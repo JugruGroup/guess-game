@@ -43,7 +43,8 @@ public class OlapDaoImpl implements OlapDao {
         Cube eventTypesCube = new Cube(
                 new LinkedHashSet<>(Arrays.asList(DimensionType.EVENT_TYPE, DimensionType.CITY, DimensionType.YEAR)),
                 new LinkedHashSet<>(Arrays.asList(MeasureType.EVENTS_QUANTITY, MeasureType.DURATION, MeasureType.TALKS_QUANTITY,
-                        MeasureType.SPEAKERS_QUANTITY, MeasureType.JAVA_CHAMPIONS_QUANTITY, MeasureType.MVPS_QUANTITY)));
+                        MeasureType.SPEAKERS_QUANTITY, MeasureType.COMPANIES_QUANTITY, MeasureType.JAVA_CHAMPIONS_QUANTITY,
+                        MeasureType.MVPS_QUANTITY)));
         Cube speakersCube = new Cube(
                 new LinkedHashSet<>(Arrays.asList(DimensionType.EVENT_TYPE, DimensionType.SPEAKER, DimensionType.YEAR)),
                 new LinkedHashSet<>(Arrays.asList(MeasureType.TALKS_QUANTITY, MeasureType.EVENTS_QUANTITY,
@@ -214,12 +215,13 @@ public class OlapDaoImpl implements OlapDao {
                 cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearDimensions, MeasureType.MVPS_QUANTITY, speaker);
             }
 
-            iterateCompanies(cubes.companiesCube, eventTypeDimension, yearDimension, speakerDimension, event, talk);
+            iterateCompanies(cubes, eventTypeDimension, yearDimension, speakerDimension, eventTypeAndCityAndYearDimensions, event, talk);
         }
     }
 
-    void iterateCompanies(Cube companiesCube, EventTypeDimension eventTypeDimension, YearDimension yearDimension,
-                          SpeakerDimension speakerDimension, Event event, Talk talk) {
+    void iterateCompanies(Cubes cubes, EventTypeDimension eventTypeDimension, YearDimension yearDimension,
+                          SpeakerDimension speakerDimension, Set<Dimension<?>> eventTypeAndCityAndYearDimensions,
+                          Event event, Talk talk) {
         EventType eventType = eventTypeDimension.getValue();
         Speaker speaker = speakerDimension.getValue();
 
@@ -229,17 +231,19 @@ public class OlapDaoImpl implements OlapDao {
                     eventTypeDimension, new CompanyDimension(company), speakerDimension, yearDimension);
 
             // Company measure values
-            companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.SPEAKERS_QUANTITY, speaker);
-            companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.TALKS_QUANTITY, talk);
-            companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.EVENTS_QUANTITY, event);
-            companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.EVENT_TYPES_QUANTITY, eventType);
+            cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearDimensions, MeasureType.COMPANIES_QUANTITY, company);
+
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.SPEAKERS_QUANTITY, speaker);
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.TALKS_QUANTITY, talk);
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.EVENTS_QUANTITY, event);
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.EVENT_TYPES_QUANTITY, eventType);
 
             if (speaker.isJavaChampion()) {
-                companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.JAVA_CHAMPIONS_QUANTITY, speaker);
+                cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.JAVA_CHAMPIONS_QUANTITY, speaker);
             }
 
             if (speaker.isAnyMvp()) {
-                companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.MVPS_QUANTITY, speaker);
+                cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.MVPS_QUANTITY, speaker);
             }
         }
     }
