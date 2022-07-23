@@ -10,6 +10,7 @@
     "eventsQuantity": "Количество событий",
     "talksQuantity": "Количество докладов",
     "speakersQuantity": "Количество спикеров",
+    "companiesQuantity": "Количество компаний",
     "javaChampionsQuantity": "Количество Java Champions",
     "mvpsQuantity": "Количество MVPs"
   },

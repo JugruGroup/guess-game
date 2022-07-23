@@ -48,6 +48,7 @@ export class OlapStatisticsComponent implements OnInit {
   private readonly EVENTS_QUANTITY_MEASURE_TYPE_KEY = 'measureType.eventsQuantity';
   private readonly TALKS_QUANTITY_MEASURE_TYPE_KEY = 'measureType.talksQuantity';
   private readonly SPEAKERS_QUANTITY_MEASURE_TYPE_KEY = 'measureType.speakersQuantity';
+  private readonly COMPANIES_QUANTITY_MEASURE_TYPE_KEY = 'measureType.companiesQuantity';
   private readonly JAVA_CHAMPIONS_QUANTITY_MEASURE_TYPE_KEY = 'measureType.javaChampionsQuantity';
   private readonly MVPS_QUANTITY_MEASURE_TYPE_KEY = 'measureType.mvpsQuantity';
 
@@ -180,6 +181,9 @@ export class OlapStatisticsComponent implements OnInit {
       }
       case MeasureType.SpeakersQuantity: {
         return this.SPEAKERS_QUANTITY_MEASURE_TYPE_KEY;
+      }
+      case MeasureType.CompaniesQuantity: {
+        return this.COMPANIES_QUANTITY_MEASURE_TYPE_KEY;
       }
       case MeasureType.JavaChampionsQuantity: {
         return this.JAVA_CHAMPIONS_QUANTITY_MEASURE_TYPE_KEY;
