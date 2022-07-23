@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("SearchUtilsTest class tests")
+@DisplayName("SearchUtils class tests")
 public class SearchUtilsTest {
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
