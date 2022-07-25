@@ -25,16 +25,16 @@ public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
         this.degrees = degrees;
     }
 
-    public String getPhotoFileName() {
-        return photoFileName;
-    }
-
     public boolean isJavaChampion() {
         return degrees.isJavaChampion();
     }
 
     public boolean isMvp() {
         return degrees.isMvp();
+    }
+
+    public String getPhotoFileName() {
+        return photoFileName;
     }
 
     public boolean isMvpReconnect() {
