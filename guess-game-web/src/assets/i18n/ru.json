@@ -10,6 +10,7 @@
     "eventsQuantity": "Количество событий",
     "talksQuantity": "Количество докладов",
     "speakersQuantity": "Количество спикеров",
+    "companiesQuantity": "Количество компаний",
     "javaChampionsQuantity": "Количество Java Champions",
     "mvpsQuantity": "Количество MVPs"
   },
@@ -279,7 +280,9 @@
         "eventTypeNameColumn": "Наименование",
         "speakerNameColumn": "Имя",
         "companyColumn": "Компания",
-        "cityColumn": "Город"
+        "cityColumn": "Город",
+        "javaChampionColumn": "Java Champion",
+        "mvpColumn": "MVP"
       }
     }
   },

@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("CmsDataLoaderTest class tests")
+@DisplayName("CmsDataLoader class tests")
 class CmsDataLoaderTest {
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)

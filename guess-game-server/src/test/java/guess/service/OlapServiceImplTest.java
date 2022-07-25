@@ -216,16 +216,10 @@ class OlapServiceImplTest {
             List<OlapEntityMetrics<EventType>> metricsList0 = Collections.emptyList();
             OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
 
-            List<OlapEntityMetrics<Speaker>> metricsList1 = List.of(
-                    new OlapEntityMetrics<>(speaker0, List.of(0L, 0L), 0L),
-                    new OlapEntityMetrics<>(speaker1, List.of(0L, 0L), 0L)
-            );
+            List<OlapEntityMetrics<Speaker>> metricsList1 = Collections.emptyList();
             OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
 
-            List<OlapEntityMetrics<Company>> metricsList2 = List.of(
-                    new OlapEntityMetrics<>(company0, List.of(0L, 0L), 0L),
-                    new OlapEntityMetrics<>(company1, List.of(0L, 0L), 0L)
-            );
+            List<OlapEntityMetrics<Company>> metricsList2 = Collections.emptyList();
             OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<EventType>> metricsList3 = List.of(

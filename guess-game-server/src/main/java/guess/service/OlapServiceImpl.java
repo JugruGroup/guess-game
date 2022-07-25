@@ -41,21 +41,28 @@ public class OlapServiceImpl implements OlapService {
                         ((op.getEventTypeIds() == null) || op.getEventTypeIds().isEmpty() || op.getEventTypeIds().contains(et.getId()));
         Predicate<Speaker> speakerPredicate = s -> (op.getSpeakerIds() == null) || op.getSpeakerIds().isEmpty() || op.getSpeakerIds().contains(s.getId());
         Predicate<Company> companyPredicate = c -> (op.getCompanyIds() == null) || op.getCompanyIds().isEmpty() || op.getCompanyIds().contains(c.getId());
+        OlapEntityStatistics<Integer, EventType> eventTypeStatistics = null;
+        OlapEntityStatistics<Integer, Speaker> speakerStatistics = null;
+        OlapEntityStatistics<Integer, Company> companyStatistics = null;
 
-        return new OlapStatistics(
-                CubeType.EVENT_TYPES.equals(op.getCubeType()) ?
-                        getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.EVENT_TYPE, eventTypePredicate,
-                                DimensionType.EVENT_TYPE, eventTypePredicate) :
-                        null,
-                CubeType.SPEAKERS.equals(op.getCubeType()) ?
-                        getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.SPEAKER, speakerPredicate,
-                                DimensionType.EVENT_TYPE, eventTypePredicate) :
-                        null,
-                CubeType.COMPANIES.equals(op.getCubeType()) ?
-                        getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.COMPANY, companyPredicate,
-                                DimensionType.EVENT_TYPE, eventTypePredicate) :
-                        null
-        );
+        if (CubeType.EVENT_TYPES.equals(op.getCubeType())) {
+            eventTypeStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.EVENT_TYPE, eventTypePredicate,
+                    DimensionType.EVENT_TYPE, eventTypePredicate);
+        }
+
+        if (CubeType.SPEAKERS.equals(op.getCubeType())) {
+            speakerStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.SPEAKER, speakerPredicate,
+                    DimensionType.EVENT_TYPE, eventTypePredicate);
+            speakerStatistics.getMetricsList().removeIf(m -> m.total() == 0);
+        }
+
+        if (CubeType.COMPANIES.equals(op.getCubeType())) {
+            companyStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.COMPANY, companyPredicate,
+                    DimensionType.EVENT_TYPE, eventTypePredicate);
+            companyStatistics.getMetricsList().removeIf(m -> m.total() == 0);
+        }
+
+        return new OlapStatistics(eventTypeStatistics, speakerStatistics, companyStatistics);
     }
 
     @Override

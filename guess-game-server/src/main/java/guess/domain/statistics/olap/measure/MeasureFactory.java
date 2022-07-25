@@ -24,6 +24,8 @@ public class MeasureFactory {
                 return new TalksQuantityMeasure(entities);
             case SPEAKERS_QUANTITY:
                 return new SpeakersQuantityMeasure(entities);
+            case COMPANIES_QUANTITY:
+                return new CompaniesQuantityMeasure(entities);
             case JAVA_CHAMPIONS_QUANTITY:
                 return new JavaChampionsQuantityMeasure(entities);
             case MVPS_QUANTITY:

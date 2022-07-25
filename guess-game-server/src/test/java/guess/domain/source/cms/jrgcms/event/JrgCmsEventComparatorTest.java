@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("JrgCmsEventComparatorTest class tests")
+@DisplayName("JrgCmsEventComparator class tests")
 class JrgCmsEventComparatorTest {
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)

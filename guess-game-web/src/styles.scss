@@ -362,7 +362,7 @@ a:hover {
   height: 2.75rem;
 }
 
-// Decrease height of paginator page buttons
+// Decrease width and height of paginator page buttons
 .p-paginator .p-paginator-pages .p-paginator-page, .p-paginator .p-paginator-current {
   //min-width: 3rem;
   //height: 3rem;
@@ -387,3 +387,16 @@ a:hover {
   //padding: 0.75rem 0;
   padding: 0;
 }
+
+// Decrease width and of table row expansion buttons
+.p-button.p-button-icon-only.p-button-rounded {
+  //height: 3rem;
+  height: 2.75rem;
+}
+
+// Decrease height of table row expansion buttons
+.p-button.p-button-icon-only {
+  //width: 3rem;
+  width: 2.75rem;
+}
+

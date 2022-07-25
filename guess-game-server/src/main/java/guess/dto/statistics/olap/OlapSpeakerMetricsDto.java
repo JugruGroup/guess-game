@@ -3,6 +3,7 @@ package guess.dto.statistics.olap;
 import guess.domain.Language;
 import guess.domain.source.Speaker;
 import guess.domain.statistics.olap.OlapEntityMetrics;
+import guess.dto.statistics.SpeakerMetricsDtoDegrees;
 import guess.util.LocalizationUtils;
 
 import java.util.List;
@@ -14,15 +15,34 @@ import java.util.Set;
  */
 public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
     private final String photoFileName;
+    private final SpeakerMetricsDtoDegrees degrees;
 
-    public OlapSpeakerMetricsDto(long id, String name, String photoFileName, List<Long> measureValues, Long total) {
+    public OlapSpeakerMetricsDto(long id, String name, String photoFileName, SpeakerMetricsDtoDegrees degrees,
+                                 List<Long> measureValues, Long total) {
         super(id, name, measureValues, total);
 
         this.photoFileName = photoFileName;
+        this.degrees = degrees;
+    }
+
+    public boolean isJavaChampion() {
+        return degrees.isJavaChampion();
+    }
+
+    public boolean isMvp() {
+        return degrees.isMvp();
     }
 
     public String getPhotoFileName() {
         return photoFileName;
+    }
+
+    public boolean isMvpReconnect() {
+        return degrees.isMvpReconnect();
+    }
+
+    public boolean isAnyMvp() {
+        return degrees.isAnyMvp();
     }
 
     public static OlapSpeakerMetricsDto convertToDto(OlapEntityMetrics<Speaker> speakerMetrics, Language language, Set<Speaker> speakerDuplicates) {
@@ -33,6 +53,12 @@ public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
                 speaker.getId(),
                 name,
                 speaker.getPhotoFileName(),
+                new SpeakerMetricsDtoDegrees(
+                        speaker.isJavaChampion(),
+                        speaker.isMvp(),
+                        speaker.isMvpReconnect(),
+                        speaker.isAnyMvp()
+                ),
                 speakerMetrics.measureValues(),
                 speakerMetrics.total());
     }
