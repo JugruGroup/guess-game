@@ -280,7 +280,9 @@
         "eventTypeNameColumn": "Name",
         "speakerNameColumn": "Name",
         "companyColumn": "Company",
-        "cityColumn": "City"
+        "cityColumn": "City",
+        "javaChampionColumn": "Java Champion",
+        "mvpColumn": "MVP"
       }
     }
   },

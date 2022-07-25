@@ -14,20 +14,6 @@ import java.util.Set;
  * Speaker metrics DTO.
  */
 public class SpeakerMetricsDto extends AbstractSpeakerCompanyMetrics {
-    public static class SpeakerMetricsDtoDegrees {
-        private final boolean javaChampion;
-        private final boolean mvp;
-        private final boolean mvpReconnect;
-        private final boolean anyMvp;
-
-        public SpeakerMetricsDtoDegrees(boolean javaChampion, boolean mvp, boolean mvpReconnect, boolean anyMvp) {
-            this.javaChampion = javaChampion;
-            this.mvp = mvp;
-            this.mvpReconnect = mvpReconnect;
-            this.anyMvp = anyMvp;
-        }
-    }
-
     private final long id;
     private final String name;
     private final String photoFileName;
@@ -56,19 +42,19 @@ public class SpeakerMetricsDto extends AbstractSpeakerCompanyMetrics {
     }
 
     public boolean isJavaChampion() {
-        return degrees.javaChampion;
+        return degrees.isJavaChampion();
     }
 
     public boolean isMvp() {
-        return degrees.mvp;
+        return degrees.isMvp();
     }
 
     public boolean isMvpReconnect() {
-        return degrees.mvpReconnect;
+        return degrees.isMvpReconnect();
     }
 
     public boolean isAnyMvp() {
-        return degrees.anyMvp;
+        return degrees.isAnyMvp();
     }
 
     public static SpeakerMetricsDto convertToDto(SpeakerMetrics speakerMetrics, Language language, Set<Speaker> speakerDuplicates) {

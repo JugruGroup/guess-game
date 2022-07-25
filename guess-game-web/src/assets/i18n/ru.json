@@ -280,7 +280,9 @@
         "eventTypeNameColumn": "Наименование",
         "speakerNameColumn": "Имя",
         "companyColumn": "Компания",
-        "cityColumn": "Город"
+        "cityColumn": "Город",
+        "javaChampionColumn": "Java Champion",
+        "mvpColumn": "MVP"
       }
     }
   },

@@ -70,6 +70,7 @@ export class OlapStatisticsComponent implements OnInit {
 
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
+  public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
 
   public cubeTypes: CubeType[] = [];
