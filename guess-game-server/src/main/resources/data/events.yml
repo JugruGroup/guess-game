@@ -2450,6 +2450,13 @@ events:
       - {startDate: "2021-10-07", endDate: "2021-10-07", placeId: 12}
     youtubeLink: https://www.youtube.com/playlist?list=PLecWId-JT7S5k9Z1H_FecIbXOvS5N55SH
     talkIds: [3220]
+  - eventTypeId: 15
+    name:
+      - {language: en, text: "JUGNsk Meetup #20"}
+      - {language: ru, text: "Митап #20 JUGNsk"}
+    days:
+      - {startDate: "2022-08-04", endDate: "2022-08-04", placeId: 13}
+    talkIds: [3970, 3971]
   # SnowOne
   - eventTypeId: 16
     name:

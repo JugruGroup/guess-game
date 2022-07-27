@@ -1492,7 +1492,7 @@ speakers:
     name:
       - {language: en, text: "Vladimir Plizga"}
       - {language: ru, text: "Владимир Плизга"}
-    companyIds: [686]
+    companyIds: [947]
     bio:
       - {language: en, text: "Since his school days Vladimir was enthusiastic about programming and from then on has managed\
             \ to code everything: from Soviet programmable calculators to modern CNC tools in production. For the last 8+\

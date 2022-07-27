@@ -3423,3 +3423,7 @@ companies:
       - {language: en, text: "Otkritie Bank"}
       - {language: ru, text: "Банк Открытие"}
     siteLink: https://www.open.ru
+  - id: 947
+    name:
+      - {language: en, text: "Tibbo Systems"}
+    siteLink: https://aggregate.digital
