@@ -459,7 +459,7 @@ class StatisticsServiceImplTest {
 
     private EventStatistics createEventStatistics(List<EventMetrics> eventMetricsList, Event event, LocalDate startDate,
                                                   long duration, long talksQuantity, long speakersQuantity,
-                                                  long javaChampionsQuantity, long mvpsQuantity) {
+                                                  long companiesQuantity, long javaChampionsQuantity, long mvpsQuantity) {
         return new EventStatistics(
                 eventMetricsList,
                 new EventMetrics(
@@ -468,6 +468,7 @@ class StatisticsServiceImplTest {
                         duration,
                         talksQuantity,
                         speakersQuantity,
+                        companiesQuantity,
                         javaChampionsQuantity,
                         mvpsQuantity
                 )
@@ -532,10 +533,12 @@ class StatisticsServiceImplTest {
                 1,
                 1,
                 1,
+                1,
                 0);
         EventMetrics eventMetrics2 = new EventMetrics(
                 event2,
                 EVENT_START_DATE2,
+                1,
                 1,
                 1,
                 1,
@@ -548,11 +551,13 @@ class StatisticsServiceImplTest {
                 0,
                 0,
                 0,
+                0,
                 0);
         EventMetrics eventMetrics4 = new EventMetrics(
                 event4,
                 EVENT_START_DATE4,
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -565,6 +570,7 @@ class StatisticsServiceImplTest {
                 5,
                 2,
                 2,
+                2,
                 1,
                 0
         );
@@ -575,6 +581,7 @@ class StatisticsServiceImplTest {
                 new Event(),
                 EVENT_START_DATE0,
                 2,
+                1,
                 1,
                 1,
                 1,
@@ -591,6 +598,7 @@ class StatisticsServiceImplTest {
                 0,
                 0,
                 0,
+                0,
                 0
         );
         assertEquals(expected2, actual2);
@@ -603,6 +611,7 @@ class StatisticsServiceImplTest {
                 3,
                 1,
                 1,
+                1,
                 0,
                 0
         );
@@ -613,6 +622,7 @@ class StatisticsServiceImplTest {
                 Collections.emptyList(),
                 new Event(),
                 null,
+                0,
                 0,
                 0,
                 0,

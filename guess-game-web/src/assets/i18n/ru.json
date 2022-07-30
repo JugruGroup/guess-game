@@ -231,6 +231,7 @@
         "durationColumn": "Длительность, дней",
         "talksColumn": "Докладов",
         "speakersColumn": "Спикеров",
+        "companiesColumn": "Компаний",
         "javaChampionsColumn": "Java Champions",
         "mvpsColumn": "MVPs"
       }

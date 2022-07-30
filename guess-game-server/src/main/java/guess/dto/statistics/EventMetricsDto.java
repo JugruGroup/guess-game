@@ -18,7 +18,8 @@ public class EventMetricsDto extends AbstractEventMetrics {
 
     public EventMetricsDto(long id, String name, String eventTypeLogoFileName, AbstractEventMetrics eventMetrics) {
         super(eventMetrics.getStartDate(), eventMetrics.getDuration(), eventMetrics.getTalksQuantity(),
-                eventMetrics.getSpeakersQuantity(), eventMetrics.getJavaChampionsQuantity(), eventMetrics.getMvpsQuantity());
+                eventMetrics.getSpeakersQuantity(), eventMetrics.getCompaniesQuantity(),
+                eventMetrics.getJavaChampionsQuantity(), eventMetrics.getMvpsQuantity());
 
         this.id = id;
         this.name = name;

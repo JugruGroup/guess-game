@@ -7,6 +7,7 @@ export class EventMetrics {
     public duration?: number,
     public talksQuantity?: number,
     public speakersQuantity?: number,
+    public companiesQuantity?: number,
     public javaChampionsQuantity?: number,
     public mvpsQuantity?: number
   ) {

@@ -79,7 +79,7 @@ public class StatisticsServiceImpl implements StatisticsService {
 
                 event.getTalks().forEach(t -> {
                     eventTypeSpeakers.addAll(t.getSpeakers());
-                    
+
                     for (Speaker speaker : t.getSpeakers()) {
                         eventTypeCompanies.addAll(speaker.getCompanies());
                     }
@@ -179,14 +179,22 @@ public class StatisticsServiceImpl implements StatisticsService {
         long totalsDuration = 0;
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
+        Set<Company> totalsCompanies = new HashSet<>();
 
         for (Event event : events) {
             // Event metrics
             long eventDuration = event.getDuration();
             long eventTalksQuantity = event.getTalks().size();
             Set<Speaker> eventSpeakers = new HashSet<>();
+            Set<Company> eventCompanies = new HashSet<>();
 
-            event.getTalks().forEach(t -> eventSpeakers.addAll(t.getSpeakers()));
+            event.getTalks().forEach(t -> {
+                eventSpeakers.addAll(t.getSpeakers());
+
+                for (Speaker speaker : t.getSpeakers()) {
+                    eventCompanies.addAll(speaker.getCompanies());
+                }
+            });
 
             long eventJavaChampionsQuantity = eventSpeakers.stream()
                     .filter(Speaker::isJavaChampion)
@@ -202,6 +210,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                     eventDuration,
                     eventTalksQuantity,
                     eventSpeakers.size(),
+                    eventCompanies.size(),
                     eventJavaChampionsQuantity,
                     eventMvpsQuantity));
 
@@ -213,6 +222,7 @@ public class StatisticsServiceImpl implements StatisticsService {
             totalsDuration += eventDuration;
             totalsTalksQuantity += eventTalksQuantity;
             totalsSpeakers.addAll(eventSpeakers);
+            totalsCompanies.addAll(eventCompanies);
         }
 
         long totalsJavaChampionsQuantity = totalsSpeakers.stream()
@@ -230,6 +240,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                         totalsDuration,
                         totalsTalksQuantity,
                         totalsSpeakers.size(),
+                        totalsCompanies.size(),
                         totalsJavaChampionsQuantity,
                         totalsMvpsQuantity));
     }

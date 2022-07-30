@@ -12,8 +12,8 @@ public class EventMetrics extends AbstractEventMetrics {
     private final Event event;
 
     public EventMetrics(Event event, LocalDate startDate, long duration, long talksQuantity, long speakersQuantity,
-                        long javaChampionsQuantity, long mvpsQuantity) {
-        super(startDate, duration, talksQuantity, speakersQuantity, javaChampionsQuantity, mvpsQuantity);
+                        long companiesQuantity, long javaChampionsQuantity, long mvpsQuantity) {
+        super(startDate, duration, talksQuantity, speakersQuantity, companiesQuantity, javaChampionsQuantity, mvpsQuantity);
 
         this.event = event;
     }
@@ -40,6 +40,13 @@ public class EventMetrics extends AbstractEventMetrics {
     public String toString() {
         return "EventMetrics{" +
                 "event=" + event +
+                "startDate=" + getStartDate() +
+                ", duration=" + getDuration() +
+                ", speakersQuantity=" + getSpeakersQuantity() +
+                ", companiesQuantity=" + getCompaniesQuantity() +
+                ", talksQuantity=" + getTalksQuantity() +
+                ", javaChampionsQuantity=" + getJavaChampionsQuantity() +
+                ", mvpsQuantity=" + getMvpsQuantity() +
                 '}';
     }
 }
