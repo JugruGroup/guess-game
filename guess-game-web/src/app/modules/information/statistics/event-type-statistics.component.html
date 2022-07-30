@@ -79,6 +79,10 @@
               {{'statistics.eventTypes.table.speakersColumn' | translate}}
               <p-sortIcon [field]="'speakersQuantity'"></p-sortIcon>
             </th>
+            <th class="text-center" [pSortableColumn]="'companiesQuantity'" pResizableColumn>
+              {{'statistics.eventTypes.table.companiesColumn' | translate}}
+              <p-sortIcon [field]="'companiesQuantity'"></p-sortIcon>
+            </th>
             <th class="text-center" [pSortableColumn]="'javaChampionsQuantity'" pResizableColumn>
               {{'statistics.eventTypes.table.javaChampionsColumn' | translate}}
               <p-sortIcon [field]="'javaChampionsQuantity'"></p-sortIcon>
@@ -112,6 +116,7 @@
             <td class="text-center">{{eventTypeMetrics.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeMetrics.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeMetrics.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventTypeMetrics.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeMetrics.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeMetrics.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
@@ -125,6 +130,7 @@
             <td class="text-center">{{eventTypeStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeStatistics.totals?.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventTypeStatistics.totals?.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventTypeStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
           </tr>

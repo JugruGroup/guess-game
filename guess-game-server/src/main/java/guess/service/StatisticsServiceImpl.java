@@ -55,6 +55,7 @@ public class StatisticsServiceImpl implements StatisticsService {
         long totalsEventsQuantity = 0;
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
+        Set<Company> totalsCompanies = new HashSet<>();
 
         for (EventType eventType : eventTypes) {
             // Event type metrics
@@ -63,6 +64,7 @@ public class StatisticsServiceImpl implements StatisticsService {
             long eventTypeDuration = 0;
             long eventTypeTalksQuantity = 0;
             Set<Speaker> eventTypeSpeakers = new HashSet<>();
+            Set<Company> eventTypeCompanies = new HashSet<>();
 
             for (Event event : eventType.getEvents()) {
                 LocalDate eventStartDate = event.getFirstStartDate();
@@ -74,7 +76,14 @@ public class StatisticsServiceImpl implements StatisticsService {
 
                 eventTypeDuration += event.getDuration();
                 eventTypeTalksQuantity += event.getTalks().size();
-                event.getTalks().forEach(t -> eventTypeSpeakers.addAll(t.getSpeakers()));
+
+                event.getTalks().forEach(t -> {
+                    eventTypeSpeakers.addAll(t.getSpeakers());
+                    
+                    for (Speaker speaker : t.getSpeakers()) {
+                        eventTypeCompanies.addAll(speaker.getCompanies());
+                    }
+                });
             }
 
             long eventTypeAge = getEventTypeAge(eventTypeStartDate, eventTypeZoneId, currentLocalDateTime);
@@ -92,6 +101,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                     eventTypeDuration,
                     eventType.getEvents().size(),
                     eventTypeSpeakers.size(),
+                    eventTypeCompanies.size(),
                     new Metrics(eventTypeTalksQuantity, eventTypeJavaChampionsQuantity, eventTypeMvpsQuantity)
             ));
 
@@ -109,6 +119,7 @@ public class StatisticsServiceImpl implements StatisticsService {
             totalsEventsQuantity += eventType.getEvents().size();
             totalsTalksQuantity += eventTypeTalksQuantity;
             totalsSpeakers.addAll(eventTypeSpeakers);
+            totalsCompanies.addAll(eventTypeCompanies);
         }
 
         long totalsJavaChampionsQuantity = totalsSpeakers.stream()
@@ -127,6 +138,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                         totalsDuration,
                         totalsEventsQuantity,
                         totalsSpeakers.size(),
+                        totalsCompanies.size(),
                         new Metrics(totalsTalksQuantity, totalsJavaChampionsQuantity, totalsMvpsQuantity)
                 ));
     }

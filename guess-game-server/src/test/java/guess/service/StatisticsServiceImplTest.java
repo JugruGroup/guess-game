@@ -267,8 +267,8 @@ class StatisticsServiceImplTest {
 
     private EventTypeStatistics createEventTypeStatistics(List<EventTypeMetrics> eventTypeMetricsList,
                                                           EventType eventType, LocalDate startDate, long age, long duration,
-                                                          long eventsQuantity, long speakersQuantity, long talksQuantity,
-                                                          long javaChampionsQuantity, long mvpsQuantity) {
+                                                          long eventsQuantity, long speakersQuantity, long companiesQuantity,
+                                                          long talksQuantity, long javaChampionsQuantity, long mvpsQuantity) {
         return new EventTypeStatistics(
                 eventTypeMetricsList,
                 new EventTypeMetrics(
@@ -278,6 +278,7 @@ class StatisticsServiceImplTest {
                         duration,
                         eventsQuantity,
                         speakersQuantity,
+                        companiesQuantity,
                         new Metrics(talksQuantity, javaChampionsQuantity, mvpsQuantity)
                 )
         );
@@ -355,12 +356,14 @@ class StatisticsServiceImplTest {
                 2,
                 1,
                 1,
+                1,
                 new Metrics(1, 1, 0)
         );
         EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
                 eventType1,
                 EVENT_START_DATE1,
                 ChronoUnit.YEARS.between(EVENT_START_DATE1, NOW_DATE),
+                1,
                 1,
                 1,
                 1,
@@ -373,6 +376,7 @@ class StatisticsServiceImplTest {
                 3,
                 3,
                 1,
+                1,
                 new Metrics(1, 0, 0)
         );
         EventTypeMetrics eventTypeMetrics3 = new EventTypeMetrics(
@@ -382,11 +386,13 @@ class StatisticsServiceImplTest {
                 1,
                 1,
                 0,
+                0,
                 new Metrics(0, 0, 0)
         );
         EventTypeMetrics eventTypeMetrics4 = new EventTypeMetrics(
                 eventType4,
                 null,
+                0,
                 0,
                 0,
                 0,
@@ -398,6 +404,7 @@ class StatisticsServiceImplTest {
                 Collections.emptyList(),
                 new EventType(),
                 null,
+                0,
                 0,
                 0,
                 0,
@@ -415,6 +422,7 @@ class StatisticsServiceImplTest {
                 2,
                 2,
                 1,
+                1,
                 1, 0, 1
         );
         EventTypeStatistics actual1 = statisticsService.getEventTypeStatistics(false, true, null);
@@ -428,6 +436,7 @@ class StatisticsServiceImplTest {
                 5,
                 4,
                 2,
+                2,
                 2, 1, 0
         );
         EventTypeStatistics actual2 = statisticsService.getEventTypeStatistics(true, false, null);
@@ -440,6 +449,7 @@ class StatisticsServiceImplTest {
                 ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
                 7,
                 6,
+                3,
                 3,
                 3, 1, 1
         );

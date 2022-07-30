@@ -215,6 +215,7 @@
         "eventsColumn": "Events",
         "talksColumn": "Talks",
         "speakersColumn": "Speakers",
+        "companiesColumn": "Companies",
         "javaChampionsColumn": "Java Champions",
         "mvpsColumn": "MVPs"
       }

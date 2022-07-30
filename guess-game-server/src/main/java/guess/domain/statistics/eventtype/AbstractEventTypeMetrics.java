@@ -14,9 +14,10 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
     private final long duration;
     private final long eventsQuantity;
     private final long speakersQuantity;
+    private final long companiesQuantity;
 
     protected AbstractEventTypeMetrics(LocalDate startDate, long age, long duration, long eventsQuantity,
-                                       long speakersQuantity, Metrics metrics) {
+                                       long speakersQuantity, long companiesQuantity, Metrics metrics) {
         super(metrics.getTalksQuantity(), metrics.getJavaChampionsQuantity(), metrics.getMvpsQuantity());
 
         this.startDate = startDate;
@@ -24,6 +25,7 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
         this.duration = duration;
         this.eventsQuantity = eventsQuantity;
         this.speakersQuantity = speakersQuantity;
+        this.companiesQuantity = companiesQuantity;
     }
 
     public LocalDate getStartDate() {
@@ -46,6 +48,10 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
         return speakersQuantity;
     }
 
+    public long getCompaniesQuantity() {
+        return companiesQuantity;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -56,12 +62,13 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
                 duration == that.duration &&
                 eventsQuantity == that.eventsQuantity &&
                 speakersQuantity == that.speakersQuantity &&
+                companiesQuantity == that.companiesQuantity &&
                 Objects.equals(startDate, that.startDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), startDate, age, duration, eventsQuantity, speakersQuantity);
+        return Objects.hash(super.hashCode(), startDate, age, duration, eventsQuantity, speakersQuantity, companiesQuantity);
     }
 
     @Override
@@ -72,6 +79,7 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
                 ", duration=" + duration +
                 ", eventsQuantity=" + eventsQuantity +
                 ", speakersQuantity=" + speakersQuantity +
+                ", companiesQuantity=" + companiesQuantity +
                 ", talksQuantity=" + getTalksQuantity() +
                 ", javaChampionsQuantity=" + getJavaChampionsQuantity() +
                 ", mvpsQuantity=" + getMvpsQuantity() +

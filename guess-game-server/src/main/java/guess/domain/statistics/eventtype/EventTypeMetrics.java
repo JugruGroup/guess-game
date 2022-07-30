@@ -13,8 +13,8 @@ public class EventTypeMetrics extends AbstractEventTypeMetrics {
     private final EventType eventType;
 
     public EventTypeMetrics(EventType eventType, LocalDate startDate, long age, long duration, long eventsQuantity,
-                            long speakersQuantity, Metrics metrics) {
-        super(startDate, age, duration, eventsQuantity, speakersQuantity, metrics);
+                            long speakersQuantity, long companiesQuantity, Metrics metrics) {
+        super(startDate, age, duration, eventsQuantity, speakersQuantity, companiesQuantity, metrics);
 
         this.eventType = eventType;
     }
@@ -46,6 +46,7 @@ public class EventTypeMetrics extends AbstractEventTypeMetrics {
                 ", duration=" + getDuration() +
                 ", eventsQuantity=" + getEventsQuantity() +
                 ", speakersQuantity=" + getSpeakersQuantity() +
+                ", companiesQuantity=" + getCompaniesQuantity() +
                 ", talksQuantity=" + getTalksQuantity() +
                 ", javaChampionsQuantity=" + getJavaChampionsQuantity() +
                 ", mvpsQuantity=" + getMvpsQuantity() +
