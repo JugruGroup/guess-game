@@ -50,9 +50,10 @@ public class StatisticsController {
     }
 
     @GetMapping("/event-statistics")
-    public EventStatisticsDto getEventStatistics(@RequestParam(required = false) Long organizerId,
+    public EventStatisticsDto getEventStatistics(@RequestParam boolean conferences, @RequestParam boolean meetups,
+                                                 @RequestParam(required = false) Long organizerId,
                                                  @RequestParam(required = false) Long eventTypeId, HttpSession httpSession) {
-        var eventStatistics = statisticsService.getEventStatistics(organizerId, eventTypeId);
+        var eventStatistics = statisticsService.getEventStatistics(conferences, meetups, organizerId, eventTypeId);
         var language = localeService.getLanguage(httpSession);
         var eventStatisticsDto = EventStatisticsDto.convertToDto(eventStatistics, language);
 

@@ -6,8 +6,20 @@
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
   <app-statistics-tabmenu></app-statistics-tabmenu>
 
-  <div class="mt-4 mb-1 ml-1 mr-1">
+  <div class="mt-3 mb-1 ml-1 mr-1">
     <form role="form" class="m-2">
+      <div class="mb-3 row justify-content-center">
+        <div class="col-auto">
+          <p-checkbox name="group1" value="conferences" label="{{'common.checkbox.conferencesLabel' | translate}}"
+                      [(ngModel)]="isConferences" binary="true"
+                      (onChange)="onEventTypeKindChange()"></p-checkbox>
+        </div>
+        <div class="col-auto">
+          <p-checkbox name="group1" value="meetups" label="{{'common.checkbox.meetupsLabel' | translate}}"
+                      [(ngModel)]="isMeetups" binary="true"
+                      (onChange)="onEventTypeKindChange()"></p-checkbox>
+        </div>
+      </div>
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="organizer" class="form-label col-12 col-sm-3 col-md-auto text-md-end">{{'common.list.organizerLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-auto">
@@ -19,11 +31,11 @@
             </ng-template>
           </p-dropdown>
         </div>
-        <label for="conference" class="form-label col-12 col-sm-3 col-md-auto text-md-end mt-3 mt-md-0">{{'statistics.events.conferenceLabel' | translate}}</label>
+        <label for="eventType" class="form-label col-12 col-sm-3 col-md-auto text-md-end mt-3 mt-md-0">{{'common.list.eventTypeLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-auto mt-sm-3 mt-md-0">
-          <p-dropdown [options]="conferenceSelectItems" [(ngModel)]="selectedConference" id="conference"
-                      placeholder="{{'statistics.events.conferencePlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onConferenceChange($event.value)" name="conference" styleClass="event-type-dropdown w-100"
+          <p-dropdown [options]="eventTypeSelectItems" [(ngModel)]="selectedEventType" id="eventType"
+                      placeholder="{{'common.list.eventTypePlaceholder' | translate}}" [showClear]="true"
+                      (onChange)="onEventTypeChange()" name="eventType" styleClass="event-type-dropdown w-100"
                       emptyMessage="{{'common.list.emptyMessage' | translate}}">
             <ng-template let-eventType pTemplate="item">
               <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-list" alt="logo"/>

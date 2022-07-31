@@ -222,8 +222,6 @@
     },
     "events" : {
       "title": "Events",
-      "conferenceLabel": "Conference:",
-      "conferencePlaceholder": "All",
       "noEventsDataFoundText": "No events data found",
       "table": {
         "nameColumn": "Name",

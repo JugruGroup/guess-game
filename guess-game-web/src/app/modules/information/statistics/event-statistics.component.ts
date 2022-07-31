@@ -18,13 +18,16 @@ export class EventStatisticsComponent implements OnInit {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
+  public isConferences = true;
+  public isMeetups = true;
+
   public organizers: Organizer[] = [];
   public selectedOrganizer: Organizer;
   public organizerSelectItems: SelectItem[] = [];
 
-  public conferences: EventType[] = [];
-  public selectedConference: EventType;
-  public conferenceSelectItems: SelectItem[] = [];
+  public eventTypes: EventType[] = [];
+  public selectedEventType: EventType;
+  public eventTypeSelectItems: SelectItem[] = [];
 
   public eventStatistics = new EventStatistics();
   public multiSortMeta: any[] = [];
@@ -47,9 +50,9 @@ export class EventStatisticsComponent implements OnInit {
     );
   }
 
-  fillConferences(conferences: EventType[]) {
-    this.conferences = conferences;
-    this.conferenceSelectItems = this.conferences.map(et => {
+  fillEventTypes(eventTypes: EventType[]) {
+    this.eventTypes = eventTypes;
+    this.eventTypeSelectItems = this.eventTypes.map(et => {
         return {label: et.name, value: et};
       }
     );
@@ -64,52 +67,56 @@ export class EventStatisticsComponent implements OnInit {
           .subscribe(defaultEventData => {
             this.selectedOrganizer = (defaultEventData) ? findOrganizerById(defaultEventData.organizerId, this.organizers) : null;
 
-            this.eventTypeService.getFilterConferences(this.selectedOrganizer)
+            this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
               .subscribe(eventTypesData => {
-                this.fillConferences(eventTypesData);
+                this.fillEventTypes(eventTypesData);
 
-                if (this.conferences.length > 0) {
-                  this.selectedConference = (defaultEventData) ? findEventTypeById(defaultEventData.eventTypeId, this.conferences) : null;
+                if (this.eventTypes.length > 0) {
+                  this.selectedEventType = (defaultEventData) ? findEventTypeById(defaultEventData.eventTypeId, this.eventTypes) : null;
                 } else {
-                  this.selectedConference = null;
+                  this.selectedEventType = null;
                 }
 
-                this.loadEventStatistics(this.selectedOrganizer, this.selectedConference);
+                this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
               });
           });
       });
   }
 
-  loadConferences() {
-    this.eventTypeService.getFilterConferences(this.selectedOrganizer)
+  loadEventTypes() {
+    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
       .subscribe(eventTypesData => {
-        this.fillConferences(eventTypesData);
+        this.fillEventTypes(eventTypesData);
 
-        this.selectedConference = null;
+        this.selectedEventType = null;
 
-        this.loadEventStatistics(this.selectedOrganizer, this.selectedConference);
+        this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
       });
   }
 
-  loadEventStatistics(organizer: Organizer, conference: EventType) {
-    this.statisticsService.getEventStatistics(organizer, conference)
+  loadEventStatistics(organizer: Organizer, eventType: EventType) {
+    this.statisticsService.getEventStatistics(this.isConferences, this.isMeetups, organizer, eventType)
       .subscribe(data => {
           this.eventStatistics = data;
         }
       );
   }
 
-  onOrganizerChange() {
-    this.loadConferences();
+  onEventTypeKindChange() {
+    this.loadEventTypes();
   }
 
-  onConferenceChange(conference: EventType) {
-    this.loadEventStatistics(this.selectedOrganizer, conference);
+  onOrganizerChange() {
+    this.loadEventTypes();
+  }
+
+  onEventTypeChange() {
+    this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
   }
 
   onLanguageChange() {
     const currentSelectedOrganizer = this.selectedOrganizer;
-    const currentSelectedConference = this.selectedConference;
+    const currentSelectedEventType = this.selectedEventType;
 
     this.organizerService.getOrganizers()
       .subscribe(organizerData => {
@@ -117,17 +124,17 @@ export class EventStatisticsComponent implements OnInit {
 
         this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.eventTypeService.getFilterConferences(this.selectedOrganizer)
+        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
           .subscribe(eventTypesData => {
-            this.fillConferences(eventTypesData);
+            this.fillEventTypes(eventTypesData);
 
-            if (this.conferences.length > 0) {
-              this.selectedConference = (currentSelectedConference) ? findEventTypeById(currentSelectedConference.id, this.conferences) : null;
+            if (this.eventTypes.length > 0) {
+              this.selectedEventType = (currentSelectedEventType) ? findEventTypeById(currentSelectedEventType.id, this.eventTypes) : null;
             } else {
-              this.selectedConference = null;
+              this.selectedEventType = null;
             }
 
-            this.loadEventStatistics(this.selectedOrganizer, this.selectedConference);
+            this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
           });
       });
   }

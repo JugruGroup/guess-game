@@ -128,8 +128,10 @@ class StatisticsControllerTest {
     void getEventStatistics() throws Exception {
         MockHttpSession httpSession = new MockHttpSession();
 
-        Long organizerId = 0L;
-        Long eventTypeId = 0L;
+        boolean conferences = true;
+        boolean meetups = false;
+        long organizerId = 0L;
+        long eventTypeId = 0L;
 
         Event event0 = new Event();
         event0.setId(0);
@@ -156,11 +158,13 @@ class StatisticsControllerTest {
                 List.of(eventMetrics0, eventMetrics1),
                 eventMetricsTotals);
 
-        given(statisticsService.getEventStatistics(organizerId, eventTypeId)).willReturn(eventStatistics);
+        given(statisticsService.getEventStatistics(conferences, meetups, organizerId, eventTypeId)).willReturn(eventStatistics);
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/statistics/event-statistics")
                         .contentType(MediaType.APPLICATION_JSON)
+                        .param("conferences", Boolean.toString(conferences))
+                        .param("meetups", Boolean.toString(meetups))
                         .param("organizerId", Long.toString(organizerId))
                         .param("eventTypeId", Long.toString(eventTypeId))
                         .session(httpSession))
@@ -169,7 +173,7 @@ class StatisticsControllerTest {
                 .andExpect(jsonPath("$.eventMetricsList[0].id", is(0)))
                 .andExpect(jsonPath("$.eventMetricsList[1].id", is(1)))
                 .andExpect(jsonPath("$.totals.duration", is(14)));
-        Mockito.verify(statisticsService, VerificationModeFactory.times(1)).getEventStatistics(organizerId, eventTypeId);
+        Mockito.verify(statisticsService, VerificationModeFactory.times(1)).getEventStatistics(conferences, meetups, organizerId, eventTypeId);
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 

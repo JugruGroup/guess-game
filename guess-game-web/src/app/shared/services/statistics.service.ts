@@ -47,8 +47,10 @@ export class StatisticsService {
       );
   }
 
-  getEventStatistics(organizer: Organizer, eventType: EventType): Observable<EventStatistics> {
-    let params = new HttpParams();
+  getEventStatistics(conferences: boolean, meetups: boolean, organizer: Organizer, eventType: EventType): Observable<EventStatistics> {
+    let params = new HttpParams()
+      .set('conferences', conferences.toString())
+      .set('meetups', meetups.toString());
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }

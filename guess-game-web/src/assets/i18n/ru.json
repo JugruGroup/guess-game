@@ -222,8 +222,6 @@
     },
     "events" : {
       "title": "События",
-      "conferenceLabel": "Конференция:",
-      "conferencePlaceholder": "Все",
       "noEventsDataFoundText": "Данные о событиях не найдены",
       "table": {
         "nameColumn": "Наименование",

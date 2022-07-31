@@ -574,7 +574,7 @@ class StatisticsServiceImplTest {
                 1,
                 0
         );
-        assertEquals(expected0, statisticsService.getEventStatistics(null, null));
+        assertEquals(expected0, statisticsService.getEventStatistics(true, false, null, null));
 
         EventStatistics expected1 = createEventStatistics(
                 List.of(eventMetrics0),
@@ -587,9 +587,9 @@ class StatisticsServiceImplTest {
                 1,
                 0
         );
-        assertEquals(expected1, statisticsService.getEventStatistics(null, 0L));
+        assertEquals(expected1, statisticsService.getEventStatistics(true, false, null, 0L));
 
-        EventStatistics actual2 = statisticsService.getEventStatistics(null, 1L);
+        EventStatistics actual2 = statisticsService.getEventStatistics(true, false, null, 1L);
         EventStatistics expected2 = createEventStatistics(
                 Collections.emptyList(),
                 new Event(),
@@ -603,7 +603,7 @@ class StatisticsServiceImplTest {
         );
         assertEquals(expected2, actual2);
 
-        EventStatistics actual3 = statisticsService.getEventStatistics(null, 2L);
+        EventStatistics actual3 = statisticsService.getEventStatistics(true, false, null, 2L);
         EventStatistics expected3 = createEventStatistics(
                 List.of(eventMetrics2, eventMetrics3, eventMetrics4),
                 new Event(),
@@ -617,7 +617,7 @@ class StatisticsServiceImplTest {
         );
         assertEquals(expected3, actual3);
 
-        EventStatistics actual4 = statisticsService.getEventStatistics(null, 3L);
+        EventStatistics actual4 = statisticsService.getEventStatistics(true, false, null, 3L);
         EventStatistics expected4 = createEventStatistics(
                 Collections.emptyList(),
                 new Event(),
@@ -631,20 +631,20 @@ class StatisticsServiceImplTest {
         );
         assertEquals(expected4, actual4);
 
-        assertEquals(expected1, statisticsService.getEventStatistics(0L, null));
-        assertEquals(expected3, statisticsService.getEventStatistics(1L, null));
+        assertEquals(expected1, statisticsService.getEventStatistics(true, false, 0L, null));
+        assertEquals(expected3, statisticsService.getEventStatistics(true, false, 1L, null));
 
-        assertEquals(expected1, statisticsService.getEventStatistics(0L, 0L));
-        assertEquals(expected2, statisticsService.getEventStatistics(1L, 0L));
+        assertEquals(expected1, statisticsService.getEventStatistics(true, false, 0L, 0L));
+        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 1L, 0L));
 
-        assertEquals(expected2, statisticsService.getEventStatistics(0L, 1L));
-        assertEquals(expected2, statisticsService.getEventStatistics(1L, 1L));
+        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 0L, 1L));
+        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 1L, 1L));
 
-        assertEquals(expected2, statisticsService.getEventStatistics(0L, 2L));
-        assertEquals(expected3, statisticsService.getEventStatistics(1L, 2L));
+        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 0L, 2L));
+        assertEquals(expected3, statisticsService.getEventStatistics(true, false, 1L, 2L));
 
-        assertEquals(expected4, statisticsService.getEventStatistics(0L, 3L));
-        assertEquals(expected4, statisticsService.getEventStatistics(1L, 3L));
+        assertEquals(expected4, statisticsService.getEventStatistics(true, false, 0L, 3L));
+        assertEquals(expected4, statisticsService.getEventStatistics(true, false, 1L, 3L));
     }
 
     private SpeakerStatistics createSpeakerStatistics(List<SpeakerMetrics> speakerMetricsList, Speaker speaker,
