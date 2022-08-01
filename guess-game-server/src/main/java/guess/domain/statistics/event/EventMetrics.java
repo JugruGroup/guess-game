@@ -1,6 +1,7 @@
 package guess.domain.statistics.event;
 
 import guess.domain.source.Event;
+import guess.domain.statistics.EventTypeEventMetrics;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -11,9 +12,8 @@ import java.util.Objects;
 public class EventMetrics extends AbstractEventMetrics {
     private final Event event;
 
-    public EventMetrics(Event event, LocalDate startDate, long duration, long talksQuantity, long speakersQuantity,
-                        long companiesQuantity, long javaChampionsQuantity, long mvpsQuantity) {
-        super(startDate, duration, talksQuantity, speakersQuantity, companiesQuantity, javaChampionsQuantity, mvpsQuantity);
+    public EventMetrics(Event event, LocalDate startDate, long duration, EventTypeEventMetrics metrics) {
+        super(startDate, duration, metrics);
 
         this.event = event;
     }

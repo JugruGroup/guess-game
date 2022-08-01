@@ -3,7 +3,7 @@ package guess.domain.statistics;
 import java.util.Objects;
 
 /**
- * Abstract speaker metrics.
+ * Abstract speaker and company metrics.
  */
 public abstract class AbstractSpeakerCompanyMetrics extends Metrics {
     private final long eventsQuantity;

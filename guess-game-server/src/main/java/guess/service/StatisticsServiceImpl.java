@@ -3,7 +3,7 @@ package guess.service;
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
 import guess.domain.source.*;
-import guess.domain.statistics.Metrics;
+import guess.domain.statistics.EventTypeEventMetrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyMetricsInternal;
 import guess.domain.statistics.company.CompanyStatistics;
@@ -100,9 +100,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                     eventTypeAge,
                     eventTypeDuration,
                     eventType.getEvents().size(),
-                    eventTypeSpeakers.size(),
-                    eventTypeCompanies.size(),
-                    new Metrics(eventTypeTalksQuantity, eventTypeJavaChampionsQuantity, eventTypeMvpsQuantity)
+                    new EventTypeEventMetrics(
+                            eventTypeTalksQuantity,
+                            eventTypeSpeakers.size(),
+                            eventTypeCompanies.size(),
+                            eventTypeJavaChampionsQuantity,
+                            eventTypeMvpsQuantity)
             ));
 
             // Totals metrics
@@ -137,9 +140,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                         totalsAge,
                         totalsDuration,
                         totalsEventsQuantity,
-                        totalsSpeakers.size(),
-                        totalsCompanies.size(),
-                        new Metrics(totalsTalksQuantity, totalsJavaChampionsQuantity, totalsMvpsQuantity)
+                        new EventTypeEventMetrics(
+                                totalsTalksQuantity,
+                                totalsSpeakers.size(),
+                                totalsCompanies.size(),
+                                totalsJavaChampionsQuantity,
+                                totalsMvpsQuantity)
                 ));
     }
 
@@ -208,11 +214,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                     event,
                     eventStartDate,
                     eventDuration,
-                    eventTalksQuantity,
-                    eventSpeakers.size(),
-                    eventCompanies.size(),
-                    eventJavaChampionsQuantity,
-                    eventMvpsQuantity));
+                    new EventTypeEventMetrics(eventTalksQuantity,
+                            eventSpeakers.size(),
+                            eventCompanies.size(),
+                            eventJavaChampionsQuantity,
+                            eventMvpsQuantity)
+            ));
 
             // Totals metrics
             if ((totalsStartDate == null) || eventStartDate.isBefore(totalsStartDate)) {
@@ -238,11 +245,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                         new Event(),
                         totalsStartDate,
                         totalsDuration,
-                        totalsTalksQuantity,
-                        totalsSpeakers.size(),
-                        totalsCompanies.size(),
-                        totalsJavaChampionsQuantity,
-                        totalsMvpsQuantity));
+                        new EventTypeEventMetrics(totalsTalksQuantity,
+                                totalsSpeakers.size(),
+                                totalsCompanies.size(),
+                                totalsJavaChampionsQuantity,
+                                totalsMvpsQuantity)
+                ));
     }
 
     @Override

@@ -2,7 +2,7 @@ package guess.controller;
 
 import guess.domain.Language;
 import guess.domain.source.*;
-import guess.domain.statistics.Metrics;
+import guess.domain.statistics.EventTypeEventMetrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyStatistics;
 import guess.domain.statistics.event.EventMetrics;
@@ -87,20 +87,20 @@ class StatisticsControllerTest {
 
         EventTypeMetrics eventTypeMetrics0 = new EventTypeMetrics(
                 eventType0,
-                LocalDate.of(2016, 11, 1), 4, 4, 1, 20, 10,
-                new Metrics(21, 3, 0)
+                LocalDate.of(2016, 11, 1), 4, 4, 1,
+                new EventTypeEventMetrics(21, 20, 10, 3, 0)
         );
 
         EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
                 eventType1,
-                LocalDate.of(2018, 1, 1), 2, 10, 4, 40, 25,
-                new Metrics(61, 5, 1)
+                LocalDate.of(2018, 1, 1), 2, 10, 4,
+                new EventTypeEventMetrics(61, 40, 25, 5, 1)
         );
 
         EventTypeMetrics eventTypeMetricsTotals = new EventTypeMetrics(
                 new EventType(),
-                LocalDate.of(2016, 11, 1), 4, 14, 5, 60, 30,
-                new Metrics(82, 7, 1)
+                LocalDate.of(2016, 11, 1), 4, 14, 5,
+                new EventTypeEventMetrics(82, 60, 30, 7, 1)
         );
 
         EventTypeStatistics eventTypeStatistics = new EventTypeStatistics(
@@ -141,17 +141,17 @@ class StatisticsControllerTest {
 
         EventMetrics eventMetrics0 = new EventMetrics(
                 event0,
-                LocalDate.of(2016, 11, 1), 4, 21, 20, 10, 3, 0
+                LocalDate.of(2016, 11, 1), 4, new EventTypeEventMetrics(21, 20, 10, 3, 0)
         );
 
         EventMetrics eventMetrics1 = new EventMetrics(
                 event1,
-                LocalDate.of(2018, 1, 1), 10, 61, 40, 25, 5, 1
+                LocalDate.of(2018, 1, 1), 10, new EventTypeEventMetrics(61, 40, 25, 5, 1)
         );
 
         EventMetrics eventMetricsTotals = new EventMetrics(
                 new Event(),
-                LocalDate.of(2016, 11, 1), 14, 81, 60, 30, 5, 1
+                LocalDate.of(2016, 11, 1), 14, new EventTypeEventMetrics(81, 60, 30, 5, 1)
         );
 
         EventStatistics eventStatistics = new EventStatistics(
