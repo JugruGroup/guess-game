@@ -40,7 +40,7 @@ public class EventMetrics extends AbstractEventMetrics {
     public String toString() {
         return "EventMetrics{" +
                 "event=" + event +
-                "startDate=" + getStartDate() +
+                ", startDate=" + getStartDate() +
                 ", duration=" + getDuration() +
                 ", speakersQuantity=" + getSpeakersQuantity() +
                 ", companiesQuantity=" + getCompaniesQuantity() +
