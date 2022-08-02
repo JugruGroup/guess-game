@@ -1,6 +1,6 @@
 package guess.domain.statistics.eventtype;
 
-import guess.domain.statistics.Metrics;
+import guess.domain.statistics.EventTypeEventMetrics;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -8,22 +8,21 @@ import java.util.Objects;
 /**
  * Abstract event type metrics.
  */
-public abstract class AbstractEventTypeMetrics extends Metrics {
+public abstract class AbstractEventTypeMetrics extends EventTypeEventMetrics {
     private final LocalDate startDate;
     private final long age;
     private final long duration;
     private final long eventsQuantity;
-    private final long speakersQuantity;
 
     protected AbstractEventTypeMetrics(LocalDate startDate, long age, long duration, long eventsQuantity,
-                                       long speakersQuantity, Metrics metrics) {
-        super(metrics.getTalksQuantity(), metrics.getJavaChampionsQuantity(), metrics.getMvpsQuantity());
+                                       EventTypeEventMetrics metrics) {
+        super(metrics.getTalksQuantity(), metrics.getSpeakersQuantity(), metrics.getCompaniesQuantity(),
+                metrics.getJavaChampionsQuantity(), metrics.getMvpsQuantity());
 
         this.startDate = startDate;
         this.age = age;
         this.duration = duration;
         this.eventsQuantity = eventsQuantity;
-        this.speakersQuantity = speakersQuantity;
     }
 
     public LocalDate getStartDate() {
@@ -42,10 +41,6 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
         return eventsQuantity;
     }
 
-    public long getSpeakersQuantity() {
-        return speakersQuantity;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -55,13 +50,12 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
         return age == that.age &&
                 duration == that.duration &&
                 eventsQuantity == that.eventsQuantity &&
-                speakersQuantity == that.speakersQuantity &&
                 Objects.equals(startDate, that.startDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), startDate, age, duration, eventsQuantity, speakersQuantity);
+        return Objects.hash(super.hashCode(), startDate, age, duration, eventsQuantity);
     }
 
     @Override
@@ -71,7 +65,8 @@ public abstract class AbstractEventTypeMetrics extends Metrics {
                 ", age=" + age +
                 ", duration=" + duration +
                 ", eventsQuantity=" + eventsQuantity +
-                ", speakersQuantity=" + speakersQuantity +
+                ", speakersQuantity=" + getSpeakersQuantity() +
+                ", companiesQuantity=" + getCompaniesQuantity() +
                 ", talksQuantity=" + getTalksQuantity() +
                 ", javaChampionsQuantity=" + getJavaChampionsQuantity() +
                 ", mvpsQuantity=" + getMvpsQuantity() +

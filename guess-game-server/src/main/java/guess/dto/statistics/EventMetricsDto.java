@@ -1,6 +1,7 @@
 package guess.dto.statistics;
 
 import guess.domain.Language;
+import guess.domain.statistics.EventTypeEventMetrics;
 import guess.domain.statistics.event.AbstractEventMetrics;
 import guess.domain.statistics.event.EventMetrics;
 import guess.util.LocalizationUtils;
@@ -17,8 +18,10 @@ public class EventMetricsDto extends AbstractEventMetrics {
     private final String eventTypeLogoFileName;
 
     public EventMetricsDto(long id, String name, String eventTypeLogoFileName, AbstractEventMetrics eventMetrics) {
-        super(eventMetrics.getStartDate(), eventMetrics.getDuration(), eventMetrics.getTalksQuantity(),
-                eventMetrics.getSpeakersQuantity(), eventMetrics.getJavaChampionsQuantity(), eventMetrics.getMvpsQuantity());
+        super(eventMetrics.getStartDate(), eventMetrics.getDuration(),
+                new EventTypeEventMetrics(eventMetrics.getTalksQuantity(), eventMetrics.getSpeakersQuantity(),
+                        eventMetrics.getCompaniesQuantity(), eventMetrics.getJavaChampionsQuantity(),
+                        eventMetrics.getMvpsQuantity()));
 
         this.id = id;
         this.name = name;

@@ -3,7 +3,7 @@ package guess.service;
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
 import guess.domain.source.*;
-import guess.domain.statistics.Metrics;
+import guess.domain.statistics.EventTypeEventMetrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyMetricsInternal;
 import guess.domain.statistics.company.CompanyStatistics;
@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Statistics service implementation.
@@ -55,6 +56,7 @@ public class StatisticsServiceImpl implements StatisticsService {
         long totalsEventsQuantity = 0;
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
+        Set<Company> totalsCompanies = new HashSet<>();
 
         for (EventType eventType : eventTypes) {
             // Event type metrics
@@ -63,6 +65,7 @@ public class StatisticsServiceImpl implements StatisticsService {
             long eventTypeDuration = 0;
             long eventTypeTalksQuantity = 0;
             Set<Speaker> eventTypeSpeakers = new HashSet<>();
+            Set<Company> eventTypeCompanies = new HashSet<>();
 
             for (Event event : eventType.getEvents()) {
                 LocalDate eventStartDate = event.getFirstStartDate();
@@ -74,7 +77,16 @@ public class StatisticsServiceImpl implements StatisticsService {
 
                 eventTypeDuration += event.getDuration();
                 eventTypeTalksQuantity += event.getTalks().size();
-                event.getTalks().forEach(t -> eventTypeSpeakers.addAll(t.getSpeakers()));
+
+                event.getTalks().forEach(t -> {
+                    eventTypeSpeakers.addAll(t.getSpeakers());
+
+                    Set<Company> companies = t.getSpeakers().stream()
+                            .flatMap(s -> s.getCompanies().stream())
+                            .collect(Collectors.toSet());
+
+                    eventTypeCompanies.addAll(companies);
+                });
             }
 
             long eventTypeAge = getEventTypeAge(eventTypeStartDate, eventTypeZoneId, currentLocalDateTime);
@@ -91,8 +103,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                     eventTypeAge,
                     eventTypeDuration,
                     eventType.getEvents().size(),
-                    eventTypeSpeakers.size(),
-                    new Metrics(eventTypeTalksQuantity, eventTypeJavaChampionsQuantity, eventTypeMvpsQuantity)
+                    new EventTypeEventMetrics(
+                            eventTypeTalksQuantity,
+                            eventTypeSpeakers.size(),
+                            eventTypeCompanies.size(),
+                            eventTypeJavaChampionsQuantity,
+                            eventTypeMvpsQuantity)
             ));
 
             // Totals metrics
@@ -109,6 +125,7 @@ public class StatisticsServiceImpl implements StatisticsService {
             totalsEventsQuantity += eventType.getEvents().size();
             totalsTalksQuantity += eventTypeTalksQuantity;
             totalsSpeakers.addAll(eventTypeSpeakers);
+            totalsCompanies.addAll(eventTypeCompanies);
         }
 
         long totalsJavaChampionsQuantity = totalsSpeakers.stream()
@@ -126,8 +143,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                         totalsAge,
                         totalsDuration,
                         totalsEventsQuantity,
-                        totalsSpeakers.size(),
-                        new Metrics(totalsTalksQuantity, totalsJavaChampionsQuantity, totalsMvpsQuantity)
+                        new EventTypeEventMetrics(
+                                totalsTalksQuantity,
+                                totalsSpeakers.size(),
+                                totalsCompanies.size(),
+                                totalsJavaChampionsQuantity,
+                                totalsMvpsQuantity)
                 ));
     }
 
@@ -155,26 +176,36 @@ public class StatisticsServiceImpl implements StatisticsService {
     }
 
     @Override
-    public EventStatistics getEventStatistics(Long organizerId, Long eventTypeId) {
+    public EventStatistics getEventStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
         List<Event> events = eventDao.getEvents().stream()
                 .filter(e ->
-                        (e.getEventType().isEventTypeConference() &&
+                        ((isConferences && e.getEventType().isEventTypeConference()) || (isMeetups && !e.getEventType().isEventTypeConference())) &&
                                 ((organizerId == null) || (e.getEventType().getOrganizer().getId() == organizerId)) &&
-                                ((eventTypeId == null) || (e.getEventType().getId() == eventTypeId))))
+                                ((eventTypeId == null) || (e.getEventType().getId() == eventTypeId)))
                 .toList();
         List<EventMetrics> eventMetricsList = new ArrayList<>();
         LocalDate totalsStartDate = null;
         long totalsDuration = 0;
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
+        Set<Company> totalsCompanies = new HashSet<>();
 
         for (Event event : events) {
             // Event metrics
             long eventDuration = event.getDuration();
             long eventTalksQuantity = event.getTalks().size();
             Set<Speaker> eventSpeakers = new HashSet<>();
+            Set<Company> eventCompanies = new HashSet<>();
 
-            event.getTalks().forEach(t -> eventSpeakers.addAll(t.getSpeakers()));
+            event.getTalks().forEach(t -> {
+                eventSpeakers.addAll(t.getSpeakers());
+
+                Set<Company> companies = t.getSpeakers().stream()
+                        .flatMap(s -> s.getCompanies().stream())
+                        .collect(Collectors.toSet());
+
+                eventCompanies.addAll(companies);
+            });
 
             long eventJavaChampionsQuantity = eventSpeakers.stream()
                     .filter(Speaker::isJavaChampion)
@@ -188,10 +219,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                     event,
                     eventStartDate,
                     eventDuration,
-                    eventTalksQuantity,
-                    eventSpeakers.size(),
-                    eventJavaChampionsQuantity,
-                    eventMvpsQuantity));
+                    new EventTypeEventMetrics(eventTalksQuantity,
+                            eventSpeakers.size(),
+                            eventCompanies.size(),
+                            eventJavaChampionsQuantity,
+                            eventMvpsQuantity)
+            ));
 
             // Totals metrics
             if ((totalsStartDate == null) || eventStartDate.isBefore(totalsStartDate)) {
@@ -201,6 +234,7 @@ public class StatisticsServiceImpl implements StatisticsService {
             totalsDuration += eventDuration;
             totalsTalksQuantity += eventTalksQuantity;
             totalsSpeakers.addAll(eventSpeakers);
+            totalsCompanies.addAll(eventCompanies);
         }
 
         long totalsJavaChampionsQuantity = totalsSpeakers.stream()
@@ -216,10 +250,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                         new Event(),
                         totalsStartDate,
                         totalsDuration,
-                        totalsTalksQuantity,
-                        totalsSpeakers.size(),
-                        totalsJavaChampionsQuantity,
-                        totalsMvpsQuantity));
+                        new EventTypeEventMetrics(totalsTalksQuantity,
+                                totalsSpeakers.size(),
+                                totalsCompanies.size(),
+                                totalsJavaChampionsQuantity,
+                                totalsMvpsQuantity)
+                ));
     }
 
     @Override

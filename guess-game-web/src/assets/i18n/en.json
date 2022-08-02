@@ -215,14 +215,13 @@
         "eventsColumn": "Events",
         "talksColumn": "Talks",
         "speakersColumn": "Speakers",
+        "companiesColumn": "Companies",
         "javaChampionsColumn": "Java Champions",
         "mvpsColumn": "MVPs"
       }
     },
     "events" : {
       "title": "Events",
-      "conferenceLabel": "Conference:",
-      "conferencePlaceholder": "All",
       "noEventsDataFoundText": "No events data found",
       "table": {
         "nameColumn": "Name",
@@ -230,6 +229,7 @@
         "durationColumn": "Duration, days",
         "talksColumn": "Talks",
         "speakersColumn": "Speakers",
+        "companiesColumn": "Companies",
         "javaChampionsColumn": "Java Champions",
         "mvpsColumn": "MVPs"
       }

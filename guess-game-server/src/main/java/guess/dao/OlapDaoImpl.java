@@ -103,7 +103,7 @@ public class OlapDaoImpl implements OlapDao {
                 .flatMap(et -> et.getEvents().stream())
                 .flatMap(e -> e.getTalks().stream())
                 .flatMap(t -> t.getSpeakers().stream())
-                .flatMap(t -> t.getCompanies().stream())
+                .flatMap(s -> s.getCompanies().stream())
                 .collect(Collectors.toSet());
 
         // Year dimension values
