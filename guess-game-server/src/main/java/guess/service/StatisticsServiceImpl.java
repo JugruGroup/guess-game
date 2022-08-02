@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Statistics service implementation.
@@ -80,9 +81,11 @@ public class StatisticsServiceImpl implements StatisticsService {
                 event.getTalks().forEach(t -> {
                     eventTypeSpeakers.addAll(t.getSpeakers());
 
-                    for (Speaker speaker : t.getSpeakers()) {
-                        eventTypeCompanies.addAll(speaker.getCompanies());
-                    }
+                    Set<Company> companies = t.getSpeakers().stream()
+                            .flatMap(s -> s.getCompanies().stream())
+                            .collect(Collectors.toSet());
+
+                    eventTypeCompanies.addAll(companies);
                 });
             }
 
@@ -197,9 +200,11 @@ public class StatisticsServiceImpl implements StatisticsService {
             event.getTalks().forEach(t -> {
                 eventSpeakers.addAll(t.getSpeakers());
 
-                for (Speaker speaker : t.getSpeakers()) {
-                    eventCompanies.addAll(speaker.getCompanies());
-                }
+                Set<Company> companies = t.getSpeakers().stream()
+                        .flatMap(s -> s.getCompanies().stream())
+                        .collect(Collectors.toSet());
+
+                eventCompanies.addAll(companies);
             });
 
             long eventJavaChampionsQuantity = eventSpeakers.stream()
