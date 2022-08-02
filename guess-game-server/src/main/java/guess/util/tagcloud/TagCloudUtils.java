@@ -158,8 +158,8 @@ public class TagCloudUtils {
         frequencyAnalyzer.addNormalizer(new CharacterStrippingNormalizer(
                 Pattern.compile("^[*]+|" +
                         "[*]+$|" +
-                        "^[«`“”\\[{]{1}|" +
-                        "[»`“”…®\\]}]{1}$"),
+                        "^[«`“”\\[{]|" +
+                        "[»`“”…®\\]}]$"),
                 ""));
 
         List<String> lines = Arrays.asList(text.split("\n"));
