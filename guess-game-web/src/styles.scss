@@ -67,8 +67,8 @@ html {
   height: auto;
 }
 
-.img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-account,
-.img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+.img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+.img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
   width: 120px;
   height: auto;
 }
@@ -123,8 +123,8 @@ html {
     height: auto;
   }
 
-  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-account,
-  .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+  .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
     width: 120px;
     height: auto;
   }
@@ -166,8 +166,8 @@ html {
     height: auto;
   }
 
-  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-account,
-  .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+  .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
     width: 160px;
     height: auto;
   }
@@ -193,8 +193,8 @@ html {
     height: auto;
   }
 
-  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-account,
-  .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+  .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
     width: 206px;
     height: auto;
   }
@@ -220,8 +220,8 @@ html {
     height: auto;
   }
 
-  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-account,
-  .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+  .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
     width: 250px;
     height: auto;
   }
@@ -400,3 +400,8 @@ a:hover {
   width: 2.75rem;
 }
 
+// Show borders around image thumbnails
+.img-thumbnail.img-guess-photo-by-name, .img-thumbnail.img-guess-speaker-by-talk, .img-thumbnail.img-guess-speaker-by-company,
+.img-thumbnail.img-guess-speaker-by-account, .img-thumbnail.img-guess-tag-cloud-by-speaker, .img-thumbnail.img-guess-speaker-by-tag-cloud {
+  border: 1px solid var(--bs-border-color);
+}
