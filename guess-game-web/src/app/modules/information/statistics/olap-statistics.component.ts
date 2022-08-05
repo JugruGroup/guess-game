@@ -242,8 +242,8 @@ export class OlapStatisticsComponent implements OnInit {
 
         this.statisticsService.getMeasureTypes(this.selectedCubeType)
           .subscribe(measureTypeData => {
-            this.fillMeasureTypes(measureTypeData);
             this.selectedMeasureType = (measureTypeData && (measureTypeData.length > 0)) ? measureTypeData[0] : null;
+            this.fillMeasureTypes(measureTypeData);
 
             this.organizerService.getOrganizers()
               .subscribe(organizerData => {
@@ -395,8 +395,8 @@ export class OlapStatisticsComponent implements OnInit {
 
     this.statisticsService.getMeasureTypes(this.selectedCubeType)
       .subscribe(measureTypeData => {
-        this.fillMeasureTypes(measureTypeData);
         this.selectedMeasureType = (measureTypeData && (measureTypeData.length > 0)) ? measureTypeData[0] : null;
+        this.fillMeasureTypes(measureTypeData);
 
         this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
           this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);

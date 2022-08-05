@@ -25,7 +25,6 @@
         <label for="measureType" class="form-label col-12 col-sm-3 col-md-2 mt-3 mt-md-0">{{'statistics.olap.measureLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-5 mt-sm-3 mt-md-0">
           <p-dropdown [options]="measureTypeSelectItems" [(ngModel)]="selectedMeasureType" id="measureType"
-                      placeholder="{{'statistics.olap.measurePlaceholder' | translate}}"
                       (onChange)="onMeasureTypeChange()" name="measureType" styleClass="w-100">
             <ng-template let-measureType pTemplate="selectedItem">
               {{ measureType.label | translate }}
