@@ -67,6 +67,10 @@ public class QuestionController {
     @GetMapping("/quantities")
     public List<Integer> getQuantities(@RequestParam List<Long> eventTypeIds, @RequestParam List<Long> eventIds,
                                        @RequestParam String guessMode) throws QuestionSetNotExistsException {
-        return questionService.getQuantities(eventTypeIds, eventIds, GuessMode.valueOf(guessMode));
+        List<Integer> quantities = questionService.getQuantities(eventTypeIds, eventIds, GuessMode.valueOf(guessMode));
+
+        return quantities.stream()
+                .sorted(Comparator.reverseOrder())
+                .toList();
     }
 }

@@ -142,13 +142,11 @@ export class StartComponent implements OnInit, AfterViewChecked {
             return {label: q.toString(), value: q};
           }
         );
-
-        if (this.quantities.length > 0) {
-          this.selectedQuantity = this.quantities[this.quantities.length - 1];
-        } else {
-          this.selectedQuantity = 0;
-        }
       });
+  }
+
+  getSelectedQuantityValue(): number {
+    return !isNaN(this.selectedQuantity) ? this.selectedQuantity : 0;
   }
 
   start() {
@@ -157,7 +155,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
         this.selectedEventTypes.map(et => et.id),
         this.selectedEvents.map(e => e.id),
         this.selectedGuessMode,
-        this.selectedQuantity))
+        this.getSelectedQuantityValue()))
       .subscribe(data => {
         this.router.navigateByUrl('/game/guess/name-by-photo');
       });
@@ -172,7 +170,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
     return (!this.selectedEventTypes) || (!this.selectedEvents) ||
       (this.selectedEventTypes && (this.selectedEventTypes.length <= 0)) ||
       (this.selectedEvents && (this.selectedEvents.length <= 0)) ||
-      (this.selectedQuantity < this.MIN_QUANTITY_VALUE);
+      (this.getSelectedQuantityValue() < this.MIN_QUANTITY_VALUE);
   }
 
   isEventTypeInactiveNotSelected(eventType: EventType) {

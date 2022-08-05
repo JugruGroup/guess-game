@@ -139,13 +139,19 @@ class QuestionControllerTest {
     void getQuantities() throws Exception {
         MockHttpSession httpSession = new MockHttpSession();
 
+        given(questionService.getQuantities(Mockito.anyList(), Mockito.anyList(), Mockito.any(GuessMode.class))).willReturn(List.of(5, 10, 15));
+
         mvc.perform(get("/api/question/quantities")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("eventTypeIds", "0")
                         .param("eventIds", "0", "1")
                         .param("guessMode", "GUESS_NAME_BY_PHOTO_MODE")
                         .session(httpSession))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(3)))
+                .andExpect(jsonPath("$[0]", is(15)))
+                .andExpect(jsonPath("$[1]", is(10)))
+                .andExpect(jsonPath("$[2]", is(5)));
         Mockito.verify(questionService, VerificationModeFactory.times(1)).getQuantities(List.of(0L), List.of(0L, 1L), GuessMode.GUESS_NAME_BY_PHOTO_MODE);
     }
 }
