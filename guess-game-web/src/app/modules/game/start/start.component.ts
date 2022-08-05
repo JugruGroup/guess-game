@@ -138,6 +138,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
     this.questionService.getQuantities(eventTypes.map(et => et.id), events.map(e => e.id), guessMode)
       .subscribe(data => {
         this.quantities = data;
+        this.selectedQuantity = null;
         this.quantitySelectItems = this.quantities.map(q => {
             return {label: q.toString(), value: q};
           }
