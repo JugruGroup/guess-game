@@ -33,6 +33,7 @@ import {
   getColorByIndex,
   getOlapEventTypeStatisticsWithSortName
 } from '../../general/utility-functions';
+import { ChartKind } from '../../../shared/models/statistics/olap/chart-kind.model';
 
 @Component({
   selector: 'app-olap-statistics',
@@ -113,6 +114,12 @@ export class OlapStatisticsComponent implements OnInit {
   public totalLineOptions: any = {};
   public totalLineData: any = {};
   private chartType = ChartType.Details;
+
+  public chartKinds: SelectItem[] = [
+    {icon: 'bi-graph-up', value: ChartKind.Line, title: 'statistics.olap.chart.lineChartToolTipText'},
+    {icon: 'bi-graph-up-arrow', value: ChartKind.LineWithRunningTotal, title: 'statistics.olap.chart.lineChartWithRunningTotalToolTipText'},
+    {icon: 'bi-pie-chart', value: ChartKind.Pie, title: 'statistics.olap.chart.pieChartToolTipText'}];
+  public selectedChartKind = ChartKind.Line;
 
   @ViewChildren('chartDiv') chartDivs: QueryList<ElementRef<HTMLDivElement>>;
   private chartDiv: ElementRef<HTMLDivElement>;
