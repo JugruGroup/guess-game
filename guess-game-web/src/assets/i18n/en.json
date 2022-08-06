@@ -271,7 +271,10 @@
       "noCompaniesDataFoundText": "No companies data found",
       "chart": {
         "detailsLabel": "Details",
-        "totalLabel": "Total"
+        "totalLabel": "Total",
+        "lineChartToolTipText": "Line chart",
+        "lineChartWithRunningTotalToolTipText": "Line chart with running total",
+        "pieChartToolTipText": "Pie chart"
       },
       "table": {
         "kindColumn": "Kind",
