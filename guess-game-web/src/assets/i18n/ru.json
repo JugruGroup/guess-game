@@ -273,7 +273,7 @@
         "detailsLabel": "Подробно",
         "totalLabel": "Всего",
         "lineChartToolTipText": "Линейный график",
-        "lineChartWithRunningTotalToolTipText": "Линейный график с нарастающим итогом",
+        "lineChartWithCumulativeTotalToolTipText": "Линейный график с нарастающим итогом",
         "pieChartToolTipText": "Круговая диаграмма"
       },
       "table": {

@@ -273,7 +273,7 @@
         "detailsLabel": "Details",
         "totalLabel": "Total",
         "lineChartToolTipText": "Line chart",
-        "lineChartWithRunningTotalToolTipText": "Line chart with running total",
+        "lineChartWithCumulativeTotalToolTipText": "Line chart with cumulative total",
         "pieChartToolTipText": "Pie chart"
       },
       "table": {

@@ -1,5 +1,5 @@
 export enum ChartKind {
   Line = 'LINE',
-  LineWithRunningTotal = 'LINE_WITH_RUNNING_TOTAL',
+  LineWithCumulativeTotal = 'LINE_WITH_CUMULATIVE_TOTAL',
   Pie = 'PIE'
 }

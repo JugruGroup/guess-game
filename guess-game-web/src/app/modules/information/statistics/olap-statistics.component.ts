@@ -117,7 +117,7 @@ export class OlapStatisticsComponent implements OnInit {
 
   public chartKinds: SelectItem[] = [
     {icon: 'bi-graph-up', value: ChartKind.Line, title: 'statistics.olap.chart.lineChartToolTipText'},
-    {icon: 'bi-graph-up-arrow', value: ChartKind.LineWithRunningTotal, title: 'statistics.olap.chart.lineChartWithRunningTotalToolTipText'},
+    {icon: 'bi-graph-up-arrow', value: ChartKind.LineWithCumulativeTotal, title: 'statistics.olap.chart.lineChartWithCumulativeTotalToolTipText'},
     {icon: 'bi-pie-chart', value: ChartKind.Pie, title: 'statistics.olap.chart.pieChartToolTipText'}];
   public selectedChartKind = ChartKind.Line;
 
