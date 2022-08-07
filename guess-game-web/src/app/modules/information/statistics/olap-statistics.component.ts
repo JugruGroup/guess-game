@@ -407,7 +407,6 @@ export class OlapStatisticsComponent implements OnInit {
   onCubeTypeChange() {
     this.selectedSpeakers = [];
     this.selectedCompanies = [];
-    this.selectedChartType = ChartType.Details;
 
     this.statisticsService.getMeasureTypes(this.selectedCubeType)
       .subscribe(measureTypeData => {
