@@ -214,65 +214,65 @@ class OlapServiceImplTest {
             List<Integer> dimensionValues0 = List.of(2020, 2021);
 
             List<OlapEntityMetrics<EventType>> metricsList0 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<Speaker>> metricsList1 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<Company>> metricsList2 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<EventType>> metricsList3 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), 1L)
+                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals3 = new OlapEntityMetrics<>(null, List.of(1L, 0L), 1L);
+            OlapEntityMetrics<Void> totals3 = new OlapEntityMetrics<>(null, List.of(1L, 0L), List.of(1L, 1L), 1L);
 
             List<OlapEntityMetrics<EventType>> metricsList4 = List.of(
-                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), 1L),
-                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), 1L)
+                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), List.of(0L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals4 = new OlapEntityMetrics<>(null, List.of(0L, 2L), 2L);
+            OlapEntityMetrics<Void> totals4 = new OlapEntityMetrics<>(null, List.of(0L, 2L), List.of(0L, 2L), 2L);
 
             List<OlapEntityMetrics<EventType>> metricsList5 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), 1L),
-                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), 1L),
-                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), 1L)
+                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L),
+                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), List.of(0L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals5 = new OlapEntityMetrics<>(null, List.of(1L, 2L), 3L);
+            OlapEntityMetrics<Void> totals5 = new OlapEntityMetrics<>(null, List.of(1L, 2L), List.of(1L, 3L), 3L);
 
             List<OlapEntityMetrics<EventType>> metricsList6 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), 1L),
-                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), 1L)
+                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L),
+                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), List.of(0L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals6 = new OlapEntityMetrics<>(null, List.of(1L, 1L), 2L);
+            OlapEntityMetrics<Void> totals6 = new OlapEntityMetrics<>(null, List.of(1L, 1L), List.of(1L, 2L), 2L);
 
             List<OlapEntityMetrics<Speaker>> metricsList7 = List.of(
-                    new OlapEntityMetrics<>(speaker0, List.of(1L, 1L), 2L),
-                    new OlapEntityMetrics<>(speaker1, List.of(0L, 2L), 2L)
+                    new OlapEntityMetrics<>(speaker0, List.of(1L, 1L), List.of(1L, 2L), 2L),
+                    new OlapEntityMetrics<>(speaker1, List.of(0L, 2L), List.of(0L, 2L), 2L)
             );
-            OlapEntityMetrics<Void> totals7 = new OlapEntityMetrics<>(null, List.of(1L, 2L), 3L);
+            OlapEntityMetrics<Void> totals7 = new OlapEntityMetrics<>(null, List.of(1L, 2L), List.of(1L, 3L), 3L);
 
             List<OlapEntityMetrics<Speaker>> metricsList8 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals8 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals8 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<Speaker>> metricsList9 = List.of(
-                    new OlapEntityMetrics<>(speaker0, List.of(1L, 1L), 2L)
+                    new OlapEntityMetrics<>(speaker0, List.of(1L, 1L), List.of(1L, 2L), 2L)
             );
-            OlapEntityMetrics<Void> totals9 = new OlapEntityMetrics<>(null, List.of(1L, 1L), 2L);
+            OlapEntityMetrics<Void> totals9 = new OlapEntityMetrics<>(null, List.of(1L, 1L), List.of(1L, 2L), 2L);
 
             List<OlapEntityMetrics<Company>> metricsList10 = List.of(
-                    new OlapEntityMetrics<>(company0, List.of(1L, 1L), 2L),
-                    new OlapEntityMetrics<>(company1, List.of(0L, 2L), 2L)
+                    new OlapEntityMetrics<>(company0, List.of(1L, 1L), List.of(1L, 2L), 2L),
+                    new OlapEntityMetrics<>(company1, List.of(0L, 2L), List.of(0L, 2L), 2L)
             );
-            OlapEntityMetrics<Void> totals10 = new OlapEntityMetrics<>(null, List.of(1L, 2L), 3L);
+            OlapEntityMetrics<Void> totals10 = new OlapEntityMetrics<>(null, List.of(1L, 2L), List.of(1L, 3L), 3L);
 
             List<OlapEntityMetrics<Company>> metricsList11 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals11 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals11 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<Company>> metricsList12 = List.of(
-                    new OlapEntityMetrics<>(company0, List.of(1L, 1L), 2L)
+                    new OlapEntityMetrics<>(company0, List.of(1L, 1L), List.of(1L, 2L), 2L)
             );
-            OlapEntityMetrics<Void> totals12 = new OlapEntityMetrics<>(null, List.of(1L, 1L), 2L);
+            OlapEntityMetrics<Void> totals12 = new OlapEntityMetrics<>(null, List.of(1L, 1L), List.of(1L, 2L), 2L);
 
             OlapEntityStatistics<Integer, EventType> eventTypeStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
             OlapEntityStatistics<Integer, EventType> eventTypeStatistics1 = new OlapEntityStatistics<>(dimensionValues0, metricsList3, totals3);
@@ -487,22 +487,22 @@ class OlapServiceImplTest {
             List<Integer> dimensionValues0 = List.of(2020, 2021);
 
             List<OlapEntityMetrics<EventType>> metricsList0 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<EventType>> metricsList1 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), 1L)
+                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(1L, 0L), 1L);
+            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(1L, 0L), List.of(1L, 1L), 1L);
 
             List<OlapEntityMetrics<EventType>> metricsList2 = List.of(
-                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), 1L)
+                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), List.of(0L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 1L), 1L);
+            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 1L), List.of(0L, 1L), 1L);
 
             List<OlapEntityMetrics<EventType>> metricsList3 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), 1L)
+                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals3 = new OlapEntityMetrics<>(null, List.of(1L, 0L), 1L);
+            OlapEntityMetrics<Void> totals3 = new OlapEntityMetrics<>(null, List.of(1L, 0L), List.of(1L, 1L), 1L);
 
             OlapEventTypeParametersDto op0 = new OlapEventTypeParametersDto();
             op0.setCubeType(CubeType.EVENT_TYPES);
@@ -709,17 +709,17 @@ class OlapServiceImplTest {
             List<Integer> dimensionValues0 = List.of(2020, 2021);
 
             List<OlapEntityMetrics<Speaker>> metricsList0 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<Speaker>> metricsList1 = List.of(
-                    new OlapEntityMetrics<>(speaker0, List.of(1L, 0L), 1L)
+                    new OlapEntityMetrics<>(speaker0, List.of(1L, 0L), List.of(1L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(1L, 0L), 1L);
+            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(1L, 0L), List.of(1L, 1L), 1L);
 
             List<OlapEntityMetrics<Speaker>> metricsList2 = List.of(
-                    new OlapEntityMetrics<>(speaker1, List.of(0L, 1L), 1L)
+                    new OlapEntityMetrics<>(speaker1, List.of(0L, 1L), List.of(0L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 1L), 1L);
+            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 1L), List.of(0L, 1L), 1L);
 
             OlapSpeakerParametersDto op0 = new OlapSpeakerParametersDto();
             op0.setCubeType(CubeType.SPEAKERS);
@@ -804,17 +804,17 @@ class OlapServiceImplTest {
             City city1 = new City(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City1")));
 
             List<OlapEntityMetrics<City>> metricsList0 = Collections.emptyList();
-            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), 0L);
+            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
 
             List<OlapEntityMetrics<City>> metricsList1 = List.of(
-                    new OlapEntityMetrics<>(city0, List.of(1L, 0L), 1L)
+                    new OlapEntityMetrics<>(city0, List.of(1L, 0L), List.of(1L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(1L, 0L), 1L);
+            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(1L, 0L), List.of(1L, 1L), 1L);
 
             List<OlapEntityMetrics<City>> metricsList2 = List.of(
-                    new OlapEntityMetrics<>(city1, List.of(0L, 1L), 1L)
+                    new OlapEntityMetrics<>(city1, List.of(0L, 1L), List.of(0L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 1L), 1L);
+            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(0L, 1L), List.of(0L, 1L), 1L);
 
             OlapCityParametersDto op0 = new OlapCityParametersDto();
             op0.setCubeType(CubeType.EVENT_TYPES);
@@ -874,16 +874,16 @@ class OlapServiceImplTest {
             List<Integer> dimensionValues0 = List.of(2020, 2021);
 
             List<OlapEntityMetrics<EventType>> metricsList0 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), 1L),
-                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), 1L),
-                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), 1L)
+                    new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L),
+                    new OlapEntityMetrics<>(eventType1, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                    new OlapEntityMetrics<>(eventType2, List.of(0L, 1L), List.of(0L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(1L, 2L), 3L);
+            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(1L, 2L), List.of(1L, 3L), 3L);
 
             List<OlapEntityMetrics<EventType>> metricsList1 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(2L, 0L), 2L)
+                    new OlapEntityMetrics<>(eventType0, List.of(2L, 0L), List.of(2L, 2L), 2L)
             );
-            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(2L, 0L), 2L);
+            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(2L, 0L), List.of(2L, 2L), 2L);
 
             OlapEntityStatistics<Integer, EventType> expected0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
             OlapEntityStatistics<Integer, EventType> expected1 = new OlapEntityStatistics<>(dimensionValues0, metricsList1, totals1);
