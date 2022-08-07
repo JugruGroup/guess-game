@@ -1,5 +1,6 @@
 package guess.domain.statistics.olap;
 
+import guess.domain.QuadFunction;
 import guess.domain.statistics.olap.dimension.Dimension;
 import guess.domain.statistics.olap.dimension.DimensionFactory;
 import guess.domain.statistics.olap.measure.Measure;
@@ -7,7 +8,6 @@ import guess.domain.statistics.olap.measure.MeasureFactory;
 import org.apache.commons.lang3.function.TriFunction;
 
 import java.util.*;
-import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
 /**
@@ -219,8 +219,8 @@ public class Cube {
      * @param secondDimensionTypeValues values of second dimension type
      * @param filterDimensionTypeValues values of filter dimension type
      * @param measureType               measure type
-     * @param entityTriFunction         result element function
-     * @param totalsBiFunction          totals function
+     * @param entityQuadFunction        result element function
+     * @param totalsTriFunction         totals function
      * @param resultTriFunction         result function
      * @param <T>                       first dimension type
      * @param <S>                       second dimension type
@@ -235,8 +235,8 @@ public class Cube {
                                                         DimensionTypeValues<S> secondDimensionTypeValues,
                                                         DimensionTypeValues<U> filterDimensionTypeValues,
                                                         MeasureType measureType,
-                                                        TriFunction<T, List<Long>, Long, V> entityTriFunction,
-                                                        BiFunction<List<Long>, Long, W> totalsBiFunction,
+                                                        QuadFunction<T, List<Long>, List<Long>, Long, V> entityQuadFunction,
+                                                        TriFunction<List<Long>, List<Long>, Long, W> totalsTriFunction,
                                                         TriFunction<List<S>, List<V>, W, Y> resultTriFunction) {
         Set<Dimension> firstDimensions = firstDimensionTypeValues.values().stream()
                 .map(v -> DimensionFactory.create(firstDimensionTypeValues.type(), v))
@@ -281,14 +281,15 @@ public class Cube {
         // Fill resulting list
         List<V> measureValueEntities = new ArrayList<>();
 
-        fillResultingList(firstDimensionTypeValues, secondDimensionTypeValues, measureType, entityTriFunction,
+        fillResultingList(firstDimensionTypeValues, secondDimensionTypeValues, measureType, entityQuadFunction,
                 measuresByFirstDimensionValue, firstDimensionTotalMeasures, measureValueEntities);
 
         // Fill totals
         List<Long> totals = new ArrayList<>();
+        List<Long> cumulativeTotals = new ArrayList<>();
         List<Measure<?>> allTotalMeasures = new ArrayList<>();
 
-        fillTotals(secondDimensionTypeValues, secondDimensionTotalMeasures, measureType, totals, allTotalMeasures);
+        fillTotals(secondDimensionTypeValues, secondDimensionTotalMeasures, measureType, totals, cumulativeTotals, allTotalMeasures);
 
         // Fill all total
         long allTotal = getMeasureValue(allTotalMeasures, measureType);
@@ -296,7 +297,7 @@ public class Cube {
         return resultTriFunction.apply(
                 secondDimensionTypeValues.values(),
                 measureValueEntities,
-                totalsBiFunction.apply(totals, allTotal));
+                totalsTriFunction.apply(totals, cumulativeTotals, allTotal));
     }
 
     /**
@@ -356,7 +357,7 @@ public class Cube {
      * @param firstDimensionTypeValues      values of first dimension type
      * @param secondDimensionTypeValues     values of second dimension type
      * @param measureType                   measure type
-     * @param entityTriFunction             result element function
+     * @param entityQuadFunction            result element function
      * @param measuresByFirstDimensionValue measures by first dimension value
      * @param firstDimensionTotalMeasures   total measures of first dimension
      * @param measureValueEntities          measure value entities
@@ -367,29 +368,39 @@ public class Cube {
     private <T, S, V> void fillResultingList(DimensionTypeValues<T> firstDimensionTypeValues,
                                              DimensionTypeValues<S> secondDimensionTypeValues,
                                              MeasureType measureType,
-                                             TriFunction<T, List<Long>, Long, V> entityTriFunction,
+                                             QuadFunction<T, List<Long>, List<Long>, Long, V> entityQuadFunction,
                                              Map<T, Map<S, List<Measure<?>>>> measuresByFirstDimensionValue,
                                              Map<T, List<Measure<?>>> firstDimensionTotalMeasures,
                                              List<V> measureValueEntities) {
         for (T firstDimensionValue : firstDimensionTypeValues.values()) {
             Map<S, List<Measure<?>>> measuresBySecondDimensionValue = measuresByFirstDimensionValue.get(firstDimensionValue);
             List<Long> measureValues;
+            List<Long> cumulativeMeasureValues;
 
             if (measuresBySecondDimensionValue == null) {
                 measureValues = Collections.nCopies(secondDimensionTypeValues.values().size(), 0L);
+                cumulativeMeasureValues = Collections.nCopies(secondDimensionTypeValues.values().size(), 0L);
             } else {
                 measureValues = new ArrayList<>();
+                cumulativeMeasureValues = new ArrayList<>();
+                List<Measure<?>> cumulativeMeasures = new ArrayList<>();
 
                 for (S secondDimensionValue : secondDimensionTypeValues.values()) {
                     List<Measure<?>> measures = measuresBySecondDimensionValue.get(secondDimensionValue);
+
+                    if ((measures != null) && !measures.isEmpty()) {
+                        cumulativeMeasures.addAll(measures);
+                    }
+
                     measureValues.add(getMeasureValue(measures, measureType));
+                    cumulativeMeasureValues.add(getMeasureValue(cumulativeMeasures, measureType));
                 }
             }
 
             List<Measure<?>> measures = firstDimensionTotalMeasures.get(firstDimensionValue);
             long total = getMeasureValue(measures, measureType);
 
-            measureValueEntities.add(entityTriFunction.apply(firstDimensionValue, measureValues, total));
+            measureValueEntities.add(entityQuadFunction.apply(firstDimensionValue, measureValues, cumulativeMeasureValues, total));
         }
     }
 
@@ -400,17 +411,28 @@ public class Cube {
      * @param secondDimensionTotalMeasures total measures of second dimension
      * @param measureType                  measure type
      * @param totals                       totals
+     * @param cumulativeTotals             cumulative totals
      * @param allTotalMeasures             all total measures
      * @param <S>                          second dimension type
      */
     private <S> void fillTotals(DimensionTypeValues<S> secondDimensionTypeValues,
                                 Map<S, List<Measure<?>>> secondDimensionTotalMeasures,
-                                MeasureType measureType, List<Long> totals, List<Measure<?>> allTotalMeasures) {
+                                MeasureType measureType, List<Long> totals, List<Long> cumulativeTotals,
+                                List<Measure<?>> allTotalMeasures) {
+        List<Measure<?>> cumulativeMeasures = new ArrayList<>();
+        
         for (S secondDimensionValue : secondDimensionTypeValues.values()) {
             List<Measure<?>> measures = secondDimensionTotalMeasures.get(secondDimensionValue);
+
+            if ((measures != null) && !measures.isEmpty()) {
+                cumulativeMeasures.addAll(measures);
+            }
+
             long total = getMeasureValue(measures, measureType);
+            long cumulativeTotal = getMeasureValue(cumulativeMeasures, measureType);
 
             totals.add(total);
+            cumulativeTotals.add(cumulativeTotal);
 
             if (measures != null) {
                 allTotalMeasures.addAll(measures);

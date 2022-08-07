@@ -144,7 +144,7 @@ public class OlapServiceImpl implements OlapService {
                 new DimensionTypeValues<>(DimensionType.YEAR, secondDimensionValues),
                 new DimensionTypeValues<>(filterDimensionType, filterDimensionValues),
                 measureType, OlapEntityMetrics::new,
-                (measureValues, total) -> new OlapEntityMetrics<Void>(null, measureValues, total),
+                (measureValues, cumulativeMeasureValues, total) -> new OlapEntityMetrics<Void>(null, measureValues, cumulativeMeasureValues, total),
                 OlapEntityStatistics::new);
     }
 }

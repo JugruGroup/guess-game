@@ -18,8 +18,8 @@ public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
     private final SpeakerMetricsDtoDegrees degrees;
 
     public OlapSpeakerMetricsDto(long id, String name, String photoFileName, SpeakerMetricsDtoDegrees degrees,
-                                 List<Long> measureValues, Long total) {
-        super(id, name, measureValues, total);
+                                 List<Long> measureValues, List<Long> cumulativeMeasureValues, Long total) {
+        super(id, name, measureValues, cumulativeMeasureValues, total);
 
         this.photoFileName = photoFileName;
         this.degrees = degrees;
@@ -60,6 +60,7 @@ public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
                         speaker.isAnyMvp()
                 ),
                 speakerMetrics.measureValues(),
+                speakerMetrics.cumulativeMeasureValues(),
                 speakerMetrics.total());
     }
 
@@ -80,9 +81,8 @@ public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof OlapSpeakerMetricsDto)) return false;
+        if (!(o instanceof OlapSpeakerMetricsDto that)) return false;
         if (!super.equals(o)) return false;
-        OlapSpeakerMetricsDto that = (OlapSpeakerMetricsDto) o;
         return Objects.equals(getPhotoFileName(), that.getPhotoFileName());
     }
 
