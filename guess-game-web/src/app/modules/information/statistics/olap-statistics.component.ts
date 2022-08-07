@@ -110,10 +110,16 @@ export class OlapStatisticsComponent implements OnInit {
   public companyExpandedRows: {} = {};
 
   public allLineOptions: any = {};
-  public allLineData: any = {};
   public totalLineOptions: any = {};
+  public allLineWithCumulativeOptions: any = {};
+  public totalLineWithCumulativeOptions: any = {};
+
+  public allLineData: any = {};
   public totalLineData: any = {};
-  private chartType = ChartType.Details;
+  public allLineWithCumulativeData: any = {};
+  public totalLineWithCumulativeData: any = {};
+
+  private selectedChartType = ChartType.Details;
 
   public chartKinds: SelectItem[] = [
     {icon: 'bi-graph-up', value: ChartKind.Line, title: 'statistics.olap.chart.lineChartToolTipText'},
@@ -332,21 +338,24 @@ export class OlapStatisticsComponent implements OnInit {
             fixOlapEntityStatistics(olapStatistics.eventTypeStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX)
             this.eventTypeExpandedRows = {};
 
-            this.loadChartTotalData(olapStatistics.eventTypeStatistics);
+            this.loadLineChartTotalData(olapStatistics.eventTypeStatistics);
+            this.loadLineChartWithCumulativeTotalData(olapStatistics.eventTypeStatistics);
           }
 
           if (olapStatistics?.speakerStatistics) {
             fixOlapEntityStatistics(olapStatistics.speakerStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX)
             this.speakerExpandedRows = {};
 
-            this.loadChartTotalData(olapStatistics.speakerStatistics);
+            this.loadLineChartTotalData(olapStatistics.speakerStatistics);
+            this.loadLineChartWithCumulativeTotalData(olapStatistics.speakerStatistics);
           }
 
           if (olapStatistics?.companyStatistics) {
             fixOlapEntityStatistics(olapStatistics.companyStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX)
             this.companyExpandedRows = {};
 
-            this.loadChartTotalData(olapStatistics.companyStatistics);
+            this.loadLineChartTotalData(olapStatistics.companyStatistics);
+            this.loadLineChartWithCumulativeTotalData(olapStatistics.companyStatistics);
           }
 
           this.olapStatistics = olapStatistics;
@@ -398,7 +407,7 @@ export class OlapStatisticsComponent implements OnInit {
   onCubeTypeChange() {
     this.selectedSpeakers = [];
     this.selectedCompanies = [];
-    this.chartType = ChartType.Details;
+    this.selectedChartType = ChartType.Details;
 
     this.statisticsService.getMeasureTypes(this.selectedCubeType)
       .subscribe(measureTypeData => {
@@ -598,8 +607,8 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
-  loadChartDetailsData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>,
-                       sortedMetricsList: OlapEntityMetrics[], quantity: number) {
+  loadLineChartDetailsData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>,
+                           sortedMetricsList: OlapEntityMetrics[], quantity: number) {
     const metricsList = (quantity <= 0) ? sortedMetricsList : sortedMetricsList.slice(0, quantity);
 
     this.allLineData = {
@@ -619,7 +628,7 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
-  loadChartTotalData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>) {
+  loadLineChartTotalData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>) {
     const color = getColorByIndex(0);
 
     this.translateService.get(this.TOTAL_LABEL_KEY)
@@ -641,8 +650,51 @@ export class OlapStatisticsComponent implements OnInit {
       );
   }
 
+  loadLineChartWithCumulativeDetailsData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>,
+                                         sortedMetricsList: OlapEntityMetrics[], quantity: number) {
+    const metricsList = (quantity <= 0) ? sortedMetricsList : sortedMetricsList.slice(0, quantity);
+
+    this.allLineWithCumulativeData = {
+      labels: olapEntityStatistics.dimensionValues,
+      datasets: metricsList.map((value, index) => {
+        const color = getColorByIndex(index);
+
+        return {
+          label: value.name,
+          data: value.cumulativeMeasureValues,
+          fill: false,
+          tension: 0.4,
+          backgroundColor: color,
+          borderColor: color
+        }
+      })
+    };
+  }
+
+  loadLineChartWithCumulativeTotalData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>) {
+    const color = getColorByIndex(0);
+
+    this.translateService.get(this.TOTAL_LABEL_KEY)
+      .subscribe(data => {
+          this.totalLineWithCumulativeData = {
+            labels: olapEntityStatistics.dimensionValues,
+            datasets: [
+              {
+                label: data,
+                data: olapEntityStatistics.totals.cumulativeMeasureValues,
+                fill: false,
+                tension: 0.4,
+                backgroundColor: color,
+                borderColor: color
+              }
+            ]
+          };
+        }
+      );
+  }
+
   getChartType(): string {
-    switch (this.chartType) {
+    switch (this.selectedChartType) {
       case ChartType.Details:
         return 'details';
       case ChartType.Total:
@@ -660,6 +712,8 @@ export class OlapStatisticsComponent implements OnInit {
 
       this.allLineOptions = this.createLineOptions(aspectRatio);
       this.totalLineOptions = this.createLineOptions(aspectRatio);
+      this.allLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
+      this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
     }
   }
 
@@ -667,31 +721,46 @@ export class OlapStatisticsComponent implements OnInit {
     return this.isEventTypesListVisible() || this.isSpeakersListVisible() || this.isCompaniesListVisible();
   }
 
-  isDetailsChartVisible() {
-    return (this.chartType === ChartType.Details);
+  isChartTypeSwitcherVisible() {
+    return (this.selectedChartKind !== ChartKind.Pie);
   }
 
-  isTotalChartVisible() {
-    return (this.chartType === ChartType.Total);
+  isDetailsLineChartVisible() {
+    return ((this.selectedChartType === ChartType.Details) && (this.selectedChartKind === ChartKind.Line));
+  }
+
+  isTotalLineChartVisible() {
+    return ((this.selectedChartType === ChartType.Total) && (this.selectedChartKind === ChartKind.Line));
+  }
+
+  isDetailsLineWithCumulativeChartVisible() {
+    return ((this.selectedChartType === ChartType.Details) && (this.selectedChartKind === ChartKind.LineWithCumulativeTotal));
+  }
+
+  isTotalLineWithCumulativeChartVisible() {
+    return ((this.selectedChartType === ChartType.Total) && (this.selectedChartKind === ChartKind.LineWithCumulativeTotal));
   }
 
   detailsChart() {
-    this.chartType = ChartType.Details;
+    this.selectedChartType = ChartType.Details;
   }
 
   totalChart() {
-    this.chartType = ChartType.Total;
+    this.selectedChartType = ChartType.Total;
   }
 
   sortEventTypeStatistics(value) {
-    this.loadChartDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
+    this.loadLineChartDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
+    this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
   }
 
   sortSpeakerStatistics(value) {
-    this.loadChartDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
+    this.loadLineChartDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
+    this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
   }
 
   sortCompanyStatistics(value) {
-    this.loadChartDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
+    this.loadLineChartDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
+    this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
   }
 }

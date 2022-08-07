@@ -3,6 +3,7 @@ export abstract class OlapEntityMetrics {
     public id?: number,
     public name?: string,
     public measureValues?: number[],
+    public cumulativeMeasureValues?: number[],
     public total?: number
   ) {
   }

@@ -95,8 +95,8 @@
     </div>
 
     <div *ngIf="isChartsVisible()" #chartDiv>
-      <div class="d-flex justify-content-between align-items-center me-2">
-        <app-chart-type-switcher [type]="getChartType()" (detailsClick)="detailsChart()" (totalClick)="totalChart()"></app-chart-type-switcher>
+      <div class="d-flex align-items-center me-2" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
+        <app-chart-type-switcher *ngIf="isChartTypeSwitcherVisible()" [type]="getChartType()" (detailsClick)="detailsChart()" (totalClick)="totalChart()"></app-chart-type-switcher>
 
         <p-selectButton [options]="chartKinds" [(ngModel)]="selectedChartKind" optionLabel="icon" optionValue="value">
           <ng-template let-item>
@@ -106,8 +106,10 @@
       </div>
 
       <div class="mt-1 ms-1 me-1 mb-2">
-        <p-chart *ngIf="isDetailsChartVisible()" type="line" [data]="allLineData" [options]="allLineOptions"></p-chart>
-        <p-chart *ngIf="isTotalChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
+        <p-chart *ngIf="isDetailsLineChartVisible()" type="line" [data]="allLineData" [options]="allLineOptions"></p-chart>
+        <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
+        <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="allLineWithCumulativeOptions"></p-chart>
+        <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
       </div>
     </div>
 
