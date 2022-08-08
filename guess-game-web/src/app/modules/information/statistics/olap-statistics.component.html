@@ -110,6 +110,7 @@
         <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
         <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="allLineWithCumulativeOptions"></p-chart>
         <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
+        <p-chart *ngIf="isPieChartVisible()" type="pie" [data]="pieData" [options]="pieOptions"></p-chart>
       </div>
     </div>
 
