@@ -12,13 +12,16 @@ import java.util.Objects;
  * OLAP event type metrics DTO.
  */
 public class OlapEventTypeMetricsDto extends OlapEntityMetricsDto {
+    private record MeasureValuesLists(List<Long> measureValues, List<Long> cumulativeMeasureValues) {
+    }
+
     private final boolean conference;
     private final String logoFileName;
     private final String organizerName;
 
     public OlapEventTypeMetricsDto(long id, String name, boolean conference, String logoFileName,
-                                   String organizerName, List<Long> measureValues, List<Long> cumulativeMeasureValues, Long total) {
-        super(id, name, measureValues, cumulativeMeasureValues, total);
+                                   String organizerName, MeasureValuesLists measureValuesLists, Long total) {
+        super(id, name, measureValuesLists.measureValues, measureValuesLists.cumulativeMeasureValues, total);
 
         this.conference = conference;
         this.logoFileName = logoFileName;
@@ -48,8 +51,7 @@ public class OlapEventTypeMetricsDto extends OlapEntityMetricsDto {
                 eventType.isEventTypeConference(),
                 eventType.getLogoFileName(),
                 organizerName,
-                eventTypeMetrics.measureValues(),
-                eventTypeMetrics.cumulativeMeasureValues(),
+                new MeasureValuesLists(eventTypeMetrics.measureValues(), eventTypeMetrics.cumulativeMeasureValues()),
                 eventTypeMetrics.total());
     }
 
