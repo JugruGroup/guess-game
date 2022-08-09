@@ -95,8 +95,12 @@
     </div>
 
     <div *ngIf="isChartsVisible()" #chartDiv>
-      <div class="d-flex align-items-center me-2" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
-        <app-chart-type-switcher *ngIf="isChartTypeSwitcherVisible()" [type]="getChartType()" (detailsClick)="detailsChart()" (totalClick)="totalChart()"></app-chart-type-switcher>
+      <div class="d-flex align-items-center mt-2 ms-2 me-2" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
+        <p-selectButton *ngIf="isChartTypeSwitcherVisible()" [options]="chartTypes" [(ngModel)]="selectedChartType" optionLabel="label" optionValue="value">
+          <ng-template let-item>
+            <span style="line-height: 1; font-size: small">{{item.label | translate}}</span>
+          </ng-template>
+        </p-selectButton>
 
         <p-selectButton [options]="chartKinds" [(ngModel)]="selectedChartKind" optionLabel="icon" optionValue="value">
           <ng-template let-item>

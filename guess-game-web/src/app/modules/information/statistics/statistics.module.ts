@@ -16,7 +16,6 @@ import { TooltipModule } from 'primeng/tooltip';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
 import { MessageModule } from '../../message/message.module';
-import { ChartTypeSwitcherComponent } from './chart-type-switcher.component';
 import { EventTypeStatisticsComponent } from './event-type-statistics.component';
 import { EventStatisticsComponent } from './event-statistics.component';
 import { SpeakerStatisticsComponent } from './speaker-statistics.component';
@@ -26,7 +25,6 @@ import { StatisticsTabMenuComponent } from './statistics-tabmenu.component';
 
 @NgModule({
   declarations: [
-    ChartTypeSwitcherComponent,
     EventTypeStatisticsComponent,
     EventStatisticsComponent,
     SpeakerStatisticsComponent,

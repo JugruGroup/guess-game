@@ -121,7 +121,11 @@ export class OlapStatisticsComponent implements OnInit {
   public totalLineWithCumulativeData: any = {};
   public pieData: any = {};
 
-  private selectedChartType = ChartType.Details;
+  public chartTypes: SelectItem[] = [
+    {label: 'statistics.olap.chart.detailsLabel', value: ChartType.Details},
+    {label: 'statistics.olap.chart.totalLabel', value: ChartType.Total}
+  ];
+  public selectedChartType = ChartType.Details;
 
   public chartKinds: SelectItem[] = [
     {icon: 'bi-graph-up', value: ChartKind.Line, title: 'statistics.olap.chart.lineChartToolTipText'},
@@ -724,17 +728,6 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
-  getChartType(): string {
-    switch (this.selectedChartType) {
-      case ChartType.Details:
-        return 'details';
-      case ChartType.Total:
-        return 'total';
-      default:
-        return null;
-    }
-  }
-
   onResize = (): void => {
     if (this.chartDiv) {
       const clientWidth = this.chartDiv.nativeElement.clientWidth;
@@ -775,14 +768,6 @@ export class OlapStatisticsComponent implements OnInit {
 
   isPieChartVisible() {
     return (this.selectedChartKind === ChartKind.Pie);
-  }
-
-  detailsChart() {
-    this.selectedChartType = ChartType.Details;
-  }
-
-  totalChart() {
-    this.selectedChartType = ChartType.Total;
   }
 
   sortEventTypeStatistics(value) {
