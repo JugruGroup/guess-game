@@ -612,7 +612,7 @@ export class OlapStatisticsComponent implements OnInit {
     return {
       elements: {
         arc: {
-          borderWidth: 0
+          borderWidth: 1
         }
       },
       animation: false,
