@@ -349,22 +349,22 @@ class StatisticsControllerTest {
             company1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
 
             List<OlapEntityMetrics<EventType>> metricsList0 = List.of(
-                    new OlapEntityMetrics<>(eventType0, List.of(0L, 1L), 1L),
-                    new OlapEntityMetrics<>(eventType1, List.of(1L, 0L), 1L)
+                    new OlapEntityMetrics<>(eventType0, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                    new OlapEntityMetrics<>(eventType1, List.of(1L, 0L), List.of(1L, 1L), 1L)
             );
-            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(1L, 1L), 2L);
+            OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(1L, 1L), List.of(1L, 2L), 2L);
 
             List<OlapEntityMetrics<Speaker>> metricsList1 = List.of(
-                    new OlapEntityMetrics<>(speaker0, List.of(0L, 1L), 1L),
-                    new OlapEntityMetrics<>(speaker1, List.of(2L, 0L), 2L)
+                    new OlapEntityMetrics<>(speaker0, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                    new OlapEntityMetrics<>(speaker1, List.of(2L, 0L), List.of(2L, 2L), 2L)
             );
-            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(2L, 1L), 3L);
+            OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
             List<OlapEntityMetrics<Company>> metricsList2 = List.of(
-                    new OlapEntityMetrics<>(company0, List.of(0L, 1L), 1L),
-                    new OlapEntityMetrics<>(company1, List.of(2L, 0L), 2L)
+                    new OlapEntityMetrics<>(company0, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                    new OlapEntityMetrics<>(company1, List.of(2L, 0L), List.of(2L, 2L), 2L)
             );
-            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(2L, 1L), 3L);
+            OlapEntityMetrics<Void> totals2 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
             OlapEntityStatistics<Integer, EventType> eventTypeStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
             OlapEntityStatistics<Integer, Speaker> speakerStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList1, totals1);
@@ -442,10 +442,10 @@ class StatisticsControllerTest {
         List<Integer> dimensionValues0 = List.of(2020, 2021);
 
         List<OlapEntityMetrics<EventType>> metricsList0 = List.of(
-                new OlapEntityMetrics<>(eventType0, List.of(0L, 1L), 1L),
-                new OlapEntityMetrics<>(eventType1, List.of(1L, 0L), 1L)
+                new OlapEntityMetrics<>(eventType0, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                new OlapEntityMetrics<>(eventType1, List.of(1L, 0L), List.of(1L, 1L), 1L)
         );
-        OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(1L, 1L), 2L);
+        OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(1L, 1L), List.of(1L, 2L), 2L);
 
         OlapEntityStatistics<Integer, EventType> eventTypeStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
 
@@ -480,10 +480,10 @@ class StatisticsControllerTest {
         List<Integer> dimensionValues0 = List.of(2020, 2021);
 
         List<OlapEntityMetrics<Speaker>> metricsList0 = List.of(
-                new OlapEntityMetrics<>(speaker0, List.of(0L, 1L), 1L),
-                new OlapEntityMetrics<>(speaker1, List.of(2L, 0L), 2L)
+                new OlapEntityMetrics<>(speaker0, List.of(0L, 1L), List.of(0L, 1L), 1L),
+                new OlapEntityMetrics<>(speaker1, List.of(2L, 0L), List.of(2L, 2L), 2L)
         );
-        OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(2L, 1L), 3L);
+        OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
         OlapEntityStatistics<Integer, Speaker> speakerStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
 
@@ -513,10 +513,10 @@ class StatisticsControllerTest {
         List<Integer> dimensionValues0 = List.of(2020, 2021);
 
         List<OlapEntityMetrics<City>> metricsList0 = List.of(
-                new OlapEntityMetrics<>(city1, List.of(2L, 0L), 2L),
-                new OlapEntityMetrics<>(city0, List.of(0L, 1L), 1L)
+                new OlapEntityMetrics<>(city1, List.of(2L, 0L), List.of(2L, 2L), 2L),
+                new OlapEntityMetrics<>(city0, List.of(0L, 1L), List.of(0L, 1L), 1L)
         );
-        OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(2L, 1L), 3L);
+        OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
         OlapEntityStatistics<Integer, City> cityStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
 

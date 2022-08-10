@@ -12,13 +12,16 @@ import java.util.Objects;
  * OLAP event type metrics DTO.
  */
 public class OlapEventTypeMetricsDto extends OlapEntityMetricsDto {
+    private record MeasureValuesLists(List<Long> measureValues, List<Long> cumulativeMeasureValues) {
+    }
+
     private final boolean conference;
     private final String logoFileName;
     private final String organizerName;
 
     public OlapEventTypeMetricsDto(long id, String name, boolean conference, String logoFileName,
-                                   String organizerName, List<Long> measureValues, Long total) {
-        super(id, name, measureValues, total);
+                                   String organizerName, MeasureValuesLists measureValuesLists, Long total) {
+        super(id, name, measureValuesLists.measureValues, measureValuesLists.cumulativeMeasureValues, total);
 
         this.conference = conference;
         this.logoFileName = logoFileName;
@@ -48,7 +51,7 @@ public class OlapEventTypeMetricsDto extends OlapEntityMetricsDto {
                 eventType.isEventTypeConference(),
                 eventType.getLogoFileName(),
                 organizerName,
-                eventTypeMetrics.measureValues(),
+                new MeasureValuesLists(eventTypeMetrics.measureValues(), eventTypeMetrics.cumulativeMeasureValues()),
                 eventTypeMetrics.total());
     }
 
@@ -61,9 +64,8 @@ public class OlapEventTypeMetricsDto extends OlapEntityMetricsDto {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof OlapEventTypeMetricsDto)) return false;
+        if (!(o instanceof OlapEventTypeMetricsDto that)) return false;
         if (!super.equals(o)) return false;
-        OlapEventTypeMetricsDto that = (OlapEventTypeMetricsDto) o;
         return isConference() == that.isConference() && Objects.equals(getLogoFileName(), that.getLogoFileName()) && Objects.equals(getOrganizerName(), that.getOrganizerName());
     }
 

@@ -1,5 +1,8 @@
 Guess Game
 
+Version 2.8.0 - August 11, 2022
+* New charts for OLAP statistics.
+
 Version 2.7.0 - July 10, 2022
 * Support for day ranges in events.
 

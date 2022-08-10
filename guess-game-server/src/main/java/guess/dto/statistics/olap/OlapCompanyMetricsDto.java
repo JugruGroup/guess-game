@@ -11,8 +11,8 @@ import java.util.List;
  * OLAP company metrics DTO.
  */
 public class OlapCompanyMetricsDto extends OlapEntityMetricsDto {
-    public OlapCompanyMetricsDto(long id, String name, List<Long> measureValues, Long total) {
-        super(id, name, measureValues, total);
+    public OlapCompanyMetricsDto(long id, String name, List<Long> measureValues, List<Long> cumulativeMeasureValues, Long total) {
+        super(id, name, measureValues, cumulativeMeasureValues, total);
     }
 
     public static OlapCompanyMetricsDto convertToDto(OlapEntityMetrics<Company> companyMetrics, Language language) {
@@ -23,6 +23,7 @@ public class OlapCompanyMetricsDto extends OlapEntityMetricsDto {
                 company.getId(),
                 name,
                 companyMetrics.measureValues(),
+                companyMetrics.cumulativeMeasureValues(),
                 companyMetrics.total());
     }
 

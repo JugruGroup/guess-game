@@ -226,6 +226,7 @@ export function fixOlapEntityStatistics<T, S extends OlapEntityMetrics>(entitySt
 
   entityStatistics.metricsList.forEach(metrics => {
     metrics.measureValues = getFixedMeasureValues(metrics.measureValues, quantity);
+    metrics.cumulativeMeasureValues = getFixedMeasureValues(metrics.cumulativeMeasureValues, quantity);
 
     for (let i = 0; i < metrics.measureValues.length; i++) {
       metrics[measureValueFieldNamePrefix + i] = metrics.measureValues[i];
@@ -233,6 +234,7 @@ export function fixOlapEntityStatistics<T, S extends OlapEntityMetrics>(entitySt
   });
 
   entityStatistics.totals.measureValues = getFixedMeasureValues(entityStatistics.totals.measureValues, quantity);
+  entityStatistics.totals.cumulativeMeasureValues = getFixedMeasureValues(entityStatistics.totals.cumulativeMeasureValues, quantity);
 }
 
 export function getColorByIndex(index: number): string {

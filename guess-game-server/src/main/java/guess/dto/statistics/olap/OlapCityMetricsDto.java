@@ -11,8 +11,8 @@ import java.util.List;
  * OLAP city metrics DTO.
  */
 public class OlapCityMetricsDto extends OlapEntityMetricsDto {
-    public OlapCityMetricsDto(long id, String name, List<Long> measureValues, Long total) {
-        super(id, name, measureValues, total);
+    public OlapCityMetricsDto(long id, String name, List<Long> measureValues, List<Long> cumulativeMeasureValues, Long total) {
+        super(id, name, measureValues, cumulativeMeasureValues, total);
     }
 
     public static OlapCityMetricsDto convertToDto(OlapEntityMetrics<City> cityMetrics, Language language) {
@@ -23,6 +23,7 @@ public class OlapCityMetricsDto extends OlapEntityMetricsDto {
                 city.getId(),
                 name,
                 cityMetrics.measureValues(),
+                cityMetrics.cumulativeMeasureValues(),
                 cityMetrics.total());
     }
 

@@ -95,11 +95,26 @@
     </div>
 
     <div *ngIf="isChartsVisible()" #chartDiv>
-      <app-chart-type-switcher [type]="getChartType()" (detailsClick)="detailsChart()" (totalClick)="totalChart()"></app-chart-type-switcher>
+      <div class="d-flex align-items-center mt-2 ms-2 me-2" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
+        <p-selectButton *ngIf="isChartTypeSwitcherVisible()" [options]="chartTypes" [(ngModel)]="selectedChartType" optionLabel="label" optionValue="value">
+          <ng-template let-item>
+            <span class="olap-chart-button">{{item.label | translate}}</span>
+          </ng-template>
+        </p-selectButton>
 
-      <div class="ms-1 me-1 mb-2">
-        <p-chart *ngIf="isDetailsChartVisible()" type="line" [data]="allLineData" [options]="allLineOptions"></p-chart>
-        <p-chart *ngIf="isTotalChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
+        <p-selectButton [options]="chartKinds" [(ngModel)]="selectedChartKind" optionLabel="icon" optionValue="value">
+          <ng-template let-item>
+            <span title="{{item.title | translate}}" class="olap-chart-button"><i [class]="item.icon"></i></span>
+          </ng-template>
+        </p-selectButton>
+      </div>
+
+      <div class="mt-1 ms-1 me-1 mb-2">
+        <p-chart *ngIf="isDetailsLineChartVisible()" type="line" [data]="allLineData" [options]="allLineOptions"></p-chart>
+        <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
+        <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="allLineWithCumulativeOptions"></p-chart>
+        <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
+        <p-chart *ngIf="isPieChartVisible()" type="pie" [data]="pieData" [options]="pieOptions"></p-chart>
       </div>
     </div>
 

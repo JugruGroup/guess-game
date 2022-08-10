@@ -4,6 +4,7 @@
 @import '~primeng/resources/themes/lara-light-blue/theme.css';
 @import '~primeng/resources/primeng.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
 @import './menubar.scss';
 @import './tabmenu.scss';
 
@@ -312,7 +313,7 @@ html {
 // Total column styles on OLAP page
 .p-datatable .p-datatable-tbody > tr > td.total-column {
   font-weight: 700;
-  background: #f4f4f4;
+  background: #f8f9fa;
 }
 
 // Fix text decoration
@@ -404,4 +405,15 @@ a:hover {
 .img-thumbnail.img-guess-photo-by-name, .img-thumbnail.img-guess-speaker-by-talk, .img-thumbnail.img-guess-speaker-by-company,
 .img-thumbnail.img-guess-speaker-by-account, .img-thumbnail.img-guess-tag-cloud-by-speaker, .img-thumbnail.img-guess-speaker-by-tag-cloud {
   border: 1px solid var(--bs-border-color);
+}
+
+// Remove box shadow for select button
+.p-selectbutton .p-button.p-highlight:focus {
+  box-shadow: none;
+}
+
+// Styles for OLAP chart button
+.olap-chart-button {
+  font-size: 0.8rem;
+  line-height: 1;
 }

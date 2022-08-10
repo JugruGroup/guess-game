@@ -271,7 +271,10 @@
       "noCompaniesDataFoundText": "Данные о компаниях не найдены",
       "chart": {
         "detailsLabel": "Подробно",
-        "totalLabel": "Всего"
+        "totalLabel": "Всего",
+        "lineChartToolTipText": "Линейный график",
+        "lineChartWithCumulativeTotalToolTipText": "Линейный график с нарастающим итогом",
+        "pieChartToolTipText": "Круговая диаграмма"
       },
       "table": {
         "kindColumn": "Вид",
