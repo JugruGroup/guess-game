@@ -411,3 +411,9 @@ a:hover {
 .p-selectbutton .p-button.p-highlight:focus {
   box-shadow: none;
 }
+
+// Styles for OLAP chart button
+.olap-chart-button {
+  font-size: 0.8rem;
+  line-height: 1;
+}
