@@ -341,7 +341,7 @@ export class OlapStatisticsComponent implements OnInit {
 
           if (olapStatistics?.eventTypeStatistics) {
             olapStatistics.eventTypeStatistics = getOlapEventTypeStatisticsWithSortName(olapStatistics.eventTypeStatistics);
-            fixOlapEntityStatistics(olapStatistics.eventTypeStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX)
+            fixOlapEntityStatistics(olapStatistics.eventTypeStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX);
             this.eventTypeExpandedRows = {};
 
             this.loadLineChartTotalData(olapStatistics.eventTypeStatistics);
@@ -349,7 +349,7 @@ export class OlapStatisticsComponent implements OnInit {
           }
 
           if (olapStatistics?.speakerStatistics) {
-            fixOlapEntityStatistics(olapStatistics.speakerStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX)
+            fixOlapEntityStatistics(olapStatistics.speakerStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX);
             this.speakerExpandedRows = {};
 
             this.loadLineChartTotalData(olapStatistics.speakerStatistics);
@@ -357,7 +357,7 @@ export class OlapStatisticsComponent implements OnInit {
           }
 
           if (olapStatistics?.companyStatistics) {
-            fixOlapEntityStatistics(olapStatistics.companyStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX)
+            fixOlapEntityStatistics(olapStatistics.companyStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX);
             this.companyExpandedRows = {};
 
             this.loadLineChartTotalData(olapStatistics.companyStatistics);
@@ -385,6 +385,8 @@ export class OlapStatisticsComponent implements OnInit {
   onLanguageChange() {
     const currentSelectedOrganizer = this.selectedOrganizer;
     const currentSelectedEventTypes = this.selectedEventTypes;
+
+    this.fillChartOptions();
 
     this.organizerService.getOrganizers()
       .subscribe(organizerData => {
@@ -608,7 +610,8 @@ export class OlapStatisticsComponent implements OnInit {
   createLineOptions(aspectRatio: number): any {
     return {
       animation: false,
-      aspectRatio: aspectRatio
+      aspectRatio: aspectRatio,
+      locale: this.translateService.currentLang
     };
   }
 
@@ -620,7 +623,8 @@ export class OlapStatisticsComponent implements OnInit {
         }
       },
       animation: false,
-      aspectRatio: aspectRatio
+      aspectRatio: aspectRatio,
+      locale: this.translateService.currentLang
     };
   }
 
@@ -729,6 +733,10 @@ export class OlapStatisticsComponent implements OnInit {
   }
 
   onResize = (): void => {
+    this.fillChartOptions();
+  }
+
+  fillChartOptions() {
     if (this.chartDiv) {
       const clientWidth = this.chartDiv.nativeElement.clientWidth;
       const aspectRatio = (clientWidth < this.SMALL_WIDTH) ? this.EXTRA_SMALL_ASPECT_RATIO :
