@@ -1,7 +1,7 @@
 # Conference data loading
 
 <table>
-    <caption>Conferences, meetups and their tags in <i>Contentful</i> spaces (2016-2021) and <i>Squidex</i> event version (2022)</caption>
+    <caption>Conferences, meetups, their tags in <i>Contentful</i> spaces (2016-2021) and event versions in <i>Squidex</i> (2022)</caption>
     <tr>
         <th rowspan="2"></th>
         <th colspan="15">Conferences</th>
