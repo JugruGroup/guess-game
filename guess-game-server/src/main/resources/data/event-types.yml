@@ -20,7 +20,6 @@ eventTypes:
       - {language: ru, text: "https://cppconf.ru/"}
     vkLink: https://vk.com/cpp_russia
     twitterLink: https://twitter.com/cpp_russia
-    facebookLink: https://www.facebook.com/cppugrussia/
     youtubeLink: https://www.youtube.com/channel/UCJ9v015sPgEi0jJXe_zanjA
     telegramLink: https://t.me/cpprussia
     habrLink: https://habr.com/ru/company/jugru
@@ -56,7 +55,6 @@ eventTypes:
       - {language: ru, text: "https://devoops.ru/"}
     vkLink: https://vk.com/devoops
     twitterLink: https://twitter.com/devoopsconf
-    facebookLink: https://www.facebook.com/devoopsconf
     youtubeLink: https://www.youtube.com/channel/UCjnQreLMbpKsfJwDnHGZLxg
     telegramLink: https://t.me/devOopsconf
     habrLink: https://habr.com/ru/company/jugru
@@ -92,7 +90,6 @@ eventTypes:
       - {language: ru, text: "https://dotnext.ru/"}
     vkLink: https://vk.com/dotnext
     twitterLink: https://twitter.com/DotNextConf
-    facebookLink: https://www.facebook.com/dotnextconf/
     youtubeLink: https://www.youtube.com/channel/UCNPwMPudMEw-gnAT4zh_UZg
     telegramLink: https://t.me/dotnextconf
     habrLink: https://habr.com/ru/company/jugru
@@ -132,7 +129,6 @@ eventTypes:
       - {language: ru, text: "https://heisenbug.ru/"}
     vkLink: https://vk.com/heisenbugconf
     twitterLink: https://twitter.com/HeisenbugConf
-    facebookLink: https://www.facebook.com/heisenbugconf/
     youtubeLink: https://www.youtube.com/channel/UCX6fjZa167tSy_4ryTLcOBw
     telegramLink: https://t.me/heisenbugconf
     habrLink: https://habr.com/ru/company/jugru
@@ -157,7 +153,6 @@ eventTypes:
       - {language: ru, text: "https://holyjs.ru/"}
     vkLink: https://vk.com/holyjs
     twitterLink: https://twitter.com/HolyJSconf
-    facebookLink: https://www.facebook.com/holyjs/
     youtubeLink: https://www.youtube.com/channel/UC2Jwo4Q0s-ucjGseHP8XUSQ
     telegramLink: https://t.me/holyjsconf
     habrLink: https://habr.com/ru/company/jugru
@@ -196,7 +191,6 @@ eventTypes:
       - {language: en, text: "https://hydraconf.com"}
     vkLink: https://vk.com/hydraconf
     twitterLink: https://twitter.com/hydraconference
-    facebookLink: https://www.facebook.com/hydraconf
     youtubeLink: https://www.youtube.com/channel/UCcwI0q9tsGZYZDvz5mLsXZA/featured
     telegramLink: https://t.me/hydraconf
     habrLink: https://habr.com/ru/company/jugru
@@ -260,7 +254,6 @@ eventTypes:
       - {language: ru, text: "https://jpoint.ru/"}
     vkLink: https://vk.com/jpoint
     twitterLink: https://twitter.com/JUGru
-    facebookLink: https://www.facebook.com/jpointconf/
     youtubeLink: https://www.youtube.com/user/JUGRuVideo
     telegramLink: https://telegram.me/jpointconf
     habrLink: https://habr.com/ru/company/jugru
@@ -288,7 +281,6 @@ eventTypes:
       - {language: ru, text: "https://jokerconf.com/"}
     vkLink: https://vk.com/jokerconf
     twitterLink: https://twitter.com/jugru
-    facebookLink: https://www.facebook.com/jokerconf
     youtubeLink: https://www.youtube.com/user/JUGRuVideo
     telegramLink: https://t.me/jokerconf
     habrLink: https://habr.com/ru/company/jugru
@@ -323,7 +315,6 @@ eventTypes:
       - {language: ru, text: "https://mobiusconf.com"}
     vkLink: https://vk.com/mobiusconf
     twitterLink: https://twitter.com/MobiusConf
-    facebookLink: https://www.facebook.com/mobiusconf/
     youtubeLink: https://www.youtube.com/c/MobiusConf
     telegramLink: https://t.me/mobiusconf
     habrLink: https://habr.com/ru/company/jugru
@@ -381,7 +372,6 @@ eventTypes:
       - {language: ru, text: "https://smartdataconf.ru/"}
     vkLink: https://vk.com/smartdata
     twitterLink: https://twitter.com/smartdatacon
-    facebookLink: https://www.facebook.com/smartdataconf
     youtubeLink: https://www.youtube.com/channel/UCfCOJWNC_ipu34-LVvPUeCg
     telegramLink: https://t.me/smartdataconf
     habrLink: https://habr.com/ru/company/jugru
@@ -407,7 +397,6 @@ eventTypes:
       - {language: ru, text: "https://techtrain.ru/"}
     vkLink: https://vk.com/techtrain
     twitterLink: https://twitter.com/techtrainfest
-    facebookLink: https://www.facebook.com/techtrainfest/
     youtubeLink: https://www.youtube.com/channel/UCJoerW5eDOz5qu7I2CYi7xg
     telegramLink: https://t.me/techtrainfest
     habrLink: https://habr.com/ru/company/jugru
@@ -513,7 +502,6 @@ eventTypes:
       - {language: ru, text: "https://vtconf.com/"}
     vkLink: https://vk.com/vt_conference
     twitterLink: https://twitter.com/videotech_conf
-    facebookLink: https://www.facebook.com/videotechconf/
     youtubeLink: https://www.youtube.com/channel/UC16ztwLQMXcS4aqCWvbkj3Q
     telegramLink: https://t.me/videotech_conf
     habrLink: https://habr.com/ru/company/jugru
