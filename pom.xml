@@ -33,7 +33,7 @@
         <logback.version>1.2.11</logback.version>
         <mockito.version>4.7.0</mockito.version>
         <sl4j.version>2.0.0</sl4j.version>
-        <snakeyaml.version>1.30</snakeyaml.version>
+        <snakeyaml.version>1.31</snakeyaml.version>
         <imageio.version>3.8.3</imageio.version>
         <spring-boot.version>2.7.3</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
