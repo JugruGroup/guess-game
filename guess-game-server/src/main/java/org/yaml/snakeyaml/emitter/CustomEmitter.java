@@ -28,6 +28,7 @@ public final class CustomEmitter implements Emitable {
 
     private static final Pattern SPACES_PATTERN = Pattern.compile("\\s");
     private static final Set<Character> INVALID_ANCHOR = new HashSet();
+
     static {
         INVALID_ANCHOR.add('[');
         INVALID_ANCHOR.add(']');
@@ -38,7 +39,9 @@ public final class CustomEmitter implements Emitable {
         INVALID_ANCHOR.add('&');
     }
 
-    private static final Map<Character, String> ESCAPE_REPLACEMENTS = new HashMap<Character, String>();
+  private static final Map<Character, String> ESCAPE_REPLACEMENTS =
+      new HashMap<Character, String>();
+
     static {
         ESCAPE_REPLACEMENTS.put('\0', "0");
         ESCAPE_REPLACEMENTS.put('\u0007', "a");
@@ -57,11 +60,14 @@ public final class CustomEmitter implements Emitable {
         ESCAPE_REPLACEMENTS.put('\u2029', "P");
     }
 
-    private final static Map<String, String> DEFAULT_TAG_PREFIXES = new LinkedHashMap<String, String>();
+  private final static Map<String, String> DEFAULT_TAG_PREFIXES =
+      new LinkedHashMap<String, String>();
+
     static {
         DEFAULT_TAG_PREFIXES.put("!", "!");
         DEFAULT_TAG_PREFIXES.put(Tag.PREFIX, "!!");
     }
+
     // The stream should have the methods `write` and possibly `flush`.
     private final Writer stream;
 
@@ -195,10 +201,9 @@ public final class CustomEmitter implements Emitable {
         this.style = null;
 
         // Comment processing
-        this.blockCommentsCollector = new CommentEventsCollector(events,
-                CommentType.BLANK_LINE, CommentType.BLOCK);
-        this.inlineCommentsCollector = new CommentEventsCollector(events,
-                CommentType.IN_LINE);
+    this.blockCommentsCollector =
+        new CommentEventsCollector(events, CommentType.BLANK_LINE, CommentType.BLOCK);
+    this.inlineCommentsCollector = new CommentEventsCollector(events, CommentType.IN_LINE);
     }
 
     public void emit(Event event) throws IOException {
@@ -219,7 +224,7 @@ public final class CustomEmitter implements Emitable {
 
         Iterator<Event> iter = events.iterator();
         Event event = iter.next(); // FIXME why without check ???
-        while(event instanceof CommentEvent) {
+    while (event instanceof CommentEvent) {
             if (!iter.hasNext()) {
                 return true;
             }
@@ -283,6 +288,7 @@ public final class CustomEmitter implements Emitable {
     // Stream handlers.
 
     private class ExpectStreamStart implements EmitterState {
+
         public void expect() throws IOException {
             if (event instanceof StreamStartEvent) {
                 writeStreamStart();
@@ -294,6 +300,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectNothing implements EmitterState {
+
         public void expect() throws IOException {
             throw new EmitterException("expecting nothing, but got " + event);
         }
@@ -302,12 +309,14 @@ public final class CustomEmitter implements Emitable {
     // Document handlers.
 
     private class ExpectFirstDocumentStart implements EmitterState {
+
         public void expect() throws IOException {
             new ExpectDocumentStart(true).expect();
         }
     }
 
     private class ExpectDocumentStart implements EmitterState {
+
         private final boolean first;
 
         public ExpectDocumentStart(boolean first) {
@@ -336,10 +345,8 @@ public final class CustomEmitter implements Emitable {
                         writeTagDirective(handleText, prefixText);
                     }
                 }
-                boolean implicit = first && !ev.getExplicit() && !canonical
-                        && ev.getVersion() == null
-                        && (ev.getTags() == null || ev.getTags().isEmpty())
-                        && !checkEmptyDocument();
+        boolean implicit = first && !ev.getExplicit() && !canonical && ev.getVersion() == null
+            && (ev.getTags() == null || ev.getTags().isEmpty()) && !checkEmptyDocument();
                 if (!implicit) {
                     writeIndent();
                     writeIndicator("---", true, false, false);
@@ -362,6 +369,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectDocumentEnd implements EmitterState {
+
         public void expect() throws IOException {
             event = blockCommentsCollector.collectEventsAndPoll(event);
             writeBlockComment();
@@ -380,6 +388,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectDocumentRoot implements EmitterState {
+
         public void expect() throws IOException {
             event = blockCommentsCollector.collectEventsAndPoll(event);
             if (!blockCommentsCollector.isEmpty()) {
@@ -455,6 +464,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFirstFlowSequenceItem implements EmitterState {
+
         public void expect() throws IOException {
             if (event instanceof SequenceEndEvent) {
                 indent = indents.pop();
@@ -479,6 +489,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFlowSequenceItem implements EmitterState {
+
         public void expect() throws IOException {
             if (event instanceof SequenceEndEvent) {
                 indent = indents.pop();
@@ -525,6 +536,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFirstFlowMappingKey implements EmitterState {
+
         public void expect() throws IOException {
             event = blockCommentsCollector.collectEventsAndPoll(event);
             writeBlockComment();
@@ -552,6 +564,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFlowMappingKey implements EmitterState {
+
         public void expect() throws IOException {
             if (event instanceof MappingEndEvent) {
                 indent = indents.pop();
@@ -587,6 +600,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFlowMappingSimpleValue implements EmitterState {
+
         public void expect() throws IOException {
             writeIndicator(":", false, false, false);
             event = inlineCommentsCollector.collectEventsAndPoll(event);
@@ -599,6 +613,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFlowMappingValue implements EmitterState {
+
         public void expect() throws IOException {
             if (canonical || (column > bestWidth) || prettyFlow) {
                 writeIndent();
@@ -622,12 +637,14 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFirstBlockSequenceItem implements EmitterState {
+
         public void expect() throws IOException {
             new ExpectBlockSequenceItem(true).expect();
         }
     }
 
     private class ExpectBlockSequenceItem implements EmitterState {
+
         private final boolean first;
 
         public ExpectBlockSequenceItem(boolean first) {
@@ -638,7 +655,7 @@ public final class CustomEmitter implements Emitable {
             if (!this.first && event instanceof SequenceEndEvent) {
                 indent = indents.pop();
                 state = states.pop();
-            } else if( event instanceof CommentEvent) {
+            } else if (event instanceof CommentEvent) {
                 blockCommentsCollector.collectEvents(event);
             } else {
                 writeIndent();
@@ -652,8 +669,8 @@ public final class CustomEmitter implements Emitable {
                 if (!blockCommentsCollector.isEmpty()) {
                     increaseIndent(false, false);
                     writeBlockComment();
-                    if(event instanceof ScalarEvent) {
-                        analysis = analyzeScalar(((ScalarEvent)event).getValue());
+                if (event instanceof ScalarEvent) {
+                    analysis = analyzeScalar(((ScalarEvent) event).getValue());
                         if (!analysis.isEmpty()) {
                             writeIndent();
                         }
@@ -675,12 +692,14 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectFirstBlockMappingKey implements EmitterState {
+
         public void expect() throws IOException {
             new ExpectBlockMappingKey(true).expect();
         }
     }
 
     private class ExpectBlockMappingKey implements EmitterState {
+
         private final boolean first;
 
         public ExpectBlockMappingKey(boolean first) {
@@ -708,7 +727,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private boolean isFoldedOrLiteral(Event event) {
-        if(!event.is(Event.ID.Scalar)) {
+        if (!event.is(Event.ID.Scalar)) {
             return false;
         }
         ScalarEvent scalarEvent = (ScalarEvent) event;
@@ -717,18 +736,19 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectBlockMappingSimpleValue implements EmitterState {
+
         public void expect() throws IOException {
             writeIndicator(":", false, false, false);
             event = inlineCommentsCollector.collectEventsAndPoll(event);
-            if(!isFoldedOrLiteral(event)) {
-                if(writeInlineComments()) {
+            if (!isFoldedOrLiteral(event)) {
+                if (writeInlineComments()) {
                     increaseIndent(true, false);
                     writeIndent();
                     indent = indents.pop();
                 }
             }
             event = blockCommentsCollector.collectEventsAndPoll(event);
-            if(!blockCommentsCollector.isEmpty()) {
+            if (!blockCommentsCollector.isEmpty()) {
                 increaseIndent(true, false);
                 writeBlockComment();
                 writeIndent();
@@ -742,6 +762,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private class ExpectBlockMappingValue implements EmitterState {
+
         public void expect() throws IOException {
             writeIndent();
             writeIndicator(":", true, false, true);
@@ -759,11 +780,13 @@ public final class CustomEmitter implements Emitable {
     // Checkers.
 
     private boolean checkEmptySequence() {
-        return event instanceof SequenceStartEvent && !events.isEmpty() && events.peek() instanceof SequenceEndEvent;
+    return event instanceof SequenceStartEvent && !events.isEmpty()
+        && events.peek() instanceof SequenceEndEvent;
     }
 
     private boolean checkEmptyMapping() {
-        return event instanceof MappingStartEvent && !events.isEmpty() && events.peek() instanceof MappingEndEvent;
+    return event instanceof MappingStartEvent && !events.isEmpty()
+        && events.peek() instanceof MappingEndEvent;
     }
 
     private boolean checkEmptyDocument() {
@@ -773,8 +796,8 @@ public final class CustomEmitter implements Emitable {
         Event event = events.peek();
         if (event instanceof ScalarEvent) {
             ScalarEvent e = (ScalarEvent) event;
-            return e.getAnchor() == null && e.getTag() == null && e.getImplicit() != null && e
-                    .getValue().length() == 0;
+            return e.getAnchor() == null && e.getTag() == null && e.getImplicit() != null
+                && e.getValue().length() == 0;
         }
         return false;
     }
@@ -833,9 +856,9 @@ public final class CustomEmitter implements Emitable {
             if (style == null) {
                 style = chooseScalarStyle();
             }
-            if ((!canonical || tag == null) && ((style == null && ev.getImplicit()
-                    .canOmitTagInPlainScalar()) || (style != null && ev.getImplicit()
-                    .canOmitTagInNonPlainScalar()))) {
+      if ((!canonical || tag == null)
+          && ((style == null && ev.getImplicit().canOmitTagInPlainScalar())
+              || (style != null && ev.getImplicit().canOmitTagInNonPlainScalar()))) {
                 preparedTag = null;
                 return;
             }
@@ -866,19 +889,22 @@ public final class CustomEmitter implements Emitable {
         if (analysis == null) {
             analysis = analyzeScalar(ev.getValue());
         }
-        if (!ev.isPlain() && ev.getScalarStyle() == DumperOptions.ScalarStyle.DOUBLE_QUOTED || this.canonical) {
+    if (!ev.isPlain() && ev.getScalarStyle() == DumperOptions.ScalarStyle.DOUBLE_QUOTED
+        || this.canonical) {
             return DumperOptions.ScalarStyle.DOUBLE_QUOTED;
         }
         if (ev.isPlain() && ev.getImplicit().canOmitTagInPlainScalar()) {
             if (!(simpleKeyContext && (analysis.isEmpty() || analysis.isMultiline()))
-                    && ((flowLevel != 0 && analysis.isAllowFlowPlain()) || (flowLevel == 0 && analysis.isAllowBlockPlain()))) {
+                    && ((flowLevel != 0 && analysis.isAllowFlowPlain())
+                    || (flowLevel == 0 && analysis.isAllowBlockPlain()))) {
 //                return null;
                 return (!simpleKeyContext && ev.getImplicit().canOmitTagInNonPlainScalar() && ev.getValue().contains(" ")) ?
                         DumperOptions.ScalarStyle.DOUBLE_QUOTED :
                         null;
             }
         }
-        if (!ev.isPlain() && (ev.getScalarStyle() == DumperOptions.ScalarStyle.LITERAL || ev.getScalarStyle() == DumperOptions.ScalarStyle.FOLDED)) {
+        if (!ev.isPlain() && (ev.getScalarStyle() == DumperOptions.ScalarStyle.LITERAL
+                || ev.getScalarStyle() == DumperOptions.ScalarStyle.FOLDED)) {
             if (flowLevel == 0 && !simpleKeyContext && analysis.isAllowBlock()) {
 //                return ev.getScalarStyle();
                 return DumperOptions.ScalarStyle.DOUBLE_QUOTED;
@@ -1038,7 +1064,8 @@ public final class CustomEmitter implements Emitable {
         }
         // First character or preceded by a whitespace.
         boolean preceededByWhitespace = true;
-        boolean followedByWhitespace = scalar.length() == 1 || Constant.NULL_BL_T_LINEBR.has(scalar.codePointAt(1));
+        boolean followedByWhitespace =
+            scalar.length() == 1 || Constant.NULL_BL_T_LINEBR.has(scalar.codePointAt(1));
         // The previous character is a space.
         boolean previousSpace = false;
 
@@ -1088,9 +1115,8 @@ public final class CustomEmitter implements Emitable {
                 lineBreaks = true;
             }
             if (!(c == '\n' || (0x20 <= c && c <= 0x7E))) {
-                if (c == 0x85 || (c >= 0xA0 && c <= 0xD7FF)
-                        || (c >= 0xE000 && c <= 0xFFFD)
-                        || (c >= 0x10000 && c <= 0x10FFFF)) {
+            if (c == 0x85 || (c >= 0xA0 && c <= 0xD7FF) || (c >= 0xE000 && c <= 0xFFFD)
+                    || (c >= 0x10000 && c <= 0x10FFFF)) {
                     // unicode is used
                     if (!this.allowUnicode) {
                         specialCharacters = true;
@@ -1136,7 +1162,8 @@ public final class CustomEmitter implements Emitable {
             if (index + 1 < scalar.length()) {
                 int nextIndex = index + Character.charCount(scalar.codePointAt(index));
                 if (nextIndex < scalar.length()) {
-                    followedByWhitespace = (Constant.NULL_BL_T.has(scalar.codePointAt(nextIndex))) || isLineBreak;
+                    followedByWhitespace =
+                            (Constant.NULL_BL_T.has(scalar.codePointAt(nextIndex))) || isLineBreak;
                 }
             }
         }
@@ -1416,7 +1443,7 @@ public final class CustomEmitter implements Emitable {
 
     private boolean writeCommentLines(List<CommentLine> commentLines) throws IOException {
         boolean wroteComment = false;
-        if(emitComments) {
+        if (emitComments) {
             int indentColumns = 0;
             boolean firstComment = true;
             for (CommentLine commentLine : commentLines) {
@@ -1442,7 +1469,7 @@ public final class CustomEmitter implements Emitable {
     }
 
     private void writeBlockComment() throws IOException {
-        if(!blockCommentsCollector.isEmpty()) {
+        if (!blockCommentsCollector.isEmpty()) {
             writeIndent();
             writeCommentLines(blockCommentsCollector.consume());
         }
@@ -1472,7 +1499,7 @@ public final class CustomEmitter implements Emitable {
         if (hints.length() > 0 && (hints.charAt(hints.length() - 1) == '+')) {
             openEnded = true;
         }
-        if(!writeInlineComments()) {
+        if (!writeInlineComments()) {
             writeLineBreak(null);
         }
         boolean leadingSpace = true;
@@ -1539,7 +1566,7 @@ public final class CustomEmitter implements Emitable {
         if (hints.length() > 0 && (hints.charAt(hints.length() - 1)) == '+') {
             openEnded = true;
         }
-        if(!writeInlineComments()) {
+        if (!writeInlineComments()) {
             writeLineBreak(null);
         }
         boolean breaks = true;

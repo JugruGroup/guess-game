@@ -19,6 +19,7 @@ import guess.domain.source.cms.jrgcms.talk.JrgTalkPresentation;
 import guess.domain.source.cms.jrgcms.talk.schedule.*;
 import guess.domain.source.image.UrlDates;
 import guess.util.LocalizationUtils;
+import guess.util.yaml.CustomYaml;
 import guess.util.yaml.YamlUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +33,6 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
 import java.io.FileNotFoundException;
@@ -147,7 +147,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     static JrgCmsTokenResponse getTokenFromCache() throws IOException {
         var resolver = new PathMatchingResourcePatternResolver();
         var tokenResponseResource = resolver.getResource(String.format("file:%s/%s", getOptionsDirectoryName(), TOKEN_FILENAME));
-        var tokenResponseYaml = new Yaml(new Constructor(JrgCmsTokenResponse.class));
+        var tokenResponseYaml = new CustomYaml(new Constructor(JrgCmsTokenResponse.class));
 
         try {
             return tokenResponseYaml.load(tokenResponseResource.getInputStream());
