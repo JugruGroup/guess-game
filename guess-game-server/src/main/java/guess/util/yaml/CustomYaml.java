@@ -20,6 +20,17 @@ import java.util.List;
  */
 public class CustomYaml extends Yaml {
     /**
+     * Create Yaml instance.
+     *
+     * @param constructor BaseConstructor to construct incoming documents
+     */
+    public CustomYaml(BaseConstructor constructor) {
+        super(constructor);
+
+        loadingConfig.setCodePointLimit(Integer.MAX_VALUE);
+    }
+
+    /**
      * Create Yaml instance. It is safe to create a few instances and use them
      * in different Threads.
      *

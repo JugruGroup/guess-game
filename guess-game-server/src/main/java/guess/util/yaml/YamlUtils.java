@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.yaml.snakeyaml.DumperOptions;
-import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 import org.yaml.snakeyaml.nodes.Tag;
 
@@ -53,15 +52,15 @@ public class YamlUtils {
         var speakersResource = resolver.getResource(String.format("classpath:%s/speakers.yml", DATA_DIRECTORY_NAME));
         var talksResource = resolver.getResource(String.format("classpath:%s/talks.yml", DATA_DIRECTORY_NAME));
 
-        var placesYaml = new Yaml(new Constructor(PlaceList.class));
-        var organizerYaml = new Yaml(new Constructor(OrganizerList.class));
-        var eventTypesYaml = new Yaml(new Constructor(EventTypeList.class));
-        var eventsYaml = new Yaml(new DateTimeYamlConstructor(EventList.class));
-        var companiesYaml = new Yaml(new Constructor(CompanyList.class));
-        var companyGroupsYaml = new Yaml(new Constructor(CompanyGroupList.class));
-        var companySynonymsYaml = new Yaml(new Constructor(CompanySynonymsList.class));
-        var speakersYaml = new Yaml(new DateTimeYamlConstructor(SpeakerList.class));
-        var talksYaml = new Yaml(new DateTimeYamlConstructor(TalkList.class));
+        var placesYaml = new CustomYaml(new Constructor(PlaceList.class));
+        var organizerYaml = new CustomYaml(new Constructor(OrganizerList.class));
+        var eventTypesYaml = new CustomYaml(new Constructor(EventTypeList.class));
+        var eventsYaml = new CustomYaml(new DateTimeYamlConstructor(EventList.class));
+        var companiesYaml = new CustomYaml(new Constructor(CompanyList.class));
+        var companyGroupsYaml = new CustomYaml(new Constructor(CompanyGroupList.class));
+        var companySynonymsYaml = new CustomYaml(new Constructor(CompanySynonymsList.class));
+        var speakersYaml = new CustomYaml(new DateTimeYamlConstructor(SpeakerList.class));
+        var talksYaml = new CustomYaml(new DateTimeYamlConstructor(TalkList.class));
 
         // Read from YAML files
         var placeList = (PlaceList) placesYaml.load(placesResource.getInputStream());
