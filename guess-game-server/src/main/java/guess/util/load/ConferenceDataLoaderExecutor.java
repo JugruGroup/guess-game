@@ -2241,8 +2241,8 @@ public class ConferenceDataLoaderExecutor {
 //                                "What a C++ developer should keep in mind about processor architecture",
 //                                "Overview of recent research in the field of selection of optimal sequences of optimization passes using ML")));
 //        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2022, 6, 6), "2022",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
-//                        createEventTemplate("C++ Russia 2022", null, List.of(24L, 4L)),
+//                new LoadSettings(
+//                        Map.of(new NameCompany("Павел Новиков", null), 351L),
 //                        Set.of("Открытие конференции C++ Russia 2022", "Разговор в студии про C++ в ML",
 //                                "Разговор об автопилотах", "Подведение итогов online-части конференции",
 //                                "Открытие офлайн-части конференций C++ Russia 2022 и Hydra 2022",
@@ -2251,7 +2251,10 @@ public class ConferenceDataLoaderExecutor {
 //                                "Интервью с Вадимом Цесько",
 //                                "Parallel Asynchronous Replication between YDB Database Instances",
 //                                "What about Binary Search Trees?", "Thread pools: variety of algorithms and features",
-//                                "Интервью с Андреем Фомичевым", "OK S3", "Круглый стол. Concurrency")));
+//                                "Интервью с Андреем Фомичевым", "OK S3", "Круглый стол. Concurrency"),
+//                        true,
+//                        createEventTemplate("C++ Russia 2022", null, List.of(24L, 4L))
+//                ));
 //        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2022, 6, 8), "2022 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("HolyJS 2022 Spring", null, List.of(24L, 4L)),

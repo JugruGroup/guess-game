@@ -14181,7 +14181,7 @@ speakers:
   - id: 990
     photoFileName: 0990.jpg
     name:
-      - {language: en, text: "Arno Schoedl"}
+      - {language: en, text: "Arno Schödl"}
     companyIds: [524]
     bio:
       - language: en
