@@ -2251,7 +2251,7 @@ public class ConferenceDataLoaderExecutor {
 //                                "Интервью с Вадимом Цесько",
 //                                "Parallel Asynchronous Replication between YDB Database Instances",
 //                                "What about Binary Search Trees?", "Thread pools: variety of algorithms and features",
-//                                "Интервью с Андреем Фомичевым", "OK S3"),
+//                                "Интервью с Андреем Фомичевым", "OK S3", "Круглый стол. Concurrency"),
 //                        true,
 //                        createEventTemplate("C++ Russia 2022", null, List.of(24L, 4L))
 //                ));
