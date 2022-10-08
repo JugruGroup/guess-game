@@ -1241,6 +1241,13 @@ events:
       - {startDate: "2022-05-14", endDate: "2022-05-14", placeId: 24}
     siteLink: []
     talkIds: [3655, 3656, 3657, 3658, 3659, 3660, 3661, 3662, 3663, 3664, 3665]
+  - eventTypeId: 12
+    name:
+      - {language: en, text: "TechTrain 2022 Autumn"}
+    days:
+      - {startDate: "2022-10-08", endDate: "2022-10-08", placeId: 24}
+    siteLink: []
+    talkIds: [3972, 3973, 3974, 3975, 3976, 3977, 3978, 3979, 3980, 3981, 3982, 3983]
   # JUG.MSK
   - eventTypeId: 13
     name:

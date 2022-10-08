@@ -4,7 +4,7 @@
     <caption>Conferences, meetups, their tags in <i>Contentful</i> spaces (2016-2021) and event versions in <i>Squidex</i> (2022)</caption>
     <tr>
         <th rowspan="2"></th>
-        <th colspan="15">Conferences</th>
+        <th colspan="17">Conferences</th>
         <th colspan="3">Meetups</th>
     </tr>
     <tr>
@@ -22,6 +22,8 @@
         <th>SmartData</th>
         <th>TechTrain</th>
         <th>VideoTech</th>
+        <th>PiterPy</th>
+        <th>Flow</th>
         <th>SnowOne</th>
         <th>JUG.ru</th>
         <th>JUG.MSK</th>
@@ -29,6 +31,8 @@
     </tr>
     <tr>
         <th>2012</th>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -65,6 +69,8 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
         <td>2013</td>
         <td>2013</td>
         <td></td>
@@ -81,6 +87,8 @@
         <td rowspan="2">2014</td>
         <td rowspan="2">2014</td>
         <td rowspan="2">2014&nbsp;Spb</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
@@ -110,6 +118,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2015</td>
         <td rowspan="2">2015</td>
         <td rowspan="2"></td>
@@ -129,6 +139,8 @@
         <td rowspan="3">2016</td>
         <td rowspan="3">2016<br>(2016Joker)</td>
         <td rowspan="3">2016&nbsp;Spb</td>
+        <td rowspan="3"></td>
+        <td rowspan="3"></td>
         <td rowspan="3"></td>
         <td rowspan="3"></td>
         <td rowspan="3"></td>
@@ -162,6 +174,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2017</td>
         <td rowspan="2">2017</td>
         <td rowspan="2"></td>
@@ -187,6 +201,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2">2018<br>(2018tt)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2">2018</td>
@@ -216,6 +232,8 @@
         <td rowspan="2">2019<br>(2019tt)</td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2019</td>
         <td rowspan="2">2019</td>
         <td rowspan="2">2019</td>
@@ -242,6 +260,8 @@
         <td rowspan="2">2020<br>(2020-msk-sptdc)</td>
         <td rowspan="2">2020<br>(2020spbsmartdata)</td>
         <td>2020&nbsp;Summer<br>(2020-spb-tt)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2">2020</td>
         <td rowspan="2">2020</td>
@@ -273,6 +293,8 @@
         <td rowspan="2">2021<br>(2021spbsmartdata)</td>
         <td>2021 Spring<br>(2021marchtt)</td>
         <td rowspan="2">2021<br>(2021videotech)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2021</td>
         <td rowspan="2">2021</td>
         <td rowspan="2"></td>
@@ -288,29 +310,31 @@
     <tr>
         <th rowspan="2">2022</th>
         <td rowspan="2">2022<br>(2022)</td>
-        <td rowspan="2">2022</td>
+        <td rowspan="2">2022<br>(2022)</td>
         <td>2022 Spring<br>(2022 Spring)</td>
         <td>2022 Spring<br>(2022 Spring)</td>
         <td>2022 Spring<br>(2022 Spring)</td>
         <td rowspan="2">2022<br>(2022)</td>
         <td rowspan="2"></td>
         <td rowspan="2">2022<br>(2022)</td>
-        <td rowspan="2">2022</td>
+        <td rowspan="2">2022<br>(2022)</td>
         <td>2022 Spring<br>(2022 Spring)</td>
         <td rowspan="2"></td>
-        <td rowspan="2">2022</td>
+        <td rowspan="2">2022<br>(2022)</td>
         <td>2022 Spring<br>(2022 Spring)</td>
+        <td rowspan="2">2022<br>(2022)</td>
+        <td rowspan="2">2022<br>(2022)</td>
+        <td rowspan="2">2022<br>(2022)</td>
         <td rowspan="2">2022</td>
         <td rowspan="2">2022</td>
         <td rowspan="2">2022</td>
-        <td rowspan="2"></td>
-        <td rowspan="2"></td>
+        <td rowspan="2">2022</td>
     </tr>
     <tr>
-        <td>2022 Autumn</td>
-        <td>2022 Autumn</td>
-        <td>2022 Autumn</td>
-        <td>2022 Autumn</td>
-        <td>2022 Autumn</td>
+        <td>2022 Autumn<br>(2022 Autumn)</td>
+        <td>2022 Autumn<br>(2022 Autumn)</td>
+        <td>2022 Autumn<br>(2022 Autumn)</td>
+        <td>2022 Autumn<br>(2022 Autumn)</td>
+        <td>2022 Autumn<br>(2022 Autumn)</td>
     </tr>
 </table>
