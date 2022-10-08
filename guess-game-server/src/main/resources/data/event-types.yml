@@ -35,11 +35,11 @@ eventTypes:
       - {language: en, text: "DevOps conference"}
       - {language: ru, text: "Конференция по инженерным DevOps-решениям"}
     longDescription:
-      - {language: en, text: "**DevOops** is\_a\_conference from [JUG\_Ru\_Group](https://jugru.org/en) devoted to\_DevOps\
+      - {language: en, text: "DevOops is\_a\_conference from [JUG\_Ru\_Group](https://jugru.org/en) devoted to\_DevOps\
             \ practices. It\_strives to\_unify people with different backgrounds (development and operations) so\_that everyone\
             \ can release software more often and fix problems in\_a\_faster and more reliable way. Its program consists of\_\
             three main parts: the DevOps culture itself, SRE, and Cloud Native."}
-      - {language: ru, text: "**DevOops**\_— конференция от\_[JUG\_Ru\_Group](https://jugru.org/), посвященная практикам DevOps.\
+      - {language: ru, text: "DevOops\_— конференция от\_[JUG\_Ru\_Group](https://jugru.org/), посвященная практикам DevOps.\
             \ Она объединяет специалистов с\_разным бэкграундом и\_в\_разработке, и\_в\_эксплуатации, чтобы в\_итоге все м\
             огли релизить чаще, а\_чинить быстрее и\_надежнее. Программа делится на\_три части\_— непосредственно культура\
             \ DevOps, SRE и\_Cloud Native."}
@@ -62,11 +62,11 @@ eventTypes:
       - {language: en, text: "Conference for .NET developers"}
       - {language: ru, text: "Конференция для .NET-разработчиков"}
     longDescription:
-      - {language: en, text: "**DotNext** is\_a\_conference for .NET developers. It’s the largest and oldest event of\_its\
+      - {language: en, text: "DotNext is\_a\_conference for .NET developers. It’s the largest and oldest event of\_its\
             \ kind in\_Russia. There are always talks on\_low-level optimizations and other internals of .NET for people who\
             \ want to\_know «how it\_all works under the hood.» There are also more practical talks that can be\_applied in\_\
             everyday work. The conference is\_organized by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**DotNext**\_— крупнейшая и\_старейшая конференция для всех, кто программирует на .NET. Для\
+      - {language: ru, text: "DotNext\_— крупнейшая и\_старейшая конференция для всех, кто программирует на .NET. Для\
             \ любителей узнать, как оно работает «под капотом», в\_программе всегда есть хардкорные доклады про низкоуровн\
             евые оптимизации и\_неочевидные механики .NET. Но\_есть многое и\_для тех, кому важнее «быстро использовать чт\
             о-то на\_практике». Организатор конференции — [JUG\_Ru\_Group](https://jugru.org/)."}
@@ -89,10 +89,10 @@ eventTypes:
       - {language: en, text: "Testing conference not only for testers"}
       - {language: ru, text: "Конференция по тестированию не только для тестировщиков"}
     longDescription:
-      - {language: en, text: "**Heisenbug** is\_the biggest Russian testing conference. Its talks and discussions appeal to\_\
+      - {language: en, text: "Heisenbug is\_the biggest Russian testing conference. Its talks and discussions appeal to\_\
             a\_wide array of\_tech specialists: QA\_engineers, developers, team leaders, quality directors. The conference\
             \ is\_focused on\_technologies (as\_opposed to\_processes and methodologies). It’s held by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**Heisenbug**\_— крупнейшая в\_России конференция по\_тестированию программного обеспечения\
+      - {language: ru, text: "Heisenbug\_— крупнейшая в\_России конференция по\_тестированию программного обеспечения\
             . Доклады и\_дискуссии для специалистов разных профилей: QA-инженеров, разработчиков, тимлидов, директоров по\_\
             качеству. Конференция больше ориентирована на\_технологии, чем на\_процессы и\_методологии. Ее\_организатор\_—\
             \ [JUG\_Ru\_Group](https://jugru.org/)."}
@@ -115,11 +115,11 @@ eventTypes:
       - {language: en, text: "Conference for JavaScript developers"}
       - {language: ru, text: "Конференция для JavaScript-разработчиков"}
     longDescription:
-      - {language: en, text: "**HolyJS** is\_a\_conference for all JavaScript developers (whether front end or\_otherwise).\
+      - {language: en, text: "HolyJS is\_a\_conference for all JavaScript developers (whether front end or\_otherwise).\
             \ It\_covers different aspects of\_JS development, ranging from specific frameworks to\_battling technical debt.\
             \ The bottom line is\_that the program contains a\_lot of\_useful technical knowledge. The conference is\_held\
             \ by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**HolyJS**\_— конференция для всех, кто программирует на\_JavaScript\_— для фронтенда и\_не\_\
+      - {language: ru, text: "HolyJS\_— конференция для всех, кто программирует на\_JavaScript\_— для фронтенда и\_не\_\
             только. JS‑разработку здесь рассматривают в\_разных ракурсах: от\_конкретных фреймворков до\_борьбы с\_техдолг\
             ом\_— главное, чтобы в\_программе было много технической конкретики. Организатор конференции\_— [JUG\_Ru\_Group](https://jugru.org/)."}
     siteLink:
@@ -202,11 +202,11 @@ eventTypes:
       - {language: en, text: "The largest Java conference in Russia"}
       - {language: ru, text: "Международная Java-конференция для опытных разработчиков"}
     longDescription:
-      - {language: en, text: "**JPoint** is\_a\_conference for Java developers that’s been held since 2013. It’s one of\_\
+      - {language: en, text: "JPoint is\_a\_conference for Java developers that’s been held since 2013. It’s one of\_\
             the two largest and oldest Java conferences in\_Russia (the other is\_its «twin», the Joker conference). It\_\
             is\_the right place to\_go\_both for practical talks (say, about using Spring Boot) and to\_get to\_know the JVM\
             \ under the hood. The conference is\_held by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**JPoint**\_— конференция для Java-программистов, проходящая с\_2013\_года. Одна из\_двух кр\
+      - {language: ru, text: "JPoint\_— конференция для Java-программистов, проходящая с\_2013\_года. Одна из\_двух кр\
             упнейших и\_старейших Java-конференций в\_России (вместе со\_своим «братом-близнецом» Joker). Здесь можно и\_у\
             знать практическую информацию об\_использовании Spring Boot, и\_разобраться, как JVM работает «под капотом». О\
             рганизатор JPoint и\_Joker\_— [JUG\_Ru\_Group](https://jugru.org/)."}
@@ -229,11 +229,11 @@ eventTypes:
       - {language: en, text: "Conference for experienced Java developers"}
       - {language: ru, text: "Конференция для опытных Java‑разработчиков"}
     longDescription:
-      - {language: en, text: "**Joker** is\_a\_conference for Java developers that’s held since 2013. It’s one of\_two largest\
+      - {language: en, text: "Joker is\_a\_conference for Java developers that’s held since 2013. It’s one of\_two largest\
             \ and oldest Java conferences in\_Russia (the other is\_its «twin», the JPoint conference). It\_is\_the right\
             \ place to\_go\_both for practical talks (say, about using Spring Boot) and getting to\_know JVM under the hood.\
             \ The conference is\_held by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**Joker**\_— конференция для Java-программистов, проходящая с\_2013\_года. Одна из\_двух кру\
+      - {language: ru, text: "Joker\_— конференция для Java-программистов, проходящая с\_2013\_года. Одна из\_двух кру\
             пнейших и\_старейших Java-конференций в\_России (вместе со\_своей «сестрой-близнецом» JPoint). Здесь можно и\_\
             узнать практическую информацию об\_использовании Spring Boot, и\_разобраться, как JVM работает «под капотом».\
             \ Организатор конференции\_— [JUG\_Ru\_Group](https://jugru.org/)."}
@@ -256,11 +256,11 @@ eventTypes:
       - {language: en, text: "Conference for mobile developers"}
       - {language: ru, text: "Конференция для мобильных разработчиков"}
     longDescription:
-      - {language: en, text: "**Mobius** is\_a\_conference for everyone involved in\_mobile app development: iOS and Android\
+      - {language: en, text: "Mobius is\_a\_conference for everyone involved in\_mobile app development: iOS and Android\
             \ developers; mobile app architects; DevOps professionals; QA\_engineers; team leaders. We\_are into both native\
             \ and cross-platform development. And into pretty much everything to\_do\_with mobile development, ranging from\
             \ Swift to\_the build tools. The conference is\_held by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**Mobius**\_— конференция для тех, кто связан с\_мобильной разработкой: iOS- и\_Android-разр\
+      - {language: ru, text: "Mobius\_— конференция для тех, кто связан с\_мобильной разработкой: iOS- и\_Android-разр\
             аботчиков, архитекторов мобильных приложений, специалистов по\_DevOps, тестировщиков, тимлидов и\_руководителе\
             й проектов. Для каждой из\_платформ мы\_обсуждаем как нативную, так и\_кроссплатформенную разработку. И\_всё,\
             \ что «вокруг»: от\_Swift до\_систем сборки. Организатор конференции\_— [JUG\_Ru\_Group](https://jugru.org/)."}
@@ -309,10 +309,10 @@ eventTypes:
       - {language: en, text: "Conference for data engineers"}
       - {language: ru, text: "Конференция для дата‑инженеров"}
     longDescription:
-      - {language: en, text: "**SmartData** is\_a\_data engineering conference. It’s full of\_tech talks related to\_all the\
+      - {language: en, text: "SmartData is\_a\_data engineering conference. It’s full of\_tech talks related to\_all the\
             \ topics that are important for a\_data engineer, ranging from reliability to\_MLOps. The conference is\_held\
             \ by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**SmartData**\_— конференция по\_инженерии данных. Здесь много технической конкретики по\_вс\
+      - {language: ru, text: "SmartData\_— конференция по\_инженерии данных. Здесь много технической конкретики по\_вс\
             ем темам, важным в\_работе дата-инженера: от\_отказоустойчивости до\_MLOps. Организатор конференции\_— [JUG\_\
             Ru\_Group](https://jugru.org/)."}
     siteLink:
@@ -334,11 +334,11 @@ eventTypes:
       - {language: en, text: "Festival for everyone interested in software development"}
       - {language: ru, text: "Фестиваль для разработчиков и им сочувствующих"}
     longDescription:
-      - {language: en, text: "**TechTrain** is a free online event for everyone interested in software development. Our speakers\
+      - {language: en, text: "TechTrain is a free online event for everyone interested in software development. Our speakers\
             \ are experienced developers coming from a wide array of fields: server- and client-side, mobile development,\
             \ testing, DevOps, ML, security, architecture and so on. Since the event is suited for very different kinds of\
             \ tech professionals."}
-      - {language: ru, text: "**TechTrain**\_— бесплатный онлайн-фестиваль от\_[JUG\_Ru\_Group](https://jugru.org/) для ра\
+      - {language: ru, text: "TechTrain\_— бесплатный онлайн-фестиваль от\_[JUG\_Ru\_Group](https://jugru.org/) для ра\
             зработчиков\_ПО и\_им\_сочувствующих. Наши спикеры\_— известные эксперты в\_области серверной, клиентской и\_м\
             обильной разработки, гуру тестирования, мастера DevOps, волшебники машинного обучения, стражи информационной б\
             езопасности, профессионалы архитектуры и\_дизайна. Фестиваль рассчитан на\_специалистов самого разного профиля\
@@ -436,10 +436,10 @@ eventTypes:
       - {language: en, text: "Video and streaming technologies conference"}
       - {language: ru, text: "Конференция по технологиям видео и стриминга"}
     longDescription:
-      - {language: en, text: "**Videotech** is a conference about video and streaming technologies. Its mission is to connect\
+      - {language: en, text: "VideoTech is a conference about video and streaming technologies. Its mission is to connect\
             \ people who work on streaming platforms, video players, content delivery and other tech projects related to video\
             \ and audio on the internet. The conference is held by [JUG\_Ru\_Group](https://jugru.org/en)."}
-      - {language: ru, text: "**VideoTech**\_— конференция по\_технологиям видео и\_стриминга. Её\_миссия\_— познакомить д\
+      - {language: ru, text: "VideoTech\_— конференция по\_технологиям видео и\_стриминга. Её\_миссия\_— познакомить д\
             руг с\_другом людей, работающих над стриминговыми платформами, плеерами, доставкой контента и\_другими техниче\
             скими аспектами работы с\_видео и\_аудио в\_интернете. Организатор конференции\_— [JUG\_Ru\_Group](https://jugru.org/)."}
     siteLink:
