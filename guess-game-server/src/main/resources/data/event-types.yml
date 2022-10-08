@@ -33,7 +33,7 @@ eventTypes:
       - {language: en, text: DevOops}
     shortDescription:
       - {language: en, text: "DevOps conference"}
-      - {language: ru, text: "Конференция, посвящённая инженерным DevOps-решениям"}
+      - {language: ru, text: "Конференция по инженерным DevOps-решениям"}
     longDescription:
       - {language: en, text: "**DevOops** is\_a\_conference from [JUG\_Ru\_Group](https://jugru.org/en) devoted to\_DevOps\
             \ practices. It\_strives to\_unify people with different backgrounds (development and operations) so\_that everyone\
@@ -86,8 +86,8 @@ eventTypes:
     name:
       - {language: en, text: Heisenbug}
     shortDescription:
-      - {language: en, text: "Software testing conference"}
-      - {language: ru, text: "Большая техническая конференция по тестированию"}
+      - {language: en, text: "Testing conference not only for testers"}
+      - {language: ru, text: "Конференция по тестированию не только для тестировщиков"}
     longDescription:
       - {language: en, text: "**Heisenbug** is\_the biggest Russian testing conference. Its talks and discussions appeal to\_\
             a\_wide array of\_tech specialists: QA\_engineers, developers, team leaders, quality directors. The conference\
@@ -113,7 +113,7 @@ eventTypes:
       - {language: en, text: HolyJS}
     shortDescription:
       - {language: en, text: "Conference for JavaScript developers"}
-      - {language: ru, text: "Большая конференция для JavaScript-разработчиков"}
+      - {language: ru, text: "Конференция для JavaScript-разработчиков"}
     longDescription:
       - {language: en, text: "**HolyJS** is\_a\_conference for all JavaScript developers (whether front end or\_otherwise).\
             \ It\_covers different aspects of\_JS development, ranging from specific frameworks to\_battling technical debt.\
@@ -226,8 +226,8 @@ eventTypes:
     name:
       - {language: en, text: Joker}
     shortDescription:
-      - {language: en, text: "The largest Java conference in Russia"}
-      - {language: ru, text: "Международная Java-конференция для опытных разработчиков"}
+      - {language: en, text: "Conference for experienced Java developers"}
+      - {language: ru, text: "Конференция для опытных Java‑разработчиков"}
     longDescription:
       - {language: en, text: "**Joker** is\_a\_conference for Java developers that’s held since 2013. It’s one of\_two largest\
             \ and oldest Java conferences in\_Russia (the other is\_its «twin», the JPoint conference). It\_is\_the right\
@@ -306,8 +306,8 @@ eventTypes:
     name:
       - {language: en, text: SmartData}
     shortDescription:
-      - {language: en, text: "Data Engineering conference"}
-      - {language: ru, text: "Конференция по Data Engineering"}
+      - {language: en, text: "Conference for data engineers"}
+      - {language: ru, text: "Конференция для дата‑инженеров"}
     longDescription:
       - {language: en, text: "**SmartData** is\_a\_data engineering conference. It’s full of\_tech talks related to\_all the\
             \ topics that are important for a\_data engineer, ranging from reliability to\_MLOps. The conference is\_held\
@@ -331,8 +331,8 @@ eventTypes:
     name:
       - {language: en, text: TechTrain}
     shortDescription:
-      - {language: en, text: "IT festival"}
-      - {language: ru, text: "IT - Фестиваль"}
+      - {language: en, text: "Festival for everyone interested in software development"}
+      - {language: ru, text: "Фестиваль для разработчиков и им сочувствующих"}
     longDescription:
       - {language: en, text: "**TechTrain** is a free online event for everyone interested in software development. Our speakers\
             \ are experienced developers coming from a wide array of fields: server- and client-side, mobile development,\
