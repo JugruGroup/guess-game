@@ -44,7 +44,7 @@ eventTypes:
             огли релизить чаще, а\_чинить быстрее и\_надежнее. Программа делится на\_три части\_— непосредственно культура\
             \ DevOps, SRE и\_Cloud Native."}
     siteLink:
-      - {language: en, text: "https://devoops.ru//en/"}
+      - {language: en, text: "https://devoops.ru/en/"}
       - {language: ru, text: "https://devoops.ru/"}
     vkLink: https://vk.com/devoops
     twitterLink: https://twitter.com/devoopsconf
@@ -182,7 +182,7 @@ eventTypes:
             \ были посвящены только востребованным Java-технологиям и проблемам: производительность, concurrency, тестиров\
             ание, распределённые системы и высокие нагрузки в мире Java, а также будущее платформы."
     siteLink:
-      - {language: en, text: "https://2018.jbreak.ru//en/"}
+      - {language: en, text: "https://2018.jbreak.ru/en/"}
       - {language: ru, text: "https://2018.jbreak.ru/"}
     vkLink: https://vk.com/jbreakconf
     twitterLink: https://twitter.com/JUGru
@@ -316,7 +316,7 @@ eventTypes:
             ем темам, важным в\_работе дата-инженера: от\_отказоустойчивости до\_MLOps. Организатор конференции\_— [JUG\_\
             Ru\_Group](https://jugru.org/)."}
     siteLink:
-      - {language: en, text: "https://smartdataconf.ru//en/"}
+      - {language: en, text: "https://smartdataconf.ru/en/"}
       - {language: ru, text: "https://smartdataconf.ru/"}
     vkLink: https://vk.com/smartdata
     twitterLink: https://twitter.com/smartdatacon
@@ -344,8 +344,7 @@ eventTypes:
             езопасности, профессионалы архитектуры и\_дизайна. Фестиваль рассчитан на\_специалистов самого разного профиля\
             , поэтому в\_программе могут быть доклады на\_совершенно разные темы."}
     siteLink:
-      - {language: en, text: "https://techtrain.ru/en/"}
-      - {language: ru, text: "https://techtrain.ru/"}
+      - {language: en, text: "https://techtrain.ru/"}
     vkLink: https://vk.com/techtrain
     twitterLink: https://twitter.com/techtrainfest
     youtubeLink: https://www.youtube.com/channel/UCJoerW5eDOz5qu7I2CYi7xg
