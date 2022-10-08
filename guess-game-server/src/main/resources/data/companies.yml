@@ -3427,3 +3427,17 @@ companies:
     name:
       - {language: en, text: "Tibbo Systems"}
     siteLink: https://aggregate.digital
+  - id: 948
+    name:
+      - {language: en, text: "Korus Сonsulting"}
+      - {language: ru, text: "Корус Консалтинг"}
+    siteLink: https://korusconsulting.ru
+  - id: 949
+    name:
+      - {language: en, text: MAI}
+      - {language: ru, text: МАИ}
+    siteLink: https://mai.ru
+  - id: 950
+    name:
+      - {language: en, text: IBS}
+    siteLink: https://ibs.ru

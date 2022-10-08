@@ -6984,32 +6984,22 @@ speakers:
     mvpReconnect: true
   - id: 472
     photoFileName: 0472.jpg
-    photoUpdatedAt: 2020-02-18T11:43:02.157Z[UTC]
+    photoUpdatedAt: 2022-09-14T14:19:21Z[UTC]
     name:
       - {language: en, text: "Dmitry Soshnikov"}
       - {language: ru, text: "Дмитрий Сошников"}
-    companyIds: [328]
+    companyIds: [949, 650]
     bio:
-      - language: en
-        text: "Dmitry is a technology evangelist of Microsoft company, promotes modern software development technologies among\
-            \ beginner developers: pupils, students, startups. Specializes in the Internet of things, Windows universal applications\
-            \ development, functional programming, and platform .NET (F#, Roslyn).\nHas personally done dozens of hackathons\
-            \ all around Russia, helped many students' startups to start their projects in various fields. Associate Professor,\
-            \ Candidate of Physical and Mathematical Sciences, teaches at MIPT and MAI, a member of the Russian Association\
-            \ for Artificial Intelligence, during summertime — a lead of the department of computer technologies of the children\
-            \ camp JUNIO-R. In his spare time is into technological magic, does Chinese tea ceremony, Gong Fu Cha\n\nYou will\
-            \ leave this talk with enough knowledge to use TCP/IP sockets to communicate with any custom device in a fully\
-            \ reliable manner. You will also be empowered to evaluate custom protocols used by devices, identify their defects,\
-            \ and provide workarounds if necessary."
+      - {language: en, text: "<span style=\"background-color: rgb(32, 38, 46);\">Dmitry Soshnikov worked at Microsoft for\
+            \ more than 16 years, as Technical Evangelist, Senior Software Engineer, AI/ML Expert and Cloud Developer Advocate.\
+            \ He met Bill Gates, and twice was on stage with Steve Ballmer, former CEO of Microsoft. He is the primary author\
+            \ of Microsoft AI for Beginners Curriculum. Currently, Dmitry is an Associate Professor at two prominent Moscow\
+            \ universities, carries out his own projects, and is involved in neurogenerative art. More info at http://soshnikov.com.</span>"}
       - language: ru
-        text: "Дмитрий Сошников — технологический евангелист компании Майкрософт, занимается популяризацией современных те\
-            хнологий разработки программного обеспечения среди начинающих разработчиков: школьников, студентов, начинающих\
-            \ стартапов. Специализируется в области интернета вещей, в разработке универсальных приложений Windows, в обла\
-            сти функционального программирования и на платформе .NET (F#, Roslyn).\r\nЛично провел несколько десятков хака\
-            тонов по всей России, помогал многим студенческим стартапам начать свои проекты в различных областях. Доцент,\
-            \ к.ф.-м.н., ведет занятия в МФТИ и МАИ, член Российской ассоциации искусственного интеллекта, летом — ведущий\
-            \ кафедры компьютерных технологий детского лагеря ЮНИО-Р. В свободное время увлекается технологической магией\
-            , проводит китайские чайные церемонии Гун Фу Ча."
+        text: "<p>Более 16 лет проработал в Microsoft в роли технологического евангелиста, разработчика и ведущего эксперт\
+            а по искусственному интеллекту и машинному обучению. Встречался с Биллом Гейтсом, дважды выступал со сцены со\
+            \ Стивом Балмером. Автор открытого курса Microsoft AI for Beginners Curriculum.</p>\n<p>Сейчас преподаёт в нес\
+            кольких ведущих вузах Москвы, занимается собственными проектами и увлекается нейрогенеративным искусством.</p>"
     twitter: shwars
     habr: shwars
   - id: 473
@@ -17745,18 +17735,18 @@ speakers:
     gitHub: bahmutov
   - id: 1246
     photoFileName: 1246.jpg
-    photoUpdatedAt: 2022-03-31T19:04:41Z[UTC]
+    photoUpdatedAt: 2022-10-06T15:57:07Z[UTC]
     name:
-      - {language: en, text: "Ruslan Akhmetzyanov"}
+      - {language: en, text: "Ruslan Akhmetzianov"}
       - {language: ru, text: "Руслан Ахметзянов"}
     companyIds: [425]
     bio:
       - {language: en, text: "DevRel at Qameta Software. Former Marketing manager and Head of Program Department at JUG Ru\
             \ Group. Learnt how to know a bit of everything. He's like a dog: understands everything in programming, but can't\
             \ do anything by himself!"}
-      - {language: ru, text: "Занимается Developer Relations в Qameta Software. До этого пять лет проработал в JUG Ru Group\
-            \ в качестве антибулшит-менеджера в маркетинге и руководителя Программного отдела. Научился разбираться во всё\
-            м понемногу. В программировании разбирается как собака: всё понимает, но говорить не может!"}
+      - {language: ru, text: "<p>Занимается Developer Relations в Qameta Software. До этого пять лет проработал в JUG Ru Group\
+            \ в качестве антибулшит-менеджера в маркетинге и руководителя Программного отдела. Научился разбираться во все\
+            м понемногу. В программировании разбирается как собака: всё понимает, но говорить не может!</p>"}
     twitter: ruslan_testops
     gitHub: Avaddon-tfa
     habr: ARG89
@@ -17891,7 +17881,7 @@ speakers:
     habr: n0mo
   - id: 1257
     photoFileName: 1257.jpg
-    photoUpdatedAt: 2022-05-25T16:01:56Z[UTC]
+    photoUpdatedAt: 2022-09-21T12:12:17Z[UTC]
     name:
       - {language: en, text: "Denis Tarasov"}
       - {language: ru, text: "Денис Тарасов"}
@@ -17900,9 +17890,9 @@ speakers:
       - {language: en, text: "<p>Denis is the team leader at Kontur, which develops exploitation tools. In his spare time\
             \ he limits internal meetups for backenders, trains new Kontur employees in REST API design and builds LEGO Technic\
             \ to the melodic sound of Metalcore.</p>"}
-      - {language: ru, text: "<p>Денис &mdash; тимлид команды в Контуре, которая занимается разработкой инструментов экспл\
-            уатации. В свободное время огранизует внутренние митапы для бэкендеров, обучает новых сотрудников Контура прое\
-            ктированию REST API и собирает LEGO Technic под мелодичное звучание Metalcore.</p>"}
+      - {language: en, text: "<p>Денис &mdash; тимлид команды в &laquo;Контуре&raquo;, которая занимается разработкой инст\
+            рументов эксплуатации. В свободное время организует внутренние митапы для бэкендеров, обучает новых сотруднико\
+            в &laquo;Контура&raquo; проектированию REST API и собирает LEGO Technic под мелодичное звучание Metalcore.</p>"}
   - id: 1258
     photoFileName: 1258.jpg
     photoUpdatedAt: 2020-06-12T08:51:48.785Z[UTC]
@@ -19233,7 +19223,7 @@ speakers:
       - {language: ru, text: "Ведущий разработчик, лидер сообщества."}
   - id: 1364
     photoFileName: 1364.jpg
-    photoUpdatedAt: 2022-04-12T11:36:26Z[UTC]
+    photoUpdatedAt: 2022-09-14T13:13Z[UTC]
     name:
       - {language: en, text: "Anna Zharkova"}
       - {language: ru, text: "Анна Жаркова"}
@@ -19244,12 +19234,11 @@ speakers:
             \ mobile application architecture for both platforms and manages the direction team. Leads junior developers (mentoring).\
             \ Lecturer in \"iOS Advanced 2.0\" and \"iOS Basic\" courses at Otus. In her spare time, she enjoys painting and\
             \ studying Chinese and German."}
-      - {language: ru, text: "<div class=\"PersonContent_personContent__text__LS5lM\">Мобильный разработчик с&nbsp;более 7&nbsp;г\
-            одами опыта коммерческой разработки. Kotlin GDE. Занимается нативной разработкой iOS (Swift/Objective-c) и&nbsp;Android\
-            \ (Kotlin/Java), кросс-платформенной (KMP, Xamarin). Разрабатывает архитектуру мобильных приложений для обеих\
-            \ платформ, управляет командой направления. Ведет младших разработчиков (менторство). Преподаватель на&nbsp;ку\
-            рсах &laquo;iOS Advanced&nbsp;2.0&raquo; и&nbsp;&laquo;iOS Базовый&raquo; в&nbsp;Otus. В&nbsp;свободное время\
-            \ увлекается живописью, изучает китайский и&nbsp;немецкий языки.</div>"}
+      - {language: ru, text: "<p>Мобильный разработчик с более чем семью годами опыта коммерческой разработки. Kotlin GDE.\
+            \ Занимается нативной разработкой iOS (Swift/Objective-c) и Android (Kotlin/Java), кросс-платформенной (KMP, Xamarin).\
+            \ Разрабатывает архитектуру мобильных приложений для обеих платформ, управляет командой направления. Ведет мла\
+            дших разработчиков (менторство). Преподаватель на курсах &laquo;iOS Advanced 2.0&raquo; и &laquo;iOS Базовый&raquo;\
+            \ в Otus. В свободное время увлекается живописью, изучает китайский и немецкий языки.</p>"}
     twitter: anioutkajarkova
     gitHub: anioutkazharkova
     habr: anioutka
@@ -21250,18 +21239,18 @@ speakers:
             \ NiFi в компании. Является администратором и активным участником сообщества пользователей NiFi в России (@nifiusers)."}
   - id: 1504
     photoFileName: 1504.jpg
-    photoUpdatedAt: 2020-12-03T07:49:21.875Z[UTC]
+    photoUpdatedAt: 2022-09-15T13:04:40Z[UTC]
     name:
       - {language: en, text: "Evgeny Ermakov"}
       - {language: ru, text: "Евгений Ермаков"}
     companyIds: [689]
     bio:
-      - {language: en, text: "More than 10 years of experience in IT. Architect of data warehouses and analysis systems at\
-            \ Mail.ru Group and Yandex Go. Candidate of Technical Sciences, author of more than 10 papers in data analysis,\
-            \ co-author of a monograph on the theory and practice of parallel database analysis."}
-      - {language: ru, text: "Более 10 лет опыта работы в ИТ-сфере. Архитектор хранилищ данных и систем анализа в Mail.ru\
+      - {language: en, text: "Более 10 лет опыта работы в ИТ-сфере. Архитектор хранилищ данных и систем анализа в Mail.ru\
             \ Group и Яндекс Go. Кандидат технических наук, автор более 10 работ в области анализа данных, соавтор моногра\
             фии по теории и практике анализа параллельных баз данных."}
+      - {language: ru, text: "Более 10 лет опыта работы в ИТ-сфере. Архитектор хранилищ данных и систем анализа в Mail.ru\
+            \ Group, Яндекс Go, Toloka.AI. Кандидат технических наук, автор более 10 работ в области анализа данных, соавт\
+            ор монографии по теории и практике анализа параллельных баз данных."}
     twitter: iJKos
   - id: 1505
     photoFileName: 1505.jpg
@@ -22588,7 +22577,7 @@ speakers:
     gitHub: borkdude
   - id: 1592
     photoFileName: 1592.jpg
-    photoUpdatedAt: 2022-03-31T19:06:37Z[UTC]
+    photoUpdatedAt: 2022-09-12T07:36:20Z[UTC]
     name:
       - {language: en, text: "Ilya Sazonov"}
       - {language: ru, text: "Илья Сазонов"}
@@ -22605,9 +22594,10 @@ speakers:
             \ проектах с большим количеством участников.\nТакже занимается образовательной деятельностью — участвует в соз\
             дании курсов SkyPro по Java.\nСейчас работает в финтехе — руководит бэкенд-разработкой в сервисе рассрочек «Вс\
             егда.Да»."
+    habr: poxvuibr
   - id: 1593
     photoFileName: 1593.jpg
-    photoUpdatedAt: 2022-03-31T19:06:37Z[UTC]
+    photoUpdatedAt: 2022-09-12T07:35:40Z[UTC]
     name:
       - {language: en, text: "Fedor Sazonov"}
       - {language: ru, text: "Фёдор Сазонов"}
@@ -22625,6 +22615,7 @@ speakers:
             ыстраивании процессов разработки и доставки продукта до конечных пользователей."
     twitter: sazonovfm
     gitHub: revenant20
+    habr: Revenant20
   - id: 1594
     photoFileName: 1594.jpg
     photoUpdatedAt: 2021-02-26T08:57:52.647Z[UTC]
@@ -32147,7 +32138,7 @@ speakers:
             исами для хранения данных. Интересуется многопоточностью и внутренним устройством .NET.</p>"}
   - id: 2235
     photoFileName: 2235.jpg
-    photoUpdatedAt: 2022-05-25T16:05:33Z[UTC]
+    photoUpdatedAt: 2022-09-15T09:21:36Z[UTC]
     name:
       - {language: en, text: "Dmitry Afanasiev"}
       - {language: ru, text: "Дмитрий Афанасьев"}
@@ -32175,3 +32166,75 @@ speakers:
     bio:
       - {language: en, text: "<p>Head of Central Logistics at Ozon.</p>"}
       - {language: ru, text: "<p>Руководитель направления центральной логистики в Ozon.</p>"}
+  - id: 2237
+    photoFileName: 2237.jpg
+    photoUpdatedAt: 2022-09-23T16:09:36Z[UTC]
+    name:
+      - {language: en, text: "Alexey Lobzov"}
+      - {language: ru, text: "Алексей Лобзов"}
+    companyIds: [613]
+    bio:
+      - {language: ru, text: "<p>Руководитель направления в Альфа-Банке. Занимается развитием компетенции системного анали\
+            за. Пишет статьи, выступает на митапах. Победитель конкурса Sovcombank Challenge 2021 в номинации &laquo;Систе\
+            мный анализ&raquo; и соавтор программы подготовки системных аналитиков от SkillFactory.</p>"}
+    habr: alobzov
+  - id: 2238
+    photoFileName: 2238.jpg
+    photoUpdatedAt: 2022-09-19T11:39:39Z[UTC]
+    name:
+      - {language: en, text: "Ilya Sidorchik"}
+      - {language: ru, text: "Илья Сидорчик"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "Frontend Developer at&nbsp;Yandex&nbsp;Market. He&nbsp;managed to&nbsp;work in&nbsp;3&nbsp;companies\
+            \ in&nbsp;5&nbsp;years: Sdamgia, Sberbank and&nbsp;Yandex. Ilya is&nbsp;fond of&nbsp;making useful products that\
+            \ are easy&nbsp;to&nbsp;use."}
+      - {language: ru, text: "<p>Фронтенд-разработчик в Яндекс.Маркете. За пять лет успел поработать в трех компаниях: СДА\
+            М ГИА, Сбербанке и Яндексе. Любит делать полезные продукты, которыми удобно пользоваться.</p>"}
+    twitter: isidorchik
+    gitHub: ilyasidorchik
+  - id: 2239
+    photoFileName: 2239.jpg
+    photoUpdatedAt: 2022-09-14T14:03:25Z[UTC]
+    name:
+      - {language: en, text: "Avenir Voronov"}
+      - {language: ru, text: "Авенир Воронов"}
+    companyIds: [948]
+    bio:
+      - {language: en, text: "<p>CTO at Corus Consulting. Worked at EPAM, HP, Luxoft, Deutsche Bank, UBS, Motorola and Qasl\
+            \ in Russia, Poland and Singapore. He has worked his way up from a programmer to the director. For four years\
+            \ was a trainer in leadership programs for project managers in Luxoft, and was awarded as the most effective trainer\
+            \ in the company.</p>"}
+      - {language: ru, text: "<p>CTO в &laquo;Корус Консалтинг&raquo;. Работал в EPAM, HP, Luxoft, Deutsche Bank, UBS, Motorola\
+            \ и Qasl в России, Польше, Сингапуре. Прошел путь от программиста до директора. Четыре года был тренером по ли\
+            дерским программам для менеджеров проектов в Luxoft, получил награду как самый эффективный тренер компании.</p>"}
+    gitHub: RobotAvi
+  - id: 2240
+    photoFileName: 2240.jpg
+    photoUpdatedAt: 2022-09-26T09:01:08Z[UTC]
+    name:
+      - {language: en, text: "Iuliia Volkova"}
+      - {language: ru, text: "Юлия Волкова"}
+    companyIds: [257]
+    bio:
+      - {language: en, text: "For the last six years she has worked in western outsourcing: EPAM and GridDynamics. For the\
+            \ last three years in Tech Lead positions. Has enjoyed working in Engineering and Resource Manager roles. In work\
+            \ projects she mainly does cloud backends and Data Engineering.Being an independent consultant helps several projects.\
+            \ In her spare time, she loves Open Source and Maintains her libraries https://github.com/xnuinside."}
+      - {language: ru, text: "<p>Последние шесть лет работала в западном аутсорсе: EPAM и GridDynamics. Последние три года\
+            \ на позициях Tech Lead. Успела насладиться работой в роли Engineering и Resource Manager. В рабочих проектах\
+            \ в основном делает бэкенды в облаках и Data Engineering. Будучи независимым консультантом помогает нескольким\
+            \ проектам. В свободное от работы время любит опенсорс и мейнтейнит свои библиотеки.</p>"}
+    gitHub: xnuinside
+    habr: xnuinside
+  - id: 2241
+    photoFileName: 2241.jpg
+    photoUpdatedAt: 2022-09-15T14:40:05Z[UTC]
+    name:
+      - {language: en, text: "Yaroslav Bozhenkov"}
+      - {language: ru, text: "Ярослав Боженков"}
+    companyIds: [950]
+    bio:
+      - {language: ru, text: "<p>Старший бизнес-аналитик, руководитель практики системного и бизнес-анализа в финансовом с\
+            екторе. Имеет опыт разработки инновационных решений и высоконапряженных систем для топовых мировых банков и ст\
+            раховых компаний.</p>"}

@@ -41,3 +41,8 @@ companyGroups:
       "Synthesized",
       "MIPT"
     ]
+  - name: "MAI / HSE / ex-Microsoft"
+    items: [
+      MAI,
+      "NRU HSE"
+    ]

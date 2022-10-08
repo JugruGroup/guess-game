@@ -2280,5 +2280,10 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-части конференции DotNext 2022 Spring",
 //                                "Интервью с офлайн-площадки DotNext", "Закрытие офлайн-части конференции DotNext 2022 Spring",
 //                                "BoF-сессия. Безопасная разработка", "BoF-сессия. C#: прошлое, настоящее, будущее")));
+//        loadTalksSpeakersEvent(Conference.TECH_TRAIN, LocalDate.of(2022, 10, 8), "2022 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("TechTrain 2022 Autumn", null, List.of(24L)),
+//                        Set.of("Открытие фестиваля TechTrain 2022 Autumn", "Закрытие фестиваля TechTrain 2022 Autumn",
+//                                "Викторина TechTrain 2022 Autumn")));
     }
 }
