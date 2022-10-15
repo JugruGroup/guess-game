@@ -128,9 +128,13 @@ export class OlapStatisticsComponent implements OnInit {
   public selectedChartType = ChartType.Details;
 
   public chartKinds: SelectItem[] = [
-    {icon: 'bi-graph-up', value: ChartKind.Line, title: 'statistics.olap.chart.lineChartToolTipText'},
-    {icon: 'bi-graph-up-arrow', value: ChartKind.LineWithCumulativeTotal, title: 'statistics.olap.chart.lineChartWithCumulativeTotalToolTipText'},
-    {icon: 'bi-pie-chart', value: ChartKind.Pie, title: 'statistics.olap.chart.pieChartToolTipText'}];
+    {icon: 'bi-graph-up', value: ChartKind.Line, label: 'statistics.olap.chart.lineChartToolTipText'},
+    {
+      icon: 'bi-graph-up-arrow',
+      value: ChartKind.LineWithCumulativeTotal,
+      label: 'statistics.olap.chart.lineChartWithCumulativeTotalToolTipText'
+    },
+    {icon: 'bi-pie-chart', value: ChartKind.Pie, label: 'statistics.olap.chart.pieChartToolTipText'}];
   public selectedChartKind = ChartKind.Line;
 
   @ViewChildren('chartDiv') chartDivs: QueryList<ElementRef<HTMLDivElement>>;
@@ -153,6 +157,9 @@ export class OlapStatisticsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadCubeTypes();
+
+    this.translateService.onLangChange
+      .subscribe(() => this.fillChartKinds());
   }
 
   ngAfterViewInit(): void {
@@ -748,6 +755,21 @@ export class OlapStatisticsComponent implements OnInit {
       this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
       this.pieOptions = this.createPieOptions(aspectRatio);
     }
+  }
+
+  fillChartKinds() {
+    const keys = this.chartKinds
+      .map(e => e.label);
+
+    this.translateService.get(keys)
+      .subscribe(data => {
+        this.chartKinds = this.chartKinds
+          .map(e => {
+            e.title = data[e.label];
+
+            return e;
+          });
+      });
   }
 
   isChartsVisible() {

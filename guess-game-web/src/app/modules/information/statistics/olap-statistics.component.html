@@ -104,7 +104,7 @@
 
         <p-selectButton [options]="chartKinds" [(ngModel)]="selectedChartKind" optionLabel="icon" optionValue="value">
           <ng-template let-item>
-            <span title="{{item.title | translate}}" class="olap-chart-button"><i [class]="item.icon"></i></span>
+            <span title="{{item.title}}" class="olap-chart-button"><i [class]="item.icon"></i></span>
           </ng-template>
         </p-selectButton>
       </div>
