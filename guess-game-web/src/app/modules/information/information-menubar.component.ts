@@ -28,9 +28,7 @@ export class InformationMenubarComponent implements OnInit {
     this.initMenuItems();
 
     this.translateService.onLangChange
-      .subscribe(() => {
-        this.initMenuItems();
-      });
+      .subscribe(() => this.initMenuItems());
   }
 
   initMenuItems() {
