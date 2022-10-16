@@ -157,6 +157,7 @@ export class OlapStatisticsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadCubeTypes();
+    this.fillChartKinds();
 
     this.translateService.onLangChange
       .subscribe(() => this.fillChartKinds());
@@ -758,18 +759,20 @@ export class OlapStatisticsComponent implements OnInit {
   }
 
   fillChartKinds() {
-    const keys = this.chartKinds
-      .map(e => e.label);
+    if (this.translateService.currentLang) {
+      const keys = this.chartKinds
+        .map(e => e.label);
 
-    this.translateService.get(keys)
-      .subscribe(data => {
-        this.chartKinds = this.chartKinds
-          .map(e => {
-            e.title = data[e.label];
+      this.translateService.get(keys)
+        .subscribe(data => {
+          this.chartKinds = this.chartKinds
+            .map(e => {
+              e.title = data[e.label];
 
-            return e;
-          });
-      });
+              return e;
+            });
+        });
+    }
   }
 
   isChartsVisible() {
