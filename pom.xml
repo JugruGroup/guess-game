@@ -32,7 +32,7 @@
         <kumo.version>1.28</kumo.version>
         <mockito.version>4.8.1</mockito.version>
         <snakeyaml.version>1.33</snakeyaml.version>
-        <imageio.version>3.9.0</imageio.version>
+        <imageio.version>3.9.1</imageio.version>
         <spring-boot.version>2.7.4</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
