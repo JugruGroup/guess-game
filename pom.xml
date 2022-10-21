@@ -33,7 +33,7 @@
         <mockito.version>4.8.1</mockito.version>
         <snakeyaml.version>1.33</snakeyaml.version>
         <imageio.version>3.9.3</imageio.version>
-        <spring-boot.version>2.7.4</spring-boot.version>
+        <spring-boot.version>2.7.5</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
         <ng.build.arguments>-- --configuration=production</ng.build.arguments>
