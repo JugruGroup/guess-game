@@ -423,7 +423,8 @@ companySynonyms:
         "SberBank Online",
         "СберБанк Онлайн",
         SberHealth,
-        СберЗдоровье
+        СберЗдоровье,
+        SberDevices
     ]
   - name: Sibur
     synonyms: [

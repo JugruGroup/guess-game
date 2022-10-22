@@ -1645,10 +1645,6 @@ companies:
     name:
       - {language: en, text: SauceLabs}
     siteLink: https://saucelabs.com
-  - id: 465
-    name:
-      - {language: en, text: SberDevices}
-    siteLink: https://sberdevices.ru
   - id: 466
     name:
       - {language: en, text: "Scienta AS"}
@@ -3243,10 +3239,6 @@ companies:
     name:
       - {language: en, text: Ordina}
     siteLink: https://www.ordina.nl
-  - id: 901
-    name:
-      - {language: en, text: "Independent Expert"}
-      - {language: ru, text: "Независимый эксперт"}
   - id: 902
     name:
       - {language: en, text: YetiCrab}
