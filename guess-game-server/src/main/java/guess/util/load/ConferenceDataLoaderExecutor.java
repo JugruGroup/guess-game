@@ -2285,5 +2285,11 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("TechTrain 2022 Autumn", null, List.of(24L)),
 //                        Set.of("Открытие фестиваля TechTrain 2022 Autumn", "Закрытие фестиваля TechTrain 2022 Autumn",
 //                                "Викторина TechTrain 2022 Autumn")));
+//        loadTalksSpeakersEvent(Conference.SMART_DATA, LocalDate.of(2022, 10, 17), "2022",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("SmartData 2022", null, List.of(24L, 4L)),
+//                        Set.of("Открытие конференции SmartData 2022", "Закрытие конференции SmartData 2022",
+//                                "SmartDataCoffee", "Викторина «Наша игра»", "Подведение итогов online-части конференции SmartData 2022",
+//                                "Открытие офлайн-части конференции SmartData 2022")));
     }
 }

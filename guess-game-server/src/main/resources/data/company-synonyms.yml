@@ -1,4 +1,8 @@
 companySynonyms:
+  - name: AGIMA
+    synonyms: [
+        AGIMA.AI
+    ]
   - name: "Ak Bars"
     synonyms: [
         AkBars,
@@ -89,6 +93,10 @@ companySynonyms:
   - name: "C++ Russia"
     synonyms: [
         "С++ Russia"
+    ]
+  - name: DuckStax
+    synonyms: [
+        duckstax.com
     ]
   - name: "Delivery Club"
     synonyms: [
@@ -265,6 +273,10 @@ companySynonyms:
     synonyms: [
         www.looc.io"
     ]
+  - name: "Minimal Modeling"
+    synonyms: [
+        MinimalModeling.com
+    ]
   - name: MPI-SWS
     synonyms: [
         "Max Planck Institute for Software Systems"
@@ -273,7 +285,8 @@ companySynonyms:
     synonyms: [
         "MTS IT",
         "МТС ИТ",
-        "MTS DIGITAL"
+        "MTS DIGITAL",
+        "МТS Digital"
     ]
   - name: "NRU HSE"
     synonyms: [
@@ -410,7 +423,8 @@ companySynonyms:
         "SberBank Online",
         "СберБанк Онлайн",
         SberHealth,
-        СберЗдоровье
+        СберЗдоровье,
+        SberDevices
     ]
   - name: Sibur
     synonyms: [
@@ -431,7 +445,8 @@ companySynonyms:
     ]
   - name: Sportmaster
     synonyms: [
-        "Sportmaster Lab"
+        "Sportmaster Lab",
+        "SM Lab"
     ]
   - name: Sudo
     synonyms: [
@@ -443,6 +458,11 @@ companySynonyms:
         Tinkoff.ru,
         "TCS Bank",
         "ТКС Банк"
+    ]
+  - name: Toloka
+    synonyms: [
+        "Toloka Ai",
+        "Toloka Ai Inc"
     ]
   - name: "Tune IT"
     synonyms: [
