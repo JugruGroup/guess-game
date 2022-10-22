@@ -3441,3 +3441,48 @@ companies:
     name:
       - {language: en, text: IBS}
     siteLink: https://ibs.ru
+  - id: 951
+    name:
+      - {language: en, text: "Center for Research in Perspective Technologies"}
+      - {language: ru, text: "Центр развития перспективных технологий"}
+    siteLink: https://crpt.ru
+  - id: 952
+    name:
+      - {language: en, text: Toloka}
+    siteLink: https://toloka.ai
+  - id: 953
+    name:
+      - {language: en, text: "Smart Prediction Technologies"}
+  - id: 954
+    name:
+      - {language: en, text: "SMP Bank"}
+      - {language: ru, text: "СМП Банк"}
+    siteLink: https://smpbank.ru
+  - id: 955
+    name:
+      - {language: en, text: Axenix}
+    siteLink: https://axenix.pro
+  - id: 956
+    name:
+      - {language: en, text: "Schwarz group"}
+    siteLink: https://gruppe.schwarz
+  - id: 957
+    name:
+      - {language: en, text: DuckStax}
+    siteLink: https://duckstax.com
+  - id: 958
+    name:
+      - {language: en, text: "Minimal Modeling"}
+    siteLink: https://minimalmodeling.com
+  - id: 959
+    name:
+      - {language: en, text: oneFactor}
+    siteLink: https://onefactor.com
+  - id: 960
+    name:
+      - {language: en, text: more.tv}
+    siteLink: https://more.tv
+  - id: 961
+    name:
+      - {language: en, text: "Apache Software Foundation"}
+    siteLink: https://www.apache.org

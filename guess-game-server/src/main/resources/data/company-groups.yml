@@ -38,11 +38,15 @@ companyGroups:
     ]
   - name: "Synthesized / MIPT"
     items: [
-      "Synthesized",
-      "MIPT"
+        "Synthesized",
+        "MIPT"
     ]
   - name: "MAI / HSE / ex-Microsoft"
     items: [
-      MAI,
-      "NRU HSE"
+        MAI,
+        "NRU HSE"
+    ]
+  - name: "МТS Digital, Big Data"
+    items: [
+        "МТS Digital"
     ]
