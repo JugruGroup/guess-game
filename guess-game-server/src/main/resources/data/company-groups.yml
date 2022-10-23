@@ -46,6 +46,11 @@ companyGroups:
         MAI,
         "NRU HSE"
     ]
+  - name: "MAI / NRU HSE / ex-Microsoft"
+    items: [
+      MAI,
+      "NRU HSE"
+    ]
   - name: "МТS Digital, Big Data"
     items: [
         "МТS Digital"

@@ -18,5 +18,6 @@ public enum Conference {
     SMART_DATA,
     TECH_TRAIN,
     VIDEO_TECH,
+    PITER_PY,
     SNOW_ONE
 }

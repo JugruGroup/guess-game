@@ -155,7 +155,7 @@ eventTypes:
       - {language: en, text: "https://hydraconf.com"}
     vkLink: https://vk.com/hydraconf
     twitterLink: https://twitter.com/hydraconference
-    youtubeLink: https://www.youtube.com/channel/UCcwI0q9tsGZYZDvz5mLsXZA/featured
+    youtubeLink: https://www.youtube.com/channel/UCcwI0q9tsGZYZDvz5mLsXZA
     telegramLink: https://t.me/hydraconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -347,7 +347,7 @@ eventTypes:
       - {language: en, text: "https://techtrain.ru/"}
     vkLink: https://vk.com/techtrain
     twitterLink: https://twitter.com/techtrainfest
-    youtubeLink: https://www.youtube.com/channel/UCJoerW5eDOz5qu7I2CYi7xg
+    youtubeLink: https://www.youtube.com/c/TechTrainFest
     telegramLink: https://t.me/techtrainfest
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -448,5 +448,32 @@ eventTypes:
     twitterLink: https://twitter.com/videotech_conf
     youtubeLink: https://www.youtube.com/channel/UC16ztwLQMXcS4aqCWvbkj3Q
     telegramLink: https://t.me/videotech_conf
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow
+  - id: 18
+    conference: PITER_PY
+    logoFileName: piterpy.jpg
+    organizerId: 0
+    name:
+      - {language: en, text: PiterPy}
+    shortDescription:
+      - {language: en, text: "Conference for those who write in Python and use it at work"}
+      - {language: ru, text: "Конференция для тех, кто пишет на Python и использует его в работе"}
+    longDescription:
+      - {language: en, text: "PiterPy is\_a\_tech conference for a\_wide array of\_professionals who use Python: developers,\
+            \ data engineers, data analytics, ML\_engineers, QA\_engineers, team leaders. There are talks and discussions\
+            \ about Python and its ecosystem, performance, new tools and frameworks, and dependency management. The conference\
+            \ is\_held by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
+      - {language: ru, text: "PiterPy\_— это техническая конференция для различных специалистов, использующих Python в\
+            \_своей работе: разработчиков, дата-инженеров, дата-аналитиков, ML-инженеров, тестировщиков и\_тимлидов. В\_пр\
+            ограмме\_— доклады и\_дискуссии о\_Python и\_экосистеме вокруг него, производительности, управлении зависимост\
+            ями, новых инструментах и\_фреймворках. Организатор\_— [JUG\_Ru\_Group](https://jugru.org/)."}
+    siteLink:
+      - {language: en, text: "https://piterpy.com/en/"}
+      - {language: ru, text: "https://piterpy.com/"}
+    vkLink: https://vk.com/piterpy
+    twitterLink: https://twitter.com/PiterPy
+    youtubeLink: https://www.youtube.com/c/PiterPyConference
+    telegramLink: https://t.me/PiterPy_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow

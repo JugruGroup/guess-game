@@ -3228,8 +3228,8 @@ companies:
     siteLink: https://www.allstarsit.com
   - id: 898
     name:
-      - {language: en, text: Innotechnum}
-      - {language: ru, text: Иннотехнум}
+      - {language: en, text: Innotech}
+      - {language: ru, text: Иннотех}
     siteLink: https://inno.tech
   - id: 899
     name:
@@ -3478,3 +3478,54 @@ companies:
     name:
       - {language: en, text: "Apache Software Foundation"}
     siteLink: https://www.apache.org
+  - id: 962
+    name:
+      - {language: en, text: AgileCode}
+    siteLink: https://agilecode.io
+  - id: 963
+    name:
+      - {language: en, text: Nordcurrent}
+    siteLink: https://www.nordcurrent.com
+  - id: 964
+    name:
+      - {language: en, text: "Lesta Group"}
+    siteLink: https://lesta.ru
+  - id: 965
+    name:
+      - {language: en, text: "Open Source Evangelist MLOps"}
+  - id: 966
+    name:
+      - {language: en, text: EUSP}
+      - {language: ru, text: "ПЦ МАСТ ЕУ"}
+    siteLink: https://eusp.org
+  - id: 967
+    name:
+      - {language: en, text: Gazpromneft}
+      - {language: ru, text: Газпромнефть}
+    siteLink: https://www.gazprom-neft.ru
+  - id: 968
+    name:
+      - {language: en, text: Maxilect}
+      - {language: ru, text: Максилект}
+    siteLink: https://maxilect.com
+  - id: 969
+    name:
+      - {language: en, text: Tochka}
+      - {language: ru, text: Точка}
+  - id: 970
+    name:
+      - {language: en, text: "The School of Strong Programmers"}
+      - {language: ru, text: "Школа Сильных Программистов"}
+    siteLink: https://education.borshev.com
+  - id: 971
+    name:
+      - {language: en, text: CVisionLab}
+    siteLink: https://www.cvisionlab.com
+  - id: 972
+    name:
+      - {language: en, text: Astera}
+    siteLink: https://astera.ru
+  - id: 973
+    name:
+      - {language: en, text: CodeScoring}
+    siteLink: https://codescoring.ru

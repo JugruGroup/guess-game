@@ -154,6 +154,11 @@ companySynonyms:
     synonyms: [
         "GitLab (Previously Fuzzit)"
     ]
+  - name: Gazpromneft
+    synonyms: [
+        Gpn-trade,
+        "Газпромнефть-Региональные продажи"
+    ]
   - name: "Grid Dynamics"
     synonyms: [
         GridDynamics
@@ -181,6 +186,10 @@ companySynonyms:
   - name: IBM
     synonyms: [
         "IBM Canada"
+    ]
+  - name: Innotech
+    synonyms: [
+        Innotechnum
     ]
   - name: Intel
     synonyms: [

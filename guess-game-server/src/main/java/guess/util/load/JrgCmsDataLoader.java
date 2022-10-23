@@ -104,6 +104,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SMART_DATA, "SMARTDATA");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SPTDC, "SPTDC");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.VIDEO_TECH, "VIDEOTECH");
+        CONFERENCE_EVENT_PROJECT_MAP.put(Conference.PITER_PY, "PITERPY");
 
         EVENT_PROJECT_CONFERENCE_MAP = CONFERENCE_EVENT_PROJECT_MAP.entrySet().stream()
                 .collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
