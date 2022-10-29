@@ -3529,3 +3529,29 @@ companies:
     name:
       - {language: en, text: CodeScoring}
     siteLink: https://codescoring.ru
+  - id: 974
+    name:
+      - {language: en, text: "Git in Sky"}
+    siteLink: https://gitinsky.com
+  - id: 975
+    name:
+      - {language: en, text: "Independent Expert"}
+      - {language: ru, text: "Независимый эксперт"}
+  - id: 976
+    name:
+      - {language: en, text: BIMeister}
+      - {language: ru, text: Bimeister}
+    siteLink: https://bimeister.com
+  - id: 977
+    name:
+      - {language: en, text: MY.GAMES}
+    siteLink: https://my.games
+  - id: 978
+    name:
+      - {language: en, text: "Independent researcher"}
+      - {language: ru, text: "Независимый исследователь"}
+  - id: 979
+    name:
+      - {language: en, text: "Jet Infosystems"}
+      - {language: ru, text: "Инфосистемы Джет"}
+    siteLink: https://jetinfosystems.com

@@ -295,7 +295,8 @@ companySynonyms:
         "MTS IT",
         "МТС ИТ",
         "MTS DIGITAL",
-        "МТS Digital"
+        "МТS Digital",
+        "МТС Digital"
     ]
   - name: "NRU HSE"
     synonyms: [
@@ -546,6 +547,8 @@ companySynonyms:
         Яндекс.Толока,
         "Yandex (Auto.ru)",
         "Яндекс (Авто.ру)",
+        "Yandex Practicum",
+        "Яндекс Практикум",
         "Kinopoisk (Yandex)",
         "Кинопоиск (Яндекс)",
         Zen,
