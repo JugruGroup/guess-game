@@ -2297,5 +2297,11 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции PiterPy 2022", "Закрытие конференции PiterPy 2022",
 //                                "Подведение итогов online-части конференции PiterPy 2022",
 //                                "Открытие офлайн-части конференции PiterPy 2022")));
+//        loadTalksSpeakersEvent(Conference.DEV_OOPS, LocalDate.of(2022, 10, 19), "2022",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("DevOops 2022", null, List.of(24L, 4L)),
+//                        Set.of("Открытие конференции DevOops 2022", "Закрытие конференции DevOops 2022",
+//                                "Подведение итогов online-части конференции DevOops 2022",
+//                                "Открытие офлайн-части конференции DevOops 2022")));
     }
 }

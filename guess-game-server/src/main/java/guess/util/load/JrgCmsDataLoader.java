@@ -655,6 +655,31 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     }
 
     /**
+     * Gets fixed contacts.
+     *
+     * @param contacts contacts
+     * @return fixed contacts
+     */
+    static List<JrgContact> getFixedContacts(List<JrgContact> contacts) {
+        Set<String> invalidValues = Set.of("-");
+
+        return contacts.stream()
+                .map(c -> {
+                    if ((c.getValue() != null) && invalidValues.contains(c.getValue())) {
+                        JrgContact jrgContact = new JrgContact();
+
+                        jrgContact.setType(c.getType());
+                        jrgContact.setValue(null);
+
+                        return jrgContact;
+                    } else {
+                        return c;
+                    }
+                })
+                .toList();
+    }
+
+    /**
      * Creates speaker from JUG Ru Group CMS information.
      *
      * @param jrgCmsSpeaker        JUG Ru Group CMS speaker
@@ -675,7 +700,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         String enName = LocalizationUtils.getString(name, Language.ENGLISH);
         String ruName = LocalizationUtils.getString(name, Language.RUSSIAN);
 
-        Map<String, JrgContact> contactMap = jrgCmsSpeaker.getContacts().stream()
+        Map<String, JrgContact> contactMap = getFixedContacts(jrgCmsSpeaker.getContacts()).stream()
                 .collect(Collectors.toMap(
                         JrgContact::getType,
                         c -> c,

@@ -1171,6 +1171,46 @@ class JrgCmsDataLoaderTest {
         }
     }
 
+    @Test
+    void getFixedContacts() {
+        final String VALUE0 = "-";
+        final String VALUE1 = "user";
+
+        JrgContact jrgContact0 = new JrgContact();
+
+        JrgContact jrgContact1 = new JrgContact();
+        jrgContact1.setValue(VALUE0);
+
+        JrgContact jrgContact2 = new JrgContact();
+        jrgContact2.setValue("user");
+
+        List<JrgContact> jrgContacts = List.of(jrgContact0, jrgContact1, jrgContact2);
+
+        assertEquals(3, jrgContacts.size());
+        assertEquals(1, jrgContacts.stream()
+                .filter(c -> c.getValue() == null)
+                .count());
+        assertEquals(1, jrgContacts.stream()
+                .filter(c -> VALUE0.equals(c.getValue()))
+                .count());
+        assertEquals(1, jrgContacts.stream()
+                .filter(c -> VALUE1.equals(c.getValue()))
+                .count());
+
+        List<JrgContact> actual = JrgCmsDataLoader.getFixedContacts(jrgContacts);
+
+        assertEquals(3, actual.size());
+        assertEquals(2, actual.stream()
+                .filter(c -> c.getValue() == null)
+                .count());
+        assertEquals(0, actual.stream()
+                .filter(c -> VALUE0.equals(c.getValue()))
+                .count());
+        assertEquals(1, actual.stream()
+                .filter(c -> VALUE1.equals(c.getValue()))
+                .count());
+    }
+
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("createSpeaker method tests")
