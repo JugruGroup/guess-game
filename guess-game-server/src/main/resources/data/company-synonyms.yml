@@ -177,7 +177,8 @@ companySynonyms:
     ]
   - name: Huawei
     synonyms: [
-        Excelsior@Huawei
+        Excelsior@Huawei,
+        "Huawei Technologies"
     ]
   - name: Hypothesis
     synonyms: [
@@ -512,7 +513,10 @@ companySynonyms:
         VK.com,
         "VK Cloud Solutions",
         "VK Calls",
-        "VK Звонки"
+        "VK Звонки",
+        "VK Video",
+        "VK Видео",
+        "VK Play"
     ]
   - name: VMware
     synonyms: [

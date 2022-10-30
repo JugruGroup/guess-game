@@ -3555,3 +3555,38 @@ companies:
       - {language: en, text: "Jet Infosystems"}
       - {language: ru, text: "Инфосистемы Джет"}
     siteLink: https://jetinfosystems.com
+  - id: 980
+    name:
+      - {language: en, text: VisionLabs}
+    siteLink: https://www.visionlabs.ru
+  - id: 981
+    name:
+      - {language: en, text: VRCast}
+    siteLink: https://vrcast.tv
+  - id: 982
+    name:
+      - {language: en, text: EdgeCenter}
+      - {language: ru, text: EdgeЦентр}
+    siteLink: https://edgecenter.ru
+  - id: 983
+    name:
+      - {language: en, text: "Effective Video Transcoding"}
+    siteLink: https://www.compression.ru/video/video_codec_optimization/
+  - id: 984
+    name:
+      - {language: en, text: Elecard}
+      - {language: ru, text: Элекард}
+    siteLink: https://www.elecard.com
+  - id: 985
+    name:
+      - {language: en, text: "Teleport Media"}
+    siteLink: https://teleport.media
+  - id: 986
+    name:
+      - {language: en, text: Fastvideo}
+      - {language: ru, text: Фаствидео}
+    siteLink: https://www.fastvideo.ru
+  - id: 987
+    name:
+      - {language: en, text: GaraninApps}
+    siteLink: https://garaninapps.com

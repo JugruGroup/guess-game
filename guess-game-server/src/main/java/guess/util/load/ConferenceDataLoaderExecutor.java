@@ -2303,5 +2303,11 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции DevOops 2022", "Закрытие конференции DevOops 2022",
 //                                "Подведение итогов online-части конференции DevOops 2022",
 //                                "Открытие офлайн-части конференции DevOops 2022")));
+//        loadTalksSpeakersEvent(Conference.VIDEO_TECH, LocalDate.of(2022, 10, 20), "2022",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("VideoTech 2022", null, List.of(24L, 4L)),
+//                        Set.of("Открытие конференции VideoTech 2022", "Закрытие конференции VideoTech 2022",
+//                                "Подведение итогов online-части конференции VideoTech 2022",
+//                                "Открытие офлайн-части конференции VideoTech 2022")));
     }
 }
