@@ -11826,16 +11826,19 @@ speakers:
     habr: Jacks0n23
   - id: 813
     photoFileName: 0813.jpg
-    photoUpdatedAt: 2021-02-25T11:17:17.357Z[UTC]
+    photoUpdatedAt: 2022-09-22T12:29:42Z[UTC]
     name:
-      - {language: en, text: "Fedor Tsymbal"}
+      - {language: en, text: "Fyodor Tsymbal"}
       - {language: ru, text: "Фёдор Цымбал"}
     companyIds: [386]
     bio:
-      - {language: en, text: "He has been working at Orion Innovations (formerly Mera) for the last 12 years, 7 years of which\
-            \ he has been working on the development of different versions of Android on all kinds of hardware."}
-      - {language: ru, text: "Последние 12 лет работает в компании Orion Innovations (ранее Mera), 7 лет из них занимается\
-            \ поднятием различных версий Android на всевозможных железках."}
+      - {language: en, text: "<p>He works at Orion Innovation as an architect. Originally from Nizhny Novgorod, now lives\
+            \ in Serbia. Has been working on Android for the last seven years. For the last five of them he speaks at various\
+            \ conferences in Russia and abroad (for example, he spoke at <a href=\"https://mobiusconf.com/en/\">Mobius</a>\
+            \ 4 times).</p>"}
+      - {language: ru, text: "<p>Работает в компании Orion Innovation архитектором. Родом из Нижнего Новгорода, сейчас жив\
+            ет в Сербии. Последние семь лет занимается Android. Из них последние пять выступает на различных конференциях\
+            \ в России и за рубежом (на <a href=\"https://mobiusconf.com/\">Mobius</a>, например, выступал 4 раза).</p>"}
     twitter: ftsymbal
     gitHub: ftsymbal
   - id: 814
@@ -27970,21 +27973,20 @@ speakers:
     twitter: AxGn
   - id: 1958
     photoFileName: 1958.jpg
-    photoUpdatedAt: 2021-11-02T08:35:11.961Z[UTC]
+    photoUpdatedAt: 2022-07-22T13:29:56Z[UTC]
     name:
       - {language: en, text: "Ruslan Gilmutdinov"}
       - {language: ru, text: "Руслан Гильмутдинов"}
-    companyIds: [280]
+    companyIds: [377]
     bio:
-      - language: en
-        text: "Adaptive streaming expert at IVI (\"the Netflix of Russia\").\r\nProud (former) member of a bunch of tech geniuses\
-            \ (www.streamroot.io) who made a dream of p2p-assisted video streaming happen.\r\nVideo streaming, WebRTC & WebAssembly\
-            \ enthusiast, focuse on optimizing video delivery on the client side."
-      - language: ru
-        text: "Руслан занимается клиентской (web) стороной видеостриминга в IVI.\r\nДо IVI вместе со стартапом Streamroot,\
+      - {language: en, text: "<p>Ruslan deals with the client (web) side of video streaming. Earlier together with Streamroot\
+            \ startup, which developed a technology of cross-platform p2p streaming based on WebRTC protocol, he went the\
+            \ way from MVP to multi-million live broadcasts \"without gaps\" and successful exit. Interested in WebRTC, WebAssembly,\
+            \ adaptive streaming and client-side video delivery optimization tasks.</p>"}
+      - {language: ru, text: "<p>Руслан занимается клиентской (web) стороной видеостриминга. Ранее вместе со стартапом Streamroot,\
             \ разработавшим технологию кроссплатформенного p2p-стриминга на базе протокола WebRTC, прошел путь от MVP до м\
-            ногомиллионных live-трансляций «без разрывов» и успешного exit'а.\r\nИнтересуется WebRTC, WebAssembly, адаптив\
-            ным стримингом и задачами в области оптимизации доставки видео на клиентской стороне."
+            ногомиллионных live-трансляций &laquo;без разрывов&raquo; и успешного exit'а. Интересуется WebRTC, WebAssembly,\
+            \ адаптивным стримингом и задачами в области оптимизации доставки видео на клиентской стороне.</p>"}
     gitHub: ruslandinov
   - id: 1959
     photoFileName: 1959.jpg
@@ -28000,17 +28002,18 @@ speakers:
             ых. Специализируется на разработке под GPU. Интересуется автоматизацией процессов разработки."}
   - id: 1960
     photoFileName: 1960.jpg
-    photoUpdatedAt: 2021-11-02T14:25:20.381Z[UTC]
+    photoUpdatedAt: 2022-08-31T16:59:22Z[UTC]
     name:
       - {language: en, text: "Olga Popova"}
       - {language: ru, text: "Ольга Попова"}
     companyIds: [689]
     bio:
-      - {language: en, text: "Since 2019, Olga has been developing a video player and integrating it into various Yandex services.\
-            \ She's interested in the streaming industry and the extensive range of challenges arising in this sphere. Olga\
-            \ graduated from National Research Nuclear University MEPhI."}
-      - {language: ru, text: "С 2019 года занимается развитием видеоплеера и его интеграцией на различные сервисы Яндекса\
-            . Интересуется индустрией стриминга и широким спектром проблем, возникающих в этой сфере. Окончила НИЯУ МИФИ."}
+      - {language: en, text: "For more than three years, Olga has been developing the video player and integrating it into\
+            \ various Yandex services. She's interested in the streaming industry and the extensive range of challenges arising\
+            \ in this sphere. Olga's favourite topics: ABR and QoE."}
+      - {language: ru, text: "Более трех лет занимается развитием видеоплеера и его интеграцией на различные сервисы Яндек\
+            са. Интересуется индустрией стриминга и широким спектром проблем, возникающих в этой сфере. Любимые темы: ABR\
+            \ и QoE."}
   - id: 1961
     photoFileName: 1961.jpg
     photoUpdatedAt: 2021-10-29T10:29:18.537Z[UTC]
@@ -28445,7 +28448,7 @@ speakers:
       - {language: ru, text: "Разрабатывает видеозвонки и серверные части конференций. Увлекается скалолазанием."}
   - id: 1989
     photoFileName: 1989.jpg
-    photoUpdatedAt: 2021-11-10T12:03:44.285Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:07:02Z[UTC]
     name:
       - {language: en, text: "Dmitry Vatolin"}
       - {language: ru, text: "Дмитрий Ватолин"}
@@ -28477,7 +28480,7 @@ speakers:
     habr: 3Dvideo
   - id: 1990
     photoFileName: 1990.jpg
-    photoUpdatedAt: 2021-10-11T14:25:30.360Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:06:54Z[UTC]
     name:
       - {language: en, text: "Maksim Lapshin"}
       - {language: ru, text: "Максим Лапшин"}
@@ -31179,18 +31182,16 @@ speakers:
     gitHub: rgabaydullov
   - id: 2174
     photoFileName: 2174.jpg
-    photoUpdatedAt: 2022-05-11T11:14:32Z[UTC]
+    photoUpdatedAt: 2022-10-17T10:42:36Z[UTC]
     name:
-      - {language: en, text: "Nikolay Vasilchuk"}
+      - {language: en, text: "Nikolai Vasilchuk"}
       - {language: ru, text: "Николай Васильчук"}
     companyIds: [620]
     bio:
-      - {language: en, text: "<p>Nikolaiy deals with all things related to VK video and calls. Works with WebRTC, Media Source\
-            \ Extensions, WASM, Web Codecs and other weird browser standards. Likes complex engineering tasks, doesn't like\
-            \ interfaces.</p>"}
-      - {language: ru, text: "<p>Занимается всем, что связано с видео и звонками VK. Работает с WebRTC, Media Source Extensions,\
-            \ WASM, Web Codecs и другими странными браузерными стандартами. Любит сложные инженерные задачи, не любит инте\
-            рфейсы.</p>"}
+      - {language: en, text: "<p>JavaScript developer. Has been working on video for more than 10 years. Works with WebRTC,\
+            \ WebCodecs, MSE and other browser technologies.</p>"}
+      - {language: ru, text: "<p>JavaScript-разработчик. Занимается видео больше 10 лет. Работает с WebRTC, WebCodecs, MSE\
+            \ и другими браузерными технологиями.</p>"}
   - id: 2175
     photoFileName: 2175.jpg
     photoUpdatedAt: 2022-06-08T17:39:57Z[UTC]
@@ -33517,3 +33518,358 @@ speakers:
             раструктуры. Работал в Ericsson, Dialog, возглавлял SRE в Mail.Ru Cloud Solutions. С 2021 года руководит разви\
             тием DevOps-систем в SberDevices.</p>\n<p>Увлекается плаванием, большим теннисом, здоровым питанием, путешеств\
             иями. Приверженец подхода everything as code. Развивает корпоративное сообщество инструментов DevOps.</p>"
+  - id: 2329
+    photoFileName: 2329.jpg
+    photoUpdatedAt: 2022-10-06T07:27:57Z[UTC]
+    name:
+      - {language: en, text: "Ivan Sokolov"}
+      - {language: ru, text: "Иван Соколов"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Руководитель видеохостинга в &laquo;Дзене&raquo;.</p>"}
+  - id: 2330
+    photoFileName: 2330.jpg
+    photoUpdatedAt: 2022-03-31T19:07:02Z[UTC]
+    name:
+      - {language: en, text: "Evgeny Zaitsev"}
+      - {language: ru, text: "Евгений Зайцев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "He has been working at Yandex for more than ten years. He was behind the development of the\
+            \ company's CDN services. During his work he has been involved in the development of several media services. Now\
+            \ he works in the team responsible for the infrastructure for receiving, processing and delivering media data\
+            \ to Yandex users."}
+      - {language: ru, text: "Работает в Яндексе более десяти лет. Стоял у истоков развития CDN-сервисов компании. За врем\
+            я работы участвовал в развитии нескольких медийных сервисов. Сейчас работает в команде, отвечающей за инфрастр\
+            уктуру приема, обработки и доставки медийных данных до пользователей Яндекса."}
+  - id: 2331
+    photoFileName: 2331.jpg
+    photoUpdatedAt: 2022-08-23T10:42:09Z[UTC]
+    name:
+      - {language: en, text: "Daniil Kireev"}
+      - {language: ru, text: "Даниил Киреев"}
+    companyIds: [980]
+    bio:
+      - {language: en, text: "<p><span style=\"color: #495057;\">Computer Vision team lead with strong background as Deep\
+            \ Learning researcher and engineer with over 8 years of experience. Inspired by implementation of modern technologies\
+            \ into powerful products, making people's lives better. Main focus on bringing complex algorithms into everyday\
+            \ life. </span></p>"}
+      - {language: ru, text: "Руководитель исследовательского направления в Компьютерном Зрении с опытом работы более 8 ле\
+            т в качестве исследователя и инженера. Вдохновлен имплементацией современных технологий в мощные продукты, кот\
+            орые делают жизнь людей лучше. Основной фокус на внедрении сложных алгоритмов в повседневную жизнь."}
+    gitHub: kir-dan
+    habr: dager_kd
+  - id: 2332
+    photoFileName: 2332.jpg
+    photoUpdatedAt: 2022-10-18T14:19:44Z[UTC]
+    name:
+      - {language: en, text: "Yulia Kaidanova"}
+      - {language: ru, text: "Юлия Кайданова"}
+    companyIds: [377]
+    bio:
+      - {language: en, text: "<p>Head of technical support for Okko online cinema. He is engaged in building processes of\
+            \ interaction with external partners and within the Okko team, building processes of transferring and fixing customer\
+            \ and other bugs in the service.</p>"}
+      - {language: ru, text: "<p>Руководитель технической поддержки онлайн-кинотеатра Okko. Занимается построением процесс\
+            ов взаимодействия с внешними партнерами и внутри команды Окко, строит процессы по передаче и исправлению клиен\
+            тских и не только багов в сервисе.</p>"}
+  - id: 2333
+    photoFileName: 2333.jpg
+    photoUpdatedAt: 2022-10-18T14:17:25Z[UTC]
+    name:
+      - {language: en, text: "Artem Volodin"}
+      - {language: ru, text: "Артём Володин"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>SRE at VK Calls, in the communications industry since 2008, first as a Telco engineer at\
+            \ a small ISP, then as a VoIP engineer at a large ISP. Now investigates complex incidents in video conferencing\
+            \ service, you can call it Tier-4 Support. In his spare time, he learns something new about technology or programming,\
+            \ and also does sports: swimming, cycling, running, or triathlons.</p>"}
+      - {language: ru, text: "<p>SRE в VK Calls, в отрасли связи с 2008 года, сначала работал Telco-инженером в мелком инт\
+            ернет-провайдере, затем инженером VoIP в крупном. Теперь занимается расследованиями сложных инцидентов в серви\
+            се видеоконференций, можно это назвать Tier-4 Support. В свободное время изучает что-то новое в сфере технолог\
+            ий или программирования, а также занимается спортом: плаванием, велоспортом, бегом, или триатлоном.</p>"}
+  - id: 2334
+    photoFileName: 2334.jpg
+    photoUpdatedAt: 2022-09-15T13:07:43Z[UTC]
+    name:
+      - {language: en, text: "Anatoly Goronesko"}
+      - {language: ru, text: "Анатолий Горонеско"}
+    companyIds: [981]
+    bio:
+      - language: en
+        text: "<p>Founder of VR Sphera and VR Cast. Graduated from the Faculty of Radio Broadcasting and Television at the\
+            \ Moscow State Technical University. Passed his baptism of fire in the on-air service of Channel One. Worked for\
+            \ the Sochi 2014 Organizing Committee to prepare the broadcast infrastructure, where he was introduced to OBS\
+            \ (Olympic Broadcasting Services).</p>\n<p>Later worked as Broadcast Venue Manager at ISB (International Sports\
+            \ Broadcasting) at the European Games in Baku and Minsk and the World Games in Wrocław and Alabama, the predecessor\
+            \ company to OBS. I was able to work with them as a freelancer to coordinate the VR infrastructure at the Tokyo\
+            \ 2020 games.</p>"
+      - language: ru
+        text: "<p>Основатель VR Sphera и VR Cast. Окончил факультет Радиовещания и телевидения в МТУСИ. Боевое крещение пр\
+            ошел в эфирной службе Первого канала. Работал в Оргкомитете Сочи 2014 по подготовке вещательной инфраструктуры\
+            , где познакомился с OBS (Olympic Broadcasting Services).</p>\n<p>Позже работал в качестве Broadcast Venue Manager\
+            \ в ISB (International Sports Broadcasting) на Европейских играх в Баку и Минске и на World Games во Вроцлаве\
+            \ и Алабаме &mdash; компании-предшественнице OBS. С ними удалось поработать в качестве фрилансера по координац\
+            ии VR-инфраструктуры на играх в Токио 2020.&nbsp;</p>"
+  - id: 2335
+    photoFileName: 2335.jpg
+    photoUpdatedAt: 2022-09-22T12:34:45Z[UTC]
+    name:
+      - {language: en, text: "Albert Kamalyan"}
+      - {language: ru, text: "Альберт Камалян"}
+    companyIds: [982]
+    bio:
+      - {language: en, text: "<p>In the video industry since 2014. Developed and modernized various digital broadcasting systems.\
+            \ Launched and supported the video platform of MTS-TV/KION online cinema. Took care of technical aspects of EdgeCenter\
+            \ streaming platform.</p>"}
+      - {language: ru, text: "<p>В видеоиндустрии с 2014 года. Занимался развитием и модернизацией разнообразных систем ци\
+            фрового телерадиовещания. Запускал и поддерживал видеоплатформу онлайн-кинотеатра МТС-ТВ/KION. Заботится о тех\
+            нических аспектах работы стриминговой платформы EdgeЦентр.</p>"}
+  - id: 2336
+    photoFileName: 2336.jpg
+    photoUpdatedAt: 2022-09-26T07:58:32Z[UTC]
+    name:
+      - {language: en, text: "Ekaterina Glazkova"}
+      - {language: ru, text: "Екатерина Глазкова"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>A developer in the neural networking group of Yandex's computer vision service. She is engaged\
+            \ in the tasks of video and image analysis. Teaches courses on machine learning and deep learning at the HSE Department\
+            \ of Computer Science. Graduated from the Higher School of Economics and the Schaad. Previously she worked in\
+            \ computer vision at the Center for Deep Learning and Bayesian Methods at the Higher School of Economics and Kaspersky\
+            \ Lab.</p>"}
+      - {language: ru, text: "<p>Разработчица в группе нейросетевых технологий службы компьютерного зрения Яндекса. Занима\
+            ется задачами анализа видео и изображений. Преподает на факультете компьютерных наук ВШЭ курсы по машинному и\
+            \ глубинному обучению. Окончила ФКН ВШЭ и ШАД. Ранее занималась компьютерным зрением в Центре глубинного обуче\
+            ния и байесовских методов НИУ ВШЭ и Лаборатории Касперского.</p>"}
+    gitHub: EkaterinaGlazkova
+  - id: 2337
+    photoFileName: 2337.jpg
+    photoUpdatedAt: 2022-10-18T10:44:13Z[UTC]
+    name:
+      - {language: en, text: "Anastasia Smirnova"}
+      - {language: ru, text: "Анастасия Смирнова"}
+    companyIds: [377]
+    bio:
+      - {language: en, text: "<p>Backend-developer in the Okko.Sport team. Develops the Live-cluster-manager (LCM) component,\
+            \ designed to automate the process of working with live broadcasts.</p>"}
+      - {language: ru, text: "Backend-разработчик в команде Okkо.Спорт. Занимается развитием компонента Live-cluster-manager\
+            \ (LCM), предназначенного для автоматизации процесса работы с прямыми трансляциями."}
+  - id: 2338
+    photoFileName: 2338.jpg
+    photoUpdatedAt: 2022-09-06T10:42:44Z[UTC]
+    name:
+      - {language: en, text: "Daniil Komarevtsev"}
+      - {language: ru, text: "Даниил Комаревцев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>He makes Yandex.Browser. It does all sorts of things, including a lot of audio and video\
+            \ encoding and decoding. And also what's next to it: voice translation of video and subtitles, video takeout,\
+            \ etc.</p>"}
+      - {language: ru, text: "<p>Делает Яндекс.Браузер. Занимается там разным, в том числе многим в области кодирования и\
+            \ декодирования аудио и видео. А также тем, что рядом: голосовым переводом видео и субтитров, выносом видео и\
+            \ т. д.</p>"}
+  - id: 2339
+    photoFileName: 2339.jpg
+    photoUpdatedAt: 2022-10-19T16:02:04Z[UTC]
+    name:
+      - {language: en, text: "Antonina Glukhova"}
+      - {language: ru, text: "Антонина Глухова"}
+    companyIds: [377]
+    bio:
+      - {language: en, text: "<p>Head of Android platform testing at okko. Approximately 5 years of video platform testing\
+            \ experience. Lazy, so adheres to the principle \"from complex to simple, from monkey-test to branual testing\"\
+            . Makes even developers test. Loves IT unicorns.</p>"}
+      - {language: ru, text: "Руководитель направления тестирования платформы Android в okko. Опыт тестирования видеоплатф\
+            орм около 5 лет. Ленива, поэтому придерживается принципа «от сложного к простому, от monkey-test к брейнуально\
+            му тестированию». Обучает тестировать даже разработчиков. Любит IT-единорогов."}
+  - id: 2340
+    photoFileName: 2340.jpg
+    photoUpdatedAt: 2022-10-14T17:40:03Z[UTC]
+    name:
+      - {language: en, text: "Ilya Kalashnikov"}
+      - {language: ru, text: "Илья Калашников"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>He has been working on video players on the frontend for almost his entire career. Started\
+            \ with TVs, now makes the VK Video player engine.</p>"}
+      - {language: ru, text: "<p>Почти всю карьеру занимается&nbsp; видеоплеерами на фронтенде. Начинал с телевизоров, сей\
+            час делает движок плеера VK Видео.</p>"}
+  - id: 2341
+    photoFileName: 2341.jpg
+    photoUpdatedAt: 2022-09-16T08:31:51Z[UTC]
+    name:
+      - {language: en, text: "Maxim Kuprashevich"}
+      - {language: ru, text: "Максим Купрашевич"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>He used to do bioinformatics and then developed in C++. Since 2015 has been working on computer\
+            \ vision and machine learning. Worked on dozens of different projects, but longest with ADAS tasks. Now runs the\
+            \ CV team at Layer, SberDevices.</p>"}
+      - {language: ru, text: "<p>Раньше занимался биоинформатикой, а затем разрабатывал на C++. С 2015 года занимается ком\
+            пьютерным зрением и машинным обучением. Работал над десятками разных проектов, но дольше всего с ADAS-задачами\
+            . Сейчас руководит CV-командой в Layer, SberDevices.</p>"}
+    twitter: WildChlamydia
+    habr: WildChlamydia
+  - id: 2342
+    photoFileName: 2342.jpg
+    photoUpdatedAt: 2022-09-09T13:29:43Z[UTC]
+    name:
+      - {language: en, text: "Igor Melker"}
+      - {language: ru, text: "Игорь Мелькер"}
+    companyIds: [883]
+    bio:
+      - {language: en, text: "About 6 years in the IT industry, started my way in communications with an SMS aggregator, then\
+            \ luckily switched to VOIP. Now Igor is a media server part developer at Voximplant. Together with his team, he\
+            \ is focused on providing quality video and audio communications to the world."}
+      - {language: ru, text: "Около 6 лет в IT индустрии, путь в коммуникации начал с агрегатора SMS, потом, к счастью, пе\
+            реключился на VoIP. Сейчас разработчик медиа серверной части в Voximplant. Вместе с командой сфокусирован на п\
+            редоставлении качественных видео и аудио коммуникаций миру."}
+  - id: 2343
+    photoFileName: 2343.jpg
+    photoUpdatedAt: 2022-08-30T11:13:49Z[UTC]
+    name:
+      - {language: en, text: "Aleksei Shpagin"}
+      - {language: ru, text: "Алексей Шпагин"}
+    companyIds: [620]
+    bio:
+      - language: en
+        text: "<p>Head of the backend team of the VK Calls project. Developed server-side software for VoIP telephony and\
+            \ videoconferencing services for the last 10 years.</p>\n<p>Started as a C++ developer, then moved to management.\
+            \ In his free time he is fond of sound recording and processing, which helps in his main work.</p>"
+      - language: ru
+        text: "<p>Руководитель команды бэкенда проекта VK Звонки. Последние 10 лет занимается разработкой серверного ПО дл\
+            я VoIP-телефонии и сервисов видеосвязи.</p>\n<p>Начинал как C++ разработчик, затем перешёл в менеджмент. В сво\
+            бодное время увлекается звукозаписью и обработкой звука, что помогает и в основной работе.</p>"
+    gitHub: adshpagin
+  - id: 2344
+    photoFileName: 2344.jpg
+    photoUpdatedAt: 2022-10-10T08:06:56Z[UTC]
+    name:
+      - {language: en, text: "Maxim Smirnov"}
+      - {language: ru, text: "Максим Смирнов"}
+    companyIds: [983]
+    bio:
+      - language: en
+        text: "<p>Expert in the field of data compression, as well as the creation and processing of stereo 3D video. Project\
+            \ manager of algorithms and software development for video and image processing for quality improvement, format\
+            \ change, analysis, etc.</p>\n<p>Candidate of Technical Sciences.</p>"
+      - language: ru
+        text: "<p>Эксперт в области сжатия данных, а также создания и обработки стерео 3D-видео. Руководитель проектов по\
+            \ разработке алгоритмов и программного обеспечения для обработки видео и изображений с целью повышения качеств\
+            а, изменения формата, анализа и др.</p>\n<p>Кандидат технических наук.</p>"
+  - id: 2345
+    photoFileName: 2345.jpg
+    photoUpdatedAt: 2022-09-07T12:34:53Z[UTC]
+    name:
+      - {language: en, text: "Kirill Chernikov"}
+      - {language: ru, text: "Кирилл Черников"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>The head of the client development team at VK Play Cloud. In 2011, completed a master's degree\
+            \ at Perm State National Research University with a degree in Applied Mathematics and Computer Science, specializing\
+            \ in Mathematical Support of Computing Systems. In 2013, also completed postgraduate studies at PSNRU, defended\
+            \ his PhD thesis (Physics and Mathematics, specialty: \"Mathematical modeling, numerical methods and software\
+            \ packages\"). In Cloud Gaming since 2015, before that was engaged in the development of distributed monitoring\
+            \ systems for telecommunications equipment.</p>"}
+      - language: ru
+        text: "<p>Руководитель группы клиентской разработки в VK Play Cloud. В 2011 году окончил магистратуру Пермского го\
+            сударственного национального исследовательского университета по специальности &laquo;Прикладная математика и и\
+            нформатика&raquo;, специализация &laquo;Математическое обеспечение вычислительных систем&raquo;.</p>\n<p>В 2013\
+            \ году окончил аспирантуру ПГНИУ, защитил кандидатскую диссертацию (физ.-мат. науки, специальность: &laquo;Мат\
+            ематическое моделирование, численные методы и комплексы программ&raquo;).</p>\n<p>В Cloud Gaming с 2015 года,\
+            \ до этого занимался разработкой распределенных систем мониторинга телекоммуникационного оборудования.</p>"
+  - id: 2346
+    photoFileName: 2346.jpg
+    photoUpdatedAt: 2022-10-06T13:22:54Z[UTC]
+    name:
+      - {language: en, text: "Ivan Rodionov"}
+      - {language: ru, text: "Иван Родионов"}
+    companyIds: [984]
+    bio:
+      - {language: en, text: "<p>Technical support and integration engineer at Elecard. Works with video and audio decoding\
+            \ and broadcasting solutions.</p>"}
+      - {language: ru, text: "<p>Инженер технической поддержки и интеграции в компании &laquo;Элекард&raquo;. Работает с р\
+            ешениями в области декодирования видео и аудио, а также вещания.</p>"}
+  - id: 2347
+    photoFileName: 2347.jpg
+    photoUpdatedAt: 2022-10-05T11:25:49Z[UTC]
+    name:
+      - {language: en, text: "Sergey Ikonin"}
+      - {language: ru, text: "Сергей Иконин"}
+    companyIds: [242]
+    bio:
+      - {language: en, text: "More than 15 years or experience in algorithms research and development in area of multimedia\
+            \ communication, including audio and video compression, international standardization, AI-based image and video\
+            \ compression, ultra-low latency communication, and joint source-channel coding."}
+      - {language: ru, text: "Более 15 лет опыта в области цифровой мультимедийной связи, включая разработку алгоритмов ко\
+            дирования аудио и видео сигналов, нейросетевых методов сжатия, методов совместного кодирования канала и источн\
+            ика, и участие в международной стандартизации."}
+  - id: 2348
+    photoFileName: 2348.jpg
+    photoUpdatedAt: 2022-09-09T12:40:40Z[UTC]
+    name:
+      - {language: en, text: "Alexey Klimenko"}
+      - {language: ru, text: "Алексей Клименко"}
+    companyIds: [985]
+    bio:
+      - language: en
+        text: "<p>Co-founder and technical director at Teleport Media and Nodr. Since 2016 the companies have been developing\
+            \ a platform for peer-to-peer video streaming.</p>\n<p>Since 2010, he has been involved in other projects, which\
+            \ were also related to peer-to-peer networks (BitTorrent). At this conference he decided to share his experience\
+            \ in creating a platform for p2p-WebRTC video streaming.</p>"
+      - language: ru
+        text: "<p>Cооснователь и технический директор в компаниях Teleport Media и Nodr. C 2016 года компании разрабатываю\
+            т платформу для peer-to-peer видеостриминга.</p>\n<p>С 2010 года занимался другими проектами, которые тоже был\
+            и связаны с пиринговыми сетями (BitTorrent). На этой конференции решил поделиться опытом создания платформы дл\
+            я p2p-WebRTC стриминга видео.</p>"
+  - id: 2349
+    photoFileName: 2349.jpg
+    photoUpdatedAt: 2022-09-09T13:26:56Z[UTC]
+    name:
+      - {language: en, text: "Nikolay Glazyrin"}
+      - {language: ru, text: "Николай Глазырин"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Senior developer at Yandex media services technology development service.</p>"}
+      - {language: ru, text: "<p>Старший разработчик в службе развития технологий медиасервисов Яндекса.</p>"}
+  - id: 2350
+    photoFileName: 2350.jpg
+    photoUpdatedAt: 2022-10-12T11:21:34Z[UTC]
+    name:
+      - {language: en, text: "Konstantin Stupnik"}
+      - {language: ru, text: "Константин Ступник"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Senior Developer at Yandex Media Services Technology Development Service.</p>"}
+      - {language: ru, text: "Старший разработчик в службе развития технологий медиасервисов Яндекса."}
+  - id: 2351
+    photoFileName: 2351.jpg
+    photoUpdatedAt: 2022-09-28T12:56:49Z[UTC]
+    name:
+      - {language: en, text: "Fyodor Serzhenko"}
+      - {language: ru, text: "Фёдор Серженко"}
+    companyIds: [986]
+    bio:
+      - {language: en, text: "Graduated from Moscow Institute of Physics and Technology at 1989. PhD from MIPT in 1992 (physics\
+            \ of semiconductores,  infrared image sensors on quantum wells). During the latest 12 years in the field of fast\
+            \ image processing on CUDA."}
+      - {language: ru, text: "<p>Окончил физтех в 1989, аспирантуру в 1992. Занимался физикой полупроводников и ИК-сенсора\
+            ми. Последние 12 лет занимается быстрой обработкой изображений на CUDA.</p>"}
+    habr: fyodorser
+  - id: 2352
+    photoFileName: 2352.jpg
+    photoUpdatedAt: 2022-09-19T14:40:41Z[UTC]
+    name:
+      - {language: en, text: "Mikhail Garanin"}
+      - {language: ru, text: "Михаил Гаранин"}
+    companyIds: [987]
+    bio:
+      - {language: en, text: "<p>A graduate of MSU Faculty of Mechanics and Mathematics, founder of GaraninApps, which develops\
+            \ B2C and B2B video streaming solutions.</p>"}
+      - {language: ru, text: "<p>Выпускник мехмата МГУ, основатель компании GaraninApps, которая разрабатывает B2C и B2B р\
+            ешения в области видеостриминга.</p>"}
+    twitter: GaraninApps
+    gitHub: m-garanin
+    habr: IamG
