@@ -28480,18 +28480,18 @@ speakers:
     habr: 3Dvideo
   - id: 1990
     photoFileName: 1990.jpg
-    photoUpdatedAt: 2022-03-31T19:06:54Z[UTC]
+    photoUpdatedAt: 2022-06-28T11:10:43Z[UTC]
     name:
       - {language: en, text: "Maksim Lapshin"}
       - {language: ru, text: "Максим Лапшин"}
     companyIds: [881]
     bio:
-      - {language: en, text: "Maskim graduated from faculty of computational mathematics and cybernetics MSU and takes interest\
-            \ in technologies of transferring video via Internet. Created server of video streaming and Erlyvideo company,\
-            \ which is in top-50 of most important companies in online video area."}
-      - {language: ru, text: "Максим — выпускник факультета вычислительной математики и кибернетики МГУ и уже более 10 лет\
-            \ интересуется технологиями передачи видео через интернет. Создал видеостриминговый сервер и компанию «Эрливид\
-            ео», которая входит в список 50 самых важных в сфере онлайн-видео."}
+      - {language: en, text: "<p>Maxim is a graduate of the Faculty of Computational Mathematics and Cybernetics of Moscow\
+            \ State University and has been interested in video transmission technologies over the Internet for more than\
+            \ 10 years. He created a video streaming server and a company called Erlyvideo.</p>"}
+      - {language: ru, text: "<p>Максим &mdash; выпускник факультета вычислительной математики и кибернетики МГУ, уже боле\
+            е 10 лет интересуется технологиями передачи видео через интернет. Создал видеостриминговый сервер и компанию &laquo;Э\
+            рливидео&raquo;.</p>"}
     gitHub: maxlapshin
     habr: erlyvideo
   - id: 1991
