@@ -2296,7 +2296,8 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("PiterPy 2022", null, List.of(24L, 4L)),
 //                        Set.of("Открытие конференции PiterPy 2022", "Закрытие конференции PiterPy 2022",
 //                                "Подведение итогов online-части конференции PiterPy 2022",
-//                                "Открытие офлайн-части конференции PiterPy 2022")));
+//                                "Открытие офлайн-части конференции PiterPy 2022",
+//                                "Разбор вопросов Python Quiz от КРОК", "Goodbye, Python!")));
 //        loadTalksSpeakersEvent(Conference.DEV_OOPS, LocalDate.of(2022, 10, 19), "2022",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("DevOops 2022", null, List.of(24L, 4L)),
@@ -2309,5 +2310,10 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции VideoTech 2022", "Закрытие конференции VideoTech 2022",
 //                                "Подведение итогов online-части конференции VideoTech 2022",
 //                                "Открытие офлайн-части конференции VideoTech 2022")));
+//        loadTalksSpeakersEvent(Conference.DOT_NEXT, LocalDate.of(2022, 11, 3), "2022 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("DotNext 2022 Autumn", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции DotNext 2022 Autumn",
+//                                "Подведение итогов online-части конференции DotNext 2022 Autumn")));
     }
 }

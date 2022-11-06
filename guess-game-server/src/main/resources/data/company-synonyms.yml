@@ -259,6 +259,11 @@ companySynonyms:
     synonyms: [
         Kaspersky
     ]
+  - name: Komus
+    synonyms: [
+        Komus-tech,
+        Комус-тех
+    ]
   - name: "Kt. Academy"
     synonyms: [
         Kt.Academy

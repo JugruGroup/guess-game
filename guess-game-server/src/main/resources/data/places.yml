@@ -76,8 +76,8 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Leningradsky Prospekt 31A Bld.1, Renaissance Moscow Monarch Centre"}
-      - {language: ru, text: "Ленинградский проспект, 31А, корп. 1, Гостиница «Ренессанс Москва Монарх Центр»"}
+      - {language: en, text: "Leningrad Avenue, 31А, building 1, Hotel MonArch"}
+      - {language: ru, text: "Ленинградский проспект, 31А, строение 1, Отель «МонАрх»"}
     mapCoordinates: "55.783321, 37.560867"
   - id: 10
     city:
