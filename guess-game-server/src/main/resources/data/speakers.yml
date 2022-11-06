@@ -5598,14 +5598,14 @@ speakers:
     photoFileName: 0379.jpg
     photoUpdatedAt: 2022-09-26T15:56:14Z[UTC]
     name:
-      - {language: en, text: "Nikolay Ryzhikov"}
+      - {language: en, text: "Nikolai Ryzhikov"}
       - {language: ru, text: "Николай Рыжиков"}
     companyIds: [235]
     bio:
-      - {language: en, text: "<p>CTO Health Samurai, an engineer with ambition, an active member of the HL7 FHIR, Clojure\
-            \ &amp; PostgreSQL communities.</p>"}
-      - {language: ru, text: "<p>CTO Health Samurai, инженер с амбициями, активный участник сообществ HL7 FHIR, Clojure &amp;\
-            \ PostgreSQL.</p>"}
+      - {language: en, text: "<p>Artistic director of the Health Samurai team. Passionate participant of FHIR, Clojure &amp;\
+            \ PostgreSQL communities.</p>"}
+      - {language: ru, text: "<p>Художественный руководитель команды Health Samurai. Пассионарный участник FHIR, Clojure &amp;\
+            \ PostgreSQL-сообществ.</p>"}
     twitter: niquola
     gitHub: niquola
   - id: 380
@@ -33462,10 +33462,8 @@ speakers:
       - {language: ru, text: "Вацлав Довнар"}
     companyIds: [978]
     bio:
-      - {language: en, text: "<p>More than 9 years in IS, main focuses are AppSec, InfraSec, DevSecOps. Currently Head of\
-            \ Software Product Security Department in one of the leading ride-hailing companies.</p>"}
-      - {language: ru, text: "<p>Более 9 лет в ИБ, основные фокусы AppSec, InfraSec, DevSecOps. В настоящий момент руковод\
-            итель департамента безопасности программных продуктов в одной из ведущих ride-hailing компаний.</p>"}
+      - {language: en, text: "<p>More than nine years in IS, main focuses - AppSec, InfraSec, DevSecOps.</p>"}
+      - {language: ru, text: "<p>Более девяти лет в ИБ, основные фокусы &mdash; AppSec, InfraSec, DevSecOps.</p>"}
   - id: 2326
     photoFileName: 2326.jpg
     photoUpdatedAt: 2022-09-28T08:14:51Z[UTC]
