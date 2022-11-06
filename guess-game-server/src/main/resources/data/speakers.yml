@@ -4163,7 +4163,7 @@ speakers:
             участник переводов книг по тестированию Вайнберга и Копланда."
   - id: 282
     photoFileName: 0282.jpg
-    photoUpdatedAt: 2020-01-31T09:16:32.208Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:05:12Z[UTC]
     name:
       - {language: en, text: "Dmitri Nesteruk"}
       - {language: ru, text: "Дмитрий Нестерук"}
@@ -4364,14 +4364,14 @@ speakers:
     name:
       - {language: en, text: "Roman Nevolin"}
       - {language: ru, text: "Роман Неволин"}
-    companyIds: [630]
+    companyIds: [989]
     bio:
       - {language: en, text: "The developer of the bioinformatics software with .NET, a chemical with Java, financial with\
             \ Haskell, and some other interesting stuff. Roman likes to dive into new areas and languages and then talk about\
             \ them at conferences and use them in production, if necessary."}
-      - {language: ru, text: "<p>Разработчик приложений для биоинформатиков на .NET, для химиков на&nbsp;Java, для финанси\
-            стов на&nbsp;Haskell, и&nbsp;множества других интересных вещей. Любит изучать новые области и&nbsp;языки, а&nbsp;п\
-            отом рассказывать о&nbsp;них на&nbsp;конференциях и&nbsp;по&nbsp;необходимости использовать в&nbsp;продакшне.</p>"}
+      - {language: ru, text: "Разработчик приложений для биоинформатиков на .NET, для химиков на Java, для финансистов на\
+            \ Haskell, и множества других интересных вещей. Любит изучать новые области и языки, а потом рассказывать о ни\
+            х на конференциях и по необходимости использовать в продакшне."}
     twitter: nevoroman
     gitHub: nevoroman
   - id: 296
@@ -6098,7 +6098,7 @@ speakers:
     gitHub: sdrapkin
   - id: 413
     photoFileName: 0413.jpg
-    photoUpdatedAt: 2019-12-16T13:46:32.472Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:05:08Z[UTC]
     name:
       - {language: en, text: "Maxim Arshinov"}
       - {language: ru, text: "Максим Аршинов"}
@@ -6924,8 +6924,11 @@ speakers:
     bio:
       - {language: en, text: "<p>Developer at Tinkoff. Previously developed JetBrains Rider, dealt with infrastructure in\
             \ Kontur. Interested in the inner workings of .NET and Windows and uses this knowledge in practice.</p>"}
-      - {language: ru, text: "<p>Разработчик в Тинькофф. Ранее разрабатывал JetBrains Rider, занимался инфраструктурой в К\
-            онтуре. Интересуется внутренним устройством .NET и Windows и использует эти знания на практике.</p>"}
+      - language: ru
+        text: "<p>Разработчик в Тинькофф, занимается высоконагруженными сервисами. Ранее разрабатывал JetBrains Rider, зан\
+            имался в Контуре общей инфраструктурой &mdash; системой хостинга приложений. Спикер DotNext, Dump, Codefest, .NET\
+            \ Summit.</p>\n<p>Интересуется lock-free алгоритмами и структурами данных, внутренним устройством .NET и опера\
+            ционных систем.</p>"
     twitter: epeshk
     gitHub: epeshk
     habr: epeshk
@@ -6998,7 +7001,7 @@ speakers:
     mvpReconnect: true
   - id: 472
     photoFileName: 0472.jpg
-    photoUpdatedAt: 2022-09-14T14:19:21Z[UTC]
+    photoUpdatedAt: 2022-09-26T10:48:24Z[UTC]
     name:
       - {language: en, text: "Dmitry Soshnikov"}
       - {language: ru, text: "Дмитрий Сошников"}
@@ -7014,16 +7017,17 @@ speakers:
     habr: shwars
   - id: 473
     photoFileName: 0473.jpg
+    photoUpdatedAt: 2022-03-31T19:05:08Z[UTC]
     name:
-      - {language: en, text: "Anatoly Kulakov"}
+      - {language: en, text: "Anatoliy Kulakov"}
       - {language: ru, text: "Анатолий Кулаков"}
-    companyIds: [391]
+    companyIds: [749]
     bio:
-      - {language: en, text: "Was getting an education to become an information security specialist. Was earning money like\
-            \ a tough C++ developer on Linux. After getting bored of coding, he felt the urge to create and switched to C#.\
-            \ Has been writing in .NET since its first versions. Is designing and developing business applications, distributed\
-            \ and fault-tolerant systems. Spends his spare time with ES, CQRS and DDD."}
-      - {language: ru, text: "Получал образование специалиста по информационной безопасности. Зарабатывал, как суровый C++\
+      - {language: en, text: "Educated for the role of information security specialist. Earned as a hardcore C++ developer\
+            \ for Linux. When I got tired of coding and wanted to create, I switched to C#. He has been writing in .NET since\
+            \ the first versions of the program. Designs and builds business applications, distributed and fault-tolerant\
+            \ systems. Taking a break with ES, CQRS, and DDD."}
+      - {language: ru, text: "Образовывался на роль специалиста по информационной безопасности. Зарабатывал, как суровый C++\
             \ разработчик под Linux. Когда надоело кодировать и захотелось творить, перешёл на C#. Пишет на .NET с первых\
             \ его версий. Занимается проектированием и построением бизнес-приложений, распределённых и отказоустойчивых си\
             стем. Отдыхает с ES, CQRS и DDD."}
@@ -7208,7 +7212,7 @@ speakers:
     mvp: true
   - id: 484
     photoFileName: 0484.jpg
-    photoUpdatedAt: 2019-06-14T12:21:46.580Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:05:08Z[UTC]
     name:
       - {language: en, text: "Igor Labutin"}
       - {language: ru, text: "Игорь Лабутин"}
@@ -7423,7 +7427,7 @@ speakers:
     gitHub: gfraiteur
   - id: 498
     photoFileName: 0498.jpg
-    photoUpdatedAt: 2021-02-19T08:41:23.368Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:05:12Z[UTC]
     name:
       - {language: en, text: "Vagif Abilov"}
       - {language: ru, text: "Вагиф Абилов"}
@@ -7440,18 +7444,18 @@ speakers:
     habr: VagifAbilov
   - id: 499
     photoFileName: 0499.jpg
-    photoUpdatedAt: 2022-04-20T11:56:45Z[UTC]
+    photoUpdatedAt: 2022-10-24T11:20:20Z[UTC]
     name:
-      - {language: en, text: "Sergey Vasilev"}
+      - {language: en, text: "Sergey Vasiliev"}
       - {language: ru, text: "Сергей Васильев"}
     companyIds: [424]
     bio:
-      - {language: en, text: "<p>Head of DevRel at PVS-Studio LLC. Sergey has been developing a static analyzer for over 7\
-            \ years, has experience with both C# and C++ analyzer development. Aside from developing, he writes articles on\
-            \ C#, .NET, security and other topics.</p>"}
-      - {language: ru, text: "<p>Head of DevRel в PVS-Studio LLC. Участвует в разработке и продвижении статического анализ\
-            атора более 7 лет, за которые успел поработать над C#- и C++ анализатором, а также в отделе Tools &amp; DevOps.\
-            \ Выступает на конференциях, пишет на тему C#, .NET, security и не только.</p>"}
+      - {language: en, text: "Head of DevRel at PVS-Studio LLC. Sergey has been developing a static analyzer for over 7 years,\
+            \ has experience with both C# and C++ analyzer development. Aside from developing, he writes articles on C#, .NET,\
+            \ security and other topics."}
+      - {language: ru, text: "Head of DevRel в PVS-Studio LLC. Участвует в разработке и продвижении статического анализато\
+            ра более 7 лет, за которые успел поработать над C# и C++ анализатором, а также в отделе Tools &amp; DevOps. Вы\
+            ступает на конференциях, пишет на тему C#, .NET, security и не только."}
     twitter: _SergVasiliev_
     habr: foto_shooter
   - id: 500
@@ -10225,12 +10229,26 @@ speakers:
     twitter: went_out
   - id: 699
     photoFileName: 0699.jpg
+    photoUpdatedAt: 2022-11-02T11:05:33Z[UTC]
     name:
       - {language: en, text: "Vsevolod Rodionov"}
       - {language: ru, text: "Всеволод Родионов"}
-    companyIds: []
+    companyIds: [997]
     bio:
-      - {language: en, text: "Lead software engineer."}
+      - {language: en, text: "Vsevolod is a long-time HolyJS participant and has been on stage even at the very first Holy\
+            \ (and more than one other too). He has been in web development for more than ten years, of which the last five\
+            \ have been managing teams of web applications such as Yandex.Music or Raiffeisenbank, and is now in charge of\
+            \ the web part of the top 2 DeFi project.As an engineering hobby, he tries to formalize the concept of \"good\
+            \ code\" and collects bug bounty. As a non-engineering hobby, he writes fiction and rides various boards: wake,\
+            \ snow and longboards.* according to TVL, for example, see https://defillama.com/protocols"}
+      - language: ru
+        text: "<p>Всеволод давний участник HolyJS и был на сцене даже на самой первой Holy (да и не одной другой тоже). Уж\
+            е больше десяти лет занимается веб-разработкой, из которых последние пять руководит командами веб-приложений,\
+            \ таких как Яндекс.Музыка или интернет-банк Райффайзенбанк, а сейчас отвечает за веб-часть топ-2 DeFi-проекта\
+            .*</p>\n<p>В качестве инженерного хобби пытается формализовать понятие &laquo;хороший код&raquo; и собирает bug\
+            \ bounty. В качестве не инженерного &mdash; пишет фантастику и катается на различных досках: вейк-, сноу- и ло\
+            нгбордах.</p>\n<p>* согласно TVL, например, см.&nbsp;<a href=\"https://defillama.com/protocols\" target=\"_blank\"\
+            \ rel=\"noopener noreferrer\">https://defillama.com/protocols</a></p>"
     twitter: jabher
   - id: 700
     photoFileName: 0700.jpg
@@ -10571,7 +10589,7 @@ speakers:
     gitHub: LeaVerou
   - id: 723
     photoFileName: 0723.jpg
-    photoUpdatedAt: 2021-04-12T09:35:03.673Z[UTC]
+    photoUpdatedAt: 2022-11-02T10:41:52Z[UTC]
     name:
       - {language: en, text: "Andrey Melikhov"}
       - {language: ru, text: "Андрей Мелихов"}
@@ -13611,11 +13629,11 @@ speakers:
             ля распределенных монолитных и микросервисных решений в области ECM."
   - id: 953
     photoFileName: 0953.jpg
-    photoUpdatedAt: 2022-06-14T11:50:36Z[UTC]
+    photoUpdatedAt: 2022-10-27T10:37:43Z[UTC]
     name:
       - {language: en, text: "Mark Shevchenko"}
       - {language: ru, text: "Марк Шевченко"}
-    companyIds: [689]
+    companyIds: [990]
     bio:
       - language: en
         text: "<p>Mark has been programming since 1989. He has written in C, C++, Delphi, Perl, PHP, C#, Ruby and F#. He has\
@@ -14552,14 +14570,14 @@ speakers:
       - {language: ru, text: "Роман Просин"}
     companyIds: [429]
     bio:
-      - {language: en, text: ".NET developer at Raiffeisenbank. Roman is a bright representative of the new school of innovation\
+      - {language: en, text: "<p>.NET developer at Raiffeisenbank. Roman is a bright representative of the new school of innovation\
             \ in software development. He believes that any impact should lead to an improvement in the system. He convinced\
             \ that each person is able to understand the program code created by another person, regardless of the programming\
-            \ language and experience in IT."}
-      - {language: ru, text: "Разработчик .NET в Райффайзенбанк. Роман — яркий представитель новой школы инноватики в разр\
-            аботке программного обеспечения. Считает, что любое воздействие должно приводить к улучшению системы. Убежден\
-            , что каждый человек способен понимать программный код, созданный другим человеком, независимо от языка програ\
-            ммирования и опыта в ИТ."}
+            \ language and experience in IT.</p>"}
+      - {language: ru, text: "<p>Senior Community Lead Raiffeisen .NET Community. Яркий представитель новой школы инновати\
+            ки в разработке программного обеспечения. Считает, что любое воздействие должно приводить к улучшению системы\
+            . Убежден, что каждый человек способен понимать программный код, созданный другим человеком, независимо от язы\
+            ка программирования и опыта в ИТ.</p>"}
     gitHub: RomanProsin
   - id: 1016
     photoFileName: 1016.jpg
@@ -14693,22 +14711,21 @@ speakers:
     gitHub: msaboff
   - id: 1026
     photoFileName: 1026.jpg
-    photoUpdatedAt: 2022-03-31T19:04:25Z[UTC]
+    photoUpdatedAt: 2022-11-02T07:41:57Z[UTC]
     name:
       - {language: en, text: "Ivan Popelyshev"}
       - {language: ru, text: "Иван Попелышев"}
     companyIds: [930]
     bio:
-      - {language: en, text: "<p>Ivan helps people with Canvas 2D/WebGL projects, sometimes invents new things in web graphics.<br\
-            \ /><br />Ivan works with HTML5 games since 2012 (gameofbombs.com), he's a member of the core PixiJS team since\
-            \ 2016. When he studied in the math department at Moscow State University, he participated in many algorithm competitions,\
-            \ including ICPC Finals.<br /><br />Ivan participated in conversion of one of biggest Flash projects (facebook.com/playthehousehold)\
-            \ to special platform that can build both to Flash and to HTML5.</p>"}
-      - language: ru
-        text: "<p>Иван помогает всем желающим с Canvas 2D/WebGL-проектами и иногда случайно открывает новые вещи в веб-гра\
-            фике.</p>\n<p>Занимается играми на HTML5 с 2012 года (gameofbombs.com), состоит в ядре команды PixiJS с 2015.\
-            \ Учился на мехмате МГУ, участвовал в алгоритмических соревнованиях, таких как финал ICPC.</p>\n<p>В настоящий\
-            \ момент отжигает в проекте написания клона игры Minecraft на HTML5.</p>"
+      - {language: en, text: "Ivan helps people with Canvas 2D/WebGL projects, sometimes invents new things in web graphics.Ivan\
+            \ works with HTML5 games since 2012 (gameofbombs.com), he's a member of the core PixiJS team since 2016. When\
+            \ he studied in the math department at Moscow State University, he participated in many algorithm competitions,\
+            \ including ICPC Finals.Ivan participated in conversion of one of biggest Flash projects (facebook.com/playthehousehold)\
+            \ to special platform that can build both to Flash and to HTML5."}
+      - {language: ru, text: "Иван помогает всем желающим с Canvas 2D/WebGL-проектами и иногда случайно открывает новые ве\
+            щи в веб-графике.</p><p>Занимается играми на HTML5 с 2012 года (gameofbombs.com), состоит в ядре команды PixiJS\
+            \ с 2015. Учился на мехмате МГУ, участвовал в алгоритмических соревнованиях, таких как финал ICPC.</p><p>В нас\
+            тоящий момент отжигает в проекте написания клона игры Minecraft на HTML5."}
     twitter: ivanpopelyshev
     gitHub: ivanpopelyshev
   - id: 1027
@@ -21034,11 +21051,11 @@ speakers:
     gitHub: badamczewski
   - id: 1490
     photoFileName: 1490.jpg
-    photoUpdatedAt: 2020-10-29T09:20:52.663Z[UTC]
+    photoUpdatedAt: 2022-05-25T12:06:48Z[UTC]
     name:
       - {language: en, text: "Andrey Tsvettsikh"}
       - {language: ru, text: "Андрей Цветцих"}
-    companyIds: [183]
+    companyIds: [674, 796]
     bio:
       - {language: en, text: "Andrey has been developing corporate applications for over 10 years. He was involved in both\
             \ the creation of new applications and the support and refactoring of existing ones. The main area of interest\
@@ -23222,7 +23239,7 @@ speakers:
             давать больше пользы за меньшее количество кода."}
   - id: 1634
     photoFileName: 1634.jpg
-    photoUpdatedAt: 2021-03-12T14:19:42.965Z[UTC]
+    photoUpdatedAt: 2022-10-11T15:16:27Z[UTC]
     name:
       - {language: en, text: "Igor Shatalkin"}
       - {language: ru, text: "Игорь Шаталкин"}
@@ -23232,9 +23249,9 @@ speakers:
             \ about programming for Windows 95, but only understood the introduction from there. He has been working in IT\
             \ for more than 15 years. Igor writes in C#, recently he became interested in frontend programming (TypeScript,\
             \ React)."}
-      - {language: ru, text: "Увлекается программированием со школьной скамьи. В 7 лет пытался прочитать книгу о программи\
-            ровании под Windows 95, но понял оттуда лишь введение. Работает в IT больше 15 лет. Пишет на C#, в последнее в\
-            ремя увлекся программированием для фронта (TypeScript, React)."}
+      - {language: ru, text: "<p>Увлекается программированием со школьной скамьи. В семь лет пытался прочитать книгу о про\
+            граммировании под Windows 95, но понял оттуда лишь введение. Работает в IT больше 15 лет. Пишет на C# и TypeScript\
+            \ (React). Учится на пилота гражданской авиации.</p>"}
     gitHub: ishatalkin
     habr: IgorShatalkin
   - id: 1635
@@ -25172,16 +25189,14 @@ speakers:
             \ низкоуровневой оптимизацией."}
   - id: 1765
     photoFileName: 1765.jpg
-    photoUpdatedAt: 2021-09-16T14:56:57.725Z[UTC]
+    photoUpdatedAt: 2022-10-11T15:07:50Z[UTC]
     name:
       - {language: en, text: "Anna Morozova"}
       - {language: ru, text: "Анна Морозова"}
     companyIds: [161]
     bio:
-      - {language: en, text: "Technical leader of b2c at Dodo Engineering. I am responsible for a client services development,\
-            \ such as website and mobile application."}
-      - {language: ru, text: "Технический лидер направления b2c в компании Dodo Engineering. Отвечает за разработку сервис\
-            ов для клиентов, таких как сайт и мобильное приложение."}
+      - {language: en, text: "<p>Technical leader Ordering Platform at Dodo Engineering, responsible for the b2c pizza backend.</p>"}
+      - {language: ru, text: "<p>Техлид Ordering Platform в Dodo Engineering, отвечает за бэкенд b2c-пиццы.</p>"}
     twitter: techmyheart
     gitHub: aryabush
   - id: 1766
@@ -26765,16 +26780,14 @@ speakers:
     twitter: ru_ostroumova
   - id: 1870
     photoFileName: 1870.jpg
-    photoUpdatedAt: 2021-10-18T15:14:36.749Z[UTC]
+    photoUpdatedAt: 2022-10-23T07:25:25Z[UTC]
     name:
       - {language: en, text: "Oleg Safonov"}
       - {language: ru, text: "Олег Сафонов"}
     companyIds: [674]
     bio:
-      - {language: en, text: "Developer with more than 11 years of experience and MSIT-SE education. Works in great teams,\
-            \ develops quality architecture, writes clean code, and teaches."}
-      - {language: ru, text: "Разработчик с более чем 11-летним опытом и профильным образованием по программе MSIT-SE. Раб\
-            отает в отличных командах, разрабатывает качественную архитектуру, пишет чистый код и преподает."}
+      - {language: en, text: "<p>12 years of experience, specialized education MSIT-SE, writes code without bugs.</p>"}
+      - {language: ru, text: "<p>12 лет опыта, профильное образование MSIT-SE, пишет код без багов.</p>"}
   - id: 1871
     photoFileName: 1871.jpg
     photoUpdatedAt: 2021-04-08T11:50:50.883Z[UTC]
@@ -27932,17 +27945,18 @@ speakers:
             имался развитием «Сбербанк Бизнес», а сейчас отвечает за счастливое будущее интернет-банка для СМБ в ВТБ."}
   - id: 1955
     photoFileName: 1955.jpg
-    photoUpdatedAt: 2021-11-02T12:58:43.407Z[UTC]
+    photoUpdatedAt: 2022-11-02T07:37:16Z[UTC]
     name:
       - {language: en, text: "Alexander Myshov"}
       - {language: ru, text: "Александр Мышов"}
-    companyIds: [866]
+    companyIds: [3]
     bio:
-      - {language: en, text: "Full-stack developer with experience in 2GIS and Yandex. Loves the web and everything connected\
-            \ with it. Involved in organizing mitaps and conferences. For the last three years has been running the [Defront](https://t.me/defront)\
-            \ telegram channel."}
-      - {language: ru, text: "Фуллстек-разработчик с опытом работы в 2ГИС и Яндекс. Любит веб и всё, что с ним связано. За\
-            нимается организацией митапов и конференций. Последние три года ведет телеграм-канал [Defront](https://t.me/defront)."}
+      - {language: en, text: "Alexander has been engaged in web development since 2008. Worked in large and small companies.\
+            \ A year ago lived on donations. Currently working in 2GIS on a 3D mapping browser engine. Runs the Russian MDN\
+            \ Team. Participates in organizing the frontend section of CodeFest."}
+      - {language: ru, text: "Александр занимается веб-разработкой с 2008 года. Работал в больших и маленьких компаниях. Г\
+            од назад жил на донаты. Сейчас работает в 2ГИС над браузерным движком 3D-карты. Участник Russian MDN Team. Уча\
+            ствует в организации фронтенд-секции CodeFest."}
     twitter: myshov
     gitHub: myshov
     habr: Myshov
@@ -30775,7 +30789,7 @@ speakers:
             \ different projects and now helps Workato to make their platform even better."
   - id: 2148
     photoFileName: 2148.jpg
-    photoUpdatedAt: 2022-09-06T10:21:36Z[UTC]
+    photoUpdatedAt: 2022-10-27T12:28:37Z[UTC]
     name:
       - {language: en, text: "Petr Sovetov"}
       - {language: ru, text: "Пётр Советов"}
@@ -33870,3 +33884,272 @@ speakers:
     twitter: GaraninApps
     gitHub: m-garanin
     habr: IamG
+  - id: 2353
+    photoFileName: 2353.jpg
+    photoUpdatedAt: 2022-10-11T15:09:34Z[UTC]
+    name:
+      - {language: en, text: "Maxim Smirnov"}
+      - {language: ru, text: "Максим Смирнов"}
+    companyIds: [613]
+    bio:
+      - {language: en, text: "<p>Head of the .NET competence center in Alfa-Bank, responsible for the development of the .NET\
+            \ platform and related technologies in the bank since 2013. He started as a simple developer and is now responsible\
+            \ for the development of 30 systems with 10 architects and 130 developers.</p>"}
+      - {language: ru, text: "<p>Руководитель центра компетенции .NET в Альфа-Банке, с 2013 года отвечающий за развитие пл\
+            атформы .NET и смежных технологий в банке. Начинал как простой разработчик и сейчас отвечает за разработку 30\
+            \ систем силами 10 архитекторов и 130 разработчиков.</p>"}
+  - id: 2354
+    photoFileName: 2354.jpg
+    photoUpdatedAt: 2022-09-30T21:25:19Z[UTC]
+    name:
+      - {language: en, text: "Dmitry Tabolich"}
+      - {language: ru, text: "Дмитрий Таболич"}
+    companyIds: [988]
+    bio:
+      - {language: en, text: "<p>Practicing Solution Architect with a focus on corporate architecture and IT modernization\
+            \ strategies. Industry certifications (SEI, IASA, AWS) in solution architecture. Technologist. Expert.</p>"}
+      - {language: ru, text: "<p>Практикующий архитектор решений (Solution Architect) с фокусом на корпоративную архитекту\
+            ру и стратегии модернизации ИТ-систем. Обладатель индустриальных сертификатов (SEI, IASA, AWS) в области архит\
+            ектуры решений. Технолоджист. Эксперт.</p>"}
+    twitter: dtabolich
+    gitHub: dtabolich
+  - id: 2355
+    photoFileName: 2355.jpg
+    photoUpdatedAt: 2022-10-25T14:39:18Z[UTC]
+    name:
+      - {language: en, text: "Guriy Samarin"}
+      - {language: ru, text: "Гурий Самарин"}
+    companyIds: [663]
+    bio:
+      - {language: ru, text: "<p>Старший разработчик C#, архитектор и энтузиаст технологий.</p>"}
+    twitter: guriy_samarin
+    gitHub: Sa1Gur
+  - id: 2356
+    photoFileName: 2356.jpg
+    photoUpdatedAt: 2022-10-21T15:38:52Z[UTC]
+    name:
+      - {language: en, text: "Denis Fomin"}
+      - {language: ru, text: "Денис Фомин"}
+    companyIds: [630]
+    bio:
+      - {language: en, text: "<p>Head of programmers in Contour. Organizes interaction processes with more than 900 developers\
+            \ of different stacks.<br />Professional interests: social psychology, business application architecture.</p>"}
+      - {language: ru, text: "<p>Руководитель программистов в Контуре. Организует процессы взаимодействия с более 900 разр\
+            аботчиков разных стеков.<br />Профессиональные интересы: социальная психология, архитектура бизнес-приложений\
+            .</p>"}
+  - id: 2357
+    photoFileName: 2357.jpg
+    photoUpdatedAt: 2022-10-11T15:05:24Z[UTC]
+    name:
+      - {language: en, text: "Dmitry Radchenko"}
+      - {language: ru, text: "Дмитрий Радченко"}
+    companyIds: [814]
+    bio:
+      - {language: en, text: "<p>The .NET Guildmaster at Postatech. In 12 years he worked his way up from a developer to the\
+            \ head of a department.</p>"}
+      - {language: ru, text: "<p>Гильд-мастер .NET в &laquo;Почтатех&raquo;. За 12 лет прошел путь от разработчика до руко\
+            водителя департамента.</p>"}
+  - id: 2358
+    photoFileName: 2358.jpg
+    photoUpdatedAt: 2022-10-11T15:01:22Z[UTC]
+    name:
+      - {language: en, text: "Olga Scherbakova"}
+      - {language: ru, text: "Ольга Щербакова"}
+    companyIds: [749]
+    bio:
+      - {language: en, text: "<p>More than 15 years of experience, including international companies and jurisdictions of\
+            \ different regions (Russia, CIS, Europe, UAE, Turkey). Graduated in Madrid with a Master's degree in New Technology\
+            \ Jurisprudence. In recent years, she has been actively engaged in projects in the field of personal data and\
+            \ new technologies.</p>"}
+      - {language: ru, text: "<p>Опыт работы более 15 лет, включая международные компании и юрисдикции разных регионов (Ро\
+            ссия, СНГ, Европа, ОАЭ, Турция). Окончила магистратуру по направлению &laquo;Юриспруденция в сфере новых техно\
+            логий&raquo; в Мадриде. Последние годы активно занимается проектами в области персональных данных и новых техн\
+            ологий.</p>"}
+  - id: 2359
+    photoFileName: 2359.jpg
+    photoUpdatedAt: 2022-11-02T07:46:11Z[UTC]
+    name:
+      - {language: en, text: "Sam Bulatov"}
+      - {language: ru, text: "Сэм Булатов"}
+    companyIds: [991, 992]
+    bio:
+      - {language: en, text: "Leads the front end at Waliot from Krasnodar, organizes krd.dev events. Loves Angular and participates\
+            \ in OSS, translates RxJS documentation into Russian, and participates in the NgRuAir podcast. He likes anime\
+            \ and manga."}
+      - {language: ru, text: "Ведущий фронт в Waliot из Краснодара, организует мероприятия krd.dev. Любит Angular и участв\
+            ует в OSS, переводит документацию RxJS на русский язык, участник подкаста NgRuAir. Тащится по аниме и манге."}
+    gitHub: mephistorine
+    habr: stylesam
+  - id: 2360
+    photoFileName: 2360.jpg
+    photoUpdatedAt: 2022-11-02T07:55:29Z[UTC]
+    name:
+      - {language: en, text: "Denis Krasnovsky"}
+      - {language: ru, text: "Денис Красновский"}
+    companyIds: [715]
+    bio:
+      - {language: en, text: "Head of four B2C teams and front-end lead at Domclick. More than eight years of experience in\
+            \ IT."}
+      - {language: ru, text: "Руководитель четырех B2C-команд и фронтенд-лид в компании «Домклик». Стаж в IT более восьми\
+            \ лет."}
+    gitHub: DenRedsky
+  - id: 2361
+    photoFileName: 2361.jpg
+    photoUpdatedAt: 2022-11-02T10:15:42Z[UTC]
+    name:
+      - {language: en, text: "Andrey Vlasov"}
+      - {language: ru, text: "Андрей Власов"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "He started programming at the age of six, when his parents bought him a \"Subor\" set-top box.\
+            \ His work record includes the last 15 years of programming experience.He teaches enterprise development at Innopolis\
+            \ University. Involved in the redesign of the web version of Sberbank Online."}
+      - {language: ru, text: "Программировать начал в шесть лет, когда родители купили ему приставку «Сюбор». В трудовой з\
+            афиксированы последние 15 лет опыта программирования.Преподает в Университете Иннополис энтерпрайз-разработку\
+            . Причастен к редизайну веб-версии «СберБанк Онлайн»."}
+  - id: 2362
+    photoFileName: 2362.jpg
+    photoUpdatedAt: 2022-11-02T10:14:31Z[UTC]
+    name:
+      - {language: en, text: "Vasily Markitan"}
+      - {language: ru, text: "Василий Маркитан"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Has been working in frontend for 7 years. Tried his hand at both startups and enterprise\
+            \ development. He likes the latter more :) Writes in React stack, Typescript, RTKQuery. Has experience in teaching\
+            \ and occasionally giving lectures on the frontend. Loves digging into new technologies and debugging.</p>"}
+      - {language: ru, text: "<p>Работает во фронтенде 7 лет. Работал и в стартапах, и в энтерпрайз-разработке. Последнее\
+            \ нравится больше :) Пишет на стеке React, Typescript, RTKQuery. Имеет пятилетний опыт преподавания. Любит коп\
+            аться в новых технологиях и заниматься отладкой.</p>"}
+  - id: 2363
+    photoFileName: 2363.jpg
+    photoUpdatedAt: 2022-10-18T17:33:31Z[UTC]
+    name:
+      - {language: en, text: "Aleksei Avdeev"}
+      - {language: ru, text: "Алексей Авдеев"}
+    companyIds: [424]
+    bio:
+      - {language: en, text: "<p>Developer of the C# static code analyzer in the PVS-Studio team. Part-time student and a\
+            \ curious guy. Studying information security and bringing secure code to the masses.</p>"}
+      - {language: ru, text: "<p>Разработчик статического анализатора кода C# в команде PVS-Studio. По совместительству ст\
+            удент и любознательный парень. Изучает информационную безопасность и несет безопасный код в массы.</p>"}
+  - id: 2364
+    photoFileName: 2364.jpg
+    photoUpdatedAt: 2022-10-23T20:51:13Z[UTC]
+    name:
+      - {language: en, text: "Andrey Ganichev"}
+      - {language: ru, text: "Андрей Ганичев"}
+    companyIds: [161]
+    bio:
+      - {language: en, text: "<p>Six years ago, he was designing antenna devices. Now he is a development engineer at Dodo\
+            \ Engineering. Interested in architecture and Domain Driven Design.</p>"}
+      - {language: ru, text: "<p>Еще шесть лет назад проектировал антенные устройства. Сейчас инженер-разработчик в Dodo Engineering.\
+            \ Интересуется архитектурой и Domain Driven Design.</p>"}
+    gitHub: AndreiGanichev
+    habr: AG10
+  - id: 2365
+    photoFileName: 2365.jpg
+    photoUpdatedAt: 2022-11-02T10:30:55Z[UTC]
+    name:
+      - {language: en, text: "Anton Zhukov"}
+      - {language: ru, text: "Антон Жуков"}
+    companyIds: [993]
+    bio:
+      - {language: en, text: "<p>Anton worked for more than seven years at DevExpress, an international IT company. Teamlead,\
+            \ Engineering Manager. Headed the startup department. Now he works in a Russian company. Directs a startup in\
+            \ the sphere of import substitution and business analytics (big data, OLAP cubes, dashboards). Read more about\
+            \ Anton&nbsp;<a style=\"color: #dca10d;\" href=\"https://career.habr.com/mrcheater\" target=\"_blank\" rel=\"\
+            noopener noreferrer\">here</a>.&nbsp;</p>"}
+      - {language: ru, text: "Антон более семи лет работал в международной IT-компании DevExpress. Тимлид, Engineering Manager.\
+            \ Руководил отделом стартапов. Сейчас работает в российской компании. Руководит стартапом в сфере импортозамещ\
+            ения и бизнес аналитики (большие данные, OLAP-кубы, дашборды). Подробнее об Антоне&nbsp;<a href=\"https://career.habr.com/mrcheater\"\
+            \ rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: rgb(220, 161, 13);\">тут</a>.&nbsp;"}
+    gitHub: MrCheater
+    habr: MrCheater
+  - id: 2366
+    photoFileName: 2366.jpg
+    photoUpdatedAt: 2022-10-21T19:05:20Z[UTC]
+    name:
+      - {language: en, text: "Alexander Kateen"}
+      - {language: ru, text: "Александр Катин"}
+    companyIds: []
+    bio:
+      - {language: en, text: "More than 10 years develops with .NET. Besides work tries to contribute into society. Started\
+            \ by answering at 'stackoverflow'. Having reached a position in top 5% at C# decided to change format and created\
+            \ a profile at Habr. Mostly describes his experiments with curious use cases of the language and tools."}
+      - {language: ru, text: "Более 10 лет занимается разработкой под .NET. В свободное от работы время старается вносить\
+            \ вклад в сообщество. Начинал с ответов на StackOverflow. Достигнув позиции в top 5% по C#, решил сменить форм\
+            ат и завел профиль на Хабре. В основном описывает свои эксперименты по нестандартному использованию языка и ин\
+            струментов."}
+  - id: 2367
+    photoFileName: 2367.jpg
+    photoUpdatedAt: 2022-11-02T10:34Z[UTC]
+    name:
+      - {language: en, text: "Ivan Malyugin"}
+      - {language: ru, text: "Иван Малюгин"}
+    companyIds: [618]
+    bio:
+      - {language: en, text: "Frontend developer with over 14 years of experience. Passionate about FrontOps topics, hardcore\
+            \ R&amp;D, architecture (especially wysiwyg CMS platforms) and clean code."}
+      - {language: ru, text: "Фронтенд-разработчик со стажем более 14 лет. Увлекается FrontOps-тематикой, хардкорным R&amp;D,\
+            \ архитектурой (в особенности wysiwyg CMS-платформ) и чистым кодом."}
+  - id: 2368
+    photoFileName: 2368.jpg
+    photoUpdatedAt: 2022-10-21T14:50:40Z[UTC]
+    name:
+      - {language: en, text: "Aleksandr Kuznetsov"}
+      - {language: ru, text: "Александр Кузнецов"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>22 years in IT. Trainer and lead developer. Specializes in .NET.</p>"}
+      - {language: ru, text: "<p>22 года в IT. Тренер и ведущий разработчик. Специализируется в .NET.</p>"}
+  - id: 2369
+    photoFileName: 2369.jpg
+    photoUpdatedAt: 2022-11-02T10:46:18Z[UTC]
+    name:
+      - {language: en, text: "Roman Troitsky"}
+      - {language: ru, text: "Роман Троицкий"}
+    companyIds: [994]
+    bio:
+      - {language: en, text: "Frontend Retriever. Three and a half years in frontend, bachelor's degree in applied computer\
+            \ science. Works in the Komus-teh team. Loves frontend and curious people, tries to help all who ask."}
+      - {language: ru, text: "Фронтенд-ретривер. Три с половиной года во фронтенде, бакалавр прикладной информатики. Работ\
+            ает в команде «Комус-тех». Любит фронтенд и любопытных людей, старается помочь всем обратившимся."}
+    gitHub: DreamShaded
+    habr: DreamShaded
+  - id: 2370
+    photoFileName: 2370.jpg
+    photoUpdatedAt: 2022-11-02T10:53:48Z[UTC]
+    name:
+      - {language: en, text: "Dmitry Grosh"}
+      - {language: ru, text: "Дмитрий Грош"}
+    companyIds: [995]
+    bio:
+      - {language: en, text: "Dima is a front-end developer at WIS Software. He has a bit less than two years in commercial\
+            \ development. Specializes in React.The most important project was related to a medical institution in the USA.\
+            \ The point was to create an effective CRM system for data exchange between patients and doctors. The key tasks\
+            \ were related to data collecting from forms. It was needed to create convenient reusable components which had\
+            \ different behavior. And Dmitry was partly responsible for setting up webpack and helping newbies to set up the\
+            \ environment at MacBook to launch the app."}
+      - {language: ru, text: "Дима — фронтенд-разработчик в компании WIS Software. У него чуть меньше двух лет опыта в ком\
+            мерческой разработке. В основном специализируется на React.Самый значительный проект был связан с медицинским\
+            \ учреждением в Америке. Его целью было создание эффективной CRM-системы для обмена данными между пациентами и\
+            \ врачами. Основные задачи были связаны со сбором данных из форм. Нужно было создать удобные переиспользуемые\
+            \ компоненты, которые имели разное поведение. И Дмитрий частично отвечал за настройку вебпака и помощь новичка\
+            м при настройке окружения на MacBook для запуска приложения."}
+  - id: 2371
+    photoFileName: 2371.jpg
+    photoUpdatedAt: 2022-11-02T11:02:08Z[UTC]
+    name:
+      - {language: en, text: "Artem Akutin"}
+      - {language: ru, text: "Артём Акутин"}
+    companyIds: [996]
+    bio:
+      - {language: en, text: "He has been actively exploring the IT space for eight years now. Manages the backend development\
+            \ team, uses NodeJS on a daily basis. Can do frontend, write in Java, GO, and do a little Andriod applications.Works\
+            \ on a dissertation on distributed systems, writes on Habr, teaches cloud computing in college, participates in\
+            \ hackathons and builds a community among students."}
+      - {language: ru, text: "Уже восьмой год активно исследует IT-пространство. Руководит группой бэкенд-разработки, ежед\
+            невно использует NodeJS. Умеет делать фронтенд, писать на Java, GO и совсем немного делать Andriod-приложения\
+            .Работает над диссертацией по распределенным системам, пишет на Хабр, преподает облачные вычисления в вузе, уч\
+            аствует в хакатонах и строит коммьюнити среди студентов."}

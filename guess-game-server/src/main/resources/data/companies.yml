@@ -3590,3 +3590,45 @@ companies:
     name:
       - {language: en, text: GaraninApps}
     siteLink: https://garaninapps.com
+  - id: 988
+    name:
+      - {language: en, text: IT_ONE}
+    siteLink: https://www.it-one.ru
+  - id: 989
+    name:
+      - {language: en, text: Sytac}
+    siteLink: https://sytac.io
+  - id: 990
+    name:
+      - {language: en, text: CraftTalk}
+    siteLink: https://crafttalk.ru
+  - id: 991
+    name:
+      - {language: en, text: Waliot}
+    siteLink: https://waliot.com
+  - id: 992
+    name:
+      - {language: en, text: krd.dev}
+    siteLink: https://krd.dev
+  - id: 993
+    name:
+      - {language: en, text: "Control Systems"}
+      - {language: ru, text: "Контрол Системс"}
+    siteLink: https://controlsystems.ru
+  - id: 994
+    name:
+      - {language: en, text: Komus}
+      - {language: ru, text: Комус}
+    siteLink: https://www.komus.ru
+  - id: 995
+    name:
+      - {language: en, text: "Wis Software"}
+    siteLink: https://wis.software
+  - id: 996
+    name:
+      - {language: en, text: Citydrive}
+      - {language: ru, text: Ситидрайв}
+    siteLink: https://citydrive.ru
+  - id: 997
+    name:
+      - {language: en, text: Lido}

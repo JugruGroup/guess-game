@@ -20,11 +20,30 @@ companyGroups:
         Gritstep,
         Dotnetos
     ]
+  - name: "MAI / HSE / ex-Microsoft"
+    items: [
+      MAI,
+      "NRU HSE"
+    ]
+  - name: "MAI / NRU HSE"
+    items: [
+      MAI,
+      "NRU HSE"
+    ]
+  - name: "MAI / NRU HSE / ex-Microsoft"
+    items: [
+      MAI,
+      "NRU HSE"
+    ]
   - name: "MPI-SWS, JetBrains Research, NRU HSE"
     items: [
         MPI-SWS,
         "JetBrains Research",
         "NRU HSE"
+    ]
+  - name: "МТS Digital, Big Data"
+    items: [
+      "МТS Digital"
     ]
   - name: "OTS Lab / odgAssist"
     items: [
@@ -41,17 +60,13 @@ companyGroups:
         "Synthesized",
         "MIPT"
     ]
-  - name: "MAI / HSE / ex-Microsoft"
+  - name: "Waliot, krd.dev"
     items: [
-        MAI,
-        "NRU HSE"
+      Waliot,
+      krd.dev
     ]
-  - name: "MAI / NRU HSE / ex-Microsoft"
+  - name: "Тинькофф, DevBrothers"
     items: [
-      MAI,
-      "NRU HSE"
-    ]
-  - name: "МТS Digital, Big Data"
-    items: [
-        "МТS Digital"
+      Тинькофф,
+      DevBrothers
     ]
