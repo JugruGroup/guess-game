@@ -20692,14 +20692,19 @@ speakers:
     photoFileName: 1464.jpg
     photoUpdatedAt: 2022-03-31T19:06:42Z[UTC]
     name:
-      - {language: en, text: "Mikhail Maryufich"}
+      - {language: en, text: "Mikhail Maryfich"}
       - {language: ru, text: "Михаил Марюфич"}
     companyIds: [653]
     bio:
-      - {language: en, text: "<p>Senior developer at Odnoklassniki. Engaged in infrastructure for big data and machine learning.\
-            \ He has spoken at conferences - SmartData, HighLoad++, DataFest, etc.</p>"}
-      - {language: ru, text: "<p>Старший разработчик в &laquo;Одноклассниках&raquo;. Занимается инфраструктурой для больши\
-            х данных и машинного обучения. Выступал с докладами на конференциях &mdash; SmartData, HighLoad++, DataFest, etc.</p>"}
+      - language: en
+        text: "Mikhail has been developing an infrastructure for ML.\nHe has experience in the implementation of ML systems\
+            \ from problem formulation to deployment into industrial operation.\nValues reproducibility of results and good\
+            \ development processes above all else.\nSpeaker at SmartData, HighLoad++, DataFest conferences, etc."
+      - language: ru
+        text: "Разрабатывает инфраструктуру для машинного обучения.\n\nИмеет опыт реализации систем машинного обучения от\
+            \ формулировки проблемы до выкатки в промышленную эксплуатацию и дальнейшей поддержки системы.\n\nВ профессион\
+            альной деятельности превыше всего ценит воспроизводимость результатов и хорошие процессы разработки.\n\nВыступ\
+            ал с докладами на конференциях — SmartData, HighLoad++, DataFest, etc."
     twitter: mikhailmar
     habr: mikhail_mar
   - id: 1465
@@ -21345,8 +21350,8 @@ speakers:
     bio:
       - {language: en, text: "7 years of full-time IT teaching, Information security and math stats. Ph.D. Currently works\
             \ on developing recommender systems at ok.ru."}
-      - {language: ru, text: "7 лет преподавал ИТ, информационную безопасность и статистику. Кандидат технических наук. Се\
-            йчас занимается развитием рекомендательных систем в Одноклассниках."}
+      - {language: ru, text: "<p>Семь лет преподавал ИТ, информационную безопасность и статистику. Кандидат технических на\
+            ук. Сейчас занимается развитием рекомендательных систем в &laquo;Одноклассниках&raquo;.</p>"}
     habr: netcitizen
   - id: 1511
     photoFileName: 1511.jpg
@@ -26205,14 +26210,12 @@ speakers:
       - {language: ru, text: "Александр Боргардт"}
     companyIds: [957]
     bio:
-      - language: en
-        text: "<div class=\"PersonContent_personContent__text__LS5lM\">More than 10 years researches new approaches and creates\
-            \ solutions for advertisements, fintech and ML. Among fields of interests there are questions of developing distributed\
-            \ systems, parallel and concurrent handle of information. Makes the world better by <a href=\"https://duckstax.com/\"\
-            >opensource</a>.</div>\n<div class=\"PersonContent_personContent__talks__7yMyH\">&nbsp;</div>"
-      - {language: ru, text: "<p>Более 10 лет занимается исследованием новых подходов и созданием решений в областях рекла\
-            мы, финтеха и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и конкурен\
-            тной обработки информации. Улучшает мир посредством <a href=\"https://duckstax.com/\">опенсорса</a>.</p>"}
+      - {language: en, text: "<p>More than 10 years researches new approaches and creates solutions for advertisements, FinTech\
+            \ and ML. Among fields of interests there are questions of developing distributed systems, parallel and concurrent\
+            \ handle of information. Makes the world better by opensource duckstax.com.</p>"}
+      - {language: ru, text: "<p>Более 10+ лет занимается исследованием новых подходов и созданием решений в областях AdTech,\
+            \ FinTech и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и конкурентн\
+            ой обработки информации. Улучшает мир посредством опенсорса duckstax.com.</p>"}
     twitter: k0tbegem0t
     gitHub: kotbegemot
   - id: 1833
@@ -32721,18 +32724,17 @@ speakers:
       - {language: ru, text: "Данил Иванов"}
     companyIds: [964]
     bio:
-      - {language: en, text: "<span style=\"color: rgb(23, 43, 77);\">Developer, team lead, husband, father and also organizer\
-            \ of the SPb Python community.Works as a Lead of cross-functional team, but still tries to be a player-coach,\
-            \ because Danil believes that the most important and useful for business solutions are at the junction of different\
-            \ domains. Danil and his team develop the features for hardcore players in World Of Warships. He's responsible\
-            \ for the development, delivery of quality features on time, the search for new technical solutions to reduce\
-            \ development time, the interviewing of new employees and the team building.</span>"}
-      - {language: ru, text: "<p><span style=\"color: #172b4d;\">Разработчик, тимлид, муж, отец и организатор сообщества SPb\
-            \ Python. Работает тимлидом кросс-функциональной команды, но при этом старается быть играющим тренером, так ка\
-            к верит, что самые важные и полезные бизнес-решения находятся на стыке различных областей. Вместе с командой р\
-            азрабатывает фичи для хардкорных игроков в World of Warships. Он отвечает за разработку, доставку качественных\
-            \ фич в срок, поиск новых технических решений с целью сократить время разработки, собеседования, построение и\
-            \ развитие команд.</span></p>"}
+      - {language: en, text: "<p>Developer, team lead, husband, father and also organizer of the SPb Python community. Works\
+            \ as a Lead of cross-functional team, but still tries to be a player-coach, because Danil believes that the most\
+            \ important and useful for business solutions are at the junction of different domains. Danil and his team develop\
+            \ the features for hardcore players in World Of Warships. He's responsible for the development, delivery of quality\
+            \ features on time, the search for new technical solutions to reduce development time, the interviewing of new\
+            \ employees and the team building.</p>"}
+      - {language: ru, text: "<p>Разработчик, тимлид, муж, отец и организатор сообщества SPb Python. Работает тимлидом кро\
+            сс-функциональной команды, но при этом старается быть играющим тренером, так как верит, что самые важные и пол\
+            езные бизнес-решения находятся на стыке различных областей. Вместе с командой разрабатывает фичи для хардкорны\
+            х игроков в World of Warships. Отвечает за разработку, доставку качественных фич в срок, поиск новых техническ\
+            их решений с целью сократить время разработки, собеседования, построение и развитие команд.</p>"}
     twitter: nonamenix
     gitHub: nonamenix
     habr: nonamenix
