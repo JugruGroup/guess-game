@@ -68,6 +68,10 @@ companySynonyms:
     synonyms: [
         СFT
     ]
+  - name: Careem
+    synonyms: [
+        "Careem (UAE)"
+    ]
   - name: "Chronicle Software"
     synonyms: [
         "Chronicle Software Ltd"
@@ -292,6 +296,11 @@ companySynonyms:
     synonyms: [
         MinimalModeling.com
     ]
+  - name: "Monitor Electric"
+    synonyms: [
+        "Monitor Electric (monitel.com)",
+        "Монитор Электрик (monitel.ru)"
+    ]
   - name: MPI-SWS
     synonyms: [
         "Max Planck Institute for Software Systems"
@@ -351,9 +360,20 @@ companySynonyms:
     synonyms: [
         performance-lab.ru
     ]
+  - name: "RT Labs"
+    synonyms: [
+        RTLabs,
+        РТЛабс
+    ]
   - name: PVS-Studio
     synonyms: [
-      "PVS-Studio LLC"
+        "PVS-Studio LLC"
+    ]
+  - name: Rostelecom
+    synonyms: [
+        Rostelekom,
+        "Rostelecom Information Technologies",
+        "Ростелеком Информационные Технологии"
     ]
   - name: SouJava
     synonyms: [

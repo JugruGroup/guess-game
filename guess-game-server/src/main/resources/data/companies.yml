@@ -3407,7 +3407,7 @@ companies:
     siteLink: https://icons8.ru
   - id: 945
     name:
-      - {language: en, text: Rostelekom}
+      - {language: en, text: Rostelecom}
       - {language: ru, text: Ростелеком}
     siteLink: https://rt.ru
   - id: 946
@@ -3632,3 +3632,50 @@ companies:
   - id: 997
     name:
       - {language: en, text: Lido}
+  - id: 998
+    name:
+      - {language: en, text: "START.ru online cinema"}
+      - {language: ru, text: "Онлайн-кинотеатр START"}
+    siteLink: https://start.ru
+  - id: 999
+    name:
+      - {language: en, text: "ALM Works"}
+    siteLink: https://almworks.com
+  - id: 1000
+    name:
+      - {language: en, text: HintEd}
+    siteLink: https://hinted.me
+  - id: 1001
+    name:
+      - {language: en, text: Careem}
+    siteLink: https://www.careem.com
+  - id: 1002
+    name:
+      - {language: en, text: Indeed}
+    siteLink: https://www.indeed.com
+  - id: 1003
+    name:
+      - {language: en, text: 1CUPIS}
+      - {language: ru, text: "ЕДИНЫЙ ЦУПИС"}
+    siteLink: https://1cupis.ru
+  - id: 1004
+    name:
+      - {language: en, text: ATI.SU}
+    siteLink: https://ati.su
+  - id: 1005
+    name:
+      - {language: en, text: Qualitica}
+    siteLink: https://qualitica.ru
+  - id: 1006
+    name:
+      - {language: en, text: DeteAct}
+    siteLink: https://deteact.ru
+  - id: 1007
+    name:
+      - {language: en, text: RUTUBE}
+    siteLink: https://rutube.ru
+  - id: 1008
+    name:
+      - {language: en, text: "Monitor Electric"}
+      - {language: ru, text: "Монитор Электрик"}
+    siteLink: https://monitel.com
