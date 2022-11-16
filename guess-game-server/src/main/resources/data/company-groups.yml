@@ -60,6 +60,11 @@ companyGroups:
         "Synthesized",
         "MIPT"
     ]
+  - name: VK/Tarantool
+    items: [
+        VK,
+        Tarantool
+    ]
   - name: "Waliot, krd.dev"
     items: [
       Waliot,

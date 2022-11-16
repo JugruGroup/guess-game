@@ -2330,6 +2330,19 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("DotNext 2022 Autumn", null, List.of(24L, 9L)),
 //                        Set.of("Открытие конференции DotNext 2022 Autumn",
-//                                "Подведение итогов online-части конференции DotNext 2022 Autumn")));
+//                                "Подведение итогов online-части конференции DotNext 2022 Autumn",
+//                                "Открытие офлайн-части конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
+//                                "Закрытие конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
+//                                "Lightning Talks: что нас бесит в .NET")));
+//        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2022, 11, 7), "2022 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Heisenbug 2022 Autumn", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции Heisenbug 2022 Autumn",
+//                                "Подведение итогов онлайн-части конференции Heisenbug 2022 Autumn",
+//                                "Как учить и учиться автоматизации?", "100 к 1 тестировщику",
+//                                "Как строить внутренние сервисы QA для продуктовых команд",
+//                                "Открытие офлайн-дня конференции Heisenbug 2022 Autumn",
+//                                "Закрытие конференции Heisenbug 2022 Autumn",
+//                                "Lightning Talks", "Поговорим о профессиональной литературе")));
     }
 }
