@@ -282,6 +282,9 @@ public class ConferenceDataLoaderExecutor {
         // Delete talk duplicates
         cmsTalks = deleteTalkDuplicates(cmsTalks);
 
+        // Check existence of talk speakers
+        checkTalkSpeakersExistence(cmsTalks);
+
         // Order speakers with talk order
         List<Speaker> cmsSpeakers = getTalkSpeakers(cmsTalks);
         log.info("Speakers (in CMS): {}", cmsSpeakers.size());
@@ -476,6 +479,19 @@ public class ConferenceDataLoaderExecutor {
         return talks.stream()
                 .filter(t -> t.equals(ruNameMap.get(LocalizationUtils.getString(t.getName(), Language.RUSSIAN))))
                 .toList();
+    }
+
+    /**
+     * Checks existence of talk speakers.
+     *
+     * @param talks talks
+     */
+    static void checkTalkSpeakersExistence(List<Talk> talks) {
+        for (Talk talk : talks) {
+            if (talk.getSpeakers().isEmpty()) {
+                throw new IllegalStateException(String.format("No speakers found for talk %s", talk.getName()));
+            }
+        }
     }
 
     /**

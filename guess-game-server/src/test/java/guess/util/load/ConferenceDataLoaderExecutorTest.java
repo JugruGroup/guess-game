@@ -686,6 +686,42 @@ class ConferenceDataLoaderExecutorTest {
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("checkTalkSpeakersExistence method tests")
+    class CheckTalkSpeakersExistenceTest {
+        private Stream<Arguments> data() {
+            Speaker speaker0 = new Speaker();
+            speaker0.setId(0);
+
+            Talk talk0 = new Talk();
+            talk0.setId(0);
+            talk0.setName(List.of(new LocaleItem("en", "Name0")));
+            talk0.setSpeakers(List.of(speaker0));
+
+            Talk talk1 = new Talk();
+            talk1.setId(1);
+            talk1.setName(List.of(new LocaleItem("en", "Name1")));
+
+            return Stream.of(
+                    arguments(Collections.emptyList(), null),
+                    arguments(List.of(talk0), null),
+                    arguments(List.of(talk1), IllegalStateException.class),
+                    arguments(List.of(talk0, talk1), IllegalStateException.class)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void checkTalkSpeakersExistence(List<Talk> talks, Class<? extends Throwable> expectedException) {
+            if (expectedException == null) {
+                assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.checkTalkSpeakersExistence(talks));
+            } else {
+                assertThrows(expectedException, () -> ConferenceDataLoaderExecutor.checkTalkSpeakersExistence(talks));
+            }
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("getInvalidCompanyNames method tests")
     class GetInvalidCompanyNamesTest {
         private Stream<Arguments> data() {
