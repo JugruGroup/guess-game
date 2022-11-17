@@ -644,6 +644,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         var companyId = new AtomicLong(-1);
 
         return validJrgCmsActivities.stream()
+                .filter(a -> a.getParticipants() != null)
                 .flatMap(a -> a.getParticipants().stream())
                 .filter(JrgCmsDataLoader::isValidSpeaker)
                 .map(JrgCmsParticipant::getData)

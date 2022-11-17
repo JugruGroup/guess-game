@@ -2344,5 +2344,16 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-дня конференции Heisenbug 2022 Autumn",
 //                                "Закрытие конференции Heisenbug 2022 Autumn",
 //                                "Lightning Talks", "Поговорим о профессиональной литературе")));
+//        loadTalksSpeakersEvent(Conference.JOKER, LocalDate.of(2022, 11, 8), "2022",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Joker 2022", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции Joker 2022",
+//                                "Подведение итогов онлайн-части конференции Joker 2022",
+//                                "Kotlin-школа — конкурентная среда в обучении", "IDE или нет — вот в чем вопрос",
+//                                "Архитектура в команде: боль и/или удовольствие?", "Реалии финтеха",
+//                                "Открытие второго дня online-части", "Java или Kotlin: на чем писать бэкенд",
+//                                "«Годные и не очень» практики подбора и наставничества разработчиков",
+//                                "«ГосТех»: новая жизнь", "Открытие offline-части конференции Joker 2022",
+//                                "Закрытие конференции Joker 2022")));
     }
 }

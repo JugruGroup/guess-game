@@ -979,7 +979,7 @@ companies:
     siteLink: https://vk.com/ithrmeetup
   - id: 278
     name:
-      - {language: en, text: "IT Territory/My.Games"}
+      - {language: en, text: "IT Territory/MY.GAMES"}
     siteLink: https://www.it-territory.ru
   - id: 279
     name:
@@ -3679,3 +3679,20 @@ companies:
       - {language: en, text: "Monitor Electric"}
       - {language: ru, text: "Монитор Электрик"}
     siteLink: https://monitel.com
+  - id: 1009
+    name:
+      - {language: en, text: Naumen}
+    siteLink: https://naumen.com
+  - id: 1010
+    name:
+      - {language: en, text: Tempo}
+    siteLink: https://www.tempo.io
+  - id: 1011
+    name:
+      - {language: en, text: Rostselmash}
+      - {language: ru, text: Ростсельмаш}
+    siteLink: https://rostselmash.com
+  - id: 1012
+    name:
+      - {language: en, text: ITentika}
+    siteLink: https://itentika.ru

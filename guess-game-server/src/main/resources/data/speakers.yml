@@ -69,18 +69,18 @@ speakers:
     habr: yegor256
   - id: 4
     photoFileName: 0004.jpg
+    photoUpdatedAt: 2022-10-25T14:58:41Z[UTC]
     name:
       - {language: en, text: "Ruslan Cheremin"}
       - {language: ru, text: "Руслан Черемин"}
-    companyIds: [141]
+    companyIds: []
     bio:
-      - {language: en, text: "Java developer for >10 years. Has coded ERP for food and cellular in his youth, later developed\
-            \ LMS in 1C, and ad strategy simulator in Yandex, and nowadays works on pricing strategies in Deutsche Bank. Prefers\
-            \ to code bug-free right from the start, but sometimes uses tests to support his overconfidence."}
-      - {language: ru, text: "Разрабатывает на Java более 10 лет. В юности программировал всякое-разное за еду и мобильный\
-            \ телефон, позже создавал обучающие программы для школьников в 1С и симулятор рекламных стратегий в Яндексе, а\
-            \ сейчас занимается генерацией цен в Deutsche Bank. Как настоящий профессионал, предпочитает сразу писать код\
-            \ без багов, но иногда подогревает свою самоуверенность тестами."}
+      - {language: en, text: "<p>He has been developing in Java for more than 10 years. In his youth he programmed all sorts\
+            \ of things for food and a cell phone, and later created educational programs for schoolchildren in 1C, a simulator\
+            \ of advertising strategies in Yandex and was engaged in low-latency price generation in Deutsche Bank.</p>"}
+      - {language: ru, text: "<p>Разрабатывает на Java более 10 лет. В юности программировал всякое разное за еду и мобиль\
+            ный телефон, позже создавал обучающие программы для школьников в 1С, симулятор рекламных стратегий в Яндексе и\
+            \ занимался low-latency-генерацией цен в Deutsche Bank.</p>"}
     twitter: dj_begemot
     gitHub: cheremin
     habr: cheremin
@@ -202,23 +202,22 @@ speakers:
     javaChampion: true
   - id: 10
     photoFileName: 0010.jpg
+    photoUpdatedAt: 2022-03-31T19:05:52Z[UTC]
     name:
       - {language: en, text: "Maxim Gorelikov"}
       - {language: ru, text: "Максим Гореликов"}
     companyIds: [642]
     bio:
-      - language: en
-        text: "10+ years experience in IT, starting from C/C++ and geophysics and now basically JVM languages/JS and\
-            \ financial services.\n\nBasically, he uses Spring and Netflix ecosystem, but checks out everything that is\
-            \ worth trying on GitHub. He is experimenting with reactive approaches.\n\nHe wants to understand not only\
-            \ his apps but also everything around them, thus he is working with all the infrastructure (logs, CI/CD,\
-            \ orchestration) and tests. To sum up, DevOps is our everything."
-      - language: ru
-        text: "Более 10 лет разрабатывает всё подряд, начинал с С/С++ и геофизики, сейчас JVM-языки/JS и финансовые\
-            \ сервисы.\n\nВ основном использует экосистему Spring и Netflix, но пробует всё, что найдет хорошего на\
-            \ GitHub. Экспериментирует с реактивными подходами.\n\nИнтересуется тем, как работают приложения от начала\
-            \ до конца, поэтому работает с инфраструктурой (логи, CI/CD, оркестрация) и тестами. В общем, DevOps — наше\
-            \ всё и всё такое."
+      - {language: en, text: "<p>10+ years experience in IT, starting from C/C++ and geophysics and now basically JVM languages/JS\
+            \ and financial services. Basically, he uses Spring and Netflix ecosystem, but checks out everything that is worth\
+            \ trying on GitHub. He is experimenting with reactive approaches. He wants to understand not only his apps but\
+            \ also everything around them, thus he is working with all the infrastructure (logs, CI/CD, orchestration) and\
+            \ tests. To sum up, DevOps is our everything.</p>"}
+      - {language: ru, text: "<span style=\"color: rgb(15, 23, 42);\">Более 10 лет разрабатывает всё подряд, начинал с С/С\
+            ++ и геофизики, сейчас в основном JVM-языки, немного JS и финансовые сервисы. В основном использует экосистему\
+            \ Spring в разработке, но иногда нужны альтернативы, поэтому пробует всё, что найдет хорошего на GitHub. Хочет\
+            \ понимать, как работают приложения от начала до конца, поэтому интересуется архитектурой, инфраструктурой и п\
+            роцессами деплоя и поддержки. Очень ценит DevOps как методологию.</span>"}
     twitter: gorelikoff
     gitHub: gorelikov
     habr: somemaxim
@@ -345,7 +344,7 @@ speakers:
             , системами полнотекстового поиска, системами интеллектуального анализа данных."
   - id: 18
     photoFileName: 0018.jpg
-    photoUpdatedAt: 2022-03-31T19:06:12Z[UTC]
+    photoUpdatedAt: 2022-10-24T08:02:18Z[UTC]
     name:
       - {language: en, text: "Andrei Pangin"}
       - {language: ru, text: "Андрей Паньгин"}
@@ -363,18 +362,18 @@ speakers:
     javaChampion: true
   - id: 19
     photoFileName: 0019.jpg
-    photoUpdatedAt: 2022-06-02T11:51:39Z[UTC]
+    photoUpdatedAt: 2022-08-25T10:38:12Z[UTC]
     name:
       - {language: en, text: "Ivan Ponomarev"}
       - {language: ru, text: "Иван Пономарёв"}
-    companyIds: [702, 826]
+    companyIds: [826]
     bio:
-      - {language: en, text: "Staff software engineer at Synthesized.io, lecturer at MIPT. Over 20 years in IT, he writes\
-            \ code and manages projects from refining ERP systems to building real-time Internet data monitoring systems.\
-            \ Periodically shares his experience at conferences and meetups."}
-      - {language: ru, text: "Staff software engineer в Synthesized.io, преподаватель в МФТИ. Более 20 лет работает в ИТ,\
-            \ пишет код и руководит проектами от доработки ERP-систем до построения систем мониторинга данных в интернете\
-            \ в реальном времени. Периодически делится своим опытом на конференциях и митапах."}
+      - {language: en, text: "Staff software engineer, lecturer at MIPT. Over 20 years in IT, he writes code and manages projects\
+            \ from refining ERP systems to building real-time Internet data monitoring systems. Periodically shares his experience\
+            \ at conferences and meetups."}
+      - {language: ru, text: "Staff software engineer, преподаватель в МФТИ. Более 20 лет работает в ИТ, пишет код и руков\
+            одит проектами от доработки ERP-систем до построения систем мониторинга данных в интернете в реальном времени\
+            . Периодически делится своим опытом на конференциях и митапах."}
     twitter: inponomarev
     gitHub: inponomarev
     habr: IvanPonomarev
@@ -468,14 +467,14 @@ speakers:
       - {language: ru, text: "Владимир Ситников"}
     companyIds: []
     bio:
-      - {language: en, text: "Vladimir has been working on performance and scalability of NetCracker platform (a software\
-            \ used by telecom operators for automatization of network management processes and network equipment) for ten\
-            \ years. His focus is Java and Oracle Database performance optimisations. Vladimir is an author of more than a\
-            \ dozen of performance improvements in the official PostgreSQL JDBC driver."}
-      - {language: ru, text: "Десять лет работает над производительностью и масштабируемостью NetCracker OSS — ПО, использ\
-            уемого операторами связи для автоматизации процессов управления сетью и сетевым оборудованием. Увлекается вопр\
-            осами производительности Java и Oracle Database. Автор более десятка улучшений производительности в официально\
-            м PostgreSQL JDBC-драйвере."}
+      - {language: en, text: "<p>Works on performance and scalability of Java and SQL-based systems since 2006. Supports Apache\
+            \ JMeter and is part of PMC's JMeter. Supports the PostgreSQL JDBC driver and is happy to discuss the role of\
+            \ JDBC in the 21st century. Member of the Joker, JPoint, JBreak, Heisenbug, Hydra, DevOops, TechTrain, SmartData\
+            \ program committees.</p>"}
+      - {language: ru, text: "<p>С 2006 года работает над производительностью и масштабируемостью систем на базе Java и SQL.\
+            \ Поддерживает Apache JMeter и входит в JMeter PMC. Поддерживает PostgreSQL JDBC драйвер и с радостью обсудит\
+            \ роль JDBC в XXI веке. Многочлен Программных комитетов Joker, JPoint, JBreak, Heisenbug, Hydra, DevOops, TechTrain,\
+            \ SmartData.</p>"}
     twitter: VladimirSitnikv
     gitHub: vlsi
     habr: vladimirsitnikov
@@ -731,19 +730,17 @@ speakers:
       - {language: ru, text: "Алексей Стукалов"}
     companyIds: [232]
     bio:
-      - language: en
-        text: "<p>Alexey started his career as a developer in 2005. Since then he has come a long way through C, C++ and even\
-            \ Delphi with 1C to Java and Kotlin. In 2013 I joined HAULMONT and started developing the open source framework\
-            \ Jmix (formerly CUBA). In 5 years Jmix evolved from an internal project into a globally recognizable product.</p>\n\
-            <p>Today Alexey is the head of R&amp;D and DevRel directions, and is also engaged in design and development of\
-            \ tools which allow developers to use mainstream technologies with more pleasure and more efficiency.</p>"
-      - language: ru
-        text: "<p>Начал карьеру разработчика в 2005 году. С тех пор проделал долгий путь через C, C++ и даже Delphi с 1С к\
-            \ Java и Kotlin. В 2013 году присоединился к компании HAULMONT и занялся развитием open source-фреймворка Jmix\
-            \ (ранее CUBA). За 5 лет Jmix превратился из внутреннего проекта в узнаваемый на мировом рынке продукт.</p>\n\
-            <p>Сегодня Алексей является руководителем R&amp;D и DevRel-направлений, а также занимается разработкой и разви\
-            тием инструментов, которые позволяют разработчикам с большим удовольствием и большей эффективностью пользовать\
-            ся мейнстрим-технологиями.</p>"
+      - {language: en, text: "Aleksey started his developer career in 2005. Since then, he's come a long way through C, C\
+            \ ++, and even Delphi from 1C to Java and Kotlin. In 2021 he joined HAULMONT and started developing the open source\
+            \ framework Jmix. For 5 years Jmix has evolved from an internal project into a product recognizable on the world\
+            \ market. Now Alexey is the head of R&D и DevRel, develops tools that allow developers to use mainstream technologies\
+            \ with great pleasure and more effectiveness."}
+      - {language: ru, text: "Начал карьеру разработчика в 2005 году. С тех пор проделал долгий путь через C, C++ и даже Delphi\
+            \ с 1С к Java и Kotlin. В 2013 году присоединился к компании HAULMONT и занялся развитием open source-фреймовр\
+            ка Jmix (ранее CUBA). За 5 лет Jmix превратился из внутреннего проекта в узнаваемый на мировом рынке продукт.\
+            \ Сегодня Алексей является руководителем R&D и DevRel-направлений, а также занимается разработкой и развитием\
+            \ инструментов, которые позволяют разработчикам с большим удовольствием и большей эффективностью пользоваться\
+            \ мэйнстрим-технологиями."}
     twitter: AlekseyStukalov
     gitHub: aleksey-stukalov
     habr: aleksey-stukalov
@@ -888,19 +885,16 @@ speakers:
     gitHub: sebastienblanc
   - id: 49
     photoFileName: 0049.jpg
-    photoUpdatedAt: 2021-08-31T11:55:27.040Z[UTC]
+    photoUpdatedAt: 2022-10-25T11:21:55Z[UTC]
     name:
       - {language: en, text: "Tagir Valeev"}
       - {language: ru, text: "Тагир Валеев"}
-    companyIds: [286]
+    companyIds: []
     bio:
-      - {language: en, text: "Tagir Valeev is a software developer in JetBrains s.r.o. Currently, he improves the support\
-            \ of Java features in IntelliJ IDEA developing new inspections and intention actions. Tagir is actively interested\
-            \ in static code analysis and when time permits, develops an open source library called StreamEx which enhances\
-            \ standard Java 8 Stream API."}
-      - {language: ru, text: "Разработчик в JetBrains, занимается статическим анализатором кода IntelliJ IDEA, инспекциями\
-            \ и квик-фиксами. Также кидает патчики в OpenJDK и разрабатывает опенсорсную библиотеку StreamEx. Известен на\
-            \ Хабре как lany, в Twitter — как @tagir_valeev."}
+      - {language: en, text: "<p>Java Champion, OpenJDK committer, member of the Amber project expert group. Develops StreamEx,\
+            \ an open-source library. On Habra and Twitter @tagir_valeev.</p>"}
+      - {language: ru, text: "Java Champion, коммиттер OpenJDK, член экспертной группы проекта Amber. Разрабатывает опенсо\
+            рсную библиотеку StreamEx. На Хабре и в Twitter - @tagir_valeev"}
     twitter: tagir_valeev
     gitHub: amaembo
     habr: tagir_valeev
@@ -1069,14 +1063,14 @@ speakers:
       - {language: ru, text: "Вадим Цесько"}
     companyIds: [653]
     bio:
-      - {language: en, text: "<p>Currently, lead developer at Odnoklassniki Platform. Joined IT/CS field in 2004 with hydroacoustic\
+      - {language: en, text: "Currently, lead developer at Odnoklassniki Platform. Joined IT/CS field in 2004 with hydroacoustic\
             \ systems and research projects on static code analysis. Had been developing high-performance distributed services\
             \ at Yandex. Verticals for more than 5 years. Occasionally gives lectures on parallel computing and distributed\
-            \ data storage.</p>"}
-      - {language: ru, text: "<p>Начал свой путь в IT/CS в 2004 с создания систем гидроакустики и исследовательских проект\
-            ов по статическому анализу кода на C/C++. Затем переключился на распределённые системы и разрабатывал высокона\
-            груженные распределённые сервисы на Java/Scala в Яндекс.Вертикалях. Сейчас в роли ведущего разработчика Платфо\
-            рмы Одноклассников продолжает распределённое дело. Попутно ведёт курсы по NoSQL и Highload системам.</p>"}
+            \ data storage."}
+      - {language: ru, text: "Начал свой путь в IT/CS в 2004 с создания систем гидроакустики и исследовательских проектов\
+            \ по статическому анализу кода на C/C++. Затем переключился на распределённые системы и разрабатывал высоконаг\
+            руженные распределённые сервисы на Java/Scala в Яндекс.Вертикалях. Сейчас в роли ведущего разработчика Платфор\
+            мы Одноклассников продолжает распределённое дело. Попутно ведёт курсы по NoSQL и Highload системам."}
     twitter: incubos
     gitHub: incubos
     habr: incubos
@@ -1651,17 +1645,17 @@ speakers:
       - {language: ru, text: "Андрей Когунь"}
     companyIds: [633]
     bio:
-      - {language: en, text: "Andrei has been working in IT for more than 15 years, head of the developers at Croc Code. During\
+      - {language: en, text: "<p>Andrei has been working in IT for more than 15 years, head of the developers at CROC. During\
             \ his career he took part in many custom development projects, mainly e-document flow systems and business processes\
             \ automatization for several big Russian companies as a senior developer and an architect. At the universities\
             \ of Moscow, he delivers lectures in development basics with the use of Java technologies. Organizer and leader\
-            \ of <a href=\"https://jugmsk.timepad.ru/events/\" target=\"_blank\">Moscow Java developers community</a>."}
-      - {language: ru, text: "В IT более 15 лет. Руководитель группы разработчиков в Croc Code. За свою карьеру принял уча\
-            стие в большом количестве проектов по заказной разработке, в основном систем электронного документооборота и а\
-            втоматизации бизнес-процессов для ряда крупных российских компаний в роли ведущего разработчика и архитектора\
-            . Преподает для студентов московских вузов курсы по основам разработки с применением Java-технологий. Основате\
-            ль и организатор встреч московского сообщества Java-разработчиков <a href=\"https://jugmsk.timepad.ru/events/\"\
-            \ target=\"_blank\">JUG.MSK</a>."}
+            \ of <a href=\"https://jugmsk.timepad.ru/events/\" target=\"_blank\" rel=\"noopener\">Moscow Java developers community</a>.</p>"}
+      - {language: ru, text: "<p>В IT более 15 лет. Руководитель группы разработчиков в КРОК. За свою карьеру принял участ\
+            ие в большом количестве проектов по заказной разработке, в основном систем электронного документооборота и авт\
+            оматизации бизнес-процессов для ряда крупных российских компаний в роли ведущего разработчика и архитектора. П\
+            реподает для студентов московских вузов курсы по основам разработки с применением Java-технологий. Основатель\
+            \ и организатор встреч московского сообщества Java-разработчиков <a href=\"https://jugmsk.timepad.ru/events/\"\
+            \ target=\"_blank\" rel=\"noopener\">JUG.MSK</a>.</p>"}
     twitter: andrei_kogun
     gitHub: kogun
     habr: AKogun47
@@ -3238,10 +3232,18 @@ speakers:
     companyIds: [383]
   - id: 208
     photoFileName: 0208.jpg
+    photoUpdatedAt: 2022-10-10T15:39:04Z[UTC]
     name:
-      - {language: en, text: "Mihail Hludnev"}
+      - {language: en, text: "Mikhail Khludnev"}
       - {language: ru, text: "Михаил Хлуднев"}
-    companyIds: [223]
+    companyIds: [961]
+    bio:
+      - {language: en, text: "<p>Developed Java backends. In 2011, started searching, speaking at conferences, and posting\
+            \ code. In 2015 he was accepted into Apache Lucene developers, Apache Solr. Now developing cloud data pipelines\
+            \ and optimizing search.</p>"}
+      - {language: ru, text: "<p>Разрабатывал Java-бэкенды. В 2011 году начал заниматься поиском, выступать на конференция\
+            х и выкладывать код. В 2015 году был принят в разработчики Apache Lucene, Apache Solr. Сейчас разрабатывает об\
+            лачные конвейеры обработки данных и оптимизирует поиск.</p>"}
     gitHub: m-khl
   - id: 209
     photoFileName: 0209.jpg
@@ -3366,10 +3368,10 @@ speakers:
             \ working in Kontur, the largest IT company in Yekaterinburg, now he leads a small infrastructure team that provides\
             \ tools for Observability (Vostok Hercules). Engaged in the development of the Java stack in the company and gives\
             \ talks on Kafka, Java, Hercules, and related technologies."}
-      - {language: ru, text: "<p>С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в &laquo;Ко\
-            нтуре&raquo; &mdash; самой крупной IT-компании Екатеринбурга, последние 4 года руководил разработкой инструмен\
-            тов для Observability (Vostok Hercules). Занимается развитием стеков Java и Go в компании и выступает с доклад\
-            ами про Kafka, Java, Hercules и связанные технологии.</p>"}
+      - {language: ru, text: "С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в Контуре — са\
+            мой крупной IT-компании Екатеринбурга, сейчас руководит небольшой инфраструктурной командой, предоставляющей и\
+            нструменты для Observability (Vostok Hercules). Занимается развитием Java-стека в компании и выступает с докла\
+            дами про Kafka, Java, Hercules и связанные технологии."}
     twitter: GregoryKoshelev
     gitHub: gnkoshelev
     habr: gnkoshelev
@@ -3402,10 +3404,19 @@ speakers:
     gitHub: PDimitryuk
   - id: 224
     photoFileName: 0224.jpg
+    photoUpdatedAt: 2022-10-16T21:00:12Z[UTC]
     name:
       - {language: en, text: "Vladimir Voskresensky"}
       - {language: ru, text: "Владимир Воскресенский"}
-    companyIds: [383]
+    companyIds: [63]
+    bio:
+      - {language: en, text: "<p>Distinguished Engineer at Azul System working on Azul Prime JVM (aka Zing). Before Azul worked\
+            \ at Sun and Oracle Tech Lead of NetBeans C/C++ IDE and Oracle Solaris Studio IDE.</p>"}
+      - language: ru
+        text: "<p>20 лет в Java-мире. Прошел путь от разработчика до Principal Engineer в качестве техлида NetBeans C/C++\
+            \ IDE и Oracle Solaris Studio IDE в компаниях Sun и Oracle.</p>\n<p>При работе над производительностью Java-пр\
+            иложений появлялось много вопросов к JVM и её внутренностям, поэтому Владимир погрузился в мир разработки сами\
+            х JVM в компании Azul Systems, где стал первым Distinguished Engineer в истории компании.</p>"
     gitHub: vladimir-voskresensky
   - id: 225
     photoFileName: 0225.jpg
@@ -3429,14 +3440,18 @@ speakers:
     companyIds: [454]
   - id: 228
     photoFileName: 0228.jpg
+    photoUpdatedAt: 2022-10-17T09:30:13Z[UTC]
     name:
-      - {language: en, text: "Alexey Ignatenko"}
+      - {language: en, text: "Aleksei Ignatenko"}
       - {language: ru, text: "Алексей Игнатенко"}
     companyIds: [63]
     bio:
-      - {language: en, text: "2005-2016 Intel Novosibirsk branch, projects Harmony, Oracle Hotspot, x86 optimizations,\
-            \ performance, benchmarking, compilers\n2017-nowadays - Azul Systems - manager of Performance and Compiler\
-            \ Teams"}
+      - {language: en, text: "<p>Director of Engineering at Azul Prime. 18 years of experience in developing and tuning different\
+            \ JVMs: Harmony, Oracle, OpenJDK, Android ART, Azul Prime. Special focus on performance tuning, benchmarking and\
+            \ innovation.</p>"}
+      - {language: ru, text: "<p>Директор по инжинирингу Azul Prime. 18 лет опыта в разработке и тюнинге различных JVM: Harmony,\
+            \ Oracle, OpenJDK, Android ART, Azul Prime. Особый фокус на тюнинге производительности, бенчмаркинге и инновац\
+            иям.</p>"}
   - id: 229
     photoFileName: 0229.jpg
     name:
@@ -3503,15 +3518,14 @@ speakers:
       - {language: ru, text: "Андрей Беляев"}
     companyIds: [232]
     bio:
-      - {language: en, text: "Developer Advocate at Haulmont. I've been working with Java since 2006. He worked in outsourcing\
-            \ for a long time, where he tried himself in almost all roles, except perhaps the designer. He's been a developer,\
-            \ a team-technician, a PM, an architect. He is currently working on the Jmix framework at Haulmont — doing RnD\
-            \ and representing the company at various events."}
-      - {language: ru, text: "<div class=\"PersonContent_personContent__text__LS5lM\">Developer Advocate в&nbsp;компании Haulmont.\
-            \ С&nbsp;Java начал плотно работать с&nbsp;2006&nbsp;года. Долго работал в&nbsp;аутсорсинге, где попробовал се\
-            бя почти во&nbsp;всех ролях, кроме, пожалуй, дизайнера. Был разработчиком, тимтехлидом, ПМ-ом, архитектором. В\
-            &nbsp;настоящее время работает над фреймворком Jmix в&nbsp;компании Haulmont&nbsp;&mdash; делает RnD и&nbsp;пр\
-            едставляет компанию на&nbsp;разных мероприятиях.</div>"}
+      - {language: en, text: "Developer Advocate at Haulmont. He started working closely with Java in 2006. He worked in outsourcing\
+            \ for a long time, where he tried himself in almost all roles, except perhaps the designer. Was a developer, a\
+            \ team lead, a PM, an architect. He's currently working on the Jmix framework at Haulmont - doing RnD and representing\
+            \ the company at various events."}
+      - {language: ru, text: "Developer Advocate в компании Haulmont. С Java начал плотно работать с 2006 года. Долго рабо\
+            тал в аутсорсинге, где попробовал себя почти во всех ролях, кроме, пожалуй, дизайнера. Был разработчиком, тимт\
+            ехлидом, ПМом, архитектором. В настоящее время работает над фреймворком Jmix в компании Haulmont — делает RnD\
+            \ и представляет компанию на разных мероприятиях."}
     twitter: belyaev_andrey
     gitHub: belyaev-andrey
     habr: a_belyaev
@@ -5596,7 +5610,7 @@ speakers:
     gitHub: craigbox
   - id: 379
     photoFileName: 0379.jpg
-    photoUpdatedAt: 2022-09-26T15:56:14Z[UTC]
+    photoUpdatedAt: 2022-10-21T11:35:23Z[UTC]
     name:
       - {language: en, text: "Nikolai Ryzhikov"}
       - {language: ru, text: "Николай Рыжиков"}
@@ -6903,15 +6917,16 @@ speakers:
     twitter: shchegrikovich
   - id: 465
     photoFileName: 0465.jpg
-    photoUpdatedAt: 2022-03-31T19:06:16Z[UTC]
+    photoUpdatedAt: 2022-10-24T07:58:30Z[UTC]
     name:
       - {language: en, text: "Dmitry Ivanov"}
       - {language: ru, text: "Дмитрий Иванов"}
     companyIds: [242]
     bio:
-      - {language: en, text: "<p>Dmitry is Software Automation Lab Leader, ex. Technical Leader of JetBrains Rider, concurrency\
-            \ and data structures expert in ReSharper, author of reactive distributed protocol used in various JetBrains applications,\
-            \ ex.&nbsp; team leader in Yota.</p>"}
+      - {language: en, text: "Director of R&amp;D Software Tools Lab at Huawei. Ex Technical Leader of JetBrains Rider. Ex\
+            \ Team Lead at Yota."}
+      - {language: ru, text: "<p>Возглавляет группу анализа программ в R&amp;D-центре компании Huawei. В прошлом техническ\
+            ий лидер JetBrains Rider и тимлид в Yota.</p>"}
     twitter: korifey_ad
     gitHub: korifey
   - id: 466
@@ -9196,13 +9211,13 @@ speakers:
       - {language: en, text: "<p>Andrey has 8+ years of professional experience as a software developer. He has worked in\
             \ well-known companies like Intel, Deutsche Bank, and Huawei. Developed mostly everything: from optimizing C/C++\
             \ compilers to high-load Java applications for investment banking. From Big Data applications to static analyzers\
-            \ and dev tools. Currently working on a distributed cloud system for benchmarking of tools for code analysis.\
+            \ and development tools. Currently working on a distributed cloud system for benchmarking tools for code analysis.\
             \ Active open-source enthusiast, contributor to the Kotlin ecosystem.</p>"}
       - {language: ru, text: "<p>Программист с восьмилетним стажем, работал в Intel, Deutsche Bank, Huawei. Занимался разр\
             аботкой в очень разных сферах: от C/C++ компиляторов до высоконагруженных торговых сервисов на Java, от Big Data-х\
-            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. В данный момент занима\
-            ется разработкой распределенной cloud-системы бенчмаркинга и тестирования анализаторов кода SAVE. Влюблен в opensource\
-            \ и в Kotlin.</p>"}
+            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. Тимлид Java/Kotlin-ком\
+            анды в Huawei. Активный опенсорс-энтузиаст, контрибьютор в экосистему Kotlin. Создатель библиотеки ktoml и ста\
+            тического анализатора diktat. Сейчас занимается разработкой экосистемы для бенчмаркинга анализаторов кода.</p>"}
     gitHub: akuleshov7
   - id: 628
     photoFileName: 0628.jpg
@@ -18555,19 +18570,20 @@ speakers:
             ции процессов эксплуатации."
   - id: 1312
     photoFileName: 1312.jpg
-    photoUpdatedAt: 2020-06-25T09:33:51.174Z[UTC]
+    photoUpdatedAt: 2022-10-12T15:41:19Z[UTC]
     name:
       - {language: en, text: "Sergey Orlov"}
       - {language: ru, text: "Сергей Орлов"}
     companyIds: [729]
     bio:
-      - {language: en, text: "Head of the Competence Center for Web and Mobile Development at SMLab. A specialist with seventeen\
-            \ years of experience in software development in a wide variety of languages and platforms. Now Sergey is helping\
-            \ the company in determining the directions of technological development and designing information systems architectures."}
-      - language: ru
-        text: "Руководитель Центра Компетенций веб и мобильной разработки в SMLab.\nСпециалист с семнадцатилетним опытом р\
-            азработки программного обеспечения на самых разных языках и платформах.\nСейчас Сергей помогает компании в опр\
-            еделении направлений технологического развития и проектировании архитектур информационных систем."
+      - {language: en, text: "<p>Head of web and mobile development competence center in Sportmaster Lab. A specialist with\
+            \ nineteen years of experience in software development in a variety of languages and platforms. Now helps the\
+            \ company in defining the direction of technological development, designing information system architectures and\
+            \ organizing development in product teams.</p>"}
+      - {language: ru, text: "Руководитель департамента веб и мобильной разработки в Sportmaster Lab. Специалист с девятна\
+            дцатилетним опытом разработки программного обеспечения на самых разных языках и платформах. Сейчас помогает ко\
+            мпании в определении направлений технологического развития, проектировании архитектур информационных систем и\
+            \ организации разработки в продуктовых командах."}
   - id: 1313
     photoFileName: 1313.jpg
     photoUpdatedAt: 2020-06-26T11:55:43.430Z[UTC]
@@ -23506,16 +23522,16 @@ speakers:
             и межличностного общения в работе не менее важны, чем технические знания."
   - id: 1652
     photoFileName: 1652.jpg
-    photoUpdatedAt: 2021-04-09T08:01:51.163Z[UTC]
+    photoUpdatedAt: 2022-09-13T08:28:12Z[UTC]
     name:
       - {language: en, text: "Vitaly Kutsenko"}
       - {language: ru, text: "Виталий Куценко"}
-    companyIds: [665]
+    companyIds: [1011]
     bio:
-      - {language: en, text: "Leads the development of IT projects at Sberbank. Mainly interested in the development of enterprise\
-            \ applications of various sizes. He is actively involved in training programmers at Sberbank and Otus."}
-      - {language: ru, text: "Руководит разработкой ИТ-проектов в Сбере. В основном интересуется разработкой прикладных эн\
-            терпрайз-приложений разных размеров. Активно занимается подготовкой программистов в Сбере и Отусе."}
+      - {language: en, text: "<p>Backend technical leader in the R&amp;D department of Rostselmash. He likes to solve interesting\
+            \ problems - the kind that requires a lot of thinking.</p>"}
+      - {language: ru, text: "<p>Техлид бэкенда в R&amp;D-подразделении &laquo;Ростсельмаша&raquo;. Любит решать интересны\
+            е задачи &mdash; такие, чтобы пришлось поломать голову.</p>"}
   - id: 1653
     photoFileName: 1653.jpg
     photoUpdatedAt: 2021-04-12T07:22:14.896Z[UTC]
@@ -25289,24 +25305,18 @@ speakers:
     habr: XperiAndri
   - id: 1772
     photoFileName: 1772.jpg
-    photoUpdatedAt: 2021-09-03T11:06:41.357Z[UTC]
+    photoUpdatedAt: 2022-11-04T15:47:24Z[UTC]
     name:
       - {language: en, text: "Dmitry Mordvinov"}
       - {language: ru, text: "Дмитрий Мордвинов"}
-    companyIds: [286]
+    companyIds: []
     bio:
-      - {language: en, text: "Dmitry Mordvinov is a researcher in JetBrains Research and senior lecturer at Saint-Petersburg\
-            \ State University. He graduated in 2013 from Saint-Petersburg State University and got his Ph.D. in 2021 in A.P.\
-            \ Ershov Institute of Informatics Systems. From 2019, he leads the formal verification group in the Programming\
-            \ Languages and Tools Lab in JetBrains Research. His work is focused on the theory and practice of symbolic execution\
-            \ engines and automated inductive invariants inference. His research interests include software verification,\
-            \ symbolic execution, type theory, and model theory."}
-      - {language: ru, text: "Дмитрий — исследователь в JetBrains Research и старший преподаватель Санкт-Петербургского Го\
-            сударственного Университета. Закончил кафедру системного программирования СПбГУ и защитил докторскую в 2021 го\
-            ду. С 2019 руководит группой формальной верификацией в лаборатории языковых инструментов JetBrains Research. Д\
-            митрий работает над теорией и практикой символьного исполнения и автоматического вывода индуктивных инварианто\
-            в. Его область научных интереснов включает верификацию программного обеспечения, символьное исполнение, теорию\
-            \ типов и теорию моделей."}
+      - {language: en, text: "<p>Dmitry heads the symbolic execution research group at Huawei and also lectures at St. Petersburg\
+            \ State University. Previously, he headed the formal methods group at JetBrains Research and also worked at several\
+            \ startups.</p>"}
+      - {language: ru, text: "Дмитрий возглавляет исследовательскую группу символьного исполнения в Huawei, а также читает\
+            \ лекции в Санкт-Петербургском Государственном Университете. Ранее он возглавлял группу формальных методов в JetBrains\
+            \ Research, а также работал в нескольких стартапах."}
   - id: 1773
     photoFileName: 1773.jpg
     photoUpdatedAt: 2021-09-20T08:22:01.262Z[UTC]
@@ -25375,22 +25385,15 @@ speakers:
       - {language: ru, text: "Александр Нозик"}
     companyIds: [826]
     bio:
-      - {language: en, text: "When he was in school, he had three hobbies: board role-playing games, physics, and programming.\
-            \ When it came time to choose a profession, he chose physics, thinking that it was more interesting. He was not\
-            \ mistaken. But as a result, he is now doing programming in physics.</p><p>Now he teach physics, mathematical\
-            \ statistics, and Kotlin at MIPT. He is director of the Scientific Programming Centre at MIPT and ex team lead\
-            \ of JetBrains Research, where he is engaged in the creation of scientific software.</p><p>He has a Ph.D. in particle\
-            \ physics, more than 12 years of development experience, including commercial development. Mostly Java, but the\
-            \ last 4 years in Kotlin, other than that, Python, Groovy, Julia, and so on. Kotlin GDE in 2021.</p><p>Leader\
-            \ of the Moscow KUG."}
-      - language: ru
-        text: "<p>В школе у Александра было три увлечения: настольные ролевые игры, физика и программирование. Когда пришл\
-            о время выбирать профессию, он выбрал физику, думая, что она интереснее. И не ошибся. Но в результате занимает\
-            ся программированием физики.</p>\n<p>Преподает физику, математическую статистику и Kotlin в МФТИ, директор цен\
-            тра научного программирования МФТИ, ex-руководитель направления в JetBrains Research.</p>\n<p>Имеет кандидатск\
-            ую степень по физике частиц, больше 12 лет опыта разработки, в том числе коммерческой. В основном на Java, но\
-            \ в последние 5 лет Kotlin, кроме этого были Python, Groovy, Julia и так далее. GDE по Kotlin в 2021.</p>\n<p>Л\
-            идер московского KUG.</p>"
+      - {language: en, text: "Aleksandr teaches physics, mathematical statistics, and Kotlin at MIPT, he's the director of\
+            \ Scientific Programming Centre at MIPT and formerly the head of the NPM research group at JetBrains Research.\
+            \ He also has a Ph.D. in particle physics, and more than 12 years of development experience, including commercial\
+            \ development. Mostly in Java, but the last 5+ years in Kotlin, apart from that there have been Python, Groovy,\
+            \ Julia, and so on. Kotlin GDE in 2021."}
+      - {language: ru, text: "Преподает физику, математическую статистику и Kotlin в МФТИ, директор Центра Научного Програ\
+            ммирования МФТИ. За плечами кандидатская диссертация по физике частиц, больше 12 лет опыта разработки, в том ч\
+            исле коммерческой. В основном на Java, но в последние 5 с лишним лет Kotlin, кроме этого были Python, Groovy,\
+            \ Julia и так далее. GDE по Kotlin в 2021."}
     twitter: noraltavir
     gitHub: altavir
     habr: darksnake
@@ -27140,20 +27143,12 @@ speakers:
     photoFileName: 1897.jpg
     photoUpdatedAt: 2022-06-06T14:58:02Z[UTC]
     name:
-      - {language: en, text: "Andrei Mychka"}
+      - {language: en, text: "Andrej Mychka"}
       - {language: ru, text: "Андрей Мычка"}
     companyIds: [429]
     bio:
-      - language: en
-        text: "<p>In industrial development for over 20 years. Most of his professional life is related to the Java ecosystem.</p>\n\
-            <p>Since 2020, a senior expert at Raiffeisenbank, participating in the development of the bank's JVM community.\
-            \ In the role of lead developer and architect, he does a little bit of everything, from Kotlin backend and React\
-            \ frontend to DevOps and expert systems in Python.</p>"
-      - language: ru
-        text: "<p>В промышленной разработке более 20 лет. Б<em>о</em>льшая часть профессиональной жизни связана с экосисте\
-            мой Java.</p>\n<p>С 2020 года старший эксперт в Райффайзен Банке, участвует в развитии JVM-сообщества банка. В\
-            \ роли ведущего разработчика и архитектора занимается всем понемногу, от бэкенда на Kotlin и фронтенда на React\
-            \ до DevOps и экспертных систем на Python.</p>"
+      - {language: en, text: "<p>Senior Java Development Improvement Expert at Raiffeisen Bank.</p>"}
+      - {language: ru, text: "<p>Cтарший эксперт по развитию Java-разработки, Райффайзен Банк.</p>"}
   - id: 1898
     photoFileName: 1898.jpg
     photoUpdatedAt: 2021-10-25T09:37:31.512Z[UTC]
@@ -29139,13 +29134,14 @@ speakers:
       - {language: ru, text: "CEO KarpovCourses. Ведущий аналитик в Mail.ru."}
   - id: 2034
     photoFileName: 2034.jpg
+    photoUpdatedAt: 2022-11-16T16:27:26Z[UTC]
     name:
       - {language: en, text: "Alexander Kuchuk"}
       - {language: ru, text: "Александр Кучук"}
-    companyIds: [650]
+    companyIds: []
     bio:
-      - {language: ru, text: "Кучук Александр, пишу в твиттер и на Java. Преподаю в ВШЭ, ранее в МФТИ. Маленький тимлид\
-            \ в большой компании."}
+      - {language: en, text: "<p>He teaches at the Higher School of Economics, taught at MIPT. Team Lead, Java developer.</p>"}
+      - {language: ru, text: "Преподает в ВШЭ, преподавал в МФТИ. Team Lead, Java-разработчик."}
     twitter: aarexer
     gitHub: aarexer
   - id: 2035
@@ -31730,16 +31726,25 @@ speakers:
     gitHub: asundukov
   - id: 2209
     photoFileName: 2209.jpg
-    photoUpdatedAt: 2022-06-07T09:42:07Z[UTC]
+    photoUpdatedAt: 2022-09-27T08:39:42Z[UTC]
     name:
-      - {language: en, text: "Grigorii Skobelev"}
+      - {language: en, text: "Gregory Skobelev"}
       - {language: ru, text: "Григорий Скобелев"}
     companyIds: [864]
     bio:
-      - {language: en, text: "<p>Java Dev from Petersburg, director of Podlodka Backend Crew program committee, book club\
-            \ organizer, lecturer at Netology, active speaker.</p>"}
-      - {language: ru, text: "<p class=\"p1\">Java Dev с берегов Невы, директор программного комитета Podlodka Backend Crew,\
-            \ орг книжного клуба { между скобок }, лектор в Нетологии, активный спикер.</p>"}
+      - language: en
+        text: "<p>Backend developer. He has a guitar, a cat, and a skateboard. Grisha loves Spring Framework so much that\
+            \ he named his cat after it, Vesnusha.</p>\n<p>He is the head of the Podlodka Backend Crew, where he makes cool\
+            \ conferences. Gives lectures and makes courses, gives speeches, mentors. Participated in the WDA, Women Developer\
+            \ Academy, a Google initiative to support girls in the IT industry. Recently organized a book club for backend\
+            \ developers { between the brackets }.</p>"
+      - language: ru
+        text: "<p>Бэкэнд-разработчик. Есть гитара, кошка и скейтборд. Гриша так сильно любит Spring Framework, что в честь\
+            \ него назвал кошку &mdash; Веснуша.</p>\n<p>Возглавляет программный комитет Podlodka Backend Crew, где делают\
+            \ классные конференции. Читает лекции и делает курсы, выступает с докладами, менторит. Участвовал в WDA &mdash;\
+            \ Women Developer Academy, инициативе Google для поддержки девушек в IT-индустрии. Недавно организовал книжный\
+            \ клуб для бэкенд-разработчиков { между скобок }.</p>"
+    twitter: gskobelevff
     gitHub: GSkoba
     habr: GSobaka
   - id: 2210
@@ -31758,22 +31763,29 @@ speakers:
             ркестрации, до организации процессов, которые позволяют все это делать.</p>"}
   - id: 2211
     photoFileName: 2211.jpg
-    photoUpdatedAt: 2022-06-06T12:49:32Z[UTC]
+    photoUpdatedAt: 2022-10-16T23:37:25Z[UTC]
     name:
       - {language: en, text: "Maksim Chernukhin"}
       - {language: ru, text: "Максим Чернухин"}
     companyIds: [613]
     bio:
-      - {language: en, text: "<p>Architect of digital sales platform in Alfa-Bank. Developed project architecture and infrastructure\
-            \ with full software lifecycle in mind. Created a platform that is successfully used outside the company, and\
-            \ its implementation has increased the number of sales by 2-4 times. Always liked complex and interesting tasks,\
-            \ which he finds both in IT and in related fields such as hiring employees, motivation management or climbing\
-            \ Elbrus.</p>"}
-      - {language: ru, text: "<p>Архитектор цифровой платформы продаж в Альфа-Банке. Занимается разработкой архитектуры и\
-            \ инфраструктуры проектов с учётом полного жизненного цикла ПО. Создал платформу, которая успешно используется\
-            \ за пределами компании, а её внедрение увеличило число продаж в 2-4 раза. Всегда любил сложные и интересные з\
-            адачи, которые находит как в IT, так и в смежных областях таких как найм сотрудников, управление мотивацией ил\
-            и восхождение на Эльбрус.</p>"}
+      - language: en
+        text: "<p>Maksim is an Architect / IT leader of digital sales platform in Alfa-Bank. He is engaged in the development\
+            \ of architecture and infrastructure projects, taking into account the full life cycle of the software. Created\
+            \ a platform that is successfully used outside the company, and its implementation has increased the number of\
+            \ sales by 2-4 times. Leads cloud technology implementation project at Alfa Bank.</p>\n<p>He likes complex and\
+            \ interesting tasks, which he finds both in IT and in related fields, such as hiring employees, motivation management\
+            \ or climbing Elbrus. He graduated from Bauman Moscow State Technical University and during 8 years in IT he managed\
+            \ to work with different back- and frontend development languages and to take part in projects with machine learning\
+            \ and big data.</p>"
+      - language: ru
+        text: "<p>Максим &mdash; архитектор / IT leader цифровой платформы продаж в Альфа-Банке. Занимается разработкой ар\
+            хитектуры и инфраструктуры проектов с учетом полного жизненного цикла ПО. Создал платформу, которая успешно ис\
+            пользуется за пределами компании, а ее внедрение увеличило число продаж в 2-4 раза. Ведет проект по внедрению\
+            \ облачных технологий в Альфа-Банк.</p>\n<p>Любит сложные и интересные задачи, которые находит как в IT, так и\
+            \ в смежных областях таких, как найм сотрудников, управление мотивацией или восхождение на Эльбрус. Окончил МГ\
+            ТУ им. Баумана и за 8 лет в IT успел поработать с разными языками back- и front-разработки и поучаствовать в п\
+            роектах с машинным обучением и большими данными.</p>"
   - id: 2212
     photoFileName: 2212.jpg
     photoUpdatedAt: 2022-06-08T10:15:50Z[UTC]
@@ -31875,22 +31887,24 @@ speakers:
     habr: zenleo
   - id: 2218
     photoFileName: 2218.jpg
-    photoUpdatedAt: 2022-06-10T09:21Z[UTC]
+    photoUpdatedAt: 2022-11-07T13:17:27Z[UTC]
     name:
       - {language: en, text: "Denis Rodin"}
       - {language: ru, text: "Денис Родин"}
     companyIds: [665]
     bio:
-      - {language: en, text: "<p>Head of direction, service delivery leader, product owner.</p>"}
+      - language: en
+        text: "<p>In his spare time, teaches Java at the Sber Corporate University and summer schools for university teachers.\
+            \ Runs a Telegram channel about Java. Fond of hackathons. During his studies at the institute, took part in various\
+            \ international programming tournaments.</p>\n<p>In commercial software development since 2003. Began in Sber\
+            \ with a project on linear scaling of processing systems. The owner of the product of the Yadro team, as well\
+            \ as the leader of the SberProfi Java Development community.</p>\n<p>TG-channel: https://t.me/java_guru</p>"
       - language: ru
-        text: "<p>Руководитель направления, лидер поставки сервиса, владелец продукта.</p>\n<p class=\"p1\">Первый раз сел\
-            \ за компьютер в 6 классе. В институтские годы участвовал в разных международных турнирах по программированию\
-            . В коммерческой разработке ПО с 2003 года. В Сбере начинал с проекта по линейному масштабированию систем проц\
-            ессинга.<span class=\"Apple-converted-space\">&nbsp;</span></p>\n<p class=\"p1\">Текущий проект: разработка но\
-            вой кредитной карты Сбера. Уже в проме!</p>\n<p class=\"p1\">В свободное от работы время преподает Java в Корп\
-            оративном университете Сбера и летних школах для преподавателей ВУЗов. Ведет телеграмм канал про Java. Очень л\
-            юбит хакатоны.</p>\n<p class=\"p1\">Ведущий эксперт сообщества SberProfi Java Development.</p>\n<p class=\"p2\"\
-            >&nbsp;</p>"
+        text: "<p>В свободное от работы время преподает Java в Корпоративном университете Сбера и летних школах для препод\
+            авателей ВУЗов. Ведет Телеграм-канал про Java. Очень любит хакатоны. Во время обучения в институте участвовал\
+            \ в разных международных т по программированию.</p>\n<p>В коммерческой разработке ПО с 2003 года. В Сбере начи\
+            нал с проекта по линейному масштабированию систем процессинга. Владелец продукта команды Ядро, а также лидер с\
+            ообщества SberProfi Java Development.</p>\n<p>ТГ-канал: https://t.me/java_guru</p>"
   - id: 2219
     photoFileName: 2219.jpg
     photoUpdatedAt: 2022-04-19T06:36:04Z[UTC]
@@ -31928,20 +31942,21 @@ speakers:
     habr: ltalal
   - id: 2221
     photoFileName: 2221.jpg
-    photoUpdatedAt: 2022-05-25T07:48:28Z[UTC]
+    photoUpdatedAt: 2022-10-10T13:38:34Z[UTC]
     name:
-      - {language: en, text: "Artyom Drozdov"}
+      - {language: en, text: "Artem Drozdov"}
       - {language: ru, text: "Артём Дроздов"}
     companyIds: [653]
     bio:
-      - {language: en, text: "Lead developer on the Odnoklassniki game platform team. Chief Java fan. Big lover of legacy.\
+      - {language: en, text: "<p>Lead developer on the Odnoklassniki game platform team. Chief Java fan. Big fan of legacy.\
             \ Maintainer of everything that's bad. Non-specialist generalist. Lecturer of courses \"NoSQL\" and \"Designing\
             \ highly loaded systems\" in \"VK Education\". Facilitator of procrastination. Author and performer of the best\
-            \ unfunny jokes and a treasure trove of bearded stories."}
-      - {language: ru, text: "<p>Ведущий разработчик в команде игровой платформы Одноклассников. Главный Java-фанат. Больш\
-            ой любитель легаси. Мейнтейнер всего, что плохо лежит. Неспециалист широкого профиля. Преподаватель курсов &laquo;NoSQL&raquo;\
-            \ и &laquo;Проектирование высоконагруженных систем&raquo; в проекте &laquo;VK Образование&raquo;. Фасилитатор\
-            \ прокрастинации. Автор и исполнитель лучших несмешных шуток и кладезь бородатых анекдотов.</p>"}
+            \ unfunny jokes and a treasure trove of bearded jokes.</p>"}
+      - {language: ru, text: "<p>Ведущий разработчик в команде игровой платформы &laquo;Одноклассников&raquo;. Главный Java-ф\
+            анат. Большой любитель легаси. Мейнтейнер всего, что плохо лежит. Неспециалист широкого профиля. Преподаватель\
+            \ курсов &laquo;NoSQL&raquo; и &laquo;Проектирование высоконагруженных систем&raquo; в проекте &laquo;VK Образ\
+            ование&raquo;. Фасилитатор прокрастинации. Автор и исполнитель лучших несмешных шуток и кладезь бородатых анек\
+            дотов.</p>"}
     gitHub: Artyomcool
     habr: Artyomcool
   - id: 2222
@@ -34636,3 +34651,414 @@ speakers:
             \ Citrus Framework. Leads automated testing projects in the company.</p>"}
       - {language: ru, text: "<p>Старший QA-инженер в МТС. Участвовал в разработке собственных фреймворков, сейчас тестиру\
             ет на Citrus Framework. Ведет в компании проекты автоматизированного тестирования.</p>"}
+  - id: 2408
+    photoFileName: 2408.jpg
+    photoUpdatedAt: 2022-09-07T08:41:39Z[UTC]
+    name:
+      - {language: en, text: "Dmitrii Sugrobov"}
+      - {language: ru, text: "Дмитрий Сугробов"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>Developer, promoter of good engineering approaches, and member of the InnerSource Commons\
+            \ Foundation community.</p>"}
+      - {language: ru, text: "Разработчик, проповедник хороших инженерных подходов, член сообщества InnerSource Commons Foundation."}
+    gitHub: voborgus
+    habr: sugrobov
+  - id: 2409
+    photoFileName: 2409.jpg
+    photoUpdatedAt: 2022-11-07T06:25:24Z[UTC]
+    name:
+      - {language: en, text: "August Vilakia"}
+      - {language: ru, text: "Август Вилакия"}
+    companyIds: [613]
+    bio:
+      - language: en
+        text: "<p>Has been working as a Java Software Engineer more than 4 years. Developed mission-critical employee services\
+            \ for one of the largest employers (staff of more than 2 million people). Right now working on API for Alfa-Bank\
+            \ mobile application, daily user online 5 million people. One of those who helped to win Markswebb 2021.</p>\n\
+            <p>At the same time, has more than one year of experience building microservices using Golang and frontend using\
+            \ JavaScript (React). Certified AWS Solution Architect. Believes that if you know first principles and concepts,\
+            \ it is indifferent for you what programming languages and services to use.</p>\n<p>More details on https://augustvi.com/.</p>"
+      - language: ru
+        text: "<p>Разрабатывает на Java более 4 лет. Работал над mission-critical сервисами для сотрудников компании, чей\
+            \ штат насчитывает более 2 миллионов человек. В данный момент занимается разработкой API для мобильного прилож\
+            ения &laquo;Альфа-Банк&raquo;. Один из тех, чей вклад помог выиграть Markswebb 2021.</p>\n<p>В багаже имеет бо\
+            льше года опыта написания микросервисов на Golang, а также разработки фронтэнда на Javascript (React). Архитек\
+            тор решения для облачных сервисов Amazon. Верит, что при знании первых принципов, язык и используемые сервисы\
+            \ не имеют значения.</p>\n<p>Узнать об Августе подробнее можно на <a href=\"https://augustvi.com/\">сайте</a>.&nbsp;</p>"
+    twitter: augustlakia
+    gitHub: augustlakia
+    habr: augustlakia
+  - id: 2410
+    photoFileName: 2410.jpg
+    photoUpdatedAt: 2022-10-17T07:23:55Z[UTC]
+    name:
+      - {language: en, text: "Andrey Arkayev"}
+      - {language: ru, text: "Андрей Аркаев"}
+    companyIds: [1009]
+    bio:
+      - {language: en, text: "<p>Has been developing relatively large services and high-loaded monoliths in Java for 17 years.\
+            \ Chief driver of new technology adoption on the team, has worked very hard on stack upgrades, including ORMs.\
+            \ Trying to keep an eye on what's going on outside the Java world in other languages to make decisions with a\
+            \ little bit of perspective. Has spoken at dump-ekb, jug.ekb, and internal conferences.</p>"}
+      - {language: ru, text: "<p>Занимается разработкой относительно больших сервисов и высоконагруженных монолитов на Java\
+            \ уже 17 лет. В команде главный двигатель внедрения новых технологий, очень много работал над обновлением стек\
+            а, в том числе над ORM. Старается следить за происходящим за пределами мира Java в других языках, чтобы приним\
+            ать решения, смотря чуть за рамки. Выступал на dump-ekb, jug.ekb и внутренних конференциях.</p>"}
+  - id: 2411
+    photoFileName: 2411.jpg
+    photoUpdatedAt: 2022-10-15T15:42:14Z[UTC]
+    name:
+      - {language: en, text: "Gleb Lazarev"}
+      - {language: ru, text: "Глеб Лазарев"}
+    companyIds: [1003]
+    bio:
+      - {language: en, text: "<p>While serving in the Navy, he dreamed of becoming a programmer. This dream came true, and\
+            \ for the past year Gleb has been developing web applications.</p>"}
+      - {language: ru, text: "<p>Во время службы в ВМФ мечтал стать программистом. Мечта сбылась, и вот уже который год Гл\
+            еб занимается разработкой веб-приложений.</p>"}
+  - id: 2412
+    photoFileName: 2412.jpg
+    photoUpdatedAt: 2022-11-01T11:37:08Z[UTC]
+    name:
+      - {language: en, text: "Kseniia Ishkina"}
+      - {language: ru, text: "Ксения Ишкина"}
+    companyIds: [1003]
+    bio:
+      - {language: en, text: "<p>Likes to streamline everything she does. Has been working with people, setting up processes,\
+            \ and helping employees develop for ten years. Knows the challenges companies and teams face when scaling, transforming,\
+            \ and changing the external environment. Will be happy to make new acquaintances.</p>"}
+      - {language: ru, text: "<p>Любит упорядочивать все, чем занимается. Уже десять лет работает с людьми, настраивает пр\
+            оцессы и помогает сотрудникам развиваться. Знает, с какими проблемами сталкиваются компании и команды при масш\
+            табировании, трансформации и изменениях во внешней среде. Будет рада новым знакомствам.</p>"}
+  - id: 2413
+    photoFileName: 2413.jpg
+    photoUpdatedAt: 2022-09-06T08:43:38Z[UTC]
+    name:
+      - {language: en, text: "Andrey Paikin"}
+      - {language: ru, text: "Андрей Пайкин"}
+    companyIds: [999, 1010]
+    bio:
+      - {language: en, text: "<p>Together with his colleagues at ALM Works / Tempo creates great plugins for Jira. One of\
+            \ the maintainers of Cheskstyle. Loves open source, clean code, static analysis and everything related to it.\
+            \ Mentor and teacher on Java.</p>"}
+      - {language: ru, text: "<p>Вместе с коллегами в ALM Works / Tempo создает отличные плагины для Jira. Один из мейнтей\
+            неров Сheckstyle. Любит опенсорс, чистый код, статический анализ и всё, что с ним связано. Ментор и преподават\
+            ель по Java.</p>"}
+    gitHub: strkkk
+  - id: 2414
+    photoFileName: 2414.jpg
+    photoUpdatedAt: 2022-10-10T15:37:21Z[UTC]
+    name:
+      - {language: en, text: "Rustam Akhmetov"}
+      - {language: ru, text: "Рустам Ахметов"}
+    companyIds: [567]
+    bio:
+      - {language: en, text: "<p>Rustam in IT since 2010. Extensive experience in Java, JavaScript development. Extensive\
+            \ experience in managing IT teams.</p>"}
+      - {language: ru, text: "<p>В IT c 2010 года. Большой опыт разработки на Java, JavaScript. Огромный опыт управления IT-к\
+            омандами.</p>"}
+    gitHub: taiberium
+  - id: 2415
+    photoFileName: 2415.jpg
+    photoUpdatedAt: 2022-09-30T12:23:44Z[UTC]
+    name:
+      - {language: en, text: "Dmitry Morozovsky"}
+      - {language: ru, text: "Дмитрий Морозовский"}
+    companyIds: [242]
+    bio:
+      - {language: en, text: "Principal Engineer in Huawei Research Center. Currently is a member of static anlysis team,\
+            \ developing static analyzers of code as well as cloud tools for their testing. More then 20 years of enterprise\
+            \ programming. Worked 15 years in Deutsche Bank as Java/Kotlin Dev. Also have some experience with C++ and system\
+            \ programming. MIPT graduatee."}
+      - {language: ru, text: "<p>Главный инженер в исследовательском центре компании Huawei. Разрабатывает статические ана\
+            лизаторы кода и инструменты их тестирования в облаке. Имеет более 20 лет опыта в промышленном программировании\
+            . До этого 15 лет работал в Deutsche Bank как Java/Kotlin Dev. Также имеет опыт в С++ и системном программиров\
+            ании. Окончил МФТИ.</p>"}
+    gitHub: icemachined
+  - id: 2416
+    photoFileName: 2416.jpg
+    photoUpdatedAt: 2022-10-12T16:10:10Z[UTC]
+    name:
+      - {language: en, text: "Daniil Solodukhin"}
+      - {language: ru, text: "Даниил Солодухин"}
+    companyIds: [278]
+    bio:
+      - {language: en, text: "<p>Java developer for 6 years. Master's degree in chemistry. Worked in bank sphere, now in game\
+            \ area. Had been working as a developer and team leader. Currently engaged in game server development at IT Territory,\
+            \ working on projects like World Above and Rush Royale.</p>"}
+      - {language: ru, text: "<p>Java-разработчик уже 6 лет. По образованию магистр химии. Работал в банковской сфере, сей\
+            час в геймдеве. Занимал позиции разработчика и тимлида. Сейчас занимается разработкой игровых серверов в студи\
+            и IT Territory, работает в таких проектах, как World Above и Rush Royale.</p>"}
+  - id: 2417
+    photoFileName: 2417.jpg
+    photoUpdatedAt: 2022-10-26T09:13:38Z[UTC]
+    name:
+      - {language: en, text: "Mikhail Mikhalkin"}
+      - {language: ru, text: "Михаил Михалкин"}
+    companyIds: [643]
+    bio:
+      - {language: en, text: "<p>Leading developer of the Faster Payments System. He has been working in SBP since the start\
+            \ of the project, creating the service both on the testing and development side.</p>"}
+      - {language: ru, text: "<p>Ведущий разработчик Мир Plat.Form.&nbsp;</p>"}
+  - id: 2418
+    photoFileName: 2418.jpg
+    photoUpdatedAt: 2022-10-20T11:58:40Z[UTC]
+    name:
+      - {language: en, text: "Mikhail Mikhulya"}
+      - {language: ru, text: "Михаил Михуля"}
+    companyIds: [729]
+    bio:
+      - {language: en, text: "<p>Mikhail is a Java/Kotlin developer. Loves to do performance optimization, build CI/CD pipelines.</p>"}
+      - {language: ru, text: "<p>Разработчик Java/Kotlin. Любит заниматься оптимизацией производительности, строить CI/CD\
+            \ пайплайны.</p>"}
+  - id: 2419
+    photoFileName: 2419.jpg
+    photoUpdatedAt: 2022-10-21T13:11:35Z[UTC]
+    name:
+      - {language: en, text: "Maksim Ivanov"}
+      - {language: ru, text: "Максим Иванов"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Senior developer at Tinkoff. Makes data warehouses. Works a lot on APIs over the database.</p>"}
+      - {language: ru, text: "<p>Старший разработчик в Тинькофф. Делает хранилища данных. Много работает по API над БД.</p>"}
+  - id: 2420
+    photoFileName: 2420.jpg
+    photoUpdatedAt: 2022-09-27T08:48:36Z[UTC]
+    name:
+      - {language: en, text: "Andrey Chernov"}
+      - {language: ru, text: "Андрей Чернов"}
+    companyIds: [665]
+    bio:
+      - language: en
+        text: "<p>Architect of the microservice used in Sberbank Online and beyond. Likes to generate and implement new ideas.\
+            \ Enjoys writing code.</p>\n<p>D. thesis on indexes in databases.</p>\n<p>More than 15 years of development experience.\
+            \ Started with automated banking systems in C/C++, and has been developing services for Sberbank ecosystem in\
+            \ Java for the last six years.</p>"
+      - language: ru
+        text: "<p>Архитектор микросервиса, который используется в Сбербанк Онлайн и не только. Любит генерировать и воплощ\
+            ать в жизнь новые идеи. Кайфует от написания кода.</p>\n<p>За плечами кандидатская диссертация по индексам в б\
+            азах данных.</p>\n<p>Более 15 лет опыта разработки. Начинал с автоматизированных банковских систем на C/C++, а\
+            \ последние шесть лет разрабатывает на Java сервисы для экосистемы Сбера.</p>"
+    gitHub: serializers-benchmark
+  - id: 2421
+    photoFileName: 2421.jpg
+    photoUpdatedAt: 2022-10-13T20:36:29Z[UTC]
+    name:
+      - {language: en, text: "Andrei Bogdanov"}
+      - {language: ru, text: "Андрей Богданов"}
+    companyIds: [620]
+    bio:
+      - language: en
+        text: "<p>Has been in IT since school. Most of the time was a developer. Lately held the position of Solution Architect.</p>\n\
+            <p>Was engaged in industrial automation, transport monitoring. Currently engaged in IAM within the VK Cloud.</p>"
+      - language: ru
+        text: "<p>В IT еще со школы. Поработал в разных компаниях, в том числе зарубежных. Большую часть времени был разра\
+            ботчиком. Последнее время занимает позиции Solution Architect.</p>\n<p>Занимался промышленной автоматизацией,\
+            \ мониторингом транспорта. Сейчас занимается IAM в рамках VK Cloud.</p>"
+  - id: 2422
+    photoFileName: 2422.jpg
+    photoUpdatedAt: 2022-11-14T08:09:30Z[UTC]
+    name:
+      - {language: en, text: "Zlata Zanina"}
+      - {language: ru, text: "Злата Занина"}
+    companyIds: [429]
+    bio:
+      - {language: en, text: "<p>Senior Java/Kotlin developer of the product team. Adept at Agile and servant leadership.</p>"}
+      - {language: ru, text: "<p>Старший Java/Kotlin-разработчик продуктовой команды. Адепт Agile и servant leadership.</p>"}
+  - id: 2423
+    photoFileName: 2423.jpg
+    photoUpdatedAt: 2022-10-10T08:59:45Z[UTC]
+    name:
+      - {language: en, text: "Pavel Kislov"}
+      - {language: ru, text: "Павел Кислов"}
+    companyIds: [715]
+    bio:
+      - {language: en, text: "<p>He works at Domclick and manages development for several teams. Has visited 53 countries,\
+            \ plays 8 musical instruments. He goes Alpine skiing, snowboarding, and plays tennis. Teaches Java and tries to\
+            \ bring the language to the masses.</p>"}
+      - {language: ru, text: "<p>Работает в компании &laquo;Домклик&raquo; и руководит разработкой в нескольких командах.\
+            \ Посетил 53 страны, играет на 8 музыкальных инструментах. Катается на горных лыжах и сноуборде, играет в боль\
+            шой теннис. Преподает Java и старается нести язык в массы.</p>"}
+    habr: i_am_chasing_the_clouds
+  - id: 2424
+    photoFileName: 2424.jpg
+    photoUpdatedAt: 2022-10-31T21:37:39Z[UTC]
+    name:
+      - {language: en, text: "Vladislav Aleshkevich"}
+      - {language: ru, text: "Владислав Алешкевич"}
+    companyIds: [1012]
+    bio:
+      - {language: en, text: "<p class=\"ql-align-justify\">Software Engineer, ITentika. 10+ years of professional expertise\
+            \ in the Information Technologies (IT) industry.</p><p>Participated in a trading platform for Exchange's customers\
+            \ development; have an experience in mobile robot's embedded software and RC Android-application development;\
+            \ was a responsible person for design, implementation and deployment of high load system's services related to\
+            \ notifications about emergency situations in configured geographical areas."}
+      - {language: ru, text: "Software Engineer, ITentika. В промышленной разработке ПО более 10 лет. Участвовал в развити\
+            и и доработке торговой платформы для товарно-сырьевой биржи; был разработчиком встроенного программного обеспе\
+            чения мобильного робота и Android-приложения для управления им; отвечал за проектирование, разработку и развер\
+            тывание сервисов высоконагруженной системы по доставке сообщений о чрезвычайных ситуациях в заданных географич\
+            еских областях."}
+  - id: 2425
+    photoFileName: 2425.jpg
+    photoUpdatedAt: 2022-09-21T15:20:37Z[UTC]
+    name:
+      - {language: en, text: "Alexander Rakovsky"}
+      - {language: ru, text: "Александр Раковский"}
+    companyIds: [1012]
+    bio:
+      - {language: en, text: "<p>Senior Java Developer, Itentika. Been \"my mom's programmer\" for 9 years now. Worked in\
+            \ retail and fintech, was the leader of the team in the bank, developed private S3-storage, spent two years in\
+            \ development and support of medical information system. I spent three years of my life in robotics, controllers\
+            \ and C/C++. Follower of extreme programming, TDD, DDD, Continuous Delivery. Fan of the works of Martin Fowler,\
+            \ Robert Martin, Dave Farley, Kent Beck, Jez Humble, Eric Evans.</p>"}
+      - {language: ru, text: "<p>Senior Java Developer, Itentika. Вот уже 9 лет &laquo;у мамы программист&raquo;. Работал\
+            \ в ритейле и финтехе, был лидом команды в банке, разрабатывал private S3-storage, два года провел в разработк\
+            е и поддержке медицинской информационной системы. Три года жизни отдал робототехнике, контроллерам и C/C++. По\
+            клонник экстремального программирования, TDD, DDD, Continuous Delivery. Фанат трудов Мартина Фаулера, Роберта\
+            \ Мартина, Дейва Фарли, Кента Бека, Джеза Хамбла, Эрика Эванса.</p>"}
+  - id: 2426
+    photoFileName: 2426.jpg
+    photoUpdatedAt: 2022-11-15T11:35:16Z[UTC]
+    name:
+      - {language: en, text: "Oleg Merinov"}
+      - {language: ru, text: "Олег Меринов"}
+    companyIds: [729]
+    bio:
+      - language: en
+        text: "<p>Head of the department in the center of competence of web and mobile development in Sportmaster Lab. More\
+            \ than 17 years in IT. Worked as an engineer, team leader, project manager, technical consultant, functional and\
+            \ technical architect in Russia, Germany and USA.</p>\n<p>Now helps several product teams with the development\
+            \ of technical competencies.</p>"
+      - language: ru
+        text: "<p>Руководитель направления в центре компетенций веб- и мобильной разработки в Sportmaster Lab. В IT более\
+            \ 17-ти лет. Работал на позиции инженера, тимлида, руководителя проектов, технического консультанта, функциона\
+            льного и технического архитектора в России, Германии и США.</p>\n<p>Сейчас помогает нескольким продуктовым ком\
+            андам с развитием технических компетенций.</p>"
+  - id: 2427
+    photoFileName: 2427.jpg
+    photoUpdatedAt: 2022-11-11T12:49:08Z[UTC]
+    name:
+      - {language: en, text: "Aleksandr Kazantsev"}
+      - {language: ru, text: "Александр Казанцев"}
+    companyIds: [234]
+    bio:
+      - {language: en, text: "<p>Teamlead at hh.ru</p>"}
+      - {language: ru, text: "Тимлид в hh.ru"}
+  - id: 2428
+    photoFileName: 2428.jpg
+    photoUpdatedAt: 2022-10-07T11:50:16Z[UTC]
+    name:
+      - {language: en, text: "Evgeny Demkin"}
+      - {language: ru, text: "Евгений Демкин"}
+    companyIds: [664]
+    bio:
+      - {language: en, text: "<p>Has been developing in Java for 10 years. Specializes in reliability and performance issues\
+            \ of highly loaded systems. He used to develop software for modeling behavior and making decisions in real-time\
+            \ mode based on a set of physical and spatial data. He is currently working on the performance and fault tolerance\
+            \ of the Electronic Interagency Interaction System.</p>"}
+      - {language: ru, text: "<p>Десять лет разрабатывает на Java. Специализируется на вопросах надежности и производитель\
+            ности высоконагруженных систем. Раньше занимался разработкой ПО для моделирования поведения и принятия решений\
+            \ в режиме real-time на основе совокупности физических и пространственных данных. Сейчас работает над производ\
+            ительностью и отказоустойчивостью системы электронного межведомственного взаимодействия (ГИС СМЭВ).</p>"}
+  - id: 2429
+    photoFileName: 2429.jpg
+    photoUpdatedAt: 2022-10-06T11:39:58Z[UTC]
+    name:
+      - {language: en, text: "Lubov Weinstein"}
+      - {language: ru, text: "Любовь Вайнштейн"}
+    companyIds: [664]
+    bio:
+      - {language: en, text: "<p>For more than 15 years he has been involved in the quality issues of developing enterprise\
+            \ systems and building effective end-to-end production processes. He is responsible for approaches to creating\
+            \ solutions whose key advantages are functionality, performance, fault tolerance, low resource intensity, security,\
+            \ reliability, ease of use and maintenance. Extensive experience in the following areas: billing and billing of\
+            \ calls, payment systems, traffic management systems, a single portal of public services, the system of interagency\
+            \ electronic interaction.</p>"}
+      - {language: ru, text: "Более 15 лет занимается вопросами качества разработки энтерпрайз-систем и построением эффект\
+            ивных сквозных производственных процессов. Отвечает за подходы к созданию решений, ключевыми преимуществами ко\
+            торых являются функциональность, производительность, отказоустойчивость, низкая ресурсоемкость, безопасность,\
+            \ надежность, удобство использования и сопровождения. Большой опыт работы в направлениях: биллинг и тарификаци\
+            я разговоров, платежные системы, системы управления трафиком дорожного движения, единый портал госуслуг, систе\
+            ма межведомственного электронного взаимодействия."}
+  - id: 2430
+    photoFileName: 2430.jpg
+    photoUpdatedAt: 2022-10-20T14:45:45Z[UTC]
+    name:
+      - {language: en, text: "Dmitrii Vladimirov"}
+      - {language: ru, text: "Дмитрий Владимиров"}
+    companyIds: [1003]
+    bio:
+      - {language: en, text: "<p>Started programming in school, then became PLC developer and now highload developer and teamlead.\
+            \ Prefers Russian companies. Kotlin fan.</p>"}
+      - {language: ru, text: "<p>Сначала писал программы для PLC, потом выучил Java и понеслось.</p>"}
+  - id: 2431
+    photoFileName: 2431.jpg
+    photoUpdatedAt: 2022-09-06T08:55:29Z[UTC]
+    name:
+      - {language: en, text: "Alexander Kozlov"}
+      - {language: ru, text: "Александр Козлов"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>He is a long-time software developer. Started out as a layout designer back when CSS was\
+            \ just starting to tickle everyone's nerves. It took almost seven years to learn the depths of software development\
+            \ on the front end, and then began a period of immersion in the back end. For six years he has been involved in\
+            \ backend development.&nbsp;<br />During all this time Alexander was lucky enough to face different tasks and\
+            \ different companies. As a web-developer he created web-sites, CRM and ERP-systems. After web he worked on GameDev\
+            \ (Mail.ru) and high-load system tasks, deeply immersed in optimization of network interactions. After game-dev\
+            \ joined Sberbank, where he has been developing the integration platform for several years now.<br />Been in the\
+            \ roles of developer (Java, Go, C#, C++), system architect, team leader and product owner.</p>"}
+      - language: ru
+        text: "<p>Разработчик ПО со стажем. Начинал верстальщиком в те времена, когда CSS только начинал щекотать всем нер\
+            вные клетки. Почти семь лет ушли на познания глубин разработки ПО со стороны фронта, а после начался период по\
+            гружения в бэк. Уже шесть лет занимается разработкой бэка.&nbsp;<br />За все это время Александру посчастливил\
+            ось столкнуться с разными задачами и разными компаниями. Будучи веб-разработчиком, создавал сайты, CRM и ERP-с\
+            истемы. После веба занимался геймдевом (Mail.ru) и задачами на высоконагруженные системы с глубоким погружение\
+            м в оптимизацию сетевых взаимодействий. После геймдева пришел в Сбер, где уже несколько лет занимается разрабо\
+            ткой интеграционной платформы.</p>\n<p>Был в ролях разработчика (Java, Go, C#, C++), системного архитектора, т\
+            имлида и владельца продукта.</p>"
+  - id: 2432
+    photoFileName: 2432.jpg
+    photoUpdatedAt: 2022-09-06T09:27:07Z[UTC]
+    name:
+      - {language: en, text: "Maxim Chudnovsky"}
+      - {language: ru, text: "Максим Чудновский"}
+    companyIds: [665]
+    bio:
+      - language: en
+        text: "<p>More than 10 years of experience in software development in various roles: developer, product manager, solution\
+            \ architect, system architect. Key areas of projects:</p>\n<ul>\n<li>high-load integration solutions;</li>\n<li>Distributed\
+            \ platform solutions based on cloud technologies;</li>\n<li>CI/CD solutions for cloud environments;</li>\n<li>AI&amp;ML\
+            \ solutions.</li>\n</ul>"
+      - {language: ru, text: "Более 10 лет опыта разработки ПО в различных ролях: developer, product manager, solution architect,\
+            \ system architect. Ключевые области проектов: </p><ul><li>высоконагруженные интеграционные решения;</li><li>р\
+            аспределенные платформенные решения на базе облачных технологий;</li><li>CI/CD-решения для облачных сред;</li><li>AI&amp;ML-р\
+            ешения.</li></ul>"}
+    twitter: mchudnovskiy
+    habr: chudnovskiy
+  - id: 2433
+    photoFileName: 2433.jpg
+    photoUpdatedAt: 2022-10-10T15:34:38Z[UTC]
+    name:
+      - {language: en, text: "Ivan Lyagaev"}
+      - {language: ru, text: "Иван Лягаев"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Lead Scala developer at Tinkoff.Business. Engaged in services for FEA. Teaches Scala at KFU\
+            \ ITIS.</p>"}
+      - {language: ru, text: "<p>Ведущий Scala-разработчик в Тинькофф.Бизнес. Занимается сервисами для ВЭД. Преподает Scala\
+            \ в КФУ ИТИС.</p>"}
+  - id: 2434
+    photoFileName: 2434.jpg
+    photoUpdatedAt: 2022-10-13T15:20:10Z[UTC]
+    name:
+      - {language: en, text: "Oleg Tereshkin"}
+      - {language: ru, text: "Олег Терёшкин"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Works as a solution-architect for Sber's personal offerings platform. Specialization - building\
+            \ x-sell and credit pipelines. More than 10 years of Java/Flink/Go/Python development experience in systems with\
+            \ loads over 5,000 tps.</p>"}
+      - {language: ru, text: "Работает в роли solution-архитектора платформы персональных предложений Сбера. Специализация\
+            \ — построение x-sell и кредитных конвейеров. Более 10 лет опыта разработки на С/Go/Python в системах с нагруз\
+            ками более 5000 tps."}
