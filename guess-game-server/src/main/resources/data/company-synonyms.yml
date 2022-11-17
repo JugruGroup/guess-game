@@ -204,9 +204,11 @@ companySynonyms:
     synonyms: [
         IST
     ]
-  - name: "IT Territory/My.Games"
+  - name: "IT Territory/MY.GAMES"
     synonyms: [
-        "IT Territory/MyGames"
+        "IT Territory/My.Games",
+        "IT Territory/MyGames",
+        "IT Territory (MY.GAMES)"
     ]
   - name: ITIS
     synonyms: [
@@ -536,6 +538,7 @@ companySynonyms:
     synonyms: [
         VKontakte,
         VK.com,
+        "VK Cloud",
         "VK Cloud Solutions",
         "VK Calls",
         "VK Звонки",

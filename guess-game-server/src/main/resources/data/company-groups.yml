@@ -1,4 +1,9 @@
 companyGroups:
+  - name: "ALM Works / Tempo"
+    items: [
+        "ALM Works",
+        Tempo
+    ]
   - name: "BeerJS / TC39"
     items: [
         BeerJS,
