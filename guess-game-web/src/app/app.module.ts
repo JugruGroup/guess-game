@@ -126,7 +126,7 @@ registerLocaleData(localeRu, 'ru');
     AppComponent
   ],
   imports: [
-    RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'}),
+    RouterModule.forRoot(routes, {}),
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
