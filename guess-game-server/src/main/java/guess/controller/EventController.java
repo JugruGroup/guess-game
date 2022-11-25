@@ -11,10 +11,10 @@ import guess.dto.talk.TalkBriefDto;
 import guess.service.EventService;
 import guess.service.EventTypeService;
 import guess.service.LocaleService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;

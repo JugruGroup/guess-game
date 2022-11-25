@@ -4,9 +4,8 @@ import guess.domain.GameState;
 import guess.domain.StartParameters;
 import guess.domain.question.QuestionAnswersSet;
 import guess.util.HttpSessionUtils;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Repository;
-
-import javax.servlet.http.HttpSession;
 
 /**
  * State DAO implementation.

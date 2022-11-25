@@ -9,10 +9,10 @@ import guess.domain.answer.AnswerSet;
 import guess.domain.answer.ErrorDetails;
 import guess.domain.answer.Result;
 import guess.domain.question.QuestionAnswers;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

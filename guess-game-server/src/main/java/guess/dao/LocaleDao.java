@@ -1,8 +1,7 @@
 package guess.dao;
 
 import guess.domain.Language;
-
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * Locale DAO.

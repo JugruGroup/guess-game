@@ -2,9 +2,9 @@ package guess.dao;
 
 import guess.domain.answer.AnswerSet;
 import guess.util.HttpSessionUtils;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Repository;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**

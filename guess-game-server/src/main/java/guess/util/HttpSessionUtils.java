@@ -5,8 +5,8 @@ import guess.domain.Language;
 import guess.domain.StartParameters;
 import guess.domain.answer.AnswerSet;
 import guess.domain.question.QuestionAnswersSet;
+import jakarta.servlet.http.HttpSession;
 
-import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 

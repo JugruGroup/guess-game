@@ -3,8 +3,7 @@ package guess.service;
 import guess.domain.GameState;
 import guess.domain.StartParameters;
 import guess.domain.question.QuestionAnswersSet;
-
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * State service.

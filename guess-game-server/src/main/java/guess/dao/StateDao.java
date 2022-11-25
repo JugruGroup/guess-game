@@ -1,10 +1,9 @@
 package guess.dao;
 
 import guess.domain.GameState;
-import guess.domain.question.QuestionAnswersSet;
 import guess.domain.StartParameters;
-
-import javax.servlet.http.HttpSession;
+import guess.domain.question.QuestionAnswersSet;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * State DAO.

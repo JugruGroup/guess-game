@@ -2,6 +2,7 @@ package guess.service;
 
 import guess.dao.LocaleDao;
 import guess.domain.Language;
+import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,8 +14,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import javax.servlet.http.HttpSession;
 
 @DisplayName("LocaleServiceImpl class tests")
 @ExtendWith(SpringExtension.class)

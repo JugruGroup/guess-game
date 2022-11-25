@@ -8,12 +8,12 @@ import guess.domain.question.QuestionAnswersSet;
 import guess.domain.question.SpeakerQuestion;
 import guess.domain.source.LocaleItem;
 import guess.domain.source.Speaker;
+import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.web.MockHttpSession;
 
-import javax.servlet.http.HttpSession;
 import java.util.Collections;
 import java.util.List;
 

@@ -9,10 +9,10 @@ import guess.domain.source.Event;
 import guess.domain.source.LocaleItem;
 import guess.domain.source.Speaker;
 import guess.util.LocalizationUtils;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpSession;
 import java.util.*;
 import java.util.stream.Collectors;
 
