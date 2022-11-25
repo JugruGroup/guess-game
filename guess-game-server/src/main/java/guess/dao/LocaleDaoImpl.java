@@ -2,9 +2,8 @@ package guess.dao;
 
 import guess.domain.Language;
 import guess.util.HttpSessionUtils;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Repository;
-
-import javax.servlet.http.HttpSession;
 
 /**
  * Locale DAO implementation.

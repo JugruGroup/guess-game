@@ -2,13 +2,13 @@ package guess.dao;
 
 import guess.domain.answer.AnswerSet;
 import guess.util.HttpSessionUtils;
+import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.springframework.mock.web.MockHttpSession;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @DisplayName("AnswerDaoImpl class tests")

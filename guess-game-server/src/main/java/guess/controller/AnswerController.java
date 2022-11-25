@@ -4,11 +4,11 @@ import guess.domain.answer.ErrorDetails;
 import guess.dto.result.ResultDto;
 import guess.service.AnswerService;
 import guess.service.LocaleService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**

@@ -2,8 +2,8 @@ package guess.service;
 
 import guess.domain.answer.ErrorDetails;
 import guess.domain.answer.Result;
+import jakarta.servlet.http.HttpSession;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**

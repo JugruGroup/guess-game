@@ -5,6 +5,7 @@ import guess.domain.*;
 import guess.domain.answer.*;
 import guess.domain.question.*;
 import guess.domain.source.*;
+import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,6 @@ import org.mockito.Mockito;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.mock.web.MockHttpSession;
 
-import javax.servlet.http.HttpSession;
 import java.util.*;
 import java.util.stream.Stream;
 
