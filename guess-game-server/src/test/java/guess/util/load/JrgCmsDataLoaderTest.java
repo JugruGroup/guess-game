@@ -1162,7 +1162,9 @@ class JrgCmsDataLoaderTest {
             JrgCmsActivity jrgCmsActivity1 = new JrgCmsActivity();
             jrgCmsActivity1.setParticipants(List.of(jrgCmsParticipant2));
 
-            Map<String, Speaker> actual = JrgCmsDataLoader.getSpeakerMap(List.of(jrgCmsActivity0, jrgCmsActivity1));
+            JrgCmsActivity jrgCmsActivity2 = new JrgCmsActivity();
+
+            Map<String, Speaker> actual = JrgCmsDataLoader.getSpeakerMap(List.of(jrgCmsActivity0, jrgCmsActivity1, jrgCmsActivity2));
 
             assertEquals(3, actual.size());
             assertTrue(actual.containsKey(ID0));
