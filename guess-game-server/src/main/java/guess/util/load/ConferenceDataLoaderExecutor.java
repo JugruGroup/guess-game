@@ -2305,7 +2305,9 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("SmartData 2022", null, List.of(24L, 4L)),
 //                        Set.of("Открытие конференции SmartData 2022", "Закрытие конференции SmartData 2022",
-//                                "SmartDataCoffee", "Викторина «Наша игра»", "Подведение итогов online-части конференции SmartData 2022",
+//                                "Импортозамещение BI-решений. Все очень плохо?", "Викторина «Наша игра»",
+//                                "Развитие внутренних DE-инструментов: как сделать так, чтобы ими пользовались больше одного человека",
+//                                "Подведение итогов online-части конференции SmartData 2022",
 //                                "Открытие офлайн-части конференции SmartData 2022")));
 //        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2022, 10, 18), "2022",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
@@ -2319,7 +2321,10 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("DevOops 2022", null, List.of(24L, 4L)),
 //                        Set.of("Открытие конференции DevOops 2022", "Закрытие конференции DevOops 2022",
 //                                "Подведение итогов online-части конференции DevOops 2022",
-//                                "Открытие офлайн-части конференции DevOops 2022")));
+//                                "Открытие офлайн-части конференции DevOops 2022",
+//                                "Автоматизация внедрения DevSecOps",
+//                                "Как в Garage Eight разработчики работают с инфраструктурой",
+//                                "Нужно ли DevOps-инженеру писать код?")));
 //        loadTalksSpeakersEvent(Conference.VIDEO_TECH, LocalDate.of(2022, 10, 20), "2022",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("VideoTech 2022", null, List.of(24L, 4L)),
@@ -2333,7 +2338,7 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов online-части конференции DotNext 2022 Autumn",
 //                                "Открытие офлайн-части конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
 //                                "Закрытие конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
-//                                "Lightning Talks: что нас бесит в .NET")));
+//                                "Lightning Talks: что нас бесит в .NET", "Lightning talks", "Fail-секция")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2022, 11, 7), "2022 Autumn",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2022 Autumn", null, List.of(24L, 9L)),
@@ -2354,6 +2359,6 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие второго дня online-части", "Java или Kotlin: на чем писать бэкенд",
 //                                "«Годные и не очень» практики подбора и наставничества разработчиков",
 //                                "«ГосТех»: новая жизнь", "Открытие offline-части конференции Joker 2022",
-//                                "Закрытие конференции Joker 2022")));
+//                                "Закрытие конференции Joker 2022", "Lightning Talks")));
     }
 }
