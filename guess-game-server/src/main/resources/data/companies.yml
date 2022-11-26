@@ -3696,3 +3696,7 @@ companies:
     name:
       - {language: en, text: ITentika}
     siteLink: https://itentika.ru
+  - id: 1013
+    name:
+      - {language: en, text: Roche}
+    siteLink: https://www.roche.ru

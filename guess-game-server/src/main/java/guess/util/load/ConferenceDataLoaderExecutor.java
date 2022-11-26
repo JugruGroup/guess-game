@@ -2305,7 +2305,9 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("SmartData 2022", null, List.of(24L, 4L)),
 //                        Set.of("Открытие конференции SmartData 2022", "Закрытие конференции SmartData 2022",
-//                                "SmartDataCoffee", "Викторина «Наша игра»", "Подведение итогов online-части конференции SmartData 2022",
+//                                "Импортозамещение BI-решений. Все очень плохо?", "Викторина «Наша игра»",
+//                                "Развитие внутренних DE-инструментов: как сделать так, чтобы ими пользовались больше одного человека",
+//                                "Подведение итогов online-части конференции SmartData 2022",
 //                                "Открытие офлайн-части конференции SmartData 2022")));
 //        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2022, 10, 18), "2022",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(

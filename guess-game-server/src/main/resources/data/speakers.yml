@@ -20715,19 +20715,14 @@ speakers:
     photoFileName: 1464.jpg
     photoUpdatedAt: 2022-03-31T19:06:42Z[UTC]
     name:
-      - {language: en, text: "Mikhail Maryfich"}
+      - {language: en, text: "Mikhail Maryufich"}
       - {language: ru, text: "Михаил Марюфич"}
     companyIds: [653]
     bio:
-      - language: en
-        text: "Mikhail has been developing an infrastructure for ML.\nHe has experience in the implementation of ML systems\
-            \ from problem formulation to deployment into industrial operation.\nValues reproducibility of results and good\
-            \ development processes above all else.\nSpeaker at SmartData, HighLoad++, DataFest conferences, etc."
-      - language: ru
-        text: "Разрабатывает инфраструктуру для машинного обучения.\n\nИмеет опыт реализации систем машинного обучения от\
-            \ формулировки проблемы до выкатки в промышленную эксплуатацию и дальнейшей поддержки системы.\n\nВ профессион\
-            альной деятельности превыше всего ценит воспроизводимость результатов и хорошие процессы разработки.\n\nВыступ\
-            ал с докладами на конференциях — SmartData, HighLoad++, DataFest, etc."
+      - {language: en, text: "<p>Senior developer at Odnoklassniki. Engaged in infrastructure for big data and machine learning.\
+            \ He has spoken at conferences - SmartData, HighLoad++, DataFest, etc.</p>"}
+      - {language: ru, text: "<p>Старший разработчик в &laquo;Одноклассниках&raquo;. Занимается инфраструктурой для больши\
+            х данных и машинного обучения. Выступал с докладами на конференциях &mdash; SmartData, HighLoad++, DataFest, etc.</p>"}
     twitter: mikhailmar
     habr: mikhail_mar
   - id: 1465
@@ -21373,8 +21368,8 @@ speakers:
     bio:
       - {language: en, text: "7 years of full-time IT teaching, Information security and math stats. Ph.D. Currently works\
             \ on developing recommender systems at ok.ru."}
-      - {language: ru, text: "<p>Семь лет преподавал ИТ, информационную безопасность и статистику. Кандидат технических на\
-            ук. Сейчас занимается развитием рекомендательных систем в &laquo;Одноклассниках&raquo;.</p>"}
+      - {language: ru, text: "7 лет преподавал ИТ, информационную безопасность и статистику. Кандидат технических наук. Се\
+            йчас занимается развитием рекомендательных систем в Одноклассниках."}
     habr: netcitizen
   - id: 1511
     photoFileName: 1511.jpg
@@ -25385,15 +25380,22 @@ speakers:
       - {language: ru, text: "Александр Нозик"}
     companyIds: [826]
     bio:
-      - {language: en, text: "Aleksandr teaches physics, mathematical statistics, and Kotlin at MIPT, he's the director of\
-            \ Scientific Programming Centre at MIPT and formerly the head of the NPM research group at JetBrains Research.\
-            \ He also has a Ph.D. in particle physics, and more than 12 years of development experience, including commercial\
-            \ development. Mostly in Java, but the last 5+ years in Kotlin, apart from that there have been Python, Groovy,\
-            \ Julia, and so on. Kotlin GDE in 2021."}
-      - {language: ru, text: "Преподает физику, математическую статистику и Kotlin в МФТИ, директор Центра Научного Програ\
-            ммирования МФТИ. За плечами кандидатская диссертация по физике частиц, больше 12 лет опыта разработки, в том ч\
-            исле коммерческой. В основном на Java, но в последние 5 с лишним лет Kotlin, кроме этого были Python, Groovy,\
-            \ Julia и так далее. GDE по Kotlin в 2021."}
+      - {language: en, text: "When he was in school, he had three hobbies: board role-playing games, physics, and programming.\
+            \ When it came time to choose a profession, he chose physics, thinking that it was more interesting. He was not\
+            \ mistaken. But as a result, he is now doing programming in physics.</p><p>Now he teach physics, mathematical\
+            \ statistics, and Kotlin at MIPT. He is director of the Scientific Programming Centre at MIPT and ex team lead\
+            \ of JetBrains Research, where he is engaged in the creation of scientific software.</p><p>He has a Ph.D. in particle\
+            \ physics, more than 12 years of development experience, including commercial development. Mostly Java, but the\
+            \ last 4 years in Kotlin, other than that, Python, Groovy, Julia, and so on. Kotlin GDE in 2021.</p><p>Leader\
+            \ of the Moscow KUG."}
+      - language: ru
+        text: "<p>В школе у Александра было три увлечения: настольные ролевые игры, физика и программирование. Когда пришл\
+            о время выбирать профессию, он выбрал физику, думая, что она интереснее. И не ошибся. Но в результате занимает\
+            ся программированием физики.</p>\n<p>Преподает физику, математическую статистику и Kotlin в МФТИ, директор цен\
+            тра научного программирования МФТИ, ex-руководитель направления в JetBrains Research.</p>\n<p>Имеет кандидатск\
+            ую степень по физике частиц, больше 12 лет опыта разработки, в том числе коммерческой. В основном на Java, но\
+            \ в последние 5 лет Kotlin, кроме этого были Python, Groovy, Julia и так далее. GDE по Kotlin в 2021.</p>\n<p>Л\
+            идер московского KUG.</p>"
     twitter: noraltavir
     gitHub: altavir
     habr: darksnake
@@ -26219,12 +26221,14 @@ speakers:
       - {language: ru, text: "Александр Боргардт"}
     companyIds: [957]
     bio:
-      - {language: en, text: "<p>More than 10 years researches new approaches and creates solutions for advertisements, FinTech\
-            \ and ML. Among fields of interests there are questions of developing distributed systems, parallel and concurrent\
-            \ handle of information. Makes the world better by opensource duckstax.com.</p>"}
-      - {language: ru, text: "<p>Более 10+ лет занимается исследованием новых подходов и созданием решений в областях AdTech,\
-            \ FinTech и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и конкурентн\
-            ой обработки информации. Улучшает мир посредством опенсорса duckstax.com.</p>"}
+      - language: en
+        text: "<div class=\"PersonContent_personContent__text__LS5lM\">More than 10 years researches new approaches and creates\
+            \ solutions for advertisements, fintech and ML. Among fields of interests there are questions of developing distributed\
+            \ systems, parallel and concurrent handle of information. Makes the world better by <a href=\"https://duckstax.com/\"\
+            >opensource</a>.</div>\n<div class=\"PersonContent_personContent__talks__7yMyH\">&nbsp;</div>"
+      - {language: ru, text: "<p>Более 10 лет занимается исследованием новых подходов и созданием решений в областях рекла\
+            мы, финтеха и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и конкурен\
+            тной обработки информации. Улучшает мир посредством <a href=\"https://duckstax.com/\">опенсорса</a>.</p>"}
     twitter: k0tbegem0t
     gitHub: kotbegemot
   - id: 1833
@@ -32423,27 +32427,6 @@ speakers:
       - {language: ru, text: "<p>Руководитель продукта Self Service ETL на платформе данных Tinkoff. Окончил мехмат МГУ в\
             \ 2015, кафедра теории вероятностей. Успел поработать актуарием. За пять лет в Тинькофф прошел путь от BI-анал\
             итика до руководителя бизнес-команды в DWH, а сейчас отвечает за развитие Self Service ETL.</p>"}
-  - id: 2253
-    photoFileName: 2253.jpg
-    photoUpdatedAt: 2022-10-13T11:49:28Z[UTC]
-    name:
-      - {language: en, text: "Natalia Sumtsova"}
-      - {language: ru, text: "Наталья Сумцова"}
-    companyIds: [955]
-    bio:
-      - {language: en, text: "<p>Company manager, head of data processing at the Axenix Technology Center in Russia.</p>"}
-      - {language: ru, text: "<p>Менеджер компании, руководитель направления работы с данными в Технологическом центре Axenix\
-            \ в России.</p>"}
-  - id: 2254
-    photoFileName: 2254.jpg
-    photoUpdatedAt: 2022-10-13T11:50:39Z[UTC]
-    name:
-      - {language: en, text: "Anastasia Ostapenko"}
-      - {language: ru, text: "Анастасия Остапенко"}
-    companyIds: [955]
-    bio:
-      - {language: en, text: "<p>Head of BI development at Axenix Technology.</p>"}
-      - {language: ru, text: "<p>Руководитель направления BI-разработки в Axenix Technology.</p>"}
   - id: 2255
     photoFileName: 2255.jpg
     photoUpdatedAt: 2022-10-06T07:38:29Z[UTC]
@@ -32503,52 +32486,6 @@ speakers:
             \ а еще раньше была product manager в Mail.ru и стартапах. Фанат моделирования данных и self-service аналитики\
             .</p>"}
     habr: Epoch8
-  - id: 2259
-    photoFileName: 2259.jpg
-    photoUpdatedAt: 2022-10-11T09:51:08Z[UTC]
-    name:
-      - {language: en, text: "Alexey Perminov"}
-      - {language: ru, text: "Алексей Перминов"}
-    companyIds: [648]
-    bio:
-      - language: en
-        text: "<p>Alexey has been in IT for 20 years, starting with the development of billing systems, then for many years\
-            \ he developed and implemented systems as a Project Manager on the integrator side.</p>\n<p>He joined MTS Big\
-            \ Data in 2017 and is now responsible for all utility data - Data Lake, DWH and some data products. The right\
-            \ data tool is half the success (but you still need to be able to make the right choice in each specific situation).</p>"
-      - language: ru
-        text: "<p>В IT уже 20 лет, начинал с разработки биллинговых систем, потом много лет разрабатывал и внедрял системы\
-            \ в качестве Project Manager на стороне интегратора.</p>\n<p>В Big Data МТС пришел в 2017 году, сейчас отвечае\
-            т за все коммунальные данные &mdash; Data Lake, DWH и некоторые дата-продукты. Правильно выбранный инструмент\
-            \ по работе с данными &mdash; уже половина успеха (но сделать правильный выбор в каждой конкретной ситуации ещ\
-            е надо суметь).</p>"
-  - id: 2260
-    photoFileName: 2260.jpg
-    photoUpdatedAt: 2022-10-11T10:09:46Z[UTC]
-    name:
-      - {language: en, text: "Daniil Potapov"}
-      - {language: ru, text: "Даниил Потапов"}
-    companyIds: [648]
-    bio:
-      - {language: en, text: "<p>Nine years in IT. Early in his career, managed to be a frontrunner, GIS developer and full-stack\
-            \ developer. Passionate about machine learning and chess. He is a big supporter of open source and affordable\
-            \ learning.</p>"}
-      - {language: ru, text: "<p>Девять лет в IT. В начале карьеры успел побыть фронтендером, GIS-разработчиком и фуллстек\
-            -разработчиком. Увлекается машинным обучением и шахматами. Топит за доступное обучение и open source.</p>"}
-  - id: 2261
-    photoFileName: 2261.jpg
-    photoUpdatedAt: 2022-10-11T09:47:42Z[UTC]
-    name:
-      - {language: en, text: "Maxim Bartenev"}
-      - {language: ru, text: "Максим Бартенев"}
-    companyIds: [648]
-    bio:
-      - {language: en, text: "<p>He has been working with data platforms for more than ten years. He started as a software\
-            \ developer, then was a data engineer, solution architect. Now he supervises the development of his own big data\
-            \ platform at MTS.</p>"}
-      - {language: ru, text: "<p>Более десяти лет работает с дата-платформами. Начинал как software developer, потом был data\
-            \ engineer, solution architect. Сейчас руководит разработкой собственной платформой работы с большими данными\
-            \ в МТС.</p>"}
   - id: 2262
     photoFileName: 2262.jpg
     photoUpdatedAt: 2022-10-06T08:04:47Z[UTC]
@@ -35062,3 +34999,28 @@ speakers:
       - {language: ru, text: "Работает в роли solution-архитектора платформы персональных предложений Сбера. Специализация\
             \ — построение x-sell и кредитных конвейеров. Более 10 лет опыта разработки на С/Go/Python в системах с нагруз\
             ками более 5000 tps."}
+  - id: 2435
+    photoFileName: 2435.jpg
+    photoUpdatedAt: 2022-10-13T13:57:37Z[UTC]
+    name:
+      - {language: en, text: "Dina Safina"}
+      - {language: ru, text: "Дина Сафина"}
+    companyIds: [390]
+    bio:
+      - {language: en, text: "<p>Data engineer at Ozon Fintech. Presenter of the Data Coffee podcast. Leading ETL block in\
+            \ Karpov Courses. Co-founder of the Russian-speaking community Airflow.</p>"}
+      - {language: ru, text: "<p>Дата-инженер в Ozon Fintech. Ведущий подкаста Data Coffee. Ведущий блока ETL в Karpov Courses.\
+            \ Сооснователь русскоязычного сообщества Airflow.</p>"}
+    habr: diiina
+  - id: 2436
+    photoFileName: 2436.jpg
+    photoUpdatedAt: 2022-10-14T13:54:44Z[UTC]
+    name:
+      - {language: en, text: "Alexander Andreychenko"}
+      - {language: ru, text: "Александр Андрейченко"}
+    companyIds: [1013]
+    bio:
+      - {language: en, text: "<p>Data scientist at Roche and host of the Data Coffee podcast. PhD in computer science, author\
+            \ of several publications in the field of random process analysis in biological systems.</p>"}
+      - {language: ru, text: "Data scientist в Roche и ведущий подкаста Data Coffee. PhD в computer science, автор несколь\
+            ких публикаций в области анализа случайных процессов в биологических системах."}
