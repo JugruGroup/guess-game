@@ -467,14 +467,14 @@ speakers:
       - {language: ru, text: "Владимир Ситников"}
     companyIds: []
     bio:
-      - {language: en, text: "<p>Works on performance and scalability of Java and SQL-based systems since 2006. Supports Apache\
-            \ JMeter and is part of PMC's JMeter. Supports the PostgreSQL JDBC driver and is happy to discuss the role of\
-            \ JDBC in the 21st century. Member of the Joker, JPoint, JBreak, Heisenbug, Hydra, DevOops, TechTrain, SmartData\
-            \ program committees.</p>"}
-      - {language: ru, text: "<p>С 2006 года работает над производительностью и масштабируемостью систем на базе Java и SQL.\
-            \ Поддерживает Apache JMeter и входит в JMeter PMC. Поддерживает PostgreSQL JDBC драйвер и с радостью обсудит\
-            \ роль JDBC в XXI веке. Многочлен Программных комитетов Joker, JPoint, JBreak, Heisenbug, Hydra, DevOops, TechTrain,\
-            \ SmartData.</p>"}
+      - {language: en, text: "Vladimir has been working on performance and scalability of NetCracker platform (a software\
+            \ used by telecom operators for automatization of network management processes and network equipment) for ten\
+            \ years. His focus is Java and Oracle Database performance optimisations. Vladimir is an author of more than a\
+            \ dozen of performance improvements in the official PostgreSQL JDBC driver."}
+      - {language: ru, text: "Десять лет работает над производительностью и масштабируемостью NetCracker OSS — ПО, использ\
+            уемого операторами связи для автоматизации процессов управления сетью и сетевым оборудованием. Увлекается вопр\
+            осами производительности Java и Oracle Database. Автор более десятка улучшений производительности в официально\
+            м PostgreSQL JDBC-драйвере."}
     twitter: VladimirSitnikv
     gitHub: vlsi
     habr: vladimirsitnikov
@@ -7008,8 +7008,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Andrey is ex-performance lead at JetBrains Rider, Ph.D., the project lead of BenchmarkDotNet\
             \ and perfolizer, the author of Pro .NET Benchmarking, an ex Microsoft .NET MVP, a silver medalist of ACM ICPC.</p>"}
-      - {language: ru, text: "Андрей — ex-performance lead в JetBrains Rider, к.ф.-м.н., мейнтейнер BenchmarkDotNet и perfolizer,\
-            \ автор Pro .NET Benchmarking, бывший Microsoft .NET MVP, серебряный медалист ACM ICPC."}
+      - {language: ru, text: "<p>Андрей &mdash; ex-performance lead в JetBrains Rider, к.ф.-м.н., мейнтейнер BenchmarkDotNet\
+            \ и perfolizer, автор Pro .NET Benchmarking, бывший Microsoft .NET MVP, серебряный медалист ACM ICPC.</p>"}
     twitter: andrey_akinshin
     gitHub: AndreyAkinshin
     habr: DreamWalker
@@ -9211,13 +9211,13 @@ speakers:
       - {language: en, text: "<p>Andrey has 8+ years of professional experience as a software developer. He has worked in\
             \ well-known companies like Intel, Deutsche Bank, and Huawei. Developed mostly everything: from optimizing C/C++\
             \ compilers to high-load Java applications for investment banking. From Big Data applications to static analyzers\
-            \ and development tools. Currently working on a distributed cloud system for benchmarking tools for code analysis.\
+            \ and dev tools. Currently working on a distributed cloud system for benchmarking of tools for code analysis.\
             \ Active open-source enthusiast, contributor to the Kotlin ecosystem.</p>"}
       - {language: ru, text: "<p>Программист с восьмилетним стажем, работал в Intel, Deutsche Bank, Huawei. Занимался разр\
             аботкой в очень разных сферах: от C/C++ компиляторов до высоконагруженных торговых сервисов на Java, от Big Data-х\
-            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. Тимлид Java/Kotlin-ком\
-            анды в Huawei. Активный опенсорс-энтузиаст, контрибьютор в экосистему Kotlin. Создатель библиотеки ktoml и ста\
-            тического анализатора diktat. Сейчас занимается разработкой экосистемы для бенчмаркинга анализаторов кода.</p>"}
+            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. В данный момент занима\
+            ется разработкой распределенной cloud-системы бенчмаркинга и тестирования анализаторов кода SAVE. Влюблен в opensource\
+            \ и в Kotlin.</p>"}
     gitHub: akuleshov7
   - id: 628
     photoFileName: 0628.jpg
@@ -28490,18 +28490,19 @@ speakers:
     habr: 3Dvideo
   - id: 1990
     photoFileName: 1990.jpg
-    photoUpdatedAt: 2022-06-28T11:10:43Z[UTC]
+    photoUpdatedAt: 2022-11-11T11:58:57Z[UTC]
     name:
       - {language: en, text: "Maksim Lapshin"}
       - {language: ru, text: "Максим Лапшин"}
     companyIds: [881]
     bio:
-      - {language: en, text: "Maskim graduated from faculty of computational mathematics and cybernetics MSU and takes interest\
-            \ in technologies of transferring video via Internet. Created server of video streaming and Erlyvideo company,\
-            \ which is in top-50 of most important companies in online video area."}
-      - {language: ru, text: "Максим — выпускник факультета вычислительной математики и кибернетики МГУ и уже более 10 лет\
-            \ интересуется технологиями передачи видео через интернет. Создал видеостриминговый сервер и компанию «Эрливид\
-            ео», которая входит в список 50 самых важных в сфере онлайн-видео."}
+      - {language: en, text: "<p>Maksim is a graduate of the Faculty of Computational Mathematics and Cybernetics at Moscow\
+            \ State University. For more than 10 years he has been interested in technologies of video transmission over the\
+            \ Internet. He created a video streaming server and Erlyvideo company, which is included in the list of 50 most\
+            \ important online video companies.</p>"}
+      - {language: ru, text: "<p>Максим &mdash; выпускник факультета вычислительной математики и кибернетики МГУ. Уже боле\
+            е 10 лет интересуется технологиями передачи видео через интернет. Создал видеостриминговый сервер и компанию Э\
+            рливидео, которая входит в список 50 самых важных в сфере онлайн-видео.</p>"}
     gitHub: maxlapshin
     habr: erlyvideo
   - id: 1991
@@ -28558,13 +28559,13 @@ speakers:
     gitHub: patrick-239
   - id: 1994
     photoFileName: 1994.jpg
-    photoUpdatedAt: 2021-09-28T13:01:57.760Z[UTC]
+    photoUpdatedAt: 2022-11-11T11:57:46Z[UTC]
     name:
-      - {language: en, text: "Alexey Gusev"}
+      - {language: en, text: "Aleksei Gusev"}
       - {language: ru, text: "Алексей Гусев"}
     companyIds: [689]
     bio:
-      - {language: en, text: "He makes a video player in Yandex. He speaks at conferences, contributes to open-source."}
+      - {language: en, text: "<p>Makes a video player in Yandex. Gives talks at conferences, contributes to Open Source.</p>"}
       - {language: ru, text: "Делает видеоплеер в Яндексе. Выступает на конференциях, контрибьютит в open-source."}
   - id: 1995
     photoFileName: 1995.jpg
@@ -33542,18 +33543,18 @@ speakers:
             \ т. д.</p>"}
   - id: 2339
     photoFileName: 2339.jpg
-    photoUpdatedAt: 2022-10-19T16:02:04Z[UTC]
+    photoUpdatedAt: 2022-11-11T12:26:44Z[UTC]
     name:
       - {language: en, text: "Antonina Glukhova"}
       - {language: ru, text: "Антонина Глухова"}
     companyIds: [377]
     bio:
-      - {language: en, text: "<p>Head of Android platform testing at okko. Approximately 5 years of video platform testing\
-            \ experience. Lazy, so adheres to the principle \"from complex to simple, from monkey-test to branual testing\"\
-            . Makes even developers test. Loves IT unicorns.</p>"}
-      - {language: ru, text: "Руководитель направления тестирования платформы Android в okko. Опыт тестирования видеоплатф\
-            орм около 5 лет. Ленива, поэтому придерживается принципа «от сложного к простому, от monkey-test к брейнуально\
-            му тестированию». Обучает тестировать даже разработчиков. Любит IT-единорогов."}
+      - {language: en, text: "<p>Head of Android platform testing at Okko. About 5 years of video platform testing experience.\
+            \ Lazy, so adheres to the principle \"from complex to simple, from monkey-test to branual testing\". Teaches even\
+            \ developers how to test. Loves IT unicorns.</p>"}
+      - {language: ru, text: "<p>Руководитель направления тестирования платформы Android в Okko. Опыт тестирования видеопл\
+            атформ около 5 лет. Ленива, поэтому придерживается принципа &laquo;от сложного к простому, от monkey-test к бр\
+            ейнуальному тестированию&raquo;. Обучает тестировать даже разработчиков. Любит IT-единорогов.</p>"}
   - id: 2340
     photoFileName: 2340.jpg
     photoUpdatedAt: 2022-10-14T17:40:03Z[UTC]
@@ -33780,8 +33781,8 @@ speakers:
       - {language: ru, text: "Гурий Самарин"}
     companyIds: [663]
     bio:
-      - {language: en, text: "<p>Senior C# developer, architect and technology enthusiast.</p>"}
-      - {language: ru, text: "<p>Старший разработчик C#, архитектор и энтузиаст технологий.</p>"}
+      - {language: en, text: "Senior C# developer, architect and tech enthusiast."}
+      - {language: ru, text: "Старший разработчик C#, архитектор и энтузиаст технологий."}
     twitter: guriy_samarin
     gitHub: Sa1Gur
   - id: 2356
@@ -34120,8 +34121,8 @@ speakers:
       - {language: ru, text: "Анастасия Илюхина"}
     companyIds: [636]
     bio:
-      - {language: en, text: "<p>Head of load testing at Lanit. Over 10 years of experience in load testing, including 7 years\
-            \ as a performance engineer on various projects. Conducts performance testing of her brain 24/7.</p>"}
+      - {language: en, text: "Head of load testing at Lanit Expertise. Over 10 years of experience in load testing, including\
+            \ 7 years as a performance engineer on various projects. Conducts performance testing of her brain 24/7."}
       - {language: ru, text: "Руководитель направления нагрузочного тестирования в «Ланит Экспертиза». Более 10 лет опыта\
             \ в сфере нагрузки, из них 7 лет работы инженером производительности на разных проектах. 24/7 проводит тестиро\
             вание производительности своего мозга."}
