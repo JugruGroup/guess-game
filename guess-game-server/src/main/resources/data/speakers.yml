@@ -282,7 +282,7 @@ speakers:
     name:
       - {language: en, text: "Nikita Lipsky"}
       - {language: ru, text: "Никита Липский"}
-    companyIds: [242]
+    companyIds: [286]
     bio:
       - {language: en, text: "<p>Nikita works at Huawei on compilers, virtual machines and new programming languages. Before\
             \ Huawei he worked on Excelsior JET project for more than 20 years, where he was involved in research and development\
@@ -467,14 +467,14 @@ speakers:
       - {language: ru, text: "Владимир Ситников"}
     companyIds: []
     bio:
-      - {language: en, text: "Vladimir has been working on performance and scalability of NetCracker platform (a software\
-            \ used by telecom operators for automatization of network management processes and network equipment) for ten\
-            \ years. His focus is Java and Oracle Database performance optimisations. Vladimir is an author of more than a\
-            \ dozen of performance improvements in the official PostgreSQL JDBC driver."}
-      - {language: ru, text: "Десять лет работает над производительностью и масштабируемостью NetCracker OSS — ПО, использ\
-            уемого операторами связи для автоматизации процессов управления сетью и сетевым оборудованием. Увлекается вопр\
-            осами производительности Java и Oracle Database. Автор более десятка улучшений производительности в официально\
-            м PostgreSQL JDBC-драйвере."}
+      - {language: en, text: "<p>Works on performance and scalability of Java and SQL-based systems since 2006. Supports Apache\
+            \ JMeter and is part of PMC's JMeter. Supports the PostgreSQL JDBC driver and is happy to discuss the role of\
+            \ JDBC in the 21st century. Member of the Joker, JPoint, JBreak, Heisenbug, Hydra, DevOops, TechTrain, SmartData\
+            \ program committees.</p>"}
+      - {language: ru, text: "<p>С 2006 года работает над производительностью и масштабируемостью систем на базе Java и SQL.\
+            \ Поддерживает Apache JMeter и входит в JMeter PMC. Поддерживает PostgreSQL JDBC драйвер и с радостью обсудит\
+            \ роль JDBC в XXI веке. Многочлен Программных комитетов Joker, JPoint, JBreak, Heisenbug, Hydra, DevOops, TechTrain,\
+            \ SmartData.</p>"}
     twitter: VladimirSitnikv
     gitHub: vlsi
     habr: vladimirsitnikov
@@ -1065,12 +1065,12 @@ speakers:
     bio:
       - {language: en, text: "<p>Currently, lead developer at Odnoklassniki Platform. Joined IT/CS field in 2004 with hydroacoustic\
             \ systems and research projects on static code analysis. Had been developing high-performance distributed services\
-            \ at Yandex. Verticals for more than 5 years. Occasionally gives lectures on parallel computing and distributed\
+            \ at Yandex Verticals for more than 5 years. Occasionally gives lectures on parallel computing and distributed\
             \ data storage.</p>"}
       - {language: ru, text: "<p>Начал свой путь в IT/CS в 2004 с создания систем гидроакустики и исследовательских проект\
-            ов по статическому анализу кода на C/C++. Затем переключился на распределённые системы и разрабатывал высокона\
-            груженные распределённые сервисы на Java/Scala в Яндекс.Вертикалях. Сейчас в роли ведущего разработчика Платфо\
-            рмы Одноклассников продолжает распределённое дело. Попутно ведёт курсы по NoSQL и Highload системам.</p>"}
+            ов по статическому анализу кода на C/C++. Затем переключился на распределенные системы и разрабатывал высокона\
+            груженные распределенные сервисы на Java/Scala в Яндекс Вертикалях. Сейчас в роли ведущего разработчика Платфо\
+            рмы Одноклассников продолжает распределенное дело. Попутно ведет курсы по NoSQL и Highload системам.</p>"}
     twitter: incubos
     gitHub: incubos
     habr: incubos
@@ -3368,10 +3368,10 @@ speakers:
             \ working in Kontur, the largest IT company in Yekaterinburg, now he leads a small infrastructure team that provides\
             \ tools for Observability (Vostok Hercules). Engaged in the development of the Java stack in the company and gives\
             \ talks on Kafka, Java, Hercules, and related technologies."}
-      - {language: ru, text: "<p>С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в &laquo;Ко\
-            нтуре&raquo; &mdash; самой крупной IT-компании Екатеринбурга, последние 4 года руководил разработкой инструмен\
-            тов для Observability (Vostok Hercules). Занимается развитием стеков Java и Go в компании и выступает с доклад\
-            ами про Kafka, Java, Hercules и связанные технологии.</p>"}
+      - {language: ru, text: "С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в Контуре — са\
+            мой крупной IT-компании Екатеринбурга, сейчас руководит небольшой инфраструктурной командой, предоставляющей и\
+            нструменты для Observability (Vostok Hercules). Занимается развитием Java-стека в компании и выступает с докла\
+            дами про Kafka, Java, Hercules и связанные технологии."}
     twitter: GregoryKoshelev
     gitHub: gnkoshelev
     habr: gnkoshelev
@@ -3451,7 +3451,7 @@ speakers:
             \ innovation.</p>"}
       - {language: ru, text: "<p>Директор по инжинирингу Azul Prime. 18 лет опыта в разработке и тюнинге различных JVM: Harmony,\
             \ Oracle, OpenJDK, Android ART, Azul Prime. Особый фокус на тюнинге производительности, бенчмаркинге и инновац\
-            иям.</p>"}
+            иях.</p>"}
   - id: 229
     photoFileName: 0229.jpg
     name:
@@ -5612,14 +5612,14 @@ speakers:
     photoFileName: 0379.jpg
     photoUpdatedAt: 2022-10-21T11:35:23Z[UTC]
     name:
-      - {language: en, text: "Nikolay Ryzhikov"}
+      - {language: en, text: "Nikolai Ryzhikov"}
       - {language: ru, text: "Николай Рыжиков"}
     companyIds: [235]
     bio:
-      - {language: en, text: "<p>CTO Health Samurai, an engineer with ambition, an active member of the HL7 FHIR, Clojure\
-            \ &amp; PostgreSQL communities.</p>"}
-      - {language: ru, text: "<p>CTO Health Samurai, инженер с амбициями, активный участник сообществ HL7 FHIR, Clojure &amp;\
-            \ PostgreSQL.</p>"}
+      - {language: en, text: "<p>Artistic director of the Health Samurai team. Passionate participant of FHIR, Clojure &amp;\
+            \ PostgreSQL communities.</p>"}
+      - {language: ru, text: "<p>Художественный руководитель команды Health Samurai. Пассионарный участник FHIR, Clojure &amp;\
+            \ PostgreSQL-сообществ.</p>"}
     twitter: niquola
     gitHub: niquola
   - id: 380
@@ -9211,13 +9211,13 @@ speakers:
       - {language: en, text: "<p>Andrey has 8+ years of professional experience as a software developer. He has worked in\
             \ well-known companies like Intel, Deutsche Bank, and Huawei. Developed mostly everything: from optimizing C/C++\
             \ compilers to high-load Java applications for investment banking. From Big Data applications to static analyzers\
-            \ and dev tools. Currently working on a distributed cloud system for benchmarking of tools for code analysis.\
+            \ and development tools. Currently working on a distributed cloud system for benchmarking tools for code analysis.\
             \ Active open-source enthusiast, contributor to the Kotlin ecosystem.</p>"}
       - {language: ru, text: "<p>Программист с восьмилетним стажем, работал в Intel, Deutsche Bank, Huawei. Занимался разр\
             аботкой в очень разных сферах: от C/C++ компиляторов до высоконагруженных торговых сервисов на Java, от Big Data-х\
-            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. В данный момент занима\
-            ется разработкой распределенной cloud-системы бенчмаркинга и тестирования анализаторов кода SAVE. Влюблен в opensource\
-            \ и в Kotlin.</p>"}
+            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. Тимлид Java/Kotlin-ком\
+            анды в Huawei. Активный опенсорс-энтузиаст, контрибьютор в экосистему Kotlin. Создатель библиотеки ktoml и ста\
+            тического анализатора diktat. Сейчас занимается разработкой экосистемы для бенчмаркинга анализаторов кода.</p>"}
     gitHub: akuleshov7
   - id: 628
     photoFileName: 0628.jpg
@@ -18581,10 +18581,10 @@ speakers:
             \ nineteen years of experience in software development in a variety of languages and platforms. Now helps the\
             \ company in defining the direction of technological development, designing information system architectures and\
             \ organizing development in product teams.</p>"}
-      - {language: ru, text: "Руководитель департамента веб и мобильной разработки в Sportmaster Lab. Специалист с девятна\
-            дцатилетним опытом разработки программного обеспечения на самых разных языках и платформах. Сейчас помогает ко\
-            мпании в определении направлений технологического развития, проектировании архитектур информационных систем и\
-            \ организации разработки в продуктовых командах."}
+      - {language: ru, text: "<p>Руководитель департамента веб и мобильной разработки в Sportmaster Lab. Специалист с 19-л\
+            етним опытом разработки программного обеспечения на самых разных языках и платформах. Сейчас помогает компании\
+            \ в определении направлений технологического развития, проектировании архитектур информационных систем и орган\
+            изации разработки в продуктовых командах.</p>"}
   - id: 1313
     photoFileName: 1313.jpg
     photoUpdatedAt: 2020-06-26T11:55:43.430Z[UTC]
@@ -23533,8 +23533,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Backend technical leader in the R&amp;D department of Rostselmash. He likes to solve interesting\
             \ problems - the kind that requires a lot of thinking.</p>"}
-      - {language: ru, text: "<p>Техлид бэкенда в R&amp;D-подразделении &laquo;Ростсельмаша&raquo;. Любит решать интересны\
-            е задачи &mdash; такие, чтобы пришлось поломать голову.</p>"}
+      - {language: ru, text: "<p>Техлид бэкенда в R&amp;D-подразделении Ростсельмаша. Любит решать интересные задачи &mdash;\
+            \ такие, чтобы пришлось поломать голову.</p>"}
   - id: 1653
     photoFileName: 1653.jpg
     photoUpdatedAt: 2021-04-12T07:22:14.896Z[UTC]
@@ -25388,22 +25388,15 @@ speakers:
       - {language: ru, text: "Александр Нозик"}
     companyIds: [826]
     bio:
-      - {language: en, text: "When he was in school, he had three hobbies: board role-playing games, physics, and programming.\
-            \ When it came time to choose a profession, he chose physics, thinking that it was more interesting. He was not\
-            \ mistaken. But as a result, he is now doing programming in physics.</p><p>Now he teach physics, mathematical\
-            \ statistics, and Kotlin at MIPT. He is director of the Scientific Programming Centre at MIPT and ex team lead\
-            \ of JetBrains Research, where he is engaged in the creation of scientific software.</p><p>He has a Ph.D. in particle\
-            \ physics, more than 12 years of development experience, including commercial development. Mostly Java, but the\
-            \ last 4 years in Kotlin, other than that, Python, Groovy, Julia, and so on. Kotlin GDE in 2021.</p><p>Leader\
-            \ of the Moscow KUG."}
-      - language: ru
-        text: "<p>В школе у Александра было три увлечения: настольные ролевые игры, физика и программирование. Когда пришл\
-            о время выбирать профессию, он выбрал физику, думая, что она интереснее. И не ошибся. Но в результате занимает\
-            ся программированием физики.</p>\n<p>Преподает физику, математическую статистику и Kotlin в МФТИ, директор цен\
-            тра научного программирования МФТИ, ex-руководитель направления в JetBrains Research.</p>\n<p>Имеет кандидатск\
-            ую степень по физике частиц, больше 12 лет опыта разработки, в том числе коммерческой. В основном на Java, но\
-            \ в последние 5 лет Kotlin, кроме этого были Python, Groovy, Julia и так далее. GDE по Kotlin в 2021.</p>\n<p>Л\
-            идер московского KUG.</p>"
+      - {language: en, text: "Aleksandr teaches physics, mathematical statistics, and Kotlin at MIPT, he's the director of\
+            \ Scientific Programming Centre at MIPT and formerly the head of the NPM research group at JetBrains Research.\
+            \ He also has a Ph.D. in particle physics, and more than 12 years of development experience, including commercial\
+            \ development. Mostly in Java, but the last 5+ years in Kotlin, apart from that there have been Python, Groovy,\
+            \ Julia, and so on. Kotlin GDE in 2021."}
+      - {language: ru, text: "Преподает физику, математическую статистику и Kotlin в МФТИ, директор Центра Научного Програ\
+            ммирования МФТИ. За плечами кандидатская диссертация по физике частиц, больше 12 лет опыта разработки, в том ч\
+            исле коммерческой. В основном на Java, но в последние 5 с лишним лет Kotlin, кроме этого были Python, Groovy,\
+            \ Julia и так далее. GDE по Kotlin в 2021."}
     twitter: noraltavir
     gitHub: altavir
     habr: darksnake
@@ -34731,9 +34724,9 @@ speakers:
       - {language: en, text: "<p>He works at Domclick and manages development for several teams. Has visited 53 countries,\
             \ plays 8 musical instruments. He goes Alpine skiing, snowboarding, and plays tennis. Teaches Java and tries to\
             \ bring the language to the masses.</p>"}
-      - {language: ru, text: "<p>Работает в компании &laquo;Домклик&raquo; и руководит разработкой в нескольких командах.\
-            \ Посетил 53 страны, играет на 8 музыкальных инструментах. Катается на горных лыжах и сноуборде, играет в боль\
-            шой теннис. Преподает Java и старается нести язык в массы.</p>"}
+      - {language: ru, text: "<p>Работает в компании Домклик и руководит разработкой в нескольких командах. Посетил 53 стр\
+            аны, играет на 8 музыкальных инструментах. Катается на горных лыжах и сноуборде, играет в большой теннис. Преп\
+            одает Java и старается нести язык в массы.</p>"}
     habr: i_am_chasing_the_clouds
   - id: 2424
     photoFileName: 2424.jpg
@@ -34786,9 +34779,9 @@ speakers:
             \ of technical competencies.</p>"
       - language: ru
         text: "<p>Руководитель направления в центре компетенций веб- и мобильной разработки в Sportmaster Lab. В IT более\
-            \ 17-ти лет. Работал на позиции инженера, тимлида, руководителя проектов, технического консультанта, функциона\
-            льного и технического архитектора в России, Германии и США.</p>\n<p>Сейчас помогает нескольким продуктовым ком\
-            андам с развитием технических компетенций.</p>"
+            \ 17 лет. Работал на позиции инженера, тимлида, руководителя проектов, технического консультанта, функциональн\
+            ого и технического архитектора в России, Германии и США.</p>\n<p>Сейчас помогает нескольким продуктовым команд\
+            ам с развитием технических компетенций.</p>"
   - id: 2427
     photoFileName: 2427.jpg
     photoUpdatedAt: 2022-11-11T12:49:08Z[UTC]
@@ -34797,8 +34790,8 @@ speakers:
       - {language: ru, text: "Александр Казанцев"}
     companyIds: [234]
     bio:
-      - {language: en, text: "<p>Teamlead at hh.ru</p>"}
-      - {language: ru, text: "Тимлид в hh.ru"}
+      - {language: en, text: "<p>Teamlead at hh.ru.</p>"}
+      - {language: ru, text: "<p>Тимлид в hh.ru.</p>"}
   - id: 2428
     photoFileName: 2428.jpg
     photoUpdatedAt: 2022-10-07T11:50:16Z[UTC]
@@ -34845,7 +34838,7 @@ speakers:
     bio:
       - {language: en, text: "<p>Started programming in school, then became PLC developer and now highload developer and teamlead.\
             \ Prefers Russian companies. Kotlin fan.</p>"}
-      - {language: ru, text: "<p>Сначала писал программы для PLC, потом выучил Java и понеслось.</p>"}
+      - {language: ru, text: "<p>Сначала писал программы для PLC, потом выучил Java, и понеслось.</p>"}
   - id: 2431
     photoFileName: 2431.jpg
     photoUpdatedAt: 2022-09-06T08:55:29Z[UTC]
