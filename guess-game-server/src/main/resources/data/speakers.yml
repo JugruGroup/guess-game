@@ -7008,8 +7008,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Andrey is ex-performance lead at JetBrains Rider, Ph.D., the project lead of BenchmarkDotNet\
             \ and perfolizer, the author of Pro .NET Benchmarking, an ex Microsoft .NET MVP, a silver medalist of ACM ICPC.</p>"}
-      - {language: ru, text: "<p>Андрей &mdash; ex-performance lead в JetBrains Rider, к.ф.-м.н., мейнтейнер BenchmarkDotNet\
-            \ и perfolizer, автор Pro .NET Benchmarking, бывший Microsoft .NET MVP, серебряный медалист ACM ICPC.</p>"}
+      - {language: ru, text: "Андрей — ex-performance lead в JetBrains Rider, к.ф.-м.н., мейнтейнер BenchmarkDotNet и perfolizer,\
+            \ автор Pro .NET Benchmarking, бывший Microsoft .NET MVP, серебряный медалист ACM ICPC."}
     twitter: andrey_akinshin
     gitHub: AndreyAkinshin
     habr: DreamWalker
@@ -10605,14 +10605,15 @@ speakers:
     name:
       - {language: en, text: "Andrey Melikhov"}
       - {language: ru, text: "Андрей Мелихов"}
-    companyIds: [868]
+    companyIds: [1014]
     bio:
       - {language: en, text: "Mythical full-stack, host of the Devshakhta channel on Youtube, co-host of the Web Standards\
             \ podcast. Good architecture evangelist, an expert on Node.js and other JavaScript runtimes. Apologist for DevOps\
             \ practices. For all the good and against all the bad. Likes to work for an idea. Idea is also good."}
-      - {language: ru, text: "Мифический фуллстек, ведущий канала «Девшахта» на Youtube, соведущий подкаста «Веб-стандарты\
-            ». Евангелист хорошей архитектуры, знаток Node.js и других JavaScript-рантаймов. Апологет DevOps-практик. За в\
-            сё хорошее и против всего плохого. Любитель работать за идею. Idea — тоже хорошо, даже отлично."}
+      - {language: ru, text: "<p>Мифический фуллстек, ведущий канала &laquo;Девшахта&raquo; на YouTube, соведущий подкаста\
+            \ &laquo;Веб-стандарты&raquo;. Евангелист хорошей архитектуры, знаток Node.js и других JavaScript-рантаймов. А\
+            пологет DevOps-практик. За всё хорошее и против всего плохого. Любитель работать за идею. Idea &mdash; тоже хо\
+            рошо, даже отлично.</p>"}
     twitter: amel_true
     gitHub: amel-true
     habr: amel-true
@@ -10742,16 +10743,16 @@ speakers:
     gitHub: life777
   - id: 733
     photoFileName: 0733.jpg
-    photoUpdatedAt: 2019-01-30T06:54:59.382Z[UTC]
+    photoUpdatedAt: 2022-11-18T10:50:20Z[UTC]
     name:
       - {language: en, text: "Alexey Zolotyh"}
       - {language: ru, text: "Алексей Золотых"}
-    companyIds: [183]
+    companyIds: [646]
     bio:
       - {language: en, text: "Have been writing in javascript since 2007. Have an experience of working as a webpage designer,\
             \ made up more than 100 websites. Later started writing in javascript. Have experience in writing in jQuery, BackboneJS,\
-            \ Angular 1, Angular2, React, ExtJS, polymerjs. Fond of user interfaces and coffee.  Consider Dart to be more\
-            \ convenient than TypeScript."}
+            \ Angular 1, Angular2, React, ExtJS, polymerjs. Fond of user interfaces and coffee. Consider Dart to be more convenient\
+            \ than TypeScript."}
       - {language: ru, text: "Первый компьютер у Алексея появился на 2 курсе университета. Уже через 2 года он сверстал пе\
             рвый сайт, работающий в том числе и под IE6. Прошел путь от верстальщика до архитектора. В настоящее время тим\
             лид, спикер. До недавнего времени захватывал мир вместе с Infobip — глобальной коммуникационной платформой для\
@@ -20202,10 +20203,12 @@ speakers:
       - {language: ru, text: "Семён Левенсон"}
     companyIds: [689]
     bio:
-      - {language: en, text: "Front-end developer since 2013, has managed to work both in startups and governmental projects.\
-            \ Was a team lead at Rambler, developed a useful program for HR, and now helps people to achieve zen at Yandex.Zen."}
-      - {language: ru, text: "<p>Фронтенд-разработчик с 2013 года, успел поработать в стартапе и над госпроектами. Тимлиди\
-            л в Рамблере, развивал полезную программу для HR, а сейчас помогает людям поймать дзен в Яндекс.Дзене.</p>"}
+      - {language: en, text: "<p>Frontend developer since 2013. Worked in startups in Moscow City, managed a team at Rambler,\
+            \ developed a useful program for HR, and now helps people catch zen at Zen. Traveled around Asia, dreams of performing\
+            \ in front of a crowd of 10,000 people in a rock band. 30 cm beard.</p>"}
+      - {language: ru, text: "<p>Фронтенд-разработчик с 2013 года. Стартапил в Москва-Сити, тимлидил в Рамблере, развивал\
+            \ полезную программу для HR, а сейчас помогает людям поймать дзен в &laquo;Дзене&raquo;. Путешествовал по Азии\
+            , мечтает выступить перед десятитысячной толпой в составе рок-группы. Борода 30 см.</p>"}
     twitter: sem_eleven
     gitHub: semeleven
   - id: 1429
@@ -23154,18 +23157,18 @@ speakers:
     gitHub: erzhtor
   - id: 1628
     photoFileName: 1628.jpg
-    photoUpdatedAt: 2021-03-18T10:18:31.396Z[UTC]
+    photoUpdatedAt: 2022-11-15T11:23:38Z[UTC]
     name:
-      - {language: en, text: "Aleksandr Shushunov"}
+      - {language: en, text: "Alexandr Shushunov"}
       - {language: ru, text: "Александр Шушунов"}
-    companyIds: [183]
+    companyIds: [620]
     bio:
-      - {language: en, text: "Alexander has been developing software for many years. In recent years, he is into the frontend.\
+      - {language: en, text: "<p>Alexander has been developing software for many years. In recent years, he is into the frontend.\
             \ Alexander thinks that each programmer should read \"Clean Code\". Twice! His sincere belief is that the internal\
-            \ quality of a product goes side by side with the external quality. He likes running and talking about code."}
-      - {language: ru, text: "Много лет занимается разработкой ПО на разных технологиях. Последние годы верстает формочки\
-            \ на JS. Адепт церкви Дядюшки Боба. Искренне верит, что внутреннее качество продукта неразрывно связано с внеш\
-            ним. Любит бегать и рассказывать про код."}
+            \ quality of a product goes side by side with the external quality. He likes running and talking about code.</p>"}
+      - {language: ru, text: "<p>Много лет занимается разработкой ПО на разных технологиях. Последние годы верстает формоч\
+            ки на JS. Адепт церкви Дядюшки Боба. Искренне верит, что внутреннее качество продукта неразрывно связано с вне\
+            шним. Любит бегать и рассказывать про код.</p>"}
     twitter: AShushunov
     gitHub: AlexanderShushunov
     habr: AShushunov
@@ -31139,25 +31142,24 @@ speakers:
             ения, безопасность системы и данных, оптимизация производительности, функциональное программирование.</p>"
   - id: 2171
     photoFileName: 2171.jpg
-    photoUpdatedAt: 2022-06-03T12:58:18Z[UTC]
+    photoUpdatedAt: 2022-11-18T10:55:46Z[UTC]
     name:
       - {language: en, text: "Nikita Sidorov"}
       - {language: ru, text: "Никита Сидоров"}
     companyIds: [689]
     bio:
-      - language: en
-        text: "<p>Almost 5 years in Yandex. During this time, Nikita had time to study at SHAD, read and continue lecturing\
-            \ at SHRI. At the Yandex Programming Championship he made people write their trisheiking in 30 minutes (believe\
-            \ me, it is real to do!). Yandex's production runs his code in: JS, TS, Python, C++, Java and doesn't even crash.</p>\n\
-            <p>In addition to his intense love for Yandex (RSU accrual has nothing to do with it) he is fond of code mining:\
-            \ searching for similar code sections with code2seq, minhashing and so on.</p>"
-      - language: ru
-        text: "<p>Почти 5 лет в Яндексе. За это время Никита успел поучиться в ШАДе, почитать и продолжить читать лекции в\
-            \ ШРИ. На Чемпионате Яндекса по программированию он заставил людей писать свой тришейкинг за 30 минут (поверьт\
-            е, это реально сделать!). В продакшене Яндекса крутится его код на: JS, TS, Python, C++, Java и даже не падает\
-            .</p>\n<p>Помимо острой любви к Яндексу (накопленные RSU тут не причем), увлекается темой code mining: поиск с\
-            хожих участков кода через code2seq, minhashing и прочее.</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<pre spellcheck=\"\
-            false\">&nbsp;</pre>"
+      - {language: en, text: "<p class=\"ql-align-justify\">Almost 5 years in Yandex. During this time, Nikita had time to\
+            \ study at SHAD, read and continue lecturing at SHRI. At the Yandex Programming Championship he made people write\
+            \ their trisheiking in 30 minutes (believe me, it is real to do!). Yandex's production runs his code in: JS, TS,\
+            \ Python, C++, Java and doesn't even crash.</p><p class=\"ql-align-justify\">In addition to his intense love for\
+            \ Yandex (RSU accrual has nothing to do with it) he is fond of code mining: searching for similar code sections\
+            \ with code2seq, minhashing and so on."}
+      - {language: ru, text: "<p class=\"ql-align-justify\">Почти 5 лет в Яндексе. За это время Никита успел поучиться в Ш\
+            АДе, почитать и продолжить читать лекции в ШРИ. На Чемпионате Яндекса по программированию он заставил людей пи\
+            сать свой тришейкинг за 30 минут (поверьте, это реально сделать!). В продакшене Яндекса крутится его код на: JS,\
+            \ TS, Python, C++, Java и даже не падает.</p><p class=\"ql-align-justify\">Помимо острой любви к Яндексу (нако\
+            пленные RSU тут не причем), увлекается темой code mining: поиск схожих участков кода через code2seq, minhashing\
+            \ и прочее."}
     twitter: nickshevr
     gitHub: nickshevr
   - id: 2172
@@ -33772,14 +33774,14 @@ speakers:
     gitHub: dtabolich
   - id: 2355
     photoFileName: 2355.jpg
-    photoUpdatedAt: 2022-11-04T16:49:04Z[UTC]
+    photoUpdatedAt: 2022-11-16T06:51:03Z[UTC]
     name:
       - {language: en, text: "Guriy Samarin"}
       - {language: ru, text: "Гурий Самарин"}
     companyIds: [663]
     bio:
-      - {language: en, text: "Senior C# developer, architect and tech enthusiast."}
-      - {language: ru, text: "Старший разработчик C#, архитектор и энтузиаст технологий."}
+      - {language: en, text: "<p>Senior C# developer, architect and technology enthusiast.</p>"}
+      - {language: ru, text: "<p>Старший разработчик C#, архитектор и энтузиаст технологий.</p>"}
     twitter: guriy_samarin
     gitHub: Sa1Gur
   - id: 2356
@@ -33881,7 +33883,7 @@ speakers:
             аться в новых технологиях и заниматься отладкой.</p>"}
   - id: 2363
     photoFileName: 2363.jpg
-    photoUpdatedAt: 2022-10-18T17:33:31Z[UTC]
+    photoUpdatedAt: 2022-11-14T15:44:34Z[UTC]
     name:
       - {language: en, text: "Aleksei Avdeev"}
       - {language: ru, text: "Алексей Авдеев"}
@@ -33926,7 +33928,7 @@ speakers:
     habr: MrCheater
   - id: 2366
     photoFileName: 2366.jpg
-    photoUpdatedAt: 2022-10-21T19:05:20Z[UTC]
+    photoUpdatedAt: 2022-11-19T15:28:12Z[UTC]
     name:
       - {language: en, text: "Alexander Kateen"}
       - {language: ru, text: "Александр Катин"}
@@ -33953,11 +33955,11 @@ speakers:
             \ архитектурой (в особенности wysiwyg CMS-платформ) и чистым кодом."}
   - id: 2368
     photoFileName: 2368.jpg
-    photoUpdatedAt: 2022-10-21T14:50:40Z[UTC]
+    photoUpdatedAt: 2022-11-14T14:24:16Z[UTC]
     name:
       - {language: en, text: "Aleksandr Kuznetsov"}
       - {language: ru, text: "Александр Кузнецов"}
-    companyIds: [259]
+    companyIds: [630]
     bio:
       - {language: en, text: "<p>22 years in IT. Trainer and lead developer. Specializes in .NET.</p>"}
       - {language: ru, text: "<p>22 года в IT. Тренер и ведущий разработчик. Специализируется в .NET.</p>"}
@@ -34938,3 +34940,34 @@ speakers:
             \ of several publications in the field of random process analysis in biological systems.</p>"}
       - {language: ru, text: "Data scientist в Roche и ведущий подкаста Data Coffee. PhD в computer science, автор несколь\
             ких публикаций в области анализа случайных процессов в биологических системах."}
+  - id: 2437
+    photoFileName: 2437.jpg
+    photoUpdatedAt: 2022-11-09T14:00:10Z[UTC]
+    name:
+      - {language: en, text: "Andrei Gladkov"}
+      - {language: ru, text: "Андрей Гладков"}
+    companyIds: [234]
+    bio:
+      - language: en
+        text: "<p>Frontend developer at hh.ru. Works in the Core team.</p>\n<p>Has been a product developer, a team leader\
+            \ and a developer again. Before hh.ru worked as an outsourcer, doing everything from sex shops to prison online\
+            \ stores.</p>"
+      - language: ru
+        text: "<p>Фронтенд-разработчик в hh.ru. Работает в Core-команде.</p>\n<p>Успел побывать продуктовым разработчиком\
+            , тимлидом и снова разработчиком. До hh.ru работал на аутсорсинге, делал всё: от секс-шопов до тюремных интерн\
+            ет-магазинов.</p>"
+    gitHub: AndreyGladkov
+  - id: 2438
+    photoFileName: 2438.jpg
+    photoUpdatedAt: 2022-11-18T10:52:56Z[UTC]
+    name:
+      - {language: en, text: "Sergey Konstantinov"}
+      - {language: ru, text: "Сергей Константинов"}
+    companyIds: [429]
+    bio:
+      - {language: en, text: "Frontend developer on the platform team, developing an internal community, as well as mentoring\
+            \ in the Yandex Practicum. Loves solving interesting problems on the frontend, as well as experimenting with browser\
+            \ APIs."}
+      - {language: ru, text: "Фронтенд-разработчик в платформенной команде, занимается развитием внутреннего коммьюнити, а\
+            \ также наставничеством в Я.Практикуме. Любит решать интересные задачи на фронтенде, а также экспериментироват\
+            ь с браузерным API."}

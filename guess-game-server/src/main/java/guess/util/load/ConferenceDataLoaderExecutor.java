@@ -2338,7 +2338,7 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов online-части конференции DotNext 2022 Autumn",
 //                                "Открытие офлайн-части конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
 //                                "Закрытие конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
-//                                "Lightning Talks: что нас бесит в .NET")));
+//                                "Lightning Talks: что нас бесит в .NET", "Lightning talks", "Fail-секция")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2022, 11, 7), "2022 Autumn",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2022 Autumn", null, List.of(24L, 9L)),

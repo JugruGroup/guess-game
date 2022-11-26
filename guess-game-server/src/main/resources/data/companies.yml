@@ -3700,3 +3700,8 @@ companies:
     name:
       - {language: en, text: Roche}
     siteLink: https://www.roche.ru
+  - id: 1014
+    name:
+      - {language: en, text: "Web standards"}
+      - {language: ru, text: Веб-стандарты}
+    siteLink: https://web-standards.ru
