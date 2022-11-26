@@ -1063,14 +1063,14 @@ speakers:
       - {language: ru, text: "Вадим Цесько"}
     companyIds: [653]
     bio:
-      - {language: en, text: "Currently, lead developer at Odnoklassniki Platform. Joined IT/CS field in 2004 with hydroacoustic\
+      - {language: en, text: "<p>Currently, lead developer at Odnoklassniki Platform. Joined IT/CS field in 2004 with hydroacoustic\
             \ systems and research projects on static code analysis. Had been developing high-performance distributed services\
             \ at Yandex. Verticals for more than 5 years. Occasionally gives lectures on parallel computing and distributed\
-            \ data storage."}
-      - {language: ru, text: "Начал свой путь в IT/CS в 2004 с создания систем гидроакустики и исследовательских проектов\
-            \ по статическому анализу кода на C/C++. Затем переключился на распределённые системы и разрабатывал высоконаг\
-            руженные распределённые сервисы на Java/Scala в Яндекс.Вертикалях. Сейчас в роли ведущего разработчика Платфор\
-            мы Одноклассников продолжает распределённое дело. Попутно ведёт курсы по NoSQL и Highload системам."}
+            \ data storage.</p>"}
+      - {language: ru, text: "<p>Начал свой путь в IT/CS в 2004 с создания систем гидроакустики и исследовательских проект\
+            ов по статическому анализу кода на C/C++. Затем переключился на распределённые системы и разрабатывал высокона\
+            груженные распределённые сервисы на Java/Scala в Яндекс.Вертикалях. Сейчас в роли ведущего разработчика Платфо\
+            рмы Одноклассников продолжает распределённое дело. Попутно ведёт курсы по NoSQL и Highload системам.</p>"}
     twitter: incubos
     gitHub: incubos
     habr: incubos
@@ -3368,10 +3368,10 @@ speakers:
             \ working in Kontur, the largest IT company in Yekaterinburg, now he leads a small infrastructure team that provides\
             \ tools for Observability (Vostok Hercules). Engaged in the development of the Java stack in the company and gives\
             \ talks on Kafka, Java, Hercules, and related technologies."}
-      - {language: ru, text: "С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в Контуре — са\
-            мой крупной IT-компании Екатеринбурга, сейчас руководит небольшой инфраструктурной командой, предоставляющей и\
-            нструменты для Observability (Vostok Hercules). Занимается развитием Java-стека в компании и выступает с докла\
-            дами про Kafka, Java, Hercules и связанные технологии."}
+      - {language: ru, text: "<p>С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в &laquo;Ко\
+            нтуре&raquo; &mdash; самой крупной IT-компании Екатеринбурга, последние 4 года руководил разработкой инструмен\
+            тов для Observability (Vostok Hercules). Занимается развитием стеков Java и Go в компании и выступает с доклад\
+            ами про Kafka, Java, Hercules и связанные технологии.</p>"}
     twitter: GregoryKoshelev
     gitHub: gnkoshelev
     habr: gnkoshelev
@@ -5612,14 +5612,14 @@ speakers:
     photoFileName: 0379.jpg
     photoUpdatedAt: 2022-10-21T11:35:23Z[UTC]
     name:
-      - {language: en, text: "Nikolai Ryzhikov"}
+      - {language: en, text: "Nikolay Ryzhikov"}
       - {language: ru, text: "Николай Рыжиков"}
     companyIds: [235]
     bio:
-      - {language: en, text: "<p>Artistic director of the Health Samurai team. Passionate participant of FHIR, Clojure &amp;\
-            \ PostgreSQL communities.</p>"}
-      - {language: ru, text: "<p>Художественный руководитель команды Health Samurai. Пассионарный участник FHIR, Clojure &amp;\
-            \ PostgreSQL-сообществ.</p>"}
+      - {language: en, text: "<p>CTO Health Samurai, an engineer with ambition, an active member of the HL7 FHIR, Clojure\
+            \ &amp; PostgreSQL communities.</p>"}
+      - {language: ru, text: "<p>CTO Health Samurai, инженер с амбициями, активный участник сообществ HL7 FHIR, Clojure &amp;\
+            \ PostgreSQL.</p>"}
     twitter: niquola
     gitHub: niquola
   - id: 380
@@ -33084,30 +33084,6 @@ speakers:
             л SAP, был разработчиком автоматизированной банковской системы, последние семь лет работает в DevOps.</p>"}
     gitHub: seasadm
     habr: seasadm
-  - id: 2301
-    photoFileName: 2301.jpg
-    photoUpdatedAt: 2022-10-18T11:34:08Z[UTC]
-    name:
-      - {language: en, text: "Georgy Starostin"}
-      - {language: ru, text: "Георгий Старостин"}
-    companyIds: [620]
-    bio:
-      - {language: en, text: "<p>Director of VK Application Security.</p>"}
-      - {language: ru, text: "<p class=\"p1\">Директор департамента защиты приложений VK.</p>"}
-  - id: 2302
-    photoFileName: 2302.jpg
-    photoUpdatedAt: 2022-10-18T10:28:31Z[UTC]
-    name:
-      - {language: en, text: "Alexander Voznesensky"}
-      - {language: ru, text: "Александр Вознесенский"}
-    companyIds: [620]
-    bio:
-      - {language: en, text: "<p>AppSec Team lead in VK, helps the company build DevSecOps. Previously implemented DevSecOps\
-            \ at Citymobil.&nbsp;</p>"}
-      - {language: ru, text: "<p><span style=\"font-weight: 400;\">AppSec Team lead в VK, помогает компании выстраивать DevSecOps.\
-            \ Ранее внедрил DevSecOps в компании Ситимобил.&nbsp;</span></p>"}
-    gitHub: true-hero
-    habr: true-hero
   - id: 2303
     photoFileName: 2303.jpg
     photoUpdatedAt: 2022-09-27T14:46:28Z[UTC]
@@ -33241,44 +33217,6 @@ speakers:
             \ in product development, FinTech, EdTech. Been in the role of team lead, tech lead, and then back in development.</p>"}
       - {language: ru, text: "<p>Infrastructure Engineer в Skyeng. Более трех лет разрабатывает на Ansible. Работал в прод\
             уктовой разработке, FinTech, EdTech. Успел побыть в роли тимлида, техлида, а потом вернуться в разработку.</p>"}
-  - id: 2312
-    photoFileName: 2312.jpg
-    photoUpdatedAt: 2022-10-12T07:51:45Z[UTC]
-    name:
-      - {language: en, text: "Artemiy Plotnikov"}
-      - {language: ru, text: "Артемий Плотников"}
-    companyIds: [904]
-    bio:
-      - {language: en, text: "<p>Systems engineer at Garage Eight. Mainly involved in Kubernetes integration and development\
-            \ at the company.</p>"}
-      - {language: ru, text: "<p>Системный инженер в Garage Eight. В основном участвует в интеграции и развитии Kubernetes\
-            \ в компании.</p>"}
-  - id: 2313
-    photoFileName: 2313.jpg
-    photoUpdatedAt: 2022-10-12T07:50:03Z[UTC]
-    name:
-      - {language: en, text: "Georgy Gerasimov"}
-      - {language: ru, text: "Георгий Герасимов"}
-    companyIds: [904]
-    bio:
-      - {language: en, text: "<p>Systems engineer at Garage Eight. He is engaged in the development of IT infrastructure and\
-            \ development processes.</p>"}
-      - {language: ru, text: "<p>Системный инженер в Garage Eight. Занимается развитием IT-инфраструктуры и процессов разр\
-            аботки.</p>"}
-  - id: 2314
-    photoFileName: 2314.jpg
-    photoUpdatedAt: 2022-10-12T07:48Z[UTC]
-    name:
-      - {language: en, text: "Artem Kolupaev"}
-      - {language: ru, text: "Артём Колупаев"}
-    companyIds: [904]
-    bio:
-      - {language: en, text: "<p>Systems engineer at Garage Eight. He is engaged in improving and developing application architecture,\
-            \ developing and integrating Kubernetes in dev and prod environments of the company, as well as implementing and\
-            \ delivering new services.</p>"}
-      - {language: ru, text: "<p>Системный инженер в компании Garage Eight. Занимается улучшением и развитием архитектуры\
-            \ приложения, развитием и интеграцией Kubernetes в dev и prod окружениях компании, а также внедрением и постав\
-            кой новых сервисов.</p>"}
   - id: 2315
     photoFileName: 2315.jpg
     photoUpdatedAt: 2022-08-19T13:14:51Z[UTC]
@@ -33335,33 +33273,6 @@ speakers:
             \ работает в Rabota.ru. Любит хайкинг, котиков, мотоциклы и убегать от медведей.</p>"}
     gitHub: zhilyaev
     habr: ZhilyaevDmitriy
-  - id: 2319
-    photoFileName: 2319.jpg
-    photoUpdatedAt: 2022-10-14T07:15:11Z[UTC]
-    name:
-      - {language: en, text: "Maksim Semochkin"}
-      - {language: ru, text: "Максим Сёмочкин"}
-    companyIds: [648]
-    bio:
-      - {language: en, text: "<p>He has been working in IT for about 15 years, and joined MTS in 2016. During this time he\
-            \ has changed a bunch of roles - from DevOps and developer to corporate architect. Now he is a technical project\
-            \ manager. He is fond of running.</p>"}
-      - {language: ru, text: "<p>В IT работает около 15 лет, а в МТС пришёл в 2016 году. За это время сменил тучу ролей &mdash;\
-            \ от DevOps и разработчика до корпоративного архитектора. Сейчас технический руководитель проекта. Увлекается\
-            \ бегом.</p>"}
-    habr: mak_sim
-  - id: 2320
-    photoFileName: 2320.jpg
-    photoUpdatedAt: 2022-10-12T10:41:04Z[UTC]
-    name:
-      - {language: en, text: "Sergey Kurbanov"}
-      - {language: ru, text: "Сергей Курбанов"}
-    companyIds: [648]
-    bio:
-      - {language: en, text: "<p>Genius, billionaire, playboy, philanthropist, devops.</p>"}
-      - {language: ru, text: "<p>Гений, миллиардер, плейбой, филантроп, девопс.</p>"}
-    twitter: cnolick
-    gitHub: cnolick
   - id: 2321
     photoFileName: 2321.jpg
     photoUpdatedAt: 2022-09-15T11:10:10Z[UTC]
