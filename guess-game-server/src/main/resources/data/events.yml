@@ -1310,6 +1310,7 @@ events:
     days:
       - {startDate: "2022-10-08", endDate: "2022-10-08", placeId: 24}
     siteLink: []
+    youtubeLink: https://www.youtube.com/playlist?list=PLmJD_ICvgPy3VeQ5BETksiDD1ebDvBv_8
     talkIds: [3972, 3973, 3974, 3975, 3976, 3977, 3978, 3979, 3980, 3981, 3982, 3983]
   # JUG.MSK
   - eventTypeId: 13
