@@ -1175,8 +1175,9 @@ class JrgCmsDataLoaderTest {
 
     @Test
     void getFixedContacts() {
-        final String VALUE0 = "-";
-        final String VALUE1 = "user";
+        final String VALUE0 = "user";
+        final String VALUE1 = "-";
+        final String VALUE2 = "t.me/alexmeta";
 
         JrgContact jrgContact0 = new JrgContact();
 
@@ -1184,11 +1185,14 @@ class JrgCmsDataLoaderTest {
         jrgContact1.setValue(VALUE0);
 
         JrgContact jrgContact2 = new JrgContact();
-        jrgContact2.setValue("user");
+        jrgContact2.setValue(VALUE1);
 
-        List<JrgContact> jrgContacts = List.of(jrgContact0, jrgContact1, jrgContact2);
+        JrgContact jrgContact3 = new JrgContact();
+        jrgContact3.setValue(VALUE2);
 
-        assertEquals(3, jrgContacts.size());
+        List<JrgContact> jrgContacts = List.of(jrgContact0, jrgContact1, jrgContact2, jrgContact3);
+
+        assertEquals(4, jrgContacts.size());
         assertEquals(1, jrgContacts.stream()
                 .filter(c -> c.getValue() == null)
                 .count());
@@ -1197,19 +1201,25 @@ class JrgCmsDataLoaderTest {
                 .count());
         assertEquals(1, jrgContacts.stream()
                 .filter(c -> VALUE1.equals(c.getValue()))
+                .count());
+        assertEquals(1, jrgContacts.stream()
+                .filter(c -> VALUE2.equals(c.getValue()))
                 .count());
 
         List<JrgContact> actual = JrgCmsDataLoader.getFixedContacts(jrgContacts);
 
-        assertEquals(3, actual.size());
-        assertEquals(2, actual.stream()
+        assertEquals(4, actual.size());
+        assertEquals(3, actual.stream()
                 .filter(c -> c.getValue() == null)
                 .count());
-        assertEquals(0, actual.stream()
+        assertEquals(1, actual.stream()
                 .filter(c -> VALUE0.equals(c.getValue()))
                 .count());
-        assertEquals(1, actual.stream()
+        assertEquals(0, actual.stream()
                 .filter(c -> VALUE1.equals(c.getValue()))
+                .count());
+        assertEquals(0, actual.stream()
+                .filter(c -> VALUE2.equals(c.getValue()))
                 .count());
     }
 
