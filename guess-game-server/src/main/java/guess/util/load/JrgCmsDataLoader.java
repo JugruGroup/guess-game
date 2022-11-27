@@ -42,6 +42,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -662,17 +663,26 @@ public class JrgCmsDataLoader extends CmsDataLoader {
      * @return fixed contacts
      */
     static List<JrgContact> getFixedContacts(List<JrgContact> contacts) {
-        Set<String> invalidValues = Set.of("-");
+        List<String> invalidPatternRegExpList = List.of("-", "^t.me/.*");
 
         return contacts.stream()
                 .map(c -> {
-                    if ((c.getValue() != null) && invalidValues.contains(c.getValue())) {
-                        JrgContact jrgContact = new JrgContact();
+                    if (c.getValue() != null) {
+                        for (String invalidPatternRegExp : invalidPatternRegExpList) {
+                            var pattern = Pattern.compile(invalidPatternRegExp);
+                            var matcher = pattern.matcher(c.getValue());
 
-                        jrgContact.setType(c.getType());
-                        jrgContact.setValue(null);
+                            if (matcher.matches()) {
+                                JrgContact jrgContact = new JrgContact();
 
-                        return jrgContact;
+                                jrgContact.setType(c.getType());
+                                jrgContact.setValue(null);
+
+                                return jrgContact;
+                            }
+                        }
+
+                        return c;
                     } else {
                         return c;
                     }

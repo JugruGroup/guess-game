@@ -149,6 +149,7 @@ events:
       - {startDate: "2022-10-19", endDate: "2022-10-20", placeId: 24}
       - {startDate: "2022-10-27", endDate: "2022-10-27", placeId: 4}
     siteLink: []
+    youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTrF4wWfG5I9h-gbGyok1DBl
     talkIds: [4065, 4066, 4067, 4069, 4070, 4071, 4072, 4073, 4074, 4075, 4076, 4077, 4078, 4079, 4080, 4082, 4083, 4084,
               4085, 4086, 4088, 4089, 4090, 4091, 4092, 4093, 4094, 4095, 4096, 4097, 4098, 4099, 4100, 4101, 4102]
   # DotNext
@@ -1043,8 +1044,8 @@ events:
     days:
       - {startDate: "2017-04-21", endDate: "2017-04-22", placeId: 1}
     siteLink:
-      - {language: en, text: "https://2017.mobiusconf.com/en/"}
-      - {language: ru, text: "https://2017.mobiusconf.com/"}
+      - {language: en, text: "https://2017.mobius-piter.ru/en/"}
+      - {language: ru, text: "https://2017.mobius-piter.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236qo2oL0Sis_Zf_UUgeMAjDl
     talkIds: [463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484,
         485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497]
@@ -1055,8 +1056,8 @@ events:
     days:
       - {startDate: "2017-11-11", endDate: "2017-11-11", placeId: 11}
     siteLink:
-      - {language: en, text: "https://mobiusconf.com/en/2017/msk/"}
-      - {language: ru, text: "https://mobiusconf.com/2017/msk/"}
+      - {language: en, text: "https://2017msk.mobiusconf.com/en/"}
+      - {language: ru, text: "https://2017msk.mobiusconf.com/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236rwEv556SL9jD_m7E5FjfA-
     talkIds: [647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665]
   - eventTypeId: 9
@@ -1066,8 +1067,8 @@ events:
     days:
       - {startDate: "2018-04-20", endDate: "2018-04-21", placeId: 4}
     siteLink:
-      - {language: en, text: "https://mobiusconf.com/en/2018/spb/"}
-      - {language: ru, text: "https://mobiusconf.com/2018/spb/"}
+      - {language: en, text: "https://mobius-piter.ru/en/2018/spb/"}
+      - {language: ru, text: "https://mobius-piter.ru/2018/spb/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236pm38EMCT2Ue-fo3j-WfYbX
     talkIds: [816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837,
         838, 839, 840, 841, 842, 843, 844, 845]
@@ -1078,8 +1079,8 @@ events:
     days:
       - {startDate: "2018-12-08", endDate: "2018-12-09", placeId: 11}
     siteLink:
-      - {language: en, text: "https://mobiusconf.com/en/2018/msk/"}
-      - {language: ru, text: "https://mobiusconf.com/2018/msk/"}
+      - {language: en, text: "https://2018msk.mobiusconf.com/en/"}
+      - {language: ru, text: "https://2018msk.mobiusconf.com/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236ob2oOxaJ4VPSVb9M897UGE
     talkIds: [1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1149,
         1150, 1151, 1152, 1153, 1154, 1155, 1156, 1157, 1158, 1159, 1160, 1161, 1162, 1163]
@@ -1102,8 +1103,8 @@ events:
     days:
       - {startDate: "2019-12-07", endDate: "2019-12-08", placeId: 9}
     siteLink:
-      - {language: en, text: "https://mobiusconf.com/en/"}
-      - {language: ru, text: "https://mobiusconf.com"}
+      - {language: en, text: "https://2019msk.mobiusconf.com/en/"}
+      - {language: ru, text: "https://2019msk.mobiusconf.com/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236pt711o6853Gs_yf2gqM5Lt
     talkIds: [254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275,
         276, 277, 278, 279, 280, 281, 282, 283]
@@ -1114,8 +1115,8 @@ events:
     days:
       - {startDate: "2020-06-22", endDate: "2020-06-25", placeId: 24}
     siteLink:
-      - {language: en, text: "https://mobius-piter.ru/en/"}
-      - {language: ru, text: "https://mobius-piter.ru/"}
+      - {language: en, text: "https://mobius-piter.ru/2020/spb/en/"}
+      - {language: ru, text: "https://mobius-piter.ru/2020/spb/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236pxEWPQUlg98OYU2O1WRw1e
     talkIds: [2393, 2489, 1965, 1972, 2490, 2491, 2437, 2492, 2104, 2109, 2394, 1973, 2350, 2493, 2494, 2495, 2438, 2496,
         1971, 1964, 2395, 1961, 2107, 2108, 2497, 2396, 1967, 1966, 2105, 2227, 1974, 2226, 1969, 2498, 2500, 2352, 1962,
@@ -1127,8 +1128,8 @@ events:
     days:
       - {startDate: "2020-11-11", endDate: "2020-11-14", placeId: 24}
     siteLink:
-      - {language: en, text: "https://mobius-moscow.ru/en/"}
-      - {language: ru, text: "https://mobius-moscow.ru/"}
+      - {language: en, text: "https://2020msk.mobiusconf.com/en/"}
+      - {language: ru, text: "https://2020msk.mobiusconf.com/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236p4NcChx-G-aWNuiXgce80d
     talkIds: [2627, 2628, 2629, 2630, 2631, 2632, 2633, 2634, 2635, 2636, 2637, 2638, 2639, 2640, 2641, 2642, 2643, 2644,
         2645, 2646, 2647, 2648, 2649, 2650, 2651, 2652, 2653, 2654, 2683, 2655, 2656, 2837, 2657]
@@ -1172,6 +1173,16 @@ events:
     talkIds: [3666, 3667, 3668, 3669, 3670, 3671, 3672, 3673, 3674, 3675, 3676, 3677, 3678, 3679, 3680, 3681, 3682, 3683,
               3684, 3685, 3686, 3687, 3688, 3689, 3690, 3691, 3692, 3693, 3694, 3695, 3696, 3697, 3698, 3699, 3700, 3701, 3702,
               3747, 3706, 3703, 3748, 3705, 3704, 3749, 3708, 3707, 3750, 3751, 3709]
+  - eventTypeId: 9
+    name:
+      - {language: en, text: "Mobius 2022 Autumn"}
+    days:
+      - {startDate: "2022-11-09", endDate: "2022-11-10", placeId: 24}
+      - {startDate: "2022-11-21", endDate: "2022-11-21", placeId: 9}
+    siteLink: []
+    talkIds: [4285, 4286, 4287, 4288, 4289, 4290, 4291, 4292, 4293, 4294, 4295, 4296, 4297, 4298, 4299, 4300, 4301, 4302,
+              4303, 4304, 4305, 4306, 4307, 4308, 4309, 4310, 4311, 4312, 4313, 4314, 4315, 4316, 4317, 4318, 4319, 4320, 4321,
+              4322, 4323, 4324, 4325, 4326, 4327, 4328, 4329, 4330]
   # SPTDC
   - eventTypeId: 10
     name:
@@ -1232,6 +1243,7 @@ events:
       - {startDate: "2022-10-17", endDate: "2022-10-18", placeId: 24}
       - {startDate: "2022-10-29", endDate: "2022-10-29", placeId: 4}
     siteLink: []
+    youtubeLink: https://www.youtube.com/playlist?list=PLeN_80lmoMY1c5C4uwgSE21ZUfAEu6hp0
     talkIds: [3984, 3985, 3986, 3987, 3988, 3989, 3990, 3991, 4278, 3992, 3993, 3994, 3995, 3996, 3997, 3998, 4000, 4001,
               4002, 4003, 4005, 4006, 4007, 4008, 4009, 4010, 4011, 4012, 4013, 4014, 4015, 4134, 4017, 4018, 4019, 4020, 4021,
               4022, 4023, 4024, 4025, 4026, 4027, 4028]
@@ -1310,6 +1322,7 @@ events:
     days:
       - {startDate: "2022-10-08", endDate: "2022-10-08", placeId: 24}
     siteLink: []
+    youtubeLink: https://www.youtube.com/playlist?list=PLmJD_ICvgPy3VeQ5BETksiDD1ebDvBv_8
     talkIds: [3972, 3973, 3974, 3975, 3976, 3977, 3978, 3979, 3980, 3981, 3982, 3983]
   # JUG.MSK
   - eventTypeId: 13
