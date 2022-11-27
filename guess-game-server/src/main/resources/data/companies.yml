@@ -3705,3 +3705,57 @@ companies:
       - {language: en, text: "Web standards"}
       - {language: ru, text: Веб-стандарты}
     siteLink: https://web-standards.ru
+  - id: 1015
+    name:
+      - {language: en, text: Gradle}
+    siteLink: https://gradle.org
+  - id: 1016
+    name:
+      - {language: en, text: "Linearity GmbH"}
+    siteLink: https://www.vectornator.io
+  - id: 1017
+    name:
+      - {language: en, text: Adapty}
+    siteLink: https://adapty.io
+  - id: 1018
+    name:
+      - {language: en, text: CocoaHeads}
+    siteLink: https://cocoa.heads.club
+  - id: 1019
+    name:
+      - {language: en, text: Ziina}
+    siteLink: https://ziina.com
+  - id: 1020
+    name:
+      - {language: en, text: Joom}
+    siteLink: https://www.joom.com
+  - id: 1021
+    name:
+      - {language: en, text: "Open Mobile Platform"}
+      - {language: ru, text: "Открытая Мобильная Платформа"}
+    siteLink: https://www.omp.ru
+  - id: 1022
+    name:
+      - {language: en, text: "YouTube channel Mobile Developer"}
+    siteLink: https://www.youtube.com/c/mobiledeveloper
+  - id: 1023
+    name:
+      - {language: en, text: RuStore}
+    siteLink: https://www.rustore.ru
+  - id: 1024
+    name:
+      - {language: en, text: GetSquire}
+    siteLink: https://getsquire.com
+  - id: 1025
+    name:
+      - {language: en, text: Simla.com}
+    siteLink: https://www.simla.com
+  - id: 1026
+    name:
+      - {language: en, text: RetailCRM}
+    siteLink: https://www.retailcrm.ru
+  - id: 1027
+    name:
+      - {language: en, text: Delimobil}
+      - {language: ru, text: Делимобиль}
+    siteLink: https://delimobil.ru

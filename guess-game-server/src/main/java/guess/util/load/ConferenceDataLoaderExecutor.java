@@ -2360,5 +2360,15 @@ public class ConferenceDataLoaderExecutor {
 //                                "«Годные и не очень» практики подбора и наставничества разработчиков",
 //                                "«ГосТех»: новая жизнь", "Открытие offline-части конференции Joker 2022",
 //                                "Закрытие конференции Joker 2022", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2022, 11, 9), "2022 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Mobius 2022 Autumn", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции Mobius 2022 Autumn",
+//                                "Подведение итогов online-части конференции Mobius 2022 Autumn",
+//                                "Открытие офлайн-части конференции Mobius 2022 Autumn", "Закрытие конференции Mobius 2022 Autumn",
+//                                "Квиз по Android", "Кроссплатформенный переполох: присматриваемся к KMM",
+//                                "Квиз по iOS", "Как грамотно говорить с тимлидом, если хочешь расти", "Квиз по Flutter",
+//                                "Квиз по мобильной разработке",
+//                                "Перспективы платформ: кто займет основную нишу, на чем все будут работать?")));
     }
 }

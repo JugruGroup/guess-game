@@ -1,4 +1,9 @@
 companyGroups:
+  - name: "Adapty, CocoaHeads"
+    items: [
+        Adapty,
+        CocoaHeads
+    ]
   - name: "ALM Works / Tempo"
     items: [
         "ALM Works",
@@ -60,10 +65,15 @@ companyGroups:
         "Red Hat",
         "Kiwi TCMS"
     ]
+  - name: "Simla.com / RetailCRM"
+    items: [
+        Simla.com,
+        RetailCRM
+    ]
   - name: "Synthesized / MIPT"
     items: [
-        "Synthesized",
-        "MIPT"
+        Synthesized,
+        MIPT
     ]
   - name: VK/Tarantool
     items: [
