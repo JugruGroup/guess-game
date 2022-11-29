@@ -2338,7 +2338,15 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов online-части конференции DotNext 2022 Autumn",
 //                                "Открытие офлайн-части конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
 //                                "Закрытие конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
-//                                "Lightning Talks: что нас бесит в .NET", "Lightning talks", "Fail-секция")));
+//                                "Lightning Talks: что нас бесит в .NET", "Lightning talks", "Fail-секция",
+//                                "High refresh web", "Введение в реактивное программирование",
+//                                "WebTransport и его место среди других протоколов", "ESLint — больше чем просто \"extend\"",
+//                                "Shared Modules", "Код как данные, или Будь крутым программистом",
+//                                "Хаки и ветчина из JS-геймдева, которые подходят для велосипедных оптимизаций приложений в вебе",
+//                                "Event Sourcing: глубокое погружение", "Анимации и их оптимизация в корпоративных проектах",
+//                                "А почему бы не вынести все конфиги в отдельный пакет, сократив бойлерплейт до нуля?",
+//                                "Сколько это стоит", "Батчинг в React", "Ситидрайв: поездка продолжается",
+//                                "Дебаты.JS")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2022, 11, 7), "2022 Autumn",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2022 Autumn", null, List.of(24L, 9L)),
@@ -2370,5 +2378,20 @@ public class ConferenceDataLoaderExecutor {
 //                                "Квиз по iOS", "Как грамотно говорить с тимлидом, если хочешь расти", "Квиз по Flutter",
 //                                "Квиз по мобильной разработке",
 //                                "Перспективы платформ: кто займет основную нишу, на чем все будут работать?")));
+//        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2022, 11, 10), "2022 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("HolyJS 2022 Autumn", null, List.of(24L, 9L)),
+//                        Set.of("Открытие HolyJS 2022 Autumn", "Подведение итогов онлайн-части HolyJS 2022 Autumn",
+//                                "Открытие офлайн-части конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
+//                                "Закрытие конференций DotNext 2022 Autumn и HolyJS 2022 Autumn",
+//                                "Микрофронтенды: внедрение в проект с нуля или в уже текущий проект",
+//                                "Как перейти на другой фреймворк, поменять команду и не сойти с ума",
+//                                "Fail-секция", "Lightning Talks: что нас бесит в .NET", "Lightning talks",
+//                                "Что нового в .NET 7 и C# 11", "Алгоритмы троттлинга запросов",
+//                                "Instruction pipelining от 8086 до 2022: как работает конвейер в современных процессорах",
+//                                "Уязвимость регулярных выражений: теория и практика ReDoS-атак",
+//                                "lock(_sync): иллюзия идеального выбора", "Open source с точки зрения юриста",
+//                                "Загадочный EF Core, или Как написать свое расширение", "Архитектурные тесты",
+//                                "Введение в Microsoft SignalR", "[Test] + <T> = ❤️")));
     }
 }
