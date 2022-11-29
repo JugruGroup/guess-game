@@ -2392,6 +2392,6 @@ public class ConferenceDataLoaderExecutor {
 //                                "Уязвимость регулярных выражений: теория и практика ReDoS-атак",
 //                                "lock(_sync): иллюзия идеального выбора", "Open source с точки зрения юриста",
 //                                "Загадочный EF Core, или Как написать свое расширение", "Архитектурные тесты",
-//                                "Введение в Microsoft SignalR", "[Test] + <T>  = ❤️")));
+//                                "Введение в Microsoft SignalR", "[Test] + <T> = ❤️")));
     }
 }

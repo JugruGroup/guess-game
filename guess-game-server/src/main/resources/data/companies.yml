@@ -3759,3 +3759,29 @@ companies:
       - {language: en, text: Delimobil}
       - {language: ru, text: Делимобиль}
     siteLink: https://delimobil.ru
+  - id: 1028
+    name:
+      - {language: en, text: HackerOne}
+    siteLink: https://www.hackerone.com
+  - id: 1029
+    name:
+      - {language: en, text: SimBaze}
+    siteLink: https://simbaze.com
+  - id: 1030
+    name:
+      - {language: en, text: Snapview.de}
+    siteLink: https://www.snapview.de
+  - id: 1031
+    name:
+      - {language: en, text: lumen5}
+    siteLink: https://lumen5.com
+  - id: 1032
+    name:
+      - {language: en, text: GeekBoards}
+    siteLink: https://geekboards.ru
+  - id: 1033
+    name:
+      - {language: en, text: "Pink Unicorn"}
+  - id: 1034
+    name:
+      - {language: en, text: Cloud}
