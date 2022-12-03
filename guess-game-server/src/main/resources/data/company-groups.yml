@@ -25,6 +25,11 @@ companyGroups:
         "DPI.Solutions",
         "EPAM"
     ]
+  - name: "DZ, E-Legion"
+    items: [
+        DZ,
+        "E-Legion"
+    ]
   - name: Gritstep/Dotnetos
     items: [
         Gritstep,

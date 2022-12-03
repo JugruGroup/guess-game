@@ -19,5 +19,6 @@ public enum Conference {
     TECH_TRAIN,
     VIDEO_TECH,
     PITER_PY,
+    FLOW,
     SNOW_ONE
 }

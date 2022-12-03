@@ -3785,3 +3785,42 @@ companies:
   - id: 1034
     name:
       - {language: en, text: Cloud}
+  - id: 1035
+    name:
+      - {language: en, text: IIBA}
+    siteLink: https://www.iiba.org
+  - id: 1036
+    name:
+      - {language: en, text: Сonsaltica}
+      - {language: ru, text: Консалтика}
+    siteLink: https://consaltica.ru
+  - id: 1037
+    name:
+      - {language: en, text: BIA-Technologies}
+    siteLink: https://bia-tech.ru
+  - id: 1038
+    name:
+      - {language: en, text: NextWay}
+    siteLink: https://nextway.pro
+  - id: 1039
+    name:
+      - {language: en, text: Center-Invest}
+      - {language: ru, text: "Банк «Центр-инвест»"}
+    siteLink: https://www.centrinvest.ru
+  - id: 1040
+    name:
+      - {language: en, text: "Summer Analytical Festival"}
+      - {language: ru, text: "ЛАФ (Летний аналитический фестиваль)"}
+    siteLink: https://lafest.ru
+  - id: 1041
+    name:
+      - {language: en, text: E-Legion}
+    siteLink: https://www.e-legion.com
+  - id: 1042
+    name:
+      - {language: en, text: "Systems Education"}
+    siteLink: https://systems.education
+  - id: 1043
+    name:
+      - {language: en, text: documentat.io}
+    siteLink: https://documentat.io
