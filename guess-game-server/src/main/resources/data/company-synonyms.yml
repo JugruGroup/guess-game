@@ -130,6 +130,10 @@ companySynonyms:
     synonyms: [
         "DINO Systems"
     ]
+  - name: "Digital Zone"
+    synonyms: [
+        DZ
+    ]
   - name: dotdigital
     synonyms: [
         dotmailer
@@ -488,18 +492,32 @@ companySynonyms:
   - name: Sportmaster
     synonyms: [
         "Sportmaster Lab",
-        "SM Lab"
+        "SM Lab",
+        SportmasterLab
     ]
   - name: Sudo
     synonyms: [
         "Sudo Ltd",
         "ООО «Судо»"
     ]
+  - name: "Summer Analytical Festival"
+    synonyms: [
+        "Summer Analytical Festival (lafest.ru)"
+    ]
+  - name: "Systems Education"
+    synonyms: [
+        Systems.Education
+    ]
+  - name: Tarantool
+    synonyms: [
+        "Tarantool (VK tech)"
+    ]
   - name: Tinkoff
     synonyms: [
         Tinkoff.ru,
         "TCS Bank",
-        "ТКС Банк"
+        "ТКС Банк",
+        "IT's Tinkoff"
     ]
   - name: Toloka
     synonyms: [

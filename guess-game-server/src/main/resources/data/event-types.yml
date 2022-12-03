@@ -477,3 +477,28 @@ eventTypes:
     telegramLink: https://t.me/PiterPy_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+  - id: 19
+    conference: FLOW
+    logoFileName: flow.jpg
+    organizerId: 0
+    name:
+      - {language: en, text: Flow}
+    shortDescription:
+      - {language: en, text: "Conference on systems and business analysis"}
+      - {language: ru, text: "Конференция по системному и бизнес-анализу"}
+    longDescription:
+      - {language: en, text: "Flow is a conference on\_systems and business analysis for those who create complex systems.\
+            \ The program will include speeches about designing service interactions, analytical tools, modeling business\
+            \ processes, and\_working with requirements. The conference is\_organized by\_[JUG\_Ru\_Group](https://jugru.org/en)."}
+      - {language: ru, text: "Flow — конференция по\_системному и\_бизнес‑анализу для тех, кто создает сложные системы\
+            . В\_программе будут выступления про\_проектирование взаимодействия сервисов, инструменты аналитика, моделиров\
+            ание бизнес-процессов и\_работу с\_требованиями. Организатор конференции — [JUG\_Ru\_Group](https://jugru.org/)."}
+    siteLink:
+      - {language: en, text: "https://flowconf.ru/en/"}
+      - {language: ru, text: "https://flowconf.ru/"}
+    vkLink: https://vk.com/flowconf
+    twitterLink: https://twitter.com/Flow_conf
+    youtubeLink: https://www.youtube.com/channel/UC6kyNBysyJZIs8bKBf7YhVg
+    telegramLink: https://t.me/flowconf_channel
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow

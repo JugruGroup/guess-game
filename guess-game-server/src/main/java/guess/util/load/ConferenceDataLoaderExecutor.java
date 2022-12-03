@@ -2393,5 +2393,9 @@ public class ConferenceDataLoaderExecutor {
 //                                "lock(_sync): иллюзия идеального выбора", "Open source с точки зрения юриста",
 //                                "Загадочный EF Core, или Как написать свое расширение", "Архитектурные тесты",
 //                                "Введение в Microsoft SignalR", "[Test] + <T> = ❤️")));
+//        loadTalksSpeakersEvent(Conference.FLOW, LocalDate.of(2022, 11, 29), "2022",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Flow 2022", null, List.of(24L)),
+//                        Set.of("Открытие конференции Flow 2022", "Закрытие конференции Flow 2022")));
     }
 }
