@@ -1178,6 +1178,7 @@ class JrgCmsDataLoaderTest {
         final String VALUE0 = "user";
         final String VALUE1 = "-";
         final String VALUE2 = "t.me/alexmeta";
+        final String VALUE3 = "igerta (тг)";
 
         JrgContact jrgContact0 = new JrgContact();
 
@@ -1190,9 +1191,12 @@ class JrgCmsDataLoaderTest {
         JrgContact jrgContact3 = new JrgContact();
         jrgContact3.setValue(VALUE2);
 
-        List<JrgContact> jrgContacts = List.of(jrgContact0, jrgContact1, jrgContact2, jrgContact3);
+        JrgContact jrgContact4 = new JrgContact();
+        jrgContact4.setValue(VALUE3);
 
-        assertEquals(4, jrgContacts.size());
+        List<JrgContact> jrgContacts = List.of(jrgContact0, jrgContact1, jrgContact2, jrgContact3, jrgContact4);
+
+        assertEquals(5, jrgContacts.size());
         assertEquals(1, jrgContacts.stream()
                 .filter(c -> c.getValue() == null)
                 .count());
@@ -1205,11 +1209,14 @@ class JrgCmsDataLoaderTest {
         assertEquals(1, jrgContacts.stream()
                 .filter(c -> VALUE2.equals(c.getValue()))
                 .count());
+        assertEquals(1, jrgContacts.stream()
+                .filter(c -> VALUE3.equals(c.getValue()))
+                .count());
 
         List<JrgContact> actual = JrgCmsDataLoader.getFixedContacts(jrgContacts);
 
-        assertEquals(4, actual.size());
-        assertEquals(3, actual.stream()
+        assertEquals(5, actual.size());
+        assertEquals(4, actual.stream()
                 .filter(c -> c.getValue() == null)
                 .count());
         assertEquals(1, actual.stream()
@@ -1220,6 +1227,9 @@ class JrgCmsDataLoaderTest {
                 .count());
         assertEquals(0, actual.stream()
                 .filter(c -> VALUE2.equals(c.getValue()))
+                .count());
+        assertEquals(0, actual.stream()
+                .filter(c -> VALUE3.equals(c.getValue()))
                 .count());
     }
 

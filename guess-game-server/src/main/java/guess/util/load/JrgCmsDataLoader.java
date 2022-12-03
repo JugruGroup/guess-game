@@ -663,7 +663,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
      * @return fixed contacts
      */
     static List<JrgContact> getFixedContacts(List<JrgContact> contacts) {
-        List<String> invalidPatternRegExpList = List.of("-", "^t.me/.*");
+        List<String> invalidPatternRegExpList = List.of("-", "^t.me/.*", "^.*\\(тг\\).*$");
 
         return contacts.stream()
                 .map(c -> {
