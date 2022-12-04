@@ -31771,24 +31771,27 @@ speakers:
     photoFileName: 2211.jpg
     photoUpdatedAt: 2022-11-23T11:50:01Z[UTC]
     name:
-      - {language: en, text: "Maxim Chernukhin"}
+      - {language: en, text: "Maksim Chernukhin"}
       - {language: ru, text: "Максим Чернухин"}
     companyIds: [613]
     bio:
-      - {language: en, text: "<p>Architect of digital sales platform in Alfa-Bank. Developed project architecture and infrastructure\
-            \ with full software lifecycle in mind. Created a platform that is successfully used outside the company, and\
-            \ its implementation increased the number of sales by 2-4 times. Leads cloud technology implementation project\
-            \ in Alfa-Bank. He has always liked complex and interesting tasks, which he finds both in IT and related fields\
-            \ - in hiring employees, motivation management or climbing Elbrus. He graduated from Bauman Moscow State Technical\
-            \ University and during 8 years in IT he managed to work with different languages of back and front development\
-            \ and take part in projects related to machine learning and big data.</p>"}
-      - {language: ru, text: "<p>Архитектор цифровой платформы продаж в Альфа-Банке. Занимается разработкой архитектуры и\
-            \ инфраструктуры проектов с учётом полного жизненного цикла ПО. Создал платформу, которая успешно используется\
-            \ за пределами компании, а её внедрение увеличило число продаж в 2-4 раза. Ведёт проект по внедрению облачных\
-            \ технологий в Альфа-Банк. Всегда любил сложные и интересные задачи, которые находит как в IT, так и в смежных\
-            \ областях &mdash; в найме сотрудников, управлении мотивацией или восхождении на Эльбрус. Окончил МГТУ им. Бау\
-            мана и за 8 лет в IT успел поработать с разными языками back и front разработки и поучаствовать в проектах, св\
-            язанных с машинным обучением и большими данными.</p>"}
+      - language: en
+        text: "<p>Maksim is an Architect / IT leader of digital sales platform in Alfa-Bank. He is engaged in the development\
+            \ of architecture and infrastructure projects, taking into account the full life cycle of the software. Created\
+            \ a platform that is successfully used outside the company, and its implementation has increased the number of\
+            \ sales by 2-4 times. Leads cloud technology implementation project at Alfa Bank.</p>\n<p>He likes complex and\
+            \ interesting tasks, which he finds both in IT and in related fields, such as hiring employees, motivation management\
+            \ or climbing Elbrus. He graduated from Bauman Moscow State Technical University and during 8 years in IT he managed\
+            \ to work with different back- and frontend development languages and to take part in projects with machine learning\
+            \ and big data.</p>"
+      - language: ru
+        text: "<p>Максим &mdash; архитектор / IT leader цифровой платформы продаж в Альфа-Банке. Занимается разработкой ар\
+            хитектуры и инфраструктуры проектов с учетом полного жизненного цикла ПО. Создал платформу, которая успешно ис\
+            пользуется за пределами компании, а ее внедрение увеличило число продаж в 2-4 раза. Ведет проект по внедрению\
+            \ облачных технологий в Альфа-Банк.</p>\n<p>Любит сложные и интересные задачи, которые находит как в IT, так и\
+            \ в смежных областях таких, как найм сотрудников, управление мотивацией или восхождение на Эльбрус. Окончил МГ\
+            ТУ им. Баумана и за 8 лет в IT успел поработать с разными языками back- и front-разработки и поучаствовать в п\
+            роектах с машинным обучением и большими данными.</p>"
   - id: 2212
     photoFileName: 2212.jpg
     photoUpdatedAt: 2022-06-08T10:15:50Z[UTC]
