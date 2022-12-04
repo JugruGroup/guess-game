@@ -35836,7 +35836,7 @@ speakers:
       - {language: en, text: "<p>Has been designing and developing interesting products for many years. Works at Banks Soft\
             \ Systems. Before that he worked at Mail.ru (VK), Golden Telecom.</p>"}
       - {language: ru, text: "<p>Много лет занимается проектированием и разработкой интересных продуктов. Работает в Banks\
-            \ Soft Systems. До этого работал в Mail.ru(VK), Golden Telecom (ВымпелКом).</p>"}
+            \ Soft Systems. До этого работал в Mail.ru (VK), Golden Telecom (ВымпелКом).</p>"}
   - id: 2498
     photoFileName: 2498.jpg
     photoUpdatedAt: 2022-10-21T14:52:34Z[UTC]
@@ -35945,6 +35945,7 @@ speakers:
             нал как универсальный боец, потом углубился в системную аналитику. Сейчас так же совмещаю тимлидство с  ролями\
             \ лида общебанковского стрима найма системных аналитиков (со стороны интервьюеров) и держателя профессии «Сист\
             емный анализ» в Тинькофф Бизнес."}
+    habr: evgenii_zinger
   - id: 2506
     photoFileName: 2506.jpg
     photoUpdatedAt: 2022-10-25T11:21:46Z[UTC]
@@ -36069,7 +36070,8 @@ speakers:
     photoFileName: 2513.jpg
     photoUpdatedAt: 2022-11-28T12:10:10Z[UTC]
     name:
-      - {language: en, text: "Константин Валеев"}
+      - {language: en, text: "Konstantin Valeev"}
+      - {language: ru, text: "Константин Валеев"}
     companyIds: []
     bio:
       - {language: en, text: "<p>He was head of system analysis and documentation at Rostelecom Information Technologies,\
@@ -36089,6 +36091,8 @@ speakers:
       - {language: ru, text: "Занимается заказной разработкой технической документации. Проводит учебные курсы для техниче\
             ских писателей и всех, кто хочет разрабатывать качественную документацию. Помогает компаниям настраивать проце\
             ссы документирования."}
+    gitHub: sfactor
+    habr: chebureque
   - id: 2515
     photoFileName: 2515.jpg
     photoUpdatedAt: 2022-11-25T15:40:45Z[UTC]
@@ -36101,6 +36105,7 @@ speakers:
             \ Telegram channel.</p>"}
       - {language: ru, text: "Автор Telegram-канала DocOps (@docops). Тимлид команды Developer Experience в Tarantool (VK\
             \ tech)."}
+    habr: nick_volynkin
   - id: 2516
     photoFileName: 2516.jpg
     photoUpdatedAt: 2022-11-19T10:55:08Z[UTC]
@@ -36111,6 +36116,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Solution Architect. Makes complex things simple.</p>"}
       - {language: ru, text: "<p>Архитектор решений. Делает сложные вещи простыми.</p>"}
+    gitHub: romkavt
+    habr: romkavt
   - id: 2517
     photoFileName: 2517.jpg
     photoUpdatedAt: 2022-10-28T08:00:28Z[UTC]
@@ -36126,6 +36133,7 @@ speakers:
             \ лет. Создал несколько крупных систем для российских банков и фондового рынка. Последние 7 лет занимается edTech-п\
             роектами. Также учит системных аналитиков.</p>"}
     twitter: ykkks
+    habr: Ykkks
   - id: 2518
     photoFileName: 2518.jpg
     photoUpdatedAt: 2022-09-06T13:40:07Z[UTC]
@@ -36142,3 +36150,5 @@ speakers:
             \ в консалтинговых проектах по постановке процессов в компаниях, специализирующихся на разработке ПО. Автор не\
             скольких курсов по разработке и управлению требованиями, управлению проектами, разработке и документированию с\
             истемной архитектуры.</p>"}
+    twitter: enotinka
+    habr: enotinka

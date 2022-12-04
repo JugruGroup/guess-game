@@ -1975,7 +1975,7 @@ public class ConferenceDataLoaderExecutor {
     }
 
     public static void main(String[] args) throws IOException, SpeakerDuplicatedException, NoSuchFieldException {
-        // Uncomment one of lines and run
+        // Uncomment one or more lines and run
 
         // Load event tags
 //        loadTags(CmsType.CONTENTFUL, "2020");
