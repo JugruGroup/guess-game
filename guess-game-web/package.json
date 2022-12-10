@@ -29,12 +29,13 @@
     "chart.js": "^4.0.1",
     "core-js": "^3.26.1",
     "get-video-id": "^3.6.5",
-    "ngx-markdown": "^14.0.1",
+    "marked": "^4.2.4",
+    "ngx-markdown": "^15.0.0",
     "primeicons": "^6.0.1",
-    "primeng": "^14.2.2",
+    "primeng": "^15.0.0-rc.1",
     "rxjs": "^7.6.0",
     "tslib": "^2.4.1",
-    "zone.js": "~0.11.8"
+    "zone.js": "^0.12.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~15.0.3",
@@ -43,7 +44,8 @@
     "@angular/language-service": "^15.0.3",
     "@types/jasmine": "^4.3.1",
     "@types/jasminewd2": "^2.0.10",
-    "@types/node": "^18.11.12",
+    "@types/marked": "^4.0.8",
+    "@types/node": "^18.11.13",
     "ajv": "^8.11.2",
     "codelyzer": "^6.0.2",
     "jasmine-core": "^4.5.0",
