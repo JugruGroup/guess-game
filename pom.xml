@@ -36,7 +36,7 @@
         <spring-boot.version>3.0.0</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
-        <node.version>v16.13.2</node.version>
+        <node.version>v18.12.1</node.version>
         <ng.build.arguments>-- --configuration=production</ng.build.arguments>
 
         <sonar.coverage.exclusions>
