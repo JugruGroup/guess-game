@@ -32,7 +32,7 @@
     "marked": "^4.2.4",
     "ngx-markdown": "^15.0.0",
     "primeicons": "^6.0.1",
-    "primeng": "^15.0.0-rc.1",
+    "primeng": "^15.0.0",
     "rxjs": "^7.6.0",
     "tslib": "^2.4.1",
     "zone.js": "^0.12.0"
