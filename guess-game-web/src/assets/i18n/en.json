@@ -144,7 +144,8 @@
       "talkTimeColumn": "Time",
       "trackColumn": "Track",
       "nameColumn": "Name",
-      "speakersColumn": "Speakers"
+      "speakersColumn": "Speakers",
+      "materialsColumn": "Materials"
     },
     "search": {
       "title": "Search",
