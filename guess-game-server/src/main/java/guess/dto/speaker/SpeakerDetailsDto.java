@@ -18,6 +18,6 @@ public record SpeakerDetailsDto(SpeakerDto speaker, List<TalkSuperBriefDto> talk
                                                  Function<Event, EventType> eventEventTypeFunction, Language language) {
         return new SpeakerDetailsDto(
                 SpeakerDto.convertToDto(speaker, language),
-                TalkSuperBriefDto.convertToBriefDto(talks, talkEventFunction, eventEventTypeFunction, language));
+                TalkSuperBriefDto.convertToSuperBriefDto(talks, talkEventFunction, eventEventTypeFunction, language));
     }
 }

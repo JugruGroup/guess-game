@@ -22,12 +22,12 @@ import java.util.function.Function;
  * Talk DTO (super brief).
  */
 public class TalkSuperBriefDto {
-    public static class TalkBriefDtoDetails {
+    public static class TalkSuperBriefDtoDetails {
         private final EventSuperBriefDto event;
         private final String eventTypeLogoFileName;
         private final List<SpeakerSuperBriefDto> speakers;
 
-        public TalkBriefDtoDetails(EventSuperBriefDto event, String eventTypeLogoFileName, List<SpeakerSuperBriefDto> speakers) {
+        public TalkSuperBriefDtoDetails(EventSuperBriefDto event, String eventTypeLogoFileName, List<SpeakerSuperBriefDto> speakers) {
             this.event = event;
             this.eventTypeLogoFileName = eventTypeLogoFileName;
             this.speakers = speakers;
@@ -40,10 +40,10 @@ public class TalkSuperBriefDto {
     private final Long talkDay;
     private final LocalDateTime talkTime;
     private final Long track;
-    private final TalkBriefDtoDetails details;
+    private final TalkSuperBriefDtoDetails details;
 
     public TalkSuperBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkTime, Long track,
-                             TalkBriefDtoDetails details) {
+                             TalkSuperBriefDtoDetails details) {
         this.id = id;
         this.name = name;
         this.talkDate = talkDate;
@@ -89,8 +89,8 @@ public class TalkSuperBriefDto {
         return details.speakers;
     }
 
-    public static TalkSuperBriefDto convertToBriefDto(Talk talk, Function<Talk, Event> talkEventFunction,
-                                                      Function<Event, EventType> eventEventTypeFunction, Language language) {
+    public static TalkSuperBriefDto convertToSuperBriefDto(Talk talk, Function<Talk, Event> talkEventFunction,
+                                                           Function<Event, EventType> eventEventTypeFunction, Language language) {
         var event = talkEventFunction.apply(talk);
         var eventType = eventEventTypeFunction.apply(event);
         Map<Long, LocalDate> talkDayDates = new HashMap<>();
@@ -126,7 +126,7 @@ public class TalkSuperBriefDto {
                 talk.getTalkDay(),
                 talkTime,
                 talk.getTrack(),
-                new TalkBriefDtoDetails(
+                new TalkSuperBriefDtoDetails(
                         eventSuperBriefDto,
                         eventTypeLogoFileName,
                         speakers
@@ -134,11 +134,11 @@ public class TalkSuperBriefDto {
         );
     }
 
-    public static List<TalkSuperBriefDto> convertToBriefDto(List<Talk> talks, Function<Talk, Event> talkEventFunction,
-                                                            Function<Event, EventType> eventEventTypeFunction,
-                                                            Language language) {
+    public static List<TalkSuperBriefDto> convertToSuperBriefDto(List<Talk> talks, Function<Talk, Event> talkEventFunction,
+                                                                 Function<Event, EventType> eventEventTypeFunction,
+                                                                 Language language) {
         return talks.stream()
-                .map(t -> convertToBriefDto(t, talkEventFunction, eventEventTypeFunction, language))
+                .map(t -> convertToSuperBriefDto(t, talkEventFunction, eventEventTypeFunction, language))
                 .toList();
     }
 }

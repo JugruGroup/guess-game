@@ -41,7 +41,7 @@ public class TalkController {
                                             HttpSession httpSession) {
         List<Talk> talks = talkService.getTalks(eventTypeId, eventId, talkName, speakerName);
         var language = localeService.getLanguage(httpSession);
-        List<TalkSuperBriefDto> talkSuperBriefDtoList = TalkSuperBriefDto.convertToBriefDto(talks, eventService::getEventByTalk,
+        List<TalkSuperBriefDto> talkSuperBriefDtoList = TalkSuperBriefDto.convertToSuperBriefDto(talks, eventService::getEventByTalk,
                 eventTypeService::getEventTypeByEvent, language);
 
         Comparator<TalkSuperBriefDto> comparatorByEventName = Comparator.comparing(t -> t.getEvent().getName());

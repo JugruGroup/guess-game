@@ -12,27 +12,16 @@ import java.util.function.Function;
 /**
  * Talk DTO.
  */
-public class TalkDto extends TalkSuperBriefDto {
+public class TalkDto extends TalkBriefDto {
     private final String description;
     private final String language;
-    private final List<String> presentationLinks;
-    private final List<String> materialLinks;
-    private final List<String> videoLinks;
 
-    public TalkDto(TalkSuperBriefDto talkSuperBriefDto, String description, String language, List<String> presentationLinks,
-                   List<String> materialLinks, List<String> videoLinks) {
-        super(talkSuperBriefDto.getId(), talkSuperBriefDto.getName(), talkSuperBriefDto.getTalkDate(), talkSuperBriefDto.getTalkDay(),
-                talkSuperBriefDto.getTalkTime(), talkSuperBriefDto.getTrack(),
-                new TalkBriefDtoDetails(
-                        talkSuperBriefDto.getEvent(),
-                        talkSuperBriefDto.getEventTypeLogoFileName(),
-                        talkSuperBriefDto.getSpeakers()));
+    public TalkDto(TalkSuperBriefDto talkSuperBriefDto, List<String> presentationLinks, List<String> materialLinks,
+                   List<String> videoLinks, String description, String language) {
+        super(talkSuperBriefDto, presentationLinks, materialLinks, videoLinks);
 
         this.description = description;
         this.language = language;
-        this.presentationLinks = presentationLinks;
-        this.materialLinks = materialLinks;
-        this.videoLinks = videoLinks;
     }
 
     public String getDescription() {
@@ -41,18 +30,6 @@ public class TalkDto extends TalkSuperBriefDto {
 
     public String getLanguage() {
         return language;
-    }
-
-    public List<String> getPresentationLinks() {
-        return presentationLinks;
-    }
-
-    public List<String> getMaterialLinks() {
-        return materialLinks;
-    }
-
-    public List<String> getVideoLinks() {
-        return videoLinks;
     }
 
     public static TalkDto convertToDto(Talk talk, Function<Talk, Event> talkEventFunction,
@@ -65,11 +42,11 @@ public class TalkDto extends TalkSuperBriefDto {
 
         return new TalkDto(
                 convertToBriefDto(talk, talkEventFunction, eventEventTypeFunction, language),
-                description,
-                talk.getLanguage(),
                 talk.getPresentationLinks(),
                 talk.getMaterialLinks(),
-                talk.getVideoLinks());
+                talk.getVideoLinks(),
+                description,
+                talk.getLanguage());
     }
 
     public static List<TalkDto> convertToDto(List<Talk> talks, Function<Talk, Event> talkEventFunction,
