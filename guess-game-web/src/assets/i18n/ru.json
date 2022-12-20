@@ -144,7 +144,8 @@
       "talkTimeColumn": "Время",
       "trackColumn": "Трек",
       "nameColumn": "Наименование",
-      "speakersColumn": "Спикеры"
+      "speakersColumn": "Спикеры",
+      "materialsColumn": "Материалы"
     },
     "search": {
       "title": "Поиск",

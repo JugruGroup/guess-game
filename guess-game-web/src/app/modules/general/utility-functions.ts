@@ -206,6 +206,30 @@ export function getSpeakersWithCompaniesString(speakers: Speaker[]): Speaker[] {
   return speakers;
 }
 
+export function getTalksWithMaterialsOrderNumber(talks: Talk[]): Talk[] {
+  if (talks) {
+    talks.forEach(t => {
+      let materialsOrderNumber = 0;
+
+      if (t.videoLinks) {
+        materialsOrderNumber += t.videoLinks.length * 100;
+      }
+
+      if (t.presentationLinks) {
+        materialsOrderNumber += t.presentationLinks.length * 10;
+      }
+
+      if (t.materialLinks) {
+        materialsOrderNumber += t.materialLinks.length;
+      }
+
+      t.materialsOrderNumber = materialsOrderNumber;
+    });
+  }
+
+  return talks;
+}
+
 export function getFixedMeasureValues(measureValues: number[], quantity: number): number[] {
   if (measureValues) {
     if (measureValues.length < quantity) {

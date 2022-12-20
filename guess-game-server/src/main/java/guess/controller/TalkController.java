@@ -1,7 +1,7 @@
 package guess.controller;
 
 import guess.domain.source.Talk;
-import guess.dto.talk.TalkBriefDto;
+import guess.dto.talk.TalkSuperBriefDto;
 import guess.dto.talk.TalkDetailsDto;
 import guess.service.EventService;
 import guess.service.EventTypeService;
@@ -34,20 +34,20 @@ public class TalkController {
     }
 
     @GetMapping("/talks")
-    public List<TalkBriefDto> getTalks(@RequestParam(required = false) Long eventTypeId,
-                                       @RequestParam(required = false) Long eventId,
-                                       @RequestParam(required = false) String talkName,
-                                       @RequestParam(required = false) String speakerName,
-                                       HttpSession httpSession) {
+    public List<TalkSuperBriefDto> getTalks(@RequestParam(required = false) Long eventTypeId,
+                                            @RequestParam(required = false) Long eventId,
+                                            @RequestParam(required = false) String talkName,
+                                            @RequestParam(required = false) String speakerName,
+                                            HttpSession httpSession) {
         List<Talk> talks = talkService.getTalks(eventTypeId, eventId, talkName, speakerName);
         var language = localeService.getLanguage(httpSession);
-        List<TalkBriefDto> talkBriefDtoList = TalkBriefDto.convertToBriefDto(talks, eventService::getEventByTalk,
+        List<TalkSuperBriefDto> talkSuperBriefDtoList = TalkSuperBriefDto.convertToSuperBriefDto(talks, eventService::getEventByTalk,
                 eventTypeService::getEventTypeByEvent, language);
 
-        Comparator<TalkBriefDto> comparatorByEventName = Comparator.comparing(t -> t.getEvent().getName());
-        Comparator<TalkBriefDto> comparatorByName = Comparator.comparing(TalkBriefDto::getName);
+        Comparator<TalkSuperBriefDto> comparatorByEventName = Comparator.comparing(t -> t.getEvent().getName());
+        Comparator<TalkSuperBriefDto> comparatorByName = Comparator.comparing(TalkSuperBriefDto::getName);
 
-        return talkBriefDtoList.stream()
+        return talkSuperBriefDtoList.stream()
                 .sorted(comparatorByEventName.thenComparing(comparatorByName))
                 .toList();
     }

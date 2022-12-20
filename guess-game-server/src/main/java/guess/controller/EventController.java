@@ -8,6 +8,7 @@ import guess.dto.company.CompanyBriefDto;
 import guess.dto.event.*;
 import guess.dto.speaker.SpeakerBriefDto;
 import guess.dto.talk.TalkBriefDto;
+import guess.dto.talk.TalkSuperBriefDto;
 import guess.service.EventService;
 import guess.service.EventTypeService;
 import guess.service.LocaleService;
@@ -100,17 +101,17 @@ public class EventController {
                 .sorted(comparatorByName.thenComparing(comparatorByCompany))
                 .toList();
 
-        Comparator<TalkBriefDto> comparatorByTalkDate = Comparator.nullsLast(
+        Comparator<TalkSuperBriefDto> comparatorByTalkDate = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkBriefDto::getTalkDay,
+                        TalkSuperBriefDto::getTalkDay,
                         Comparator.nullsLast(Comparator.naturalOrder())));
-        Comparator<TalkBriefDto> comparatorByTalkTime = Comparator.nullsLast(
+        Comparator<TalkSuperBriefDto> comparatorByTalkTime = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkBriefDto::getTalkTime,
+                        TalkSuperBriefDto::getTalkTime,
                         Comparator.nullsLast(Comparator.naturalOrder())));
-        Comparator<TalkBriefDto> comparatorByTrack = Comparator.nullsLast(
+        Comparator<TalkSuperBriefDto> comparatorByTrack = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkBriefDto::getTrack,
+                        TalkSuperBriefDto::getTrack,
                         Comparator.nullsLast(Comparator.naturalOrder())));
         List<TalkBriefDto> sortedTalks = eventDetailsDto.talks().stream()
                 .sorted(comparatorByTalkDate.thenComparing(comparatorByTalkTime).thenComparing(comparatorByTrack))
