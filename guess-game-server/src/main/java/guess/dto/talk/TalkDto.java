@@ -12,21 +12,21 @@ import java.util.function.Function;
 /**
  * Talk DTO.
  */
-public class TalkDto extends TalkBriefDto {
+public class TalkDto extends TalkSuperBriefDto {
     private final String description;
     private final String language;
     private final List<String> presentationLinks;
     private final List<String> materialLinks;
     private final List<String> videoLinks;
 
-    public TalkDto(TalkBriefDto talkBriefDto, String description, String language, List<String> presentationLinks,
+    public TalkDto(TalkSuperBriefDto talkSuperBriefDto, String description, String language, List<String> presentationLinks,
                    List<String> materialLinks, List<String> videoLinks) {
-        super(talkBriefDto.getId(), talkBriefDto.getName(), talkBriefDto.getTalkDate(), talkBriefDto.getTalkDay(),
-                talkBriefDto.getTalkTime(), talkBriefDto.getTrack(),
+        super(talkSuperBriefDto.getId(), talkSuperBriefDto.getName(), talkSuperBriefDto.getTalkDate(), talkSuperBriefDto.getTalkDay(),
+                talkSuperBriefDto.getTalkTime(), talkSuperBriefDto.getTrack(),
                 new TalkBriefDtoDetails(
-                        talkBriefDto.getEvent(),
-                        talkBriefDto.getEventTypeLogoFileName(),
-                        talkBriefDto.getSpeakers()));
+                        talkSuperBriefDto.getEvent(),
+                        talkSuperBriefDto.getEventTypeLogoFileName(),
+                        talkSuperBriefDto.getSpeakers()));
 
         this.description = description;
         this.language = language;

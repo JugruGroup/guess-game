@@ -19,9 +19,9 @@ import java.util.Optional;
 import java.util.function.Function;
 
 /**
- * Talk DTO (brief).
+ * Talk DTO (super brief).
  */
-public class TalkBriefDto {
+public class TalkSuperBriefDto {
     public static class TalkBriefDtoDetails {
         private final EventSuperBriefDto event;
         private final String eventTypeLogoFileName;
@@ -42,8 +42,8 @@ public class TalkBriefDto {
     private final Long track;
     private final TalkBriefDtoDetails details;
 
-    public TalkBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkTime, Long track,
-                        TalkBriefDtoDetails details) {
+    public TalkSuperBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkTime, Long track,
+                             TalkBriefDtoDetails details) {
         this.id = id;
         this.name = name;
         this.talkDate = talkDate;
@@ -89,8 +89,8 @@ public class TalkBriefDto {
         return details.speakers;
     }
 
-    public static TalkBriefDto convertToBriefDto(Talk talk, Function<Talk, Event> talkEventFunction,
-                                                 Function<Event, EventType> eventEventTypeFunction, Language language) {
+    public static TalkSuperBriefDto convertToBriefDto(Talk talk, Function<Talk, Event> talkEventFunction,
+                                                      Function<Event, EventType> eventEventTypeFunction, Language language) {
         var event = talkEventFunction.apply(talk);
         var eventType = eventEventTypeFunction.apply(event);
         Map<Long, LocalDate> talkDayDates = new HashMap<>();
@@ -119,7 +119,7 @@ public class TalkBriefDto {
         String eventTypeLogoFileName = (eventType != null) ? eventType.getLogoFileName() : null;
         List<SpeakerSuperBriefDto> speakers = SpeakerSuperBriefDto.convertToSuperBriefDto(talk.getSpeakers(), language);
 
-        return new TalkBriefDto(
+        return new TalkSuperBriefDto(
                 talk.getId(),
                 LocalizationUtils.getString(talk.getName(), language),
                 talkDate,
@@ -134,9 +134,9 @@ public class TalkBriefDto {
         );
     }
 
-    public static List<TalkBriefDto> convertToBriefDto(List<Talk> talks, Function<Talk, Event> talkEventFunction,
-                                                       Function<Event, EventType> eventEventTypeFunction,
-                                                       Language language) {
+    public static List<TalkSuperBriefDto> convertToBriefDto(List<Talk> talks, Function<Talk, Event> talkEventFunction,
+                                                            Function<Event, EventType> eventEventTypeFunction,
+                                                            Language language) {
         return talks.stream()
                 .map(t -> convertToBriefDto(t, talkEventFunction, eventEventTypeFunction, language))
                 .toList();
