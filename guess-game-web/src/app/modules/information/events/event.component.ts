@@ -8,6 +8,7 @@ import {
   getEventDates,
   getEventDisplayName,
   getSpeakersWithCompaniesString,
+  getTalksWithMaterialsOrderNumber,
   getTalksWithSpeakersString
 } from '../../general/utility-functions';
 
@@ -73,7 +74,7 @@ export class EventComponent implements OnInit {
     }
 
     if (eventDetails?.talks) {
-      eventDetails.talks = getTalksWithSpeakersString(eventDetails.talks);
+      eventDetails.talks = getTalksWithMaterialsOrderNumber(getTalksWithSpeakersString(eventDetails.talks));
     }
 
     return eventDetails;
