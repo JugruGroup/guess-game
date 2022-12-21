@@ -1065,12 +1065,12 @@ speakers:
     bio:
       - {language: en, text: "<p>Currently, lead developer at Odnoklassniki Platform. Joined IT/CS field in 2004 with hydroacoustic\
             \ systems and research projects on static code analysis. Had been developing high-performance distributed services\
-            \ at Yandex Verticals for more than 5 years. Occasionally gives lectures on parallel computing and distributed\
+            \ at Yandex. Verticals for more than 5 years. Occasionally gives lectures on parallel computing and distributed\
             \ data storage.</p>"}
       - {language: ru, text: "<p>Начал свой путь в IT/CS в 2004 с создания систем гидроакустики и исследовательских проект\
-            ов по статическому анализу кода на C/C++. Затем переключился на распределенные системы и разрабатывал высокона\
-            груженные распределенные сервисы на Java/Scala в Яндекс Вертикалях. Сейчас в роли ведущего разработчика Платфо\
-            рмы Одноклассников продолжает распределенное дело. Попутно ведет курсы по NoSQL и Highload системам.</p>"}
+            ов по статическому анализу кода на C/C++. Затем переключился на распределённые системы и разрабатывал высокона\
+            груженные распределённые сервисы на Java/Scala в Яндекс.Вертикалях. Сейчас в роли ведущего разработчика Платфо\
+            рмы Одноклассников продолжает распределённое дело. Попутно ведёт курсы по NoSQL и Highload системам.</p>"}
     twitter: incubos
     gitHub: incubos
     habr: incubos
@@ -3366,10 +3366,10 @@ speakers:
             \ working in Kontur, the largest IT company in Yekaterinburg, now he leads a small infrastructure team that provides\
             \ tools for Observability (Vostok Hercules). Engaged in the development of the Java stack in the company and gives\
             \ talks on Kafka, Java, Hercules, and related technologies."}
-      - {language: ru, text: "С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в Контуре — са\
-            мой крупной IT-компании Екатеринбурга, сейчас руководит небольшой инфраструктурной командой, предоставляющей и\
-            нструменты для Observability (Vostok Hercules). Занимается развитием Java-стека в компании и выступает с докла\
-            дами про Kafka, Java, Hercules и связанные технологии."}
+      - {language: ru, text: "<p>С 2011 года занимается промышленной разработкой на Java. С 2014 года работает в &laquo;Ко\
+            нтуре&raquo; &mdash; самой крупной IT-компании Екатеринбурга, последние 4 года руководил разработкой инструмен\
+            тов для Observability (Vostok Hercules). Занимается развитием стеков Java и Go в компании и выступает с доклад\
+            ами про Kafka, Java, Hercules и связанные технологии.</p>"}
     twitter: GregoryKoshelev
     gitHub: gnkoshelev
     habr: gnkoshelev
@@ -5600,14 +5600,14 @@ speakers:
     photoFileName: 0379.jpg
     photoUpdatedAt: 2022-10-21T11:35:23Z[UTC]
     name:
-      - {language: en, text: "Nikolai Ryzhikov"}
+      - {language: en, text: "Nikolay Ryzhikov"}
       - {language: ru, text: "Николай Рыжиков"}
     companyIds: [235]
     bio:
-      - {language: en, text: "<p>Artistic director of the Health Samurai team. Passionate participant of FHIR, Clojure &amp;\
-            \ PostgreSQL communities.</p>"}
-      - {language: ru, text: "<p>Художественный руководитель команды Health Samurai. Пассионарный участник FHIR, Clojure &amp;\
-            \ PostgreSQL-сообществ.</p>"}
+      - {language: en, text: "<p>CTO Health Samurai, an engineer with ambition, an active member of the HL7 FHIR, Clojure\
+            \ &amp; PostgreSQL communities.</p>"}
+      - {language: ru, text: "<p>CTO Health Samurai, инженер с амбициями, активный участник сообществ HL7 FHIR, Clojure &amp;\
+            \ PostgreSQL.</p>"}
     twitter: niquola
     gitHub: niquola
   - id: 380
