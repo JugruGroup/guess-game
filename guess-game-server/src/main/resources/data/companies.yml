@@ -102,10 +102,6 @@ companies:
     name:
       - {language: en, text: "Align Technology"}
     siteLink: https://www.aligntech.com
-  - id: 28
-    name:
-      - {language: en, text: "Aligned Research Group"}
-    siteLink: https://www.alignedresearch.com
   - id: 29
     name:
       - {language: en, text: Allegro}
@@ -460,10 +456,6 @@ companies:
     name:
       - {language: en, text: DataStax}
     siteLink: https://www.datastax.com
-  - id: 132
-    name:
-      - {language: en, text: DBeaver}
-    siteLink: https://dbeaver.com
   - id: 133
     name:
       - {language: en, text: "DefinedCrowd Corp."}
@@ -575,10 +567,6 @@ companies:
     name:
       - {language: en, text: "Droids On Roids"}
     siteLink: https://www.thedroidsonroids.com
-  - id: 168
-    name:
-      - {language: en, text: "DZ Systems"}
-    siteLink: https://dzsystems.com
   - id: 169
     name:
       - {language: en, text: e-square.io}
@@ -619,10 +607,6 @@ companies:
     name:
       - {language: en, text: EmDev}
     siteLink: https://www.emdev.ru
-  - id: 179
-    name:
-      - {language: en, text: "Emirates Airline"}
-    siteLink: https://www.emirates.com
   - id: 180
     name:
       - {language: en, text: Empear}
@@ -1353,11 +1337,6 @@ companies:
     name:
       - {language: en, text: onqtam.com}
     siteLink: https://onqtam.com
-  - id: 380
-    name:
-      - {language: en, text: "ITIS"}
-      - {language: ru, text: "ИТИС"}
-    siteLink: http://itisinfo.ru
   - id: 381
     name:
       - {language: en, text: Opbeat}
@@ -1394,10 +1373,6 @@ companies:
     name:
       - {language: en, text: OZON}
     siteLink: https://www.ozon.ru
-  - id: 391
-    name:
-      - {language: en, text: "Paladyne Systems"}
-    siteLink: https://www.paladynesys.com
   - id: 392
     name:
       - {language: en, text: "Particular Software"}
@@ -2324,11 +2299,6 @@ companies:
       - {language: en, text: MyOffice}
       - {language: ru, text: МойОфис}
     siteLink: https://myoffice.ru
-  - id: 647
-    name:
-      - {language: en, text: Mosigra}
-      - {language: ru, text: Мосигра}
-    siteLink: https://www.mosigra.ru
   - id: 648
     name:
       - {language: en, text: MTS}
@@ -2729,10 +2699,6 @@ companies:
     name:
       - {language: en, text: PulsePoint}
     siteLink: https://pulsepoint.com
-  - id: 763
-    name:
-      - {language: en, text: "ANNA Money"}
-    siteLink: https://anna.money
   - id: 764
     name:
       - {language: en, text: ExoAtlet}
@@ -3102,18 +3068,10 @@ companies:
     name:
       - {language: en, text: "Cube Dev"}
     siteLink: https://cube.dev
-  - id: 866
-    name:
-      - {language: en, text: Defront}
-    siteLink: https://defront.ru
   - id: 867
     name:
       - {language: en, text: BeerJS}
     siteLink: https://beerjs.moscow
-  - id: 868
-    name:
-      - {language: en, text: Osome}
-    siteLink: https://osome.com
   - id: 869
     name:
       - {language: en, text: ArangoDB}
