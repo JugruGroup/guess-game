@@ -6996,8 +6996,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Andrey is ex-performance lead at JetBrains Rider, Ph.D., the project lead of BenchmarkDotNet\
             \ and perfolizer, the author of Pro .NET Benchmarking, an ex Microsoft .NET MVP, a silver medalist of ACM ICPC.</p>"}
-      - {language: ru, text: "<p>Андрей &mdash; ex-performance lead в JetBrains Rider, к.ф.-м.н., мейнтейнер BenchmarkDotNet\
-            \ и perfolizer, автор Pro .NET Benchmarking, бывший Microsoft .NET MVP, серебряный медалист ACM ICPC.</p>"}
+      - {language: ru, text: "Андрей — ex-performance lead в JetBrains Rider, к.ф.-м.н., мейнтейнер BenchmarkDotNet и perfolizer,\
+            \ автор Pro .NET Benchmarking, бывший Microsoft .NET MVP, серебряный медалист ACM ICPC."}
     twitter: andrey_akinshin
     gitHub: AndreyAkinshin
     habr: DreamWalker
@@ -33767,11 +33767,11 @@ speakers:
       - {language: ru, text: "Дмитрий Таболич"}
     companyIds: [988]
     bio:
-      - {language: en, text: "<p>Practicing solution architect with a focus on enterprise architecture and modernization strategies.\
-            \ Industry certifications (SEI, IASA, AWS) in solution architecture. Understands cloud and beyond.</p>"}
+      - {language: en, text: "<p>Practicing Solution Architect with a focus on corporate architecture and IT modernization\
+            \ strategies. Industry certifications (SEI, IASA, AWS) in solution architecture. Technologist. Expert.</p>"}
       - {language: ru, text: "<p>Практикующий архитектор решений (Solution Architect) с фокусом на корпоративную архитекту\
             ру и стратегии модернизации ИТ-систем. Обладатель индустриальных сертификатов (SEI, IASA, AWS) в области архит\
-            ектуры решений. Технолоджист. Разбирается в облаках и не только.</p>"}
+            ектуры решений. Технолоджист. Эксперт.</p>"}
     twitter: dtabolich
     gitHub: dtabolich
   - id: 2355
@@ -33782,8 +33782,8 @@ speakers:
       - {language: ru, text: "Гурий Самарин"}
     companyIds: [663]
     bio:
-      - {language: en, text: "Senior C# developer, architect and tech enthusiast."}
-      - {language: ru, text: "Старший разработчик C#, архитектор и энтузиаст технологий."}
+      - {language: en, text: "<p>Senior C# developer, architect and technology enthusiast.</p>"}
+      - {language: ru, text: "<p>Старший разработчик C#, архитектор и энтузиаст технологий.</p>"}
     twitter: guriy_samarin
     gitHub: Sa1Gur
   - id: 2356
