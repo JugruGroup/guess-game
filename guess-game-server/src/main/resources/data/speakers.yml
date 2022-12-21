@@ -33550,12 +33550,12 @@ speakers:
       - {language: ru, text: "Антонина Глухова"}
     companyIds: [377]
     bio:
-      - {language: en, text: "<p>Head of Android platform testing at Okko. About 5 years of video platform testing experience.\
-            \ Lazy, so adheres to the principle \"from complex to simple, from monkey-test to branual testing\". Teaches even\
-            \ developers how to test. Loves IT unicorns.</p>"}
-      - {language: ru, text: "<p>Руководитель направления тестирования платформы Android в Okko. Опыт тестирования видеопл\
-            атформ около 5 лет. Ленива, поэтому придерживается принципа &laquo;от сложного к простому, от monkey-test к бр\
-            ейнуальному тестированию&raquo;. Обучает тестировать даже разработчиков. Любит IT-единорогов.</p>"}
+      - {language: en, text: "<p>Head of Android platform testing at okko. Approximately 5 years of video platform testing\
+            \ experience. Lazy, so adheres to the principle \"from complex to simple, from monkey-test to branual testing\"\
+            . Makes even developers test. Loves IT unicorns.</p>"}
+      - {language: ru, text: "Руководитель направления тестирования платформы Android в okko. Опыт тестирования видеоплатф\
+            орм около 5 лет. Ленива, поэтому придерживается принципа «от сложного к простому, от monkey-test к брейнуально\
+            му тестированию». Обучает тестировать даже разработчиков. Любит IT-единорогов."}
   - id: 2340
     photoFileName: 2340.jpg
     photoUpdatedAt: 2022-10-14T17:40:03Z[UTC]
