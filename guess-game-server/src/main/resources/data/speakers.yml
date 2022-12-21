@@ -36068,16 +36068,18 @@ speakers:
     twitter: _Unsolved_
   - id: 2513
     photoFileName: 2513.jpg
-    photoUpdatedAt: 2022-11-28T12:10:10Z[UTC]
+    photoUpdatedAt: 2022-11-30T12:17:17Z[UTC]
     name:
       - {language: en, text: "Konstantin Valeev"}
       - {language: ru, text: "Константин Валеев"}
     companyIds: []
     bio:
-      - {language: en, text: "<p>He was head of system analysis and documentation at Rostelecom Information Technologies,\
-            \ a software subsidiary of Rostelecom. He understands product management, system analysis, and documentation.</p>"}
+      - {language: en, text: "He was head of system analysis and documentation at Rostelecom Information Technologies, a software\
+            \ subsidiary of Rostelecom, and currently works as a product manager. He understands product management, system\
+            \ analysis, and documentation."}
       - {language: ru, text: "Руководил отделом системной аналитики и документации в «Ростелеком Информационные Технологии\
-            » — софтверной дочке «Ростелекома». Разбирается в управлении продуктами, системном анализе и документировании."}
+            » — софтверной дочке «Ростелекома», сейчас работает продакт-менеджером. Разбирается в управлении продуктами, с\
+            истемном анализе и документировании."}
   - id: 2514
     photoFileName: 2514.jpg
     photoUpdatedAt: 2022-11-28T12:12:12Z[UTC]
