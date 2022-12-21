@@ -22446,13 +22446,13 @@ speakers:
       - {language: ru, text: "Ярослав Магин"}
     companyIds: [635]
     bio:
-      - {language: en, text: "iOS developer in Delivery Club. Works in commercial development more 6 years, 4 of them related\
-            \ to mobile development. Primarily focused on native iOS-development, but discovered Flutter. Has experience with\
-            \ different projects — from small startups to large products (GIS, mobile banking)."}
-      - {language: ru, text: "iOS-разработчик в компании Delivery Club. В коммерческой разработке уже более 6 лет, из них\
-            \ 4 года занимается мобильными приложениями. Главное направление — нативная iOS-разработка, но экспериментиров\
-            ал и с Flutter. Успел поработать как с небольшими стартапами, так и с крупными продуктами (геоинформационные с\
-            истемы, банковские приложения)."}
+      - {language: en, text: "<span style=\"color: rgb(73, 80, 87);\">iOS developer in Kaspersky. Works in commercial development\
+            \ more 6 years, 4 of them related to mobile development. Primarily focused on native iOS-development, but discovered\
+            \ Flutter. Has experience with different projects — from small startups to large products (GIS, mobile banking).</span>"}
+      - {language: ru, text: "<p>iOS-разработчик в компании &laquo;Лаборатория Касперского&raquo;. В коммерческой разработ\
+            ке уже более 6 лет, из них 4 года занимается мобильными приложениями. Главное направление &mdash; нативная iOS-р\
+            азработка, но экспериментировал и с Flutter. Успел поработать как с небольшими стартапами, так и с крупными пр\
+            одуктами (геоинформационные системы, банковские приложения).</p>"}
   - id: 1581
     photoFileName: 1581.jpg
     photoUpdatedAt: 2021-03-01T12:05:24.992Z[UTC]
