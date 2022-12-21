@@ -214,11 +214,6 @@ companySynonyms:
         "IT Territory/MyGames",
         "IT Territory (MY.GAMES)"
     ]
-  - name: ITIS
-    synonyms: [
-        "OOO ИТИС",
-        "ООО ИТИС"
-    ]
   - name: JavaSpecialists
     synonyms: [
         JavaSpecialists.eu
