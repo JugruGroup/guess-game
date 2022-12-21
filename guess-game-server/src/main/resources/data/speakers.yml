@@ -9199,13 +9199,13 @@ speakers:
       - {language: en, text: "<p>Andrey has 8+ years of professional experience as a software developer. He has worked in\
             \ well-known companies like Intel, Deutsche Bank, and Huawei. Developed mostly everything: from optimizing C/C++\
             \ compilers to high-load Java applications for investment banking. From Big Data applications to static analyzers\
-            \ and development tools. Currently working on a distributed cloud system for benchmarking tools for code analysis.\
+            \ and dev tools. Currently working on a distributed cloud system for benchmarking of tools for code analysis.\
             \ Active open-source enthusiast, contributor to the Kotlin ecosystem.</p>"}
       - {language: ru, text: "<p>Программист с восьмилетним стажем, работал в Intel, Deutsche Bank, Huawei. Занимался разр\
             аботкой в очень разных сферах: от C/C++ компиляторов до высоконагруженных торговых сервисов на Java, от Big Data-х\
-            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. Тимлид Java/Kotlin-ком\
-            анды в Huawei. Активный опенсорс-энтузиаст, контрибьютор в экосистему Kotlin. Создатель библиотеки ktoml и ста\
-            тического анализатора diktat. Сейчас занимается разработкой экосистемы для бенчмаркинга анализаторов кода.</p>"}
+            ранилищ для банковских данных до статических анализаторов и сервисов для разработчиков. В данный момент занима\
+            ется разработкой распределенной cloud-системы бенчмаркинга и тестирования анализаторов кода SAVE. Влюблен в opensource\
+            \ и в Kotlin.</p>"}
     gitHub: akuleshov7
   - id: 628
     photoFileName: 0628.jpg
