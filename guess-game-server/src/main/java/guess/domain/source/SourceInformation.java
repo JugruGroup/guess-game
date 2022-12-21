@@ -13,6 +13,7 @@ public class SourceInformation {
 
     private final List<Place> places;
     private final List<Organizer> organizers;
+    private final List<Topic> topics;
     private final List<EventType> eventTypes;
     private final List<Event> events;
     private final List<Company> companies;
@@ -21,11 +22,12 @@ public class SourceInformation {
     private final List<Speaker> speakers;
     private final List<Talk> talks;
 
-    public SourceInformation(List<Place> places, List<Organizer> organizers, List<EventType> eventTypes, List<Event> events,
-                             SpeakerInformation speakerInformation, List<Talk> talks) {
+    public SourceInformation(List<Place> places, List<Organizer> organizers, List<Topic> topics, List<EventType> eventTypes,
+                             List<Event> events, SpeakerInformation speakerInformation, List<Talk> talks) {
         this.eventTypes = eventTypes;
         this.places = places;
         this.organizers = organizers;
+        this.topics = topics;
         this.events = events;
         this.companies = speakerInformation.companies;
         this.companyGroups = speakerInformation.companyGroups;
@@ -40,6 +42,10 @@ public class SourceInformation {
 
     public List<Organizer> getOrganizers() {
         return organizers;
+    }
+
+    public List<Topic> getTopics() {
+        return topics;
     }
 
     public List<EventType> getEventTypes() {
@@ -77,6 +83,7 @@ public class SourceInformation {
         SourceInformation that = (SourceInformation) o;
         return Objects.equals(places, that.places) &&
                 Objects.equals(organizers, that.organizers) &&
+                Objects.equals(topics, that.topics) &&
                 Objects.equals(eventTypes, that.eventTypes) &&
                 Objects.equals(events, that.events) &&
                 Objects.equals(companies, that.companies) &&
@@ -88,7 +95,7 @@ public class SourceInformation {
 
     @Override
     public int hashCode() {
-        return Objects.hash(places, organizers, eventTypes, events, companies, companyGroups, companySynonyms, speakers, talks);
+        return Objects.hash(places, organizers, topics, eventTypes, events, companies, companyGroups, companySynonyms, speakers, talks);
     }
 
     @Override
@@ -96,6 +103,7 @@ public class SourceInformation {
         return "SourceInformation{" +
                 "places=" + places +
                 ", organizers=" + organizers +
+                ", topics=" + topics +
                 ", eventTypes=" + eventTypes +
                 ", events=" + events +
                 ", companies=" + companies +

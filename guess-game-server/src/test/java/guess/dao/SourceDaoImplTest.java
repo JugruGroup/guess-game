@@ -33,6 +33,9 @@ class SourceDaoImplTest {
     private static Organizer organizer0;
     private static Organizer organizer1;
 
+    private static Topic topic0;
+    private static Topic topic1;
+
     private static EventType eventType0;
     private static EventType eventType1;
     private static EventType eventType2;
@@ -77,21 +80,30 @@ class SourceDaoImplTest {
         organizer1 = new Organizer();
         organizer1.setId(1);
 
+        topic0 = new Topic();
+        topic0.setId(0);
+
+        topic1 = new Topic();
+        topic1.setId(1);
+
         eventType0 = new EventType();
         eventType0.setId(0);
         eventType0.setConference(Conference.JPOINT);
         eventType0.setOrganizer(organizer0);
         eventType0.setTimeZoneId(ZoneId.of("Europe/Moscow"));
+        eventType0.setTopic(topic0);
 
         eventType1 = new EventType();
         eventType1.setId(1);
         eventType1.setOrganizer(organizer0);
         eventType1.setTimeZoneId(ZoneId.of("Europe/Moscow"));
+        eventType1.setTopic(topic0);
 
         eventType2 = new EventType();
         eventType2.setId(2);
         eventType2.setOrganizer(organizer1);
         eventType2.setTimeZoneId(ZoneId.of("Asia/Novosibirsk"));
+        eventType2.setTopic(topic1);
 
         company0 = new Company();
         company0.setId(0);
@@ -207,6 +219,7 @@ class SourceDaoImplTest {
         SourceInformation sourceInformation = new SourceInformation(
                 List.of(place0, place1, place2),
                 List.of(organizer0, organizer1),
+                List.of(topic0, topic1),
                 List.of(eventType0, eventType1, eventType2),
                 List.of(event0, event1, event2),
                 new SourceInformation.SpeakerInformation(

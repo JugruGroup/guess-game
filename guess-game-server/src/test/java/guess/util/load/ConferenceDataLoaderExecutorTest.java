@@ -64,7 +64,11 @@ class ConferenceDataLoaderExecutorTest {
              MockedStatic<CmsDataLoaderFactory> cmsDataLoaderFactoryMockedStatic = Mockito.mockStatic(CmsDataLoaderFactory.class);
              MockedStatic<ConferenceDataLoaderExecutor> conferenceDataLoaderMockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class)) {
             yamlUtilsMockedStatic.when(YamlUtils::readSourceInformation)
-                    .thenReturn(new SourceInformation(Collections.emptyList(), Collections.emptyList(), Collections.emptyList(),
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
                             Collections.emptyList(),
                             new SourceInformation.SpeakerInformation(
                                     Collections.emptyList(),
@@ -294,6 +298,8 @@ class ConferenceDataLoaderExecutorTest {
 
             Organizer organizer0 = new Organizer();
 
+            Topic topic0 = new Topic();
+
             Event event0 = new Event();
             event0.setId(0);
             event0.setDays(List.of(new EventDays(
@@ -323,6 +329,7 @@ class ConferenceDataLoaderExecutorTest {
                             new SourceInformation(
                                     List.of(place0),
                                     List.of(organizer0),
+                                    List.of(topic0),
                                     List.of(eventType0),
                                     Collections.emptyList(),
                                     new SourceInformation.SpeakerInformation(
@@ -341,6 +348,7 @@ class ConferenceDataLoaderExecutorTest {
                             new SourceInformation(
                                     List.of(place0),
                                     List.of(organizer0),
+                                    List.of(topic0),
                                     List.of(eventType0),
                                     Collections.emptyList(),
                                     new SourceInformation.SpeakerInformation(
@@ -3221,7 +3229,11 @@ class ConferenceDataLoaderExecutorTest {
             event6.setTalks(List.of(talk1, talk2, talk3, talk4));
 
             mockedStatic.when(YamlUtils::readSourceInformation)
-                    .thenReturn(new SourceInformation(Collections.emptyList(), Collections.emptyList(), Collections.emptyList(),
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
                             List.of(event0, event1, event2, event3, event4, event5, event6),
                             new SourceInformation.SpeakerInformation(
                                     Collections.emptyList(),
@@ -3257,8 +3269,12 @@ class ConferenceDataLoaderExecutorTest {
             speaker1.setCompanies(Collections.emptyList());
 
             mockedStatic.when(YamlUtils::readSourceInformation)
-                    .thenReturn(new SourceInformation(Collections.emptyList(), Collections.emptyList(),
-                            Collections.emptyList(), Collections.emptyList(),
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
                             new SourceInformation.SpeakerInformation(
                                     List.of(company0, company1, company2, company3, company4, company5),
                                     Collections.emptyList(),

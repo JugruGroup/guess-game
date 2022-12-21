@@ -25,6 +25,7 @@ eventTypes:
     telegramLink: https://t.me/cpprussia
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 4
   - id: 1
     conference: DEV_OOPS
     logoFileName: devoops.jpg
@@ -52,6 +53,7 @@ eventTypes:
     telegramLink: https://t.me/devOopsconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 8
   - id: 2
     conference: DOT_NEXT
     logoFileName: dotnext.jpg
@@ -79,6 +81,7 @@ eventTypes:
     telegramLink: https://t.me/dotnextconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 2
   - id: 3
     conference: HEISENBUG
     logoFileName: heisenbug.jpg
@@ -105,6 +108,7 @@ eventTypes:
     telegramLink: https://t.me/heisenbugconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 7
   - id: 4
     conference: HOLY_JS
     logoFileName: holyjs.jpg
@@ -131,6 +135,7 @@ eventTypes:
     telegramLink: https://t.me/holyjsconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 3
   - id: 5
     conference: HYDRA
     logoFileName: hydra.jpg
@@ -159,6 +164,7 @@ eventTypes:
     telegramLink: https://t.me/hydraconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 10
   - id: 6
     conference: JBREAK
     logoFileName: jbreak.jpg
@@ -192,6 +198,7 @@ eventTypes:
     habrLink: https://habr.com/ru/company/jugru
     inactive: true
     timeZone: Europe/Moscow
+    topicId: 1
   - id: 7
     conference: JPOINT
     logoFileName: jpoint.jpg
@@ -219,6 +226,7 @@ eventTypes:
     telegramLink: https://telegram.me/jpointconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 1
   - id: 8
     conference: JOKER
     logoFileName: jokerconf.jpg
@@ -246,6 +254,7 @@ eventTypes:
     telegramLink: https://t.me/jokerconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 1
   - id: 9
     conference: MOBIUS
     logoFileName: mobius.jpg
@@ -273,6 +282,7 @@ eventTypes:
     telegramLink: https://t.me/mobiusconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 6
   - id: 10
     conference: SPTDC
     logoFileName: sptdc.jpg
@@ -299,6 +309,7 @@ eventTypes:
     youtubeLink: https://www.youtube.com/channel/UCYoIFJ96Kn_Ziayw8av-IAA
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 10
   - id: 11
     conference: SMART_DATA
     logoFileName: smartdata.jpg
@@ -324,6 +335,7 @@ eventTypes:
     telegramLink: https://t.me/smartdataconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 9
   - id: 12
     conference: TECH_TRAIN
     logoFileName: techtrain.jpg
@@ -368,6 +380,7 @@ eventTypes:
     youtubeLink: https://www.youtube.com/playlist?list=PLojTLDAO4jjIRjDPIQjc4iG7CfR6m8pfc
     speakerdeckLink: https://speakerdeck.com/jugmsk
     timeZone: Europe/Moscow
+    topicId: 1
   - id: 14
     logoFileName: jugru.jpg
     organizerId: 0
@@ -385,6 +398,7 @@ eventTypes:
     youtubeLink: https://www.youtube.com/c/JUGru
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 1
   - id: 15
     logoFileName: jugnsk.jpg
     organizerId: 2
@@ -403,6 +417,7 @@ eventTypes:
     telegramLink: https://t.me/jugnsk
     speakerdeckLink: https://speakerdeck.com/jugnsk
     timeZone: Asia/Novosibirsk
+    topicId: 1
   - id: 16
     conference: SNOW_ONE
     logoFileName: snowone.jpg
@@ -425,6 +440,7 @@ eventTypes:
     twitterLink: https://twitter.com/snowone_conf
     youtubeLink: https://www.youtube.com/c/JUGNsk
     timeZone: Asia/Novosibirsk
+    topicId: 1
   - id: 17
     conference: VIDEO_TECH
     logoFileName: videotech.jpg
@@ -450,6 +466,7 @@ eventTypes:
     telegramLink: https://t.me/videotech_conf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 11
   - id: 18
     conference: PITER_PY
     logoFileName: piterpy.jpg
@@ -477,6 +494,7 @@ eventTypes:
     telegramLink: https://t.me/PiterPy_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 4
   - id: 19
     conference: FLOW
     logoFileName: flow.jpg
@@ -502,3 +520,4 @@ eventTypes:
     telegramLink: https://t.me/flowconf_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
+    topicId: 12
