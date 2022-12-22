@@ -101,6 +101,7 @@
       "kindColumn": "Вид",
       "nameColumn": "Наименование",
       "organizerNameColumn": "Организатор",
+      "topicNameColumn": "Тема",
       "shortDescriptionColumn": "Описание"
     },
     "search": {
