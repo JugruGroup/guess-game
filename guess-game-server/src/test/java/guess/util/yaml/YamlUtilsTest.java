@@ -220,6 +220,52 @@ class YamlUtilsTest {
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("linkEventTypesToTopics method tests")
+    class LinkEventTypesToTopicsTest {
+        private Stream<Arguments> data() {
+            EventType eventType0 = new EventType();
+            eventType0.setId(0);
+            eventType0.setTopicId(0L);
+
+            EventType eventType1 = new EventType();
+            eventType1.setId(1);
+            eventType1.setTopicId(1L);
+
+            EventType eventType2 = new EventType();
+            eventType2.setId(2);
+
+            Topic topic0 = new Topic();
+            topic0.setId(0);
+
+            return Stream.of(
+                    arguments(Collections.emptyMap(), List.of(eventType0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType0), null),
+                    arguments(Map.of(0L, topic0), List.of(eventType1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType0, eventType1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType1, eventType0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType2), null)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void linkEventTypesToTopics(Map<Long, Topic> topics, List<EventType> eventTypes, Class<? extends Exception> expected) {
+            if (expected == null) {
+                eventTypes.forEach(et -> assertNull(et.getTopic()));
+
+                assertDoesNotThrow(() -> YamlUtils.linkEventTypesToTopics(topics, eventTypes));
+
+                eventTypes.stream()
+                        .filter(et -> et.getTopicId() != null)
+                        .forEach(et -> assertNotNull(et.getTopic()));
+            } else {
+                assertThrows(expected, () -> YamlUtils.linkEventTypesToTopics(topics, eventTypes));
+            }
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("linkEventsToEventTypes method tests")
     class LinkEventsToEventTypesTest {
         private Stream<Arguments> data() {
