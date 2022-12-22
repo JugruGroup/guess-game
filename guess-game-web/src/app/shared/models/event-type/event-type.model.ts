@@ -17,6 +17,7 @@ export class EventType {
     public displayName?: string,
     public inactive?: boolean,
     public organizerName?: string,
+    public topicName?: string,
     public sortName?: string
   ) {
   }

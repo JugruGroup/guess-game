@@ -5,7 +5,7 @@ package guess.domain.source;
  */
 public class Topic extends Nameable {
     private boolean defaultTopic;
-    private Integer orderNumber;
+    private int orderNumber;
 
     public boolean isDefaultTopic() {
         return defaultTopic;
@@ -15,11 +15,11 @@ public class Topic extends Nameable {
         this.defaultTopic = defaultTopic;
     }
 
-    public Integer getOrderNumber() {
+    public int getOrderNumber() {
         return orderNumber;
     }
 
-    public void setOrderNumber(Integer orderNumber) {
+    public void setOrderNumber(int orderNumber) {
         this.orderNumber = orderNumber;
     }
 

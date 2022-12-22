@@ -49,6 +49,9 @@
             <th class="text-center" pResizableColumn>
               {{'eventTypes.table.organizerNameColumn' | translate}}
             </th>
+            <th class="text-center" pResizableColumn>
+              {{'eventTypes.table.topicNameColumn' | translate}}
+            </th>
             <th class="text-center" [pSortableColumn]="'sortName'" pResizableColumn>
               {{'eventTypes.table.nameColumn' | translate}}
               <p-sortIcon [field]="'sortName'"></p-sortIcon>
@@ -71,6 +74,7 @@
               </span>
             </td>
             <td>{{eventType.organizerName}}</td>
+            <td>{{eventType.topicName}}</td>
             <td>
               <a [routerLink]="['/information', 'event-types', 'event-type', eventType.id]" class="text-dark">
                 <img src="{{eventsImageDirectory}}/{{eventType.logoFileName}}" class="img-event-type-logo-table" alt="logo"/>

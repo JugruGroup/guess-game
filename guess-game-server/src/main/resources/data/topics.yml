@@ -4,6 +4,7 @@ topics:
       - {language: en, text: "Other"}
       - {language: ru, text: "Прочее"}
     defaultTopic: true
+    orderNumber: 13
   - id: 1
     name:
       - {language: en, text: "Java"}

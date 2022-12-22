@@ -494,7 +494,7 @@ eventTypes:
     telegramLink: https://t.me/PiterPy_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
-    topicId: 4
+    topicId: 5
   - id: 19
     conference: FLOW
     logoFileName: flow.jpg
