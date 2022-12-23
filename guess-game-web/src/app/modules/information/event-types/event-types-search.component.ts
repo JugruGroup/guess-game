@@ -5,6 +5,7 @@ import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { Organizer } from '../../../shared/models/organizer/organizer.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { OrganizerService } from '../../../shared/services/organizer.service';
+import { Topic } from '../../../shared/models/topic/topic.model';
 import { findOrganizerById, getEventTypesWithSortName } from '../../general/utility-functions';
 
 @Component({
@@ -21,6 +22,10 @@ export class EventTypesSearchComponent implements OnInit {
   public organizers: Organizer[] = [];
   public selectedOrganizer: Organizer;
   public organizerSelectItems: SelectItem[] = [];
+
+  public topics: Topic[] = [];
+  public selectedTopic: Topic;
+  public topicSelectItems: SelectItem[] = [];
 
   public eventTypes: EventType[] = [];
 
@@ -73,6 +78,10 @@ export class EventTypesSearchComponent implements OnInit {
 
   onOrganizerChange(organizer: Organizer) {
     this.loadEventTypes(this.isConferences, this.isMeetups, organizer);
+  }
+
+  onTopicChange() {
+    // TODO: implement
   }
 
   onLanguageChange() {
