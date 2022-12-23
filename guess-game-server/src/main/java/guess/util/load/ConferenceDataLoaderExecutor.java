@@ -22,6 +22,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.BooleanSupplier;
 import java.util.function.Consumer;
+import java.util.function.LongConsumer;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -846,7 +847,7 @@ public class ConferenceDataLoaderExecutor {
      * @param targetSupplier   target supplier
      * @param targetConsumer   target consumer
      */
-    static void fillLongAttributeValue(Supplier<Long> resourceSupplier, Supplier<Long> targetSupplier, Consumer<Long> targetConsumer) {
+    static void fillLongAttributeValue(Supplier<Long> resourceSupplier, Supplier<Long> targetSupplier, LongConsumer targetConsumer) {
         if ((resourceSupplier.get() != null) && (targetSupplier.get() == null)) {
             targetConsumer.accept(resourceSupplier.get());
         }

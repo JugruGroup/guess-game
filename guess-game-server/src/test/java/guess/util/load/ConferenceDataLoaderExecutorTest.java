@@ -26,10 +26,7 @@ import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.function.BooleanSupplier;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -1572,7 +1569,7 @@ class ConferenceDataLoaderExecutorTest {
 
             EventType targetEventType0 = createEventType(null);
             Supplier<Long> targetSupplier0 = targetEventType0::getTopicId;
-            Consumer<Long> targetConsumer0 = targetEventType0::setTopicId;
+            LongConsumer targetConsumer0 = targetEventType0::setTopicId;
 
             // 1
             EventType resourceEventType1 = createEventType(null);
@@ -1581,7 +1578,7 @@ class ConferenceDataLoaderExecutorTest {
             Topic targetTopic1 = createTopic(TARGET_TOPIC_ID1);
             EventType targetEventType1 = createEventType(targetTopic1);
             Supplier<Long> targetSupplier1 = targetEventType1::getTopicId;
-            Consumer<Long> targetConsumer1 = targetEventType1::setTopicId;
+            LongConsumer targetConsumer1 = targetEventType1::setTopicId;
 
             // 2
             Topic resourceTopic2 = createTopic(RESOURCE_TOPIC_ID2);
@@ -1590,7 +1587,7 @@ class ConferenceDataLoaderExecutorTest {
 
             EventType targetEventType2 = createEventType(null);
             Supplier<Long> targetSupplier2 = targetEventType2::getTopicId;
-            Consumer<Long> targetConsumer2 = targetEventType2::setTopicId;
+            LongConsumer targetConsumer2 = targetEventType2::setTopicId;
 
             // 3
             Topic resourceTopic3 = createTopic(RESOURCE_TOPIC_ID3);
@@ -1600,7 +1597,7 @@ class ConferenceDataLoaderExecutorTest {
             Topic targetTopic3 = createTopic(TARGET_TOPIC_ID3);
             EventType targetEventType3 = createEventType(targetTopic3);
             Supplier<Long> targetSupplier3 = targetEventType3::getTopicId;
-            Consumer<Long> targetConsumer3 = targetEventType3::setTopicId;
+            LongConsumer targetConsumer3 = targetEventType3::setTopicId;
 
             return Stream.of(
                     arguments(resourceSupplier0, targetSupplier0, targetConsumer0, null),
@@ -1613,7 +1610,7 @@ class ConferenceDataLoaderExecutorTest {
 
         @ParameterizedTest
         @MethodSource("data")
-        void fillLongAttributeValue(Supplier<Long> resourceSupplier, Supplier<Long> targetSupplier, Consumer<Long> targetConsumer,
+        void fillLongAttributeValue(Supplier<Long> resourceSupplier, Supplier<Long> targetSupplier, LongConsumer targetConsumer,
                                     Long expected) {
             ConferenceDataLoaderExecutor.fillLongAttributeValue(resourceSupplier, targetSupplier, targetConsumer);
 
