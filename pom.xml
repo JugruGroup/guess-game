@@ -33,7 +33,7 @@
         <mockito.version>4.10.0</mockito.version>
         <snakeyaml.version>1.33</snakeyaml.version>
         <imageio.version>3.9.4</imageio.version>
-        <spring-boot.version>3.0.0</spring-boot.version>
+        <spring-boot.version>3.0.1</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
         <node.version>v18.12.1</node.version>
