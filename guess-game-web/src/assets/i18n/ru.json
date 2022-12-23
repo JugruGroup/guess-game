@@ -37,11 +37,13 @@
       "eventLabel": "Событие:",
       "speakerLabel": "Спикер:",
       "companyLabel": "Компания:",
+      "topicLabel": "Тема:",
       "organizerPlaceholder": "Все",
       "eventTypePlaceholder": "Все",
       "eventPlaceholder": "Все",
       "speakersPlaceholder": "Все",
       "companiesPlaceholder": "Все",
+      "topicPlaceholder": "Все",
       "emptyMessage": "Нет элементов"
     },
     "table": {
