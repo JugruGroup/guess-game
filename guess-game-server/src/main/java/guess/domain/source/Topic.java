@@ -1,11 +1,22 @@
 package guess.domain.source;
 
+import java.util.List;
+
 /**
  * Topic.
  */
 public class Topic extends Nameable {
     private boolean defaultTopic;
     private int orderNumber;
+
+    public Topic() {
+    }
+
+    public Topic(long id, List<LocaleItem> name, boolean defaultTopic, int orderNumber) {
+        super(id, name);
+        this.defaultTopic = defaultTopic;
+        this.orderNumber = orderNumber;
+    }
 
     public boolean isDefaultTopic() {
         return defaultTopic;

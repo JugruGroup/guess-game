@@ -171,6 +171,7 @@ public class ConferenceDataLoaderExecutor {
                         fillStringAttributeValue(resourceEventType::getSpeakerdeckLink, et::getSpeakerdeckLink, et::setSpeakerdeckLink);
                         fillStringAttributeValue(resourceEventType::getHabrLink, et::getHabrLink, et::setHabrLink);
                         fillStringAttributeValue(resourceEventType::getTimeZone, et::getTimeZone, et::setTimeZone);
+                        fillLongAttributeValue(resourceEventType::getTopicId, et::getTopicId, et::setTopicId);
                         fillBooleanAttributeValue(resourceEventType::isInactive, et::isInactive, et::setInactive);
 
                         if (needUpdate(resourceEventType, et)) {
@@ -835,6 +836,19 @@ public class ConferenceDataLoaderExecutor {
     static void fillBooleanAttributeValue(BooleanSupplier resourceSupplier, BooleanSupplier targetSupplier, Consumer<Boolean> targetConsumer) {
         if (Boolean.TRUE.equals(resourceSupplier.getAsBoolean()) && !Boolean.TRUE.equals(targetSupplier.getAsBoolean())) {
             targetConsumer.accept(true);
+        }
+    }
+
+    /**
+     * Fills long attribute value.
+     *
+     * @param resourceSupplier resource supplier
+     * @param targetSupplier   target supplier
+     * @param targetConsumer   target consumer
+     */
+    static void fillLongAttributeValue(Supplier<Long> resourceSupplier, Supplier<Long> targetSupplier, Consumer<Long> targetConsumer) {
+        if ((resourceSupplier.get() != null) && (targetSupplier.get() == null)) {
+            targetConsumer.accept(resourceSupplier.get());
         }
     }
 
@@ -1816,6 +1830,7 @@ public class ConferenceDataLoaderExecutor {
                 equals(a.getHabrLink(), b.getHabrLink()) &&
                 equals(a.getOrganizer(), b.getOrganizer()) &&
                 equals(a.getTimeZone(), b.getTimeZone()) &&
+                equals(a.getTopic(), b.getTopic()) &&
                 equals(a.isInactive(), b.isInactive()));
     }
 
