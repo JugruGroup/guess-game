@@ -86,28 +86,28 @@ class EventTypeServiceImplTest {
             List<EventType> eventTypes = List.of(eventType0, eventType1);
 
             return Stream.of(
-                    arguments(false, false, null, eventTypes, Collections.emptyList()),
-                    arguments(true, false, null, eventTypes, List.of(eventType0)),
-                    arguments(false, true, null, eventTypes, List.of(eventType1)),
-                    arguments(true, true, null, eventTypes, List.of(eventType0, eventType1)),
-                    arguments(false, false, 0L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 0L, eventTypes, List.of(eventType0)),
-                    arguments(false, true, 0L, eventTypes, List.of(eventType1)),
-                    arguments(true, true, 0L, eventTypes, List.of(eventType0, eventType1)),
-                    arguments(false, false, 1L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 1L, eventTypes, Collections.emptyList()),
-                    arguments(false, true, 1L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 1L, eventTypes, Collections.emptyList())
+                    arguments(false, false, null, null, eventTypes, Collections.emptyList()),
+                    arguments(true, false, null, null, eventTypes, List.of(eventType0)),
+                    arguments(false, true, null, null, eventTypes, List.of(eventType1)),
+                    arguments(true, true, null, null, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(false, false, 0L, null, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 0L, null, eventTypes, List.of(eventType0)),
+                    arguments(false, true, 0L, null, eventTypes, List.of(eventType1)),
+                    arguments(true, true, 0L, null, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(false, false, 1L, null, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 1L, null, eventTypes, Collections.emptyList()),
+                    arguments(false, true, 1L, null, eventTypes, Collections.emptyList()),
+                    arguments(true, true, 1L, null, eventTypes, Collections.emptyList())
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, List<EventType> eventTypes,
+        void getEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId, List<EventType> eventTypes,
                            List<EventType> expected) {
             Mockito.when(eventTypeDao.getEventTypes()).thenReturn(eventTypes);
 
-            assertEquals(expected, eventTypeService.getEventTypes(isConferences, isMeetups, organizerId));
+            assertEquals(expected, eventTypeService.getEventTypes(isConferences, isMeetups, organizerId, topicId));
             Mockito.verify(eventTypeDao, VerificationModeFactory.times(1)).getEventTypes();
             Mockito.verifyNoMoreInteractions(eventTypeDao);
 
