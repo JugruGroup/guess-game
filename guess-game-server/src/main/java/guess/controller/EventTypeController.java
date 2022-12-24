@@ -40,7 +40,7 @@ public class EventTypeController {
                                                  @RequestParam(required = false) Long topicId,
                                                  HttpSession httpSession) {
         var language = localeService.getLanguage(httpSession);
-        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, language); //TODO: use topicId
+        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, topicId, language);
 
         return EventTypeBriefDto.convertToBriefDto(eventTypes, language);
     }
@@ -49,13 +49,13 @@ public class EventTypeController {
     public List<EventTypeSuperBriefDto> getFilterEventTypes(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                                             @RequestParam(required = false) Long organizerId, HttpSession httpSession) {
         var language = localeService.getLanguage(httpSession);
-        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, language);
+        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, null, language);
 
         return EventTypeSuperBriefDto.convertToSuperBriefDto(eventTypes, language);
     }
 
-    List<EventType> getEventTypesAndSort(boolean isConferences, boolean isMeetups, Long organizerId, Language language) {
-        List<EventType> eventTypes = eventTypeService.getEventTypes(isConferences, isMeetups, organizerId);
+    List<EventType> getEventTypesAndSort(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId, Language language) {
+        List<EventType> eventTypes = eventTypeService.getEventTypes(isConferences, isMeetups, organizerId, topicId);
         Comparator<EventType> comparatorByIsConference = Comparator.comparing(EventType::isEventTypeConference).reversed();
         Comparator<EventType> comparatorByOrganizerName = Comparator.comparing(et -> LocalizationUtils.getString(et.getOrganizer().getName(), language), String.CASE_INSENSITIVE_ORDER);
         Comparator<EventType> comparatorByName = Comparator.comparing(et -> LocalizationUtils.getString(et.getName(), language), String.CASE_INSENSITIVE_ORDER);
