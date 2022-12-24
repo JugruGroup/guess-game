@@ -47,7 +47,7 @@ topics:
   - id: 10
     name:
       - {language: en, text: "Distributed computing"}
-      - {language: ru, text: "Распределенные вычисления"}
+      - {language: ru, text: "Распределённые вычисления"}
     orderNumber: 10
   - id: 11
     name:

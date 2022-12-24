@@ -144,7 +144,7 @@ eventTypes:
       - {language: en, text: Hydra}
     shortDescription:
       - {language: en, text: "Distributed computing conference"}
-      - {language: ru, text: "Конференция по параллельным и распределенным системам"}
+      - {language: ru, text: "Конференция по параллельным и распределённым системам"}
     longDescription:
       - {language: en, text: "Hydra covers the development of parallel and distributed systems, as well as the specifics of\
             \ database implementation (both classical and distributed). The conference has been held since 2019, and it has\
