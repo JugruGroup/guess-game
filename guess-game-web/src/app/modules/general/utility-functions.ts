@@ -7,6 +7,7 @@ import { Speaker } from '../../shared/models/speaker/speaker.model';
 import { EventTypeMetrics } from '../../shared/models/statistics/event-type-metrics.model';
 import { EventTypeStatistics } from '../../shared/models/statistics/event-type-statistics.model';
 import { Organizer } from '../../shared/models/organizer/organizer.model';
+import { Topic } from '../../shared/models/topic/topic.model';
 import { OlapEntityStatistics } from '../../shared/models/statistics/olap/olap-entity-statistics.model';
 import { OlapEventTypeMetrics } from '../../shared/models/statistics/olap/olap-event-type-metrics.model';
 import { OlapEntityMetrics } from '../../shared/models/statistics/olap/olap-entity-metrics.model';
@@ -21,6 +22,18 @@ export function findOrganizerById(id: number, organizers: Organizer[]): Organize
 
     if (id === organizer.id) {
       return organizer;
+    }
+  }
+
+  return null;
+}
+
+export function findTopicById(id: number, topics: Topic[]): Topic {
+  for (let i = 0; i < topics.length; i++) {
+    const topic: Topic = topics[i];
+
+    if (id === topic.id) {
+      return topic;
     }
   }
 
