@@ -5,6 +5,7 @@ import guess.domain.Conference;
 import guess.domain.source.Event;
 import guess.domain.source.EventType;
 import guess.domain.source.Organizer;
+import guess.domain.source.Topic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -74,14 +75,19 @@ class EventTypeServiceImplTest {
             Organizer organizer0 = new Organizer();
             organizer0.setId(0);
 
+            Topic topic0 = new Topic();
+            topic0.setId(0);
+
             EventType eventType0 = new EventType();
             eventType0.setId(0);
             eventType0.setConference(Conference.JPOINT);
             eventType0.setOrganizer(organizer0);
+            eventType0.setTopic(topic0);
 
             EventType eventType1 = new EventType();
             eventType1.setId(1);
             eventType1.setOrganizer(organizer0);
+            eventType1.setTopic(topic0);
 
             List<EventType> eventTypes = List.of(eventType0, eventType1);
 
@@ -97,7 +103,9 @@ class EventTypeServiceImplTest {
                     arguments(false, false, 1L, null, eventTypes, Collections.emptyList()),
                     arguments(true, false, 1L, null, eventTypes, Collections.emptyList()),
                     arguments(false, true, 1L, null, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 1L, null, eventTypes, Collections.emptyList())
+                    arguments(true, true, 1L, null, eventTypes, Collections.emptyList()),
+                    arguments(true, true, 0L, 0L, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(true, true, 0L, 1L, eventTypes, Collections.emptyList())
             );
         }
 

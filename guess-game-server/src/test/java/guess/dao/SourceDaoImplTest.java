@@ -398,6 +398,11 @@ class SourceDaoImplTest {
     private void assertFileExistence(String fileName) {
         Path path = Paths.get(String.format("../guess-game-web/src/assets/images/%s", fileName));
         assertTrue(Files.exists(path) && Files.isRegularFile(path),
-                String.format("Image file %s does not exist", path.toString()));
+                String.format("Image file %s does not exist", path));
+    }
+
+    @Test
+    void getTopics() {
+        assertEquals(List.of(topic0, topic1), sourceDao.getTopics());
     }
 }
