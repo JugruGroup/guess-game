@@ -89,17 +89,21 @@ class EventTypeServiceImplTest {
             eventType1.setOrganizer(organizer0);
             eventType1.setTopic(topic0);
 
-            List<EventType> eventTypes = List.of(eventType0, eventType1);
+            EventType eventType2 = new EventType();
+            eventType2.setId(2);
+            eventType2.setOrganizer(organizer0);
+
+            List<EventType> eventTypes = List.of(eventType0, eventType1, eventType2);
 
             return Stream.of(
                     arguments(false, false, null, null, eventTypes, Collections.emptyList()),
                     arguments(true, false, null, null, eventTypes, List.of(eventType0)),
-                    arguments(false, true, null, null, eventTypes, List.of(eventType1)),
-                    arguments(true, true, null, null, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(false, true, null, null, eventTypes, List.of(eventType1, eventType2)),
+                    arguments(true, true, null, null, eventTypes, List.of(eventType0, eventType1, eventType2)),
                     arguments(false, false, 0L, null, eventTypes, Collections.emptyList()),
                     arguments(true, false, 0L, null, eventTypes, List.of(eventType0)),
-                    arguments(false, true, 0L, null, eventTypes, List.of(eventType1)),
-                    arguments(true, true, 0L, null, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(false, true, 0L, null, eventTypes, List.of(eventType1, eventType2)),
+                    arguments(true, true, 0L, null, eventTypes, List.of(eventType0, eventType1, eventType2)),
                     arguments(false, false, 1L, null, eventTypes, Collections.emptyList()),
                     arguments(true, false, 1L, null, eventTypes, Collections.emptyList()),
                     arguments(false, true, 1L, null, eventTypes, Collections.emptyList()),
