@@ -14,7 +14,8 @@ export abstract class AbstractEvent {
     public telegramLink?: string,
     public speakerdeckLink?: string,
     public habrLink?: string,
-    public description?: string
+    public description?: string,
+    public topicExist?: boolean
   ) {
   }
 }
