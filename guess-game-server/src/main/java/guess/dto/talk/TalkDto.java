@@ -43,7 +43,7 @@ public class TalkDto extends TalkBriefDto {
 
         return new TalkDto(
                 talkSuperBriefDto,
-                convertToBriefDto(talkSuperBriefDto, talk, talkEventFunction, eventEventTypeFunction, language),
+                convertToBriefDto(talkSuperBriefDto, talk, language),
                 description,
                 talk.getLanguage());
     }

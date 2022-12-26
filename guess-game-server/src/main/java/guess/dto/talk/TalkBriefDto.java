@@ -49,8 +49,7 @@ public class TalkBriefDto extends TalkSuperBriefDto {
         return videoLinks;
     }
 
-    public static TalkBriefDto convertToBriefDto(TalkSuperBriefDto talkSuperBriefDto, Talk talk, Function<Talk, Event> talkEventFunction,
-                                                 Function<Event, EventType> eventEventTypeFunction, Language language) {
+    public static TalkBriefDto convertToBriefDto(TalkSuperBriefDto talkSuperBriefDto, Talk talk, Language language) {
         var topicName = (talk.getTopic() != null) ? LocalizationUtils.getString(talk.getTopic().getName(), language) : null;
 
         return new TalkBriefDto(
@@ -63,8 +62,7 @@ public class TalkBriefDto extends TalkSuperBriefDto {
 
     public static TalkBriefDto convertToBriefDto(Talk talk, Function<Talk, Event> talkEventFunction,
                                                  Function<Event, EventType> eventEventTypeFunction, Language language) {
-        return convertToBriefDto(convertToSuperBriefDto(talk, talkEventFunction, eventEventTypeFunction, language),
-                talk, talkEventFunction, eventEventTypeFunction, language);
+        return convertToBriefDto(convertToSuperBriefDto(talk, talkEventFunction, eventEventTypeFunction, language), talk, language);
     }
 
     public static List<TalkBriefDto> convertToBriefDto(List<Talk> talks, Function<Talk, Event> talkEventFunction,
