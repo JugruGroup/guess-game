@@ -146,6 +146,7 @@
       "talkDayColumn": "День",
       "talkTimeColumn": "Время",
       "trackColumn": "Трек",
+      "topicNameColumn": "Тема",
       "nameColumn": "Наименование",
       "speakersColumn": "Спикеры",
       "materialsColumn": "Материалы"

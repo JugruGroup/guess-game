@@ -146,6 +146,7 @@
       "talkDayColumn": "Day",
       "talkTimeColumn": "Time",
       "trackColumn": "Track",
+      "topicNameColumn": "Topic",
       "nameColumn": "Name",
       "speakersColumn": "Speakers",
       "materialsColumn": "Materials"
