@@ -12,9 +12,9 @@ import java.util.List;
  * Statistics service.
  */
 public interface StatisticsService {
-    List<EventType> getStatisticsEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId);
+    List<EventType> getStatisticsEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId, Long eventTypeId);
 
-    EventTypeStatistics getEventTypeStatistics(boolean isConferences, boolean isMeetups, Long organizerId);
+    EventTypeStatistics getEventTypeStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId);
 
     EventStatistics getEventStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId);
 

@@ -34,8 +34,10 @@ public class StatisticsController {
 
     @GetMapping("/event-type-statistics")
     public EventTypeStatisticsDto getEventTypeStatistics(@RequestParam boolean conferences, @RequestParam boolean meetups,
-                                                         @RequestParam(required = false) Long organizerId, HttpSession httpSession) {
-        var eventTypeStatistics = statisticsService.getEventTypeStatistics(conferences, meetups, organizerId);
+                                                         @RequestParam(required = false) Long organizerId,
+                                                         @RequestParam(required = false) Long topicId,
+                                                         HttpSession httpSession) {
+        var eventTypeStatistics = statisticsService.getEventTypeStatistics(conferences, meetups, organizerId, topicId);
         var language = localeService.getLanguage(httpSession);
         var eventTypeStatisticsDto = EventTypeStatisticsDto.convertToDto(eventTypeStatistics, language);
         Comparator<EventTypeMetricsDto> comparatorByIsConference = Comparator.comparing(EventTypeMetricsDto::isConference).reversed();

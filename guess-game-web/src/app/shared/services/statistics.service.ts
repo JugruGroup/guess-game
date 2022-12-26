@@ -38,6 +38,9 @@ export class StatisticsService {
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }
+    if (topic) {
+      params = params.set('topicId', topic.id.toString());
+    }
 
     return this.http.get<EventTypeStatistics>(`${this.baseUrl}/event-type-statistics`, {params: params})
       .pipe(

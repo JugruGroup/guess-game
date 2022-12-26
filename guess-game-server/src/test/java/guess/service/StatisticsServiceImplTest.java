@@ -291,53 +291,53 @@ class StatisticsServiceImplTest {
 
             return Stream.of(
                     arguments(false, false, null, null, eventTypes, Collections.emptyList()),
-                    arguments(true, false, null, null, eventTypes, List.of(eventType0)),
-                    arguments(false, true, null, null, eventTypes, List.of(eventType1)),
-                    arguments(true, true, null, null, eventTypes, List.of(eventType0, eventType1)),
-                    arguments(false, false, 0L, null, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 0L, null, eventTypes, List.of(eventType0)),
-                    arguments(false, true, 0L, null, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 0L, null, eventTypes, List.of(eventType0)),
-                    arguments(false, false, 1L, null, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 1L, null, eventTypes, Collections.emptyList()),
-                    arguments(false, true, 1L, null, eventTypes, List.of(eventType1)),
-                    arguments(true, true, 1L, null, eventTypes, List.of(eventType1)),
+                    arguments(true, false, null, null, null, eventTypes, List.of(eventType0)),
+                    arguments(false, true, null, null, null, eventTypes, List.of(eventType1)),
+                    arguments(true, true, null, null, null, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(false, false, 0L, null, null, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 0L, null, null, eventTypes, List.of(eventType0)),
+                    arguments(false, true, 0L, null, null, eventTypes, Collections.emptyList()),
+                    arguments(true, true, 0L, null, null, eventTypes, List.of(eventType0)),
+                    arguments(false, false, 1L, null, null, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 1L, null, null, eventTypes, Collections.emptyList()),
+                    arguments(false, true, 1L, null, null, eventTypes, List.of(eventType1)),
+                    arguments(true, true, 1L, null, null, eventTypes, List.of(eventType1)),
 
-                    arguments(false, false, null, 0L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, null, 0L, eventTypes, List.of(eventType0)),
-                    arguments(false, true, null, 0L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, null, 0L, eventTypes, List.of(eventType0)),
-                    arguments(false, false, 0L, 0L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 0L, 0L, eventTypes, List.of(eventType0)),
-                    arguments(false, true, 0L, 0L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 0L, 0L, eventTypes, List.of(eventType0)),
-                    arguments(false, false, 1L, 0L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 1L, 0L, eventTypes, Collections.emptyList()),
-                    arguments(false, true, 1L, 0L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 1L, 0L, eventTypes, Collections.emptyList()),
+                    arguments(false, false, null, null, 0L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, null, null, 0L, eventTypes, List.of(eventType0)),
+                    arguments(false, true, null, null, 0L, eventTypes, Collections.emptyList()),
+                    arguments(true, true, null, null, 0L, eventTypes, List.of(eventType0)),
+                    arguments(false, false, 0L, null, 0L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 0L, null, 0L, eventTypes, List.of(eventType0)),
+                    arguments(false, true, 0L, null, 0L, eventTypes, Collections.emptyList()),
+                    arguments(true, true, 0L, null, 0L, eventTypes, List.of(eventType0)),
+                    arguments(false, false, 1L, null, 0L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 1L, null, 0L, eventTypes, Collections.emptyList()),
+                    arguments(false, true, 1L, null, 0L, eventTypes, Collections.emptyList()),
+                    arguments(true, true, 1L, null, 0L, eventTypes, Collections.emptyList()),
 
-                    arguments(false, false, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(false, true, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(false, false, 0L, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 0L, 2L, eventTypes, Collections.emptyList()),
-                    arguments(false, true, 0L, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 0L, 2L, eventTypes, Collections.emptyList()),
-                    arguments(false, false, 1L, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 1L, 2L, eventTypes, Collections.emptyList()),
-                    arguments(false, true, 1L, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 1L, 2L, eventTypes, Collections.emptyList())
+                    arguments(false, false, null, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, null, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(false, true, null, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, true, null, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(false, false, 0L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 0L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(false, true, 0L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, true, 0L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(false, false, 1L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 1L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(false, true, 1L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, true, 1L, 2L, null, eventTypes, Collections.emptyList())
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getStatisticsEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId,
+        void getStatisticsEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId, Long eventTypeId,
                                      List<EventType> eventTypes, List<EventType> expected) {
             Mockito.when(eventTypeDao.getEventTypes()).thenReturn(eventTypes);
 
-            assertEquals(expected, statisticsService.getStatisticsEventTypes(isConferences, isMeetups, organizerId, eventTypeId));
+            assertEquals(expected, statisticsService.getStatisticsEventTypes(isConferences, isMeetups, organizerId, topicId, eventTypeId));
             Mockito.verify(eventTypeDao, VerificationModeFactory.times(1)).getEventTypes();
             Mockito.verifyNoMoreInteractions(eventTypeDao);
 
@@ -399,7 +399,7 @@ class StatisticsServiceImplTest {
                 0,
                 0, 0, 0
         );
-        EventTypeStatistics actual0 = statisticsService.getEventTypeStatistics(false, false, null);
+        EventTypeStatistics actual0 = statisticsService.getEventTypeStatistics(false, false, null, null);
         assertEquals(expected0, actual0);
 
         EventTypeStatistics expected1 = createEventTypeStatistics(
@@ -413,7 +413,7 @@ class StatisticsServiceImplTest {
                 1,
                 1, 0, 1
         );
-        EventTypeStatistics actual1 = statisticsService.getEventTypeStatistics(false, true, null);
+        EventTypeStatistics actual1 = statisticsService.getEventTypeStatistics(false, true, null, null);
         assertEquals(expected1, actual1);
 
         EventTypeStatistics expected2 = createEventTypeStatistics(
@@ -427,7 +427,7 @@ class StatisticsServiceImplTest {
                 2,
                 2, 1, 0
         );
-        EventTypeStatistics actual2 = statisticsService.getEventTypeStatistics(true, false, null);
+        EventTypeStatistics actual2 = statisticsService.getEventTypeStatistics(true, false, null, null);
         assertEquals(expected2, actual2);
 
         EventTypeStatistics expected3 = createEventTypeStatistics(
@@ -441,7 +441,7 @@ class StatisticsServiceImplTest {
                 3,
                 3, 1, 1
         );
-        EventTypeStatistics actual3 = statisticsService.getEventTypeStatistics(true, true, null);
+        EventTypeStatistics actual3 = statisticsService.getEventTypeStatistics(true, true, null, null);
         assertEquals(expected3, actual3);
     }
 
