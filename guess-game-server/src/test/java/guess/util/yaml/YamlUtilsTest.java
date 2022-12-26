@@ -354,6 +354,56 @@ class YamlUtilsTest {
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("linkTalksToTopics method tests")
+    class LinkTalksToTopicsTest {
+        private Stream<Arguments> data() {
+            Talk talk0 = new Talk();
+            talk0.setId(0);
+            talk0.setTopicId(0L);
+
+            Talk talk1 = new Talk();
+            talk1.setId(1);
+            talk1.setTopicId(1L);
+
+            Talk talk2 = new Talk();
+            talk2.setId(2);
+
+            Topic topic0 = new Topic();
+            topic0.setId(0);
+
+            return Stream.of(
+                    arguments(Collections.emptyMap(), List.of(talk0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk0), null),
+                    arguments(Map.of(0L, topic0), List.of(talk1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk0, talk1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk1, talk0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk2), null)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void linkTalksToTopics(Map<Long, Topic> topics, List<Talk> talks, Class<? extends Exception> expected) {
+            if (expected == null) {
+                talks.forEach(t -> assertNull(t.getTopic()));
+
+                assertDoesNotThrow(() -> YamlUtils.linkTalksToTopics(topics, talks));
+
+                talks.stream()
+                        .filter(t -> t.getTopicId() != null)
+                        .forEach(t -> assertNotNull(t.getTopic()));
+            } else {
+                assertThrows(expected, () -> YamlUtils.linkTalksToTopics(topics, talks));
+            }
+        }
+    }
+
+    @Test
+    void linkTalksToTopics() {
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("linkTalksToEvents method tests")
     class LinkTalksToEventsTest {
         private Stream<Arguments> data() {

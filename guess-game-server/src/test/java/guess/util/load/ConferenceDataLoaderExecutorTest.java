@@ -3836,6 +3836,9 @@ class ConferenceDataLoaderExecutorTest {
     @DisplayName("needUpdate method tests (Talk)")
     class NeedUpdateTalkTest {
         private Stream<Arguments> data() {
+            Topic topic0 = new Topic(0, Collections.emptyList(), false, 0);
+            Topic topic1 = new Topic(1, Collections.emptyList(), false, 1);
+
             Talk talk0 = new Talk();
             talk0.setId(0);
             talk0.setName(List.of(new LocaleItem("en", "name0")));
@@ -3849,6 +3852,7 @@ class ConferenceDataLoaderExecutorTest {
             talk0.setMaterialLinks(List.of("materialLink0"));
             talk0.setVideoLinks(List.of("videoLink0"));
             talk0.setSpeakerIds(List.of(0L));
+            talk0.setTopic(topic0);
 
             Talk talk1 = new Talk();
             talk1.setId(1);
@@ -3952,6 +3956,21 @@ class ConferenceDataLoaderExecutorTest {
             talk12.setVideoLinks(List.of("videoLink0"));
             talk12.setSpeakerIds(List.of(1L));
 
+            Talk talk13 = new Talk();
+            talk13.setId(0);
+            talk13.setName(List.of(new LocaleItem("en", "name0")));
+            talk13.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
+            talk13.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
+            talk13.setTalkDay(1L);
+            talk13.setTrackTime(LocalTime.of(10, 0));
+            talk13.setTrack(1L);
+            talk13.setLanguage("en");
+            talk13.setPresentationLinks(List.of("presentationLink0"));
+            talk13.setMaterialLinks(List.of("materialLink0"));
+            talk13.setVideoLinks(List.of("videoLink0"));
+            talk13.setSpeakerIds(List.of(0L));
+            talk13.setTopic(topic1);
+
             return Stream.of(
                     arguments(talk0, talk0, false),
                     arguments(talk0, talk1, true),
@@ -3965,7 +3984,8 @@ class ConferenceDataLoaderExecutorTest {
                     arguments(talk0, talk9, true),
                     arguments(talk0, talk10, true),
                     arguments(talk0, talk11, true),
-                    arguments(talk0, talk12, true)
+                    arguments(talk0, talk12, true),
+                    arguments(talk0, talk13, true)
             );
         }
 
