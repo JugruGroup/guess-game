@@ -132,6 +132,9 @@ class StatisticsServiceImplTest {
         Organizer organizer1 = new Organizer();
         organizer1.setId(1);
 
+        Topic topic0 = new Topic();
+        topic0.setId(0);
+
         ZoneId zoneId0 = ZoneId.of("Europe/Moscow");
 
         eventType0 = new EventType();
@@ -139,11 +142,13 @@ class StatisticsServiceImplTest {
         eventType0.setConference(Conference.JPOINT);
         eventType0.setOrganizer(organizer0);
         eventType0.setTimeZoneId(zoneId0);
+        eventType0.setTopic(topic0);
 
         eventType1 = new EventType();
         eventType1.setId(1);
         eventType1.setOrganizer(organizer1);
         eventType1.setTimeZoneId(zoneId0);
+        eventType1.setTopic(topic0);
 
         eventType2 = new EventType();
         eventType2.setId(2);
@@ -287,21 +292,21 @@ class StatisticsServiceImplTest {
     @DisplayName("getStatisticsEventTypes method with parameters tests")
     class GetStatisticsEventTypesTest {
         private Stream<Arguments> data() {
-            List<EventType> eventTypes = List.of(eventType0, eventType1);
+            List<EventType> eventTypes = List.of(eventType0, eventType1, eventType2);
 
             return Stream.of(
                     arguments(false, false, null, null, null, eventTypes, Collections.emptyList()),
-                    arguments(true, false, null, null, null, eventTypes, List.of(eventType0)),
+                    arguments(true, false, null, null, null, eventTypes, List.of(eventType0, eventType2)),
                     arguments(false, true, null, null, null, eventTypes, List.of(eventType1)),
-                    arguments(true, true, null, null, null, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(true, true, null, null, null, eventTypes, List.of(eventType0, eventType1, eventType2)),
                     arguments(false, false, 0L, null, null, eventTypes, Collections.emptyList()),
                     arguments(true, false, 0L, null, null, eventTypes, List.of(eventType0)),
                     arguments(false, true, 0L, null, null, eventTypes, Collections.emptyList()),
                     arguments(true, true, 0L, null, null, eventTypes, List.of(eventType0)),
                     arguments(false, false, 1L, null, null, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 1L, null, null, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 1L, null, null, eventTypes, List.of(eventType2)),
                     arguments(false, true, 1L, null, null, eventTypes, List.of(eventType1)),
-                    arguments(true, true, 1L, null, null, eventTypes, List.of(eventType1)),
+                    arguments(true, true, 1L, null, null, eventTypes, List.of(eventType1, eventType2)),
 
                     arguments(false, false, null, null, 0L, eventTypes, Collections.emptyList()),
                     arguments(true, false, null, null, 0L, eventTypes, List.of(eventType0)),
@@ -317,17 +322,20 @@ class StatisticsServiceImplTest {
                     arguments(true, true, 1L, null, 0L, eventTypes, Collections.emptyList()),
 
                     arguments(false, false, null, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, null, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, null, null, 2L, eventTypes, List.of(eventType2)),
                     arguments(false, true, null, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, null, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, true, null, null, 2L, eventTypes, List.of(eventType2)),
                     arguments(false, false, 0L, null, 2L, eventTypes, Collections.emptyList()),
                     arguments(true, false, 0L, null, 2L, eventTypes, Collections.emptyList()),
                     arguments(false, true, 0L, null, 2L, eventTypes, Collections.emptyList()),
                     arguments(true, true, 0L, null, 2L, eventTypes, Collections.emptyList()),
                     arguments(false, false, 1L, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, false, 1L, null, 2L, eventTypes, Collections.emptyList()),
+                    arguments(true, false, 1L, null, 2L, eventTypes, List.of(eventType2)),
                     arguments(false, true, 1L, null, 2L, eventTypes, Collections.emptyList()),
-                    arguments(true, true, 1L, 2L, null, eventTypes, Collections.emptyList())
+                    arguments(true, true, 1L, null, 2L, eventTypes, List.of(eventType2)),
+
+                    arguments(true, true, null, 0L, null, eventTypes, List.of(eventType0, eventType1)),
+                    arguments(true, true, null, 1L, null, eventTypes, Collections.emptyList())
             );
         }
 
