@@ -775,13 +775,17 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                 dayTrackTime.dayNumber(),
                 dayTrackTime.startTime(),
                 dayTrackTime.trackNumber(),
-                extractLanguage(jrgCmsTalk.getLanguage()),
                 new Talk.TalkLinks(
                         extractPresentationLinks(jrgCmsTalk.getPresentation()),
                         new ArrayList<>(),
                         new ArrayList<>()
                 ),
-                speakers);
+                speakers,
+                new Talk.TalkAttributes(
+                        extractLanguage(jrgCmsTalk.getLanguage()),
+                        null
+                )
+        );
     }
 
     /**

@@ -128,6 +128,7 @@ public class YamlUtils {
         linkEventTypesToTopics(topicMap, eventTypes);
         linkEventsToEventTypes(eventTypeMap, events);
         linkEventsToPlaces(placeMap, events);
+        linkTalksToTopics(topicMap, talks);
         linkTalksToEvents(talkMap, events);
         linkSpeakersToCompanies(companyMap, speakers);
         linkSpeakersToTalks(speakerMap, talks);
@@ -241,6 +242,24 @@ public class YamlUtils {
                 Objects.requireNonNull(place,
                         () -> String.format("Place id %d not found for event days %s", eventDays.getPlaceId(), eventDays));
                 eventDays.setPlace(place);
+            }
+        }
+    }
+
+    /**
+     * Links talks to topics.
+     *
+     * @param topics topics
+     * @param talks  talks
+     */
+    static void linkTalksToTopics(Map<Long, Topic> topics, List<Talk> talks) {
+        for (Talk talk : talks) {
+            if (talk.getTopicId() != null) {
+                // Find topic by id
+                var topic = topics.get(talk.getTopicId());
+                Objects.requireNonNull(topic,
+                        () -> String.format("Topic id %d not found for talk %s", talk.getTopicId(), talk));
+                talk.setTopic(topic);
             }
         }
     }

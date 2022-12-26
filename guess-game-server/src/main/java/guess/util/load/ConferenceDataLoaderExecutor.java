@@ -1890,7 +1890,8 @@ public class ConferenceDataLoaderExecutor {
                 equals(a.getPresentationLinks(), b.getPresentationLinks()) &&
                 equals(a.getMaterialLinks(), b.getMaterialLinks()) &&
                 equals(a.getVideoLinks(), b.getVideoLinks()) &&
-                equals(a.getSpeakerIds(), b.getSpeakerIds()));
+                equals(a.getSpeakerIds(), b.getSpeakerIds()) &&
+                equals(a.getTopic(), b.getTopic()));
     }
 
     /**

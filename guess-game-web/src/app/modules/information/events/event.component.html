@@ -201,7 +201,7 @@
             <td class="text-center">{{talk.talkDay}}</td>
             <td class="text-center">{{talk.talkTime | date:"HH:mm":undefined:translateService.currentLang}}</td>
             <td class="text-center">{{talk.track}}</td>
-            <td *ngIf="isTopicColumnVisible()" class="text-center">{{talk.topicName}}</td>
+            <td *ngIf="isTopicColumnVisible()">{{talk.topicName}}</td>
             <td>
               <a [routerLink]="['/information', 'talks', 'talk', talk.id]" class="text-dark">{{talk.name}}</a>
             </td>
