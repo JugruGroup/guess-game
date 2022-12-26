@@ -290,7 +290,7 @@ class StatisticsServiceImplTest {
             List<EventType> eventTypes = List.of(eventType0, eventType1);
 
             return Stream.of(
-                    arguments(false, false, null, null, eventTypes, Collections.emptyList()),
+                    arguments(false, false, null, null, null, eventTypes, Collections.emptyList()),
                     arguments(true, false, null, null, null, eventTypes, List.of(eventType0)),
                     arguments(false, true, null, null, null, eventTypes, List.of(eventType1)),
                     arguments(true, true, null, null, null, eventTypes, List.of(eventType0, eventType1)),
