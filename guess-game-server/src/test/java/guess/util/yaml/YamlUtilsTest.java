@@ -398,10 +398,6 @@ class YamlUtilsTest {
         }
     }
 
-    @Test
-    void linkTalksToTopics() {
-    }
-
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("linkTalksToEvents method tests")
