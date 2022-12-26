@@ -10,7 +10,6 @@ import { CompanyStatistics } from '../models/statistics/company-statistics.model
 import { Organizer } from '../models/organizer/organizer.model';
 import { CubeType } from '../models/statistics/olap/cube-type.model';
 import { MeasureType } from '../models/statistics/olap/measure-type.model';
-import { MessageService } from '../../modules/message/message.service';
 import { OlapStatistics } from "../models/statistics/olap/olap-statistics.model";
 import { OlapParameters } from "../models/statistics/olap/olap.parameters.model";
 import { OlapEventTypeParameters } from "../models/statistics/olap/olap-event-type-parameters.model";
@@ -20,6 +19,8 @@ import { OlapSpeakerMetrics } from '../models/statistics/olap/olap-speaker-metri
 import { OlapSpeakerParameters } from '../models/statistics/olap/olap-speaker-parameters.model';
 import { OlapCityMetrics } from '../models/statistics/olap/olap-city-metrics.model';
 import { OlapCityParameters } from '../models/statistics/olap/olap-city-parameters.model';
+import { Topic } from '../models/topic/topic.model';
+import { MessageService } from '../../modules/message/message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -30,12 +31,15 @@ export class StatisticsService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getEventTypeStatistics(conferences: boolean, meetups: boolean, organizer: Organizer): Observable<EventTypeStatistics> {
+  getEventTypeStatistics(conferences: boolean, meetups: boolean, organizer: Organizer, topic: Topic): Observable<EventTypeStatistics> {
     let params = new HttpParams()
       .set('conferences', conferences.toString())
       .set('meetups', meetups.toString());
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
+    }
+    if (topic) {
+      params = params.set('topicId', topic.id.toString());
     }
 
     return this.http.get<EventTypeStatistics>(`${this.baseUrl}/event-type-statistics`, {params: params})

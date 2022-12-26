@@ -31,8 +31,8 @@ export class EventsSearchComponent implements OnInit {
   public eventParts: EventPart[] = [];
   public multiSortMeta: any[] = [];
 
-  constructor(private eventTypeService: EventTypeService, private eventService: EventService,
-              public organizerService: OrganizerService, public translateService: TranslateService) {
+  constructor(private eventService: EventService, public organizerService: OrganizerService,
+              private eventTypeService: EventTypeService, public translateService: TranslateService) {
     this.multiSortMeta.push({field: 'startDate', order: -1});
     this.multiSortMeta.push({field: 'name', order: 1});
   }

@@ -31,10 +31,11 @@ public class EventTypeServiceImpl implements EventTypeService {
     }
 
     @Override
-    public List<EventType> getEventTypes(boolean isConferences, boolean isMeetups, Long organizerId) {
+    public List<EventType> getEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId) {
         return eventTypeDao.getEventTypes().stream()
                 .filter(et -> ((isConferences && et.isEventTypeConference()) || (isMeetups && !et.isEventTypeConference())) &&
-                        ((organizerId == null) || (et.getOrganizer().getId() == organizerId)))
+                        ((organizerId == null) || (et.getOrganizer().getId() == organizerId)) &&
+                        ((topicId == null) || ((et.getTopic() != null) && (et.getTopic().getId() == topicId))))
                 .toList();
     }
 

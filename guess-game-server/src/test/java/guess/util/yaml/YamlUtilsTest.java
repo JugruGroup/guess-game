@@ -50,6 +50,7 @@ class YamlUtilsTest {
 
             List<Place> places = Collections.emptyList();
             List<Organizer> organizers = Collections.emptyList();
+            List<Topic> topics = Collections.emptyList();
             List<EventType> eventTypes = Collections.emptyList();
             List<Event> events = Collections.emptyList();
             List<Company> companies = Collections.emptyList();
@@ -62,9 +63,10 @@ class YamlUtilsTest {
             List<Talk> talks = Collections.emptyList();
 
             return Stream.of(
-                    arguments(places, organizers, eventTypes, events, companies, companyGroupList, companySynonymsList,
+                    arguments(places, organizers, topics, eventTypes, events, companies, companyGroupList, companySynonymsList,
                             speakers0, talks, null,
                             new SourceInformation(
+                                    Collections.emptyList(),
                                     Collections.emptyList(),
                                     Collections.emptyList(),
                                     Collections.emptyList(),
@@ -77,21 +79,23 @@ class YamlUtilsTest {
                                     ),
                                     Collections.emptyList()
                             )),
-                    arguments(places, organizers, eventTypes, events, companies, companyGroupList, companySynonymsList,
+                    arguments(places, organizers, topics, eventTypes, events, companies, companyGroupList, companySynonymsList,
                             speakers1, talks, SpeakerDuplicatedException.class, null)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getSourceInformation(List<Place> places, List<Organizer> organizers, List<EventType> eventTypes, List<Event> events,
-                                  List<Company> companies, List<CompanyGroup> companyGroupList, List<CompanySynonyms> companySynonymsList,
-                                  List<Speaker> speakers, List<Talk> talks, Class<? extends Exception> expectedException,
+        void getSourceInformation(List<Place> places, List<Organizer> organizers, List<Topic> topics, List<EventType> eventTypes,
+                                  List<Event> events, List<Company> companies, List<CompanyGroup> companyGroupList,
+                                  List<CompanySynonyms> companySynonymsList, List<Speaker> speakers,
+                                  List<Talk> talks, Class<? extends Exception> expectedException,
                                   SourceInformation expectedResult) throws SpeakerDuplicatedException {
             if (expectedException == null) {
                 assertEquals(expectedResult, YamlUtils.getSourceInformation(
                         places,
                         organizers,
+                        topics,
                         eventTypes,
                         events,
                         new SourceInformation.SpeakerInformation(
@@ -105,6 +109,7 @@ class YamlUtilsTest {
                 assertThrows(expectedException, () -> YamlUtils.getSourceInformation(
                         places,
                         organizers,
+                        topics,
                         eventTypes,
                         events,
                         new SourceInformation.SpeakerInformation(
@@ -215,6 +220,52 @@ class YamlUtilsTest {
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("linkEventTypesToTopics method tests")
+    class LinkEventTypesToTopicsTest {
+        private Stream<Arguments> data() {
+            EventType eventType0 = new EventType();
+            eventType0.setId(0);
+            eventType0.setTopicId(0L);
+
+            EventType eventType1 = new EventType();
+            eventType1.setId(1);
+            eventType1.setTopicId(1L);
+
+            EventType eventType2 = new EventType();
+            eventType2.setId(2);
+
+            Topic topic0 = new Topic();
+            topic0.setId(0);
+
+            return Stream.of(
+                    arguments(Collections.emptyMap(), List.of(eventType0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType0), null),
+                    arguments(Map.of(0L, topic0), List.of(eventType1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType0, eventType1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType1, eventType0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(eventType2), null)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void linkEventTypesToTopics(Map<Long, Topic> topics, List<EventType> eventTypes, Class<? extends Exception> expected) {
+            if (expected == null) {
+                eventTypes.forEach(et -> assertNull(et.getTopic()));
+
+                assertDoesNotThrow(() -> YamlUtils.linkEventTypesToTopics(topics, eventTypes));
+
+                eventTypes.stream()
+                        .filter(et -> et.getTopicId() != null)
+                        .forEach(et -> assertNotNull(et.getTopic()));
+            } else {
+                assertThrows(expected, () -> YamlUtils.linkEventTypesToTopics(topics, eventTypes));
+            }
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("linkEventsToEventTypes method tests")
     class LinkEventsToEventTypesTest {
         private Stream<Arguments> data() {
@@ -297,6 +348,52 @@ class YamlUtilsTest {
                         .forEach(ed -> assertNotNull(ed.getPlace()));
             } else {
                 assertThrows(expected, () -> YamlUtils.linkEventsToPlaces(places, events));
+            }
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("linkTalksToTopics method tests")
+    class LinkTalksToTopicsTest {
+        private Stream<Arguments> data() {
+            Talk talk0 = new Talk();
+            talk0.setId(0);
+            talk0.setTopicId(0L);
+
+            Talk talk1 = new Talk();
+            talk1.setId(1);
+            talk1.setTopicId(1L);
+
+            Talk talk2 = new Talk();
+            talk2.setId(2);
+
+            Topic topic0 = new Topic();
+            topic0.setId(0);
+
+            return Stream.of(
+                    arguments(Collections.emptyMap(), List.of(talk0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk0), null),
+                    arguments(Map.of(0L, topic0), List.of(talk1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk0, talk1), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk1, talk0), NullPointerException.class),
+                    arguments(Map.of(0L, topic0), List.of(talk2), null)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void linkTalksToTopics(Map<Long, Topic> topics, List<Talk> talks, Class<? extends Exception> expected) {
+            if (expected == null) {
+                talks.forEach(t -> assertNull(t.getTopic()));
+
+                assertDoesNotThrow(() -> YamlUtils.linkTalksToTopics(topics, talks));
+
+                talks.stream()
+                        .filter(t -> t.getTopicId() != null)
+                        .forEach(t -> assertNotNull(t.getTopic()));
+            } else {
+                assertThrows(expected, () -> YamlUtils.linkTalksToTopics(topics, talks));
             }
         }
     }

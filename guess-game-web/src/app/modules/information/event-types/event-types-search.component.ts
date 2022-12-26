@@ -5,7 +5,9 @@ import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { Organizer } from '../../../shared/models/organizer/organizer.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { OrganizerService } from '../../../shared/services/organizer.service';
-import { findOrganizerById, getEventTypesWithSortName } from '../../general/utility-functions';
+import { TopicService } from '../../../shared/services/topic.service';
+import { Topic } from '../../../shared/models/topic/topic.model';
+import { findOrganizerById, findTopicById, getEventTypesWithSortName } from '../../general/utility-functions';
 
 @Component({
   selector: 'app-event-types-search',
@@ -22,10 +24,14 @@ export class EventTypesSearchComponent implements OnInit {
   public selectedOrganizer: Organizer;
   public organizerSelectItems: SelectItem[] = [];
 
+  public topics: Topic[] = [];
+  public selectedTopic: Topic;
+  public topicSelectItems: SelectItem[] = [];
+
   public eventTypes: EventType[] = [];
 
   constructor(private eventTypeService: EventTypeService, public organizerService: OrganizerService,
-              public translateService: TranslateService) {
+              private topicService: TopicService, public translateService: TranslateService) {
   }
 
   ngOnInit(): void {
@@ -40,7 +46,17 @@ export class EventTypesSearchComponent implements OnInit {
     );
   }
 
+  fillTopics(topics: Topic[]) {
+    this.topics = topics;
+    this.topicSelectItems = this.topics.map(t => {
+        return {label: t.name, value: t};
+      }
+    );
+  }
+
   loadOrganizers() {
+    const currentSelectedTopic = this.selectedTopic;
+
     this.organizerService.getOrganizers()
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
@@ -51,44 +67,79 @@ export class EventTypesSearchComponent implements OnInit {
               const selectedOrganizer = (defaultOrganizerData) ? findOrganizerById(defaultOrganizerData.id, this.organizers) : null;
               this.selectedOrganizer = (selectedOrganizer) ? selectedOrganizer : null;
 
-              this.loadEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer);
+              this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+                .subscribe(topicsData => {
+                  this.fillTopics(topicsData);
+
+                  if (this.topics.length > 0) {
+                    this.selectedTopic = (currentSelectedTopic) ? findTopicById(currentSelectedTopic.id, this.topics) : null;
+                  } else {
+                    this.selectedTopic = null;
+                  }
+
+                  this.loadEventTypes(this.selectedOrganizer, this.selectedTopic);
+                });
             });
         } else {
           this.selectedOrganizer = null;
-          this.loadEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer);
+          this.selectedTopic = null;
+          this.loadEventTypes(this.selectedOrganizer, this.selectedTopic);
         }
       });
   }
 
-  loadEventTypes(isConferences: boolean, isMeetups: boolean, organizer: Organizer) {
-    this.eventTypeService.getEventTypes(isConferences, isMeetups, organizer)
+  loadTopics() {
+    this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+      .subscribe(topicsData => {
+        this.fillTopics(topicsData);
+
+        this.selectedTopic = null;
+
+        this.loadEventTypes(this.selectedOrganizer, this.selectedTopic);
+      });
+  }
+
+  loadEventTypes(organizer: Organizer, topic: Topic) {
+    this.eventTypeService.getEventTypes(this.isConferences, this.isMeetups, organizer, topic)
       .subscribe(data => {
         this.eventTypes = getEventTypesWithSortName(data);
       });
   }
 
   onEventTypeKindChange() {
-    this.loadEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer);
+    this.loadTopics();
   }
 
-  onOrganizerChange(organizer: Organizer) {
-    this.loadEventTypes(this.isConferences, this.isMeetups, organizer);
+  onOrganizerChange() {
+    this.loadTopics();
+  }
+
+  onTopicChange() {
+    this.loadEventTypes(this.selectedOrganizer, this.selectedTopic);
   }
 
   onLanguageChange() {
     const currentSelectedOrganizer = this.selectedOrganizer;
+    const currentSelectedTopic = this.selectedTopic;
 
     this.organizerService.getOrganizers()
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
-        if (this.organizers.length > 0) {
-          this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
-        } else {
-          this.selectedOrganizer = null;
-        }
+        this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.loadEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer);
+        this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+          .subscribe(topicsData => {
+            this.fillTopics(topicsData);
+
+            if (this.topics.length > 0) {
+              this.selectedTopic = (currentSelectedTopic) ? findTopicById(currentSelectedTopic.id, this.topics) : null;
+            } else {
+              this.selectedTopic = null;
+            }
+
+            this.loadEventTypes(this.selectedOrganizer, this.selectedTopic);
+          });
       });
   }
 

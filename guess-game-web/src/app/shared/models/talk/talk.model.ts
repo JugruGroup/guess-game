@@ -19,7 +19,8 @@ export class Talk {
     public materialLinks?: string[],
     public videoLinks?: string[],
     public videoLinksVideoIds?: string[],
-    public materialsOrderNumber?: number
+    public materialsOrderNumber?: number,
+    public topicName?: string
   ) {
   }
 }

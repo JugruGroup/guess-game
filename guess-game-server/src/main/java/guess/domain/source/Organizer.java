@@ -18,7 +18,7 @@ public class Organizer extends Nameable {
     public String toString() {
         return "Organizer{" +
                 "id=" + getId() +
-                "name=" + getName() +
+                ", name=" + getName() +
                 '}';
     }
 }

@@ -16,9 +16,9 @@ public class TalkDto extends TalkBriefDto {
     private final String description;
     private final String language;
 
-    public TalkDto(TalkSuperBriefDto talkSuperBriefDto, List<String> presentationLinks, List<String> materialLinks,
-                   List<String> videoLinks, String description, String language) {
-        super(talkSuperBriefDto, presentationLinks, materialLinks, videoLinks);
+    public TalkDto(TalkSuperBriefDto talkSuperBriefDto, TalkBriefDto talkBriefDto, String description, String language) {
+        super(talkSuperBriefDto, talkBriefDto.getTopicName(), talkBriefDto.getPresentationLinks(), talkBriefDto.getMaterialLinks(),
+                talkBriefDto.getVideoLinks());
 
         this.description = description;
         this.language = language;
@@ -34,6 +34,7 @@ public class TalkDto extends TalkBriefDto {
 
     public static TalkDto convertToDto(Talk talk, Function<Talk, Event> talkEventFunction,
                                        Function<Event, EventType> eventEventTypeFunction, Language language) {
+        var talkSuperBriefDto = convertToSuperBriefDto(talk, talkEventFunction, eventEventTypeFunction, language);
         var description = LocalizationUtils.getString(talk.getLongDescription(), language);
 
         if ((description == null) || description.isEmpty()) {
@@ -41,10 +42,8 @@ public class TalkDto extends TalkBriefDto {
         }
 
         return new TalkDto(
-                convertToBriefDto(talk, talkEventFunction, eventEventTypeFunction, language),
-                talk.getPresentationLinks(),
-                talk.getMaterialLinks(),
-                talk.getVideoLinks(),
+                talkSuperBriefDto,
+                convertToBriefDto(talkSuperBriefDto, talk, language),
                 description,
                 talk.getLanguage());
     }

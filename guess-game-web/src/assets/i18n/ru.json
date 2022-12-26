@@ -37,11 +37,13 @@
       "eventLabel": "Событие:",
       "speakerLabel": "Спикер:",
       "companyLabel": "Компания:",
+      "topicLabel": "Тема:",
       "organizerPlaceholder": "Все",
       "eventTypePlaceholder": "Все",
       "eventPlaceholder": "Все",
       "speakersPlaceholder": "Все",
       "companiesPlaceholder": "Все",
+      "topicPlaceholder": "Все",
       "emptyMessage": "Нет элементов"
     },
     "table": {
@@ -101,6 +103,7 @@
       "kindColumn": "Вид",
       "nameColumn": "Наименование",
       "organizerNameColumn": "Организатор",
+      "topicNameColumn": "Тема",
       "shortDescriptionColumn": "Описание"
     },
     "search": {
@@ -143,6 +146,7 @@
       "talkDayColumn": "День",
       "talkTimeColumn": "Время",
       "trackColumn": "Трек",
+      "topicNameColumn": "Тема",
       "nameColumn": "Наименование",
       "speakersColumn": "Спикеры",
       "materialsColumn": "Материалы"

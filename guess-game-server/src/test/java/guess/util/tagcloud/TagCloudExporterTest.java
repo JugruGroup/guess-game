@@ -32,6 +32,8 @@ class TagCloudExporterTest {
 
     private static Organizer organizer0;
 
+    private static Topic topic0;
+
     private static EventType eventType0;
 
     private static Talk talk0;
@@ -47,6 +49,8 @@ class TagCloudExporterTest {
         place0 = new Place();
 
         organizer0 = new Organizer();
+
+        topic0 = new Topic();
 
         Event event0 = new Event();
         event0.setId(0);
@@ -103,6 +107,7 @@ class TagCloudExporterTest {
                 Collections.emptyList(),
                 Collections.emptyList(),
                 Collections.emptyList(),
+                Collections.emptyList(),
                 new SourceInformation.SpeakerInformation(
                         Collections.emptyList(),
                         Collections.emptyList(),
@@ -127,6 +132,7 @@ class TagCloudExporterTest {
         SourceInformation sourceInformation = new SourceInformation(
                 List.of(place0),
                 List.of(organizer0),
+                List.of(topic0),
                 List.of(eventType0),
                 Collections.emptyList(),
                 new SourceInformation.SpeakerInformation(

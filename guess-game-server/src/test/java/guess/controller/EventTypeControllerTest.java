@@ -62,7 +62,7 @@ class EventTypeControllerTest {
         eventType1.setId(1);
         eventType1.setOrganizer(organizer0);
 
-        given(eventTypeService.getEventTypes(true, true, null)).willReturn(List.of(eventType0, eventType1));
+        given(eventTypeService.getEventTypes(true, true, null, null)).willReturn(List.of(eventType0, eventType1));
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/event-type/event-types")
@@ -72,7 +72,7 @@ class EventTypeControllerTest {
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
-        Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes(true, true, null);
+        Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes(true, true, null, null);
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
@@ -91,7 +91,7 @@ class EventTypeControllerTest {
         eventType1.setId(1);
         eventType1.setOrganizer(organizer0);
 
-        given(eventTypeService.getEventTypes(true, true, null)).willReturn(List.of(eventType0, eventType1));
+        given(eventTypeService.getEventTypes(true, true, null, null)).willReturn(List.of(eventType0, eventType1));
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/event-type/filter-event-types")
@@ -101,12 +101,15 @@ class EventTypeControllerTest {
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
-        Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes(true, true, null);
+        Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes(true, true, null, null);
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
     void getEventTypesAndSort() {
+        final Long ORGANIZER_ID = 0L;
+        final Long TOPIC_ID = 1L;
+
         Organizer organizer0 = new Organizer();
         organizer0.setId(0);
 
@@ -120,10 +123,10 @@ class EventTypeControllerTest {
         eventType1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
         eventType1.setOrganizer(organizer0);
 
-        given(eventTypeService.getEventTypes(true, true, null)).willReturn(List.of(eventType1, eventType0));
+        given(eventTypeService.getEventTypes(true, true, ORGANIZER_ID, TOPIC_ID)).willReturn(List.of(eventType1, eventType0));
 
-        assertEquals(List.of(eventType0, eventType1), eventTypeController.getEventTypesAndSort(true, true, null, Language.ENGLISH));
-        Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes(true, true, null);
+        assertEquals(List.of(eventType0, eventType1), eventTypeController.getEventTypesAndSort(true, true, ORGANIZER_ID, TOPIC_ID, Language.ENGLISH));
+        Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes(true, true, ORGANIZER_ID, TOPIC_ID);
     }
 
     @Test

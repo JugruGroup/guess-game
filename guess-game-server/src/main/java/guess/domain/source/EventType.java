@@ -43,10 +43,12 @@ public class EventType extends Descriptionable {
     public static class EventTypeAttributes {
         private final boolean inactive;
         private final String timeZone;
+        private final Topic topic;
 
-        public EventTypeAttributes(boolean inactive, String timeZone) {
+        public EventTypeAttributes(boolean inactive, String timeZone, Topic topic) {
             this.inactive = inactive;
             this.timeZone = timeZone;
+            this.topic = topic;
         }
     }
 
@@ -69,6 +71,9 @@ public class EventType extends Descriptionable {
 
     private String timeZone;
     private ZoneId timeZoneId;
+
+    private Long topicId;
+    private Topic topic;
 
     public EventType() {
     }
@@ -95,6 +100,9 @@ public class EventType extends Descriptionable {
 
         this.timeZone = attributes.timeZone;
         this.timeZoneId = (timeZone != null) ? ZoneId.of(timeZone) : null;
+
+        this.topic = attributes.topic;
+        this.topicId = (topic != null) ? topic.getId() : null;
     }
 
     public Conference getConference() {
@@ -223,6 +231,22 @@ public class EventType extends Descriptionable {
 
     public void setTimeZoneId(ZoneId timeZoneId) {
         this.timeZoneId = timeZoneId;
+    }
+
+    public Long getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(Long topicId) {
+        this.topicId = topicId;
+    }
+
+    public Topic getTopic() {
+        return topic;
+    }
+
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
     public boolean isEventTypeConference() {

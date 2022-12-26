@@ -13,7 +13,7 @@ public interface EventTypeService {
 
     List<EventType> getEventTypes();
 
-    List<EventType> getEventTypes(boolean isConferences, boolean isMeetups, Long organizerId);
+    List<EventType> getEventTypes(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId);
 
     EventType getEventTypeByEvent(Event event);
 }

@@ -1,0 +1,61 @@
+topics:
+  - id: 0
+    name:
+      - {language: en, text: "Other"}
+      - {language: ru, text: "Прочее"}
+    defaultTopic: true
+    orderNumber: 13
+  - id: 1
+    name:
+      - {language: en, text: "Java"}
+    orderNumber: 1
+  - id: 2
+    name:
+      - {language: en, text: ".NET"}
+    orderNumber: 2
+  - id: 3
+    name:
+      - {language: en, text: "JavaScript"}
+    orderNumber: 3
+  - id: 4
+    name:
+      - {language: en, text: "C++"}
+    orderNumber: 4
+  - id: 5
+    name:
+      - {language: en, text: "Python"}
+    orderNumber: 5
+  - id: 6
+    name:
+      - {language: en, text: "Mobile development"}
+      - {language: ru, text: "Мобильная разработка"}
+    orderNumber: 6
+  - id: 7
+    name:
+      - {language: en, text: "Testing"}
+      - {language: ru, text: "Тестирование"}
+    orderNumber: 7
+  - id: 8
+    name:
+      - {language: en, text: "DevOps"}
+    orderNumber: 8
+  - id: 9
+    name:
+      - {language: en, text: "Data engineering"}
+      - {language: ru, text: "Обработка данных"}
+    orderNumber: 9
+  - id: 10
+    name:
+      - {language: en, text: "Distributed computing"}
+      - {language: ru, text: "Распределённые вычисления"}
+    orderNumber: 10
+  - id: 11
+    name:
+      - {language: en, text: "Video and streaming"}
+      - {language: ru, text: "Видео и стриминг"}
+    orderNumber: 11
+  - id: 12
+    name:
+      - {language: en, text: "Systems and business analysis"}
+      - {language: ru, text: "Системный и бизнес-анализ"}
+    orderNumber: 12

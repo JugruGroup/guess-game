@@ -44,6 +44,7 @@ public class YamlUtils {
         var resolver = new PathMatchingResourcePatternResolver();
         var placesResource = resolver.getResource(String.format("classpath:%s/places.yml", DATA_DIRECTORY_NAME));
         var organizersResource = resolver.getResource(String.format("classpath:%s/organizers.yml", DATA_DIRECTORY_NAME));
+        var topicsResource = resolver.getResource(String.format("classpath:%s/topics.yml", DATA_DIRECTORY_NAME));
         var eventTypesResource = resolver.getResource(String.format("classpath:%s/event-types.yml", DATA_DIRECTORY_NAME));
         var eventsResource = resolver.getResource(String.format("classpath:%s/events.yml", DATA_DIRECTORY_NAME));
         var companiesResource = resolver.getResource(String.format("classpath:%s/companies.yml", DATA_DIRECTORY_NAME));
@@ -54,6 +55,7 @@ public class YamlUtils {
 
         var placesYaml = new CustomYaml(new Constructor(PlaceList.class));
         var organizerYaml = new CustomYaml(new Constructor(OrganizerList.class));
+        var topicYaml = new CustomYaml(new Constructor(TopicList.class));
         var eventTypesYaml = new CustomYaml(new Constructor(EventTypeList.class));
         var eventsYaml = new CustomYaml(new DateTimeYamlConstructor(EventList.class));
         var companiesYaml = new CustomYaml(new Constructor(CompanyList.class));
@@ -65,6 +67,7 @@ public class YamlUtils {
         // Read from YAML files
         var placeList = (PlaceList) placesYaml.load(placesResource.getInputStream());
         var organizerList = (OrganizerList) organizerYaml.load(organizersResource.getInputStream());
+        var topicList = (TopicList) topicYaml.load(topicsResource.getInputStream());
         var eventTypeList = (EventTypeList) eventTypesYaml.load(eventTypesResource.getInputStream());
         var eventList = (EventList) eventsYaml.load(eventsResource.getInputStream());
         var companyList = (CompanyList) companiesYaml.load(companiesResource.getInputStream());
@@ -76,6 +79,7 @@ public class YamlUtils {
         return getSourceInformation(
                 placeList.getPlaces(),
                 organizerList.getOrganizers(),
+                topicList.getTopics(),
                 eventTypeList.getEventTypes(),
                 eventList.getEvents(),
                 new SourceInformation.SpeakerInformation(
@@ -92,6 +96,7 @@ public class YamlUtils {
      *
      * @param places             places
      * @param organizers         organizers
+     * @param topics             topics
      * @param eventTypes         event types
      * @param events             events
      * @param speakerInformation speaker information
@@ -99,8 +104,9 @@ public class YamlUtils {
      * @return source information
      * @throws SpeakerDuplicatedException if speaker duplicated
      */
-    static SourceInformation getSourceInformation(List<Place> places, List<Organizer> organizers, List<EventType> eventTypes,
-                                                  List<Event> events, SourceInformation.SpeakerInformation speakerInformation,
+    static SourceInformation getSourceInformation(List<Place> places, List<Organizer> organizers, List<Topic> topics,
+                                                  List<EventType> eventTypes, List<Event> events,
+                                                  SourceInformation.SpeakerInformation speakerInformation,
                                                   List<Talk> talks) throws SpeakerDuplicatedException {
         List<Company> companies = speakerInformation.companies();
         List<CompanyGroup> companyGroupList = speakerInformation.companyGroups();
@@ -109,6 +115,7 @@ public class YamlUtils {
 
         Map<Long, Place> placeMap = listToMap(places, Place::getId);
         Map<Long, Organizer> organizerMap = listToMap(organizers, Organizer::getId);
+        Map<Long, Topic> topicMap = listToMap(topics, Topic::getId);
         Map<Long, EventType> eventTypeMap = listToMap(eventTypes, EventType::getId);
         Map<Long, Company> companyMap = listToMap(companies, Company::getId);
         Map<Long, Speaker> speakerMap = listToMap(speakers, Speaker::getId);
@@ -118,8 +125,10 @@ public class YamlUtils {
 
         // Link entities
         linkEventTypesToOrganizers(organizerMap, eventTypes);
+        linkEventTypesToTopics(topicMap, eventTypes);
         linkEventsToEventTypes(eventTypeMap, events);
         linkEventsToPlaces(placeMap, events);
+        linkTalksToTopics(topicMap, talks);
         linkTalksToEvents(talkMap, events);
         linkSpeakersToCompanies(companyMap, speakers);
         linkSpeakersToTalks(speakerMap, talks);
@@ -135,6 +144,7 @@ public class YamlUtils {
         return new SourceInformation(
                 places,
                 organizers,
+                topics,
                 eventTypes,
                 events,
                 new SourceInformation.SpeakerInformation(
@@ -184,6 +194,24 @@ public class YamlUtils {
     }
 
     /**
+     * Links event types to topics.
+     *
+     * @param topics     topics
+     * @param eventTypes event types
+     */
+    static void linkEventTypesToTopics(Map<Long, Topic> topics, List<EventType> eventTypes) {
+        for (EventType eventType : eventTypes) {
+            if (eventType.getTopicId() != null) {
+                // Find topic by id
+                var topic = topics.get(eventType.getTopicId());
+                Objects.requireNonNull(topic,
+                        () -> String.format("Topic id %d not found for event type %s", eventType.getTopicId(), eventType));
+                eventType.setTopic(topic);
+            }
+        }
+    }
+
+    /**
      * Links events to event types.
      *
      * @param eventTypes event types
@@ -214,6 +242,24 @@ public class YamlUtils {
                 Objects.requireNonNull(place,
                         () -> String.format("Place id %d not found for event days %s", eventDays.getPlaceId(), eventDays));
                 eventDays.setPlace(place);
+            }
+        }
+    }
+
+    /**
+     * Links talks to topics.
+     *
+     * @param topics topics
+     * @param talks  talks
+     */
+    static void linkTalksToTopics(Map<Long, Topic> topics, List<Talk> talks) {
+        for (Talk talk : talks) {
+            if (talk.getTopicId() != null) {
+                // Find topic by id
+                var topic = topics.get(talk.getTopicId());
+                Objects.requireNonNull(topic,
+                        () -> String.format("Topic id %d not found for talk %s", talk.getTopicId(), talk));
+                talk.setTopic(topic);
             }
         }
     }
@@ -385,7 +431,7 @@ public class YamlUtils {
                     new PropertyMatcher(EventType.class,
                             List.of("id", "conference", "logoFileName", "organizerId", "name", "shortDescription",
                                     "longDescription", "siteLink", "vkLink", "twitterLink", "facebookLink", "youtubeLink",
-                                    "telegramLink", "speakerdeckLink", "habrLink", "timeZone")),
+                                    "telegramLink", "speakerdeckLink", "habrLink", "timeZone", "topicId")),
                     new PropertyMatcher(Place.class,
                             List.of("id", "city", "venueAddress", "mapCoordinates")),
                     new PropertyMatcher(EventDays.class,

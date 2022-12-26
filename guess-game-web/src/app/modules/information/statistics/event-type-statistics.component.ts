@@ -3,9 +3,11 @@ import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
 import { EventTypeStatistics } from '../../../shared/models/statistics/event-type-statistics.model';
 import { Organizer } from '../../../shared/models/organizer/organizer.model';
+import { Topic } from '../../../shared/models/topic/topic.model';
 import { StatisticsService } from '../../../shared/services/statistics.service';
 import { OrganizerService } from '../../../shared/services/organizer.service';
-import { findOrganizerById, getEventTypeStatisticsWithSortName } from '../../general/utility-functions';
+import { TopicService } from '../../../shared/services/topic.service';
+import { findOrganizerById, findTopicById, getEventTypeStatisticsWithSortName } from '../../general/utility-functions';
 
 @Component({
   selector: 'app-event-type-statistics',
@@ -22,11 +24,15 @@ export class EventTypeStatisticsComponent implements OnInit {
   public selectedOrganizer: Organizer;
   public organizerSelectItems: SelectItem[] = [];
 
+  public topics: Topic[] = [];
+  public selectedTopic: Topic;
+  public topicSelectItems: SelectItem[] = [];
+
   public eventTypeStatistics = new EventTypeStatistics();
   public multiSortMeta: any[] = [];
 
   constructor(private statisticsService: StatisticsService, public organizerService: OrganizerService,
-              public translateService: TranslateService) {
+              private topicService: TopicService, public translateService: TranslateService) {
     this.multiSortMeta.push({field: 'sortName', order: 1});
   }
 
@@ -42,7 +48,17 @@ export class EventTypeStatisticsComponent implements OnInit {
     );
   }
 
+  fillTopics(topics: Topic[]) {
+    this.topics = topics;
+    this.topicSelectItems = this.topics.map(t => {
+        return {label: t.name, value: t};
+      }
+    );
+  }
+
   loadOrganizers() {
+    const currentSelectedTopic = this.selectedTopic;
+
     this.organizerService.getOrganizers()
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
@@ -53,45 +69,79 @@ export class EventTypeStatisticsComponent implements OnInit {
               const selectedOrganizer = (defaultOrganizerData) ? findOrganizerById(defaultOrganizerData.id, this.organizers) : null;
               this.selectedOrganizer = (selectedOrganizer) ? selectedOrganizer : null;
 
-              this.loadEventTypeStatistics(this.isConferences, this.isMeetups, this.selectedOrganizer);
+              this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+                .subscribe(topicsData => {
+                  this.fillTopics(topicsData);
+
+                  if (this.topics.length > 0) {
+                    this.selectedTopic = (currentSelectedTopic) ? findTopicById(currentSelectedTopic.id, this.topics) : null;
+                  } else {
+                    this.selectedTopic = null;
+                  }
+
+                  this.loadEventTypeStatistics(this.selectedOrganizer, this.selectedTopic);
+                });
             });
         } else {
           this.selectedOrganizer = null;
-          this.loadEventTypeStatistics(this.isConferences, this.isMeetups, this.selectedOrganizer);
+          this.selectedTopic = null;
+          this.loadEventTypeStatistics(this.selectedOrganizer, this.selectedTopic);
         }
       });
   }
 
-  loadEventTypeStatistics(isConferences: boolean, isMeetups: boolean, organizer: Organizer) {
-    this.statisticsService.getEventTypeStatistics(isConferences, isMeetups, organizer)
+  loadTopics() {
+    this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+      .subscribe(topicsData => {
+        this.fillTopics(topicsData);
+
+        this.selectedTopic = null;
+
+        this.loadEventTypeStatistics(this.selectedOrganizer, this.selectedTopic);
+      });
+  }
+
+  loadEventTypeStatistics(organizer: Organizer, topic: Topic) {
+    this.statisticsService.getEventTypeStatistics(this.isConferences, this.isMeetups, organizer, topic)
       .subscribe(data => {
           this.eventTypeStatistics = getEventTypeStatisticsWithSortName(data);
-        }
-      );
+        });
   }
 
   onEventTypeKindChange() {
-    this.loadEventTypeStatistics(this.isConferences, this.isMeetups, this.selectedOrganizer);
+    this.loadTopics();
   }
 
-  onOrganizerChange(organizer: Organizer) {
-    this.loadEventTypeStatistics(this.isConferences, this.isMeetups, organizer);
+  onOrganizerChange() {
+    this.loadTopics();
+  }
+
+  onTopicChange() {
+    this.loadEventTypeStatistics(this.selectedOrganizer, this.selectedTopic);
   }
 
   onLanguageChange() {
     const currentSelectedOrganizer = this.selectedOrganizer;
+    const currentSelectedTopic = this.selectedTopic;
 
     this.organizerService.getOrganizers()
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
-        if (this.organizers.length > 0) {
-          this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
-        } else {
-          this.selectedOrganizer = null;
-        }
+        this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.loadEventTypeStatistics(this.isConferences, this.isMeetups, this.selectedOrganizer);
+        this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+          .subscribe(topicsData => {
+            this.fillTopics(topicsData);
+
+            if (this.topics.length > 0) {
+              this.selectedTopic = (currentSelectedTopic) ? findTopicById(currentSelectedTopic.id, this.topics) : null;
+            } else {
+              this.selectedTopic = null;
+            }
+
+            this.loadEventTypeStatistics(this.selectedOrganizer, this.selectedTopic);
+          });
       });
   }
 

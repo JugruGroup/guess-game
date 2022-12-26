@@ -37,11 +37,13 @@
       "eventLabel": "Event:",
       "speakerLabel": "Speaker:",
       "companyLabel": "Company:",
+      "topicLabel": "Topic:",
       "organizerPlaceholder": "All",
       "eventTypePlaceholder": "All",
       "eventPlaceholder": "All",
       "speakersPlaceholder": "All",
       "companiesPlaceholder": "All",
+      "topicPlaceholder": "All",
       "emptyMessage": "No items"
     },
     "table": {
@@ -100,6 +102,7 @@
     "table": {
       "kindColumn": "Kind",
       "organizerNameColumn": "Organizer",
+      "topicNameColumn": "Topic",
       "nameColumn": "Name",
       "shortDescriptionColumn": "Description"
     },
@@ -143,6 +146,7 @@
       "talkDayColumn": "Day",
       "talkTimeColumn": "Time",
       "trackColumn": "Track",
+      "topicNameColumn": "Topic",
       "nameColumn": "Name",
       "speakersColumn": "Speakers",
       "materialsColumn": "Materials"

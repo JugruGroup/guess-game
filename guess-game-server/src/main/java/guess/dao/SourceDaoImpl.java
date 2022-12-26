@@ -167,4 +167,9 @@ public class SourceDaoImpl implements SourceDao {
                         .anyMatch(s -> s.equals(speaker))))
                 .toList();
     }
+
+    @Override
+    public List<Topic> getTopics() {
+        return sourceInformation.getTopics();
+    }
 }

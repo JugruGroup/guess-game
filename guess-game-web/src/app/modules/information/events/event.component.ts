@@ -102,6 +102,10 @@ export class EventComponent implements OnInit {
     return ((this.eventDetails.talks) && (this.eventDetails.talks.length > 0));
   }
 
+  isTopicColumnVisible() {
+    return ((this.eventDetails.event) && !this.eventDetails.event.topicExist);
+  }
+
   getDisplayPlace(eventDays: EventDays): string {
     let place = '';
 

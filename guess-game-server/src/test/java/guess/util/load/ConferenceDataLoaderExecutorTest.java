@@ -26,10 +26,7 @@ import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.function.BooleanSupplier;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,7 +61,11 @@ class ConferenceDataLoaderExecutorTest {
              MockedStatic<CmsDataLoaderFactory> cmsDataLoaderFactoryMockedStatic = Mockito.mockStatic(CmsDataLoaderFactory.class);
              MockedStatic<ConferenceDataLoaderExecutor> conferenceDataLoaderMockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class)) {
             yamlUtilsMockedStatic.when(YamlUtils::readSourceInformation)
-                    .thenReturn(new SourceInformation(Collections.emptyList(), Collections.emptyList(), Collections.emptyList(),
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
                             Collections.emptyList(),
                             new SourceInformation.SpeakerInformation(
                                     Collections.emptyList(),
@@ -294,6 +295,8 @@ class ConferenceDataLoaderExecutorTest {
 
             Organizer organizer0 = new Organizer();
 
+            Topic topic0 = new Topic();
+
             Event event0 = new Event();
             event0.setId(0);
             event0.setDays(List.of(new EventDays(
@@ -323,6 +326,7 @@ class ConferenceDataLoaderExecutorTest {
                             new SourceInformation(
                                     List.of(place0),
                                     List.of(organizer0),
+                                    List.of(topic0),
                                     List.of(eventType0),
                                     Collections.emptyList(),
                                     new SourceInformation.SpeakerInformation(
@@ -341,6 +345,7 @@ class ConferenceDataLoaderExecutorTest {
                             new SourceInformation(
                                     List.of(place0),
                                     List.of(organizer0),
+                                    List.of(topic0),
                                     List.of(eventType0),
                                     Collections.emptyList(),
                                     new SourceInformation.SpeakerInformation(
@@ -1525,6 +1530,91 @@ class ConferenceDataLoaderExecutorTest {
             ConferenceDataLoaderExecutor.fillBooleanAttributeValue(resourceSupplier, targetSupplier, targetConsumer);
 
             assertEquals(expected, targetSupplier.getAsBoolean());
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("fillLongAttributeValue method tests")
+    class FillLongAttributeValueTest {
+        private Topic createTopic(long id) {
+            Topic topic = new Topic();
+            topic.setId(id);
+
+            return topic;
+        }
+
+        private EventType createEventType(Topic topic) {
+            EventType eventType = new EventType();
+            eventType.setTopic(topic);
+
+            if (topic != null) {
+                eventType.setTopicId(topic.getId());
+            }
+
+            return eventType;
+        }
+
+        private Stream<Arguments> data() {
+            final long TARGET_TOPIC_ID1 = 1L;
+
+            final long RESOURCE_TOPIC_ID2 = 2L;
+
+            final long RESOURCE_TOPIC_ID3 = 3L;
+            final long TARGET_TOPIC_ID3 = 4;
+
+            // 0
+            EventType resourceEventType0 = createEventType(null);
+            Supplier<Long> resourceSupplier0 = resourceEventType0::getTopicId;
+
+            EventType targetEventType0 = createEventType(null);
+            Supplier<Long> targetSupplier0 = targetEventType0::getTopicId;
+            LongConsumer targetConsumer0 = targetEventType0::setTopicId;
+
+            // 1
+            EventType resourceEventType1 = createEventType(null);
+            Supplier<Long> resourceSupplier1 = resourceEventType1::getTopicId;
+
+            Topic targetTopic1 = createTopic(TARGET_TOPIC_ID1);
+            EventType targetEventType1 = createEventType(targetTopic1);
+            Supplier<Long> targetSupplier1 = targetEventType1::getTopicId;
+            LongConsumer targetConsumer1 = targetEventType1::setTopicId;
+
+            // 2
+            Topic resourceTopic2 = createTopic(RESOURCE_TOPIC_ID2);
+            EventType resourceEventType2 = createEventType(resourceTopic2);
+            Supplier<Long> resourceSupplier2 = resourceEventType2::getTopicId;
+
+            EventType targetEventType2 = createEventType(null);
+            Supplier<Long> targetSupplier2 = targetEventType2::getTopicId;
+            LongConsumer targetConsumer2 = targetEventType2::setTopicId;
+
+            // 3
+            Topic resourceTopic3 = createTopic(RESOURCE_TOPIC_ID3);
+            EventType resourceEventType3 = createEventType(resourceTopic3);
+            Supplier<Long> resourceSupplier3 = resourceEventType3::getTopicId;
+
+            Topic targetTopic3 = createTopic(TARGET_TOPIC_ID3);
+            EventType targetEventType3 = createEventType(targetTopic3);
+            Supplier<Long> targetSupplier3 = targetEventType3::getTopicId;
+            LongConsumer targetConsumer3 = targetEventType3::setTopicId;
+
+            return Stream.of(
+                    arguments(resourceSupplier0, targetSupplier0, targetConsumer0, null),
+                    arguments(resourceSupplier1, targetSupplier1, targetConsumer1, TARGET_TOPIC_ID1),
+                    arguments(resourceSupplier2, targetSupplier2, targetConsumer2, RESOURCE_TOPIC_ID2),
+                    arguments(resourceSupplier3, targetSupplier3, targetConsumer3, TARGET_TOPIC_ID3)
+            );
+        }
+
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void fillLongAttributeValue(Supplier<Long> resourceSupplier, Supplier<Long> targetSupplier, LongConsumer targetConsumer,
+                                    Long expected) {
+            ConferenceDataLoaderExecutor.fillLongAttributeValue(resourceSupplier, targetSupplier, targetConsumer);
+
+            assertEquals(expected, targetSupplier.get());
         }
     }
 
@@ -3221,7 +3311,11 @@ class ConferenceDataLoaderExecutorTest {
             event6.setTalks(List.of(talk1, talk2, talk3, talk4));
 
             mockedStatic.when(YamlUtils::readSourceInformation)
-                    .thenReturn(new SourceInformation(Collections.emptyList(), Collections.emptyList(), Collections.emptyList(),
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
                             List.of(event0, event1, event2, event3, event4, event5, event6),
                             new SourceInformation.SpeakerInformation(
                                     Collections.emptyList(),
@@ -3257,8 +3351,12 @@ class ConferenceDataLoaderExecutorTest {
             speaker1.setCompanies(Collections.emptyList());
 
             mockedStatic.when(YamlUtils::readSourceInformation)
-                    .thenReturn(new SourceInformation(Collections.emptyList(), Collections.emptyList(),
-                            Collections.emptyList(), Collections.emptyList(),
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
                             new SourceInformation.SpeakerInformation(
                                     List.of(company0, company1, company2, company3, company4, company5),
                                     Collections.emptyList(),
@@ -3280,6 +3378,9 @@ class ConferenceDataLoaderExecutorTest {
             Organizer organizer0 = new Organizer(0, Collections.emptyList());
             Organizer organizer1 = new Organizer(1, Collections.emptyList());
 
+            Topic topic0 = new Topic(0, Collections.emptyList(), false, 0);
+            Topic topic1 = new Topic(1, Collections.emptyList(), false, 1);
+
             EventType eventType0 = new EventType();
             eventType0.setId(0);
             eventType0.setConference(Conference.JPOINT);
@@ -3297,6 +3398,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType0.setHabrLink("habrLink0");
             eventType0.setOrganizer(organizer0);
             eventType0.setTimeZone("Europe/Moscow");
+            eventType0.setTopic(topic0);
 
             EventType eventType1 = new EventType();
             eventType1.setId(1);
@@ -3482,7 +3584,27 @@ class ConferenceDataLoaderExecutorTest {
             eventType17.setHabrLink("habrLink0");
             eventType17.setOrganizer(organizer0);
             eventType17.setTimeZone("Europe/Moscow");
-            eventType17.setInactive(true);
+            eventType17.setTopic(topic1);
+
+            EventType eventType18 = new EventType();
+            eventType18.setId(0);
+            eventType18.setConference(Conference.JPOINT);
+            eventType18.setLogoFileName("logoFileName0");
+            eventType18.setName(List.of(new LocaleItem("en", "name0")));
+            eventType18.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
+            eventType18.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
+            eventType18.setSiteLink(List.of(new LocaleItem("en", "siteLink0")));
+            eventType18.setVkLink("vkLink0");
+            eventType18.setTwitterLink("twitterLink0");
+            eventType18.setFacebookLink("facebookLink0");
+            eventType18.setYoutubeLink("youtubeLink0");
+            eventType18.setTelegramLink("telegramLink0");
+            eventType18.setSpeakerdeckLink("speakerdeckLink0");
+            eventType18.setHabrLink("habrLink0");
+            eventType18.setOrganizer(organizer0);
+            eventType18.setTimeZone("Europe/Moscow");
+            eventType18.setTopic(topic0);
+            eventType18.setInactive(true);
 
             return Stream.of(
                     arguments(eventType0, eventType0, false),
@@ -3502,7 +3624,8 @@ class ConferenceDataLoaderExecutorTest {
                     arguments(eventType0, eventType14, true),
                     arguments(eventType0, eventType15, true),
                     arguments(eventType0, eventType16, true),
-                    arguments(eventType0, eventType17, true)
+                    arguments(eventType0, eventType17, true),
+                    arguments(eventType0, eventType18, true)
             );
         }
 
@@ -3713,6 +3836,9 @@ class ConferenceDataLoaderExecutorTest {
     @DisplayName("needUpdate method tests (Talk)")
     class NeedUpdateTalkTest {
         private Stream<Arguments> data() {
+            Topic topic0 = new Topic(0, Collections.emptyList(), false, 0);
+            Topic topic1 = new Topic(1, Collections.emptyList(), false, 1);
+
             Talk talk0 = new Talk();
             talk0.setId(0);
             talk0.setName(List.of(new LocaleItem("en", "name0")));
@@ -3726,6 +3852,7 @@ class ConferenceDataLoaderExecutorTest {
             talk0.setMaterialLinks(List.of("materialLink0"));
             talk0.setVideoLinks(List.of("videoLink0"));
             talk0.setSpeakerIds(List.of(0L));
+            talk0.setTopic(topic0);
 
             Talk talk1 = new Talk();
             talk1.setId(1);
@@ -3829,6 +3956,21 @@ class ConferenceDataLoaderExecutorTest {
             talk12.setVideoLinks(List.of("videoLink0"));
             talk12.setSpeakerIds(List.of(1L));
 
+            Talk talk13 = new Talk();
+            talk13.setId(0);
+            talk13.setName(List.of(new LocaleItem("en", "name0")));
+            talk13.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
+            talk13.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
+            talk13.setTalkDay(1L);
+            talk13.setTrackTime(LocalTime.of(10, 0));
+            talk13.setTrack(1L);
+            talk13.setLanguage("en");
+            talk13.setPresentationLinks(List.of("presentationLink0"));
+            talk13.setMaterialLinks(List.of("materialLink0"));
+            talk13.setVideoLinks(List.of("videoLink0"));
+            talk13.setSpeakerIds(List.of(0L));
+            talk13.setTopic(topic1);
+
             return Stream.of(
                     arguments(talk0, talk0, false),
                     arguments(talk0, talk1, true),
@@ -3842,7 +3984,8 @@ class ConferenceDataLoaderExecutorTest {
                     arguments(talk0, talk9, true),
                     arguments(talk0, talk10, true),
                     arguments(talk0, talk11, true),
-                    arguments(talk0, talk12, true)
+                    arguments(talk0, talk12, true),
+                    arguments(talk0, talk13, true)
             );
         }
 

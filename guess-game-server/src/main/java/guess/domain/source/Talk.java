@@ -21,6 +21,16 @@ public class Talk extends Descriptionable {
         }
     }
 
+    public static class TalkAttributes {
+        private final String language;
+        private final Topic topic;
+
+        public TalkAttributes(String language, Topic topic) {
+            this.language = language;
+            this.topic = topic;
+        }
+    }
+
     private Long talkDay;
     private LocalTime trackTime;
     private Long track;
@@ -32,17 +42,20 @@ public class Talk extends Descriptionable {
     private List<Long> speakerIds;
     private List<Speaker> speakers = new ArrayList<>();
 
+    private Long topicId;
+    private Topic topic;
+
     public Talk() {
     }
 
-    public Talk(Descriptionable descriptionable, Long talkDay, LocalTime trackTime, Long track, String language, TalkLinks links,
-                List<Speaker> speakers) {
+    public Talk(Descriptionable descriptionable, Long talkDay, LocalTime trackTime, Long track, TalkLinks links,
+                List<Speaker> speakers, TalkAttributes attributes) {
         super(descriptionable.getId(), descriptionable.getName(), descriptionable.getShortDescription(), descriptionable.getLongDescription());
 
         this.talkDay = talkDay;
         this.trackTime = trackTime;
         this.track = track;
-        this.language = language;
+        this.language = attributes.language;
         this.presentationLinks = links.presentationLinks;
         this.materialLinks = links.materialLinks;
         this.videoLinks = links.videoLinks;
@@ -50,6 +63,9 @@ public class Talk extends Descriptionable {
         this.speakerIds = speakers.stream()
                 .map(Speaker::getId)
                 .collect(Collectors.toCollection(ArrayList::new));
+
+        this.topic = attributes.topic;
+        this.topicId = (topic != null) ? topic.getId() : null;
     }
 
     public Long getTalkDay() {
@@ -122,6 +138,22 @@ public class Talk extends Descriptionable {
 
     public void setSpeakers(List<Speaker> speakers) {
         this.speakers = speakers;
+    }
+
+    public Long getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(Long topicId) {
+        this.topicId = topicId;
+    }
+
+    public Topic getTopic() {
+        return topic;
+    }
+
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
     @Override

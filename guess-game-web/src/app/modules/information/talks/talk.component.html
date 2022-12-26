@@ -20,6 +20,7 @@
         <span *ngIf="talkDetails.talk?.talkTime"> / <i class="fas fa-clock"></i> {{talkDetails.talk.talkTime | date:"HH:mm":undefined:translateService.currentLang}}</span>
         <span *ngIf="talkDetails.talk?.track"> / <i class="fas fa-location-arrow"></i> {{'talk.trackLabel' | translate}} {{talkDetails.talk.track}}</span>
         <span *ngIf="talkDetails.talk?.language"> / <i class="fas fa-globe"></i> {{talkDetails.talk.language | uppercase}}</span>
+        <span *ngIf="talkDetails.talk?.topicName"> / <i class="fas fa-circle-info"></i> {{talkDetails.talk.topicName}}</span>
       </div>
 
       <div *ngIf="talkDetails.talk?.description" class="mt-3">

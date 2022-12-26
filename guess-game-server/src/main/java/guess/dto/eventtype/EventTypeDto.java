@@ -23,7 +23,7 @@ public class EventTypeDto extends EventTypeBriefDto {
 
     public EventTypeDto(EventTypeSuperBriefDto eventTypeSuperBriefDto, EventTypeBriefDto eventTypeBriefDto, String description,
                         EventTypeDtoLinks links) {
-        super(eventTypeSuperBriefDto, eventTypeBriefDto.getShortDescription(), eventTypeBriefDto.getOrganizerName());
+        super(eventTypeSuperBriefDto, eventTypeBriefDto.getShortDescription(), eventTypeBriefDto.getOrganizerName(), eventTypeBriefDto.getTopicName());
 
         this.description = description;
         this.links = links;

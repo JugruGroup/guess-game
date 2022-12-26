@@ -22,13 +22,15 @@ public class EventDto extends EventBriefDto {
 
     private final EventDtoLinks links;
     private final String description;
+    private final boolean topicExist;
 
     public EventDto(EventSuperBriefDto eventSuperBriefDto, EventBriefDto eventBriefDto, EventDtoLinks links,
-                    String description) {
+                    String description, boolean topicExist) {
         super(eventSuperBriefDto, eventBriefDto.getEventTypeLogoFileName());
 
         this.links = links;
         this.description = description;
+        this.topicExist = topicExist;
     }
 
     public String getSiteLink() {
@@ -67,6 +69,10 @@ public class EventDto extends EventBriefDto {
         return description;
     }
 
+    public boolean isTopicExist() {
+        return topicExist;
+    }
+
     public static EventDto convertToDto(Event event, Function<Event, EventType> eventEventTypeFunction, Language language) {
         var eventSuperBriefDto = convertToSuperBriefDto(event, language);
         var eventSiteLink = LocalizationUtils.getString(event.getSiteLink(), language);
@@ -82,6 +88,7 @@ public class EventDto extends EventBriefDto {
         String eventTypeSpeakerdeckLink = (eventType != null) ? eventType.getSpeakerdeckLink() : null;
         String eventTypeHabrLink = (eventType != null) ? eventType.getHabrLink() : null;
         String description = (eventType != null) ? LocalizationUtils.getString(eventType.getShortDescription(), language) : null;
+        boolean topicExist = (eventType != null) && (eventType.getTopic() != null);
 
         return new EventDto(
                 eventSuperBriefDto,
@@ -98,7 +105,8 @@ public class EventDto extends EventBriefDto {
                                 eventTypeHabrLink
                         )
                 ),
-                description);
+                description,
+                topicExist);
     }
 
     public static List<EventDto> convertToDto(List<Event> events, Function<Event, EventType> eventEventTypeFunction, Language language) {
