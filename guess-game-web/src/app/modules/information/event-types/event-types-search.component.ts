@@ -110,7 +110,7 @@ export class EventTypesSearchComponent implements OnInit {
     this.loadTopics();
   }
 
-  onOrganizerChange(organizer: Organizer) {
+  onOrganizerChange() {
     this.loadTopics();
   }
 

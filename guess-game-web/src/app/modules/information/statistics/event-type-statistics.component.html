@@ -25,7 +25,7 @@
         <div class="col-12 col-sm-9 col-md-auto">
           <p-dropdown [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
                       placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onOrganizerChange($event.value)" name="organizer" styleClass="organizer-dropdown w-100">
+                      (onChange)="onOrganizerChange()" name="organizer" styleClass="organizer-dropdown w-100">
             <ng-template let-organizer pTemplate="item">
               {{organizer.value.name}}
             </ng-template>
