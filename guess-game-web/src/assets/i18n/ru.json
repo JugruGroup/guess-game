@@ -214,6 +214,7 @@
         "kindColumn": "Вид",
         "organizerNameColumn": "Организатор",
         "nameColumn": "Наименование",
+        "topicNameColumn": "Тема",
         "startDateColumn": "Начальная дата",
         "ageColumn": "Возраст, лет",
         "durationColumn": "Длительность, дней",

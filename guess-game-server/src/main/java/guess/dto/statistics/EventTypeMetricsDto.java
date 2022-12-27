@@ -18,9 +18,10 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
     private final boolean conference;
     private final String logoFileName;
     private final String organizerName;
+    private final String topicName;
 
     public EventTypeMetricsDto(long id, String displayName, boolean conference, String logoFileName,
-                               AbstractEventTypeMetrics eventTypeMetrics, String organizerName) {
+                               AbstractEventTypeMetrics eventTypeMetrics, String organizerName, String topicName) {
         super(eventTypeMetrics.getStartDate(), eventTypeMetrics.getAge(), eventTypeMetrics.getDuration(),
                 eventTypeMetrics.getEventsQuantity(),
                 new EventTypeEventMetrics(eventTypeMetrics.getTalksQuantity(), eventTypeMetrics.getSpeakersQuantity(),
@@ -32,6 +33,7 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
         this.conference = conference;
         this.logoFileName = logoFileName;
         this.organizerName = organizerName;
+        this.topicName = topicName;
     }
 
     public long getId() {
@@ -54,10 +56,15 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
         return organizerName;
     }
 
+    public String getTopicName() {
+        return topicName;
+    }
+
     public static EventTypeMetricsDto convertToDto(EventTypeMetrics eventTypeMetrics, Language language) {
         var eventType = eventTypeMetrics.getEventType();
         var displayName = LocalizationUtils.getString(eventType.getName(), language);
-        String organizerName = (eventType.getOrganizer() != null) ? LocalizationUtils.getString(eventType.getOrganizer().getName(), language) : null;
+        var organizerName = (eventType.getOrganizer() != null) ? LocalizationUtils.getString(eventType.getOrganizer().getName(), language) : null;
+        var topicName = (eventType.getTopic() != null) ? LocalizationUtils.getString(eventType.getTopic().getName(), language) : null;
 
         return new EventTypeMetricsDto(
                 eventType.getId(),
@@ -65,7 +72,8 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
                 eventType.isEventTypeConference(),
                 eventType.getLogoFileName(),
                 eventTypeMetrics,
-                organizerName);
+                organizerName,
+                topicName);
     }
 
     public static List<EventTypeMetricsDto> convertToDto(List<EventTypeMetrics> eventTypeMetricsList, Language language) {
