@@ -214,6 +214,7 @@
         "kindColumn": "Kind",
         "organizerNameColumn": "Organizer",
         "nameColumn": "Name",
+        "topicNameColumn": "Topic",
         "startDateColumn": "Start date",
         "ageColumn": "Age, years",
         "durationColumn": "Duration, days",
