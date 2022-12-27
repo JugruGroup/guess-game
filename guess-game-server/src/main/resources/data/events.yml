@@ -1114,8 +1114,8 @@ events:
     days:
       - {startDate: "2019-05-22", endDate: "2019-05-23", placeId: 4}
     siteLink:
-      - {language: en, text: "https://mobiusconf.com/en/2019/spb/"}
-      - {language: ru, text: "https://mobiusconf.com/2019/spb/"}
+      - {language: en, text: "https://mobius-piter.ru/en/2019/spb/"}
+      - {language: ru, text: "https://mobius-piter.ru/2019/spb/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236qyWB8mBbWF_FN6fC4ztPXG
     talkIds: [1250, 1251, 1252, 1253, 1254, 1255, 1256, 1257, 1258, 1259, 1260, 1261, 1262, 1263, 1264, 1265, 1266, 1267,
         1268, 1269, 1270, 1271, 1272, 1273, 1274, 1275, 1276, 1277, 1278]
