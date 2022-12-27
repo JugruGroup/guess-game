@@ -280,7 +280,8 @@
         "totalLabel": "Total",
         "lineChartToolTipText": "Line chart",
         "lineChartWithCumulativeTotalToolTipText": "Line chart with cumulative total",
-        "pieChartToolTipText": "Pie chart"
+        "pieChartToolTipText": "Pie chart",
+        "radarChartToolTipText": "Radar chart"
       },
       "table": {
         "kindColumn": "Kind",

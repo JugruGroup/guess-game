@@ -280,7 +280,8 @@
         "totalLabel": "Всего",
         "lineChartToolTipText": "Линейный график",
         "lineChartWithCumulativeTotalToolTipText": "Линейный график с нарастающим итогом",
-        "pieChartToolTipText": "Круговая диаграмма"
+        "pieChartToolTipText": "Круговая диаграмма",
+        "radarChartToolTipText": "Радар"
       },
       "table": {
         "kindColumn": "Вид",
