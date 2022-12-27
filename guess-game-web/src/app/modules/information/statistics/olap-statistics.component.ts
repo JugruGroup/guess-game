@@ -134,7 +134,8 @@ export class OlapStatisticsComponent implements OnInit {
       value: ChartKind.LineWithCumulativeTotal,
       label: 'statistics.olap.chart.lineChartWithCumulativeTotalToolTipText'
     },
-    {icon: 'bi-pie-chart', value: ChartKind.Pie, label: 'statistics.olap.chart.pieChartToolTipText'}];
+    {icon: 'bi-pie-chart', value: ChartKind.Pie, label: 'statistics.olap.chart.pieChartToolTipText'},
+    {icon: 'bi-pentagon', value: ChartKind.Radar, label: 'statistics.olap.chart.radarChartToolTipText'}];
   public selectedChartKind = ChartKind.Line;
 
   @ViewChildren('chartDiv') chartDivs: QueryList<ElementRef<HTMLDivElement>>;
