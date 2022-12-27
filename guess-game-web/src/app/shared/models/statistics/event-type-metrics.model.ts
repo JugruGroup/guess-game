@@ -16,6 +16,7 @@ export class EventTypeMetrics implements SortableEventTypeMetrics {
     public javaChampionsQuantity?: number,
     public mvpsQuantity?: number,
     public organizerName?: string,
+    public topicName?: string,
     public sortName?: string
   ) {
   }
