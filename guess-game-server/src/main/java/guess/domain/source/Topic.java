@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Topic.
  */
-public class Topic extends Nameable {
+public class Topic extends Nameable implements Comparable<Topic> {
     private boolean defaultTopic;
     private int orderNumber;
 
@@ -32,6 +32,11 @@ public class Topic extends Nameable {
 
     public void setOrderNumber(int orderNumber) {
         this.orderNumber = orderNumber;
+    }
+
+    @Override
+    public int compareTo(Topic o) {
+        return Integer.compare(orderNumber, o.orderNumber);
     }
 
     @Override

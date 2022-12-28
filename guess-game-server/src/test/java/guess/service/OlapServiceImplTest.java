@@ -922,7 +922,7 @@ class OlapServiceImplTest {
                             ((op.getEventTypeIds() == null) || op.getEventTypeIds().isEmpty() || op.getEventTypeIds().contains(et.getId()));
             OlapEntityStatistics<Integer, EventType> actual = olapServiceImpl.getOlapEntityStatistics(
                     op.getCubeType(), op.getMeasureType(), DimensionType.EVENT_TYPE, eventTypePredicate,
-                    DimensionType.EVENT_TYPE, eventTypePredicate);
+                    DimensionType.YEAR, DimensionType.EVENT_TYPE, eventTypePredicate);
 
             List<OlapEntityMetrics<EventType>> sortedMetricsList = actual.getMetricsList().stream()
                     .sorted(Comparator.comparing(m -> m.entity().getId()))
