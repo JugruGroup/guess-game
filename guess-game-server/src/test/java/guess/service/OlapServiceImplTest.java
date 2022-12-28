@@ -88,6 +88,7 @@ class OlapServiceImplTest {
     static void init() {
         topic0 = new Topic();
         topic0.setId(0);
+        topic0.setDefaultTopic(true);
 
         topic1 = new Topic();
         topic1.setId(1);

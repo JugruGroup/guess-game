@@ -47,6 +47,7 @@ class OlapDaoImplTest {
     static void init() {
         topic0 = new Topic();
         topic0.setId(0);
+        topic0.setDefaultTopic(true);
 
         topic1 = new Topic();
         topic1.setId(1);
@@ -57,6 +58,7 @@ class OlapDaoImplTest {
 
         eventType1 = new EventType();
         eventType1.setId(1);
+        eventType1.setTopic(topic1);
 
         eventType2 = new EventType();
         eventType2.setId(2);
