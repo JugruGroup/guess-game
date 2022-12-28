@@ -20,16 +20,17 @@ import java.util.stream.IntStream;
  */
 @Repository
 public class OlapDaoImpl implements OlapDao {
-    static class Cubes {
-        private final Cube eventTypesCube;
-        private final Cube speakersCube;
-        private final Cube companiesCube;
+    record Cubes(Cube eventTypesCube, Cube speakersCube, Cube companiesCube) {
+    }
 
-        public Cubes(Cube eventTypesCube, Cube speakersCube, Cube companiesCube) {
-            this.eventTypesCube = eventTypesCube;
-            this.speakersCube = speakersCube;
-            this.companiesCube = companiesCube;
-        }
+    record IterateTalksDimensions(EventTypeDimension eventTypeDimension, YearDimension yearDimension,
+                                  TopicDimension eventTypeTopicDimension,
+                                  Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions) {
+    }
+
+    record IterateCompaniesDimensions(EventTypeDimension eventTypeDimension, YearDimension yearDimension,
+                                      SpeakerDimension speakerDimension, TopicDimension talkTopicDimension,
+                                      Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions) {
     }
 
     private final Map<CubeType, Cube> cubeMap = new EnumMap<>(CubeType.class);
@@ -180,7 +181,8 @@ public class OlapDaoImpl implements OlapDao {
                     eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.EVENTS_QUANTITY, event);
 
                     // Iterate event part talks
-                    iterateTalks(cubes, eventTypeDimension, yearDimension, eventTypeTopicDimension, eventTypeAndCityAndYearAndTopicDimensions,
+                    iterateTalks(cubes, new IterateTalksDimensions(
+                                    eventTypeDimension, yearDimension, eventTypeTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
                             event, firstDayNumber, lastDayNumber);
 
                     previousDays += days;
@@ -189,18 +191,17 @@ public class OlapDaoImpl implements OlapDao {
         }
     }
 
-    void iterateTalks(Cubes cubes, EventTypeDimension eventTypeDimension, YearDimension yearDimension, TopicDimension eventTypeTopicDimension,
-                      Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions, Event event,
-                      long firstDayNumber, long lastDayNumber) {
+    void iterateTalks(Cubes cubes, IterateTalksDimensions dimensions, Event event, long firstDayNumber, long lastDayNumber) {
         for (Talk talk : event.getTalks()) {
             long safeTalkDay = (talk.getTalkDay() != null) ? talk.getTalkDay() : 1;
-            TopicDimension talkTopicDimension = (talk.getTopic() != null) ? new TopicDimension(talk.getTopic()) : eventTypeTopicDimension;
+            TopicDimension talkTopicDimension = (talk.getTopic() != null) ? new TopicDimension(talk.getTopic()) : dimensions.eventTypeTopicDimension;
 
             if ((safeTalkDay >= firstDayNumber) && (safeTalkDay <= lastDayNumber)) {
                 // Talk measure values
-                cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
+                cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
 
-                iterateSpeakers(cubes, eventTypeDimension, yearDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions, event, talk);
+                iterateSpeakers(cubes, dimensions.eventTypeDimension, dimensions.yearDimension, talkTopicDimension,
+                        dimensions.eventTypeAndCityAndYearAndTopicDimensions, event, talk);
             }
         }
     }
@@ -233,23 +234,23 @@ public class OlapDaoImpl implements OlapDao {
                 cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.MVPS_QUANTITY, speaker);
             }
 
-            iterateCompanies(cubes, eventTypeDimension, yearDimension, speakerDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions, event, talk);
+            iterateCompanies(cubes, new IterateCompaniesDimensions(eventTypeDimension, yearDimension, speakerDimension,
+                    talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions), event, talk);
         }
     }
 
-    void iterateCompanies(Cubes cubes, EventTypeDimension eventTypeDimension, YearDimension yearDimension,
-                          SpeakerDimension speakerDimension, TopicDimension talkTopicDimension,
-                          Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions, Event event, Talk talk) {
-        EventType eventType = eventTypeDimension.getValue();
-        Speaker speaker = speakerDimension.getValue();
+    void iterateCompanies(Cubes cubes, IterateCompaniesDimensions dimensions, Event event, Talk talk) {
+        EventType eventType = dimensions.eventTypeDimension.getValue();
+        Speaker speaker = dimensions.speakerDimension.getValue();
 
         for (Company company : speaker.getCompanies()) {
             // Event type, company, speaker, year and topic dimension
             Set<Dimension<?>> eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions = Set.of(
-                    eventTypeDimension, new CompanyDimension(company), speakerDimension, yearDimension, talkTopicDimension);
+                    dimensions.eventTypeDimension, new CompanyDimension(company), dimensions.speakerDimension,
+                    dimensions.yearDimension, dimensions.talkTopicDimension);
 
             // Company measure values
-            cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.COMPANIES_QUANTITY, company);
+            cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.COMPANIES_QUANTITY, company);
 
             cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.SPEAKERS_QUANTITY, speaker);
             cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
