@@ -3,6 +3,7 @@ package guess.service;
 import guess.dao.EventTypeDao;
 import guess.dao.OlapDao;
 import guess.dao.OlapDaoImpl;
+import guess.dao.TopicDao;
 import guess.domain.Conference;
 import guess.domain.Language;
 import guess.domain.source.*;
@@ -38,6 +39,8 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("OlapServiceImpl class tests")
 @ExtendWith(SpringExtension.class)
 class OlapServiceImplTest {
+    private static Topic topic0;
+    private static Topic topic1;
     private static EventType eventType0;
     private static EventType eventType1;
     private static EventType eventType2;
@@ -49,6 +52,14 @@ class OlapServiceImplTest {
     @TestConfiguration
     static class TestContextConfiguration {
         @Bean
+        TopicDao topicDao() {
+            TopicDao topicDao = Mockito.mock(TopicDao.class);
+            Mockito.when(topicDao.getTopics()).thenReturn(List.of(topic0, topic1));
+
+            return topicDao;
+        }
+
+        @Bean
         EventTypeDao eventTypeDao() {
             EventTypeDao eventTypeDao = Mockito.mock(EventTypeDao.class);
             Mockito.when(eventTypeDao.getEventTypes()).thenReturn(List.of(eventType0, eventType1, eventType2));
@@ -58,7 +69,7 @@ class OlapServiceImplTest {
 
         @Bean
         OlapDao olapDao() {
-            return new OlapDaoImpl(eventTypeDao());
+            return new OlapDaoImpl(topicDao(), eventTypeDao());
         }
 
         @Bean
@@ -75,6 +86,12 @@ class OlapServiceImplTest {
 
     @BeforeAll
     static void init() {
+        topic0 = new Topic();
+        topic0.setId(0);
+
+        topic1 = new Topic();
+        topic1.setId(1);
+
         Organizer organizer0 = new Organizer();
         organizer0.setId(0L);
 
