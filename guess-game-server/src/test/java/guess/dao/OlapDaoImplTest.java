@@ -237,21 +237,17 @@ class OlapDaoImplTest {
 
         List<Topic> topics = List.of(topic0, topic1);
 
-        assertEquals(Collections.emptyList(), convertList(eventTypesCube.getDimensionValues(DimensionType.EVENT_TYPE)));
-        assertEquals(Collections.emptyList(), convertList(eventTypesCube.getDimensionValues(DimensionType.CITY)));
-        assertEquals(Collections.emptyList(), convertList(eventTypesCube.getDimensionValues(DimensionType.YEAR)));
-        assertEquals(Collections.emptyList(), convertList(eventTypesCube.getDimensionValues(DimensionType.TOPIC)));
+        for (DimensionType dimensionType : List.of(DimensionType.EVENT_TYPE, DimensionType.CITY, DimensionType.YEAR, DimensionType.TOPIC)) {
+            assertEquals(Collections.emptyList(), convertList(eventTypesCube.getDimensionValues(dimensionType)));
+        }
 
-        assertEquals(Collections.emptyList(), convertList(speakersCube.getDimensionValues(DimensionType.EVENT_TYPE)));
-        assertEquals(Collections.emptyList(), convertList(speakersCube.getDimensionValues(DimensionType.SPEAKER)));
-        assertEquals(Collections.emptyList(), convertList(speakersCube.getDimensionValues(DimensionType.YEAR)));
-        assertEquals(Collections.emptyList(), convertList(speakersCube.getDimensionValues(DimensionType.TOPIC)));
+        for (DimensionType dimensionType : List.of(DimensionType.EVENT_TYPE, DimensionType.SPEAKER, DimensionType.YEAR, DimensionType.TOPIC)) {
+            assertEquals(Collections.emptyList(), convertList(speakersCube.getDimensionValues(dimensionType)));
+        }
 
-        assertEquals(Collections.emptyList(), convertList(companiesCube.getDimensionValues(DimensionType.EVENT_TYPE)));
-        assertEquals(Collections.emptyList(), convertList(companiesCube.getDimensionValues(DimensionType.COMPANY)));
-        assertEquals(Collections.emptyList(), convertList(companiesCube.getDimensionValues(DimensionType.SPEAKER)));
-        assertEquals(Collections.emptyList(), convertList(companiesCube.getDimensionValues(DimensionType.YEAR)));
-        assertEquals(Collections.emptyList(), convertList(companiesCube.getDimensionValues(DimensionType.TOPIC)));
+        for (DimensionType dimensionType : List.of(DimensionType.EVENT_TYPE, DimensionType.COMPANY, DimensionType.SPEAKER, DimensionType.YEAR, DimensionType.TOPIC)) {
+            assertEquals(Collections.emptyList(), convertList(companiesCube.getDimensionValues(dimensionType)));
+        }
 
         olapDaoImpl.fillDimensions(eventTypesCube, speakersCube, companiesCube);
 
