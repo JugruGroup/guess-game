@@ -31,7 +31,8 @@ import {
   findOrganizerById,
   fixOlapEntityStatistics,
   getColorByIndex,
-  getOlapEventTypeStatisticsWithSortName
+  getOlapEventTypeStatisticsWithSortName,
+  hexToRgbA
 } from '../../general/utility-functions';
 import { ChartKind } from '../../../shared/models/statistics/olap/chart-kind.model';
 
@@ -114,12 +115,16 @@ export class OlapStatisticsComponent implements OnInit {
   public allLineWithCumulativeOptions: any = {};
   public totalLineWithCumulativeOptions: any = {};
   public pieOptions: any;
+  public allRadarOptions: any = {};
+  public totalRadarOptions: any = {};
 
   public allLineData: any = {};
   public totalLineData: any = {};
   public allLineWithCumulativeData: any = {};
   public totalLineWithCumulativeData: any = {};
   public pieData: any = {};
+  public allRadarData: any = {};
+  public totalRadarData: any = {};
 
   public chartTypes: SelectItem[] = [
     {label: 'statistics.olap.chart.detailsLabel', value: ChartType.Details},
@@ -355,6 +360,7 @@ export class OlapStatisticsComponent implements OnInit {
 
             this.loadLineChartTotalData(olapStatistics.eventTypeStatistics);
             this.loadLineChartWithCumulativeTotalData(olapStatistics.eventTypeStatistics);
+            this.loadRadarChartTotalData(olapStatistics.eventTypeStatistics);
           }
 
           if (olapStatistics?.speakerStatistics) {
@@ -363,6 +369,7 @@ export class OlapStatisticsComponent implements OnInit {
 
             this.loadLineChartTotalData(olapStatistics.speakerStatistics);
             this.loadLineChartWithCumulativeTotalData(olapStatistics.speakerStatistics);
+            this.loadRadarChartTotalData(olapStatistics.speakerStatistics);
           }
 
           if (olapStatistics?.companyStatistics) {
@@ -371,6 +378,7 @@ export class OlapStatisticsComponent implements OnInit {
 
             this.loadLineChartTotalData(olapStatistics.companyStatistics);
             this.loadLineChartWithCumulativeTotalData(olapStatistics.companyStatistics);
+            this.loadRadarChartTotalData(olapStatistics.companyStatistics);
           }
 
           this.olapStatistics = olapStatistics;
@@ -637,6 +645,14 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
+  createRadarOptions(aspectRatio: number): any {
+    return {
+      animation: false,
+      aspectRatio: aspectRatio,
+      locale: this.translateService.currentLang
+    };
+  }
+
   loadLineChartDetailsData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>,
                            sortedMetricsList: OlapEntityMetrics[], quantity: number) {
     const metricsList = (quantity <= 0) ? sortedMetricsList : sortedMetricsList.slice(0, quantity);
@@ -741,6 +757,53 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
+  loadRadarChartDetailsData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>,
+                            sortedMetricsList: OlapEntityMetrics[], quantity: number) {
+    const color0 = getColorByIndex(0);
+    const color1 = getColorByIndex(1);
+    const backgroundColor0 = hexToRgbA(color0, '0.2');
+    const backgroundColor1 = hexToRgbA(color1, '0.2');
+
+    this.allRadarData = {
+      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+      datasets: [
+        {
+          label: 'My First dataset',
+          data: [65, 59, 90, 81, 56, 55, 40],
+          backgroundColor: backgroundColor0,
+          borderColor: color0
+        },
+        {
+          label: 'My Second dataset',
+          data: [28, 48, 40, 19, 96, 27, 100],
+          backgroundColor: backgroundColor1,
+          borderColor: color1
+        }
+      ]
+    };
+
+    // TODO: implement
+  }
+
+  loadRadarChartTotalData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>) {
+    const color0 = getColorByIndex(0);
+    const backgroundColor0 = hexToRgbA(color0, '0.2');
+
+    this.totalRadarData = {
+      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+      datasets: [
+        {
+          label: 'My First dataset',
+          data: [65, 59, 90, 81, 56, 55, 40],
+          backgroundColor: backgroundColor0,
+          borderColor: color0
+        }
+      ]
+    };
+
+    // TODO: implement
+  }
+
   onResize = (): void => {
     this.fillChartOptions();
   }
@@ -756,6 +819,8 @@ export class OlapStatisticsComponent implements OnInit {
       this.allLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
       this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
       this.pieOptions = this.createPieOptions(aspectRatio);
+      this.allRadarOptions = this.createRadarOptions(aspectRatio);
+      this.totalRadarOptions = this.createRadarOptions(aspectRatio);
     }
   }
 
@@ -804,21 +869,32 @@ export class OlapStatisticsComponent implements OnInit {
     return (this.selectedChartKind === ChartKind.Pie);
   }
 
+  isDetailsRadarChartVisible() {
+    return ((this.selectedChartType === ChartType.Details) && (this.selectedChartKind === ChartKind.Radar));
+  }
+
+  isTotalRadarChartVisible() {
+    return ((this.selectedChartType === ChartType.Total) && (this.selectedChartKind === ChartKind.Radar));
+  }
+
   sortEventTypeStatistics(value) {
     this.loadLineChartDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
+    this.loadRadarChartDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
   }
 
   sortSpeakerStatistics(value) {
     this.loadLineChartDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
+    this.loadRadarChartDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
   }
 
   sortCompanyStatistics(value) {
     this.loadLineChartDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
+    this.loadRadarChartDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
   }
 }
