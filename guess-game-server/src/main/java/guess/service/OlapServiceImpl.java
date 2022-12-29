@@ -63,6 +63,7 @@ public class OlapServiceImpl implements OlapService {
 
             topicSpeakerStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.SPEAKER, speakerPredicate,
                     DimensionType.TOPIC, DimensionType.EVENT_TYPE, eventTypePredicate);
+            topicSpeakerStatistics.getMetricsList().removeIf(m -> m.total() == 0);
         }
 
         if (CubeType.COMPANIES.equals(op.getCubeType())) {
@@ -72,9 +73,11 @@ public class OlapServiceImpl implements OlapService {
 
             topicCompanyStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.COMPANY, companyPredicate,
                     DimensionType.TOPIC, DimensionType.EVENT_TYPE, eventTypePredicate);
+            topicCompanyStatistics.getMetricsList().removeIf(m -> m.total() == 0);
         }
 
-        return new OlapStatistics(yearEventTypeStatistics, yearSpeakerStatistics, yearCompanyStatistics);
+        return new OlapStatistics(yearEventTypeStatistics, yearSpeakerStatistics, yearCompanyStatistics,
+                topicEventTypeStatistics, topicSpeakerStatistics, topicCompanyStatistics);
     }
 
     @Override

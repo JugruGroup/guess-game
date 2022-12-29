@@ -370,9 +370,9 @@ class StatisticsControllerTest {
             OlapEntityStatistics<Integer, Speaker> speakerStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList1, totals1);
             OlapEntityStatistics<Integer, Company> companyStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList2, totals2);
 
-            OlapStatistics olapStatistics0 = new OlapStatistics(eventTypeStatistics0, null, null);
-            OlapStatistics olapStatistics1 = new OlapStatistics(null, speakerStatistics0, null);
-            OlapStatistics olapStatistics2 = new OlapStatistics(null, null, companyStatistics0);
+            OlapStatistics olapStatistics0 = new OlapStatistics(eventTypeStatistics0, null, null, null, null, null);
+            OlapStatistics olapStatistics1 = new OlapStatistics(null, speakerStatistics0, null, null, null, null);
+            OlapStatistics olapStatistics2 = new OlapStatistics(null, null, companyStatistics0, null, null, null);
 
             return Stream.of(
                     arguments(CubeType.EVENT_TYPES, olapStatistics0),
