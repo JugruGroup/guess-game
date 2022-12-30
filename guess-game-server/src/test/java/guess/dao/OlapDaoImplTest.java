@@ -342,11 +342,11 @@ class OlapDaoImplTest {
 
             return Stream.of(
                     arguments(
-                            eventTypeDimension0, yearDimension0, topicDimension0,
+                            eventTypeDimension0, yearDimension0, topicDimension0, topicDimension0,
                             Set.of(eventTypeDimension0, cityDimension0, yearDimension0, topicDimension0),
                             event0, talk0, speaker0, 1L, 1L, 1L, 1L, 1L, 0L),
                     arguments(
-                            eventTypeDimension1, yearDimension1, topicDimension1,
+                            eventTypeDimension1, yearDimension1, topicDimension1, topicDimension1,
                             Set.of(eventTypeDimension1, cityDimension1, yearDimension1, topicDimension1),
                             event1, talk1, speaker1, 1L, 1L, 1L, 1L, 0L, 1L)
             );
@@ -354,9 +354,9 @@ class OlapDaoImplTest {
 
         @ParameterizedTest
         @MethodSource("data")
-        void iterateSpeakers(EventTypeDimension eventTypeDimension, YearDimension yearDimension, TopicDimension talkTopicDimension,
-                             Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions, Event event, Talk talk, Speaker speaker,
-                             long expectedSpeakers, long expectedTalks, long expectedEvents,
+        void iterateSpeakers(EventTypeDimension eventTypeDimension, YearDimension yearDimension, TopicDimension eventTypeTopicDimension,
+                             TopicDimension talkTopicDimension, Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions,
+                             Event event, Talk talk, Speaker speaker, long expectedSpeakers, long expectedTalks, long expectedEvents,
                              long expectedEventTypes, long javaChampionsSpeakers, long mvpsSpeakers) {
             OlapDaoImpl olapDaoImpl = new OlapDaoImpl(topicDao, eventTypeDao);
             Cube eventTypesCube = createEventTypesCube();
@@ -376,7 +376,7 @@ class OlapDaoImplTest {
             assertEquals(0L, eventTypesCube.getMeasureValue(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.MVPS_QUANTITY));
 
             olapDaoImpl.iterateSpeakers(cubes, new OlapDaoImpl.IterateSpeakersDimensions(
-                            eventTypeDimension, yearDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
+                            eventTypeDimension, yearDimension, eventTypeTopicDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
                     event, talk);
 
             assertEquals(expectedSpeakers, eventTypesCube.getMeasureValue(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.SPEAKERS_QUANTITY));
@@ -414,11 +414,11 @@ class OlapDaoImplTest {
             return Stream.of(
                     arguments(
                             new EventTypeDimension(eventType0), new YearDimension(2020), new SpeakerDimension(speaker0),
-                            topicDimension0, Set.of(eventTypeDimension0, cityDimension0, yearDimension0, topicDimension0),
+                            topicDimension0, topicDimension0, Set.of(eventTypeDimension0, cityDimension0, yearDimension0, topicDimension0),
                             event0, talk0, company0, 1L, 1L, 1L, 1L, 1L, 1L, 0L),
                     arguments(
                             new EventTypeDimension(eventType1), new YearDimension(2021), new SpeakerDimension(speaker1),
-                            topicDimension1, Set.of(eventTypeDimension1, cityDimension1, yearDimension1, topicDimension1),
+                            topicDimension1, topicDimension1, Set.of(eventTypeDimension1, cityDimension1, yearDimension1, topicDimension1),
                             event1, talk1, company1, 1L, 1L, 1L, 1L, 1L, 0L, 1L)
             );
         }
@@ -426,8 +426,8 @@ class OlapDaoImplTest {
         @ParameterizedTest
         @MethodSource("data")
         void iterateCompanies(EventTypeDimension eventTypeDimension, YearDimension yearDimension, SpeakerDimension speakerDimension,
-                              TopicDimension talkTopicDimension, Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions,
-                              Event event, Talk talk, Company company,
+                              TopicDimension eventTypeTopicDimension, TopicDimension talkTopicDimension,
+                              Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions, Event event, Talk talk, Company company,
                               long expectedCompanies, long expectedSpeakers, long expectedTalks, long expectedEvents,
                               long expectedEventTypes, long javaChampionsSpeakers, long mvpsSpeakers) {
             OlapDaoImpl olapDaoImpl = new OlapDaoImpl(topicDao, eventTypeDao);
@@ -449,7 +449,7 @@ class OlapDaoImplTest {
             assertEquals(0L, companiesCube.getMeasureValue(eventTypeAndCompanyAndSpeakerAndYearDimensions, MeasureType.MVPS_QUANTITY));
 
             olapDaoImpl.iterateCompanies(cubes, new OlapDaoImpl.IterateCompaniesDimensions(
-                            eventTypeDimension, yearDimension, speakerDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
+                            eventTypeDimension, yearDimension, speakerDimension, eventTypeTopicDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
                     event, talk);
 
             assertEquals(expectedCompanies, eventTypesCube.getMeasureValue(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.COMPANIES_QUANTITY));

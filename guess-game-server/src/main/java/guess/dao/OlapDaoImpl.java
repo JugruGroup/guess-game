@@ -29,12 +29,13 @@ public class OlapDaoImpl implements OlapDao {
     }
 
     record IterateSpeakersDimensions(EventTypeDimension eventTypeDimension, YearDimension yearDimension,
-                                     TopicDimension talkTopicDimension,
+                                     TopicDimension eventTypeTopicDimension, TopicDimension talkTopicDimension,
                                      Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions) {
     }
 
     record IterateCompaniesDimensions(EventTypeDimension eventTypeDimension, YearDimension yearDimension,
-                                      SpeakerDimension speakerDimension, TopicDimension talkTopicDimension,
+                                      SpeakerDimension speakerDimension, TopicDimension eventTypeTopicDimension,
+                                      TopicDimension talkTopicDimension,
                                       Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions) {
     }
 
@@ -209,8 +210,8 @@ public class OlapDaoImpl implements OlapDao {
                 cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
 
                 iterateSpeakers(cubes, new IterateSpeakersDimensions(
-                                dimensions.eventTypeDimension, dimensions.yearDimension, talkTopicDimension,
-                                eventTypeAndCityAndYearAndTopicDimensions),
+                                dimensions.eventTypeDimension, dimensions.yearDimension, dimensions.eventTypeTopicDimension,
+                                talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
                         event, talk);
             }
         }
@@ -224,15 +225,17 @@ public class OlapDaoImpl implements OlapDao {
             SpeakerDimension speakerDimension = new SpeakerDimension(speaker);
 
             // Event type, speaker, year and topic dimension
-            Set<Dimension<?>> eventTypeAndSpeakerAndYearAndTopicDimensions = Set.of(
+            Set<Dimension<?>> eventTypeAndSpeakerAndYearAndTopicDimensions1 = Set.of(
                     dimensions.eventTypeDimension, speakerDimension, dimensions.yearDimension, dimensions.talkTopicDimension);
+            Set<Dimension<?>> eventTypeAndSpeakerAndYearAndTopicDimensions2 = Set.of(
+                    dimensions.eventTypeDimension, speakerDimension, dimensions.yearDimension, dimensions.eventTypeTopicDimension);
 
             // Speaker measure values
             cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.SPEAKERS_QUANTITY, speaker);
 
-            cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
-            cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions, MeasureType.EVENTS_QUANTITY, event);
-            cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions, MeasureType.EVENT_TYPES_QUANTITY, eventType);
+            cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions1, MeasureType.TALKS_QUANTITY, talk);
+            cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions2, MeasureType.EVENTS_QUANTITY, event);
+            cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions2, MeasureType.EVENT_TYPES_QUANTITY, eventType);
 
             if (speaker.isJavaChampion()) {
                 cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.JAVA_CHAMPIONS_QUANTITY, speaker);
@@ -243,7 +246,7 @@ public class OlapDaoImpl implements OlapDao {
             }
 
             iterateCompanies(cubes, new IterateCompaniesDimensions(dimensions.eventTypeDimension, dimensions.yearDimension, speakerDimension,
-                    dimensions.talkTopicDimension, dimensions.eventTypeAndCityAndYearAndTopicDimensions), event, talk);
+                    dimensions.eventTypeTopicDimension, dimensions.talkTopicDimension, dimensions.eventTypeAndCityAndYearAndTopicDimensions), event, talk);
         }
     }
 
@@ -253,24 +256,27 @@ public class OlapDaoImpl implements OlapDao {
 
         for (Company company : speaker.getCompanies()) {
             // Event type, company, speaker, year and topic dimension
-            Set<Dimension<?>> eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions = Set.of(
+            Set<Dimension<?>> eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions1 = Set.of(
                     dimensions.eventTypeDimension, new CompanyDimension(company), dimensions.speakerDimension,
                     dimensions.yearDimension, dimensions.talkTopicDimension);
+            Set<Dimension<?>> eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions2 = Set.of(
+                    dimensions.eventTypeDimension, new CompanyDimension(company), dimensions.speakerDimension,
+                    dimensions.yearDimension, dimensions.eventTypeTopicDimension);
 
             // Company measure values
             cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.COMPANIES_QUANTITY, company);
 
-            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.SPEAKERS_QUANTITY, speaker);
-            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
-            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.EVENTS_QUANTITY, event);
-            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.EVENT_TYPES_QUANTITY, eventType);
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions1, MeasureType.SPEAKERS_QUANTITY, speaker);
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions1, MeasureType.TALKS_QUANTITY, talk);
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions2, MeasureType.EVENTS_QUANTITY, event);
+            cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions2, MeasureType.EVENT_TYPES_QUANTITY, eventType);
 
             if (speaker.isJavaChampion()) {
-                cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.JAVA_CHAMPIONS_QUANTITY, speaker);
+                cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions1, MeasureType.JAVA_CHAMPIONS_QUANTITY, speaker);
             }
 
             if (speaker.isAnyMvp()) {
-                cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions, MeasureType.MVPS_QUANTITY, speaker);
+                cubes.companiesCube.addMeasureEntity(eventTypeAndCompanyAndSpeakerAndYearAndTopicDimensions1, MeasureType.MVPS_QUANTITY, speaker);
             }
         }
     }
