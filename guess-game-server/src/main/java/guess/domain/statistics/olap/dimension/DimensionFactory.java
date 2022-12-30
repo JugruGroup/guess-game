@@ -22,6 +22,8 @@ public class DimensionFactory {
                 return new CompanyDimension(value);
             case YEAR:
                 return new YearDimension(value);
+            case TOPIC:
+                return new TopicDimension(value);
             default:
                 throw new IllegalStateException(String.format("Unknown dimension type %s", dimensionType));
         }

@@ -12,15 +12,17 @@ import guess.domain.statistics.olap.OlapStatistics;
  */
 public record OlapStatisticsDto(OlapEventTypeStatisticsDto eventTypeStatistics,
                                 OlapSpeakerStatisticsDto speakerStatistics,
-                                OlapCompanyStatisticsDto companyStatistics) {
+                                OlapCompanyStatisticsDto companyStatistics,
+                                OlapTopicStatisticsDto topicStatistics) {
     public static OlapStatisticsDto convertToDto(OlapStatistics olapStatistics, Language language) {
-        OlapEntityStatistics<Integer, EventType> eventTypeStatistics = olapStatistics.eventTypeStatistics();
-        OlapEntityStatistics<Integer, Speaker> speakerStatistics = olapStatistics.speakerStatistics();
-        OlapEntityStatistics<Integer, Company> companyStatistics = olapStatistics.companyStatistics();
+        OlapEntityStatistics<Integer, EventType> eventTypeStatistics = olapStatistics.yearEventTypeStatistics();
+        OlapEntityStatistics<Integer, Speaker> speakerStatistics = olapStatistics.yearSpeakerStatistics();
+        OlapEntityStatistics<Integer, Company> companyStatistics = olapStatistics.yearCompanyStatistics();
 
         return new OlapStatisticsDto(
                 (eventTypeStatistics != null) ? OlapEventTypeStatisticsDto.convertToDto(eventTypeStatistics, language) : null,
                 (speakerStatistics != null) ? OlapSpeakerStatisticsDto.convertToDto(speakerStatistics, language) : null,
-                (companyStatistics != null) ? OlapCompanyStatisticsDto.convertToDto(companyStatistics, language) : null);
+                (companyStatistics != null) ? OlapCompanyStatisticsDto.convertToDto(companyStatistics, language) : null,
+                OlapTopicStatisticsDto.convertToDto(olapStatistics, language));
     }
 }

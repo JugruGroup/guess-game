@@ -115,6 +115,8 @@
         <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="allLineWithCumulativeOptions"></p-chart>
         <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
         <p-chart *ngIf="isPieChartVisible()" type="pie" [data]="pieData" [options]="pieOptions"></p-chart>
+        <p-chart *ngIf="isDetailsRadarChartVisible()" type="radar" [data]="allRadarData" [options]="allRadarOptions"></p-chart>
+        <p-chart *ngIf="isTotalRadarChartVisible()" type="radar" [data]="totalRadarData" [options]="totalRadarOptions"></p-chart>
       </div>
     </div>
 

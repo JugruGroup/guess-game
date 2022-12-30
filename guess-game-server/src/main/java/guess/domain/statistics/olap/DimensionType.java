@@ -8,5 +8,6 @@ public enum DimensionType {
     CITY,
     SPEAKER,
     COMPANY,
-    YEAR
+    YEAR,
+    TOPIC
 }

@@ -1,6 +1,5 @@
 package guess.domain.source;
 
-import guess.domain.Identifier;
 import guess.domain.Language;
 import guess.util.LocalizationUtils;
 
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * Speaker.
  */
-public class Speaker extends Identifier {
+public class Speaker extends Nameable {
     public static class SpeakerPhoto {
         private final String photoFileName;
         private final ZonedDateTime photoUpdatedAt;
@@ -49,7 +48,6 @@ public class Speaker extends Identifier {
 
     private String photoFileName;
     private ZonedDateTime photoUpdatedAt;
-    private List<LocaleItem> name;
     private List<LocaleItem> bio;
     private String twitter;
     private String gitHub;
@@ -67,11 +65,10 @@ public class Speaker extends Identifier {
 
     public Speaker(long id, SpeakerPhoto photo, List<LocaleItem> name, List<Company> companies,
                    List<LocaleItem> bio, SpeakerSocials socials, SpeakerDegrees degrees) {
-        super(id);
+        super(id, name);
 
         this.photoFileName = photo.photoFileName;
         this.photoUpdatedAt = photo.photoUpdatedAt;
-        this.name = name;
         this.bio = bio;
         this.twitter = socials.twitter;
         this.gitHub = socials.gitHub;
@@ -99,14 +96,6 @@ public class Speaker extends Identifier {
 
     public void setPhotoUpdatedAt(ZonedDateTime photoUpdatedAt) {
         this.photoUpdatedAt = photoUpdatedAt;
-    }
-
-    public List<LocaleItem> getName() {
-        return name;
-    }
-
-    public void setName(List<LocaleItem> name) {
-        this.name = name;
     }
 
     public List<LocaleItem> getBio() {
@@ -186,17 +175,17 @@ public class Speaker extends Identifier {
     }
 
     public List<LocaleItem> getNameWithLastNameFirst() {
-        if (name == null) {
+        if (getName() == null) {
             return null;
         }
 
         List<LocaleItem> result = new ArrayList<>();
 
-        for (LocaleItem localeItem : name) {
+        for (LocaleItem localeItem : getName()) {
             var language = Language.getLanguageByCode(localeItem.getLanguage());
 
             if (language != null) {
-                String localeName = LocalizationUtils.getString(name, language).trim();
+                String localeName = LocalizationUtils.getString(getName(), language).trim();
                 int lastIndex = localeName.lastIndexOf(' ');
                 String resultLocaleName;
 
@@ -230,7 +219,7 @@ public class Speaker extends Identifier {
         return "Speaker{" +
                 "id=" + getId() +
                 ", fileName='" + photoFileName + '\'' +
-                ", name=" + name +
+                ", name=" + getName() +
                 '}';
     }
 }
