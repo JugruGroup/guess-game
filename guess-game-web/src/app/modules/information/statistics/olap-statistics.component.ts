@@ -769,20 +769,57 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
+  getNonZeroValues(dimensionValueSize: number, metricsList: OlapEntityMetrics[]): boolean[] {
+    const result = [];
+
+    // Unmark all dimensions
+    for (let i = 0; i < dimensionValueSize; i++) {
+      result.push(false);
+    }
+
+    // Mark non-value dimensions
+    for (let metrics of metricsList) {
+      for (let i = 0; i < metrics.measureValues.length; i++) {
+        if (metrics.measureValues[i] > 0) {
+          result[i] = true;
+        }
+      }
+    }
+
+    // Count non-value dimensions
+    const count = result
+      .filter(value => value)
+      .length;
+
+    if (count < 3) {
+      // Mark all dimensions
+      for (let i = 0; i < dimensionValueSize; i++) {
+        result[i] = true;
+      }
+    }
+
+    return result;
+  }
+
   loadRadarChartDetailsData(olapEntityStatistics: OlapEntityStatistics<string, OlapEntityMetrics>,
                             sortedMetricsList: OlapEntityMetrics[], quantity: number) {
     const metricsList = (quantity <= 0) ? sortedMetricsList : sortedMetricsList.slice(0, quantity);
+    const topicMetricsList = metricsList.map(value => this.topicMetricsMap.get(value.id));
+    const nonZeroValues = this.getNonZeroValues(olapEntityStatistics.dimensionValues.length, topicMetricsList);
+    const filteredDimensionValues = olapEntityStatistics.dimensionValues
+      .filter((element, index) => nonZeroValues[index]);
 
     this.allRadarData = {
-      labels: olapEntityStatistics.dimensionValues,
-      datasets: metricsList.map((value, index) => {
-        const topicMetrics: OlapEntityMetrics = this.topicMetricsMap.get(value.id);
+      labels: filteredDimensionValues,
+      datasets: topicMetricsList.map((value, index) => {
         const color = getColorByIndex(index);
         const backgroundColor = hexToRgbA(color, '0.2');
+        const filteredMeasureValues = value.measureValues
+          .filter((element, index) => nonZeroValues[index]);
 
         return {
-          label: topicMetrics.name,
-          data: topicMetrics.measureValues,
+          label: value.name,
+          data: filteredMeasureValues,
           backgroundColor: backgroundColor,
           borderColor: color
         }
@@ -793,15 +830,21 @@ export class OlapStatisticsComponent implements OnInit {
   loadRadarChartTotalData(olapEntityStatistics: OlapEntityStatistics<string, OlapEntityMetrics>) {
     const color = getColorByIndex(0);
     const backgroundColor = hexToRgbA(color, '0.2');
+    const topicMetricsList = [olapEntityStatistics.totals];
+    const nonZeroValues = this.getNonZeroValues(olapEntityStatistics.dimensionValues.length, topicMetricsList);
+    const filteredDimensionValues = olapEntityStatistics.dimensionValues
+      .filter((element, index) => nonZeroValues[index]);
+    const filteredMeasureValues = olapEntityStatistics.totals.measureValues
+      .filter((element, index) => nonZeroValues[index]);
 
     this.translateService.get(this.TOTAL_LABEL_KEY)
       .subscribe(data => {
           this.totalRadarData = {
-            labels: olapEntityStatistics.dimensionValues,
+            labels: filteredDimensionValues,
             datasets: [
               {
                 label: data,
-                data: olapEntityStatistics.totals.measureValues,
+                data: filteredMeasureValues,
                 backgroundColor: backgroundColor,
                 borderColor: color
               }
