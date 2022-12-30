@@ -27,7 +27,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
     "chart.js": "^4.1.1",
-    "core-js": "^3.27.0",
+    "core-js": "^3.27.1",
     "get-video-id": "^3.6.5",
     "marked": "^4.2.5",
     "ngx-markdown": "^15.0.0",
