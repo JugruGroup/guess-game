@@ -1,6 +1,5 @@
 package guess.domain.source;
 
-import guess.domain.Identifier;
 import guess.domain.Language;
 import guess.util.LocalizationUtils;
 
