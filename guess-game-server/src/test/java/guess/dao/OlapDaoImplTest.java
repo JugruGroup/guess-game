@@ -375,7 +375,9 @@ class OlapDaoImplTest {
             assertEquals(0L, eventTypesCube.getMeasureValue(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.JAVA_CHAMPIONS_QUANTITY));
             assertEquals(0L, eventTypesCube.getMeasureValue(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.MVPS_QUANTITY));
 
-            olapDaoImpl.iterateSpeakers(cubes, eventTypeDimension, yearDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions, event, talk);
+            olapDaoImpl.iterateSpeakers(cubes, new OlapDaoImpl.IterateSpeakersDimensions(
+                            eventTypeDimension, yearDimension, talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
+                    event, talk);
 
             assertEquals(expectedSpeakers, eventTypesCube.getMeasureValue(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.SPEAKERS_QUANTITY));
             assertEquals(expectedTalks, speakersCube.getMeasureValue(eventTypeAndSpeakerAndYearDimensions, MeasureType.TALKS_QUANTITY));

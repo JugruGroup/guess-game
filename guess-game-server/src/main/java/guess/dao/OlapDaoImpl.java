@@ -23,9 +23,14 @@ public class OlapDaoImpl implements OlapDao {
     record Cubes(Cube eventTypesCube, Cube speakersCube, Cube companiesCube) {
     }
 
-    record IterateTalksDimensions(EventTypeDimension eventTypeDimension, YearDimension yearDimension,
-                                  TopicDimension eventTypeTopicDimension,
+    record IterateTalksDimensions(EventTypeDimension eventTypeDimension, CityDimension cityDimension,
+                                  YearDimension yearDimension, TopicDimension eventTypeTopicDimension,
                                   Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions) {
+    }
+
+    record IterateSpeakersDimensions(EventTypeDimension eventTypeDimension, YearDimension yearDimension,
+                                     TopicDimension talkTopicDimension,
+                                     Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions) {
     }
 
     record IterateCompaniesDimensions(EventTypeDimension eventTypeDimension, YearDimension yearDimension,
@@ -182,7 +187,7 @@ public class OlapDaoImpl implements OlapDao {
 
                     // Iterate event part talks
                     iterateTalks(cubes, new IterateTalksDimensions(
-                                    eventTypeDimension, yearDimension, eventTypeTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
+                                    eventTypeDimension, cityDimension, yearDimension, eventTypeTopicDimension, eventTypeAndCityAndYearAndTopicDimensions),
                             event, firstDayNumber, lastDayNumber);
 
                     previousDays += days;
@@ -195,21 +200,24 @@ public class OlapDaoImpl implements OlapDao {
         for (Talk talk : event.getTalks()) {
             long safeTalkDay = (talk.getTalkDay() != null) ? talk.getTalkDay() : 1;
             TopicDimension talkTopicDimension = (talk.getTopic() != null) ? new TopicDimension(talk.getTopic()) : dimensions.eventTypeTopicDimension;
+            Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions = (talk.getTopic() != null) ?
+                    Set.of(dimensions.eventTypeDimension, dimensions.cityDimension, dimensions.yearDimension, talkTopicDimension) :
+                    dimensions.eventTypeAndCityAndYearAndTopicDimensions;
 
             if ((safeTalkDay >= firstDayNumber) && (safeTalkDay <= lastDayNumber)) {
                 // Talk measure values
-                cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
+                cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
 
-                iterateSpeakers(cubes, dimensions.eventTypeDimension, dimensions.yearDimension, talkTopicDimension,
-                        dimensions.eventTypeAndCityAndYearAndTopicDimensions, event, talk);
+                iterateSpeakers(cubes, new IterateSpeakersDimensions(
+                                dimensions.eventTypeDimension, dimensions.yearDimension, talkTopicDimension,
+                                eventTypeAndCityAndYearAndTopicDimensions),
+                        event, talk);
             }
         }
     }
 
-    void iterateSpeakers(Cubes cubes, EventTypeDimension eventTypeDimension, YearDimension yearDimension,
-                         TopicDimension talkTopicDimension, Set<Dimension<?>> eventTypeAndCityAndYearAndTopicDimensions,
-                         Event event, Talk talk) {
-        EventType eventType = eventTypeDimension.getValue();
+    void iterateSpeakers(Cubes cubes, IterateSpeakersDimensions dimensions, Event event, Talk talk) {
+        EventType eventType = dimensions.eventTypeDimension.getValue();
 
         for (Speaker speaker : talk.getSpeakers()) {
             // Speaker dimension
@@ -217,25 +225,25 @@ public class OlapDaoImpl implements OlapDao {
 
             // Event type, speaker, year and topic dimension
             Set<Dimension<?>> eventTypeAndSpeakerAndYearAndTopicDimensions = Set.of(
-                    eventTypeDimension, speakerDimension, yearDimension, talkTopicDimension);
+                    dimensions.eventTypeDimension, speakerDimension, dimensions.yearDimension, dimensions.talkTopicDimension);
 
             // Speaker measure values
-            cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.SPEAKERS_QUANTITY, speaker);
+            cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.SPEAKERS_QUANTITY, speaker);
 
             cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions, MeasureType.TALKS_QUANTITY, talk);
             cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions, MeasureType.EVENTS_QUANTITY, event);
             cubes.speakersCube.addMeasureEntity(eventTypeAndSpeakerAndYearAndTopicDimensions, MeasureType.EVENT_TYPES_QUANTITY, eventType);
 
             if (speaker.isJavaChampion()) {
-                cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.JAVA_CHAMPIONS_QUANTITY, speaker);
+                cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.JAVA_CHAMPIONS_QUANTITY, speaker);
             }
 
             if (speaker.isAnyMvp()) {
-                cubes.eventTypesCube.addMeasureEntity(eventTypeAndCityAndYearAndTopicDimensions, MeasureType.MVPS_QUANTITY, speaker);
+                cubes.eventTypesCube.addMeasureEntity(dimensions.eventTypeAndCityAndYearAndTopicDimensions, MeasureType.MVPS_QUANTITY, speaker);
             }
 
-            iterateCompanies(cubes, new IterateCompaniesDimensions(eventTypeDimension, yearDimension, speakerDimension,
-                    talkTopicDimension, eventTypeAndCityAndYearAndTopicDimensions), event, talk);
+            iterateCompanies(cubes, new IterateCompaniesDimensions(dimensions.eventTypeDimension, dimensions.yearDimension, speakerDimension,
+                    dimensions.talkTopicDimension, dimensions.eventTypeAndCityAndYearAndTopicDimensions), event, talk);
         }
     }
 
