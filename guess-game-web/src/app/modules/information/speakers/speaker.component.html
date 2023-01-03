@@ -81,6 +81,10 @@
               {{'talks.table.speakersColumn' | translate}}
               <p-sortIcon [field]="'speakersString'"></p-sortIcon>
             </th>
+            <th class="text-center" [pSortableColumn]="'materialsOrderNumber'" pResizableColumn>
+              {{'talks.table.materialsColumn' | translate}}
+              <p-sortIcon [field]="'materialsOrderNumber'"></p-sortIcon>
+            </th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-talk let-i = "rowIndex">
@@ -99,6 +103,17 @@
             <td>
               <span *ngFor="let speaker of talk.speakers; let i = index">
                 <span *ngIf="i > 0">, </span><a [routerLink]="['/information', 'speakers', 'speaker', speaker.id]" class="text-dark">{{speaker.displayName}}</a>
+              </span>
+            </td>
+            <td>
+              <span *ngFor="let videoLink of talk.videoLinks" class="ms-1 me-1">
+                <a href="{{videoLink}}" class="text-dark"><i class="fab fa-youtube"></i></a>
+              </span>
+              <span *ngFor="let presentationLink of talk.presentationLinks" class="ms-1 me-1">
+                <a href="{{presentationLink}}" class="text-dark"><i class="far fa-file-pdf"></i></a>
+              </span>
+              <span *ngFor="let materialLink of talk.materialLinks" class="ms-1 me-1">
+                <a href="{{materialLink}}" class="text-dark"><i class="fas fa-external-link-alt"></i></a>
               </span>
             </td>
           </tr>

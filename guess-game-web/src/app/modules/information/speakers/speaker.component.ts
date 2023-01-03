@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { SpeakerDetails } from '../../../shared/models/speaker/speaker-details.model';
 import { SpeakerService } from '../../../shared/services/speaker.service';
-import { getTalksWithSpeakersString } from '../../general/utility-functions';
+import { getTalksWithMaterialsOrderNumber, getTalksWithSpeakersString } from '../../general/utility-functions';
 
 @Component({
   selector: 'app-speaker',
@@ -49,7 +49,7 @@ export class SpeakerComponent implements OnInit {
 
   getSpeakerDetailsWithFilledAttributes(speakerDetails: SpeakerDetails): SpeakerDetails {
     if (speakerDetails?.talks) {
-      speakerDetails.talks = getTalksWithSpeakersString(speakerDetails.talks);
+      speakerDetails.talks = getTalksWithMaterialsOrderNumber(getTalksWithSpeakersString(speakerDetails.talks));
     }
 
     return speakerDetails;
