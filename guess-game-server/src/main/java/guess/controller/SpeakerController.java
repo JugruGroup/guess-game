@@ -8,7 +8,7 @@ import guess.dto.company.CompanyBriefDto;
 import guess.dto.speaker.SpeakerBriefDto;
 import guess.dto.speaker.SpeakerDetailsDto;
 import guess.dto.speaker.SpeakerSuperBriefDto;
-import guess.dto.talk.TalkSuperBriefDto;
+import guess.dto.talk.TalkBriefDto;
 import guess.service.*;
 import guess.util.LocalizationUtils;
 import jakarta.servlet.http.HttpSession;
@@ -86,8 +86,8 @@ public class SpeakerController {
         var speakerDetailsDto = SpeakerDetailsDto.convertToDto(speaker, talks, eventService::getEventByTalk,
                 eventTypeService::getEventTypeByEvent, language);
 
-        List<TalkSuperBriefDto> sortedTalks = speakerDetailsDto.talks().stream()
-                .sorted(Comparator.comparing(TalkSuperBriefDto::getTalkDate).reversed())
+        List<TalkBriefDto> sortedTalks = speakerDetailsDto.talks().stream()
+                .sorted(Comparator.comparing(TalkBriefDto::getTalkDate).reversed())
                 .toList();
 
         return new SpeakerDetailsDto(speakerDetailsDto.speaker(), sortedTalks);
