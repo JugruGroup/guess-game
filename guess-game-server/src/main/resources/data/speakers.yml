@@ -10477,6 +10477,8 @@ speakers:
             енного изоморфного фреймворка и плотно познакомился с React. Потом полтора года проработал в компании Wrike, г\
             де познал все радости и печали работы на стеке Dart + Angular. С недавнего времени работает в компании ВКонтак\
             те. В общем, с Ильей будет о чем пообщаться!"}
+    twitter: darkilfa
+    gitHub: ilfa
     habr: ilfa
   - id: 715
     photoFileName: 0715.jpg
@@ -20070,6 +20072,7 @@ speakers:
             \ до того, как это стало модным. Обладатель значка «Легенда» на Хабре (как будто это что-то значит). Всерьёз п\
             ользуется ChromeOS. Удалёнщик по убеждениям."}
     twitter: phillennium
+    gitHub: expectfun
     habr: phillennium
   - id: 1418
     photoFileName: 1418.jpg
@@ -34522,6 +34525,7 @@ speakers:
       - {language: en, text: "<p>Developer, promoter of good engineering approaches, and member of the InnerSource Commons\
             \ Foundation community.</p>"}
       - {language: ru, text: "Разработчик, проповедник хороших инженерных подходов, член сообщества InnerSource Commons Foundation."}
+    twitter: voborgus
     gitHub: voborgus
     habr: sugrobov
   - id: 2409
