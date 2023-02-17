@@ -10267,6 +10267,7 @@ speakers:
             центрировался на фронтенде. Сейчас занимается разработкой peer-2-peer системы доставки видео в браузере, испол\
             ьзуя технологии Node.js, MSE, WebSocket, WebRTC и WebAssembly."}
     twitter: andrnag
+    gitHub: andrnag
     habr: AndreyNagih
   - id: 701
     photoFileName: 0701.jpg
@@ -32599,6 +32600,9 @@ speakers:
             пил с докладом &laquo;<a href=\"https://youtu.be/TxZnxcTo0R8\">Приносим DevOps в DWH/BI</a>&raquo;.</p>\n<p>Се\
             йчас занимает позицию руководителя группы автоматизации хранилищ данных в Почтатехе, где продолжает развивать\
             \ экспертность DevOps в DWH/BI. В свободное время занимается музыкой.</p>"
+    twitter: servarius
+    gitHub: servarius
+    habr: servarius
   - id: 2268
     photoFileName: 2268.jpg
     photoUpdatedAt: 2022-08-22T17:35:22Z[UTC]
