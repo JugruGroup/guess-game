@@ -4791,6 +4791,8 @@ speakers:
             ет вёл разработку ряда рекламных проектов в компании Creara. Специализируется в области BigData и работе с выс\
             окими нагрузками. Основные языки — Java / Scala, в профессии уже около 8 лет."}
     twitter: onexdrk
+    gitHub: onexdrk
+    habr: onexdrk
   - id: 325
     photoFileName: 0325.jpg
     name:
@@ -5383,6 +5385,8 @@ speakers:
             ельный путь поглощений вместе с компанией Qik — путь из эксплуатации быстрорастущего стартапа к эксплуатации в\
             \ крупной международной компании Microsoft.\n\nОрганизатор сообщества DevOps Moscow, конференции DevOpsDays Moscow."
     twitter: osminog
+    gitHub: osminog
+    habr: osminog
   - id: 365
     photoFileName: 0365.jpg
     name:
@@ -5631,6 +5635,8 @@ speakers:
             итает писать на функциональных языках, но из-за неидеальности мира пришлось выучить много других языков. \nГде\
             \ бы ни работал, везде продвигает идеи DevOps."
     twitter: gliush
+    gitHub: gliush
+    habr: gli
   - id: 381
     photoFileName: 0381.jpg
     name:
@@ -5708,6 +5714,7 @@ speakers:
             \ etc.), в построении Continuous Integration и Delivery решений, в создании/адаптировании полного цикла разраб\
             отки для команд, занимающихся DevOps-инжинирингом, а также в оптимизации производительности и профилировании."}
     twitter: dvl_lincore
+    gitHub: dvl-lincore
   - id: 386
     photoFileName: 0386.jpg
     name:
@@ -7020,6 +7027,7 @@ speakers:
             \ Engineering, где небольшой группой разрабатывали библиотеку mPyPl, упрощающую программирование пайплайнов об\
             работки данных на Python в функциональном стиле. Неоднократно выступал на DotNext.</p>"}
     twitter: shwars
+    gitHub: shwars
     habr: shwars
   - id: 473
     photoFileName: 0473.jpg
@@ -7826,6 +7834,7 @@ speakers:
             я.</p>\n<p>Регулярно выступал с докладами о своих проектах, в том числе на Heisenbug. Сейчас отвечает за скоро\
             сть в сервисе crowd-тестирования.</p>"
     twitter: direvius
+    gitHub: direvius
     habr: Direvius
   - id: 535
     photoFileName: 0535.jpg
@@ -9116,6 +9125,8 @@ speakers:
             у пошёл в мобильное тестирование), тестирование методом свободного поиска, детективную работу по нахождению ко\
             мплексных проблем."}
     twitter: akhozya
+    gitHub: AKhozya
+    habr: z3us
   - id: 622
     photoFileName: 0622.jpg
     name:
@@ -9190,6 +9201,8 @@ speakers:
     bio:
       - {language: en, text: "The guy who is responsible for the quality of mobile application with 10+ years of experience."}
       - {language: ru, text: "Ответственный за качество мобильных приложений человек с 10+ годами опыта работы."}
+    twitter: lamamer
+    gitHub: lamamer
     habr: lamamer
   - id: 627
     photoFileName: 0627.jpg
@@ -9737,6 +9750,7 @@ speakers:
             \ он делает облачную вычислительную платформу для проекта по управлению цепочкой поставок изделий для одной из\
             \ самых крупных компаний в США по производству электроники."
     twitter: matvi3nko
+    gitHub: matvi3nko
   - id: 664
     photoFileName: 0664.jpg
     name:
@@ -9955,6 +9969,7 @@ speakers:
             \ В свободное от программирования время увлекается танго, книгами и приятными беседами."}
     twitter: kirjs
     gitHub: kirjs
+    habr: z6Dabrata
   - id: 680
     photoFileName: 0680.jpg
     name:
@@ -10440,6 +10455,7 @@ speakers:
             абость к оптимизации быстродействия и эстетике кода. Ведет <a href=\"http://challengingnative.com\" target=\"\
             _blank\">воркшоп</a>, организатор конференций React Amsterdam, AmsterdamJS. Любит WebGL, synthwave, горы."}
     twitter: pixelscommander
+    gitHub: PixelsCommander
   - id: 712
     photoFileName: 0712.jpg
     name:
@@ -10931,6 +10947,8 @@ speakers:
       - {language: ru, text: "Более 10 лет опыта работы разработчиком и тимлидом, в том числе над проектами для eBay, Янде\
             кса и Communigate."}
     twitter: iadramelk
+    gitHub: iAdramelk
+    habr: iadramelk
   - id: 747
     photoFileName: 0747.jpg
     name:
@@ -12823,6 +12841,8 @@ speakers:
             ации, созданием сложных систем с одной кнопкой, которая «делает хорошо». В Juno со дня основания, занимается р\
             азработкой Android приложений на Kotlin + Rx. Основной язык программирования на протяжении последних лет — Kotlin.\
             \ Один из лидеров GDG Minsk, частый гость и докладчик DevFest’ов и JVM конференций Европы и СНГ."}
+    twitter: AntonRutkevich
+    gitHub: AntonRutkevich
   - id: 880
     photoFileName: 0880.jpg
     name:

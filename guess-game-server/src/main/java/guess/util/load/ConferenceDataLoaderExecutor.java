@@ -1998,6 +1998,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadTags(CmsType.CONTENTFUL, "2020");
 //        loadTags(CmsType.CONTENTFUL, "2021");
 //        loadTags(CmsType.JUGRUGROUP_CMS, "2022");
+//        loadTags(CmsType.JUGRUGROUP_CMS, "2023");
 
         // Load event types
 //        loadEventTypes(CmsType.CONTENTFUL);
@@ -2414,5 +2415,31 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Flow 2022", null, List.of(24L)),
 //                        Set.of("Открытие конференции Flow 2022", "Закрытие конференции Flow 2022")));
+
+        // 2023
+//        loadTalksSpeakersEvent(Conference.TECH_TRAIN, LocalDate.of(2023, 4, 1), "2023 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("TechTrain 2023 Spring", null, List.of(24L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2023, 4, 11), "2023 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Heisenbug 2023 Spring", null, List.of(24L, 11L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2023, 4, 12), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("JPoint 2023", null, List.of(24L, 11L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2023, 5, 11), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("C++ Russia 2023", null, List.of(24L, 28L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 5, 12), "2023 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Mobius 2023 Spring", null, List.of(24L, 28L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2023, 5, 15), "2023 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("HolyJS 2023 Spring", null, List.of(24L, 28L)),
+//                        Set.of()));
     }
 }

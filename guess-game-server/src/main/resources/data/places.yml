@@ -219,3 +219,11 @@ places:
       - {language: en, text: "9th line of Vasilyevsky island, 34, BC Magnus, office 303, JUG Ru Group office"}
       - {language: ru, text: "9-я линия Васильевского острова, 34, БЦ Магнус, офис 303, Офис компании JUG Ru Group"}
     mapCoordinates: "59.941087, 30.277097"
+  - id: 28
+    city:
+      - {language: en, text: Moscow}
+      - {language: ru, text: Москва}
+    venueAddress:
+      - {language: en, text: "Red October, Start Hub: Bersenevskaya emb., 6, building 3"}
+      - {language: ru, text: "Красный Октябрь, Start Hub: Берсеневская набережная, д. 6, стр. 3"}
+    mapCoordinates: "55.740654, 37.609263"

@@ -337,4 +337,27 @@
         <td>2022 Autumn<br>(2022 Autumn)</td>
         <td>2022 Autumn<br>(2022 Autumn)</td>
     </tr>
+    <tr>
+        <th>2023</th>
+        <td>2023</td>
+        <td>2023</td>
+        <td>2023</td>
+        <td>2023 Spring</td>
+        <td>2023 Spring</td>
+        <td>2023</td>
+        <td></td>
+        <td>2023</td>
+        <td></td>
+        <td>2023 Spring</td>
+        <td></td>
+        <td></td>
+        <td>2023 Spring</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2023</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
