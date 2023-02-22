@@ -7027,6 +7027,7 @@ speakers:
             \ Engineering, где небольшой группой разрабатывали библиотеку mPyPl, упрощающую программирование пайплайнов об\
             работки данных на Python в функциональном стиле. Неоднократно выступал на DotNext.</p>"}
     twitter: shwars
+    gitHub: shwars
     habr: shwars
   - id: 473
     photoFileName: 0473.jpg
@@ -9124,6 +9125,8 @@ speakers:
             у пошёл в мобильное тестирование), тестирование методом свободного поиска, детективную работу по нахождению ко\
             мплексных проблем."}
     twitter: akhozya
+    gitHub: AKhozya
+    habr: z3us
   - id: 622
     photoFileName: 0622.jpg
     name:
@@ -9198,6 +9201,8 @@ speakers:
     bio:
       - {language: en, text: "The guy who is responsible for the quality of mobile application with 10+ years of experience."}
       - {language: ru, text: "Ответственный за качество мобильных приложений человек с 10+ годами опыта работы."}
+    twitter: lamamer
+    gitHub: lamamer
     habr: lamamer
   - id: 627
     photoFileName: 0627.jpg
@@ -10942,6 +10947,8 @@ speakers:
       - {language: ru, text: "Более 10 лет опыта работы разработчиком и тимлидом, в том числе над проектами для eBay, Янде\
             кса и Communigate."}
     twitter: iadramelk
+    gitHub: iAdramelk
+    habr: iadramelk
   - id: 747
     photoFileName: 0747.jpg
     name:
@@ -12834,6 +12841,8 @@ speakers:
             ации, созданием сложных систем с одной кнопкой, которая «делает хорошо». В Juno со дня основания, занимается р\
             азработкой Android приложений на Kotlin + Rx. Основной язык программирования на протяжении последних лет — Kotlin.\
             \ Один из лидеров GDG Minsk, частый гость и докладчик DevFest’ов и JVM конференций Европы и СНГ."}
+    twitter: AntonRutkevich
+    gitHub: AntonRutkevich
   - id: 880
     photoFileName: 0880.jpg
     name:
