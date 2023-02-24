@@ -1908,6 +1908,7 @@ speakers:
             \ production debugging and performance diagnostics, and mobile application development."}
     twitter: goldshtn
     gitHub: goldshtn
+    habr: goldshtn
     mvp: true
   - id: 112
     photoFileName: 0112.jpg
@@ -2098,6 +2099,7 @@ speakers:
             \ и IT Brunch. Основатель «Клуба анонимных разработчиков»."}
     twitter: xpinjection
     gitHub: xpinjection
+    habr: xpinjection
   - id: 124
     photoFileName: 0124.jpg
     photoUpdatedAt: 2022-03-31T19:05:56Z[UTC]
@@ -4380,6 +4382,7 @@ speakers:
             х на конференциях и по необходимости использовать в продакшне."}
     twitter: nevoroman
     gitHub: nevoroman
+    habr: nevoroman
   - id: 296
     photoFileName: 0296.jpg
     photoUpdatedAt: 2021-03-15T11:55:31.363Z[UTC]
@@ -8403,6 +8406,8 @@ speakers:
             ольких стартапов в России, Азии и Европе, сейчас работает в Lyft в солнечной Калифорнии.\r\n\r\nВозможно, вы у\
             же слышали голос Дениса в Android Dev Подкасте или видели его на конференциях."
     twitter: nekdenis
+    gitHub: nekdenis
+    habr: nekdenis
   - id: 572
     photoFileName: 0572.jpg
     name:
@@ -9285,6 +9290,8 @@ speakers:
             \ задач по автоматизации и помощью с техническими проблемами другим членам команды, также много работает над в\
             алидацией данных."}
     twitter: korobochka191
+    gitHub: korobochka
+    habr: korobochka
   - id: 633
     photoFileName: 0633.jpg
     name:
@@ -11421,6 +11428,7 @@ speakers:
             оуправляемыми машинами, а в свободное время делится своим опытом через доклады и OSS."}
     twitter: stepango
     gitHub: stepango
+    habr: stepango
   - id: 783
     photoFileName: 0783.jpg
     photoUpdatedAt: 2020-04-16T11:07:00.887Z[UTC]
@@ -11750,6 +11758,7 @@ speakers:
             \ Yandex.Maps for iOS."}
       - {language: ru, text: "Окончил Факультет вычислительной математики и кибернетики МГУ в 2012 году. В 2014 вместе с к\
             омандой Any Void пришел работать в Яндекс, где руководит группой разработки мобильных Яндекс.Карт под iOS."}
+    gitHub: likhogrud
     habr: likhogrud
   - id: 805
     photoFileName: 0805.jpg
