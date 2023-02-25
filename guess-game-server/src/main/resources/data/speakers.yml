@@ -2625,6 +2625,7 @@ speakers:
             \ Group."}
     twitter: dyer_the
     gitHub: bob-the-dyer
+    habr: vlkrasil
   - id: 159
     photoFileName: 0159.jpg
     photoUpdatedAt: 2016-09-13T13:34:48.544Z[UTC]
@@ -12986,6 +12987,7 @@ speakers:
             ссказывал людям про RxJava и Scala. \n\nРаботал в 2GIS и московских стартапах, а сейчас делает Jetpack Compose\
             \ в Google."
     twitter: matveyka_jj
+    habr: lNevermore
   - id: 889
     photoFileName: 0889.jpg
     name:
