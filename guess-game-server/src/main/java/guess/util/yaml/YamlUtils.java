@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.yaml.snakeyaml.DumperOptions;
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.constructor.Constructor;
 import org.yaml.snakeyaml.nodes.Tag;
 
@@ -53,16 +54,16 @@ public class YamlUtils {
         var speakersResource = resolver.getResource(String.format("classpath:%s/speakers.yml", DATA_DIRECTORY_NAME));
         var talksResource = resolver.getResource(String.format("classpath:%s/talks.yml", DATA_DIRECTORY_NAME));
 
-        var placesYaml = new CustomYaml(new Constructor(PlaceList.class));
-        var organizerYaml = new CustomYaml(new Constructor(OrganizerList.class));
-        var topicYaml = new CustomYaml(new Constructor(TopicList.class));
-        var eventTypesYaml = new CustomYaml(new Constructor(EventTypeList.class));
-        var eventsYaml = new CustomYaml(new DateTimeYamlConstructor(EventList.class));
-        var companiesYaml = new CustomYaml(new Constructor(CompanyList.class));
-        var companyGroupsYaml = new CustomYaml(new Constructor(CompanyGroupList.class));
-        var companySynonymsYaml = new CustomYaml(new Constructor(CompanySynonymsList.class));
-        var speakersYaml = new CustomYaml(new DateTimeYamlConstructor(SpeakerList.class));
-        var talksYaml = new CustomYaml(new DateTimeYamlConstructor(TalkList.class));
+        var placesYaml = new CustomYaml(new Constructor(PlaceList.class, new LoaderOptions()));
+        var organizerYaml = new CustomYaml(new Constructor(OrganizerList.class, new LoaderOptions()));
+        var topicYaml = new CustomYaml(new Constructor(TopicList.class, new LoaderOptions()));
+        var eventTypesYaml = new CustomYaml(new Constructor(EventTypeList.class, new LoaderOptions()));
+        var eventsYaml = new CustomYaml(new DateTimeYamlConstructor(EventList.class, new LoaderOptions()));
+        var companiesYaml = new CustomYaml(new Constructor(CompanyList.class, new LoaderOptions()));
+        var companyGroupsYaml = new CustomYaml(new Constructor(CompanyGroupList.class, new LoaderOptions()));
+        var companySynonymsYaml = new CustomYaml(new Constructor(CompanySynonymsList.class, new LoaderOptions()));
+        var speakersYaml = new CustomYaml(new DateTimeYamlConstructor(SpeakerList.class, new LoaderOptions()));
+        var talksYaml = new CustomYaml(new DateTimeYamlConstructor(TalkList.class, new LoaderOptions()));
 
         // Read from YAML files
         var placeList = (PlaceList) placesYaml.load(placesResource.getInputStream());
@@ -453,7 +454,7 @@ public class YamlUtils {
             representer.addClassTag(entity.getClass(), Tag.MAP);
 
             var itemsYaml = new CustomYaml(
-                    new Constructor(entity.getClass()),
+                    new Constructor(entity.getClass(), new LoaderOptions()),
                     representer,
                     options);
             itemsYaml.dump(entity, writer);

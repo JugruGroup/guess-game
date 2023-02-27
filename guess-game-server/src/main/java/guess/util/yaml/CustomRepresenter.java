@@ -1,5 +1,6 @@
 package guess.util.yaml;
 
+import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.introspector.Property;
 import org.yaml.snakeyaml.nodes.NodeTuple;
 import org.yaml.snakeyaml.nodes.Tag;
@@ -21,6 +22,8 @@ public class CustomRepresenter extends Representer {
     private final List<PropertyMatcher> propertyMatchers;
 
     public CustomRepresenter(List<PropertyMatcher> propertyMatchers) {
+        super(new DumperOptions());
+
         this.propertyMatchers = propertyMatchers;
 
         this.representers.put(LocalDate.class, data -> CustomRepresenter.this.representData(data.toString()));
