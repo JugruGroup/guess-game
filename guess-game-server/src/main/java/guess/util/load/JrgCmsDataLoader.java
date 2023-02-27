@@ -33,6 +33,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.constructor.Constructor;
 
 import java.io.FileNotFoundException;
@@ -150,7 +151,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     static JrgCmsTokenResponse getTokenFromCache() throws IOException {
         var resolver = new PathMatchingResourcePatternResolver();
         var tokenResponseResource = resolver.getResource(String.format("file:%s/%s", getOptionsDirectoryName(), TOKEN_FILENAME));
-        var tokenResponseYaml = new CustomYaml(new Constructor(JrgCmsTokenResponse.class));
+        var tokenResponseYaml = new CustomYaml(new Constructor(JrgCmsTokenResponse.class, new LoaderOptions()));
 
         try {
             return tokenResponseYaml.load(tokenResponseResource.getInputStream());
