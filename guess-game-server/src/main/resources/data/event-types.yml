@@ -435,8 +435,7 @@ eventTypes:
       - language: ru
         text: "SnowOne — Java-конференция от JUGNsk в Новосибирске — столице Сибири! Главное мероприятие года от Java-сообщества Сибири."
     siteLink:
-      - {language: en, text: "https://snowone.ru/en"}
-      - {language: ru, text: "https://snowone.ru/ru"}
+      - {language: en, text: "https://snowone.ru"}
     twitterLink: https://twitter.com/snowone_conf
     youtubeLink: https://www.youtube.com/c/JUGNsk
     timeZone: Asia/Novosibirsk

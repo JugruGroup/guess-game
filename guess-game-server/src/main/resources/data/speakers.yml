@@ -36138,6 +36138,7 @@ speakers:
       - {language: ru, text: "Занимается заказной разработкой технической документации. Проводит учебные курсы для техниче\
             ских писателей и всех, кто хочет разрабатывать качественную документацию. Помогает компаниям настраивать проце\
             ссы документирования."}
+    twitter: lazeez
     gitHub: sfactor
     habr: chebureque
   - id: 2515
@@ -36199,3 +36200,47 @@ speakers:
             истемной архитектуры.</p>"}
     twitter: enotinka
     habr: enotinka
+  - id: 2519
+    photoFileName: 2519.jpg
+    photoUpdatedAt: 2023-03-09T11:00:00Z[UTC]
+    name:
+      - {language: en, text: "Valeria Yurkovlyanec"}
+      - {language: ru, text: "Валерия Юрковлянец"}
+    companyIds: [899]
+    bio:
+      - {language: ru, text: "Java Developer в CDEK IT.\n\nИскупалась в легаси из-под аутсорса и доросла до девлида на\
+            \ проектах с clean arch.\n\nНе потеряла оптимизм в энтерпрайзе.\n\nВ CDEK IT занимаюсь интеграцией сторонних\
+            \ сервисов с экосистемой СДЭК."}
+    twitter: yurkovlanets
+  - id: 2520
+    photoFileName: 2520.jpg
+    photoUpdatedAt: 2023-03-09T11:00:00Z[UTC]
+    name:
+      - {language: en, text: "Artemiy Sartakov"}
+      - {language: ru, text: "Артемий Сартаков"}
+    companyIds: [242]
+    bio:
+      - {language: ru, text: "Профессионально пишет на языке Java c 2016 года. Последние 5 лет занимается статическим\
+            \ анализом, большую часть из которых работал над поддержкой языка Java в IntelliJ IDEA.\n\nТакже преподает\
+            \ курс по C++/Java студентам ФИТ НГУ."}
+    gitHub: artfly
+    habr: artfly
+  - id: 2521
+    photoFileName: 2521.jpg
+    photoUpdatedAt: 2023-03-09T11:00:00Z[UTC]
+    name:
+      - {language: en, text: "Vladimir Kempik"}
+      - {language: ru, text: "Владимир Кемпик"}
+    companyIds: [919]
+    bio:
+      - {language: ru, text: "Работал над JVM в Oracle/Azul/JetBrains/Syntacore, со-автор JEP 391: macOS/AArch64 Port"}
+    gitHub: VladimirKempik
+  - id: 2522
+    photoFileName: 2522.jpg
+    photoUpdatedAt: 2023-03-09T11:00:00Z[UTC]
+    name:
+      - {language: en, text: "Xie Junfeng"}
+    companyIds: [242]
+    bio:
+      - {language: en, text: "He graduated from Fudan University with a master's degree and has worked for Huawei for\
+            \ 1 year. He took part in the dev of RISC-V port of OpenJDK and is interested in GC algorithms."}
