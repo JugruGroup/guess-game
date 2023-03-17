@@ -56,7 +56,7 @@ https://jugspeakers.info
 
 1. Install [Java SE 17](https://www.oracle.com/technetwork/java/javase/downloads/index.html) or higher (*JDK*)
 
-1. Install [Apache Maven 3.8.0](https://maven.apache.org/download.cgi) or higher
+1. Install [Apache Maven 3.9.0](https://maven.apache.org/download.cgi) or higher
 
 1. From the command line with *Maven* (in the root directory):
 
