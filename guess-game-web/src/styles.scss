@@ -27,6 +27,10 @@ html {
   margin-left: auto;
 }
 
+.container-information {
+  max-width: 1712px;
+}
+
 .img-home-logo {
   width: 100%;
   height: auto;
@@ -230,12 +234,6 @@ html {
   .img-guess-result {
     width: 200px;
     height: auto;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container-information {
-    max-width: 1400px;
   }
 }
 
