@@ -19,11 +19,11 @@
       </div>
 
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 mt-1">
+        <div class="col-12 col-sm-6 col-md-4 col-xxl-3 mt-1">
           <img *ngIf="speakerDetails.speaker?.photoFileName" class="img-speaker-photo"
                src="{{speakersImageDirectory}}/{{speakerDetails.speaker.photoFileName}}" alt="{{speakerDetails.speaker?.name}}">
         </div>
-        <div *ngIf="speakerDetails.speaker?.bio" class="col-12 col-sm-6 col-md-8 mt-1">
+        <div *ngIf="speakerDetails.speaker?.bio" class="col-12 col-sm-6 col-md-8 col-xxl-9 mt-1">
           <markdown [data]='speakerDetails.speaker.bio'></markdown>
         </div>
       </div>
