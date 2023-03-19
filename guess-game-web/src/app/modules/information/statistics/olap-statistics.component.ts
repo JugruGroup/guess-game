@@ -65,10 +65,12 @@ export class OlapStatisticsComponent implements OnInit {
   private readonly MARGIN_WIDTH = 30;
   private readonly SMALL_WIDTH = 576 - this.MARGIN_WIDTH;
   private readonly MEDIUM_WIDTH = 768 - this.MARGIN_WIDTH;
+  private readonly LARGE_WIDTH = 1200 - this.MARGIN_WIDTH;
 
   private readonly EXTRA_SMALL_ASPECT_RATIO = 1.5;
   private readonly SMALL_ASPECT_RATIO = 2.25;
   private readonly MEDIUM_ASPECT_RATIO = 3;
+  private readonly LARGE_ASPECT_RATIO = 3.75;
 
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
@@ -858,11 +860,24 @@ export class OlapStatisticsComponent implements OnInit {
     this.fillChartOptions();
   }
 
+  getAspectRatio(clientWidth: number): number {
+    if (clientWidth < this.SMALL_WIDTH) {
+      return this.EXTRA_SMALL_ASPECT_RATIO;
+    }
+    if (clientWidth < this.MEDIUM_WIDTH) {
+      return this.SMALL_ASPECT_RATIO;
+    }
+    if (clientWidth < this.LARGE_WIDTH) {
+      return this.MEDIUM_ASPECT_RATIO;
+    } else {
+      return this.LARGE_ASPECT_RATIO;
+    }
+  }
+
   fillChartOptions() {
     if (this.chartDiv) {
       const clientWidth = this.chartDiv.nativeElement.clientWidth;
-      const aspectRatio = (clientWidth < this.SMALL_WIDTH) ? this.EXTRA_SMALL_ASPECT_RATIO :
-        ((clientWidth < this.MEDIUM_WIDTH) ? this.SMALL_ASPECT_RATIO : this.MEDIUM_ASPECT_RATIO);
+      const aspectRatio = this.getAspectRatio(clientWidth);
 
       this.allLineOptions = this.createLineOptions(aspectRatio);
       this.totalLineOptions = this.createLineOptions(aspectRatio);
