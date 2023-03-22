@@ -55,7 +55,7 @@
   },
   "home": {
     "loadingText": "Загрузка...",
-    "informationButtonText": "Информация о конференциях и митапах",
+    "informationButtonText": "Конференции и митапы",
     "gameButtonText": "Игра «Угадай спикера»"
   },
   "start": {
