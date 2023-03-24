@@ -438,6 +438,7 @@ eventTypes:
       - {language: en, text: "https://snowone.ru"}
     twitterLink: https://twitter.com/snowone_conf
     youtubeLink: https://www.youtube.com/c/JUGNsk
+    speakerdeckLink: https://speakerdeck.com/jugnsk
     timeZone: Asia/Novosibirsk
     topicId: 1
   - id: 17
