@@ -560,7 +560,7 @@ class EventServiceImplTest {
             Mockito.doCallRealMethod().when(eventService).getDefaultEvent(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any());
             Mockito.when(eventService.getEventsFromDateTime(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any())).thenReturn(eventsFromDateTime);
             Mockito.when(eventService.getEventDateMinStartTimeList(Mockito.any())).thenReturn(eventDateMinStartTimeList);
-            Mockito.when(eventService.getEventMinTrackTimeEndDayTimeList(Mockito.any())).thenReturn(eventMinStartTimeEndDayTimeList);
+            Mockito.when(eventService.getEventMinStartTimeEndDayTimeList(Mockito.any())).thenReturn(eventMinStartTimeEndDayTimeList);
 
             assertEquals(expected, eventService.getDefaultEvent(isConferences, isMeetups, dateTime));
         }
@@ -607,7 +607,7 @@ class EventServiceImplTest {
 
         @ParameterizedTest
         @MethodSource("data")
-        void getConferenceDateMinTrackTimeList(List<Event> events, List<EventDateMinStartTime> expected) {
+        void getEventDateMinStartTimeList(List<Event> events, List<EventDateMinStartTime> expected) {
             EventDao eventDao = Mockito.mock(EventDao.class);
             EventTypeDao eventTypeDao = Mockito.mock(EventTypeDao.class);
             EventServiceImpl eventService = new EventServiceImpl(eventDao, eventTypeDao);
@@ -617,7 +617,7 @@ class EventServiceImplTest {
     }
 
     @Test
-    void getEventMinTrackTimeEndDayTimeList() {
+    void getEventMinStartTimeEndDayTimeList() {
         Event event0 = new Event();
         event0.setId(0);
         event0.setTimeZoneId(ZoneId.of("Europe/Moscow"));
@@ -668,7 +668,7 @@ class EventServiceImplTest {
 
         assertEquals(
                 List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1, eventMinStartTimeEndDayTime2),
-                eventService.getEventMinTrackTimeEndDayTimeList(List.of(eventDateMinStartTime0, eventDateMinStartTime1, eventDateMinStartTime2)));
+                eventService.getEventMinStartTimeEndDayTimeList(List.of(eventDateMinStartTime0, eventDateMinStartTime1, eventDateMinStartTime2)));
     }
 
     @Test

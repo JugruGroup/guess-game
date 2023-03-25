@@ -117,7 +117,7 @@ public class EventServiceImpl implements EventService {
         }
 
         //Transform to (event, minimal track time, end date time) items
-        List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeList = getEventMinTrackTimeEndDayTimeList(eventDateMinStartTimeList);
+        List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeList = getEventMinStartTimeEndDayTimeList(eventDateMinStartTimeList);
         if (eventMinStartTimeEndDayTimeList.isEmpty()) {
             return null;
         }
@@ -218,12 +218,12 @@ public class EventServiceImpl implements EventService {
     }
 
     /**
-     * Gets list of (event, minimal track time, end date time) items.
+     * Gets list of (event, minimal start time, end date time) items.
      *
-     * @param eventDateMinStartTimeList list of (event, date, minimal track time) items
-     * @return list of (event, minimal track time, end date time) items
+     * @param eventDateMinStartTimeList list of (event, date, minimal start time) items
+     * @return list of (event, minimal start time, end date time) items
      */
-    List<EventMinStartTimeEndDayTime> getEventMinTrackTimeEndDayTimeList(List<EventDateMinStartTime> eventDateMinStartTimeList) {
+    List<EventMinStartTimeEndDayTime> getEventMinStartTimeEndDayTimeList(List<EventDateMinStartTime> eventDateMinStartTimeList) {
         return eventDateMinStartTimeList.stream()
                 .map(edt -> {
                     var minStartDateTime = ZonedDateTime.of(
