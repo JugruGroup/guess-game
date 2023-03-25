@@ -71,7 +71,7 @@ class EventComparatorTest {
     @DisplayName("compareStartDate method tests")
     class CompareStartDateTest {
         private Stream<Arguments> data() {
-            final int COMPARE_TRACK_TIME_RESULT = 42;
+            final int COMPARE_START_TIME_RESULT = 42;
             LocalDate START_DATE0 = LocalDate.of(2021, 3, 29);
             LocalDate START_DATE1 = LocalDate.of(2021, 3, 31);
             LocalDate START_DATE2 = LocalDate.of(2021, 3, 27);
@@ -109,21 +109,21 @@ class EventComparatorTest {
             )));
 
             return Stream.of(
-                    arguments(event0, event1, COMPARE_TRACK_TIME_RESULT, 0),
-                    arguments(event1, event2, COMPARE_TRACK_TIME_RESULT, -1),
-                    arguments(event2, event1, COMPARE_TRACK_TIME_RESULT, 1),
-                    arguments(event2, event3, COMPARE_TRACK_TIME_RESULT, -1),
-                    arguments(event2, event4, COMPARE_TRACK_TIME_RESULT, 1),
-                    arguments(event2, event5, COMPARE_TRACK_TIME_RESULT, 1)
+                    arguments(event0, event1, COMPARE_START_TIME_RESULT, 0),
+                    arguments(event1, event2, COMPARE_START_TIME_RESULT, -1),
+                    arguments(event2, event1, COMPARE_START_TIME_RESULT, 1),
+                    arguments(event2, event3, COMPARE_START_TIME_RESULT, -1),
+                    arguments(event2, event4, COMPARE_START_TIME_RESULT, 1),
+                    arguments(event2, event5, COMPARE_START_TIME_RESULT, 1)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void compareStartDate(Event event1, Event event2, int compareTrackTimeResult, int expected) {
+        void compareStartDate(Event event1, Event event2, int compareStartTimeResult, int expected) {
             try (MockedStatic<EventComparator> mockedStatic = Mockito.mockStatic(EventComparator.class, Mockito.CALLS_REAL_METHODS)) {
                 mockedStatic.when(() -> EventComparator.compareStartTime(event1, event2))
-                        .thenReturn(compareTrackTimeResult);
+                        .thenReturn(compareStartTimeResult);
 
                 int actual = extractSign(EventComparator.compareStartDate(event1, event2));
 
