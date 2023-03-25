@@ -2420,7 +2420,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.TECH_TRAIN, LocalDate.of(2023, 4, 1), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("TechTrain 2023 Spring", null, List.of(24L)),
-//                        Set.of()));
+//                        Set.of("Открытие фестиваля TechTrain 2023 Spring", "Викторина и подведение итогов TechTrain 2023 Spring")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2023, 4, 11), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2023 Spring", null, List.of(24L, 11L)),

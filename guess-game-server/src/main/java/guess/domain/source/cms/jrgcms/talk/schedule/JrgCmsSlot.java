@@ -4,6 +4,7 @@ import guess.domain.source.cms.jrgcms.talk.JrgCmsActivity;
 
 public class JrgCmsSlot {
     private String slotStartTime;
+    private String slotEndTime;
     private JrgCmsActivity activity;
 
     public String getSlotStartTime() {
@@ -12,6 +13,14 @@ public class JrgCmsSlot {
 
     public void setSlotStartTime(String slotStartTime) {
         this.slotStartTime = slotStartTime;
+    }
+
+    public String getSlotEndTime() {
+        return slotEndTime;
+    }
+
+    public void setSlotEndTime(String slotEndTime) {
+        this.slotEndTime = slotEndTime;
     }
 
     public JrgCmsActivity getActivity() {

@@ -548,7 +548,8 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                         currentDayTrackTimeMap.put(slot.getActivity().getId(), new DayTrackTime(
                                 day.getDayNumber(),
                                 track.getTrackNumber(),
-                                CmsDataLoader.createEventLocalTime(slot.getSlotStartTime())));
+                                CmsDataLoader.createEventLocalTime(slot.getSlotStartTime()),
+                                CmsDataLoader.createEventLocalTime(slot.getSlotEndTime())));
                     }
                 }
             }
