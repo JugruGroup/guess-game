@@ -113,7 +113,7 @@ public class TalkSuperBriefDto {
         LocalDate talkDate = talkDayDates.get(safeTalkDay);
 
         var safeLocalDate = Optional.ofNullable(talkDate).orElse(LocalDate.now());
-        LocalDateTime talkTime = (talk.getTrackTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getTrackTime()) : null;
+        LocalDateTime talkTime = (talk.getStartTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getStartTime()) : null;
 
         EventSuperBriefDto eventSuperBriefDto = EventSuperBriefDto.convertToSuperBriefDto(event, language);
         String eventTypeLogoFileName = (eventType != null) ? eventType.getLogoFileName() : null;

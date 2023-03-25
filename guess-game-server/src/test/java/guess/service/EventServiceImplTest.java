@@ -129,12 +129,12 @@ class EventServiceImplTest {
         Talk talk1 = new Talk();
         talk1.setId(1);
         talk1.setTalkDay(1L);
-        talk1.setTrackTime(TALK_TRACK_TIME1);
+        talk1.setStartTime(TALK_TRACK_TIME1);
 
         Talk talk2 = new Talk();
         talk2.setId(2);
         talk2.setTalkDay(1L);
-        talk2.setTrackTime(TALK_TRACK_TIME2);
+        talk2.setStartTime(TALK_TRACK_TIME2);
 
         event0 = new Event();
         event0.setId(0);

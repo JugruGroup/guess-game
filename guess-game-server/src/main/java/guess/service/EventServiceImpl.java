@@ -168,13 +168,13 @@ public class EventServiceImpl implements EventService {
                             Collectors.groupingBy(
                                     Talk::getTalkDay,
                                     Collectors.mapping(
-                                            Talk::getTrackTime,
+                                            Talk::getStartTime,
                                             Collectors.minBy(Comparator.naturalOrder())
                                     )
                             )
                     );
 
-            // Fill map (event, (trackTime, minTrackTime))
+            // Fill map (event, (startTime, minStartTime))
             minTrackTimeInTalkDaysForConferences.put(event, minStartTimeInTalkDays);
         }
 

@@ -433,8 +433,8 @@ public class ConferenceDataLoaderExecutor {
                     String ruName = LocalizationUtils.getString(t.getName(), Language.RUSSIAN).trim();
 
                     if (deletedTalks.contains(enName) || deletedTalks.contains(ruName)) {
-                        log.warn("Conference opening or closing talk is deleted, name: {'{}', '{}'}, talkDay: {}, trackTime: {}, track: {}, language: {}",
-                                enName, ruName, t.getTalkDay(), t.getTrackTime(), t.getTrack(), t.getLanguage());
+                        log.warn("Conference opening or closing talk is deleted, name: {'{}', '{}'}, talkDay: {}, startTime: {}, track: {}, language: {}",
+                                enName, ruName, t.getTalkDay(), t.getStartTime(), t.getTrack(), t.getLanguage());
 
                         return false;
                     } else {
@@ -464,13 +464,13 @@ public class ConferenceDataLoaderExecutor {
                 long existingTalkDay = Optional.ofNullable(existingTalk.getTalkDay()).orElse(0L);
                 long newTalkTrack = Optional.ofNullable(talk.getTrack()).orElse(0L);
                 long existingTalkTrack = Optional.ofNullable(existingTalk.getTrack()).orElse(0L);
-                LocalTime newTalkTrackTime = Optional.ofNullable(talk.getTrackTime()).orElse(LocalTime.of(0, 0));
-                LocalTime existingTalkTrackTime = Optional.ofNullable(existingTalk.getTrackTime()).orElse(LocalTime.of(0, 0));
+                LocalTime newTalkStartTime = Optional.ofNullable(talk.getStartTime()).orElse(LocalTime.of(0, 0));
+                LocalTime existingTalkStartTime = Optional.ofNullable(existingTalk.getStartTime()).orElse(LocalTime.of(0, 0));
 
                 if ((newTalkDay < existingTalkDay) ||
                         ((newTalkDay == existingTalkDay) &&
                                 ((newTalkTrack < existingTalkTrack) ||
-                                        ((newTalkTrack == existingTalkTrack) && newTalkTrackTime.isBefore(existingTalkTrackTime))))) {
+                                        ((newTalkTrack == existingTalkTrack) && newTalkStartTime.isBefore(existingTalkStartTime))))) {
                     // (Less day) or
                     // (Equal day) and ((Less track) or ((Equal track) and (Less track time)))
                     ruNameMap.put(ruName, talk);
@@ -1884,7 +1884,7 @@ public class ConferenceDataLoaderExecutor {
                 equals(a.getShortDescription(), b.getShortDescription()) &&
                 equals(a.getLongDescription(), b.getLongDescription()) &&
                 equals(a.getTalkDay(), b.getTalkDay()) &&
-                equals(a.getTrackTime(), b.getTrackTime()) &&
+                equals(a.getStartTime(), b.getStartTime()) &&
                 equals(a.getTrack(), b.getTrack()) &&
                 equals(a.getLanguage(), b.getLanguage()) &&
                 equals(a.getPresentationLinks(), b.getPresentationLinks()) &&

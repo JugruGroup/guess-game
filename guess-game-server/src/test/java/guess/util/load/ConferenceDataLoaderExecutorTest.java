@@ -637,7 +637,7 @@ class ConferenceDataLoaderExecutorTest {
             talk0.setName(List.of(new LocaleItem("ru", "name0")));
             talk0.setTalkDay(1L);
             talk0.setTrack(1L);
-            talk0.setTrackTime(LocalTime.of(10, 0));
+            talk0.setStartTime(LocalTime.of(10, 0));
 
             Talk talk1 = new Talk();
             talk1.setId(1);
@@ -655,14 +655,14 @@ class ConferenceDataLoaderExecutorTest {
             talk3.setName(List.of(new LocaleItem("ru", "name0")));
             talk3.setTalkDay(1L);
             talk3.setTrack(1L);
-            talk3.setTrackTime(LocalTime.of(10, 30));
+            talk3.setStartTime(LocalTime.of(10, 30));
 
             Talk talk4 = new Talk();
             talk4.setId(4);
             talk4.setName(List.of(new LocaleItem("ru", "name0")));
             talk4.setTalkDay(1L);
             talk4.setTrack(1L);
-            talk4.setTrackTime(LocalTime.of(11, 0));
+            talk4.setStartTime(LocalTime.of(11, 0));
 
             Talk talk5 = new Talk();
             talk5.setId(5);
@@ -3845,7 +3845,7 @@ class ConferenceDataLoaderExecutorTest {
             talk0.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk0.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk0.setTalkDay(1L);
-            talk0.setTrackTime(LocalTime.of(10, 0));
+            talk0.setStartTime(LocalTime.of(10, 0));
             talk0.setTrack(1L);
             talk0.setLanguage("en");
             talk0.setPresentationLinks(List.of("presentationLink0"));
@@ -3885,7 +3885,7 @@ class ConferenceDataLoaderExecutorTest {
             talk6.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk6.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk6.setTalkDay(1L);
-            talk6.setTrackTime(LocalTime.of(10, 30));
+            talk6.setStartTime(LocalTime.of(10, 30));
 
             Talk talk7 = new Talk();
             talk7.setId(0);
@@ -3893,7 +3893,7 @@ class ConferenceDataLoaderExecutorTest {
             talk7.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk7.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk7.setTalkDay(1L);
-            talk7.setTrackTime(LocalTime.of(10, 0));
+            talk7.setStartTime(LocalTime.of(10, 0));
             talk7.setTrack(2L);
 
             Talk talk8 = new Talk();
@@ -3902,7 +3902,7 @@ class ConferenceDataLoaderExecutorTest {
             talk8.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk8.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk8.setTalkDay(1L);
-            talk8.setTrackTime(LocalTime.of(10, 0));
+            talk8.setStartTime(LocalTime.of(10, 0));
             talk8.setTrack(1L);
             talk8.setLanguage("ru");
 
@@ -3912,7 +3912,7 @@ class ConferenceDataLoaderExecutorTest {
             talk9.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk9.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk9.setTalkDay(1L);
-            talk9.setTrackTime(LocalTime.of(10, 0));
+            talk9.setStartTime(LocalTime.of(10, 0));
             talk9.setTrack(1L);
             talk9.setLanguage("en");
             talk9.setPresentationLinks(List.of("presentationLink9"));
@@ -3923,7 +3923,7 @@ class ConferenceDataLoaderExecutorTest {
             talk10.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk10.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk10.setTalkDay(1L);
-            talk10.setTrackTime(LocalTime.of(10, 0));
+            talk10.setStartTime(LocalTime.of(10, 0));
             talk10.setTrack(1L);
             talk10.setLanguage("en");
             talk10.setPresentationLinks(List.of("presentationLink0"));
@@ -3935,7 +3935,7 @@ class ConferenceDataLoaderExecutorTest {
             talk11.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk11.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk11.setTalkDay(1L);
-            talk11.setTrackTime(LocalTime.of(10, 0));
+            talk11.setStartTime(LocalTime.of(10, 0));
             talk11.setTrack(1L);
             talk11.setLanguage("en");
             talk11.setPresentationLinks(List.of("presentationLink0"));
@@ -3948,7 +3948,7 @@ class ConferenceDataLoaderExecutorTest {
             talk12.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk12.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk12.setTalkDay(1L);
-            talk12.setTrackTime(LocalTime.of(10, 0));
+            talk12.setStartTime(LocalTime.of(10, 0));
             talk12.setTrack(1L);
             talk12.setLanguage("en");
             talk12.setPresentationLinks(List.of("presentationLink0"));
@@ -3962,7 +3962,7 @@ class ConferenceDataLoaderExecutorTest {
             talk13.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk13.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk13.setTalkDay(1L);
-            talk13.setTrackTime(LocalTime.of(10, 0));
+            talk13.setStartTime(LocalTime.of(10, 0));
             talk13.setTrack(1L);
             talk13.setLanguage("en");
             talk13.setPresentationLinks(List.of("presentationLink0"));

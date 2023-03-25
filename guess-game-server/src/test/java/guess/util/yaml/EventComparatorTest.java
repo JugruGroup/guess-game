@@ -140,19 +140,19 @@ class EventComparatorTest {
         talk1.setTalkDay(1L);
 
         Talk talk2 = new Talk();
-        talk2.setTrackTime(LocalTime.of(10, 0));
+        talk2.setStartTime(LocalTime.of(10, 0));
 
         Talk talk3 = new Talk();
         talk3.setTalkDay(1L);
-        talk3.setTrackTime(LocalTime.of(10, 30));
+        talk3.setStartTime(LocalTime.of(10, 30));
 
         Talk talk4 = new Talk();
         talk4.setTalkDay(1L);
-        talk4.setTrackTime(LocalTime.of(10, 45));
+        talk4.setStartTime(LocalTime.of(10, 45));
 
         Talk talk5 = new Talk();
         talk5.setTalkDay(2L);
-        talk5.setTrackTime(LocalTime.of(9, 0));
+        talk5.setStartTime(LocalTime.of(9, 0));
 
         List<Talk> talks = List.of(talk0, talk1, talk2, talk3, talk4);
 
@@ -174,7 +174,7 @@ class EventComparatorTest {
 
             Talk talk0 = new Talk();
             talk0.setTalkDay(1L);
-            talk0.setTrackTime(LocalTime.of(10, 30));
+            talk0.setStartTime(LocalTime.of(10, 30));
 
             Event event2 = new Event();
             event2.setTalks(List.of(talk0));
@@ -184,7 +184,7 @@ class EventComparatorTest {
 
             Talk talk1 = new Talk();
             talk1.setTalkDay(1L);
-            talk1.setTrackTime(LocalTime.of(10, 45));
+            talk1.setStartTime(LocalTime.of(10, 45));
 
             Event event4 = new Event();
             event4.setTalks(List.of(talk1));
@@ -210,7 +210,7 @@ class EventComparatorTest {
                                     Object[] args = invocation.getArguments();
                                     List<Talk> talks = (List<Talk>) args[0];
 
-                                    return talks.isEmpty() ? Optional.empty() : Optional.of(talks.get(0).getTrackTime());
+                                    return talks.isEmpty() ? Optional.empty() : Optional.of(talks.get(0).getStartTime());
                                 }
                         );
 

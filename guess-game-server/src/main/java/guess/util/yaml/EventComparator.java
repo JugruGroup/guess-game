@@ -58,9 +58,9 @@ public class EventComparator implements Comparator<Event> {
 
     static Optional<LocalTime> getFirstTrackTime(List<Talk> talks) {
         return talks.stream()
-                .filter(t -> (t.getTalkDay() != null) && (t.getTrackTime() != null))
-                .sorted(Comparator.comparing(Talk::getTalkDay).thenComparing(Talk::getTrackTime))
-                .map(Talk::getTrackTime)
+                .filter(t -> (t.getTalkDay() != null) && (t.getStartTime() != null))
+                .sorted(Comparator.comparing(Talk::getTalkDay).thenComparing(Talk::getStartTime))
+                .map(Talk::getStartTime)
                 .findFirst();
     }
 
