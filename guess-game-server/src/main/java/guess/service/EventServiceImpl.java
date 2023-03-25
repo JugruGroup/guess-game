@@ -226,7 +226,7 @@ public class EventServiceImpl implements EventService {
     List<EventMinTrackTimeEndDayTime> getEventMinTrackTimeEndDayTimeList(List<EventDateMinStartTime> eventDateMinStartTimeList) {
         return eventDateMinStartTimeList.stream()
                 .map(edt -> {
-                    var minTrackDateTime = ZonedDateTime.of(
+                    var minStartDateTime = ZonedDateTime.of(
                                     edt.date(),
                                     edt.minStartTime(),
                                     edt.event().getFinalTimeZoneId())
@@ -241,7 +241,7 @@ public class EventServiceImpl implements EventService {
 
                     return new EventMinTrackTimeEndDayTime(
                             edt.event(),
-                            minTrackDateTime,
+                            minStartDateTime,
                             endDayDateTime
                     );
                 })
