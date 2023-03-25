@@ -48,7 +48,7 @@ public class EventComparator implements Comparator<Event> {
             } else {
                 // Compare track time
                 if (eventStartDate1.isEqual(eventStartDate2)) {
-                    return compareTrackTime(event1, event2);
+                    return compareStartTime(event1, event2);
                 } else {
                     return eventStartDate1.compareTo(eventStartDate2);
                 }
@@ -64,24 +64,24 @@ public class EventComparator implements Comparator<Event> {
                 .findFirst();
     }
 
-    static int compareTrackTime(Event event1, Event event2) {
-        Optional<LocalTime> eventTrackTime1 = getFirstStartTime(event1.getTalks());
-        Optional<LocalTime> eventTrackTime2 = getFirstStartTime(event2.getTalks());
+    static int compareStartTime(Event event1, Event event2) {
+        Optional<LocalTime> eventStartTime1 = getFirstStartTime(event1.getTalks());
+        Optional<LocalTime> eventStartTime2 = getFirstStartTime(event2.getTalks());
 
-        if (eventTrackTime1.isEmpty()) {
-            if (eventTrackTime2.isEmpty()) {
+        if (eventStartTime1.isEmpty()) {
+            if (eventStartTime2.isEmpty()) {
                 return 0;
             } else {
                 return -1;
             }
         } else {
-            if (eventTrackTime2.isEmpty()) {
+            if (eventStartTime2.isEmpty()) {
                 return 1;
             } else {
-                if (eventTrackTime1.get().equals(eventTrackTime2.get())) {
+                if (eventStartTime1.get().equals(eventStartTime2.get())) {
                     return 0;
                 } else {
-                    return eventTrackTime1.get().compareTo(eventTrackTime2.get());
+                    return eventStartTime1.get().compareTo(eventStartTime2.get());
                 }
             }
         }
