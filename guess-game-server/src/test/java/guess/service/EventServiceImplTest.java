@@ -559,7 +559,7 @@ class EventServiceImplTest {
 
             Mockito.doCallRealMethod().when(eventService).getDefaultEvent(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any());
             Mockito.when(eventService.getEventsFromDateTime(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any())).thenReturn(eventsFromDateTime);
-            Mockito.when(eventService.getEventDateMinTrackTimeList(Mockito.any())).thenReturn(eventDateMinStartTimeList);
+            Mockito.when(eventService.getEventDateMinStartTimeList(Mockito.any())).thenReturn(eventDateMinStartTimeList);
             Mockito.when(eventService.getEventMinTrackTimeEndDayTimeList(Mockito.any())).thenReturn(eventMinStartTimeEndDayTimeList);
 
             assertEquals(expected, eventService.getDefaultEvent(isConferences, isMeetups, dateTime));
@@ -568,8 +568,8 @@ class EventServiceImplTest {
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-    @DisplayName("getEventDateMinTrackTimeList method tests")
-    class GetEventDateMinTrackTimeListTest {
+    @DisplayName("getEventDateMinStartTimeList method tests")
+    class GetEventDateMinStartTimeListTest {
         private Stream<Arguments> data() {
             EventDateMinStartTime eventDateMinStartTime0 = new EventDateMinStartTime(
                     event0,
@@ -612,7 +612,7 @@ class EventServiceImplTest {
             EventTypeDao eventTypeDao = Mockito.mock(EventTypeDao.class);
             EventServiceImpl eventService = new EventServiceImpl(eventDao, eventTypeDao);
 
-            assertEquals(expected, eventService.getEventDateMinTrackTimeList(events));
+            assertEquals(expected, eventService.getEventDateMinStartTimeList(events));
         }
     }
 

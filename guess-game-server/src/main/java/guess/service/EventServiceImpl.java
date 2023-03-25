@@ -111,7 +111,7 @@ public class EventServiceImpl implements EventService {
         }
 
         // Find (event, date, minimal track time) items
-        List<EventDateMinStartTime> eventDateMinStartTimeList = getEventDateMinTrackTimeList(conferencesFromDate);
+        List<EventDateMinStartTime> eventDateMinStartTimeList = getEventDateMinStartTimeList(conferencesFromDate);
         if (eventDateMinStartTimeList.isEmpty()) {
             return null;
         }
@@ -155,7 +155,7 @@ public class EventServiceImpl implements EventService {
      * @param events events
      * @return list of (event, date, minimal start time) items
      */
-    List<EventDateMinStartTime> getEventDateMinTrackTimeList(List<Event> events) {
+    List<EventDateMinStartTime> getEventDateMinStartTimeList(List<Event> events) {
         List<EventDateMinStartTime> result = new ArrayList<>();
         Map<Event, Map<Long, Optional<LocalTime>>> minStartTimeInTalkDaysForConferences = new LinkedHashMap<>();
 
