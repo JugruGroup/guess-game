@@ -7,5 +7,5 @@ import java.time.LocalDateTime;
 /**
  * Event, minimal start time, end date time.
  */
-public record EventMinStartTimeEndDayTime(Event event, LocalDateTime minTrackDateTime, LocalDateTime endDayDateTime) {
+public record EventMinStartTimeEndDayTime(Event event, LocalDateTime minStartDateTime, LocalDateTime endDayDateTime) {
 }

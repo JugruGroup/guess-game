@@ -125,14 +125,14 @@ public class EventServiceImpl implements EventService {
         // Find current and future event days, sort by minimal track date time and end day date time
         List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeListFromDateOrdered = eventMinStartTimeEndDayTimeList.stream()
                 .filter(edt -> dateTime.isBefore(edt.endDayDateTime()))
-                .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minTrackDateTime).thenComparing(EventMinStartTimeEndDayTime::endDayDateTime))
+                .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minStartDateTime).thenComparing(EventMinStartTimeEndDayTime::endDayDateTime))
                 .toList();
         if (eventMinStartTimeEndDayTimeListFromDateOrdered.isEmpty()) {
             return null;
         }
 
         // Find first date
-        LocalDateTime firstDateTime = eventMinStartTimeEndDayTimeListFromDateOrdered.get(0).minTrackDateTime();
+        LocalDateTime firstDateTime = eventMinStartTimeEndDayTimeListFromDateOrdered.get(0).minStartDateTime();
 
         if (dateTime.isBefore(firstDateTime)) {
             // No current day events, return nearest first event
@@ -140,8 +140,8 @@ public class EventServiceImpl implements EventService {
         } else {
             // Current day events exist, find happened time, sort by reversed minimal track date time
             List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeListOnCurrentDate = eventMinStartTimeEndDayTimeListFromDateOrdered.stream()
-                    .filter(edt -> !dateTime.isBefore(edt.minTrackDateTime()))
-                    .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minTrackDateTime).reversed())
+                    .filter(edt -> !dateTime.isBefore(edt.minStartDateTime()))
+                    .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minStartDateTime).reversed())
                     .toList();
 
             // Return nearest last event
