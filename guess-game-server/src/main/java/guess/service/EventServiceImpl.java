@@ -150,14 +150,14 @@ public class EventServiceImpl implements EventService {
     }
 
     /**
-     * Gets list of (event, date, minimal track time) items.
+     * Gets list of (event, date, minimal start time) items.
      *
      * @param events events
-     * @return list of (event, date, minimal track time) items
+     * @return list of (event, date, minimal start time) items
      */
     List<EventDateMinTrackTime> getEventDateMinTrackTimeList(List<Event> events) {
         List<EventDateMinTrackTime> result = new ArrayList<>();
-        Map<Event, Map<Long, Optional<LocalTime>>> minTrackTimeInTalkDaysForConferences = new LinkedHashMap<>();
+        Map<Event, Map<Long, Optional<LocalTime>>> minStartTimeInTalkDaysForConferences = new LinkedHashMap<>();
 
         // Calculate start time minimum for each day of each event
         for (Event event : events) {
@@ -175,11 +175,11 @@ public class EventServiceImpl implements EventService {
                     );
 
             // Fill map (event, (startTime, minStartTime))
-            minTrackTimeInTalkDaysForConferences.put(event, minStartTimeInTalkDays);
+            minStartTimeInTalkDaysForConferences.put(event, minStartTimeInTalkDays);
         }
 
         // Transform to (event, day, minTrackTime) list
-        for (Map.Entry<Event, Map<Long, Optional<LocalTime>>> entry : minTrackTimeInTalkDaysForConferences.entrySet()) {
+        for (Map.Entry<Event, Map<Long, Optional<LocalTime>>> entry : minStartTimeInTalkDaysForConferences.entrySet()) {
             var event = entry.getKey();
             Map<Long, Optional<LocalTime>> minTrackTimeInTalkDays = entry.getValue();
             long previousDays = 0;
