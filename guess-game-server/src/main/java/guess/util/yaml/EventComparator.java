@@ -56,7 +56,7 @@ public class EventComparator implements Comparator<Event> {
         }
     }
 
-    static Optional<LocalTime> getFirstTrackTime(List<Talk> talks) {
+    static Optional<LocalTime> getFirstStartTime(List<Talk> talks) {
         return talks.stream()
                 .filter(t -> (t.getTalkDay() != null) && (t.getStartTime() != null))
                 .sorted(Comparator.comparing(Talk::getTalkDay).thenComparing(Talk::getStartTime))
@@ -65,8 +65,8 @@ public class EventComparator implements Comparator<Event> {
     }
 
     static int compareTrackTime(Event event1, Event event2) {
-        Optional<LocalTime> eventTrackTime1 = getFirstTrackTime(event1.getTalks());
-        Optional<LocalTime> eventTrackTime2 = getFirstTrackTime(event2.getTalks());
+        Optional<LocalTime> eventTrackTime1 = getFirstStartTime(event1.getTalks());
+        Optional<LocalTime> eventTrackTime2 = getFirstStartTime(event2.getTalks());
 
         if (eventTrackTime1.isEmpty()) {
             if (eventTrackTime2.isEmpty()) {
