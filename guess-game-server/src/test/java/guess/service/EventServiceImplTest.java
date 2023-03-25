@@ -4,7 +4,7 @@ import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
 import guess.domain.Conference;
 import guess.domain.auxiliary.EventDateMinStartTime;
-import guess.domain.auxiliary.EventMinTrackTimeEndDayTime;
+import guess.domain.auxiliary.EventMinStartTimeEndDayTime;
 import guess.domain.source.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -517,13 +517,13 @@ class EventServiceImplTest {
                     LocalTime.of(10, 0)
             );
 
-            EventMinTrackTimeEndDayTime eventMinTrackTimeEndDayTime0 = new EventMinTrackTimeEndDayTime(
+            EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime0 = new EventMinStartTimeEndDayTime(
                     event0,
                     LocalDateTime.of(2021, 2, 7, 10, 0),
                     LocalDateTime.of(2021, 2, 8, 0, 0)
             );
 
-            EventMinTrackTimeEndDayTime eventMinTrackTimeEndDayTime1 = new EventMinTrackTimeEndDayTime(
+            EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime1 = new EventMinStartTimeEndDayTime(
                     event1,
                     LocalDateTime.of(2021, 2, 7, 12, 0),
                     LocalDateTime.of(2021, 2, 8, 0, 0)
@@ -534,17 +534,17 @@ class EventServiceImplTest {
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, List.of(event0), Collections.emptyList(), null, null),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, List.of(event0), List.of(eventDateMinStartTime0), Collections.emptyList(), null),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(1, ChronoUnit.DAYS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), null),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), null),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.minus(1, ChronoUnit.DAYS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event0),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME,
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event0),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(1, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event0),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(2, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event1),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event1),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(3, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event1)
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event1)
             );
         }
 
@@ -552,7 +552,7 @@ class EventServiceImplTest {
         @MethodSource("data")
         void getDefaultEvent(boolean isConferences, boolean isMeetups, LocalDateTime dateTime, List<Event> eventsFromDateTime,
                              List<EventDateMinStartTime> eventDateMinStartTimeList,
-                             List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeList, Event expected) {
+                             List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeList, Event expected) {
             EventDao eventDao = Mockito.mock(EventDao.class);
             EventTypeDao eventTypeDao = Mockito.mock(EventTypeDao.class);
             EventServiceImpl eventService = Mockito.mock(EventServiceImpl.class, Mockito.withSettings().useConstructor(eventDao, eventTypeDao));
@@ -560,7 +560,7 @@ class EventServiceImplTest {
             Mockito.doCallRealMethod().when(eventService).getDefaultEvent(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any());
             Mockito.when(eventService.getEventsFromDateTime(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any())).thenReturn(eventsFromDateTime);
             Mockito.when(eventService.getEventDateMinTrackTimeList(Mockito.any())).thenReturn(eventDateMinStartTimeList);
-            Mockito.when(eventService.getEventMinTrackTimeEndDayTimeList(Mockito.any())).thenReturn(eventMinTrackTimeEndDayTimeList);
+            Mockito.when(eventService.getEventMinTrackTimeEndDayTimeList(Mockito.any())).thenReturn(eventMinStartTimeEndDayTimeList);
 
             assertEquals(expected, eventService.getDefaultEvent(isConferences, isMeetups, dateTime));
         }
@@ -644,19 +644,19 @@ class EventServiceImplTest {
                 LocalTime.of(0, 0)
         );
 
-        EventMinTrackTimeEndDayTime eventMinTrackTimeEndDayTime0 = new EventMinTrackTimeEndDayTime(
+        EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime0 = new EventMinStartTimeEndDayTime(
                 event0,
                 LocalDateTime.of(2021, 2, 4, 12, 0),
                 LocalDateTime.of(2021, 2, 4, 21, 0)
         );
 
-        EventMinTrackTimeEndDayTime eventMinTrackTimeEndDayTime1 = new EventMinTrackTimeEndDayTime(
+        EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime1 = new EventMinStartTimeEndDayTime(
                 event1,
                 LocalDateTime.of(2021, 2, 4, 8, 0),
                 LocalDateTime.of(2021, 2, 4, 17, 0)
         );
 
-        EventMinTrackTimeEndDayTime eventMinTrackTimeEndDayTime2 = new EventMinTrackTimeEndDayTime(
+        EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime2 = new EventMinStartTimeEndDayTime(
                 event0,
                 LocalDateTime.of(2021, 2, 3, 21, 0),
                 LocalDateTime.of(2021, 2, 4, 21, 0)
@@ -667,7 +667,7 @@ class EventServiceImplTest {
         EventServiceImpl eventService = new EventServiceImpl(eventDao, eventTypeDao);
 
         assertEquals(
-                List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1, eventMinTrackTimeEndDayTime2),
+                List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1, eventMinStartTimeEndDayTime2),
                 eventService.getEventMinTrackTimeEndDayTimeList(List.of(eventDateMinStartTime0, eventDateMinStartTime1, eventDateMinStartTime2)));
     }
 

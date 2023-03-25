@@ -3,7 +3,7 @@ package guess.service;
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
 import guess.domain.auxiliary.EventDateMinStartTime;
-import guess.domain.auxiliary.EventMinTrackTimeEndDayTime;
+import guess.domain.auxiliary.EventMinStartTimeEndDayTime;
 import guess.domain.source.Event;
 import guess.domain.source.EventDays;
 import guess.domain.source.EventPart;
@@ -117,35 +117,35 @@ public class EventServiceImpl implements EventService {
         }
 
         //Transform to (event, minimal track time, end date time) items
-        List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeList = getEventMinTrackTimeEndDayTimeList(eventDateMinStartTimeList);
-        if (eventMinTrackTimeEndDayTimeList.isEmpty()) {
+        List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeList = getEventMinTrackTimeEndDayTimeList(eventDateMinStartTimeList);
+        if (eventMinStartTimeEndDayTimeList.isEmpty()) {
             return null;
         }
 
         // Find current and future event days, sort by minimal track date time and end day date time
-        List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeListFromDateOrdered = eventMinTrackTimeEndDayTimeList.stream()
+        List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeListFromDateOrdered = eventMinStartTimeEndDayTimeList.stream()
                 .filter(edt -> dateTime.isBefore(edt.endDayDateTime()))
-                .sorted(Comparator.comparing(EventMinTrackTimeEndDayTime::minTrackDateTime).thenComparing(EventMinTrackTimeEndDayTime::endDayDateTime))
+                .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minTrackDateTime).thenComparing(EventMinStartTimeEndDayTime::endDayDateTime))
                 .toList();
-        if (eventMinTrackTimeEndDayTimeListFromDateOrdered.isEmpty()) {
+        if (eventMinStartTimeEndDayTimeListFromDateOrdered.isEmpty()) {
             return null;
         }
 
         // Find first date
-        LocalDateTime firstDateTime = eventMinTrackTimeEndDayTimeListFromDateOrdered.get(0).minTrackDateTime();
+        LocalDateTime firstDateTime = eventMinStartTimeEndDayTimeListFromDateOrdered.get(0).minTrackDateTime();
 
         if (dateTime.isBefore(firstDateTime)) {
             // No current day events, return nearest first event
-            return eventMinTrackTimeEndDayTimeListFromDateOrdered.get(0).event();
+            return eventMinStartTimeEndDayTimeListFromDateOrdered.get(0).event();
         } else {
             // Current day events exist, find happened time, sort by reversed minimal track date time
-            List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeListOnCurrentDate = eventMinTrackTimeEndDayTimeListFromDateOrdered.stream()
+            List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeListOnCurrentDate = eventMinStartTimeEndDayTimeListFromDateOrdered.stream()
                     .filter(edt -> !dateTime.isBefore(edt.minTrackDateTime()))
-                    .sorted(Comparator.comparing(EventMinTrackTimeEndDayTime::minTrackDateTime).reversed())
+                    .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minTrackDateTime).reversed())
                     .toList();
 
             // Return nearest last event
-            return eventMinTrackTimeEndDayTimeListOnCurrentDate.get(0).event();
+            return eventMinStartTimeEndDayTimeListOnCurrentDate.get(0).event();
         }
     }
 
@@ -223,7 +223,7 @@ public class EventServiceImpl implements EventService {
      * @param eventDateMinStartTimeList list of (event, date, minimal track time) items
      * @return list of (event, minimal track time, end date time) items
      */
-    List<EventMinTrackTimeEndDayTime> getEventMinTrackTimeEndDayTimeList(List<EventDateMinStartTime> eventDateMinStartTimeList) {
+    List<EventMinStartTimeEndDayTime> getEventMinTrackTimeEndDayTimeList(List<EventDateMinStartTime> eventDateMinStartTimeList) {
         return eventDateMinStartTimeList.stream()
                 .map(edt -> {
                     var minStartDateTime = ZonedDateTime.of(
@@ -239,7 +239,7 @@ public class EventServiceImpl implements EventService {
                             .withZoneSameInstant(ZoneId.of("UTC"))
                             .toLocalDateTime();
 
-                    return new EventMinTrackTimeEndDayTime(
+                    return new EventMinStartTimeEndDayTime(
                             edt.event(),
                             minStartDateTime,
                             endDayDateTime
