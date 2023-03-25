@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 /**
- * Event, date, minimal track time.
+ * Event, date, minimal start time.
  */
-public record EventDateMinTrackTime(Event event, LocalDate date, LocalTime minTrackTime) {
+public record EventDateMinStartTime(Event event, LocalDate date, LocalTime minStartTime) {
 }

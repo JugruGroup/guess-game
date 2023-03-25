@@ -3,7 +3,7 @@ package guess.service;
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
 import guess.domain.Conference;
-import guess.domain.auxiliary.EventDateMinTrackTime;
+import guess.domain.auxiliary.EventDateMinStartTime;
 import guess.domain.auxiliary.EventMinTrackTimeEndDayTime;
 import guess.domain.source.*;
 import org.junit.jupiter.api.*;
@@ -511,7 +511,7 @@ class EventServiceImplTest {
             Event event1 = new Event();
             event1.setId(1);
 
-            EventDateMinTrackTime eventDateMinTrackTime0 = new EventDateMinTrackTime(
+            EventDateMinStartTime eventDateMinStartTime0 = new EventDateMinStartTime(
                     event0,
                     LocalDate.of(2021, 2, 7),
                     LocalTime.of(10, 0)
@@ -532,26 +532,26 @@ class EventServiceImplTest {
             return Stream.of(
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, Collections.emptyList(), null, null, null),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, List.of(event0), Collections.emptyList(), null, null),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, List.of(event0), List.of(eventDateMinTrackTime0), Collections.emptyList(), null),
+                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, List.of(event0), List.of(eventDateMinStartTime0), Collections.emptyList(), null),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(1, ChronoUnit.DAYS),
-                            List.of(event0), List.of(eventDateMinTrackTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), null),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), null),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.minus(1, ChronoUnit.DAYS),
-                            List.of(event0), List.of(eventDateMinTrackTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME,
-                            List.of(event0), List.of(eventDateMinTrackTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(1, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinTrackTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event0),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(2, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinTrackTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event1),
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event1),
                     arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(3, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinTrackTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event1)
+                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1), event1)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
         void getDefaultEvent(boolean isConferences, boolean isMeetups, LocalDateTime dateTime, List<Event> eventsFromDateTime,
-                             List<EventDateMinTrackTime> eventDateMinTrackTimeList,
+                             List<EventDateMinStartTime> eventDateMinStartTimeList,
                              List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeList, Event expected) {
             EventDao eventDao = Mockito.mock(EventDao.class);
             EventTypeDao eventTypeDao = Mockito.mock(EventTypeDao.class);
@@ -559,7 +559,7 @@ class EventServiceImplTest {
 
             Mockito.doCallRealMethod().when(eventService).getDefaultEvent(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any());
             Mockito.when(eventService.getEventsFromDateTime(Mockito.anyBoolean(), Mockito.anyBoolean(), Mockito.any())).thenReturn(eventsFromDateTime);
-            Mockito.when(eventService.getEventDateMinTrackTimeList(Mockito.any())).thenReturn(eventDateMinTrackTimeList);
+            Mockito.when(eventService.getEventDateMinTrackTimeList(Mockito.any())).thenReturn(eventDateMinStartTimeList);
             Mockito.when(eventService.getEventMinTrackTimeEndDayTimeList(Mockito.any())).thenReturn(eventMinTrackTimeEndDayTimeList);
 
             assertEquals(expected, eventService.getDefaultEvent(isConferences, isMeetups, dateTime));
@@ -571,25 +571,25 @@ class EventServiceImplTest {
     @DisplayName("getEventDateMinTrackTimeList method tests")
     class GetEventDateMinTrackTimeListTest {
         private Stream<Arguments> data() {
-            EventDateMinTrackTime eventDateMinTrackTime0 = new EventDateMinTrackTime(
+            EventDateMinStartTime eventDateMinStartTime0 = new EventDateMinStartTime(
                     event0,
                     EVENT_START_DATE0,
                     LocalTime.of(0, 0)
             );
 
-            EventDateMinTrackTime eventDateMinTrackTime1 = new EventDateMinTrackTime(
+            EventDateMinStartTime eventDateMinStartTime1 = new EventDateMinStartTime(
                     event0,
                     EVENT_START_DATE0.plus(1, ChronoUnit.DAYS),
                     LocalTime.of(0, 0)
             );
 
-            EventDateMinTrackTime eventDateMinTrackTime2 = new EventDateMinTrackTime(
+            EventDateMinStartTime eventDateMinStartTime2 = new EventDateMinStartTime(
                     event1,
                     EVENT_START_DATE1,
                     TALK_TRACK_TIME1
             );
 
-            EventDateMinTrackTime eventDateMinTrackTime3 = new EventDateMinTrackTime(
+            EventDateMinStartTime eventDateMinStartTime3 = new EventDateMinStartTime(
                     event2,
                     EVENT_START_DATE2,
                     TALK_TRACK_TIME2
@@ -597,17 +597,17 @@ class EventServiceImplTest {
 
             return Stream.of(
                     arguments(Collections.emptyList(), Collections.emptyList()),
-                    arguments(List.of(event0), List.of(eventDateMinTrackTime0, eventDateMinTrackTime1)),
-                    arguments(List.of(event0, event1), List.of(eventDateMinTrackTime0, eventDateMinTrackTime1, eventDateMinTrackTime2)),
-                    arguments(List.of(event0, event1, event2), List.of(eventDateMinTrackTime0, eventDateMinTrackTime1, eventDateMinTrackTime2, eventDateMinTrackTime3)),
+                    arguments(List.of(event0), List.of(eventDateMinStartTime0, eventDateMinStartTime1)),
+                    arguments(List.of(event0, event1), List.of(eventDateMinStartTime0, eventDateMinStartTime1, eventDateMinStartTime2)),
+                    arguments(List.of(event0, event1, event2), List.of(eventDateMinStartTime0, eventDateMinStartTime1, eventDateMinStartTime2, eventDateMinStartTime3)),
                     arguments(List.of(event3, event4, event5, event6), Collections.emptyList()),
-                    arguments(List.of(event0, event1, event2, event3, event4, event5, event6), List.of(eventDateMinTrackTime0, eventDateMinTrackTime1, eventDateMinTrackTime2, eventDateMinTrackTime3))
+                    arguments(List.of(event0, event1, event2, event3, event4, event5, event6), List.of(eventDateMinStartTime0, eventDateMinStartTime1, eventDateMinStartTime2, eventDateMinStartTime3))
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getConferenceDateMinTrackTimeList(List<Event> events, List<EventDateMinTrackTime> expected) {
+        void getConferenceDateMinTrackTimeList(List<Event> events, List<EventDateMinStartTime> expected) {
             EventDao eventDao = Mockito.mock(EventDao.class);
             EventTypeDao eventTypeDao = Mockito.mock(EventTypeDao.class);
             EventServiceImpl eventService = new EventServiceImpl(eventDao, eventTypeDao);
@@ -626,19 +626,19 @@ class EventServiceImplTest {
         event1.setId(1);
         event1.setTimeZoneId(ZoneId.of("Asia/Novosibirsk"));
 
-        EventDateMinTrackTime eventDateMinTrackTime0 = new EventDateMinTrackTime(
+        EventDateMinStartTime eventDateMinStartTime0 = new EventDateMinStartTime(
                 event0,
                 LocalDate.of(2021, 2, 4),
                 LocalTime.of(15, 0)
         );
 
-        EventDateMinTrackTime eventDateMinTrackTime1 = new EventDateMinTrackTime(
+        EventDateMinStartTime eventDateMinStartTime1 = new EventDateMinStartTime(
                 event1,
                 LocalDate.of(2021, 2, 4),
                 LocalTime.of(15, 0)
         );
 
-        EventDateMinTrackTime eventDateMinTrackTime2 = new EventDateMinTrackTime(
+        EventDateMinStartTime eventDateMinStartTime2 = new EventDateMinStartTime(
                 event0,
                 LocalDate.of(2021, 2, 4),
                 LocalTime.of(0, 0)
@@ -668,7 +668,7 @@ class EventServiceImplTest {
 
         assertEquals(
                 List.of(eventMinTrackTimeEndDayTime0, eventMinTrackTimeEndDayTime1, eventMinTrackTimeEndDayTime2),
-                eventService.getEventMinTrackTimeEndDayTimeList(List.of(eventDateMinTrackTime0, eventDateMinTrackTime1, eventDateMinTrackTime2)));
+                eventService.getEventMinTrackTimeEndDayTimeList(List.of(eventDateMinStartTime0, eventDateMinStartTime1, eventDateMinStartTime2)));
     }
 
     @Test

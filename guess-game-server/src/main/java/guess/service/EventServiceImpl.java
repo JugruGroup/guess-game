@@ -2,7 +2,7 @@ package guess.service;
 
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
-import guess.domain.auxiliary.EventDateMinTrackTime;
+import guess.domain.auxiliary.EventDateMinStartTime;
 import guess.domain.auxiliary.EventMinTrackTimeEndDayTime;
 import guess.domain.source.Event;
 import guess.domain.source.EventDays;
@@ -111,13 +111,13 @@ public class EventServiceImpl implements EventService {
         }
 
         // Find (event, date, minimal track time) items
-        List<EventDateMinTrackTime> eventDateMinTrackTimeList = getEventDateMinTrackTimeList(conferencesFromDate);
-        if (eventDateMinTrackTimeList.isEmpty()) {
+        List<EventDateMinStartTime> eventDateMinStartTimeList = getEventDateMinTrackTimeList(conferencesFromDate);
+        if (eventDateMinStartTimeList.isEmpty()) {
             return null;
         }
 
         //Transform to (event, minimal track time, end date time) items
-        List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeList = getEventMinTrackTimeEndDayTimeList(eventDateMinTrackTimeList);
+        List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeList = getEventMinTrackTimeEndDayTimeList(eventDateMinStartTimeList);
         if (eventMinTrackTimeEndDayTimeList.isEmpty()) {
             return null;
         }
@@ -155,8 +155,8 @@ public class EventServiceImpl implements EventService {
      * @param events events
      * @return list of (event, date, minimal start time) items
      */
-    List<EventDateMinTrackTime> getEventDateMinTrackTimeList(List<Event> events) {
-        List<EventDateMinTrackTime> result = new ArrayList<>();
+    List<EventDateMinStartTime> getEventDateMinTrackTimeList(List<Event> events) {
+        List<EventDateMinStartTime> result = new ArrayList<>();
         Map<Event, Map<Long, Optional<LocalTime>>> minStartTimeInTalkDaysForConferences = new LinkedHashMap<>();
 
         // Calculate start time minimum for each day of each event
@@ -178,7 +178,7 @@ public class EventServiceImpl implements EventService {
             minStartTimeInTalkDaysForConferences.put(event, minStartTimeInTalkDays);
         }
 
-        // Transform to (event, day, minTrackTime) list
+        // Transform to (event, day, minStartTime) list
         for (Map.Entry<Event, Map<Long, Optional<LocalTime>>> entry : minStartTimeInTalkDaysForConferences.entrySet()) {
             var event = entry.getKey();
             Map<Long, Optional<LocalTime>> minTrackTimeInTalkDays = entry.getValue();
@@ -199,7 +199,7 @@ public class EventServiceImpl implements EventService {
     }
 
     void iteratesDays(long days, EventDays eventDays, long previousDays, Map<Long, Optional<LocalTime>> minTrackTimeInTalkDays,
-                      List<EventDateMinTrackTime> result, Event event) {
+                      List<EventDateMinStartTime> result, Event event) {
         for (long i = 1; i <= days; i++) {
             LocalDate date = eventDays.getStartDate().plusDays(i - 1);
             Optional<LocalTime> localTimeOptional;
@@ -213,22 +213,22 @@ public class EventServiceImpl implements EventService {
 
             var minTrackTime = localTimeOptional.orElse(LocalTime.of(0, 0));
 
-            result.add(new EventDateMinTrackTime(event, date, minTrackTime));
+            result.add(new EventDateMinStartTime(event, date, minTrackTime));
         }
     }
 
     /**
      * Gets list of (event, minimal track time, end date time) items.
      *
-     * @param eventDateMinTrackTimeList list of (event, date, minimal track time) items
+     * @param eventDateMinStartTimeList list of (event, date, minimal track time) items
      * @return list of (event, minimal track time, end date time) items
      */
-    List<EventMinTrackTimeEndDayTime> getEventMinTrackTimeEndDayTimeList(List<EventDateMinTrackTime> eventDateMinTrackTimeList) {
-        return eventDateMinTrackTimeList.stream()
+    List<EventMinTrackTimeEndDayTime> getEventMinTrackTimeEndDayTimeList(List<EventDateMinStartTime> eventDateMinStartTimeList) {
+        return eventDateMinStartTimeList.stream()
                 .map(edt -> {
                     var minTrackDateTime = ZonedDateTime.of(
                                     edt.date(),
-                                    edt.minTrackTime(),
+                                    edt.minStartTime(),
                                     edt.event().getFinalTimeZoneId())
                             .withZoneSameInstant(ZoneId.of("UTC"))
                             .toLocalDateTime();
