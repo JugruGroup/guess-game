@@ -181,14 +181,14 @@ public class EventServiceImpl implements EventService {
         // Transform to (event, day, minStartTime) list
         for (Map.Entry<Event, Map<Long, Optional<LocalTime>>> entry : minStartTimeInTalkDaysForConferences.entrySet()) {
             var event = entry.getKey();
-            Map<Long, Optional<LocalTime>> minTrackTimeInTalkDays = entry.getValue();
+            Map<Long, Optional<LocalTime>> minStartTimeInTalkDays = entry.getValue();
             long previousDays = 0;
 
             for (EventDays eventDays : event.getDays()) {
                 if ((eventDays.getStartDate() != null) && (eventDays.getEndDate() != null) && (!eventDays.getStartDate().isAfter(eventDays.getEndDate()))) {
                     long days = ChronoUnit.DAYS.between(eventDays.getStartDate(), eventDays.getEndDate()) + 1;
 
-                    iteratesDays(days, eventDays, previousDays, minTrackTimeInTalkDays, result, event);
+                    iteratesDays(days, eventDays, previousDays, minStartTimeInTalkDays, result, event);
 
                     previousDays += days;
                 }
@@ -198,22 +198,22 @@ public class EventServiceImpl implements EventService {
         return result;
     }
 
-    void iteratesDays(long days, EventDays eventDays, long previousDays, Map<Long, Optional<LocalTime>> minTrackTimeInTalkDays,
+    void iteratesDays(long days, EventDays eventDays, long previousDays, Map<Long, Optional<LocalTime>> minStartTimeInTalkDays,
                       List<EventDateMinStartTime> result, Event event) {
         for (long i = 1; i <= days; i++) {
             LocalDate date = eventDays.getStartDate().plusDays(i - 1);
             Optional<LocalTime> localTimeOptional;
             long totalDayNumber = previousDays + i;
 
-            if (minTrackTimeInTalkDays.containsKey(totalDayNumber)) {
-                localTimeOptional = minTrackTimeInTalkDays.get(totalDayNumber);
+            if (minStartTimeInTalkDays.containsKey(totalDayNumber)) {
+                localTimeOptional = minStartTimeInTalkDays.get(totalDayNumber);
             } else {
                 localTimeOptional = Optional.empty();
             }
 
-            var minTrackTime = localTimeOptional.orElse(LocalTime.of(0, 0));
+            var minStartTime = localTimeOptional.orElse(LocalTime.of(0, 0));
 
-            result.add(new EventDateMinStartTime(event, date, minTrackTime));
+            result.add(new EventDateMinStartTime(event, date, minStartTime));
         }
     }
 
