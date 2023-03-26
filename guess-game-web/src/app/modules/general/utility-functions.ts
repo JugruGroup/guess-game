@@ -112,6 +112,40 @@ export function getEventDates(startDate: Date, endDate: Date, translateService: 
   return result;
 }
 
+export function isTalkStartTimeVisible(startTime: Date): boolean {
+  return !!startTime;
+}
+
+export function isTalkEndTimeVisible(startTime: Date, endTime: Date): boolean {
+  return (startTime && endTime && (startTime !== endTime));
+}
+
+export function isTalkHyphenVisible(startTime: Date, endTime: Date): boolean {
+  return (isTalkStartTimeVisible(startTime) && isTalkEndTimeVisible(startTime, endTime));
+}
+
+export function getTalkTimes(startTime: Date, endTime: Date, translateService: TranslateService): string {
+  const isTalkStartTimeVisibleFlag = isTalkStartTimeVisible(startTime);
+  const isTalkHyphenVisibleFlag = isTalkHyphenVisible(startTime, endTime);
+  const isTalkEndTimeVisibleFlag = isTalkEndTimeVisible(startTime, endTime);
+
+  let result = '';
+
+  if (isTalkStartTimeVisibleFlag) {
+    result += formatDate(startTime, 'HH:mm', translateService.currentLang, undefined);
+  }
+
+  if (isTalkHyphenVisibleFlag) {
+    result += ' – ';
+  }
+
+  if (isTalkEndTimeVisibleFlag) {
+    result += formatDate(endTime, 'HH:mm', translateService.currentLang, undefined);
+  }
+
+  return result;
+}
+
 export function getEventDisplayName(event: Event, translateService: TranslateService): string {
   let displayName = event.name;
 

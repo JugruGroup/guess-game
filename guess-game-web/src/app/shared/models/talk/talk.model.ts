@@ -21,7 +21,8 @@ export class Talk {
     public videoLinks?: string[],
     public videoLinksVideoIds?: string[],
     public materialsOrderNumber?: number,
-    public topicName?: string
+    public topicName?: string,
+    public displayTimes?: string
   ) {
   }
 }
