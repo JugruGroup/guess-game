@@ -33,6 +33,7 @@ public class Talk extends Descriptionable {
 
     private Long talkDay;
     private LocalTime startTime;
+    private LocalTime endTime;
     private Long track;
     private String language;
     private List<String> presentationLinks;
@@ -48,12 +49,13 @@ public class Talk extends Descriptionable {
     public Talk() {
     }
 
-    public Talk(Descriptionable descriptionable, Long talkDay, LocalTime startTime, Long track, TalkLinks links,
+    public Talk(Descriptionable descriptionable, Long talkDay, LocalTime startTime, LocalTime endTime, Long track, TalkLinks links,
                 List<Speaker> speakers, TalkAttributes attributes) {
         super(descriptionable.getId(), descriptionable.getName(), descriptionable.getShortDescription(), descriptionable.getLongDescription());
 
         this.talkDay = talkDay;
         this.startTime = startTime;
+        this.endTime = endTime;
         this.track = track;
         this.language = attributes.language;
         this.presentationLinks = links.presentationLinks;
@@ -82,6 +84,14 @@ public class Talk extends Descriptionable {
 
     public void setStartTime(LocalTime startTime) {
         this.startTime = startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
     }
 
     public Long getTrack() {

@@ -38,17 +38,19 @@ public class TalkSuperBriefDto {
     private final String name;
     private final LocalDate talkDate;
     private final Long talkDay;
-    private final LocalDateTime talkTime;
+    private final LocalDateTime talkStartTime;
+    private final LocalDateTime talkEndTime;
     private final Long track;
     private final TalkSuperBriefDtoDetails details;
 
-    public TalkSuperBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkTime, Long track,
-                             TalkSuperBriefDtoDetails details) {
+    public TalkSuperBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkStartTime,
+                             LocalDateTime talkEndTime, Long track, TalkSuperBriefDtoDetails details) {
         this.id = id;
         this.name = name;
         this.talkDate = talkDate;
         this.talkDay = talkDay;
-        this.talkTime = talkTime;
+        this.talkStartTime = talkStartTime;
+        this.talkEndTime = talkEndTime;
         this.track = track;
         this.details = details;
     }
@@ -69,8 +71,12 @@ public class TalkSuperBriefDto {
         return talkDay;
     }
 
-    public LocalDateTime getTalkTime() {
-        return talkTime;
+    public LocalDateTime getTalkStartTime() {
+        return talkStartTime;
+    }
+
+    public LocalDateTime getTalkEndTime() {
+        return talkEndTime;
     }
 
     public Long getTrack() {
@@ -113,7 +119,8 @@ public class TalkSuperBriefDto {
         LocalDate talkDate = talkDayDates.get(safeTalkDay);
 
         var safeLocalDate = Optional.ofNullable(talkDate).orElse(LocalDate.now());
-        LocalDateTime talkTime = (talk.getStartTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getStartTime()) : null;
+        LocalDateTime talkStartTime = (talk.getStartTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getStartTime()) : null;
+        LocalDateTime talkEndTime = (talk.getEndTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getEndTime()) : null;
 
         EventSuperBriefDto eventSuperBriefDto = EventSuperBriefDto.convertToSuperBriefDto(event, language);
         String eventTypeLogoFileName = (eventType != null) ? eventType.getLogoFileName() : null;
@@ -124,7 +131,8 @@ public class TalkSuperBriefDto {
                 LocalizationUtils.getString(talk.getName(), language),
                 talkDate,
                 talk.getTalkDay(),
-                talkTime,
+                talkStartTime,
+                talkEndTime,
                 talk.getTrack(),
                 new TalkSuperBriefDtoDetails(
                         eventSuperBriefDto,

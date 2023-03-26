@@ -105,16 +105,20 @@ public class EventController {
                 Comparator.comparing(
                         TalkSuperBriefDto::getTalkDay,
                         Comparator.nullsLast(Comparator.naturalOrder())));
-        Comparator<TalkSuperBriefDto> comparatorByTalkTime = Comparator.nullsLast(
+        Comparator<TalkSuperBriefDto> comparatorByTalkStartTime = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkSuperBriefDto::getTalkTime,
+                        TalkSuperBriefDto::getTalkStartTime,
+                        Comparator.nullsLast(Comparator.naturalOrder())));
+        Comparator<TalkSuperBriefDto> comparatorByTalkEndTime = Comparator.nullsLast(
+                Comparator.comparing(
+                        TalkSuperBriefDto::getTalkEndTime,
                         Comparator.nullsLast(Comparator.naturalOrder())));
         Comparator<TalkSuperBriefDto> comparatorByTrack = Comparator.nullsLast(
                 Comparator.comparing(
                         TalkSuperBriefDto::getTrack,
                         Comparator.nullsLast(Comparator.naturalOrder())));
         List<TalkBriefDto> sortedTalks = eventDetailsDto.talks().stream()
-                .sorted(comparatorByTalkDate.thenComparing(comparatorByTalkTime).thenComparing(comparatorByTrack))
+                .sorted(comparatorByTalkDate.thenComparing(comparatorByTalkStartTime).thenComparing(comparatorByTrack).thenComparing(comparatorByTalkEndTime))
                 .toList();
 
         return new EventDetailsDto(eventDetailsDto.event(), sortedSpeakers, sortedTalks);

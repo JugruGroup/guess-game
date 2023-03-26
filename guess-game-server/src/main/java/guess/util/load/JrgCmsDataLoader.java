@@ -776,6 +776,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                 ),
                 dayTrackTime.dayNumber(),
                 dayTrackTime.startTime(),
+                dayTrackTime.endTime(),
                 dayTrackTime.trackNumber(),
                 new Talk.TalkLinks(
                         extractPresentationLinks(jrgCmsTalk.getPresentation()),

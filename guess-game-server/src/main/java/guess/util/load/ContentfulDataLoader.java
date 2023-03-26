@@ -665,6 +665,7 @@ public class ContentfulDataLoader extends CmsDataLoader {
                 ),
                 contentfulTalk.getFields().getTalkDay(),
                 contentfulTalk.getFields().getTrackTime(),
+                null,
                 contentfulTalk.getFields().getTrack(),
                 new Talk.TalkLinks(
                         extractPresentationLinks(

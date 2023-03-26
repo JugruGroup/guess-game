@@ -21,7 +21,7 @@ public class TalkBriefDto extends TalkSuperBriefDto {
     public TalkBriefDto(TalkSuperBriefDto talkSuperBriefDto, String topicName, List<String> presentationLinks,
                         List<String> materialLinks, List<String> videoLinks) {
         super(talkSuperBriefDto.getId(), talkSuperBriefDto.getName(), talkSuperBriefDto.getTalkDate(), talkSuperBriefDto.getTalkDay(),
-                talkSuperBriefDto.getTalkTime(), talkSuperBriefDto.getTrack(),
+                talkSuperBriefDto.getTalkStartTime(), talkSuperBriefDto.getTalkEndTime(), talkSuperBriefDto.getTrack(),
                 new TalkSuperBriefDtoDetails(
                         talkSuperBriefDto.getEvent(),
                         talkSuperBriefDto.getEventTypeLogoFileName(),

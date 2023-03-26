@@ -169,9 +169,13 @@
               {{'talks.table.talkDayColumn' | translate}}
               <p-sortIcon [field]="'talkDay'"></p-sortIcon>
             </th>
-            <th class="text-center" [pSortableColumn]="'talkTime'" pResizableColumn>
-              {{'talks.table.talkTimeColumn' | translate}}
-              <p-sortIcon [field]="'talkTime'"></p-sortIcon>
+            <th class="text-center" [pSortableColumn]="'talkStartTime'" pResizableColumn>
+              {{'talks.table.talkStartTimeColumn' | translate}}
+              <p-sortIcon [field]="'talkStartTime'"></p-sortIcon>
+            </th>
+            <th class="text-center" [pSortableColumn]="'talkEndTime'" pResizableColumn>
+              {{'talks.table.talkEndTimeColumn' | translate}}
+              <p-sortIcon [field]="'talkEndTime'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'track'" pResizableColumn>
               {{'talks.table.trackColumn' | translate}}
@@ -199,7 +203,8 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td class="text-center">{{talk.talkDay}}</td>
-            <td class="text-center">{{talk.talkTime | date:"HH:mm":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{talk.talkStartTime | date:"HH:mm":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{talk.talkEndTime | date:"HH:mm":undefined:translateService.currentLang}}</td>
             <td class="text-center">{{talk.track}}</td>
             <td *ngIf="isTopicColumnVisible()">{{talk.topicName}}</td>
             <td>
