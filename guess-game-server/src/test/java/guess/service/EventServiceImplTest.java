@@ -48,8 +48,8 @@ class EventServiceImplTest {
     private static final LocalDate EVENT_START_DATE6;
     private static final LocalDate EVENT_END_DATE6;
 
-    private static final LocalTime TALK_TRACK_TIME1;
-    private static final LocalTime TALK_TRACK_TIME2;
+    private static final LocalTime TALK_START_TIME1;
+    private static final LocalTime TALK_START_TIME2;
 
     private static EventType eventType0;
     private static EventType eventType1;
@@ -81,8 +81,8 @@ class EventServiceImplTest {
         EVENT_START_DATE6 = NOW_DATE.plus(10, ChronoUnit.DAYS);
         EVENT_END_DATE6 = EVENT_START_DATE6.minus(1, ChronoUnit.DAYS);
 
-        TALK_TRACK_TIME1 = LocalTime.of(9, 0);
-        TALK_TRACK_TIME2 = LocalTime.of(11, 30);
+        TALK_START_TIME1 = LocalTime.of(9, 0);
+        TALK_START_TIME2 = LocalTime.of(11, 30);
     }
 
     @BeforeAll
@@ -129,12 +129,12 @@ class EventServiceImplTest {
         Talk talk1 = new Talk();
         talk1.setId(1);
         talk1.setTalkDay(1L);
-        talk1.setStartTime(TALK_TRACK_TIME1);
+        talk1.setStartTime(TALK_START_TIME1);
 
         Talk talk2 = new Talk();
         talk2.setId(2);
         talk2.setTalkDay(1L);
-        talk2.setStartTime(TALK_TRACK_TIME2);
+        talk2.setStartTime(TALK_START_TIME2);
 
         event0 = new Event();
         event0.setId(0);
@@ -586,13 +586,13 @@ class EventServiceImplTest {
             EventDateMinStartTime eventDateMinStartTime2 = new EventDateMinStartTime(
                     event1,
                     EVENT_START_DATE1,
-                    TALK_TRACK_TIME1
+                    TALK_START_TIME1
             );
 
             EventDateMinStartTime eventDateMinStartTime3 = new EventDateMinStartTime(
                     event2,
                     EVENT_START_DATE2,
-                    TALK_TRACK_TIME2
+                    TALK_START_TIME2
             );
 
             return Stream.of(
