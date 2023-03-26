@@ -563,7 +563,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
      *
      * @param eventId         event identifier
      * @param ignoreDemoStage ignore demo stage talks
-     * @param dayTrackTimeMap day, track, start time map
+     * @param dayTrackTimeMap day, track, time map
      * @return talks
      */
     List<Talk> getTalks(long eventId, boolean ignoreDemoStage, Map<String, DayTrackTime> dayTrackTimeMap) {
@@ -749,7 +749,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
      * @param jrgCmsActivity  JUG Ru Group CMS activity
      * @param speakerMap      speaker map
      * @param talkId          atomic talk identifier
-     * @param dayTrackTimeMap day, track, start time map
+     * @param dayTrackTimeMap day, track, time map
      * @return talk
      */
     static Talk createTalk(JrgCmsActivity jrgCmsActivity, Map<String, Speaker> speakerMap, AtomicLong talkId,
