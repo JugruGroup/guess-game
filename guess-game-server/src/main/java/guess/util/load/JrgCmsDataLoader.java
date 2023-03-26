@@ -587,7 +587,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         return validJrgCmsActivities.stream()
                 .filter(a -> dayTrackTimeMap.containsKey(a.getId()))
                 .map(a -> createTalk(a, speakerMap, talkId, dayTrackTimeMap))
-                .sorted(Comparator.comparing(Talk::getTalkDay).thenComparing(Talk::getStartTime).thenComparing(Talk::getTrack))
+                .sorted(Comparator.comparing(Talk::getTalkDay).thenComparing(Talk::getStartTime).thenComparing(Talk::getTrack).thenComparing(Talk::getEndTime))
                 .toList();
     }
 

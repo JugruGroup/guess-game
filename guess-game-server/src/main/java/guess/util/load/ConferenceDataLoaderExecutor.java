@@ -433,8 +433,8 @@ public class ConferenceDataLoaderExecutor {
                     String ruName = LocalizationUtils.getString(t.getName(), Language.RUSSIAN).trim();
 
                     if (deletedTalks.contains(enName) || deletedTalks.contains(ruName)) {
-                        log.warn("Conference opening or closing talk is deleted, name: {'{}', '{}'}, talkDay: {}, startTime: {}, track: {}, language: {}",
-                                enName, ruName, t.getTalkDay(), t.getStartTime(), t.getTrack(), t.getLanguage());
+                        log.warn("Conference opening or closing talk is deleted, name: {'{}', '{}'}, talkDay: {}, startTime: {}, endTime: {}, track: {}, language: {}",
+                                enName, ruName, t.getTalkDay(), t.getStartTime(), t.getEndTime(), t.getTrack(), t.getLanguage());
 
                         return false;
                     } else {
@@ -1885,6 +1885,7 @@ public class ConferenceDataLoaderExecutor {
                 equals(a.getLongDescription(), b.getLongDescription()) &&
                 equals(a.getTalkDay(), b.getTalkDay()) &&
                 equals(a.getStartTime(), b.getStartTime()) &&
+                equals(a.getEndTime(), b.getEndTime()) &&
                 equals(a.getTrack(), b.getTrack()) &&
                 equals(a.getLanguage(), b.getLanguage()) &&
                 equals(a.getPresentationLinks(), b.getPresentationLinks()) &&
