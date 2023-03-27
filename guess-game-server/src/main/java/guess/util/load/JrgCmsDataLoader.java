@@ -783,10 +783,10 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                         new ArrayList<>(),
                         new ArrayList<>()
                 ),
-                speakers,
                 new Talk.TalkAttributes(
                         extractLanguage(jrgCmsTalk.getLanguage()),
-                        null
+                        null,
+                        speakers
                 )
         );
     }

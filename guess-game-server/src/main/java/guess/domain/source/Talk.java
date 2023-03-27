@@ -24,10 +24,12 @@ public class Talk extends Descriptionable {
     public static class TalkAttributes {
         private final String language;
         private final Topic topic;
+        private final List<Speaker> speakers;
 
-        public TalkAttributes(String language, Topic topic) {
+        public TalkAttributes(String language, Topic topic, List<Speaker> speakers) {
             this.language = language;
             this.topic = topic;
+            this.speakers = speakers;
         }
     }
 
@@ -50,7 +52,7 @@ public class Talk extends Descriptionable {
     }
 
     public Talk(Descriptionable descriptionable, Long talkDay, LocalTime startTime, LocalTime endTime, Long track, TalkLinks links,
-                List<Speaker> speakers, TalkAttributes attributes) {
+                TalkAttributes attributes) {
         super(descriptionable.getId(), descriptionable.getName(), descriptionable.getShortDescription(), descriptionable.getLongDescription());
 
         this.talkDay = talkDay;
@@ -61,7 +63,7 @@ public class Talk extends Descriptionable {
         this.presentationLinks = links.presentationLinks;
         this.materialLinks = links.materialLinks;
         this.videoLinks = links.videoLinks;
-        this.speakers = speakers;
+        this.speakers = attributes.speakers;
         this.speakerIds = speakers.stream()
                 .map(Speaker::getId)
                 .collect(Collectors.toCollection(ArrayList::new));

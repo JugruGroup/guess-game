@@ -23,11 +23,14 @@ import java.util.function.Function;
  */
 public class TalkSuperBriefDto {
     public static class TalkSuperBriefDtoDetails {
+        private final Long track;
         private final EventSuperBriefDto event;
         private final String eventTypeLogoFileName;
         private final List<SpeakerSuperBriefDto> speakers;
 
-        public TalkSuperBriefDtoDetails(EventSuperBriefDto event, String eventTypeLogoFileName, List<SpeakerSuperBriefDto> speakers) {
+        public TalkSuperBriefDtoDetails(Long track, EventSuperBriefDto event, String eventTypeLogoFileName,
+                                        List<SpeakerSuperBriefDto> speakers) {
+            this.track = track;
             this.event = event;
             this.eventTypeLogoFileName = eventTypeLogoFileName;
             this.speakers = speakers;
@@ -40,18 +43,16 @@ public class TalkSuperBriefDto {
     private final Long talkDay;
     private final LocalDateTime talkStartTime;
     private final LocalDateTime talkEndTime;
-    private final Long track;
     private final TalkSuperBriefDtoDetails details;
 
     public TalkSuperBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkStartTime,
-                             LocalDateTime talkEndTime, Long track, TalkSuperBriefDtoDetails details) {
+                             LocalDateTime talkEndTime, TalkSuperBriefDtoDetails details) {
         this.id = id;
         this.name = name;
         this.talkDate = talkDate;
         this.talkDay = talkDay;
         this.talkStartTime = talkStartTime;
         this.talkEndTime = talkEndTime;
-        this.track = track;
         this.details = details;
     }
 
@@ -80,7 +81,7 @@ public class TalkSuperBriefDto {
     }
 
     public Long getTrack() {
-        return track;
+        return details.track;
     }
 
     public EventSuperBriefDto getEvent() {
@@ -133,8 +134,8 @@ public class TalkSuperBriefDto {
                 talk.getTalkDay(),
                 talkStartTime,
                 talkEndTime,
-                talk.getTrack(),
                 new TalkSuperBriefDtoDetails(
+                        talk.getTrack(),
                         eventSuperBriefDto,
                         eventTypeLogoFileName,
                         speakers

@@ -674,10 +674,10 @@ public class ContentfulDataLoader extends CmsDataLoader {
                         extractMaterialLinks(contentfulTalk.getFields().getMaterial()),
                         extractVideoLinks(contentfulTalk.getFields().getVideo())
                 ),
-                speakers,
                 new Talk.TalkAttributes(
                         extractLanguage(contentfulTalk.getFields().getLanguage()),
-                        null
+                        null,
+                        speakers
                 )
         );
     }
