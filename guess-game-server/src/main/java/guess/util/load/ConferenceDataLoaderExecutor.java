@@ -1808,6 +1808,40 @@ public class ConferenceDataLoaderExecutor {
     }
 
     /**
+     * Checks talk times.
+     */
+    static void checkTalkTimes() throws SpeakerDuplicatedException, IOException {
+        // Read event types, places, events, companies, speakers, talks from resource files
+        var resourceSourceInformation = YamlUtils.readSourceInformation();
+        List<Event> events = resourceSourceInformation.getEvents().stream()
+                .sorted(Comparator.comparing(Event::getFirstStartDate).reversed())
+                .toList();
+
+        events.forEach(event -> {
+            int all = event.getTalks().size();
+            int withTimes = (int) event.getTalks().stream()
+                    .filter(t -> (t.getStartTime() != null) && (t.getEndTime() != null))
+                    .count();
+            double percents = (all == 0) ? 0 : (double) withTimes / all * 100;
+            String message = String.format("%-30s %2d/%2d (%6.2f%%)",
+                    LocalizationUtils.getString(event.getName(), Language.ENGLISH),
+                    withTimes,
+                    all,
+                    percents);
+
+            if (all != withTimes) {
+                if (percents >= 75) {
+                    log.info(message);
+                } else if (percents >= 50) {
+                    log.warn(message);
+                } else {
+                    log.error(message);
+                }
+            }
+        });
+    }
+
+    /**
      * Indicates the need to update event type.
      *
      * @param a first event type
@@ -2010,6 +2044,9 @@ public class ConferenceDataLoaderExecutor {
 
         // Check companies
 //        checkCompanies();
+
+        // Check talk times
+//        checkTalkTimes();
 
         // Load talks, speaker and event
         // 2016
