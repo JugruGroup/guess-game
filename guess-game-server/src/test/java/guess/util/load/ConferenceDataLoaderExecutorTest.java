@@ -3370,6 +3370,137 @@ class ConferenceDataLoaderExecutorTest {
         }
     }
 
+    @Test
+    void checkTalkTimes() {
+        try (MockedStatic<YamlUtils> mockedStatic = Mockito.mockStatic(YamlUtils.class)) {
+            LocalDate now = LocalDate.now();
+            LocalDate yesterday = now.minusDays(1);
+            LocalDate tomorrow = now.plusDays(1);
+
+            EventType eventType0 = new EventType();
+
+            EventType eventType1 = new EventType();
+            eventType1.setConference(Conference.JOKER);
+
+            Event event0 = new Event();
+            event0.setEventType(eventType0);
+            event0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
+            event0.setDays(List.of(new EventDays(
+                    now,
+                    null,
+                    new Place()
+            )));
+
+            Event event1 = new Event();
+            event1.setEventType(eventType1);
+            event1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
+            event1.setDays(List.of(new EventDays(
+                    now,
+                    null,
+                    new Place()
+            )));
+
+            Event event2 = new Event();
+            event2.setEventType(eventType1);
+            event2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
+            event2.setDays(List.of(new EventDays(
+                    tomorrow,
+                    null,
+                    new Place()
+            )));
+
+            Event event3 = new Event();
+            event3.setEventType(eventType1);
+            event3.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name3")));
+            event3.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event4 = new Event();
+            event4.setEventType(eventType1);
+            event4.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name4")));
+            event4.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event5 = new Event();
+            event5.setEventType(eventType1);
+            event5.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name5")));
+            event5.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event6 = new Event();
+            event6.setEventType(eventType1);
+            event6.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name6")));
+            event6.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event7 = new Event();
+            event7.setEventType(eventType1);
+            event7.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name7")));
+            event7.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Talk talk0 = new Talk();
+
+            Talk talk1 = new Talk();
+            talk1.setStartTime(LocalTime.of(10, 0));
+
+            Talk talk2 = new Talk();
+            talk2.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk3 = new Talk();
+            talk3.setStartTime(LocalTime.of(10, 0));
+            talk3.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk4 = new Talk();
+            talk4.setStartTime(LocalTime.of(12, 0));
+            talk4.setEndTime(LocalTime.of(12, 45));
+
+            Talk talk5 = new Talk();
+            talk5.setStartTime(LocalTime.of(13, 0));
+            talk5.setEndTime(LocalTime.of(13, 15));
+
+            event2.setTalks(List.of(talk0));
+            event3.setTalks(List.of(talk1));
+            event4.setTalks(List.of(talk2));
+            event5.setTalks(List.of(talk3));
+            event6.setTalks(List.of(talk1, talk3));
+            event7.setTalks(List.of(talk2, talk3, talk4, talk5));
+
+            mockedStatic.when(YamlUtils::readSourceInformation)
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            List.of(event0, event1, event2, event3, event4, event5, event6, event7),
+                            new SourceInformation.SpeakerInformation(
+                                    Collections.emptyList(),
+                                    Collections.emptyList(),
+                                    Collections.emptyList(),
+                                    Collections.emptyList()
+                            ),
+                            Collections.emptyList()
+                    ));
+
+            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkTalkTimes);
+        }
+    }
+
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("needUpdate method tests (EventType)")
