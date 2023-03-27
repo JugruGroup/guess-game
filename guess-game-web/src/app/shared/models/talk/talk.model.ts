@@ -12,7 +12,8 @@ export class Talk {
     public speakersString?: string,
     public description?: string,
     public talkDay?: number,
-    public talkTime?: Date,
+    public talkStartTime?: Date,
+    public talkEndTime?: Date,
     public track?: number,
     public language?: string,
     public presentationLinks?: string[],
@@ -20,7 +21,8 @@ export class Talk {
     public videoLinks?: string[],
     public videoLinksVideoIds?: string[],
     public materialsOrderNumber?: number,
-    public topicName?: string
+    public topicName?: string,
+    public displayTimes?: string
   ) {
   }
 }

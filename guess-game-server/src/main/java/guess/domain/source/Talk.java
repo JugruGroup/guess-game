@@ -24,15 +24,18 @@ public class Talk extends Descriptionable {
     public static class TalkAttributes {
         private final String language;
         private final Topic topic;
+        private final List<Speaker> speakers;
 
-        public TalkAttributes(String language, Topic topic) {
+        public TalkAttributes(String language, Topic topic, List<Speaker> speakers) {
             this.language = language;
             this.topic = topic;
+            this.speakers = speakers;
         }
     }
 
     private Long talkDay;
-    private LocalTime trackTime;
+    private LocalTime startTime;
+    private LocalTime endTime;
     private Long track;
     private String language;
     private List<String> presentationLinks;
@@ -48,18 +51,19 @@ public class Talk extends Descriptionable {
     public Talk() {
     }
 
-    public Talk(Descriptionable descriptionable, Long talkDay, LocalTime trackTime, Long track, TalkLinks links,
-                List<Speaker> speakers, TalkAttributes attributes) {
+    public Talk(Descriptionable descriptionable, Long talkDay, LocalTime startTime, LocalTime endTime, Long track, TalkLinks links,
+                TalkAttributes attributes) {
         super(descriptionable.getId(), descriptionable.getName(), descriptionable.getShortDescription(), descriptionable.getLongDescription());
 
         this.talkDay = talkDay;
-        this.trackTime = trackTime;
+        this.startTime = startTime;
+        this.endTime = endTime;
         this.track = track;
         this.language = attributes.language;
         this.presentationLinks = links.presentationLinks;
         this.materialLinks = links.materialLinks;
         this.videoLinks = links.videoLinks;
-        this.speakers = speakers;
+        this.speakers = attributes.speakers;
         this.speakerIds = speakers.stream()
                 .map(Speaker::getId)
                 .collect(Collectors.toCollection(ArrayList::new));
@@ -76,12 +80,20 @@ public class Talk extends Descriptionable {
         this.talkDay = talkDay;
     }
 
-    public LocalTime getTrackTime() {
-        return trackTime;
+    public LocalTime getStartTime() {
+        return startTime;
     }
 
-    public void setTrackTime(LocalTime trackTime) {
-        this.trackTime = trackTime;
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
     }
 
     public Long getTrack() {

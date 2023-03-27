@@ -637,7 +637,7 @@ class ConferenceDataLoaderExecutorTest {
             talk0.setName(List.of(new LocaleItem("ru", "name0")));
             talk0.setTalkDay(1L);
             talk0.setTrack(1L);
-            talk0.setTrackTime(LocalTime.of(10, 0));
+            talk0.setStartTime(LocalTime.of(10, 0));
 
             Talk talk1 = new Talk();
             talk1.setId(1);
@@ -655,14 +655,14 @@ class ConferenceDataLoaderExecutorTest {
             talk3.setName(List.of(new LocaleItem("ru", "name0")));
             talk3.setTalkDay(1L);
             talk3.setTrack(1L);
-            talk3.setTrackTime(LocalTime.of(10, 30));
+            talk3.setStartTime(LocalTime.of(10, 30));
 
             Talk talk4 = new Talk();
             talk4.setId(4);
             talk4.setName(List.of(new LocaleItem("ru", "name0")));
             talk4.setTalkDay(1L);
             talk4.setTrack(1L);
-            talk4.setTrackTime(LocalTime.of(11, 0));
+            talk4.setStartTime(LocalTime.of(11, 0));
 
             Talk talk5 = new Talk();
             talk5.setId(5);
@@ -3370,6 +3370,137 @@ class ConferenceDataLoaderExecutorTest {
         }
     }
 
+    @Test
+    void checkTalkTimes() {
+        try (MockedStatic<YamlUtils> mockedStatic = Mockito.mockStatic(YamlUtils.class)) {
+            LocalDate now = LocalDate.now();
+            LocalDate yesterday = now.minusDays(1);
+            LocalDate tomorrow = now.plusDays(1);
+
+            EventType eventType0 = new EventType();
+
+            EventType eventType1 = new EventType();
+            eventType1.setConference(Conference.JOKER);
+
+            Event event0 = new Event();
+            event0.setEventType(eventType0);
+            event0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
+            event0.setDays(List.of(new EventDays(
+                    now,
+                    null,
+                    new Place()
+            )));
+
+            Event event1 = new Event();
+            event1.setEventType(eventType1);
+            event1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
+            event1.setDays(List.of(new EventDays(
+                    now,
+                    null,
+                    new Place()
+            )));
+
+            Event event2 = new Event();
+            event2.setEventType(eventType1);
+            event2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
+            event2.setDays(List.of(new EventDays(
+                    tomorrow,
+                    null,
+                    new Place()
+            )));
+
+            Event event3 = new Event();
+            event3.setEventType(eventType1);
+            event3.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name3")));
+            event3.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event4 = new Event();
+            event4.setEventType(eventType1);
+            event4.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name4")));
+            event4.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event5 = new Event();
+            event5.setEventType(eventType1);
+            event5.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name5")));
+            event5.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event6 = new Event();
+            event6.setEventType(eventType1);
+            event6.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name6")));
+            event6.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event7 = new Event();
+            event7.setEventType(eventType1);
+            event7.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name7")));
+            event7.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Talk talk0 = new Talk();
+
+            Talk talk1 = new Talk();
+            talk1.setStartTime(LocalTime.of(10, 0));
+
+            Talk talk2 = new Talk();
+            talk2.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk3 = new Talk();
+            talk3.setStartTime(LocalTime.of(10, 0));
+            talk3.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk4 = new Talk();
+            talk4.setStartTime(LocalTime.of(12, 0));
+            talk4.setEndTime(LocalTime.of(12, 45));
+
+            Talk talk5 = new Talk();
+            talk5.setStartTime(LocalTime.of(13, 0));
+            talk5.setEndTime(LocalTime.of(13, 15));
+
+            event2.setTalks(List.of(talk0));
+            event3.setTalks(List.of(talk1));
+            event4.setTalks(List.of(talk2));
+            event5.setTalks(List.of(talk3));
+            event6.setTalks(List.of(talk1, talk3));
+            event7.setTalks(List.of(talk2, talk3, talk4, talk5));
+
+            mockedStatic.when(YamlUtils::readSourceInformation)
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            List.of(event0, event1, event2, event3, event4, event5, event6, event7),
+                            new SourceInformation.SpeakerInformation(
+                                    Collections.emptyList(),
+                                    Collections.emptyList(),
+                                    Collections.emptyList(),
+                                    Collections.emptyList()
+                            ),
+                            Collections.emptyList()
+                    ));
+
+            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkTalkTimes);
+        }
+    }
+
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("needUpdate method tests (EventType)")
@@ -3845,7 +3976,8 @@ class ConferenceDataLoaderExecutorTest {
             talk0.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk0.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk0.setTalkDay(1L);
-            talk0.setTrackTime(LocalTime.of(10, 0));
+            talk0.setStartTime(LocalTime.of(10, 0));
+            talk0.setEndTime(LocalTime.of(11, 0));
             talk0.setTrack(1L);
             talk0.setLanguage("en");
             talk0.setPresentationLinks(List.of("presentationLink0"));
@@ -3885,7 +4017,7 @@ class ConferenceDataLoaderExecutorTest {
             talk6.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk6.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk6.setTalkDay(1L);
-            talk6.setTrackTime(LocalTime.of(10, 30));
+            talk6.setStartTime(LocalTime.of(10, 30));
 
             Talk talk7 = new Talk();
             talk7.setId(0);
@@ -3893,8 +4025,8 @@ class ConferenceDataLoaderExecutorTest {
             talk7.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk7.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk7.setTalkDay(1L);
-            talk7.setTrackTime(LocalTime.of(10, 0));
-            talk7.setTrack(2L);
+            talk7.setStartTime(LocalTime.of(10, 0));
+            talk7.setEndTime(LocalTime.of(11, 30));
 
             Talk talk8 = new Talk();
             talk8.setId(0);
@@ -3902,9 +4034,9 @@ class ConferenceDataLoaderExecutorTest {
             talk8.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk8.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk8.setTalkDay(1L);
-            talk8.setTrackTime(LocalTime.of(10, 0));
-            talk8.setTrack(1L);
-            talk8.setLanguage("ru");
+            talk8.setStartTime(LocalTime.of(10, 0));
+            talk8.setEndTime(LocalTime.of(11, 0));
+            talk8.setTrack(2L);
 
             Talk talk9 = new Talk();
             talk9.setId(0);
@@ -3912,10 +4044,10 @@ class ConferenceDataLoaderExecutorTest {
             talk9.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk9.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk9.setTalkDay(1L);
-            talk9.setTrackTime(LocalTime.of(10, 0));
+            talk9.setStartTime(LocalTime.of(10, 0));
+            talk9.setEndTime(LocalTime.of(11, 0));
             talk9.setTrack(1L);
-            talk9.setLanguage("en");
-            talk9.setPresentationLinks(List.of("presentationLink9"));
+            talk9.setLanguage("ru");
 
             Talk talk10 = new Talk();
             talk10.setId(0);
@@ -3923,11 +4055,11 @@ class ConferenceDataLoaderExecutorTest {
             talk10.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk10.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk10.setTalkDay(1L);
-            talk10.setTrackTime(LocalTime.of(10, 0));
+            talk10.setStartTime(LocalTime.of(10, 0));
+            talk10.setEndTime(LocalTime.of(11, 0));
             talk10.setTrack(1L);
             talk10.setLanguage("en");
-            talk10.setPresentationLinks(List.of("presentationLink0"));
-            talk10.setMaterialLinks(List.of("materialLink10"));
+            talk10.setPresentationLinks(List.of("presentationLink9"));
 
             Talk talk11 = new Talk();
             talk11.setId(0);
@@ -3935,12 +4067,12 @@ class ConferenceDataLoaderExecutorTest {
             talk11.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk11.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk11.setTalkDay(1L);
-            talk11.setTrackTime(LocalTime.of(10, 0));
+            talk11.setStartTime(LocalTime.of(10, 0));
+            talk11.setEndTime(LocalTime.of(11, 0));
             talk11.setTrack(1L);
             talk11.setLanguage("en");
             talk11.setPresentationLinks(List.of("presentationLink0"));
-            talk11.setMaterialLinks(List.of("materialLink0"));
-            talk11.setVideoLinks(List.of("videoLink11"));
+            talk11.setMaterialLinks(List.of("materialLink10"));
 
             Talk talk12 = new Talk();
             talk12.setId(0);
@@ -3948,13 +4080,13 @@ class ConferenceDataLoaderExecutorTest {
             talk12.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk12.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk12.setTalkDay(1L);
-            talk12.setTrackTime(LocalTime.of(10, 0));
+            talk12.setStartTime(LocalTime.of(10, 0));
+            talk12.setEndTime(LocalTime.of(11, 0));
             talk12.setTrack(1L);
             talk12.setLanguage("en");
             talk12.setPresentationLinks(List.of("presentationLink0"));
             talk12.setMaterialLinks(List.of("materialLink0"));
-            talk12.setVideoLinks(List.of("videoLink0"));
-            talk12.setSpeakerIds(List.of(1L));
+            talk12.setVideoLinks(List.of("videoLink11"));
 
             Talk talk13 = new Talk();
             talk13.setId(0);
@@ -3962,14 +4094,30 @@ class ConferenceDataLoaderExecutorTest {
             talk13.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
             talk13.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
             talk13.setTalkDay(1L);
-            talk13.setTrackTime(LocalTime.of(10, 0));
+            talk13.setStartTime(LocalTime.of(10, 0));
+            talk13.setEndTime(LocalTime.of(11, 0));
             talk13.setTrack(1L);
             talk13.setLanguage("en");
             talk13.setPresentationLinks(List.of("presentationLink0"));
             talk13.setMaterialLinks(List.of("materialLink0"));
             talk13.setVideoLinks(List.of("videoLink0"));
-            talk13.setSpeakerIds(List.of(0L));
-            talk13.setTopic(topic1);
+            talk13.setSpeakerIds(List.of(1L));
+
+            Talk talk14 = new Talk();
+            talk14.setId(0);
+            talk14.setName(List.of(new LocaleItem("en", "name0")));
+            talk14.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
+            talk14.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
+            talk14.setTalkDay(1L);
+            talk14.setStartTime(LocalTime.of(10, 0));
+            talk14.setEndTime(LocalTime.of(11, 0));
+            talk14.setTrack(1L);
+            talk14.setLanguage("en");
+            talk14.setPresentationLinks(List.of("presentationLink0"));
+            talk14.setMaterialLinks(List.of("materialLink0"));
+            talk14.setVideoLinks(List.of("videoLink0"));
+            talk14.setSpeakerIds(List.of(0L));
+            talk14.setTopic(topic1);
 
             return Stream.of(
                     arguments(talk0, talk0, false),
@@ -3985,7 +4133,8 @@ class ConferenceDataLoaderExecutorTest {
                     arguments(talk0, talk10, true),
                     arguments(talk0, talk11, true),
                     arguments(talk0, talk12, true),
-                    arguments(talk0, talk13, true)
+                    arguments(talk0, talk13, true),
+                    arguments(talk0, talk14, true)
             );
         }
 

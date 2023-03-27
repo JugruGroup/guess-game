@@ -2,8 +2,8 @@ package guess.service;
 
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
-import guess.domain.auxiliary.EventDateMinTrackTime;
-import guess.domain.auxiliary.EventMinTrackTimeEndDayTime;
+import guess.domain.auxiliary.EventDateMinStartTime;
+import guess.domain.auxiliary.EventMinStartTimeEndDayTime;
 import guess.domain.source.Event;
 import guess.domain.source.EventDays;
 import guess.domain.source.EventPart;
@@ -111,53 +111,53 @@ public class EventServiceImpl implements EventService {
         }
 
         // Find (event, date, minimal track time) items
-        List<EventDateMinTrackTime> eventDateMinTrackTimeList = getEventDateMinTrackTimeList(conferencesFromDate);
-        if (eventDateMinTrackTimeList.isEmpty()) {
+        List<EventDateMinStartTime> eventDateMinStartTimeList = getEventDateMinStartTimeList(conferencesFromDate);
+        if (eventDateMinStartTimeList.isEmpty()) {
             return null;
         }
 
         //Transform to (event, minimal track time, end date time) items
-        List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeList = getEventMinTrackTimeEndDayTimeList(eventDateMinTrackTimeList);
-        if (eventMinTrackTimeEndDayTimeList.isEmpty()) {
+        List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeList = getEventMinStartTimeEndDayTimeList(eventDateMinStartTimeList);
+        if (eventMinStartTimeEndDayTimeList.isEmpty()) {
             return null;
         }
 
         // Find current and future event days, sort by minimal track date time and end day date time
-        List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeListFromDateOrdered = eventMinTrackTimeEndDayTimeList.stream()
+        List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeListFromDateOrdered = eventMinStartTimeEndDayTimeList.stream()
                 .filter(edt -> dateTime.isBefore(edt.endDayDateTime()))
-                .sorted(Comparator.comparing(EventMinTrackTimeEndDayTime::minTrackDateTime).thenComparing(EventMinTrackTimeEndDayTime::endDayDateTime))
+                .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minStartDateTime).thenComparing(EventMinStartTimeEndDayTime::endDayDateTime))
                 .toList();
-        if (eventMinTrackTimeEndDayTimeListFromDateOrdered.isEmpty()) {
+        if (eventMinStartTimeEndDayTimeListFromDateOrdered.isEmpty()) {
             return null;
         }
 
         // Find first date
-        LocalDateTime firstDateTime = eventMinTrackTimeEndDayTimeListFromDateOrdered.get(0).minTrackDateTime();
+        LocalDateTime firstDateTime = eventMinStartTimeEndDayTimeListFromDateOrdered.get(0).minStartDateTime();
 
         if (dateTime.isBefore(firstDateTime)) {
             // No current day events, return nearest first event
-            return eventMinTrackTimeEndDayTimeListFromDateOrdered.get(0).event();
+            return eventMinStartTimeEndDayTimeListFromDateOrdered.get(0).event();
         } else {
             // Current day events exist, find happened time, sort by reversed minimal track date time
-            List<EventMinTrackTimeEndDayTime> eventMinTrackTimeEndDayTimeListOnCurrentDate = eventMinTrackTimeEndDayTimeListFromDateOrdered.stream()
-                    .filter(edt -> !dateTime.isBefore(edt.minTrackDateTime()))
-                    .sorted(Comparator.comparing(EventMinTrackTimeEndDayTime::minTrackDateTime).reversed())
+            List<EventMinStartTimeEndDayTime> eventMinStartTimeEndDayTimeListOnCurrentDate = eventMinStartTimeEndDayTimeListFromDateOrdered.stream()
+                    .filter(edt -> !dateTime.isBefore(edt.minStartDateTime()))
+                    .sorted(Comparator.comparing(EventMinStartTimeEndDayTime::minStartDateTime).reversed())
                     .toList();
 
             // Return nearest last event
-            return eventMinTrackTimeEndDayTimeListOnCurrentDate.get(0).event();
+            return eventMinStartTimeEndDayTimeListOnCurrentDate.get(0).event();
         }
     }
 
     /**
-     * Gets list of (event, date, minimal track time) items.
+     * Gets list of (event, date, minimal start time) items.
      *
      * @param events events
-     * @return list of (event, date, minimal track time) items
+     * @return list of (event, date, minimal start time) items
      */
-    List<EventDateMinTrackTime> getEventDateMinTrackTimeList(List<Event> events) {
-        List<EventDateMinTrackTime> result = new ArrayList<>();
-        Map<Event, Map<Long, Optional<LocalTime>>> minTrackTimeInTalkDaysForConferences = new LinkedHashMap<>();
+    List<EventDateMinStartTime> getEventDateMinStartTimeList(List<Event> events) {
+        List<EventDateMinStartTime> result = new ArrayList<>();
+        Map<Event, Map<Long, Optional<LocalTime>>> minStartTimeInTalkDaysForConferences = new LinkedHashMap<>();
 
         // Calculate start time minimum for each day of each event
         for (Event event : events) {
@@ -168,27 +168,27 @@ public class EventServiceImpl implements EventService {
                             Collectors.groupingBy(
                                     Talk::getTalkDay,
                                     Collectors.mapping(
-                                            Talk::getTrackTime,
+                                            Talk::getStartTime,
                                             Collectors.minBy(Comparator.naturalOrder())
                                     )
                             )
                     );
 
-            // Fill map (event, (trackTime, minTrackTime))
-            minTrackTimeInTalkDaysForConferences.put(event, minStartTimeInTalkDays);
+            // Fill map (event, (startTime, minStartTime))
+            minStartTimeInTalkDaysForConferences.put(event, minStartTimeInTalkDays);
         }
 
-        // Transform to (event, day, minTrackTime) list
-        for (Map.Entry<Event, Map<Long, Optional<LocalTime>>> entry : minTrackTimeInTalkDaysForConferences.entrySet()) {
+        // Transform to (event, day, minStartTime) list
+        for (Map.Entry<Event, Map<Long, Optional<LocalTime>>> entry : minStartTimeInTalkDaysForConferences.entrySet()) {
             var event = entry.getKey();
-            Map<Long, Optional<LocalTime>> minTrackTimeInTalkDays = entry.getValue();
+            Map<Long, Optional<LocalTime>> minStartTimeInTalkDays = entry.getValue();
             long previousDays = 0;
 
             for (EventDays eventDays : event.getDays()) {
                 if ((eventDays.getStartDate() != null) && (eventDays.getEndDate() != null) && (!eventDays.getStartDate().isAfter(eventDays.getEndDate()))) {
                     long days = ChronoUnit.DAYS.between(eventDays.getStartDate(), eventDays.getEndDate()) + 1;
 
-                    iteratesDays(days, eventDays, previousDays, minTrackTimeInTalkDays, result, event);
+                    iteratesDays(days, eventDays, previousDays, minStartTimeInTalkDays, result, event);
 
                     previousDays += days;
                 }
@@ -198,37 +198,37 @@ public class EventServiceImpl implements EventService {
         return result;
     }
 
-    void iteratesDays(long days, EventDays eventDays, long previousDays, Map<Long, Optional<LocalTime>> minTrackTimeInTalkDays,
-                      List<EventDateMinTrackTime> result, Event event) {
+    void iteratesDays(long days, EventDays eventDays, long previousDays, Map<Long, Optional<LocalTime>> minStartTimeInTalkDays,
+                      List<EventDateMinStartTime> result, Event event) {
         for (long i = 1; i <= days; i++) {
             LocalDate date = eventDays.getStartDate().plusDays(i - 1);
             Optional<LocalTime> localTimeOptional;
             long totalDayNumber = previousDays + i;
 
-            if (minTrackTimeInTalkDays.containsKey(totalDayNumber)) {
-                localTimeOptional = minTrackTimeInTalkDays.get(totalDayNumber);
+            if (minStartTimeInTalkDays.containsKey(totalDayNumber)) {
+                localTimeOptional = minStartTimeInTalkDays.get(totalDayNumber);
             } else {
                 localTimeOptional = Optional.empty();
             }
 
-            var minTrackTime = localTimeOptional.orElse(LocalTime.of(0, 0));
+            var minStartTime = localTimeOptional.orElse(LocalTime.of(0, 0));
 
-            result.add(new EventDateMinTrackTime(event, date, minTrackTime));
+            result.add(new EventDateMinStartTime(event, date, minStartTime));
         }
     }
 
     /**
-     * Gets list of (event, minimal track time, end date time) items.
+     * Gets list of (event, minimal start time, end date time) items.
      *
-     * @param eventDateMinTrackTimeList list of (event, date, minimal track time) items
-     * @return list of (event, minimal track time, end date time) items
+     * @param eventDateMinStartTimeList list of (event, date, minimal start time) items
+     * @return list of (event, minimal start time, end date time) items
      */
-    List<EventMinTrackTimeEndDayTime> getEventMinTrackTimeEndDayTimeList(List<EventDateMinTrackTime> eventDateMinTrackTimeList) {
-        return eventDateMinTrackTimeList.stream()
+    List<EventMinStartTimeEndDayTime> getEventMinStartTimeEndDayTimeList(List<EventDateMinStartTime> eventDateMinStartTimeList) {
+        return eventDateMinStartTimeList.stream()
                 .map(edt -> {
-                    var minTrackDateTime = ZonedDateTime.of(
+                    var minStartDateTime = ZonedDateTime.of(
                                     edt.date(),
-                                    edt.minTrackTime(),
+                                    edt.minStartTime(),
                                     edt.event().getFinalTimeZoneId())
                             .withZoneSameInstant(ZoneId.of("UTC"))
                             .toLocalDateTime();
@@ -239,9 +239,9 @@ public class EventServiceImpl implements EventService {
                             .withZoneSameInstant(ZoneId.of("UTC"))
                             .toLocalDateTime();
 
-                    return new EventMinTrackTimeEndDayTime(
+                    return new EventMinStartTimeEndDayTime(
                             edt.event(),
-                            minTrackDateTime,
+                            minStartDateTime,
                             endDayDateTime
                     );
                 })

@@ -23,11 +23,14 @@ import java.util.function.Function;
  */
 public class TalkSuperBriefDto {
     public static class TalkSuperBriefDtoDetails {
+        private final Long track;
         private final EventSuperBriefDto event;
         private final String eventTypeLogoFileName;
         private final List<SpeakerSuperBriefDto> speakers;
 
-        public TalkSuperBriefDtoDetails(EventSuperBriefDto event, String eventTypeLogoFileName, List<SpeakerSuperBriefDto> speakers) {
+        public TalkSuperBriefDtoDetails(Long track, EventSuperBriefDto event, String eventTypeLogoFileName,
+                                        List<SpeakerSuperBriefDto> speakers) {
+            this.track = track;
             this.event = event;
             this.eventTypeLogoFileName = eventTypeLogoFileName;
             this.speakers = speakers;
@@ -38,18 +41,18 @@ public class TalkSuperBriefDto {
     private final String name;
     private final LocalDate talkDate;
     private final Long talkDay;
-    private final LocalDateTime talkTime;
-    private final Long track;
+    private final LocalDateTime talkStartTime;
+    private final LocalDateTime talkEndTime;
     private final TalkSuperBriefDtoDetails details;
 
-    public TalkSuperBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkTime, Long track,
-                             TalkSuperBriefDtoDetails details) {
+    public TalkSuperBriefDto(long id, String name, LocalDate talkDate, Long talkDay, LocalDateTime talkStartTime,
+                             LocalDateTime talkEndTime, TalkSuperBriefDtoDetails details) {
         this.id = id;
         this.name = name;
         this.talkDate = talkDate;
         this.talkDay = talkDay;
-        this.talkTime = talkTime;
-        this.track = track;
+        this.talkStartTime = talkStartTime;
+        this.talkEndTime = talkEndTime;
         this.details = details;
     }
 
@@ -69,12 +72,16 @@ public class TalkSuperBriefDto {
         return talkDay;
     }
 
-    public LocalDateTime getTalkTime() {
-        return talkTime;
+    public LocalDateTime getTalkStartTime() {
+        return talkStartTime;
+    }
+
+    public LocalDateTime getTalkEndTime() {
+        return talkEndTime;
     }
 
     public Long getTrack() {
-        return track;
+        return details.track;
     }
 
     public EventSuperBriefDto getEvent() {
@@ -113,7 +120,8 @@ public class TalkSuperBriefDto {
         LocalDate talkDate = talkDayDates.get(safeTalkDay);
 
         var safeLocalDate = Optional.ofNullable(talkDate).orElse(LocalDate.now());
-        LocalDateTime talkTime = (talk.getTrackTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getTrackTime()) : null;
+        LocalDateTime talkStartTime = (talk.getStartTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getStartTime()) : null;
+        LocalDateTime talkEndTime = (talk.getEndTime() != null) ? LocalDateTime.of(safeLocalDate, talk.getEndTime()) : null;
 
         EventSuperBriefDto eventSuperBriefDto = EventSuperBriefDto.convertToSuperBriefDto(event, language);
         String eventTypeLogoFileName = (eventType != null) ? eventType.getLogoFileName() : null;
@@ -124,9 +132,10 @@ public class TalkSuperBriefDto {
                 LocalizationUtils.getString(talk.getName(), language),
                 talkDate,
                 talk.getTalkDay(),
-                talkTime,
-                talk.getTrack(),
+                talkStartTime,
+                talkEndTime,
                 new TalkSuperBriefDtoDetails(
+                        talk.getTrack(),
                         eventSuperBriefDto,
                         eventTypeLogoFileName,
                         speakers

@@ -14,7 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { TalkDetails } from '../../../shared/models/talk/talk-details.model';
 import { TalkService } from '../../../shared/services/talk.service';
 import { VideoSize } from "../../../shared/models/talk/video-size.model";
-import { getEventDisplayName, getSpeakersWithCompaniesString } from '../../general/utility-functions';
+import { getEventDisplayName, getSpeakersWithCompaniesString, getTalkTimes } from '../../general/utility-functions';
 import getVideoId from 'get-video-id';
 
 @Component({
@@ -79,6 +79,11 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
     // Event display name
     if (talkDetails?.talk?.event) {
       talkDetails.talk.event.displayName = getEventDisplayName(talkDetails.talk.event, this.translateService);
+    }
+
+    // Times
+    if (talkDetails?.talk) {
+      talkDetails.talk.displayTimes = getTalkTimes(talkDetails.talk.talkStartTime, talkDetails.talk.talkEndTime, this.translateService);
     }
 
     // YouTube video ids

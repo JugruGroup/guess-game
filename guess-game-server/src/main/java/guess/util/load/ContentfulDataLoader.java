@@ -665,6 +665,7 @@ public class ContentfulDataLoader extends CmsDataLoader {
                 ),
                 contentfulTalk.getFields().getTalkDay(),
                 contentfulTalk.getFields().getTrackTime(),
+                null,
                 contentfulTalk.getFields().getTrack(),
                 new Talk.TalkLinks(
                         extractPresentationLinks(
@@ -673,10 +674,10 @@ public class ContentfulDataLoader extends CmsDataLoader {
                         extractMaterialLinks(contentfulTalk.getFields().getMaterial()),
                         extractVideoLinks(contentfulTalk.getFields().getVideo())
                 ),
-                speakers,
                 new Talk.TalkAttributes(
                         extractLanguage(contentfulTalk.getFields().getLanguage()),
-                        null
+                        null,
+                        speakers
                 )
         );
     }

@@ -71,7 +71,7 @@ class EventComparatorTest {
     @DisplayName("compareStartDate method tests")
     class CompareStartDateTest {
         private Stream<Arguments> data() {
-            final int COMPARE_TRACK_TIME_RESULT = 42;
+            final int COMPARE_START_TIME_RESULT = 42;
             LocalDate START_DATE0 = LocalDate.of(2021, 3, 29);
             LocalDate START_DATE1 = LocalDate.of(2021, 3, 31);
             LocalDate START_DATE2 = LocalDate.of(2021, 3, 27);
@@ -109,21 +109,21 @@ class EventComparatorTest {
             )));
 
             return Stream.of(
-                    arguments(event0, event1, COMPARE_TRACK_TIME_RESULT, 0),
-                    arguments(event1, event2, COMPARE_TRACK_TIME_RESULT, -1),
-                    arguments(event2, event1, COMPARE_TRACK_TIME_RESULT, 1),
-                    arguments(event2, event3, COMPARE_TRACK_TIME_RESULT, -1),
-                    arguments(event2, event4, COMPARE_TRACK_TIME_RESULT, 1),
-                    arguments(event2, event5, COMPARE_TRACK_TIME_RESULT, 1)
+                    arguments(event0, event1, COMPARE_START_TIME_RESULT, 0),
+                    arguments(event1, event2, COMPARE_START_TIME_RESULT, -1),
+                    arguments(event2, event1, COMPARE_START_TIME_RESULT, 1),
+                    arguments(event2, event3, COMPARE_START_TIME_RESULT, -1),
+                    arguments(event2, event4, COMPARE_START_TIME_RESULT, 1),
+                    arguments(event2, event5, COMPARE_START_TIME_RESULT, 1)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void compareStartDate(Event event1, Event event2, int compareTrackTimeResult, int expected) {
+        void compareStartDate(Event event1, Event event2, int compareStartTimeResult, int expected) {
             try (MockedStatic<EventComparator> mockedStatic = Mockito.mockStatic(EventComparator.class, Mockito.CALLS_REAL_METHODS)) {
-                mockedStatic.when(() -> EventComparator.compareTrackTime(event1, event2))
-                        .thenReturn(compareTrackTimeResult);
+                mockedStatic.when(() -> EventComparator.compareStartTime(event1, event2))
+                        .thenReturn(compareStartTimeResult);
 
                 int actual = extractSign(EventComparator.compareStartDate(event1, event2));
 
@@ -133,31 +133,31 @@ class EventComparatorTest {
     }
 
     @Test
-    void getFirstTrackTime() {
+    void getFirstStartTime() {
         Talk talk0 = new Talk();
 
         Talk talk1 = new Talk();
         talk1.setTalkDay(1L);
 
         Talk talk2 = new Talk();
-        talk2.setTrackTime(LocalTime.of(10, 0));
+        talk2.setStartTime(LocalTime.of(10, 0));
 
         Talk talk3 = new Talk();
         talk3.setTalkDay(1L);
-        talk3.setTrackTime(LocalTime.of(10, 30));
+        talk3.setStartTime(LocalTime.of(10, 30));
 
         Talk talk4 = new Talk();
         talk4.setTalkDay(1L);
-        talk4.setTrackTime(LocalTime.of(10, 45));
+        talk4.setStartTime(LocalTime.of(10, 45));
 
         Talk talk5 = new Talk();
         talk5.setTalkDay(2L);
-        talk5.setTrackTime(LocalTime.of(9, 0));
+        talk5.setStartTime(LocalTime.of(9, 0));
 
         List<Talk> talks = List.of(talk0, talk1, talk2, talk3, talk4);
 
         LocalTime expected = LocalTime.of(10, 30);
-        Optional<LocalTime> actual = EventComparator.getFirstTrackTime(talks);
+        Optional<LocalTime> actual = EventComparator.getFirstStartTime(talks);
 
         assertTrue(actual.isPresent());
         assertEquals(expected, actual.get());
@@ -165,8 +165,8 @@ class EventComparatorTest {
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-    @DisplayName("compareTrackTime method tests")
-    class CompareTrackTimeTest {
+    @DisplayName("compareStartTime method tests")
+    class CompareStartTimeTest {
         private Stream<Arguments> data() {
             Event event0 = new Event();
 
@@ -174,7 +174,7 @@ class EventComparatorTest {
 
             Talk talk0 = new Talk();
             talk0.setTalkDay(1L);
-            talk0.setTrackTime(LocalTime.of(10, 30));
+            talk0.setStartTime(LocalTime.of(10, 30));
 
             Event event2 = new Event();
             event2.setTalks(List.of(talk0));
@@ -184,7 +184,7 @@ class EventComparatorTest {
 
             Talk talk1 = new Talk();
             talk1.setTalkDay(1L);
-            talk1.setTrackTime(LocalTime.of(10, 45));
+            talk1.setStartTime(LocalTime.of(10, 45));
 
             Event event4 = new Event();
             event4.setTalks(List.of(talk1));
@@ -202,19 +202,19 @@ class EventComparatorTest {
         @ParameterizedTest
         @MethodSource("data")
         @SuppressWarnings("unchecked")
-        void compareTrackTime(Event event1, Event event2, int expected) {
+        void compareStartTime(Event event1, Event event2, int expected) {
             try (MockedStatic<EventComparator> mockedStatic = Mockito.mockStatic(EventComparator.class, Mockito.CALLS_REAL_METHODS)) {
-                mockedStatic.when(() -> EventComparator.getFirstTrackTime(Mockito.any()))
+                mockedStatic.when(() -> EventComparator.getFirstStartTime(Mockito.any()))
                         .thenAnswer(
                                 (Answer<Optional<LocalTime>>) invocation -> {
                                     Object[] args = invocation.getArguments();
                                     List<Talk> talks = (List<Talk>) args[0];
 
-                                    return talks.isEmpty() ? Optional.empty() : Optional.of(talks.get(0).getTrackTime());
+                                    return talks.isEmpty() ? Optional.empty() : Optional.of(talks.get(0).getStartTime());
                                 }
                         );
 
-                int actual = extractSign(EventComparator.compareTrackTime(event1, event2));
+                int actual = extractSign(EventComparator.compareStartTime(event1, event2));
 
                 assertEquals(expected, actual);
             }

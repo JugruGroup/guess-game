@@ -548,7 +548,8 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                         currentDayTrackTimeMap.put(slot.getActivity().getId(), new DayTrackTime(
                                 day.getDayNumber(),
                                 track.getTrackNumber(),
-                                CmsDataLoader.createEventLocalTime(slot.getSlotStartTime())));
+                                CmsDataLoader.createEventLocalTime(slot.getSlotStartTime()),
+                                CmsDataLoader.createEventLocalTime(slot.getSlotEndTime())));
                     }
                 }
             }
@@ -562,7 +563,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
      *
      * @param eventId         event identifier
      * @param ignoreDemoStage ignore demo stage talks
-     * @param dayTrackTimeMap day, track, start time map
+     * @param dayTrackTimeMap day, track, time map
      * @return talks
      */
     List<Talk> getTalks(long eventId, boolean ignoreDemoStage, Map<String, DayTrackTime> dayTrackTimeMap) {
@@ -586,7 +587,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         return validJrgCmsActivities.stream()
                 .filter(a -> dayTrackTimeMap.containsKey(a.getId()))
                 .map(a -> createTalk(a, speakerMap, talkId, dayTrackTimeMap))
-                .sorted(Comparator.comparing(Talk::getTalkDay).thenComparing(Talk::getTrackTime).thenComparing(Talk::getTrack))
+                .sorted(Comparator.comparing(Talk::getTalkDay).thenComparing(Talk::getStartTime).thenComparing(Talk::getTrack).thenComparing(Talk::getEndTime))
                 .toList();
     }
 
@@ -748,7 +749,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
      * @param jrgCmsActivity  JUG Ru Group CMS activity
      * @param speakerMap      speaker map
      * @param talkId          atomic talk identifier
-     * @param dayTrackTimeMap day, track, start time map
+     * @param dayTrackTimeMap day, track, time map
      * @return talk
      */
     static Talk createTalk(JrgCmsActivity jrgCmsActivity, Map<String, Speaker> speakerMap, AtomicLong talkId,
@@ -775,16 +776,17 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                 ),
                 dayTrackTime.dayNumber(),
                 dayTrackTime.startTime(),
+                dayTrackTime.endTime(),
                 dayTrackTime.trackNumber(),
                 new Talk.TalkLinks(
                         extractPresentationLinks(jrgCmsTalk.getPresentation()),
                         new ArrayList<>(),
                         new ArrayList<>()
                 ),
-                speakers,
                 new Talk.TalkAttributes(
                         extractLanguage(jrgCmsTalk.getLanguage()),
-                        null
+                        null,
+                        speakers
                 )
         );
     }

@@ -844,18 +844,22 @@ class JrgCmsDataLoaderTest {
 
             JrgCmsSlot jrgCmsSlot1 = new JrgCmsSlot();
             jrgCmsSlot1.setSlotStartTime("2022-05-14T08:45:00Z");
+            jrgCmsSlot1.setSlotEndTime("2022-05-14T09:00:00Z");
             jrgCmsSlot1.setActivity(jrgCmsActivity1);
 
             JrgCmsSlot jrgCmsSlot2 = new JrgCmsSlot();
             jrgCmsSlot2.setSlotStartTime("2022-05-14T09:45:00Z");
+            jrgCmsSlot2.setSlotEndTime("2022-05-14T10:00:00Z");
             jrgCmsSlot2.setActivity(jrgCmsActivity2);
 
             JrgCmsSlot jrgCmsSlot3 = new JrgCmsSlot();
             jrgCmsSlot3.setSlotStartTime("2022-05-14T11:15:00Z");
+            jrgCmsSlot3.setSlotEndTime("2022-05-14T11:30:00Z");
             jrgCmsSlot3.setActivity(jrgCmsActivity3);
 
             JrgCmsSlot jrgCmsSlot4 = new JrgCmsSlot();
             jrgCmsSlot4.setSlotStartTime("2022-05-14T13:00:00Z");
+            jrgCmsSlot4.setSlotEndTime("2022-05-14T13:15:00Z");
             jrgCmsSlot4.setActivity(jrgCmsActivity4);
 
             // Tracks
@@ -914,10 +918,10 @@ class JrgCmsDataLoaderTest {
 
             // Expected result
             Map<String, DayTrackTime> expected = new HashMap<>();
-            expected.put(ACTIVITY_ID1, new DayTrackTime(1L, 2L, LocalTime.of(8, 45)));
-            expected.put(ACTIVITY_ID2, new DayTrackTime(2L, 3L, LocalTime.of(9, 45)));
-            expected.put(ACTIVITY_ID3, new DayTrackTime(2L, 4L, LocalTime.of(11, 15)));
-            expected.put(ACTIVITY_ID4, new DayTrackTime(3L, 5L, LocalTime.of(13, 0)));
+            expected.put(ACTIVITY_ID1, new DayTrackTime(1L, 2L, LocalTime.of(8, 45), LocalTime.of(9, 0)));
+            expected.put(ACTIVITY_ID2, new DayTrackTime(2L, 3L, LocalTime.of(9, 45), LocalTime.of(10, 0)));
+            expected.put(ACTIVITY_ID3, new DayTrackTime(2L, 4L, LocalTime.of(11, 15), LocalTime.of(11, 30)));
+            expected.put(ACTIVITY_ID4, new DayTrackTime(3L, 5L, LocalTime.of(13, 0), LocalTime.of(13, 15)));
 
             assertEquals(expected, jrgCmsDataLoader.getDayTrackTimeMap(42));
         }
@@ -967,7 +971,7 @@ class JrgCmsDataLoaderTest {
 
                                 Talk talk = new Talk();
                                 talk.setTalkDay(dayTrackTime.dayNumber());
-                                talk.setTrackTime(dayTrackTime.startTime());
+                                talk.setStartTime(dayTrackTime.startTime());
                                 talk.setTrack(dayTrackTime.trackNumber());
 
                                 return talk;
@@ -980,8 +984,8 @@ class JrgCmsDataLoaderTest {
                     .thenCallRealMethod();
 
             Map<String, DayTrackTime> dayTrackTimeMap = new HashMap<>();
-            dayTrackTimeMap.put(ID0, new DayTrackTime(2L, 1L, LocalTime.of(10, 0)));
-            dayTrackTimeMap.put(ID1, new DayTrackTime(1L, 1L, LocalTime.of(10, 0)));
+            dayTrackTimeMap.put(ID0, new DayTrackTime(2L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
+            dayTrackTimeMap.put(ID1, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
 
             List<Talk> actual = jrgCmsDataLoader.getTalks(42, false, dayTrackTimeMap);
 
@@ -1368,7 +1372,7 @@ class JrgCmsDataLoaderTest {
             jrgCmsActivity2.setParticipants(List.of(jrgCmsParticipant0));
 
             Map<String, Speaker> speakerMap = Map.of(SPEAKER_ID0, speaker0, SPEAKER_ID1, speaker1);
-            Map<String, DayTrackTime> dayTrackTimeMap = Map.of(ACTIVITY_ID0, new DayTrackTime(1L, 1L, LocalTime.of(10, 0)));
+            Map<String, DayTrackTime> dayTrackTimeMap = Map.of(ACTIVITY_ID0, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
 
             return Stream.of(
                     arguments(jrgCmsActivity0, speakerMap, new AtomicLong(-1), dayTrackTimeMap, null),

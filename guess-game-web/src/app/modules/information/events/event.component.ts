@@ -36,8 +36,9 @@ export class EventComponent implements OnInit {
     this.speakersMultiSortMeta.push({field: 'companiesString', order: 1});
 
     this.talksMultiSortMeta.push({field: 'talkDay', order: 1});
-    this.talksMultiSortMeta.push({field: 'talkTime', order: 1});
+    this.talksMultiSortMeta.push({field: 'talkStartTime', order: 1});
     this.talksMultiSortMeta.push({field: 'track', order: 1});
+    this.talksMultiSortMeta.push({field: 'talkEndTime', order: 1});
   }
 
   ngOnInit(): void {

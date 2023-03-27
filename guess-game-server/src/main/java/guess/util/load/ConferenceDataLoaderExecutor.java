@@ -433,8 +433,8 @@ public class ConferenceDataLoaderExecutor {
                     String ruName = LocalizationUtils.getString(t.getName(), Language.RUSSIAN).trim();
 
                     if (deletedTalks.contains(enName) || deletedTalks.contains(ruName)) {
-                        log.warn("Conference opening or closing talk is deleted, name: {'{}', '{}'}, talkDay: {}, trackTime: {}, track: {}, language: {}",
-                                enName, ruName, t.getTalkDay(), t.getTrackTime(), t.getTrack(), t.getLanguage());
+                        log.warn("Conference opening or closing talk is deleted, name: {'{}', '{}'}, talkDay: {}, startTime: {}, endTime: {}, track: {}, language: {}",
+                                enName, ruName, t.getTalkDay(), t.getStartTime(), t.getEndTime(), t.getTrack(), t.getLanguage());
 
                         return false;
                     } else {
@@ -464,13 +464,13 @@ public class ConferenceDataLoaderExecutor {
                 long existingTalkDay = Optional.ofNullable(existingTalk.getTalkDay()).orElse(0L);
                 long newTalkTrack = Optional.ofNullable(talk.getTrack()).orElse(0L);
                 long existingTalkTrack = Optional.ofNullable(existingTalk.getTrack()).orElse(0L);
-                LocalTime newTalkTrackTime = Optional.ofNullable(talk.getTrackTime()).orElse(LocalTime.of(0, 0));
-                LocalTime existingTalkTrackTime = Optional.ofNullable(existingTalk.getTrackTime()).orElse(LocalTime.of(0, 0));
+                LocalTime newTalkStartTime = Optional.ofNullable(talk.getStartTime()).orElse(LocalTime.of(0, 0));
+                LocalTime existingTalkStartTime = Optional.ofNullable(existingTalk.getStartTime()).orElse(LocalTime.of(0, 0));
 
                 if ((newTalkDay < existingTalkDay) ||
                         ((newTalkDay == existingTalkDay) &&
                                 ((newTalkTrack < existingTalkTrack) ||
-                                        ((newTalkTrack == existingTalkTrack) && newTalkTrackTime.isBefore(existingTalkTrackTime))))) {
+                                        ((newTalkTrack == existingTalkTrack) && newTalkStartTime.isBefore(existingTalkStartTime))))) {
                     // (Less day) or
                     // (Equal day) and ((Less track) or ((Equal track) and (Less track time)))
                     ruNameMap.put(ruName, talk);
@@ -1808,6 +1808,40 @@ public class ConferenceDataLoaderExecutor {
     }
 
     /**
+     * Checks talk times.
+     */
+    static void checkTalkTimes() throws SpeakerDuplicatedException, IOException {
+        // Read event types, places, events, companies, speakers, talks from resource files
+        var resourceSourceInformation = YamlUtils.readSourceInformation();
+        List<Event> events = resourceSourceInformation.getEvents().stream()
+                .sorted(Comparator.comparing(Event::getFirstStartDate).reversed())
+                .toList();
+
+        events.forEach(event -> {
+            int all = event.getTalks().size();
+            int withTimes = (int) event.getTalks().stream()
+                    .filter(t -> (t.getStartTime() != null) && (t.getEndTime() != null))
+                    .count();
+            double percents = (all == 0) ? 0 : (double) withTimes / all * 100;
+            String message = String.format("%-30s %2d/%2d (%6.2f%%)",
+                    LocalizationUtils.getString(event.getName(), Language.ENGLISH),
+                    withTimes,
+                    all,
+                    percents);
+
+            if (all != withTimes) {
+                if (percents >= 75) {
+                    log.info(message);
+                } else if (percents >= 50) {
+                    log.warn(message);
+                } else {
+                    log.error(message);
+                }
+            }
+        });
+    }
+
+    /**
      * Indicates the need to update event type.
      *
      * @param a first event type
@@ -1884,7 +1918,8 @@ public class ConferenceDataLoaderExecutor {
                 equals(a.getShortDescription(), b.getShortDescription()) &&
                 equals(a.getLongDescription(), b.getLongDescription()) &&
                 equals(a.getTalkDay(), b.getTalkDay()) &&
-                equals(a.getTrackTime(), b.getTrackTime()) &&
+                equals(a.getStartTime(), b.getStartTime()) &&
+                equals(a.getEndTime(), b.getEndTime()) &&
                 equals(a.getTrack(), b.getTrack()) &&
                 equals(a.getLanguage(), b.getLanguage()) &&
                 equals(a.getPresentationLinks(), b.getPresentationLinks()) &&
@@ -2009,6 +2044,9 @@ public class ConferenceDataLoaderExecutor {
 
         // Check companies
 //        checkCompanies();
+
+        // Check talk times
+//        checkTalkTimes();
 
         // Load talks, speaker and event
         // 2016
@@ -2420,7 +2458,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.TECH_TRAIN, LocalDate.of(2023, 4, 1), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("TechTrain 2023 Spring", null, List.of(24L)),
-//                        Set.of()));
+//                        Set.of("Открытие фестиваля TechTrain 2023 Spring", "Викторина и подведение итогов TechTrain 2023 Spring")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2023, 4, 11), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2023 Spring", null, List.of(24L, 11L)),
