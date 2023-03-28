@@ -1217,6 +1217,8 @@ class JrgCmsDataLoaderTest {
                 .filter(c -> VALUE3.equals(c.getValue()))
                 .count());
 
+        assertEquals(Collections.emptyList(), JrgCmsDataLoader.getFixedContacts(null));
+
         List<JrgContact> actual = JrgCmsDataLoader.getFixedContacts(jrgContacts);
 
         assertEquals(5, actual.size());
