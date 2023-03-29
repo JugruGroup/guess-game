@@ -3782,3 +3782,7 @@ companies:
     name:
       - {language: en, text: documentat.io}
     siteLink: https://documentat.io
+  - id: 1044
+    name:
+      - {language: en, text: "TestOps enthusiast"}
+      - {language: ru, text: TestOps-энтузиаст}
