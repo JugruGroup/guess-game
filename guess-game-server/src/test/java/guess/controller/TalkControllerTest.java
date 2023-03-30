@@ -18,6 +18,8 @@ import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.Collections;
 import java.util.List;
 
@@ -128,6 +130,8 @@ class TalkControllerTest {
         EventType eventType = new EventType();
         eventType.setId(0);
         eventType.setOrganizer(organizer);
+        eventType.setTimeZone("Europe/Moscow");
+        eventType.setTimeZoneId(ZoneId.of(eventType.getTimeZone()));
 
         EventDays eventDays = new EventDays(
                 LocalDate.of(2020, 10, 30),
@@ -148,6 +152,9 @@ class TalkControllerTest {
         Talk talk = new Talk();
         talk.setId(0);
         talk.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name")));
+        talk.setTalkDay(1L);
+        talk.setStartTime(LocalTime.of(10, 0));
+        talk.setEndTime(LocalTime.of(10, 45));
 
         given(talkService.getTalkById(0)).willReturn(talk);
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
