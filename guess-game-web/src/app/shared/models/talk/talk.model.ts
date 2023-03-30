@@ -22,7 +22,8 @@ export class Talk {
     public videoLinksVideoIds?: string[],
     public materialsOrderNumber?: number,
     public topicName?: string,
-    public displayTimes?: string
+    public displayTimes?: string,
+    public utcTimeZone?: string
   ) {
   }
 }
