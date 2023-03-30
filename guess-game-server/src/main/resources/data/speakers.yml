@@ -34119,18 +34119,20 @@ speakers:
       - {language: ru, text: "<p>Руководитель группы тестирования Мир Plat.Form.&nbsp;</p>"}
   - id: 2376
     photoFileName: 2376.jpg
-    photoUpdatedAt: 2022-09-16T15:40:16Z[UTC]
+    photoUpdatedAt: 2023-02-15T20:26:19Z[UTC]
     name:
       - {language: en, text: "Tatyana Drozdova"}
       - {language: ru, text: "Татьяна Дроздова"}
-    companyIds: [998]
+    companyIds: [390]
     bio:
-      - {language: en, text: "<p>She has three years of testing experience (mostly web). Currently writing UI autotests in\
-            \ Python, before that she managed a team of six manual testers. She leads the <a href=\"https://t.me/short_QA\"\
-            >Short QA ideas</a> channel, mentors at Women in Tech, and is a member of the Podlodka QA Crew in season 7.</p>"}
-      - {language: ru, text: "<p>Имеет три года опыта в тестировании (в основном веба). Сейчас пишет автотесты UI на Python,\
-            \ до этого руководила командой из шести ручных тестировщиков. Ведет канал <a href=\"https://t.me/short_QA\">Short\
-            \ QA ideas</a>, менторит в Women in Tech, член ПК Podlodka&nbsp;QA Crew в 7 сезоне.</p>"}
+      - {language: en, text: "<p>She has three years of testing experience (partly in manual testing, partly in automating\
+            \ UI testing and API testing with Python). She's currently automating e2e API testing. Before that she managed\
+            \ a team of six manual testers. She leads the <a href=\"https://t.me/short_QA\">Short QA ideas</a> Telegram channel,\
+            \ mentors at Women in Tech, and is a member of the Podlodka QA Crew in season 7.</p>"}
+      - {language: ru, text: "<p>Имеет более 3 лет опыта в мануальном тестировании, автоматизации UI и API на Python. Сейч\
+            ас занимается автоматизацией e2e API-тестов, до этого руководила командой из шести ручных тестировщиков. Ведет\
+            \ канал <a href=\"https://t.me/short_QA\" target=\"_blank\" rel=\"noopener noreferrer\">Short QA ideas</a>, ме\
+            нторит в Women in Tech, член ПК Podlodka&nbsp;QA Crew.</p>"}
   - id: 2377
     photoFileName: 2377.jpg
     photoUpdatedAt: 2022-10-03T15:00:43Z[UTC]
@@ -34239,20 +34241,10 @@ speakers:
             \ Cloud Services, Defense Industry, Autonomous Mobile Robots, Embedded and Software applications. Along with having\
             \ a proficiency in CMMI &amp; Scrum and PMP experiences under his belt, he has taken various roles in multinational\
             \ projects. He has expertise in test automation and integration into CI/CD platforms, supporting continuous testing\
-            \ with logging, reporting, and root cause analysis packages from scratch. Besides, he has been facilitating test\
-            \ processes and building test lifecycles in the projects. He has initiated several QA POCs like monitoring and\
-            \ bug management with ML assistance. He is a frequent international speaker, having received the UCAAT 8 Best\
-            \ Presentation Award and various program committee memberships with various <a href=\"https://www.mesutdurukal.com/conferences.html\"\
-            >talks</a>.</p>"}
-      - {language: ru, text: "<p>Mesut has 13 years&rsquo; experience in Industrial Automation, IoT platforms, SaaS/PaaS,\
-            \ Cloud Services, Defense Industry, Autonomous Mobile Robots, Embedded and Software applications. Along with having\
-            \ a proficiency in CMMI and Scrum and PMP experiences under his belt, he has taken various roles in multinational\
-            \ projects. He has expertise in test automation and integration into CI/CD platforms, supporting continuous testing\
-            \ with logging, reporting, and root cause analysis packages from scratch. Besides, he has been facilitating test\
-            \ processes and building test lifecycles in the projects. He has initiated several QA POCs like monitoring and\
-            \ bug management with ML assistance. He is a frequent international speaker, having received the UCAAT 8 Best\
-            \ Presentation Award and various program committee memberships with various <a href=\"https://www.mesutdurukal.com/conferences.html\"\
-            >talks</a>.</p>"}
+            \ with logging, reporting, and root cause analysis packages from scratch. <br /><br />Besides, he has been facilitating\
+            \ test processes and building test lifecycles in the projects. He has initiated several QA POCs like monitoring\
+            \ and bug management with ML assistance. He is a frequent international speaker, having received the UCAAT 8 Best\
+            \ Presentation Award and various program committee memberships with various talks.</p>"}
     twitter: durukalmesut
   - id: 2386
     photoFileName: 2386.jpg
@@ -34377,13 +34369,13 @@ speakers:
             нах.</p>"}
   - id: 2395
     photoFileName: 2395.jpg
-    photoUpdatedAt: 2022-08-19T10:41:33Z[UTC]
+    photoUpdatedAt: 2023-02-22T13:06:16Z[UTC]
     name:
       - {language: en, text: "Ramazan Ramazanov"}
       - {language: ru, text: "Рамазан Рамазанов"}
     companyIds: [1006]
     bio:
-      - {language: en, text: "<p>Pentester. Baghunter. TechLead. Works at DeteAct, where he has been making the world a little\
+      - {language: en, text: "<p>Pentester. Bughunter. TechLead. Works at DeteAct, where he has been making the world a little\
             \ safer for over four years.</p>"}
       - {language: ru, text: "<p>Пентестер. Багхантер. TechLead. Работает в компании DeteAct, где уже более четырех лет де\
             лает мир немножко безопаснее.</p>"}
@@ -34424,10 +34416,10 @@ speakers:
       - {language: ru, text: "Эмилия Куцарева"}
     companyIds: [653]
     bio:
-      - {language: en, text: "<p>Emilia is in charge of automating testing on Odnoklassniki. She teaches in VK educational\
+      - {language: en, text: "<p>Emilia is in charge of automating testing at Odnoklassniki. She teaches in VK educational\
             \ projects.</p>"}
-      - {language: ru, text: "Руководитель команды автоматизации тестирования в «Одноклассниках». Преподаватель в образова\
-            тельных проектах VK."}
+      - {language: ru, text: "<p>Руководитель команды автоматизации тестирования в Одноклассниках. Преподаватель в образов\
+            ательных проектах VK.</p>"}
   - id: 2399
     photoFileName: 2399.jpg
     photoUpdatedAt: 2022-10-27T13:32:51Z[UTC]
@@ -34520,16 +34512,16 @@ speakers:
       - {language: ru, text: "Александр Шарков"}
     companyIds: [1008]
     bio:
-      - {language: en, text: "<p>Has been testing real-time systems (SCADA \\ EMS \\ DMS) in the electric power industry for\
+      - {language: en, text: "<p>Has been testing real-time systems (SCADA / EMS / DMS) in the electric power industry for\
             \ more than 10 years. Passed the classic path from a tester to a department head. Personally implemented the best\
-            \ practices of leading IT companies.</p>"}
-      - {language: ru, text: "<p class=\"p1\">Более 10 лет тестирует системы реального времени (SCADA \\ EMS \\ DMS) в эле\
-            ктроэнергетике. Прошел классический путь от тестировщика до руководителя отдела. Лично внедрил лучшие практики\
-            \ ведущих IT-компаний.</p>"}
+            \ practices of leading IT c.</p>"}
+      - {language: ru, text: "<p class=\"p1\">Более 10 лет тестирует системы реального времени (SCADA / EMS / DMS) в элект\
+            роэнергетике. Прошел классический путь от тестировщика до руководителя отдела. Лично внедрил лучшие практики в\
+            едущих IT-компаний.</p>"}
     habr: RussianTM
   - id: 2406
     photoFileName: 2406.jpg
-    photoUpdatedAt: 2022-11-04T15:02:31Z[UTC]
+    photoUpdatedAt: 2023-03-21T10:54:13Z[UTC]
     name:
       - {language: en, text: "Aleksandr Ivanov"}
       - {language: ru, text: "Александр Иванов"}
