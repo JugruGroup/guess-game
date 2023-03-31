@@ -17,7 +17,7 @@
           <span class="ms-2">{{talkDetails.talk?.event?.displayName}}</span>
         </a>
         <span *ngIf="talkDetails.talk?.talkDay"> / <i class="far fa-calendar"></i> {{'talk.dayLabel' | translate}} {{talkDetails.talk.talkDay}}</span>
-        <span *ngIf="talkDetails.talk?.displayTimes"> / <i class="fas fa-clock"></i> {{talkDetails.talk.displayTimes}} <span *ngIf="talkDetails.talk?.utcTimeZone" class="text-muted">({{talkDetails.talk.utcTimeZone}})</span></span>
+        <span *ngIf="talkDetails.talk?.displayTimes"> / <i class="fas fa-clock"></i> {{talkDetails.talk.displayTimes}} <span *ngIf="talkDetails.talk?.utcTimeZone">({{talkDetails.talk.utcTimeZone}})</span></span>
         <span *ngIf="talkDetails.talk?.track"> / <i class="fas fa-location-arrow"></i> {{'talk.trackLabel' | translate}} {{talkDetails.talk.track}}</span>
         <span *ngIf="talkDetails.talk?.language"> / <i class="fas fa-globe"></i> {{talkDetails.talk.language | uppercase}}</span>
         <span *ngIf="talkDetails.talk?.topicName"> / <i class="fas fa-circle-info"></i> {{talkDetails.talk.topicName}}</span>
