@@ -691,8 +691,8 @@ events:
       - {language: ru, text: "https://holyjs.ru/archive/2022 Spring/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8K6ytqC6yjEFVaatyYT7zzR
     talkIds: [3840, 3841, 3842, 3843, 3844, 3845, 3846, 3847, 3848, 3849, 3850, 3851, 3852, 3853, 3854, 3855, 3856, 3857,
-              3858, 3859, 3860, 3861, 3862, 3863, 3864, 3865, 3866, 3867, 3868, 3869, 3870, 3871, 3872, 3873, 3874, 3875, 3876,
-              3877, 3878]
+              3858, 3859, 3860, 3861, 3862, 3863, 3864, 3865, 3866, 3867, 3868, 3869, 3870, 3871, 3873, 3874, 3875, 3876, 3877,
+              3878]
   - eventTypeId: 4
     name:
       - {language: en, text: "HolyJS 2022 Autumn"}
