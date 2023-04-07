@@ -35,6 +35,11 @@ companyGroups:
         Gritstep,
         Dotnetos
     ]
+  - name: "hh.ru, CyberDacha"
+    items: [
+      hh.ru,
+      CyberDacha
+    ]
   - name: "MAI / HSE / ex-Microsoft"
     items: [
       MAI,
