@@ -3786,3 +3786,16 @@ companies:
     name:
       - {language: en, text: "TestOps enthusiast"}
       - {language: ru, text: TestOps-энтузиаст}
+  - id: 1045
+    name:
+      - {language: en, text: "\"Provetrimsya!\" podcast"}
+      - {language: ru, text: "Подкаст «Проветримся!»"}
+    siteLink: https://progulka.yamshchikov.info
+  - id: 1046
+    name:
+      - {language: en, text: "Data Monsters"}
+    siteLink: https://www.datamonsters.com
+  - id: 1047
+    name:
+      - {language: en, text: CyberDacha}
+    siteLink: https://www.youtube.com/channel/UCdiwSVi1wq6wnd4gbpjbIAg

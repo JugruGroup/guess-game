@@ -3886,20 +3886,18 @@ speakers:
     gitHub: mishunov
   - id: 262
     photoFileName: 0262.jpg
-    photoUpdatedAt: 2020-05-20T07:26:05.657Z[UTC]
+    photoUpdatedAt: 2023-03-01T19:36:07Z[UTC]
     name:
-      - {language: en, text: "Ivan Yamshchikov"}
+      - {language: en, text: "Ivan Yamschikov"}
       - {language: ru, text: "Иван Ямщиков"}
-    companyIds: [6]
+    companyIds: [1045]
     bio:
-      - {language: en, text: "Got PhD in applied mathematics at Brandenburg University of Technology (Cottbus, Germany). Is\
-            \ currently a research associate at Max Planck Institute (Leipzig, Germany) and an AI-evangelist at ABBYY. Ivan\
-            \ is studying new AI work principles which could help us to understand how our brain works."}
-      - {language: ru, text: "Получил PhD по прикладной математике в Бранденбургском Технологическом университете (Котбус\
-            , Германия). В данный момент — научный сотрудник Института Макса Планка (Лейпциг, Германия) и AI-евангелист ABBYY.\
-            \ Иван исследует новые принципы работы искусственного интеллекта, которые могли бы помочь понять, как работает\
-            \ наш мозг."}
+      - {language: en, text: "<p>Ivan researches artificial intelligence, hosts a popular science podcast, advises start-ups\
+            \ in the field of generative artificial intelligence, and helps build the Toloka ecosystem.</p>"}
+      - {language: ru, text: "<p>Иван исследует искусственный интеллект, делает научно-популярный подкаст, консультирует с\
+            тартапы в области генеративного искусственного интеллекта и помогает строить экосистему Толоки.</p>"}
     twitter: kr0niker
+    gitHub: kr0niker
   - id: 263
     photoFileName: 0263.jpg
     name:
@@ -4463,7 +4461,7 @@ speakers:
             стеров Hadoop."}
   - id: 301
     photoFileName: 0301.jpg
-    photoUpdatedAt: 2020-06-25T13:48:53.653Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:06:20Z[UTC]
     name:
       - {language: en, text: "Dmitry Bugaychenko"}
       - {language: ru, text: "Дмитрий Бугайченко"}
@@ -4472,14 +4470,13 @@ speakers:
       - {language: en, text: "Graduated from St. Petersburg State University in 2004, got a PhD degree in the field of the\
             \ formal logical methods in 2007. Spent almost 9 years in outsourcing without losing contact with the university\
             \ and research community. Big data analysis at Odnoklassniki became for Dmitry an unique chance to combine theoretical\
-            \ knowledge and scientific foundation with the development of real and popular products. And this chance he gladly\
-            \ took advantage of by coming there in 2011. Joined Sberbank team in 2019."}
-      - {language: ru, text: "Окончил Санкт-Петербургский государственный университет в 2004 году, там же защитил кандидат\
-            скую по формально-логическим методам в 2007. Почти 9 лет проработал в аутсорсинге, не теряя контакта с универс\
-            итетом и научной средой. Анализ больших данных в Одноклассниках стал для Дмитрия уникальным шансом совместить\
-            \ теоретическую подготовку и научный фундамент с разработкой реальных, востребованных продуктов. И этим шансом\
-            \ он с радостью воспользовался, придя туда пять лет назад. С 2019-го года присоединился к дружной команде Сбер\
-            банка."}
+            \ knowledge and scientific foundation with the development of real and popular products. Joined Sberbank team\
+            \ in 2019."}
+      - {language: ru, text: "<p>Окончил Санкт-Петербургский государственный университет в 2004 году, там же защитил канди\
+            датскую по формально-логическим методам в 2007. Почти 9 лет проработал в аутсорсинге, не теряя контакта с унив\
+            ерситетом и научной средой. Анализ больших данных в Одноклассниках стал для Дмитрия уникальным шансом совмести\
+            ть теоретическую подготовку и научный фундамент с разработкой реальных, востребованных продуктов. С 2019 года\
+            \ присоединился к дружной команде Сбербанка.</p>"}
     gitHub: DmitryBugaychenko
     habr: dmitrybugaychenko
   - id: 302
@@ -7025,12 +7022,16 @@ speakers:
       - {language: ru, text: "Дмитрий Сошников"}
     companyIds: [949, 650]
     bio:
-      - {language: en, text: "<p>Sixteen years of experience at Microsoft in evangelism, as well as working on the Commercial\
-            \ Software Engineering team, where a small group developed the mPyPl library that simplifies Python data processing\
-            \ pipelines programming in a functional style. Repeatedly spoke at DotNext.</p>"}
-      - {language: ru, text: "<p>16 лет опыта работы в Microsoft в евангелизме, а также работа в команде Commercial Software\
-            \ Engineering, где небольшой группой разрабатывали библиотеку mPyPl, упрощающую программирование пайплайнов об\
-            работки данных на Python в функциональном стиле. Неоднократно выступал на DotNext.</p>"}
+      - {language: en, text: "<p>Dmitry Soshnikov worked at Microsoft for more than 16 years, as Technical Evangelist, Senior\
+            \ Software Engineer, AI/ML Expert and Cloud Developer Advocate. He met Bill Gates, and twice was on stage with\
+            \ Steve Ballmer, former CEO of Microsoft. He is the primary author of Microsoft AI for Beginners Curriculum. Currently,\
+            \ Dmitry is an Associate Professor at two prominent Moscow universities, carries out his own projects, and is\
+            \ involved in neurogenerative art. More info at http://soshnikov.com.</p>"}
+      - language: ru
+        text: "<p>Более 16 лет проработал в Microsoft в роли технологического евангелиста, разработчика и ведущего эксперт\
+            а по искусственному интеллекту и машинному обучению. Встречался с Биллом Гейтсом, дважды выступал со сцены со\
+            \ Стивом Балмером. Автор открытого курса Microsoft AI for Beginners Curriculum.</p>\n<p>Сейчас преподаёт в нес\
+            кольких ведущих вузах Москвы, занимается собственными проектами и увлекается нейрогенеративным искусством.</p>"
     twitter: shwars
     gitHub: shwars
     habr: shwars
@@ -33642,20 +33643,19 @@ speakers:
             редоставлении качественных видео и аудио коммуникаций миру."}
   - id: 2343
     photoFileName: 2343.jpg
-    photoUpdatedAt: 2022-08-30T11:13:49Z[UTC]
+    photoUpdatedAt: 2023-03-07T12:58:05Z[UTC]
     name:
-      - {language: en, text: "Aleksei Shpagin"}
+      - {language: en, text: "Alexey Shpagin"}
       - {language: ru, text: "Алексей Шпагин"}
     companyIds: [620]
     bio:
-      - language: en
-        text: "<p>Head of the backend team of the VK Calls project. Developed server-side software for VoIP telephony and\
-            \ videoconferencing services for the last 10 years.</p>\n<p>Started as a C++ developer, then moved to management.\
-            \ In his free time he is fond of sound recording and processing, which helps in his main work.</p>"
+      - {language: en, text: "<p>Head of the backend team of the VK Calls project. For the last 10 years he has been developing\
+            \ server software for VoIP-telephony and video communication services. Started as a C++ developer, then moved\
+            \ into management. In his free time, he enjoys sound recording and sound processing, which also helps at work.</p>"}
       - language: ru
-        text: "<p>Руководитель команды бэкенда проекта VK Звонки. Последние 10 лет занимается разработкой серверного ПО дл\
-            я VoIP-телефонии и сервисов видеосвязи.</p>\n<p>Начинал как C++ разработчик, затем перешёл в менеджмент. В сво\
-            бодное время увлекается звукозаписью и обработкой звука, что помогает и в основной работе.</p>"
+        text: "Руководитель команды бэкенда проекта VK Звонки. Последние 10 лет занимается разработкой серверного ПО для VoIP-т\
+            елефонии и сервисов видеосвязи.\n\nНачинал как C++ разработчик, затем перешёл в менеджмент. В свободное время\
+            \ увлекается звукозаписью и обработкой звука, что помогает и в основной работе."
     gitHub: adshpagin
   - id: 2344
     photoFileName: 2344.jpg
@@ -36237,3 +36237,153 @@ speakers:
     bio:
       - {language: en, text: "He graduated from Fudan University with a master's degree and has worked for Huawei for\
             \ 1 year. He took part in the dev of RISC-V port of OpenJDK and is interested in GC algorithms."}
+  - id: 2523
+    photoFileName: 2523.jpg
+    photoUpdatedAt: 2023-03-20T15:51:30Z[UTC]
+    name:
+      - {language: en, text: "Alexandra Murzina"}
+      - {language: ru, text: "Александра Мурзина"}
+    companyIds: [410]
+    bio:
+      - {language: ru, text: "<p>В Positive Technologies успела поработать с продуктами PT Application Firewall, PT NAD, PT\
+            \ SIEM, PT Sandbox. Занимается исследованиями и разработками решений, основанных на методах машинного обучения\
+            , и исследованием безопасности этих алгоритмов в реальной жизни. Автор нескольких статей по этим тематикам. С\
+            \ 2019 года организует AI CTF &mdash; конкурс в рамках Positive Hack Days, в котором участникам предлагается и\
+            сследовать уязвимости ИИ. В 2019 и 2022 организовывала секцию с докладами ML &amp; Security на Data Fest Siberia.\
+            \ В 2021 и 2022 организовывала секцию AI Track на Positive Hack Days.</p>"}
+    gitHub: amurzina
+    habr: murzina_a
+  - id: 2524
+    photoFileName: 2524.jpg
+    photoUpdatedAt: 2023-03-23T20:23:31Z[UTC]
+    name:
+      - {language: en, text: "Alexey Antonov"}
+      - {language: ru, text: "Алексей Антонов"}
+    companyIds: [635]
+    bio:
+      - {language: en, text: "<p>Work in detection methods analysis group. We use machine learning to detect various types\
+            \ of malicious activity. From analysis static features and behavioral of executable to analysis of hosts in the\
+            \ internet. To solve our tasks we use different ML algorithms: neural networks, locality sensitive hashing, gradient\
+            \ boosting, etc.</p>"}
+      - {language: ru, text: "<p>Работает в группе анализа методов детектирования, где используют машинное обучение для об\
+            наружения различных видов вредоносной активности. От анализа статических и поведенческих признаков исполняемых\
+            \ файлов до анализа хостов в интернете. В команде применяют различные ML-алгоритмы в зависимости от задачи: не\
+            йросети, гибкое хеширование, градиентный бустинг.</p>"}
+  - id: 2525
+    photoFileName: 2525.jpg
+    photoUpdatedAt: 2023-03-02T14:59:31Z[UTC]
+    name:
+      - {language: en, text: "Artemiy Malkov"}
+      - {language: ru, text: "Артемий Малков"}
+    companyIds: [1046]
+    bio:
+      - {language: en, text: "<p>DataMonsters founder, PhD, AI expert with 15 years of experience in Silicon Valley. NVIDIA\
+            \ Elite Partner. Clients: Siemens, General Electric, Intel, Cisco, Nestl&eacute;, Adobe, Sberbank, X5, Megafon,\
+            \ Tinkoff, etc. LeanDS activist, co-author of the Research QUEST AI project management framework.</p>"}
+      - {language: ru, text: "<p>Основатель DataMonsters, PhD. Эксперт по искусственному интеллекту, 15 лет опыта работы в\
+            \ Кремниевой долине. Элитный партнер NVIDIA. Клиенты: Siemens, General Electric, Intel, Cisco, Nestl&eacute;,\
+            \ Adobe, Сбер, X5, Мегафон, Тинькофф и др. Активист движения LeanDS, соавтор фреймворка управления ИИ-проектам\
+            и Research QUEST.</p>"}
+  - id: 2526
+    photoFileName: 2526.jpg
+    photoUpdatedAt: 2023-03-02T11:23:59Z[UTC]
+    name:
+      - {language: en, text: "Julia Rubtsova"}
+      - {language: ru, text: "Юлия Рубцова"}
+    companyIds: [1046]
+    bio:
+      - {language: en, text: "<p>PhD in Data Science. For the last 8 years she has been responsible for the launch, growth\
+            \ and development of IT products, including complex science-related products that use Data Science and machine\
+            \ learning technologies. Co-author and co-host of LeanDS &mdash; a course on managing Data Science projects and\
+            \ products.</p>"}
+      - {language: ru, text: "<p>PhD в Data Science. Последние 8 лет отвечает за запуск, рост и развитие IT-продуктов, в т\
+            ом числе сложных наукоемких продуктов, в которых используются технологии Data Science и машинного обучения. Со\
+            автор и соведущий LeanDS &mdash; курса по управлению Data Science-проектами и продуктами.</p>"}
+  - id: 2527
+    photoFileName: 2527.jpg
+    photoUpdatedAt: 2023-03-21T10:59:04Z[UTC]
+    name:
+      - {language: en, text: "Alexander Krainov"}
+      - {language: ru, text: "Александр Крайнов"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Директор по развитию технологий искусственного интеллекта Яндекса. Отвечает за направлени\
+            е экспериментальных продуктов и технологий на базе ИИ. До этого на протяжении 9 лет возглавлял в Яндексе разра\
+            ботку продуктов и алгоритмов компьютерного зрения. Член экспертного совета премии Сегаловича.</p>"}
+    habr: krainov
+  - id: 2528
+    photoFileName: 2528.jpg
+    photoUpdatedAt: 2023-03-20T08:30:11Z[UTC]
+    name:
+      - {language: en, text: "Nikolay Lyfenko"}
+      - {language: ru, text: "Николай Лыфенко"}
+    companyIds: [410]
+    bio:
+      - {language: en, text: "<p>Interested in ML + Security. I'm sure there are a lot of non-trivial information security\
+            \ problems that can be solved with machine learning.</p>"}
+      - {language: ru, text: "<p>Интересуется ML + Security. Уверен, что с помощью машинного обучения можно решить много н\
+            етривиальных задач информационной безопасности.</p>"}
+    gitHub: nlyf
+    habr: nlyf
+  - id: 2529
+    photoFileName: 2529.jpg
+    photoUpdatedAt: 2023-03-20T10:42:33Z[UTC]
+    name:
+      - {language: en, text: "Evgeny Popov"}
+      - {language: ru, text: "Евгений Попов"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Руководитель направления Здравоохранение Yandex Cloud. До Яндекса несколько лет занимался\
+            \ разработкой систем в области здравоохранения (телемедицина, автоматизация референс-центров, внедрение ИИ в л\
+            учевую диагностику). Активно участвовал в организации московского эксперимента по компьютерному зрению и в раз\
+            работке серии ГОСТов по ИИ в здравоохранении.</p>"}
+  - id: 2530
+    photoFileName: 2530.jpg
+    photoUpdatedAt: 2023-03-27T07:58:52Z[UTC]
+    name:
+      - {language: en, text: "Ashat Urazbaev"}
+      - {language: ru, text: "Асхат Уразбаев"}
+    companyIds: [468]
+    bio:
+      - {language: en, text: "<p>Graduated from Moscow Institute of Physics and Technology in 2000 with honors. Worked as\
+            \ a programmer, managed development, managed projects in various IT companies. In 2007, he founded the company\
+            \ ScrumTrek, which consults, conducts trainings and helps companies go through the Agile transformation. ScrumTrek\
+            \ clients include such companies as Skype, Sberbank, Alfa-Bank, Post Bank, Megafon, Yandex, Rambler and others.\
+            \ ScrumTrek also organizes conferences such as AgileDays and ArchDays.</p>"}
+      - {language: ru, text: "<p>Окончил МФТИ в 2000 году с отличием. Работал программистом, руководил разработкой, управл\
+            ял проектами в различных ИТ-компаниях. В 2007 году основал компанию ScrumTrek, которая консультирует, проводит\
+            \ тренинги и помогает компаниям проходить Agile-трансформацию. Среди клиентов ScrumTrek такие компании, как Skype,\
+            \ Сбербанк, Альфа-Банк, Почта Банк, МегаФон, Яндекс, Рамблер и другие. ScrumTrek также организует конференции\
+            \ AgileDays, ArchDays и другие.</p>"}
+    twitter: zibsun
+    habr: Zibsun
+  - id: 2531
+    photoFileName: 2531.jpg
+    photoUpdatedAt: 2023-03-27T08:04:56Z[UTC]
+    name:
+      - {language: en, text: "Alexander Dmitriev"}
+      - {language: ru, text: "Александр Дмитриев"}
+    companyIds: [234, 1047]
+    bio:
+      - {language: en, text: "<p>Data Scientist at HH.RU. &laquo;IT-gardener&raquo;, fond of aeroponics.</p>"}
+      - {language: ru, text: "<p>Data Scientist в hh.ru. IT-садовод, увлекается аэропоникой.</p>"}
+  - id: 2532
+    photoFileName: 2532.jpg
+    photoUpdatedAt: 2023-03-27T08:02:45Z[UTC]
+    name:
+      - {language: en, text: "Fedor Romanenko"}
+      - {language: ru, text: "Фёдор Романенко"}
+    companyIds: [611]
+    bio:
+      - {language: en, text: "<p>He has been working on web search since the late 90s. Worked for 12 years at Yandex, where\
+            \ he led the launch of Yandex.Images and Yandex.Video, social search, developed the infrastructure and methodology\
+            \ for search quality. Since 2018, he has been leading the quality of search in Avito, where he launched work on\
+            \ machine learning, a multi-objective optimization framework, big data, and an RT aggregation pipeline for search\
+            \ features. Leads projects for the implementation of tools for paid promotion in the search result page.</p>"}
+      - {language: ru, text: "<p>Занимается поиском с конца 90-х. Проработал 12 лет в Яндексе, где руководил запуском Янде\
+            кс Картинок и Яндекс Видео, свежего и социального поиска, разрабатывал инфраструктуру и методологию качества п\
+            оиска. С 2018 года руководит качеством поиска в Авито, запустил машинное обучение, фреймворк многокритериально\
+            й оптимизации, большие данные, пайплайн RT-агрегации поисковых фичей. Лид проектов по реализации инструментов\
+            \ платного продвижения в выдаче.</p>"}
+    twitter: fedor57
+    gitHub: fedor57
