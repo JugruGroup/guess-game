@@ -3590,11 +3590,6 @@ companies:
   - id: 997
     name:
       - {language: en, text: Lido}
-  - id: 998
-    name:
-      - {language: en, text: "START.ru online cinema"}
-      - {language: ru, text: "Онлайн-кинотеатр START"}
-    siteLink: https://start.ru
   - id: 999
     name:
       - {language: en, text: "ALM Works"}
@@ -3782,10 +3777,6 @@ companies:
     name:
       - {language: en, text: documentat.io}
     siteLink: https://documentat.io
-  - id: 1044
-    name:
-      - {language: en, text: "TestOps enthusiast"}
-      - {language: ru, text: TestOps-энтузиаст}
   - id: 1045
     name:
       - {language: en, text: "\"Provetrimsya!\" podcast"}
