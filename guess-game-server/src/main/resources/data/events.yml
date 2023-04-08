@@ -1855,7 +1855,7 @@ events:
     days:
       - {startDate: "2013-09-02", endDate: "2013-09-05", placeId: 0}
     youtubeLink: https://www.youtube.com/playlist?list=PLVe-2wcL84b8T9aw7AaAj-Kir3CKABg55
-    talkIds: [2175]
+    talkIds: [2175, 4409, 4410, 4411]
   - eventTypeId: 14
     name:
       - {language: en, text: "JUG.ru Meetup #24"}
