@@ -1215,9 +1215,9 @@ events:
     days:
       - {startDate: "2019-07-08", endDate: "2019-07-12", placeId: 4}
     siteLink:
-      - {language: en, text: "https://sptdc.ru/"}
+      - {language: en, text: "https://2019.sptdc.ru"}
     youtubeLink: https://www.youtube.com/playlist?list=PL_5iU_mKtf3tVGo_x8XO0J8SEr32BxYjv
-    talkIds: [244, 245, 251, 246, 247, 248, 249, 250, 252, 253]
+    talkIds: [244, 4413, 245, 251, 246, 4414, 247, 4415, 248, 4416, 249, 4417, 250, 4418, 252, 4419, 253, 4420]
   - eventTypeId: 10
     name:
       - {language: en, text: "SPTDC 2020"}
@@ -1226,7 +1226,7 @@ events:
     siteLink:
       - {language: en, text: "https://sptdc.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL_5iU_mKtf3uFget7xsc6CueBQO3EfB_r
-    talkIds: [2367, 2368, 2369, 2370, 2371, 2539, 2566]
+    talkIds: [2367, 2368, 2369, 2370, 4412, 2371, 2539, 2566]
   # SmartData
   - eventTypeId: 11
     name:
@@ -1855,7 +1855,7 @@ events:
     days:
       - {startDate: "2013-09-02", endDate: "2013-09-05", placeId: 0}
     youtubeLink: https://www.youtube.com/playlist?list=PLVe-2wcL84b8T9aw7AaAj-Kir3CKABg55
-    talkIds: [2175]
+    talkIds: [2175, 4409, 4410, 4411]
   - eventTypeId: 14
     name:
       - {language: en, text: "JUG.ru Meetup #24"}
