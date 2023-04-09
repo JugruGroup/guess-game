@@ -1226,7 +1226,7 @@ events:
     siteLink:
       - {language: en, text: "https://sptdc.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL_5iU_mKtf3uFget7xsc6CueBQO3EfB_r
-    talkIds: [2367, 2368, 2369, 2370, 2371, 2539, 2566]
+    talkIds: [2367, 2368, 2369, 2370, 4412, 2371, 2539, 2566]
   # SmartData
   - eventTypeId: 11
     name:
