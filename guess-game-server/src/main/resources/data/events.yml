@@ -1215,9 +1215,9 @@ events:
     days:
       - {startDate: "2019-07-08", endDate: "2019-07-12", placeId: 4}
     siteLink:
-      - {language: en, text: "https://sptdc.ru/"}
+      - {language: en, text: "https://2019.sptdc.ru"}
     youtubeLink: https://www.youtube.com/playlist?list=PL_5iU_mKtf3tVGo_x8XO0J8SEr32BxYjv
-    talkIds: [244, 245, 251, 246, 247, 248, 249, 250, 252, 253]
+    talkIds: [244, 4413, 245, 251, 246, 4414, 247, 4415, 248, 4416, 249, 4417, 250, 4418, 252, 4419, 253, 4420]
   - eventTypeId: 10
     name:
       - {language: en, text: "SPTDC 2020"}
