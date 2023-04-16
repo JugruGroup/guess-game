@@ -64,7 +64,7 @@ public class TalkDto extends TalkBriefDto {
                 talkTime,
                 event.getFinalTimeZoneId());
         var formatter = DateTimeFormatter.ofPattern("O");
-        var utcTimeZone = (String) zonedDateTime.format(formatter).replace("GMT", "UTC");
+        var utcTimeZone = zonedDateTime.format(formatter).replace("GMT", "UTC");
 
         return new TalkDto(
                 talkSuperBriefDto,
