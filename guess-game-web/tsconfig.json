@@ -16,7 +16,7 @@
     ],
     "useDefineForClassFields": false,
     "lib": [
-      "es2018",
+      "ES2022",
       "dom"
     ]
   }
