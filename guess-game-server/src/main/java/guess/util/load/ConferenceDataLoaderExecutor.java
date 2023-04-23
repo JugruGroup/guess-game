@@ -1808,9 +1808,9 @@ public class ConferenceDataLoaderExecutor {
     }
 
     /**
-     * Checks talk times.
+     * Checks talk attributes.
      */
-    static void checkTalkTimes() throws SpeakerDuplicatedException, IOException {
+    static void checkTalkAttributes() throws SpeakerDuplicatedException, IOException {
         // Read event types, places, events, companies, speakers, talks from resource files
         var resourceSourceInformation = YamlUtils.readSourceInformation();
         List<Event> events = resourceSourceInformation.getEvents().stream()
@@ -1820,7 +1820,7 @@ public class ConferenceDataLoaderExecutor {
         events.forEach(event -> {
             int all = event.getTalks().size();
             int withTimes = (int) event.getTalks().stream()
-                    .filter(t -> (t.getStartTime() != null) && (t.getEndTime() != null))
+                    .filter(t -> (t.getTalkDay() != null) && (t.getStartTime() != null) && (t.getEndTime() != null) && (t.getTrack() != null))
                     .count();
             double percents = (all == 0) ? 0 : (double) withTimes / all * 100;
             String message = String.format("%-30s %2d/%2d (%6.2f%%)",
@@ -2045,8 +2045,8 @@ public class ConferenceDataLoaderExecutor {
         // Check companies
 //        checkCompanies();
 
-        // Check talk times
-//        checkTalkTimes();
+        // Check talk attributes
+//        checkTalkAttributes();
 
         // Load talks, speaker and event
         // 2016

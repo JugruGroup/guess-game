@@ -3371,7 +3371,7 @@ class ConferenceDataLoaderExecutorTest {
     }
 
     @Test
-    void checkTalkTimes() {
+    void checkTalkAttributes() {
         try (MockedStatic<YamlUtils> mockedStatic = Mockito.mockStatic(YamlUtils.class)) {
             LocalDate now = LocalDate.now();
             LocalDate yesterday = now.minusDays(1);
@@ -3457,29 +3457,85 @@ class ConferenceDataLoaderExecutorTest {
             Talk talk0 = new Talk();
 
             Talk talk1 = new Talk();
-            talk1.setStartTime(LocalTime.of(10, 0));
+            talk1.setTalkDay(1L);
 
             Talk talk2 = new Talk();
-            talk2.setEndTime(LocalTime.of(11, 0));
+            talk2.setStartTime(LocalTime.of(10, 0));
 
             Talk talk3 = new Talk();
+            talk3.setTalkDay(1L);
             talk3.setStartTime(LocalTime.of(10, 0));
-            talk3.setEndTime(LocalTime.of(11, 0));
 
             Talk talk4 = new Talk();
-            talk4.setStartTime(LocalTime.of(12, 0));
-            talk4.setEndTime(LocalTime.of(12, 45));
+            talk4.setEndTime(LocalTime.of(11, 0));
 
             Talk talk5 = new Talk();
-            talk5.setStartTime(LocalTime.of(13, 0));
-            talk5.setEndTime(LocalTime.of(13, 15));
+            talk5.setTalkDay(1L);
+            talk5.setEndTime(LocalTime.of(11, 0));
 
-            event2.setTalks(List.of(talk0));
-            event3.setTalks(List.of(talk1));
-            event4.setTalks(List.of(talk2));
-            event5.setTalks(List.of(talk3));
-            event6.setTalks(List.of(talk1, talk3));
-            event7.setTalks(List.of(talk2, talk3, talk4, talk5));
+            Talk talk6 = new Talk();
+            talk6.setStartTime(LocalTime.of(10, 0));
+            talk6.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk7 = new Talk();
+            talk7.setTalkDay(1L);
+            talk7.setStartTime(LocalTime.of(10, 0));
+            talk7.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk8 = new Talk();
+            talk8.setTrack(1L);
+
+            Talk talk9 = new Talk();
+            talk9.setTalkDay(1L);
+            talk9.setTrack(1L);
+
+            Talk talk10 = new Talk();
+            talk10.setStartTime(LocalTime.of(10, 0));
+            talk10.setTrack(1L);
+
+            Talk talk11 = new Talk();
+            talk11.setTalkDay(1L);
+            talk11.setStartTime(LocalTime.of(10, 0));
+            talk11.setTrack(1L);
+
+            Talk talk12 = new Talk();
+            talk12.setEndTime(LocalTime.of(11, 0));
+            talk12.setTrack(1L);
+
+            Talk talk13 = new Talk();
+            talk13.setTalkDay(1L);
+            talk13.setEndTime(LocalTime.of(11, 0));
+            talk13.setTrack(1L);
+
+            Talk talk14 = new Talk();
+            talk14.setStartTime(LocalTime.of(10, 0));
+            talk14.setEndTime(LocalTime.of(11, 0));
+            talk14.setTrack(1L);
+
+            Talk talk15 = new Talk();
+            talk15.setTalkDay(1L);
+            talk15.setStartTime(LocalTime.of(10, 0));
+            talk15.setEndTime(LocalTime.of(11, 0));
+            talk15.setTrack(1L);
+
+            Talk talk16 = new Talk();
+            talk16.setTalkDay(1L);
+            talk16.setStartTime(LocalTime.of(12, 0));
+            talk16.setEndTime(LocalTime.of(12, 45));
+            talk16.setTrack(1L);
+
+            Talk talk17 = new Talk();
+            talk17.setTalkDay(1L);
+            talk17.setStartTime(LocalTime.of(13, 0));
+            talk17.setEndTime(LocalTime.of(13, 15));
+            talk17.setTrack(1L);
+
+            event2.setTalks(List.of(talk0, talk1, talk2, talk3, talk4));
+            event3.setTalks(List.of(talk5, talk6, talk7, talk8, talk9));
+            event4.setTalks(List.of(talk10, talk11, talk12, talk13, talk14));
+            event5.setTalks(List.of(talk15));
+            event6.setTalks(List.of(talk1, talk15));
+            event7.setTalks(List.of(talk2, talk15, talk16, talk17));
 
             mockedStatic.when(YamlUtils::readSourceInformation)
                     .thenReturn(new SourceInformation(
@@ -3497,7 +3553,7 @@ class ConferenceDataLoaderExecutorTest {
                             Collections.emptyList()
                     ));
 
-            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkTalkTimes);
+            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkTalkAttributes);
         }
     }
 
