@@ -3371,7 +3371,7 @@ class ConferenceDataLoaderExecutorTest {
     }
 
     @Test
-    void checkTalkTimes() {
+    void checkTalkAttributes() {
         try (MockedStatic<YamlUtils> mockedStatic = Mockito.mockStatic(YamlUtils.class)) {
             LocalDate now = LocalDate.now();
             LocalDate yesterday = now.minusDays(1);
@@ -3497,7 +3497,7 @@ class ConferenceDataLoaderExecutorTest {
                             Collections.emptyList()
                     ));
 
-            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkTalkTimes);
+            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkTalkAttributes);
         }
     }
 
