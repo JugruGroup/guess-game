@@ -297,8 +297,8 @@ events:
     days:
       - {startDate: "2019-11-06", endDate: "2019-11-07", placeId: 7}
     siteLink:
-      - {language: en, text: "https://dotnext-moscow.ru/en/"}
-      - {language: ru, text: "https://dotnext-moscow.ru/"}
+      - {language: en, text: "https://2019.dotnext-moscow.ru/en/"}
+      - {language: ru, text: "https://2019.dotnext-moscow.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLtWrKx3nUGBfg3H0bRcA6-zOHfN42_atE
     talkIds: [140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161,
         162, 163, 164, 165, 166, 167, 168, 169]
@@ -309,8 +309,8 @@ events:
     days:
       - {startDate: "2020-06-15", endDate: "2020-06-18", placeId: 24}
     siteLink:
-      - {language: en, text: "https://dotnext-piter.ru/en/"}
-      - {language: ru, text: "https://dotnext-piter.ru/"}
+      - {language: en, text: "https://2020.dotnext-piter.ru/en/"}
+      - {language: ru, text: "https://2020.dotnext-piter.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLtWrKx3nUGBe8Fm_3Mp6dtdQnet5GuHFu
     talkIds: [1371, 1632, 1362, 2221, 2411, 2412, 2309, 1349, 1352, 1358, 1347, 1374, 1361, 2413, 2414, 2415, 2339, 1845,
         1351, 1366, 1348, 1356, 1350, 2574, 2454, 2416, 2417, 2418, 2422, 1367, 1375, 2419, 2420, 1359, 1355, 1369, 2421,
@@ -322,7 +322,8 @@ events:
     days:
       - {startDate: "2020-12-02", endDate: "2020-12-05", placeId: 24}
     siteLink:
-      - {language: ru, text: "https://dotnext-moscow.ru/"}
+      - {language: en, text: "https://2020.dotnext-moscow.ru/en/"}
+      - {language: ru, text: "https://2020.dotnext-moscow.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLtWrKx3nUGBfRvrRmicKedShARUrDU3sj
     talkIds: [2798, 2799, 2800, 2801, 2802, 2831, 2803, 2804, 2805, 2832, 2807, 2808, 2809, 2810, 2811, 2812, 2813, 2814,
         2833, 2815, 2816, 2817, 2818, 2819, 2820, 2821, 2822, 2823, 2824, 2825, 2826, 2827, 2829, 2830, 2834]
