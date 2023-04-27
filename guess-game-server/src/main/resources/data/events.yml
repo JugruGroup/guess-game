@@ -624,8 +624,8 @@ events:
     days:
       - {startDate: "2019-11-08", endDate: "2019-11-09", placeId: 7}
     siteLink:
-      - {language: en, text: "https://holyjs-moscow.ru/en/"}
-      - {language: ru, text: "https://holyjs-moscow.ru/"}
+      - {language: en, text: "https://2019.holyjs-moscow.ru/en/"}
+      - {language: ru, text: "https://2019.holyjs-moscow.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8KXjvw3i0bY-fCn1abQMbv8
     talkIds: [170, 171, 172, 1345, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190,
         191, 192, 193, 194, 195, 1346, 196, 197, 198, 3627, 3628]
@@ -636,8 +636,8 @@ events:
     days:
       - {startDate: "2020-06-22", endDate: "2020-06-26", placeId: 24}
     siteLink:
-      - {language: en, text: "https://holyjs-piter.ru/en/"}
-      - {language: ru, text: "https://holyjs-piter.ru"}
+      - {language: en, text: "https://2020.holyjs-piter.ru/en/"}
+      - {language: ru, text: "https://2020.holyjs-piter.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8KY2RD2eJIrbdSSljJ49QVm
     talkIds: [1957, 1432, 1434, 2456, 2457, 2458, 2459, 2460, 2461, 2462, 1756, 1433, 2463, 1409, 1415, 1757, 1405, 2464,
         2465, 2466, 2467, 1414, 1428, 1435, 2468, 2469, 1643, 2470, 1422, 2471, 2472, 2473, 2391, 2434, 1406, 2435, 2392,
@@ -650,8 +650,8 @@ events:
     days:
       - {startDate: "2020-11-25", endDate: "2020-11-28", placeId: 24}
     siteLink:
-      - {language: en, text: "https://holyjs-moscow.ru/en/"}
-      - {language: ru, text: "https://holyjs-moscow.ru/"}
+      - {language: en, text: "https://2020.holyjs-moscow.ru/en/"}
+      - {language: ru, text: "https://2020.holyjs-moscow.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8KkFDsx3tAM8t1kOMn89CwU
     talkIds: [2723, 2724, 2725, 2726, 2727, 2728, 2729, 2730, 2731, 2732, 2733, 2734, 2735, 2736, 2737, 2757, 2738, 2739,
         2740, 2741, 2742, 2743, 2744, 2745, 2758, 2746, 2747, 2748, 2749, 2750, 2751, 2752, 2753]
