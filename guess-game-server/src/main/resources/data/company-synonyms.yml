@@ -142,6 +142,10 @@ companySynonyms:
     synonyms: [
         "DPI Solutions"
     ]
+  - name: "Electrolux AB"
+    synonyms: [
+      Electrolux
+    ]
   - name: "Emma Technologies"
     synonyms: [
         Emma
@@ -561,11 +565,19 @@ companySynonyms:
         "VK Звонки",
         "VK Video",
         "VK Видео",
-        "VK Play"
+        "VK Play",
+        "VK Education",
+        "VK Образование",
+        "VK for Business",
+        "ВКонтакте для бизнеса"
     ]
   - name: VMware
     synonyms: [
         "VMware Tanzu"
+    ]
+  - name: "X5 Group"
+    synonyms: [
+        "X5 Tech"
     ]
   - name: "Yahoo!"
     synonyms: [

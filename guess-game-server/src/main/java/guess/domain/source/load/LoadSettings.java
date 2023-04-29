@@ -59,4 +59,14 @@ public record LoadSettings(Map<NameCompany, Long> knownSpeakerIdsMap, Set<String
                 true,
                 eventTemplate);
     }
+
+    public static LoadSettings eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(Event eventTemplate,
+                                                                                    Map<NameCompany, Long> knownSpeakerIdsMap,
+                                                                                    Set<String> invalidTalksSet) {
+        return new LoadSettings(
+                knownSpeakerIdsMap,
+                invalidTalksSet,
+                true,
+                eventTemplate);
+    }
 }

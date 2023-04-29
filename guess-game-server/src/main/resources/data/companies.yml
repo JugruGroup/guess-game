@@ -3790,3 +3790,69 @@ companies:
     name:
       - {language: en, text: CyberDacha}
     siteLink: https://www.youtube.com/channel/UCdiwSVi1wq6wnd4gbpjbIAg
+  - id: 1048
+    name:
+      - {language: en, text: "Marathon Labs"}
+    siteLink: https://marathonlabs.io
+  - id: 1049
+    name:
+      - {language: en, text: "Electrolux AB"}
+    siteLink: https://www.electrolux.com
+  - id: 1050
+    name:
+      - {language: en, text: "Product Psychology"}
+    siteLink: https://psychologyproduct.ru
+  - id: 1051
+    name:
+      - {language: en, text: Yoonion}
+    siteLink: https://yoonion.ru
+  - id: 1052
+    name:
+      - {language: en, text: RSHB-Intech}
+      - {language: ru, text: РСХБ-Интех}
+    siteLink: https://rshb-intech.ru
+  - id: 1053
+    name:
+      - {language: en, text: Supabase}
+    siteLink: https://supabase.com
+  - id: 1054
+    name:
+      - {language: en, text: DigitLetter}
+      - {language: ru, text: ЦифраБуква}
+    siteLink: https://www.youtube.com/@digitletter
+  - id: 1055
+    name:
+      - {language: en, text: BrowserStack}
+    siteLink: https://www.browserstack.com
+  - id: 1056
+    name:
+      - {language: en, text: Evocargo}
+    siteLink: https://evocargo.com
+  - id: 1057
+    name:
+      - {language: en, text: "Signant Health"}
+    siteLink: https://www.signanthealth.com
+  - id: 1058
+    name:
+      - {language: en, text: Aero}
+  - id: 1059
+    name:
+      - {language: en, text: "TestOps enthusiast"}
+      - {language: ru, text: TestOps-энтузиаст}
+  - id: 1060
+    name:
+      - {language: en, text: "Flipper devices"}
+    siteLink: https://www.flipperdevices.com
+  - id: 1061
+    name:
+      - {language: en, text: Astral-soft}
+      - {language: ru, text: Астрал-софт}
+    siteLink: https://astral-soft.ru
+  - id: 1062
+    name:
+      - {language: en, text: SoftSwiss}
+    siteLink: https://www.softswiss.com
+  - id: 1063
+    name:
+      - {language: en, text: "QA team"}
+    siteLink: https://t.me/dev_qa

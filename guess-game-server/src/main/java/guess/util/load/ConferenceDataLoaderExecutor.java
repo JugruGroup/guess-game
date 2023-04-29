@@ -2460,9 +2460,12 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("TechTrain 2023 Spring", null, List.of(24L)),
 //                        Set.of("Открытие фестиваля TechTrain 2023 Spring", "Викторина и подведение итогов TechTrain 2023 Spring")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2023, 4, 11), "2023 Spring",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2023 Spring", null, List.of(24L, 11L)),
-//                        Set.of()));
+//                        Map.of(new NameCompany("Алексей Иванов", null), 2533L),
+//                        Set.of("Открытие конференции Heisenbug 2023 Spring", "Подведение итогов онлайн-части Heisenbug 2023 Spring",
+//                                "Открытие офлайн-части конференции Heisenbug 2023 Spring", "Открытие", "Lightning Talks",
+//                                "Coding Battle", "Закрытие конференции Heisenbug 2023 Spring")));
 //        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2023, 4, 12), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("JPoint 2023", null, List.of(24L, 11L)),
