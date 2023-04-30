@@ -37115,6 +37115,7 @@ speakers:
       - {language: ru, text: "<p>В Росбанке занимается разработкой микросервисов нового интернет-клиент банка для юридичес\
             ких лиц для осуществления внешнеэкономической деятельности. Работал в Центральном Банке РФ. Участвовал в проек\
             те Google Healthcare.</p>"}
+    gitHub: arvgord
   - id: 2582
     photoFileName: 2582.jpg
     photoUpdatedAt: 2023-04-06T12:30:21Z[UTC]
@@ -37197,6 +37198,7 @@ speakers:
             \ игры Echelon и Echelon-WW. Позже перешел в Sun Microsystems, а затем в Oracle. Работал с JavaFX и JavaFX 3D\
             \ API и реализациями. Затем перешел в Delightex (форк JetBrains) и работал там над образовательным проектом. И\
             , наконец, перешел в компанию Huawei.</p>"
+    gitHub: kirillp
   - id: 2588
     photoFileName: 2588.jpg
     photoUpdatedAt: 2023-03-13T10:08:48Z[UTC]
@@ -37239,6 +37241,7 @@ speakers:
             \ He is an independent consultant and trainer.&nbsp; To share his knowledge, he gives talks at conferences if\
             \ he is not working on a new article about software engineering.</p>"}
     twitter: ElmarDott
+    gitHub: ElmarDott
   - id: 2591
     photoFileName: 2591.jpg
     photoUpdatedAt: 2023-03-01T09:50:39Z[UTC]
@@ -37300,6 +37303,8 @@ speakers:
       - {language: ru, text: "<p>Эксперт в области SRE/DevOps. Помогает разработке и эксплуатации находить общий язык. Зан\
             имается улучшением процессов. Адепт современных подходов к инфраструктуре и разработке. Регулярно выступает и\
             \ делится опытом с коллегами как на внутренних, так и на публичных мероприятиях.</p>"}
+    gitHub: gecube
+    habr: gecube
   - id: 2595
     photoFileName: 2595.jpg
     photoUpdatedAt: 2023-03-16T13:03:05Z[UTC]
@@ -37338,6 +37343,8 @@ speakers:
       - {language: ru, text: "<p>В профессиональной разработке с 2003 года. С 2010 года программирует на Java. В основном\
             \ работает в финансовой сфере. Работал в московском техцентре Deutsche Bank, Райффайзен Банке, сейчас занимает\
             ся системой авторизации в Мир Plat.Form.</p>"}
+    gitHub: petrelevich
+    habr: Petrelevich
   - id: 2598
     photoFileName: 2598.jpg
     photoUpdatedAt: 2023-02-18T16:33:25Z[UTC]
@@ -37350,6 +37357,7 @@ speakers:
             \ and concurrency, economic models."}
       - {language: ru, text: "Занимается разработкой алготрейдинговых систем, интересуется low-latency и конкурентным прог\
             раммированием, экономическими моделями."}
+    gitHub: lantalex
   - id: 2599
     photoFileName: 2599.jpg
     photoUpdatedAt: 2023-02-16T10:10:39Z[UTC]
@@ -37366,6 +37374,7 @@ speakers:
             ыми системами. В продуктовой разработке в Альфа-Банке более 3 лет. В свободное время катается на лыжах, занима\
             ется 3D-моделированием и 3D-печатью, участвует в крипто-хакатонах, играет в видеоигры. Сознание Яна будоражит\
             \ поиск и внедрение новых технологий, улучшение процессов и инновации.</p>"}
+    gitHub: Sprytin
   - id: 2600
     photoFileName: 2600.jpg
     photoUpdatedAt: 2023-02-27T09:22:31Z[UTC]
@@ -37420,6 +37429,7 @@ speakers:
       - {language: ru, text: "<p>IT Area Lead в Домклике. Разрабатывает с 2005 года. Начинал с олимпиадного программирован\
             ия, а затем пришел в продуктовую разработку. С самого начала писал на Java. Руководит и выстраивает архитектур\
             у у нескольких команд. <a href=\"https://habr.com/ru/users/olegklimenko52/posts/\">Пишет</a> на Habr.</p>"}
+    habr: olegklimenko52
   - id: 2604
     photoFileName: 2604.jpg
     photoUpdatedAt: 2023-03-03T08:58Z[UTC]
@@ -37465,6 +37475,8 @@ speakers:
             нит), занимался своим стартапом, в прошлом &mdash; автор популярных постов на Хабре. Ведет <a href=\"https://t.me/senior_unicorn\"\
             >Telegram-канал</a> о развитии разработчиков.</p>"}
     twitter: vladimir_maslov
+    gitHub: vladimir-maslov
+    habr: HotWaterMusic
   - id: 2607
     photoFileName: 2607.jpg
     photoUpdatedAt: 2023-03-10T12:01:50Z[UTC]
@@ -37494,6 +37506,7 @@ speakers:
             \ разработке платформы IntelliJ. Работал над библиотеками JDK в компаниях Sun Microsystems и Oracle. Решал зад\
             ачи, связанные с переводом Java-библиотек в репозитории с открытым исходным кодом. Начал работу над OpenJDK дл\
             я платформы IntelliJ.</p>"}
+    gitHub: denis-fokin
   - id: 2609
     photoFileName: 2609.jpg
     photoUpdatedAt: 2023-03-21T20:04:08Z[UTC]
@@ -37506,6 +37519,7 @@ speakers:
             \ and wants to share his experience."}
       - {language: ru, text: "<p>Разработчик в Кинопоиске. Занимался переводом взаимодействия бэкенда и фронтенда на GraphQL,\
             \ хочет поделиться накопленным опытом.</p>"}
+    gitHub: ysamsonov
   - id: 2610
     photoFileName: 2610.jpg
     photoUpdatedAt: 2023-02-16T02:22:05Z[UTC]
@@ -37536,6 +37550,8 @@ speakers:
             https://azhidkov.pro/posts\" target=\"_blank\" rel=\"noopener noreferrer\">блог</a> о своем подходе к дизайну\
             \ и разработке ПО.</p>"
     twitter: d__r_q
+    gitHub: d-r-q
+    habr: jdev
   - id: 2611
     photoFileName: 2611.jpg
     photoUpdatedAt: 2023-03-03T10:01:41Z[UTC]
