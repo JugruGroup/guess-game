@@ -18303,7 +18303,7 @@ speakers:
     photoFileName: 1288.jpg
     photoUpdatedAt: 2022-03-31T19:05:52Z[UTC]
     name:
-      - {language: en, text: "Vitaliy Aksenov"}
+      - {language: en, text: "Vitaly Aksenov"}
       - {language: ru, text: "Виталий Аксёнов"}
     companyIds: [279]
     bio:
@@ -30720,19 +30720,6 @@ speakers:
       - {language: en, text: "<p>CEO of OKTET Labs (Russia) and OKTET (independent Israeli entity). Developer for 19 years.</p>"}
       - {language: ru, text: "<p>CEO OKTET Labs (Россия) и OKTET (независимая израильская компания). Разработчик с 19-ти л\
             етним стажем.</p>"}
-  - id: 2140
-    photoFileName: 2140.jpg
-    photoUpdatedAt: 2022-03-31T19:05:52Z[UTC]
-    name:
-      - {language: en, text: "Vitaly Aksenov"}
-    companyIds: [279]
-    bio:
-      - language: en
-        text: "Vitaliy Aksenov currently is a researcher at ITMO University. His research focuses on practice and theory of\
-            \ concurrent data structures.\n\nBefore ITMO University, Vitaliy was a post-doc in IST Austria under the guidance\
-            \ of professor Dan Alistarh and received his PhD from Paris 7 Diderot and ITMO University under the guidance of\
-            \ professor Petr Kuznetsov."
-    gitHub: Aksenov239
   - id: 2141
     photoFileName: 2141.jpg
     photoUpdatedAt: 2022-06-03T10:35:02Z[UTC]
