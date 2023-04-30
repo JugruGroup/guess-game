@@ -36441,6 +36441,8 @@ speakers:
       - {language: en, text: "<p>Plays the piano, loves motorcycle gymkhana, codes in his spare time and his work time.</p>"}
       - {language: ru, text: "<p>Играет на рояле, любит мотоджимхану, пишет код в свободное и рабочее время.</p>"}
     twitter: anton_malinskiy
+    gitHub: Malinskiy
+    habr: Malinskiy
   - id: 2538
     photoFileName: 2538.jpg
     photoUpdatedAt: 2023-03-05T09:55:27Z[UTC]
@@ -36460,6 +36462,7 @@ speakers:
             матические статьи. Принимает участие в качестве ментора и судьи в различных хакатонах и конкурсах. Помогает на\
             йти первую работу в тестировании, начиная от помощи в составлении резюме и заканчивая обучением начинающих. Пр\
             еподавал в Otus.</p>"}
+    habr: SergeiShaikin
   - id: 2539
     photoFileName: 2539.jpg
     photoUpdatedAt: 2023-03-03T20:11:06Z[UTC]
@@ -36484,6 +36487,7 @@ speakers:
             \ на практике и кайфует от полученного результата, а именно: команды сонаправлены и двигают компанию к ее боль\
             шой цели, а люди понимают, зачем они это делают. От этого появляется сильная мотивация и вовлеченность, которы\
             е повышают продуктивность. Внутри и снаружи все понимают, что происходит, поэтому готовы помогать.</p>"}
+    habr: OKRStoyanov
   - id: 2540
     photoFileName: 2540.jpg
     photoUpdatedAt: 2023-03-03T16:34:36Z[UTC]
@@ -36554,6 +36558,8 @@ speakers:
         text: "<p>Пять лет работает SDET. Начинал с разработки внутренней системы автоматизации инфраструктуры и тестирова\
             ния. Занимался автотестированием в отделе шины данных для микросервисов трейдинговой платформы и инфраструктур\
             ной разработкой в Тинькофф.&nbsp;</p>\n<p>Сейчас создает инструменты для улучшения качества продуктов в Supabase.</p>"
+    gitHub: egor-romanov
+    habr: egor-romanov
   - id: 2545
     photoFileName: 2545.jpg
     photoUpdatedAt: 2023-02-08T13:05:48Z[UTC]
@@ -36658,6 +36664,9 @@ speakers:
       - {language: ru, text: "<p>Организатор чемпионатов по программированию с неприлично большим стажем. Выпускница КТ ИТ\
             МО. Переводчик с любого на разработческий. Режиссер и комментатор прямых трансляций спортивного программирован\
             ия, DevRel, академический менеджер и хорошая тамада.</p>"}
+    twitter: lperovskaya
+    gitHub: lperovskaya
+    habr: lperovskaya
   - id: 2553
     photoFileName: 2553.jpg
     photoUpdatedAt: 2023-04-05T15:02:08Z[UTC]
@@ -36684,6 +36693,7 @@ speakers:
             \ at Mozilla within Developer Experience working on tooling and infrastructure to help make a better web and now\
             \ heads up the Open Source Program Office at BrowserStack."}
     twitter: AutomatedTester
+    gitHub: AutomatedTester
   - id: 2555
     photoFileName: 2555.jpg
     photoUpdatedAt: 2023-02-13T22:57:53Z[UTC]
@@ -36805,6 +36815,7 @@ speakers:
       - {language: ru, text: "<p>В прошлом химик и системный администратор. Сейчас уже более 5 лет занимается тестирование\
             м на одном из крупнейших проектов Сбера. Прошел путь от тестировщика до лида по процессу и инструментам тестир\
             ования.</p>"}
+    gitHub: ChSergeiG
   - id: 2564
     photoFileName: 2564.jpg
     photoUpdatedAt: 2023-03-07T21:57:06Z[UTC]
@@ -36934,6 +36945,7 @@ speakers:
             \ 10 лет работает над улучшением производительности вычислений. В настоящее время является экспертом по произв\
             одительности СУБД в Postgres Professional и профессионально занимается анализом производительности, оценкой ра\
             бот по оптимизации и конфигурированием СУБД PostgreSQL и Postgres Pro."}
+    gitHub: mizhka
   - id: 2574
     photoFileName: 2574.jpg
     photoUpdatedAt: 2023-03-03T05:34Z[UTC]
@@ -36971,6 +36983,7 @@ speakers:
       - {language: ru, text: "<p>Руководитель команды тестирования, 11+ лет в тестировании, 7+ лет в автоматизации тестиро\
             вания. Тестировала web, desktop, mobile и оборудование. Любит везде делать хорошо. А также обожает танцы и теа\
             тр.</p>"}
+    habr: mmishonak
   - id: 2577
     photoFileName: 2577.jpg
     photoUpdatedAt: 2023-02-27T07:57:10Z[UTC]
@@ -36985,6 +36998,8 @@ speakers:
       - {language: ru, text: "<p>Пишет автотесты, разрабатывает вспомогательные сервисы, настраивает и администрирует обла\
             чную инфраструктуру dev-сред. В ИТ-сфере работает уже более 10 лет. Был и разработчиком, и системным аналитико\
             м, и SRE. Теперь уже 4 года в тестировании.&nbsp;</p>"}
+    gitHub: Sugrob57
+    habr: Sugrob-57
   - id: 2578
     photoFileName: 2578.jpg
     photoUpdatedAt: 2022-11-03T08:21:23Z[UTC]
