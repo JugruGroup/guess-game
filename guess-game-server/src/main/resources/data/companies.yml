@@ -3856,3 +3856,27 @@ companies:
     name:
       - {language: en, text: "QA team"}
     siteLink: https://t.me/dev_qa
+  - id: 1064
+    name:
+      - {language: en, text: "Prisma Medios de Pago"}
+    siteLink: https://www.prismamediosdepago.com
+  - id: 1065
+    name:
+      - {language: en, text: IT-NLMK}
+      - {language: ru, text: ИТ-НЛМК}
+    siteLink: https://it.nlmk.com
+  - id: 1066
+    name:
+      - {language: en, text: "Marco Schulz Consulting"}
+    siteLink: https://www.service-schulz.eu
+  - id: 1067
+    name:
+      - {language: en, text: "Zodia Markets"}
+    siteLink: https://zodia-markets.com
+  - id: 1068
+    name:
+      - {language: en, text: Aiven}
+    siteLink: https://aiven.io
+  - id: 1069
+    name:
+      - {language: en, text: "Dijkstra Markets"}

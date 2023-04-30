@@ -1,4 +1,8 @@
 companySynonyms:
+  - name: Aiven
+    synonyms: [
+        "Aiven (aiven.io)"
+    ]
   - name: AGIMA
     synonyms: [
         AGIMA.AI
@@ -247,6 +251,11 @@ companySynonyms:
   - name: LightSource
     synonyms: [
         Lightsource.ai
+    ]
+  - name: Lamoda
+    synonyms: [
+        "Lamoda Tech",
+        "Lamoda Tech"
     ]
   - name: "Mail.ru Group"
     synonyms: [

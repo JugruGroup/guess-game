@@ -2469,7 +2469,10 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2023, 4, 12), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("JPoint 2023", null, List.of(24L, 11L)),
-//                        Set.of()));
+//                        Set.of("Открытие конференции JPoint 2023", "Закрытие конференции JPoint 2023",
+//                                "Открытие второго дня онлайн-части", "Открытие офлайн-части конференции JPoint 2023",
+//                                "Подведение итогов онлайн-части конференции JPoint 2023", "Lightning Talks",
+//                                "Yandex Stack-o-loto", "Code Battle")));
 //        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2023, 5, 11), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("C++ Russia 2023", null, List.of(24L, 28L)),
