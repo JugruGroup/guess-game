@@ -3243,10 +3243,6 @@ companies:
     name:
       - {language: en, text: JettyCloud}
     siteLink: https://www.jettycloud.com
-  - id: 914
-    name:
-      - {language: en, text: TravelX}
-    siteLink: https://travelx.ai
   - id: 915
     name:
       - {language: en, text: Celsus.ai}
