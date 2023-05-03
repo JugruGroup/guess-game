@@ -7,8 +7,8 @@ events:
     days:
       - {startDate: "2019-04-19", endDate: "2019-04-20", placeId: 8}
     siteLink:
-      - {language: en, text: "https://2019.cppconf-moscow.ru/en/"}
-      - {language: ru, text: "https://2019.cppconf-moscow.ru/"}
+      - {language: en, text: "https://cppconf.ru/en/archive/2019/"}
+      - {language: ru, text: "https://cppconf.ru/archive/2019/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLZN9ZGiWZoZry4qywRiaNQ1CqGEpqKyMw
     talkIds: [1164, 1165, 1166, 1167, 1168, 1169, 1170, 1171, 1172, 1173, 1174, 1175, 1176, 1177, 1178, 1179, 1180, 1181,
         1182, 1183, 1184, 1185, 1186, 1187, 1188, 1189, 1190, 1191]
@@ -19,8 +19,8 @@ events:
     days:
       - {startDate: "2019-10-31", endDate: "2019-11-01", placeId: 4}
     siteLink:
-      - {language: en, text: "https://2019.cppconf-piter.ru/en/"}
-      - {language: ru, text: "https://2019.cppconf-piter.ru"}
+      - {language: en, text: "https://cppconf.ru/en/archive/2019 Piter/"}
+      - {language: ru, text: "https://cppconf.ru/archive/2019 Piter/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLZN9ZGiWZoZp6wYMijN-W4HOrJCsciwLj
     talkIds: [110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131,
         132, 133, 134, 135, 136, 137, 138, 139]
@@ -31,8 +31,8 @@ events:
     days:
       - {startDate: "2020-06-29", endDate: "2020-07-02", placeId: 24}
     siteLink:
-      - {language: en, text: "https://cppconf-moscow.ru/en/"}
-      - {language: ru, text: "https://cppconf-moscow.ru/"}
+      - {language: en, text: "https://cppconf.ru/en/archive/2020 Moscow/"}
+      - {language: ru, text: "https://cppconf.ru/archive/2020 Moscow/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLZN9ZGiWZoZruMY-MlkAd-nHzdP9TfLRC
     talkIds: [1438, 1440, 2520, 1449, 2521, 2522, 1445, 1460, 2353, 2354, 2399, 1451, 1446, 1453, 2524, 2525, 1459, 1461,
         1456, 1441, 1455, 1452, 1443, 2526, 2527, 2528, 1450, 2112, 1442, 1447, 2400, 1463, 2529, 2530, 2401, 1464]
@@ -43,8 +43,8 @@ events:
     days:
       - {startDate: "2020-11-11", endDate: "2020-11-14", placeId: 24}
     siteLink:
-      - {language: en, text: "https://2020.cppconf-piter.ru/en/"}
-      - {language: ru, text: "https://2020.cppconf-piter.ru/"}
+      - {language: en, text: "https://cppconf.ru/en/archive/2020 Piter/"}
+      - {language: ru, text: "https://cppconf.ru/archive/2020 Piter/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLZN9ZGiWZoZpzXS_y_1tZJW0OaL-HrU1F
     talkIds: [2659, 2660, 2661, 2662, 2663, 2664, 2838, 2665, 2666, 2667, 2668, 2669, 2670, 2671, 2672, 2673, 2674, 2675,
         2676, 2677, 2678, 2679, 2680, 2681, 2682]
@@ -54,8 +54,8 @@ events:
     days:
       - {startDate: "2021-11-15", endDate: "2021-11-18", placeId: 24}
     siteLink:
-      - {language: en, text: "https://2021.cppconf.ru/en/"}
-      - {language: ru, text: "https://2021.cppconf.ru/"}
+      - {language: en, text: "https://cppconf.ru/en/archive/2021/"}
+      - {language: ru, text: "https://cppconf.ru/archive/2021/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLZN9ZGiWZoZqIsJqUgmMznD68NSsyaAhy
     talkIds: [3389, 3565, 3392, 3391, 3403, 3566, 3393, 3390, 3395, 3396, 3398, 3397, 3567, 3568, 3399, 3400, 3401, 3570,
         3394, 3402, 3404, 3405, 3406, 3407, 3571, 3572, 3408, 3409, 3410, 3573, 3574, 3592, 3411, 3412, 3413, 3575, 3576,
