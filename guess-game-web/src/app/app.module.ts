@@ -64,22 +64,22 @@ import { SpeakerService } from './shared/services/speaker.service';
 import { StatisticsService } from './shared/services/statistics.service';
 import { TalkService } from './shared/services/talk.service';
 import { TopicService } from './shared/services/topic.service';
-import { GameStateGuard } from './shared/guards/game-state.guard';
+import { gameStateCanActivate } from './shared/guards/game-state.guard';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'game/start', component: StartComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/name-by-photo', component: GuessNameByPhotoComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/photo-by-name', component: GuessPhotoByNameComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/talk-by-speaker', component: GuessTalkBySpeakerComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/speaker-by-talk', component: GuessSpeakerByTalkComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/company-by-speaker', component: GuessCompanyBySpeakerComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/speaker-by-company', component: GuessSpeakerByCompanyComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/account-by-speaker', component: GuessAccountBySpeakerComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/speaker-by-account', component: GuessSpeakerByAccountComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/tag-cloud-by-speaker', component: GuessTagCloudBySpeakerComponent, canActivate: [GameStateGuard]},
-  {path: 'game/guess/speaker-by-tag-cloud', component: GuessSpeakerByTagCloudComponent, canActivate: [GameStateGuard]},
-  {path: 'game/result', component: ResultComponent, canActivate: [GameStateGuard]},
+  {path: 'game/start', component: StartComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/name-by-photo', component: GuessNameByPhotoComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/photo-by-name', component: GuessPhotoByNameComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/talk-by-speaker', component: GuessTalkBySpeakerComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/speaker-by-talk', component: GuessSpeakerByTalkComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/company-by-speaker', component: GuessCompanyBySpeakerComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/speaker-by-company', component: GuessSpeakerByCompanyComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/account-by-speaker', component: GuessAccountBySpeakerComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/speaker-by-account', component: GuessSpeakerByAccountComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/tag-cloud-by-speaker', component: GuessTagCloudBySpeakerComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/guess/speaker-by-tag-cloud', component: GuessSpeakerByTagCloudComponent, canActivate: [gameStateCanActivate]},
+  {path: 'game/result', component: ResultComponent, canActivate: [gameStateCanActivate]},
   {path: 'game/cancel', component: CancelGameComponent},
   {path: 'game', redirectTo: 'game/start'},
   {path: 'information/event-types/search', component: EventTypesSearchComponent},
@@ -159,7 +159,6 @@ registerLocaleData(localeRu, 'ru');
     AnswerService,
     EventService,
     EventTypeService,
-    GameStateGuard,
     QuestionService,
     StateService,
     SpeakerService,

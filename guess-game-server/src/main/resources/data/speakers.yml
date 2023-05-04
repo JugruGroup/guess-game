@@ -13488,6 +13488,7 @@ speakers:
             \ .NET. Уже несколько лет занимается организацией встреч питерского сообщества C++ разработчиков (St. Petersburg\
             \ C++ User Group)."}
     twitter: anastasiak2512
+    gitHub: anastasiak2512
     habr: anastasiak2512
   - id: 931
     photoFileName: 0931.jpg
@@ -19730,34 +19731,6 @@ speakers:
       - {language: en, text: "At Bloomberg LP since 2016, Filipp enjoys exploring the obscure, arcane, and esoteric corners\
             \ of the C++ language. He is known among his coworkers for heavy use of templates, emphasis on compile time computation,\
             \ and abusing language features for nefarious purposes."}
-  - id: 1391
-    photoFileName: 1391.jpg
-    photoUpdatedAt: 2020-06-01T12:24:49.943Z[UTC]
-    name:
-      - {language: en, text: "Program committee"}
-      - {language: ru, text: "Программный комитет"}
-    companyIds: [83]
-    bio:
-      - language: en
-        text: "__Sergey Platonov__\nC++ developer, organizer of C++ Siberia.\n\n__Alexey Veselovsky__\nSenior C++ developer\
-            \ at Align Technology. Alexey is engaged in the development of common system components and the framework of the\
-            \ specialized 3D CAD system.\n\n__Pavel Filonov__\nFor more than 5 years Pavel is developing software in the IT\
-            \ security area. For more than 3 years he is actively using data analysis methods to develop and implement machine\
-            \ learning techniques in IT security.\n\n__Anton Naumovich__\nSenior manager in SolarWinds company.\nOrganizer\
-            \ of C++ community CoreHard and QA community COMAQA.\n\n__Anastasia Kazakova__\nAs a C and C++ software developer,\
-            \ Anastasia Kazakova created real-time nix-based systems and pushed them to production for 8 years. She worked\
-            \ as an intern in Microsoft Research, Networking department, and launched the first 4G network in Russia being\
-            \ a part of the Yota operator team."
-      - language: ru
-        text: "__Сергей Платонов__\nC++ программист. Организатор C++ Siberia.\n\n__Алексей Веселовский__\nСтарший С++ разр\
-            аботчик в Align Technology. Занимается разработкой общих системных компонентов и фреймворка специализированной\
-            \ 3D CAD-системы.\n\n__Павел Филонов__\nБолее 5 лет занимается разработкой ПО в области информационной безопас\
-            ности. Более 3 лет активно использует методы анализа данных для разработки и внедрения методов машинного обуче\
-            ния в ИБ.\n\n__Антон Наумович__\nСтарший менеджер в компании SolarWinds.\nОрганизатор С++ сообщества CoreHard\
-            \ и сообщества тестировщиков-автоматизаторов COMAQA.\n\n__Анастасия Казакова__\nБолее 8 лет в коммерческой раз\
-            работке на C и C++. В прошлом занималась встроенными системами и задачами управления сетевым трафиком, стажиро\
-            валась в лаборатории Microsoft Research по направлению Сетевой трафик и участвовала в запуске сетей поколения\
-            \ 4G в компании Yota."
   - id: 1392
     photoFileName: 1392.jpg
     photoUpdatedAt: 2020-09-22T11:29:17.438Z[UTC]
@@ -37576,3 +37549,17 @@ speakers:
             жества археологических экспедиций. Лауреат премии &laquo;За верность науке&raquo; 2017 г. и Беляевской премии\
             \ 2018 г., финалист премии &laquo;Просветитель&raquo; в 2017 и 2018 гг., лауреат премии РАН за популяризацию н\
             ауки 2019 г. и премии &laquo;Знание&raquo; 2021 г.</p>"}
+  - id: 2612
+    photoFileName: 2612.jpg
+    photoUpdatedAt: 2023-05-02T12:00:00Z[UTC]
+    name:
+      - {language: en, text: "Anton Naumovich"}
+      - {language: ru, text: "Антон Наумович"}
+    companyIds: [1070]
+    bio:
+      - {language: en, text: "Senior manager in SolarWinds company.\n\nOrganizer of C++ community CoreHard and QA community\
+            \ COMAQA.\n\nTook part in development of Hyper-V product in the past when working for Microsoft.\n\nAmong\
+            \ technical interests — architecture, performance, debugging."}
+      - {language: ru, text: "Старший менеджер в компании SolarWinds.\n\nОрганизатор С++ сообщества CoreHard и сообщества\
+            \ тестировщиков-автоматизаторов COMAQA.\n\nВ прошлом — участник разработки продукта Hyper-V в компании\
+            \ Microsoft.\n\nОбласти технических интересов: архитектура, производительность, отладка."}
