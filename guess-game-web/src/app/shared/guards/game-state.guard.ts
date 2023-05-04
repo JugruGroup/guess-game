@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { StateService } from '../services/state.service';
@@ -7,7 +7,7 @@ import { MessageService } from '../../modules/message/message.service';
 import { GameState } from '../models/game-state.model';
 
 @Injectable()
-export class GameStateGuard implements CanActivate {
+export class GameStateGuard  {
   constructor(public stateService: StateService, private messageService: MessageService, private router: Router) {
   }
 
