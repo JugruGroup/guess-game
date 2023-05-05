@@ -90,8 +90,8 @@ events:
     days:
       - {startDate: "2018-10-14", endDate: "2018-10-14", placeId: 4}
     siteLink:
-      - {language: en, text: "https://2018.devoops-piter.ru/en/"}
-      - {language: ru, text: "https://2018.devoops-piter.ru/"}
+      - {language: en, text: "https://devoops.ru/en/archive/2018 Piter/"}
+      - {language: ru, text: "https://devoops.ru/archive/2018 Piter/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTqxc9H4l_1eerCim4XU65ns
     talkIds: [983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999]
   - eventTypeId: 1
@@ -100,8 +100,8 @@ events:
     days:
       - {startDate: "2019-10-29", endDate: "2019-10-30", placeId: 4}
     siteLink:
-      - {language: en, text: "https://2019.devoops-piter.ru/en/"}
-      - {language: ru, text: "https://2019.devoops-piter.ru/"}
+      - {language: en, text: "https://devoops.ru/en/archive/2019 Piter/"}
+      - {language: ru, text: "https://devoops.ru/archive/2019 Piter/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTpTfIaormD2gRFxO0Ocnb22
     talkIds: [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105,
         106, 107, 108, 109]
@@ -112,8 +112,8 @@ events:
     days:
       - {startDate: "2020-07-06", endDate: "2020-07-10", placeId: 24}
     siteLink:
-      - {language: en, text: "https://2020.devoops-moscow.ru/en/"}
-      - {language: ru, text: "https://2020.devoops-moscow.ru/"}
+      - {language: en, text: "https://devoops.ru/en/archive/2020 Moscow/"}
+      - {language: ru, text: "https://devoops.ru/archive/2020 Moscow/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rToQPAGEJh0t3QkWClxvx_ql
     talkIds: [2119, 2115, 2116, 2548, 2549, 2550, 2551, 2118, 2131, 2552, 2122, 2553, 2125, 2554, 2567, 2555, 2568, 2128,
         2556, 2127, 2130, 2117, 2143, 2557, 2558, 2559, 2402, 2135, 2133, 2138, 2357, 2139, 2560, 2561, 2126, 2142, 2569,
@@ -125,8 +125,8 @@ events:
     days:
       - {startDate: "2020-12-02", endDate: "2020-12-05", placeId: 24}
     siteLink:
-      - {language: en, text: "https://2020.devoops-piter.ru/en/"}
-      - {language: ru, text: "https://2020.devoops-piter.ru/"}
+      - {language: en, text: "https://devoops.ru/en/archive/2020 Piter/"}
+      - {language: ru, text: "https://devoops.ru/archive/2020 Piter/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTqlHs8YSt4C-Epx9nJuxBfQ
     talkIds: [2761, 2762, 2763, 2835, 2765, 2766, 2767, 2768, 2769, 2770, 2771, 2772, 2773, 2836, 2774, 2775, 2776, 2777,
         2778, 2779, 2780, 2781, 2782, 2783, 2784, 2785, 2786, 2787, 2788, 2789, 2790, 2791, 2792, 2794, 2795, 2796, 2797]
@@ -136,8 +136,8 @@ events:
     days:
       - {startDate: "2021-11-08", endDate: "2021-11-11", placeId: 24}
     siteLink:
-      - {language: en, text: "https://2021.devoops.ru/en/"}
-      - {language: ru, text: "https://2021.devoops.ru/"}
+      - {language: en, text: "https://devoops.ru/en/archive/2021/"}
+      - {language: ru, text: "https://devoops.ru/archive/2021/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTqE_4_cyiLHx3Vg-08Ww6vD
     talkIds: [3367, 3476, 3368, 3526, 3553, 3384, 3477, 3370, 3373, 3374, 3372, 3527, 3554, 3376, 3375, 3478, 3503, 3555,
         3479, 3379, 3380, 3556, 3381, 3382, 3377, 3504, 3557, 3536, 3558, 3505, 3385, 3383, 3366, 3528, 3559, 3387, 3480,
@@ -148,7 +148,9 @@ events:
     days:
       - {startDate: "2022-10-19", endDate: "2022-10-20", placeId: 24}
       - {startDate: "2022-10-27", endDate: "2022-10-27", placeId: 4}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://devoops.ru/en/archive/2022/"}
+      - {language: ru, text: "https://devoops.ru/archive/2022/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTrF4wWfG5I9h-gbGyok1DBl
     talkIds: [4065, 4066, 4067, 4069, 4070, 4071, 4072, 4073, 4074, 4075, 4076, 4077, 4078, 4079, 4080, 4082, 4083, 4084,
               4085, 4086, 4088, 4089, 4090, 4091, 4092, 4093, 4094, 4095, 4096, 4097, 4098, 4099, 4100, 4101, 4102]
