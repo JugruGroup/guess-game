@@ -152,6 +152,10 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
     }
   }
 
+  isSpeakersListVisible() {
+    return ((this.talkDetails.speakers) && (this.talkDetails.speakers.length > 0));
+  }
+
   isPresentationLinksListVisible() {
     return ((this.talkDetails.talk?.presentationLinks) && (this.talkDetails.talk.presentationLinks.length > 0));
   }
@@ -168,7 +172,7 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
     return ((this.talkDetails.talk?.videoLinksVideoIds) && (this.talkDetails.talk.videoLinksVideoIds.length > 0));
   }
 
-  isSpeakersListVisible() {
-    return ((this.talkDetails.speakers) && (this.talkDetails.speakers.length > 0));
+  isMaterialsVisible() {
+    return this.isLinksListsVisible() || this.isVideoLinksVideoIdsListVisible();
   }
 }
