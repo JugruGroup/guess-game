@@ -124,8 +124,8 @@
         </span>
       </div>
 
-      <div *ngIf="isVideoLinksVideoIdsListVisible()" #youtubePlayerDiv>
-        <div *ngFor="let videoId of talkDetails.talk.videoLinksVideoIds" class="mt-3">
+      <div *ngIf="isVideoLinksVideoIdsListVisible()" #youtubePlayerDiv class="mt-3">
+        <div *ngFor="let videoId of talkDetails.talk.videoLinksVideoIds" class="mb-1">
           <youtube-player #youtubePlayer videoId="{{videoId}}" (ready)="onReady($event)"></youtube-player>
         </div>
       </div>
