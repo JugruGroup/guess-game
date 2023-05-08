@@ -290,10 +290,6 @@ companies:
     name:
       - {language: en, text: "C++ Alliance"}
     siteLink: https://cppalliance.org
-  - id: 83
-    name:
-      - {language: en, text: "C++ Russia"}
-    siteLink: https://cppconf.ru
   - id: 85
     name:
       - {language: en, text: Camunda}
