@@ -114,12 +114,12 @@
       <div *ngIf="isLinksListsVisible()" class="row mt-3">
       <span *ngFor="let presentationLink of talkDetails.talk.presentationLinks; let i = index" class="col-auto">
           <a href="{{presentationLink}}" class="text-dark">
-            <i class="far fa-file-pdf"></i> {{'talk.presentationLinkText' | translate}}<span *ngIf="talkDetails.talk.presentationLinks.length > 1"> {{i + 1}}</span>
+            <i class="far fa-file-pdf"></i><span class="d-none d-sm-inline"> {{'talk.presentationLinkText' | translate}}<span *ngIf="talkDetails.talk.presentationLinks.length > 1"> {{i + 1}}</span></span>
           </a>
       </span>
         <span *ngFor="let materialLink of talkDetails.talk.materialLinks; let i = index" class="col-auto">
           <a href="{{materialLink}}" class="text-dark">
-            <i class="fas fa-external-link-alt"></i> {{'talk.materialLinkText' | translate}}<span *ngIf="talkDetails.talk.materialLinks.length > 1"> {{i + 1}}</span>
+            <i class="fas fa-external-link-alt"></i><span class="d-none d-sm-inline"> {{'talk.materialLinkText' | translate}}<span *ngIf="talkDetails.talk.materialLinks.length > 1"> {{i + 1}}</span></span>
           </a>
         </span>
       </div>
