@@ -47,6 +47,7 @@
       "emptyMessage": "Нет элементов"
     },
     "table": {
+      "numberColumn": "№",
       "totalsText": "Всего",
       "paginator": {
         "currentPageReportTemplate": "{first} по {last} из {totalRecords}"

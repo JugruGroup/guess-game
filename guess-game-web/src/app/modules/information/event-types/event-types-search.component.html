@@ -52,7 +52,9 @@
                styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines" responsiveLayout="scroll">
         <ng-template pTemplate="header" let-columns>
           <tr>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" pResizableColumn>
               {{'eventTypes.table.kindColumn' | translate}}
             </th>

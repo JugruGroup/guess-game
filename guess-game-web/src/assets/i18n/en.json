@@ -47,6 +47,7 @@
       "emptyMessage": "No items"
     },
     "table": {
+      "numberColumn": "#",
       "totalsText": "Totals",
       "paginator": {
         "currentPageReportTemplate": "{first} to {last} of {totalRecords}"
