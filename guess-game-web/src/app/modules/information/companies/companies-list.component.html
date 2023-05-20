@@ -42,7 +42,9 @@
                styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines" responsiveLayout="scroll">
         <ng-template pTemplate="header">
           <tr>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" pResizableColumn>
               {{'companies.table.nameColumn' | translate}}
             </th>

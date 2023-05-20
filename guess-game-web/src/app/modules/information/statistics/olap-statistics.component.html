@@ -140,7 +140,9 @@
         <ng-template pTemplate="header">
           <tr>
             <th style="width: 3rem"></th>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" pResizableColumn>
               {{'statistics.olap.table.kindColumn' | translate}}
             </th>
@@ -198,7 +200,9 @@
                          responsiveLayout="scroll" dataKey="id">
                   <ng-template pTemplate="header">
                     <tr>
-                      <th class="text-center" pResizableColumn>#</th>
+                      <th class="text-center" pResizableColumn>
+                        {{'common.table.numberColumn' | translate}}
+                      </th>
                       <th class="text-center" [pSortableColumn]="'name'" pResizableColumn>
                         {{'statistics.olap.table.cityColumn' | translate}}
                         <p-sortIcon [field]="'name'"></p-sortIcon>
@@ -252,7 +256,9 @@
         <ng-template pTemplate="header">
           <tr>
             <th style="width: 3rem"></th>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" [pSortableColumn]="'name'" pResizableColumn>
               {{'statistics.olap.table.speakerNameColumn' | translate}}
               <p-sortIcon [field]="'name'"></p-sortIcon>
@@ -310,7 +316,9 @@
                          responsiveLayout="scroll" dataKey="id">
                   <ng-template pTemplate="header">
                     <tr>
-                      <th class="text-center" pResizableColumn>#</th>
+                      <th class="text-center" pResizableColumn>
+                        {{'common.table.numberColumn' | translate}}
+                      </th>
                       <th class="text-center" [pSortableColumn]="'sortName'" pResizableColumn>
                         {{'statistics.olap.table.eventTypeNameColumn' | translate}}
                         <p-sortIcon [field]="'sortName'"></p-sortIcon>
@@ -369,7 +377,9 @@
         <ng-template pTemplate="header">
           <tr>
             <th style="width: 3rem"></th>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" [pSortableColumn]="'name'" pResizableColumn>
               {{'statistics.olap.table.companyColumn' | translate}}
               <p-sortIcon [field]="'name'"></p-sortIcon>
@@ -410,7 +420,9 @@
                   <ng-template pTemplate="header">
                     <tr>
                       <th style="width: 3rem"></th>
-                      <th class="text-center" pResizableColumn>#</th>
+                      <th class="text-center" pResizableColumn>
+                        {{'common.table.numberColumn' | translate}}
+                      </th>
                       <th class="text-center" [pSortableColumn]="'sortName'" pResizableColumn>
                         {{'statistics.olap.table.eventTypeNameColumn' | translate}}
                         <p-sortIcon [field]="'sortName'"></p-sortIcon>
@@ -453,7 +465,9 @@
                                    responsiveLayout="scroll" dataKey="id">
                             <ng-template pTemplate="header">
                               <tr>
-                                <th class="text-center" pResizableColumn>#</th>
+                                <th class="text-center" pResizableColumn>
+                                  {{'common.table.numberColumn' | translate}}
+                                </th>
                                 <th class="text-center" [pSortableColumn]="'name'" pResizableColumn>
                                   {{'statistics.olap.table.speakerNameColumn' | translate}}
                                   <p-sortIcon [field]="'name'"></p-sortIcon>

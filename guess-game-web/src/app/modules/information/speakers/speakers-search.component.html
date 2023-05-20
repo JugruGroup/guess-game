@@ -64,7 +64,9 @@
                responsiveLayout="scroll">
         <ng-template pTemplate="header">
           <tr>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" [pSortableColumn]="'displayName'" pResizableColumn>
               {{'speakers.table.nameColumn' | translate}}
               <p-sortIcon [field]="'displayName'"></p-sortIcon>

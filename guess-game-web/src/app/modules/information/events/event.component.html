@@ -81,7 +81,9 @@
                responsiveLayout="scroll">
         <ng-template pTemplate="header" let-columns>
           <tr>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" [pSortableColumn]="'displayName'" pResizableColumn>
               {{'speakers.table.nameColumn' | translate}}
               <p-sortIcon [field]="'displayName'"></p-sortIcon>
@@ -164,7 +166,9 @@
                responsiveLayout="scroll">
         <ng-template pTemplate="header" let-columns>
           <tr>
-            <th class="text-center" pResizableColumn>#</th>
+            <th class="text-center" pResizableColumn>
+              {{'common.table.numberColumn' | translate}}
+            </th>
             <th class="text-center" [pSortableColumn]="'talkDay'" pResizableColumn>
               {{'talks.table.talkDayColumn' | translate}}
               <p-sortIcon [field]="'talkDay'"></p-sortIcon>
