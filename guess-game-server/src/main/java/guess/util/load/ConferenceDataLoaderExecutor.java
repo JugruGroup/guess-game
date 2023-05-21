@@ -2316,7 +2316,8 @@ public class ConferenceDataLoaderExecutor {
 //                new LoadSettings(
 //                        Map.of(new NameCompany("Павел Новиков", null), 351L),
 //                        Set.of("Открытие конференции C++ Russia 2022", "Разговор в студии про C++ в ML",
-//                                "Разговор об автопилотах", "Подведение итогов online-части конференции",
+//                                "Разговор об автопилотах", "Разговор о C++ в мобильной разработке",
+//                                "Подведение итогов online-части конференции",
 //                                "Открытие офлайн-части конференций C++ Russia 2022 и Hydra 2022",
 //                                "Закрытие конференций C++ Russia 2022 и Hydra 2022",
 //                                "Distributed transactions implementation trade-offs",

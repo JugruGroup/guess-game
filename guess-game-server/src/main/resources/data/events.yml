@@ -69,9 +69,9 @@ events:
     siteLink:
       - {language: en, text: "https://cppconf.ru/en/archive/2022/"}
       - {language: ru, text: "https://cppconf.ru/archive/2022/"}
-    youtubeLink: https://www.youtube.com/playlist?list=PLZN9ZGiWZoZo4MvdepGdU-6HmGVCf46Eh
+    youtubeLink: https://www.youtube.com/playlist?list=PLZN9ZGiWZoZoNBjREyWqo3Etfc4JGnkMe
     talkIds: [3801, 3802, 3803, 3804, 3805, 3806, 3807, 3808, 3809, 3810, 3811, 3812, 3813, 3814, 3815, 3816, 3817, 3818,
-              3819, 3820, 3821, 3822, 3823, 3824, 3825, 3826, 3827, 3828, 3829, 3830, 3831, 3832, 3833, 3834, 3835, 3836, 3837,
+              3819, 3820, 3821, 3822, 3823, 3825, 3826, 3827, 3828, 3829, 3830, 3831, 3832, 3833, 3834, 3835, 3836, 3837,
               3838, 3839]
   # DevOops
   - eventTypeId: 1

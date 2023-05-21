@@ -222,7 +222,7 @@ eventTypes:
       - {language: ru, text: "https://jpoint.ru/"}
     vkLink: https://vk.com/jpoint
     twitterLink: https://twitter.com/JUGru
-    youtubeLink: https://www.youtube.com/user/JUGRuVideo
+    youtubeLink: https://www.youtube.com/c/JUGru
     telegramLink: https://telegram.me/jpointconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -250,7 +250,7 @@ eventTypes:
       - {language: ru, text: "https://jokerconf.com/"}
     vkLink: https://vk.com/jokerconf
     twitterLink: https://twitter.com/jugru
-    youtubeLink: https://www.youtube.com/user/JUGRuVideo
+    youtubeLink: https://www.youtube.com/c/JUGru
     telegramLink: https://t.me/jokerconf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
