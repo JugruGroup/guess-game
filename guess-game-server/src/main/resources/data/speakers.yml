@@ -31420,26 +31420,6 @@ speakers:
             \ build a better tech world by contributing to open source projects.</p>"}
     twitter: AndrewRedUk
     gitHub: maZahaca
-  - id: 2188
-    photoFileName: 2188.jpg
-    photoUpdatedAt: 2022-05-24T12:39:37Z[UTC]
-    name:
-      - {language: en, text: "Alexander Korzhikov"}
-    companyIds: [265]
-    bio:
-      - language: en
-        text: "<p class=\"root-block-node\" data-changed=\"true\" data-paragraphid=\"3\">Software Engineer, Netherlands.</p>\n\
-            <p class=\"root-block-node\" data-changed=\"true\" data-paragraphid=\"4\">His primary interest is self development\
-            \ and craftsmanship. He enjoy exploring technologies, coding open source and enterprise projects, teaching, speaking\
-            \ and writing about programming &mdash; JavaScript, Node.js, TypeScript, Go, Java, Docker, Kubernetes, JSON Schema,\
-            \ DevOps, Web Components, Algorithms.</p>"
-      - language: ru
-        text: "<p>Software Engineer, Netherlands.</p>\n<p>His primary interest is self development and craftsmanship. He enjoy\
-            \ exploring technologies, coding open source and enterprise projects, teaching, speaking and writing about programming\
-            \ &mdash; JavaScript, Node.js, TypeScript, Go, Java, Docker, Kubernetes, JSON Schema, DevOps, Web Components,\
-            \ Algorithms.</p>"
-    twitter: AlexKorzhikov
-    gitHub: korzio
   - id: 2189
     photoFileName: 2189.jpg
     photoUpdatedAt: 2022-05-30T14:06:53Z[UTC]
