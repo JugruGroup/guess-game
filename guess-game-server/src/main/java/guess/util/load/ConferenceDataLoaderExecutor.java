@@ -2040,7 +2040,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadEventTypes(CmsType.JUGRUGROUP_CMS);
 
         // Check video links
-        checkVideoLinks();
+//        checkVideoLinks();
 
         // Check companies
 //        checkCompanies();

@@ -718,6 +718,7 @@ events:
     siteLink:
       - {language: en, text: "https://holyjs.ru/en/archive/2022 Autumn/"}
       - {language: ru, text: "https://holyjs.ru/archive/2022 Autumn/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8I1uVkTypmYzQnLyFFSzIRU
     talkIds: [4331, 4332, 4333, 4334, 4335, 4336, 4337, 4338, 4339, 4340, 4341, 4342, 4343, 4344, 4345, 4346, 4347, 4348,
               4349, 4350, 4351, 4352, 4353, 4354, 4355, 4356, 4357, 4158, 4159, 4280, 4162, 4281, 4282, 4167, 4168, 4175, 4172,
               4171, 4176, 4178, 4283]
