@@ -31026,24 +31026,6 @@ speakers:
       - language: ru
         text: "<p>Программист в &laquo;Судо&raquo;.</p>\n<p>Магистрант кафедры компьютерных технологий Университета ИТМО.\
             \ Область научных интересов: методы декомпиляции, статический анализ.</p>"
-  - id: 2163
-    photoFileName: 2163.jpg
-    photoUpdatedAt: 2022-05-26T11:50:33Z[UTC]
-    name:
-      - {language: en, text: "Ruslan Morozov"}
-      - {language: ru, text: "Руслан Морозов"}
-    companyIds: [635]
-    bio:
-      - language: en
-        text: "<p>Head of development of mobile and desktop versions of KasperskyOS.</p>\n<p>He is engaged in system development\
-            \ and practical application of secure development methodologies.</p>\n<p>He sees the main challenge as building\
-            \ an information ecosystem that allows users to focus on their problems and tasks, rather than confronting cyber\
-            \ villains.</p>"
-      - language: ru
-        text: "<p>Руководитель отдела разработки мобильной и десктопной версий KasperskyOS.</p>\n<p>Занимается системной р\
-            азработкой и практическим применением методологий безопасной разработки.</p>\n<p>Основным вызовом видит постро\
-            ение информационной экосистемы, позволяющей пользователю сосредоточиться на своих проблемах и задачах, а не пр\
-            отивостоянию киберзлодеям.</p>"
   - id: 2164
     photoFileName: 2164.jpg
     photoUpdatedAt: 2022-05-12T16:04:15Z[UTC]
@@ -31438,26 +31420,6 @@ speakers:
             \ build a better tech world by contributing to open source projects.</p>"}
     twitter: AndrewRedUk
     gitHub: maZahaca
-  - id: 2188
-    photoFileName: 2188.jpg
-    photoUpdatedAt: 2022-05-24T12:39:37Z[UTC]
-    name:
-      - {language: en, text: "Alexander Korzhikov"}
-    companyIds: [265]
-    bio:
-      - language: en
-        text: "<p class=\"root-block-node\" data-changed=\"true\" data-paragraphid=\"3\">Software Engineer, Netherlands.</p>\n\
-            <p class=\"root-block-node\" data-changed=\"true\" data-paragraphid=\"4\">His primary interest is self development\
-            \ and craftsmanship. He enjoy exploring technologies, coding open source and enterprise projects, teaching, speaking\
-            \ and writing about programming &mdash; JavaScript, Node.js, TypeScript, Go, Java, Docker, Kubernetes, JSON Schema,\
-            \ DevOps, Web Components, Algorithms.</p>"
-      - language: ru
-        text: "<p>Software Engineer, Netherlands.</p>\n<p>His primary interest is self development and craftsmanship. He enjoy\
-            \ exploring technologies, coding open source and enterprise projects, teaching, speaking and writing about programming\
-            \ &mdash; JavaScript, Node.js, TypeScript, Go, Java, Docker, Kubernetes, JSON Schema, DevOps, Web Components,\
-            \ Algorithms.</p>"
-    twitter: AlexKorzhikov
-    gitHub: korzio
   - id: 2189
     photoFileName: 2189.jpg
     photoUpdatedAt: 2022-05-30T14:06:53Z[UTC]
