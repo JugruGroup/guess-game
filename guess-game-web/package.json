@@ -19,7 +19,7 @@
     "@angular/forms": "^16.0.2",
     "@angular/platform-browser": "^16.0.2",
     "@angular/platform-browser-dynamic": "^16.0.2",
-    "@angular/router": "^16.0.2",
+    "@angular/router": "^16.0.3",
     "@angular/youtube-player": "^16.0.1",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@ngx-translate/core": "^15.0.0",
