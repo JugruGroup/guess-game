@@ -9,6 +9,11 @@ companyGroups:
         "ALM Works",
         Tempo
     ]
+  - name: "Avito / Sphinx"
+    items: [
+      Avito,
+      Sphinx
+    ]
   - name: "BeerJS / TC39"
     items: [
         BeerJS,

@@ -98,10 +98,6 @@ companySynonyms:
         KROK,
         "Croc Code"
     ]
-  - name: "C++ Russia"
-    synonyms: [
-        "С++ Russia"
-    ]
   - name: DuckStax
     synonyms: [
         duckstax.com
@@ -242,6 +238,11 @@ companySynonyms:
     synonyms: [
         "SKB Contur",
         "СКБ Контур"
+    ]
+  - name: Kronshtadt
+    synonyms: [
+      "KT — Unmanned Systems",
+      "КТ — Беспилотные Системы"
     ]
   - name: KURS-IT
     synonyms: [
@@ -568,16 +569,17 @@ companySynonyms:
     synonyms: [
         VKontakte,
         VK.com,
+        "VK Calls",
         "VK Cloud",
         "VK Cloud Solutions",
-        "VK Calls",
-        "VK Звонки",
+        "VK Education",
+        "VK for Business",
+        "VK Play",
+        "VK Tech",
         "VK Video",
         "VK Видео",
-        "VK Play",
-        "VK Education",
+        "VK Звонки",
         "VK Образование",
-        "VK for Business",
         "ВКонтакте для бизнеса"
     ]
   - name: VMware

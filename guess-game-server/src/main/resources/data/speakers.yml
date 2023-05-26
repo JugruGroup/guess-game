@@ -37525,3 +37525,15 @@ speakers:
       - {language: ru, text: "Старший менеджер в компании SolarWinds.\n\nОрганизатор С++ сообщества CoreHard и сообщества\
             \ тестировщиков-автоматизаторов COMAQA.\n\nВ прошлом — участник разработки продукта Hyper-V в компании\
             \ Microsoft.\n\nОбласти технических интересов: архитектура, производительность, отладка."}
+  - id: 2613
+    photoFileName: 2613.jpg
+    photoUpdatedAt: "2023-04-06T12:48:27Z"
+    name:
+      - {language: en, text: "Alexey Stepanov"}
+      - {language: ru, text: "Алексей Степанов"}
+    companyIds: [678]
+    bio:
+      - {language: en, text: "<p>PhD student in the Laboratory of Operating Systems, Programming Languages and Compilers.\
+            \ Is currently working on his thesis on the analysis and visualization of C++ programs.</p>"}
+      - {language: ru, text: "<p>Аспирант в лаборатории операционных систем, языков программирования и компиляторов. В дан\
+            ный момент работает над диссертацией по теме анализа и визуализации программ на языке C++.</p>"}
