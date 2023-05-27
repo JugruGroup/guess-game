@@ -461,20 +461,19 @@ speakers:
     javaChampion: true
   - id: 25
     photoFileName: 0025.jpg
-    photoUpdatedAt: 2022-03-31T19:05:48Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:05:48Z"
     name:
       - {language: en, text: "Vladimir Sitnikov"}
       - {language: ru, text: "Владимир Ситников"}
     companyIds: []
     bio:
-      - {language: en, text: "Vladimir has been working on performance and scalability of NetCracker platform (a software\
-            \ used by telecom operators for automatization of network management processes and network equipment) for ten\
-            \ years. His focus is Java and Oracle Database performance optimisations. Vladimir is an author of more than a\
-            \ dozen of performance improvements in the official PostgreSQL JDBC driver."}
-      - {language: ru, text: "Десять лет работает над производительностью и масштабируемостью NetCracker OSS — ПО, использ\
-            уемого операторами связи для автоматизации процессов управления сетью и сетевым оборудованием. Увлекается вопр\
-            осами производительности Java и Oracle Database. Автор более десятка улучшений производительности в официально\
-            м PostgreSQL JDBC-драйвере."}
+      - {language: en, text: "<p>Vladimir has been working on reliability and performance of enterprise systems since 2006.\
+            \ He supports PostgreSQL JDBC driver and Apache JMeter load testing tool. Likes to share knowledge and helps others\
+            \ with reports. Participates in Program Committees at JPoint, Joker, Heisenbug, Hydra, and DevOops conferences.</p>"}
+      - {language: ru, text: "<p>Владимир работает над надежностью и производительностью enterprise-систем с 2006 года. По\
+            ддерживает PostgreSQL JDBC-драйвер и инструмент нагрузочного тестирования Apache JMeter. Любит делиться знания\
+            ми и помогает другим с подготовкой докладов. Участвует в Программных комитетах конференций JPoint, Joker, Heisenbug,\
+            \ Hydra и DevOops.</p>"}
     twitter: VladimirSitnikv
     gitHub: vlsi
     habr: vladimirsitnikov
@@ -4944,10 +4943,10 @@ speakers:
             \ proposals to the C++ standard. Author of the Boost libraries: TypeIndex, DLL, Stacktrace; maintainer of Any,\
             \ Conversion, LexicalCast, Variant. Author of \"Boost C++ Application Development Cookbook\" and \"Boost C++ Application\
             \ Development Cookbook, Second Edition\"."}
-      - {language: ru, text: "Представитель России в ISO на международных заседаниях рабочей группы по стандартизации C++.\
+      - {language: ru, text: "<p>Представитель России в ISO на международных заседаниях рабочей группы по стандартизации C++.\
             \ Автор нескольких принятых предложений к стандарту языка C++. Aвтор Boost-библиотек TypeIndex, DLL, Stacktrace\
-            \ и активный мейнтейнер Any, Conversion, LexicalCast, Variant. Автор книг «Boost C++ Application Development Cookbook»\
-            \ и «Boost C++ Application Development Cookbook, Second Edition»."}
+            \ и активный мейнтейнер Any, Conversion, LexicalCast, Variant. Автор книг &laquo;Boost C++ Application Development\
+            \ Cookbook&raquo; и &laquo;Boost C++ Application Development Cookbook, Second Edition&raquo;.</p>"}
     gitHub: apolukhin
     habr: antoshkka
   - id: 333
@@ -5046,16 +5045,29 @@ speakers:
     gitHub: onqtam
   - id: 339
     photoFileName: 0339.jpg
+    photoUpdatedAt: "2023-01-25T12:19:34Z"
     name:
       - {language: en, text: "Rainer Grimm"}
-    companyIds: [336]
+    companyIds: [1075]
     bio:
       - language: en
-        text: "Rainer Grimm has worked as a software architect, team lead and instructor for about 20 years. In his spare\
-            \ time, he likes to write articles about C++, Python, and Haskell. Rainer Grimm also likes to speak at conferences.\
-            \ He publishes weekly on his English and German blog \"Modernes C++\". Heise Developer hosts the German blog.\n\
-            \nNow he is an independent instructor giving seminars about modern C++ and Python. He published several books\
-            \ in various languages about modern C++ and concurrency in particular."
+        text: "<p>Has worked as a software architect, team lead, and instructor since 1999. In 2002, created company-intern\
+            \ meetings for further education and has given training courses since 2002.&nbsp;First tutorials were about proprietary\
+            \ management software, but Rainer began teaching Python and C++ soon after.</p>\n<p>In his spare time, he likes\
+            \ to write articles about C++, Python, and Haskell, and to speak at conferences. He publishes weekly on his English\
+            \ blog &mdash; Modernes Cpp(https://www.modernescpp.com/) and his German blog (https://www.grimm-jaud.de/index.php/blog)\
+            \ hosted by heise Developer.</p>\n<p>Since 2016, he is an independent instructor giving seminars about modern\
+            \ C++ and Python. In the last ten years, he has published several books in various languages about modern C++.\
+            \ Due to his profession, he always searches for the best way to teach modern C++.</p>"
+      - language: ru
+        text: "<p>Has worked as a software architect, team lead, and instructor since 1999. In 2002, created company-intern\
+            \ meetings for further education and has given training courses since 2002. First tutorials were about proprietary\
+            \ management software, but Rainer began teaching Python and C++ soon after.</p>\n<p>In his spare time, he likes\
+            \ to write articles about C++, Python, and Haskell, and to speak at conferences. He publishes weekly on his English\
+            \ blog &mdash; Modernes Cpp(https://www.modernescpp.com/) and his German blog (https://www.grimm-jaud.de/index.php/blog)\
+            \ hosted by heise Developer.</p>\n<p>Since 2016, he is an independent instructor giving seminars about modern\
+            \ C++ and Python. In the last ten years, he has published several books in various languages about modern C++.\
+            \ Due to his profession, he always searches for the best way to teach modern C++.</p>"
     twitter: rainer_grimm
     gitHub: RainerGrimm
   - id: 340
@@ -5213,11 +5225,11 @@ speakers:
     gitHub: zmij
   - id: 351
     photoFileName: 0351.jpg
-    photoUpdatedAt: 2022-04-25T13:05:28Z[UTC]
+    photoUpdatedAt: "2022-04-25T13:05:28Z"
     name:
       - {language: en, text: "Pavel Novikov"}
       - {language: ru, text: "Павел Новиков"}
-    companyIds: [27]
+    companyIds: [258]
     bio:
       - {language: en, text: "Got an engineering degree in missilery at BMSTU. </p><p>Loves C++ and knows how to cook it.\
             \ </p><p>Likes metaprogramming, multithreading and asynchronous programming. Coroutine adoption enthusiast."}
@@ -13368,18 +13380,18 @@ speakers:
     twitter: ppleskov
   - id: 923
     photoFileName: 0923.jpg
-    photoUpdatedAt: 2022-03-31T19:06Z[UTC]
+    photoUpdatedAt: 2022-03-31T19:06Z
     name:
       - {language: en, text: "Vadim Vinnik"}
       - {language: ru, text: "Вадим Винник"}
-    companyIds: [924]
+    companyIds: []
     bio:
       - {language: en, text: "Technical lead developer, Ph.D. in physical and mathematical sciences, author of books and scientific\
             \ publications on theory of programming; translator of books on programming; university lecturer on programming\
             \ and some supporting areas of mathematics. Favourite programming languages: C++ and Haskell."}
-      - {language: ru, text: "Technical lead developer, кандидат физико-математических наук, автор книг и научных публикац\
-            ий по теории программирования, переводчик книг по программированию, преподаватель программирования и сопутству\
-            ющих разделов математики. Любимые языки: C++ и Haskell."}
+      - {language: ru, text: "<p>Tech Lead developer, кандидат физико-математических наук, автор книг и научных публикаций\
+            \ по теории программирования, переводчик книг по программированию, преподаватель программирования и сопутствую\
+            щих разделов математики. Любимые языки: C++ и Haskell.</p>"}
   - id: 924
     photoFileName: 0924.jpg
     photoUpdatedAt: 2019-08-02T13:00:35.517Z[UTC]
@@ -14370,31 +14382,31 @@ speakers:
             >compiler-rt</a> на VLIW-архитектуру;</li>\n<li>OpenCL для VLIW-архитектуры.</li>\n</ul>"
   - id: 997
     photoFileName: 0997.jpg
-    photoUpdatedAt: 2022-03-31T19:06:04Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:06:04Z"
     name:
       - {language: en, text: "Alexander Ganyukhin"}
       - {language: ru, text: "Александр Ганюхин"}
     companyIds: [386]
     bio:
       - {language: en, text: "<p>Works as a C++ developer for more than 11 years, mostly in mobile communication, automotive\
-            \ industry and access control. Currently is fond of metaprogramming and developing tools in C++ to make the life\
+            \ industry and access control. Currently, is fond of metaprogramming and developing tools in C++ to make the life\
             \ of his colleagues a bit easier.</p>"}
-      - {language: ru, text: "<p>Работает C++ программистом более 11 лет, по большей части в таких сферах как: сотовая свя\
-            зь, автомобильная индустрии и СКУД. Увлечён метапрограммированием и разработкой инструментов на C++.</p>"}
+      - {language: ru, text: "<p>Работает C++ программистом более 11 лет, по большей части в таких сферах, как сотовая свя\
+            зь, автомобильная индустрия и СКУД. Увлечен метапрограммированием и разработкой инструментов на C++.</p>"}
     gitHub: alex-ganyukhin
     habr: alex-ganyukhin
   - id: 998
     photoFileName: 0998.jpg
-    photoUpdatedAt: 2020-09-14T11:34:38.734Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:06:20Z"
     name:
       - {language: en, text: "Ashot Vardanian"}
       - {language: ru, text: "Ашот Варданян"}
     companyIds: [565]
     bio:
-      - language: en
-        text: "Ashot grew up in St. Petersburg, studied Astrophysics in SPbSTU, and does programming since 2005. These days\
-            \ he designs new algorithms and software products and invests in tech companies worldwide.\n\nHis interests include\
-            \ neuro-symbolic machine learning models, low-level software, and formal languages."
+      - {language: en, text: "<p>Ashot grew up in St. Petersburg, studied astrophysics at SPbSTU, and has been programming\
+            \ since about 2005. Since 2015 he has been designing new algorithms and their high-performance implementation\
+            \ within the Unum.Сloud project. Areas of interest: neuro-symbolic machine learning models, low-level software\
+            \ and formal languages.</p>"}
       - language: ru
         text: "Ашот вырос в Санкт-Петербурге, изучал Астрофизику в СПБГПУ, а программирует с 2005 года. С 2015 года он изо\
             бретает новые алгоритмы, создает высокопроизводительные продукты на их основе и инвестирует в технологические\
@@ -14439,21 +14451,15 @@ speakers:
     gitHub: adishavit
   - id: 1002
     photoFileName: 1002.jpg
+    photoUpdatedAt: "2023-03-07T11:41:21Z"
     name:
       - {language: en, text: "Alexander Bychuk"}
       - {language: ru, text: "Александр Бычук"}
-    companyIds: [635]
+    companyIds: [620]
     bio:
-      - {language: en, text: "Since 2007, Alexander has been developing middleware and ECM systems. All this was written in\
-            \ C and C++, so the C++ Enterprise Edition for Alexander is not fiction, but daily work. One of the important\
-            \ components of any corporate system is transport, to be more precise, message brokers, and Alexander wants to\
-            \ tell you about them. He will talk about the current situation in the world of MQ-Brokers and, of course, about\
-            \ his own broker and the features of his writing."}
-      - {language: ru, text: "С 2007 года Александр занимался разработкой middleware и системы электронного документооборо\
-            та. Все это писалось на C и C++, так что C++ Enterprise Edition для Александра не выдумка, а ежедневная работа\
-            . Одним из важных компонентов любой корпоративной системы является транспорт, если быть точнее — брокеры сообщ\
-            ений, именно о них Александр и расскажет. Он поговорит о текущей обстановке в мире MQ-Brokers и, конечно же, о\
-            \ собственном брокере и особенностях его написания."}
+      - {language: en, text: "Alexander loves integrations, microservices and C++ and is always happy to discuss C++ Enterprise\
+            \ Edition."}
+      - {language: ru, text: "Александр очень любит интеграции, микросервисы и С++ и всегда рад обсудить C++ Enterprise Edition."}
     twitter: bychuk_as
   - id: 1003
     photoFileName: 1003.jpg
@@ -16248,17 +16254,16 @@ speakers:
     gitHub: yevgenypats
   - id: 1135
     photoFileName: 1135.jpg
-    photoUpdatedAt: 2020-02-20T09:46:06.160Z[UTC]
+    photoUpdatedAt: "2022-06-03T08:48:43Z"
     name:
       - {language: en, text: "Ivan Afanasyev"}
       - {language: ru, text: "Иван Афанасьев"}
-    companyIds: [27]
+    companyIds: [679]
     bio:
-      - language: en
-        text: "C++ developer at Align Technology.\nGraduated from MMF NSU.\n\nParticipated in Intel MKL, 2GIS mobile/core\
-            \ and Yandex.Browser development as C/C++ engineer."
-      - {language: ru, text: "С++ инженер в Align Technology. Окончил ММФ НГУ. Волей судьбы удалось познакомиться с С/С++\
-            \ в Intel MKL, мобильной/core-разработке 2ГИС и Я.Браузере."}
+      - {language: en, text: "<p>C++ developer. Graduated from MMF NSU. Participated in Intel MKL, 2GIS mobile/core and Yandex.Browser\
+            \ development as C/C++ engineer.</p>"}
+      - {language: ru, text: "<p>LLVM compiler engineer. Окончил ММФ НГУ. Познакомился с С/С++ в Intel MKL, с мобильной/core-р\
+            азработкой &mdash; в 2ГИС, Яндекс Браузере и Align.</p>"}
     twitter: ivafanas
     gitHub: ivafanas
   - id: 1136
@@ -17695,20 +17700,20 @@ speakers:
     gitHub: jspolsky
   - id: 1237
     photoFileName: 1237.jpg
-    photoUpdatedAt: 2020-05-28T14:20:53.221Z[UTC]
+    photoUpdatedAt: "2023-04-19T10:36:58Z"
     name:
       - {language: en, text: "Maxim Babenko"}
+      - {language: ru, text: "Максим Бабенко"}
     companyIds: [689]
     bio:
-      - language: en
-        text: "PhD, Associate Professor of Algorithms and Programming Technology at MIPT, head of the Yandex Faculty of Computer\
-            \ Science at HSE.\n\nTeaches the courses \"Algorithms and data structures\" and \"Algorithms in external memory\"\
-            \ at the Yandex School of Data Analysis. Creator of the Big Data Infrastructure academic program.\n\nCandidate\
-            \ of Sciences (PhD) in Mathematical Logic, Algebra and Number Theory, Associate Professor of Algorithms and Programming\
-            \ Technology at the Moscow Institute of Physics and Technology, and head of the Yandex Faculty of Computer Science\
-            \ at the Higher School of Economics National Research University. Leads development of the YT platform for distributed\
-            \ computing and data processing at Yandex.\n\nA long-standing organizer of computer science competitions for youth\
-            \ and students. Adept at explaining the most complex subject matter in clear and simple terms."
+      - {language: en, text: "<p>A graduate of Moscow State University, Candidate of Sciences (Ph.D.) in Physics and Mathematics.\
+            \ Winner of school (IOI) and student (ICPC) programming competitions. Head of the Yandex department of the Higher\
+            \ School of Economics. Lecturer of Yandex School of Data Analysis. Head of Distributed Computing Technology Department\
+            \ in Yandex. Founder, architect and developer of the open-source platform YTsaurus.</p>"}
+      - {language: ru, text: "<p>Выпускник мехмата МГУ, кандидат физико-математических наук. Победитель школьных (IOI) и с\
+            туденческих (ICPC) олимпиад по программированию. Заведующий базовой кафедрой Яндекса ФКН НИУ ВШЭ. Лектор Школы\
+            \ Анализа Данных Яндекса. Руководитель отдела технологий распределенных вычислений в Яндексе. Основатель, архи\
+            тектор и разработчик open-source платформы YTsaurus.</p>"}
     habr: maxim_babenko
   - id: 1238
     photoFileName: 1238.jpg
@@ -17854,15 +17859,17 @@ speakers:
       - {language: ru, text: "Павел Филонов"}
     companyIds: [257]
     bio:
-      - {language: en, text: "<p>Pavel is engaged in online education in the field of C ++ and ML. As a leader, he developed\
-            \ the Data Science team at Kaspersky, which provides functionality based on machine learning for the company's\
-            \ products and services. In the role of Data Scientist, he participated in the development of Kaspersky MLAD and\
-            \ MDR AI Analyst. As a C ++ developer, he participated in the creation of MaxPatrol SIEM. For many years Pavel\
-            \ has been teaching computer science disciplines at MSTU GA.</p>"}
-      - {language: ru, text: "Много занимался разработкой и машинным обучением в области ИБ в Positive Technologies и Kaspersky.\
-            \ Сейчас помогает компаниям проверить, насколько ML поможет улучшить их бизнес-процессы. Постоянно ведет препо\
-            давательскую деятельность в вузах и на курсах повышения квалификации. Периодически выступает с докладами и мас\
-            тер-классами про ML, MLOps, С++, Python и Security."}
+      - language: en
+        text: "Pavel is engaged in online education in the field of C ++ and ML.\n\nAs a leader, he developed the Data Science\
+            \ team at Kaspersky, which provides functionality based on machine learning for the company's products and services.\n\
+            \nIn the role of Data Scientist, he participated in the development of Kaspersky MLAD and MDR AI Analyst.\n\n\
+            As a C ++ developer, he participated in the creation of MaxPatrol SIEM.\n\nFor many years Pavel has been teaching\
+            \ computer science disciplines at MSTU GA."
+      - language: ru
+        text: "Занимается онлайн образованием в области C++ и ML.\n\nВ роли руководителя развивал Data Science команду в Kaspersky,\
+            \ которая предоставляет для продуктов и сервисов компании функционал на основе машинного обучения.\n\nВ роли Data\
+            \ Scientist участвовал в разработке Kaspersky MLAD и MDR AI Analyst.\n\nВ роли разработчика C++ участвовал в с\
+            оздании MaxPatrol SIEM.\n\nВ течение многих лет преподает computer science дисциплины в МГТУ ГА."
     twitter: filonovpv
     gitHub: sdukshis
   - id: 1248
@@ -18706,28 +18713,26 @@ speakers:
             форм. Особая страсть — компьютерные игры: стратегии, RPG, а также настольные RPG."}
   - id: 1318
     photoFileName: 1318.jpg
-    photoUpdatedAt: 2020-10-26T15:00:59.008Z[UTC]
+    photoUpdatedAt: "2023-03-02T20:02:44Z"
     name:
       - {language: en, text: "Evgeny Erokhin"}
       - {language: ru, text: "Евгений Ерохин"}
-    companyIds: [242]
+    companyIds: [635]
     bio:
-      - language: en
-        text: "Senior engineer on compilers at Huawei. Takes part in the development of compilers and toolchains for Harmony\
-            \ OS. \nFounder of startup HyperIntegrate. Evgeny created the product that allows you to connect Android as a\
-            \ filesystem on macOS. \nWas more than 2 years the Senior Software Developer in DINO Systems. Took part in the\
-            \ development of a real-time video service. \nAnd behind are more than 10 years in Paragon Software on the position\
-            \ of a Team Lead. He developed filesystem drivers for macOS, worked on filesystem implementation, snapshot system\
-            \ for block-devices (disk subsystem), boot loader, reverse-engineering, and many low-level things. \nIn his free\
-            \ time, he researches operation-systems internals and microprocessor architectures."
-      - language: ru
-        text: "Старший инженер по компиляторам в Huawei. Занимается разработкой компиляторов и тулчейна для Harmony OS. \n\
-            Основатель стартапа HyperIntegrate. Создал продукт, позволяющий подключать Android как файловую систему на macOS.\
-            \ \nБольше двух лет был старшим разработчиком в компании DINO Systems. Занимался разработкой сервиса передачи\
-            \ видео в реальном времени. \nЗа плечами более 10 лет опыта работы в Paragon Software на позиции ведущего разр\
-            аботчика. Разрабатывал драйвера файловых систем под macOS, занимался имплементацией файловых систем, системы с\
-            непшотинга блочных (дисковых) устройств, boot-загрузчика, реверс-инженирингом и другими низкоуровневыми задача\
-            ми. \nВ свободное время занимается изучением устройства операционных систем и процессорных архитектур."
+      - {language: en, text: "<p>Senior developer in the KasperskyOS microkernel team. Creator of the startup HyperIntegrate.\
+            \ Created a product that allows you to connect Android as a file system on macOS. Researched and developed compilers\
+            \ at Huawei. Developed algorithms for register allocation and various optimizations. And also a toolchain for\
+            \ Harmony OS. At DINS has been developing a service of real-time video broadcasting. For more than 10 years has\
+            \ been developing macOS drivers for Paragon Software. Developed file systems drivers, did file systems implementation,\
+            \ snapshot systems, and reverse-engineering. Prior to that, developed GIS components. Passionate about studying\
+            \ processor architectures and various aspects of ABI.</p>"}
+      - {language: ru, text: "<p>Старший разработчик в команде микроядра KasperskyOS. Создатель стартапа HyperIntegrate. С\
+            оздал продукт, позволяющий подключать Android как файловую систему на macOS. Занимался исследованиями и разраб\
+            откой компиляторов в Huawei. Разрабатывал алгоритмы регистровой аллокации и различные оптимизации. А так же ту\
+            лчейна для Harmony OS. В DINS занимался разработкой сервиса передачи видео в реальном времени. Больше 10 лет з\
+            анимался разработкой драйверов для macOS в Paragon Software. Разрабатывал драйвера файловых систем, занимался\
+            \ имплементацией файловых систем, системы снепшотинга, реверс-инжинирингом. До этого разрабатывал компоненты Г\
+            ИС. Увлекается изучением процессорных архитектур и разных аспектов ABI.</p>"}
   - id: 1319
     photoFileName: 1319.jpg
     photoUpdatedAt: 2022-04-27T08:39:38Z[UTC]
@@ -19686,7 +19691,7 @@ speakers:
     twitter: belyaev_ms
   - id: 1388
     photoFileName: 1388.jpg
-    photoUpdatedAt: 2019-06-07T07:48:16.279Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:05:56Z"
     name:
       - {language: en, text: "Evgeny Zouev"}
       - {language: ru, text: "Евгений Зуев"}
@@ -19697,13 +19702,13 @@ speakers:
             \ University and in a number of technical universities in Europe including ETH Zurich and EPFL Lausanne. Among\
             \ his major achievements are the full ISO-compliant C++ front end compiler, the Zonnon language compiler and many\
             \ others. The area of his research interests is programming languages' semantics and compiler construction."}
-      - {language: ru, text: "Выпускник Факультета Вычислительной Математики и Кибернетики МГУ им. М. В. Ломоносова. Там ж\
-            е получил степень кандидата физико-математических наук (1999). Работал в оборонных научно-исследовательских це\
-            нтрах, в НИВЦ МГУ. Преподавал и проводил исследования в МГУ и в престижных технических университетах Европы —\
-            \ ETH Zurich (с 2000 по 2006 годы) и EPFL Lausanne (с 2009 по 2010 годы). Руководил несколькими успешными иссл\
-            едовательскими и промышленными проектами по разработке ПО: языки и системы имитационного моделирования, компил\
-            яторы С++ и Zonnon и др. В настоящее время — профессор университета Иннополис (Россия). Область исследований —\
-            \ семантика языков программирования, проектирование и разработка компиляторов ЯП."}
+      - {language: ru, text: "<p>Выпускник Факультета Вычислительной Математики и Кибернетики МГУ им. М. В. Ломоносова. Та\
+            м же получил степень кандидата физико-математических наук (1999). Работал в оборонных научно-исследовательских\
+            \ центрах, в НИВЦ МГУ. Преподавал и проводил исследования в МГУ и в престижных технических университетах Европ\
+            ы &mdash; ETH Zurich (с 2000 по 2006 годы) и EPFL Lausanne (с 2009 по 2010 годы). Руководил несколькими успешн\
+            ыми исследовательскими и промышленными проектами по разработке ПО: языки и системы имитационного моделирования\
+            , компиляторы С++ и Zonnon и др. В настоящее время &mdash; профессор университета Иннополис (Россия). Область\
+            \ исследований &mdash; семантика языков программирования, проектирование и разработка компиляторов ЯП.</p>"}
   - id: 1389
     photoFileName: 1389.jpg
     photoUpdatedAt: 2020-11-09T14:32:30.001Z[UTC]
@@ -19761,16 +19766,17 @@ speakers:
     gitHub: tituswinters
   - id: 1394
     photoFileName: 1394.jpg
-    photoUpdatedAt: 2020-07-02T14:03:47.014Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:06:20Z"
     name:
       - {language: en, text: "Ilya Shishkov"}
       - {language: ru, text: "Илья Шишков"}
     companyIds: [689]
     bio:
-      - {language: en, text: "Senior developer at Yandex, co-author of the online specialization \"The Art of Development\
-            \ in Modern C++\" and the online course \"Programmer's Algorithmic Foundation\"."}
-      - {language: ru, text: "Старший разработчик компании Яндекс, соавтор онлайн-специализации «Искусство разработки на с\
-            овременном C++» и онлайн-курса «Алгоритмический фундамент программиста»."}
+      - {language: en, text: "<p>Teamlead and developer in Yandex Food backend. He has been programming in C++ since 2006.\
+            \ Created the online specialization \"Belts in C++\" as well as the online course \"Programmer's Algorithmic Foundation\"\
+            .</p>"}
+      - {language: ru, text: "<p>Разработчик-тимлид в бэкенде Яндекс Еды. Программирует на С++ с 2006 года. Создал онлайн\
+            -специализацию &laquo;Пояса по С++&raquo;, а также онлайн-курс &laquo;Алгоритмический фундамент программиста&raquo;.</p>"}
     gitHub: ishfb
     habr: ishfb
   - id: 1395
@@ -19787,18 +19793,17 @@ speakers:
     gitHub: stheophil
   - id: 1396
     photoFileName: 1396.jpg
-    photoUpdatedAt: 2020-10-20T13:48:00.099Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:06:29Z"
     name:
       - {language: en, text: "Andrey Aksenov"}
-      - {language: ru, text: "Андрей Аксенов"}
-    companyIds: [611]
+      - {language: ru, text: "Андрей Аксёнов"}
+    companyIds: [611, 1073]
     bio:
-      - {language: en, text: "Writes code on everything shows others how. On good days, the code can be demolished, Andrei\
-            \ necessarily shows others and makes \"the same\" three times stronger. Throughout all life, different engines\
-            \ have come out of this, like some kind of curse."}
-      - {language: ru, text: "Пишет код на всём подряд, показывает другим как. В удачные дни код удается сносить, это обяз\
-            ательно показывает другим и заставляет «точно так же» втрое сильнее. Всю сознательную жизнь из этого выходят р\
-            азные движки, прямо проклятие какое-то."}
+      - {language: en, text: "<p>Programs programs and commands commands. Gives talks. Works in Avito, looks after the search\
+            \ infrastructure, and writes the Sphinx search engine. Other than that, all sorts of things have happened.</p>"}
+      - {language: ru, text: "<p><span style=\"color: #3f4350;\">Программирует программы, командует командами, докладывает\
+            \ доклады.&nbsp;</span><span style=\"color: #3f4350;\">Работает в Авито, присматривает за инфрой поиска, пилит\
+            \ поисковой движок Sphinx. А так, всякое бывало.</span></p>"}
   - id: 1397
     photoFileName: 1397.jpg
     photoUpdatedAt: 2020-10-09T11:56:08.402Z[UTC]
@@ -26277,32 +26282,30 @@ speakers:
     name:
       - {language: en, text: "Alexander Borgardt"}
       - {language: ru, text: "Александр Боргардт"}
-    companyIds: [957]
+    companyIds: []
     bio:
-      - {language: en, text: "<p>More than 10 years researches new approaches and creates solutions for advertisements, FinTech\
-            \ and ML. Among fields of interests there are questions of developing distributed systems, parallel and concurrent\
-            \ handle of information. Makes the world better by opensource duckstax.com.</p>"}
-      - {language: ru, text: "<p>Более 10+ лет занимается исследованием новых подходов и созданием решений в областях AdTech,\
-            \ FinTech и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и конкурентн\
-            ой обработки информации. Улучшает мир посредством опенсорса duckstax.com.</p>"}
+      - {language: en, text: "<p>For more than 10 years he has been researching new approaches and creating solutions in AdTech,\
+            \ FinTech, MedTech and ML. Areas of interest include distributed systems development, parallel and competitive\
+            \ information processing. Makes the world better by <a href=\"https://duckstax.com/\">opensource</a>.</p>"}
+      - {language: ru, text: "<p>Более 10 лет занимается исследованием новых подходов и созданием решений в областях AdTech,\
+            \ FinTech, MedTech и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и к\
+            онкурентной обработки информации. Улучшает мир посредством <a href=\"https://duckstax.com/\" target=\"_blank\"\
+            \ rel=\"noopener noreferrer\">опенсорса.</a></p>"}
     twitter: k0tbegem0t
     gitHub: kotbegemot
   - id: 1833
     photoFileName: 1833.jpg
-    photoUpdatedAt: 2022-05-11T10:14:49Z[UTC]
+    photoUpdatedAt: 2023-04-04T12:22Z
     name:
       - {language: en, text: "Mikhail Lukin"}
       - {language: ru, text: "Михаил Лукин"}
     companyIds: [925]
     bio:
-      - language: en
-        text: "<p>Mikhail has been working since 2008 mostly as a C++ developer.</p>\n<p>Participated in various projects\
-            \ from enterprise to embedded systems. For the last three years has been developing GPGPU projects in OpenCL and\
-            \ CUDA.</p>"
-      - language: ru
-        text: "<div class=\"PersonContent_personContent__text__LS5lM\">\n<p>Программирует с 2008 года, преимущественно на\
-            \ С++. Участвовал в разных проектах: от энтерпрайза до встраиваемых систем. Последние четыре года занимается п\
-            рограммированием GPGPU на OpenCL и CUDA.</p>\n</div>"
+      - {language: en, text: "Mikhail has been working since 2008 mostly as a C++ developer.</p><p>Participated in various\
+            \ projects from enterprise to embedded systems. For the last four years has been developing GPGPU projects in\
+            \ OpenCL and CUDA."}
+      - {language: ru, text: "Программирует с 2008 года, преимущественно, на С++.</p><p>Участвовал в разных проектах: от э\
+            нтерпрайза до встраиваемых систем. Последние четыре года занимается программированием GPGPU на OpenCL и CUDA."}
     gitHub: lukinma
   - id: 1834
     photoFileName: 1834.jpg
@@ -26392,18 +26395,17 @@ speakers:
     gitHub: knatten
   - id: 1840
     photoFileName: 1840.jpg
-    photoUpdatedAt: 2022-03-31T19:06:54Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:06:54Z"
     name:
       - {language: en, text: "Maksim Kita"}
       - {language: ru, text: "Максим Кита"}
-    companyIds: [831]
+    companyIds: [689]
     bio:
-      - language: en
-        text: "<p>At ClickHouse he is responsible for JIT compilation, query analysis, dictionaries, performance optimization.</p>\n\
-            <p>He teaches a course at the Faculty of Computer Science at the HSE on databases: http://wiki.cs.hse.ru/Database_Systems_2022</p>"
-      - language: ru
-        text: "<p>В ClickHouse отвечает за JIT компиляцию, анализ запроса, словари, перформанс оптимизации.</p>\n<p>Ведет\
-            \ курс на Факультет компьютерных наук в НИУ ВШЭ по базам данных: http://wiki.cs.hse.ru/Database_Systems_2022.</p>"
+      - {language: en, text: "<p>Maksim develops database management systems and specializes in performance optimization,\
+            \ query analysis and planning, JIT compilation, system programming, distributed systems.</p>"}
+      - {language: ru, text: "<p>Максим занимается разработкой систем управления базами данных и специализируется на оптим\
+            изациях производительности, анализе и планировании запросов, JIT-компиляции, системном программировании, распр\
+            еделенных системах.</p>"}
     gitHub: kitaisreal
     habr: mkita
   - id: 1841
@@ -26487,17 +26489,17 @@ speakers:
             \ работу — в столь же совместный драйв."}
   - id: 1846
     photoFileName: 1846.jpg
-    photoUpdatedAt: 2022-03-31T19:06:53Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:06:53Z"
     name:
       - {language: en, text: "Sergey Talantov"}
       - {language: ru, text: "Сергей Талантов"}
     companyIds: [635]
     bio:
-      - {language: en, text: "Software architect, Security Champion.C++ developer with 18 years of experience.Developed desktop\
-            \ and server software in the past. Currently concentrated on software security."}
+      - {language: en, text: "Software architect, Security Champion. C++ developer with more than 20 years of experience.\
+            \ Developed desktop and server software in the past. Currently concentrated on software security."}
       - language: ru
-        text: "<p>Архитектор, Security Champion.</p>\n<p>Опыт в С++ разработке &mdash; 18 лет.</p>\n<p>В прошлом разрабаты\
-            вал серверное и десктопное ПО. Сейчас основные интересы &mdash; проектирование и разработка безопасного ПО.</p>"
+        text: "<p>Архитектор, Security Champion.&nbsp;Опыт на С++ более 20 лет.</p>\n<p>В прошлом разрабатывал серверное и\
+            \ десктопное ПО.&nbsp;Сейчас основные интересы &mdash; проектирование и разработка безопасного ПО.</p>"
   - id: 1847
     photoFileName: 1847.jpg
     photoUpdatedAt: 2021-10-07T13:12:38.169Z[UTC]
@@ -28400,20 +28402,20 @@ speakers:
             : C++, C, Assembler. В Luxoft работает уже порядка трех лет по направлению Automotive."}
   - id: 1982
     photoFileName: 1982.jpg
-    photoUpdatedAt: 2022-03-31T19:06:16Z[UTC]
+    photoUpdatedAt: "2023-02-22T07:09:17Z"
     name:
       - {language: en, text: "Egor Suvorov"}
       - {language: ru, text: "Егор Суворов"}
-    companyIds: [650]
+    companyIds: []
     bio:
-      - {language: en, text: "Teaches a one-year C ++ course for bachelors at the HSE. Interested in compilers, the diploma\
-            \ focuses on type-safe FFI between C ++ and JavaScript. Trained on C ++ at Google and think-cell. Winner of the\
-            \ ACM ICPC 2014 World Cup as part of the St. Petersburg State University team. Graduated from St. Petersburg Academic\
-            \ University, Computer Science Center, and graduate studies at the Higher School of Economics."}
-      - {language: ru, text: "Ведёт годовой курс по C++ для первокурсников бакалавриата НИУ ВШЭ — Санкт-Петербург. Интерес\
-            уется компиляторами, диплом посвящён типобезопасному FFI между C++ и JavaScript. Стажировался на C++ в Google\
-            \ и think-cell. Победитель чемпионата мира ACM ICPC 2014 в составе команды СПбГУ. Закончил Санкт-Петербургский\
-            \ Академический Университет, Computer Science Center и магистратуру в НИУ ВШЭ — Санкт-Петербург."}
+      - language: en
+        text: "<p>Leads a year-long course in C++ for bachelor freshmen of the HSE University for the last few years: from\
+            \ 50 students and two teachers to 150 students and a dozen of teachers this year.</p>\n<p>Curious about compilers.\
+            \ Thesis on type-safe FFI between C++ and JavaScript (the Typescripten project).</p>"
+      - language: ru
+        text: "<p>Ведет годовой курс по C++ для первокурсников бакалавриата НИУ ВШЭ в Санкт-Петербурге: от 50 студентов и\
+            \ двух преподавателей до 150 студентов и дюжины преподавателей.</p>\n<p>Интересуется компиляторами. Диплом пос\
+            вящен типобезопасному FFI между C++ и JavaScript (проект Typescripten).</p>"
     gitHub: yeputons
     habr: yeputons
   - id: 1983
@@ -30573,17 +30575,21 @@ speakers:
     gitHub: raphaelsc
   - id: 2128
     photoFileName: 2128.jpg
-    photoUpdatedAt: 2022-05-16T07:26:15Z[UTC]
+    photoUpdatedAt: "2023-03-21T05:15:32Z"
     name:
       - {language: en, text: "Anton Malakhov"}
+      - {language: ru, text: "Антон Малахов"}
     companyIds: [242]
     bio:
-      - {language: en, text: "<p><span class=\"red-underline\" data-startindex=\"0\" data-endindex=\"4\" data-paragraphid=\"\
-            27\">Intel</span> TBB core <span class=\"red-underline\" data-startindex=\"15\" data-endindex=\"23\" data-paragraphid=\"\
-            27\">developer</span> for 9+ years since its inception. <span class=\"red-underline\" data-startindex=\"59\" data-endindex=\"\
-            69\" data-paragraphid=\"27\">Contributed</span> to the Intel OpenCL runtime for the CPU, Python's threading composability\
-            \ story, and Julia-lang multithreading. 2 patents, 3 proposals for the C++ standard, multiple papers and conferences:\
-            \ expert in composable, shared memory parallelism, and data structures.&nbsp;</p>"}
+      - {language: en, text: "<p>Former Intel TBB core developer. Contributed to the Intel OpenCL runtime for the CPU, Python's\
+            \ threading composability story, and Julia-lang multithreading. 2 algorithm patents (concurrent rehashing and\
+            \ parallel-for), 3 proposals for the C++ standard about concurrent hash tables, multiple papers and conferences:\
+            \ expert in composable, shared memory parallelism, and data structures.</p>"}
+      - {language: ru, text: "<p>Разработчик Intel TBB с 2006 по 2015 года. Участвовал в разработке среды выполнения Intel\
+            \ OpenCL для CPU, разрабатывал тему компоновки многопоточных компонентов в среде Python и многопоточности язык\
+            а Julia. 2 патента на алгоритмы (параллельный рехэшинг и параллельный for-цикл); 3 предложения для стандарта C++\
+            \ о параллельных хэш-таблицах; несколько статей и конференций: эксперт в области компоновки параллелизма, пара\
+            ллелизма на общей памяти и структур данных.</p>"}
     gitHub: anton-malakhov
     habr: anton-malakhov
   - id: 2129
@@ -30681,18 +30687,17 @@ speakers:
     gitHub: KokorinIlya
   - id: 2136
     photoFileName: 2136.jpg
-    photoUpdatedAt: 2022-05-23T12:35:49Z[UTC]
+    photoUpdatedAt: "2023-01-20T07:28:57Z"
     name:
       - {language: en, text: "Konstantin Vladimirov"}
       - {language: ru, text: "Константин Владимиров"}
-    companyIds: [826]
+    companyIds: [919]
     bio:
       - language: en
         text: "<p>For the last three years has been working on a graphical compiler for Intel.</p>\n<p>Total experience in\
             \ compilers about 12 years. Passionate about heterogeneous programming. Teaches C++ at MIPT.</p>"
-      - language: ru
-        text: "<p>Последние три года занимался графическим компилятором для Intel.</p>\n<p>Общий опыт в компиляторах около\
-            \ 12 лет. Увлекается гетерогенным программированием. Преподает C++ в МФТИ</p>"
+      - {language: ru, text: "<p>Работает над компиляторами с 2010 года. В настоящий момент работает над компилятором для\
+            \ RISCV в компании Syntacore.</p>"}
     twitter: Tilir
   - id: 2137
     photoFileName: 2137.jpg
@@ -30706,17 +30711,16 @@ speakers:
     gitHub: CyberROFL
   - id: 2138
     photoFileName: 2138.jpg
-    photoUpdatedAt: 2022-06-26T05:34:49Z[UTC]
+    photoUpdatedAt: "2023-03-20T19:09:08Z"
     name:
       - {language: en, text: "Vladislav Stolyarov"}
       - {language: ru, text: "Владислав Столяров"}
-    companyIds: [424]
+    companyIds: [1071]
     bio:
-      - language: en
-        text: "<p class=\"p1\">Senior C++ developer at PVS-Studio. He has been developing the C++ analyzer for more than 2\
-            \ years. In his free time, he is writing a front-end for Solidity.</p>\n<p class=\"p1\">&nbsp;</p>"
-      - {language: ru, text: "<p>Ведущий C++ разработчик в компании PVS-Studio. Более двух лет занимается разработкой анал\
-            изатора для C++. В свободное время пишет фронтенд для языка Solidity.</p>"}
+      - {language: en, text: "One of the founders of Mekhovyye Kulaki startup, a graduate student at TSU. He is writing his\
+            \ PhD dissertation on compiler development."}
+      - {language: ru, text: "Один из основателей стартапа Mekhovyye Kulaki, аспирант ТулГУ. Пишет кандидатскую диссертаци\
+            ю по разработке компиляторов."}
   - id: 2139
     photoFileName: 2139.jpg
     photoUpdatedAt: 2022-05-30T12:14:57Z[UTC]
@@ -30820,49 +30824,53 @@ speakers:
             \ different projects and now helps Workato to make their platform even better."
   - id: 2148
     photoFileName: 2148.jpg
-    photoUpdatedAt: 2022-10-27T12:28:37Z[UTC]
+    photoUpdatedAt: "2022-10-27T12:28:37Z"
     name:
-      - {language: en, text: "Petr Sovetov"}
+      - {language: en, text: "Peter Sovietov"}
       - {language: ru, text: "Пётр Советов"}
     companyIds: [922]
     bio:
-      - {language: en, text: "<p>Developer of compilers for special processors. Lecturer at RTU MIREA. Interested in program\
-            \ synthesis and procedural generation.</p>"}
-      - {language: ru, text: "<p>Разработчик компиляторов для спецпроцессоров. Преподаватель в РТУ МИРЭА. Интересуется воп\
-            росами синтеза программ и процедурной генерации.</p>"}
+      - {language: en, text: "<p>Professional interests: compiler construction and program synthesis. Defended a Ph.D. thesis\
+            \ on the compiler construction. Created several DSL compilers and compilers for specialized processors. Teaches\
+            \ in RTU MIREA. Is interested in computer history.</p>"}
+      - {language: ru, text: "<p>Основные области профессиональных интересов: технологии компиляции и синтеза программ. За\
+            щитил кандидатскую диссертацию по тематике разработки компиляторов. Создал несколько DSL-компиляторов и компил\
+            яторов для спецпроцессоров. Преподает в РТУ МИРЭА. Интересуется компьютерной историей.</p>"}
     gitHub: true-grue
     habr: true-grue
   - id: 2149
     photoFileName: 2149.jpg
-    photoUpdatedAt: 2022-05-30T09:42:23Z[UTC]
+    photoUpdatedAt: "2023-03-20T19:09:25Z"
     name:
       - {language: en, text: "Sergey Larin"}
       - {language: ru, text: "Сергей Ларин"}
-    companyIds: [424]
+    companyIds: [1071]
     bio:
-      - {language: en, text: "<p>Leading C++ developer at PVS-Studio. He has been developing an analyzer for C++ for more\
-            \ than 3 years. In his spare time he writes frontend for Solidity language.</p>"}
-      - {language: ru, text: "<p>Ведущий C++ разработчик в компании PVS-Studio. Более 3 лет занимается&nbsp; разработкой а\
-            нализатора для C++. В свободное время пишет фронтенд для языка Solidity.</p>"}
+      - {language: en, text: "A contributor to the open source RISC-V Virtual Machine. Writing his graduate work in the Institute\
+            \ of Advanced Information Technologies on static analysis. CTO at Mekhovyye Kulaki startup."}
+      - {language: ru, text: "Контрибьютер open source-эмулятора RISC-V Virtual Machine. Пишет ВКР в Институте передовых и\
+            нформационных технологий по теме статического анализа. CTO в стартапе Mekhovyye Kulaki."}
   - id: 2150
     photoFileName: 2150.jpg
-    photoUpdatedAt: 2022-04-27T08:30:36Z[UTC]
+    photoUpdatedAt: "2022-04-27T08:30:36Z"
     name:
       - {language: en, text: "Denis Legezo"}
       - {language: ru, text: "Денис Легезо"}
-    companyIds: [635]
+    companyIds: [689]
     bio:
-      - {language: en, text: "<p>He is working as a Lead Security Researcher with the Global Research and Analysis Team (GReAT)\
-            \ at Kaspersky Lab since 2014. &nbsp;Specialized on targeted attacks, research, reverse engineering, and malware\
-            \ analysis. Regularly providing training on these matters. Got the degree at Cybernetics and Applied Math facility\
-            \ of Moscow State University in 2002. Then he started a career as a programmer for different public and commercial\
-            \ companies. Presented the research at RSA, HITB, SAS, VirusBulletin, MBLT Dev.</p>"}
-      - {language: ru, text: "<p>Ведущий исследователь безопасности в группе глобальных исследований и анализа (GreAT) в &laquo;Л\
-            аборатории Касперского&raquo; с 2014 года. Специализируется на исследовании целевых атак, реверс-инжиниринге и\
-            \ анализе вредоносных программ. Регулярно проводит тренинги для клиентов по этим вопросам.&nbsp;<br />В 2002 г\
-            оду окончил факультет вычислительной математики и кибернетики МГУ. Карьеру программистом начинал в различных г\
-            осударственных и коммерческих компаниях. Представлял свои исследования на RSA, HITB, SAS, VirusBulletin, MBLT\
-            \ Dev.</p>"}
+      - language: en
+        text: "<p>Senior security engineer at SOC Yandex, dealing with threat hunting. Prior to that, he worked as a Lead\
+            \ Security Researcher with the Global Research and Analysis Team (GReAT) at Kaspersky Lab. Specialized on targeted\
+            \ attacks, research, reverse engineering, and malware analysis. Regularly providing training on these matters.</p>\n\
+            <p>Got the degree at Cybernetics and Applied Math facility of Moscow State University in 2002. Then he started\
+            \ a career as a programmer for different public and commercial companies. Presented the research at RSA, HITB,\
+            \ SAS, VirusBulletin, MBLT Dev.</p>"
+      - language: ru
+        text: "<p>Старший инженер безопасности в SOC Yandex, занимается threat hunting. До этого работал в группе глобальн\
+            ых исследований и анализа (GreAT) Лаборатории Касперского. Специализировался на исследовании целевых атак, рев\
+            ерс-инжиниринге и анализе вредоносных программ. Регулярно проводит тренинги для клиентов по этим вопросам.&nbsp;</p>\n\
+            <p>В 2002 году окончил факультет вычислительной математики и кибернетики МГУ. Представлял свои исследования на\
+            \ RSA, HITB, SAS, VirusBulletin, MBLT Dev.</p>"
     twitter: legezo
     gitHub: dlegezo
     habr: legezo
@@ -30916,23 +30924,23 @@ speakers:
     twitter: xardas2000
   - id: 2154
     photoFileName: 2154.jpg
-    photoUpdatedAt: 2022-04-26T13:37:22Z[UTC]
+    photoUpdatedAt: "2022-04-26T13:37:22Z"
     name:
       - {language: en, text: "Oleg Lysyy"}
       - {language: ru, text: "Олег Лысый"}
     companyIds: [424]
     bio:
-      - {language: en, text: "<p>C++ developer at PVS-Studio, a company that develops static analysis tools.<br />Graduated\
-            \ from Tula State University. 1.5 years of commercial C++ development experience + 2 years in a startup (Unity).<br\
-            \ />He enjoys playing guitar, vocals, chess and StarCraft 2.</p>"}
-      - {language: ru, text: "<p>C++ разработчик в PVS-Studio &mdash; компании, разрабатывающей инструменты статического а\
-            нализа.<br />Выпускник Тульского государственного университета. Опыт коммерческой С++ разработки 1,5 года + 2\
-            \ года в стартапе (Unity).&nbsp;<br />Увлекается игрой на гитаре, вокалом, шахматами и StarCraft 2.</p>"}
+      - {language: en, text: "Senior C++ developer at PVS-Studio, a company that develops static analysis tools.Graduated\
+            \ from Tula State University. 1.5 years of commercial C++ development experience + 2 years in a startup (Unity).He\
+            \ enjoys playing guitar, vocals, chess and StarCraft2."}
+      - {language: ru, text: "Senior C++ разработчик в PVS-Studio — компании, разрабатывающей инструменты статического ана\
+            лиза.</p><p>Выпускник Тульского государственного университета. Опыт коммерческой С++ разработки 1,5 года + 2 г\
+            ода в стартапе (Unity).&nbsp;</p><p>Увлекается игрой на гитаре, вокалом, шахматами и StarCraft 2."}
     gitHub: Minatych
     habr: Minatych
   - id: 2156
     photoFileName: 2156.jpg
-    photoUpdatedAt: 2022-04-28T13:14:20Z[UTC]
+    photoUpdatedAt: "2022-04-28T13:14:20Z"
     name:
       - {language: en, text: "Alexander Enaldiev"}
       - {language: ru, text: "Александр Еналдиев"}
@@ -30968,18 +30976,18 @@ speakers:
     habr: Un1oR
   - id: 2158
     photoFileName: 2158.jpg
-    photoUpdatedAt: 2022-05-24T11:04:50Z[UTC]
+    photoUpdatedAt: "2022-05-24T11:04:50Z"
     name:
       - {language: en, text: "Alexander Polomodov"}
       - {language: ru, text: "Александр Поломодов"}
     companyIds: [674]
     bio:
-      - {language: en, text: "Head of Digital Ecosystem Development at Tinkoff. Responsible for public web applications, mobile\
-            \ banking, engagement channel automation, data management services. Once upon a time wrote requirements, code,\
-            \ and led development teams. Serves on the program committee of ArchDays."}
-      - {language: ru, text: "Руководитель управления разработки цифровых экосистем в Tinkoff. Отвечает за публичные веб-п\
-            риложения, мобильный банк, автоматизацию каналов привлечения, сервисы управления данными. Когда-то давно писал\
-            \ требования, код, лидил команды разработки. Входит в программный комитет ArchDays."}
+      - {language: en, text: "<p>Head of Digital Ecosystem Development at Tinkoff. Responsible for public web applications,\
+            \ mobile banking, engagement channel automation, data management services. Once upon a time wrote requirements\
+            \ and code, and led development teams. Serves on the Program Committee of ArchDays.</p>"}
+      - {language: ru, text: "<p>Руководитель управления разработки цифровых экосистем в Тинькофф. Отвечает за публичные в\
+            еб-приложения, мобильный банк, автоматизацию каналов привлечения, сервисы управления данными. Когда-то давно п\
+            исал требования и код, лидил команды разработки. Входит в программный комитет ArchDays.</p>"}
     twitter: apolomodov
     gitHub: polomodov
   - id: 2159
@@ -34166,18 +34174,18 @@ speakers:
     habr: vasiksim88
   - id: 2382
     photoFileName: 2382.jpg
-    photoUpdatedAt: 2022-08-16T10:26:19Z[UTC]
+    photoUpdatedAt: "2023-05-17T10:19:23Z"
     name:
       - {language: en, text: "Anton Lastochkin"}
       - {language: ru, text: "Антон Ласточкин"}
-    companyIds: []
+    companyIds: [1081]
     bio:
-      - {language: en, text: "<p>Leading software engineer with fifteen years of experience. Participated in avionics development,\
-            \ now moved to unmanned aircraft. Developed and implemented automated testing system for onboard equipment within\
-            \ the company.</p>"}
-      - {language: ru, text: "<p>Ведущий инженер-программист с пятнадцатилетним стажем. Участвовал в разработке авионики,\
-            \ сейчас перешел на беспилотное направление. Разработал и внедрил систему автоматизированного тестирования для\
-            \ бортового оборудования в рамках компании.</p>"}
+      - {language: en, text: "<p>Lead software engineer in a drone development company. More than 15 years programming in\
+            \ C++. Performed successful projects in a wide range: embedded, GUI, backend, freelance. Trying to develop soft\
+            \ skills. Teaches C++ and does code reviews of backend projects on EdTech platforms.</p>"}
+      - {language: ru, text: "<p>Ведущий инженер-программист в компании по разработке дронов. Более 15 лет программирует н\
+            а С++. Выполнял успешные проекты в широком диапазоне: embedded, GUI, бэкенд, фриланс. Старается развивать софт\
+            -скиллы. Преподает С++ и выполняет код-ревью бэкенд-проектов на площадках EdTech.</p>"}
     gitHub: lastant
     habr: alastochkin
   - id: 2383
@@ -37537,3 +37545,387 @@ speakers:
             \ Is currently working on his thesis on the analysis and visualization of C++ programs.</p>"}
       - {language: ru, text: "<p>Аспирант в лаборатории операционных систем, языков программирования и компиляторов. В дан\
             ный момент работает над диссертацией по теме анализа и визуализации программ на языке C++.</p>"}
+  - id: 2614
+    photoFileName: 2614.jpg
+    photoUpdatedAt: "2023-03-28T07:16:25Z"
+    name:
+      - {language: en, text: "Alexander Fokin"}
+      - {language: ru, text: "Александр Фокин"}
+    companyIds: []
+    bio:
+      - {language: en, text: "Founded WG21 in Russia. Worked on Yandex search. Worked on search, infrastructure and ML at\
+            \ Ozon."}
+      - {language: ru, text: "<p>Основал WG21 в России. Делал поиск в Яндексе. Занимался поиском, инфраструктурой и ML в О\
+            зоне.</p>"}
+  - id: 2615
+    photoFileName: 2615.jpg
+    photoUpdatedAt: "2023-04-05T09:01:54Z"
+    name:
+      - {language: en, text: "Anton Potapov"}
+      - {language: ru, text: "Антон Потапов"}
+    companyIds: [242]
+    bio:
+      - {language: en, text: "<p>Has been working on parallelism for the last 13 years. Contributed to projects such as TBB\
+            \ and OpenCV. Authored several C++ standardization committee proposals.</p>"}
+      - {language: ru, text: "<p>Занимается параллелизмом последние 13 лет. Оставил свой след в таких проектах как TBB и OpenCV.\
+            \ Автор предложений в стандарт С++.</p>"}
+    gitHub: anton-potapov
+  - id: 2616
+    photoFileName: 2616.jpg
+    photoUpdatedAt: "2023-04-01T10:45:26Z"
+    name:
+      - {language: en, text: "Aleksandr Kukharenko"}
+      - {language: ru, text: "Александр Кухаренко"}
+    companyIds: [1072]
+    bio:
+      - {language: en, text: "<p>Engaged in computer graphics and writing demos since 1997. Works as a rendering engineer\
+            \ (photorealistic graphics, augmented reality).</p>"}
+      - {language: ru, text: "<p>Занимается компьютерной графикой и пишет демо с 1997 года. Работает рендер-инженером (фот\
+            ореалистичная графика, дополненная реальность).</p>"}
+    habr: 0xf0x
+  - id: 2617
+    photoFileName: 2617.jpg
+    photoUpdatedAt: "2023-02-15T14:04:34Z"
+    name:
+      - {language: en, text: "Evgenii Zoshchuk"}
+      - {language: ru, text: "Евгений Зощук"}
+    companyIds: [1074]
+    bio:
+      - {language: en, text: "Engaged in backend development in C++ and C#. Likes to achieve high performance by optimizing\
+            \ code. Convinced that the IT sphere is now evolving towards supercomplex and slow monsters. He is sure that the\
+            \ tasks to be solved can be made compact and simple and do not require a Core i9."}
+      - {language: ru, text: "<p>Занимается бэкенд-разработкой на языках С++ и C#. Любит добиваться высокой производительн\
+            ости, оптимизируя код. Убежден, что сейчас IT-сфера развивается в сторону сверхсложных и тормозящих монстров.\
+            \ Уверен, что решаемые задачи можно сделать компактными и простыми и не требующими наличия Core i9.</p>"}
+  - id: 2618
+    photoFileName: 2618.jpg
+    photoUpdatedAt: "2022-05-20T13:56:22Z"
+    name:
+      - {language: en, text: "Ayaz Salikhov"}
+      - {language: ru, text: "Аяз Салихов"}
+    companyIds: [1076]
+    bio:
+      - {language: en, text: "Software Architect, C++ developer for around 6 years. Ex Conan (C++ Package Manager) community\
+            \ reviewer. Loves non-trivial moments in code. Has been developing a trading platform for HFT company for a long\
+            \ time. In his free time develops Docker images for Jupyter Project."}
+      - {language: ru, text: "<p>Software Architect, C++ разработчик с шестилетним опытом. Ex-Community Reviewer для Conan\
+            \ (C++ Package Manager). Любит нетривиальные моменты в коде, ценит их красоту. Долгое время занимался разработ\
+            кой торговой системы в сфере HFT. В свободное время занимается развитием Docker-образов для Jupyter.</p>"}
+    gitHub: mathbunnyru
+    habr: mathbunnyru
+  - id: 2619
+    photoFileName: 2619.jpg
+    photoUpdatedAt: "2023-03-02T21:28:46Z"
+    name:
+      - {language: en, text: "Elena Veselovskaia"}
+      - {language: ru, text: "Елена Веселовская"}
+    companyIds: [1077]
+    bio:
+      - {language: en, text: "<p>Has been working as a C++ programmer since 2011. Since 2017 at NT Progress, which develops\
+            \ FinTech solutions for financial markets. She worked her way up from junior to one of the leading developers.</p>"}
+      - {language: ru, text: "<p>С 2011 года работает C++ программистом. С 2017 года в компании НТ Прогресс, которая разра\
+            батывает финтех-решения для финансовых рынков. Прошла путь от джуниора до одного из ведущих разработчиков.</p>"}
+  - id: 2620
+    photoFileName: 2620.jpg
+    photoUpdatedAt: 2023-05-10T12:49Z
+    name:
+      - {language: en, text: "Dmitrii Starodubtsev"}
+      - {language: ru, text: "Дмитрий Стародубцев"}
+    companyIds: [1078]
+    bio:
+      - {language: en, text: "<p>Master's degree programme in Software Engineering, SUSU Department of System Programming.\
+            \ Engaged in C++ embedded development at Tourmaline Core.</p>"}
+      - {language: ru, text: "<p>Магистратура по специальности &laquo;Программная инженерия&raquo;, кафедра системного про\
+            граммирования ЮУрГУ. Занимается embedded-разработкой на С++ в компании Tourmaline Core.</p>"}
+  - id: 2621
+    photoFileName: 2621.jpg
+    photoUpdatedAt: "2023-05-10T12:56:33Z"
+    name:
+      - {language: en, text: "Olga Kuzmicheva"}
+      - {language: ru, text: "Ольга Кузьмичева"}
+    companyIds: [1078]
+    bio:
+      - {language: en, text: "<p>Bachelor's degree programme in Software Engineering, Department of System Programming, SUSU.\
+            \ Engaged in C++ embedded development at Tourmaline Core.</p>"}
+      - {language: ru, text: "<p>Бакалавр по специальности &laquo;Программная инженерия&raquo;, кафедра системного програм\
+            мирования ЮУрГУ. Занимается embedded-разработкой на С++ в компании Tourmaline Core.</p>"}
+  - id: 2622
+    photoFileName: 2622.jpg
+    photoUpdatedAt: "2023-03-30T14:09:39Z"
+    name:
+      - {language: en, text: "Stepan Dyatkovskiy"}
+      - {language: ru, text: "Степан Дятковский"}
+    companyIds: [635]
+    bio:
+      - {language: en, text: "<p>System software developer. Participated in LLVM ARM Backend development. Worked on autotuning\
+            \ solutions in Huawei R&amp;D. Now working on KOS development at Kaspersky Lab.</p>"}
+      - {language: ru, text: "<p>Разработчик системного ПО, участвовал в добавлении ARM Backend в LLVM, работал над autotuning-р\
+            ешениями в Huawei, сейчас активно участвует в развитии Kaspersky OS.</p>"}
+    gitHub: kaomoneus
+  - id: 2623
+    photoFileName: 2623.jpg
+    photoUpdatedAt: "2023-04-04T13:33:50Z"
+    name:
+      - {language: en, text: "Semen Budenkov"}
+      - {language: ru, text: "Семён Буденков"}
+    companyIds: [1079]
+    bio:
+      - {language: en, text: "Have been developing Computer Vision algorithms for more than 7 years. Worked on such projects\
+            \ as license plate recognition, vehicle classification, multi-camera video analytics."}
+      - {language: ru, text: "<p>Занимается разработкой алгоритмов Computer Vision больше 7 лет. Работал над проектами по\
+            \ распознаванию автомобильных номеров, классификации транспортных средств, многокамерной видеоаналитике.</p>"}
+  - id: 2624
+    photoFileName: 2624.jpg
+    photoUpdatedAt: "2023-03-01T16:44:05Z"
+    name:
+      - {language: en, text: "Anton Sosnin"}
+      - {language: ru, text: "Антон Соснин"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>He has been programming professionally in C++ for almost 9 years. Programmed an image editor,\
+            \ computer vision for robotic manipulators, a statistics aggregator for slot machines, and now a message broker.\
+            \ He jokes about C++ on Twitter. And in the \"<a href=\"https://t.me/ithueti\">IT Today</a>\" Telegram channel\
+            \ &mdash; about C++ and not only.</p>"}
+      - {language: ru, text: "<p>Почти 9 лет профессионально программирует на С++. Программировал редактор для изображений\
+            , компьютерное зрение для роботических манипуляторов, агрегатор статистики для игровых автоматов и теперь брок\
+            ер для сообщений. Шутит шутки про С++ в Twitter. А в Telegram-канале <a href=\"https://t.me/ithueti\">Айти Туд\
+            эй </a>&mdash; про С++ и не только.</p>"}
+    twitter: "0xfe0d"
+    gitHub: mrfeod
+    habr: MrFeod
+  - id: 2625
+    photoFileName: 2625.jpg
+    photoUpdatedAt: "2023-03-06T07:18:08Z"
+    name:
+      - {language: en, text: "Marsel Galimullin"}
+      - {language: ru, text: "Марсель Галимуллин"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Graduated from St. Petersburg State Electrotechnical University in 2016. Since then, he has\
+            \ been working with C++. During this time he worked in such companies as Synopsys, Kronshtadt Technologies, InfoTex,\
+            \ ADM SYSTEMS. Helped with development of libcds library. For the last year has been working in the Yandex Lavka\
+            \ backend.</p>"}
+      - {language: ru, text: "<p>Окончил магистратуру СПбГЭТУ в 2016 году. Поработал с С++ в таких компаниях как Synopsys,\
+            \ &laquo;Кронштадт Технологии&raquo;, &laquo;ИнфоТеКС&raquo;, &laquo;АДМ СИСТЕМЫ&raquo;. Помогал с развитием б\
+            иблиотеки libcds. Последний год работает в бэкенде Яндекс Лавки.</p>"}
+    gitHub: mgalimullin
+  - id: 2626
+    photoFileName: 2626.jpg
+    photoUpdatedAt: "2023-03-27T10:36:50Z"
+    name:
+      - {language: en, text: "Aleksander Lyapunov"}
+      - {language: ru, text: "Александр Ляпунов"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Head of DBMS Tarantool kernel development group.</p>"}
+      - {language: ru, text: "<p>Руководитель группы разработки ядра СУБД Tarantool.</p>"}
+    gitHub: alyapunov
+  - id: 2627
+    photoFileName: 2627.jpg
+    photoUpdatedAt: "2023-03-09T10:25:10Z"
+    name:
+      - {language: en, text: "Viktor Shamparov"}
+      - {language: ru, text: "Виктор Шампаров"}
+    companyIds: [1080]
+    bio:
+      - {language: en, text: "<p>Developer of the LCC compiler for Elbrus microprocessors, graduate student of MIPT. He is\
+            \ engaged in compiler optimization and profiling.</p>"}
+      - {language: ru, text: "<p>Программист в команде разработки компилятора LCC для микропроцессоров Эльбрус, аспирант М\
+            ФТИ. Занимается оптимизациями в компиляторе и профилированием.</p>"}
+  - id: 2628
+    photoFileName: 2628.jpg
+    photoUpdatedAt: "2023-03-28T07:32:34Z"
+    name:
+      - {language: en, text: "Alexander Kornilov"}
+      - {language: ru, text: "Александр Корнилов"}
+    companyIds: [635]
+    bio:
+      - {language: en, text: "<p>Sine 2005 he is professionally working as software developer. He took part in mobile platform\
+            \ development for such customers: Motorola, Kyocera, Nokia, Samsung etc. Lately he has been working in automotive\
+            \ division and developing software mostly on middleware level and sometimes HMI and low-level layer. Main customers\
+            \ are Jaguar, Chrysler, Peugeot-Citro&euml;n (Groupe PSA), General Motors, Daimler. Main skills: C/C++, Java,\
+            \ C#, Kotlin.</p>"}
+      - {language: ru, text: "<p>Занимается промышленной разработкой ПО с 2005 года. Принимал участие в проектах таких кру\
+            пных международных компаний, как Jaguar, Crysler, General Motors, Daimler, Samsung, Nokia в сфере automotive и\
+            \ мобильной разработки. Имеет опыт программирования на C/C++, Java, C#, Kotlin.</p>"}
+  - id: 2629
+    photoFileName: 2629.jpg
+    photoUpdatedAt: "2023-03-17T06:43:56Z"
+    name:
+      - {language: en, text: "Artyom Khoroshev"}
+      - {language: ru, text: "Артём Хорошев"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Develops high-performance software in C++. Specializes in GPU, actively uses CUDA and other\
+            \ solutions from Nvidia to solve problems. Currently works at SberDevices, where he develops and optimizes ML\
+            \ services. Reads a course on high performance computing at the Higher School of Economics in St. Petersburg.</p>"}
+      - {language: ru, text: "<p>Разрабатывает высокопроизводительный софт на C++. Специализируется на работе с GPU, актив\
+            но использует CUDA и другие решения от Nvidia для решения задач. Сейчас работает в SberDevices, где занимается\
+            \ разработкой и оптимизацией ML-сервисов.&nbsp;Читает курс по высокопроизводительным вычислениям в ВШЭ в Санкт\
+            -Петербурге.</p>"}
+  - id: 2630
+    photoFileName: 2630.jpg
+    photoUpdatedAt: "2023-03-17T14:51:47Z"
+    name:
+      - {language: en, text: "Ivan Smirnov"}
+      - {language: ru, text: "Иван Смирнов"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p><span style=\"color: #000000;\">Developer of a key-value storage part of the YT distributed\
+            \ system at Yandex. Formerly developed automotive routing and guidance algorithms at Yandex.Maps. Ex-competitive\
+            \ programmer, still fond of algorithms and teaches them on a regular basis.</span></p>"}
+      - {language: ru, text: "<p><span style=\"color: #000000;\">Несколько лет разрабатывает в Яндексе key-value storage в\
+            \ распределенной системе YT. В прошлом занимался автомобильной маршрутизацией в Яндекс Картах. В студенческие\
+            \ годы много участвовал в олимпиадах по программированию, алгоритмы до сих пор любит и преподает.</span></p>"}
+  - id: 2631
+    photoFileName: 2631.jpg
+    photoUpdatedAt: "2023-03-29T20:56:24Z"
+    name:
+      - {language: en, text: "Rostislav Mikheev"}
+      - {language: ru, text: "Ростислав Михеев"}
+    companyIds: [1082]
+    bio:
+      - {language: en, text: "<p>Leading computer graphics engineer and co-founder of Elveris. More than 10 years of C++ game\
+            \ development experience.</p>"}
+      - {language: ru, text: "<p>Ведущий инженер по компьютерной графике и сооснователь компании Elveris. Более 10 лет опы\
+            та геймдева на C++.</p>"}
+    twitter: hacenator
+    gitHub: hacenator
+    habr: hacenator
+  - id: 2632
+    photoFileName: 2632.jpg
+    photoUpdatedAt: "2023-01-19T09:04:25Z"
+    name:
+      - {language: en, text: "Aleksandr Kirsanov"}
+      - {language: ru, text: "Александр Кирсанов"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>At VK he is focused on developing KPHP and a set of other open source projects, and low-level\
+            \ kernel optimizations</p>"}
+      - {language: ru, text: "<p>Внутри ВКонтакте занимается разработкой KPHP и других open source проектов, оптимизацией\
+            \ ядра и работой на стыке: PHP &mdash; KPHP &mdash; движки.</p>"}
+    gitHub: unserialize
+    habr: unserialize
+  - id: 2633
+    photoFileName: 2633.jpg
+    photoUpdatedAt: "2023-03-31T14:20:12Z"
+    name:
+      - {language: en, text: "Eugene Grigorchuk"}
+      - {language: ru, text: "Евгений Григорчук"}
+    companyIds: [1082]
+    bio:
+      - {language: en, text: "<p>Graphic Engineer at Elverils. Engaged in porting graphics code to different platforms, mostly\
+            \ macOS (Apple Metal API). Loves new useful technologies in games.</p>"}
+      - {language: ru, text: "<p>Графический инженер в компании Elverils. Занимается переносом графического кода под разны\
+            е платформы, в основном на macOS (Apple Metal API). Любит новые полезные технологии в играх.</p>"}
+  - id: 2634
+    photoFileName: 2634.jpg
+    photoUpdatedAt: "2023-03-01T17:29:11Z"
+    name:
+      - {language: en, text: "Yury Gribov"}
+      - {language: ru, text: "Юрий Грибов"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>Tool developer: compilers, verification tools.</p>"}
+      - {language: ru, text: "<p>Разработчик инструментальных средств: компиляторов, инструментов верификации</p>"}
+    gitHub: yugr
+    habr: the_real_yugr
+  - id: 2635
+    photoFileName: 2635.jpg
+    photoUpdatedAt: "2023-03-30T20:08:34Z"
+    name:
+      - {language: en, text: "Anton Sysoev"}
+      - {language: ru, text: "Антон Сысоев"}
+    companyIds: [258]
+    bio:
+      - {language: en, text: "<p>Over 20 years of experience in embedded systems. Tech Lead, Team Lead, just a fun guy.</p>"}
+      - {language: ru, text: "<p>Более 20 лет опыта в embedded-системах. Tech Lead, Team Lead, просто веселый парень.</p>"}
+  - id: 2636
+    photoFileName: 2636.jpg
+    photoUpdatedAt: "2023-03-16T08:39:46Z"
+    name:
+      - {language: en, text: "Ilya Kazakov"}
+      - {language: ru, text: "Илья Казаков"}
+    companyIds: [773]
+    bio:
+      - {language: en, text: "<p>He started writing in C when he was still in school. Then became a circuit engineer: worked\
+            \ with sound, made power supplies. In 2020, he got into real IT and started writing in C++. He works in the team\
+            \ that deals with Datapath storage systems. Now deals with fault injection in SAS protocol.</p>"}
+      - {language: ru, text: "<p>Начал писать на С еще в школе. Затем стал схемотехником: работал со звуком, делал источни\
+            ки питания. В 2020 году попал в настоящее IT и начал писать на С++. Работает в команде, которая занимается Datapath\
+            \ системы хранения данных. Сейчас занимается fault injection в протокол SAS.</p>"}
+    gitHub: TheSalvator
+  - id: 2637
+    photoFileName: 2637.jpg
+    photoUpdatedAt: "2023-03-20T18:21:47Z"
+    name:
+      - {language: en, text: "Evgenii Oparin"}
+      - {language: ru, text: "Евгений Опарин"}
+    companyIds: [635]
+    bio:
+      - {language: en, text: "<p>Over 10 years of experience in C/C++ development. In the past worked as an embedded developer\
+            \ or close to it. Currently translating software builds to Bazel.</p>"}
+      - {language: ru, text: "<p>Более 10 лет опыта в разработке на С/С++. В прошлом работал как embedded-разработчик или\
+            \ близко к этому. Сейчас занимается переводом сборки программного обеспечения на Bazel.</p>"}
+  - id: 2638
+    photoFileName: 2638.jpg
+    photoUpdatedAt: "2023-03-29T13:54:06Z"
+    name:
+      - {language: en, text: "Ernest Asanov"}
+      - {language: ru, text: "Эрнест Асанов"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>C++ developer at VK Maps, the rendering team. Has been writing in С++ for 10 years, and the\
+            \ last 8 years for mobile platforms (Android &amp; iOS). Interested in the development of C++ language.</p>"}
+      - {language: ru, text: "<p>C++ разработчик в VK Карты, занимается движком рендеринга. Давно пишет на С++. Также посл\
+            едние 8 лет занимается мобильными платформами (преимущественно Android, NDK, в том числе). Интересуется развит\
+            ием языка C++.</p>"}
+    gitHub: kwote
+  - id: 2639
+    photoFileName: 2639.jpg
+    photoUpdatedAt: "2023-03-30T05:41:43Z"
+    name:
+      - {language: en, text: "Dmitry Melnik"}
+      - {language: ru, text: "Дмитрий Мельник"}
+    companyIds: [627]
+    bio:
+      - {language: en, text: "<p>Since 2005 he has been developing compiler optimizations and improving performance of generated\
+            \ code in static and dynamic compilers. Took part in developing optimizations in GCC and LLVM open source compilers,\
+            \ JavaScript execution environments - WebKit (JavaScriptCore) and V8, as well as JIT compiler for executing SQL\
+            \ queries in PostgreSQL using LLVM compiler. Repeatedly presented at core developer conferences (GCC, LLVM, PostgreSQL).\
+            \ Author of more than 20 scientific papers. Leads tulchain development and compiler optimization group in ISP\
+            \ RAS.</p>"}
+      - {language: ru, text: "<p>С 2005 года занимается разработкой компиляторных оптимизаций и улучшением производительно\
+            сти генерируемого кода в статических и динамических компиляторах. Участвовал в разработке оптимизаций в компил\
+            яторах с открытым исходным кодом GCC и LLVM, средах исполнения JavaScript &mdash; WebKit (JavaScriptCore) и V8,\
+            \ а также JIT-компилятора для исполнения SQL-запросов в PostgreSQL с использованием компилятора LLVM. Неоднокр\
+            атно выступал на профильных конференциях разработчиков (GCC, LLVM, PostgreSQL). Автор более 20 научных работ.\
+            \ Руководит группой разработки тулчейнов и компиляторных оптимизаций в ИСП РАН.</p>"}
+  - id: 2640
+    photoFileName: 2640.jpg
+    photoUpdatedAt: "2023-03-12T13:09:02Z"
+    name:
+      - {language: en, text: "Dmitry Ermolov"}
+      - {language: ru, text: "Дмитрий Ермолов"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Has worked as a C++ developer at Yandex for almost 15 years. For the last few years he has\
+            \ been working in Yandex infrastructure, in the YT team &mdash; the internal distributed computing platform. Leads\
+            \ a team that develops and maintains client SDKs for their system in C++, Java and Python. On top of these SDKs\
+            \ are written and run thousands of processes within Yandex.</p>"}
+      - {language: ru, text: "С++ разработчик из Яндекса, имеющий за спиной 15 лет опыта. Последние несколько лет работает\
+            \ в инфраструктуре Яндекса, в команде YT — внутренней платформе распределенных вычислений. Руководит группой,\
+            \ разрабатывающей и поддерживающей клиентские SDK для их системы на языках С++, Java и Python. Поверх этих SDK\
+            \ написаны и работают тысячи процессов внутри Яндекса."}
+  - id: 2641
+    photoFileName: 2641.jpg
+    photoUpdatedAt: "2023-04-06T14:33:28Z"
+    name:
+      - {language: en, text: "Oleg Senin"}
+      - {language: ru, text: "Олег Сенин"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Employee of Yandex Museum, a specialist in the field of visual effects programming, a multiple\
+            \ winner of international festivals of computer art.</p>"}
+      - {language: ru, text: "<p>Сотрудник Яндекс Музея, специалист в области программирования визуальных эффектов, неодно\
+            кратный призер международных фестивалей компьютерного искусства.</p>"}
