@@ -3876,3 +3876,58 @@ companies:
     name:
       - {language: en, text: "SolarWinds"}
     siteLink: https://www.solarwinds.com
+  - id: 1071
+    name:
+      - {language: en, text: "Mekhovyye Kulaki"}
+  - id: 1072
+    name:
+      - {language: en, text: WANNA}
+  - id: 1073
+    name:
+      - {language: en, text: Sphinx}
+    siteLink: https://sphinxsearch.com
+  - id: 1074
+    name:
+      - {language: en, text: "Renaissance Credit"}
+      - {language: ru, text: "Ренессанс Банк"}
+    siteLink: https://rencredit.ru
+  - id: 1075
+    name:
+      - {language: en, text: "Modernes C++ GmbH"}
+    siteLink: https://www.modernescpp.com
+  - id: 1076
+    name:
+      - {language: en, text: "Project Jupyter"}
+    siteLink: https://jupyter.org
+  - id: 1077
+    name:
+      - {language: en, text: "NT Progress"}
+      - {language: ru, text: "НТ Прогресс"}
+    siteLink: https://ntprogress.ru
+  - id: 1078
+    name:
+      - {language: en, text: "Tourmaline Core"}
+    siteLink: https://www.tourmalinecore.com
+  - id: 1079
+    name:
+      - {language: en, text: IntelliVision}
+    siteLink: https://intellivision.com
+  - id: 1080
+    name:
+      - {language: en, text: MCST}
+      - {language: ru, text: МЦСТ}
+    siteLink: http://www.mcst.ru
+  - id: 1081
+    name:
+      - {language: en, text: Kronshtadt}
+      - {language: ru, text: Кронштадт}
+    siteLink: https://kronshtadt.ru
+  - id: 1082
+    name:
+      - {language: en, text: Elverils}
+    siteLink: https://elverils.com
+  - id: 1083
+    name:
+      - {language: en, text: MIIT}
+      - {language: ru, text: МИИТ}
+    siteLink: https://www.miit.ru

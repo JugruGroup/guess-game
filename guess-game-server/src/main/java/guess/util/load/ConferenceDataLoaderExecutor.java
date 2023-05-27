@@ -2475,9 +2475,13 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов онлайн-части конференции JPoint 2023", "Lightning Talks",
 //                                "Yandex Stack-o-loto", "Code Battle")));
 //        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2023, 5, 11), "2023",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("C++ Russia 2023", null, List.of(24L, 28L)),
-//                        Set.of()));
+//                        Map.of(new NameCompany("Павел Новиков", null), 351L),
+//                        Set.of("Открытие конференции C++ Russia 2023", "Подведение итогов online-части конференции",
+//                                "Открытие офлайн-части конференции C++ Russia 2023", "Lightning Talks",
+//                                "Закрытие конференции C++ Russia 2023", "Нужны ли профсоюзы в IT?", "Тренды от HR",
+//                                "Актуальные проблемы GPGPU-разработки", "Вопросы преподавания языка в вузе")));
 //        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 5, 12), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Mobius 2023 Spring", null, List.of(24L, 28L)),
