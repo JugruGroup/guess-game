@@ -316,6 +316,11 @@ companySynonyms:
         "Monitor Electric (monitel.com)",
         "Монитор Электрик (monitel.ru)"
     ]
+  - name: NLMK
+    synonyms: [
+        IT-NLMK,
+        ИТ-НЛМК
+    ]
   - name: MPI-SWS
     synonyms: [
         "Max Planck Institute for Software Systems"
@@ -526,7 +531,9 @@ companySynonyms:
         Tinkoff.ru,
         "TCS Bank",
         "ТКС Банк",
-        "IT's Tinkoff"
+        "IT's Tinkoff",
+        "Mobile Developer. Tinkoff",
+        "Mobile Developer. Тинькофф"
     ]
   - name: Toloka
     synonyms: [
@@ -569,14 +576,24 @@ companySynonyms:
     synonyms: [
         VKontakte,
         VK.com,
+        "VK / VKontakte",
+        "VK / ВКонтакте",
         "VK Calls",
+        "VK / VK Clips",
         "VK Cloud",
         "VK Cloud Solutions",
         "VK Education",
         "VK for Business",
         "VK Play",
+        "VK / VK Play",
+        "VK / RuStore",
         "VK Tech",
         "VK Video",
+        "VK / Youla.ru",
+        "VK / Zen",
+        "VK / Дзен",
+        "VK / VK Клипы",
+        "VK / Юла",
         "VK Видео",
         "VK Звонки",
         "VK Образование",

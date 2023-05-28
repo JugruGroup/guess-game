@@ -3854,9 +3854,9 @@ companies:
     siteLink: https://www.prismamediosdepago.com
   - id: 1065
     name:
-      - {language: en, text: IT-NLMK}
-      - {language: ru, text: ИТ-НЛМК}
-    siteLink: https://it.nlmk.com
+      - {language: en, text: NLMK}
+      - {language: ru, text: НЛМК}
+    siteLink: https://nlmk.com
   - id: 1066
     name:
       - {language: en, text: "Marco Schulz Consulting"}
@@ -3931,3 +3931,23 @@ companies:
       - {language: en, text: MIIT}
       - {language: ru, text: МИИТ}
     siteLink: https://www.miit.ru
+  - id: 1084
+    name:
+      - {language: en, text: "Stingray Technologies"}
+      - {language: ru, text: "Стингрей Технолоджиз"}
+    siteLink: https://stingray-mobile.ru
+  - id: 1085
+    name:
+      - {language: en, text: "Somnio Software"}
+    siteLink: https://somniosoftware.com
+  - id: 1086
+    name:
+      - {language: en, text: Uzum}
+    siteLink: https://uzum.com
+  - id: 1087
+    name:
+      - {language: en, text: Doubletapp}
+    siteLink: https://doubletapp.ai
+  - id: 1088
+    name:
+      - {language: en, text: Linen}
