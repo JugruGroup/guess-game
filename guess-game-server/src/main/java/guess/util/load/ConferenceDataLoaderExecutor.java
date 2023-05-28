@@ -2485,7 +2485,16 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 5, 12), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Mobius 2023 Spring", null, List.of(24L, 28L)),
-//                        Set.of()));
+//                        Set.of("Открытие конференции Mobius 2023 Spring", "Открытие. 2 день",
+//                                "Подведение итогов онлайн-части конференции Mobius 2023 Spring",
+//                                "Открытие офлайн-части конференции Mobius 2023 Spring", "Mоbius Code Battle ",
+//                                "Закрытие офлайн-части конференции Mobius 2023 Spring",
+//                                "Kotlin Multiplatform Mobile, или Три слова, от которых хорошо на душе",
+//                                "Автоматизация в мобильной разработке",
+//                                "От монолита к распределенной архитектуре, а также другие проблемы использования Redux в нативном коде",
+//                                "Подкаст: Лента Мобиуса + Yet Another Mobile Party",
+//                                "Принципиально ли наличие principal мобильных разработчиков в корпорации?",
+//                                "Счет выставлен: как организовать процесс работы с техдолгом и продать его бизнесу")));
 //        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2023, 5, 15), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("HolyJS 2023 Spring", null, List.of(24L, 28L)),
