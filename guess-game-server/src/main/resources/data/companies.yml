@@ -933,10 +933,6 @@ companies:
     name:
       - {language: en, text: Invitae}
     siteLink: https://www.invitae.com
-  - id: 272
-    name:
-      - {language: en, text: IPONWEB}
-    siteLink: https://www.iponweb.com
   - id: 273
     name:
       - {language: en, text: Isovalent}
@@ -2940,10 +2936,6 @@ companies:
     name:
       - {language: en, text: Zivid}
     siteLink: https://www.zivid.com
-  - id: 831
-    name:
-      - {language: en, text: ClickHouse}
-    siteLink: https://clickhouse.com
   - id: 832
     name:
       - {language: en, text: "Woven Planet"}
@@ -3277,10 +3269,6 @@ companies:
     name:
       - {language: en, text: "Catalyst Aerospace Technologies"}
     siteLink: https://ctlst.tech
-  - id: 924
-    name:
-      - {language: en, text: "N-able Technology"}
-    siteLink: https://www.n-able.com
   - id: 925
     name:
       - {language: en, text: Sudo}
@@ -3408,10 +3396,6 @@ companies:
     name:
       - {language: en, text: "Schwarz group"}
     siteLink: https://gruppe.schwarz
-  - id: 957
-    name:
-      - {language: en, text: DuckStax}
-    siteLink: https://duckstax.com
   - id: 958
     name:
       - {language: en, text: "Minimal Modeling"}
@@ -3650,10 +3634,6 @@ companies:
       - {language: en, text: "Web standards"}
       - {language: ru, text: Веб-стандарты}
     siteLink: https://web-standards.ru
-  - id: 1015
-    name:
-      - {language: en, text: Gradle}
-    siteLink: https://gradle.org
   - id: 1016
     name:
       - {language: en, text: "Linearity GmbH"}
@@ -3679,10 +3659,6 @@ companies:
       - {language: en, text: "Open Mobile Platform"}
       - {language: ru, text: "Открытая Мобильная Платформа"}
     siteLink: https://www.omp.ru
-  - id: 1022
-    name:
-      - {language: en, text: "YouTube channel Mobile Developer"}
-    siteLink: https://www.youtube.com/c/mobiledeveloper
   - id: 1023
     name:
       - {language: en, text: RuStore}
@@ -3891,10 +3867,6 @@ companies:
       - {language: en, text: "Renaissance Credit"}
       - {language: ru, text: "Ренессанс Банк"}
     siteLink: https://rencredit.ru
-  - id: 1075
-    name:
-      - {language: en, text: "Modernes C++ GmbH"}
-    siteLink: https://www.modernescpp.com
   - id: 1076
     name:
       - {language: en, text: "Project Jupyter"}
@@ -3926,11 +3898,6 @@ companies:
     name:
       - {language: en, text: Elverils}
     siteLink: https://elverils.com
-  - id: 1083
-    name:
-      - {language: en, text: MIIT}
-      - {language: ru, text: МИИТ}
-    siteLink: https://www.miit.ru
   - id: 1084
     name:
       - {language: en, text: "Stingray Technologies"}
