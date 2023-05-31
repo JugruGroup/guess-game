@@ -2498,6 +2498,10 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2023, 5, 15), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("HolyJS 2023 Spring", null, List.of(24L, 28L)),
-//                        Set.of()));
+//                        Set.of("Открытие конференции HolyJS 2023 Spring", "Открытие второго дня HolyJS 2023 Spring",
+//                                "Code Review", "Подведение итогов онлайн-части HolyJS 2023 Spring",
+//                                "Открытие офлайн-части HolyJS 2023 Spring", "Просмотр документального фильма",
+//                                "Lightning Talks", "Code in the Dark", "Закрытие конференции HolyJS 2023 Spring",
+//                                "Цифровая доступность: как начать внедрять и не обжечься")));
     }
 }

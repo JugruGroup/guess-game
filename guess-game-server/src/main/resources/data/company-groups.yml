@@ -85,6 +85,11 @@ companyGroups:
         Simla.com,
         RetailCRM
     ]
+  - name: "Skillbox, FrontendConf"
+    items: [
+      Skillbox,
+      FrontendConf
+    ]
   - name: "Synthesized / MIPT"
     items: [
         Synthesized,

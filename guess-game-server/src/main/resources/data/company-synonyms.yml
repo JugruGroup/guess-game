@@ -311,6 +311,10 @@ companySynonyms:
     synonyms: [
         MinimalModeling.com
     ]
+  - name: "Modernes C++"
+    synonyms: [
+      "Modernes C++ GmbH"
+    ]
   - name: "Monitor Electric"
     synonyms: [
         "Monitor Electric (monitel.com)",
