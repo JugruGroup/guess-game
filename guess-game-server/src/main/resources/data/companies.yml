@@ -3951,3 +3951,68 @@ companies:
   - id: 1088
     name:
       - {language: en, text: Linen}
+  - id: 1089
+    name:
+      - {language: en, text: WebElArt}
+    siteLink: https://webelart.com
+  - id: 1090
+    name:
+      - {language: en, text: Neogenda}
+    siteLink: https://neogenda.com
+  - id: 1091
+    name:
+      - {language: en, text: Mapbox}
+    siteLink: https://www.mapbox.com
+  - id: 1092
+    name:
+      - {language: en, text: Ostrovok}
+      - {language: ru, text: Островок}
+    siteLink: https://ostrovok.ru
+  - id: 1093
+    name:
+      - {language: en, text: IDDQD}
+    siteLink: https://iddqd.pro
+  - id: 1094
+    name:
+      - {language: en, text: DRPC}
+  - id: 1095
+    name:
+      - {language: en, text: "Art. Lebedev Studio"}
+      - {language: ru, text: "Студия Артемия Лебедева"}
+    siteLink: https://www.artlebedev.ru
+  - id: 1096
+    name:
+      - {language: en, text: "МТС Exolve"}
+    siteLink: https://exolve.ru
+  - id: 1097
+    name:
+      - {language: en, text: Elvees}
+      - {language: ru, text: "НПЦ ЭЛВИС"}
+    siteLink: https://elvees.ru
+  - id: 1098
+    name:
+      - {language: en, text: "Tochka Bank"}
+      - {language: ru, text: "Банк Точка"}
+    siteLink: https://tochka.com
+  - id: 1099
+    name:
+      - {language: en, text: "Artem Gorbunov Design Bureau"}
+      - {language: ru, text: "Дизайн-бюро Артёма Горбунова"}
+    siteLink: https://bureau.ru
+  - id: 1100
+    name:
+      - {language: en, text: BIOCAD}
+    siteLink: https://biocad.ru
+  - id: 1101
+    name:
+      - {language: en, text: Skillbox}
+    siteLink: https://skillbox.ru
+  - id: 1102
+    name:
+      - {language: en, text: FrontendConf}
+    siteLink: https://frontendconf.ru
+  - id: 1103
+    name:
+      - {language: en, text: "Phoenix Creative Group"}
+      - {language: ru, text: "Креативная группа «Феникс»"}
+    siteLink: https://phoenix-cg.ru
