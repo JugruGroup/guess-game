@@ -29463,13 +29463,15 @@ speakers:
       - {language: ru, text: "Валерия Курмак"}
     companyIds: [689]
     bio:
-      - {language: en, text: "<p>Valeria is the head of Inclusion at Yandex, a member of the Strategic Leader in Accessibility\
-            \ Initiative at IAAP, author of the Sberbank Digital Accessibility Guidelines, and author of the AccessibilityUnity\
-            \ educational course on digital accessibility. She runs a telegram channel about inclusive design, \"No Exception.</p>"}
-      - {language: ru, text: "<p>Руководитель направления &laquo;Инклюзия&raquo; в Яндексе, член Strategic Leader in Accessibility\
-            \ Initiative в IAAP, автор гайдлайна по цифровой доступности Сбербанка, автор образовательного курса по цифров\
-            ой доступности &laquo;AccessibilityUnity&raquo;. Ведет телеграмм-канал об инклюзивном дизайне &laquo;Не исключ\
-            ение&raquo;.</p>"}
+      - {language: en, text: "<p class=\"root-block-node\" data-paragraphid=\"3\" data-from-init=\"true\" data-changed=\"\
+            false\">Head of the Inclusion direction at Yandex, member of the Strategic Leader in Accessibility Initiative\
+            \ at IAAP, as well as the Expert Council at the Polytechnic Museum, author of the Sberbank digital accessibility\
+            \ guidelines, author of the educational course on digital accessibility, and host of a Telegram channel about\
+            \ inclusive design \"Not an Exception\".</p>"}
+      - {language: ru, text: "<p>Руководитель направления &laquo;Инклюзия&raquo;, член Strategic Leader in Accessibility Initiative\
+            \ в IAAP, автор гайдлайна по цифровой доступности Сбербанка, автор образовательного курса по цифровой доступно\
+            сти Accessibility Unity, ведет <a href=\"https://t.me/neiskluchenie\">Telegram-канал об инклюзивном дизайне &laquo;Н\
+            е исключение&raquo;</a>.</p>"}
     twitter: KurmakLera
   - id: 2054
     photoFileName: 2054.jpg
