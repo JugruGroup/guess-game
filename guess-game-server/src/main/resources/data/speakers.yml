@@ -36967,46 +36967,6 @@ speakers:
             ких лиц для осуществления внешнеэкономической деятельности. Работал в Центральном Банке РФ. Участвовал в проек\
             те Google Healthcare.</p>"}
     gitHub: arvgord
-  - id: 2582
-    photoFileName: 2582.jpg
-    photoUpdatedAt: 2023-04-06T12:30:21Z[UTC]
-    name:
-      - {language: en, text: "Pyotr Belkin"}
-      - {language: ru, text: "Пётр Белкин"}
-    companyIds: [665]
-    bio:
-      - {language: en, text: "<p>Product Leader. Leads the product that everyone in SBOL (Sber Online) needs, namely the server-side\
-            \ part of the client's profile. Technical specialist by education, at heart a businessman. During his career in\
-            \ IT he managed to work in all positions, except a tester. This allows him to find a common language with both\
-            \ business and development and competently solve ambitious tasks. He likes building teams and growing competencies\
-            \ from the ground up. He is also one of the leaders of a large-scale community of server-side platform developers\
-            \ for SBOL. In his spare time he is passionate about startups and trends in investments.</p>"}
-      - {language: ru, text: "<p>Лидер продукта. Возглавляет продукт, который необходим всем в СБОЛ, а именно server-side\
-            \ часть профиля клиента. Технический специалист по образованию, в душе бизнесмен. За свой путь в IT успел пора\
-            ботать на всех позициях, кроме тестировщика. Это позволяет находить общий язык как с бизнесом, так и с разрабо\
-            ткой и грамотно решать амбициозные задачи. Любит заниматься созданием команд, выращивать компетенции с нуля. Т\
-            акже является одним из лидеров масштабного сообщества разработчиков server-side платформы для СБОЛ.&nbsp;В сво\
-            бодное время увлекается стартапами и трендами в инвестициях.</p>"}
-  - id: 2583
-    photoFileName: 2583.jpg
-    photoUpdatedAt: 2023-04-06T12:23:21Z[UTC]
-    name:
-      - {language: en, text: "Roman Artamonov"}
-      - {language: ru, text: "Роман Артамонов"}
-    companyIds: [665]
-    bio:
-      - {language: en, text: "<p>Head of Sberbank Online.</p>"}
-      - {language: ru, text: "<p>Начальник управления Сбербанк Онлайн.</p>"}
-  - id: 2584
-    photoFileName: 2584.jpg
-    photoUpdatedAt: 2023-04-04T12:35:44Z[UTC]
-    name:
-      - {language: en, text: "Egor Ziborov"}
-      - {language: ru, text: "Егор Зиборов"}
-    companyIds: [665]
-    bio:
-      - {language: en, text: "<p>Java lead in Sber. Works in Sber Online. Has been in the industry for 11 years.</p>"}
-      - {language: ru, text: "<p>Java-лид в Сбере. Занимается Сбербанк Онлайном. В индустрии 11 лет.</p>"}
   - id: 2585
     photoFileName: 2585.jpg
     photoUpdatedAt: 2023-03-28T14:05:12Z[UTC]
