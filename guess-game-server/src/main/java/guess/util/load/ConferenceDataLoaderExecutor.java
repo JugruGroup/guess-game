@@ -2466,7 +2466,8 @@ public class ConferenceDataLoaderExecutor {
 //                        Map.of(new NameCompany("Алексей Иванов", null), 2533L),
 //                        Set.of("Открытие конференции Heisenbug 2023 Spring", "Подведение итогов онлайн-части Heisenbug 2023 Spring",
 //                                "Открытие офлайн-части конференции Heisenbug 2023 Spring", "Открытие", "Lightning Talks",
-//                                "Coding Battle", "Закрытие конференции Heisenbug 2023 Spring")));
+//                                "Coding Battle", "Закрытие конференции Heisenbug 2023 Spring",
+//                                "Как начать автоматизировать?", "Сам себе «лид»")));
 //        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2023, 4, 12), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("JPoint 2023", null, List.of(24L, 11L)),

@@ -98,10 +98,6 @@ companySynonyms:
         KROK,
         "Croc Code"
     ]
-  - name: DuckStax
-    synonyms: [
-        duckstax.com
-    ]
   - name: "Delivery Club"
     synonyms: [
         "Delivery Club Tech"
