@@ -2466,14 +2466,16 @@ public class ConferenceDataLoaderExecutor {
 //                        Map.of(new NameCompany("Алексей Иванов", null), 2533L),
 //                        Set.of("Открытие конференции Heisenbug 2023 Spring", "Подведение итогов онлайн-части Heisenbug 2023 Spring",
 //                                "Открытие офлайн-части конференции Heisenbug 2023 Spring", "Открытие", "Lightning Talks",
-//                                "Coding Battle", "Закрытие конференции Heisenbug 2023 Spring")));
+//                                "Coding Battle", "Закрытие конференции Heisenbug 2023 Spring",
+//                                "Как начать автоматизировать?", "Сам себе «лид»")));
 //        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2023, 4, 12), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("JPoint 2023", null, List.of(24L, 11L)),
 //                        Set.of("Открытие конференции JPoint 2023", "Закрытие конференции JPoint 2023",
 //                                "Открытие второго дня онлайн-части", "Открытие офлайн-части конференции JPoint 2023",
 //                                "Подведение итогов онлайн-части конференции JPoint 2023", "Lightning Talks",
-//                                "Yandex Stack-o-loto", "Code Battle")));
+//                                "Yandex Stack-o-loto", "Code Battle",
+//                                "Рост «зоопарка новых языков» в стеке технологий IT-компаний — путь в хаос или ранжирование рисков?")));
 //        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2023, 5, 11), "2023",
 //                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("C++ Russia 2023", null, List.of(24L, 28L)),
@@ -2481,7 +2483,8 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции C++ Russia 2023", "Подведение итогов online-части конференции",
 //                                "Открытие офлайн-части конференции C++ Russia 2023", "Lightning Talks",
 //                                "Закрытие конференции C++ Russia 2023", "Нужны ли профсоюзы в IT?", "Тренды от HR",
-//                                "Актуальные проблемы GPGPU-разработки", "Вопросы преподавания языка в вузе")));
+//                                "Актуальные проблемы GPGPU-разработки", "Вопросы преподавания языка в вузе",
+//                                "Тот самый стендап от Павла Филонова ")));
 //        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 5, 12), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Mobius 2023 Spring", null, List.of(24L, 28L)),

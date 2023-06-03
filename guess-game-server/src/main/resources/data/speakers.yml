@@ -36408,20 +36408,6 @@ speakers:
             \ Windows, и различными шлюзами для операторов сотовой связи, и платежными системами.&nbsp;</p>\n<p>В 2014 реш\
             ил перейти к Java и сразу окунулся в мир кровавого энтерпрайза в проектах одного известного немецкого банка.</p>\n\
             <p>С 2020 работает в банке Тинькофф в команде разработки инфраструктуры и инструментов для тестирования.</p>"
-  - id: 2536
-    photoFileName: 2536.jpg
-    photoUpdatedAt: 2023-04-04T11:37:15Z[UTC]
-    name:
-      - {language: en, text: "Mikhail Budaev"}
-      - {language: ru, text: "Михаил Будаев"}
-    companyIds: [665]
-    bio:
-      - {language: en, text: "<p>I have been testing for over 12 years. More than 7 years of automation. Currently PO. I managed\
-            \ to work in outsourcing companies, under a contract for an American startup. Currently works at Sberbank. Passionate\
-            \ about quadrocopters. Likes to look at the world from a bird's eye view.</p>"}
-      - {language: ru, text: "<p>Более 12 лет занимался тестированием. Более 7 лет автоматизацией. На текущий момент PO. У\
-            спел поработать в аутсорсинговых компаниях, по контракту на американский стартап. На текущий момент работает в\
-            \ Сбере. Увлекается квадрокоптерами. Любит смотреть на мир с высоты птичьего полета.</p>"}
   - id: 2537
     photoFileName: 2537.jpg
     photoUpdatedAt: 2023-03-24T11:06:56Z[UTC]
@@ -36564,44 +36550,6 @@ speakers:
             \ part in a fairly large number of projects ranging from fintech to e-commerce.</p>"}
       - {language: ru, text: "<p>Пришла в тестирование три года назад и за это время приняла участие в довольно большом ко\
             личестве проектов: от финтеха до e-commerce.</p>"}
-  - id: 2546
-    photoFileName: 2546.jpg
-    photoUpdatedAt: 2023-03-30T06:10:43Z[UTC]
-    name:
-      - {language: en, text: "Sergey Timchenko"}
-      - {language: ru, text: "Сергей Тимченко"}
-    companyIds: [410]
-    bio:
-      - {language: en, text: "<p>He strives to do nothing, and therefore, sparing no effort, he explores, experiments and\
-            \ automates reality. He generously shares his knowledges of traps awaiting in the areas of data processing, autotesting,\
-            \ organizing his own and team work.</p>"}
-      - {language: ru, text: "<p>Стремится ничего не делать, а потому не жалея сил исследует, экспериментирует и автоматиз\
-            ирует реальность. Щедро делится граблями в областях обработки данных, автотестирования, организации своей и ко\
-            мандной работы.</p>"}
-  - id: 2547
-    photoFileName: 2547.jpg
-    photoUpdatedAt: 2023-03-29T17:18:53Z[UTC]
-    name:
-      - {language: en, text: "Evgeniy Matveev"}
-      - {language: ru, text: "Евгений Матвеев"}
-    companyIds: [410]
-    bio:
-      - {language: en, text: "<p>Head of Quality Assurance Department in Testing since 2004. Conducted over a thousand interviews.</p>"}
-      - {language: ru, text: "Руководитель департамента обеспечения качества, в тестировании c 2004 года. Провел более чем\
-            \ тысячу собеседований."}
-  - id: 2548
-    photoFileName: 2548.jpg
-    photoUpdatedAt: 2023-03-29T08:47:49Z[UTC]
-    name:
-      - {language: en, text: "Natalia Verhoglyadova"}
-      - {language: ru, text: "Наталья Верхоглядова"}
-    companyIds: [410]
-    bio:
-      - {language: en, text: "<p>In testing for over 13 years. She started her career testing mobile phones. She has been\
-            \ working at PT for 7 years, of which 5 years she has been in charge of the product testing department.</p>"}
-      - language: ru
-        text: "<p>В тестировании уже более 13 лет. Начинала свою карьеру с тестирования мобильных телефонов. Уже 7 лет раб\
-            отает в PT, из них 5 лет руководит отделом продуктового тестирования.</p>\n<p>&nbsp;</p>"
   - id: 2549
     photoFileName: 2549.jpg
     photoUpdatedAt: 2023-03-25T11:02:38Z[UTC]
@@ -36616,32 +36564,6 @@ speakers:
       - {language: ru, text: "<p>Release Manager ряда продуктов Positive Technologies, работает в компании уже более 10 ле\
             т. Занимается аналитикой качества и процессов разработки. Любит делиться опытом и рассказывать об удачных (и н\
             еудачных) практиках:)</p>"}
-  - id: 2550
-    photoFileName: 2550.jpg
-    photoUpdatedAt: 2023-03-28T06:16:11Z[UTC]
-    name:
-      - {language: en, text: "Oleg Machalov"}
-      - {language: ru, text: "Олег Мачалов"}
-    companyIds: [410]
-    bio:
-      - {language: en, text: "<p>He has been in software testing for over 10 years, of which 6 years he devoted to Positive\
-            \ Technologies and the Application Inspector product. He sincerely believes that testing is a calling, a hobby\
-            \ and a way of life that should be enjoyable.</p>"}
-      - {language: ru, text: "<p>В тестировании программного обеспечения уже более 10 лет, из которых 6 лет посвятил Positive\
-            \ Technologies и продукту Application Inspector. Искренне убеждён, что тестирование &mdash; это призвание, хоб\
-            би и образ жизни, которые должны доставлять удовольствие.</p>"}
-  - id: 2551
-    photoFileName: 2551.jpg
-    photoUpdatedAt: 2023-03-30T04:02:44Z[UTC]
-    name:
-      - {language: en, text: "Pavel Fadeev"}
-      - {language: ru, text: "Павел Фадеев"}
-    companyIds: [410]
-    bio:
-      - {language: en, text: "<p>5 years in product testing. Before product testing, he was a seasoned system administrator\
-            \ and head of the IT department.</p>"}
-      - {language: ru, text: "<p>В продуктовом тестировании 5 лет. До продуктового тестирования был прожженным сисадмином\
-            \ и руководителем IT-департамента.</p>"}
   - id: 2552
     photoFileName: 2552.jpg
     photoUpdatedAt: 2023-03-23T14:38:55Z[UTC]
@@ -37045,46 +36967,6 @@ speakers:
             ких лиц для осуществления внешнеэкономической деятельности. Работал в Центральном Банке РФ. Участвовал в проек\
             те Google Healthcare.</p>"}
     gitHub: arvgord
-  - id: 2582
-    photoFileName: 2582.jpg
-    photoUpdatedAt: 2023-04-06T12:30:21Z[UTC]
-    name:
-      - {language: en, text: "Pyotr Belkin"}
-      - {language: ru, text: "Пётр Белкин"}
-    companyIds: [665]
-    bio:
-      - {language: en, text: "<p>Product Leader. Leads the product that everyone in SBOL (Sber Online) needs, namely the server-side\
-            \ part of the client's profile. Technical specialist by education, at heart a businessman. During his career in\
-            \ IT he managed to work in all positions, except a tester. This allows him to find a common language with both\
-            \ business and development and competently solve ambitious tasks. He likes building teams and growing competencies\
-            \ from the ground up. He is also one of the leaders of a large-scale community of server-side platform developers\
-            \ for SBOL. In his spare time he is passionate about startups and trends in investments.</p>"}
-      - {language: ru, text: "<p>Лидер продукта. Возглавляет продукт, который необходим всем в СБОЛ, а именно server-side\
-            \ часть профиля клиента. Технический специалист по образованию, в душе бизнесмен. За свой путь в IT успел пора\
-            ботать на всех позициях, кроме тестировщика. Это позволяет находить общий язык как с бизнесом, так и с разрабо\
-            ткой и грамотно решать амбициозные задачи. Любит заниматься созданием команд, выращивать компетенции с нуля. Т\
-            акже является одним из лидеров масштабного сообщества разработчиков server-side платформы для СБОЛ.&nbsp;В сво\
-            бодное время увлекается стартапами и трендами в инвестициях.</p>"}
-  - id: 2583
-    photoFileName: 2583.jpg
-    photoUpdatedAt: 2023-04-06T12:23:21Z[UTC]
-    name:
-      - {language: en, text: "Roman Artamonov"}
-      - {language: ru, text: "Роман Артамонов"}
-    companyIds: [665]
-    bio:
-      - {language: en, text: "<p>Head of Sberbank Online.</p>"}
-      - {language: ru, text: "<p>Начальник управления Сбербанк Онлайн.</p>"}
-  - id: 2584
-    photoFileName: 2584.jpg
-    photoUpdatedAt: 2023-04-04T12:35:44Z[UTC]
-    name:
-      - {language: en, text: "Egor Ziborov"}
-      - {language: ru, text: "Егор Зиборов"}
-    companyIds: [665]
-    bio:
-      - {language: en, text: "<p>Java lead in Sber. Works in Sber Online. Has been in the industry for 11 years.</p>"}
-      - {language: ru, text: "<p>Java-лид в Сбере. Занимается Сбербанк Онлайном. В индустрии 11 лет.</p>"}
   - id: 2585
     photoFileName: 2585.jpg
     photoUpdatedAt: 2023-03-28T14:05:12Z[UTC]
