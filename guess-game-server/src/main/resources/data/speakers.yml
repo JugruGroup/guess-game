@@ -9646,6 +9646,8 @@ speakers:
       - {language: en, text: "Lead front-end developer in Evil Martians. Author of Autoprefixer and PostCSS."}
       - {language: ru, text: "Ведущий фронтендер в «Злых марсианах». Автор Автопрефиксера и PostCSS."}
     twitter: andrey_sitnik
+    gitHub: ai
+    habr: Iskin
   - id: 654
     photoFileName: 0654.jpg
     photoUpdatedAt: 2019-03-06T12:42:51.324Z[UTC]
