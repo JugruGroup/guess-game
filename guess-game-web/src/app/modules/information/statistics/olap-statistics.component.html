@@ -97,13 +97,13 @@
     <div *ngIf="isChartsVisible()" #chartDiv>
       <div class="d-flex align-items-center mt-2 ms-2 me-2" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
         <p-selectButton *ngIf="isChartTypeSwitcherVisible()" [options]="chartTypes" [(ngModel)]="selectedChartType" optionLabel="label" optionValue="value">
-          <ng-template let-item>
+          <ng-template let-item pTemplate>
             <span class="olap-chart-button">{{item.label | translate}}</span>
           </ng-template>
         </p-selectButton>
 
         <p-selectButton [options]="chartKinds" [(ngModel)]="selectedChartKind" optionLabel="icon" optionValue="value">
-          <ng-template let-item>
+          <ng-template let-item pTemplate>
             <span title="{{item.title}}" class="olap-chart-button"><i [class]="item.icon"></i></span>
           </ng-template>
         </p-selectButton>
