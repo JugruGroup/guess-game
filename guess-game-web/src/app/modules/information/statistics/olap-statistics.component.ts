@@ -66,11 +66,13 @@ export class OlapStatisticsComponent implements OnInit {
   private readonly SMALL_WIDTH = 576 - this.MARGIN_WIDTH;
   private readonly MEDIUM_WIDTH = 768 - this.MARGIN_WIDTH;
   private readonly LARGE_WIDTH = 1200 - this.MARGIN_WIDTH;
+  private readonly EXTRA_LARGE_WIDTH = 1400 - this.MARGIN_WIDTH;
 
   private readonly EXTRA_SMALL_ASPECT_RATIO = 1.5;
   private readonly SMALL_ASPECT_RATIO = 2.25;
   private readonly MEDIUM_ASPECT_RATIO = 3;
   private readonly LARGE_ASPECT_RATIO = 3.75;
+  private readonly EXTRA_LARGE_ASPECT_RATIO = 5;
 
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
@@ -863,14 +865,14 @@ export class OlapStatisticsComponent implements OnInit {
   getAspectRatio(clientWidth: number): number {
     if (clientWidth < this.SMALL_WIDTH) {
       return this.EXTRA_SMALL_ASPECT_RATIO;
-    }
-    if (clientWidth < this.MEDIUM_WIDTH) {
+    } else if (clientWidth < this.MEDIUM_WIDTH) {
       return this.SMALL_ASPECT_RATIO;
-    }
-    if (clientWidth < this.LARGE_WIDTH) {
+    } else if (clientWidth < this.LARGE_WIDTH) {
       return this.MEDIUM_ASPECT_RATIO;
-    } else {
+    } else if (clientWidth < this.EXTRA_LARGE_WIDTH) {
       return this.LARGE_ASPECT_RATIO;
+    } else {
+      return this.EXTRA_LARGE_ASPECT_RATIO;
     }
   }
 
