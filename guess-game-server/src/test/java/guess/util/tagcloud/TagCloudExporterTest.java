@@ -1,5 +1,7 @@
 package guess.util.tagcloud;
 
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
 import guess.domain.Conference;
 import guess.domain.Language;
 import guess.domain.source.*;
@@ -12,6 +14,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -25,6 +28,8 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("TagCloudExporter class tests")
 class TagCloudExporterTest {
+    private static final Logger log = (Logger) LoggerFactory.getLogger(TagCloudExporter.class);
+
     private static final Conference JPOINT_CONFERENCE;
     private static final LocalDate EVENT_DATE;
 
@@ -127,33 +132,49 @@ class TagCloudExporterTest {
         }
     }
 
-    @Test
-    void exportTalksAndConference() {
-        SourceInformation sourceInformation = new SourceInformation(
-                List.of(place0),
-                List.of(organizer0),
-                List.of(topic0),
-                List.of(eventType0),
-                Collections.emptyList(),
-                new SourceInformation.SpeakerInformation(
-                        Collections.emptyList(),
-                        Collections.emptyList(),
-                        Collections.emptyList(),
-                        Collections.emptyList()
-                ),
-                Collections.emptyList());
 
-        try (MockedStatic<TagCloudExporter> tagCloudExporterMockedStatic = Mockito.mockStatic(TagCloudExporter.class);
-             MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class);
-             MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class)) {
-            tagCloudExporterMockedStatic.when(() -> TagCloudExporter.exportTalksAndConference(Mockito.any(Conference.class), Mockito.any(LocalDate.class)))
-                    .thenCallRealMethod();
-            yamlUtilsMockedStatic.when(YamlUtils::readSourceInformation)
-                    .thenReturn(sourceInformation);
-            localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
-                    .thenReturn("");
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("exportTalksAndConference method tests")
+    class ExportTalksAndConferenceTest {
+        private Stream<Arguments> data() {
+            return Stream.of(
+                    arguments(Level.INFO),
+                    arguments(Level.WARN)
+            );
+        }
 
-            assertDoesNotThrow(() -> TagCloudExporter.exportTalksAndConference(JPOINT_CONFERENCE, EVENT_DATE));
+        @ParameterizedTest
+        @MethodSource("data")
+        void exportTalksAndConference(Level level) {
+            log.setLevel(level);
+
+            SourceInformation sourceInformation = new SourceInformation(
+                    List.of(place0),
+                    List.of(organizer0),
+                    List.of(topic0),
+                    List.of(eventType0),
+                    Collections.emptyList(),
+                    new SourceInformation.SpeakerInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList()
+                    ),
+                    Collections.emptyList());
+
+            try (MockedStatic<TagCloudExporter> tagCloudExporterMockedStatic = Mockito.mockStatic(TagCloudExporter.class);
+                 MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class);
+                 MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class)) {
+                tagCloudExporterMockedStatic.when(() -> TagCloudExporter.exportTalksAndConference(Mockito.any(Conference.class), Mockito.any(LocalDate.class)))
+                        .thenCallRealMethod();
+                yamlUtilsMockedStatic.when(YamlUtils::readSourceInformation)
+                        .thenReturn(sourceInformation);
+                localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
+                        .thenReturn("");
+
+                assertDoesNotThrow(() -> TagCloudExporter.exportTalksAndConference(JPOINT_CONFERENCE, EVENT_DATE));
+            }
         }
     }
 

@@ -1,5 +1,7 @@
 package guess.util.load;
 
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
 import guess.domain.Conference;
 import guess.domain.Language;
 import guess.domain.source.*;
@@ -18,6 +20,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.stubbing.Answer;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -34,6 +37,8 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("ConferenceDataLoaderExecutor class tests")
 class ConferenceDataLoaderExecutorTest {
+    private static final Logger log = (Logger) LoggerFactory.getLogger(ConferenceDataLoaderExecutor.class);
+
     @Test
     void loadSpaceTags() throws IOException, NoSuchFieldException {
         try (MockedStatic<CmsDataLoaderFactory> mockedStatic = Mockito.mockStatic(CmsDataLoaderFactory.class)) {
@@ -340,7 +345,28 @@ class ConferenceDataLoaderExecutorTest {
                             List.of(talk0),
                             List.of(speaker0),
                             List.of(company0),
-                            Map.of("name0", company0)),
+                            Map.of("name0", company0),
+                            Level.INFO),
+                    arguments(JPOINT_CONFERENCE, EVENT_DATE, EVENT_CODE, LoadSettings.defaultSettings(),
+                            new SourceInformation(
+                                    List.of(place0),
+                                    List.of(organizer0),
+                                    List.of(topic0),
+                                    List.of(eventType0),
+                                    Collections.emptyList(),
+                                    new SourceInformation.SpeakerInformation(
+                                            Collections.emptyList(),
+                                            Collections.emptyList(),
+                                            Collections.emptyList(),
+                                            List.of(speaker0)
+                                    ),
+                                    Collections.emptyList()),
+                            event0,
+                            List.of(talk0),
+                            List.of(speaker0),
+                            List.of(company0),
+                            Map.of("name0", company0),
+                            Level.WARN),
                     arguments(JPOINT_CONFERENCE, LocalDate.of(2020, 6, 30), null, LoadSettings.defaultSettings(),
                             new SourceInformation(
                                     List.of(place0),
@@ -359,7 +385,8 @@ class ConferenceDataLoaderExecutorTest {
                             List.of(talk0),
                             List.of(speaker0),
                             List.of(company0),
-                            Map.of("name0", company0))
+                            Map.of("name0", company0),
+                            Level.INFO)
             );
         }
 
@@ -369,7 +396,9 @@ class ConferenceDataLoaderExecutorTest {
         void loadTalksSpeakersEvent(Conference conference, LocalDate startDate, String conferenceCode,
                                     LoadSettings loadSettings, SourceInformation sourceInformation, Event contentfulEvent,
                                     List<Talk> contentfulTalks, List<Speaker> talkSpeakers, List<Company> speakerCompanies,
-                                    Map<String, Company> resourceLowerNameCompanyMap) throws IOException, NoSuchFieldException {
+                                    Map<String, Company> resourceLowerNameCompanyMap, Level level) throws IOException, NoSuchFieldException {
+            log.setLevel(level);
+
             try (MockedStatic<CmsDataLoaderFactory> cmsDataLoaderFactoryMockedStatic = Mockito.mockStatic(CmsDataLoaderFactory.class);
                  MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class);
                  MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
@@ -1966,16 +1995,21 @@ class ConferenceDataLoaderExecutorTest {
             event1.setEventType(eventType1);
 
             return Stream.of(
-                    arguments(List.of(talk0), talk0, Collections.emptyList(), null, false),
-                    arguments(Collections.emptyList(), talk0, List.of(event0), event0, true),
-                    arguments(Collections.emptyList(), talk0, List.of(event0), event1, false)
+                    arguments(List.of(talk0), talk0, Collections.emptyList(), null, Level.WARN, false),
+                    arguments(Collections.emptyList(), talk0, List.of(event0), event0, Level.WARN, true),
+                    arguments(Collections.emptyList(), talk0, List.of(event0), event1, Level.WARN, false),
+                    arguments(List.of(talk0), talk0, Collections.emptyList(), null, Level.ERROR, false),
+                    arguments(Collections.emptyList(), talk0, List.of(event0), event0, Level.ERROR, true),
+                    arguments(Collections.emptyList(), talk0, List.of(event0), event1, Level.ERROR, false)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
         void needDeleteTalk(List<Talk> talks, Talk resourceTalk, List<Event> resourceEvents, Event resourceEvent,
-                            boolean expected) {
+                            Level level, boolean expected) {
+            log.setLevel(level);
+
             try (MockedStatic<LocalizationUtils> mockedStatic = Mockito.mockStatic(LocalizationUtils.class)) {
                 mockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                         .thenReturn("");
