@@ -1995,12 +1995,12 @@ class ConferenceDataLoaderExecutorTest {
             event1.setEventType(eventType1);
 
             return Stream.of(
-                    arguments(List.of(talk0), talk0, Collections.emptyList(), null, Level.INFO, false),
-                    arguments(Collections.emptyList(), talk0, List.of(event0), event0, Level.INFO, true),
-                    arguments(Collections.emptyList(), talk0, List.of(event0), event1, Level.INFO, false),
                     arguments(List.of(talk0), talk0, Collections.emptyList(), null, Level.WARN, false),
                     arguments(Collections.emptyList(), talk0, List.of(event0), event0, Level.WARN, true),
-                    arguments(Collections.emptyList(), talk0, List.of(event0), event1, Level.WARN, false)
+                    arguments(Collections.emptyList(), talk0, List.of(event0), event1, Level.WARN, false),
+                    arguments(List.of(talk0), talk0, Collections.emptyList(), null, Level.ERROR, false),
+                    arguments(Collections.emptyList(), talk0, List.of(event0), event0, Level.ERROR, true),
+                    arguments(Collections.emptyList(), talk0, List.of(event0), event1, Level.ERROR, false)
             );
         }
 
