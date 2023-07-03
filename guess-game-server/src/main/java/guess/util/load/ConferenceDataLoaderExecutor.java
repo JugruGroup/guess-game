@@ -240,9 +240,12 @@ public class ConferenceDataLoaderExecutor {
                 .findFirst();
         var resourceEventType = resourceOptionalEventType
                 .orElseThrow(() -> new IllegalStateException(String.format("No event type found for conference %s (in resource files)", conference)));
-        log.info("Event type (in resource files): nameEn: {}, nameRu: {}",
-                LocalizationUtils.getString(resourceEventType.getName(), Language.ENGLISH),
-                LocalizationUtils.getString(resourceEventType.getName(), Language.RUSSIAN));
+
+        if (log.isInfoEnabled()) {
+            log.info("Event type (in resource files): nameEn: {}, nameRu: {}",
+                    LocalizationUtils.getString(resourceEventType.getName(), Language.ENGLISH),
+                    LocalizationUtils.getString(resourceEventType.getName(), Language.RUSSIAN));
+        }
 
         var resourceEvent = resourceOptionalEventType
                 .flatMap(et -> et.getEvents().stream()
@@ -252,19 +255,24 @@ public class ConferenceDataLoaderExecutor {
         if (resourceEvent == null) {
             log.info("Event (in resource files) not found");
         } else {
-            log.info("Event (in resource files): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
-                    LocalizationUtils.getString(resourceEvent.getName(), Language.ENGLISH),
-                    LocalizationUtils.getString(resourceEvent.getName(), Language.RUSSIAN),
-                    resourceEvent.getFirstStartDate(), resourceEvent.getLastEndDate());
+            if (log.isInfoEnabled()) {
+                log.info("Event (in resource files): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
+                        LocalizationUtils.getString(resourceEvent.getName(), Language.ENGLISH),
+                        LocalizationUtils.getString(resourceEvent.getName(), Language.RUSSIAN),
+                        resourceEvent.getFirstStartDate(), resourceEvent.getLastEndDate());
+            }
         }
 
         // Read event from CMS
         var cmsDataLoader = CmsDataLoaderFactory.createDataLoader(startDate);
         var cmsEvent = cmsDataLoader.getEvent(conference, startDate, conferenceCode, loadSettings.eventTemplate());
-        log.info("Event (in CMS): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
-                LocalizationUtils.getString(cmsEvent.getName(), Language.ENGLISH),
-                LocalizationUtils.getString(cmsEvent.getName(), Language.RUSSIAN),
-                cmsEvent.getFirstStartDate(), cmsEvent.getLastEndDate());
+
+        if (log.isInfoEnabled()) {
+            log.info("Event (in CMS): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
+                    LocalizationUtils.getString(cmsEvent.getName(), Language.ENGLISH),
+                    LocalizationUtils.getString(cmsEvent.getName(), Language.RUSSIAN),
+                    cmsEvent.getFirstStartDate(), cmsEvent.getLastEndDate());
+        }
 
         // Read talks from CMS
         List<Talk> cmsTalks = cmsDataLoader.getTalks(conference, startDate, conferenceCode, loadSettings.ignoreDemoStage());
@@ -1006,7 +1014,7 @@ public class ConferenceDataLoaderExecutor {
                     .flatMap(e -> e.getTalks().stream())
                     .anyMatch(rt -> rt.equals(resourceTalk));
 
-            if (talkExistsInAnyOtherEvent) {
+            if (talkExistsInAnyOtherEvent && log.isWarnEnabled()) {
                 log.warn("Deleting '{}' talk exists in other events and can't be deleted",
                         LocalizationUtils.getString(resourceTalk.getName(), Language.ENGLISH));
             }

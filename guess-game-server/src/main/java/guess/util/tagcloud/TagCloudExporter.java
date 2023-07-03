@@ -49,9 +49,12 @@ public class TagCloudExporter {
                 .findFirst();
         var resourceEventType = resourceOptionalEventType
                 .orElseThrow(() -> new IllegalStateException(String.format("No event type found for conference %s (in resource files)", conference)));
-        log.info("Event type (in resource files): nameEn: {}, nameRu: {}",
-                LocalizationUtils.getString(resourceEventType.getName(), Language.ENGLISH),
-                LocalizationUtils.getString(resourceEventType.getName(), Language.RUSSIAN));
+
+        if (log.isInfoEnabled()) {
+            log.info("Event type (in resource files): nameEn: {}, nameRu: {}",
+                    LocalizationUtils.getString(resourceEventType.getName(), Language.ENGLISH),
+                    LocalizationUtils.getString(resourceEventType.getName(), Language.RUSSIAN));
+        }
 
         Optional<Event> resourceOptionalEvent = resourceOptionalEventType
                 .flatMap(et -> et.getEvents().stream()
@@ -59,10 +62,13 @@ public class TagCloudExporter {
                         .findFirst());
         var resourceEvent = resourceOptionalEvent
                 .orElseThrow(() -> new IllegalStateException(String.format("No event found for start date %s (in resource files)", startDate)));
-        log.info("Event (in resource files): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
-                LocalizationUtils.getString(resourceEvent.getName(), Language.ENGLISH),
-                LocalizationUtils.getString(resourceEvent.getName(), Language.RUSSIAN),
-                resourceEvent.getFirstStartDate(), resourceEvent.getLastEndDate());
+
+        if (log.isInfoEnabled()) {
+            log.info("Event (in resource files): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
+                    LocalizationUtils.getString(resourceEvent.getName(), Language.ENGLISH),
+                    LocalizationUtils.getString(resourceEvent.getName(), Language.RUSSIAN),
+                    resourceEvent.getFirstStartDate(), resourceEvent.getLastEndDate());
+        }
 
         export(resourceEvent.getTalks(), true, String.format("event%d.txt", resourceEvent.getId()));
     }
