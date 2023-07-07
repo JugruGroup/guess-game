@@ -161,7 +161,7 @@ events:
     siteLink:
       - {language: en, text: "https://devoops.ru/en/archive/2022/"}
       - {language: ru, text: "https://devoops.ru/archive/2022/"}
-    youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTrF4wWfG5I9h-gbGyok1DBl
+    youtubeLink: https://www.youtube.com/playlist?list=PL-ety8gh7rTpAl_ktlY-3KedVseNmgA8g
     talkIds: [4065, 4066, 4067, 4069, 4070, 4071, 4072, 4073, 4074, 4075, 4076, 4077, 4078, 4079, 4080, 4082, 4083, 4084,
               4085, 4086, 4088, 4089, 4090, 4091, 4092, 4093, 4094, 4095, 4096, 4097, 4098, 4099, 4100, 4101, 4102]
   # DotNext
