@@ -2692,7 +2692,10 @@ events:
     days:
       - {startDate: "2022-10-18", endDate: "2022-10-19", placeId: 24}
       - {startDate: "2022-10-28", endDate: "2022-10-28", placeId: 4}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://piterpy.com/archive/2022/"}
+      - {language: ru, text: "https://piterpy.com/en/archive/2022/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLQTGSfnaYlCtQIfcjB1TUcDD8ubFBdVaY
     talkIds: [4029, 4030, 4031, 4032, 4033, 4034, 4035, 4036, 4037, 4038, 4039, 4040, 4041, 4042, 4043, 4044, 4045, 4046,
               4047, 4048, 4049, 4050, 4051, 4052, 4059, 4055, 4054, 4056, 4058, 4060, 4061, 4062, 4053, 4064]
   # Flow
