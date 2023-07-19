@@ -895,7 +895,7 @@ speakers:
     name:
       - {language: en, text: "Tagir Valeev"}
       - {language: ru, text: "Тагир Валеев"}
-    companyIds: []
+    companyIds: [286]
     bio:
       - {language: en, text: "<p>Java Champion, OpenJDK committer, member of the Amber project expert group. Develops StreamEx,\
             \ an open-source library. On Habra and Twitter @tagir_valeev.</p>"}
