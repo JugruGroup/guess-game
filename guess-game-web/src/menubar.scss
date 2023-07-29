@@ -29,7 +29,7 @@
 }
 
 // Decrease top, bottom padding for menu item
-.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
   //padding: 0.75rem 1.25rem;
   padding: 0.75rem 0.5rem;
 }
@@ -58,13 +58,13 @@
     position: relative !important;
   }
 
-  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content {
     border-radius: 6px;
   }
 }
 
 @media (min-width: 820px) {
-  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
     //padding: 0.75rem 1.25rem;
     padding: 0.75rem 0.75rem;
   }
@@ -72,14 +72,14 @@
 
 
 @media (min-width: 992px) {
-  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
     //padding: 0.75rem 1.25rem;
     padding: 0.75rem 1rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link {
     padding: 0.75rem 1.25rem;
   }
 }
