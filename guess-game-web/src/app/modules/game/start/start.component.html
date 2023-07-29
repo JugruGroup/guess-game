@@ -5,7 +5,7 @@
 
   <div class="row justify-content-end align-items-center">
     <div class="col-auto">
-      <button class="btn text-muted" routerLink="/home" title="{{'common.homeToolTipText' | translate}}"><i class="pi pi-home"></i></button>
+      <button class="btn text-secondary" routerLink="/home" title="{{'common.homeToolTipText' | translate}}"><i class="pi pi-home"></i></button>
     </div>
     <app-language-switcher class="col-auto"></app-language-switcher>
   </div>
@@ -20,7 +20,7 @@
             <ng-template let-eventType pTemplate="item">
               <div #eventTypeRow [attr.id]="eventType.value.id">
                 <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-start" alt="logo"/>
-                <span class="ms-2" [class.text-muted]="isEventTypeInactiveNotSelected(eventType.value)">{{eventType.value.displayName}}</span>
+                <span class="ms-2" [class.text-secondary]="isEventTypeInactiveNotSelected(eventType.value)">{{eventType.value.displayName}}</span>
               </div>
             </ng-template>
           </p-listbox>
