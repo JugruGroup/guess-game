@@ -1,6 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
+import { Menubar } from "primeng/menubar";
 
 @Component({
   selector: 'app-information-menubar',
@@ -20,6 +21,9 @@ export class InformationMenubarComponent implements OnInit {
   @Output() reload: EventEmitter<any> = new EventEmitter();
 
   public items: MenuItem[] = [];
+
+  // Workaround until PrimeNG fix, see https://github.com/primefaces/primeng/issues/13394
+  @ViewChild(Menubar) pMenubar: Menubar;
 
   constructor(public translateService: TranslateService) {
   }
@@ -42,6 +46,10 @@ export class InformationMenubarComponent implements OnInit {
           {label: labels[this.COMPANIES_TITLE_KEY], routerLink: '/information/companies'},
           {label: labels[this.STATISTICS_TITLE_KEY], routerLink: '/information/statistics'}
         ];
+
+        // Workaround until PrimeNG fix, see https://github.com/primefaces/primeng/issues/13394
+        this.pMenubar._processedItems = null;
+        this.pMenubar.cd.markForCheck();
       });
   }
 
