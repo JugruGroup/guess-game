@@ -31,7 +31,7 @@
         <commons-lang3.version>3.13.0</commons-lang3.version>
         <kumo.version>1.28</kumo.version>
         <mockito.version>5.2.0</mockito.version>
-        <snakeyaml.version>2.0</snakeyaml.version>
+        <snakeyaml.version>2.1</snakeyaml.version>
         <imageio.version>3.9.4</imageio.version>
         <spring-boot.version>3.1.2</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
