@@ -67,7 +67,7 @@ public final class CustomEmitter implements Emitable {
         ESCAPE_REPLACEMENTS.put('\u2029', "P");
     }
 
-    private final static Map<String, String> DEFAULT_TAG_PREFIXES =
+    private static final Map<String, String> DEFAULT_TAG_PREFIXES =
             new LinkedHashMap<String, String>();
 
     static {
@@ -241,7 +241,7 @@ public final class CustomEmitter implements Emitable {
         }
 
         Iterator<Event> iter = events.iterator();
-        Event event = iter.next(); // FIXME why without check ???
+        Event event = iter.next(); // it cannot be empty here
         while (event instanceof CommentEvent) {
             if (!iter.hasNext()) {
                 return true;
@@ -979,7 +979,7 @@ public final class CustomEmitter implements Emitable {
         return version.getRepresentation();
     }
 
-    private final static Pattern HANDLE_FORMAT = Pattern.compile("^![-_\\w]*!$");
+    private static final Pattern HANDLE_FORMAT = Pattern.compile("^![-_\\w]*!$");
 
     private String prepareTagHandle(String handle) {
         if (handle.length() == 0) {
@@ -1056,7 +1056,20 @@ public final class CustomEmitter implements Emitable {
         return anchor;
     }
 
-    private static final Pattern LEADING_ZERO_PATTERN = Pattern.compile("0[0-9_]+");
+    // Equivalent to Pattern.compile("0[0-9_]+").matcher(scalar).matches().
+    private static boolean hasLeadingZero(String scalar) {
+        if (scalar.length() > 1 && scalar.charAt(0) == '0') {
+            for (int i = 1; i < scalar.length(); i++) {
+                char ch = scalar.charAt(i);
+                boolean isDigitOrUnderscore = (ch >= '0' && ch <= '9') || ch == '_';
+                if (!isDigitOrUnderscore) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
 
     private ScalarAnalysis analyzeScalar(String scalar) {
         // Empty scalar is a special case.
@@ -1068,7 +1081,7 @@ public final class CustomEmitter implements Emitable {
         boolean flowIndicators = false;
         boolean lineBreaks = false;
         boolean specialCharacters = false;
-        boolean leadingZeroNumber = LEADING_ZERO_PATTERN.matcher(scalar).matches();
+        boolean leadingZeroNumber = hasLeadingZero(scalar);
 
         // Important whitespace combinations.
         boolean leadingSpace = false;

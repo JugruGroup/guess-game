@@ -2514,5 +2514,54 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-части HolyJS 2023 Spring", "Просмотр документального фильма",
 //                                "Lightning Talks", "Code in the Dark", "Закрытие конференции HolyJS 2023 Spring",
 //                                "Цифровая доступность: как начать внедрять и не обжечься")));
+//        loadTalksSpeakersEvent(Conference.TECH_TRAIN, LocalDate.of(2023, 8, 30), "2023 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("TechTrain 2023 Autumn", null, List.of(24L)),
+//                        Set.of("Открытие фестиваля TechTrain 2023 Autumn", "Закрытие фестиваля TechTrain 2023 Autumn")));
+//        loadTalksSpeakersEvent(Conference.FLOW, LocalDate.of(2023, 9, 4), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Flow 2023", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции Flow 2023", "Закрытие конференции Flow 2023")));
+//        loadTalksSpeakersEvent(Conference.DEV_OOPS, LocalDate.of(2023, 9, 5), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("DevOops 2023", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции DevOops 2023", "Закрытие конференции DevOops 2023",
+//                                "Подведение итогов online-части конференции DevOops 2023",
+//                                "Открытие офлайн-части конференции DevOops 2023")));
+//        loadTalksSpeakersEvent(Conference.SMART_DATA, LocalDate.of(2023, 9, 6), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("SmartData 2023", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции SmartData 2023", "Закрытие конференции SmartData 2023",
+//                                "Открытие второго дня SmartData 2023",
+//                                "Подведение итогов online-части конференции SmartData 2023",
+//                                "Открытие офлайн-части конференции SmartData 2023")));
+//        loadTalksSpeakersEvent(Conference.DOT_NEXT, LocalDate.of(2023, 9, 15), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("DotNext 2023", null, List.of(9L)),
+//                        Set.of("Открытие конференции DotNext 2023", "Fail-митап", "Закрытие конференции DotNext 2023")));
+//        loadTalksSpeakersEvent(Conference.JOKER, LocalDate.of(2023, 10, 9), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Joker 2023", null, List.of(24L, 4L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2023, 10, 10), "2023 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Heisenbug 2023 Autumn", null, List.of(24L, 4L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 11, 1), "2023 Autumn ",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Mobius 2023 Autumn", null, List.of(24L, 4L)),
+//                        Set.of("Открытие конференции Mobius 2023 Autumn")));
+//        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2023, 11, 2), "2023 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("HolyJS 2023 Autumn", null, List.of(24L, 4L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2023, 11, 7), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("PiterPy 2023", null, List.of(24L, 4L)),
+//                        Set.of()));
+//        loadTalksSpeakersEvent(Conference.VIDEO_TECH, LocalDate.of(2023, 11, 16), "2023",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("VideoTech 2023", null, List.of(24L, 28L)),
+//                        Set.of()));
     }
 }

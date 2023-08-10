@@ -311,7 +311,7 @@
         <th rowspan="2">2022</th>
         <td rowspan="2">2022<br>(2022)</td>
         <td rowspan="2">2022<br>(2022)</td>
-        <td>2022 Spring<br>(2022 Spring)</td>
+        <td>2022&nbsp;Spring<br>(2022&nbsp;Spring)</td>
         <td>2022 Spring<br>(2022 Spring)</td>
         <td>2022 Spring<br>(2022 Spring)</td>
         <td rowspan="2">2022<br>(2022)</td>
@@ -331,33 +331,39 @@
         <td rowspan="2">2022</td>
     </tr>
     <tr>
-        <td>2022 Autumn<br>(2022 Autumn)</td>
+        <td>2022&nbsp;Autumn<br>(2022&nbsp;Autumn)</td>
         <td>2022 Autumn<br>(2022 Autumn)</td>
         <td>2022 Autumn<br>(2022 Autumn)</td>
         <td>2022 Autumn<br>(2022 Autumn)</td>
         <td>2022 Autumn<br>(2022 Autumn)</td>
     </tr>
     <tr>
-        <th>2023</th>
-        <td>2023</td>
-        <td>2023</td>
-        <td>2023</td>
+        <th rowspan="2">2023</th>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td>2023&nbsp;Spring<br>(2023&nbsp;Spring)</td>
+        <td>2023&nbsp;Spring<br>(2023&nbsp;Spring)</td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td>2023&nbsp;Spring<br>(2023&nbsp;Spring)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2023<br>(2023)</td>
         <td>2023 Spring</td>
-        <td>2023 Spring</td>
-        <td>2023</td>
-        <td></td>
-        <td>2023</td>
-        <td></td>
-        <td>2023 Spring</td>
-        <td></td>
-        <td></td>
-        <td>2023 Spring</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>2023</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td rowspan="2">2023<br>(2023)</td>
+        <td rowspan="2">2023</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+    </tr>
+        <td>2023&nbsp;Autumn<br>(2023&nbsp;Autumn)</td>
+        <td>2023&nbsp;Autumn<br>(2023&nbsp;Autumn)</td>
+        <td>2023&nbsp;Autumn<br>(2023&nbsp;Autumn)</td>
+        <td>2023&nbsp;Autumn<br>(2023&nbsp;Autumn)</td>
+    <tr>
     </tr>
 </table>
