@@ -26,7 +26,7 @@
     "@ngx-translate/http-loader": "^8.0.0",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
-    "chart.js": "^4.3.3",
+    "chart.js": "^4.4.0",
     "core-js": "^3.32.1",
     "get-video-id": "^3.6.5",
     "marked": "^4.3.0",
