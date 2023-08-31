@@ -385,6 +385,7 @@ events:
     siteLink:
       - {language: en, text: "https://dotnext.ru/en/archive/2022 Autumn/"}
       - {language: ru, text: "https://dotnext.ru/archive/2022 Autumn/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLtWrKx3nUGBfpiTQKb9ovdR2_gSQbnwJd
     talkIds: [4135, 4136, 4137, 4138, 4139, 4140, 4141, 4142, 4143, 4144, 4145, 4146, 4147, 4148, 4149, 4150, 4151, 4152,
               4153, 4154, 4155, 4279, 4160, 4161, 4164, 4165, 4157, 4156, 4166, 4173, 4169]
   # Heisenbug
@@ -542,6 +543,7 @@ events:
     siteLink:
       - {language: en, text: "https://heisenbug.ru/en/archive/2022 Autumn/"}
       - {language: ru, text: "https://heisenbug.ru/archive/2022 Autumn/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLsVTVVvrKX9uwg_amKKFsvWwZVYoCuW68
     talkIds: [4180, 4181, 4182, 4183, 4184, 4185, 4186, 4187, 4188, 4189, 4190, 4191, 4192, 4193, 4194, 4195, 4196, 4197,
               4198, 4199, 4200, 4201, 4202, 4203, 4204, 4205, 4206, 4207, 4208, 4209, 4210, 4212, 4211, 4213, 4214, 4216, 4215,
               4217, 4218, 4219, 4220, 4221, 4222, 4223, 4224, 4225, 4284, 4226, 4227, 4228]
@@ -2683,7 +2685,7 @@ events:
     siteLink:
       - {language: en, text: "https://2021.vtconf.com/en/"}
       - {language: ru, text: "https://2021.vtconf.com/"}
-    youtubeLink: https://www.youtube.com/playlist?list=PL0TQFzykgJj97EwKkUop3krdQoZQ90-ps
+    youtubeLink: https://www.youtube.com/playlist?list=PL0TQFzykgJj8vou3N_2plIezhpqNUW2Av
     talkIds: [3543, 3562, 3581, 3619, 3588, 3582, 3564, 3584, 3611, 3585, 3561, 3586, 3545, 3622, 3614, 3612, 3587, 3620,
         3613, 3583, 3548, 3549, 3589, 3550, 3621, 3623, 3590, 3546, 3591, 3552, 3615]
   - eventTypeId: 17
