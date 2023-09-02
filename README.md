@@ -9,13 +9,17 @@ There are two parts of the program:
 
 1. **Guess the Speaker** game
 
+Information and statistics of conferences, meetups, talks, speakers:
+
 ![Information](/documents/images/information.png)
 
-Information and statistics of conferences, meetups, talks, speakers.
+*Statistics* page contains OLAP cubes for event types, speakers and companies:
+
+![OLAP](/documents/images/olap.png)
+
+You need to guess the speaker, talk, company or tag cloud in the game:
 
 ![Game](/documents/images/game.png)
-
-In the game you need to guess the speaker, talk, company or tag cloud.
 
 ## Running
 
