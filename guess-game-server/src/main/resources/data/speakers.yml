@@ -38751,3 +38751,169 @@ speakers:
     bio:
       - {language: en, text: "<p>Heads the frontend department, which works closely with interactive in SVG.</p>"}
       - {language: ru, text: "<p>Возглавляет отдел фронтенда, который плотно работает с интерактивом в SVG.</p>"}
+  - id: 2703
+    photoFileName: 2703.jpg
+    photoUpdatedAt: "2023-08-01T11:33:52Z"
+    name:
+      - {language: en, text: "Ksenia Larkina"}
+      - {language: ru, text: "Ксения Ларькина"}
+    companyIds: [1104]
+    bio:
+      - {language: en, text: "Researcher in the field of AI and ML application in psychotherapy. Practicing psychologist,\
+            \ founder of Nezhno Space startup. Together with the team we are developing an AI based recommendation system\
+            \ for treatment of eating disorders."}
+      - {language: ru, text: "<p>Исследователь в области применения AI и ML в психотерапии, основатель &laquo;Нежно Space&raquo;\
+            \ &mdash; платформы психологической поддержки при РПП на основе ИИ.</p>"}
+  - id: 2704
+    photoFileName: 2704.jpg
+    photoUpdatedAt: "2023-08-07T10:28:54Z"
+    name:
+      - {language: en, text: "Roman Kucev"}
+      - {language: ru, text: "Роман Куцев"}
+    companyIds: [1105]
+    bio:
+      - {language: en, text: "<p>Crowdsourcing teacher at SDA, HSE, MIPT. Co-Founder &amp; CTO TrainingData.Solutions</p>"}
+      - {language: ru, text: "<p>Преподаватель краудсорсинга в ШАДе, ВШЭ, МФТИ. Co-Founder &amp; CTO TrainingData.Solutions</p>"}
+    gitHub: Kucev
+    habr: kucev
+  - id: 2705
+    photoFileName: 2705.jpg
+    photoUpdatedAt: "2023-08-03T09:08:39Z"
+    name:
+      - {language: en, text: "Michael Khrushchev"}
+      - {language: ru, text: "Михаил Хрущев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Leads the YandexGPT pretrain team. YandexGPT is a family of large and smart language models\
+            \ that are already used in most Yandex products. The success of implementations directly depends on how smart\
+            \ the initial model is. The team's goal is to make the smartest possible model that will be able to answer any\
+            \ user's question with minimal additional training.</p>"}
+      - {language: ru, text: "<p>Руководит командой претрейна YandexGPT. YandexGPT &mdash; это семейство больших и умных я\
+            зыковых моделей, которые уже используются в большинстве продуктов Яндекса. Успех внедрений напрямую зависит от\
+            \ того, насколько умной является исходная модель. Задача команды &mdash; сделать максимально умную модель, кот\
+            орая будет способна с минимальным дообучением ответить на любой вопрос пользователя.</p>"}
+    gitHub: MichaelEk
+    habr: MichaelEk
+  - id: 2706
+    photoFileName: 2706.jpg
+    photoUpdatedAt: "2023-08-09T12:45:01Z"
+    name:
+      - {language: en, text: "Mikhail Berezkin"}
+      - {language: ru, text: "Михаил Березкин"}
+    companyIds: [1106]
+    bio:
+      - language: ru
+        text: "<p>Окончил Московский институт инженеров геодезии, аэрофотосъемки и картографии по специальности &laquo;фот\
+            ограмметрия&raquo;, а также Дипломатическую академию МИД по специальности &laquo;международная экономика&raquo;.\
+            \ В ракетно-космической отрасли с 2017 года. В Терра Тех занимается развитием продуктов, пресейлом и стратегие\
+            й.</p>\n<p>Михаил свободно владеет английским, интересуется историей и географией, любит путешествия, музыку и\
+            \ видеоигры.</p>"
+  - id: 2707
+    photoFileName: 2707.jpg
+    photoUpdatedAt: "2023-07-24T11:23:32Z"
+    name:
+      - {language: en, text: "Ibrahim Badertdinov"}
+      - {language: ru, text: "Ибрагим Бадертдинов"}
+    companyIds: [975]
+    bio:
+      - language: en
+        text: "<p>Ibragim has been working in machine learning for the last 5 years, he was involved in the startup Salute\
+            \ assistants in SberDevices. Last year he was responsible for machine learning in one of the startups in the TON\
+            \ ecosystem. It was mostly recommendation systems for different tasks.&nbsp;</p>\n<p>&nbsp;</p>"
+      - language: ru
+        text: "<p>Независимый эксперт в области NLP и RecSys.<strong> </strong>Последние 5 лет занимается машинным обучени\
+            ем. Успел с самого стартапа поучаствовать в запуске ассистентов Салют в SberDevices. Там занимался NLP, chit-chat\
+            \ моделями, information retrieval. Последний год отвечал за ML в одном из стартапов экосистемы TON. В основном\
+            , это были рекомендательные системы для разных задач.&nbsp;</p>\n<p>Выступления Ибрагима:</p>\n<p>1. <a href=\"\
+            https://youtu.be/-Ur7zctCrdw\">Подкаст Яндекса про Голосовых помощников</a></p>\n<p>2. <a href=\"https://youtu.be/gB0mrl1KXfU\"\
+            >Выступление про ускорение моделей на Highload&nbsp;</a></p>\n<p>3. <a href=\"https://youtu.be/g0bQF5MPTZY\">В\
+            ыступление на митапе AGIMA</a>&nbsp;</p>"
+    gitHub: ibragim-bad
+    habr: Ibragim_bad
+  - id: 2708
+    photoFileName: 2708.jpg
+    photoUpdatedAt: "2023-08-07T08:17:14Z"
+    name:
+      - {language: en, text: "Alexander Zemskov"}
+      - {language: ru, text: "Александр Земсков"}
+    companyIds: [1107]
+    bio:
+      - {language: en, text: "<p>CTO and Co-Founder of RADAR marketing research agency. Businessman, sociologist, web developer,\
+            \ analyst. Key competencies: creating software solutions for the sociological and marketing research industry;\
+            \ expertise in Discrete Choice Modeling / Conjoint Analysis / MaxDiff.</p>"}
+      - {language: ru, text: "<p>CTO и Co-Founder агентства маркетинговых исследований RADAR. Предприниматель, социолог, в\
+            еб-разработчик, аналитик. Ключевые компетенции: создание software-решений для отрасли социологических и маркет\
+            инговых исследований; экспертиза в области Discrete Choice Modeling / Conjoint Analysis / MaxDiff.</p>"}
+  - id: 2709
+    photoFileName: 2709.jpg
+    photoUpdatedAt: "2023-08-15T10:24:54Z"
+    name:
+      - {language: en, text: "Ivan Morshchagin"}
+      - {language: ru, text: "Иван Морщагин"}
+    companyIds: [1041]
+    bio:
+      - language: en
+        text: "15+ лет в IT индустрии\nОбеспечение качества в направлениях: web, mobile, встроенные системы, blockchain, e-commerce,\
+            \ хостинг, большие интеграции\nКомпании: от стартапов, гос.компаний до банков, финтеха и телекома\nАктивный уч\
+            астник мероприятий платформы РСВ\nТрекер и методолог хакатонов по ИИ"
+      - language: ru
+        text: "<p>15+ лет в IT-индустрии. Обеспечивает качество в направлениях web, mobile, встроенных систем, blockchain,\
+            \ e-commerce, хостинга и больших интеграций в компаниях различного масштаба и профиля: от стартапов и государс\
+            твенных компаний до банков, финтеха и телекома. Прошел путь от инженера до директора.</p>\n<p>Иван занимается\
+            \ IT-консалтингом и активно участвует в мероприятиях платформы РСВ. Трекер и методолог хакатонов по ИИ.</p>"
+  - id: 2710
+    photoFileName: 2710.jpg
+    photoUpdatedAt: "2023-08-10T14:53:25Z"
+    name:
+      - {language: en, text: "Evgeny Nikitin"}
+      - {language: ru, text: "Евгений Никитин"}
+    companyIds: [915]
+    bio:
+      - {language: en, text: "<p>Много лет любит машинное обучение в разных формах. Сейчас Евгений &ndash; CTO Цельса, где\
+            \ разрабатывают ML-системы для анализа медицинских изображений. Ведет Telegram-канал &laquo;Варим ML&raquo;.</p>"}
+    twitter: crazyfrogspb
+    gitHub: crazyfrogspb
+    habr: crazyfrogspb1
+  - id: 2711
+    photoFileName: 2711.jpg
+    photoUpdatedAt: "2023-08-07T09:36:41Z"
+    name:
+      - {language: en, text: "Igor Terekhin"}
+      - {language: ru, text: "Игорь Терехин"}
+    companyIds: [1108]
+    bio:
+      - {language: en, text: "<p>Team Lead CV. Previously worked at EPAM as a middle+ ML Engineer. Winner of all-Russian hacks.ai\
+            \ hackathons in Samara and Yekaterinburg and technical expert for the next hacks.ai seasons.</p>"}
+      - {language: ru, text: "Team Lead CV. Ранее работал в EPAM как middle+ ML Engineer. Победитель всероссийских хакатон\
+            ов hacks.ai в Самаре и Екатеринбурге и технический эксперт следующих сезонов hacks.ai."}
+  - id: 2712
+    photoFileName: 2712.jpg
+    photoUpdatedAt: "2023-07-24T11:00:29Z"
+    name:
+      - {language: en, text: "Sergei Savvov"}
+      - {language: ru, text: "Сергей Саввов"}
+    companyIds: []
+    bio:
+      - {language: en, text: "ex-Head of AI @ 3commas, ML engineering leader, AI enthusiast. For 8 years at DS, I have worked\
+            \ in AdTech, FinTech, BioTech, trading and crypto projects. Founded and led a team of 15 professionals to develop\
+            \ trading bots using ML. For the last year I have been passionate about using LLMs in personal and commercial\
+            \ projects."}
+      - {language: ru, text: "<p>ex-Head of AI 3commas, ML engineering leader, AI-энтузиаст. За 8 лет в DS поработал в AdTech,\
+            \ FinTech, BioTech, trading и crypto-проектах. Основал и руководил командой из 15 специалистов для разработки\
+            \ торговых ботов с использованием ML. Последний год увлечен использованием LLMs в личных и коммерческих проект\
+            ах.</p>"}
+    gitHub: slgero
+    habr: slgero
+  - id: 2713
+    photoFileName: 2713.jpg
+    photoUpdatedAt: "2023-08-29T15:20:48Z"
+    name:
+      - {language: en, text: "Igor Kotenkov"}
+      - {language: ru, text: "Игорь Котенков"}
+    companyIds: [1109]
+    bio:
+      - {language: ru, text: "<p>Руководитель AI в Unleashing.AI, ex-Yandex, ex-Alibaba, Kaggle Competitions Master, лекто\
+            р, писатель.</p>"}
+    twitter: stalkermustang
+    gitHub: stalkermustang
+    habr: stalkermustang

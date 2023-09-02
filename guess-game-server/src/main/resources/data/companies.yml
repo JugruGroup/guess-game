@@ -3983,3 +3983,29 @@ companies:
       - {language: en, text: "Phoenix Creative Group"}
       - {language: ru, text: "Креативная группа «Феникс»"}
     siteLink: https://phoenix-cg.ru
+  - id: 1104
+    name:
+      - {language: en, text: "Nezhno Space"}
+      - {language: ru, text: "Нежно Space"}
+    siteLink: https://nezhno.space
+  - id: 1105
+    name:
+      - {language: en, text: TrainingData.Solutions}
+    siteLink: https://trainingdata.solutions
+  - id: 1106
+    name:
+      - {language: en, text: TerraTech}
+      - {language: ru, text: "Терра Тех"}
+    siteLink: https://terratech.ru
+  - id: 1107
+    name:
+      - {language: en, text: "RADAR Agency"}
+    siteLink: https://radar-research.ru
+  - id: 1108
+    name:
+      - {language: en, text: "Napoleon IT"}
+    siteLink: https://napoleonit.ru
+  - id: 1109
+    name:
+      - {language: en, text: Unleashing.AI}
+    siteLink: https://www.unleashing.ai
