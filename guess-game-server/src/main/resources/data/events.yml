@@ -1076,6 +1076,7 @@ events:
     siteLink:
       - {language: en, text: "https://jokerconf.com/en/archive/2022/"}
       - {language: ru, text: "https://jokerconf.com/archive/2022/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLVe-2wcL84b9redwDis1Jqe7HvVB9ds4Z
     talkIds: [4229, 4230, 4231, 4232, 4233, 4234, 4235, 4236, 4237, 4238, 4239, 4240, 4241, 4242, 4243, 4244, 4245, 4246,
               4247, 4248, 4249, 4250, 4251, 4252, 4253, 4254, 4255, 4256, 4257, 4258, 4259, 4260, 4261, 4262, 4263, 4264, 4265,
               4266, 4267, 4268, 4269, 4270, 4271, 4272, 4273, 4274, 4275, 4276, 4277]
@@ -1426,6 +1427,12 @@ events:
       - {language: en, text: "https://techtrain.ru/archive/2023 Spring/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLmJD_ICvgPy3LseuXIY8685_vdbx3znU8
     talkIds: [4394, 4395, 4396, 4397, 4398, 4399, 4400, 4401, 4402, 4403, 4404, 4405, 4406, 4407, 4408]
+  - eventTypeId: 12
+    name:
+      - {language: en, text: "TechTrain 2023 Autumn"}
+    days:
+      - {startDate: "2023-08-30", endDate: "2023-08-30", placeId: 24}
+    talkIds: [4695, 4696, 4697, 4698, 4699, 4700, 4701, 4702, 4703, 4704, 4705]
   # JUG.MSK
   - eventTypeId: 13
     name:
