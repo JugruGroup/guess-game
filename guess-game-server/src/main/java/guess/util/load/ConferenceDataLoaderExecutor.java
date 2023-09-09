@@ -173,6 +173,7 @@ public class ConferenceDataLoaderExecutor {
                         fillStringAttributeValue(resourceEventType::getHabrLink, et::getHabrLink, et::setHabrLink);
                         fillStringAttributeValue(resourceEventType::getTimeZone, et::getTimeZone, et::setTimeZone);
                         fillLongAttributeValue(resourceEventType::getTopicId, et::getTopicId, et::setTopicId);
+                        fillTopicAttributeValue(resourceEventType::getTopic, et::getTopic, et::setTopic);
                         fillBooleanAttributeValue(resourceEventType::isInactive, et::isInactive, et::setInactive);
 
                         if (needUpdate(resourceEventType, et)) {
@@ -862,6 +863,19 @@ public class ConferenceDataLoaderExecutor {
     }
 
     /**
+     * Fills topic attribute value.
+     *
+     * @param resourceSupplier resource supplier
+     * @param targetSupplier   target supplier
+     * @param targetConsumer   target consumer
+     */
+    static void fillTopicAttributeValue(Supplier<Topic> resourceSupplier, Supplier<Topic> targetSupplier, Consumer<Topic> targetConsumer) {
+        if ((resourceSupplier.get() != null) && (targetSupplier.get() == null)) {
+            targetConsumer.accept(resourceSupplier.get());
+        }
+    }
+
+    /**
      * Fills speaker MVP.
      *
      * @param targetSpeaker   target speaker
@@ -977,6 +991,9 @@ public class ConferenceDataLoaderExecutor {
                         } else {
                             // Talk exists
                             t.setId(resourceTalk.getId());
+
+                            fillLongAttributeValue(resourceTalk::getTopicId, t::getTopicId, t::setTopicId);
+                            fillTopicAttributeValue(resourceTalk::getTopic, t::getTopic, t::setTopic);
 
                             if (needUpdate(resourceTalk, t)) {
                                 talksToUpdate.add(t);
