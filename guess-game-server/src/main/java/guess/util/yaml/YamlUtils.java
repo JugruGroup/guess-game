@@ -442,7 +442,7 @@ public class YamlUtils {
                     new PropertyMatcher(Talk.class,
                             List.of("id", "name", "shortDescription", "longDescription", "talkDay", "startTime",
                                     "endTime", "track", "language", "presentationLinks", "materialLinks", "videoLinks",
-                                    "speakerIds")),
+                                    "speakerIds", "topicId")),
                     new PropertyMatcher(Company.class,
                             List.of("id", "name")),
                     new PropertyMatcher(Speaker.class,

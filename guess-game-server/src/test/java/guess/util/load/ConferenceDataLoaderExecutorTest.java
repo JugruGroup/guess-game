@@ -1636,12 +1636,95 @@ class ConferenceDataLoaderExecutorTest {
             );
         }
 
-
         @ParameterizedTest
         @MethodSource("data")
         void fillLongAttributeValue(Supplier<Long> resourceSupplier, Supplier<Long> targetSupplier, LongConsumer targetConsumer,
                                     Long expected) {
             ConferenceDataLoaderExecutor.fillLongAttributeValue(resourceSupplier, targetSupplier, targetConsumer);
+
+            assertEquals(expected, targetSupplier.get());
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("fillTopicAttributeValue method tests")
+    class FillTopicAttributeValueTest {
+        private Topic createTopic(long id) {
+            Topic topic = new Topic();
+            topic.setId(id);
+
+            return topic;
+        }
+
+        private EventType createEventType(Topic topic) {
+            EventType eventType = new EventType();
+            eventType.setTopic(topic);
+
+            if (topic != null) {
+                eventType.setTopicId(topic.getId());
+            }
+
+            return eventType;
+        }
+
+        private Stream<Arguments> data() {
+            final long TARGET_TOPIC_ID1 = 1L;
+
+            final long RESOURCE_TOPIC_ID2 = 2L;
+
+            final long RESOURCE_TOPIC_ID3 = 3L;
+            final long TARGET_TOPIC_ID3 = 4;
+
+            // 0
+            EventType resourceEventType0 = createEventType(null);
+            Supplier<Topic> resourceSupplier0 = resourceEventType0::getTopic;
+
+            EventType targetEventType0 = createEventType(null);
+            Supplier<Topic> targetSupplier0 = targetEventType0::getTopic;
+            Consumer<Topic> targetConsumer0 = targetEventType0::setTopic;
+
+            // 1
+            EventType resourceEventType1 = createEventType(null);
+            Supplier<Topic> resourceSupplier1 = resourceEventType1::getTopic;
+
+            Topic targetTopic1 = createTopic(TARGET_TOPIC_ID1);
+            EventType targetEventType1 = createEventType(targetTopic1);
+            Supplier<Topic> targetSupplier1 = targetEventType1::getTopic;
+            Consumer<Topic> targetConsumer1 = targetEventType1::setTopic;
+
+            // 2
+            Topic resourceTopic2 = createTopic(RESOURCE_TOPIC_ID2);
+            EventType resourceEventType2 = createEventType(resourceTopic2);
+            Supplier<Topic> resourceSupplier2 = resourceEventType2::getTopic;
+
+            EventType targetEventType2 = createEventType(null);
+            Supplier<Topic> targetSupplier2 = targetEventType2::getTopic;
+            Consumer<Topic> targetConsumer2 = targetEventType2::setTopic;
+
+            // 3
+            Topic resourceTopic3 = createTopic(RESOURCE_TOPIC_ID3);
+            EventType resourceEventType3 = createEventType(resourceTopic3);
+            Supplier<Topic> resourceSupplier3 = resourceEventType3::getTopic;
+
+            Topic targetTopic3 = createTopic(TARGET_TOPIC_ID3);
+            EventType targetEventType3 = createEventType(targetTopic3);
+            Supplier<Topic> targetSupplier3 = targetEventType3::getTopic;
+            Consumer<Topic> targetConsumer3 = targetEventType3::setTopic;
+
+            return Stream.of(
+                    arguments(resourceSupplier0, targetSupplier0, targetConsumer0, null),
+                    arguments(resourceSupplier1, targetSupplier1, targetConsumer1, targetTopic1),
+                    arguments(resourceSupplier2, targetSupplier2, targetConsumer2, resourceTopic2),
+                    arguments(resourceSupplier3, targetSupplier3, targetConsumer3, targetTopic3)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void fillTopicAttributeValue(Supplier<Topic> resourceSupplier, Supplier<Topic> targetSupplier, Consumer<Topic> targetConsumer,
+                                     Topic expected) {
+            ConferenceDataLoaderExecutor.fillTopicAttributeValue(resourceSupplier, targetSupplier, targetConsumer);
 
             assertEquals(expected, targetSupplier.get());
         }
