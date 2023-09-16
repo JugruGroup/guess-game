@@ -22184,6 +22184,7 @@ speakers:
             й и недооцененной. Любит кататься на мотоциклах, играть в пляжный волейбол, а также делиться результатами прое\
             ктов на конференциях и митапах.</p>"
     twitter: varivoda_ivan
+    gitHub: varivoda
   - id: 1561
     photoFileName: 1561.jpg
     photoUpdatedAt: 2021-04-06T07:23:48.119Z[UTC]
@@ -36633,6 +36634,8 @@ speakers:
             \ clean code at internal meetings.</p>"}
       - {language: ru, text: "<p>Занимается разработкой фреймворков и инструментов для тестирования. Продвигает подходы дл\
             я написания чистого кода на внутренних митингах.</p>"}
+    gitHub: shilko2013
+    habr: shilko2013
   - id: 2557
     photoFileName: 2557.jpg
     photoUpdatedAt: 2023-02-13T23:55:55Z[UTC]
