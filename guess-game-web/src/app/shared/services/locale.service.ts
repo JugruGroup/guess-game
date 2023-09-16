@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MessageService } from '../../modules/message/message.service';
-import { Observable } from 'rxjs';
+import { lastValueFrom, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Language } from '../models/language.model';
 import { TranslateService } from '@ngx-translate/core';
@@ -34,7 +34,7 @@ export class LocaleService {
     return this.http.put<string>(`${this.baseUrl}/language`, language)
       .pipe(
         map(data => {
-            this.changeInterfaceLanguage(language);
+            this.changeInterfaceLanguage(language).then();
             return data;
           }
         ),
@@ -46,12 +46,15 @@ export class LocaleService {
   }
 
   async getLanguageAndChangeInterfaceLanguage() {
-    const language = await this.getLanguage().toPromise();
+    const language$ = this.getLanguage();
+    const language = await lastValueFrom(language$);
 
-    this.changeInterfaceLanguage(language);
+    await this.changeInterfaceLanguage(language);
   }
 
   async changeInterfaceLanguage(language: Language) {
-    await this.translateService.use(language === Language.Russian ? 'ru' : 'en').toPromise();
+    const language$ = this.translateService.use(language === Language.Russian ? 'ru' : 'en');
+
+    await lastValueFrom(language$);
   }
 }
