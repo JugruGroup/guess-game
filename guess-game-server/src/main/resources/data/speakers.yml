@@ -34353,6 +34353,8 @@ speakers:
       - {language: ru, text: "<p>Пентестер. Багхантер. TechLead. Работает в компании DeteAct, где уже более четырех лет де\
             лает мир немножко безопаснее.</p>"}
     twitter: r0hack
+    gitHub: r0hack
+    habr: r0hack
   - id: 2396
     photoFileName: 2396.jpg
     photoUpdatedAt: 2022-11-01T15:00:29Z[UTC]
