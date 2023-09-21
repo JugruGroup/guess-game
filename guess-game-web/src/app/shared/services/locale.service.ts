@@ -17,7 +17,7 @@ export class LocaleService {
     this.translateService.addLangs(['en', 'ru']);
     this.translateService.setDefaultLang('en');
 
-    this.getLanguageAndChangeInterfaceLanguage();
+    this.getLanguageAndChangeInterfaceLanguage().then();
   }
 
   getLanguage(): Observable<Language> {
