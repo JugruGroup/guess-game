@@ -110,3 +110,8 @@ companyGroups:
       Тинькофф,
       DevBrothers
     ]
+  - name: "DevBrothers, Tinkoff"
+    items: [
+      Тинькофф,
+      DevBrothers
+    ]

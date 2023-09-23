@@ -4009,3 +4009,75 @@ companies:
     name:
       - {language: en, text: Unleashing.AI}
     siteLink: https://www.unleashing.ai
+  - id: 1110
+    name:
+      - {language: en, text: Webtronics}
+    siteLink: https://webtronics.ru
+  - id: 1111
+    name:
+      - {language: en, text: TravelX}
+    siteLink: https://travelx.io
+  - id: 1112
+    name:
+      - {language: en, text: Rubytech}
+    siteLink: https://rubytech.ru
+  - id: 1113
+    name:
+      - {language: en, text: Poscredit}
+    siteLink: https://pos-credit.ru
+  - id: 1114
+    name:
+      - {language: en, text: GetAnalyst}
+    siteLink: https://getanalyst.ru
+  - id: 1115
+    name:
+      - {language: en, text: "Analytic Workspace"}
+    siteLink: https://analyticworkspace.ru
+  - id: 1116
+    name:
+      - {language: en, text: JobLeads}
+    siteLink: https://www.jobleads.com
+  - id: 1117
+    name:
+      - {language: en, text: Finom}
+    siteLink: https://finom.co
+  - id: 1118
+    name:
+      - {language: en, text: "ITFB Group"}
+    siteLink: https://itfbgroup.ru
+  - id: 1119
+    name:
+      - {language: en, text: "Neoflex Consulting"}
+      - {language: ru, text: "Неофлекс Консалтинг"}
+    siteLink: https://www.neoflex.ru
+  - id: 1120
+    name:
+      - {language: en, text: O2Consulting}
+    siteLink: https://o2consult.com
+  - id: 1121
+    name:
+      - {language: en, text: "T1 Consulting"}
+      - {language: ru, text: "Т1 Консалтинг"}
+    siteLink: https://www.t1-consulting.ru
+  - id: 1122
+    name:
+      - {language: en, text: Magnit}
+      - {language: ru, text: Магнит}
+    siteLink: https://magnit.ru
+  - id: 1123
+    name:
+      - {language: en, text: "TSQ Consulting"}
+    siteLink: https://tsqconsulting.ru
+  - id: 1124
+    name:
+      - {language: en, text: SimbirSoft}
+    siteLink: https://www.simbirsoft.com
+  - id: 1125
+    name:
+      - {language: en, text: USABILITYLAB}
+    siteLink: https://usabilitylab.ru
+  - id: 1126
+    name:
+      - {language: en, text: AlfaStrakhovanie}
+      - {language: ru, text: АльфаСтрахование}
+    siteLink: https://www.alfastrah.ru
