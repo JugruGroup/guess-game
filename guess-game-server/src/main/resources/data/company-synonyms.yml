@@ -226,6 +226,10 @@ companySynonyms:
     synonyms: [
         JFrog/Conan
     ]
+  - name: JobLeads
+    synonyms: [
+      "JobLeads GmbH"
+    ]
   - name: "JUG Ru Group"
     synonyms: [
         "JUG.ru Group"
@@ -338,7 +342,9 @@ companySynonyms:
         "National Research University Higher School of Economics",
         "Национальный исследовательский университет «Высшая школа экономики»",
         "HSE University — Saint Petersburg",
-        "НИУ ВШЭ — Санкт-Петербург"
+        "НИУ ВШЭ — Санкт-Петербург",
+        "Higher School of Economics (HSE)",
+        "Высшая Школа Экономики (ВШЭ)"
     ]
   - name: Netflix
     synonyms: [
@@ -484,7 +490,10 @@ companySynonyms:
         СберЗдоровье,
         SberDevices,
         SberMarket,
-        СберМаркет
+        СберМаркет,
+        "Sber Process Mining",
+        "Sber Life Insurance",
+        "Сбер Страхование Жизни"
     ]
   - name: Sibur
     synonyms: [

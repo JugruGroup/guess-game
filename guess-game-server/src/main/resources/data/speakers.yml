@@ -4747,33 +4747,25 @@ speakers:
             \ Institute)."}
   - id: 321
     photoFileName: 0321.jpg
-    photoUpdatedAt: 2022-10-06T10:25:56Z[UTC]
+    photoUpdatedAt: "2023-07-03T07:01:18Z"
     name:
-      - {language: en, text: "Alexander Serbul"}
+      - {language: en, text: "Alexandr Serbul"}
       - {language: ru, text: "Александр Сербул"}
     companyIds: [1]
     bio:
       - language: en
-        text: "<p>Head of AI and Big Data at 1C-Bitrix.</p>\n<p>Graduated from Don State Technical University. Worked as an\
-            \ advisor in the Presidential Administration of Russia in the Southern Federal District, in the South-West Bank\
-            \ of Sberbank of Russia, as a leading developer of the web studio QSoft and head of development of the company\
-            \ \"Softline Internet Trade\". He is in charge of quality control of integration and implementations in 1C-Bitrix.\
-            \ He is actively involved as an architect and developer in the company's projects connected with high load and\
-            \ fault tolerance (Bitrix24). He is an expert in Big Data, software development, system analysis and design. Leads\
-            \ the DataScience direction. Actively participates as a developer and analyst in projects related to deep machine\
-            \ learning and AI. A regular speaker at industry conferences and seminars on Internet topics (RIF+KIB, RIW, HighLoad,\
-            \ RIT++, CodeFest, FailOver Conference, etc.).</p>"
+        text: "<p>Head of AI and Big Data at 1C-Bitrix. Supervises integration quality control and implementations. Participates\
+            \ as an architect and developer in the company's projects related to high load and fault tolerance.</p>\n<p>Expert\
+            \ in Big Data, software development, systems analysis and design. Leads DataScience direction. Regular speaker\
+            \ at industry conferences and seminars on Internet topics (RIF+KIB, RIW, High- Load, RIT++, CodeFest, FailOver\
+            \ Conference and others).</p>"
       - language: ru
-        text: "<p>Руководитель направления AI и Big Data в компании &laquo;1С-Битрикс&raquo;.</p>\n<p>Окончил Донской Госу\
-            дарственный Технический Университет. Работал советником в Администрации Президента России по Южному федерально\
-            му округу, в Юго- Западном банке Сбербанка России, ведущим разработчиком веб-студии QSoft и главой отдела разр\
-            аботки компании &laquo;Софтлайн Интернет Трейд&raquo;. Курирует направление контроля качества интеграции и вне\
-            дрений в &laquo;1С-Битрикс&raquo;. Активно участвует как архитектор и разработчик в проектах компании, связанн\
-            ых с высокой нагрузкой и отказоустойчивостью (&laquo;Битрикс24&raquo;). Эксперт в области Big Data, разработки\
-            \ программного обеспечения, системного анализа и проектирования. Руководит направлением DataScience. Активно у\
-            частвует как разработчик и аналитик в проектах, связанных с глубоким машинным обучением и AI. Постоянный спике\
-            р отраслевых конференций и семинаров по интернет-тематике (&laquo;РИФ+КИБ&raquo;, RIW, HighLoad, РИТ++, CodeFest,\
-            \ FailOver Conference и др.).</p>"
+        text: "<p>Руководитель направления AI и Big Data в &laquo;1С-Битрикс&raquo;. Курирует направление контроля качеств\
+            а интеграции и внедрений. Участвует как архитектор и разработчик в проектах компании, связанных с высокой нагр\
+            узкой и отказоустойчивостью.</p>\n<p>Эксперт в области Big Data, разработки программного обеспечения, системно\
+            го анализа и проектирования. Руководит направлением DataScience. Постоянный спикер отраслевых конференций и се\
+            минаров по интернет-тематике (&laquo;РИФ+КИБ&raquo;, RIW, High- Load, РИТ++, CodeFest, FailOver Conference и д\
+            ругие).</p>"
     twitter: AlexSerbul
     gitHub: AlexanderSerbul
   - id: 322
@@ -7518,19 +7510,17 @@ speakers:
     habr: foto_shooter
   - id: 500
     photoFileName: 0500.jpg
-    photoUpdatedAt: 2022-03-31T19:04:58Z[UTC]
+    photoUpdatedAt: "2023-07-14T11:41:37Z"
     name:
-      - {language: en, text: "Denis Tsvetsikh"}
+      - {language: en, text: "Denis Tzvetzih"}
       - {language: ru, text: "Денис Цветцих"}
-    companyIds: [796]
+    companyIds: [674, 796]
     bio:
-      - {language: en, text: "<p>Denis has more than 10 years of experience in the development of enterprise applications\
-            \ using C# and .NET. Now his interests are in software architecture and design patterns. He thinks that the best\
-            \ metaphor for software architecture is not an onion, but an accordion. Denis is the author of courses about software\
-            \ architecture on Udemy.</p>"}
+      - {language: en, text: "<p>Over 10 years developing bloody Enterprise in C# and .NET. Current area of interest is DDD,\
+            \ software architecture and enterprise patterns. Author of a course about Pure Architecture on Udemy.</p>"}
       - {language: ru, text: "<p>Более 10 лет разрабатывает кровавый Enterprise на C# и .NET. Текущая область интересов &mdash;\
-            \ архитектура и паттерны проектирования. Считает, что лучшая метафора для архитектуры ПО &mdash; это не лукови\
-            ца, а баян. Автор курсов об архитектуре ПО на Udemy.</p>"}
+            \ DDD, архитектура ПО и enterprise-паттерны. Считает, что лучшая метафора для архитектуры ПО &mdash; это не лу\
+            ковица, а баян. Автор курса о Чистой Архитектуре на Udemy.</p>"}
     gitHub: denis-tsv
   - id: 501
     photoFileName: 0501.jpg
@@ -13136,15 +13126,29 @@ speakers:
             \ реализации новых гайдов Material Design."}
   - id: 898
     photoFileName: 0898.jpg
+    photoUpdatedAt: "2023-06-06T08:43:18Z"
     name:
-      - {language: en, text: "Boris Rjutin"}
+      - {language: en, text: "Boris Ryutin"}
       - {language: ru, text: "Борис Рютин"}
-    companyIds: [153]
+    companyIds: [689]
     bio:
-      - {language: ru, text: "Окончил факультет авиа- и ракетостроения БГТУ «Военмех», где в данный момент обучается в асп\
-            ирантуре. Аналитик в компании «Digital Security». В область интересов, помимо reverse engineering, входит безо\
-            пасность мобильных платформ. Постоянный автор журнала «Хакер» и евангелист Open Source проекта в сфере ИБ - Radare2.\
-            \ Награжден рядом компаний за обнаруженные уязвимости."}
+      - language: en
+        text: "<p>Boris started his career as an engineer and developer, but his passion for software research led him into\
+            \ the world of reverse engineering. And for more than 10 years now he has been involved in various information\
+            \ security issues. A few years ago his focus shifted to DevSecOps. Boris spent several years in the Exploit Review\
+            \ column of the paper version of Hacker magazine.</p>\n<p>He is involved in the development of several open-source\
+            \ projects related to IS. He is a speaker, and occasionally holds trainings at universities and international\
+            \ conferences. Awarded by different companies for discovered vulnerabilities.</p>"
+      - language: ru
+        text: "<p>Борис начал карьеру в качестве инженера и разработчика, однако страсть к исследованию ПО привела его в м\
+            ир обратной разработки. И вот уже более 10 лет он занимается различными вопросами информационной безопасности\
+            . Несколько лет назад его фокус сместился в сторону DevSecOps. Борис вёл несколько лет колонку &laquo;Обзор эк\
+            сплойтов&raquo; еще бумажной версии журнала &laquo;Хакер&raquo;.</p>\n<p>Участвует в развитии нескольких проек\
+            тах с открытым исходным кодом, связанных с ИБ. Спикер, время от времени проводит тренинги в университетах и на\
+            \ международных конференциях. Награжден разными компаниями за обнаруженные уязвимости.</p>"
+    twitter: dukebarman
+    gitHub: dukebarman
+    habr: dukebarman
   - id: 899
     photoFileName: 0899.jpg
     name:
@@ -17854,23 +17858,18 @@ speakers:
     habr: ARG89
   - id: 1247
     photoFileName: 1247.jpg
-    photoUpdatedAt: 2022-09-12T14:50:36Z[UTC]
+    photoUpdatedAt: "2023-07-03T10:37:53Z"
     name:
       - {language: en, text: "Pavel Filonov"}
       - {language: ru, text: "Павел Филонов"}
     companyIds: [257]
     bio:
-      - language: en
-        text: "Pavel is engaged in online education in the field of C ++ and ML.\n\nAs a leader, he developed the Data Science\
-            \ team at Kaspersky, which provides functionality based on machine learning for the company's products and services.\n\
-            \nIn the role of Data Scientist, he participated in the development of Kaspersky MLAD and MDR AI Analyst.\n\n\
-            As a C ++ developer, he participated in the creation of MaxPatrol SIEM.\n\nFor many years Pavel has been teaching\
-            \ computer science disciplines at MSTU GA."
-      - language: ru
-        text: "Занимается онлайн образованием в области C++ и ML.\n\nВ роли руководителя развивал Data Science команду в Kaspersky,\
-            \ которая предоставляет для продуктов и сервисов компании функционал на основе машинного обучения.\n\nВ роли Data\
-            \ Scientist участвовал в разработке Kaspersky MLAD и MDR AI Analyst.\n\nВ роли разработчика C++ участвовал в с\
-            оздании MaxPatrol SIEM.\n\nВ течение многих лет преподает computer science дисциплины в МГТУ ГА."
+      - {language: en, text: "<p>Pavel helps companies test how ML can improve their business processes. Previously, he led\
+            \ the DS department at Kaspersky and developed IS software. He started his professional career as a university\
+            \ teacher.</p>"}
+      - {language: ru, text: "<p>Павел помогает компаниям проверить, насколько ML может улучшить их бизнес-процессы. Ранее\
+            \ руководил отделом DS в Kaspersky и разрабатывал ПО для ИБ. Начинал профессиональную карьеру как преподавател\
+            ь в вузе.</p>"}
     twitter: filonovpv
     gitHub: sdukshis
   - id: 1248
@@ -30401,15 +30400,30 @@ speakers:
     gitHub: m1r2nda
   - id: 2116
     photoFileName: 2116.jpg
-    photoUpdatedAt: 2022-10-19T11:19:33Z[UTC]
+    photoUpdatedAt: "2022-10-19T11:19:33Z"
     name:
       - {language: en, text: "Andres Sacco"}
-    companyIds: [1064]
+    companyIds: [1111]
     bio:
-      - {language: en, text: "Andres Sacco is a Technical Lead at MercadoLibre and he has experience in different languages\
-            \ like Java, PHP, NodeJs. In his previous job, Andres helped to find alternative ways to optimize the transference\
-            \ of data between microservices, which helps to reduce the cost of infrastructure by 55%. Also, he dictated some\
-            \ internal courses about new technologies and he has written some articles on Medium."}
+      - {language: en, text: "Andres Sacco has been working as a developer since 2007 in different languages including Java,\
+            \ PHP, NodeJs, and Android. Most of his background is in Java and the libraries or frameworks associated with\
+            \ this language. In most of the companies that he worked for, he researched new technologies to improve the performance,\
+            \ stability, and quality of the applications of each company. In 2017 he started to find new ways to optimize\
+            \ the transference of data between applications to reduce the cost of infrastructure. He suggested some actions,\
+            \ some of them applicable in all the manual microservices and others in just a few of them. All this work conclude\
+            \ with the creation of a series of theoric-practical projects which are available on the page of Manning.com He\
+            \ dictated some internal courses to different audiences like developers, business analysts, and commercial people.\
+            \ Also, he participates as a Technical Reviewer on the books of the editorials: Manning, Apress, and Packt."}
+      - {language: ru, text: "<p>Andres Sacco has been working as a developer since 2007 in different languages including\
+            \ Java, PHP, NodeJs, and Android. Most of his background is in Java and the libraries or frameworks associated\
+            \ with this language. In most of the companies that he worked for, he researched new technologies to improve the\
+            \ performance, stability, and quality of the applications of each company. In 2017 he started to find new ways\
+            \ to optimize the transference of data between applications to reduce the cost of infrastructure. He suggested\
+            \ some actions, some of them applicable in all the manual microservices and others in just a few of them. All\
+            \ this work conclude with the creation of a series of theoric-practical projects which are available on the page\
+            \ of Manning.com He dictated some internal courses to different audiences like developers, business analysts,\
+            \ and commercial people. Also, he participates as a Technical Reviewer on the books of the editorials: Manning,\
+            \ Apress, and Packt.</p>"}
     twitter: adsChosen
     gitHub: andres-sacco
   - id: 2117
@@ -30975,18 +30989,22 @@ speakers:
     habr: Un1oR
   - id: 2158
     photoFileName: 2158.jpg
-    photoUpdatedAt: "2022-05-24T11:04:50Z"
+    photoUpdatedAt: "2023-06-26T11:14:29Z"
     name:
       - {language: en, text: "Alexander Polomodov"}
       - {language: ru, text: "Александр Поломодов"}
     companyIds: [674]
     bio:
-      - {language: en, text: "<p>Head of Digital Ecosystem Development at Tinkoff. Responsible for public web applications,\
-            \ mobile banking, engagement channel automation, data management services. Once upon a time wrote requirements\
-            \ and code, and led development teams. Serves on the Program Committee of ArchDays.</p>"}
-      - {language: ru, text: "<p>Руководитель управления разработки цифровых экосистем в Тинькофф. Отвечает за публичные в\
-            еб-приложения, мобильный банк, автоматизацию каналов привлечения, сервисы управления данными. Когда-то давно п\
-            исал требования и код, лидил команды разработки. Входит в программный комитет ArchDays.</p>"}
+      - language: en
+        text: "<p>Used to write code, design solutions, and be a team leader. Now he is a technical director of the Client\
+            \ Interfaces, Marketing and Engagement unit for 900+ people at Tinkoff. Responsibilities include client interfaces\
+            \ (mobile bank, online bank, API), marketing platform, media projects, special projects and social mechanics.\
+            \ Member of the Program Committee of ArchDays.</p>\n<p>&nbsp;</p>"
+      - language: ru
+        text: "<p>Когда-то давно писал код, проектировал решения, был тимлидом. Сейчас исполняет роль технического директо\
+            ра юнита &laquo;Клиентские интерфейсы, маркетинг и вовлечение&raquo; на 900+ человек в Тинькофф. В сферу ответ\
+            ственности входят клиентские интерфейсы (мобильный банк, интернет банк, API), маркетинговая платформа, медиапр\
+            оекты, спецпроекты и социальные механики. Член Программного комитета ArchDays.</p>\n<p>&nbsp;</p>"
     twitter: apolomodov
     gitHub: polomodov
   - id: 2159
@@ -31770,29 +31788,32 @@ speakers:
             ркестрации, до организации процессов, которые позволяют все это делать.</p>"}
   - id: 2211
     photoFileName: 2211.jpg
-    photoUpdatedAt: 2022-11-23T11:50:01Z[UTC]
+    photoUpdatedAt: "2023-08-07T10:42:44Z"
     name:
-      - {language: en, text: "Maksim Chernukhin"}
+      - {language: en, text: "Maxim Chernukhin"}
       - {language: ru, text: "Максим Чернухин"}
-    companyIds: [613]
+    companyIds: [665]
     bio:
-      - language: en
-        text: "<p>Maksim is an Architect / IT leader of digital sales platform in Alfa-Bank. He is engaged in the development\
-            \ of architecture and infrastructure projects, taking into account the full life cycle of the software. Created\
-            \ a platform that is successfully used outside the company, and its implementation has increased the number of\
-            \ sales by 2-4 times. Leads cloud technology implementation project at Alfa Bank.</p>\n<p>He likes complex and\
-            \ interesting tasks, which he finds both in IT and in related fields, such as hiring employees, motivation management\
-            \ or climbing Elbrus. He graduated from Bauman Moscow State Technical University and during 8 years in IT he managed\
-            \ to work with different back- and frontend development languages and to take part in projects with machine learning\
-            \ and big data.</p>"
+      - {language: en, text: "<p>10 years in IT. Graduated from Bauman Moscow State Technical University. He has worked with\
+            \ different languages of back and front end development and participated in projects with machine learning and\
+            \ big data.<br /><br />He created a digital sales platform for Alfa-Bank, which is successfully used outside the\
+            \ company, and its implementation increased the number of sales by 2-4 times.<br /><br />At Sber Life Insurance\
+            \ as Executive Director of the Technology Department, he is responsible for improving customer experience and\
+            \ digitalization of customer interaction channels, as well as managing the development of architecture and infrastructure\
+            \ of projects taking into account the full software lifecycle.<br /><br />Leads the Cloud #9 community on cloud\
+            \ adoption in the banking industry. Project Director of Skillbox. Speaker at industry and business events.<br\
+            \ /><br />Always loved the challenges he finds both in IT and related fields such as hiring employees, motivation\
+            \ management or climbing Elbrus.<br /><br /></p>"}
       - language: ru
-        text: "<p>Максим &mdash; архитектор / IT leader цифровой платформы продаж в Альфа-Банке. Занимается разработкой ар\
-            хитектуры и инфраструктуры проектов с учетом полного жизненного цикла ПО. Создал платформу, которая успешно ис\
-            пользуется за пределами компании, а ее внедрение увеличило число продаж в 2-4 раза. Ведет проект по внедрению\
-            \ облачных технологий в Альфа-Банк.</p>\n<p>Любит сложные и интересные задачи, которые находит как в IT, так и\
-            \ в смежных областях таких, как найм сотрудников, управление мотивацией или восхождение на Эльбрус. Окончил МГ\
-            ТУ им. Баумана и за 8 лет в IT успел поработать с разными языками back- и front-разработки и поучаствовать в п\
-            роектах с машинным обучением и большими данными.</p>"
+        text: "<p>10 лет в IT. Окончил МГТУ им. Баумана. Успел поработать с разными языками back- и front-разработки и поу\
+            частвовать в проектах c машинным обучением и большими данными.</p>\n<p>Создал платформу цифровых продаж в Альф\
+            а-Банке, которая успешно используется за пределами компании, а ее внедрение увеличило число продаж в 2-4 раза\
+            .</p>\n<p>В СберСтраховании жизни на позиции&nbsp;исполнительного директора управления технологий отвечает за\
+            \ улучшение клиентского опыта и цифровизацию каналов взаимодействия с клиентами, а также управляет разработкой\
+            \ архитектуры и инфраструктуры проектов с учётом полного жизненного цикла ПО.</p>\n<p>Ведет комьюнити &laquo;Cloud\
+            \ №9&raquo; по внедрению облачных технологий в банковскую индустрию. Проектный директор Skillbox. Спикер отрас\
+            левых и деловых мероприятий.</p>\n<p>Всегда любил сложные и интересные задачи, которые находит как в IT, так и\
+            \ в смежных областях, таких как найм сотрудников, управление мотивацией или восхождение на Эльбрус.</p>"
   - id: 2212
     photoFileName: 2212.jpg
     photoUpdatedAt: 2023-03-03T18:34:09Z[UTC]
@@ -32217,14 +32238,12 @@ speakers:
       - {language: ru, text: "Алексей Лобзов"}
     companyIds: [613]
     bio:
-      - language: en
-        text: "<p>Head of department at Alfa-Bank. Engaged in the development of system analysis competence.</p>\n<p>Writes\
-            \ articles and speaks at meetings.</p>\n<p>Winner of Sovcombank Challenge 2021 in the category \"System Analysis\"\
-            \ and co-author of the training program for system analysts from SkillFactory.</p>"
-      - language: ru
-        text: "<p>Руководитель направления в Альфа-Банке.&nbsp;Занимается развитием компетенции системного анализа.</p>\n\
-            <p>Пишет статьи, выступает на митапах.</p>\n<p>Является победителем конкурса Sovcombank Challenge 2021 в номин\
-            ации &laquo;Системный анализ&raquo; и соавтором программы подготовки системных аналитиков от SkillFactory.</p>"
+      - {language: en, text: "MBA, Systems Analysis Development Lead in Alfa-Bank, Flow 2022 conference Program Committee\
+            \ Member, Sovcombank Challenge 2021 Winner, co-author of the systems analysts training program from SkillFactory."}
+      - {language: ru, text: "<p>МВА, руководитель направления развития компетенции системного анализа АО &laquo;Альфа-Бан\
+            к&raquo;, член Программного комитета конференции по системному и бизнес-анализу Flow 2022 от JUG Ru Group, поб\
+            едитель конкурса Sovcombank Challenge 2021 в номинации &laquo;Системный анализ&raquo;, соавтор программы подго\
+            товки системных аналитиков SkillFactory.</p>"}
     habr: alobzov
   - id: 2238
     photoFileName: 2238.jpg
@@ -33785,13 +33804,13 @@ speakers:
     name:
       - {language: en, text: "Dmitry Tabolich"}
       - {language: ru, text: "Дмитрий Таболич"}
-    companyIds: [988]
+    companyIds: [1112]
     bio:
-      - {language: en, text: "<p>Practicing Solution Architect with a focus on corporate architecture and IT modernization\
-            \ strategies. Industry certifications (SEI, IASA, AWS) in solution architecture. Technologist. Expert.</p>"}
+      - {language: en, text: "<p>Practicing solution architect with a focus on enterprise architecture and modernization strategies.\
+            \ Industry certifications (SEI, IASA, AWS) in solution architecture. Understands cloud and beyond.</p>"}
       - {language: ru, text: "<p>Практикующий архитектор решений (Solution Architect) с фокусом на корпоративную архитекту\
             ру и стратегии модернизации ИТ-систем. Обладатель индустриальных сертификатов (SEI, IASA, AWS) в области архит\
-            ектуры решений. Технолоджист. Эксперт.</p>"}
+            ектуры решений. Технолоджист. Разбирается в облаках и не только.</p>"}
     twitter: dtabolich
     gitHub: dtabolich
   - id: 2355
@@ -35788,7 +35807,7 @@ speakers:
     gitHub: ArminaAiren
   - id: 2494
     photoFileName: 2494.jpg
-    photoUpdatedAt: 2022-10-04T16:12:54Z[UTC]
+    photoUpdatedAt: "2022-10-04T16:12:54Z"
     name:
       - {language: en, text: "Alexander Belin"}
       - {language: ru, text: "Александр Белин"}
@@ -35854,14 +35873,17 @@ speakers:
             \ Soft Systems. До этого работал в Mail.ru (VK), Golden Telecom (ВымпелКом).</p>"}
   - id: 2498
     photoFileName: 2498.jpg
-    photoUpdatedAt: 2022-10-21T14:52:34Z[UTC]
+    photoUpdatedAt: "2022-10-21T14:52:34Z"
     name:
       - {language: en, text: "Tatyana Krat"}
       - {language: ru, text: "Татьяна Крат"}
-    companyIds: [814]
+    companyIds: [1110]
     bio:
-      - {language: en, text: "<p>Leader of the Analyst Guild.</p>"}
-      - {language: ru, text: "<p>Лидер гильдии аналитики.</p>"}
+      - {language: en, text: "<p>Tatiana has worked her way up from entry-level to management positions. Her managerial experience\
+            \ in large corporations and startups allows her to deeply understand the analytical tasks that need to be solved\
+            \ in teamwork.</p>"}
+      - {language: ru, text: "Прошла путь от начальных до руководящих позиций. Управленческий опыт в крупных корпорациях и\
+            \ стартапах позволяет глубоко понимать аналитические задачи, которые нужно решать в командной работе."}
   - id: 2499
     photoFileName: 2499.jpg
     photoUpdatedAt: 2022-10-21T14:54:35Z[UTC]
@@ -35880,10 +35902,11 @@ speakers:
       - {language: ru, text: "Михаил Максимов"}
     companyIds: [1054]
     bio:
-      - {language: en, text: "<p>Product, business analyst. Author and host of the \"TsifraBukva\" YouTube channel for business\
-            \ and system analysts. TOGAF-certified. One of the leaders of the St. Petersburg Thinking Club.</p>"}
-      - {language: ru, text: "Продакт, бизнес-аналитик. Автор и ведущий YouTube-канала для бизнес- и системных аналитиков\
-            \ «ЦифраБуква». TOGAF certified. Один из лидеров Клуба Мышления «Санкт-Петербург»."}
+      - {language: en, text: "<p>Producer, business analyst. Author and host of the YouTube channel for business and systems\
+            \ analysts \"FigraBukova\". TOGAF certified. One of the leaders of the St. Petersburg Thinking Club.</p>"}
+      - {language: ru, text: "<p>Продакт, бизнес-аналитик. Кандидат экономических наук. Автор и ведущий YouTube-канала для\
+            \ системных и бизнес-аналитиков &laquo;ЦифраБуква&raquo;. TOGAF certified. Один из лидеров Клуба Мышления &laquo;С\
+            анкт-Петербург&raquo;.</p>"}
     twitter: mikhmax
   - id: 2501
     photoFileName: 2501.jpg
@@ -35915,7 +35938,7 @@ speakers:
             ледние 7 лет работает в финтехе, занимается крупными международными банковскими проектами.</p>"}
   - id: 2503
     photoFileName: 2503.jpg
-    photoUpdatedAt: 2022-11-14T18:04:51Z[UTC]
+    photoUpdatedAt: "2022-11-14T18:04:51Z"
     name:
       - {language: en, text: "Andrey Burakov"}
       - {language: ru, text: "Андрей Бураков"}
@@ -36002,15 +36025,19 @@ speakers:
             \ финтеха.</p>"
   - id: 2508
     photoFileName: 2508.jpg
-    photoUpdatedAt: 2022-09-16T07:40:55Z[UTC]
+    photoUpdatedAt: "2022-09-16T07:40:55Z"
     name:
-      - {language: en, text: "Роман Бунин"}
+      - {language: en, text: "Roman Bunin"}
+      - {language: ru, text: "Роман Бунин"}
     companyIds: [689]
     bio:
-      - {language: en, text: "Руководитель группы развития BI-систем Яндекс Go, специалист по визуализации данных и развит\
-            ию BI-систем. Заморочен на дизайне, пользе и продуктовых подходах для проектирования дашбордов и систем отчетн\
-            ости. Автор канала&nbsp;<a href=\"https://t.me/revealthedata\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"\
-            color: var(--primary-color);\">Reveal the Data</a>."}
+      - {language: en, text: "<p>Head of Yandex Go BI systems development group. Data visualization and BI systems development\
+            \ specialist. Intrigued by the design, usefulness and product approaches for designing dashboards and reporting\
+            \ systems. Author of the Reveal the Data channel.</p>"}
+      - {language: ru, text: "<p>Руководитель группы развития BI-систем Яндекс Go, специалист по визуализации данных и раз\
+            витию BI-систем. Заморочен на дизайне, пользе и продуктовых подходах для проектирования дашбордов и систем отч\
+            етности. Автор канала&nbsp;<a style=\"color: var(--primary-color);\" href=\"https://t.me/revealthedata\" target=\"\
+            _blank\" rel=\"noopener noreferrer\">Reveal the Data</a>.</p>"}
     twitter: revealthedata
   - id: 2509
     photoFileName: 2509.jpg
@@ -36035,29 +36062,27 @@ speakers:
             \ и 14, Analyst Marathon 6, Sber Meetup.</p><p>Победил в хакатоне SberCode 2020."}
   - id: 2510
     photoFileName: 2510.jpg
-    photoUpdatedAt: 2022-11-04T07:18:56Z[UTC]
+    photoUpdatedAt: "2023-06-29T04:31:41Z"
     name:
       - {language: en, text: "Sergey Nuzhnenko"}
       - {language: ru, text: "Сергей Нужненко"}
-    companyIds: []
+    companyIds: [1113]
     bio:
       - language: en
         text: "<p>Sergey has 25 years in IT. Has been in design for 20 years (system and business analyst, system architect,\
             \ implementer).</p>\n<p>For 15 years he has managed projects, departments and groups of analysts. For 10 years\
             \ conducted trainings and seminars for analysts and managers and helped colleagues and teams with coaching.</p>\n\
             <p>Co-founder of the School of Systems Analysis. Co-developer of \"System Analyst\" professional standard. Worked\
-            \ in prominent domestic IT-companies: Kaspersky, Superjob, in the structures of Gazprom. Among his consulting\
-            \ clients: Yandex, Ozon, Lanit, Armada, Sberteсh, Severstal.</p>"
+            \ in prominent domestic IT companies: Kaspersky, Superjob, in the structures of Gazprom. Among his consulting\
+            \ clients are Yandex, Ozon, Lanit, Armada, Sberteсh, Severstal.</p>"
       - language: ru
-        text: "<p>25 лет в IT. Уже 20 лет занимается проектированием (системный и бизнес-аналитик, системный архитектор, в\
-            недренец).</p>\n<p>15 лет руководил проектами, отделами, группами аналитиков. 10 лет проводит тренинги и семин\
-            ары для аналитиков и менеджеров, помогает коучингом коллегам и командам.</p>\n<p>Сооснователь Школы системного\
-            \ Анализа. Соразработчик профстандарта &laquo;Системный аналитик&raquo;. Работал в заметных отечественных IT-к\
-            омпаниях: Kaspersky, Superjob, в структурах Газпрома. Среди заказчиков консалтинга Яндекс, Озон, Ланит, Армада\
-            , Сбертех, Северсталь.</p>"
+        text: "<p>Более 25 лет в информационных технологиях. Побывал во всех основных проектных ролях.</p>\n<p>Соосновател\
+            ь Школы Системного Анализа.</p>\n<p>Руководитель экспертной группы, разработчик профстандарта &laquo;Системный\
+            \ аналитик&raquo; редакции 2023 года.</p>\n<p>Системный аналитик и системный архитектор в Poscredit.</p>\n<p>Agile-к\
+            оуч, тренер, консультант по проектированию и построению ИТ-систем, преподаватель в НИУ ВШЭ.</p>"
   - id: 2511
     photoFileName: 2511.jpg
-    photoUpdatedAt: 2022-10-25T11:21:59Z[UTC]
+    photoUpdatedAt: "2022-10-25T11:21:59Z"
     name:
       - {language: en, text: "Mira Karlash"}
       - {language: ru, text: "Мира Карлаш"}
@@ -36100,7 +36125,7 @@ speakers:
             истемном анализе и документировании."}
   - id: 2514
     photoFileName: 2514.jpg
-    photoUpdatedAt: 2022-11-28T12:12:12Z[UTC]
+    photoUpdatedAt: "2022-11-28T12:12:12Z"
     name:
       - {language: en, text: "Semyon Factorovich"}
       - {language: ru, text: "Семён Факторович"}
@@ -36108,9 +36133,9 @@ speakers:
     bio:
       - {language: en, text: "<p>Semyon does custom development of technical documentation. Conducts training courses for\
             \ technical writers. Helps companies set up documentation processes.</p>"}
-      - {language: ru, text: "Занимается заказной разработкой технической документации. Проводит учебные курсы для техниче\
-            ских писателей и всех, кто хочет разрабатывать качественную документацию. Помогает компаниям настраивать проце\
-            ссы документирования."}
+      - {language: ru, text: "<p>Занимается заказной разработкой технической документации. Проводит учебные курсы для техн\
+            ических писателей и всех, кто хочет разрабатывать качественную документацию. Помогает компаниям настраивать пр\
+            оцессы документирования.</p>"}
     twitter: lazeez
     gitHub: sfactor
     habr: chebureque
@@ -36141,36 +36166,51 @@ speakers:
     habr: romkavt
   - id: 2517
     photoFileName: 2517.jpg
-    photoUpdatedAt: 2022-10-28T08:00:28Z[UTC]
+    photoUpdatedAt: "2023-04-28T09:29:07Z"
     name:
       - {language: en, text: "Yury Kupriyanov"}
       - {language: ru, text: "Юрий Куприянов"}
     companyIds: [1042]
     bio:
-      - {language: en, text: "<p>Programmer, team leader, architect, system analyst, product manager with more than 20 years\
-            \ of experience. Created several large systems for Russian banks and stock market. Has been involved in edTech\
-            \ projects for the last 7 years. Also teaches systems analysts.</p>"}
-      - {language: ru, text: "<p>Программист, тимлид, архитектор, системный аналитик, менеджер продукта со стажем более 20\
-            \ лет. Создал несколько крупных систем для российских банков и фондового рынка. Последние 7 лет занимается edTech-п\
-            роектами. Также учит системных аналитиков.</p>"}
+      - language: en
+        text: "<p>25 years in software development. Has experience as a programmer, an analyst, a team leader, a solution\
+            \ architect, a project manager, and a director of technology and products. Took part in projects in education,\
+            \ medicine, tourism, real estate, media, idea management, stock market, oil industry.&nbsp;</p>\n<p>Created systems\
+            \ for Russian top 3 banks, National Settlement Depository, Moscow Government. Yury has also been involved in EdTech\
+            \ projects since 2015: he launched and was product director of the Open Education national platform, Open School\
+            \ projects and CoreApp.ai (Construct Online Resources for Education). Worked as the architect of the University\
+            \ 2035 platform, managed the product development of the Moscow Electronic School.&nbsp;</p>\n<p>Best speaker at\
+            \ LAF 2022 and Analyst Days 2023 conferences.</p>"
+      - language: ru
+        text: "<p>Директор по продуктам Школы системного анализа и проектирования Systems.Education</p>\n<p>25 лет в разра\
+            ботке ПО. Прошел путь программиста, аналитика, тимлида, архитектора решений, руководителя проектов, директора\
+            \ по технологиям и продуктам. Выполнял проекты в области образования, медицины, туризма, недвижимости, медиа,\
+            \ управления идеями, фондового рынка, нефтяной промышленности.&nbsp;</p>\n<p>Создавал системы для банков из ро\
+            ссийского топ-3, Национального расчетного депозитария, Правительства Москвы. С 2015 года занимается EdTech-про\
+            ектами. Запускал и был директором по продуктам национальной платформы &laquo;Открытое образование&raquo;, прое\
+            ктов &laquo;Открытая школа&raquo; и конструктора образовательных ресурсов CoreApp.ai. Работал архитектором пла\
+            тформы &laquo;Университета 2035&raquo;, управлял продуктовым развитием Московской электронной школы.&nbsp;</p>\n\
+            <p>Лучший докладчик конференций ЛАФ 2022 и Analyst Days 2023.</p>"
     twitter: ykkks
     habr: Ykkks
   - id: 2518
     photoFileName: 2518.jpg
-    photoUpdatedAt: 2022-09-06T13:40:07Z[UTC]
+    photoUpdatedAt: "2022-09-06T13:40:07Z"
     name:
       - {language: en, text: "Natalia Zhelnova"}
       - {language: ru, text: "Наталья Желнова"}
-    companyIds: []
+    companyIds: [648]
     bio:
-      - {language: en, text: "<p>In IT since 1997. Starting from 1996 has been working on consulting projects for process\
-            \ management in software development companies, as an author of several courses on requirements development and\
-            \ management, project management, system architecture design and documentation.</p>"}
-      - {language: ru, text: "<p>В сфере IT &mdash; с 1997 года. За это время прошла путь от разработчика программного обе\
-            спечения до аналитика, руководителя отдела системного анализа, руководителя направления. С 1996 года участвует\
-            \ в консалтинговых проектах по постановке процессов в компаниях, специализирующихся на разработке ПО. Автор не\
-            скольких курсов по разработке и управлению требованиями, управлению проектами, разработке и документированию с\
-            истемной архитектуры.</p>"}
+      - language: en
+        text: "<p>In IT since 1997. Starting from 1996, she has been working on consulting projects for process management\
+            \ in software development companies.</p>\n<p>Natalia is an author of several courses on requirements development\
+            \ and management, project management, system architecture design and documentation.</p>"
+      - language: ru
+        text: "<p>В сфере IT &mdash; с 1997 года. За это время прошла путь от разработчика программного обеспечения до ана\
+            литика, руководителя отдела системного анализа, руководителя направления. С 1996 года участвует в консалтингов\
+            ых проектах по постановке процессов в компаниях, специализирующихся на разработке ПО.</p>\n<p>Автор нескольких\
+            \ курсов по разработке и управлению требованиями, управлению проектами, разработке и документированию системно\
+            й архитектуры.</p>"
     twitter: enotinka
     habr: enotinka
   - id: 2519
@@ -36492,16 +36532,18 @@ speakers:
             й команды&raquo;. Продолжает внедрение ОКR уже в Сберздоровье.</p>"
   - id: 2541
     photoFileName: 2541.jpg
-    photoUpdatedAt: 2023-03-15T16:34:23Z[UTC]
+    photoUpdatedAt: "2023-07-13T07:49:48Z"
     name:
-      - {language: en, text: "Maxim Yatskevich"}
+      - {language: en, text: "Maxim Yatskiewicz"}
       - {language: ru, text: "Максим Яцкевич"}
     companyIds: [1050]
     bio:
-      - {language: en, text: "<p>Founder of the research and tracking company Product Psychology. Member of the Skolkovo expert\
-            \ board.</p>"}
-      - {language: ru, text: "<p>Основатель исследовательской и трекинговой компании &laquo;Психология продукта&raquo;. Чл\
-            ен экспертной коллегии Сколково.</p>"}
+      - {language: en, text: "<p>Member of the Skolkovo Expert Panel. Business coach, speaker, consultant, founder of Product\
+            \ Psychology. In the past, co-founder of the RPA platform PIX Robotics. CPO at VTB and Sberbank. He has implemented\
+            \ more than 70 digitalization projects.</p>"}
+      - {language: ru, text: "<p>Член экспертной коллегии &laquo;Сколково&raquo;. Бизнес-тренер, спикер, консультант, осно\
+            ватель Product Psychology. В прошлом &mdash; соонователь RPA платформы &mdash; PIX Robotics. CPO в ВТБ и Сбере\
+            . Реализовал более 70 проектов по цифровизации.</p>"}
   - id: 2542
     photoFileName: 2542.jpg
     photoUpdatedAt: 2023-03-03T16:21:57Z[UTC]
@@ -38922,3 +38964,657 @@ speakers:
     twitter: stalkermustang
     gitHub: stalkermustang
     habr: stalkermustang
+  - id: 2714
+    photoFileName: 2714.jpg
+    photoUpdatedAt: "2023-04-28T09:22:58Z"
+    name:
+      - {language: en, text: "Anna Ovzyak"}
+      - {language: ru, text: "Анна Овзяк"}
+    companyIds: [613]
+    bio:
+      - language: en
+        text: "<p>Solution-architect in Alfa-Bank. He is engaged in projects in the direction of \"Remote call center\" and\
+            \ \"Telemarketing\". &nbsp;</p>\n<p>Author of the course \"System Analyst from scratch\" on the Stepik platform.\
+            \ Over 9 years in IT. Passed the way from a system analyst to a certified architect. Writes articles on Habr about\
+            \ systems analysis.</p>"
+      - language: ru
+        text: "<p>Solution-архитектор в Альфа-Банке. Занимается проектами в направлении &laquo;Дистанционный call center&raquo;\
+            \ и &laquo;Телемаркетинг&raquo;.&nbsp;&nbsp;</p>\n<p>Автор курса &laquo;Системный аналитик с нуля&raquo; на пл\
+            атформе Stepik. Более 9 лет в ИТ. Прошла путь от системного аналитика до дипломированного архитектора. Пишет с\
+            татьи на Хабр о системном анализе.</p>"
+    habr: anna_ovzyak
+  - id: 2715
+    photoFileName: 2715.jpg
+    photoUpdatedAt: "2023-07-19T16:26:14Z"
+    name:
+      - {language: en, text: "Anastasia Moskovkina"}
+      - {language: ru, text: "Анастасия Московкина"}
+    companyIds: [631]
+    bio:
+      - {language: en, text: "<p>Mentor, systems and business analyst leader, theater enthusiast. Over 10 years in the commercial\
+            \ IT industry. Worked in outsourcing, in-product, implementing solutions. Fifth year as head of systems and business\
+            \ analysis. Mentor at Women in Tech. Speaker at Analyst Days, LAF, Assembly Point, Analyst marathon, e-legion\
+            \ analysts meetup, Koshelek meetup.<br /><br />Adept of Kaizen philosophy - continuous improvement. That is why\
+            \ he constantly evaluates himself, plans development points, develops, summarizes and reflects. He enjoys his\
+            \ work because it is possible to bring users and business benefit and value through products.</p>"}
+      - language: ru
+        text: "<p>Ментор, руководитель системных и бизнес-аналитиков, любительница театра. Более 10 лет в коммерческой IT-и\
+            ндустрии. Работала на аутсорсе, внутри продукта, внедряла решения. Пятый год работает руководителем отдела сис\
+            темного и бизнес-анализа. Ментор в Women in Tech. Спикер на Analyst Days, ЛАФ, Точка сборки, Analyst marathon,\
+            \ e-legion analysts meetup, Koshelek meetup.</p>\n<p>Адепт философии Кайдзен &mdash; непрерывного улучшения. П\
+            оэтому постоянно оценивает себя, планирует точки развития, развивается, подводит итоги и рефлексирует. Получае\
+            т удовольствие от своей работы, потому что продуктами можно приносить пользователям и бизнесу пользу и ценност\
+            ь.</p>"
+    habr: moskovkina
+  - id: 2716
+    photoFileName: 2716.jpg
+    photoUpdatedAt: "2023-07-19T16:36:45Z"
+    name:
+      - {language: en, text: "Aleksandra Kamzeyeva"}
+      - {language: ru, text: "Александра Камзеева"}
+    companyIds: [302]
+    bio:
+      - {language: en, text: "<p>Head of Systems Analysis at Lamoda Tech with 20 employees. Participates in changes in development\
+            \ team management processes, IT department development strategy and Lamoda Tech systems architecture together\
+            \ with IT and STO managers.<br /><br />Established knowledge base, processes and documentation culture in Lamoda\
+            \ Tech IT.<br /><br />Does various activities at NextWay School of Systems Analysis: public interviews, career\
+            \ conversations \"What we will be when we grow up\".<br /><br />Member of the program committee of the Summer\
+            \ Analytical Festival (SAF).</p>"}
+      - language: ru
+        text: "<p>Руководитель направления системного анализа в Lamoda Tech, в котором работают 20 человек. Участвует в из\
+            менениях процессов управления командами разработки, стратегии развития ИТ-департамента и архитектуры систем Lamoda\
+            \ Tech совместно с руководителями ИТ-департамента и СТО.</p>\n<p>Создала базу знаний, процессы и культуру доку\
+            ментирования в ИТ Lamoda Tech.</p>\n<p>Делает разные активности в школе системного анализа NextWay: публичные\
+            \ собесы, карьерные разговоры &laquo;Кем мы станем, когда вырастем&raquo;.</p>\n<p>Член программного комитета\
+            \ Летнего аналитического фестиваля (ЛАФ).</p>"
+    habr: skgirl
+  - id: 2717
+    photoFileName: 2717.jpg
+    photoUpdatedAt: "2023-07-31T11:40:16Z"
+    name:
+      - {language: en, text: "Ekaterina Ananeva"}
+      - {language: ru, text: "Екатерина Ананьева"}
+    companyIds: [1114]
+    bio:
+      - language: en
+        text: "<p>The founder of the GetAnalyst community for System Analysts. Ekaterina has journeyed through the System\
+            \ Analyst's career path from an intern's position to becoming a department head. She specializes in translating\
+            \ complex terms into layman's language, not just in Russian, but now in English as well, making intricate subjects\
+            \ easily comprehensible.</p>\n<p>Currently lead expert in the GetAnalyst community, the author of international\
+            \ educational programs for System and Business Analysts, a contributing author on Habr, a technical project manager,\
+            \ and a CEO of business specializing in development and marketing in the USA.</p>"
+      - language: ru
+        text: "<p>Основатель сообщества системных аналитиков GetAnalyst. Прошла путь системного аналитика от стажера до ру\
+            ководителя отдела. Переводит с &laquo;птичьего&raquo; на русский и на английский и рассказывает о сложном прос\
+            тыми словами.</p>\n<p>На текущий момент Екатерина &mdash; ведущий эксперт сообщества GetAnalyst, автор междуна\
+            родных образовательных программ для системных и бизнес-аналитиков, автор Habr, технический руководитель проект\
+            ов и CEO в бизнесе по разработке и маркетингу в США.</p>"
+    habr: katherine_a
+  - id: 2718
+    photoFileName: 2718.jpg
+    photoUpdatedAt: "2023-07-14T12:20:58Z"
+    name:
+      - {language: en, text: "Michael Grekov"}
+      - {language: ru, text: "Михаил Греков"}
+    companyIds: [1115]
+    bio:
+      - {language: en, text: "<p>In IT since 2007: was QA, analyst, project and product manager, product director. Almost\
+            \ always involved in b2b and b2g products: distribution automation in FMCG, architecture and urban planning (GIS,\
+            \ EDMS), automation of digital distribution, digitalization of the construction industry, BI.</p>"}
+      - {language: ru, text: "<p>В ИТ с 2007 года &mdash; был QA, аналитиком, менеджером проектов и продуктов, директором\
+            \ по продуктам. Занимался почти всегда b2b и b2g продуктами: автоматизацией дистрибуции в FMCG, архитектурой и\
+            \ градостроительством (ГИС, СЭДО), автоматизацией цифровой дистрибуции, цифровизацией строительной отрасли, BI.</p>"}
+  - id: 2719
+    photoFileName: 2719.jpg
+    photoUpdatedAt: "2023-08-11T06:45:15Z"
+    name:
+      - {language: en, text: "Maksim Tsepkov"}
+      - {language: ru, text: "Максим Цепков"}
+    companyIds: [125]
+    bio:
+      - {language: en, text: "<p>Maksim has been an analyst and an enterprise systems architect at CUSTIS for 25+ years. Actively\
+            \ applies Domain-Driven Design and knows a lot about accounting systems. He advises on new management practices\
+            \ and related concepts and is ready to serve as a guide in the realm of Agile methodologies, turquoise organizations,\
+            \ and spiral dynamics &ndash; &nbsp;all within a general concept of social development.</p>"}
+      - {language: ru, text: "<p>Аналитик и архитектор корпоративных систем в CUSTIS 25+ лет. Активно использует Domain-Driven\
+            \ Design, много знает про учетные системы. Консультирует по практикам нового менеджмента и смежным концептам,\
+            \ готов быть навигаторам по миру Agile, бирюзовых организаций, cпиральной динамики &ndash; у Максима это уложе\
+            но в общую концепцию развития общества.</p>"}
+    twitter: mtsepkov
+    habr: MaximTsepkov
+  - id: 2720
+    photoFileName: 2720.jpg
+    photoUpdatedAt: "2023-06-28T04:05:40Z"
+    name:
+      - {language: en, text: "Natalia Leonova"}
+      - {language: ru, text: "Наталья Леонова"}
+    companyIds: [147]
+    bio:
+      - {language: en, text: "<p>Natalia has 10 years in IT, experience in different roles: from tester to manager. Analyst\
+            \ with a special love for communication and beauty of requirements. Speaker at Analyst Days, SQA Days, Build Point\
+            \ conferences. Company and location: Devexperts, Porto.</p>"}
+      - language: ru
+        text: "<p>10 лет в IT, опыт в разных ролях &mdash; от тестировщика до руководителя.</p>\n<p>Аналитик с особой любо\
+            вью к коммуникациям и красоте требований.</p>\n<p>Докладчик конференций Analyst Days, SQA Days, Точка сборки.\
+            \ Ментор Women in Tech 4.0.</p>\n<p>Компания и локация: Devexperts, Porto.</p>"
+  - id: 2721
+    photoFileName: 2721.jpg
+    photoUpdatedAt: "2023-06-21T11:15:41Z"
+    name:
+      - {language: en, text: "Maksim Koreychenko"}
+      - {language: ru, text: "Максим Корейченко"}
+    companyIds: [1116]
+    bio:
+      - language: en
+        text: "<p>Speaker worked as a freelance developer; later as a developer in a web-studio making low-end websites; after\
+            \ that became the head of the development team in a large systems integrator, working with customers from the\
+            \ top 100 Russian companies.</p>\n<p>Maksim has been working for three years as a developer in an international\
+            \ company, which creates its own service for job search and career advice. He has experienced the difference between\
+            \ the project work and the product In-house development.</p>"
+      - {language: ru, text: "<p>Был разработчиком-фрилансером; позже разработчиком в веб-студии, делающей сайты нижнего ц\
+            енового сегмента; в дальнейшем стал руководителем команды разработки в крупном системном интеграторе, работающ\
+            ем с заказчиками из ТОП-100 российских компаний.<br /><br />В настоящее время уже 3 года работает разработчико\
+            м в международной компании, делающей собственный сервис для поиска работы и карьерных консультаций. На своем о\
+            пыте прочувствовал разницу между проектной работой &laquo;на заказ&raquo; и продуктовой In-house разработкой.</p>"}
+    gitHub: Koreychenko
+  - id: 2722
+    photoFileName: 2722.jpg
+    photoUpdatedAt: "2023-06-20T08:13:30Z"
+    name:
+      - {language: en, text: "Innokenty Bodrov"}
+      - {language: ru, text: "Иннокентий Бодров"}
+    companyIds: [1117]
+    bio:
+      - {language: en, text: "<p>15 years in IT, almost all the time in systems and business analysis. He is smoothly transitioning\
+            \ into product management. Regularly speaks at Analyst Days, for two years successfully leads and teaches the\
+            \ course \"System Analyst. Advanced\" course at otus.ru.</p>"}
+      - {language: ru, text: "<p>15 лет в ИТ, практически все время в системном и бизнес-анализе. Плавно переходит в проду\
+            ктовый менеджмент. Регулярно выступает на Analyst Days, два года успешно руководит и ведет занятия курса &laquo;С\
+            истемный аналитик. Advanced&raquo; на площадке otus.ru.</p>"}
+  - id: 2723
+    photoFileName: 2723.jpg
+    photoUpdatedAt: "2023-08-29T13:53:57Z"
+    name:
+      - {language: en, text: "Sergey Markov"}
+      - {language: ru, text: "Сергей Марков"}
+    companyIds: [665]
+    bio:
+      - language: en
+        text: "<p>Managing Director - Head of Experimental Machine Learning Systems Department, Sber's Salut Shared Services\
+            \ Division. &nbsp;</p>\n<p>Specialist in the field of artificial intelligence, organises and performs operational,\
+            \ strategic and scientific and methodological management of the processes of development, implementation and maintenance\
+            \ of experimental software and hardware-software systems based on machine learning technologies.</p>"
+      - language: ru
+        text: "<p>Управляющий директор &mdash; начальник управления экспериментальных систем машинного обучения, дивизион\
+            \ общих сервисов &laquo;Салют&raquo; Сбера.&nbsp;&nbsp;</p>\n<p>Специалист в области искусственного интеллекта\
+            , организует и осуществляет оперативное, стратегическое и научно-методическое управление процессами разработки\
+            , внедрения и сопровождения экспериментальных программных и программно-аппаратных систем на основе технологий\
+            \ машинного обучения.</p>"
+    habr: oulenspiegel
+  - id: 2724
+    photoFileName: 2724.jpg
+    photoUpdatedAt: "2023-08-16T13:28:04Z"
+    name:
+      - {language: en, text: "Elena Vaulina"}
+      - {language: ru, text: "Елена Ваулина"}
+    companyIds: [1118]
+    bio:
+      - {language: en, text: "<p>Systems and business analyst with over 12 years of IT experience.</p>"}
+      - {language: ru, text: "<p>Системный и бизнес-аналитик с опытом в IT более 12 лет.</p>"}
+  - id: 2725
+    photoFileName: 2725.jpg
+    photoUpdatedAt: "2023-08-29T09:02:37Z"
+    name:
+      - {language: en, text: "Zarislava Vasileva"}
+      - {language: ru, text: "Зарислава Васильева"}
+    companyIds: [1119]
+    bio:
+      - {language: en, text: "<p>For the last two years, Zarislava has been working as an analyst on a project to migrate\
+            \ the storefronts of a leading bank. Before joining IT, she worked in higher education and then in banking.</p>"}
+      - {language: ru, text: "<p>Последние два года работает аналитиком на проекте миграции витрин хранилища одного из вед\
+            ущих банков. До прихода в IT работала в системе высшего образования, а затем в банковской сфере.</p>"}
+  - id: 2726
+    photoFileName: 2726.jpg
+    photoUpdatedAt: "2023-07-19T08:43:50Z"
+    name:
+      - {language: en, text: "Ekaterina Goncharova"}
+      - {language: ru, text: "Екатерина Гончарова"}
+    companyIds: [730]
+    bio:
+      - {language: en, text: "<p>Over 10 years of experience in IT in the role of systems and business analyst, product manager.</p>"}
+      - language: ru
+        text: "<p>Более 10 лет опыта работы в IT в роли системного и бизнес-аналитика, менеджера продукта.</p>\n<p>Опыт ра\
+            боты:</p>\n<p>2021&ndash;2023 Product Lead, Arrival</p>\n<p>2019&ndash;2022 CPO, Airspector</p>\n<p>2020&ndash;2021\
+            \ Senior Business Analyst, Align Technology</p>\n<p>2019&ndash;2020 Ведущий бизнес-аналитик, ПАО Ростелеком</p>\n\
+            <p>2017&ndash;2018 Ведущий бизнес-аналитик, Роскосмос</p>\n<p>Образование:</p>\n<p>2011 &mdash; НИУ ВШЭ, магис\
+            тратура, бизнес-информатика</p>\n<p>2009 &mdash; МГТУ им. Баумана, бакалавриат.<span style=\"color: white;\">и\
+            нформатика</span></p>"
+    habr: katrinq
+  - id: 2727
+    photoFileName: 2727.jpg
+    photoUpdatedAt: "2022-08-24T08:06:03Z"
+    name:
+      - {language: en, text: "Maksim Smirnov"}
+      - {language: ru, text: "Максим Смирнов"}
+    companyIds: [259]
+    bio:
+      - {language: en, text: "<p>IT Architect. He was Chief Architect at B&amp;N Bank Digital. Before that he was Chief Architect\
+            \ of Information Systems at the Central Bank of the Russian Federation, and before that he was Head of the IT\
+            \ Architecture Department at VimpelCom (Beeline trademark).</p>"}
+      - {language: ru, text: "<p>ИТ-архитектор. Был главным архитектором в &laquo;БИНБАНК Диджитал&raquo;, до этого главны\
+            м архитектором информационных систем ЦБ РФ, а до этого руководителем Департамента ИТ архитектуры ОАО &laquo;Вы\
+            мпелКом&raquo; (торговая марка &laquo;Билайн&raquo;).</p>"}
+  - id: 2728
+    photoFileName: 2728.jpg
+    photoUpdatedAt: "2023-07-03T14:10:58Z"
+    name:
+      - {language: en, text: "Tatyana Evlashina"}
+      - {language: ru, text: "Татьяна Евлашина"}
+    companyIds: [1120]
+    bio:
+      - {language: en, text: "<p>The speaker's team has successfully completed more than 50 projects related to increasing\
+            \ operational efficiency in companies in various industries: oil and gas, mining, metallurgy, banking and telecommunications.&nbsp;\
+            \ Tatiana has implemented tasks to increase profitability and reduce costs by optimizing and automating processes,\
+            \ implementing innovations and IT solutions, as well as developing relationships between the company and its customers.<br\
+            \ /><br /></p>"}
+      - {language: ru, text: "<p>Команда спикера успешна завершила более 50 проектов, связанных с повышением операционной\
+            \ эффективности в компаниях различных отраслей &mdash; нефтегазовой, добывающей, металлургической, банковской\
+            \ и телекоммуникационной. В рамках проектов Татьяна реализовала задачи по повышению рентабельности и снижению\
+            \ затрат за счет оптимизации и автоматизации процессов, внедрения инноваций и ИТ-решений, а также по развитию\
+            \ отношений между компанией и клиентами.</p>"}
+  - id: 2729
+    photoFileName: 2729.jpg
+    photoUpdatedAt: "2023-08-15T11:20:29Z"
+    name:
+      - {language: en, text: "Evgeniia Vidrashko"}
+      - {language: ru, text: "Евгения Видрашко"}
+    companyIds: [1121]
+    bio:
+      - {language: en, text: "<p>Evgeniia has experience as an analyst in both custom and product development for Russian\
+            \ and foreign companies.</p>"}
+      - {language: ru, text: "<p>Опыт работы аналитиком как в заказной, так и продуктовой разработке для российских и зару\
+            бежных компаний.</p>"}
+  - id: 2730
+    photoFileName: 2730.jpg
+    photoUpdatedAt: "2023-08-17T08:07:22Z"
+    name:
+      - {language: en, text: "Ivan Matveev"}
+      - {language: ru, text: "Иван Матвеев"}
+    companyIds: [1121]
+    bio:
+      - {language: en, text: "<p>Analyst at T1 Consulting. Ivan has experience of working with customers from the Russian\
+            \ Federation, as well as customers from Europe, North and South America.</p>"}
+      - {language: ru, text: "<p>Аналитик в компании Т1 Консалтинг. Опыт работы как с заказчиками из РФ, так и заказчиками\
+            \ из стран Европы, Северной и Южной Америки.</p>"}
+  - id: 2731
+    photoFileName: 2731.jpg
+    photoUpdatedAt: "2023-08-21T13:29:11Z"
+    name:
+      - {language: en, text: "Danil Starosek"}
+      - {language: ru, text: "Данил Старосек"}
+    companyIds: [1052]
+    bio:
+      - {language: en, text: "<p>Lead analyst for the Single Front-end Solution project &ndash; a teller platform in the bank\
+            \ office. He sets tasks for backend and frontend developers, works on requirements with the business. Studied\
+            \ at Tomsk State University for Control Systems and Radioelectronics, got a PhD in physical process modelling.\
+            \ Taught C++ and Scratch to children. In IT for more than 6 years. Likes to customise processes so that there\
+            \ is nothing unnecessary and everyone is happy.</p>"}
+      - {language: ru, text: "<p>Основной аналитик на проекте Единое Фронтальное Решение &ndash; платформа операциониста в\
+            \ офисе банка. Ставит задачи бэкенд- и фронтенд-разработчикам, прорабатывает требования с бизнесом. Учился в Т\
+            УСУРе, получил к.т.н. в области моделирования физических процессов. Обучал детей C++ и Scratch. В IT более 6 л\
+            ет. Любит настраивать процессы так, чтобы не было ничего лишнего и все были довольны.</p>"}
+    twitter: starosekdan
+  - id: 2732
+    photoFileName: 2732.jpg
+    photoUpdatedAt: "2023-08-23T15:46:35Z"
+    name:
+      - {language: en, text: "Alexey Bushuev"}
+      - {language: ru, text: "Алексей Бушуев"}
+    companyIds: [1096]
+    bio:
+      - {language: en, text: "<p>Worked his way up from analyst to deputy department director at MTT. Initiator of global\
+            \ reorganization of processes &mdash; from conception to development.</p>"}
+      - {language: ru, text: "<p>Прошел путь от аналитика до замдиректора департамента в МТТ. Инициатор глобальной реорган\
+            изации процессов &mdash; от задумки до разработки.</p>"}
+  - id: 2733
+    photoFileName: 2733.jpg
+    photoUpdatedAt: "2023-06-25T15:02:21Z"
+    name:
+      - {language: en, text: "Alexandra Zhigulina"}
+      - {language: ru, text: "Александра Жигулина"}
+    companyIds: [264]
+    bio:
+      - {language: en, text: "<p>Lead systems analyst at InfoTeCS, team leader of the analytics team in the cryptography department.\
+            \ Develops requirements for cryptographic libraries, selects secure algorithms and protocols for different scenarios\
+            \ and situations.</p>"}
+      - {language: ru, text: "<p>Ведущий системный аналитик компании ИнфоТеКС, тимлид команды аналитиков в отделе криптогр\
+            афии. Разрабатывает требования для криптографических библиотек, выбирает безопасные алгоритмы и протоколы для\
+            \ разных сценариев и ситуаций.</p>"}
+  - id: 2734
+    photoFileName: 2734.jpg
+    photoUpdatedAt: "2023-07-18T12:10:53Z"
+    name:
+      - {language: en, text: "Olga Ponomareva"}
+      - {language: ru, text: "Ольга Пономарева"}
+    companyIds: [429]
+    bio:
+      - language: en
+        text: "<ul>\n<li>As an analyst for 7 years</li>\n<li>Worked at Miro, Xsolla, Tinkoff</li>\n<li>An analyst mentor</li>\n\
+            <li>Has the course \"System Analyst: System Design and Integration\" (https://systemanalyst.getcourse.ru/systemanalyst)\
+            \ and the telegram channel</li>\n</ul>"
+      - language: ru
+        text: "<ul>\n<li>В роли аналитика 7 лет</li>\n<li>Работала в Miro, Xsolla, Tinkoff</li>\n<li>Ментор аналитиков</li>\n\
+            <li>Проводит курс &laquo;Системный аналитик: проектирование и интеграции систем&raquo; (https://systemanalyst.getcourse.ru/systemanalyst)\
+            \ и ведет Telegram-канал о системом анализе.</li>\n</ul>"
+  - id: 2735
+    photoFileName: 2735.jpg
+    photoUpdatedAt: "2023-07-03T13:43:38Z"
+    name:
+      - {language: en, text: "Dmitrii Andreev"}
+      - {language: ru, text: "Дмитрий Андреев"}
+    companyIds: [988]
+    bio:
+      - {language: en, text: "<p>Senior Analytics Specialist with extensive experience building data pipeline: from formulating\
+            \ business requirements to building dashboards and financial models. With development in SQL and Python and DWH&amp;ETL\
+            \ system analysis in between.</p>"}
+      - language: ru
+        text: "<p>Лид аналитики с большим опытом построения data pipeline &mdash; от формулирования бизнес-требований до п\
+            остроения дашбордов и финансовых моделей. С разработкой на SQL и Python и системным анализом DWH&amp;ETL в про\
+            межутке.</p>\n<p>&nbsp;</p>"
+  - id: 2736
+    photoFileName: 2736.jpg
+    photoUpdatedAt: "2023-07-18T13:03:19Z"
+    name:
+      - {language: en, text: "Artem Zyablitsev"}
+      - {language: ru, text: "Артём Зяблицев"}
+    companyIds: [613]
+    bio:
+      - {language: en, text: "<p>He has been leading the development team at Alfa-Bank for over a year. Responsible for the\
+            \ development of a mobile application for iOS and Android, as well as a web-application for employees. In the\
+            \ past, he was a systems analyst.</p>"}
+      - {language: ru, text: "<p>Больше года руководит командой разработки в Альфа-Банке. Отвечает за разработку мобильног\
+            о приложения под iOS и Android, а также web-приложения для сотрудников. В прошлом &mdash; системный аналитик.</p>"}
+  - id: 2737
+    photoFileName: 2737.jpg
+    photoUpdatedAt: "2023-07-24T10:41:22Z"
+    name:
+      - {language: en, text: "Natalia Dubinicheva"}
+      - {language: ru, text: "Наталья Дубиничева"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Over 10 years of experience in financial analysis, modeling, business performance assessment\
+            \ and management reporting. For the last 2 years, she has been the owner of Sber Process Mining: her team develops\
+            \ a state-of-the-art analytical product and helps to apply it effectively to improve process efficiency. Sber\
+            \ has implemented more than 200 projects using process mining.</p>"}
+      - {language: ru, text: "Более 10 лет занимается финансовым анализом, моделированием, оценкой эффективности бизнеса и\
+            \ управленческой отчетностью. Последние 2 года — владелец продукта Sber Process Mining: ее команда разрабатыва\
+            ет современный аналитический продукт и помогает его применять для повышения эффективности процессов. В Сбере р\
+            еализовано более 200 проектов с применением process mining."}
+  - id: 2738
+    photoFileName: 2738.jpg
+    photoUpdatedAt: "2023-07-12T11:22:05Z"
+    name:
+      - {language: en, text: "Svyatoslav Kotusev"}
+      - {language: ru, text: "Святослав Котусев"}
+    companyIds: [650]
+    bio:
+      - {language: en, text: "<p>Independent Russian-Australian researcher. Since 2013 he has been studying the practice of\
+            \ enterprise architecture in organizations. He is the author of the book \"The Practice of Enterprise Architecture:\
+            \ A Modern Approach to Business and IT Alignment\", articles and other materials on enterprise architecture.<br\
+            \ /><br />Svyatoslav holds a PhD in Information Systems from RMIT University, Melbourne, Australia. Prior to his\
+            \ research career, he held various software development and architecture positions in industry.</p>"}
+      - language: ru
+        text: "<p>Независимый российско-австралийский исследователь. С 2013 года изучает практику корпоративной архитектур\
+            ы в организациях. Является автором книги &laquo;The Practice of Enterprise Architecture: A Modern Approach to\
+            \ Business and IT Alignment&raquo;, статей и других материалов по архитектуре предприятия.</p>\n<p>Святослав и\
+            меет диплом PhD в области информационных систем от RMIT University, Мельбурн, Австралия. До начала исследовате\
+            льской карьеры он занимал различные должности связанные с разработкой и архитектурой ПО в индустрии.</p>"
+    twitter: kotusev
+  - id: 2739
+    photoFileName: 2739.jpg
+    photoUpdatedAt: "2023-07-12T09:38:04Z"
+    name:
+      - {language: en, text: "Vsevolod Lyapin"}
+      - {language: ru, text: "Всеволод Ляпин"}
+    companyIds: [1093]
+    bio:
+      - language: en
+        text: "<p>More than 16 years in IT. Mostly in frontend development, the last 5 years of which have been in team, project\
+            \ and process management. I have worked in FinTech and EdTech, and now I am a CTO in a GameDev startup.</p>\n\
+            <p>Professional interests: ExtJs, ReactJs, ES5, Agile, CI/CD. In teamwork I am committed to flexibility, openness,\
+            \ trust and mutual assistance.</p>"
+      - language: ru
+        text: "<p>Более 16 лет в IT &mdash; преимущественно в frontend-разработке, из них последние 5 лет в управлении ком\
+            андами, проектами и процессами. Работал в FinTech и EdTech, сейчас на позиции CTO в GameDev-стартапе.</p>\n<p>П\
+            рофессиональные интересы: ExtJs, ReactJs, ES5, Agile, CI/CD. В командной работе приверженец гибкости, открытос\
+            ти, доверия и взаимопомощи.</p>\n<p>&nbsp;</p>"
+    habr: ZORGer
+  - id: 2740
+    photoFileName: 2740.jpg
+    photoUpdatedAt: "2023-07-21T14:23:23Z"
+    name:
+      - {language: en, text: "Sergey Bondarchuk"}
+      - {language: ru, text: "Сергей Бондарчук"}
+    companyIds: [1122]
+    bio:
+      - {language: en, text: "<p>He works at Magnit and is the head of the systems analysis department. He develops the competencies\
+            \ of system analysts in his division, and is also a team leader in one of the teams developing transportation\
+            \ logistics systems, as well as a scrum master in two other young teams.</p>"}
+      - {language: ru, text: "Работает в компании «Магнит», является начальником отдела системного анализа. Занимается раз\
+            витием компетенций системных аналитиков своего подразделения, параллельно является тимлидом одной из команд ра\
+            зработки систем транспортной логистики, а также scrum-мастером в двух других молодых командах."}
+  - id: 2741
+    photoFileName: 2741.jpg
+    photoUpdatedAt: "2022-11-28T14:52:01Z"
+    name:
+      - {language: en, text: "Ksenia Teselkina"}
+      - {language: ru, text: "Ксения Теселкина"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Ksenia is a business analyst in VK, she has been in IT since 2010, working as a system and\
+            \ business analyst for more than seven years. She has worked on more than thirty projects in Russia and on the\
+            \ international market, specializing in the fintech sector, e-commerce, entertainment and the transport sphere.\
+            \ She is a lecturer and author of courses at the School of Systems Analysis.</p>"}
+      - {language: ru, text: "<p>Бизнес-аналитик в VK, с 2010 года в IT, более семи лет работает системным и бизнес-аналит\
+            иком. Работала на 30+ проектах в России и на международном рынке, специализируется на финтех-секторе, e-commerce,\
+            \ сфере развлечений и в транспортной сфере. Преподаватель и автор курсов в Школе системного анализа.</p>"}
+  - id: 2742
+    photoFileName: 2742.jpg
+    photoUpdatedAt: "2023-07-12T10:25:22Z"
+    name:
+      - {language: en, text: "Vyacheslav Zhukov"}
+      - {language: ru, text: "Вячеслав Жуков"}
+    companyIds: [1058]
+    bio:
+      - {language: en, text: "<p>10+ years in IT: main focus on product analytics, development of analytical platforms and\
+            \ personalization technologies. Portfolio includes over 100 projects, including RBC, Sberbank, Gloria Jeans, Burger\
+            \ King, Hoff, 4 Paws, ChTPZ and others. Since 2020, he has been building the data analytics vertical at Aero from\
+            \ scratch, which has become a separate fast-growing area of the agency.&nbsp;</p>"}
+      - {language: ru, text: "<p>10+ лет в IT: основной фокус на задачах продуктовой аналитики, разработке аналитических п\
+            латформ и технологий персонализации. В портфолио более 100 проектов, в том числе РБК, Сбербанк, Gloria Jeans,\
+            \ Burger King, Hoff, 4 лапы, ЧТПЗ и другие. С 2020 года с нуля выстраивает вертикаль аналитики данных в Aero,\
+            \ которая превратилась в отдельное быстрорастущее направление агентства.&nbsp;</p>"}
+    habr: zhukov_slava
+  - id: 2743
+    photoFileName: 2743.jpg
+    photoUpdatedAt: "2023-07-14T07:18:19Z"
+    name:
+      - {language: en, text: "Ann Mozgovaya"}
+      - {language: ru, text: "Анна Мозговая"}
+    companyIds: [1050]
+    bio:
+      - {language: en, text: "<p>Worked as a business analyst for 4 years (Sber, GPB). Managed projects in international companies\
+            \ for 3 years (BSH, Mondelez). Started project management in Sberbank Leasing. Co-organizer of the business analysis\
+            \ school at GPB.</p>"}
+      - {language: ru, text: "<p>Работала бизнес-аналитиком 4 года (Сбер, ГПБ). Управляла проектами в международных компан\
+            иях 3 года (BSH, Mondelez). Запускала проектное управление в Сбербанк Лизинге. Соорганизатор школы бизнес-анал\
+            иза в ГПБ.</p>"}
+  - id: 2744
+    photoFileName: 2744.jpg
+    photoUpdatedAt: "2023-07-05T12:24:34Z"
+    name:
+      - {language: en, text: "Anastasia Soldatova"}
+      - {language: ru, text: "Анастасия Солдатова"}
+    companyIds: [613]
+    bio:
+      - {language: en, text: "<p>Head of development of CRM system for managers of Alfa-Bank. Develops business and technical\
+            \ processes of the direction, manages several IT teams, supervises employee retraining project and migration of\
+            \ the system component to the new stack.&nbsp;</p>"}
+      - {language: ru, text: "Начальник отдела развития CRM-системы для менеджеров Альфа-Банка. Развивает бизнес и техниче\
+            ские процессы направления, руководит несколькими IT-командами, курирует проект переобучения сотрудников и пере\
+            вод компонента системы на новый стек.&nbsp;&nbsp;"}
+  - id: 2745
+    photoFileName: 2745.jpg
+    photoUpdatedAt: "2023-07-11T13:56:36Z"
+    name:
+      - {language: en, text: "Daria Yandulskaya"}
+      - {language: ru, text: "Дарья Яндульская"}
+    companyIds: [1123]
+    bio:
+      - language: en
+        text: "<p>Head of Operational Efficiency at TSQ Consulting. 15 years in the field of operational efficiency, 8 certifications\
+            \ in the field of process management and personnel development, 720 realized projects. Key competencies: business\
+            \ process audit and efficiency analysis, support of business process reengineering projects, business process\
+            \ automation, description and implementation of business processes, development of business model of the organization,\
+            \ development of business process system.<br /><br />Clients: Lukoil, Rosenergoatom, BMA Russland, Siemens, Millenix,\
+            \ Inter Logistics Group, Voronezhselmash, Zarechnoye, Karbofer Metservis, Bryanskselmash.</p>\n<p>&nbsp;</p>"
+      - language: ru
+        text: "<p>Руководитель направления &laquo;Операционная эффективность&raquo; компании TSQ Consulting. 15 лет в сфер\
+            е операционной эффективности, 8 сертификаций в области управления процессами и развития персонала, 720 реализо\
+            ванных проектов. Ключевые компетенции: аудит бизнес-процессов и анализ эффективности, сопровождение проектов п\
+            о реорганизации бизнес-процессов, автоматизация бизнес-процессов, описание и внедрение бизнес-процессов, разра\
+            ботка бизнес-модели организации, разработка системы бизнес-процессов.</p>\n<p>Клиенты: Лукойл, Росэнергоатом,\
+            \ BMA Russland, Siemens, Милленикс, Интер Лоджистикс Групп, Воронежсельмаш, ГК &laquo;Заречное&raquo;, Карбофе\
+            р Метсервис, Брянсксельмаш.</p>"
+  - id: 2746
+    photoFileName: 2746.jpg
+    photoUpdatedAt: "2023-07-19T15:29:49Z"
+    name:
+      - {language: en, text: "Denis Beskov"}
+      - {language: ru, text: "Денис Бесков"}
+    companyIds: [1042]
+    bio:
+      - language: en
+        text: "<ul>\n<li>Founder and head of the Systems.Education school.</li>\n<li>Main author of professional standards\
+            \ for system analyst and IT product manager.</li>\n<li>Founder of Product Camp Russia and Product.Vision consulting\
+            \ company.</li>\n</ul>"
+      - language: ru
+        text: "<ul>\n<li>Основатель и руководитель школы Systems.Education.</li>\n<li>Основной автор первого поколения про\
+            фстандартов системного аналитика и менеджера ИТ-продуктов.</li>\n<li>Основатель баркэмпов Product Camp Russia\
+            \ и консалтинговой компании Product.Vision.</li>\n</ul>"
+    habr: beskov
+  - id: 2747
+    photoFileName: 2747.jpg
+    photoUpdatedAt: "2023-07-06T11:40:03Z"
+    name:
+      - {language: en, text: "Alevtina Chugunova"}
+      - {language: ru, text: "Алевтина Чугунова"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Developed a design system inside Sbera's corporate products to simplify developers' lives\
+            \ and make products simple and beautiful. Developed a requirements template for UI components with all the information\
+            \ on the properties and behavior of UI components. Did systems and business analysis and created a design system\
+            \ team from scratch together with a front-end developer.</p>"}
+      - {language: ru, text: "<p>Развивает дизайн-систему внутри корпоративных продуктов Сбера, чтобы упростить жизнь разр\
+            аботчиков и сделать продукты простыми и красивыми. Выработали шаблон требований к UI-компонентам, в которых ес\
+            ть вся информация по свойствам и особенностям поведения UI-компонентов. Занималась системным и бизнес-анализом\
+            \ и создала команду дизайн-системы с нуля совместно с frontend-разработчиком.</p>"}
+  - id: 2748
+    photoFileName: 2748.jpg
+    photoUpdatedAt: "2023-07-03T13:28:18Z"
+    name:
+      - {language: en, text: "Tatiana Oshurkova"}
+      - {language: ru, text: "Татьяна Ошуркова"}
+    companyIds: [940]
+    bio:
+      - {language: en, text: "<p>Senior IT Manager at Rosbank. Previously worked at Credit Ural Bank (Gazprombank Group).</p>"}
+      - {language: ru, text: "<p>Старший ИТ-менеджер в Росбанке. Ранее работала в Кредит Урал Банке (группа Газпромбанка).</p>"}
+  - id: 2749
+    photoFileName: 2749.jpg
+    photoUpdatedAt: "2023-07-31T11:39:20Z"
+    name:
+      - {language: en, text: "Anna Guryanova"}
+      - {language: ru, text: "Анна Гурьянова"}
+    companyIds: [1124]
+    bio:
+      - language: en
+        text: "<p>Analyst at SimbirSoft. 10 years in IT, more than 9 years in IT systems analysis.</p>\n<p>Certificates: IREB,\
+            \ Organization and Personnel Management MBA LINC.</p>"
+      - language: ru
+        text: "<p>Аналитик и менеджер группы оценок направления аналитики в SimbirSoft. В IT сфере более 10 лет, 9 из кото\
+            рых посвятила анализу IТ-систем.</p>\n<p>Сертификаты: IREB, Управление организацией и персоналом MBA ЛИНК.</p>"
+  - id: 2750
+    photoFileName: 2750.jpg
+    photoUpdatedAt: "2023-07-19T15:42:41Z"
+    name:
+      - {language: en, text: "Mikhail Galushko"}
+      - {language: ru, text: "Михаил Галушко"}
+    companyIds: [1125]
+    bio:
+      - {language: en, text: "<p>He has been working in the field of design, development and promotion of digital interfaces\
+            \ and services since 1996. Worked in Renaissance Insurance, Financial Technology Center, VTB24, Alfa-Bank. He\
+            \ has worked both on the client side of solutions and on the executor side - in Actis Wunderman and AIC agencies,\
+            \ as well as within his own expert practice. Since April 2023 he has been developing the design management practice\
+            \ at USABILITYLAB.</p>"}
+      - {language: ru, text: "<p>Работает в области проектирования, развития и продвижения цифровых интерфейсов и сервисов\
+            \ с 1996 года. Работал в Ренессанс страховании, Центре Финансовых Технологий, ВТБ24, Альфа-Банке. Работал как\
+            \ на стороне заказчика решений, так и на стороне исполнителя &mdash; в агентствах Actis Wunderman и AIC, а так\
+            же в рамках собственной экспертной практики. С апреля 2023 года развивает практику управления дизайном в USABILITYLAB.</p>"}
+    habr: galushko
+  - id: 2751
+    photoFileName: 2751.jpg
+    photoUpdatedAt: "2023-06-05T10:55:10Z"
+    name:
+      - {language: en, text: "Roman Piontik"}
+      - {language: ru, text: "Роман Пионтик"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>He has been in IT for about 25 years. During this time he has been in many roles, which eventually\
+            \ led Roman to his current role - IT-architect. In this role he created architectures of different automated systems\
+            \ from CRM to high-frequency trading bots. In the process he came to understanding of necessity of architecture\
+            \ management tool integrated into production process. The result was the creation of the FOSS architecture management\
+            \ tool <a href=\"https://dochub.info/\">DocHub</a>.</p>"}
+      - {language: ru, text: "<p>В IT около 25 лет. За это время побывал во многих ролях, что в итоге и привело Романа к т\
+            екущей роли &mdash; IT-архитектора. В этой роли он создавал архитектуры различных автоматизированных систем от\
+            \ CRM до высокочастотных трейдинговых ботов. В процессе пришел к пониманию необходимости инструмента управлени\
+            я архитектурой, встроенного в производственный процесс. Итогом стало создание FOSS-инструмента управления архи\
+            тектурой <a href=\"https://dochub.info/\">DocHub</a>.</p>"}
+    gitHub: rpiontik
+    habr: rpiontik
+  - id: 2752
+    photoFileName: 2752.jpg
+    photoUpdatedAt: "2023-06-28T11:38:04Z"
+    name:
+      - {language: en, text: "Alexey Tushkanov"}
+      - {language: ru, text: "Алексей Тушканов"}
+    companyIds: [1126]
+    bio:
+      - {language: en, text: "<p>16 years in IT. Started out as a developer. Extensive experience working as a freelance SEO-expert.\
+            \ Worked as a project manager, then as a scrum master. Currently in charge of design and UX-research for b2b at\
+            \ AlfaStrakhovanie.</p>"}
+      - {language: ru, text: "<p>16 лет в IT. Начинал с разработчика. Большой опыт работы на фрилансе в роли SEO-эксперта\
+            . Работал менеджером проектов, затем scrum-мастером. Сейчас руководит дизайном и UX-исследованиями b2b в компа\
+            нии &laquo;АльфаСтрахование&raquo;.&nbsp;</p>"}
+  - id: 2753
+    photoFileName: 2753.jpg
+    photoUpdatedAt: "2023-07-14T12:28:42Z"
+    name:
+      - {language: en, text: "Irina Korchagina"}
+      - {language: ru, text: "Ирина Корчагина"}
+    companyIds: [1012]
+    bio:
+      - {language: en, text: "<p>Lead system and business analyst at ITentika, Product owner. 15+ years of development experience.\
+            \ Participated in projects to create mobile and web applications for the world's leading companies.</p>"}
+      - {language: ru, text: "<p>Ведущий системный и бизнес-аналитик компании ITentika, Product owner. 15+ лет опыта в раз\
+            работке. Участвовала в проектах по созданию мобильных и web-приложений для ведущих мировых компаний.</p>"}
+  - id: 2754
+    photoFileName: 2754.jpg
+    photoUpdatedAt: "2022-11-27T19:18:01Z"
+    name:
+      - {language: en, text: "Dmitry Satin"}
+      - {language: ru, text: "Дмитрий Сатин"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>CEO of USABILITYLAB. Engineering psychologist, in UX consulting since 1997.</p>"}
+      - {language: ru, text: "<p>Генеральный директор USABILITYLAB. Инженерный психолог, в UX-консалтинге с 1997 года.</p>"}
+    habr: dmitrysatin

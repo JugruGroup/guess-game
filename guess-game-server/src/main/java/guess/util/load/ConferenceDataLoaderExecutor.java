@@ -2538,7 +2538,9 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.FLOW, LocalDate.of(2023, 9, 4), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Flow 2023", null, List.of(24L, 9L)),
-//                        Set.of("Открытие конференции Flow 2023", "Закрытие конференции Flow 2023")));
+//                        Set.of("Открытие конференции Flow 2023", "Закрытие конференции Flow 2023",
+//                                "Открытие второго дня Flow 2023", "Подведение итогов online-части конференции Flow 2023",
+//                                "Открытие офлайн-части конференции Flow 2023", "Квиз", "Lightning talks")));
 //        loadTalksSpeakersEvent(Conference.DEV_OOPS, LocalDate.of(2023, 9, 5), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("DevOops 2023", null, List.of(24L, 9L)),
