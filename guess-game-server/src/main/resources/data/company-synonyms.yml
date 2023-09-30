@@ -329,6 +329,11 @@ companySynonyms:
     synonyms: [
         "Max Planck Institute for Software Systems"
     ]
+  - name: Magnit
+    synonyms: [
+        "Magnit IT Lab",
+        "Магнит ИТ Лаб"
+    ]
   - name: MTS
     synonyms: [
         "MTS IT",
@@ -336,6 +341,12 @@ companySynonyms:
         "MTS DIGITAL",
         "МТS Digital",
         "МТС Digital"
+    ]
+  - name: Naviteq
+    synonyms: [
+        "Naviteq LTD",
+        "Naviteq Ltd",
+        "Naviteq Ltd."
     ]
   - name: "NRU HSE"
     synonyms: [
@@ -606,7 +617,8 @@ companySynonyms:
         "VK Видео",
         "VK Звонки",
         "VK Образование",
-        "ВКонтакте для бизнеса"
+        "ВКонтакте для бизнеса",
+        "VK / VK Cloud"
     ]
   - name: VMware
     synonyms: [
