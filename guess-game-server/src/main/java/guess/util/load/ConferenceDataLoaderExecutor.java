@@ -2542,11 +2542,13 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие второго дня Flow 2023", "Подведение итогов online-части конференции Flow 2023",
 //                                "Открытие офлайн-части конференции Flow 2023", "Квиз", "Lightning talks")));
 //        loadTalksSpeakersEvent(Conference.DEV_OOPS, LocalDate.of(2023, 9, 5), "2023",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("DevOops 2023", null, List.of(24L, 9L)),
+//                        Map.of(new NameCompany("Алексей Романов", new Company(1134, "IT Enduro")), 2373L),
 //                        Set.of("Открытие конференции DevOops 2023", "Закрытие конференции DevOops 2023",
 //                                "Подведение итогов online-части конференции DevOops 2023",
-//                                "Открытие офлайн-части конференции DevOops 2023")));
+//                                "Открытие офлайн-части конференции DevOops 2023", "Квиз", "Внедрение безопасной разработки",
+//                                "Бегущие по граблям: наш опыт внедрения практик СЕ")));
 //        loadTalksSpeakersEvent(Conference.SMART_DATA, LocalDate.of(2023, 9, 6), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("SmartData 2023", null, List.of(24L, 9L)),

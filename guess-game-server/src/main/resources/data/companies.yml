@@ -4081,3 +4081,51 @@ companies:
       - {language: en, text: AlfaStrakhovanie}
       - {language: ru, text: АльфаСтрахование}
     siteLink: https://www.alfastrah.ru
+  - id: 1127
+    name:
+      - {language: en, text: Sogaz}
+      - {language: ru, text: Согаз}
+    siteLink: https://www.sogaz.ru
+  - id: 1128
+    name:
+      - {language: en, text: Wildberries}
+    siteLink: https://www.wildberries.ru
+  - id: 1129
+    name:
+      - {language: en, text: Luntry}
+    siteLink: https://luntry.ru
+  - id: 1130
+    name:
+      - {language: en, text: Naviteq}
+    siteLink: https://www.naviteq.io
+  - id: 1131
+    name:
+      - {language: en, text: GlobalDots}
+    siteLink: https://www.globaldots.com
+  - id: 1132
+    name:
+      - {language: en, text: "Kolesa Group"}
+    siteLink: https://kolesa.group
+  - id: 1133
+    name:
+      - {language: en, text: DeusOps}
+    siteLink: https://deusops.com
+  - id: 1134
+    name:
+      - {language: en, text: "IT Enduro"}
+    siteLink: https://it-endu.ro
+  - id: 1135
+    name:
+      - {language: en, text: "Т1 Sfera"}
+      - {language: ru, text: "Т1 Сфера"}
+    siteLink: https://www.sferaplatform.ru
+  - id: 1136
+    name:
+      - {language: en, text: PPR}
+      - {language: ru, text: "Передовые Платежные Решения"}
+    siteLink: https://www.petrolplus.ru
+  - id: 1137
+    name:
+      - {language: en, text: GNIVC}
+      - {language: ru, text: "АО ГНИВЦ"}
+    siteLink: https://www.gnivc.ru
