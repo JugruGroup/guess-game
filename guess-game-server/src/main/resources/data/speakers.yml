@@ -30992,16 +30992,12 @@ speakers:
       - {language: ru, text: "Александр Поломодов"}
     companyIds: [674]
     bio:
-      - language: en
-        text: "<p>Used to write code, design solutions, and be a team leader. Now he is a technical director of the Client\
-            \ Interfaces, Marketing and Engagement unit for 900+ people at Tinkoff. Responsibilities include client interfaces\
-            \ (mobile bank, online bank, API), marketing platform, media projects, special projects and social mechanics.\
-            \ Member of the Program Committee of ArchDays.</p>\n<p>&nbsp;</p>"
-      - language: ru
-        text: "<p>Когда-то давно писал код, проектировал решения, был тимлидом. Сейчас исполняет роль технического директо\
-            ра юнита &laquo;Клиентские интерфейсы, маркетинг и вовлечение&raquo; на 900+ человек в Тинькофф. В сферу ответ\
-            ственности входят клиентские интерфейсы (мобильный банк, интернет банк, API), маркетинговая платформа, медиапр\
-            оекты, спецпроекты и социальные механики. Член Программного комитета ArchDays.</p>\n<p>&nbsp;</p>"
+      - {language: en, text: "Head of Digital Ecosystem Development at Tinkoff. Responsible for public web applications, mobile\
+            \ banking, engagement channel automation, data management services. Once upon a time wrote requirements and code,\
+            \ and led development teams. Serves on the Program Committee of ArchDays."}
+      - {language: ru, text: "<p>Руководитель управления разработки цифровых экосистем в Тинькофф. Отвечает за публичные в\
+            еб-приложения, мобильный банк, автоматизацию каналов привлечения, сервисы управления данными. Когда-то давно п\
+            исал требования и код, лидил команды разработки. Входит в Программный комитет ArchDays.</p>"}
     twitter: apolomodov
     gitHub: polomodov
   - id: 2159
