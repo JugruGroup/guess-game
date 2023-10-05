@@ -112,6 +112,6 @@ companyGroups:
     ]
   - name: "DevBrothers, Tinkoff"
     items: [
-      Тинькофф,
-      DevBrothers
+      DevBrothers,
+      Тинькофф
     ]
