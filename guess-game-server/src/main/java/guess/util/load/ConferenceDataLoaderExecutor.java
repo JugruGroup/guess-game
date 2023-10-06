@@ -2555,7 +2555,11 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции SmartData 2023", "Закрытие конференции SmartData 2023",
 //                                "Открытие второго дня SmartData 2023",
 //                                "Подведение итогов online-части конференции SmartData 2023",
-//                                "Открытие офлайн-части конференции SmartData 2023")));
+//                                "Открытие офлайн-части конференции SmartData 2023",
+//                                "Викторина и подведение итогов online-части конференции SmartData 2023",
+//                                "Graph challenge от «Поиска и рекламных технологий» Яндекса",
+//                                "Подведение итогов Graph challenge от «Поиска и рекламных технологий» Яндекса",
+//                                "Квиз", "Наука и программисты в космической сфере")));
 //        loadTalksSpeakersEvent(Conference.DOT_NEXT, LocalDate.of(2023, 9, 15), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("DotNext 2023", null, List.of(9L)),

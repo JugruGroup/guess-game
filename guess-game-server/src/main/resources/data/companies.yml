@@ -4129,3 +4129,56 @@ companies:
       - {language: en, text: GNIVC}
       - {language: ru, text: "АО ГНИВЦ"}
     siteLink: https://www.gnivc.ru
+  - id: 1138
+    name:
+      - {language: en, text: DuckStax}
+    siteLink: https://duckstax.com
+  - id: 1139
+    name:
+      - {language: en, text: "Agro Software"}
+    siteLink: https://agromon.ru
+  - id: 1140
+    name:
+      - {language: en, text: "Rayo Data"}
+    siteLink: https://rayodata.com
+  - id: 1141
+    name:
+      - {language: en, text: Whoosh}
+    siteLink: https://whoosh-bike.ru
+  - id: 1142
+    name:
+      - {language: en, text: "ASC LPI"}
+      - {language: ru, text: "АКЦ ФИАН"}
+    siteLink: https://www.asc-lebedev.ru
+  - id: 1143
+    name:
+      - {language: en, text: YTsaurus}
+    siteLink: https://ytsaurus.tech
+  - id: 1144
+    name:
+      - {language: en, text: Gett}
+    siteLink: https://www.gett.com
+  - id: 1145
+    name:
+      - {language: en, text: Surfalytics}
+    siteLink: https://surfalytics.com
+  - id: 1146
+    name:
+      - {language: en, text: "API Crafter"}
+    siteLink: https://apicrafter.ru
+  - id: 1147
+    name:
+      - {language: en, text: Neoflex}
+    siteLink: https://www.neoflex.ru
+  - id: 1148
+    name:
+      - {language: en, text: GlowByte}
+    siteLink: https://glowbyteconsulting.com
+  - id: 1149
+    name:
+      - {language: en, text: "Data Sapience"}
+    siteLink: https://datasapience.ru
+  - id: 1150
+    name:
+      - {language: en, text: "SR Data"}
+    siteLink: https://srdata.ru
