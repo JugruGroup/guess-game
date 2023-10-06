@@ -98,6 +98,10 @@ companySynonyms:
         KROK,
         "Croc Code"
     ]
+  - name: DuckStax
+    synonyms: [
+        duckstax.com
+    ]
   - name: "Delivery Club"
     synonyms: [
         "Delivery Club Tech"
@@ -158,14 +162,18 @@ companySynonyms:
     synonyms: [
         eyeota.com
     ]
-  - name: GitLab
-    synonyms: [
-        "GitLab (Previously Fuzzit)"
-    ]
   - name: Gazpromneft
     synonyms: [
         Gpn-trade,
         "Газпромнефть-Региональные продажи"
+    ]
+  - name: GitLab
+    synonyms: [
+        "GitLab (Previously Fuzzit)"
+    ]
+  - name: GlowByte
+    synonyms: [
+        "GlowByte Consulting"
     ]
   - name: "Grid Dynamics"
     synonyms: [
@@ -558,7 +566,8 @@ companySynonyms:
   - name: Toloka
     synonyms: [
         "Toloka Ai",
-        "Toloka Ai Inc"
+        "Toloka Ai Inc",
+        Toloka.ai
     ]
   - name: "Tune IT"
     synonyms: [
@@ -645,6 +654,8 @@ companySynonyms:
         Yandex.Money,
         Яндекс.Деньги,
         Yandex.Drive,
+        "Yandex Eda",
+        "Яндекс Еда",
         Яндекс.Драйв,
         Yandex.Market,
         Яндекс.Маркет,
