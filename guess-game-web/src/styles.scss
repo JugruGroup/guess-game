@@ -1,121 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-@import '~primeicons/primeicons.css';
-@import '~primeng/resources/themes/lara-light-blue/theme.css';
-@import '~primeng/resources/primeng.min.css';
-@import '~@fortawesome/fontawesome-free/css/all.css';
-@import '~bootstrap-icons/font/bootstrap-icons.css';
-@import './menubar.scss';
-@import './tabmenu.scss';
+@layer defaults, bootstrap, primeng, primeicons, fontawesome, bootstrap-icons, utilities;
 
-html {
-  font-size: 13px;
-}
+@import 'src/defaults.scss' layer(defaults);
+@import 'bootstrap/dist/css/bootstrap.min.css' layer(bootstrap);
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css' layer(primeicons);
+@import '@fortawesome/fontawesome-free/css/all.css' layer(fontawesome);
+@import 'bootstrap-icons/font/bootstrap-icons.css' layer(bootstrap-icons);
+@import 'src/menubar.scss' layer(utilities);
+@import 'src/tabmenu.scss' layer(utilities);
 
-body {
-  background-color: #ffffff;
-}
-
-.container-home {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 400px;
-}
-
-.container-dialog, .container-information {
-  width: 100%;
-  padding-right: 12px !important;
-  padding-left: 12px !important;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.img-home-logo {
-  width: 100%;
-  height: auto;
-}
-
-.img-event-type-logo {
-  height: 32px;
-}
-
-.img-event-type-logo-talk {
-  height: 30px;
-}
-
-.img-speaker-photo {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-}
-
-.img-event-type-logo-list, .img-event-type-logo-table, .img-speaker-photo-table, .img-speaker-degree-table {
-  height: 24px;
-}
-
-.img-speaker-degree {
-  height: 30px;
-}
-
-.img-event-type-logo-start {
-  height: 32px;
-}
-
-.img-guess-logo {
-  width: 48px;
-  height: auto;
-}
-
-.img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
-  width: 192px;
-  height: auto;
-}
-
-.img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
-.img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
-  width: 120px;
-  height: auto;
-}
-
-.img-guess-result {
-  width: 96px;
-  height: auto;
-}
-
-// Link styles on list pages
-.btn-sm-condensed {
-  padding: 0.25rem 0.2rem 0.25rem 0.5rem;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  border-radius: 0.2rem;
-}
-
-// Style for event type listbox on start page
-.event-type-listbox-start {
-  height: 222px;
-}
-
-// Style for event listbox on start page
-.event-listbox-start {
-  height: 98px;
-}
-
-@media (min-width: 576px) {
+@layer defaults {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  .container-dialog {
-    max-width: 540px;
+  body {
+    background-color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .container-home {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 400px;
+  }
+
+  .container-dialog, .container-information {
+    width: 100%;
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .img-home-logo {
+    width: 100%;
+    height: auto;
   }
 
   .img-event-type-logo {
-    height: 60px;
+    height: 32px;
+  }
+
+  .img-event-type-logo-talk {
+    height: 30px;
+  }
+
+  .img-speaker-photo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-event-type-logo-list, .img-event-type-logo-table, .img-speaker-photo-table, .img-speaker-degree-table {
+    height: 24px;
+  }
+
+  .img-speaker-degree {
+    height: 30px;
   }
 
   .img-event-type-logo-start {
-    height: 40px;
+    height: 32px;
   }
 
   .img-guess-logo {
@@ -139,279 +88,337 @@ body {
     height: auto;
   }
 
+  // Link styles on list pages
   .btn-sm-condensed {
-    font-size: 0.875rem;
+    padding: 0.25rem 0.2rem 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
   }
 
+  // Style for event type listbox on start page
   .event-type-listbox-start {
-    height: 276px;
+    height: 222px;
   }
 
+  // Style for event listbox on start page
   .event-listbox-start {
-    height: 120px;
+    height: 98px;
+  }
+
+  @media (min-width: 576px) {
+    html {
+      font-size: 14px;
+    }
+
+    .container-dialog {
+      max-width: 540px;
+    }
+
+    .img-event-type-logo {
+      height: 60px;
+    }
+
+    .img-event-type-logo-start {
+      height: 40px;
+    }
+
+    .img-guess-logo {
+      width: 48px;
+      height: auto;
+    }
+
+    .img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
+      width: 192px;
+      height: auto;
+    }
+
+    .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+    .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+      width: 120px;
+      height: auto;
+    }
+
+    .img-guess-result {
+      width: 96px;
+      height: auto;
+    }
+
+    .btn-sm-condensed {
+      font-size: 0.875rem;
+    }
+
+    .event-type-listbox-start {
+      height: 276px;
+    }
+
+    .event-listbox-start {
+      height: 120px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 15px;
+    }
+
+    .container-dialog {
+      max-width: 720px;
+    }
+
+    .img-guess-logo {
+      width: 64px;
+      height: auto;
+    }
+
+    .img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
+      width: 256px;
+      height: auto;
+    }
+
+    .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+    .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+      width: 160px;
+      height: auto;
+    }
+
+    .img-guess-result {
+      width: 128px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .container-dialog {
+      max-width: 720px;
+    }
+
+    .img-guess-logo {
+      width: 82px;
+      height: auto;
+    }
+
+    .img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
+      width: 330px;
+      height: auto;
+    }
+
+    .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+    .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+      width: 206px;
+      height: auto;
+    }
+
+    .img-guess-result {
+      width: 165px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container-dialog {
+      max-width: 720px;
+    }
+
+    .img-guess-logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
+      width: 400px;
+      height: auto;
+    }
+
+    .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
+    .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
+      width: 250px;
+      height: auto;
+    }
+
+    .img-guess-result {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  // Style for autocompletes
+  .search-autocomplete.p-autocomplete, .search-autocomplete .p-inputtext,
+  .olap-autocomplete.p-autocomplete, .olap-autocomplete .p-inputtext {
+    width: 100%;
+  }
+
+  // Style for dropdowns
+  .organizer-dropdown.p-dropdown, .event-type-dropdown.p-dropdown {
+    min-width: 175px;
+  }
+
+  // Styles for table paginator
+  .p-paginator {
+    padding: 0;
+
+    .p-dropdown {
+      order: 0 !important;
+      margin-right: auto !important;
+    }
+
+    .p-paginator-first {
+      margin-left: auto !important;
+      order: 1 !important;
+    }
+
+    .p-paginator-prev {
+      order: 2 !important;
+    }
+
+    .p-paginator-pages {
+      order: 3 !important;
+    }
+
+    .p-paginator-next {
+      order: 4 !important;
+    }
+
+    .p-paginator-last {
+      order: 5 !important;
+    }
+
+    .p-paginator-current {
+      margin-left: auto !important;
+      order: 6 !important;
+    }
+  }
+
+  // Styles for table header
+  .p-datatable .p-datatable-thead > tr > th {
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  // Styles for table body
+  .p-datatable .p-datatable-tbody > tr > td {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  // Checkbox style
+  .p-checkbox-label, .p-radiobutton-label {
+    margin-bottom: 0;
+  }
+
+  // Habr color
+  .text-habr {
+    color: #548eaa;
+  }
+
+  // Total column styles on OLAP page
+  .p-datatable .p-datatable-tbody > tr > td.total-column {
+    font-weight: 700;
+    background: #f8f9fa;
+  }
+
+  // Fix text decoration
+  .btn-link {
+    text-decoration: none;
+  }
+
+  .btn-link:hover {
+    text-decoration: underline;
+  }
+
+  .btn-link.focus, .btn-link:focus {
+    text-decoration: underline;
+  }
+
+  .btn-link.disabled, .btn-link:disabled {
+    pointer-events: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  // Fix active and checked colors
+  .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.dropdown-toggle {
+    color: #000;
+    background-color: #dae0e5;
+    border-color: #dae0e5;
+  }
+
+  // Decrease top, bottom padding for inputtext and multiselect
+  .p-inputtext, .p-multiselect .p-multiselect-label {
+    //padding: 0.75rem 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  // Decrease height of paginator arrow buttons
+  .p-paginator .p-paginator-first,
+  .p-paginator .p-paginator-prev,
+  .p-paginator .p-paginator-next,
+  .p-paginator .p-paginator-last {
+    //height: 3rem;
+    height: 2.75rem;
+  }
+
+  // Decrease width and height of paginator page buttons
+  .p-paginator .p-paginator-pages .p-paginator-page, .p-paginator .p-paginator-current {
+    //min-width: 3rem;
+    //height: 3rem;
+    min-width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  // Decrease height of paginator dropdown
+  .p-paginator .p-dropdown {
+    //height: 3rem;
+    height: 2.75rem;
+  }
+
+  // Decrease top, bottom padding for listbox item
+  .p-listbox .p-listbox-list .p-listbox-item {
+    //padding: 0.75rem 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+
+  // Decrease top, bottom padding for listbox
+  .p-listbox .p-listbox-list {
+    //padding: 0.75rem 0;
+    padding: 0;
+  }
+
+  // Decrease width and of table row expansion buttons
+  .p-button.p-button-icon-only.p-button-rounded {
+    //height: 3rem;
+    height: 2.75rem;
+  }
+
+  // Decrease height of table row expansion buttons
+  .p-button.p-button-icon-only {
+    //width: 3rem;
+    width: 2.75rem;
+  }
+
+  // Show borders around image thumbnails
+  .img-thumbnail.img-guess-photo-by-name, .img-thumbnail.img-guess-speaker-by-talk, .img-thumbnail.img-guess-speaker-by-company,
+  .img-thumbnail.img-guess-speaker-by-account, .img-thumbnail.img-guess-tag-cloud-by-speaker, .img-thumbnail.img-guess-speaker-by-tag-cloud {
+    border: 1px solid var(--bs-border-color);
+  }
+
+  // Remove box shadow for select button
+  .p-selectbutton .p-button.p-highlight:focus {
+    box-shadow: none;
+  }
+
+  // Styles for OLAP chart button
+  .olap-chart-button {
+    font-size: 0.8rem;
+    line-height: 1;
   }
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 15px;
-  }
-
-  .container-dialog {
-    max-width: 720px;
-  }
-
-  .img-guess-logo {
-    width: 64px;
-    height: auto;
-  }
-
-  .img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
-    width: 256px;
-    height: auto;
-  }
-
-  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
-  .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
-    width: 160px;
-    height: auto;
-  }
-
-  .img-guess-result {
-    width: 128px;
-    height: auto;
-  }
-}
-
-@media (min-width: 992px) {
-  .container-dialog {
-    max-width: 720px;
-  }
-
-  .img-guess-logo {
-    width: 82px;
-    height: auto;
-  }
-
-  .img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
-    width: 330px;
-    height: auto;
-  }
-
-  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
-  .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
-    width: 206px;
-    height: auto;
-  }
-
-  .img-guess-result {
-    width: 165px;
-    height: auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container-dialog {
-    max-width: 720px;
-  }
-
-  .img-guess-logo {
-    width: 100px;
-    height: auto;
-  }
-
-  .img-guess-name-by-photo, .img-guess-talk-by-speaker-single, .img-guess-account-by-speaker {
-    width: 400px;
-    height: auto;
-  }
-
-  .img-guess-photo-by-name, .img-guess-talk-by-speaker-some, .img-guess-speaker-by-talk, .img-guess-speaker-by-company,
-  .img-guess-speaker-by-account, .img-guess-tag-cloud-by-speaker, .img-guess-speaker-by-tag-cloud {
-    width: 250px;
-    height: auto;
-  }
-
-  .img-guess-result {
-    width: 200px;
-    height: auto;
-  }
-}
-
-// Style for autocompletes
-.search-autocomplete.p-autocomplete, .search-autocomplete .p-inputtext,
-.olap-autocomplete.p-autocomplete, .olap-autocomplete .p-inputtext {
-  width: 100%;
-}
-
-// Style for dropdowns
-.organizer-dropdown.p-dropdown, .event-type-dropdown.p-dropdown {
-  min-width: 175px;
-}
-
-// Styles for table paginator
-.p-paginator {
-  padding: 0;
-
-  .p-dropdown {
-    order: 0 !important;
-    margin-right: auto !important;
-  }
-
-  .p-paginator-first {
-    margin-left: auto !important;
-    order: 1 !important;
-  }
-
-  .p-paginator-prev {
-    order: 2 !important;
-  }
-
-  .p-paginator-pages {
-    order: 3 !important;
-  }
-
-  .p-paginator-next {
-    order: 4 !important;
-  }
-
-  .p-paginator-last {
-    order: 5 !important;
-  }
-
-  .p-paginator-current {
-    margin-left: auto !important;
-    order: 6 !important;
-  }
-}
-
-// Styles for table header
-.p-datatable .p-datatable-thead > tr > th {
-  white-space: normal !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-// Styles for table body
-.p-datatable .p-datatable-tbody > tr > td {
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-// Checkbox style
-.p-checkbox-label, .p-radiobutton-label {
-  margin-bottom: 0;
-}
-
-// Habr color
-.text-habr {
-  color: #548eaa;
-}
-
-// Total column styles on OLAP page
-.p-datatable .p-datatable-tbody > tr > td.total-column {
-  font-weight: 700;
-  background: #f8f9fa;
-}
-
-// Fix text decoration
-.btn-link {
-  text-decoration: none;
-}
-
-.btn-link:hover {
-  text-decoration: underline;
-}
-
-.btn-link.focus, .btn-link:focus {
-  text-decoration: underline;
-}
-
-.btn-link.disabled, .btn-link:disabled {
-  pointer-events: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-// Fix active and checked colors
-.btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.dropdown-toggle {
-  color: #000;
-  background-color: #dae0e5;
-  border-color: #dae0e5;
-}
-
-// Decrease top, bottom padding for inputtext and multiselect
-.p-inputtext, .p-multiselect .p-multiselect-label {
-  //padding: 0.75rem 0.75rem;
-  padding: 0.5rem 0.75rem;
-}
-
-// Decrease height of paginator arrow buttons
-.p-paginator .p-paginator-first,
-.p-paginator .p-paginator-prev,
-.p-paginator .p-paginator-next,
-.p-paginator .p-paginator-last {
-  //height: 3rem;
-  height: 2.75rem;
-}
-
-// Decrease width and height of paginator page buttons
-.p-paginator .p-paginator-pages .p-paginator-page, .p-paginator .p-paginator-current {
-  //min-width: 3rem;
-  //height: 3rem;
-  min-width: 2.75rem;
-  height: 2.75rem;
-}
-
-// Decrease height of paginator dropdown
-.p-paginator .p-dropdown {
-  //height: 3rem;
-  height: 2.75rem;
-}
-
-// Decrease top, bottom padding for listbox item
-.p-listbox .p-listbox-list .p-listbox-item {
-  //padding: 0.75rem 1.25rem;
-  padding: 0.5rem 1rem;
-}
-
-// Decrease top, bottom padding for listbox
-.p-listbox .p-listbox-list {
-  //padding: 0.75rem 0;
-  padding: 0;
-}
-
-// Decrease width and of table row expansion buttons
-.p-button.p-button-icon-only.p-button-rounded {
-  //height: 3rem;
-  height: 2.75rem;
-}
-
-// Decrease height of table row expansion buttons
-.p-button.p-button-icon-only {
-  //width: 3rem;
-  width: 2.75rem;
-}
-
-// Show borders around image thumbnails
-.img-thumbnail.img-guess-photo-by-name, .img-thumbnail.img-guess-speaker-by-talk, .img-thumbnail.img-guess-speaker-by-company,
-.img-thumbnail.img-guess-speaker-by-account, .img-thumbnail.img-guess-tag-cloud-by-speaker, .img-thumbnail.img-guess-speaker-by-tag-cloud {
-  border: 1px solid var(--bs-border-color);
-}
-
-// Remove box shadow for select button
-.p-selectbutton .p-button.p-highlight:focus {
-  box-shadow: none;
-}
-
-// Styles for OLAP chart button
-.olap-chart-button {
-  font-size: 0.8rem;
-  line-height: 1;
-}
