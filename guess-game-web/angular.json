@@ -25,7 +25,6 @@
             "styles": [
               "src/styles.scss",
               "src/assets/styles/defaults.scss",
-              "src/assets/styles/middle.scss",
               "src/assets/styles/menubar.scss",
               "src/assets/styles/tabmenu.scss"
             ],
@@ -98,7 +97,6 @@
             "styles": [
               "src/styles.scss",
               "src/assets/styles/defaults.scss",
-              "src/assets/styles/middle.scss",
               "src/assets/styles/menubar.scss",
               "src/assets/styles/tabmenu.scss"
             ],
