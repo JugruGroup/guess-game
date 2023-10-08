@@ -24,9 +24,10 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/defaults.scss",
-              "src/menubar.scss",
-              "src/tabmenu.scss"
+              "src/assets/styles/defaults.scss",
+              "src/assets/styles/middle.scss",
+              "src/assets/styles/menubar.scss",
+              "src/assets/styles/tabmenu.scss"
             ],
             "scripts": [
               "node_modules/chart.js/dist/chart.js",
@@ -96,9 +97,10 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "src/styles.scss",
-              "src/defaults.scss",
-              "src/menubar.scss",
-              "src/tabmenu.scss"
+              "src/assets/styles/defaults.scss",
+              "src/assets/styles/middle.scss",
+              "src/assets/styles/menubar.scss",
+              "src/assets/styles/tabmenu.scss"
             ],
             "scripts": [
               "node_modules/chart.js/dist/chart.js"

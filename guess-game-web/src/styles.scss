@@ -1,14 +1,15 @@
-@layer defaults, bootstrap, primeng, primeicons, fontawesome, bootstrap-icons, utilities;
+@layer defaults, bootstrap, middle, primeng, primeicons, fontawesome, bootstrap-icons, utilities;
 
-@import 'src/defaults.scss' layer(defaults);
+@import 'src/assets/styles/defaults.scss' layer(defaults);
 @import 'bootstrap/dist/css/bootstrap.min.css' layer(bootstrap);
+@import 'src/assets/styles/middle.scss' layer(middle);
 @import 'primeng/resources/themes/lara-light-blue/theme.css';
 @import 'primeng/resources/primeng.min.css';
 @import 'primeicons/primeicons.css' layer(primeicons);
 @import '@fortawesome/fontawesome-free/css/all.css' layer(fontawesome);
 @import 'bootstrap-icons/font/bootstrap-icons.css' layer(bootstrap-icons);
-@import 'src/menubar.scss' layer(utilities);
-@import 'src/tabmenu.scss' layer(utilities);
+@import 'src/assets/styles/menubar.scss' layer(utilities);
+@import 'src/assets/styles/tabmenu.scss' layer(utilities);
 
 @layer defaults {
   html {
@@ -17,6 +18,16 @@
 
   body {
     background-color: #ffffff;
+  }
+}
+
+@layer middle {
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
 
@@ -334,14 +345,6 @@
 
   .btn-link.disabled, .btn-link:disabled {
     pointer-events: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 
   // Fix active and checked colors
