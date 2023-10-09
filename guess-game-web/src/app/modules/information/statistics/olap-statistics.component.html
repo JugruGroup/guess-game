@@ -3,7 +3,7 @@
 
   <app-message></app-message>
 
-  <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
+  <app-information-menubar></app-information-menubar>
   <app-statistics-tabmenu></app-statistics-tabmenu>
 
   <div class="mt-4 mb-1 ms-1 me-1">
@@ -114,7 +114,7 @@
         <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
         <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="allLineWithCumulativeOptions"></p-chart>
         <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
-        <p-chart *ngIf="isPieChartVisible()" type="pie" [data]="pieData" [options]="pieOptions"></p-chart>
+        <p-chart *ngIf="isPieChartVisible()" type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions"></p-chart>
         <p-chart *ngIf="isDetailsRadarChartVisible()" type="radar" [data]="allRadarData" [options]="allRadarOptions"></p-chart>
         <p-chart *ngIf="isTotalRadarChartVisible()" type="radar" [data]="totalRadarData" [options]="totalRadarOptions"></p-chart>
       </div>

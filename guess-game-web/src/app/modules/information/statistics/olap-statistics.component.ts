@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { formatPercent } from '@angular/common';
 import { SelectItem } from 'primeng/api';
 import { TranslateService } from '@ngx-translate/core';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Company } from '../../../shared/models/company/company.model';
 import { CubeType } from '../../../shared/models/statistics/olap/cube-type.model';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
@@ -150,6 +152,8 @@ export class OlapStatisticsComponent implements OnInit {
   @ViewChildren('chartDiv') chartDivs: QueryList<ElementRef<HTMLDivElement>>;
   private chartDiv: ElementRef<HTMLDivElement>;
 
+  public chartPlugins = [ChartDataLabels];
+
   private topicMetricsMap = new Map<number, OlapEntityMetrics>();
 
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
@@ -172,7 +176,11 @@ export class OlapStatisticsComponent implements OnInit {
     this.fillChartKinds();
 
     this.translateService.onLangChange
-      .subscribe(() => this.fillChartKinds());
+      .subscribe(() => {
+          this.onLanguageChange();
+          this.fillChartKinds();
+        }
+      );
   }
 
   ngAfterViewInit(): void {
@@ -657,7 +665,29 @@ export class OlapStatisticsComponent implements OnInit {
       },
       animation: false,
       aspectRatio: aspectRatio,
-      locale: this.translateService.currentLang
+      locale: this.translateService.currentLang,
+      plugins: {
+        datalabels: {
+          formatter: (value, context) => {
+            const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+
+            return formatPercent(value / total, context.chart.options.locale, '1.1-1');
+          },
+          color: '#ffffff',
+          display: 'auto'
+        },
+        tooltip: {
+          callbacks: {
+            label: function (tooltipItem) {
+              const value = tooltipItem.dataset.data[tooltipItem.dataIndex];
+              const total = tooltipItem.dataset.data.reduce((a, b) => a + b, 0);
+              const percents = formatPercent(value / total, this.chart.options.locale, '1.1-1');
+
+              return `${tooltipItem.formattedValue} (${percents})`;
+            }
+          }
+        }
+      }
     };
   }
 
