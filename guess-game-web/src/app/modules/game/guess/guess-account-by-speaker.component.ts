@@ -13,7 +13,7 @@ export class GuessAccountBySpeakerComponent implements OnInit {
   private imageDirectory = 'assets/images';
   private eventsImageDirectory = `${this.imageDirectory}/events`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
-  public speakerAccounts: SpeakerAccounts = new SpeakerAccounts();
+  public speakerAccounts: SpeakerAccounts;
   public title: string;
   public logoImageSource: string;
 

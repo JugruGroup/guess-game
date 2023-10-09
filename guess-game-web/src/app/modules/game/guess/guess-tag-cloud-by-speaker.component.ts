@@ -14,7 +14,7 @@ export class GuessTagCloudBySpeakerComponent implements OnInit {
   private eventsImageDirectory = `${this.imageDirectory}/events`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
   private imageSourcePrefix = 'data:image/jpeg;base64,';
-  public speakerTagClouds: SpeakerTagClouds = new SpeakerTagClouds();
+  public speakerTagClouds: SpeakerTagClouds;
   public title: string;
   public logoImageSource: string;
   public imageSource0: string;
