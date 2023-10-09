@@ -27,6 +27,7 @@
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.1",
     "chart.js": "^4.4.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "core-js": "^3.33.0",
     "get-video-id": "^3.6.5",
     "marked": "^4.3.0",

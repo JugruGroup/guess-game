@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { formatPercent } from '@angular/common';
 import { SelectItem } from 'primeng/api';
 import { TranslateService } from '@ngx-translate/core';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Company } from '../../../shared/models/company/company.model';
 import { CubeType } from '../../../shared/models/statistics/olap/cube-type.model';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
@@ -149,6 +151,8 @@ export class OlapStatisticsComponent implements OnInit {
 
   @ViewChildren('chartDiv') chartDivs: QueryList<ElementRef<HTMLDivElement>>;
   private chartDiv: ElementRef<HTMLDivElement>;
+
+  public chartPlugins = [ChartDataLabels];
 
   private topicMetricsMap = new Map<number, OlapEntityMetrics>();
 
@@ -657,7 +661,17 @@ export class OlapStatisticsComponent implements OnInit {
       },
       animation: false,
       aspectRatio: aspectRatio,
-      locale: this.translateService.currentLang
+      locale: this.translateService.currentLang,
+      plugins: {
+        datalabels: {
+          formatter: (value, ctx) => {
+            const sum = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+
+            return formatPercent(value / sum, this.translateService.currentLang, '1.1-1');
+          },
+          color: '#fff'
+        }
+      }
     };
   }
 
