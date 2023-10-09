@@ -10,26 +10,28 @@
     <app-language-switcher (reload)="loadQuestion()" class="col"></app-language-switcher>
   </div>
 
-  <div class="text-center mb-1">
-    <figure class="figure ms-1 me-1">
-      <img src="{{speakersImageDirectory}}/{{speakerTagClouds.speaker?.photoFileName}}" alt="photo"
-           class="figure-img img-thumbnail img-guess-tag-cloud-by-speaker"/>
-      <figcaption class="figure-caption text-center">{{speakerTagClouds.speaker?.name}}</figcaption>
-    </figure>
-  </div>
-  <div class="text-center">
-    <input type="image" alt="cloud1" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
-           [class.btn-danger]="speakerTagClouds.invalid0" [disabled]="speakerTagClouds.invalid0"
-           (click)="answer(speakerTagClouds.id0)" src="{{imageSource0}}"/>
-    <input type="image" alt="cloud2" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
-           [class.btn-danger]="speakerTagClouds.invalid1" [disabled]="speakerTagClouds.invalid1"
-           (click)="answer(speakerTagClouds.id1)" src="{{imageSource1}}"/>
-    <input type="image" alt="cloud3" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
-           [class.btn-danger]="speakerTagClouds.invalid2" [disabled]="speakerTagClouds.invalid2"
-           (click)="answer(speakerTagClouds.id2)" src="{{imageSource2}}"/>
-    <input type="image" alt="cloud4" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
-           [class.btn-danger]="speakerTagClouds.invalid3" [disabled]="speakerTagClouds.invalid3"
-           (click)="answer(speakerTagClouds.id3)" src="{{imageSource3}}"/>
+  <div *ngIf="speakerTagClouds">
+    <div class="text-center mb-1">
+      <figure class="figure ms-1 me-1">
+        <img src="{{speakersImageDirectory}}/{{speakerTagClouds.speaker.photoFileName}}" alt="photo"
+             class="figure-img img-thumbnail img-guess-tag-cloud-by-speaker"/>
+        <figcaption class="figure-caption text-center">{{speakerTagClouds.speaker.name}}</figcaption>
+      </figure>
+    </div>
+    <div class="text-center">
+      <input type="image" alt="cloud1" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
+             [class.btn-danger]="speakerTagClouds.invalid0" [disabled]="speakerTagClouds.invalid0"
+             (click)="answer(speakerTagClouds.id0)" src="{{imageSource0}}"/>
+      <input type="image" alt="cloud2" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
+             [class.btn-danger]="speakerTagClouds.invalid1" [disabled]="speakerTagClouds.invalid1"
+             (click)="answer(speakerTagClouds.id1)" src="{{imageSource1}}"/>
+      <input type="image" alt="cloud3" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
+             [class.btn-danger]="speakerTagClouds.invalid2" [disabled]="speakerTagClouds.invalid2"
+             (click)="answer(speakerTagClouds.id2)" src="{{imageSource2}}"/>
+      <input type="image" alt="cloud4" class="img-thumbnail m-1 img-guess-tag-cloud-by-speaker remove-focus btn"
+             [class.btn-danger]="speakerTagClouds.invalid3" [disabled]="speakerTagClouds.invalid3"
+             (click)="answer(speakerTagClouds.id3)" src="{{imageSource3}}"/>
+    </div>
   </div>
   <div class="text-end mt-1">
     <button class="btn btn-link text-secondary" (click)="cancel()"><small>{{'common.cancelLinkText' | translate}}</small></button>

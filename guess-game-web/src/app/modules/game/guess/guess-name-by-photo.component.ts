@@ -13,7 +13,7 @@ export class GuessNameByPhotoComponent implements OnInit {
   private imageDirectory = 'assets/images';
   private eventsImageDirectory = `${this.imageDirectory}/events`;
   private speakersImageDirectory = `${this.imageDirectory}/speakers`;
-  public photoNames: PhotoNames = new PhotoNames();
+  public photoNames: PhotoNames;
   public title: string;
   public logoImageSource: string;
   public imageSource: string;

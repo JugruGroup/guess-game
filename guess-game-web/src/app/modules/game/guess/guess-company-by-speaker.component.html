@@ -10,30 +10,32 @@
     <app-language-switcher (reload)="loadQuestion()" class="col"></app-language-switcher>
   </div>
 
-  <div class="text-center mb-1">
-    <figure class="figure ms-1 me-1">
-      <img src="{{speakersImageDirectory}}/{{speakerCompanies.speaker?.photoFileName}}" alt="photo"
-           class="figure-img img-thumbnail img-guess-talk-by-speaker-single"/>
-      <figcaption class="figure-caption text-center">{{speakerCompanies.speaker?.name}}</figcaption>
-    </figure>
-  </div>
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary m-1 remove-focus"
-            [class.btn-danger]="speakerCompanies.invalid0" [class.btn-success]="speakerCompanies.valid0"
-            [disabled]="speakerCompanies.invalid0 || speakerCompanies.valid0"
-            (click)="answer(speakerCompanies.id0)">{{speakerCompanies.companyName0}}</button>
-    <button type="submit" class="btn btn-primary m-1 remove-focus"
-            [class.btn-danger]="speakerCompanies.invalid1" [class.btn-success]="speakerCompanies.valid1"
-            [disabled]="speakerCompanies.invalid1 || speakerCompanies.valid1"
-            (click)="answer(speakerCompanies.id1)">{{speakerCompanies.companyName1}}</button>
-    <button type="submit" class="btn btn-primary m-1 remove-focus"
-            [class.btn-danger]="speakerCompanies.invalid2" [class.btn-success]="speakerCompanies.valid2"
-            [disabled]="speakerCompanies.invalid2 || speakerCompanies.valid2"
-            (click)="answer(speakerCompanies.id2)">{{speakerCompanies.companyName2}}</button>
-    <button type="submit" class="btn btn-primary m-1 remove-focus"
-            [class.btn-danger]="speakerCompanies.invalid3" [class.btn-success]="speakerCompanies.valid3"
-            [disabled]="speakerCompanies.invalid3 || speakerCompanies.valid3"
-            (click)="answer(speakerCompanies.id3)">{{speakerCompanies.companyName3}}</button>
+  <div *ngIf="speakerCompanies">
+    <div class="text-center mb-1">
+      <figure class="figure ms-1 me-1">
+        <img src="{{speakersImageDirectory}}/{{speakerCompanies.speaker.photoFileName}}" alt="photo"
+             class="figure-img img-thumbnail img-guess-talk-by-speaker-single"/>
+        <figcaption class="figure-caption text-center">{{speakerCompanies.speaker.name}}</figcaption>
+      </figure>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary m-1 remove-focus"
+              [class.btn-danger]="speakerCompanies.invalid0" [class.btn-success]="speakerCompanies.valid0"
+              [disabled]="speakerCompanies.invalid0 || speakerCompanies.valid0"
+              (click)="answer(speakerCompanies.id0)">{{speakerCompanies.companyName0}}</button>
+      <button type="submit" class="btn btn-primary m-1 remove-focus"
+              [class.btn-danger]="speakerCompanies.invalid1" [class.btn-success]="speakerCompanies.valid1"
+              [disabled]="speakerCompanies.invalid1 || speakerCompanies.valid1"
+              (click)="answer(speakerCompanies.id1)">{{speakerCompanies.companyName1}}</button>
+      <button type="submit" class="btn btn-primary m-1 remove-focus"
+              [class.btn-danger]="speakerCompanies.invalid2" [class.btn-success]="speakerCompanies.valid2"
+              [disabled]="speakerCompanies.invalid2 || speakerCompanies.valid2"
+              (click)="answer(speakerCompanies.id2)">{{speakerCompanies.companyName2}}</button>
+      <button type="submit" class="btn btn-primary m-1 remove-focus"
+              [class.btn-danger]="speakerCompanies.invalid3" [class.btn-success]="speakerCompanies.valid3"
+              [disabled]="speakerCompanies.invalid3 || speakerCompanies.valid3"
+              (click)="answer(speakerCompanies.id3)">{{speakerCompanies.companyName3}}</button>
+    </div>
   </div>
   <div class="text-end mt-1">
     <button class="btn btn-link text-secondary" (click)="cancel()"><small>{{'common.cancelLinkText' | translate}}</small></button>
