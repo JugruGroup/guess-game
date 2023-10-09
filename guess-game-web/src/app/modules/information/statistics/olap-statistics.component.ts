@@ -176,7 +176,11 @@ export class OlapStatisticsComponent implements OnInit {
     this.fillChartKinds();
 
     this.translateService.onLangChange
-      .subscribe(() => this.fillChartKinds());
+      .subscribe(() => {
+          this.onLanguageChange();
+          this.fillChartKinds();
+        }
+      );
   }
 
   ngAfterViewInit(): void {
@@ -664,12 +668,24 @@ export class OlapStatisticsComponent implements OnInit {
       locale: this.translateService.currentLang,
       plugins: {
         datalabels: {
-          formatter: (value, ctx) => {
-            const sum = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+          formatter: (value, context) => {
+            const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
 
-            return formatPercent(value / sum, this.translateService.currentLang, '1.1-1');
+            return formatPercent(value / total, context.chart.options.locale, '1.1-1');
           },
-          color: '#fff'
+          color: '#ffffff',
+          display: 'auto'
+        },
+        tooltip: {
+          callbacks: {
+            label: function (tooltipItem) {
+              const value = tooltipItem.dataset.data[tooltipItem.dataIndex];
+              const total = tooltipItem.dataset.data.reduce((a, b) => a + b, 0);
+              const percents = formatPercent(value / total, this.chart.options.locale, '1.1-1');
+
+              return `${tooltipItem.formattedValue} (${percents})`;
+            }
+          }
         }
       }
     };
