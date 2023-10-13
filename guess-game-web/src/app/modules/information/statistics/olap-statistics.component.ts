@@ -177,8 +177,9 @@ export class OlapStatisticsComponent implements OnInit {
 
     this.translateService.onLangChange
       .subscribe(() => {
-          this.onLanguageChange();
+          this.loadOrganizers();
           this.fillChartKinds();
+          this.fillChartOptions();
         }
       );
   }
@@ -281,6 +282,38 @@ export class OlapStatisticsComponent implements OnInit {
     );
   }
 
+  fillChartKinds() {
+    if (this.translateService.currentLang) {
+      const keys = this.chartKinds
+        .map(e => e.label);
+
+      this.translateService.get(keys)
+        .subscribe(data => {
+          this.chartKinds = this.chartKinds
+            .map(e => {
+              e.title = data[e.label];
+
+              return e;
+            });
+        });
+    }
+  }
+
+  fillChartOptions() {
+    if (this.chartDiv) {
+      const clientWidth = this.chartDiv.nativeElement.clientWidth;
+      const aspectRatio = this.getAspectRatio(clientWidth);
+
+      this.allLineOptions = this.createLineOptions(aspectRatio);
+      this.totalLineOptions = this.createLineOptions(aspectRatio);
+      this.allLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
+      this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
+      this.pieOptions = this.createPieOptions(aspectRatio);
+      this.allRadarOptions = this.createRadarOptions(aspectRatio);
+      this.totalRadarOptions = this.createRadarOptions(aspectRatio);
+    }
+  }
+
   loadCubeTypes() {
     this.statisticsService.getCubeTypes()
       .subscribe(cubeTypeData => {
@@ -315,6 +348,34 @@ export class OlapStatisticsComponent implements OnInit {
                       });
                   });
               });
+          });
+      });
+  }
+
+  loadOrganizers() {
+    const currentSelectedOrganizer = this.selectedOrganizer;
+    const currentSelectedEventTypes = this.selectedEventTypes;
+
+    this.organizerService.getOrganizers()
+      .subscribe(organizerData => {
+        this.fillOrganizers(organizerData);
+
+        this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
+
+        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+          .subscribe(eventTypesData => {
+            this.fillEventTypes(eventTypesData);
+
+            if (this.eventTypes.length > 0) {
+              this.selectedEventTypes = (currentSelectedEventTypes) ? findEventTypesByIds(currentSelectedEventTypes.map(et => et.id), this.eventTypes) : [];
+            } else {
+              this.selectedEventTypes = [];
+            }
+
+            this.loadSelectedEntities(() => {
+              this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
+                this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
+            });
           });
       });
   }
@@ -410,49 +471,6 @@ export class OlapStatisticsComponent implements OnInit {
     });
   }
 
-  onEventTypeKindChange() {
-    this.loadEventTypes();
-  }
-
-  onOrganizerChange() {
-    this.loadEventTypes();
-  }
-
-  onEventTypeChange() {
-    this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
-      this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
-  }
-
-  onLanguageChange() {
-    const currentSelectedOrganizer = this.selectedOrganizer;
-    const currentSelectedEventTypes = this.selectedEventTypes;
-
-    this.fillChartOptions();
-
-    this.organizerService.getOrganizers()
-      .subscribe(organizerData => {
-        this.fillOrganizers(organizerData);
-
-        this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
-
-        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
-          .subscribe(eventTypesData => {
-            this.fillEventTypes(eventTypesData);
-
-            if (this.eventTypes.length > 0) {
-              this.selectedEventTypes = (currentSelectedEventTypes) ? findEventTypesByIds(currentSelectedEventTypes.map(et => et.id), this.eventTypes) : [];
-            } else {
-              this.selectedEventTypes = [];
-            }
-
-            this.loadSelectedEntities(() => {
-              this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
-                this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
-            });
-          });
-      });
-  }
-
   onCubeTypeChange() {
     this.selectedSpeakers = [];
     this.selectedCompanies = [];
@@ -468,6 +486,19 @@ export class OlapStatisticsComponent implements OnInit {
   }
 
   onMeasureTypeChange() {
+    this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
+      this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
+  }
+
+  onEventTypeKindChange() {
+    this.loadEventTypes();
+  }
+
+  onOrganizerChange() {
+    this.loadEventTypes();
+  }
+
+  onEventTypeChange() {
     this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
       this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
   }
@@ -903,38 +934,6 @@ export class OlapStatisticsComponent implements OnInit {
       return this.LARGE_ASPECT_RATIO;
     } else {
       return this.EXTRA_LARGE_ASPECT_RATIO;
-    }
-  }
-
-  fillChartOptions() {
-    if (this.chartDiv) {
-      const clientWidth = this.chartDiv.nativeElement.clientWidth;
-      const aspectRatio = this.getAspectRatio(clientWidth);
-
-      this.allLineOptions = this.createLineOptions(aspectRatio);
-      this.totalLineOptions = this.createLineOptions(aspectRatio);
-      this.allLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
-      this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
-      this.pieOptions = this.createPieOptions(aspectRatio);
-      this.allRadarOptions = this.createRadarOptions(aspectRatio);
-      this.totalRadarOptions = this.createRadarOptions(aspectRatio);
-    }
-  }
-
-  fillChartKinds() {
-    if (this.translateService.currentLang) {
-      const keys = this.chartKinds
-        .map(e => e.label);
-
-      this.translateService.get(keys)
-        .subscribe(data => {
-          this.chartKinds = this.chartKinds
-            .map(e => {
-              e.title = data[e.label];
-
-              return e;
-            });
-        });
     }
   }
 

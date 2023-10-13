@@ -7493,7 +7493,8 @@ speakers:
             \ .NET, security и не только. В прошлом &mdash; DevRel и тимлид команд разработки C#-анализатора и Tools &amp;\
             \ DevOps в PVS-Studio.</p>"}
     twitter: _SergVasiliev_
-    habr: foto_shooter
+    gitHub: VasilievSerg
+    habr: SergVasiliev
   - id: 500
     photoFileName: 0500.jpg
     photoUpdatedAt: "2023-07-14T11:41:37Z"
