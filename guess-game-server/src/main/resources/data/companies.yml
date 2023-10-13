@@ -4182,3 +4182,33 @@ companies:
     name:
       - {language: en, text: "SR Data"}
     siteLink: https://srdata.ru
+  - id: 1151
+    name:
+      - {language: en, text: sibedge}
+    siteLink: https://sibedge.team
+  - id: 1152
+    name:
+      - {language: en, text: Byndyusoft}
+    siteLink: https://byndyusoft.com
+  - id: 1153
+    name:
+      - {language: en, text: "PostgreSQL JDBC maintainer"}
+  - id: 1154
+    name:
+      - {language: en, text: "Digitalization of engineering"}
+      - {language: ru, text: "Цифровизация инженерного дела"}
+    siteLink: https://rusde.ru
+  - id: 1155
+    name:
+      - {language: en, text: ASE}
+      - {language: ru, text: АСЭ}
+    siteLink: https://ase-ec.ru
+  - id: 1156
+    name:
+      - {language: en, text: ProgMsk}
+      - {language: ru, text: "Московский клуб программистов"}
+    siteLink: https://prog.msk.ru
+  - id: 1157
+    name:
+      - {language: en, text: "C Teleport"}
+    siteLink: https://cteleport.com

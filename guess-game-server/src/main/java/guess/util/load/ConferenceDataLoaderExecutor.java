@@ -2563,7 +2563,8 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.DOT_NEXT, LocalDate.of(2023, 9, 15), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("DotNext 2023", null, List.of(9L)),
-//                        Set.of("Открытие конференции DotNext 2023", "Fail-митап", "Закрытие конференции DotNext 2023")));
+//                        Set.of("Открытие конференции DotNext 2023", "Закрытие конференции DotNext 2023",
+//                                ".NET не тормозит", "Поиск талантов в .NET", "Концерт группы НТР")));
 //        loadTalksSpeakersEvent(Conference.JOKER, LocalDate.of(2023, 10, 9), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Joker 2023", null, List.of(24L, 4L)),
