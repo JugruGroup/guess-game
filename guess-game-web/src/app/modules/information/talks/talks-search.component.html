@@ -23,7 +23,7 @@
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5 mt-sm-3 mt-md-0">
           <p-dropdown [options]="eventSelectItems" [(ngModel)]="selectedEvent" id="event"
                       placeholder="{{'common.list.eventPlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onEventChange($event.value)" name="event" styleClass="w-100"
+                      (onChange)="onFilterChange()" name="event" styleClass="w-100"
                       emptyMessage="{{'common.list.emptyMessage' | translate}}">
             <ng-template let-event pTemplate="selectedItem">
               {{event.value.name}}
@@ -37,11 +37,30 @@
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="talkName" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'talks.search.nameLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5">
-          <input type="text" id="talkName" pInputText class="form-control" [(ngModel)]="talkName" name="talkName" (ngModelChange)="onFilterChange($event)"/>
+          <input type="text" id="talkName" pInputText class="form-control" [(ngModel)]="talkName" name="talkName" (ngModelChange)="onFilterChange()"/>
         </div>
         <label for="speakerName" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'common.list.speakerLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5 mt-sm-3 mt-md-0">
-          <input type="text" id="speakerName" pInputText class="form-control" [(ngModel)]="speakerName" name="speakerName" (ngModelChange)="onFilterChange($event)"/>
+          <input type="text" id="speakerName" pInputText class="form-control" [(ngModel)]="speakerName" name="speakerName" (ngModelChange)="onFilterChange()"/>
+        </div>
+      </div>
+      <div class="mb-3 row justify-content-center align-items-center">
+        <label for="topic" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'common.list.topicLabel' | translate}}</label>
+        <div class="col-12 col-sm-9 col-md-4 col-xxl-5">
+          <p-dropdown [options]="topicSelectItems" [(ngModel)]="selectedTopic" id="topic"
+                      placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
+                      (onChange)="onFilterChange()" name="topic" styleClass="w-100">
+            <ng-template let-topic pTemplate="item">
+              {{topic.value.name}}
+            </ng-template>
+          </p-dropdown>
+        </div>
+        <label for="language" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'common.list.languageLabel' | translate}}</label>
+        <div class="col-12 col-sm-9 col-md-4 col-xxl-5 mt-sm-3 mt-md-0">
+          <p-dropdown [options]="languages" [(ngModel)]="selectedLanguage" id="language"
+                      placeholder="{{'common.list.languagePlaceholder' | translate}}" [showClear]="true"
+                      (onChange)="onFilterChange()" name="language" styleClass="w-100">
+          </p-dropdown>
         </div>
       </div>
       <div class="text-center">

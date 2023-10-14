@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { Event } from '../../../shared/models/event/event.model';
+import { Topic } from '../../../shared/models/topic/topic.model';
 import { Talk } from '../../../shared/models/talk/talk.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { EventService } from '../../../shared/services/event.service';
@@ -36,6 +37,13 @@ export class TalksSearchComponent implements OnInit {
 
   public talkName: string;
   public speakerName: string;
+
+  public topics: Topic[] = [];
+  public selectedTopic: Topic;
+  public topicSelectItems: SelectItem[] = [];
+
+  public languages: string[] = ['EN', 'RU'];
+  public selectedLanguage: string;
 
   public talks: Talk[] = [];
 
@@ -117,7 +125,7 @@ export class TalksSearchComponent implements OnInit {
     }
   }
 
-  onEventChange(event: Event) {
+  onFilterChange() {
     this.searched = false;
   }
 
@@ -166,10 +174,6 @@ export class TalksSearchComponent implements OnInit {
           this.search();
         }
       });
-  }
-
-  onFilterChange(value: any) {
-    this.searched = false;
   }
 
   search() {
