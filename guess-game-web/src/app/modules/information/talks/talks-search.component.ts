@@ -184,11 +184,15 @@ export class TalksSearchComponent implements OnInit {
 
   clear() {
     this.selectedEventType = undefined;
+
     this.events = [];
     this.eventSelectItems = [];
     this.selectedEvent = undefined;
+
     this.talkName = undefined;
     this.speakerName = undefined;
+    this.selectedTopic = undefined;
+    this.selectedLanguage = undefined;
 
     this.searched = false;
   }
@@ -196,6 +200,8 @@ export class TalksSearchComponent implements OnInit {
   isSearchDisabled(): boolean {
     return (!this.selectedEventType &&
       !this.selectedEvent &&
+      !this.selectedTopic &&
+      !this.selectedLanguage &&
       isStringEmpty(this.talkName) &&
       isStringEmpty(this.speakerName));
   }
