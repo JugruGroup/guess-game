@@ -149,39 +149,40 @@ class TalkServiceImplTest {
     class GetTalksTest {
         private Stream<Arguments> data() {
             return Stream.of(
-                    arguments(null, null, null, null, Collections.emptyList()),
-                    arguments(0L, null, null, null, List.of(talk0)),
-                    arguments(0L, 0L, null, null, List.of(talk0)),
-                    arguments(null, null, "name", null, List.of(talk0, talk1, talk2)),
-                    arguments(null, null, "0", null, List.of(talk0)),
-                    arguments(null, null, "1", null, List.of(talk1)),
-                    arguments(null, null, "2", null, List.of(talk2)),
-                    arguments(null, null, "7", null, Collections.emptyList()),
-                    arguments(null, null, null, "speaker", List.of(talk0, talk1, talk2)),
-                    arguments(null, null, null, "0", List.of(talk0, talk2)),
-                    arguments(null, null, null, "1", List.of(talk1, talk2)),
-                    arguments(null, null, null, "7", Collections.emptyList()),
-                    arguments(null, null, "2", "0", List.of(talk2)),
-                    arguments(null, null, "0", "0", List.of(talk0)),
-                    arguments(null, null, "1", "0", Collections.emptyList()),
-                    arguments(null, 0L, null, null, List.of(talk0, talk1, talk2)),
-                    arguments(null, 0L, null, "0", List.of(talk0, talk2)),
-                    arguments(null, 0L, "0", null, List.of(talk0)),
-                    arguments(null, 0L, "0", "0", List.of(talk0)),
-                    arguments(0L, null, null, "0", List.of(talk0)),
-                    arguments(0L, null, "0", null, List.of(talk0)),
-                    arguments(0L, null, "0", "0", List.of(talk0)),
-                    arguments(0L, 0L, null, null, List.of(talk0)),
-                    arguments(0L, 0L, null, "0", List.of(talk0)),
-                    arguments(0L, 0L, "0", null, List.of(talk0)),
-                    arguments(0L, 0L, "0", "0", List.of(talk0))
+                    arguments(null, null, null, null, null, null, Collections.emptyList()),
+                    arguments(0L, null, null, null, null, null, List.of(talk0)),
+                    arguments(0L, 0L, null, null, null, null, List.of(talk0)),
+                    arguments(null, null, "name", null, null, null, List.of(talk0, talk1, talk2)),
+                    arguments(null, null, "0", null, null, null, List.of(talk0)),
+                    arguments(null, null, "1", null, null, null, List.of(talk1)),
+                    arguments(null, null, "2", null, null, null, List.of(talk2)),
+                    arguments(null, null, "7", null, null, null, Collections.emptyList()),
+                    arguments(null, null, null, "speaker", null, null, List.of(talk0, talk1, talk2)),
+                    arguments(null, null, null, "0", null, null, List.of(talk0, talk2)),
+                    arguments(null, null, null, "1", null, null, List.of(talk1, talk2)),
+                    arguments(null, null, null, "7", null, null, Collections.emptyList()),
+                    arguments(null, null, "2", "0", null, null, List.of(talk2)),
+                    arguments(null, null, "0", "0", null, null, List.of(talk0)),
+                    arguments(null, null, "1", "0", null, null, Collections.emptyList()),
+                    arguments(null, 0L, null, null, null, null, List.of(talk0, talk1, talk2)),
+                    arguments(null, 0L, null, "0", null, null, List.of(talk0, talk2)),
+                    arguments(null, 0L, "0", null, null, null, List.of(talk0)),
+                    arguments(null, 0L, "0", "0", null, null, List.of(talk0)),
+                    arguments(0L, null, null, "0", null, null, List.of(talk0)),
+                    arguments(0L, null, "0", null, null, null, List.of(talk0)),
+                    arguments(0L, null, "0", "0", null, null, List.of(talk0)),
+                    arguments(0L, 0L, null, null, null, null, List.of(talk0)),
+                    arguments(0L, 0L, null, "0", null, null, List.of(talk0)),
+                    arguments(0L, 0L, "0", null, null, null, List.of(talk0)),
+                    arguments(0L, 0L, "0", "0", null, null, List.of(talk0))
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getTalks(Long eventTypeId, Long eventId, String talkName, String speakerName, List<Talk> expected) {
-            assertEquals(expected, talkService.getTalks(eventTypeId, eventId, talkName, speakerName));
+        void getTalks(Long eventTypeId, Long eventId, String talkName, String speakerName, Long topicId,
+                      String talkLanguage, List<Talk> expected) {
+            assertEquals(expected, talkService.getTalks(eventTypeId, eventId, talkName, speakerName, topicId, talkLanguage));
         }
     }
 

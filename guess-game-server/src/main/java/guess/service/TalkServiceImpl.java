@@ -35,7 +35,8 @@ public class TalkServiceImpl implements TalkService {
     }
 
     @Override
-    public List<Talk> getTalks(Long eventTypeId, Long eventId, String talkName, String speakerName) {
+    public List<Talk> getTalks(Long eventTypeId, Long eventId, String talkName, String speakerName, Long topicId,
+                               String talkLanguage) {
         String trimmedLowerCasedTalkName = SearchUtils.trimAndLowerCase(talkName);
         String trimmedLowerCasedSpeakerName = SearchUtils.trimAndLowerCase(speakerName);
         boolean isTalkNameSet = SearchUtils.isStringSet(trimmedLowerCasedTalkName);

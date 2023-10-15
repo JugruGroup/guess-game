@@ -32,6 +32,12 @@ export class TalkService {
     if (speakerName) {
       params = params.set('speakerName', speakerName);
     }
+    if (topic) {
+      params = params.set('topicId', topic.id.toString());
+    }
+    if (language) {
+      params = params.set('talkLanguage', language);
+    }
 
     return this.http.get<Talk[]>(`${this.baseUrl}/talks`, {params: params})
       .pipe(
