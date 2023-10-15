@@ -8,9 +8,11 @@ import { Talk } from '../../../shared/models/talk/talk.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { EventService } from '../../../shared/services/event.service';
 import { TalkService } from '../../../shared/services/talk.service';
+import { TopicService } from '../../../shared/services/topic.service';
 import {
   findEventById,
   findEventTypeById,
+  findTopicById,
   getEventsWithBriefDisplayName,
   getEventsWithFullDisplayName,
   getTalksWithSpeakersString,
@@ -51,7 +53,8 @@ export class TalksSearchComponent implements OnInit {
   public multiSortMeta: any[] = [];
 
   constructor(private eventTypeService: EventTypeService, private eventService: EventService,
-              private talkService: TalkService, public translateService: TranslateService) {
+              private talkService: TalkService, private topicService: TopicService,
+              public translateService: TranslateService) {
     this.multiSortMeta.push({field: 'event.name', order: 1});
     this.multiSortMeta.push({field: 'talkDate', order: 1});
     this.multiSortMeta.push({field: 'name', order: 1});
@@ -59,6 +62,7 @@ export class TalksSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadEventTypes();
+    this.loadTopics();
   }
 
   fillEventTypes(eventTypes: EventType[]) {
@@ -76,6 +80,14 @@ export class TalksSearchComponent implements OnInit {
     this.eventSelectItems = this.events.map(e => {
       return {label: e.displayName, value: e};
     });
+  }
+
+  fillTopics(topics: Topic[]) {
+    this.topics = topics;
+    this.topicSelectItems = this.topics.map(t => {
+        return {label: t.name, value: t};
+      }
+    );
   }
 
   loadEventTypes() {
@@ -129,8 +141,17 @@ export class TalksSearchComponent implements OnInit {
     this.searched = false;
   }
 
-  loadTalks(eventType: EventType, event: Event, talkName: string, speakerName: string) {
-    this.talkService.getTalks(eventType, event, talkName, speakerName)
+  loadTopics() {
+    this.topicService.getFilterTopics(true, true, null)
+      .subscribe(topicsData => {
+        this.fillTopics(topicsData);
+
+        this.selectedTopic = null;
+      });
+  }
+
+  loadTalks(eventType: EventType, event: Event, talkName: string, speakerName: string, topic: Topic, language: string) {
+    this.talkService.getTalks(eventType, event, talkName, speakerName, topic, language)
       .subscribe(data => {
         this.talks = getTalksWithSpeakersString(data);
         this.searched = true;
@@ -164,21 +185,38 @@ export class TalksSearchComponent implements OnInit {
                 this.selectedEvent = null;
               }
 
-              this.search();
+              this.loadTopicsAndSearch();
             });
         } else {
           this.events = [];
           this.eventSelectItems = [];
           this.selectedEvent = null;
 
-          this.search();
+          this.loadTopicsAndSearch();
         }
+      });
+  }
+
+  loadTopicsAndSearch() {
+    const currentSelectedTopic = this.selectedTopic;
+
+    this.topicService.getFilterTopics(true, true, null)
+      .subscribe(topicsData => {
+        this.fillTopics(topicsData);
+
+        if (this.topics.length > 0) {
+          this.selectedTopic = (currentSelectedTopic) ? findTopicById(currentSelectedTopic.id, this.topics) : null;
+        } else {
+          this.selectedTopic = null;
+        }
+
+        this.search();
       });
   }
 
   search() {
     if (!this.isSearchDisabled()) {
-      this.loadTalks(this.selectedEventType, this.selectedEvent, this.talkName, this.speakerName);
+      this.loadTalks(this.selectedEventType, this.selectedEvent, this.talkName, this.speakerName, this.selectedTopic, this.selectedLanguage);
     }
   }
 
