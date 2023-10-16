@@ -1845,7 +1845,8 @@ public class ConferenceDataLoaderExecutor {
         events.forEach(event -> {
             int all = event.getTalks().size();
             int withTimes = (int) event.getTalks().stream()
-                    .filter(t -> (t.getTalkDay() != null) && (t.getStartTime() != null) && (t.getEndTime() != null) && (t.getTrack() != null))
+                    .filter(t -> (t.getTalkDay() != null) && (t.getStartTime() != null) && (t.getEndTime() != null) &&
+                            (t.getTrack() != null) && (t.getLanguage() != null))
                     .count();
             double percents = (all == 0) ? 0 : (double) withTimes / all * 100;
             String message = String.format("%-30s %2d/%2d (%6.2f%%)",
