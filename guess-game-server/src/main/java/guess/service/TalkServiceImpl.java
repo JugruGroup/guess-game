@@ -62,6 +62,7 @@ public class TalkServiceImpl implements TalkService {
                     .filter(t -> ((!isTalkNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedTalkName, t.getName())) &&
                             (!isSpeakerNameSet || t.getSpeakers().stream()
                                     .anyMatch(s -> SearchUtils.isSubstringFound(trimmedLowerCasedSpeakerName, s.getName()))) &&
+                            ((topicId == null) || topicId.equals(t.getResultTopic().getId())) &&
                             ((talkLanguage == null) || talkLanguage.equals(t.getLanguage()))))
                     .toList();
         }

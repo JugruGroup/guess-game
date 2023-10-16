@@ -47,6 +47,7 @@ public class Talk extends Descriptionable {
 
     private Long topicId;
     private Topic topic;
+    private Topic resultTopic;
 
     public Talk() {
     }
@@ -166,6 +167,14 @@ public class Talk extends Descriptionable {
 
     public void setTopic(Topic topic) {
         this.topic = topic;
+    }
+
+    public Topic getResultTopic() {
+        return resultTopic;
+    }
+
+    public void setResultTopic(Topic resultTopic) {
+        this.resultTopic = resultTopic;
     }
 
     @Override
