@@ -44,8 +44,8 @@ export class TalksSearchComponent implements OnInit {
   public selectedTopic: Topic;
   public topicSelectItems: SelectItem[] = [];
 
-  public languages: string[] = ['EN', 'RU'];
   public selectedLanguage: string;
+  public languageSelectItems: SelectItem[] = [{label: 'EN', value: 'en'}, {label: 'RU', value: 'ru'}];
 
   public talks: Talk[] = [];
 

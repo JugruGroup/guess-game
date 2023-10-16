@@ -42,7 +42,8 @@ public class TalkServiceImpl implements TalkService {
         boolean isTalkNameSet = SearchUtils.isStringSet(trimmedLowerCasedTalkName);
         boolean isSpeakerNameSet = SearchUtils.isStringSet(trimmedLowerCasedSpeakerName);
 
-        if ((eventTypeId == null) && (eventId == null) && !isTalkNameSet && !isSpeakerNameSet) {
+        if ((eventTypeId == null) && (eventId == null) && !isTalkNameSet && !isSpeakerNameSet &&
+                (topicId == null) && (talkLanguage == null)) {
             return Collections.emptyList();
         } else {
             Stream<Talk> talkStream;
@@ -60,7 +61,8 @@ public class TalkServiceImpl implements TalkService {
             return talkStream
                     .filter(t -> ((!isTalkNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedTalkName, t.getName())) &&
                             (!isSpeakerNameSet || t.getSpeakers().stream()
-                                    .anyMatch(s -> SearchUtils.isSubstringFound(trimmedLowerCasedSpeakerName, s.getName())))))
+                                    .anyMatch(s -> SearchUtils.isSubstringFound(trimmedLowerCasedSpeakerName, s.getName()))) &&
+                            ((talkLanguage == null) || talkLanguage.equals(t.getLanguage()))))
                     .toList();
         }
     }
