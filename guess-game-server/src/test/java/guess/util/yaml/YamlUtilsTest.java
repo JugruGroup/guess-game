@@ -48,9 +48,13 @@ class YamlUtilsTest {
             speaker1.setId(1);
             speaker1.setName(List.of(new LocaleItem("en", "name0")));
 
+            Topic topic0 = new Topic();
+            topic0.setId(0);
+            topic0.setDefaultTopic(true);
+
             List<Place> places = Collections.emptyList();
             List<Organizer> organizers = Collections.emptyList();
-            List<Topic> topics = Collections.emptyList();
+            List<Topic> topics = List.of(topic0);
             List<EventType> eventTypes = Collections.emptyList();
             List<Event> events = Collections.emptyList();
             List<Company> companies = Collections.emptyList();
@@ -68,7 +72,7 @@ class YamlUtilsTest {
                             new SourceInformation(
                                     Collections.emptyList(),
                                     Collections.emptyList(),
-                                    Collections.emptyList(),
+                                    List.of(topic0),
                                     Collections.emptyList(),
                                     Collections.emptyList(),
                                     new SourceInformation.SpeakerInformation(
