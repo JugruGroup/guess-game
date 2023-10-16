@@ -34,6 +34,23 @@ public class TalkServiceImpl implements TalkService {
         return talkDao.getTalkById(id);
     }
 
+    Stream<Talk> getTalkStream(Long eventTypeId, Long eventId) {
+        Stream<Talk> talkStream;
+
+        if (eventTypeId != null) {
+            if (eventId != null) {
+                talkStream = eventDao.getEventById(eventId).getTalks().stream();
+            } else {
+                talkStream = eventTypeDao.getEventTypeById(eventTypeId).getEvents().stream()
+                        .flatMap(e -> e.getTalks().stream());
+            }
+        } else {
+            talkStream = talkDao.getTalks().stream();
+        }
+
+        return talkStream;
+    }
+
     @Override
     public List<Talk> getTalks(Long eventTypeId, Long eventId, String talkName, String speakerName, Long topicId,
                                String talkLanguage) {
@@ -46,17 +63,7 @@ public class TalkServiceImpl implements TalkService {
                 (topicId == null) && (talkLanguage == null)) {
             return Collections.emptyList();
         } else {
-            Stream<Talk> talkStream;
-            if (eventTypeId != null) {
-                if (eventId != null) {
-                    talkStream = eventDao.getEventById(eventId).getTalks().stream();
-                } else {
-                    talkStream = eventTypeDao.getEventTypeById(eventTypeId).getEvents().stream()
-                            .flatMap(e -> e.getTalks().stream());
-                }
-            } else {
-                talkStream = talkDao.getTalks().stream();
-            }
+            Stream<Talk> talkStream = getTalkStream(eventTypeId, eventId);
 
             return talkStream
                     .filter(t -> ((!isTalkNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedTalkName, t.getName())) &&
