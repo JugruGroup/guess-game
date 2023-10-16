@@ -1,6 +1,7 @@
 package guess.service;
 
 import guess.dao.EventTypeDao;
+import guess.dao.TopicDao;
 import guess.domain.Conference;
 import guess.domain.source.EventType;
 import guess.domain.source.Organizer;
@@ -34,13 +35,19 @@ class TopicServiceImplTest {
     @TestConfiguration
     static class TopicServiceImplTestConfiguration {
         @MockBean
+        TopicDao topicDao;
+
+        @MockBean
         EventTypeDao eventTypeDao;
 
         @Bean
         TopicService topicService() {
-            return new TopicServiceImpl(eventTypeDao);
+            return new TopicServiceImpl(topicDao, eventTypeDao);
         }
     }
+
+    @Autowired
+    private TopicDao topicDao;
 
     @Autowired
     private EventTypeDao eventTypeDao;

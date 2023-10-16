@@ -142,7 +142,7 @@ export class TalksSearchComponent implements OnInit {
   }
 
   loadTopics() {
-    this.topicService.getFilterTopics(true, true, null)
+    this.topicService.getTopics()
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 
@@ -200,7 +200,7 @@ export class TalksSearchComponent implements OnInit {
   loadTopicsAndSearch() {
     const currentSelectedTopic = this.selectedTopic;
 
-    this.topicService.getFilterTopics(true, true, null)
+    this.topicService.getTopics()
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 
