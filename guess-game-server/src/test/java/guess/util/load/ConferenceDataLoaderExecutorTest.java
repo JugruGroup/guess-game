@@ -3636,23 +3636,104 @@ class ConferenceDataLoaderExecutorTest {
             talk15.setTrack(1L);
 
             Talk talk16 = new Talk();
-            talk16.setTalkDay(1L);
-            talk16.setStartTime(LocalTime.of(12, 0));
-            talk16.setEndTime(LocalTime.of(12, 45));
-            talk16.setTrack(1L);
+            talk16.setLanguage("en");
 
             Talk talk17 = new Talk();
+            talk17.setLanguage("en");
             talk17.setTalkDay(1L);
-            talk17.setStartTime(LocalTime.of(13, 0));
-            talk17.setEndTime(LocalTime.of(13, 15));
-            talk17.setTrack(1L);
 
-            event2.setTalks(List.of(talk0, talk1, talk2, talk3, talk4));
-            event3.setTalks(List.of(talk5, talk6, talk7, talk8, talk9));
-            event4.setTalks(List.of(talk10, talk11, talk12, talk13, talk14));
-            event5.setTalks(List.of(talk15));
-            event6.setTalks(List.of(talk1, talk15));
-            event7.setTalks(List.of(talk2, talk15, talk16, talk17));
+            Talk talk18 = new Talk();
+            talk18.setLanguage("ru");
+            talk18.setStartTime(LocalTime.of(10, 0));
+
+            Talk talk19 = new Talk();
+            talk19.setLanguage("ru");
+            talk19.setTalkDay(1L);
+            talk19.setStartTime(LocalTime.of(10, 0));
+
+            Talk talk20 = new Talk();
+            talk20.setLanguage("ru");
+            talk20.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk21 = new Talk();
+            talk21.setLanguage("ru");
+            talk21.setTalkDay(1L);
+            talk21.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk22 = new Talk();
+            talk22.setLanguage("ru");
+            talk22.setStartTime(LocalTime.of(10, 0));
+            talk22.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk23 = new Talk();
+            talk23.setLanguage("ru");
+            talk23.setStartTime(LocalTime.of(10, 0));
+            talk23.setEndTime(LocalTime.of(11, 0));
+
+            Talk talk24 = new Talk();
+            talk24.setLanguage("ru");
+            talk24.setTrack(1L);
+
+            Talk talk25 = new Talk();
+            talk25.setLanguage("ru");
+            talk25.setTalkDay(1L);
+            talk25.setTrack(1L);
+
+            Talk talk26 = new Talk();
+            talk26.setLanguage("ru");
+            talk26.setStartTime(LocalTime.of(10, 0));
+            talk26.setTrack(1L);
+
+            Talk talk27 = new Talk();
+            talk27.setLanguage("ru");
+            talk27.setTalkDay(1L);
+            talk27.setStartTime(LocalTime.of(10, 0));
+            talk27.setTrack(1L);
+
+            Talk talk28 = new Talk();
+            talk28.setLanguage("ru");
+            talk28.setEndTime(LocalTime.of(11, 0));
+            talk28.setTrack(1L);
+
+            Talk talk29 = new Talk();
+            talk29.setLanguage("ru");
+            talk29.setTalkDay(1L);
+            talk29.setEndTime(LocalTime.of(11, 0));
+            talk29.setTrack(1L);
+
+            Talk talk30 = new Talk();
+            talk30.setLanguage("ru");
+            talk30.setStartTime(LocalTime.of(10, 0));
+            talk30.setEndTime(LocalTime.of(11, 0));
+            talk30.setTrack(1L);
+
+            Talk talk31 = new Talk();
+            talk31.setLanguage("ru");
+            talk31.setTalkDay(1L);
+            talk31.setStartTime(LocalTime.of(10, 0));
+            talk31.setEndTime(LocalTime.of(11, 0));
+            talk31.setTrack(1L);
+
+            Talk talk32 = new Talk();
+            talk32.setLanguage("ru");
+            talk32.setTalkDay(1L);
+            talk32.setStartTime(LocalTime.of(10, 0));
+            talk32.setEndTime(LocalTime.of(11, 0));
+            talk32.setTrack(1L);
+
+            Talk talk33 = new Talk();
+            talk33.setLanguage("ru");
+            talk33.setTalkDay(1L);
+            talk33.setStartTime(LocalTime.of(10, 0));
+            talk33.setEndTime(LocalTime.of(11, 0));
+            talk33.setTrack(1L);
+
+            event2.setTalks(List.of(talk0, talk1, talk2, talk3, talk4, talk5, talk6, talk7, talk8, talk9, talk10));
+            event3.setTalks(List.of(talk11, talk12, talk13, talk14, talk15, talk16, talk17, talk18, talk19, talk20));
+            event4.setTalks(List.of(talk21, talk22, talk23, talk24, talk25, talk26, talk27, talk28, talk29, talk30));
+            event5.setTalks(List.of(talk31));
+            event6.setTalks(List.of(talk1, talk31));
+            event7.setTalks(List.of(talk2, talk31, talk32, talk33));
 
             mockedStatic.when(YamlUtils::readSourceInformation)
                     .thenReturn(new SourceInformation(

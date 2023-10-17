@@ -36,6 +36,28 @@ class TopicControllerTest {
     private LocaleService localeService;
 
     @Test
+    void getTopics() throws Exception {
+        MockHttpSession httpSession = new MockHttpSession();
+
+        Topic topic0 = new Topic();
+        topic0.setId(0);
+
+        Topic topic1 = new Topic();
+        topic1.setId(1);
+
+        given(topicService.getTopics()).willReturn(List.of(topic0, topic1));
+        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
+
+        mvc.perform(get("/api/topic/topics")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .session(httpSession))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(2)));
+        Mockito.verify(topicService, VerificationModeFactory.times(1)).getTopics();
+        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
+    }
+
+    @Test
     void getFilterTopics() throws Exception {
         MockHttpSession httpSession = new MockHttpSession();
 
