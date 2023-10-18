@@ -101,20 +101,32 @@ class TalkServiceImplTest {
         speaker1.setId(1);
         speaker1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Speaker1")));
 
+        Topic topic0 = new Topic();
+        topic0.setId(0);
+
+        Topic topic1 = new Topic();
+        topic1.setId(1);
+
         talk0 = new Talk();
         talk0.setId(0);
         talk0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
         talk0.setSpeakers(List.of(speaker0));
+        talk0.setResultTopic(topic0);
+        talk0.setLanguage("en");
 
         talk1 = new Talk();
         talk1.setId(1);
         talk1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
         talk1.setSpeakers(List.of(speaker1));
+        talk1.setResultTopic(topic1);
+        talk1.setLanguage("ru");
 
         talk2 = new Talk();
         talk2.setId(2);
         talk2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
         talk2.setSpeakers(List.of(speaker0, speaker1));
+        talk2.setResultTopic(topic1);
+        talk2.setLanguage("ru");
 
         event0 = new Event();
         event0.setId(0);
@@ -161,6 +173,10 @@ class TalkServiceImplTest {
                     arguments(null, null, null, "0", null, null, List.of(talk0, talk2)),
                     arguments(null, null, null, "1", null, null, List.of(talk1, talk2)),
                     arguments(null, null, null, "7", null, null, Collections.emptyList()),
+                    arguments(null, null, null, null, 0L, null, List.of(talk0)),
+                    arguments(null, null, null, null, 1L, null, List.of(talk1, talk2)),
+                    arguments(null, null, null, null, null, "en", List.of(talk0)),
+                    arguments(null, null, null, null, null, "ru", List.of(talk1, talk2)),
                     arguments(null, null, "2", "0", null, null, List.of(talk2)),
                     arguments(null, null, "0", "0", null, null, List.of(talk0)),
                     arguments(null, null, "1", "0", null, null, Collections.emptyList()),
@@ -174,7 +190,9 @@ class TalkServiceImplTest {
                     arguments(0L, 0L, null, null, null, null, List.of(talk0)),
                     arguments(0L, 0L, null, "0", null, null, List.of(talk0)),
                     arguments(0L, 0L, "0", null, null, null, List.of(talk0)),
-                    arguments(0L, 0L, "0", "0", null, null, List.of(talk0))
+                    arguments(0L, 0L, "0", "0", null, null, List.of(talk0)),
+                    arguments(0L, 0L, "0", "0", 0L, null, List.of(talk0)),
+                    arguments(0L, 0L, "0", "0", 0L, "en", List.of(talk0))
             );
         }
 

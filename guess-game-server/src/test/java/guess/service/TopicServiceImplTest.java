@@ -8,6 +8,7 @@ import guess.domain.source.Organizer;
 import guess.domain.source.Topic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -25,6 +26,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -54,6 +56,15 @@ class TopicServiceImplTest {
 
     @Autowired
     private TopicService topicService;
+
+    @Test
+    void getTopics() {
+        Mockito.when(topicDao.getTopics()).thenReturn(Collections.emptyList());
+
+        assertDoesNotThrow(() -> topicService.getTopics());
+        Mockito.verify(topicDao, VerificationModeFactory.times(1)).getTopics();
+        Mockito.verifyNoMoreInteractions(topicDao);
+    }
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
