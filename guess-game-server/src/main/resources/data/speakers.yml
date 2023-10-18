@@ -9928,7 +9928,8 @@ speakers:
             \ в крупных компаниях (Яндекс, Mail.ru) в роли ведущего разработчика.\nИнтересуется статическим анализом кода\
             \ и дизайном."
     twitter: zapolnoch
-    habr: ngOo
+    gitHub: zapolnoch
+    habr: zapolnoch
   - id: 672
     photoFileName: 0672.jpg
     name:
@@ -18624,6 +18625,7 @@ speakers:
     companyIds: [729]
     bio:
       - {language: en, text: "Иван в Спортмастере с 2017 года и прошел пусть от разработчика до руководителя направления."}
+    gitHub: ivanglushnev
     habr: ivanglushnev
   - id: 1306
     photoFileName: 1306.jpg
@@ -25882,6 +25884,7 @@ speakers:
             \ для скачивания видео с YouTube. Сделал больше 20 расширений. Автор самой популярной библиотеки для работы с\
             \ Telegram API — @mtproto/core."}
     gitHub: alik0211
+    habr: alik0211
   - id: 1803
     photoFileName: 1803.jpg
     photoUpdatedAt: 2021-09-17T16:03:03.155Z[UTC]
@@ -28131,6 +28134,7 @@ speakers:
             ногомиллионных live-трансляций &laquo;без разрывов&raquo; и успешного exit'а. Интересуется WebRTC, WebAssembly,\
             \ адаптивным стримингом и задачами в области оптимизации доставки видео на клиентской стороне.</p>"}
     gitHub: ruslandinov
+    habr: ruslandinov
   - id: 1959
     photoFileName: 1959.jpg
     photoUpdatedAt: 2021-11-02T14:37:01.747Z[UTC]
@@ -33224,6 +33228,7 @@ speakers:
             кендом банковского софта в разных компаниях. Контрибьютор в open source: Apache Ignite, Artipie. Последнее вре\
             мя занимается развитием OSS Artipie.</p>"}
     gitHub: dgarus
+    habr: dgarus
   - id: 2306
     photoFileName: 2306.jpg
     photoUpdatedAt: "2022-09-21T11:01:40Z"
@@ -37694,6 +37699,7 @@ speakers:
             \ &laquo;Кронштадт Технологии&raquo;, &laquo;ИнфоТеКС&raquo;, &laquo;АДМ СИСТЕМЫ&raquo;. Помогал с развитием б\
             иблиотеки libcds. Последний год работает в бэкенде Яндекс Лавки.</p>"}
     gitHub: mgalimullin
+    habr: mgalimullin
   - id: 2626
     photoFileName: 2626.jpg
     photoUpdatedAt: "2023-03-27T10:36:50Z"
@@ -40233,6 +40239,7 @@ speakers:
             ия начинается с выстраивания процессов внутри компании и развития инженерной культуры.&nbsp;</p>"}
     twitter: gainanovrus
     gitHub: GRomR1
+    habr: GRomR1
   - id: 2792
     photoFileName: 2792.jpg
     photoUpdatedAt: "2023-06-26T16:54:43Z"
