@@ -4722,6 +4722,7 @@ speakers:
             бора экспертных оценок, развитие сервисов для асессоров и краудсорсинговой платформы Яндекс.Толока. Аспирант м\
             атематико-механического факультета СПбГУ."}
     twitter: ortemij
+    gitHub: ortemij
     habr: ortemij
   - id: 320
     photoFileName: 0320.jpg
@@ -6475,6 +6476,7 @@ speakers:
             о C#."}
     twitter: egor_grishechko
     gitHub: egorikas
+    habr: Egorikas
   - id: 434
     photoFileName: 0434.jpg
     name:
@@ -10294,6 +10296,8 @@ speakers:
       - {language: ru, text: "Закончил мат-мех УрГУ, к.ф.-м.н.. Работал в Банке России, Яндексе, TU Delft, Realm, JetBrains.\
             \ Специализируется на синхронизации данных. Развивает RON — Replicated Object Notation."}
     twitter: gritzko
+    gitHub: gritzko
+    habr: gritzko
   - id: 698
     photoFileName: 0698.jpg
     photoUpdatedAt: "2023-03-27T20:24:11Z"
@@ -11069,6 +11073,7 @@ speakers:
             сквой, Иннополисом и Симферополем.</p>\n<p>В Яндексе уже более 12 лет. За это время успел приложить руку к сам\
             ым разным проектам. До Яндекса руководил небольшой дизайн-студией.</p>"
     twitter: tadatuta
+    gitHub: tadatuta
     habr: tadatuta
   - id: 750
     photoFileName: 0750.jpg
@@ -11940,6 +11945,7 @@ speakers:
             зывал людям о финтехе. Сейчас работает в Tinkoff.ru на проекте Тинькофф Бизнес. Последние пару лет занимается\
             \ мобильной инфраструктурой(MobileDevOps) и автоматизацией"}
     twitter: JACKS0N23
+    gitHub: Jacks0N23
     habr: Jacks0n23
   - id: 813
     photoFileName: 0813.jpg
@@ -16853,6 +16859,7 @@ speakers:
         text: "Последние несколько лет работает в Яндекс.Вертикали.\r\nУспел поработать над такими проектами, как «Недвижи\
             мость» и «Auto.ru».\r\nЗа плечами пара лет в аутсорс-компании e-Legion."
     twitter: fanruten
+    gitHub: fanruten
     habr: Fanruten
   - id: 1173
     photoFileName: 1173.jpg
@@ -22868,6 +22875,7 @@ speakers:
             сновном, поддержкой разных языков и улучшением производительности. Гитхаб — donnerpeter."}
     twitter: donnerpeter
     gitHub: donnerpeter
+    habr: donnerpeter
   - id: 1601
     photoFileName: 1601.jpg
     photoUpdatedAt: 2021-03-17T11:18:29.429Z[UTC]
@@ -24007,6 +24015,7 @@ speakers:
             \ 8 лет кодирует за деньги. Нравится запускать нейросети на телефоне."
     twitter: gordinmitya
     gitHub: gordinmitya
+    habr: gordinmitya
   - id: 1680
     photoFileName: 1680.jpg
     photoUpdatedAt: "2023-08-21T16:16:26Z"
@@ -26357,6 +26366,7 @@ speakers:
             \ возглавил продукт «хранилище для мониторинга» в компании «Флант». Пожизненно состоит в кружках «Хочу все зна\
             ть» и «Всегда готов поделиться тем, что уже узнал»."}
     twitter: magvai69
+    habr: Magvai69
   - id: 1832
     photoFileName: 1832.jpg
     photoUpdatedAt: "2023-07-14T14:53:43Z"
@@ -27939,6 +27949,7 @@ speakers:
             уте «Стрелка», а затем — ведущим веб-инженером в Revolut над эквайринг-продуктом и над созданием дизайн-систем\
             ы."
     gitHub: exah
+    habr: exah
   - id: 1946
     photoFileName: 1946.jpg
     photoUpdatedAt: 2021-10-31T15:14:00.446Z[UTC]
@@ -27970,6 +27981,7 @@ speakers:
       - {language: ru, text: "CTO http://lucky-group.com, ведущий подкаста «Цинковый прод»."}
     twitter: hack3p
     gitHub: hack3p
+    habr: hack3p
   - id: 1948
     photoFileName: 1948.jpg
     photoUpdatedAt: 2021-10-31T15:19:17.463Z[UTC]
@@ -28251,6 +28263,7 @@ speakers:
       - {language: ru, text: "Инженер с широким кругозором и богатым опытом приведения инфраструктуры в порядок. Преподава\
             тель во внутренней DevOps-школе Deutsche Telekom IT Solutions. Разработчик официального Ansible-модуля vmware_content_deploy_ovf_template."}
     gitHub: ultral
+    habr: ultral
   - id: 1967
     photoFileName: 1967.jpg
     photoUpdatedAt: 2021-11-04T09:25:24.774Z[UTC]
@@ -35227,6 +35240,7 @@ speakers:
       - {language: ru, text: "<p>Пишет Android-приложения, библиотеки и инструменты.</p>"}
     twitter: miha_x64
     gitHub: Miha-x64
+    habr: Miha_x64
   - id: 2450
     photoFileName: 2450.jpg
     photoUpdatedAt: 2022-09-14T16:04:16Z[UTC]
@@ -37089,6 +37103,7 @@ speakers:
             ких лиц для осуществления внешнеэкономической деятельности. Работал в Центральном Банке РФ. Участвовал в проек\
             те Google Healthcare.</p>"}
     gitHub: arvgord
+    habr: arvgord
   - id: 2585
     photoFileName: 2585.jpg
     photoUpdatedAt: 2023-03-28T14:05:12Z[UTC]
