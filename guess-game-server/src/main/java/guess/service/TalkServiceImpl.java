@@ -34,32 +34,43 @@ public class TalkServiceImpl implements TalkService {
         return talkDao.getTalkById(id);
     }
 
+    Stream<Talk> getTalkStream(Long eventTypeId, Long eventId) {
+        Stream<Talk> talkStream;
+
+        if (eventTypeId != null) {
+            if (eventId != null) {
+                talkStream = eventDao.getEventById(eventId).getTalks().stream();
+            } else {
+                talkStream = eventTypeDao.getEventTypeById(eventTypeId).getEvents().stream()
+                        .flatMap(e -> e.getTalks().stream());
+            }
+        } else {
+            talkStream = talkDao.getTalks().stream();
+        }
+
+        return talkStream;
+    }
+
     @Override
-    public List<Talk> getTalks(Long eventTypeId, Long eventId, String talkName, String speakerName) {
+    public List<Talk> getTalks(Long eventTypeId, Long eventId, String talkName, String speakerName, Long topicId,
+                               String talkLanguage) {
         String trimmedLowerCasedTalkName = SearchUtils.trimAndLowerCase(talkName);
         String trimmedLowerCasedSpeakerName = SearchUtils.trimAndLowerCase(speakerName);
         boolean isTalkNameSet = SearchUtils.isStringSet(trimmedLowerCasedTalkName);
         boolean isSpeakerNameSet = SearchUtils.isStringSet(trimmedLowerCasedSpeakerName);
 
-        if ((eventTypeId == null) && (eventId == null) && !isTalkNameSet && !isSpeakerNameSet) {
+        if ((eventTypeId == null) && (eventId == null) && !isTalkNameSet && !isSpeakerNameSet &&
+                (topicId == null) && (talkLanguage == null)) {
             return Collections.emptyList();
         } else {
-            Stream<Talk> talkStream;
-            if (eventTypeId != null) {
-                if (eventId != null) {
-                    talkStream = eventDao.getEventById(eventId).getTalks().stream();
-                } else {
-                    talkStream = eventTypeDao.getEventTypeById(eventTypeId).getEvents().stream()
-                            .flatMap(e -> e.getTalks().stream());
-                }
-            } else {
-                talkStream = talkDao.getTalks().stream();
-            }
+            Stream<Talk> talkStream = getTalkStream(eventTypeId, eventId);
 
             return talkStream
                     .filter(t -> ((!isTalkNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedTalkName, t.getName())) &&
                             (!isSpeakerNameSet || t.getSpeakers().stream()
-                                    .anyMatch(s -> SearchUtils.isSubstringFound(trimmedLowerCasedSpeakerName, s.getName())))))
+                                    .anyMatch(s -> SearchUtils.isSubstringFound(trimmedLowerCasedSpeakerName, s.getName()))) &&
+                            ((topicId == null) || topicId.equals(t.getResultTopic().getId())) &&
+                            ((talkLanguage == null) || talkLanguage.equals(t.getLanguage()))))
                     .toList();
         }
     }

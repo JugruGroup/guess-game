@@ -38,8 +38,10 @@ public class TalkController {
                                             @RequestParam(required = false) Long eventId,
                                             @RequestParam(required = false) String talkName,
                                             @RequestParam(required = false) String speakerName,
+                                            @RequestParam(required = false) Long topicId,
+                                            @RequestParam(required = false) String talkLanguage,
                                             HttpSession httpSession) {
-        List<Talk> talks = talkService.getTalks(eventTypeId, eventId, talkName, speakerName);
+        List<Talk> talks = talkService.getTalks(eventTypeId, eventId, talkName, speakerName, topicId, talkLanguage);
         var language = localeService.getLanguage(httpSession);
         List<TalkSuperBriefDto> talkSuperBriefDtoList = TalkSuperBriefDto.convertToSuperBriefDto(talks, eventService::getEventByTalk,
                 eventTypeService::getEventTypeByEvent, language);

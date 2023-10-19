@@ -134,6 +134,9 @@ public class YamlUtils {
         linkSpeakersToCompanies(companyMap, speakers);
         linkSpeakersToTalks(speakerMap, talks);
 
+        // Fill result topics of events
+        fillEventResultTopics(topics, eventTypes);
+
         // Set event identifiers
         setEventIds(events);
 
@@ -325,6 +328,31 @@ public class YamlUtils {
                 Objects.requireNonNull(speaker,
                         () -> String.format("Speaker id %d not found for talk %s", speakerId, talk));
                 talk.getSpeakers().add(speaker);
+            }
+        }
+    }
+
+    /**
+     * Fills result topic of talk.
+     *
+     * @param topics     topics
+     * @param eventTypes event types
+     */
+    private static void fillEventResultTopics(List<Topic> topics, List<EventType> eventTypes) {
+        Topic defaultTopic = topics.stream()
+                .filter(Topic::isDefaultTopic)
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException("Default topic not found"));
+
+        for (EventType eventType : eventTypes) {
+            Topic eventTypeTopic = (eventType.getTopic() != null) ? eventType.getTopic() : defaultTopic;
+
+            for (Event event : eventType.getEvents()) {
+                for (Talk talk : event.getTalks()) {
+                    Topic resultTalkTopic = (talk.getTopic() != null) ? talk.getTopic() : eventTypeTopic;
+
+                    talk.setResultTopic(resultTalkTopic);
+                }
             }
         }
     }

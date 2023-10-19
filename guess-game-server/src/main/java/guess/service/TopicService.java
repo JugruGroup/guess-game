@@ -8,5 +8,7 @@ import java.util.List;
  * Topic service.
  */
 public interface TopicService {
+    List<Topic> getTopics();
+
     List<Topic> getTopics(boolean isConferences, boolean isMeetups, Long organizerId, Boolean defaultTopic);
 }

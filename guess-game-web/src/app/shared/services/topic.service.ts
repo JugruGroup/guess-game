@@ -15,6 +15,16 @@ export class TopicService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
+  getTopics() {
+    return this.http.get<Topic[]>(`${this.baseUrl}/topics`)
+      .pipe(
+        catchError((response: Response) => {
+          this.messageService.reportMessage(response);
+          throw response;
+        })
+      );
+  }
+
   getFilterTopics(isConferences: boolean, isMeetups: boolean, organizer: Organizer): Observable<Topic[]> {
     let params = new HttpParams()
       .set('conferences', isConferences.toString())

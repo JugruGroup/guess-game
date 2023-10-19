@@ -29,6 +29,17 @@ public class TopicController {
         this.localeService = localeService;
     }
 
+    @GetMapping("/topics")
+    List<TopicDto> getTopics(HttpSession httpSession) {
+        var language = localeService.getLanguage(httpSession);
+        List<Topic> topics = topicService.getTopics();
+        List<Topic> sortedTopics = topics.stream()
+                .sorted(Comparator.comparing(Topic::getOrderNumber))
+                .toList();
+
+        return TopicDto.convertToDto(sortedTopics, language);
+    }
+
     @GetMapping("/filter-topics")
     List<TopicDto> getFilterTopics(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                    @RequestParam(required = false) Long organizerId, HttpSession httpSession) {

@@ -38,12 +38,14 @@
       "speakerLabel": "Спикер:",
       "companyLabel": "Компания:",
       "topicLabel": "Тема:",
+      "languageLabel": "Язык:",
       "organizerPlaceholder": "Все",
       "eventTypePlaceholder": "Все",
       "eventPlaceholder": "Все",
       "speakersPlaceholder": "Все",
       "companiesPlaceholder": "Все",
       "topicPlaceholder": "Все",
+      "languagePlaceholder": "Все",
       "emptyMessage": "Нет элементов"
     },
     "table": {

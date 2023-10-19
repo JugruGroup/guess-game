@@ -2696,6 +2696,7 @@ speakers:
             ний даже в самых нестандартных случаях. Лектор (МФТИ), соавтор пособия и популяризатор защиты информации и кри\
             птографии."}
     gitHub: vlsergey
+    habr: vlsergey
   - id: 162
     photoFileName: 0162.jpg
     name:
@@ -3197,6 +3198,7 @@ speakers:
             \ и сообществами, как внутренними, так и внешними. Специализируется на Open Source и Cloud Native, с фокусом н\
             а разработку.</span></p>"
     twitter: ahriman_ru
+    gitHub: ahriman-ru
     habr: ahriman
   - id: 203
     photoFileName: 0203.jpg
@@ -3443,6 +3445,7 @@ speakers:
             \ Java-приложений появлялось много вопросов к JVM и ее внутренностям, поэтому Владимир погрузился в мир разраб\
             отки самих JVM в компании Azul Systems, где стал первым Distinguished Engineer в истории компании.</p>"}
     gitHub: vladimir-voskresensky
+    habr: vladimir_vv
   - id: 225
     photoFileName: 0225.jpg
     name:
@@ -4293,6 +4296,7 @@ speakers:
             , видео, upload и подобные смежные области. Активный участник сообщества GolangRU."}
     twitter: AterCattus
     gitHub: atercattus
+    habr: AterCattus
   - id: 289
     photoFileName: 0289.jpg
     name:
@@ -4718,6 +4722,7 @@ speakers:
             бора экспертных оценок, развитие сервисов для асессоров и краудсорсинговой платформы Яндекс.Толока. Аспирант м\
             атематико-механического факультета СПбГУ."}
     twitter: ortemij
+    gitHub: ortemij
     habr: ortemij
   - id: 320
     photoFileName: 0320.jpg
@@ -4786,6 +4791,7 @@ speakers:
             ьтет Санкт-Петербургского Государственного Университета. Сейчас учится там же в аспирантуре. Занимается вопрос\
             ами, связанными с применением методов глубокого обучения для решения задач машинного зрения."}
     twitter: andrew_bo_29
+    gitHub: andrewbo29
     habr: andrewbo29
   - id: 324
     photoFileName: 0324.jpg
@@ -5231,6 +5237,8 @@ speakers:
             о на Rust. Увлекается разработкой игр, компьютерной графикой, экзотическими языками программирования. Модерато\
             р и активный участник русскоязычного Rust-сообщества, организатор регулярных Rust-митапов в Санкт-Петербурге."}
     twitter: vitvakatu
+    gitHub: vitvakatu
+    habr: vitvakatu
   - id: 353
     photoFileName: 0353.jpg
     name:
@@ -5376,6 +5384,7 @@ speakers:
             гий. Является экспертом по техническому преподаванию, инициатором и соавтором первого в Израиле курса DevOps-с\
             ертификации. Антон участвует в международных конференциях и известен как крутой докладчик."}
     twitter: antweiss
+    gitHub: antweiss
   - id: 363
     photoFileName: 0363.jpg
     photoUpdatedAt: 2020-01-17T08:05:28.490Z[UTC]
@@ -5431,6 +5440,7 @@ speakers:
       - {language: en, text: "Head of Yandex.Cloud storage service team."}
       - {language: ru, text: "Руководитель службы сервисов хранения данных Яндекс.Облака."}
     twitter: man_brain
+    gitHub: man-brain
     habr: dev1ant
   - id: 367
     photoFileName: 0367.jpg
@@ -5470,6 +5480,7 @@ speakers:
             \ [AWS](https://github.com/terraform-aws-modules), которые были скачаны более миллиона раз. Он также является\
             \ организатором встреч пользовательских групп по темам AWS, DevOps, HashiCorp в Норвегии."}
     twitter: antonbabenko
+    gitHub: antonbabenko
   - id: 369
     photoFileName: 0369.jpg
     photoUpdatedAt: 2019-08-25T12:12:54.587Z[UTC]
@@ -5637,6 +5648,7 @@ speakers:
             в.</p>"}
     twitter: niquola
     gitHub: niquola
+    habr: nicola
   - id: 380
     photoFileName: 0380.jpg
     name:
@@ -6431,6 +6443,7 @@ speakers:
             ал в команде Mono."}
     twitter: EgorBo
     gitHub: EgorBo
+    habr: Nagg
   - id: 432
     photoFileName: 0432.jpg
     photoUpdatedAt: 2021-08-25T13:29:45.078Z[UTC]
@@ -6463,6 +6476,7 @@ speakers:
             о C#."}
     twitter: egor_grishechko
     gitHub: egorikas
+    habr: Egorikas
   - id: 434
     photoFileName: 0434.jpg
     name:
@@ -7327,6 +7341,8 @@ speakers:
             \ Certified Technology Specialist. В свободное время ломает голову на квестах, а также занимается сноубординго\
             м и MMA.\nКандидат технических наук."
     twitter: dbeylkhanov
+    gitHub: dbeylkhanov
+    habr: dbeylkhanov
   - id: 489
     photoFileName: 0489.jpg
     photoUpdatedAt: 2022-05-19T12:06:20Z[UTC]
@@ -7637,6 +7653,7 @@ speakers:
         text: "CEO KeenTools. Разработчик Kotlin for Data Science в JetBrains. Бывший PMM for Kotlin и разработчик DotMemory\
             \ там же.\r\nЛюбит ветер, паруса и фрисби."
     twitter: volebamor
+    gitHub: belovrv
     habr: belovrv
   - id: 512
     photoFileName: 0512.jpg
@@ -8081,6 +8098,7 @@ speakers:
             \ Fintech School. Последние три года занималась iOS-разработкой. Разрабатывала проекты в крупных компаниях в т\
             аких областях, как финтех, медицина и классифайд. Также в роли ментора помогает начинающим разработчикам и тес\
             тировщикам получать первую работу в IT и создавать свои pet-проекты."}
+    gitHub: Neifmetus
     habr: Neifmetus
   - id: 549
     photoFileName: 0549.jpg
@@ -8099,6 +8117,7 @@ speakers:
             ю enterprise-систем и сервисов. В свободное время автоматизирует утилиты для bug bounty и ищет новые способы н\
             ахождения уязвимостей. Находил уязвимости в таких компаниях, как Auth0, Ford, BMW, IKEA и др."}
     twitter: averonesis
+    gitHub: averonesis
   - id: 550
     photoFileName: 0550.jpg
     photoUpdatedAt: 2018-12-04T13:12:20.552Z[UTC]
@@ -8633,6 +8652,7 @@ speakers:
             я активным участником сообщества Web Not Bombs."}
     twitter: vvscode
     gitHub: vvscode
+    habr: vvscode
   - id: 587
     photoFileName: 0587.jpg
     photoUpdatedAt: 2021-03-16T11:53:30.759Z[UTC]
@@ -8905,6 +8925,7 @@ speakers:
             \ полностью не был доволен работой AQA и поэтому в 2015 ушёл в тестирование, чтобы доказать, что всё можно дел\
             ать намного лучше. Доказал и ушёл в бизнес-анализ."}
     twitter: sbashkirtsev
+    gitHub: ctapobep
   - id: 606
     photoFileName: 0606.jpg
     name:
@@ -8941,6 +8962,7 @@ speakers:
             атизацию во благо качества.</p><p>Сейчас руководит отделом тестирования в Ozon Fintech, выступает на конференц\
             иях, митапах и подкастах, а также состоит в программном комитете Heisenbug."}
     gitHub: ibalagurov
+    habr: ibalagurov
   - id: 608
     photoFileName: 0608.jpg
     name:
@@ -9071,6 +9093,8 @@ speakers:
       - {language: ru, text: "Работает в IT-проектах в Германии более 20 лет. Консультирует по вопросам тестирования и авт\
             оматизации. Младший разработчик фреймворка Selenide. Основатель и один из ведущих подкаста Radio QA."}
     twitter: i_vino
+    gitHub: vinogradoff
+    habr: i_vino
   - id: 617
     photoFileName: 0617.jpg
     photoUpdatedAt: 2022-03-31T19:04:29Z[UTC]
@@ -9334,6 +9358,7 @@ speakers:
             \ разрабатывать приложения в финансовой области. Дмитрий консультирует в областях системной архитектуры, Agile,\
             \ тестовой автоматизации и DevOps."}
     twitter: buzdin
+    gitHub: buzdin
   - id: 634
     photoFileName: 0634.jpg
     name:
@@ -9479,6 +9504,7 @@ speakers:
             \ тестированием, формальной верификацией и спецификацией ПО. Любит спорт, поэтому в разное время занимался лыж\
             ными гонками, бегом на длинные дистанции и боксом.</p>"
     twitter: estet
+    habr: estet
   - id: 644
     photoFileName: 0644.jpg
     name:
@@ -9495,6 +9521,8 @@ speakers:
             \ Appium. Не менеджер, не консультант и не тренер. Любит Python, пишет на Ruby. А ещё у него есть репозиторий\
             \ на GitHub с более чем 17 тысячами звёздочек."}
     twitter: abayandin
+    gitHub: bayandin
+    habr: bayandin
   - id: 645
     photoFileName: 0645.jpg
     name:
@@ -9902,7 +9930,8 @@ speakers:
             \ в крупных компаниях (Яндекс, Mail.ru) в роли ведущего разработчика.\nИнтересуется статическим анализом кода\
             \ и дизайном."
     twitter: zapolnoch
-    habr: ngOo
+    gitHub: zapolnoch
+    habr: zapolnoch
   - id: 672
     photoFileName: 0672.jpg
     name:
@@ -10267,6 +10296,8 @@ speakers:
       - {language: ru, text: "Закончил мат-мех УрГУ, к.ф.-м.н.. Работал в Банке России, Яндексе, TU Delft, Realm, JetBrains.\
             \ Специализируется на синхронизации данных. Развивает RON — Replicated Object Notation."}
     twitter: gritzko
+    gitHub: gritzko
+    habr: gritzko
   - id: 698
     photoFileName: 0698.jpg
     photoUpdatedAt: "2023-03-27T20:24:11Z"
@@ -10282,6 +10313,8 @@ speakers:
             да еще не было ни JavaScript, ни &laquo;снежинок&raquo;, ни layers в Netscape Navigator. В последнее время инт\
             ересуется топологией трансформации данных. Иногда воображает себя музыкантом. Мечтатель.</p>"}
     twitter: went_out
+    gitHub: wentout
+    habr: wentout
   - id: 699
     photoFileName: 0699.jpg
     photoUpdatedAt: 2022-11-02T11:05:33Z[UTC]
@@ -10839,6 +10872,8 @@ speakers:
       - {language: ru, text: "Фулстек на JS/.NET, фанат TypeScript и ReasonML. Пытается в теорию типов и компиляторов, отб\
             ирает доклады в ПК HolyJS."}
     twitter: saitonakamura
+    gitHub: saitonakamura
+    habr: SaitoNakamura
   - id: 736
     photoFileName: 0736.jpg
     photoUpdatedAt: 2022-11-07T11:13:22Z[UTC]
@@ -10972,6 +11007,8 @@ speakers:
       - {language: ru, text: "Работает в компании JetBrains в команде Kotlin, возглавляет направление Kotlin JS. Ранее зан\
             имался инкрементальной компиляцией для Kotlin на JVM."}
     twitter: bashorov
+    gitHub: bashor
+    habr: bashor
   - id: 746
     photoFileName: 0746.jpg
     name:
@@ -11036,6 +11073,7 @@ speakers:
             сквой, Иннополисом и Симферополем.</p>\n<p>В Яндексе уже более 12 лет. За это время успел приложить руку к сам\
             ым разным проектам. До Яндекса руководил небольшой дизайн-студией.</p>"
     twitter: tadatuta
+    gitHub: tadatuta
     habr: tadatuta
   - id: 750
     photoFileName: 0750.jpg
@@ -11075,6 +11113,8 @@ speakers:
       - {language: ru, text: "Преподаватель. JS-разработчик с опытом более 8 лет. Работал в Студии Лебедева, Островке, JetBrains.\
             \ Ведёт курсы HTML Academy по программированию на JavaScript."}
     twitter: iamo0
+    gitHub: o0
+    habr: iamo0
   - id: 752
     photoFileName: 0752.jpg
     name:
@@ -11591,6 +11631,8 @@ speakers:
             ительностью, чтобы Buck не отставал от Xcode в worst case scenario. В Авито с октября 2017 года, занимается build\
             \ & test infra."}
     twitter: Beefon
+    gitHub: beefon
+    habr: beefon
   - id: 791
     photoFileName: 0791.jpg
     photoUpdatedAt: 2021-10-11T13:12:44.884Z[UTC]
@@ -11856,6 +11898,7 @@ speakers:
             . Спикер многих конференций, в том числе DUMP, Droidcon, AppsConf, Mobius.\n\nОдин из ведущих Android Dev Podcast.\
             \ Соавтор и технический евангелист MVP-фреймворка Moxy."
     twitter: xanderblinov
+    gitHub: xanderblinov
     habr: Xanderblinov
   - id: 810
     photoFileName: 0810.jpg
@@ -11902,6 +11945,7 @@ speakers:
             зывал людям о финтехе. Сейчас работает в Tinkoff.ru на проекте Тинькофф Бизнес. Последние пару лет занимается\
             \ мобильной инфраструктурой(MobileDevOps) и автоматизацией"}
     twitter: JACKS0N23
+    gitHub: Jacks0N23
     habr: Jacks0n23
   - id: 813
     photoFileName: 0813.jpg
@@ -12123,6 +12167,7 @@ speakers:
             ность с работой в различных стартапах. Область научных интересов: обработка и анализ изображений, а также разр\
             аботка видеокодеков.\n\nС 2013 года перешел в Яндекс на позицию iOS-разработчика в мобильный Яндекс.Браузер. С\
             ейчас занимает должность руководитель отдела разработки мобильного портального приложения и браузера."
+    gitHub: Bryunyon
     habr: bryunyon
   - id: 827
     photoFileName: 0827.jpg
@@ -12331,6 +12376,7 @@ speakers:
             \ мобильной разработке, также имеет опыт в облачных технологиях и создании архитектуры комплексных систем. Вед\
             ет блог для начинающих [Software Architects](https://medium.com/@nvashanin)."}
     twitter: nikolay_ashanin
+    habr: niklnd
   - id: 842
     photoFileName: 0842.jpg
     name:
@@ -12481,6 +12527,7 @@ speakers:
             \ можно сделать еще лучше и эффективнее. Уровень конференций и open source-проектов для Ивана — основной показ\
             атель зрелости комьюнити по разработке."}
     gitHub: vani2
+    habr: vani2
   - id: 852
     photoFileName: 0852.jpg
     photoUpdatedAt: 2020-11-27T14:13:43.635Z[UTC]
@@ -12597,6 +12644,7 @@ speakers:
             россплатформенного игрового движка Fiber2D, в настоящее время Metal/ARKit-инженер."}
     twitter: s1ddok
     gitHub: s1ddok
+    habr: s1dd0k
   - id: 860
     photoFileName: 0860.jpg
     name:
@@ -12667,6 +12715,7 @@ speakers:
             ля на мероприятиях самых разных сообществ разработчиков в Риге. Также он является организатором Google Developers\
             \ Group Riga, Java User Group Latvia и ежегодной конференции Riga Dev Day."}
     twitter: AlexeyBuzdin
+    gitHub: AlexeyBuzdin
   - id: 865
     photoFileName: 0865.jpg
     name:
@@ -12988,6 +13037,8 @@ speakers:
             осле перешел в команду Yota продолжать разрабатывать продукт в штате. Люблю MVVM и ReactiveCocoa, иногда пишу\
             \ в свой маленький и уютный блог, который вы сможете найти в моем твиттере!"}
     twitter: i_vasilenko
+    gitHub: vasilenkoigor
+    habr: spbvasilenko14
   - id: 886
     photoFileName: 0886.jpg
     name:
@@ -14427,6 +14478,8 @@ speakers:
             \ компании по всему миру.\n\nЕго области интересов: нейро-символьные модели машинного обучения, низкоуровневый\
             \ софт и формальные языки."
     twitter: ashvardanian
+    gitHub: ashvardanian
+    habr: AshVardanian
   - id: 999
     photoFileName: 0999.jpg
     name:
@@ -14955,6 +15008,8 @@ speakers:
             >monocss.vercel.app</a> и <a href=\"https://github.com/artalar/reatom\" target=\"_blank\" rel=\"noopener noreferrer\"\
             >менеджер состояния Reatom</a></p>"}
     twitter: artalar_dev
+    gitHub: artalar
+    habr: artalar
   - id: 1037
     photoFileName: 1037.jpg
     name:
@@ -15457,6 +15512,7 @@ speakers:
       - {language: en, text: "<p>Responsible for the speed and stability of CI/CD Android in Avito.</p>"}
       - {language: ru, text: "<p>Отвечает за скорость и стабильность CI/CD Android в Авито.</p>"}
     twitter: sboishtyan
+    gitHub: sboishtyan
     habr: willykolepniy
   - id: 1076
     photoFileName: 1076.jpg
@@ -15996,6 +16052,7 @@ speakers:
       - {language: ru, text: "12 лет в разработке. Бывший бэкендер. Работал в кровавом энтерпрайзе, ушёл в стартап. Ведущи\
             й подкаста «Фронтенд Юность». Дэн Абрамов сказал, что Александр — видный персонаж."}
     twitter: rm_baad
+    gitHub: rmbaad
   - id: 1115
     photoFileName: 1115.jpg
     name:
@@ -16178,6 +16235,7 @@ speakers:
             тывал различные математические спец. функции для библиотеки Boost. Сейчас работает в Google над управлением па\
             мятью в браузере Chrome."}
     twitter: antohabikineev
+    gitHub: AntonBikineev
   - id: 1129
     photoFileName: 1129.jpg
     photoUpdatedAt: 2022-03-31T19:06:12Z[UTC]
@@ -16632,6 +16690,7 @@ speakers:
             екс развивать Яндекс.Переводчик в качестве iOS-разработчика, сейчас занимает должность тимлида мобильной коман\
             ды Переводчика.</p>"}
     twitter: volkovre
+    gitHub: RomanVolkov
     habr: VolkovRoman
   - id: 1162
     photoFileName: 1162.jpg
@@ -16800,6 +16859,7 @@ speakers:
         text: "Последние несколько лет работает в Яндекс.Вертикали.\r\nУспел поработать над такими проектами, как «Недвижи\
             мость» и «Auto.ru».\r\nЗа плечами пара лет в аутсорс-компании e-Legion."
     twitter: fanruten
+    gitHub: fanruten
     habr: Fanruten
   - id: 1173
     photoFileName: 1173.jpg
@@ -17122,6 +17182,7 @@ speakers:
       - {language: ru, text: "Борис Бочкарев"}
     companyIds: [667]
     gitHub: BorisBochkaryov
+    habr: BorisBochkaryov
   - id: 1195
     photoFileName: 1195.jpg
     name:
@@ -17722,6 +17783,7 @@ speakers:
             туденческих (ICPC) олимпиад по программированию. Заведующий базовой кафедрой Яндекса ФКН НИУ ВШЭ. Лектор Школы\
             \ Анализа Данных Яндекса. Руководитель отдела технологий распределенных вычислений в Яндексе. Основатель, архи\
             тектор и разработчик open-source платформы YTsaurus.</p>"}
+    gitHub: maxim-babenko
     habr: maxim_babenko
   - id: 1238
     photoFileName: 1238.jpg
@@ -17773,6 +17835,7 @@ speakers:
             е технологии, быть в курсе последних новостей фронтенда. Активно использует GraphQL в процессе разработки, ста\
             рается продвигать его в массы. Сторонник статической типизации и функционального программирования."}
     twitter: oceandrama
+    gitHub: oceandrama
   - id: 1241
     photoFileName: 1241.jpg
     photoUpdatedAt: 2020-02-14T12:44:59.071Z[UTC]
@@ -17797,6 +17860,7 @@ speakers:
       - {language: ru, text: "Занимается разработкой 3D-приложений в Align Technology. Основные языки — Rust, TypeScript и\
             \ GLSL. В свободное время занимается музыкой и бегом."}
     twitter: vinneyto
+    gitHub: vinneyto
   - id: 1243
     photoFileName: 1243.jpg
     photoUpdatedAt: 2020-02-25T09:59:08.035Z[UTC]
@@ -18568,6 +18632,7 @@ speakers:
     companyIds: [729]
     bio:
       - {language: en, text: "Иван в Спортмастере с 2017 года и прошел пусть от разработчика до руководителя направления."}
+    gitHub: ivanglushnev
     habr: ivanglushnev
   - id: 1306
     photoFileName: 1306.jpg
@@ -18875,6 +18940,7 @@ speakers:
       - {language: en, text: "До перехода в Облако занимался системой управления кластером внутреннего облака Яндекса, вне\
             дрял автоматизацию процессов и DevOps-культуру. Разбирается во многих сферах — от frontend-разработки до систе\
             много программирования и администрирования больших кластеров."}
+    gitHub: monsterzz
     habr: monsterzz
   - id: 1332
     photoFileName: 1332.jpg
@@ -19545,6 +19611,8 @@ speakers:
             ях.\r\nВ данный момент он — Android Software Engineer в core-команде Revolut.\r\n\r\nВходит в программный коми\
             тет конференции Podlodka Droid Crew, увлекается гражданской авиацией."
     twitter: nonewsss
+    gitHub: NoNews
+    habr: NoNews
   - id: 1378
     photoFileName: 1378.jpg
     photoUpdatedAt: 2020-10-12T08:26:51.245Z[UTC]
@@ -19696,6 +19764,8 @@ speakers:
             анных, и является ведущим разработчиком системы резервирования и встраиваемого кроссплатформенного модуля инфо\
             рмационной безопасности. Более 15 лет использует C и C++."
     twitter: belyaev_ms
+    gitHub: belyaev-ms
+    habr: belyaev_ms
   - id: 1388
     photoFileName: 1388.jpg
     photoUpdatedAt: "2022-03-31T19:05:56Z"
@@ -20605,6 +20675,7 @@ speakers:
             нию, Zero Trust и внимание к безопасности при разработке — это правильный путь.\n\nСейчас вы можете найти ее в\
             \ Майкрософте или на сцене, где она делится практиками по обеспечению безопасности."
     twitter: texnokot
+    gitHub: texnokot
   - id: 1453
     photoFileName: 1453.jpg
     photoUpdatedAt: 2020-09-02T09:57:52.676Z[UTC]
@@ -21733,6 +21804,7 @@ speakers:
             \ тестовых данных в компании."
     twitter: Kostya05983
     gitHub: kostya05983
+    habr: kostya05983
   - id: 1530
     photoFileName: 1530.jpg
     name:
@@ -21983,6 +22055,7 @@ speakers:
       - {language: ru, text: "Senior QA Engineer с опытом автоматизации на различных языках и фреймворках. Пробовал full-stack-р\
             азработку (React.js на фронте, TypeScript/Python на бэке)."}
     twitter: wolftheburglar
+    gitHub: bormando
   - id: 1547
     photoFileName: 1547.jpg
     photoUpdatedAt: 2021-03-12T15:02:45.465Z[UTC]
@@ -22195,6 +22268,7 @@ speakers:
             ктов на конференциях и митапах.</p>"
     twitter: varivoda_ivan
     gitHub: varivoda
+    habr: varivoda_ivan
   - id: 1561
     photoFileName: 1561.jpg
     photoUpdatedAt: 2021-04-06T07:23:48.119Z[UTC]
@@ -22300,6 +22374,7 @@ speakers:
             ью и интервью."
     twitter: Wackaloon
     gitHub: Wackaloon
+    habr: Wackaloon
   - id: 1567
     photoFileName: 1567.jpg
     photoUpdatedAt: 2021-03-12T07:35:55.749Z[UTC]
@@ -22800,6 +22875,7 @@ speakers:
             сновном, поддержкой разных языков и улучшением производительности. Гитхаб — donnerpeter."}
     twitter: donnerpeter
     gitHub: donnerpeter
+    habr: donnerpeter
   - id: 1601
     photoFileName: 1601.jpg
     photoUpdatedAt: 2021-03-17T11:18:29.429Z[UTC]
@@ -23438,6 +23514,7 @@ speakers:
       - {language: ru, text: "<p>Руководитель центра мониторинга и наблюдаемости в МТС. Занимается развитием технологическ\
             ой платформы, обеспечивающей наблюдаемость экосистемы компании. Продвигает и популяризирует идеи наблюдаемости\
             \ среди продуктовых команд. Сертифицированный владелец продукта с опытом в разработке более 10 лет.</p>"}
+    gitHub: bocharovf
     habr: bocharovf
   - id: 1642
     photoFileName: 1642.jpg
@@ -23938,6 +24015,7 @@ speakers:
             \ 8 лет кодирует за деньги. Нравится запускать нейросети на телефоне."
     twitter: gordinmitya
     gitHub: gordinmitya
+    habr: gordinmitya
   - id: 1680
     photoFileName: 1680.jpg
     photoUpdatedAt: "2023-08-21T16:16:26Z"
@@ -24987,6 +25065,7 @@ speakers:
             альный архитектор облачных решений и Developer Advocate для Apache Cassandra в Datastax, всегда рад поделиться\
             \ опытом в проектировании высокопроизводительных и отказоустойчивых систем."}
     twitter: hadesarchitect
+    gitHub: HadesArchitect
   - id: 1748
     photoFileName: 1748.jpg
     photoUpdatedAt: 2021-10-06T15:29:31.031Z[UTC]
@@ -25165,6 +25244,7 @@ speakers:
             у основал компанию Valiotti Analytics, где осуществляет аналитический консалтинг для мобильных и digital-стара\
             пов. Сооснователь opensource self-service BI-платформы Mprove.\r\nАвтор блога leftjoin.ru."
     gitHub: valiotti
+    habr: valiotti
   - id: 1759
     photoFileName: 1759.jpg
     photoUpdatedAt: 2021-09-01T09:29:52.449Z[UTC]
@@ -25813,6 +25893,7 @@ speakers:
             \ для скачивания видео с YouTube. Сделал больше 20 расширений. Автор самой популярной библиотеки для работы с\
             \ Telegram API — @mtproto/core."}
     gitHub: alik0211
+    habr: alik0211
   - id: 1803
     photoFileName: 1803.jpg
     photoUpdatedAt: 2021-09-17T16:03:03.155Z[UTC]
@@ -26285,6 +26366,7 @@ speakers:
             \ возглавил продукт «хранилище для мониторинга» в компании «Флант». Пожизненно состоит в кружках «Хочу все зна\
             ть» и «Всегда готов поделиться тем, что уже узнал»."}
     twitter: magvai69
+    habr: Magvai69
   - id: 1832
     photoFileName: 1832.jpg
     photoUpdatedAt: "2023-07-14T14:53:43Z"
@@ -27867,6 +27949,7 @@ speakers:
             уте «Стрелка», а затем — ведущим веб-инженером в Revolut над эквайринг-продуктом и над созданием дизайн-систем\
             ы."
     gitHub: exah
+    habr: exah
   - id: 1946
     photoFileName: 1946.jpg
     photoUpdatedAt: 2021-10-31T15:14:00.446Z[UTC]
@@ -27898,6 +27981,7 @@ speakers:
       - {language: ru, text: "CTO http://lucky-group.com, ведущий подкаста «Цинковый прод»."}
     twitter: hack3p
     gitHub: hack3p
+    habr: hack3p
   - id: 1948
     photoFileName: 1948.jpg
     photoUpdatedAt: 2021-10-31T15:19:17.463Z[UTC]
@@ -28062,6 +28146,7 @@ speakers:
             ногомиллионных live-трансляций &laquo;без разрывов&raquo; и успешного exit'а. Интересуется WebRTC, WebAssembly,\
             \ адаптивным стримингом и задачами в области оптимизации доставки видео на клиентской стороне.</p>"}
     gitHub: ruslandinov
+    habr: ruslandinov
   - id: 1959
     photoFileName: 1959.jpg
     photoUpdatedAt: 2021-11-02T14:37:01.747Z[UTC]
@@ -28178,6 +28263,7 @@ speakers:
       - {language: ru, text: "Инженер с широким кругозором и богатым опытом приведения инфраструктуры в порядок. Преподава\
             тель во внутренней DevOps-школе Deutsche Telekom IT Solutions. Разработчик официального Ansible-модуля vmware_content_deploy_ovf_template."}
     gitHub: ultral
+    habr: ultral
   - id: 1967
     photoFileName: 1967.jpg
     photoUpdatedAt: 2021-11-04T09:25:24.774Z[UTC]
@@ -28341,6 +28427,7 @@ speakers:
             \ in the team."}
       - {language: ru, text: "Три года делает проект «Пробки», герой борьбы с техдолгом в команде."}
     gitHub: bobro-krab
+    habr: bobro-krab
   - id: 1977
     photoFileName: 1977.jpg
     photoUpdatedAt: 2022-05-30T09:41:39Z[UTC]
@@ -30714,6 +30801,7 @@ speakers:
       - {language: ru, text: "<p>Работает над компиляторами с 2010 года. В настоящий момент работает над компилятором для\
             \ RISCV в компании Syntacore.</p>"}
     twitter: Tilir
+    gitHub: tilir
   - id: 2137
     photoFileName: 2137.jpg
     photoUpdatedAt: 2022-05-18T15:51:36Z[UTC]
@@ -31535,6 +31623,7 @@ speakers:
       - {language: ru, text: "Старший инженер в команде инфраструктуры фронтенда ВКонтакте, где занимается оптимизациями.\
             \ Магистр компьютерных наук. Бывал на главной «Хабра». За плечами более 10 лет профессионального опыта."}
     twitter: belov
+    gitHub: artbelov
   - id: 2196
     photoFileName: 2196.jpg
     photoUpdatedAt: 2022-06-15T14:55:58Z[UTC]
@@ -33152,6 +33241,7 @@ speakers:
             кендом банковского софта в разных компаниях. Контрибьютор в open source: Apache Ignite, Artipie. Последнее вре\
             мя занимается развитием OSS Artipie.</p>"}
     gitHub: dgarus
+    habr: dgarus
   - id: 2306
     photoFileName: 2306.jpg
     photoUpdatedAt: "2022-09-21T11:01:40Z"
@@ -33384,6 +33474,7 @@ speakers:
             рируют к нам: Дзен, Маруся, Movika.</p>"}
     twitter: byumov
     gitHub: byumov
+    habr: byumov
   - id: 2327
     photoFileName: 2327.jpg
     photoUpdatedAt: 2022-10-04T15:13:26Z[UTC]
@@ -34200,7 +34291,7 @@ speakers:
       - {language: ru, text: "<p>DevTestOps в сфере мобильных устройств, работает в компании Stream, имеет более чем восем\
             ь лет опыта создания тестовых фреймворков и пайплайнов релиза приложений и SDK для iOS и Android.</p>"}
     twitter: testableapple
-    gitHub: alteral
+    gitHub: testableapple
   - id: 2384
     photoFileName: 2384.jpg
     photoUpdatedAt: 2023-02-20T13:11:42Z[UTC]
@@ -35149,6 +35240,7 @@ speakers:
       - {language: ru, text: "<p>Пишет Android-приложения, библиотеки и инструменты.</p>"}
     twitter: miha_x64
     gitHub: Miha-x64
+    habr: Miha_x64
   - id: 2450
     photoFileName: 2450.jpg
     photoUpdatedAt: 2022-09-14T16:04:16Z[UTC]
@@ -35517,6 +35609,7 @@ speakers:
             и, упрощающие жизнь других разработчиков.</p>"}
     twitter: newesters
     gitHub: newesters
+    habr: Newesters
   - id: 2475
     photoFileName: 2475.jpg
     photoUpdatedAt: 2022-09-08T15:36Z[UTC]
@@ -36140,6 +36233,7 @@ speakers:
             \ Telegram channel.</p>"}
       - {language: ru, text: "Автор Telegram-канала DocOps (@docops). Тимлид команды Developer Experience в Tarantool (VK\
             \ tech)."}
+    gitHub: NickVolynkin
     habr: nick_volynkin
   - id: 2516
     photoFileName: 2516.jpg
@@ -37009,6 +37103,7 @@ speakers:
             ких лиц для осуществления внешнеэкономической деятельности. Работал в Центральном Банке РФ. Участвовал в проек\
             те Google Healthcare.</p>"}
     gitHub: arvgord
+    habr: arvgord
   - id: 2585
     photoFileName: 2585.jpg
     photoUpdatedAt: 2023-03-28T14:05:12Z[UTC]
@@ -37619,6 +37714,7 @@ speakers:
             \ &laquo;Кронштадт Технологии&raquo;, &laquo;ИнфоТеКС&raquo;, &laquo;АДМ СИСТЕМЫ&raquo;. Помогал с развитием б\
             иблиотеки libcds. Последний год работает в бэкенде Яндекс Лавки.</p>"}
     gitHub: mgalimullin
+    habr: mgalimullin
   - id: 2626
     photoFileName: 2626.jpg
     photoUpdatedAt: "2023-03-27T10:36:50Z"
@@ -39853,6 +39949,8 @@ speakers:
             ии сборки и развертывания ПО&raquo; и &laquo;Инфраструктура как код&raquo; в университете ИТМО. Создатель сооб\
             щества DeusOps и &laquo;DevOps-Задачника&raquo;. Ведущий и частый гость подкастов и конференций.</p>"
     twitter: deusops
+    gitHub: d3pre5s
+    habr: DeusOps
   - id: 2771
     photoFileName: 2771.jpg
     photoUpdatedAt: "2023-07-14T12:40:19Z"
@@ -40156,6 +40254,7 @@ speakers:
             ия начинается с выстраивания процессов внутри компании и развития инженерной культуры.&nbsp;</p>"}
     twitter: gainanovrus
     gitHub: GRomR1
+    habr: GRomR1
   - id: 2792
     photoFileName: 2792.jpg
     photoUpdatedAt: "2023-06-26T16:54:43Z"

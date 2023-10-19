@@ -1,6 +1,7 @@
 package guess.service;
 
 import guess.dao.EventTypeDao;
+import guess.dao.TopicDao;
 import guess.domain.source.EventType;
 import guess.domain.source.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +14,18 @@ import java.util.List;
  */
 @Service
 public class TopicServiceImpl implements TopicService {
+    private final TopicDao topicDao;
     private final EventTypeDao eventTypeDao;
 
     @Autowired
-    public TopicServiceImpl(EventTypeDao eventTypeDao) {
+    public TopicServiceImpl(TopicDao topicDao, EventTypeDao eventTypeDao) {
+        this.topicDao = topicDao;
         this.eventTypeDao = eventTypeDao;
+    }
+
+    @Override
+    public List<Topic> getTopics() {
+        return topicDao.getTopics();
     }
 
     @Override

@@ -98,7 +98,8 @@ class TalkControllerTest {
         event0.setDays(List.of(eventDays0));
         event1.setDays(List.of(eventDays0));
 
-        given(talkService.getTalks(0L, 1L, "Talk", "Speaker")).willReturn(List.of(talk1, talk0));
+        given(talkService.getTalks(0L, 1L, "Talk", "Speaker", 2L, "EN"))
+                .willReturn(List.of(talk1, talk0));
         given(eventService.getEventByTalk(talk0)).willReturn(event0);
         given(eventService.getEventByTalk(talk1)).willReturn(event1);
         given(eventTypeService.getEventTypeByEvent(event0)).willReturn(eventType0);
@@ -111,12 +112,15 @@ class TalkControllerTest {
                         .param("eventId", "1")
                         .param("talkName", "Talk")
                         .param("speakerName", "Speaker")
+                        .param("topicId", "2")
+                        .param("talkLanguage", "EN")
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(0)))
                 .andExpect(jsonPath("$[1].id", is(1)));
-        Mockito.verify(talkService, VerificationModeFactory.times(1)).getTalks(0L, 1L, "Talk", "Speaker");
+        Mockito.verify(talkService, VerificationModeFactory.times(1)).getTalks(0L,
+                1L, "Talk", "Speaker", 2L, "EN");
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 

@@ -38,12 +38,14 @@
       "speakerLabel": "Speaker:",
       "companyLabel": "Company:",
       "topicLabel": "Topic:",
+      "languageLabel": "Language:",
       "organizerPlaceholder": "All",
       "eventTypePlaceholder": "All",
       "eventPlaceholder": "All",
       "speakersPlaceholder": "All",
       "companiesPlaceholder": "All",
       "topicPlaceholder": "All",
+      "languagePlaceholder": "All",
       "emptyMessage": "No items"
     },
     "table": {
