@@ -2569,7 +2569,9 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.JOKER, LocalDate.of(2023, 10, 9), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Joker 2023", null, List.of(24L, 4L)),
-//                        Set.of()));
+//                        Set.of("Открытие конференции", "Закрытие конференции", "Открытие второго дня онлайн-части",
+//                                "Подведение итогов онлайн-части", "Открытие офлайн-части", "Lightning Talks",
+//                                "Nexign Quiz: Make It or Break It")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2023, 10, 10), "2023 Autumn",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2023 Autumn", null, List.of(24L, 4L)),

@@ -2389,6 +2389,7 @@ speakers:
             транением заморочек с перформансом и не только."}
     twitter: dolzhenko
     gitHub: vladimirdolzhenko
+    habr: vladimir_dolzhenko
   - id: 143
     photoFileName: 0143.jpg
     photoUpdatedAt: 2020-02-14T09:20:16.274Z[UTC]
@@ -3427,6 +3428,7 @@ speakers:
       - {language: ru, text: "Павел Димитрюк"}
     companyIds: [618]
     gitHub: PDimitryuk
+    habr: PDimitryuk
   - id: 224
     photoFileName: 0224.jpg
     photoUpdatedAt: 2023-03-13T11:39:37Z[UTC]
@@ -5072,6 +5074,7 @@ speakers:
             огию.</p>"}
     twitter: timur_audio
     gitHub: timuraudio
+    habr: timuraudio
   - id: 341
     photoFileName: 0341.jpg
     name:
@@ -6374,6 +6377,7 @@ speakers:
             \ автоматизации промышленного оборудования — установок магнетронного напыления и плазмохимического травления.\
             \ Интересуется статическим анализом кода, теорией типов и метапрограммированием."}
     twitter: a_tessenr
+    gitHub: TessenR
   - id: 427
     photoFileName: 0427.jpg
     name:
@@ -7942,6 +7946,8 @@ speakers:
             \ руководил практикой мобильных и веб-решений в SAP СНГ, где делал проекты для компаний Газпром, Лукойл, Север\
             сталь, Башнефть, Сбербанк, Сургутнефтегаз, СОКАР, УкрТрансГаз, National Grid, Dong Energy, Petrobras и других."
     twitter: YuryDymov
+    gitHub: yury-dymov
+    habr: yury-dymov
   - id: 539
     photoFileName: 0539.jpg
     name:
@@ -10114,6 +10120,8 @@ speakers:
       - {language: ru, text: "Исследователь, изобретатель велосипедов, евангелист веб-стандартов, идейный вдохновитель, кр\
             итик, докладчик. Автор CSSTree, discovery.js, basis.js и других, мейнтейнер CSSO."}
     twitter: rdvornov
+    gitHub: lahmatiy
+    habr: lahmatiy
   - id: 686
     photoFileName: 0686.jpg
     photoUpdatedAt: 2021-09-02T07:35:47.867Z[UTC]
@@ -11575,6 +11583,7 @@ speakers:
       - {language: ru, text: "Старший iOS-разработчик в компании EPAM, где помимо проектной работы занимается развитием пе\
             тербургского и глобального мобильного сообщества в компании."}
     twitter: dydus0x14
+    gitHub: dydus0x14
     habr: dydus0x14
   - id: 788
     photoFileName: 0788.jpg
@@ -12959,6 +12968,8 @@ speakers:
             тся биоинформатикой (публиковался в научных журналах с исследованиями алгоритмов реконструкции ДНК) и высокоча\
             стотным трейдингом (победил во всероссийском конкурсе научно-исследовательских работ)."
     twitter: valzevul
+    gitHub: valzevul
+    habr: valzevul
   - id: 881
     photoFileName: 0881.jpg
     name:
@@ -13011,6 +13022,7 @@ speakers:
             \ and reverse engineering."}
       - {language: ru, text: "Григорий работает над Android-клиентом соцсети «Одноклассники». Он любит низкоуровневые вещи\
             \ и реверс-инжиниринг."}
+    gitHub: strlght
     habr: StrLght
   - id: 884
     photoFileName: 0884.jpg
@@ -13586,6 +13598,7 @@ speakers:
             ++ и С#, потом писал микросервисы на Java, но с появлением Flutter активно увлекся разработкой на Dart. Flutter-э\
             нтузиаст. Организатор комьюнити GDG Moscow. Ведущий на подкастах Mobile People Talks и Flutter Dev Podcast."}
     twitter: ShuregDenisov
+    gitHub: DenisovAV
     habr: denisovich
   - id: 932
     photoFileName: 0932.jpg
@@ -15798,6 +15811,7 @@ speakers:
             \ holds CISSP (Certified Information Systems Security Professional) and in the process of obtaining OSWE (Offensive\
             \ Security Web Expert)."}
     twitter: alekseidremin
+    habr: alllendulles
   - id: 1096
     photoFileName: 1096.jpg
     photoUpdatedAt: 2020-02-07T12:29:54.912Z[UTC]
@@ -20584,6 +20598,7 @@ speakers:
       - {language: ru, text: "Занимается Developer Relations в Яндексе. Нежно любит фронтенд-сообщество и HolyJS, заботила\
             сь о спикерах в JUG Ru Group и воспитывает 4 котов (включая Евгения)."}
     twitter: deni_deniskina
+    habr: deni-deniskina
   - id: 1448
     photoFileName: 1448.jpg
     photoUpdatedAt: 2020-10-06T09:57:34.860Z[UTC]
@@ -20726,6 +20741,7 @@ speakers:
             \ Canaria) и выступает на конференциях (последние выступления на HashiConf EU 2020, DevOps Pro EU 2020, DevOpsDays\
             \ Madrid 2020), а также записывает подкаст DevSecOps Talks."
     twitter: andrey9kin
+    gitHub: Andrey9kin
   - id: 1456
     photoFileName: 1456.jpg
     photoUpdatedAt: 2020-10-21T07:28:20.940Z[UTC]
@@ -22958,6 +22974,7 @@ speakers:
             очисленных граблей, на которые наступал сам. Свободное время проводит с семьей и собакой, а также увлекается с\
             толярным делом."}
     twitter: Yury_Dubovoy
+    gitHub: yury-dubovoy
   - id: 1606
     photoFileName: 1606.jpg
     photoUpdatedAt: 2022-11-04T11:36:21Z[UTC]
@@ -35399,6 +35416,7 @@ speakers:
     bio:
       - {language: en, text: "<p>Maksud is an iOS developer looking after the back end.</p>"}
       - {language: ru, text: "<p>iOS-разработчик, присматривающий за бэком.</p>"}
+    gitHub: NuVeS
     habr: NuVeS
   - id: 2461
     photoFileName: 2461.jpg
@@ -38282,6 +38300,8 @@ speakers:
       - {language: ru, text: "<p>Руководит мобильной инфраструктурой рекламного SDK Яндекса. Выращивает дочь и senior-разр\
             аботчиков. Расплачивается с техдолгом и ипотекой. Всю жизнь смотрит сериалы, фильмы и на то, как компилится.</p>"}
     twitter: Andrey__Danilov
+    gitHub: DEADMC
+    habr: DEADMC
   - id: 2666
     photoFileName: 2666.jpg
     photoUpdatedAt: "2023-03-03T12:57:28Z"
@@ -38368,6 +38388,7 @@ speakers:
             дине 2020 года. Практически с самого начала занимается обработкой видео. Последние полтора года создание редак\
             тора &mdash; его единственная задача, которая увлекла его полностью.</p>"}
     twitter: MikelDementyev
+    gitHub: MikelDementyev
   - id: 2672
     photoFileName: 2672.jpg
     photoUpdatedAt: "2023-03-20T09:10:43Z"
@@ -39995,6 +40016,7 @@ speakers:
       - {language: ru, text: "<p>DevOps Teamlead в команде платформы в Магните. Действующий тренер, учит разных людей (нач\
             иная с OTUS и заканчивая крупными заказчиками &mdash; ВТБ, Райффайзенбанк, и т.д.).</p>"}
     gitHub: mrgreyves
+    habr: mrgreyves
   - id: 2774
     photoFileName: 2774.jpg
     photoUpdatedAt: "2023-08-08T15:41:56Z"
