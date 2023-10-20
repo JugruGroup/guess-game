@@ -1280,9 +1280,12 @@ class JrgCmsDataLoaderTest {
                  MockedStatic<CmsDataLoader> cmsDataLoaderMockedStatic = Mockito.mockStatic(CmsDataLoader.class)) {
                 // Mock methods
                 JrgContact jrgContact0 = new JrgContact();
-
                 jrgContact0.setType("type");
-                jrgContact0.setValue("value");
+                jrgContact0.setValue("value0");
+
+                JrgContact jrgContact1 = new JrgContact();
+                jrgContact1.setType("type");
+                jrgContact1.setValue("value1");
 
                 jrgCmsDataLoaderMockedStatic.when(() -> JrgCmsDataLoader.createSpeaker(Mockito.any(JrgCmsSpeaker.class),
                                 Mockito.any(AtomicLong.class), Mockito.any(AtomicLong.class), Mockito.anyBoolean()))
@@ -1301,7 +1304,7 @@ class JrgCmsDataLoaderTest {
                                 Mockito.any(UnaryOperator.class)))
                         .thenReturn("");
                 cmsDataLoaderMockedStatic.when(() -> JrgCmsDataLoader.getFixedContacts(Mockito.anyList()))
-                        .thenReturn(List.of(jrgContact0));
+                        .thenReturn(List.of(jrgContact0, jrgContact1));
                 localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                         .thenReturn("");
                 cmsDataLoaderMockedStatic.when(() -> CmsDataLoader.extractLocaleItems(Mockito.nullable(String.class), Mockito.nullable(String.class),
