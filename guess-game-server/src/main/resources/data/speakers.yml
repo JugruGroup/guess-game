@@ -467,7 +467,7 @@ speakers:
     name:
       - {language: en, text: "Vladimir Sitnikov"}
       - {language: ru, text: "Владимир Ситников"}
-    companyIds: [1153]
+    companyIds: []
     bio:
       - {language: en, text: "<p>Vladimir has been working on reliability and performance of enterprise systems since 2006.\
             \ He supports PostgreSQL JDBC driver and Apache JMeter load testing tool. Likes to share knowledge and helps others\

@@ -4190,9 +4190,6 @@ companies:
     name:
       - {language: en, text: Byndyusoft}
     siteLink: https://byndyusoft.com
-  - id: 1153
-    name:
-      - {language: en, text: "PostgreSQL JDBC maintainer"}
   - id: 1154
     name:
       - {language: en, text: "Digitalization of engineering"}
