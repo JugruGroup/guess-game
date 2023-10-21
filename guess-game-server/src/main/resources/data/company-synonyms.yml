@@ -381,9 +381,11 @@ companySynonyms:
     synonyms: [
         "Object Computing, Inc."
     ]
-  - name: OK.RU
+  - name: Odnoklassniki
     synonyms: [
-        Odnoklassniki
+        OK.RU,
+        VK/Odnoklassniki,
+        VK/Одноклассники
     ]
   - name: "OKTET Labs"
     synonyms: [
@@ -418,7 +420,9 @@ companySynonyms:
     synonyms: [
         Rostelekom,
         "Rostelecom Information Technologies",
-        "Ростелеком Информационные Технологии"
+        "Ростелеком Информационные Технологии",
+        "Rostelecom IT",
+        "Ростелеком ИТ"
     ]
   - name: SouJava
     synonyms: [
@@ -589,6 +593,11 @@ companySynonyms:
     synonyms: [
         Uber
     ]
+  - name: "Т1 Sfera"
+    synonyms: [
+        "Sfera Platform",
+        "Платформа Сфера"
+    ]
   - name: UCB
     synonyms: [
         "UCB BioPharma"
@@ -672,6 +681,8 @@ companySynonyms:
         "Яндекс (Авто.ру)",
         "Yandex Practicum",
         "Яндекс Практикум",
+        "Yandex 360",
+        "Яндекс 360",
         "Kinopoisk (Yandex)",
         "Кинопоиск (Яндекс)",
         Zen,
@@ -694,5 +705,6 @@ companySynonyms:
         "Acme Corp",
         Startup,
         Стартап,
-        "JMeter Committer"
+        "JMeter Committer",
+        "PostgreSQL JDBC maintainer"
     ]
