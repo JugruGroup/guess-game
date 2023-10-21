@@ -11,8 +11,8 @@ companyGroups:
     ]
   - name: "Avito / Sphinx"
     items: [
-      Avito,
-      Sphinx
+        Avito,
+        Sphinx
     ]
   - name: "BeerJS / TC39"
     items: [
@@ -42,23 +42,28 @@ companyGroups:
     ]
   - name: "hh.ru, CyberDacha"
     items: [
-      hh.ru,
-      CyberDacha
+        hh.ru,
+        CyberDacha
     ]
   - name: "MAI / HSE / ex-Microsoft"
     items: [
-      MAI,
-      "NRU HSE"
+        MAI,
+        "NRU HSE"
     ]
   - name: "MAI / NRU HSE"
     items: [
-      MAI,
-      "NRU HSE"
+        MAI,
+        "NRU HSE"
     ]
   - name: "MAI / NRU HSE / ex-Microsoft"
     items: [
-      MAI,
-      "NRU HSE"
+        MAI,
+        "NRU HSE"
+    ]
+  - name: "Moscow State University/Russian Quantum Center"
+    items: [
+        MSU,
+        "Russian Quantum Center"
     ]
   - name: "MPI-SWS, JetBrains Research, NRU HSE"
     items: [
@@ -68,7 +73,7 @@ companyGroups:
     ]
   - name: "МТS Digital, Big Data"
     items: [
-      "МТS Digital"
+        "МТS Digital"
     ]
   - name: "OTS Lab / odgAssist"
     items: [
@@ -87,8 +92,8 @@ companyGroups:
     ]
   - name: "Skillbox, FrontendConf"
     items: [
-      Skillbox,
-      FrontendConf
+        Skillbox,
+        FrontendConf
     ]
   - name: "Synthesized / MIPT"
     items: [
@@ -102,16 +107,16 @@ companyGroups:
     ]
   - name: "Waliot, krd.dev"
     items: [
-      Waliot,
-      krd.dev
+        Waliot,
+        krd.dev
     ]
   - name: "Тинькофф, DevBrothers"
     items: [
-      Тинькофф,
-      DevBrothers
+        Тинькофф,
+        DevBrothers
     ]
   - name: "DevBrothers, Tinkoff"
     items: [
-      DevBrothers,
-      Тинькофф
+        DevBrothers,
+        Тинькофф
     ]

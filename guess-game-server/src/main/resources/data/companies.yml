@@ -2308,7 +2308,7 @@ companies:
     siteLink: https://notissimus.com
   - id: 653
     name:
-      - {language: en, text: OK.RU}
+      - {language: en, text: Odnoklassniki}
       - {language: ru, text: Одноклассники}
     siteLink: https://ok.ru
   - id: 654
@@ -4212,3 +4212,34 @@ companies:
     name:
       - {language: en, text: "C Teleport"}
     siteLink: https://cteleport.com
+  - id: 1158
+    name:
+      - {language: en, text: "Axiom JDK"}
+    siteLink: https://axiomjdk.ru
+  - id: 1159
+    name:
+      - {language: en, text: "RNT Group"}
+    siteLink: https://www.rntgroup.com
+  - id: 1160
+    name:
+      - {language: en, text: Lightrun}
+    siteLink: https://lightrun.com
+  - id: 1161
+    name:
+      - {language: en, text: "Nedremlyushchee oko"}
+      - {language: ru, text: "Недремлющее око"}
+    siteLink: https://kvs-sb.ru
+  - id: 1162
+    name:
+      - {language: en, text: "Institute of Linguistics of the Russian Academy of Sciences"}
+      - {language: ru, text: "Институт языкознания РАН"}
+    siteLink: https://iling-ran.ru
+  - id: 1163
+    name:
+      - {language: en, text: "Zend by Perforce"}
+    siteLink: https://www.perforce.com
+  - id: 1164
+    name:
+      - {language: en, text: "Russian Quantum Center"}
+      - {language: ru, text: "Российский квантовый центр"}
+    siteLink: https://www.rqc.ru
