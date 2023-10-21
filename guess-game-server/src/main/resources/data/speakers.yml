@@ -7198,6 +7198,8 @@ speakers:
             \ и Java. Занимался задачами моделирования миграций. Хобби – математика, рыбалка, игра на гитаре и разработка\
             \ бесплатного генератора документации DocumentSprint. MCP в области Developing Microsoft Azure Solutions."}
     twitter: witaly_ezepchuk
+    gitHub: Detrav
+    habr: Detrav
   - id: 480
     photoFileName: 0480.jpg
     name:
@@ -11281,6 +11283,7 @@ speakers:
             \ engine. Компиляторщик до мозга костей, интересующийся всем, что так или иначе связанно с виртуальными машина\
             ми. Работал над V8, сейчас работаю над Dart VM и иногда чиню баги в LuaJIT. До Google работал в Новосибирской\
             \ компании Excelsior над JVM с ahead-of-time компилятором."}
+    gitHub: mraleph
     habr: mraleph
   - id: 764
     photoFileName: 0764.jpg
@@ -13509,6 +13512,7 @@ speakers:
             ишел в 2014 году на роль разработчика баз данных, в настоящий момент возглавляет команду DBA.\r\nАктивно участ\
             вует в жизни PostgreSQL community."
     twitter: kevteev
+    habr: kevteev
   - id: 927
     photoFileName: 0927.jpg
     name:
@@ -15387,6 +15391,7 @@ speakers:
             опарк&raquo;.</p>"}
     twitter: sk1nny_puppy
     gitHub: egv
+    habr: sk1nny_puppy
   - id: 1063
     photoFileName: 1063.jpg
     name:
@@ -21421,6 +21426,8 @@ speakers:
             , автор более 10 работ в области анализа данных, соавтор монографии по теории и практике анализа параллельных\
             \ баз данных.</div>"}
     twitter: iJKos
+    gitHub: iJKos
+    habr: iJKos
   - id: 1505
     photoFileName: 1505.jpg
     photoUpdatedAt: 2020-12-03T07:42:10.557Z[UTC]
