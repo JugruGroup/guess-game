@@ -1023,6 +1023,11 @@ class JrgCmsDataLoaderTest {
         assertEquals("width", new JrgCmsDataLoader().getImageWidthParameterName());
     }
 
+    @Test
+    void getImageHeightParameterName() {
+        assertEquals("height", new JrgCmsDataLoader().getImageHeightParameterName());
+    }
+
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("isValidTalk method tests")

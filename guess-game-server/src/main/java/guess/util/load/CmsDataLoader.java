@@ -79,6 +79,13 @@ public abstract class CmsDataLoader {
      */
     abstract String getImageWidthParameterName();
 
+    /**
+     * Gets name of image height parameter.
+     *
+     * @return name of image width parameter
+     */
+    abstract String getImageHeightParameterName();
+
     static RestTemplate createRestTemplate() {
         List<HttpMessageConverter<?>> converters = new ArrayList<>();
         converters.add(new StringHttpMessageConverter(StandardCharsets.UTF_8));

@@ -614,6 +614,11 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         return "width";
     }
 
+    @Override
+    String getImageHeightParameterName() {
+        return "height";
+    }
+
     /**
      * Checks talk validity.
      *

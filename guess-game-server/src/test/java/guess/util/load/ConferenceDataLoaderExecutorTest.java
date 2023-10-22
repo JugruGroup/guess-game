@@ -462,7 +462,7 @@ class ConferenceDataLoaderExecutorTest {
                 conferenceDataLoaderExecutorMockedStatic.when(() -> ConferenceDataLoaderExecutor.getResourceNameSpeakersMap(Mockito.anyList()))
                         .thenReturn(Collections.emptyMap());
                 conferenceDataLoaderExecutorMockedStatic.when(() -> ConferenceDataLoaderExecutor.getSpeakerLoadResult(
-                                Mockito.anyList(), Mockito.any(SpeakerLoadMaps.class), Mockito.any(), Mockito.anyString()))
+                                Mockito.anyList(), Mockito.any(SpeakerLoadMaps.class), Mockito.any(), Mockito.anyString(), Mockito.anyString()))
                         .thenReturn(new SpeakerLoadResult(
                                 new LoadResult<>(
                                         Collections.emptyList(),
@@ -1303,6 +1303,7 @@ class ConferenceDataLoaderExecutorTest {
         final String PHOTO_FILE_NAME1 = "0001.jpg";
         final String PHOTO_FILE_NAME2 = "http://valid.com/2.jpg";
         final String WIDTH_PARAMETER_NAME = "w";
+        final String HEIGHT_PARAMETER_NAME = "h";
 
         private Stream<Arguments> data() {
             Speaker speaker0 = new Speaker();
@@ -1364,21 +1365,21 @@ class ConferenceDataLoaderExecutorTest {
                             Collections.emptyList()));
 
             return Stream.of(
-                    arguments(Collections.emptyList(), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult0, WIDTH_PARAMETER_NAME),
-                    arguments(List.of(speaker2), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult1, WIDTH_PARAMETER_NAME),
-                    arguments(List.of(speaker0), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult2, WIDTH_PARAMETER_NAME),
-                    arguments(List.of(speaker1), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult3, WIDTH_PARAMETER_NAME)
+                    arguments(Collections.emptyList(), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult0, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME),
+                    arguments(List.of(speaker2), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult1, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME),
+                    arguments(List.of(speaker0), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult2, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME),
+                    arguments(List.of(speaker1), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult3, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
         void getSpeakerLoadResult(List<Speaker> speakers, SpeakerLoadMaps speakerLoadMaps, AtomicLong lastSpeakerId,
-                                  SpeakerLoadResult expected, String imageWidthParameterName) throws IOException {
+                                  SpeakerLoadResult expected, String imageWidthParameterName, String imageHeightParameterName) throws IOException {
             try (MockedStatic<ConferenceDataLoaderExecutor> conferenceDataLoaderExecutorMockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class)) {
                 conferenceDataLoaderExecutorMockedStatic.when(() -> ConferenceDataLoaderExecutor.needPhotoUpdate(
                                 Mockito.nullable(ZonedDateTime.class), Mockito.nullable(ZonedDateTime.class), Mockito.nullable(String.class),
-                                Mockito.nullable(String.class), Mockito.anyString()))
+                                Mockito.nullable(String.class), Mockito.anyString(), Mockito.anyString()))
                         .thenAnswer(
                                 (Answer<Boolean>) invocation -> {
                                     Object[] args = invocation.getArguments();
@@ -1395,7 +1396,7 @@ class ConferenceDataLoaderExecutorTest {
                                 }
                         );
                 conferenceDataLoaderExecutorMockedStatic.when(() -> ConferenceDataLoaderExecutor.getSpeakerLoadResult(
-                                Mockito.anyList(), Mockito.any(SpeakerLoadMaps.class), Mockito.any(AtomicLong.class), Mockito.anyString()))
+                                Mockito.anyList(), Mockito.any(SpeakerLoadMaps.class), Mockito.any(AtomicLong.class), Mockito.anyString(), Mockito.anyString()))
                         .thenCallRealMethod();
                 conferenceDataLoaderExecutorMockedStatic.when(() -> ConferenceDataLoaderExecutor.findResourceSpeaker(Mockito.any(Speaker.class), Mockito.any(SpeakerLoadMaps.class)))
                         .thenAnswer(
@@ -1407,7 +1408,8 @@ class ConferenceDataLoaderExecutorTest {
                                 }
                         );
 
-                assertEquals(expected, ConferenceDataLoaderExecutor.getSpeakerLoadResult(speakers, speakerLoadMaps, lastSpeakerId, imageWidthParameterName));
+                assertEquals(expected, ConferenceDataLoaderExecutor.getSpeakerLoadResult(speakers, speakerLoadMaps,
+                        lastSpeakerId, imageWidthParameterName, imageHeightParameterName));
             }
         }
     }
@@ -2455,7 +2457,7 @@ class ConferenceDataLoaderExecutorTest {
                     for (LoadResult<List<Talk>> talkLoadResult : List.of(talkLoadResult0, talkLoadResult1, talkLoadResult2, talkLoadResult3)) {
                         for (SpeakerLoadResult speakerLoadResult : List.of(speakerLoadResult0, speakerLoadResult1, speakerLoadResult2, speakerLoadResult3, speakerLoadResult4)) {
                             for (LoadResult<List<Company>> companyLoadResult : List.of(companyLoadResult0, companyLoadResult1)) {
-                                argumentsList.add(arguments(companyLoadResult, speakerLoadResult, talkLoadResult, placeLoadResult, eventLoadResult, "w"));
+                                argumentsList.add(arguments(companyLoadResult, speakerLoadResult, talkLoadResult, placeLoadResult, eventLoadResult, "w", "h"));
                             }
                         }
                     }
@@ -2469,15 +2471,16 @@ class ConferenceDataLoaderExecutorTest {
         @MethodSource("data")
         @SuppressWarnings("unchecked")
         void saveFiles(LoadResult<List<Company>> companyLoadResult, SpeakerLoadResult speakerLoadResult, LoadResult<List<Talk>> talkLoadResult,
-                       LoadResult<List<Place>> placeLoadResult, LoadResult<Event> eventLoadResult, String imageWidthParameterName) {
+                       LoadResult<List<Place>> placeLoadResult, LoadResult<Event> eventLoadResult, String imageWidthParameterName,
+                       String imageHeightParameterName) {
             try (MockedStatic<ConferenceDataLoaderExecutor> mockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class)) {
                 mockedStatic.when(() -> ConferenceDataLoaderExecutor.saveFiles(
                                 Mockito.any(LoadResult.class), Mockito.any(SpeakerLoadResult.class), Mockito.any(LoadResult.class),
-                                Mockito.any(LoadResult.class), Mockito.any(LoadResult.class), Mockito.anyString()))
+                                Mockito.any(LoadResult.class), Mockito.any(LoadResult.class), Mockito.anyString(), Mockito.anyString()))
                         .thenCallRealMethod();
 
                 assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.saveFiles(companyLoadResult, speakerLoadResult,
-                        talkLoadResult, placeLoadResult, eventLoadResult, imageWidthParameterName));
+                        talkLoadResult, placeLoadResult, eventLoadResult, imageWidthParameterName, imageHeightParameterName));
             }
         }
     }
@@ -2529,6 +2532,7 @@ class ConferenceDataLoaderExecutorTest {
             UrlFilename urlFilename0 = new UrlFilename("url0", "filename0");
             UrlFilename urlFilename1 = new UrlFilename("url1", "filename1");
             String WIDTH_PARAMETER_NAME = "w";
+            String HEIGHT_PARAMETER_NAME = "h";
 
             SpeakerLoadResult speakerLoadResult0 = new SpeakerLoadResult(
                     new LoadResult<>(
@@ -2551,19 +2555,19 @@ class ConferenceDataLoaderExecutorTest {
                             List.of(urlFilename1)));
 
             return Stream.of(
-                    arguments(speakerLoadResult0, WIDTH_PARAMETER_NAME),
-                    arguments(speakerLoadResult1, WIDTH_PARAMETER_NAME)
+                    arguments(speakerLoadResult0, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME),
+                    arguments(speakerLoadResult1, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void saveImages(SpeakerLoadResult speakerLoadResult, String imageWidthParameterName) {
+        void saveImages(SpeakerLoadResult speakerLoadResult, String imageWidthParameterName, String imageHeightParameterName) {
             try (MockedStatic<ConferenceDataLoaderExecutor> mockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class)) {
-                mockedStatic.when(() -> ConferenceDataLoaderExecutor.saveImages(Mockito.any(SpeakerLoadResult.class), Mockito.anyString()))
+                mockedStatic.when(() -> ConferenceDataLoaderExecutor.saveImages(Mockito.any(SpeakerLoadResult.class), Mockito.anyString(), Mockito.anyString()))
                         .thenCallRealMethod();
 
-                assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.saveImages(speakerLoadResult, imageWidthParameterName));
+                assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.saveImages(speakerLoadResult, imageWidthParameterName, imageHeightParameterName));
             }
         }
     }
@@ -2753,7 +2757,8 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndCreateSpeakerImages() {
         try (MockedStatic<ImageUtils> mockedStatic = Mockito.mockStatic(ImageUtils.class)) {
-            assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.logAndCreateSpeakerImages(List.of(new UrlFilename("url", "filename")), "{}", "w"));
+            assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.logAndCreateSpeakerImages(
+                    List.of(new UrlFilename("url", "filename")), "{}", "w", "h"));
         }
     }
 
@@ -4504,20 +4509,21 @@ class ConferenceDataLoaderExecutorTest {
             final String VALID_URL = "https://valid.com";
             final String PHOTO_FILE_NAME = "0000.jpg";
             final String WIDTH_PARAMETER_NAME = "w";
+            final String HEIGHT_PARAMETER_NAME = "h";
 
             return Stream.of(
-                    arguments(null, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, true, true),
-                    arguments(null, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, true, true),
-                    arguments(null, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, false, false),
-                    arguments(null, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, false, false),
-                    arguments(NOW, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, true, true),
-                    arguments(NOW, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, false, true),
-                    arguments(NOW, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, true, false),
-                    arguments(NOW, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, false, false),
-                    arguments(NOW, YESTERDAY, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, true, true),
-                    arguments(NOW, YESTERDAY, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, false, true),
-                    arguments(YESTERDAY, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, true, false),
-                    arguments(YESTERDAY, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, false, false)
+                    arguments(null, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, true, true),
+                    arguments(null, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, true, true),
+                    arguments(null, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, false, false),
+                    arguments(null, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, false, false),
+                    arguments(NOW, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, true, true),
+                    arguments(NOW, null, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, false, true),
+                    arguments(NOW, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, true, false),
+                    arguments(NOW, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, false, false),
+                    arguments(NOW, YESTERDAY, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, true, true),
+                    arguments(NOW, YESTERDAY, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, false, true),
+                    arguments(YESTERDAY, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, true, false),
+                    arguments(YESTERDAY, NOW, VALID_URL, PHOTO_FILE_NAME, WIDTH_PARAMETER_NAME, HEIGHT_PARAMETER_NAME, false, false)
             );
         }
 
@@ -4525,13 +4531,13 @@ class ConferenceDataLoaderExecutorTest {
         @MethodSource("data")
         void needPhotoUpdate(ZonedDateTime targetPhotoUpdatedAt, ZonedDateTime resourcePhotoUpdatedAt,
                              String targetPhotoUrl, String resourcePhotoFileName, String imageWidthParameterName,
-                             boolean needUpdate, boolean expected) throws IOException {
+                             String imageHeightParameterName, boolean needUpdate, boolean expected) throws IOException {
             try (MockedStatic<ImageUtils> mockedStatic = Mockito.mockStatic(ImageUtils.class)) {
-                mockedStatic.when(() -> ImageUtils.needUpdate(Mockito.anyString(), Mockito.anyString(), Mockito.anyString()))
+                mockedStatic.when(() -> ImageUtils.needUpdate(Mockito.anyString(), Mockito.anyString(), Mockito.anyString(), Mockito.anyString()))
                         .thenReturn(needUpdate);
 
                 assertEquals(expected, ConferenceDataLoaderExecutor.needPhotoUpdate(targetPhotoUpdatedAt, resourcePhotoUpdatedAt,
-                        targetPhotoUrl, resourcePhotoFileName, imageWidthParameterName));
+                        targetPhotoUrl, resourcePhotoFileName, imageWidthParameterName, imageHeightParameterName));
             }
         }
     }
