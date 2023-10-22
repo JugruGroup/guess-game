@@ -4056,9 +4056,9 @@ companies:
     siteLink: https://o2consult.com
   - id: 1121
     name:
-      - {language: en, text: "T1 Consulting"}
-      - {language: ru, text: "Т1 Консалтинг"}
-    siteLink: https://www.t1-consulting.ru
+      - {language: en, text: "Т1 Holding"}
+      - {language: ru, text: "Т1 Холдинг"}
+    siteLink: https://t1.ru
   - id: 1122
     name:
       - {language: en, text: Magnit}
@@ -4114,11 +4114,6 @@ companies:
     name:
       - {language: en, text: "IT Enduro"}
     siteLink: https://it-endu.ro
-  - id: 1135
-    name:
-      - {language: en, text: "Т1 Sfera"}
-      - {language: ru, text: "Т1 Сфера"}
-    siteLink: https://www.sferaplatform.ru
   - id: 1136
     name:
       - {language: en, text: PPR}
@@ -4240,3 +4235,58 @@ companies:
       - {language: en, text: "Russian Quantum Center"}
       - {language: ru, text: "Российский квантовый центр"}
     siteLink: https://www.rqc.ru
+  - id: 1165
+    name:
+      - {language: en, text: Samolet}
+      - {language: ru, text: Самолет}
+    siteLink: https://samolet.ru
+  - id: 1166
+    name:
+      - {language: en, text: Qubit}
+      - {language: ru, text: Кубит}
+    siteLink: https://qubit.su
+  - id: 1167
+    name:
+      - {language: en, text: AVO}
+    siteLink: https://avo.business
+  - id: 1168
+    name:
+      - {language: en, text: DoorDash}
+    siteLink: https://www.doordash.com
+  - id: 1169
+    name:
+      - {language: en, text: TestIT}
+    siteLink: https://testit.software
+  - id: 1170
+    name:
+      - {language: en, text: Yclients}
+    siteLink: https://www.yclients.com
+  - id: 1171
+    name:
+      - {language: en, text: Amediateka}
+    siteLink: https://www.amediateka.ru
+  - id: 1172
+    name:
+      - {language: en, text: Zvuk}
+      - {language: ru, text: Звук}
+    siteLink: https://zvuk.com
+  - id: 1173
+    name:
+      - {language: en, text: Aladdin}
+      - {language: ru, text: Аладдин}
+    siteLink: https://www.aladdin-rd.ru
+  - id: 1174
+    name:
+      - {language: en, text: Granch}
+      - {language: ru, text: Гранч}
+    siteLink: https://granch.ru
+  - id: 1175
+    name:
+      - {language: en, text: Auriga}
+      - {language: ru, text: Аурига}
+    siteLink: https://auriga.ru
+  - id: 1176
+    name:
+      - {language: en, text: "Lebedev Physical Institute"}
+      - {language: ru, text: "Физический институт им. П.Н. Лебедева РАН"}
+    siteLink: http://www.lebedev.ru

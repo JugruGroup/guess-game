@@ -348,7 +348,9 @@ companySynonyms:
         "МТС ИТ",
         "MTS DIGITAL",
         "МТS Digital",
-        "МТС Digital"
+        "МТС Digital",
+        "MTS Bank",
+        "МТС Банк"
     ]
   - name: Naviteq
     synonyms: [
@@ -516,7 +518,8 @@ companySynonyms:
         СберМаркет,
         "Sber Process Mining",
         "Sber Life Insurance",
-        "Сбер Страхование Жизни"
+        "Сбер Страхование Жизни",
+        SberAutoTech
     ]
   - name: Sibur
     synonyms: [
@@ -593,8 +596,12 @@ companySynonyms:
     synonyms: [
         Uber
     ]
-  - name: "Т1 Sfera"
+  - name: "Т1 Holding"
     synonyms: [
+        "T1 Consulting",
+        "Т1 Консалтинг",
+        "Т1 Sfera",
+        "Т1 Сфера",
         "Sfera Platform",
         "Платформа Сфера"
     ]
@@ -636,7 +643,9 @@ companySynonyms:
         "VK Звонки",
         "VK Образование",
         "ВКонтакте для бизнеса",
-        "VK / VK Cloud"
+        "VK / VK Cloud",
+        "VK / Ads",
+        "VK / Реклама"
     ]
   - name: VMware
     synonyms: [
@@ -683,6 +692,7 @@ companySynonyms:
         "Яндекс Практикум",
         "Yandex 360",
         "Яндекс 360",
+        "Yandex Infrastructure",
         "Kinopoisk (Yandex)",
         "Кинопоиск (Яндекс)",
         Zen,
