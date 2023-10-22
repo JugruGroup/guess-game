@@ -699,6 +699,11 @@ public class ContentfulDataLoader extends CmsDataLoader {
         return "h";
     }
 
+    @Override
+    String getImageAdditionalParameters() {
+        return null;
+    }
+
     /**
      * Gets map id/speaker.
      *

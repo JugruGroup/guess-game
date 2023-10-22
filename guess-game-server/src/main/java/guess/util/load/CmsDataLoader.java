@@ -86,6 +86,8 @@ public abstract class CmsDataLoader {
      */
     abstract String getImageHeightParameterName();
 
+    abstract String getImageAdditionalParameters();
+
     static RestTemplate createRestTemplate() {
         List<HttpMessageConverter<?>> converters = new ArrayList<>();
         converters.add(new StringHttpMessageConverter(StandardCharsets.UTF_8));

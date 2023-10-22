@@ -619,6 +619,11 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         return "height";
     }
 
+    @Override
+    String getImageAdditionalParameters() {
+        return "mode=CropUpsize";
+    }
+
     /**
      * Checks talk validity.
      *
