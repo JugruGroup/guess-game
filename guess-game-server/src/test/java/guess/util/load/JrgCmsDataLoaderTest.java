@@ -45,6 +45,7 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
+import static guess.util.load.JrgCmsDataLoader.IMAGE_PARAMETERS_TEMPLATE;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -1016,6 +1017,11 @@ class JrgCmsDataLoaderTest {
         jrgCmsActivity2.setData(jrgCmsTalk2);
 
         assertDoesNotThrow(() -> JrgCmsDataLoader.logNotTalkActivities(List.of(jrgCmsActivity0, jrgCmsActivity1, jrgCmsActivity2)));
+    }
+
+    @Test
+    void getImageParametersTemplate() {
+        assertEquals(IMAGE_PARAMETERS_TEMPLATE, new JrgCmsDataLoader().getImageParametersTemplate());
     }
 
     @Nested
