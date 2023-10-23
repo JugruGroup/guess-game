@@ -27,6 +27,7 @@ class ImageUtilsTest {
     private static final String JPG_IMAGE_400x400_PATH = createImagePath("400x400.jpg");
     private static final String PNG_IMAGE_400x400_PATH = createImagePath("400x400.png");
     private static final String JPG_IMAGE_1x1_PATH = createImagePath("1x1.jpg");
+    private static final String JPG_IMAGE_400x1_PATH = createImagePath("400x1.jpg");
     private static final String INVALID_IMAGE_PATH = "invalid.jpg";
 
     private static String createImagePath(String resourceFileName) {
@@ -103,8 +104,11 @@ class ImageUtilsTest {
                     arguments(null, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
                     arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
                     arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+
                     arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE, true),
-                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE, false)
+                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_400x1_PATH, IMAGE_PARAMETERS_TEMPLATE, true),
+                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_400x1_PATH, IMAGE_PARAMETERS_TEMPLATE, false)
             );
         }
 
