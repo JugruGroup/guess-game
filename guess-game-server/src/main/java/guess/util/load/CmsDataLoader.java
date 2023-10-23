@@ -73,20 +73,11 @@ public abstract class CmsDataLoader {
     abstract List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage) throws IOException, NoSuchFieldException;
 
     /**
-     * Gets name of image width parameter.
+     * Gets template of image parameters.
      *
-     * @return name of image width parameter
+     * @return template of image parameters
      */
-    abstract String getImageWidthParameterName();
-
-    /**
-     * Gets name of image height parameter.
-     *
-     * @return name of image width parameter
-     */
-    abstract String getImageHeightParameterName();
-
-    abstract String getImageAdditionalParameters();
+    abstract String getImageParametersTemplate();
 
     static RestTemplate createRestTemplate() {
         List<HttpMessageConverter<?>> converters = new ArrayList<>();

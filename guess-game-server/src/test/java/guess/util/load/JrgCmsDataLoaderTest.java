@@ -1018,16 +1018,6 @@ class JrgCmsDataLoaderTest {
         assertDoesNotThrow(() -> JrgCmsDataLoader.logNotTalkActivities(List.of(jrgCmsActivity0, jrgCmsActivity1, jrgCmsActivity2)));
     }
 
-    @Test
-    void getImageWidthParameterName() {
-        assertEquals("width", new JrgCmsDataLoader().getImageWidthParameterName());
-    }
-
-    @Test
-    void getImageHeightParameterName() {
-        assertEquals("height", new JrgCmsDataLoader().getImageHeightParameterName());
-    }
-
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("isValidTalk method tests")

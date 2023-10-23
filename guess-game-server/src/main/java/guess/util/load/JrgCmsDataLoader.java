@@ -610,18 +610,8 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     }
 
     @Override
-    String getImageWidthParameterName() {
-        return "width";
-    }
-
-    @Override
-    String getImageHeightParameterName() {
-        return "height";
-    }
-
-    @Override
-    String getImageAdditionalParameters() {
-        return "mode=CropUpsize";
+    String getImageParametersTemplate() {
+        return "width=%d&height=%d&mode=CropUpsize";
     }
 
     /**

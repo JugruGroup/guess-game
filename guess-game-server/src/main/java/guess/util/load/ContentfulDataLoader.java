@@ -690,18 +690,8 @@ public class ContentfulDataLoader extends CmsDataLoader {
     }
 
     @Override
-    String getImageWidthParameterName() {
-        return "w";
-    }
-
-    @Override
-    String getImageHeightParameterName() {
-        return "h";
-    }
-
-    @Override
-    String getImageAdditionalParameters() {
-        return null;
+    String getImageParametersTemplate() {
+        return "w=%d&h=%d";
     }
 
     /**

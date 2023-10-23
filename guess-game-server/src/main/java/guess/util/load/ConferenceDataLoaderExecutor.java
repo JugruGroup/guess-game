@@ -352,9 +352,7 @@ public class ConferenceDataLoaderExecutor {
                         resourceNameCompanySpeakers,
                         resourceNameSpeakers),
                 lastSpeakerId,
-                cmsDataLoader.getImageWidthParameterName(),
-                cmsDataLoader.getImageHeightParameterName(),
-                cmsDataLoader.getImageAdditionalParameters());
+                cmsDataLoader.getImageParametersTemplate());
 
         // Find talks
         fillSpeakerIds(cmsTalks);
@@ -383,8 +381,7 @@ public class ConferenceDataLoaderExecutor {
 
         // Save files
         saveFiles(companyLoadResult, speakerLoadResult, talkLoadResult, placeLoadResult, eventLoadResult,
-                cmsDataLoader.getImageWidthParameterName(), cmsDataLoader.getImageHeightParameterName(),
-                cmsDataLoader.getImageAdditionalParameters());
+                cmsDataLoader.getImageParametersTemplate());
     }
 
     /**
@@ -757,19 +754,15 @@ public class ConferenceDataLoaderExecutor {
     /**
      * Gets load result for speakers.
      *
-     * @param speakers                  speakers
-     * @param speakerLoadMaps           speaker load maps
-     * @param lastSpeakerId             identifier of last speaker
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param speakers                speakers
+     * @param speakerLoadMaps         speaker load maps
+     * @param lastSpeakerId           identifier of last speaker
+     * @param imageParametersTemplate image parameters template
      * @return load result for speakers
      * @throws IOException if read error occurs
      */
     static SpeakerLoadResult getSpeakerLoadResult(List<Speaker> speakers, SpeakerLoadMaps speakerLoadMaps,
-                                                  AtomicLong lastSpeakerId, String imageWidthParameterName,
-                                                  String imageHeightParameterName,
-                                                  String imageAdditionalParameters) throws IOException {
+                                                  AtomicLong lastSpeakerId, String imageParametersTemplate) throws IOException {
         List<Speaker> speakersToAppend = new ArrayList<>();
         List<Speaker> speakersToUpdate = new ArrayList<>();
         List<UrlFilename> urlFilenamesToAppend = new ArrayList<>();
@@ -805,7 +798,7 @@ public class ConferenceDataLoaderExecutor {
 
                 // Update speaker photo
                 if (needPhotoUpdate(speaker.getPhotoUpdatedAt(), resourceSpeaker.getPhotoUpdatedAt(), targetPhotoUrl,
-                        resourcePhotoFileName, imageWidthParameterName, imageHeightParameterName, imageAdditionalParameters)) {
+                        resourcePhotoFileName, imageParametersTemplate)) {
                     urlFilenamesToUpdate.add(new UrlFilename(targetPhotoUrl, resourcePhotoFileName));
                 }
 
@@ -1154,21 +1147,18 @@ public class ConferenceDataLoaderExecutor {
     /**
      * Saves files.
      *
-     * @param companyLoadResult         company load result
-     * @param speakerLoadResult         speaker load result
-     * @param talkLoadResult            talk load result
-     * @param placeLoadResult           place load result
-     * @param eventLoadResult           event load result
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param companyLoadResult       company load result
+     * @param speakerLoadResult       speaker load result
+     * @param talkLoadResult          talk load result
+     * @param placeLoadResult         place load result
+     * @param eventLoadResult         event load result
+     * @param imageParametersTemplate image parameters template
      * @throws IOException          if file creation error occurs
      * @throws NoSuchFieldException if field name is invalid
      */
     static void saveFiles(LoadResult<List<Company>> companyLoadResult, SpeakerLoadResult speakerLoadResult, LoadResult<List<Talk>> talkLoadResult,
                           LoadResult<List<Place>> placeLoadResult, LoadResult<Event> eventLoadResult,
-                          String imageWidthParameterName, String imageHeightParameterName,
-                          String imageAdditionalParameters) throws IOException, NoSuchFieldException {
+                          String imageParametersTemplate) throws IOException, NoSuchFieldException {
         List<Company> companiesToAppend = companyLoadResult.itemToAppend();
 
         List<Speaker> speakersToAppend = speakerLoadResult.speakers().itemToAppend();
@@ -1198,7 +1188,7 @@ public class ConferenceDataLoaderExecutor {
             YamlUtils.clearOutputDirectory();
 
             saveCompanies(companyLoadResult);
-            saveImages(speakerLoadResult, imageWidthParameterName, imageHeightParameterName, imageAdditionalParameters);
+            saveImages(speakerLoadResult, imageParametersTemplate);
             saveSpeakers(speakerLoadResult);
             saveTalks(talkLoadResult);
             savePlaces(placeLoadResult);
@@ -1224,25 +1214,20 @@ public class ConferenceDataLoaderExecutor {
     /**
      * Saves images.
      *
-     * @param speakerLoadResult         speaker load result
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param speakerLoadResult       speaker load result
+     * @param imageParametersTemplate image parameters template
      * @throws IOException if file creation error occurs
      */
-    static void saveImages(SpeakerLoadResult speakerLoadResult, String imageWidthParameterName,
-                           String imageHeightParameterName, String imageAdditionalParameters) throws IOException {
+    static void saveImages(SpeakerLoadResult speakerLoadResult, String imageParametersTemplate) throws IOException {
         List<UrlFilename> urlFilenamesToAppend = speakerLoadResult.urlFilenames().itemToAppend();
         List<UrlFilename> urlFilenamesToUpdate = speakerLoadResult.urlFilenames().itemToUpdate();
 
         if (!urlFilenamesToAppend.isEmpty()) {
-            logAndCreateSpeakerImages(urlFilenamesToAppend, "Speaker images (to append): {}",
-                    imageWidthParameterName, imageHeightParameterName, imageAdditionalParameters);
+            logAndCreateSpeakerImages(urlFilenamesToAppend, "Speaker images (to append): {}", imageParametersTemplate);
         }
 
         if (!urlFilenamesToUpdate.isEmpty()) {
-            logAndCreateSpeakerImages(urlFilenamesToUpdate, "Speaker images (to update): {}",
-                    imageWidthParameterName, imageHeightParameterName, imageAdditionalParameters);
+            logAndCreateSpeakerImages(urlFilenamesToUpdate, "Speaker images (to update): {}", imageParametersTemplate);
         }
     }
 
@@ -1386,20 +1371,16 @@ public class ConferenceDataLoaderExecutor {
     /**
      * Logs and creates speaker images.
      *
-     * @param urlFilenames              url, filenames pairs
-     * @param logMessage                log message
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param urlFilenames            url, filenames pairs
+     * @param logMessage              log message
+     * @param imageParametersTemplate image parameters template
      * @throws IOException if file creation error occurs
      */
     static void logAndCreateSpeakerImages(List<UrlFilename> urlFilenames, String logMessage,
-                                          String imageWidthParameterName, String imageHeightParameterName,
-                                          String imageAdditionalParameters) throws IOException {
+                                          String imageParametersTemplate) throws IOException {
         log.info(logMessage, urlFilenames.size());
         for (UrlFilename urlFilename : urlFilenames) {
-            ImageUtils.create(urlFilename.url(), urlFilename.filename(), imageWidthParameterName,
-                    imageHeightParameterName, imageAdditionalParameters);
+            ImageUtils.create(urlFilename.url(), urlFilename.filename(), imageParametersTemplate);
         }
     }
 
@@ -1995,24 +1976,21 @@ public class ConferenceDataLoaderExecutor {
     /**
      * Indicates the need to update speaker photo.
      *
-     * @param targetPhotoUpdatedAt      updated datetime of target speaker
-     * @param resourcePhotoUpdatedAt    updated datetime of resource speaker
-     * @param targetPhotoUrl            photo URL of target speaker
-     * @param resourcePhotoFileName     photo filename of resource speaker
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param targetPhotoUpdatedAt    updated datetime of target speaker
+     * @param resourcePhotoUpdatedAt  updated datetime of resource speaker
+     * @param targetPhotoUrl          photo URL of target speaker
+     * @param resourcePhotoFileName   photo filename of resource speaker
+     * @param imageParametersTemplate image parameters template
      * @return {@code true} if need to update, {@code false} otherwise
      * @throws IOException if read error occurs
      */
     public static boolean needPhotoUpdate(ZonedDateTime targetPhotoUpdatedAt, ZonedDateTime resourcePhotoUpdatedAt,
                                           String targetPhotoUrl, String resourcePhotoFileName,
-                                          String imageWidthParameterName, String imageHeightParameterName,
-                                          String imageAdditionalParameters) throws IOException {
+                                          String imageParametersTemplate) throws IOException {
         if (targetPhotoUpdatedAt == null) {
             // New updated datetime is null
             return ImageUtils.needUpdate(targetPhotoUrl, String.format(RESOURCE_PHOTO_FILE_NAME_PATH, resourcePhotoFileName),
-                    imageWidthParameterName, imageHeightParameterName, imageAdditionalParameters);
+                    imageParametersTemplate);
         } else {
             // New updated datetime is not null
             if (resourcePhotoUpdatedAt == null) {

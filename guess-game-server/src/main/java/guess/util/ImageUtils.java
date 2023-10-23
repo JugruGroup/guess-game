@@ -44,21 +44,14 @@ public class ImageUtils {
     /**
      * Gets image by URL string.
      *
-     * @param urlString                 source URL string
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param urlString               source URL string
+     * @param imageParametersTemplate image parameters template
      * @return image
      * @throws IOException if read error occurs
      */
-    static BufferedImage getImageByUrlString(String urlString, String imageWidthParameterName,
-                                             String imageHeightParameterName,
-                                             String imageAdditionalParameters) throws IOException {
-        var fullImageAdditionalParameters = (imageAdditionalParameters != null) ?
-                String.format("&%s", imageAdditionalParameters) : "";
-        var urlSpec = String.format("%s?%s=%d&%s=%d%s", urlString,
-                imageWidthParameterName, IMAGE_WIDTH, imageHeightParameterName, IMAGE_HEIGHT,
-                fullImageAdditionalParameters);
+    static BufferedImage getImageByUrlString(String urlString, String imageParametersTemplate) throws IOException {
+        var imageParameters = String.format(imageParametersTemplate, IMAGE_WIDTH, IMAGE_HEIGHT);
+        var urlSpec = String.format("%s?%s", urlString, imageParameters);
         var url = new URL(urlSpec);
 
         return getImageByUrl(url);
@@ -67,21 +60,17 @@ public class ImageUtils {
     /**
      * Checks for need to update file.
      *
-     * @param targetPhotoUrl            source URL
-     * @param resourceFileName          resource file name
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param targetPhotoUrl          source URL
+     * @param resourceFileName        resource file name
+     * @param imageParametersTemplate image parameters template
      * @return {@code true} if need to update, {@code false} otherwise
      * @throws IOException if read error occurs
      */
-    public static boolean needUpdate(String targetPhotoUrl, String resourceFileName, String imageWidthParameterName,
-                                     String imageHeightParameterName, String imageAdditionalParameters) throws IOException {
+    public static boolean needUpdate(String targetPhotoUrl, String resourceFileName, String imageParametersTemplate) throws IOException {
         BufferedImage fileImage = getImageByUrl(new File(resourceFileName).toURI().toURL());
 
         if ((fileImage.getWidth() < IMAGE_WIDTH) || (fileImage.getHeight() < IMAGE_HEIGHT)) {
-            BufferedImage urlImage = getImageByUrlString(targetPhotoUrl, imageWidthParameterName,
-                    imageHeightParameterName, imageAdditionalParameters);
+            BufferedImage urlImage = getImageByUrlString(targetPhotoUrl, imageParametersTemplate);
 
             return ((fileImage.getWidth() < urlImage.getWidth()) || (fileImage.getHeight() < urlImage.getHeight()));
         } else {
@@ -132,19 +121,16 @@ public class ImageUtils {
     /**
      * Creates image file from URL.
      *
-     * @param sourceUrl                 source URL
-     * @param destinationFileName       destination file name
-     * @param imageWidthParameterName   name of image width parameter
-     * @param imageHeightParameterName  name of image height parameter
-     * @param imageAdditionalParameters image additional parameters
+     * @param sourceUrl               source URL
+     * @param destinationFileName     destination file name
+     * @param imageParametersTemplate image parameters template
      * @throws IOException if file creation error occurs
      */
-    public static void create(String sourceUrl, String destinationFileName, String imageWidthParameterName,
-                              String imageHeightParameterName, String imageAdditionalParameters) throws IOException {
+    public static void create(String sourceUrl, String destinationFileName, String imageParametersTemplate) throws IOException {
         var file = new File(String.format("%s/%s", OUTPUT_DIRECTORY_NAME, destinationFileName));
         FileUtils.checkAndCreateDirectory(file.getParentFile());
 
-        BufferedImage image = getImageByUrlString(sourceUrl, imageWidthParameterName, imageHeightParameterName, imageAdditionalParameters);
+        BufferedImage image = getImageByUrlString(sourceUrl, imageParametersTemplate);
         var imageFormat = getImageFormatByUrlString(sourceUrl);
 
         if (!ImageFormat.JPG.equals(imageFormat)) {
