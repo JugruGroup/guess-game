@@ -114,14 +114,11 @@ class ImageUtilsTest {
                                 Object[] args = invocation.getArguments();
                                 String urlString = (String) args[0];
 
-                                switch (urlString) {
-                                    case IMAGE_400X400_URL_STRING:
-                                        return createImage(400, 400);
-                                    case IMAGE_1X1_URL_STRING:
-                                        return createImage(1, 1);
-                                    default:
-                                        throw new IOException();
-                                }
+                                return switch (urlString) {
+                                    case IMAGE_400X400_URL_STRING -> createImage(400, 400);
+                                    case IMAGE_1X1_URL_STRING -> createImage(1, 1);
+                                    default -> throw new IOException();
+                                };
                             }
                     );
 
@@ -178,16 +175,15 @@ class ImageUtilsTest {
                                 Object[] args = invocation.getArguments();
                                 String urlString = (String) args[0];
 
-                                switch (urlString) {
-                                    case JPG_IMAGE_400X400_URL_STRING:
-                                        return ImageIO.read(Paths.get(JPG_IMAGE_400x400_PATH).toUri().toURL());
-                                    case PNG_IMAGE_400X400_URL_STRING:
-                                        return ImageIO.read(Paths.get(PNG_IMAGE_400x400_PATH).toUri().toURL());
-                                    case JPG_IMAGE_1X1_URL_STRING:
-                                        return ImageIO.read(Paths.get(JPG_IMAGE_1x1_PATH).toUri().toURL());
-                                    default:
-                                        return null;
-                                }
+                                return switch (urlString) {
+                                    case JPG_IMAGE_400X400_URL_STRING ->
+                                            ImageIO.read(Paths.get(JPG_IMAGE_400x400_PATH).toUri().toURL());
+                                    case PNG_IMAGE_400X400_URL_STRING ->
+                                            ImageIO.read(Paths.get(PNG_IMAGE_400x400_PATH).toUri().toURL());
+                                    case JPG_IMAGE_1X1_URL_STRING ->
+                                            ImageIO.read(Paths.get(JPG_IMAGE_1x1_PATH).toUri().toURL());
+                                    default -> null;
+                                };
                             }
                     );
             imageUtilsMockedStatic.when(() -> ImageUtils.getImageFormatByUrlString(Mockito.nullable(String.class)))
@@ -196,14 +192,11 @@ class ImageUtilsTest {
                                 Object[] args = invocation.getArguments();
                                 String sourceUrl = (String) args[0];
 
-                                switch (sourceUrl) {
-                                    case JPG_IMAGE_400X400_URL_STRING:
-                                        return ImageFormat.JPG;
-                                    case PNG_IMAGE_400X400_URL_STRING:
-                                        return ImageFormat.PNG;
-                                    default:
-                                        return null;
-                                }
+                                return switch (sourceUrl) {
+                                    case JPG_IMAGE_400X400_URL_STRING -> ImageFormat.JPG;
+                                    case PNG_IMAGE_400X400_URL_STRING -> ImageFormat.PNG;
+                                    default -> null;
+                                };
                             }
                     );
             imageIOMockedStatic.when(() -> ImageIO.write(Mockito.nullable(RenderedImage.class), Mockito.nullable(String.class), Mockito.any(File.class)))
