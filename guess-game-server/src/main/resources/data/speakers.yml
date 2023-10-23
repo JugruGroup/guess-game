@@ -2823,6 +2823,7 @@ speakers:
             ого отделения компании и в этой роли непосредственно участвует в процессе разработки и принятии технических ре\
             шений. Является комитером проекта Apache Ignite. Не представляет лето без мотоциклов, а зиму без снега и гор."}
     twitter: zhakob_j
+    gitHub: yzhdanov
   - id: 171
     photoFileName: 0171.jpg
     name:
@@ -6920,6 +6921,8 @@ speakers:
             ению нравится делиться знаниями с другими, поэтому он прокачивает навык публичных выступлений и преподает неск\
             олько курсов для студентов в УрФУ."
     twitter: ezsilmar
+    gitHub: ezsilmar
+    habr: ezsilmar
   - id: 462
     photoFileName: 0462.jpg
     name:
@@ -9030,6 +9033,7 @@ speakers:
             . Ментор, пишет и автоматизирует на Java. Верит в то, что «простые» тесты могут быть написаны для сколь угодно\
             \ сложных систем."}
     gitHub: dtuchs
+    habr: dtuchs
   - id: 610
     photoFileName: 0610.jpg
     name:
@@ -13129,6 +13133,8 @@ speakers:
             анимается поддержкой Android. До этого работал Android-разработчиком, есть опыт создания приложений и для таки\
             х динозавров, как Blackberry OS и Java ME. Закончил факультет ИТиП СПбГУ ИТМО."}
     twitter: yanex_ru
+    gitHub: yanex
+    habr: yanex
   - id: 890
     photoFileName: 0890.jpg
     name:
@@ -33269,6 +33275,7 @@ speakers:
       - {language: ru, text: "<p>Основатель и генеральный директор DevOps-компании Git in Sky. Создавал такие проекты, как\
             \ социальный сервис закладок Рунета &laquo;БобрДобр&raquo;, интернет-провайдер &laquo;Невалинк&raquo;. Выступа\
             л на конференциях &laquo;Онтико&raquo; и подобных. Эксперт по управлению сервисными IT-бизнесами.&nbsp;</p>"}
+    gitHub: serzhit
     habr: gitinsky
   - id: 2304
     photoFileName: 2304.jpg
@@ -37057,6 +37064,7 @@ speakers:
             одительности СУБД в Postgres Professional и профессионально занимается анализом производительности, оценкой ра\
             бот по оптимизации и конфигурированием СУБД PostgreSQL и Postgres Pro."}
     gitHub: mizhka
+    habr: mizhka
   - id: 2574
     photoFileName: 2574.jpg
     photoUpdatedAt: 2023-03-03T05:34Z[UTC]
@@ -41853,6 +41861,8 @@ speakers:
             анным на Go. Сейчас команда создает амбициозную функцию &ndash; сценарии нагрузки. Она призвана значительно уп\
             ростить создание сценариев для нагрузочных тестов без использования языков программирования, при этом сохраняя\
             \ высокую производительность генератора.&nbsp;</p>"
+    gitHub: oke11o
+    habr: oke11o
   - id: 2892
     photoFileName: 2892.jpg
     photoUpdatedAt: "2023-09-16T10:51:46Z"
@@ -42080,6 +42090,8 @@ speakers:
             стве, консультировании, обучении руководителей и девелопер адвокатстве. Выступает про управление, людей и соци\
             ально-технические системы.</span></p>"}
     twitter: vsharovatov1
+    gitHub: sharovatov
+    habr: vsh
   - id: 2907
     photoFileName: 2907.jpg
     photoUpdatedAt: "2023-10-02T12:04:41Z"
@@ -42132,6 +42144,7 @@ speakers:
       - {language: ru, text: "<p>Инженер по автоматизации тестирования в команде Core iOS ВКонтакте. Занимается разработко\
             й инфраструктуры для iOS-автоматизации и написанием автотестов. Проводит онбординг и менторит новых сотруднико\
             в. Принимает участие в технических и финальных интервью ВКонтакте.</p>"}
+    gitHub: ksenksenon
   - id: 2911
     photoFileName: 2911.jpg
     photoUpdatedAt: "2023-08-30T14:09:01Z"
@@ -42170,6 +42183,7 @@ speakers:
             \ these companies optimize their technology infrastructure, empowering them to stay ahead of the curve and thrive\
             \ in today's fast-paced and ever-changing digital landscape.</p>"
     twitter: amitgud
+    gitHub: amitgud-doordash
   - id: 2913
     photoFileName: 2913.jpg
     photoUpdatedAt: "2023-08-30T14:20:50Z"
@@ -42195,6 +42209,7 @@ speakers:
       - {language: ru, text: "<p>Head of QA в TestIT. В IT столько, сколько себя помнит. Занимается вопросами качества и в\
             ыстраиванием процессов для его обеспечения. Любит воспитывать команды.</p>"}
     twitter: KarimAminov
+    habr: KarimAminov
   - id: 2915
     photoFileName: 2915.jpg
     photoUpdatedAt: "2023-07-24T10:38:13Z"
@@ -42283,6 +42298,8 @@ speakers:
             \ про автотестирование. Имеет большой опыт в автоматизации и менторстве, вел курс в Иннополисе по Java QA Automation.</p>\n\
             <p>За всё свое время в сфере автотестирования успел поработать с UI, API, Mobile частью, а также писал код на\
             \ Java, Kotlin, Python, Swift, Ruby и изучил CI/CD-часть вдоль и поперек, используя Bash-скрипты.</p>"
+    gitHub: penolegrus
+    habr: penolegrus
   - id: 2921
     photoFileName: 2921.jpg
     photoUpdatedAt: "2023-07-31T15:52:39Z"
@@ -42310,6 +42327,8 @@ speakers:
         text: "<p>Руководитель группы автоматизации тестирования в Звуке. Писал автотесты под платформы iOS и Android, а т\
             акже для web и API.</p>\n<p>Борис увлекается автоматизацией тестирования iOS, пишет статьи на Хабр и ведет Telegram-к\
             анал на эту тематику.</p>"
+    gitHub: BorisLys
+    habr: Boris_Lys
   - id: 2923
     photoFileName: 2923.jpg
     photoUpdatedAt: "2023-08-10T13:42:26Z"
@@ -42387,6 +42406,8 @@ speakers:
         text: "<p>В IT работает более 10 лет, и все это время работа связана с обеспечением качества.</p>\n<p>В Тинькофф &ndash;\
             \ более 6 лет: начинал с тестирования ETL-процессов, а теперь занимается обеспечением качества инструментов вы\
             грузки данных, используемых в ETL.</p>"
+    gitHub: dgokondra
+    habr: dgon_kondrasov
   - id: 2928
     photoFileName: 2928.jpg
     photoUpdatedAt: "2023-09-19T20:09:15Z"
@@ -42416,6 +42437,8 @@ speakers:
             \ co-operates with Test IT and is the author of a series of articles on autotesting.</p>"}
       - {language: ru, text: "<p>QA Lead в Иннотех. Ранее работал в таких компаниях, как Ланит и Сбербанк. Активно сотрудн\
             ичает с Test IT, автор серии статей на тему автотестирования.&nbsp;</p>"}
+    gitHub: stillwork-bit
+    habr: StillWork
   - id: 2930
     photoFileName: 2930.jpg
     photoUpdatedAt: "2023-07-28T11:11:07Z"
@@ -42494,6 +42517,7 @@ speakers:
             \ with medical devices. He participates in diverse company's projects that provide rich experience.</p>"}
       - {language: ru, text: "<p>Работает в Ауриге более 10 лет, большую часть времени &ndash; над медицинским оборудовани\
             ем. Участвует в разнообразных проектах компании, которые дают возможность приобрести богатый опыт.</p>"}
+    habr: dmitryvolochaev
   - id: 2936
     photoFileName: 2936.jpg
     photoUpdatedAt: "2023-08-15T08:55:05Z"
