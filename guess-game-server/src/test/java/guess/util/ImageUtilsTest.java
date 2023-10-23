@@ -90,44 +90,58 @@ class ImageUtilsTest {
         }
     }
 
-    @Test
-    void needUpdate() throws IOException {
-        final String IMAGE_400X400_URL_STRING = "https://valid.com/path0";
-        final String IMAGE_1X1_URL_STRING = "https://valid.com/path1";
-        final String IMAGE_PARAMETERS_TEMPLATE = "w=%d&h=%d";
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("needUpdate method tests")
+    class NeedUpdateTest {
+        private Stream<Arguments> data() {
+            final String IMAGE_400X400_URL_STRING = "https://valid.com/path0";
+            final String IMAGE_1X1_URL_STRING = "https://valid.com/path1";
+            final String IMAGE_PARAMETERS_TEMPLATE = "w=%d&h=%d";
 
-        try (MockedStatic<ImageUtils> mockedStatic = Mockito.mockStatic(ImageUtils.class)) {
-            mockedStatic.when(() -> ImageUtils.needUpdate(Mockito.nullable(String.class), Mockito.anyString(), Mockito.anyString()))
-                    .thenCallRealMethod();
-            mockedStatic.when(() -> ImageUtils.getImageByUrl(Mockito.any(URL.class)))
-                    .thenAnswer(
-                            (Answer<BufferedImage>) invocation -> {
-                                Object[] args = invocation.getArguments();
-                                URL url = (URL) args[0];
+            return Stream.of(
+                    arguments(null, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE, true),
+                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE, false)
+            );
+        }
 
-                                return ImageIO.read(url);
-                            }
-                    );
-            mockedStatic.when(() -> ImageUtils.getImageByUrlString(Mockito.nullable(String.class), Mockito.anyString()))
-                    .thenAnswer(
-                            (Answer<BufferedImage>) invocation -> {
-                                Object[] args = invocation.getArguments();
-                                String urlString = (String) args[0];
+        @ParameterizedTest
+        @MethodSource("data")
+        void needUpdate(String targetPhotoUrl, String resourceFileName, String imageParametersTemplate, boolean expected) throws IOException {
+            final String IMAGE_400X400_URL_STRING = "https://valid.com/path0";
+            final String IMAGE_1X1_URL_STRING = "https://valid.com/path1";
 
-                                return switch (urlString) {
-                                    case IMAGE_400X400_URL_STRING -> createImage(400, 400);
-                                    case IMAGE_1X1_URL_STRING -> createImage(1, 1);
-                                    default -> throw new IOException();
-                                };
-                            }
-                    );
+            try (MockedStatic<ImageUtils> mockedStatic = Mockito.mockStatic(ImageUtils.class)) {
+                mockedStatic.when(() -> ImageUtils.needUpdate(Mockito.nullable(String.class), Mockito.anyString(), Mockito.anyString()))
+                        .thenCallRealMethod();
+                mockedStatic.when(() -> ImageUtils.getImageByUrl(Mockito.any(URL.class)))
+                        .thenAnswer(
+                                (Answer<BufferedImage>) invocation -> {
+                                    Object[] args = invocation.getArguments();
+                                    URL url = (URL) args[0];
 
-            assertFalse(ImageUtils.needUpdate(null, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE));
-            assertFalse(ImageUtils.needUpdate(IMAGE_400X400_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE));
-            assertFalse(ImageUtils.needUpdate(IMAGE_1X1_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE));
+                                    return ImageIO.read(url);
+                                }
+                        );
+                mockedStatic.when(() -> ImageUtils.getImageByUrlString(Mockito.nullable(String.class), Mockito.anyString()))
+                        .thenAnswer(
+                                (Answer<BufferedImage>) invocation -> {
+                                    Object[] args = invocation.getArguments();
+                                    String urlString = (String) args[0];
 
-            assertTrue(ImageUtils.needUpdate(IMAGE_400X400_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE));
-            assertFalse(ImageUtils.needUpdate(IMAGE_1X1_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE));
+                                    return switch (urlString) {
+                                        case IMAGE_400X400_URL_STRING -> createImage(400, 400);
+                                        case IMAGE_1X1_URL_STRING -> createImage(1, 1);
+                                        default -> throw new IOException();
+                                    };
+                                }
+                        );
+
+                assertEquals(expected, ImageUtils.needUpdate(targetPhotoUrl, resourceFileName, imageParametersTemplate));
+            }
         }
     }
 
