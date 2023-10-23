@@ -55,6 +55,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Stream;
 
+import static guess.util.load.ContentfulDataLoader.IMAGE_PARAMETERS_TEMPLATE;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -1068,8 +1069,8 @@ class ContentfulDataLoaderTest {
     }
 
     @Test
-    void getImageWidthParameterName() {
-        assertEquals("w", new ContentfulDataLoader().getImageWidthParameterName());
+    void getImageParametersTemplate() {
+        assertEquals(IMAGE_PARAMETERS_TEMPLATE, new ContentfulDataLoader().getImageParametersTemplate());
     }
 
     @Nested

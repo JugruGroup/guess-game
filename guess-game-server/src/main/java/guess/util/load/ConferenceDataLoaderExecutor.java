@@ -352,7 +352,7 @@ public class ConferenceDataLoaderExecutor {
                         resourceNameCompanySpeakers,
                         resourceNameSpeakers),
                 lastSpeakerId,
-                cmsDataLoader.getImageWidthParameterName());
+                cmsDataLoader.getImageParametersTemplate());
 
         // Find talks
         fillSpeakerIds(cmsTalks);
@@ -381,7 +381,7 @@ public class ConferenceDataLoaderExecutor {
 
         // Save files
         saveFiles(companyLoadResult, speakerLoadResult, talkLoadResult, placeLoadResult, eventLoadResult,
-                cmsDataLoader.getImageWidthParameterName());
+                cmsDataLoader.getImageParametersTemplate());
     }
 
     /**
@@ -757,12 +757,12 @@ public class ConferenceDataLoaderExecutor {
      * @param speakers                speakers
      * @param speakerLoadMaps         speaker load maps
      * @param lastSpeakerId           identifier of last speaker
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @return load result for speakers
      * @throws IOException if read error occurs
      */
     static SpeakerLoadResult getSpeakerLoadResult(List<Speaker> speakers, SpeakerLoadMaps speakerLoadMaps,
-                                                  AtomicLong lastSpeakerId, String imageWidthParameterName) throws IOException {
+                                                  AtomicLong lastSpeakerId, String imageParametersTemplate) throws IOException {
         List<Speaker> speakersToAppend = new ArrayList<>();
         List<Speaker> speakersToUpdate = new ArrayList<>();
         List<UrlFilename> urlFilenamesToAppend = new ArrayList<>();
@@ -798,7 +798,7 @@ public class ConferenceDataLoaderExecutor {
 
                 // Update speaker photo
                 if (needPhotoUpdate(speaker.getPhotoUpdatedAt(), resourceSpeaker.getPhotoUpdatedAt(), targetPhotoUrl,
-                        resourcePhotoFileName, imageWidthParameterName)) {
+                        resourcePhotoFileName, imageParametersTemplate)) {
                     urlFilenamesToUpdate.add(new UrlFilename(targetPhotoUrl, resourcePhotoFileName));
                 }
 
@@ -1152,13 +1152,13 @@ public class ConferenceDataLoaderExecutor {
      * @param talkLoadResult          talk load result
      * @param placeLoadResult         place load result
      * @param eventLoadResult         event load result
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @throws IOException          if file creation error occurs
      * @throws NoSuchFieldException if field name is invalid
      */
     static void saveFiles(LoadResult<List<Company>> companyLoadResult, SpeakerLoadResult speakerLoadResult, LoadResult<List<Talk>> talkLoadResult,
                           LoadResult<List<Place>> placeLoadResult, LoadResult<Event> eventLoadResult,
-                          String imageWidthParameterName) throws IOException, NoSuchFieldException {
+                          String imageParametersTemplate) throws IOException, NoSuchFieldException {
         List<Company> companiesToAppend = companyLoadResult.itemToAppend();
 
         List<Speaker> speakersToAppend = speakerLoadResult.speakers().itemToAppend();
@@ -1188,7 +1188,7 @@ public class ConferenceDataLoaderExecutor {
             YamlUtils.clearOutputDirectory();
 
             saveCompanies(companyLoadResult);
-            saveImages(speakerLoadResult, imageWidthParameterName);
+            saveImages(speakerLoadResult, imageParametersTemplate);
             saveSpeakers(speakerLoadResult);
             saveTalks(talkLoadResult);
             savePlaces(placeLoadResult);
@@ -1215,19 +1215,19 @@ public class ConferenceDataLoaderExecutor {
      * Saves images.
      *
      * @param speakerLoadResult       speaker load result
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @throws IOException if file creation error occurs
      */
-    static void saveImages(SpeakerLoadResult speakerLoadResult, String imageWidthParameterName) throws IOException {
+    static void saveImages(SpeakerLoadResult speakerLoadResult, String imageParametersTemplate) throws IOException {
         List<UrlFilename> urlFilenamesToAppend = speakerLoadResult.urlFilenames().itemToAppend();
         List<UrlFilename> urlFilenamesToUpdate = speakerLoadResult.urlFilenames().itemToUpdate();
 
         if (!urlFilenamesToAppend.isEmpty()) {
-            logAndCreateSpeakerImages(urlFilenamesToAppend, "Speaker images (to append): {}", imageWidthParameterName);
+            logAndCreateSpeakerImages(urlFilenamesToAppend, "Speaker images (to append): {}", imageParametersTemplate);
         }
 
         if (!urlFilenamesToUpdate.isEmpty()) {
-            logAndCreateSpeakerImages(urlFilenamesToUpdate, "Speaker images (to update): {}", imageWidthParameterName);
+            logAndCreateSpeakerImages(urlFilenamesToUpdate, "Speaker images (to update): {}", imageParametersTemplate);
         }
     }
 
@@ -1373,13 +1373,14 @@ public class ConferenceDataLoaderExecutor {
      *
      * @param urlFilenames            url, filenames pairs
      * @param logMessage              log message
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @throws IOException if file creation error occurs
      */
-    static void logAndCreateSpeakerImages(List<UrlFilename> urlFilenames, String logMessage, String imageWidthParameterName) throws IOException {
+    static void logAndCreateSpeakerImages(List<UrlFilename> urlFilenames, String logMessage,
+                                          String imageParametersTemplate) throws IOException {
         log.info(logMessage, urlFilenames.size());
         for (UrlFilename urlFilename : urlFilenames) {
-            ImageUtils.create(urlFilename.url(), urlFilename.filename(), imageWidthParameterName);
+            ImageUtils.create(urlFilename.url(), urlFilename.filename(), imageParametersTemplate);
         }
     }
 
@@ -1979,16 +1980,17 @@ public class ConferenceDataLoaderExecutor {
      * @param resourcePhotoUpdatedAt  updated datetime of resource speaker
      * @param targetPhotoUrl          photo URL of target speaker
      * @param resourcePhotoFileName   photo filename of resource speaker
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @return {@code true} if need to update, {@code false} otherwise
      * @throws IOException if read error occurs
      */
     public static boolean needPhotoUpdate(ZonedDateTime targetPhotoUpdatedAt, ZonedDateTime resourcePhotoUpdatedAt,
                                           String targetPhotoUrl, String resourcePhotoFileName,
-                                          String imageWidthParameterName) throws IOException {
+                                          String imageParametersTemplate) throws IOException {
         if (targetPhotoUpdatedAt == null) {
             // New updated datetime is null
-            return ImageUtils.needUpdate(targetPhotoUrl, String.format(RESOURCE_PHOTO_FILE_NAME_PATH, resourcePhotoFileName), imageWidthParameterName);
+            return ImageUtils.needUpdate(targetPhotoUrl, String.format(RESOURCE_PHOTO_FILE_NAME_PATH, resourcePhotoFileName),
+                    imageParametersTemplate);
         } else {
             // New updated datetime is not null
             if (resourcePhotoUpdatedAt == null) {
@@ -2574,9 +2576,15 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов онлайн-части", "Открытие офлайн-части", "Lightning Talks",
 //                                "Nexign Quiz: Make It or Break It")));
 //        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2023, 10, 10), "2023 Autumn",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("Heisenbug 2023 Autumn", null, List.of(24L, 4L)),
-//                        Set.of()));
+//                        Map.of(new NameCompany("Алексей Иванов", new Company(1165, "Samolet")), 2533L),
+//                        Set.of("Открытие конференции Heisenbug 2023 Autumn", "Закрытие конференции Heisenbug 2023 Autumn",
+//                                "Открытие второго дня Heisenbug 2023 Autumn",
+//                                "Подведение итогов online-части конференции Heisenbug 2023 Autumn",
+//                                "Открытие офлайн-части конференции Heisenbug 2023 Autumn",
+//                                "Свой среди чужих, чужой среди своих", "Пути развития в тестировании",
+//                                "Tinkoff afterparty: челленджи и кешбэк", "Lightning talks")));
 //        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 11, 1), "2023 Autumn ",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Mobius 2023 Autumn", null, List.of(24L, 4L)),

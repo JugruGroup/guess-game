@@ -89,6 +89,8 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     private static final String OPTIONS_DIRECTORY_NAME = String.format("%s/%s", System.getProperty("user.home"), ".guess-game");
     private static final String TOKEN_FILENAME = "token.yml";
 
+    static final String IMAGE_PARAMETERS_TEMPLATE = "width=%d&height=%d&mode=CropUpsize";
+
     private Long eventId;
 
     static {
@@ -610,8 +612,8 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     }
 
     @Override
-    String getImageWidthParameterName() {
-        return "width";
+    String getImageParametersTemplate() {
+        return IMAGE_PARAMETERS_TEMPLATE;
     }
 
     /**

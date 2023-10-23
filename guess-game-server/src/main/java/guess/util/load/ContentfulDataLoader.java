@@ -70,6 +70,8 @@ public class ContentfulDataLoader extends CmsDataLoader {
     static final String ENTRY_LINK_TYPE = "Entry";
     static final String ASSET_LINK_TYPE = "Asset";
 
+    static final String IMAGE_PARAMETERS_TEMPLATE = "w=%d&h=%d";
+
     public enum ConferenceSpaceInfo {
         // Joker, JPoint, JBreak, TechTrain, C++ Russia, Hydra, SPTDC, DevOops, SmartData
         COMMON_SPACE_INFO("oxjq45e8ilak", "fdc0ca21c8c39ac5a33e1e20880cae6836ae837af73c2cfc822650483ee388fe",
@@ -690,8 +692,8 @@ public class ContentfulDataLoader extends CmsDataLoader {
     }
 
     @Override
-    String getImageWidthParameterName() {
-        return "w";
+    String getImageParametersTemplate() {
+        return IMAGE_PARAMETERS_TEMPLATE;
     }
 
     /**

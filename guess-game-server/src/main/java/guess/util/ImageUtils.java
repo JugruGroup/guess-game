@@ -20,6 +20,7 @@ public class ImageUtils {
 
     static final String OUTPUT_DIRECTORY_NAME = "output";
     static final int IMAGE_WIDTH = 400;
+    static final int IMAGE_HEIGHT = 400;
 
     private ImageUtils() {
     }
@@ -44,12 +45,13 @@ public class ImageUtils {
      * Gets image by URL string.
      *
      * @param urlString               source URL string
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @return image
      * @throws IOException if read error occurs
      */
-    static BufferedImage getImageByUrlString(String urlString, String imageWidthParameterName) throws IOException {
-        var urlSpec = String.format("%s?%s=%d", urlString, imageWidthParameterName, IMAGE_WIDTH);
+    static BufferedImage getImageByUrlString(String urlString, String imageParametersTemplate) throws IOException {
+        var imageParameters = String.format(imageParametersTemplate, IMAGE_WIDTH, IMAGE_HEIGHT);
+        var urlSpec = String.format("%s?%s", urlString, imageParameters);
         var url = new URL(urlSpec);
 
         return getImageByUrl(url);
@@ -60,17 +62,17 @@ public class ImageUtils {
      *
      * @param targetPhotoUrl          source URL
      * @param resourceFileName        resource file name
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @return {@code true} if need to update, {@code false} otherwise
      * @throws IOException if read error occurs
      */
-    public static boolean needUpdate(String targetPhotoUrl, String resourceFileName, String imageWidthParameterName) throws IOException {
+    public static boolean needUpdate(String targetPhotoUrl, String resourceFileName, String imageParametersTemplate) throws IOException {
         BufferedImage fileImage = getImageByUrl(new File(resourceFileName).toURI().toURL());
 
-        if (fileImage.getWidth() < IMAGE_WIDTH) {
-            BufferedImage urlImage = getImageByUrlString(targetPhotoUrl, imageWidthParameterName);
+        if ((fileImage.getWidth() < IMAGE_WIDTH) || (fileImage.getHeight() < IMAGE_HEIGHT)) {
+            BufferedImage urlImage = getImageByUrlString(targetPhotoUrl, imageParametersTemplate);
 
-            return (fileImage.getWidth() < urlImage.getWidth());
+            return ((fileImage.getWidth() < urlImage.getWidth()) || (fileImage.getHeight() < urlImage.getHeight()));
         } else {
             return false;
         }
@@ -121,14 +123,14 @@ public class ImageUtils {
      *
      * @param sourceUrl               source URL
      * @param destinationFileName     destination file name
-     * @param imageWidthParameterName name of image width parameter
+     * @param imageParametersTemplate image parameters template
      * @throws IOException if file creation error occurs
      */
-    public static void create(String sourceUrl, String destinationFileName, String imageWidthParameterName) throws IOException {
+    public static void create(String sourceUrl, String destinationFileName, String imageParametersTemplate) throws IOException {
         var file = new File(String.format("%s/%s", OUTPUT_DIRECTORY_NAME, destinationFileName));
         FileUtils.checkAndCreateDirectory(file.getParentFile());
 
-        BufferedImage image = getImageByUrlString(sourceUrl, imageWidthParameterName);
+        BufferedImage image = getImageByUrlString(sourceUrl, imageParametersTemplate);
         var imageFormat = getImageFormatByUrlString(sourceUrl);
 
         if (!ImageFormat.JPG.equals(imageFormat)) {

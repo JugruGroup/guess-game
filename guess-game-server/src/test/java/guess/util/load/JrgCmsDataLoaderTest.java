@@ -45,6 +45,7 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
+import static guess.util.load.JrgCmsDataLoader.IMAGE_PARAMETERS_TEMPLATE;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -1019,8 +1020,8 @@ class JrgCmsDataLoaderTest {
     }
 
     @Test
-    void getImageWidthParameterName() {
-        assertEquals("width", new JrgCmsDataLoader().getImageWidthParameterName());
+    void getImageParametersTemplate() {
+        assertEquals(IMAGE_PARAMETERS_TEMPLATE, new JrgCmsDataLoader().getImageParametersTemplate());
     }
 
     @Nested
