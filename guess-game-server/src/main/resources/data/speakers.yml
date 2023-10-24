@@ -3832,6 +3832,7 @@ speakers:
             жных стран.</p>"
     twitter: dzavalishin
     gitHub: dzavalishin
+    habr: dzavalishin
   - id: 257
     photoFileName: 0257.jpg
     name:
@@ -4290,6 +4291,7 @@ speakers:
             ованного тестирования: VIQA, JDI UI, JDI Light, JDI Dark, FlashPages. Роман старается улучшить мир вокруг, пом\
             очь коллегам в проектах научиться тестировать в удовольствие: быстро, дешево, качественно."}
     gitHub: epam-roman-iovlev
+    habr: RomanYIovlev
   - id: 287
     photoFileName: 0287.jpg
     name:
@@ -7205,6 +7207,7 @@ speakers:
             \ Участвует в нескольких Open Source проектах и организует конференцию CodeFest в Новосибирске."
     twitter: denisivanov
     gitHub: denisivan0v
+    habr: DenisIvanov
     mvp: true
   - id: 479
     photoFileName: 0479.jpg
@@ -9583,6 +9586,8 @@ speakers:
             - Mainframer;\n- The Context Podcast;\n- Domic;\n- Composer/Swarmer;\n- StorIO;\n- QualityMatters;\n- Juno;\n\
             - Яндекс.Почта;\n- etc."
     twitter: artem_zin
+    gitHub: artem-zinnatullin
+    habr: Artem_zin
   - id: 646
     photoFileName: 0646.jpg
     name:
@@ -10882,6 +10887,7 @@ speakers:
             \ тимлид, спикер. До недавнего времени захватывал мир вместе с Infobip &mdash; глобальной коммуникационной пла\
             тформой для бизнеса.</p>"}
     twitter: zolotyh
+    gitHub: zolotyh
     habr: zolotyh
   - id: 734
     photoFileName: 0734.jpg
@@ -11769,6 +11775,7 @@ speakers:
             \ Свободное время Дмитрий проводит с семьей или за стаканом отличного голландского или бельгийского пива в как\
             ом-нибудь уютном баре."}
     twitter: dmtopolog
+    gitHub: DmIvanov
   - id: 797
     photoFileName: 0797.jpg
     name:
@@ -13666,6 +13673,7 @@ speakers:
             т стримы по IT. Иногда запускает свои продукты.</p>"}
     twitter: r3tam
     gitHub: artem-zaitsev
+    habr: r3tam
   - id: 935
     photoFileName: 0935.jpg
     name:
@@ -15031,6 +15039,8 @@ speakers:
             ервым, кто записал русскоязычные курсы по AngularJS. Более 3 лет проработал в Альфа-Банк, где развивал розничн\
             ый бизнес и помогал пользователям получать услуги быстрее. Участвовал в развитии Дизайн-Системы."}
     twitter: severenit
+    gitHub: Severenit
+    habr: severenit
   - id: 1035
     photoFileName: 1035.jpg
     name:
@@ -16899,6 +16909,7 @@ speakers:
       - {language: ru, text: "6 лет разрабатывает приложения под iOS. C 2019 пишет на разном в команде мобильной платформы\
             \ Grab."}
     twitter: zinovmikhail
+    gitHub: themz
   - id: 1172
     photoFileName: 1172.jpg
     photoUpdatedAt: 2020-04-29T11:47:09.140Z[UTC]
@@ -18825,6 +18836,7 @@ speakers:
     bio:
       - {language: en, text: "C++ программист. Участвует в разработке статического анализатора PVS-Studio, а точнее, его я\
             дра и диагностических правил. Помимо программирования увлекается философией и музыкой."}
+    gitHub: MrDvorak
     habr: MrDvorak
   - id: 1317
     photoFileName: 1317.jpg
@@ -21294,6 +21306,7 @@ speakers:
             н проектов MassTransit и Proto.Actor, и поддерживает RestSharp. Также он руководит группой митапа Domain-Driven\
             \ Design Norway и выступает на технических конференциях."
     twitter: Zimareff
+    gitHub: alexeyzimarev
   - id: 1494
     photoFileName: 1494.jpg
     photoUpdatedAt: 2020-10-08T12:58:23.678Z[UTC]
@@ -24786,6 +24799,7 @@ speakers:
     bio:
       - {language: en, text: "I write code."}
       - {language: ru, text: "Пишу код."}
+    gitHub: nizhikov
     habr: NorthDragon
   - id: 1726
     photoFileName: 1726.jpg
@@ -27736,6 +27750,7 @@ speakers:
       - {language: ru, text: "Дмитрий Злыгин — фронтенд-разработчик. Спикер на DINS IT Evening, PiterJS и Holy JS. Работае\
             т над веб-клиентом для видеоконференций в компании  DINS."}
     gitHub: JSmith01
+    habr: JSmitty
   - id: 1926
     photoFileName: 1926.jpg
     photoUpdatedAt: 2021-10-26T12:24:40.406Z[UTC]
@@ -36894,7 +36909,6 @@ speakers:
             \ Assurance Engineer at Tinkoff.</p>"}
       - {language: ru, text: "<p>В тестировании около 8 лет. Работала в аутсорсинге в сфере ритейл, сейчас является Старши\
             м инженером по обеспечению качества в Тинькофф.</p>"}
-    gitHub: Tinkoff
   - id: 2562
     photoFileName: 2562.jpg
     photoUpdatedAt: 2023-03-23T11:03:12Z[UTC]
