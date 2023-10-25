@@ -4627,6 +4627,7 @@ speakers:
       - {language: ru, text: "Руководит компанией EmDev, партнером Liferay в России, которая занимается разработкой и внед\
             рением порталов на Liferay."}
     gitHub: akakunin
+    habr: akakunin
   - id: 309
     photoFileName: 0309.jpg
     name:
@@ -4712,6 +4713,7 @@ speakers:
             \ исследовательнском институте Inria (Франция). Аспирант факультета Прикладной математики – процессов управлен\
             ия СПбГУ."}
     twitter: MikhailKamalov
+    gitHub: KamalovMikhail
   - id: 318
     photoFileName: 0318.jpg
     name:
@@ -5158,6 +5160,7 @@ speakers:
             ичества статей, посвященных качеству кода и рассказывающих о различных паттернах ошибок, которые допускают про\
             граммисты C++. Популяризирует методологию статического и динамического анализа кода."}
     twitter: Code_Analysis
+    gitHub: AndreyKarpov
     habr: Andrey2008
   - id: 345
     photoFileName: 0345.jpg
@@ -6385,6 +6388,8 @@ speakers:
             \ Интересуется дизайном языков программирования, функциональным программированием, статическим анализом и прео\
             бразованием программ."}
     twitter: akarpov89
+    gitHub: akarpov89
+    habr: Schrodingers_Cat
   - id: 426
     photoFileName: 0426.jpg
     photoUpdatedAt: 2019-04-17T09:12:23.677Z[UTC]
@@ -9946,6 +9951,7 @@ speakers:
             я разработкой архитектуры для фронтенд-проектов в компании iSpring. Последние 2 года активно изучает и следит\
             \ за развитием Google Closure Compiler."}
     twitter: i_kabirov
+    gitHub: ikabirov
   - id: 670
     photoFileName: 0670.jpg
     photoUpdatedAt: 2019-02-11T14:44:35.898Z[UTC]
@@ -12905,6 +12911,7 @@ speakers:
       - {language: ru, text: "Работает iOS разработчиком в Badoo, до этого много и долго работал в 2GIS. В свободное время\
             \ изучает технологии создания UI, следит за развитием языков программирования и других открытых проектов."}
     twitter: ikashkuta
+    gitHub: ikashkuta
     habr: Xrazont
   - id: 875
     photoFileName: 0875.jpg
@@ -13054,6 +13061,7 @@ speakers:
             истем.\n\nИнтерес к гибридным технологиям возник в Сбербанк-Технологиях: в предыдущих компаниях их использован\
             ие было неактуально и невостребованно, а в условиях банковской деятельности они позволили сократить время разр\
             аботки нового продукта и уменьшить регресс кода при изменениях. С React Native работает около полугода."
+    gitHub: jasesuperhero
     habr: jasesuperhero
   - id: 883
     photoFileName: 0883.jpg
@@ -15115,6 +15123,7 @@ speakers:
             итмов и структуры данных. Есть опыт в разработке проектных заданий и технической документации."}
     twitter: korery
     gitHub: korel-san
+    habr: korel
   - id: 1040
     photoFileName: 1040.jpg
     photoUpdatedAt: 2020-10-16T13:55:16.487Z[UTC]
@@ -20638,6 +20647,7 @@ speakers:
             \ и Apple. Кандидат наук по прикладной математике. Президентский приз за достижения в науке. Опыт со стартапом\
             , в игровой индустрии и в менеджменте."
     gitHub: yuri-karadzhov
+    habr: Large
   - id: 1447
     photoFileName: 1447.jpg
     photoUpdatedAt: 2019-03-15T07:37:23.234Z[UTC]
@@ -26287,6 +26297,7 @@ speakers:
             \ преподает в Otus, пишет курсы для SkillFactory.\nСостоит в кружках «Хочу все знать» и «С радостью поделюсь т\
             ем, что уже узнал»."
     gitHub: kksudo
+    habr: kksudo
   - id: 1822
     photoFileName: 1822.jpg
     photoUpdatedAt: 2021-10-06T12:26:14.743Z[UTC]
@@ -31365,6 +31376,7 @@ speakers:
             \ и прочее."}
     twitter: nickshevr
     gitHub: nickshevr
+    habr: nickshevr
   - id: 2172
     photoFileName: 2172.jpg
     photoUpdatedAt: 2022-05-16T13:46:53Z[UTC]
