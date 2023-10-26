@@ -1043,6 +1043,7 @@ speakers:
             х JPoint и Joker."}
     twitter: nkoval_
     gitHub: ndkoval
+    habr: ndkoval
   - id: 59
     photoFileName: 0059.jpg
     photoUpdatedAt: 2021-08-13T07:06:20.468Z[UTC]
@@ -3982,6 +3983,7 @@ speakers:
             вать, как голоса в голове.\n\nВсегда делает ставку на JS, последнее время иногда как на compile target."
     twitter: xanf_ua
     gitHub: xanf
+    habr: xanf
   - id: 265
     photoFileName: 0265.jpg
     name:
@@ -9744,6 +9746,7 @@ speakers:
             логера, но продолжает программировать в свободное время, потому что все мы заслуживаем еще больше новых инстру\
             ментов для отладки наших багов. :)"
     twitter: ak_239
+    gitHub: alexkozy
   - id: 656
     photoFileName: 0656.jpg
     name:
@@ -11421,6 +11424,7 @@ speakers:
             \ занимаюсь только фронтендом в компании Artec Group. Увлекаюсь 3D, компьютерными играми и путешествиями."}
     twitter: Lik04ka
     gitHub: Likita
+    habr: Likita
   - id: 772
     photoFileName: 0772.jpg
     name:
@@ -16953,6 +16957,8 @@ speakers:
             \ Grab и Lyft.\nС недавнего времени вместе с командой Oculus начал работать над операционной системой для VR в\
             \ компании Facebook."
     twitter: ikimruslan
+    gitHub: kirussell
+    habr: kirussell
   - id: 1174
     photoFileName: 1174.jpg
     photoUpdatedAt: 2020-05-05T07:44:16.527Z[UTC]
@@ -18606,6 +18612,8 @@ speakers:
             л с разработки в разваливающихся стартапах и запросов из Activity, пришёл к Clean-архитектуре и топовому мобил\
             ьному аутсорсеру в стране."}
     twitter: xd720p
+    gitHub: xd720p
+    habr: xd720p
   - id: 1297
     photoFileName: 1297.jpg
     photoUpdatedAt: 2020-06-18T11:59:19.965Z[UTC]
@@ -18900,6 +18908,7 @@ speakers:
             \ покопаться в crash дампах или взять в руки дизассемблер.\nВ свободное время предпочитает путешествовать с се\
             мьёй или мучать ардуинки."
     gitHub: GrayNM
+    habr: GrayNM
   - id: 1320
     photoFileName: 1320.jpg
     photoUpdatedAt: 2020-06-25T09:59:55.697Z[UTC]
@@ -20376,6 +20385,7 @@ speakers:
             \ на ARM32, PPC32, Apple M1. Область интересов: оптимизации для ускорения запуска и достижения финальной произ\
             водительности, в частности, Project CRaC.</p>"}
     gitHub: AntonKozlov
+    habr: antonkozlov
   - id: 1426
     photoFileName: 1426.jpg
     photoUpdatedAt: 2020-09-11T13:35:20.548Z[UTC]
@@ -38480,6 +38490,7 @@ speakers:
       - {language: ru, text: "<p>Несколько лет занимается разработкой сервисов для интернет-рекламы и продвижения мобильны\
             х приложений. Последние полгода руководит командой Push Service в RuStore.</p>"}
     gitHub: akovardin
+    habr: artem_kovardin
   - id: 2673
     photoFileName: 2673.jpg
     photoUpdatedAt: "2023-03-16T12:41:07Z"
