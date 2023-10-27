@@ -4892,6 +4892,7 @@ speakers:
       - {language: ru, text: "<p>Специализируется на управлении командами, обеспечивающими процессы в области хранения и о\
             бработки данных (data engineers, DWH, DBA). Опытный спикер конференций Highload, ex-Program committee member.\
             \ Интересуется устройством MPP-СУБД и распределенных хранилищ.</p>"}
+    gitHub: alex-krash
     habr: alexkrash
   - id: 328
     photoFileName: 0328.jpg
@@ -8340,6 +8341,7 @@ speakers:
       - {language: ru, text: "Senior Software Test Automation Engineer в Badoo, Великобритания. 10+ лет опыта в автоматиза\
             ции тестирования мобильных приложений. Пишет тесты на Java/Ruby. Любит исследовать мир, разбираться с Fault Fail-\
             \ и Fault Pass-тестами."}
+    gitHub: agileseph
     habr: agile_seph
   - id: 562
     photoFileName: 0562.jpg
@@ -10239,6 +10241,7 @@ speakers:
             к как хотел разрабатывать игры и постепенно начал заниматься этим на работе."}
     twitter: mamu_eval
     gitHub: lekzd
+    habr: lekzd
   - id: 690
     photoFileName: 0690.jpg
     name:
@@ -11279,6 +11282,8 @@ speakers:
       - {language: ru, text: "Закончил МИЭМ, кафедру ИКТ. В институте выучил C/C++, создал программу для детектирования дв\
             ижения лиц и прототип дополненной реальности. В вебе около пяти лет."}
     twitter: mrgustarus
+    gitHub: gustarus
+    habr: gustarus
   - id: 760
     photoFileName: 0760.jpg
     name:
@@ -12179,6 +12184,7 @@ speakers:
             ». Утверждает, что родился с баскетбольным мячом и клавиатурой в руках."}
     twitter: alex_korshak
     gitHub: akorshak
+    habr: akorshak
   - id: 824
     photoFileName: 0824.jpg
     name:
@@ -12981,6 +12987,7 @@ speakers:
             \ соавтор «Книги VIPER». Помимо VIPER, занимается техническим руководством ряда проектов Rambler&Co, а также р\
             азвитием процессов и практик разработки в iOS-отделе."}
     twitter: serkrapiv
+    gitHub: serkrapiv
   - id: 879
     photoFileName: 0879.jpg
     name:
@@ -14016,6 +14023,8 @@ speakers:
             \ т.д.\nПрофессиональные интересы включают в себя вопросы построения распределенных систем, производительности\
             \ и отказоустойчивости."
     twitter: java_dnk
+    gitHub: netudima
+    habr: netudima
   - id: 965
     photoFileName: 0965.jpg
     name:
@@ -17239,6 +17248,7 @@ speakers:
             . До Cloudflare работал старшим инженером безопасности в Samsung Electronics' Mobile Communications Division.\
             \ Его работу до сих пор можно найти в старых моделях смартфонов Samsung и планшетах."}
     twitter: ignatkn
+    gitHub: ignatk
   - id: 1193
     photoFileName: 1193.jpg
     photoUpdatedAt: 2022-04-25T14:03:46Z[UTC]
@@ -17613,6 +17623,8 @@ speakers:
             \ самого начала работал над переносом Java EE в Eclipse Foundation и по сей день примимает участие в работе не\
             скольких Jakarta EE комитетов."}
     twitter: m0mus
+    gitHub: m0mus
+    habr: m0mus
   - id: 1221
     photoFileName: 1221.jpg
     photoUpdatedAt: 2020-02-18T13:20:14.009Z[UTC]
@@ -28028,6 +28040,7 @@ speakers:
             \ и занимается наукой 15 лет. Пишет статьи, переводит."}
     twitter: igsekor
     gitHub: igsekor
+    habr: igsekor
   - id: 1945
     photoFileName: 1945.jpg
     photoUpdatedAt: 2021-10-29T08:24:30.659Z[UTC]
@@ -39570,6 +39583,7 @@ speakers:
             меет диплом PhD в области информационных систем от RMIT University, Мельбурн, Австралия. До начала исследовате\
             льской карьеры он занимал различные должности связанные с разработкой и архитектурой ПО в индустрии.</p>"
     twitter: kotusev
+    gitHub: kotusev
   - id: 2739
     photoFileName: 2739.jpg
     photoUpdatedAt: "2023-07-12T09:38:04Z"
