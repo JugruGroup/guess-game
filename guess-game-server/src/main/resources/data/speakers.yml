@@ -9930,6 +9930,7 @@ speakers:
             ий университет по специальности Information Technology, в настоящее время работает в Мюнхене фронтенд-разработ\
             чиком."}
     twitter: _sergeikriger
+    gitHub: sergeicodes
   - id: 668
     photoFileName: 0668.jpg
     name:
@@ -16821,6 +16822,7 @@ speakers:
             \ Устроившись в Google, перенес все наработки из нее в официальную AndroidX Transitions-библиотеку. В данный м\
             омент работает над Jetpack Compose."}
     twitter: and_kulikov
+    gitHub: andkulikov
     habr: andkulikov
   - id: 1165
     photoFileName: 1165.jpg
@@ -17158,6 +17160,8 @@ speakers:
       - language: ru
         text: "CEO в Amixr Inc., в прошлом — DevOps и Software Engineer.\nEx. Kaspersky, Cisco, Constructor.IO."
     twitter: Mkukkk
+    gitHub: Matvey-Kuk
+    habr: Matvey-Kuk
   - id: 1187
     photoFileName: 1187.jpg
     photoUpdatedAt: 2020-02-27T15:15:30.948Z[UTC]
@@ -18654,6 +18658,8 @@ speakers:
       - {language: ru, text: "В мобильной разработке с 2016 года. Занимается организацией сообществ GDG и KUG в Петербурге\
             , а также участвует в проекте Android Academy SPb."}
     twitter: Semper_Viventem
+    gitHub: Semper-Viventem
+    habr: Semper-Viventem
   - id: 1299
     photoFileName: 1299.jpg
     photoUpdatedAt: 2021-10-21T21:09:34.588Z[UTC]
@@ -19550,6 +19556,7 @@ speakers:
             я и единицу."}
     twitter: SvetaKrivoshee1
     gitHub: sveta-k13
+    habr: sveta-k13
   - id: 1367
     photoFileName: 1367.jpg
     photoUpdatedAt: 2020-10-06T08:22:56.526Z[UTC]
@@ -19671,6 +19678,7 @@ speakers:
       - {language: ru, text: "Разрабатывает iOS Яндекс.Карты. Последний год — Kotlin MPP. До этого занимался разработкой н\
             а Objective-C, Swift и C++. Разрабатывал прошивки для встраиваемых систем. В мобильной разработке 5 лет."}
     twitter: sPolispastom
+    gitHub: spolispastom
     habr: spolispastom
   - id: 1376
     photoFileName: 1376.jpg
@@ -22651,6 +22659,8 @@ speakers:
             \ разного масштаба. Последние два года трудится в прекрасной команде инфраструктурной разработки, которые подд\
             ерживают окружение для работы более 50 Андроид-разработчиков."}
     twitter: samokryl
+    gitHub: samokryl
+    habr: samokryl
   - id: 1578
     photoFileName: 1578.jpg
     photoUpdatedAt: 2021-10-20T14:36:19.199Z[UTC]
@@ -31135,6 +31145,8 @@ speakers:
         text: "<p>Руководитель разработки браузера.</p>\n<p>Работал C++ разработчиком в различных областях: от космофизики\
             \ и компиляторов, до геоинформатики и браузера.</p>"
     twitter: xardas2000
+    gitHub: Xardas2000
+    habr: Xardas2000
   - id: 2154
     photoFileName: 2154.jpg
     photoUpdatedAt: "2022-04-26T13:37:22Z"
@@ -33812,6 +33824,7 @@ speakers:
             пьютерным зрением и машинным обучением. Работал над десятками разных проектов, но дольше всего с ADAS-задачами\
             . Сейчас руководит CV-командой в Layer, SberDevices.</p>"}
     twitter: WildChlamydia
+    gitHub: WildChlamydia
     habr: WildChlamydia
   - id: 2342
     photoFileName: 2342.jpg
@@ -39867,6 +39880,7 @@ speakers:
             \ target=\"_blank\" rel=\"noopener noreferrer\">Brainshtorm</a>&nbsp;</li>\n</ul>"
     twitter: devopsforlove
     gitHub: darkbenladan
+    habr: darkbenladan
   - id: 2756
     photoFileName: 2756.jpg
     photoUpdatedAt: "2023-07-26T20:37:57Z"

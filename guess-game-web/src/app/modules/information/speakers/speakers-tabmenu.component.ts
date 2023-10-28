@@ -14,12 +14,12 @@ export class SpeakersTabMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label: 'speakers.list.title', routerLink: '/information/speakers/list'},
-      {label: 'speakers.search.title', routerLink: '/information/speakers/search'}
+      {labelKey: 'speakers.list.title', routerLink: '/information/speakers/list'},
+      {labelKey: 'speakers.search.title', routerLink: '/information/speakers/search'}
     ];
 
     if (!isNaN(this.id)) {
-      this.items.push({label: 'speaker.title', routerLink: `/information/speakers/speaker/${this.id}`});
+      this.items.push({labelKey: 'speaker.title', routerLink: `/information/speakers/speaker/${this.id}`});
     }
   }
 }
