@@ -14,12 +14,12 @@ export class CompaniesTabMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label: 'companies.list.title', routerLink: '/information/companies/list'},
-      {label: 'companies.search.title', routerLink: '/information/companies/search'}
+      {labelKey: 'companies.list.title', routerLink: '/information/companies/list'},
+      {labelKey: 'companies.search.title', routerLink: '/information/companies/search'}
     ];
 
     if (!isNaN(this.id)) {
-      this.items.push({label: 'company.title', routerLink: `/information/companies/company/${this.id}`});
+      this.items.push({labelKey: 'company.title', routerLink: `/information/companies/company/${this.id}`});
     }
   }
 }

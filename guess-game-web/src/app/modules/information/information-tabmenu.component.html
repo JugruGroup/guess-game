@@ -1,7 +1,3 @@
 <div #tabMenuDiv>
-  <p-tabMenu [model]="items" [scrollable]="scrollable">
-    <ng-template let-item pTemplate="item">
-      {{ item.label | translate }}
-    </ng-template>
-  </p-tabMenu>
+  <p-tabMenu [model]="localItems" [scrollable]="scrollable"></p-tabMenu>
 </div>

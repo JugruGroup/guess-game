@@ -9,10 +9,10 @@ export class StatisticsTabMenuComponent {
   public readonly SCROLLABLE_WIDTH = 360;
 
   public items: MenuItem[] = [
-    {label: 'statistics.eventTypes.title', routerLink: '/information/statistics/event-types'},
-    {label: 'statistics.events.title', routerLink: '/information/statistics/events'},
-    {label: 'statistics.speakers.title', routerLink: '/information/statistics/speakers'},
-    {label: 'statistics.companies.title', routerLink: '/information/statistics/companies'},
-    {label: 'statistics.olap.title', routerLink: '/information/statistics/olap'}
+    {labelKey: 'statistics.eventTypes.title', routerLink: '/information/statistics/event-types'},
+    {labelKey: 'statistics.events.title', routerLink: '/information/statistics/events'},
+    {labelKey: 'statistics.speakers.title', routerLink: '/information/statistics/speakers'},
+    {labelKey: 'statistics.companies.title', routerLink: '/information/statistics/companies'},
+    {labelKey: 'statistics.olap.title', routerLink: '/information/statistics/olap'}
   ];
 }

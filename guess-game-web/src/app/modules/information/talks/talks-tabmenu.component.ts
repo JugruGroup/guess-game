@@ -14,11 +14,11 @@ export class TalksTabMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label: 'talks.search.title', routerLink: '/information/talks/search'}
+      {labelKey: 'talks.search.title', routerLink: '/information/talks/search'}
     ];
 
     if (!isNaN(this.id)) {
-      this.items.push({label: 'talk.title', routerLink: `/information/talks/talk/${this.id}`});
+      this.items.push({labelKey: 'talk.title', routerLink: `/information/talks/talk/${this.id}`});
     }
   }
 }
