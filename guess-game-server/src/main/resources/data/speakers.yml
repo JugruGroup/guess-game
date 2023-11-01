@@ -21606,6 +21606,7 @@ speakers:
     bio:
       - {language: en, text: "<p>Andrey leads ML-team in Odnoklassniki and teaches at ITMO.</p>"}
       - {language: ru, text: "<p>Лидирует ML-команду в Одноклассниках, преподает в ИТМО.</p>"}
+    gitHub: netcitizenrus
     habr: netcitizen
   - id: 1511
     photoFileName: 1511.jpg
@@ -34976,6 +34977,7 @@ speakers:
       - {language: ru, text: "<p>Работает в компании &laquo;Домклик&raquo;. Руководит несколькими командами разработки, во\
             спитывает и просвещает молодое поколение разработчиков и старается нести язык в массы. В свободное время препо\
             дает Java, катается на сноуборде, серфе и играет в большой теннис.</p>"}
+    gitHub: pavel-skittles-kislov
     habr: i_am_chasing_the_clouds
   - id: 2424
     photoFileName: 2424.jpg
