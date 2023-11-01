@@ -1751,41 +1751,22 @@ public class ConferenceDataLoaderExecutor {
     }
 
     /**
-     * Checks number of links on video for events.
-     *
-     * @throws SpeakerDuplicatedException if speaker duplicated
-     * @throws IOException                if resource files could not be opened
+     * Checks speakers.
      */
-    static void checkVideoLinks() throws SpeakerDuplicatedException, IOException {
-        // Read event types, places, events, companies, speakers, talks from resource files
+    static void checkSpeakers() throws SpeakerDuplicatedException, IOException {
+        final String LOG_FORMAT = "{}: {}";
         var resourceSourceInformation = YamlUtils.readSourceInformation();
-        List<Event> events = resourceSourceInformation.getEvents().stream()
-                .filter(e -> e.getEventType().isEventTypeConference())
-                .sorted(Comparator.comparing(Event::getFirstStartDate).reversed())
-                .toList();
+        var number = new AtomicInteger(0);
 
-        events.forEach(event -> {
-            int all = event.getTalks().size();
-            int withVideoLinks = (int) event.getTalks().stream()
-                    .filter(t -> (t.getVideoLinks() != null) && !t.getVideoLinks().isEmpty())
-                    .count();
-            double percents = (all == 0) ? 0 : (double) withVideoLinks / all * 100;
-            String message = String.format("%-30s %2d/%2d (%6.2f%%)",
-                    LocalizationUtils.getString(event.getName(), Language.ENGLISH),
-                    withVideoLinks,
-                    all,
-                    percents);
-
-            if (all != withVideoLinks) {
-                if (percents >= 75) {
-                    log.info(message);
-                } else if (percents >= 50) {
-                    log.warn(message);
-                } else {
-                    log.error(message);
-                }
-            }
-        });
+        log.info("Speakers without talks:");
+        Set<Speaker> talkSpeakers = resourceSourceInformation.getTalks().stream()
+                .flatMap(t -> t.getSpeakers().stream())
+                .collect(Collectors.toSet());
+        resourceSourceInformation.getSpeakers().stream()
+                .filter(s -> !talkSpeakers.contains(s))
+                .map(s -> String.format("(%04d) %s", s.getId(), LocalizationUtils.getString(s.getName(), Language.ENGLISH)))
+                .sorted()
+                .forEach(e -> log.info(LOG_FORMAT, number.incrementAndGet(), e));
     }
 
     /**
@@ -1857,6 +1838,44 @@ public class ConferenceDataLoaderExecutor {
                     percents);
 
             if (all != withTimes) {
+                if (percents >= 75) {
+                    log.info(message);
+                } else if (percents >= 50) {
+                    log.warn(message);
+                } else {
+                    log.error(message);
+                }
+            }
+        });
+    }
+
+    /**
+     * Checks number of links on video for events.
+     *
+     * @throws SpeakerDuplicatedException if speaker duplicated
+     * @throws IOException                if resource files could not be opened
+     */
+    static void checkVideoLinks() throws SpeakerDuplicatedException, IOException {
+        // Read event types, places, events, companies, speakers, talks from resource files
+        var resourceSourceInformation = YamlUtils.readSourceInformation();
+        List<Event> events = resourceSourceInformation.getEvents().stream()
+                .filter(e -> e.getEventType().isEventTypeConference())
+                .sorted(Comparator.comparing(Event::getFirstStartDate).reversed())
+                .toList();
+
+        events.forEach(event -> {
+            int all = event.getTalks().size();
+            int withVideoLinks = (int) event.getTalks().stream()
+                    .filter(t -> (t.getVideoLinks() != null) && !t.getVideoLinks().isEmpty())
+                    .count();
+            double percents = (all == 0) ? 0 : (double) withVideoLinks / all * 100;
+            String message = String.format("%-30s %2d/%2d (%6.2f%%)",
+                    LocalizationUtils.getString(event.getName(), Language.ENGLISH),
+                    withVideoLinks,
+                    all,
+                    percents);
+
+            if (all != withVideoLinks) {
                 if (percents >= 75) {
                     log.info(message);
                 } else if (percents >= 50) {
@@ -2067,14 +2086,17 @@ public class ConferenceDataLoaderExecutor {
 //        loadEventTypes(CmsType.CONTENTFUL);
 //        loadEventTypes(CmsType.JUGRUGROUP_CMS);
 
-        // Check video links
-//        checkVideoLinks();
+        // Check speakers
+//        checkSpeakers();
 
         // Check companies
 //        checkCompanies();
 
         // Check talk attributes
 //        checkTalkAttributes();
+
+        // Check video links
+//        checkVideoLinks();
 
         // Load talks, speaker and event
         // 2016
