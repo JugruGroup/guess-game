@@ -3344,95 +3344,27 @@ class ConferenceDataLoaderExecutorTest {
     }
 
     @Test
-    void checkVideoLinks() {
+    void checkSpeakers() {
         try (MockedStatic<YamlUtils> mockedStatic = Mockito.mockStatic(YamlUtils.class)) {
-            LocalDate now = LocalDate.now();
-            LocalDate yesterday = now.minusDays(1);
-            LocalDate tomorrow = now.plusDays(1);
+            Speaker speaker0 = new Speaker();
+            speaker0.setId(0);
+            speaker0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
 
-            EventType eventType0 = new EventType();
+            Speaker speaker1 = new Speaker();
+            speaker1.setId(1);
+            speaker1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
 
-            EventType eventType1 = new EventType();
-            eventType1.setConference(Conference.JOKER);
-
-            Event event0 = new Event();
-            event0.setEventType(eventType0);
-            event0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
-            event0.setDays(List.of());
-
-            Event event1 = new Event();
-            event1.setEventType(eventType1);
-            event1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
-            event1.setDays(List.of(new EventDays(
-                    now,
-                    null,
-                    new Place()
-            )));
-
-            Event event2 = new Event();
-            event2.setEventType(eventType1);
-            event2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
-            event2.setDays(List.of(new EventDays(
-                    tomorrow,
-                    null,
-                    new Place()
-            )));
-
-            Event event3 = new Event();
-            event3.setEventType(eventType1);
-            event3.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name3")));
-            event3.setDays(List.of(new EventDays(
-                    yesterday,
-                    null,
-                    new Place()
-            )));
-
-            Event event4 = new Event();
-            event4.setEventType(eventType1);
-            event4.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name4")));
-            event4.setDays(List.of(new EventDays(
-                    yesterday,
-                    null,
-                    new Place()
-            )));
-
-            Event event5 = new Event();
-            event5.setEventType(eventType1);
-            event5.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name5")));
-            event5.setDays(List.of(new EventDays(
-                    yesterday,
-                    null,
-                    new Place()
-            )));
-
-            Event event6 = new Event();
-            event6.setEventType(eventType1);
-            event6.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name6")));
-            event6.setDays(List.of(new EventDays(
-                    yesterday,
-                    null,
-                    new Place()
-            )));
+            Speaker speaker2 = new Speaker();
+            speaker2.setId(1);
+            speaker2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
 
             Talk talk0 = new Talk();
+            talk0.setId(0);
+            talk0.setSpeakers(List.of(speaker0));
 
             Talk talk1 = new Talk();
-            talk1.setVideoLinks(Collections.emptyList());
-
-            Talk talk2 = new Talk();
-            talk2.setVideoLinks(List.of("Link0"));
-
-            Talk talk3 = new Talk();
-            talk3.setVideoLinks(List.of("Link0"));
-
-            Talk talk4 = new Talk();
-            talk4.setVideoLinks(List.of("Link0"));
-
-            event2.setTalks(List.of(talk0));
-            event3.setTalks(List.of(talk1));
-            event4.setTalks(List.of(talk2));
-            event5.setTalks(List.of(talk1, talk2));
-            event6.setTalks(List.of(talk1, talk2, talk3, talk4));
+            talk1.setId(1);
+            talk1.setSpeakers(List.of(speaker1));
 
             mockedStatic.when(YamlUtils::readSourceInformation)
                     .thenReturn(new SourceInformation(
@@ -3440,17 +3372,17 @@ class ConferenceDataLoaderExecutorTest {
                             Collections.emptyList(),
                             Collections.emptyList(),
                             Collections.emptyList(),
-                            List.of(event0, event1, event2, event3, event4, event5, event6),
+                            Collections.emptyList(),
                             new SourceInformation.SpeakerInformation(
                                     Collections.emptyList(),
                                     Collections.emptyList(),
                                     Collections.emptyList(),
-                                    Collections.emptyList()
+                                    List.of(speaker0, speaker1, speaker2)
                             ),
-                            Collections.emptyList()
+                            List.of(talk0, talk1)
                     ));
 
-            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkVideoLinks);
+            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkSpeakers);
         }
     }
 
@@ -3759,6 +3691,117 @@ class ConferenceDataLoaderExecutorTest {
                     ));
 
             assertDoesNotThrow(ConferenceDataLoaderExecutor::checkTalkAttributes);
+        }
+    }
+
+    @Test
+    void checkVideoLinks() {
+        try (MockedStatic<YamlUtils> mockedStatic = Mockito.mockStatic(YamlUtils.class)) {
+            LocalDate now = LocalDate.now();
+            LocalDate yesterday = now.minusDays(1);
+            LocalDate tomorrow = now.plusDays(1);
+
+            EventType eventType0 = new EventType();
+
+            EventType eventType1 = new EventType();
+            eventType1.setConference(Conference.JOKER);
+
+            Event event0 = new Event();
+            event0.setEventType(eventType0);
+            event0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
+            event0.setDays(List.of());
+
+            Event event1 = new Event();
+            event1.setEventType(eventType1);
+            event1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
+            event1.setDays(List.of(new EventDays(
+                    now,
+                    null,
+                    new Place()
+            )));
+
+            Event event2 = new Event();
+            event2.setEventType(eventType1);
+            event2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
+            event2.setDays(List.of(new EventDays(
+                    tomorrow,
+                    null,
+                    new Place()
+            )));
+
+            Event event3 = new Event();
+            event3.setEventType(eventType1);
+            event3.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name3")));
+            event3.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event4 = new Event();
+            event4.setEventType(eventType1);
+            event4.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name4")));
+            event4.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event5 = new Event();
+            event5.setEventType(eventType1);
+            event5.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name5")));
+            event5.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Event event6 = new Event();
+            event6.setEventType(eventType1);
+            event6.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name6")));
+            event6.setDays(List.of(new EventDays(
+                    yesterday,
+                    null,
+                    new Place()
+            )));
+
+            Talk talk0 = new Talk();
+
+            Talk talk1 = new Talk();
+            talk1.setVideoLinks(Collections.emptyList());
+
+            Talk talk2 = new Talk();
+            talk2.setVideoLinks(List.of("Link0"));
+
+            Talk talk3 = new Talk();
+            talk3.setVideoLinks(List.of("Link0"));
+
+            Talk talk4 = new Talk();
+            talk4.setVideoLinks(List.of("Link0"));
+
+            event2.setTalks(List.of(talk0));
+            event3.setTalks(List.of(talk1));
+            event4.setTalks(List.of(talk2));
+            event5.setTalks(List.of(talk1, talk2));
+            event6.setTalks(List.of(talk1, talk2, talk3, talk4));
+
+            mockedStatic.when(YamlUtils::readSourceInformation)
+                    .thenReturn(new SourceInformation(
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            Collections.emptyList(),
+                            List.of(event0, event1, event2, event3, event4, event5, event6),
+                            new SourceInformation.SpeakerInformation(
+                                    Collections.emptyList(),
+                                    Collections.emptyList(),
+                                    Collections.emptyList(),
+                                    Collections.emptyList()
+                            ),
+                            Collections.emptyList()
+                    ));
+
+            assertDoesNotThrow(ConferenceDataLoaderExecutor::checkVideoLinks);
         }
     }
 
