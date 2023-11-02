@@ -14748,7 +14748,7 @@ speakers:
     photoFileName: 1019.jpg
     name:
       - {language: en, text: "Yulia Startsev"}
-    companyIds: [343]
+    companyIds: [343, 895]
     bio:
       - {language: en, text: "Yulia Startsev is a programmer at Mozilla, recently working on SpiderMonkey. She is also one\
             \ of three co-chairs of Ecma's TC39, the standardizing body for JavaScript."}
@@ -14781,13 +14781,20 @@ speakers:
     photoUpdatedAt: 2020-02-05T11:08:10.325Z[UTC]
     name:
       - {language: en, text: "Nicolò Ribaudo"}
-    companyIds: [64]
+    companyIds: [64, 895]
     bio:
       - language: en
         text: "Nicolò has been a core Babel developer since 2017, and he has helped with the development of different ECMAScript\
             \ proposal.\n\nWhen offline, he is a mathematics student in Turin, Italy."
     twitter: NicoloRibaudo
     gitHub: nicolo-ribaudo
+  - id: 1022
+    photoFileName: 1022.jpg
+    name:
+      - {language: en, text: "Aki Rose Braun"}
+    companyIds: [1177, 895]
+    twitter: gesa
+    gitHub: gesa
   - id: 1023
     photoFileName: 1023.jpg
     photoUpdatedAt: 2019-08-28T09:07:30.878Z[UTC]
@@ -14814,7 +14821,7 @@ speakers:
     photoFileName: 1025.jpg
     name:
       - {language: en, text: "Michael Saboff"}
-    companyIds: [42]
+    companyIds: [42, 895]
     bio:
       - {language: en, text: "Michael Saboff is a Software Engineer working on the JavaScriptCore virtual machine for the\
             \ past 9 years. He is a member of the JS standards committee, TC-39."}
@@ -14890,7 +14897,7 @@ speakers:
     photoUpdatedAt: 2019-09-02T12:34:11.199Z[UTC]
     name:
       - {language: en, text: "Romulo Cintra"}
-    companyIds: [252]
+    companyIds: [252, 895]
     bio:
       - language: en
         text: "Technology enthusiast, working in Software development and Architectures for more than 10 years. Contributor\
@@ -15525,15 +15532,6 @@ speakers:
             \ [Django Girls SPb](https://djangogirls.org/stpetersburg/) и [PyLadies SPb](http://spb.pyladies.com/). \n\nОн\
             \ выступал в Москве, Лиссабоне, Берлине, Минске, Литве; является талисманом конференции index-tech.ru и извест\
             ен своими [статьями по проблематике найма](https://huntflow.ru/insight/article/v-samye-klassnye-kontory-samye-lyogkie-sobesedovaniya)."
-  - id: 1078
-    photoFileName: 1078.jpg
-    name:
-      - {language: en, text: "TC39 delegates"}
-    companyIds: []
-    bio:
-      - {language: en, text: "Michael Saboff, Aki Rose Braun, Yulia Startsev, Romulo Cintra, Sergey Rubanov, Nicolò Ribaudo."}
-      - {language: ru, text: "Michael Saboff, Aki Rose Braun, Yulia Startsev, Romulo Cintra, Сергей Рубанов, Nicolò Ribaudo."}
-    twitter: TC39
   - id: 1079
     photoFileName: 1079.jpg
     photoUpdatedAt: 2019-07-30T07:03:03.458Z[UTC]
