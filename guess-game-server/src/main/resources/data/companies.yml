@@ -4290,3 +4290,7 @@ companies:
       - {language: en, text: "Lebedev Physical Institute"}
       - {language: ru, text: "Физический институт им. П.Н. Лебедева РАН"}
     siteLink: http://www.lebedev.ru
+  - id: 1177
+    name:
+      - {language: en, text: PayPal}
+    siteLink: https://www.paypal.com

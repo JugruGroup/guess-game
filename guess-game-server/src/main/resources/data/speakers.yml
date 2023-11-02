@@ -6619,6 +6619,7 @@ speakers:
             я, проекты с открытым кодом, статьи и подкасты, а также связывает команды HR и PR с инженерным подразделением\
             . Интересуется надёжностью систем, высокими нагрузками и DevOps."}
     twitter: igorlukanin
+    gitHub: igorlukanin
     habr: green_hippo
   - id: 442
     photoFileName: 0442.jpg
@@ -7313,6 +7314,8 @@ speakers:
             \ кодирования, стал заниматься архитектурой. Особое внимание уделяет проблемам взаимодействия приложений, проб\
             лемам производительности, а также удобству разработчиков при работе над сложными проектами."}
     twitter: ilabutin
+    gitHub: ilabutin
+    habr: ilabutin
   - id: 485
     photoFileName: 0485.jpg
     photoUpdatedAt: 2017-02-25T11:10:26.471Z[UTC]
@@ -7991,6 +7994,8 @@ speakers:
       - {language: ru, text: "Пентестер и Bounty Hunter, находил уязвимости у таких компаний, как Yandex, Mail.ru, Qiwi, KyivStar,\
             \ Unity3d. В свободное время занимается автоматизацией инструментов для поиска уязвимостей."}
     twitter: hd_421
+    gitHub: HD421
+    habr: HD421
   - id: 540
     photoFileName: 0540.jpg
     name:
@@ -8401,6 +8406,7 @@ speakers:
             ать по всему миру и делиться своими знаниями в области предпринимательства, мобильной разработки и жизни в цел\
             ом."}
     twitter: parahall
+    gitHub: parahall
   - id: 566
     photoFileName: 0566.jpg
     name:
@@ -9100,6 +9106,8 @@ speakers:
             тел программист. В компании SEMrush работает в команде безопасности, отвечающей за безопасность продукта и раб\
             очей инфраструктуры и многое другое."}
     twitter: 4lemon
+    gitHub: 4lemon
+    habr: 4lemon
   - id: 614
     photoFileName: 0614.jpg
     name:
@@ -10916,6 +10924,7 @@ speakers:
             роекте ReSharper, где делал поддержку ES6, TypeScript с 1.4 по 2.2, React и Angular 2. Сейчас работает в проек\
             те WebStorm.\n\nКроме работы увлекается изучением иностранных языков и путешествиями."
     twitter: zhuravlik26
+    gitHub: zhuravlikjb
   - id: 735
     photoFileName: 0735.jpg
     photoUpdatedAt: 2020-02-25T13:59:25.704Z[UTC]
@@ -13285,6 +13294,7 @@ speakers:
       - {language: en, text: "Yury Leonychev"}
       - {language: ru, text: "Юрий Леонычев"}
     companyIds: [689]
+    gitHub: tracer0tong
     habr: tracer0tong
   - id: 901
     photoFileName: 0901.jpg
@@ -14145,6 +14155,7 @@ speakers:
             \ cloud solutions based on Kubernetes, Docker, envoy and many others cloud native tools."}
       - {language: ru, text: "<p>В Авито занимается созданием и развитием облака и Platform as a Service на базе инструмен\
             тов: Kubernetes, Docker, Envoy и множества других. Продвигает подходы построения платформы как продукта.</p>"}
+    gitHub: Lookyan
     habr: digwnews
   - id: 978
     photoFileName: 0978.jpg
@@ -14401,6 +14412,7 @@ speakers:
       - {language: ru, text: "Тимофей — инженер ПО в веб-разработке. Работает в KeepSolid, одесской продуктовой компании.\
             \ Последние 2 года работает над мигрированием нативных приложений в веб, используя TypeScript и Dart."}
     twitter: geek_timofey
+    gitHub: exelnait
   - id: 996
     photoFileName: 0996.jpg
     photoUpdatedAt: 2022-06-14T10:51:50Z[UTC]
@@ -14748,7 +14760,7 @@ speakers:
     photoFileName: 1019.jpg
     name:
       - {language: en, text: "Yulia Startsev"}
-    companyIds: [343]
+    companyIds: [343, 895]
     bio:
       - {language: en, text: "Yulia Startsev is a programmer at Mozilla, recently working on SpiderMonkey. She is also one\
             \ of three co-chairs of Ecma's TC39, the standardizing body for JavaScript."}
@@ -14781,13 +14793,20 @@ speakers:
     photoUpdatedAt: 2020-02-05T11:08:10.325Z[UTC]
     name:
       - {language: en, text: "Nicolò Ribaudo"}
-    companyIds: [64]
+    companyIds: [64, 895]
     bio:
       - language: en
         text: "Nicolò has been a core Babel developer since 2017, and he has helped with the development of different ECMAScript\
             \ proposal.\n\nWhen offline, he is a mathematics student in Turin, Italy."
     twitter: NicoloRibaudo
     gitHub: nicolo-ribaudo
+  - id: 1022
+    photoFileName: 1022.jpg
+    name:
+      - {language: en, text: "Aki Rose Braun"}
+    companyIds: [1177, 895]
+    twitter: gesa
+    gitHub: gesa
   - id: 1023
     photoFileName: 1023.jpg
     photoUpdatedAt: 2019-08-28T09:07:30.878Z[UTC]
@@ -14814,7 +14833,7 @@ speakers:
     photoFileName: 1025.jpg
     name:
       - {language: en, text: "Michael Saboff"}
-    companyIds: [42]
+    companyIds: [42, 895]
     bio:
       - {language: en, text: "Michael Saboff is a Software Engineer working on the JavaScriptCore virtual machine for the\
             \ past 9 years. He is a member of the JS standards committee, TC-39."}
@@ -14890,7 +14909,7 @@ speakers:
     photoUpdatedAt: 2019-09-02T12:34:11.199Z[UTC]
     name:
       - {language: en, text: "Romulo Cintra"}
-    companyIds: [252]
+    companyIds: [252, 895]
     bio:
       - language: en
         text: "Technology enthusiast, working in Software development and Architectures for more than 10 years. Contributor\
@@ -15525,15 +15544,6 @@ speakers:
             \ [Django Girls SPb](https://djangogirls.org/stpetersburg/) и [PyLadies SPb](http://spb.pyladies.com/). \n\nОн\
             \ выступал в Москве, Лиссабоне, Берлине, Минске, Литве; является талисманом конференции index-tech.ru и извест\
             ен своими [статьями по проблематике найма](https://huntflow.ru/insight/article/v-samye-klassnye-kontory-samye-lyogkie-sobesedovaniya)."
-  - id: 1078
-    photoFileName: 1078.jpg
-    name:
-      - {language: en, text: "TC39 delegates"}
-    companyIds: []
-    bio:
-      - {language: en, text: "Michael Saboff, Aki Rose Braun, Yulia Startsev, Romulo Cintra, Sergey Rubanov, Nicolò Ribaudo."}
-      - {language: ru, text: "Michael Saboff, Aki Rose Braun, Yulia Startsev, Romulo Cintra, Сергей Рубанов, Nicolò Ribaudo."}
-    twitter: TC39
   - id: 1079
     photoFileName: 1079.jpg
     photoUpdatedAt: 2019-07-30T07:03:03.458Z[UTC]
@@ -17719,6 +17729,7 @@ speakers:
             \ и большой фанат статического анализа. Помимо руководства командой занимается программированием, написанием с\
             татей, участием в конференциях. Интересуется веб-разработкой и машинным обучением. </span></p>"}
     twitter: nikita30005701
+    gitHub: Firensis
     habr: Firensis
   - id: 1253
     photoFileName: 1253.jpg
@@ -19257,6 +19268,8 @@ speakers:
             ожает Swift, но иногда изменяет ему с Kotlin (когда Андроид горит). Тащится по продуктовым метрикам и фичам. С\
             читает, что хороший код минималистичен и решает боль пользователей. Сторонник ООП-подхода."
     twitter: aleksmobiledev
+    gitHub: aleksiosdev
+    habr: aleksiosdev
   - id: 1377
     photoFileName: 1377.jpg
     photoUpdatedAt: 2020-09-25T09:28:11.276Z[UTC]
@@ -20008,6 +20021,8 @@ speakers:
       - {language: ru, text: "Фронтенд-инженер. Контрибьютор проекта React Figma. Занимается разработкой еще со школы, а с\
             вой первый UI написал на Delphi. В настоящее время без ума от React."}
     twitter: losyear
+    gitHub: LosYear
+    habr: LosYear
   - id: 1430
     photoFileName: 1430.jpg
     photoUpdatedAt: 2020-11-19T12:32:40.256Z[UTC]
@@ -20082,6 +20097,7 @@ speakers:
       - {language: en, text: "Software engineer, scientist (applied mathematics), IT Entrepreneur, OSS enthusiast."}
       - {language: ru, text: "Инженер ПО, ученый (прикладная математика), IT-предприниматель, энтузиаст OSS."}
     twitter: ilialesik
+    gitHub: ilyalesik
   - id: 1436
     photoFileName: 1436.jpg
     photoUpdatedAt: 2020-11-19T12:37:33.715Z[UTC]
@@ -22073,21 +22089,25 @@ speakers:
             одули на Unity в нативное приложение, проектировал custom view based дизайн-системы, переписывал крупное легас\
             и с EventBus и т.п. \r\nВ последнее время увлеченно копается в Gradle-билдах проекта Vivid Money."
     twitter: sergey_lapin_
+    gitHub: sergei-lapin
+    habr: ElberMendax
   - id: 1571
     photoFileName: 1571.jpg
-    photoUpdatedAt: 2021-03-09T11:51:34.030Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:03:52Z"
     name:
-      - {language: en, text: "Mikhail Levchenko"}
-      - {language: ru, text: "Михаил Левченко"}
+      - {language: en, text: "Misha Levchenko"}
+      - {language: ru, text: "Миша Левченко"}
     companyIds: [717]
     bio:
-      - {language: en, text: "Android developer from Rostov-on-Don. Has been working in Auto.ru for 3 years. Before mobile\
-            \ development, he was engaged in VR/AR/MR technologies. BDFL of memes telegram channel \"Jake Wharton Saves Folder\"\
-            . Likes to talk about functional programming to anyone who is willing to listen to him."}
-      - {language: ru, text: "Андроид-разработчик из Ростова-на-Дону. 3 года работает в Авто.ру. До мобильной разработки п\
-            ромышлял VR/AR/MR-технологиями. Бессменный креативный директор телеграмм-канала с мемами «Сохранёнки Джейка Во\
-            ртона». Любит рассказывать про функциональное программирование всем, кто готов его выслушать."}
+      - {language: en, text: "<p>Android developer from Rostov-on-Don. Has been working in Auto.ru for 5 years. Before mobile\
+            \ development, he was engaged in VR/AR/MR technologies. BDFL of memes Telegram channel \"Jake Wharton Saves Folder\"\
+            . Likes to talk about functional programming to anyone who is willing to listen to him.</p>"}
+      - {language: ru, text: "<p>Android-разработчик из Ростова-на-Дону, а ныне Стариj Android Стручньак в Белграде. 5 лет\
+            \ работает в Авто.ру. До мобильной разработки промышлял VR/AR/MR-технологиями. Ведет <a href=\"https://t.me/izpodshtorki\"\
+            >Telegram-блог</a>. Любит рассказывать про функциональное программирование всем, кто готов выслушать.</p>"}
     twitter: themishkun
+    gitHub: Mishkun
+    habr: Mishkun
   - id: 1572
     photoFileName: 1572.jpg
     photoUpdatedAt: 2021-03-05T08:30:14.394Z[UTC]
@@ -24004,6 +24024,7 @@ speakers:
       - {language: ru, text: "Software Test Engineer больше 6 лет. Любит тестирование, JavaScript, опенсорс и делиться зна\
             ниями. Ведет еженедельный дайджест по автоматизации тестирования на английском и русском языках для DOU."}
     twitter: elaichenkov
+    gitHub: elaichenkov
   - id: 1706
     photoFileName: 1706.jpg
     photoUpdatedAt: 2021-09-06T09:15:26.152Z[UTC]
@@ -27487,6 +27508,7 @@ speakers:
             т разработчика до продакта. Занимается образованием 4 года, лектор и автор курсов по JS."}
     twitter: N_Lopin
     gitHub: nlopin
+    habr: lopinopulos
   - id: 1944
     photoFileName: 1944.jpg
     photoUpdatedAt: 2021-10-30T10:52:36.776Z[UTC]
@@ -31864,6 +31886,7 @@ speakers:
             к&raquo;, член Программного комитета конференции по системному и бизнес-анализу Flow 2022 от JUG Ru Group, поб\
             едитель конкурса Sovcombank Challenge 2021 в номинации &laquo;Системный анализ&raquo;, соавтор программы подго\
             товки системных аналитиков SkillFactory.</p>"}
+    gitHub: alobzov
     habr: alobzov
   - id: 2238
     photoFileName: 2238.jpg
@@ -37242,6 +37265,7 @@ speakers:
       - {language: en, text: "<p>Head of DBMS Tarantool kernel development group.</p>"}
       - {language: ru, text: "<p>Руководитель группы разработки ядра СУБД Tarantool.</p>"}
     gitHub: alyapunov
+    habr: alexlyapunov
   - id: 2627
     photoFileName: 2627.jpg
     photoUpdatedAt: "2023-03-09T10:25:10Z"
@@ -37677,23 +37701,6 @@ speakers:
       - language: ru
         text: "<p>Руководитель отдела плееров в Okko. Android-разработчик и lead со стажем.</p>\n<p>Kotlin &mdash; это его\
             \ всё!&nbsp; *Смотрит в сторону KMM и подмигивает iOS-разработке и Swift.</p>"
-  - id: 2658
-    photoFileName: 2658.jpg
-    photoUpdatedAt: "2022-03-31T19:03:52Z"
-    name:
-      - {language: en, text: "Misha Levchenko"}
-      - {language: ru, text: "Миша Левченко"}
-    companyIds: [717]
-    bio:
-      - {language: en, text: "<p>Android developer from Rostov-on-Don. Has been working in Auto.ru for 5 years. Before mobile\
-            \ development, he was engaged in VR/AR/MR technologies. BDFL of memes Telegram channel \"Jake Wharton Saves Folder\"\
-            . Likes to talk about functional programming to anyone who is willing to listen to him.</p>"}
-      - {language: ru, text: "<p>Android-разработчик из Ростова-на-Дону, а ныне Стариj Android Стручньак в Белграде. 5 лет\
-            \ работает в Авто.ру. До мобильной разработки промышлял VR/AR/MR-технологиями. Ведет <a href=\"https://t.me/izpodshtorki\"\
-            >Telegram-блог</a>. Любит рассказывать про функциональное программирование всем, кто готов выслушать.</p>"}
-    twitter: themishkun
-    gitHub: Mishkun
-    habr: Mishkun
   - id: 2659
     photoFileName: 2659.jpg
     photoUpdatedAt: "2023-02-15T15:57:45Z"
@@ -40396,6 +40403,7 @@ speakers:
             \ Hadoop and GreenPlum-based KCDs. Now he is engaged in the development of open source GreenPlum build.</p>"}
       - {language: ru, text: "<p>Архитектор в GlowByte Consulting. Имеет большой опыт в построении и развитии КХД на базе\
             \ Hadoop и GreenPlum. Сейчас в компании занимается развитием open source-сборки GreenPlum.</p>"}
+    gitHub: mmlebedev
     habr: mmlebedev
   - id: 2835
     photoFileName: 2835.jpg
