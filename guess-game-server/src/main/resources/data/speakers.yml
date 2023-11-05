@@ -5140,6 +5140,8 @@ speakers:
       - {language: ru, text: "Главный архитектор в iSpring. Автор курсов «Объектно-ориентированное проектирование» и «Комп\
             ьютерная графика» в Поволжском государственном технологическом университете."}
     twitter: amalov
+    gitHub: alexey-malov
+    habr: alexeymalov
   - id: 344
     photoFileName: 0344.jpg
     photoUpdatedAt: 2019-01-10T06:33:02.188Z[UTC]
@@ -10198,6 +10200,7 @@ speakers:
             нах и митапах. Участвовал в стартапах, развивал свою компанию. Любит общаться и помогать людям."
     twitter: wegorelax
     gitHub: wegorich
+    habr: wegorich
   - id: 687
     photoFileName: 0687.jpg
     name:
@@ -34788,6 +34791,7 @@ speakers:
       - {language: ru, text: "<p>Организатор CocoaHeads, CPO в Welps и Adapty.</p>"}
     twitter: nikogenn
     gitHub: NikoGenn
+    habr: NikoGenn
   - id: 2451
     photoFileName: 2451.jpg
     photoUpdatedAt: 2022-10-05T08:41:06Z[UTC]

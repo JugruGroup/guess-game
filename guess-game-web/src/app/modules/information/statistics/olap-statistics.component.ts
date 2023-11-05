@@ -76,6 +76,10 @@ export class OlapStatisticsComponent implements OnInit {
   private readonly LARGE_ASPECT_RATIO = 3.75;
   private readonly EXTRA_LARGE_ASPECT_RATIO = 5;
 
+  private readonly EXTRA_SMALL_BOX_WIDTH = 20;
+  private readonly SMALL_BOX_WIDTH = 30;
+  private readonly DEFAULT_BOX_WIDTH = 40;
+
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
@@ -303,14 +307,15 @@ export class OlapStatisticsComponent implements OnInit {
     if (this.chartDiv) {
       const clientWidth = this.chartDiv.nativeElement.clientWidth;
       const aspectRatio = this.getAspectRatio(clientWidth);
+      const boxWidth = this.getBoxWidth(clientWidth);
 
-      this.allLineOptions = this.createLineOptions(aspectRatio);
-      this.totalLineOptions = this.createLineOptions(aspectRatio);
-      this.allLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
-      this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio);
-      this.pieOptions = this.createPieOptions(aspectRatio);
-      this.allRadarOptions = this.createRadarOptions(aspectRatio);
-      this.totalRadarOptions = this.createRadarOptions(aspectRatio);
+      this.allLineOptions = this.createLineOptions(aspectRatio, boxWidth);
+      this.totalLineOptions = this.createLineOptions(aspectRatio, boxWidth);
+      this.allLineWithCumulativeOptions = this.createLineOptions(aspectRatio, boxWidth);
+      this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio, boxWidth);
+      this.pieOptions = this.createPieOptions(aspectRatio, boxWidth);
+      this.allRadarOptions = this.createRadarOptions(aspectRatio, boxWidth);
+      this.totalRadarOptions = this.createRadarOptions(aspectRatio, boxWidth);
     }
   }
 
@@ -679,15 +684,22 @@ export class OlapStatisticsComponent implements OnInit {
     }
   }
 
-  createLineOptions(aspectRatio: number): any {
+  createLineOptions(aspectRatio: number, boxWidth: number): any {
     return {
       animation: false,
       aspectRatio: aspectRatio,
-      locale: this.translateService.currentLang
+      locale: this.translateService.currentLang,
+      plugins: {
+        legend: {
+          labels: {
+            boxWidth: boxWidth
+          }
+        }
+      }
     };
   }
 
-  createPieOptions(aspectRatio: number): any {
+  createPieOptions(aspectRatio: number, boxWidth: number): any {
     return {
       elements: {
         arc: {
@@ -717,16 +729,28 @@ export class OlapStatisticsComponent implements OnInit {
               return `${tooltipItem.formattedValue} (${percents})`;
             }
           }
+        },
+        legend: {
+          labels: {
+            boxWidth: boxWidth
+          }
         }
       }
     };
   }
 
-  createRadarOptions(aspectRatio: number): any {
+  createRadarOptions(aspectRatio: number, boxWidth: number): any {
     return {
       animation: false,
       aspectRatio: aspectRatio,
-      locale: this.translateService.currentLang
+      locale: this.translateService.currentLang,
+      plugins: {
+        legend: {
+          labels: {
+            boxWidth: boxWidth
+          }
+        }
+      }
     };
   }
 
@@ -934,6 +958,16 @@ export class OlapStatisticsComponent implements OnInit {
       return this.LARGE_ASPECT_RATIO;
     } else {
       return this.EXTRA_LARGE_ASPECT_RATIO;
+    }
+  }
+
+  getBoxWidth(clientWidth: number): number {
+    if (clientWidth < this.SMALL_WIDTH) {
+      return this.EXTRA_SMALL_BOX_WIDTH;
+    } else if (clientWidth < this.MEDIUM_WIDTH) {
+      return this.SMALL_BOX_WIDTH;
+    } else {
+      return this.DEFAULT_BOX_WIDTH;
     }
   }
 
