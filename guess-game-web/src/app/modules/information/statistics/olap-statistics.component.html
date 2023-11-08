@@ -116,15 +116,18 @@
         <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
         <div *ngIf="isPieChartVisible()" class="d-flex">
           <p-chart type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true" [plain]="true"></p-button>
+          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
+                    [rounded]="true" [text]="true" [plain]="true"></p-button>
         </div>
         <div *ngIf="isDetailsRadarChartVisible()" class="d-flex">
           <p-chart type="radar" [data]="allRadarData" [options]="allRadarOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true" [plain]="true"></p-button>
+          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
+                    [rounded]="true" [text]="true" [plain]="true"></p-button>
         </div>
         <div *ngIf="isTotalRadarChartVisible()" class="d-flex">
           <p-chart type="radar" [data]="totalRadarData" [options]="totalRadarOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true" [plain]="true"></p-button>
+          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
+                    [rounded]="true" [text]="true" [plain]="true"></p-button>
         </div>
       </div>
     </div>
