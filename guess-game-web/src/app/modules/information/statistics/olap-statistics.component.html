@@ -109,22 +109,22 @@
         </p-selectButton>
       </div>
 
-      <div class="mt-1 ms-1 me-1 mb-2">
+      <div class="mt-1 ms-2 me-2 mb-2">
         <p-chart *ngIf="isDetailsLineChartVisible()" type="line" [data]="allLineData" [options]="allLineOptions"></p-chart>
         <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
         <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="allLineWithCumulativeOptions"></p-chart>
         <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
         <div *ngIf="isPieChartVisible()" class="d-flex">
           <p-chart type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true"></p-button>
+          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true" [plain]="true"></p-button>
         </div>
         <div *ngIf="isDetailsRadarChartVisible()" class="d-flex">
           <p-chart type="radar" [data]="allRadarData" [options]="allRadarOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true"></p-button>
+          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true" [plain]="true"></p-button>
         </div>
         <div *ngIf="isTotalRadarChartVisible()" class="d-flex">
           <p-chart type="radar" [data]="totalRadarData" [options]="totalRadarOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true"></p-button>
+          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true" [plain]="true"></p-button>
         </div>
       </div>
     </div>
