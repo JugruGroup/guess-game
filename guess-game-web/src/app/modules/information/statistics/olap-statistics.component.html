@@ -114,12 +114,18 @@
         <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="totalLineOptions"></p-chart>
         <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="allLineWithCumulativeOptions"></p-chart>
         <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="totalLineWithCumulativeOptions"></p-chart>
-        <div *ngIf="isPieChartVisible()" class="d-flex align-items-center justify-content-between">
-          <p-chart type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions"></p-chart>
-          <p-button icon="pi pi-search-plus" title="Zoom in" size="small" [rounded]="true" [text]="true"></p-button>
+        <div *ngIf="isPieChartVisible()" class="d-flex">
+          <p-chart type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions" class="flex-grow-1"></p-chart>
+          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true"></p-button>
         </div>
-        <p-chart *ngIf="isDetailsRadarChartVisible()" type="radar" [data]="allRadarData" [options]="allRadarOptions"></p-chart>
-        <p-chart *ngIf="isTotalRadarChartVisible()" type="radar" [data]="totalRadarData" [options]="totalRadarOptions"></p-chart>
+        <div *ngIf="isDetailsRadarChartVisible()" class="d-flex">
+          <p-chart type="radar" [data]="allRadarData" [options]="allRadarOptions" class="flex-grow-1"></p-chart>
+          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true"></p-button>
+        </div>
+        <div *ngIf="isTotalRadarChartVisible()" class="d-flex">
+          <p-chart type="radar" [data]="totalRadarData" [options]="totalRadarOptions" class="flex-grow-1"></p-chart>
+          <p-button icon="pi pi-search-plus" title="Zoom in" [rounded]="true" [text]="true"></p-button>
+        </div>
       </div>
     </div>
 
