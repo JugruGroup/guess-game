@@ -7,12 +7,14 @@ import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { RippleModule } from 'primeng/ripple';
 import { RouterModule } from '@angular/router';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
+import { ChartZoomInComponent } from './chart-zoom-in.component';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
 import { MessageModule } from '../../message/message.module';
@@ -25,6 +27,7 @@ import { StatisticsTabMenuComponent } from './statistics-tabmenu.component';
 
 @NgModule({
   declarations: [
+    ChartZoomInComponent,
     EventTypeStatisticsComponent,
     EventStatisticsComponent,
     SpeakerStatisticsComponent,
@@ -40,6 +43,7 @@ import { StatisticsTabMenuComponent } from './statistics-tabmenu.component';
     FormsModule,
     CheckboxModule,
     DropdownModule,
+    DynamicDialogModule,
     MultiSelectModule,
     RippleModule,
     RouterModule,

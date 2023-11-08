@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { formatPercent } from '@angular/common';
 import { SelectItem } from 'primeng/api';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Company } from '../../../shared/models/company/company.model';
@@ -37,10 +38,12 @@ import {
   hexToRgbA
 } from '../../general/utility-functions';
 import { ChartKind } from '../../../shared/models/statistics/olap/chart-kind.model';
+import { ChartZoomInComponent } from './chart-zoom-in.component';
 
 @Component({
   selector: 'app-olap-statistics',
-  templateUrl: './olap-statistics.component.html'
+  templateUrl: './olap-statistics.component.html',
+  providers: [DialogService]
 })
 export class OlapStatisticsComponent implements OnInit {
   private readonly EVENT_TYPES_CUBE_TYPE_KEY = 'cubeType.eventTypes';
@@ -160,10 +163,12 @@ export class OlapStatisticsComponent implements OnInit {
 
   private topicMetricsMap = new Map<number, OlapEntityMetrics>();
 
+  private zoomInDialogRef: DynamicDialogRef;
+
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, private organizerService: OrganizerService,
               public translateService: TranslateService, private speakerService: SpeakerService,
-              private companyService: CompanyService) {
+              private companyService: CompanyService, public dialogService: DialogService) {
     this.eventTypeMultiSortMeta.push({field: 'sortName', order: 1});
 
     this.cityMultiSortMeta.push({field: 'name', order: 1});
@@ -1026,5 +1031,23 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
+  }
+
+  zoomIn() {
+    const cubeTypeMessageKey = this.getCubeTypeMessageKeyByCube(this.selectedCubeType);
+    const measureTypeMessageKey = this.getMeasureTypeMessageKeyByCube(this.selectedMeasureType);
+    const keys = [cubeTypeMessageKey, measureTypeMessageKey];
+
+    this.translateService.get(keys)
+      .subscribe(labels => {
+        const cubeTypeMessage = labels[cubeTypeMessageKey];
+        const measureTypeMessage = labels[measureTypeMessageKey];
+
+        this.zoomInDialogRef = this.dialogService.open(ChartZoomInComponent, {
+          header: `${cubeTypeMessage} – ${measureTypeMessage}`,
+          width: '100%',
+          height: '100%'
+        });
+      });
   }
 }
