@@ -123,13 +123,9 @@ export class OlapStatisticsComponent implements OnInit {
   public speakerExpandedRows: {} = {};
   public companyExpandedRows: {} = {};
 
-  public allLineOptions: any = {};
-  public totalLineOptions: any = {};
-  public allLineWithCumulativeOptions: any = {};
-  public totalLineWithCumulativeOptions: any = {};
+  public lineOptions: any = {};
   public pieOptions: any;
-  public allRadarOptions: any = {};
-  public totalRadarOptions: any = {};
+  public radarOptions: any = {};
 
   public allLineData: any = {};
   public totalLineData: any = {};
@@ -314,13 +310,9 @@ export class OlapStatisticsComponent implements OnInit {
       const aspectRatio = this.getAspectRatio(clientWidth);
       const boxWidth = this.getBoxWidth(clientWidth);
 
-      this.allLineOptions = this.createLineOptions(aspectRatio, boxWidth);
-      this.totalLineOptions = this.createLineOptions(aspectRatio, boxWidth);
-      this.allLineWithCumulativeOptions = this.createLineOptions(aspectRatio, boxWidth);
-      this.totalLineWithCumulativeOptions = this.createLineOptions(aspectRatio, boxWidth);
+      this.lineOptions = this.createLineOptions(aspectRatio, boxWidth);
       this.pieOptions = this.createPieOptions(aspectRatio, boxWidth);
-      this.allRadarOptions = this.createRadarOptions(aspectRatio, boxWidth);
-      this.totalRadarOptions = this.createRadarOptions(aspectRatio, boxWidth);
+      this.radarOptions = this.createRadarOptions(aspectRatio, boxWidth);
     }
   }
 
