@@ -12,7 +12,12 @@ updates:
       angular:
         patterns:
           - "@angular*"
+        update-types:
+          - "minor"
+          - "patch"
     ignore:
+      - dependency-name: "@angular*"
+        update-types: [ "version-update:semver-major" ]
       - dependency-name: "primeng"
   - package-ecosystem: "github-actions"
     directory: "/"
