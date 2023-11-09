@@ -124,7 +124,7 @@ export class OlapStatisticsComponent implements OnInit {
   public companyExpandedRows: {} = {};
 
   public lineOptions: any = {};
-  public pieOptions: any;
+  public pieOptions: any = {};
   public radarOptions: any = {};
 
   public allLineData: any = {};
@@ -311,8 +311,8 @@ export class OlapStatisticsComponent implements OnInit {
       const boxWidth = this.getBoxWidth(clientWidth);
 
       this.lineOptions = this.createLineOptions(aspectRatio, boxWidth);
-      this.pieOptions = this.createPieOptions(aspectRatio, boxWidth);
-      this.radarOptions = this.createRadarOptions(aspectRatio, boxWidth);
+      this.pieOptions = this.createPieOptions(true, aspectRatio, boxWidth);
+      this.radarOptions = this.createRadarOptions(true, aspectRatio, boxWidth);
     }
   }
 
@@ -696,7 +696,7 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
-  createPieOptions(aspectRatio: number, boxWidth: number): any {
+  createPieOptions(maintainAspectRatio: boolean, aspectRatio: number, boxWidth: number): any {
     return {
       elements: {
         arc: {
@@ -704,6 +704,7 @@ export class OlapStatisticsComponent implements OnInit {
         }
       },
       animation: false,
+      maintainAspectRatio: maintainAspectRatio,
       aspectRatio: aspectRatio,
       locale: this.translateService.currentLang,
       plugins: {
@@ -736,9 +737,10 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
-  createRadarOptions(aspectRatio: number, boxWidth: number): any {
+  createRadarOptions(maintainAspectRatio: boolean, aspectRatio: number, boxWidth: number): any {
     return {
       animation: false,
+      maintainAspectRatio: maintainAspectRatio,
       aspectRatio: aspectRatio,
       locale: this.translateService.currentLang,
       plugins: {
@@ -1025,7 +1027,7 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
   }
 
-  zoomIn() {
+  zoomInChart(type: string, plugins: any[], data: any, options: any) {
     const cubeTypeMessageKey = this.getCubeTypeMessageKeyByCube(this.selectedCubeType);
     const measureTypeMessageKey = this.getMeasureTypeMessageKeyByCube(this.selectedMeasureType);
     const keys = [cubeTypeMessageKey, measureTypeMessageKey];
@@ -1036,10 +1038,28 @@ export class OlapStatisticsComponent implements OnInit {
         const measureTypeMessage = labels[measureTypeMessageKey];
 
         this.zoomInDialogRef = this.dialogService.open(ChartZoomInComponent, {
+          data: {
+            type: type,
+            plugins: plugins,
+            data: data,
+            options: options
+          },
           header: `${cubeTypeMessage} – ${measureTypeMessage}`,
           width: '100%',
           height: '100%'
         });
       });
+  }
+
+  zoomInPieChart(data: any) {
+    const options = this.createPieOptions(false, 1, this.DEFAULT_BOX_WIDTH);
+
+    this.zoomInChart('pie', this.chartPlugins, data, options);
+  }
+
+  zoomInRadarChart(data: any) {
+    const options = this.createRadarOptions(false, 1, this.DEFAULT_BOX_WIDTH);
+
+    this.zoomInChart('radar', [], data, options);
   }
 }
