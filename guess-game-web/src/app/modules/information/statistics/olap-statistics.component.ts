@@ -310,7 +310,7 @@ export class OlapStatisticsComponent implements OnInit {
       const aspectRatio = this.getAspectRatio(clientWidth);
       const boxWidth = this.getBoxWidth(clientWidth);
 
-      this.lineOptions = this.createLineOptions(aspectRatio, boxWidth);
+      this.lineOptions = this.createLineOptions(true, aspectRatio, boxWidth);
       this.pieOptions = this.createPieOptions(true, aspectRatio, boxWidth);
       this.radarOptions = this.createRadarOptions(true, aspectRatio, boxWidth);
     }
@@ -681,15 +681,33 @@ export class OlapStatisticsComponent implements OnInit {
     }
   }
 
-  createLineOptions(aspectRatio: number, boxWidth: number): any {
+  createLineOptions(maintainAspectRatio: boolean, aspectRatio: number, boxWidth: number): any {
     return {
       animation: false,
+      maintainAspectRatio: maintainAspectRatio,
       aspectRatio: aspectRatio,
       locale: this.translateService.currentLang,
       plugins: {
         legend: {
           labels: {
             boxWidth: boxWidth
+          }
+        }
+      },
+      scales: {
+        y: {
+          type: 'linear',
+          display: true,
+          position: 'left',
+        },
+        y1: {
+          type: 'linear',
+          display: true,
+          position: 'right',
+          min: 0,
+          max: 16,
+          grid: {
+            drawOnChartArea: false
           }
         }
       }
@@ -1050,6 +1068,12 @@ export class OlapStatisticsComponent implements OnInit {
           styleClass: "chart-zoom-in-dialog"
         });
       });
+  }
+
+  zoomInLineChart(data: any) {
+    const options = this.createLineOptions(false, 2, this.DEFAULT_BOX_WIDTH);
+
+    this.zoomInChart('line', [], data, options);
   }
 
   zoomInPieChart(data: any) {
