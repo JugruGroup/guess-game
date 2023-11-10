@@ -1046,7 +1046,8 @@ export class OlapStatisticsComponent implements OnInit {
           },
           header: `${cubeTypeMessage} – ${measureTypeMessage}`,
           width: '100%',
-          height: '100%'
+          height: '100%',
+          styleClass: "chart-zoom-in-dialog"
         });
       });
   }

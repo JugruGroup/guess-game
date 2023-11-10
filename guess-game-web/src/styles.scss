@@ -422,3 +422,7 @@
   }
 }
 
+// Increase height of chart zoom-in dialog
+.p-dialog.chart-zoom-in-dialog {
+  max-height: 100%;
+}
