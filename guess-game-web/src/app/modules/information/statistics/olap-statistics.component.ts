@@ -693,23 +693,6 @@ export class OlapStatisticsComponent implements OnInit {
             boxWidth: boxWidth
           }
         }
-      },
-      scales: {
-        y: {
-          type: 'linear',
-          display: true,
-          position: 'left',
-        },
-        y1: {
-          type: 'linear',
-          display: true,
-          position: 'right',
-          min: 0,
-          max: 16,
-          grid: {
-            drawOnChartArea: false
-          }
-        }
       }
     };
   }
