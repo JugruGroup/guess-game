@@ -285,7 +285,8 @@
         "lineChartToolTipText": "Line chart",
         "lineChartWithCumulativeTotalToolTipText": "Line chart with cumulative total",
         "pieChartToolTipText": "Pie chart",
-        "radarChartToolTipText": "Radar chart"
+        "radarChartToolTipText": "Radar chart",
+        "zoomInToolTipText": "Zoom in"
       },
       "table": {
         "kindColumn": "Kind",

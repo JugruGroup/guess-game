@@ -392,16 +392,20 @@
     padding: 0;
   }
 
-  // Decrease width and of table row expansion buttons
-  .p-button.p-button-icon-only.p-button-rounded {
+  // Decrease width and height of table row expansion buttons
+  .p-datatable-tbody .p-button.p-button-icon-only.p-button-rounded {
     //height: 3rem;
+    //width: 3rem;
     height: 2.75rem;
+    width: 2.75rem;
   }
 
-  // Decrease height of table row expansion buttons
-  .p-button.p-button-icon-only {
+  // Decrease Decrease width and height of zoom-in buttons
+  .p-button.p-button-icon-only.p-button-rounded.chart-zoom-in-button {
+    //height: 3rem;
     //width: 3rem;
-    width: 2.75rem;
+    height: 2.25rem;
+    width: 2.25rem;
   }
 
   // Show borders around image thumbnails
@@ -422,3 +426,7 @@
   }
 }
 
+// Increase height of chart zoom-in dialog
+.p-dialog.chart-zoom-in-dialog {
+  max-height: 100%;
+}
