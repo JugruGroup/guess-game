@@ -1028,11 +1028,49 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
   }
 
-  zoomIn() {
-    // ...
-  }
+  zoomInChart() {
+    let type: string;
+    let plugins: any[];
+    let data: any;
+    let options: any;
 
-  zoomInChart(type: string, plugins: any[], data: any, options: any) {
+    if (this.selectedChartKind === ChartKind.Line) {
+      type = 'line';
+      plugins = [];
+      options = this.createLineOptions(false, 2, this.DEFAULT_BOX_WIDTH);
+
+      if (this.selectedChartType === ChartType.Details) {
+        data = this.allLineData;
+      } else {
+        data = this.totalLineData;
+      }
+    } else if (this.selectedChartKind === ChartKind.LineWithCumulativeTotal) {
+      type = 'line';
+      plugins = [];
+      options = this.createLineOptions(false, 2, this.DEFAULT_BOX_WIDTH);
+
+      if (this.selectedChartType === ChartType.Details) {
+        data = this.allLineWithCumulativeData;
+      } else {
+        data = this.totalLineWithCumulativeData;
+      }
+    } else if (this.selectedChartKind === ChartKind.Pie) {
+      type = 'pie';
+      plugins = this.chartPlugins;
+      data = this.pieData;
+      options = this.createPieOptions(false, 1, this.DEFAULT_BOX_WIDTH);
+    } else {
+      type = 'radar';
+      plugins = [];
+      options = this.createRadarOptions(false, 1, this.DEFAULT_BOX_WIDTH);
+
+      if (this.selectedChartType === ChartType.Details) {
+        data = this.allRadarData;
+      } else {
+        data = this.totalRadarData;
+      }
+    }
+
     const cubeTypeMessageKey = this.getCubeTypeMessageKeyByCube(this.selectedCubeType);
     const measureTypeMessageKey = this.getMeasureTypeMessageKeyByCube(this.selectedMeasureType);
     const keys = [cubeTypeMessageKey, measureTypeMessageKey];
@@ -1055,23 +1093,5 @@ export class OlapStatisticsComponent implements OnInit {
           styleClass: "chart-zoom-in-dialog"
         });
       });
-  }
-
-  zoomInLineChart(data: any) {
-    const options = this.createLineOptions(false, 2, this.DEFAULT_BOX_WIDTH);
-
-    this.zoomInChart('line', [], data, options);
-  }
-
-  zoomInPieChart(data: any) {
-    const options = this.createPieOptions(false, 1, this.DEFAULT_BOX_WIDTH);
-
-    this.zoomInChart('pie', this.chartPlugins, data, options);
-  }
-
-  zoomInRadarChart(data: any) {
-    const options = this.createRadarOptions(false, 1, this.DEFAULT_BOX_WIDTH);
-
-    this.zoomInChart('radar', [], data, options);
   }
 }

@@ -110,7 +110,7 @@
           {{getCubeTypeMessageKeyByCube(selectedCubeType) | translate}} – {{getMeasureTypeMessageKeyByCube(selectedMeasureType) | translate}}
         </span>
         <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                  [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomIn()"
+                  [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInChart()"
                   styleClass="chart-zoom-in-button"></p-button>
       </div>
 
