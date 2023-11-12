@@ -11676,19 +11676,27 @@ speakers:
             \ апельсинового сока может творить чудеса."
   - id: 789
     photoFileName: 0789.jpg
-    photoUpdatedAt: 2022-10-20T15:04:57Z[UTC]
+    photoUpdatedAt: "2022-10-20T15:04:57Z"
     name:
       - {language: en, text: "Dmitry Movchan"}
       - {language: ru, text: "Дмитрий Мовчан"}
     companyIds: [689]
     bio:
-      - {language: en, text: "<p>He has been developing for Android since 2016. He worked on antivirus at Kaspersky, worked\
-            \ on a banking application for business at Revolut. Now heads a group of developers at Zen. He is a graduate of\
-            \ the Bauman Moscow State Technical University. Organizer of the Android Academy MSK.</p>"}
-      - {language: ru, text: "<p>Занимается разработкой под Android с 2016 года. Работал над антивирусом в Kaspersky, зани\
-            мался банковским приложением для бизнеса в Revolut. Сейчас руководит группой разработчиков в &laquo;Дзене&raquo;.\
-            \ Выпускник МГТУ им. Баумана. Организатор Android Academy MSK.</p>"}
+      - language: en
+        text: "<p>He has been developing for Android since 2016. He worked on antivirus at Kaspersky, worked on a banking\
+            \ application for business at Revolut. Now heads a group of developers at Zen. He is a graduate of the Bauman\
+            \ Moscow State Technical University. Organizer of the Android Academy MSK.</p>\n<p>Maintains the blog \"Dmitry\
+            \ Movchan &ndash; about IT\" in <a href=\"https://dzen.ru/dmitriy_movchan\">Zen</a> and <a href=\"https://t.me/dmitriy_movchan_pro_it\"\
+            >Telegram</a>.</p>"
+      - language: ru
+        text: "<p>Занимается разработкой под Android с 2016 года. Работал над антивирусом в Kaspersky, занимался банковски\
+            м приложением для бизнеса в Revolut. Сейчас руководит группой разработчиков в &laquo;Дзене&raquo;. Выпускник М\
+            ГТУ им. Баумана. Организатор Android Academy MSK.</p>\n<p class=\"p1\">Ведет блог &laquo;Дмитрий Мовчан &mdash;\
+            \ про IT&raquo; в <a href=\"https://dzen.ru/dmitriy_movchan\">&laquo;Дзене&raquo;</a> и <a href=\"https://t.me/dmitriy_movchan_pro_it\"\
+            >Telegram</a>.</p>"
     twitter: v1sarRU
+    gitHub: v1sar
+    habr: v1sar
   - id: 790
     photoFileName: 0790.jpg
     name:
@@ -12276,19 +12284,21 @@ speakers:
     twitter: DalooG
   - id: 829
     photoFileName: 0829.jpg
-    photoUpdatedAt: 2020-04-09T09:25:38.058Z[UTC]
+    photoUpdatedAt: "2023-09-14T08:31:37Z"
     name:
       - {language: en, text: "Kirill Popov"}
       - {language: ru, text: "Кирилл Попов"}
     companyIds: [653]
     bio:
-      - {language: en, text: "Odnoklassniki Android application developer. He graduated from St.Petersburg State University,\
-            \ where he studied computer vision and security. Into Android development since his second year at university.\
-            \ Loves football, table tennis, rollerblades, and snowboard."}
-      - {language: ru, text: "Разрабатывает Android-приложение Одноклассников. Закончил матмех СПбГУ, где занимался компью\
-            терными зрением и безопасностью. Разработкой под Android занимается со второго курса. Любит футбол, настольный\
-            \ теннис, ролики и сноуборд."}
+      - {language: en, text: "<p>Kirill has been in Android development for more than 10 years. Head of Android development\
+            \ at Odnoklassniki. Founder of the Tracer project. His professional interests include improving the quality and\
+            \ stability of applications.</p>"}
+      - {language: ru, text: "<p>Более 10 лет в Android-разработке. Руководит направлением Android-разработки в Одноклассн\
+            иках. Основатель проекта Tracer. Сфера профессиональных интересов &ndash; повышение качества и стабильности пр\
+            иложений.</p>"}
     twitter: Sk1talec
+    gitHub: Sk1talec
+    habr: Sk1talec
   - id: 830
     photoFileName: 0830.jpg
     name:
@@ -12755,10 +12765,10 @@ speakers:
       - {language: ru, text: "Дмитрий Куркин"}
     companyIds: [852]
     bio:
-      - {language: en, text: "<p>Spent a lot of time on messengers in Mail.Ru, has taken part in Yandex Navigator and Yandex\
-            \ Auto. From time to time presents talks about development for iOS.</p>"}
-      - {language: ru, text: "<p>Много лет занимался мессенджерами в Mail.Ru, поучаствовал в Яндекс Навигаторе и Яндекс Ав\
-            то. Время от времени выступает с докладами про разработку под iOS.</p>"}
+      - {language: en, text: "<p>Spent a lot of time on messengers in Mail.ru, has taken part in Yandex.Navigator and Yandex.Auto.\
+            \ From time to time gives talks on development for iOS.</p>"}
+      - {language: ru, text: "<p>Много лет занимался мессенджерами в Mail.ru, поучаствовал в Яндекс.Навигаторе и Яндекс.Ав\
+            то. Время от времени выступает с докладами о разработке под iOS.</p>"}
     twitter: sclown
     gitHub: sclown
   - id: 863
@@ -15400,16 +15410,19 @@ speakers:
     twitter: mrv0van
   - id: 1065
     photoFileName: 1065.jpg
+    photoUpdatedAt: "2022-03-31T19:03:39Z"
     name:
       - {language: en, text: "Pavel Novikov"}
       - {language: ru, text: "Павел Новиков"}
     companyIds: [646]
     bio:
-      - {language: en, text: "Pavel has been developing Android applications for over 7 years. The last few years has been\
-            \ working on a line of mobile office applications."}
-      - {language: ru, text: "Занимается разработкой Android-приложений более 7 лет. Последние несколько лет работает над\
-            \ линейкой мобильных офисных приложений."}
+      - {language: en, text: "<p>Pavel has been developing Android applications for over 10 years. The last few years has\
+            \ been working on a line of mobile office applications.</p>"}
+      - {language: ru, text: "<p>Занимается разработкой Android-приложений более 10 лет. Последние несколько лет работает\
+            \ над линейкой мобильных офисных приложений.</p>"}
     twitter: E13Mort
+    gitHub: e13mort
+    habr: Mort
   - id: 1066
     photoFileName: 1066.jpg
     name:
@@ -19074,21 +19087,26 @@ speakers:
             гда в поиске новых подходов для применения их на благо.</p>"}
   - id: 1364
     photoFileName: 1364.jpg
-    photoUpdatedAt: "2023-03-09T13:47:08Z"
+    photoUpdatedAt: "2023-09-04T11:49:26Z"
     name:
       - {language: en, text: "Anna Zharkova"}
       - {language: ru, text: "Анна Жаркова"}
     companyIds: [567]
     bio:
-      - {language: en, text: "<p>Lead Mobile developer with more than 9 years of experience. Kotlin GDE Develop both native\
-            \ (iOS: Swift/Objective-c, Android: Kotlin/Java) and cross-platform (Xamarin, Kotlin Multiplatform) applications.\
-            \ Mobile architect in mobile projects. Also mentoring junior developers and leading of mobile team. Tutor at Otus\
-            \ course \"iOS Advanced 2.0\".</p>"}
-      - {language: ru, text: "<p>Мобильный разработчик с 9 годами опыта коммерческой разработки. KMM developer Expert. Зан\
-            имается нативной разработкой iOS (Swift/Objective-c), Android (Kotlin/Java) и кроссплатформенной (KMM, Xamarin).\
-            \ Разрабатывает архитектуру мобильных приложений для обеих платформ, управляет командой направления. Ведет мла\
-            дших разработчиков (менторство). Преподаватель на курсах &laquo;iOS Advanced 2.0&raquo; и &laquo;iOS Базовый&raquo;\
-            \ в Otus. В свободное время увлекается живописью, изучает китайский и немецкий языки.</p>"}
+      - language: en
+        text: "<p>Lead Mobile developer with more than 9 years of experience. Kotlin GDE. Develops both native (iOS: Swift/Objective-C,\
+            \ Android: Kotlin/Java) and cross-platform (Xamarin, Kotlin Multiplatform) applications. Mobile architect in mobile\
+            \ projects. Also mentors junior developers and leads the mobile team. Tutor at Otus for the course \"iOS Advanced\
+            \ 2.0\".</p>\n<p>She talks about native and cross-platform mobile development and IT in general in her Telegram\
+            \ channel <a href=\"https://t.me/prettygeeknotes\">\"Developer Notes\"</a>.</p>"
+      - language: ru
+        text: "<p>Мобильный разработчик с 9 годами опыта коммерческой разработки. KMM Developer Expert. Занимается нативно\
+            й разработкой iOS (Swift/Objective-С), Android (Kotlin/Java) и кроссплатформенной (KMM, Xamarin). Разрабатывае\
+            т архитектуру мобильных приложений для обеих платформ, управляет командой направления.</p>\n<p>Менторит младши\
+            х разработчиков. Преподает на курсах &laquo;iOS Advanced 2.0&raquo; и &laquo;iOS Базовый&raquo; в Otus. В своб\
+            одное время увлекается живописью, изучает китайский и немецкий языки.</p>\n<p class=\"p1\">Рассказывает о нати\
+            вной и кроссплатформенной мобильной разработке, а также про IT в целом в Telegram-канале <a href=\"https://t.me/prettygeeknotes\"\
+            >&laquo;Записки разработчицы&raquo;</a>.</p>"
     twitter: anioutkajarkova
     gitHub: anioutkazharkova
     habr: anioutka
@@ -27355,19 +27373,22 @@ speakers:
     gitHub: hitherejoe
   - id: 1932
     photoFileName: 1932.jpg
-    photoUpdatedAt: 2021-11-20T17:40:43.350Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:03:56Z"
     name:
       - {language: en, text: "Sergey Vikhlyaev"}
       - {language: ru, text: "Сергей Вихляев"}
-    companyIds: [665]
+    companyIds: [1189]
     bio:
       - language: en
-        text: "Head of iOS Mobile development of the consumer lending team for the Sbol mobile application.\n\nUltimate projects\
-            \ - Sber, Rendez-Vous."
-      - language: ru
-        text: "Руководитель направления iOS разработки команды потребительского кредитования мобильного приложения СБОЛ. \r\
-            \n\r\nПринимал непосредственное участие в более чем 12 проектах, доведённых до AppStore. Два наиболее популярн\
-            ых приложения — МП СБОЛ, и Rendez-Vous. \r\n\r\nРазвивает сообщество разработчиков iOSnick."
+        text: "<p>iOS TeamLead in Okko.</p>\n<p>&nbsp;</p>\n<p>7 years in iOS development. Speaker of Mobius 2021 Autumn,\
+            \ report \"Architecture and how to prepare it\". The author of the Telegram community iOSnickCommunity. Sergey\
+            \ believes that programmers are the ambassadors of the future, on whom it directly depends on what this future\
+            \ will become. The most important human quality determines the eco-friendly craving for knowledge and its beneficial\
+            \ use.</p>"
+      - {language: ru, text: "iOS TeamLead в Okko.</p><p>7 лет в iOS разработке. Cпикер Mobius 2021 Autumn, доклад «Архите\
+            ктура, и как ее готовить». Автор Telegram-сообщества iOSnickCommunity. Считает, что программисты — амбассадоры\
+            \ будущего, от которых непосредственно зависит, каким это будущее станет.Важнейшим человеческим качеством опре\
+            деляет экологичную тягу к знаниям и их благотворному применению."}
     gitHub: VikhlyaevSergey
   - id: 1933
     photoFileName: 1933.jpg
@@ -28155,21 +28176,22 @@ speakers:
     habr: ermolnik
   - id: 1986
     photoFileName: 1986.jpg
-    photoUpdatedAt: 2022-05-25T13:34:44Z[UTC]
+    photoUpdatedAt: "2022-05-25T13:34:44Z"
     name:
       - {language: en, text: "Roman Aymaletdinov"}
       - {language: ru, text: "Роман Аймалетдинов"}
-    companyIds: [909]
+    companyIds: [1179]
     bio:
       - language: en
-        text: "<p>Roman develops for Android at inDriver. Before inDriver he worked at Citimobile, before that at EPAM, and\
-            \ started his career working outstaff at SiriusXM in an automotive project.</p>\n<p>Roman has been in Android\
+        text: "<p>Roman develops for Android at Global in London. He worked at Citymobil, before that at EPAM, and started\
+            \ his career as an outstaff developer at SiriusXM in an automotive project.</p>\n<p>Roman has been in Android\
             \ development for almost five years. Worked mostly on product tasks, but in the last year the focus has shifted\
             \ to infrastructure tasks.</p>"
       - language: ru
-        text: "<p>Разрабатывает под Android в компании inDriver. До inDriver работал в Ситимобил, до этого в EPAM, а начин\
-            ал карьеру, работая outstaff на SiriusXM в automotive-проекте.</p>\n<p>В Android-разработке почти пять лет. В\
-            \ основном работал над продуктовыми задачами, но в последний год фокус сместился на инфраструктурные задачи.</p>"
+        text: "<p>Разрабатывает под Android в компании Global в Лондоне. Начинал карьеру в automotive-проекте для SiriusXM\
+            \ USA. В России работал в таких компаниях, как EPAM, Ситимобил и inDrive.</p>\n<p>В Android-разработке более п\
+            яти лет. В основном работал над продуктовыми задачами, но в последний год фокус сместился на инфраструктурные\
+            \ задачи.</p>"
     twitter: Evleaps
     gitHub: Evleaps
     habr: Evleaps
@@ -29021,16 +29043,21 @@ speakers:
             \ заказных до финтех-продуктов.</p>"}
   - id: 2045
     photoFileName: 2045.jpg
-    photoUpdatedAt: 2022-04-20T08:52:02Z[UTC]
+    photoUpdatedAt: "2022-04-20T08:52:02Z"
     name:
       - {language: en, text: "Slava Slutsker"}
       - {language: ru, text: "Слава Слуцкер"}
-    companyIds: [810]
+    companyIds: [1182]
     bio:
-      - {language: en, text: "<p>Head of mobile platform development with strong technical background and management skills.\
-            \ Worked as iOS developer and full-stack web developer.</p>"}
-      - {language: ru, text: "<p>Руководитель разработки мобильной платформы группы приложений Skyeng. До этого руководил\
-            \ сектором мобильной разработки компании Тензор. Большой опыт в iOS-разработке и full-stack web-разработке.</p>"}
+      - language: en
+        text: "<p>Software development tech lead with a strong engineering background in architecture, infrastructure, mobile,\
+            \ backend, automation, ML and analytics. Passionate about creating and growing great engineering products and\
+            \ teams.</p>\n<p>Slava is goal-oriented and an effective lead and engineering manager. Continuous learner.</p>"
+      - language: ru
+        text: "<p>Техлид разработки программного обеспечения с сильным инженерным опытом в архитектуре, инфраструктуре, мо\
+            бильной разработке, бэкенде, автоматизации, ML и аналитике.</p>\n<p>Увлечен созданием и развитием крутых инжен\
+            ерных продуктов и команд. Ориентирован на достижение целей. Эффективный лидер и руководитель. Постоянно учится\
+            .&nbsp;</p>"
     twitter: SlavaSlutsker
   - id: 2046
     photoFileName: 2046.jpg
@@ -29137,13 +29164,13 @@ speakers:
       - {language: ru, text: "Валерия Курмак"}
     companyIds: [689]
     bio:
-      - {language: en, text: "<p>Valeria is the head of Inclusion at Yandex, a member of the Strategic Leader in Accessibility\
-            \ Initiative at IAAP, author of the Sberbank Digital Accessibility Guidelines, and author of the AccessibilityUnity\
-            \ educational course on digital accessibility. She runs a telegram channel about inclusive design, \"No Exception.</p>"}
-      - {language: ru, text: "<p>Руководитель направления &laquo;Инклюзия&raquo; в Яндексе, член Strategic Leader in Accessibility\
-            \ Initiative в IAAP, автор гайдлайна по цифровой доступности Сбербанка, автор образовательного курса по цифров\
-            ой доступности &laquo;AccessibilityUnity&raquo;. Ведет телеграмм-канал об инклюзивном дизайне &laquo;Не исключ\
-            ение&raquo;.</p>"}
+      - {language: en, text: "<p class=\"root-block-node\" data-paragraphid=\"3\" data-from-init=\"true\" data-changed=\"\
+            false\">Head of the Inclusion direction at Yandex, author of the educational course on digital accessibility \"\
+            Accessibility Unity\", maintains the <a href=\"https://t.me/neiskluchenie\">Telegram channel about Inclusion in\
+            \ the physical and digital worlds \"Not an Exception\"</a>.</p>"}
+      - {language: ru, text: "<p>Руководитель направления &laquo;Инклюзия&raquo; в Яндексе, автор образовательного курса п\
+            о цифровой доступности Accessibility Unity, ведет <a href=\"https://t.me/neiskluchenie\" target=\"_blank\" rel=\"\
+            noopener\">Telegram-канал об Инклюзии в физическом и цифровом мире &laquo;Не исключение&raquo;</a>.</p>"}
     twitter: KurmakLera
   - id: 2054
     photoFileName: 2054.jpg
@@ -29261,16 +29288,20 @@ speakers:
             оводит Android-разработкой в Яндекс Go.</p>"}
   - id: 2063
     photoFileName: 2063.jpg
-    photoUpdatedAt: 2022-10-12T12:48:56Z[UTC]
+    photoUpdatedAt: "2023-09-11T12:47:06Z"
     name:
       - {language: en, text: "Veronika Makarovskaya"}
       - {language: ru, text: "Вероника Макаровская"}
     companyIds: [665]
     bio:
-      - {language: en, text: "<p>The first girl of the iOS-Platform Sberbank Online team. Loves coding, cats and succulents.\
-            \ Sometimes teaches programming to novice iOS developers.</p>"}
-      - {language: ru, text: "<p>Первая девушка команды iOS-Platform Сбербанк Онлайн. Любит кодить, котиков и суккуленты.\
-            \ Иногда учит программировать начинающих iOS-разработчиков.</p>"}
+      - language: en
+        text: "<p>Member of Sber's Mobile Platform team, successfully balancing iOS, Python and DevOps.</p>\n<p>Veronika has\
+            \ been with Sberbank for so long that, to check on life outside work, she does plant growing, figure skating and\
+            \ attends all sorts of courses. Sometimes teaches novice iOS developers how to programme.</p>"
+      - language: ru
+        text: "<p>Участник команды Mobile Platform Сбера, успешно балансирующий между iOS, Python и DevOps.</p>\n<p>В Сбер\
+            е так давно, что для проверки жизни вне работы занимается растениеводством, фигурным катанием и ходит на всево\
+            зможные курсы. Иногда учит начинающих iOS-разработчиков программировать.</p>"
     twitter: maknika1996
   - id: 2064
     photoFileName: 2064.jpg
@@ -29361,14 +29392,21 @@ speakers:
             ами и стрелковымм видами спорта."}
   - id: 2070
     photoFileName: 2070.jpg
-    photoUpdatedAt: 2022-05-06T13:07:40Z[UTC]
+    photoUpdatedAt: "2022-05-06T13:07:40Z"
     name:
-      - {language: en, text: "Anatoly Peshkov"}
+      - {language: en, text: "Antol Peshkov"}
       - {language: ru, text: "Анатолий Пешков"}
     companyIds: [906]
     bio:
-      - {language: en, text: "<p>Anatoly is the co-founder and CTO of Mad Brains. More than ten years in mobile development.</p>"}
-      - {language: ru, text: "<p>Сооснователь и CTO компании Mad Brains. Более десяти лет в мобильной разработке.</p>"}
+      - {language: en, text: "<p>Anatoly is the co-founder and CTO of Mad Brains. He has more than ten years of experience\
+            \ in mobile development. Develops the company's hardcore <a href=\"https://youtube.com/@MadBrains\">YouTube channel</a>\
+            \ and the Mad Education <a href=\"https://t.me/skills_by_mad\">Telegram channel</a>.</p>"}
+      - {language: ru, text: "Сооснователь и CTO компании Mad Brains. Более десяти лет в мобильной разработке. Развивает х\
+            ардовый канал компании на <a href=\"https://youtube.com/@MadBrains\" rel=\"noopener noreferrer\" target=\"_blank\"\
+            >YouTube</a> и Telegram-канал <a href=\"https://t.me/skills_by_mad\" rel=\"noopener noreferrer\" target=\"_blank\"\
+            >Mad Education</a>."}
+    gitHub: Antol
+    habr: Antol
   - id: 2071
     photoFileName: 2071.jpg
     photoUpdatedAt: 2022-05-20T08:07:03Z[UTC]
@@ -29545,34 +29583,44 @@ speakers:
             ацией кода под восприятие человека.</p>\n<p>Сторонник фразы &laquo;в споре рождается истина&raquo;.</p>"
   - id: 2081
     photoFileName: 2081.jpg
-    photoUpdatedAt: 2022-09-15T14:57:38Z[UTC]
+    photoUpdatedAt: "2023-07-28T14:26:52Z"
     name:
       - {language: en, text: "Maxim Grishutin"}
       - {language: ru, text: "Максим Гришутин"}
     companyIds: [390]
     bio:
-      - {language: en, text: "<p>He managed to work on the White Label app for banks (VTB, OTP, Absolut and 100+ more) and\
-            \ the app of a yellow bank. He is responsible for the iOS application for Ozon sellers. Taught iOS courses on\
-            \ SwiftUI at Ozon School Route 256. He tries to implement and promote new technologies and is pedantic about optimization.</p>"}
-      - {language: ru, text: "<p>Успел поработать над White Label приложением для банков (ВТБ, ОТП, Абсолют и еще 100+) и\
-            \ приложением желтого банка. Отвечает за iOS-приложение для селлеров в Ozon. Преподаватель курсов по SwiftUI в\
-            \ Ozon School Route 256. Старается внедрять и продвигать новые технологии, а еще с педантичностью подходить к\
-            \ вопросам оптимизации.</p>"}
+      - language: en
+        text: "<p>Maxim worked in Fintech for a long time: he developed White Label application for banks (VTB, OTP, Absolut\
+            \ and +100 more) and UI/UX for the voice assistant at Tinkoff.&nbsp;</p>\n<p>He is Head of the iOS development\
+            \ department at Ozon and is responsible for the iOS application for sellers.</p>\n<p>Speaker also</p>\n<ul>\n\
+            <li>teaches SwiftUI courses at Route 256;</li>\n<li>keeps a small LinkedIn blog on development;</li>\n<li>actively\
+            \ participates in open source projects (SPM, XcodeGen, Tuist, XcodeProj);</li>\n<li>develops his own projects:\
+            \ Prefire &ndash; auto-generation of Snapshot tests based on #Preview</li>\n</ul>\n<p>&nbsp;</p>"
+      - language: ru
+        text: "<p>Максим долго работал в финтехе: разрабатывал White Label-приложение для банков (ВТБ, ОТП, Абсолют и еще\
+            \ +100) и UI/UX голосового помощника в Тинькофф.</p>\n<p>Руководитель отдела iOS-разработки в Ozon, отвечает з\
+            а iOS-приложение для селлеров.</p>\n<p>Также спикер</p>\n<ul>\n<li>преподает курсы по SwiftUI в<strong> </strong>Route\
+            \ 256;</li>\n<li>ведет небольшой блог о разработке в LinkedIn;</li>\n<li>активно участвует в open source-проек\
+            тах (SPM, XcodeGen, Tuist, XcodeProj);</li>\n<li>разрабатывает собственные проекты: Prefire<span style=\"font-weight:\
+            \ 400;\"> &ndash; автоматическая </span>генерация<span style=\"font-weight: 400;\"> </span>Snapshot-<span style=\"\
+            font-weight: 400;\">тестов на основе </span>#Preview.</li>\n</ul>"
+    gitHub: BarredEwe
+    habr: BarredEwe
   - id: 2082
     photoFileName: 2082.jpg
-    photoUpdatedAt: 2022-05-30T08:27:32Z[UTC]
+    photoUpdatedAt: "2023-07-19T15:51:09Z"
     name:
       - {language: en, text: "Dmitriy Grigorev"}
       - {language: ru, text: "Дмитрий Григорьев"}
-    companyIds: [183]
+    companyIds: [1181]
     bio:
-      - {language: en, text: "<p>Senior Software Engineer at EPAM Systems. Engaged in Android development since 2018. In his\
-            \ spare time, he is actively interested in declarative and cross-platform development.<br />Creator and author\
-            \ of \"Mobile Compose\" Telegram channel.</p>"}
-      - {language: ru, text: "<p>Senior Software Engineer в EPAM Systems. Занимается Android-разработкой c 2018 года. В св\
-            ободное время активно интересуется декларативной и кроссплатформенной разработкой.<br />Создатель и автор Telegram-к\
-            анала &rdquo;Mobile Compose&rdquo;.</p>"}
+      - {language: en, text: "In Android development since 2018. In his spare time, Dmitriy is into declarative and cross-platform\
+            \ development. He is the creator and author of \"Mobile Compose\" Telegram channel."}
+      - {language: ru, text: "В Android-разработке c 2018 года. В свободное время активно интересуется декларативной и кро\
+            ссплатформенной разработкой. Создатель и автор <a href=\"https://t.me/mobile_compose\" rel=\"noopener noreferrer\"\
+            \ target=\"_blank\">Telegram-канала Mobile Compose</a>."}
     twitter: grigorievdy
+    gitHub: grigorievd
   - id: 2083
     photoFileName: 2083.jpg
     photoUpdatedAt: 2022-05-19T13:54:16Z[UTC]
@@ -34724,20 +34772,20 @@ speakers:
             лось бы поделиться с другими разработчиками.</p>"}
   - id: 2446
     photoFileName: 2446.jpg
-    photoUpdatedAt: 2022-09-20T11:57:36Z[UTC]
+    photoUpdatedAt: "2023-09-11T09:42:45Z"
     name:
       - {language: en, text: "Danil Perevalov"}
       - {language: ru, text: "Данил Перевалов"}
     companyIds: [683]
     bio:
-      - {language: en, text: "<p>He has been working in Android development for eight years. The first three years he worked\
-            \ at an outsourcing company, where he was able to expand his technological horizons. After that he worked in a\
-            \ product company, where he was able to expand his knowledge in depth. He works in the core team, where he occasionally\
-            \ has to do strange but useful things.</p>"}
-      - {language: ru, text: "<p>Занимается Android-разработкой уже восемь лет. Первые три года работал в аутсорс-компании\
-            , где смог расширить технологический кругозор. После этого работал в продуктовой компании, где смог расширить\
-            \ свои знания в глубину. Работает в core-команде, где периодически приходится делать странные, но полезные шту\
-            ки.</p>"}
+      - {language: en, text: "<p>Danil has been working in Android development for nine years. The first three years he worked\
+            \ at an outsourcing company, where he was able to expand his technological horizons. After that, he worked in\
+            \ a product company, where he expanded and deepened his knowledge. Now he works in the core team, where he occasionally\
+            \ has to implement strange but useful things.</p>"}
+      - {language: ru, text: "<p>Занимается Android-разработкой девять лет. Первые три года работал в аутсорс-компании, гд\
+            е смог расширить технологический кругозор. После этого работал в продуктовой компании, где расширил и углубил\
+            \ свои знания. Сейчас работает в core-команде, где периодически приходится делать странные, но полезные штуки\
+            .</p>"}
     gitHub: princeparadoxes
     habr: princeparadoxes
   - id: 2447
@@ -34851,7 +34899,7 @@ speakers:
     habr: Tayrinn
   - id: 2455
     photoFileName: 2455.jpg
-    photoUpdatedAt: 2022-10-24T13:23:17Z[UTC]
+    photoUpdatedAt: "2023-08-22T14:38:01Z"
     name:
       - {language: en, text: "Dmitrii Zherdev"}
       - {language: ru, text: "Дмитрий Жердев"}
@@ -34859,7 +34907,7 @@ speakers:
     bio:
       - {language: en, text: "<p>The iOS Platform Team developer at Cian. Responsible for implementing the design system on\
             \ iOS.</p>"}
-      - {language: ru, text: "Разработчик iOS Platform Team в компании Циан, отвечает за реализацию дизайн-системы на iOS."}
+      - {language: ru, text: "<p>Разработчик iOS Platform Team в Циан, отвечает за реализацию дизайн-системы и BDUI на iOS.</p>"}
     gitHub: Dmitry-Zherdev
     habr: Jedr
   - id: 2456
@@ -34915,16 +34963,17 @@ speakers:
             \ несколько лет читал лекции по проектированию драйверов Linux в МАИ.</p>"}
   - id: 2459
     photoFileName: 2459.jpg
-    photoUpdatedAt: "2023-03-24T10:21:40Z"
+    photoUpdatedAt: "2023-11-01T20:00:27Z"
     name:
       - {language: en, text: "Alexey Gladkov"}
       - {language: ru, text: "Алексей Гладков"}
-    companyIds: [674]
+    companyIds: [1188]
     bio:
-      - {language: en, text: "He has been involved in mobile OS development for 8 years. A contributor to the Mobile Developer\
-            \ channel, a regular member of the Podlodka Android and Crossplatform Crew, and a participant in several GDG Fests."}
-      - {language: ru, text: "Занимается разработкой для мобильных ОС уже 8 лет. Автор канала Mobile Developer. Постоянный\
-            \ участник Podlodka Android Crew и Crossplatform Crew, участник нескольких GDG Fest."}
+      - {language: en, text: "<p>Alexey has been involved in mobile OS development for 8 years. A contributor to the Mobile\
+            \ Developer channel, a regular member of the Podlodka Android and Crossplatform Crews, and a participant of several\
+            \ GDG Fests.</p>"}
+      - {language: ru, text: "<p>Занимается разработкой для мобильных ОС 8 лет. Автор канала Mobile Developer. Постоянный\
+            \ участник Podlodka Android Crew и Crossplatform Crew, участник нескольких GDG Fest.</p>"}
     twitter: NeuraSC2
     gitHub: AlexGladkov
     habr: neura
@@ -37498,7 +37547,7 @@ speakers:
             ю всего нового.</p>"
   - id: 2643
     photoFileName: 2643.jpg
-    photoUpdatedAt: "2023-03-30T15:50:43Z"
+    photoUpdatedAt: "2023-10-27T11:25:52Z"
     name:
       - {language: en, text: "Alexey Panov"}
       - {language: ru, text: "Алексей Панов"}
@@ -37695,19 +37744,17 @@ speakers:
     gitHub: amal
   - id: 2657
     photoFileName: 2657.jpg
-    photoUpdatedAt: "2023-05-05T10:30:25Z"
+    photoUpdatedAt: "2023-10-19T11:33:50Z"
     name:
       - {language: en, text: "Evgenii Shtern"}
       - {language: ru, text: "Евгений Штерн"}
     companyIds: [377]
     bio:
-      - {language: en, text: "<p>Head of the player department at Okko. Android developer and lead with experience.</p>"}
-      - language: ru
-        text: "<p>Руководитель отдела плееров в Okko. Android-разработчик и lead со стажем.</p>\n<p>Kotlin &mdash; это его\
-            \ всё!&nbsp; *Смотрит в сторону KMM и подмигивает iOS-разработке и Swift.</p>"
+      - {language: en, text: "<p>Head of the player department at Okko. Android developer and experienced lead.</p>"}
+      - {language: ru, text: "<p>Руководитель отдела плееров в Okko. Android-разработчик и Lead со стажем.</p>"}
   - id: 2659
     photoFileName: 2659.jpg
-    photoUpdatedAt: "2023-02-15T15:57:45Z"
+    photoUpdatedAt: "2023-07-24T14:18:21Z"
     name:
       - {language: en, text: "Andrei Zonov"}
       - {language: ru, text: "Андрей Зонов"}
@@ -37720,13 +37767,12 @@ speakers:
             \ the Tinkoff Accounting app as a team lead architect. In the project he deals with processes, test automation,\
             \ CI/CD, compilation optimization, architecture and everything that concerns key business metrics. Actively involved\
             \ in writing the application itself.</p>"
-      - language: ru
-        text: "<p>Ведущий iOS-разработчик. 10 лет в промышленной мобильной разработке, 4 года преподавания в ВУЗе, тимлид\
-            , архитектор мобильных приложений.</p>\n<p>В портфолио есть несколько стартапов: социальные сети разной успешн\
-            ости, нагруженные системы для работы с инвентаризацией склада, приложения с многопользовательскими чатами.</p>\n\
-            <p>Последние 4 года занимается разработкой приложения Тинькофф Бухгалтерия на роли архитектора-тимлида. В прое\
-            кте занимается процессами, автоматизацией тестирования, CI/CD, оптимизациями компиляции, архитектурой и всем,\
-            \ что касается ключевых метрик бизнеса. Активно принимает участие в написании самого приложения.</p>"
+      - {language: ru, text: "Ведущий iOS-разработчик. 11 лет в промышленной мобильной разработке, 4 года преподавания в В\
+            УЗе, тимлид, архитектор мобильных приложений.</p><p>В портфолио есть несколько стартапов: социальные сети разн\
+            ой успешности, нагруженные системы для работы с инвентаризацией склада, приложения с многопользовательскими ча\
+            тами.</p><p>Последние 4 года занимается разработкой приложения Тинькофф Бухгалтерия на роли архитектора-тимлид\
+            а. В проекте занимается процессами, автоматизацией тестирования, CI/CD, оптимизациями компиляции, архитектурой\
+            \ и всем, что касается ключевых метрик бизнеса. Активно принимает участие в написании самого приложения."}
     twitter: avzonov
   - id: 2660
     photoFileName: 2660.jpg
@@ -37914,14 +37960,14 @@ speakers:
     habr: artem_kovardin
   - id: 2673
     photoFileName: 2673.jpg
-    photoUpdatedAt: "2023-03-16T12:41:07Z"
+    photoUpdatedAt: "2023-09-14T09:22:05Z"
     name:
-      - {language: en, text: "Sergei Balalaev"}
+      - {language: en, text: "Sergey Balalaev"}
       - {language: ru, text: "Сергей Балалаев"}
     companyIds: [390]
     bio:
-      - {language: en, text: "<p>Leads mobile app development for Ozon's pickup points. Has been in iOS development for 14\
-            \ years. Head since 2014, lecturer and speaker, organizer of meetups and hackathons.</p>"}
+      - {language: en, text: "<p>Sergey leads mobile app development for Ozon's pickup points. Has been in iOS development\
+            \ for 14 years. Has been Head since 2014, a lecturer and a speaker, as well as an organizer of meetups and hackathons.</p>"}
       - {language: ru, text: "<p>Руководит мобильной разработкой приложения для пунктов выдачи в Ozon. В iOS-разработке 14\
             \ лет. Руководитель с 2014 года, преподаватель и спикер, организатор митапов и хакатонов.</p>"}
     gitHub: sofbix
@@ -38053,30 +38099,29 @@ speakers:
       - {language: ru, text: "Анатолий Попко"}
     companyIds: []
     bio:
-      - language: en
-        text: "<ul>\n<li>Graduated with honors from Lomonosov Moscow State University. From 2007 to 2013, he worked in managerial\
-            \ positions in the structure of the All-Russian Society of the Blind, and then for 3 years in the production and\
-            \ distribution of technical means of rehabilitation. In 2016-2021 he managed the international project \"Dialogue\
-            \ in the Dark\" (Russia).</li>\n<li>Expert in digital accessibility, representative of Russia in the Global Initiative\
-            \ for Inclusive ICT (G3ICT/Smart cities for all), one of the authors of the current edition of the national standard\
-            \ for digital content accessibility (GOST-R 52872-2019);</li>\n<li>Member of the working group under the Presidential\
-            \ Commission on Disability, member of the working group of the Bank of Russia on financial inclusion, expert of\
-            \ the Civic Chamber of the Russian Federation;</li>\n<li>Head of the project of individual distance training in\
-            \ computer literacy for blind users of the charity fund of Alisher Usmanov \"Art, Science and Sports\", expert\
-            \ of the project \"Special Bank\";</li>\n<li>Individual entrepreneur, public figure; totally blind (since the\
-            \ age of 12).</li>\n</ul>"
-      - language: ru
-        text: "<ul>\n<li>С отличием окончил МГУ им. М.В. Ломоносова (ФГУ 2007). С 2007 по 2013 работал на руководящих долж\
-            ностях в структуре Всероссийского общества слепых, затем 3 года в сфере производства и дистрибуции технических\
-            \ средств реабилитации. В 2016-2021 годах руководил международным проектом \"Диалог в Темноте\" (Россия).</li>\n\
-            <li>Эксперт в сфере цифровой доступности, представитель России в Глобальной инициативе за инклюзивные ИКТ (G3ICT/Smart\
-            \ cities for all), один из авторов действующей редакции национального стандарта по доступности цифрового конте\
-            нта (ГОСТ-Р 52872-2019);</li>\n<li>Член рабочей группы при Комиссии по делам инвалидов при президенте Российск\
-            ой Федерации, член рабочей группы Банка России по финансовой доступности, эксперт Общественной Палаты Российск\
-            ой Федерации;</li>\n<li>Руководитель проекта индивидуальных дистанционных занятий по компьютерной грамотности\
-            \ для незрячих пользователей благотворительного фонда Алишера Усманова &laquo;Искусство, наука и спорт&raquo;,\
-            \ эксперт проекта &laquo;Особенный банк&raquo;;</li>\n<li>Индивидуальный предприниматель, общественный деятель\
-            ; тотально незрячий (с 12 лет).</li>\n</ul>"
+      - {language: en, text: "<ul><li>Graduated with honors from Lomonosov Moscow State University. From 2007 to 2013, he\
+            \ worked in managerial positions in the structure of the All-Russian Society of the Blind, and then for 3 years\
+            \ in the production and distribution of technical means of rehabilitation. In 2016-2021 he managed the international\
+            \ project \"Dialogue in the Dark\" (Russia).</li><li>Expert in digital accessibility, representative of Russia\
+            \ in the Global Initiative for Inclusive ICT (G3ICT/Smart cities for all), one of the authors of the current edition\
+            \ of the national standard for digital content accessibility (GOST-R 52872-2019);</li><li>Member of the working\
+            \ group under the Presidential Commission on Disability, member of the working group of the Bank of Russia on\
+            \ financial inclusion, expert of the Civic Chamber of the Russian Federation;</li><li>Head of the project of individual\
+            \ distance training in computer literacy for blind users of the charity fund of Alisher Usmanov \"Art, Science\
+            \ and Sports\", expert of the project \"Special Bank\";</li><li>Individual entrepreneur, public figure; totally\
+            \ blind (since the age of 12).</li></ul>"}
+      - {language: ru, text: "<ul><li>С отличием окончил МГУ им. М.В. Ломоносова (ФГУ 2007). С 2007 по 2013 работал на рук\
+            оводящих должностях в структуре Всероссийского общества слепых, затем 3 года в сфере производства и дистрибуци\
+            и технических средств реабилитации. В 2016-2021 годах руководил международным проектом \"Диалог в Темноте\" (Р\
+            оссия).</li><li>Эксперт в сфере цифровой доступности, представитель России в Глобальной инициативе за инклюзив\
+            ные ИКТ (G3ICT/Smart cities for all), один из авторов действующей редакции национального стандарта по доступно\
+            сти цифрового контента (ГОСТ-Р 52872-2019);</li><li>Член рабочей группы при Комиссии по делам инвалидов при пр\
+            езиденте Российской Федерации, член рабочей группы Банка России по финансовой доступности, эксперт Общественно\
+            й Палаты Российской Федерации;</li><li>Руководитель проекта индивидуальных дистанционных занятий по компьютерн\
+            ой грамотности для незрячих пользователей благотворительного фонда Алишера Усманова «Искусство, наука и спорт»\
+            , эксперт проекта «Особенный банк»;</li><li>Индивидуальный предприниматель, общественный деятель; тотально нез\
+            рячий (с 12 лет).</li></ul>"}
+    twitter: ADPopko
     habr: ADPopko
   - id: 2682
     photoFileName: 2682.jpg
@@ -38243,16 +38288,17 @@ speakers:
     habr: hoichi
   - id: 2692
     photoFileName: 2692.jpg
-    photoUpdatedAt: "2023-03-16T13:57:53Z"
+    photoUpdatedAt: "2023-09-12T11:58:21Z"
     name:
-      - {language: en, text: "Evgeny Prokopyev"}
+      - {language: en, text: "Evgeniy Prokopev"}
       - {language: ru, text: "Евгений Прокопьев"}
     companyIds: [665]
     bio:
-      - {language: en, text: "<p>Eugene has been developing on RN for about 6 years, likes beautiful animations and well optimized\
-            \ solutions, at the same time he writes pet-projects (nothing has burned out yet), climbs and surfs.</p>"}
-      - {language: ru, text: "<p>Разрабатывает на RN около 6 лет, любит красивые анимации и хорошо оптимизированные решени\
-            я, параллельно пилит пет-проекты (пока ничего не выгорело), скалолазает, серфит.</p>"}
+      - {language: en, text: "<p>Evgeniy has been developing in RN for about 6 years, and also writes pet projects. Likes\
+            \ beautiful animations and well optimised solutions. Enjoys rock climbing and surfing.</p>"}
+      - {language: ru, text: "<p>Разрабатывает на RN около 6 лет, параллельно пилит pet-проекты. Любит красивые анимации и\
+            \ хорошо оптимизированные решения. Занимается скалолазанием и серфингом.&nbsp;</p>"}
+    gitHub: Evgen74
     habr: Evgen175
   - id: 2693
     photoFileName: 2693.jpg
@@ -39601,7 +39647,7 @@ speakers:
             х решений и инструментов, позволяющих решать такие задачи. Вдохновлен идеей подключить что угодно к интернету."}
   - id: 2779
     photoFileName: 2779.jpg
-    photoUpdatedAt: "2023-06-28T13:07:14Z"
+    photoUpdatedAt: "2023-08-01T12:18:45Z"
     name:
       - {language: en, text: "Daniel Khaliulin"}
       - {language: ru, text: "Даниэль Халиулин"}
@@ -39611,8 +39657,7 @@ speakers:
             \ the main mobile application — the mobile bank. Complex crashes, monitoring, performance optimization, technical\
             \ metrics and all that — that's his job.Before that he worked as a system analyst and backend developer on a project\
             \ for a Kuwaiti telecom operator (he even traveled to Kuwait a couple of times), and as an operations engineer\
-            \ and system administrator at MegaFon.</p><p>The author of the Telegram channel \"Tales of a Technical Manager\"\
-            \ - https://t.me/tech_managers_tales."}
+            \ and system administrator at MegaFon.The author of the Telegram channel \"Tales of a Technical Manager\" - https://t.me/tech_managers_tales."}
       - {language: ru, text: "Technical Product Manager в Тинькофф. Отвечает за производительность и надежность основного\
             \ мобильного приложения — мобильного банка. Сложные крэши, мониторинги, оптимизации производительности, технич\
             еские метрики и все такое — это к нему.До этого поработал системным аналитиком и бэкенд-разработчиком на проек\
@@ -41993,3 +42038,575 @@ speakers:
       - language: ru
         text: "<p>Доктор физико-математических наук. Интересы: конформная теория поля, теория представлений.</p>\n<p>Попул\
             яризатор науки.</p>"
+  - id: 2937
+    photoFileName: 2937.jpg
+    photoUpdatedAt: "2023-08-24T12:46:34Z"
+    name:
+      - {language: en, text: "Maksim Nechaev"}
+      - {language: ru, text: "Максим Нечаев"}
+    companyIds: [1178]
+    bio:
+      - language: en
+        text: "<p>Tech Lead and Senior iOS Developer at Qatar's largest super-app. Maxim has rich experience in the edtech,\
+            \ foodtech and e-commerce sectors, having developed a variety of services.</p>\n<p>Currently, he is overseeing\
+            \ a team focused on introducing new flagship features for Snoonu. Concurrently, he's working on an AI-driven mobile\
+            \ application tailored for the European and American markets. He is also the founder and leader of a startup.\
+            \ Passionate about AR and VR technologies, has published articles on Vision Pro and created demo applications.\
+            \ Additionally, he runs YouTube and Telegram channels dedicated to development.</p>"
+      - language: ru
+        text: "<p>Tech Lead и Senior iOS-разработчик в самом большом супераппе Катара. Разрабатывал сервисы в edtech-, foodtech-\
+            \ и e-commerce-индустриях. Сейчас управляет командой по разработке новых флагманских функциональностей в Snoonu.\
+            \ Параллельно разрабатывает мобильное приложение, основанное на AI-технологиях, на европейский и американский\
+            \ рынок.</p>\n<p>Основатель и руководитель стартапа. Активно изучает технологии AR- и VR-разработки, публикова\
+            л статьи о Vision Pro, писал демо-приложения. Ведет YouTube- и Telegram-каналы по разработке.</p>"
+  - id: 2938
+    photoFileName: 2938.jpg
+    photoUpdatedAt: "2023-08-01T14:03:07Z"
+    name:
+      - {language: en, text: "Valentin Telegin"}
+      - {language: ru, text: "Валентин Телегин"}
+    companyIds: [945]
+    bio:
+      - language: en
+        text: "<p>20 years in mobile development. Valentin started as a developer and worked his way up to become a technical\
+            \ director. Worked at Yandex for many years and was involved in the development of mobile products. One of the\
+            \ first major projects were mobile Yandex Maps. As a jury member and an expert, he participated in a number of\
+            \ hackathons, including Digital Breakthrough, VirusHack, IoT hackathon GeekBrains.</p>\n<p>Now he is managing\
+            \ mobile development at Rostelecom IT on the projects like Mobile Personal Account, Smart Home, Key and others.\
+            \ Valentin applies the whole array of technologies in his work, ranging from native development to Flutter and\
+            \ KMM.</p>"
+      - language: ru
+        text: "<p>20 лет в мобильной разработке. Прошёл путь от разработчика до технического директора. Работал в Яндексе\
+            \ много лет, разрабатывал мобильные продукты. Одним из первых крупных проектов были мобильные Яндекс Карты. В\
+            \ качестве члена жюри и эксперта участвовал в работе ряда хакатонов &ndash; таких, как &laquo;Цифровой прорыв\
+            &raquo;, VirusHack, IoT-хакатон GeekBrains.</p>\n<p>Сейчас в Ростелеком ИТ выстраивает мобильную разработку на\
+            \ проектах &laquo;Мобильный личный кабинет&raquo;, &laquo;Умный дом&raquo;, &laquo;Ключ&raquo; и других. В раб\
+            оте использует весь спектр технологий &ndash; от нативной разработки до Flutter и KMM.&nbsp;</p>"
+    twitter: balus13
+  - id: 2939
+    photoFileName: 2939.jpg
+    photoUpdatedAt: "2023-10-18T13:50:34Z"
+    name:
+      - {language: en, text: "Vladimir Zloy Sport"}
+      - {language: ru, text: "Владимир Семовских"}
+    companyIds: [1180]
+    bio:
+      - {language: en, text: "Vladimir has been involved in Android development since 2020. He worked in Mail.ru Mail. Currently,\
+            \ he works at Yandex Music."}
+      - {language: ru, text: "Занимается Android-разработкой с 2020 года. Работал в Почте Mail.ru. Сейчас — безработный."}
+    twitter: ""
+  - id: 2940
+    photoFileName: 2940.jpg
+    photoUpdatedAt: "2023-08-30T12:43:48Z"
+    name:
+      - {language: en, text: "Aleksander Popov"}
+      - {language: ru, text: "Александр Попов"}
+    companyIds: [620]
+    bio:
+      - language: en
+        text: "<p>Android developer since 2020. Current projects at VK include mobile applications of Mail, Cloud and VKontakte.\
+            \ Previously worked at M.Video-Eldorado and at the international startup NSYS Group.</p>\n<p>Aleksander is a former\
+            \ full stack developer of desktop applications.</p>"
+      - language: ru
+        text: "<p>Android-разработчик с 2020 года. Среди текущих проектов в VK: мобильные приложения Почты, Облака и ВКонт\
+            акте. До этого работал в компании М.Видео-Эльдорадо и международном стартапе NSYS Group.</p>\n<p>В прошлом &ndash;\
+            \ full stack-разработчик desktop-приложений.</p>"
+  - id: 2941
+    photoFileName: 2941.jpg
+    photoUpdatedAt: "2023-08-31T14:20:07Z"
+    name:
+      - {language: en, text: "Vsevolod Migdisov"}
+      - {language: ru, text: "Всеволод Мигдисов"}
+    companyIds: [844]
+    bio:
+      - language: en
+        text: "<p>Vsevolod has been developing applications since 1996, starting with development of desktop applications\
+            \ in C/C++. Since 2014 he has been developing applications for iOS. He has experience in developing Android and\
+            \ Qt applications.</p>\n<p>He is currently developing an iOS application for remote banking services for clients\
+            \ in Gazprombank, developing both user and platform features.</p>"
+      - language: ru
+        text: "<p>Разрабатывает приложения с 1996 года, начинал с разработки desktop-приложений на С/С++. С 2014 разрабаты\
+            вает приложения под iOS. Есть опыт разработки под Android и приложений на Qt.</p>\n<p>Сейчас Всеволод разрабат\
+            ывает iOS-приложение для дистанционного банковского обслуживания клиентов в Газпромбанке, занимается разработк\
+            ой как пользовательских, так и платформенных фичей.</p>"
+  - id: 2942
+    photoFileName: 2942.jpg
+    photoUpdatedAt: "2023-09-01T14:22:10Z"
+    name:
+      - {language: en, text: "Askhar Aidarov"}
+      - {language: ru, text: "Асхар Айдаров"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Android developer in the core team at VKontakte. He is involved in everything he can get\
+            \ his hands on: design system, build system, tools to make developers' lives easier, CI, and even has time for\
+            \ product development. Until recently, he taught Android development and mentored at VK Education.</p>"}
+      - {language: ru, text: "<p>Android-разработчик в core-команде ВКонтакте. Занимается всем, до чего руки дойдут: дизай\
+            н-системой, билд-системой, инструментами для облегчения жизни разработчиков, CI и даже успевает в продуктовую\
+            \ разработку. До недавнего времени преподавал Android-разработку в VK Education и там же менторил.</p>"}
+  - id: 2943
+    photoFileName: 2943.jpg
+    photoUpdatedAt: "2023-09-21T08:13:25Z"
+    name:
+      - {language: en, text: "Mikhail Matiunin"}
+      - {language: ru, text: "Михаил Матюнин"}
+    companyIds: [885]
+    bio:
+      - language: en
+        text: "<p>Mikhail is a dynamic and highly skilled software engineer specializing in Dart and Flutter since 2017. With\
+            \ a proven track record of leading teams and successfully delivering full-stack projects, he brings a wealth of\
+            \ expertise to any organization.</p>\n<p>In addition to his passion for programming and staying abreast of the\
+            \ latest technological advancements, he has a keen interest in cutting-edge gadgets and embarking on thrilling\
+            \ motorcycle adventures.</p>\n<p>As a dedicated advocate of transhumanism, Mikhail is driven by the belief that\
+            \ technology has the power to alleviate human suffering and create a more harmonious world. Committed to maintaining\
+            \ a healthy lifestyle and devoid of any detrimental habits, he is fully focused on his professional growth.&nbsp;</p>"
+      - language: ru
+        text: "<p>Михаил &ndash; энергичный и профессиональный разработчик, специализируется на Dart и Flutter с 2017 года\
+            . Имеет богатый опыт руководства командами и успешной реализации full stack-проектов и делится им с организаци\
+            ями.&nbsp;</p>\n<p>Помимо увлечения программированием и отслеживания последних технологических достижений, он\
+            \ интересуется передовыми гаджетами и участвует в увлекательных мотоприключениях.</p>\n<p>Убежденный сторонник\
+            \ трансгуманизма и верит, что технологии способны облегчить страдания людей и создать более гармоничный мир. П\
+            риверженец здорового образа жизни и полностью сосредоточен на своем профессиональном росте.</p>"
+    twitter: plugfox
+  - id: 2944
+    photoFileName: 2944.jpg
+    photoUpdatedAt: "2023-10-18T19:13:10Z"
+    name:
+      - {language: en, text: "Aleksandr Mironychev"}
+      - {language: ru, text: "Александр Миронычев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Aleksandr has been developing for 8 years, 4 of them &mdash; at Yandex. He promotes Backend-Driven\
+            \ UI approach in Yandex Market and beyond. He is passionate about creating tools for development.</p>"}
+      - {language: ru, text: "<p>Занимается разработкой 8 лет, 4 из них &mdash; в Яндексе. Развивает Backend-Driven UI-под\
+            ход в Яндекс Маркете и не только. Увлекается созданием инструментов для разработки.</p>"}
+  - id: 2945
+    photoFileName: 2945.jpg
+    photoUpdatedAt: "2023-09-04T11:33:58Z"
+    name:
+      - {language: en, text: "Anton Khavanskii"}
+      - {language: ru, text: "Антон Хаванский"}
+    companyIds: []
+    bio:
+      - language: en
+        text: "<p>Anton is a mobile developer with over 8 years of experience, specializing in Java and Kotlin and with expertise\
+            \ in Swift, C++, and Dart. He was involved in innovative projects in the fields of video analytics and the automotive\
+            \ industry, collaborating with major technology companies to develop functional solutions and user-friendly interfaces.\
+            \ Anton has also taught in internship programs for beginner developers.</p>\n<p>His commitment to quality code\
+            \ and cutting-edge technologies enables him to enhance both the efficiency and morale of the entire team.</p>"
+      - language: ru
+        text: "<p>Мобильный разработчик со стажем более 8 лет, специализирующийся на Java, Kotlin, а также с опытом в Swift,\
+            \ C++ и Dart. Работал в командах, занимающихся инновационными проектами в области видеоаналитики и автомобильн\
+            ой индустрии. Сотрудничал с крупными технологическими компаниями, разрабатывая функциональные решения и удобны\
+            е пользовательские интерфейсы. Преподавал в интернатуре для начинающих разработчиков.</p>\n<p>Преданность Анто\
+            на качественному коду и новым технологиям позволяет ему повышать эффективность и моральный дух всей команды.</p>"
+  - id: 2946
+    photoFileName: 2946.jpg
+    photoUpdatedAt: "2023-04-17T10:33:33Z"
+    name:
+      - {language: en, text: "Nikita Krasnov"}
+      - {language: ru, text: "Никита Краснов"}
+    companyIds: [613]
+    bio:
+      - {language: en, text: "<p>iOS platform techlead at Alfa Bank. Loves improving the lives of developers and users and\
+            \ creating different infrastructure things, as well as doing performance art on everything they work with.</p>"}
+      - {language: ru, text: "<p>Техлид платформы iOS в Альфа-Банке. Любит улучшать жизнь разработчиков и пользователей и\
+            \ создавать различные инфраструктурные штуки, а также заниматься перформансом всего, с чем они работают.</p>"}
+  - id: 2947
+    photoFileName: 2947.jpg
+    photoUpdatedAt: "2023-08-22T14:19:43Z"
+    name:
+      - {language: en, text: "Fedor Blagodyr"}
+      - {language: ru, text: "Фёдор Благодырь"}
+    companyIds: [1183]
+    bio:
+      - {language: en, text: "<p>Cross-platform mobile developer with almost 3 years in development. Started his way with\
+            \ full stack .NET, used Xamarin.Forms to develop mobile applications. Very quickly realised that Flutter is a\
+            \ powerful tool, which will play not a minor part in the future of cross-platforms, and fell in love with it quite\
+            \ quickly. Over the years he has discovered a lot for himself and wants to share the brightest discoveries with\
+            \ the community.</p>"}
+      - {language: ru, text: "<p>Кроссплатформенный мобильный разработчик, в разработке почти 3 года. Начинал свой путь с\
+            \ full stack .NET, для разработки мобильных приложений использовал Xamarin.Forms. Очень быстро понял, что Flutter\
+            \ &ndash; мощная вещь и в будущем кроссплатформы явно будет занимать не последнее место, полюбил его достаточн\
+            о быстро. За эти годы успел сделать много открытий для себя, самыми яркими из которых старается делиться с соо\
+            бществом.</p>"}
+  - id: 2948
+    photoFileName: 2948.jpg
+    photoUpdatedAt: "2023-04-25T15:33:26Z"
+    name:
+      - {language: en, text: "Aleksandr Grashchenkov"}
+      - {language: ru, text: "Александр Гращенков"}
+    companyIds: [1184]
+    bio:
+      - {language: en, text: "Has been working in mobile development for 12 years, the last 6 years added the direction of\
+            \ computer vision. At work he writes video processing modules on CPU and GPU, runs SLAM on mobile and deals with\
+            \ standard iOS developer activities (paints buttons, makes requests to the backend). He is engaged in pet projects:\
+            \ video player with translator, digitalization of table tennis and match analysis."}
+      - {language: ru, text: "Работает в мобильной разработке 12 лет, последние 6 лет добавилось направление компьютерного\
+            \ зрения. На работе пишет модули обработки видео на CPU и GPU, запускает SLAM на мобилке и занимается стандарт\
+            ной деятельностью iOS-разработчика(красит кнопки, делает запросы к бэкенду). Занимется pet-проектами: видеопле\
+            ер с переводчиком, цифровизация настольного тенниса и анализ матчей."}
+    twitter: sharrikk
+  - id: 2949
+    photoFileName: 2949.jpg
+    photoUpdatedAt: "2023-09-01T12:50:05Z"
+    name:
+      - {language: en, text: "Eugene Shapovalov"}
+      - {language: ru, text: "Евгений Шаповалов"}
+    companyIds: [620]
+    bio:
+      - language: en
+        text: "<p>Mobile and embedded developer since 2005, started from early PDAs. The main profile is performance optimization:\
+            \ somewhere in-between OS reverse engineering and UI rendering speed. Was engaged in optimization for a variety\
+            \ of platforms, but for the last 10 years have been focused on iOS.</p>\n<p>For now, as a part of VK Core iOS\
+            \ team, Eugene is working to make their iOS application even faster and stronger.</p>"
+      - language: ru
+        text: "<p>В мобильной и embedded-разработке c 2005 года, с ранних КПК. Основной профиль &mdash; оптимизация: от ре\
+            верс-инжиниринга ОС до скорости отрисовки UI. Занимался оптимизацией под самые разные платформы, но последние\
+            \ 10 лет сфокусирован на iOS.</p>\n<p>Сейчас в команде Core iOS ВКонтакте работает над оптимизацией приложения\
+            \ VK.</p>"
+  - id: 2950
+    photoFileName: 2950.jpg
+    photoUpdatedAt: "2023-09-14T06:39:12Z"
+    name:
+      - {language: en, text: "Viacheslav Tarannikov"}
+      - {language: ru, text: "Вячеслав Таранников"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Senior Android SWE at RuStore. He teaches the team how to colour buttons and interviews engineers.</p>"}
+      - {language: ru, text: "<p>Старший Android-разработчик в RuStore. Учит команду красить кнопки, собеседует крутых инж\
+            енеров.</p>"}
+  - id: 2951
+    photoFileName: 2951.jpg
+    photoUpdatedAt: "2023-10-20T07:05:35Z"
+    name:
+      - {language: en, text: "Denis Suprun"}
+      - {language: ru, text: "Денис Супрун"}
+    companyIds: [257]
+    bio:
+      - language: en
+        text: "<p>Denis graduated from South Federal University with a Master's degree in digital signal processing. After\
+            \ university, he worked in state enterprises and wrote in C/C++. Then he switched to the commercial sector.</p>\n\
+            <p>His experience in mobile development (Android and iOS) is more than 10 years. Denis is actively involved in\
+            \ the Aurora Developers community, as well as in the Aurora OS beta testing programme.</p>"
+      - language: ru
+        text: "<p>Закончил ЮФУ (РГУ) с дипломом магистра по специальности &laquo;цифровая обработка сигналов&raquo;. После\
+            \ университета работал в государственных предприятиях и писал на С/С++. Затем перешел в коммерческий сектор.</p>\n\
+            <p>Cтаж в мобильной разработке (Android и iOS) &mdash; более 10 лет. Денис активно участвует в сообществе Aurora\
+            \ Developers, а также в программе бета-тестирования Аврора ОС.</p>"
+  - id: 2952
+    photoFileName: 2952.jpg
+    photoUpdatedAt: "2023-08-04T12:35:25Z"
+    name:
+      - {language: en, text: "Dmitriy Rychagov"}
+      - {language: ru, text: "Дмитрий Рычагов"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Android team lead at VK Clips.</p>"}
+      - {language: ru, text: "<p>Лид Android-команды в VK Клипы.</p>"}
+  - id: 2953
+    photoFileName: 2953.jpg
+    photoUpdatedAt: "2023-07-24T13:59:53Z"
+    name:
+      - {language: en, text: "Alyona Tarasova"}
+      - {language: ru, text: "Алёна Тарасова"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>7 years at Sber. Got into IT through autotests. For the last 5 years she has been an engineer\
+            \ in the SBOL Android platform team. Learned a lot about reducing build time (locally and on CI). Loves her pet\
+            \ project: Kotlin the cat.</p>"}
+      - {language: ru, text: "<p>7 лет в Сбере. Попала в IT через автотесты. Последние 5 лет &mdash; инженер в платформенн\
+            ой команде SBOL Android.&nbsp;Собаку съела на сокращении длительности сборки (локально и на CI).&nbsp;Обожает\
+            \ свой домашний pet-проект: кота Котлина.</p>"}
+  - id: 2954
+    photoFileName: 2954.jpg
+    photoUpdatedAt: "2023-08-23T16:23:29Z"
+    name:
+      - {language: en, text: "Vasily Usov"}
+      - {language: ru, text: "Василий Усов"}
+    companyIds: [620]
+    bio:
+      - language: en
+        text: "<p>iOS developer with 7+ years of experience. He has been programming for over 20 years.</p>\n<p>Best-selling\
+            \ author on Swift development for iOS. Many beginners and experienced developers have gone through his books.\
+            \ He has been publishing on this topic since 2016. Founder of the developer community in Telegram <a href=\"https://t.me/usovswift\"\
+            >\"Swiftme\"</a> with 6000 participants. Works at VK in the VK Maps department, develops in Swift, as well as\
+            \ a bit in C, JS and PHP.</p>"
+      - language: ru
+        text: "<p>iOS-разработчик с 7+ лет стажа. Занимается программированием более 20 лет.</p>\n<p>Автор бестселлера по\
+            \ разработке на Swift под iOS. Через его книги прошли многие начинающие и опытные разработчики. По этой теме и\
+            здается с 2016 года. Основатель сообщества разработчиков в Telegram <a href=\"https://t.me/usovswift\">&laquo;Swiftme&raquo;</a>\
+            \ с 6000 участников. Работает в VK в департаменте VK Карты, разрабатывает на Swift, а также немного на C, JS и\
+            \ PHP.</p>"
+  - id: 2955
+    photoFileName: 2955.jpg
+    photoUpdatedAt: "2023-08-22T07:27:10Z"
+    name:
+      - {language: en, text: "Dmitriy Kuznetsov"}
+      - {language: ru, text: "Дмитрий Кузнецов"}
+    companyIds: [1185]
+    bio:
+      - {language: en, text: "<p>Dmitriy has been involved in commercial development since 2011, in mobile development since\
+            \ 2016. He developed desktop multimedia applications in C++ and Qt Framework. Coordinates the development of a\
+            \ mobile multimedia super app in iOS in C++, Kotlin Multiplatform and Swift. He believes that cross-platform development\
+            \ technologies that are chosen right for the project are the key to success.</p>"}
+      - {language: ru, text: "<p>Занимается коммерческой разработкой с 2011 года, мобильной разработкой с 2016 года. Разра\
+            батывал десктопные мультимедийные приложения на C++ и Qt Framework. Координирует разработку мобильного мультим\
+            едийного супераппа для iOS на C++, Kotlin Multiplatform и Swift. Считает, что правильно подобранные под проект\
+            \ кроссплатформенные технологии разработки &ndash; залог успеха.</p>"}
+  - id: 2956
+    photoFileName: 2956.jpg
+    photoUpdatedAt: "2023-10-09T10:03:43Z"
+    name:
+      - {language: en, text: "Igor Kliuzhev"}
+      - {language: ru, text: "Игорь Клюжев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Mobile developer from the Zen product team who writes not only in Swift. He has only been\
+            \ developing for iOS for 2 years, but already managed to write news in a commercial project, not a pet project.\
+            \ Automation of processes is his passion.</p>"}
+      - {language: ru, text: "<p>Мобильный разработчик из продуктовой команды Дзена, который пишет не только на Swift. Зан\
+            имается разработкой под iOS только 2 года, но уже успел написать новости в коммерческом проекте, а не в пет-пр\
+            оекте. Автоматизатор головного мозга.</p>"}
+  - id: 2957
+    photoFileName: 2957.jpg
+    photoUpdatedAt: "2023-08-18T08:51:16Z"
+    name:
+      - {language: en, text: "Mikhail Struchkov"}
+      - {language: ru, text: "Михаил Стручков"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Senior Android developer with 6 years in industrial Android development. In the past, he\
+            \ was engaged in apps development, but then changed his focus and for the last 1.5 years has been working in the\
+            \ Mobile Core team on UI components and design system for developers, as well as on corresponding infrastructure.\
+            \ From time to time, Mikhail shares the team's experience speaking at meetups.</p>"}
+      - {language: ru, text: "<p>Ведущий Android-разработчик, 6 лет в промышленной Android-разработке. В прошлом занимался\
+            \ разработкой приложений, но сменил фокус и последние полтора года работает в мобильной Core-команде над UI-ко\
+            мпонентами, включая дизайн-системы, а также над соответствующей инфраструктурой. Периодически делится опытом к\
+            оманды, выступая на митапах.</p>"}
+  - id: 2958
+    photoFileName: 2958.jpg
+    photoUpdatedAt: "2023-07-28T16:14:37Z"
+    name:
+      - {language: en, text: "Konstantin Petrov"}
+      - {language: ru, text: "Константин Петров"}
+    companyIds: [1186]
+    bio:
+      - {language: en, text: "<p>Head of mobile development at BCS World of Investments. Was a leader of various Android teams\
+            \ at BCS and VTB.</p>"}
+      - {language: ru, text: "<p>Руководитель мобильной разработки в БКС Мир Инвестиций. Был лидом различных Android-коман\
+            д в БКС и ВТБ.</p>"}
+  - id: 2959
+    photoFileName: 2959.jpg
+    photoUpdatedAt: "2023-08-09T08:37:20Z"
+    name:
+      - {language: en, text: "Alexander Darovsky"}
+      - {language: ru, text: "Александр Даровских"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Alexander started his programming career in 1999 as a C++ core developer. Since 2008, he's\
+            \ been engaged in iOS development. He worked on the Grocery Gadget app as the only iOS developer for 5 years.\
+            \ The app was in the top 100 of Productivity category in the US App Store. Today, Alexander is a Senior Developer\
+            \ at Tinkoff.</p>"}
+      - {language: ru, text: "<p>Занимается программированием с 1999 года, в iOS разработке &ndash; с 2008 года. Был основ\
+            ным разработчиком iOS-приложения Grocery Gadget, которое до 2014 года входило в топ-100 категории productivity\
+            \ в US App Store. Сейчас &mdash; Senior Developer в Тинькофф.</p>"}
+  - id: 2960
+    photoFileName: 2960.jpg
+    photoUpdatedAt: "2023-08-22T14:23:33Z"
+    name:
+      - {language: en, text: "Mikhail Beskhitrov"}
+      - {language: ru, text: "Михаил Бесхитров"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>He makes tools, backends, applications and other ridiculous things in his spare time. In\
+            \ the Market, he develops BDUI, being responsible for their mobile backend in particular.</p>"}
+      - {language: ru, text: "<p>Делает тулзы, бэкенды, приложения и другую нелепицу в свободное время. В Маркете занимает\
+            ся развитием BDUI, в частности отвечает за их мобильный бэкенд.</p>"}
+  - id: 2961
+    photoFileName: 2961.jpg
+    photoUpdatedAt: "2022-03-31T19:03:51Z"
+    name:
+      - {language: en, text: "Misha Haritonchik"}
+      - {language: ru, text: "Миша Харитончик"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "Member of the SberBank Online platform team."}
+      - {language: ru, text: "<p>iOS-разработчик в команде платформы Сбербанк Онлайн.</p>"}
+  - id: 2962
+    photoFileName: 2962.jpg
+    photoUpdatedAt: "2023-10-11T15:08:12Z"
+    name:
+      - {language: en, text: "Emil Zamaldinov"}
+      - {language: ru, text: "Эмиль Замалдинов"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Android developer in Zen's user experience team.</p>"}
+      - {language: ru, text: "<p>Android-разработчик в команде пользовательского опыта Дзена.</p>"}
+  - id: 2963
+    photoFileName: 2963.jpg
+    photoUpdatedAt: "2022-05-17T08:17:11Z"
+    name:
+      - {language: en, text: "Soslan Kusraev"}
+      - {language: ru, text: "Сослан Куcраев"}
+    companyIds: [613]
+    bio:
+      - {language: en, text: "<p>Technical leader of Android department in Alfa-Bank, develops general design system of Alfa-Bank\
+            \ products. Before that he was in charge of mobile development in startups. He loves applications with beautiful\
+            \ UI and thoughtful UX.</p>"}
+      - {language: ru, text: "Android техлид в Альфа-Банке, развивает общую дизайн-систему продуктов Альфа-Банка и техноло\
+            гий BDUI. До этого руководил мобильной разработкой в стартапах. Очень любит приложения с красивым UI и продума\
+            нным UX."}
+  - id: 2964
+    photoFileName: 2964.jpg
+    photoUpdatedAt: "2023-09-08T18:42:02Z"
+    name:
+      - {language: en, text: "Aleksey Koriukin"}
+      - {language: ru, text: "Алексей Корюкин"}
+    companyIds: [1187]
+    bio:
+      - {language: en, text: "<p>Lead designer at Aurora OS. He has been involved in mobile and web interfaces since 2009.\
+            \ Before joining OMP, he worked with such companies as PSA (Peugeot Citro&euml;n Automobiles), BOX, Qatar Airways,\
+            \ Harman, JBL, Vodafone, Huawei, Nielsen, BGS, IEEE and others.</p>"}
+      - {language: ru, text: "<p>Главный дизайнер ОС Аврора. Занимается мобильными и веб-интерфейсами с 2009 года. До прих\
+            ода в ОМП работал с такими компаниями, как PSA (Peugeot Citro&euml;n Automobiles), BOX, Qatar Airways, Harman,\
+            \ JBL, Vodafone, Huawei, Nielsen, BGS, IEEE и др.</p>"}
+  - id: 2965
+    photoFileName: 2965.jpg
+    photoUpdatedAt: "2023-08-18T15:03:22Z"
+    name:
+      - {language: en, text: "Sergey Chumikov"}
+      - {language: ru, text: "Сергей Чумиков"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Android developer in the RuStore team. Specialises in Compose and its optimisations. Before,\
+            \ Sergey participated in projects on accounting of finances and material assets, cryptocurrency wallet, and others.\
+            \ Likes to optimise everything and get to the bottom of things. Prefers proven simple solutions rather than sophisticated\
+            \ ones that are only good until the first refactoring.</p>"}
+      - {language: ru, text: "<p>Android-разработчик в команде RuStore. Специализируется на Compose и его оптимизациях. До\
+            \ этого участвовал в проектах по учету финансов и материальных ценностей, криптокошельке и других. Любит все о\
+            птимизировать и докапываться до сути. Предпочитает проверенные простые решения, а не большие великолепные &laquo;в\
+            елосипеды&raquo;, которые хороши только до первого рефакторинга.</p>"}
+  - id: 2966
+    photoFileName: 2966.jpg
+    photoUpdatedAt: "2023-10-06T15:55:12Z"
+    name:
+      - {language: en, text: "Mikhail Shkutkov"}
+      - {language: ru, text: "Михаил Шкутков"}
+    companyIds: [689]
+    bio:
+      - language: en
+        text: "<p>Mikhail has experience working in a startup, developing his own projects, creating cool third-party projects\
+            \ in an outsourcing company, and he knows what it's like to be an outstaff engineer.</p>\n<p>Currently, he is\
+            \ working at Yandex Go. Mikhail has been in iOS development since the release of iOS 3.3.</p>"
+      - language: ru
+        text: "<p>Имеет опыт работы в стартапе, разработки своих проектов, а также классных сторонних проектов в аутсорс-к\
+            омпании. Знает, каково это &ndash; быть аутстаффером.</p>\n<p>Сейчас занимается развитием Yandex Go. В iOS-раз\
+            работке с момента выхода iOS 3.3.</p>"
+  - id: 2967
+    photoFileName: 2967.jpg
+    photoUpdatedAt: "2023-05-04T13:20:29Z"
+    name:
+      - {language: en, text: "Artem Rokityansky"}
+      - {language: ru, text: "Артём Рокитянский"}
+    companyIds: [377]
+    bio:
+      - {language: en, text: "<p>Head of the iOS department at Okko. Before that, he worked in different companies, one of\
+            \ the last was Grid Dynamics, where Artem was a team leader and senior specialization leader.</p>"}
+      - {language: ru, text: "<p>Руководитель iOS-отдела в Okko. До этого работал в разных компаниях: одной из последних б\
+            ыла Grid Dynamics, где Артем был тимлидом и senior specialization-лидом.</p>"}
+  - id: 2968
+    photoFileName: 2968.jpg
+    photoUpdatedAt: "2022-10-10T13:04:33Z"
+    name:
+      - {language: en, text: "Sergey Maslov"}
+      - {language: ru, text: "Сергей Маслов"}
+    companyIds: [377]
+    bio:
+      - language: en
+        text: "<p>Sergey has been in IT since 2004. He started his career in the field of automation of production processes,\
+            \ and has built fault-tolerant microcontroller-based systems. He has automated dozens of facilities of Gazprom,\
+            \ Transneft and even an active spaceport.</p>\n<p>Sergey has been engaged in mobile development since 2013, bringing\
+            \ into production dozens of mobile applications &mdash; some of which have hundreds of millions of users.&nbsp;</p>"
+      - language: ru
+        text: "<p>В IT с 2004 года. Карьеру начал в области автоматизации производственных процессов, &laquo;съел собаку&raquo;\
+            \ на построении отказоустойчивых систем на микроконтроллерах. Автоматизировал десятки действующих объектов Газ\
+            прома, Транснефти и даже действующий космодром.</p>\n<p>В мобильной разработке с 2013 года. Вывел в продакшен\
+            \ десятки мобильных приложений &mdash; некоторые из них имеют сотни миллионов пользователей.</p>"
+    twitter: maslovsa
+  - id: 2969
+    photoFileName: 2969.jpg
+    photoUpdatedAt: "2023-10-19T11:35:13Z"
+    name:
+      - {language: en, text: "Aleksei Mazur"}
+      - {language: ru, text: "Алексей Мазур"}
+    companyIds: [377]
+    bio:
+      - {language: en, text: "<p>iOS Team Lead of the product team at Okko. Aleksei has been engaged in development for more\
+            \ than 15 years &mdash; started with C++.</p>"}
+      - {language: ru, text: "<p>iOS Team Lead продуктовой команды в Okko. В разработке более 15 лет, начинал с С++.</p>"}
+  - id: 2970
+    photoFileName: 2970.jpg
+    photoUpdatedAt: "2023-10-03T16:22:34Z"
+    name:
+      - {language: en, text: "Ilias Akhmerov"}
+      - {language: ru, text: "Ильяс Ахмеров"}
+    companyIds: [1190]
+    bio:
+      - {language: en, text: "<p>Android developer in the media team of DION videoconferencing service. Involved in working\
+            \ with audio/video, devices, WebRTC and MediaPipe.</p>"}
+      - {language: ru, text: "<p>Android-разработчик в медиакоманде ВКС-сервиса DION. Погружен в работу с аудио/видео, дев\
+            айсами, WebRTC и MediaPipe.</p>"}
+  - id: 2971
+    photoFileName: 2971.jpg
+    photoUpdatedAt: "2023-08-07T02:45:34Z"
+    name:
+      - {language: en, text: "Yuriy Anisimov"}
+      - {language: ru, text: "Юрий Анисимов"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Team Lead in the mobile banking infrastructure team. Yuriy has been engaged in Android development\
+            \ for 7 years. He's also dealt with processes acceleration and automation, like CI/CD, compilation and build optimization\
+            \ for more than 2 years. Before switching to Android, Yuri developed in C++ for Linux, as well as implemented\
+            \ and maintained the developed solutions.</p>"}
+      - {language: ru, text: "<p>Тимлид в команде инфраструктуры мобильного банка. 7 лет в Android-разработке. Более двух\
+            \ лет занимается ускорением и автоматизацией процессов: CI/CD, оптимизация компиляции и сборки. До перехода в\
+            \ Android Юрий разрабатывал на C++ под Linux, а также внедрял и сопровождал разрабатываемые решения.</p>"}
+  - id: 2972
+    photoFileName: 2972.jpg
+    photoUpdatedAt: "2023-09-11T11:43:47Z"
+    name:
+      - {language: en, text: "Pavel Gershevich"}
+      - {language: ru, text: "Павел Гершевич"}
+    companyIds: [1191]
+    bio:
+      - {language: en, text: "<p>Head of mobile development department in Aspirity. Pavel has been working on mobile applications\
+            \ since 2013, with Flutter &ndash; since 2018. Supervises all Flutter processes and actively speaks both within\
+            \ and outside the company &ndash; at conferences and for students at Siberian Federal University.</p>"}
+      - {language: ru, text: "<p>Руководитель отдела мобильной разработки в Аспирити. Мобильными приложениями занимается с\
+            \ 2013 года, Flutter &ndash; с 2018. Курирует все процессы по Flutter и активно выступает как внутри компании\
+            , так и за ее пределами: на конференциях и для студентов Сибирского федерального университета.</p>"}
+  - id: 2973
+    photoFileName: 2973.jpg
+    photoUpdatedAt: "2023-09-12T08:45:18Z"
+    name:
+      - {language: en, text: "Vladimir Timofeev"}
+      - {language: ru, text: "Владимир Тимофеев"}
+    companyIds: [1192]
+    bio:
+      - {language: en, text: "<p>Author of android-tools.ru blog. Indie developer. Has more than 70 million installations\
+            \ in Google Play.</p>"}
+      - {language: ru, text: "<p>Автор блога android-tools.ru. Инди-разработчик. Более 70 млн установок в Google Play.</p>"}
+  - id: 2974
+    photoFileName: 2974.jpg
+    photoUpdatedAt: "2023-09-14T11:17:57Z"
+    name:
+      - {language: en, text: "Yaroslav Andreyev"}
+      - {language: ru, text: "Ярослав Андреев"}
+    companyIds: [1187]
+    bio:
+      - {language: en, text: "<p>A programmer at OMP. He develops graphical components of the OS and is also an open source\
+            \ developer for Aurora OS / Sailfish OS. Yaroslav is a big fan of computer games, so he has ported several open\
+            \ source games to Aurora OS and continues to add to the list of available games.</p>"}
+      - {language: ru, text: "<p>Программист в ОМП, занимается разработкой графических компонентов ОС. Open source-разрабо\
+            тчик под ОС Аврора / Sailfish OS. Большой любитель компьютерных игр, поэтому портировал несколько open source-и\
+            гр на ОС Аврора и продолжает пополнять список доступных игр.</p>"}

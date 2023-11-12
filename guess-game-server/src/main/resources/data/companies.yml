@@ -4294,3 +4294,66 @@ companies:
     name:
       - {language: en, text: PayPal}
     siteLink: https://www.paypal.com
+  - id: 1178
+    name:
+      - {language: en, text: Snoonu}
+    siteLink: https://snoonu.com
+  - id: 1179
+    name:
+      - {language: en, text: Global}
+    siteLink: https://global.com
+  - id: 1180
+    name:
+      - {language: en, text: "Zloy Sport"}
+      - {language: ru, text: "Злой Спорт"}
+  - id: 1181
+    name:
+      - {language: en, text: "Mobile Compose"}
+    siteLink: https://t.me/mobile_compose
+  - id: 1182
+    name:
+      - {language: en, text: slutsker.pro}
+    siteLink: https://slutsker.pro
+  - id: 1183
+    name:
+      - {language: en, text: Yappy}
+    siteLink: https://www.yappy.com
+  - id: 1184
+    name:
+      - {language: en, text: RoadAR}
+    siteLink: https://roadar.ru
+  - id: 1185
+    name:
+      - {language: en, text: Movavi}
+    siteLink: https://www.movavi.ru
+  - id: 1186
+    name:
+      - {language: en, text: BCS}
+      - {language: ru, text: БКС}
+    siteLink: https://bcs.ru
+  - id: 1187
+    name:
+      - {language: en, text: OMP}
+      - {language: ru, text: ОМП}
+    siteLink: https://www.omp.ru
+  - id: 1188
+    name:
+      - {language: en, text: "Mobile Developer"}
+    siteLink: https://t.me/mobiledevnews
+  - id: 1189
+    name:
+      - {language: en, text: Оkko}
+    siteLink: https://okko.tv
+  - id: 1190
+    name:
+      - {language: en, text: DION}
+    siteLink: https://diongo.ru
+  - id: 1191
+    name:
+      - {language: en, text: Aspirity}
+      - {language: ru, text: Аспирити}
+    siteLink: https://www.aspirity.ru
+  - id: 1192
+    name:
+      - {language: en, text: "Android Tools"}
+    siteLink: https://android-tools.ru/en/
