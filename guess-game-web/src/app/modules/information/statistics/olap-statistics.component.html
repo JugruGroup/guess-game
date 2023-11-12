@@ -90,12 +90,8 @@
       </div>
     </form>
 
-    <div *ngIf="selectedCubeType && selectedMeasureType" class="text-center h5 mt-3 ms-2 me-2 mb-1">
-      {{getCubeTypeMessageKeyByCube(selectedCubeType) | translate}} – {{getMeasureTypeMessageKeyByCube(selectedMeasureType) | translate}}
-    </div>
-
     <div *ngIf="isChartsVisible()" #chartDiv>
-      <div class="d-flex align-items-center mt-2 ms-2 me-2" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
+      <div class="d-flex align-items-center mt-2 ms-2 me-2 mb-1" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
         <p-selectButton *ngIf="isChartTypeSwitcherVisible()" [options]="chartTypes" [(ngModel)]="selectedChartType" optionLabel="label" optionValue="value">
           <ng-template let-item pTemplate>
             <span class="olap-chart-button">{{item.label | translate}}</span>
@@ -109,51 +105,23 @@
         </p-selectButton>
       </div>
 
+      <div *ngIf="selectedCubeType && selectedMeasureType" class="mt-2 ms-2 me-2 mb-1 d-flex align-items-center">
+        <span class="text-center h5 flex-grow-1">
+          {{getCubeTypeMessageKeyByCube(selectedCubeType) | translate}} – {{getMeasureTypeMessageKeyByCube(selectedMeasureType) | translate}}
+        </span>
+        <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
+                  [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomIn()"
+                  styleClass="chart-zoom-in-button"></p-button>
+      </div>
+
       <div class="mt-1 ms-2 me-2 mb-2">
-        <div *ngIf="isDetailsLineChartVisible()" class="d-flex">
-          <p-chart type="line" [data]="allLineData" [options]="lineOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                    [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInLineChart(allLineData)"
-                    styleClass="chart-zoom-in-button"></p-button>
-        </div>
-        <div *ngIf="isTotalLineChartVisible()" class="d-flex">
-          <p-chart type="line" [data]="totalLineData" [options]="lineOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                    [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInLineChart(totalLineData)"
-                    styleClass="chart-zoom-in-button"></p-button>
-        </div>
-        <div *ngIf="isDetailsLineWithCumulativeChartVisible()" class="d-flex">
-          <p-chart type="line" [data]="allLineWithCumulativeData" [options]="lineOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                    [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInLineChart(allLineWithCumulativeData)"
-                    styleClass="chart-zoom-in-button"></p-button>
-        </div>
-        <div *ngIf="isTotalLineWithCumulativeChartVisible()" class="d-flex">
-          <p-chart type="line" [data]="totalLineWithCumulativeData" [options]="lineOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                    [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInLineChart(totalLineWithCumulativeData)"
-                    styleClass="chart-zoom-in-button"></p-button>
-        </div>
-
-        <div *ngIf="isPieChartVisible()" class="d-flex">
-          <p-chart type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                    [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInPieChart(pieData)"
-                    styleClass="chart-zoom-in-button"></p-button>
-        </div>
-
-        <div *ngIf="isDetailsRadarChartVisible()" class="d-flex">
-          <p-chart type="radar" [data]="allRadarData" [options]="radarOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                    [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInRadarChart(allRadarData)"
-                    styleClass="chart-zoom-in-button"></p-button>
-        </div>
-        <div *ngIf="isTotalRadarChartVisible()" class="d-flex">
-          <p-chart type="radar" [data]="totalRadarData" [options]="radarOptions" class="flex-grow-1"></p-chart>
-          <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                    [rounded]="true" [text]="true" [plain]="true" (onClick)="zoomInRadarChart(totalRadarData)"
-                    styleClass="chart-zoom-in-button"></p-button>
-        </div>
+        <p-chart *ngIf="isDetailsLineChartVisible()" type="line" [data]="allLineData" [options]="lineOptions"></p-chart>
+        <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="lineOptions"></p-chart>
+        <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="lineOptions"></p-chart>
+        <p-chart *ngIf="isTotalLineWithCumulativeChartVisible()" type="line" [data]="totalLineWithCumulativeData" [options]="lineOptions"></p-chart>
+        <p-chart *ngIf="isPieChartVisible()" type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions"></p-chart>
+        <p-chart *ngIf="isDetailsRadarChartVisible()" type="radar" [data]="allRadarData" [options]="radarOptions"></p-chart>
+        <p-chart *ngIf="isTotalRadarChartVisible()" type="radar" [data]="totalRadarData" [options]="radarOptions"></p-chart>
       </div>
     </div>
 

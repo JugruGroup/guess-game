@@ -1028,6 +1028,10 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
   }
 
+  zoomIn() {
+    // ...
+  }
+
   zoomInChart(type: string, plugins: any[], data: any, options: any) {
     const cubeTypeMessageKey = this.getCubeTypeMessageKeyByCube(this.selectedCubeType);
     const measureTypeMessageKey = this.getMeasureTypeMessageKeyByCube(this.selectedMeasureType);
