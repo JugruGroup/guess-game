@@ -387,7 +387,9 @@ companySynonyms:
     synonyms: [
         OK.RU,
         VK/Odnoklassniki,
-        VK/Одноклассники
+        VK/Одноклассники,
+        "VK / Odnoklassniki",
+        "VK / Одноклассники"
     ]
   - name: "OKTET Labs"
     synonyms: [
@@ -645,7 +647,11 @@ companySynonyms:
         "ВКонтакте для бизнеса",
         "VK / VK Cloud",
         "VK / Ads",
-        "VK / Реклама"
+        "VK / Реклама",
+        "VK Clips",
+        "VK Клипы",
+        "VK / VK Maps",
+        "VK / VK Карты"
     ]
   - name: VMware
     synonyms: [

@@ -2610,7 +2610,11 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 11, 1), "2023 Autumn ",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Mobius 2023 Autumn", null, List.of(24L, 4L)),
-//                        Set.of("Открытие конференции Mobius 2023 Autumn")));
+//                        Set.of("Открытие конференции Mobius 2023 Autumn", "Открытие. 2 день",
+//                                "Подведение итогов online-части конференции Mobius 2023 Autumn",
+//                                "Открытие офлайн-части конференции Mobius 2023 Autumn",
+//                                "Закрытие офлайн-части конференции Mobius 2023 Autumn",
+//                                "SwiftUI vs. Jetpack Compose", "Yandex Mobile Afterparty", "Compose Quiz")));
 //        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2023, 11, 2), "2023 Autumn",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("HolyJS 2023 Autumn", null, List.of(24L, 4L)),
