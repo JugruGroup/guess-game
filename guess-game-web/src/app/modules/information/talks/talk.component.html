@@ -14,9 +14,9 @@
         <a [routerLink]="['/information', 'events', 'event', talkDetails.talk?.event?.id]" class="text-dark">
           <img *ngIf="talkDetails.talk?.eventTypeLogoFileName" class="img-event-type-logo-talk"
                src="{{eventsImageDirectory}}/{{talkDetails.talk.eventTypeLogoFileName}}" alt="logo"/>
-          <span class="ms-2">{{talkDetails.talk?.event?.displayName}}</span>
+          <span class="ms-2">{{talkDetails.talk?.event?.name}}</span>
         </a>
-        <span *ngIf="talkDetails.talk?.talkDay"> / <i class="far fa-calendar"></i> {{'talk.dayLabel' | translate}} {{talkDetails.talk.talkDay}}</span>
+        <span *ngIf="talkDetails.talk?.talkDate"> / <i class="far fa-calendar"></i> {{talkDetails.talk.talkDate | date:"shortDate":undefined:translateService.currentLang}}</span>
         <span *ngIf="talkDetails.talk?.displayTimes"> / <i class="fas fa-clock"></i> {{talkDetails.talk.displayTimes}} <span *ngIf="talkDetails.talk?.utcTimeZone">({{talkDetails.talk.utcTimeZone}})</span></span>
         <span *ngIf="talkDetails.talk?.track"> / <i class="fas fa-location-arrow"></i> {{'talk.trackLabel' | translate}} {{talkDetails.talk.track}}</span>
         <span *ngIf="talkDetails.talk?.language"> / <i class="fas fa-globe"></i> {{talkDetails.talk.language | uppercase}}</span>
