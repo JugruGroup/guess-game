@@ -42059,6 +42059,8 @@ speakers:
             \ Параллельно разрабатывает мобильное приложение, основанное на AI-технологиях, на европейский и американский\
             \ рынок.</p>\n<p>Основатель и руководитель стартапа. Активно изучает технологии AR- и VR-разработки, публикова\
             л статьи о Vision Pro, писал демо-приложения. Ведет YouTube- и Telegram-каналы по разработке.</p>"
+    gitHub: maxnechaev-dev
+    habr: maxnechaev
   - id: 2938
     photoFileName: 2938.jpg
     photoUpdatedAt: "2023-08-01T14:03:07Z"
@@ -42083,18 +42085,19 @@ speakers:
             \ проектах &laquo;Мобильный личный кабинет&raquo;, &laquo;Умный дом&raquo;, &laquo;Ключ&raquo; и других. В раб\
             оте использует весь спектр технологий &ndash; от нативной разработки до Flutter и KMM.&nbsp;</p>"
     twitter: balus13
+    gitHub: balus13
+    habr: balus
   - id: 2939
     photoFileName: 2939.jpg
     photoUpdatedAt: "2023-10-18T13:50:34Z"
     name:
-      - {language: en, text: "Vladimir Zloy Sport"}
+      - {language: en, text: "Vladimir Semovskikh"}
       - {language: ru, text: "Владимир Семовских"}
     companyIds: [1180]
     bio:
       - {language: en, text: "Vladimir has been involved in Android development since 2020. He worked in Mail.ru Mail. Currently,\
             \ he works at Yandex Music."}
       - {language: ru, text: "Занимается Android-разработкой с 2020 года. Работал в Почте Mail.ru. Сейчас — безработный."}
-    twitter: ""
   - id: 2940
     photoFileName: 2940.jpg
     photoUpdatedAt: "2023-08-30T12:43:48Z"
@@ -42167,6 +42170,8 @@ speakers:
             \ трансгуманизма и верит, что технологии способны облегчить страдания людей и создать более гармоничный мир. П\
             риверженец здорового образа жизни и полностью сосредоточен на своем профессиональном росте.</p>"
     twitter: plugfox
+    gitHub: PlugFox
+    habr: plugfox
   - id: 2944
     photoFileName: 2944.jpg
     photoUpdatedAt: "2023-10-18T19:13:10Z"
@@ -42179,6 +42184,8 @@ speakers:
             \ UI approach in Yandex Market and beyond. He is passionate about creating tools for development.</p>"}
       - {language: ru, text: "<p>Занимается разработкой 8 лет, 4 из них &mdash; в Яндексе. Развивает Backend-Driven UI-под\
             ход в Яндекс Маркете и не только. Увлекается созданием инструментов для разработки.</p>"}
+    gitHub: acelost
+    habr: acelost
   - id: 2945
     photoFileName: 2945.jpg
     photoUpdatedAt: "2023-09-04T11:33:58Z"
@@ -42199,6 +42206,7 @@ speakers:
             ой индустрии. Сотрудничал с крупными технологическими компаниями, разрабатывая функциональные решения и удобны\
             е пользовательские интерфейсы. Преподавал в интернатуре для начинающих разработчиков.</p>\n<p>Преданность Анто\
             на качественному коду и новым технологиям позволяет ему повышать эффективность и моральный дух всей команды.</p>"
+    gitHub: r4m-antonk
   - id: 2946
     photoFileName: 2946.jpg
     photoUpdatedAt: "2023-04-17T10:33:33Z"
@@ -42211,6 +42219,7 @@ speakers:
             \ creating different infrastructure things, as well as doing performance art on everything they work with.</p>"}
       - {language: ru, text: "<p>Техлид платформы iOS в Альфа-Банке. Любит улучшать жизнь разработчиков и пользователей и\
             \ создавать различные инфраструктурные штуки, а также заниматься перформансом всего, с чем они работают.</p>"}
+    gitHub: krasich74
   - id: 2947
     photoFileName: 2947.jpg
     photoUpdatedAt: "2023-08-22T14:19:43Z"
@@ -42229,6 +42238,7 @@ speakers:
             \ &ndash; мощная вещь и в будущем кроссплатформы явно будет занимать не последнее место, полюбил его достаточн\
             о быстро. За эти годы успел сделать много открытий для себя, самыми яркими из которых старается делиться с соо\
             бществом.</p>"}
+    gitHub: feduke-nukem
   - id: 2948
     photoFileName: 2948.jpg
     photoUpdatedAt: "2023-04-25T15:33:26Z"
@@ -42246,6 +42256,8 @@ speakers:
             ной деятельностью iOS-разработчика(красит кнопки, делает запросы к бэкенду). Занимется pet-проектами: видеопле\
             ер с переводчиком, цифровизация настольного тенниса и анализ матчей."}
     twitter: sharrikk
+    gitHub: Sc0rpion
+    habr: Sk0rpion
   - id: 2949
     photoFileName: 2949.jpg
     photoUpdatedAt: "2023-09-01T12:50:05Z"
@@ -42337,6 +42349,7 @@ speakers:
             здается с 2016 года. Основатель сообщества разработчиков в Telegram <a href=\"https://t.me/usovswift\">&laquo;Swiftme&raquo;</a>\
             \ с 6000 участников. Работает в VK в департаменте VK Карты, разрабатывает на Swift, а также немного на C, JS и\
             \ PHP.</p>"
+    gitHub: DobbyWanKenoby
   - id: 2955
     photoFileName: 2955.jpg
     photoUpdatedAt: "2023-08-22T07:27:10Z"
@@ -42383,6 +42396,8 @@ speakers:
             \ разработкой приложений, но сменил фокус и последние полтора года работает в мобильной Core-команде над UI-ко\
             мпонентами, включая дизайн-системы, а также над соответствующей инфраструктурой. Периодически делится опытом к\
             оманды, выступая на митапах.</p>"}
+    gitHub: valya1
+    habr: Sistein
   - id: 2958
     photoFileName: 2958.jpg
     photoUpdatedAt: "2023-07-28T16:14:37Z"
@@ -42422,6 +42437,8 @@ speakers:
             \ the Market, he develops BDUI, being responsible for their mobile backend in particular.</p>"}
       - {language: ru, text: "<p>Делает тулзы, бэкенды, приложения и другую нелепицу в свободное время. В Маркете занимает\
             ся развитием BDUI, в частности отвечает за их мобильный бэкенд.</p>"}
+    gitHub: kon3gor
+    habr: Kon3gor
   - id: 2961
     photoFileName: 2961.jpg
     photoUpdatedAt: "2022-03-31T19:03:51Z"
@@ -42456,6 +42473,7 @@ speakers:
       - {language: ru, text: "Android техлид в Альфа-Банке, развивает общую дизайн-систему продуктов Альфа-Банка и техноло\
             гий BDUI. До этого руководил мобильной разработкой в стартапах. Очень любит приложения с красивым UI и продума\
             нным UX."}
+    gitHub: kusraevs
   - id: 2964
     photoFileName: 2964.jpg
     photoUpdatedAt: "2023-09-08T18:42:02Z"
@@ -42502,6 +42520,7 @@ speakers:
         text: "<p>Имеет опыт работы в стартапе, разработки своих проектов, а также классных сторонних проектов в аутсорс-к\
             омпании. Знает, каково это &ndash; быть аутстаффером.</p>\n<p>Сейчас занимается развитием Yandex Go. В iOS-раз\
             работке с момента выхода iOS 3.3.</p>"
+    gitHub: shkutkov
   - id: 2967
     photoFileName: 2967.jpg
     photoUpdatedAt: "2023-05-04T13:20:29Z"
@@ -42533,6 +42552,7 @@ speakers:
             прома, Транснефти и даже действующий космодром.</p>\n<p>В мобильной разработке с 2013 года. Вывел в продакшен\
             \ десятки мобильных приложений &mdash; некоторые из них имеют сотни миллионов пользователей.</p>"
     twitter: maslovsa
+    gitHub: maslovsa
   - id: 2969
     photoFileName: 2969.jpg
     photoUpdatedAt: "2023-10-19T11:35:13Z"
