@@ -8,7 +8,7 @@ import { Company } from '../../../shared/models/company/company.model';
 import { CubeType } from '../../../shared/models/statistics/olap/cube-type.model';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { MeasureType } from '../../../shared/models/statistics/olap/measure-type.model';
-import { OlapParameters } from '../../../shared/models/statistics/olap/olap.parameters.model';
+import { OlapParameters } from '../../../shared/models/statistics/olap/olap-parameters.model';
 import { OlapStatistics } from '../../../shared/models/statistics/olap/olap-statistics.model';
 import { Organizer } from '../../../shared/models/organizer/organizer.model';
 import { Speaker } from '../../../shared/models/speaker/speaker.model';

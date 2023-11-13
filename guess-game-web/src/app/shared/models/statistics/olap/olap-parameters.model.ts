@@ -1,4 +1,4 @@
-import { OlapCommonParameters } from "./olap.common.parameters.model";
+import { OlapCommonParameters } from "./olap-common-parameters.model";
 import { CubeType } from "./cube-type.model";
 import { MeasureType } from "./measure-type.model";
 
