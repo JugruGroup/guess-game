@@ -76,11 +76,6 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   getTalkDetailsWithFilledAttributes(talkDetails: TalkDetails): TalkDetails {
-    // Event display name
-    if (talkDetails?.talk?.event) {
-      talkDetails.talk.event.displayName = getEventDisplayName(talkDetails.talk.event, this.translateService);
-    }
-
     // Times
     if (talkDetails?.talk) {
       talkDetails.talk.displayTimes = getTalkTimes(talkDetails.talk.talkStartTime, talkDetails.talk.talkEndTime, this.translateService);
