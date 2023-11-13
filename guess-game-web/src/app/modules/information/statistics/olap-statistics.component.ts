@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { formatPercent } from '@angular/common';
 import { SelectItem } from 'primeng/api';
-import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Company } from '../../../shared/models/company/company.model';
@@ -39,6 +39,7 @@ import {
 } from '../../general/utility-functions';
 import { ChartKind } from '../../../shared/models/statistics/olap/chart-kind.model';
 import { ChartZoomInComponent } from './chart-zoom-in.component';
+import { DynamicDialogChartData } from '../../../shared/models/statistics/olap/dynamic-dialog-chart-data.model';
 
 @Component({
   selector: 'app-olap-statistics',
@@ -1074,24 +1075,22 @@ export class OlapStatisticsComponent implements OnInit {
     const cubeTypeMessageKey = this.getCubeTypeMessageKeyByCube(this.selectedCubeType);
     const measureTypeMessageKey = this.getMeasureTypeMessageKeyByCube(this.selectedMeasureType);
     const keys = [cubeTypeMessageKey, measureTypeMessageKey];
+    const dynamicDialogChartData = new DynamicDialogChartData(type, plugins, data, options);
+    const dynamicDialogConfig = new DynamicDialogConfig<DynamicDialogChartData>();
+
+    dynamicDialogConfig.data = dynamicDialogChartData;
+    dynamicDialogConfig.width = '100%';
+    dynamicDialogConfig.height = '100%';
+    dynamicDialogConfig.styleClass = 'chart-zoom-in-dialog';
 
     this.translateService.get(keys)
       .subscribe(labels => {
         const cubeTypeMessage = labels[cubeTypeMessageKey];
         const measureTypeMessage = labels[measureTypeMessageKey];
 
-        this.zoomInDialogRef = this.dialogService.open(ChartZoomInComponent, {
-          data: {
-            type: type,
-            plugins: plugins,
-            data: data,
-            options: options
-          },
-          header: `${cubeTypeMessage} – ${measureTypeMessage}`,
-          width: '100%',
-          height: '100%',
-          styleClass: "chart-zoom-in-dialog"
-        });
+        dynamicDialogConfig.header = `${cubeTypeMessage} – ${measureTypeMessage}`;
+
+        this.zoomInDialogRef = this.dialogService.open(ChartZoomInComponent, dynamicDialogConfig);
       });
   }
 }
