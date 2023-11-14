@@ -3355,7 +3355,7 @@ class ConferenceDataLoaderExecutorTest {
             speaker1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
 
             Speaker speaker2 = new Speaker();
-            speaker2.setId(1);
+            speaker2.setId(2);
             speaker2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
 
             Talk talk0 = new Talk();

@@ -134,7 +134,6 @@
   },
   "talk": {
     "title": "Talk",
-    "dayLabel": "Day",
     "trackLabel": "Track",
     "presentationLinkText": "Presentation",
     "materialLinkText": "Material"
