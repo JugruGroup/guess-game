@@ -2618,7 +2618,12 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2023, 11, 2), "2023 Autumn",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("HolyJS 2023 Autumn", null, List.of(24L, 4L)),
-//                        Set.of()));
+//                        Set.of("Открытие конференции HolyJS 2023 Autumn", "Закрытие конференции HolyJS 2023 Autumn",
+//                                "Открытие второго дня HolyJS 2023 Autumn",
+//                                "Подведение итогов онлайн-части конференции HolyJS 2023 Autumn",
+//                                "Открытие офлайн-части HolyJS 2023 Autumn", "JS: джем-сессия. Угадываем доклады разных лет",
+//                                "Яндекс afterparty: а какой ты архетип?", "Открытый микрофон", "Code in the Dark",
+//                                "«Угадай, кто ты»: JavaScript-гадалка")));
 //        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2023, 11, 7), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("PiterPy 2023", null, List.of(24L, 4L)),

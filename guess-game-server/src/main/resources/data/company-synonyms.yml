@@ -494,6 +494,10 @@ companySynonyms:
         "S7 Techlab",
         "S7 Техлаб"
     ]
+  - name: Samokat
+    synonyms: [
+        Samokat.tech
+    ]
   - name: Samsung
     synonyms: [
         "Samsung NEXT/GDE",
@@ -538,7 +542,9 @@ companySynonyms:
     ]
   - name: Sovcombank
     synonyms: [
-        SovcomTech
+        SovcomTech,
+        "Sovcombank Technologies",
+        "Совкомбанк Технологии"
     ]
   - name: Sportmaster
     synonyms: [
@@ -651,7 +657,9 @@ companySynonyms:
         "VK Clips",
         "VK Клипы",
         "VK / VK Maps",
-        "VK / VK Карты"
+        "VK / VK Карты",
+        "VK / vk business",
+        "VK / ВКонтакте для бизнеса"
     ]
   - name: VMware
     synonyms: [
@@ -659,7 +667,8 @@ companySynonyms:
     ]
   - name: "X5 Group"
     synonyms: [
-        "X5 Tech"
+        "X5 Tech",
+        "X5 Digital"
     ]
   - name: "Yahoo!"
     synonyms: [
@@ -667,6 +676,8 @@ companySynonyms:
     ]
   - name: Yandex
     synonyms: [
+        "Yandex Games",
+        "Яндекс Игры",
         "Yandex Go",
         "Yandex GO",
         "Яндекс GO",
@@ -722,5 +733,6 @@ companySynonyms:
         Startup,
         Стартап,
         "JMeter Committer",
-        "PostgreSQL JDBC maintainer"
+        "PostgreSQL JDBC maintainer",
+        TatarinFrontend
     ]
