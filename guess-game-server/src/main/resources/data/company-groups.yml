@@ -75,6 +75,11 @@ companyGroups:
     items: [
         "МТS Digital"
     ]
+  - name: "NEWHR | Hello New Job!"
+    items: [
+        NEWHR,
+        "Hello New Job!"
+    ]
   - name: "OTS Lab / odgAssist"
     items: [
         "OTS Lab",
@@ -99,6 +104,11 @@ companyGroups:
     items: [
         Synthesized,
         MIPT
+    ]
+  - name: "Tele2 Kazakhstan / Altel Digital"
+    items: [
+      Tele2,
+      Altel
     ]
   - name: VK/Tarantool
     items: [

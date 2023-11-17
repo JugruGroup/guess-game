@@ -4357,3 +4357,56 @@ companies:
     name:
       - {language: en, text: "Android Tools"}
     siteLink: https://android-tools.ru/en/
+  - id: 1193
+    name:
+      - {language: en, text: Fojin}
+      - {language: ru, text: ФОДЖИН}
+    siteLink: https://fojin.tech
+  - id: 1194
+    name:
+      - {language: en, text: NEWHR}
+    siteLink: https://newhr.org
+  - id: 1195
+    name:
+      - {language: en, text: "Hello New Job!"}
+    siteLink: https://hellonewjob.org
+  - id: 1196
+    name:
+      - {language: en, text: "Islamic Coin"}
+    siteLink: https://islamiccoin.net
+  - id: 1197
+    name:
+      - {language: en, text: "June Homes"}
+    siteLink: https://junehomes.com
+  - id: 1198
+    name:
+      - {language: en, text: ArmenoTech}
+    siteLink: https://armenotech.com
+  - id: 1199
+    name:
+      - {language: en, text: "Bettor IO"}
+  - id: 1200
+    name:
+      - {language: en, text: AIT}
+    siteLink: https://www.ait.ru
+  - id: 1201
+    name:
+      - {language: en, text: Altel}
+    siteLink: https://altel.kz
+  - id: 1202
+    name:
+      - {language: en, text: Ziteh}
+    siteLink: https://ziteh.ru
+  - id: 1203
+    name:
+      - {language: en, text: Pole.rf}
+      - {language: ru, text: Поле.рф}
+    siteLink: https://поле.рф
+  - id: 1204
+    name:
+      - {language: en, text: "Qatar Insurance Company"}
+    siteLink: https://qic-group.com
+  - id: 1205
+    name:
+      - {language: en, text: Rentu}
+    siteLink: https://rentu.ru
