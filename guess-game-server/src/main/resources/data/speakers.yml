@@ -2297,6 +2297,7 @@ speakers:
             росервисов. Провожу обучения внутри компании. Жертва DevOps с почти двухлетним стажем."}
     twitter: stereohorse
     gitHub: stereohorse
+    habr: stereohorse
   - id: 136
     photoFileName: 0136.jpg
     photoUpdatedAt: "2022-09-13T08:19:34Z"
@@ -2689,6 +2690,7 @@ speakers:
             , а также популярное J2ME приложение."}
     twitter: absorbb
     gitHub: absorbb
+    habr: absorbb
   - id: 161
     photoFileName: 0161.jpg
     photoUpdatedAt: 2020-01-16T08:34:08.622Z[UTC]
@@ -8943,6 +8945,7 @@ speakers:
             \ Ярый сторонник точки зрения, что тестирование сейчас — это не про поиск багов, а про увеличение качества, ск\
             орости и продуктивности."}
     twitter: artemnikitin
+    gitHub: artemnikitin
   - id: 603
     photoFileName: 0603.jpg
     name:
@@ -15729,6 +15732,7 @@ speakers:
             льзующих протоколы прикладного уровня IMAP/POP3, веб-интерфейсов и мобильных приложений.</p>\n<p>Один из основ\
             ателей OpenAPI generator и автор swagger-coverage. Ведет свой блог по автоматизации тестирования.</p>"
     gitHub: viclovsky
+    habr: viclovsky
   - id: 1093
     photoFileName: 1093.jpg
     photoUpdatedAt: 2022-03-31T19:04:41Z[UTC]
@@ -16350,6 +16354,7 @@ speakers:
       - {language: ru, text: "В веб-разработке 10+ лет. Был и студентом-верстальщиком, и делал сайты под ключ, и делал инт\
             ерфейсы для роутеров в разных компаниях. Дизраптит банкинг в Revolut."}
     twitter: o_obidin
+    gitHub: oobidin
   - id: 1153
     photoFileName: 1153.jpg
     photoUpdatedAt: 2020-03-23T10:16:16.339Z[UTC]
@@ -17208,6 +17213,7 @@ speakers:
             плением и организацией. Проводила KUG в родном Киеве, т.к. верит в обмен знаниями и коллективный разум. На осн\
             овной работе создает инструменты статического анализа кода для Java/Kotlin/Scala и др. языков."}
     twitter: jMargaritaN
+    gitHub: margarita-nedzelska-sonarsource
   - id: 1216
     photoFileName: 1216.jpg
     photoUpdatedAt: 2020-05-07T08:43:16.292Z[UTC]
@@ -27991,6 +27997,7 @@ speakers:
       - {language: ru, text: "Опытный пользователь интернета с 1998-го. Занимался поддержкой публичных облаков на OpenVZ/Xen/KVM.\
             \ Системный инженер CDN G-Core Labs в команде DNS c марта 2020 года."}
     gitHub: clickfreak
+    habr: clickfreak
   - id: 1972
     photoFileName: 1972.jpg
     photoUpdatedAt: 2021-11-04T11:52:17.297Z[UTC]
@@ -32082,6 +32089,7 @@ speakers:
             \ course for Data Engineers.</p>"}
       - {language: ru, text: "<p>Tech Lead в центре Big Data МТС Digital. К.ф.-м.н., доцент кафедры &laquo;Вычислительная\
             \ математика и программирование&raquo; в московском вузе. Автор образовательного курса для Data Engineers.&nbsp;</p>"}
+    gitHub: new94
     habr: newnew94
   - id: 2245
     photoFileName: 2245.jpg
@@ -35818,6 +35826,7 @@ speakers:
             , что документация и передача знаний &mdash; ответственность каждого в команде и каждый может брать на себя эт\
             у роль. Попробовала, пожалуй, все инструменты docs as code и теперь пытается разработать лучший на рынке.</p>"}
     twitter: _Unsolved_
+    habr: nerazzgadannaya
   - id: 2513
     photoFileName: 2513.jpg
     photoUpdatedAt: 2022-11-30T12:17:17Z[UTC]
@@ -40319,6 +40328,7 @@ speakers:
             \ и Logbroker.</p>"}
     twitter: resetius
     gitHub: resetius
+    habr: aozeritsky
   - id: 2822
     photoFileName: 2822.jpg
     photoUpdatedAt: "2023-06-20T09:29:18Z"
@@ -42703,6 +42713,7 @@ speakers:
             \" — лучший подкаст про поиск работы за рубежом.</span></p><p><span style=\"background-color: rgb(32, 38, 46);\"\
             >Пишу про работу и личное в ТГ-канале \"Рекрутинг, котики и апокалипсис\"</span>"}
     twitter: kuzmenko_kira
+    habr: newhr
   - id: 2977
     photoFileName: 2977.jpg
     photoUpdatedAt: "2023-08-18T12:02:04Z"
@@ -42714,6 +42725,7 @@ speakers:
       - {language: en, text: "<p>The creator of effector.dev</p>"}
       - {language: ru, text: "<p>Создатель effector.dev</p>"}
     twitter: zero__bias
+    gitHub: zerobias
   - id: 2978
     photoFileName: 2978.jpg
     photoUpdatedAt: "2023-08-28T10:33:40Z"
@@ -42741,6 +42753,7 @@ speakers:
       - {language: ru, text: "<p>Во фронтенд-разработке с 2015 года, поработал в банках &mdash; Рокетбанке, Райффайзенбанк\
             е, Сбере. А теперь успокоился и ищет славу в стартапах. Был сеньором, потом стал лидом. Устал, стал сеньором,\
             \ а потом опять лидом. Может рассказать о ключевых принципах Scrum и провести ретроспективу.</p>"}
+    gitHub: georgeboozin
   - id: 2980
     photoFileName: 2980.jpg
     photoUpdatedAt: "2023-08-13T21:06:46Z"
@@ -42765,6 +42778,9 @@ speakers:
             ируется на проектировании и разработке больших веб-приложений, масштабировании проектов, улучшении DX, надежно\
             сти, скорости, автоматизации и оптимизации.</p>\n<p>У Максима накопилось большое количество знаний и опыта, ко\
             торыми он делится в статьях и выступлениях.</p>"
+    twitter: Nodge74
+    gitHub: Nodge
+    habr: Nodge
   - id: 2981
     photoFileName: 2981.jpg
     photoUpdatedAt: "2023-10-02T13:08:59Z"
@@ -42792,6 +42808,7 @@ speakers:
       - {language: ru, text: "<p>Фронтенд-разработчик в ArmenoTech, крипто- и блокчейн-инфлюенсер &ndash; ведущая YouTube-к\
             анала &laquo;Anastasia.pro_blockchain&raquo;.</p>"}
     twitter: AnaBondItka1
+    gitHub: Pakistanka
   - id: 2983
     photoFileName: 2983.jpg
     photoUpdatedAt: "2023-09-14T08:00:15Z"
@@ -42813,6 +42830,8 @@ speakers:
             \ приложения Wildberries.</p>\n<p>Обожает удаленный формат работы, т.к. последние два года путешествует и иног\
             да автостопом.</p>"
     twitter: _guvictory_
+    gitHub: GuVictory
+    habr: GuVictory
   - id: 2984
     photoFileName: 2984.jpg
     photoUpdatedAt: "2023-09-01T18:44:30Z"
@@ -42846,6 +42865,8 @@ speakers:
       - {language: ru, text: "<p>Разработчик с 15 годами коммерческого опыта. Верстал под Netscape Navigator и помнит Backbone\
             \ и MooTools. Любит свою работу и серфинг.</p>"}
     twitter: petepearl
+    gitHub: PetePearl
+    habr: PetePearl
   - id: 2986
     photoFileName: 2986.jpg
     photoUpdatedAt: "2023-07-31T12:08:37Z"
@@ -42860,6 +42881,7 @@ speakers:
       - {language: ru, text: "<p>Занимается фронтендом с 2015 года. Был опыт в разработке на бэке на Java. Разрабатывал CRM-с\
             истему (Angular) в Тинькофф. Делает веб Кинопоиска уже более 3 лет. Читает лекции про React в Школе разработки\
             \ интерфейсов Яндекса.</p>"}
+    gitHub: ArchieSA
   - id: 2987
     photoFileName: 2987.jpg
     photoUpdatedAt: "2023-07-25T15:24:19Z"
@@ -42883,6 +42905,7 @@ speakers:
       - {language: en, text: "<p>Frontend TeamLead from Tatarstan, better known as TatarinFrontend.</p>"}
       - {language: ru, text: "<p>Frontend TeamLead из Татарстана, более известный как TatarinFrontend.</p>"}
     twitter: TatarinFrontend
+    gitHub: tgafiulin
   - id: 2989
     photoFileName: 2989.jpg
     photoUpdatedAt: "2023-08-21T21:53:42Z"
@@ -42915,6 +42938,7 @@ speakers:
         text: "<p>Руководит разработкой платформы для разработчиков игр. 10 лет в Яндексе.</p>\n<p>Менторит начинающих рук\
             оводителей, помогает ориентироваться в этом &laquo;изломанном&raquo; мире. Верит в людей и любит решать всё на\
             \ свете через партнерскую ненасильственную коммуникацию и смысловую синхронизацию.</p>"
+    gitHub: merzavcev
   - id: 2991
     photoFileName: 2991.jpg
     photoUpdatedAt: "2023-10-17T16:19:59Z"
@@ -42935,6 +42959,7 @@ speakers:
             \ рекламной статистикой в браузере.</p>\n<p>За более чем 10 лет своего пути прикоснулся к аутсорсу, попробовал\
             \ себя в разработке бэкенда на Go, совсем покидал разработку ради опыта управления продуктом, но всегда возвра\
             щался во фронтенд с новыми силами.</p>"
+    gitHub: pikulev
   - id: 2992
     photoFileName: 2992.jpg
     photoUpdatedAt: "2023-10-18T11:38:33Z"
@@ -43023,6 +43048,7 @@ speakers:
             ркете. Сделал стартап moscowfresh.ru и успешно продал. Сейчас занимается финтехом.&nbsp;</p>\n<p>&nbsp;</p>\n\
             <p>&nbsp;</p>"
     twitter: bastsoft
+    gitHub: bastsoft
   - id: 2998
     photoFileName: 2998.jpg
     photoUpdatedAt: "2023-09-27T15:09:56Z"
@@ -43057,6 +43083,7 @@ speakers:
             омашние задания студентов по программированию.</p>\n<p>Сооснователь образовательной платформы для дизайнеров &laquo;С\
             етка&raquo;.&nbsp;Преподаватель, путешественник, блогер.</p>"
     twitter: adam_arutyunov
+    gitHub: AdamArutyunov
   - id: 3000
     photoFileName: 3000.jpg
     photoUpdatedAt: "2023-08-08T09:38:30Z"
@@ -43070,6 +43097,7 @@ speakers:
             \ insurance market in the MENA region.</p>"}
       - {language: ru, text: "<p>Frontend-разработчик. Следит за красотой/чистотой кода в роли тимлида PuzzleBot, проводит\
             \ архитектурные комитеты в Qatar Insurance Company &ndash; лидере рынка страхования региона MENA.</p>"}
+    gitHub: venmovs
   - id: 3001
     photoFileName: 3001.jpg
     photoUpdatedAt: 2023-11-04T08:30Z
@@ -43113,6 +43141,7 @@ speakers:
       - {language: ru, text: "<p>Занимается веб-разработкой более 13 лет. В Тинькофф с 2019 года. Успел поработать с разны\
             ми типами проектов в больших и не очень больших командах &mdash; в качестве frontend-разработчика, full stack-р\
             азработчика и руководителя. Организатор и ведущий Angular Meetup.</p>"}
+    gitHub: vectorcode
   - id: 3004
     photoFileName: 3004.jpg
     photoUpdatedAt: "2023-10-27T11:49:45Z"
@@ -43137,6 +43166,7 @@ speakers:
             \ hobbyist. Team Lead with passion to experiments.</p>"}
       - {language: ru, text: "<p>Более шести лет опыта коммерческого опыта, более десяти &mdash; любительского. Тимлид-экс\
             периментатор.</p>"}
+    gitHub: e-kucheriavyi
   - id: 3006
     photoFileName: 3006.jpg
     photoUpdatedAt: "2023-10-27T13:19:50Z"
@@ -43163,6 +43193,7 @@ speakers:
             ля любого разработчика. Знает, как запустить React в Java, но не рекомендует пробовать делать это без подготов\
             ительного кофе &mdash; даже статья на Хабре об этом есть.</p>\n<p>Неоднократно выступал на различных мероприят\
             иях, конференциях и воркшопах, делясь своим опытом и знаниями.&nbsp;</p>"
+    habr: olegkorovin
   - id: 3007
     photoFileName: 3007.jpg
     photoUpdatedAt: "2023-10-24T14:02:45Z"
@@ -43203,6 +43234,7 @@ speakers:
             \ a row.</p>\n<p>He is glad to share his experience in development and learn from others.</p>"
       - {language: ru, text: "Любит фронтенд, спорт и путешествия. Сейчас развивает интернет-банк ПСБ для физических лиц.\
             \ Помимо основной работы преподавал и менторил в разных онлайн-школах."}
+    gitHub: ErmachenkoBoris
   - id: 3010
     photoFileName: 3010.jpg
     photoUpdatedAt: 2023-10-18T07:41Z
@@ -43243,6 +43275,8 @@ speakers:
             \ опенсорс, запускает различные проекты, самый популярный из них — Emmet. Сейчас работает в VK, где делает мес\
             сенджер и UI-фреймворк, на котором созданы некоторые продукты компании."}
     twitter: chikuyonok
+    gitHub: sergeche
+    habr: chikuyonok
   - id: 3012
     photoFileName: 3012.jpg
     photoUpdatedAt: "2023-09-28T15:44:35Z"
@@ -43256,6 +43290,7 @@ speakers:
       - {language: ru, text: "<p>Frontend-разработчик в проектах для бизнесов и покупателей ВКонтакте: VK Маркет и ВКонтак\
             те для бизнеса. Улучшает всё, до чего может дотянуться, не ограничиваясь рамками своей команды. Вдохновляет ко\
             ллег на улучшение DX.&nbsp;</p>"}
+    gitHub: mei33
   - id: 3013
     photoFileName: 3013.jpg
     photoUpdatedAt: "2023-07-25T14:45:30Z"
