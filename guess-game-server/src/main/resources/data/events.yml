@@ -886,24 +886,15 @@ events:
     name:
       - {language: en, text: "JPoint 2016"}
     days:
-      - {startDate: "2016-04-22", endDate: "2016-04-23", placeId: 11}
+      - {startDate: "2016-04-22", endDate: "2016-04-24", placeId: 11}
     siteLink:
       - {language: en, text: "https://2016.jpoint.ru/en/"}
       - {language: ru, text: "https://2016.jpoint.ru/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLVe-2wcL84b-Waky1nkWVSNHPg6eOQWU9
     talkIds: [1669, 1670, 1671, 1672, 1673, 1674, 1675, 1676, 1677, 1678, 1679, 1680, 1681, 1682, 1683, 1684, 1685, 1686,
         1687, 1688, 1689, 1690, 1691, 1692, 1693, 1694, 1695, 1696, 1697, 1698, 1699, 1700, 1701, 1702, 1703, 1704, 1705,
-        1706, 1707, 1708, 1709, 1710, 1711, 1712, 1713, 1714, 1715, 1716, 1717]
-  - eventTypeId: 7
-    name:
-      - {language: en, text: "JPoint 2016 Student Day"}
-    days:
-      - {startDate: "2016-04-24", endDate: "2016-04-24", placeId: 11}
-    siteLink:
-      - {language: en, text: "https://2016.jpoint.ru/en/"}
-      - {language: ru, text: "https://2016.jpoint.ru/"}
-    youtubeLink: https://www.youtube.com/playlist?list=PLVe-2wcL84b-Q2Rs5OxSzh15DttbIhJKk
-    talkIds: [2283, 2284, 2285, 2286, 2287, 2288, 2289, 2290, 2291, 2292, 2293, 2294, 2295, 2296, 2297, 2298, 2299]
+        1706, 1707, 1708, 1709, 1710, 1711, 1712, 1713, 1714, 1715, 1716, 1717, 2283, 2284, 2285, 2286, 2287, 2288, 2289,
+        2290, 2291, 2292, 2293, 2294, 2295, 2296, 2297, 2298, 2299]
   - eventTypeId: 7
     name:
       - {language: en, text: "JPoint 2017"}
