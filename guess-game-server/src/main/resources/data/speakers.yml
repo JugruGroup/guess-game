@@ -3950,6 +3950,7 @@ speakers:
             тартапы в области генеративного искусственного интеллекта и помогает строить экосистему Толоки.</p>"}
     twitter: kr0niker
     gitHub: kr0niker
+    habr: kroniker
   - id: 263
     photoFileName: 0263.jpg
     name:
@@ -6990,6 +6991,7 @@ speakers:
             но рассказывает про опыт компании на международных и локальных конференциях. Помогает коллегам с отладкой и оп\
             тимизацией производительности, раньше также внедрял DevOps и SRE-практики."}
     twitter: shchegrikovich
+    habr: new_s
   - id: 465
     photoFileName: 0465.jpg
     photoUpdatedAt: 2023-02-16T08:48:10Z[UTC]
@@ -10482,6 +10484,8 @@ speakers:
             гдатай BeerJS. \nТренирует разработчиков вести переговоры. \nВидит разработку с другой стороны, о чём и расска\
             зывает."
     twitter: MaksYu
+    gitHub: MaksYu
+    habr: Myuzik
   - id: 704
     photoFileName: 0704.jpg
     name:
@@ -12098,6 +12102,7 @@ speakers:
             риложениях Badoo. В разработке ценит простые решения, понятный код и тесты. Большой поклонник дяди Боба (Robert\
             \ C. Martin) и его книг, однажды сумел пожать ему руку и получить автограф."}
     twitter: AntonPalich
+    gitHub: AntonPalich
     habr: AntonPalich
   - id: 817
     photoFileName: 0817.jpg
@@ -12653,6 +12658,8 @@ speakers:
         text: "Android-разработчик в Revolut. \nПриверженец Clean Architecture, давний фанат Kotlin. \nВ свободное время п\
             ишет об Android-разработке на Medium и Хабрахабр."
     twitter: Yatsinar
+    gitHub: yatsinar
+    habr: yatsinar
   - id: 854
     photoFileName: 0854.jpg
     name:
@@ -12766,6 +12773,8 @@ speakers:
             \ in a team of API architects."}
       - {language: ru, text: "В Badoo с 2015 года. Пришёл в компанию как фронтенд-разработчик, сейчас работает в команде а\
             рхитекторов API."}
+    twitter: kojoru
+    gitHub: kojoru
     habr: Konojoto
   - id: 862
     photoFileName: 0862.jpg
@@ -19461,6 +19470,7 @@ speakers:
       - {language: ru, text: "Работает в Bloomberg. Активничает в С++ сообществе. В основном увлекается быстрыми алгоритма\
             ми и низкоуровневыми оптимизациями. Немного кода Дениса можно найти в libc++ и в Chromium base library."}
     twitter: dyaroshev
+    gitHub: DenisYaroshevskiy
   - id: 1387
     photoFileName: 1387.jpg
     photoUpdatedAt: 2020-10-06T08:56:32.268Z[UTC]
@@ -24662,6 +24672,8 @@ speakers:
             и Profitero в качестве техлида дата-инженеров. В свободное время старается принимать участие в различных опенс\
             орсных проектах."}
     twitter: ayudovin
+    gitHub: ayudovin
+    habr: AYudovin
   - id: 1744
     photoFileName: 1744.jpg
     photoUpdatedAt: 2021-09-14T08:21:18.425Z[UTC]
@@ -26333,6 +26345,7 @@ speakers:
             ишет статьи](https://habr.com/ru/users/lounah/posts/)"}
     twitter: lounvhx
     gitHub: Lounah
+    habr: lounah
   - id: 1854
     photoFileName: 1854.jpg
     photoUpdatedAt: 2021-08-31T08:59:25.761Z[UTC]
