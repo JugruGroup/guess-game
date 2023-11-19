@@ -3,6 +3,7 @@ package guess.dao;
 import guess.dao.exception.SpeakerDuplicatedException;
 import guess.domain.source.*;
 import guess.util.yaml.YamlUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
@@ -20,6 +21,7 @@ import java.util.List;
 public class SourceDaoImpl implements SourceDao {
     private final SourceInformation sourceInformation;
 
+    @Autowired
     public SourceDaoImpl() throws IOException, SpeakerDuplicatedException {
         this.sourceInformation = YamlUtils.readSourceInformation();
     }
