@@ -2627,7 +2627,10 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2023, 11, 7), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("PiterPy 2023", null, List.of(24L, 4L)),
-//                        Set.of()));
+//                        Set.of("Открытие конференции PiterPy 2023", "Закрытие конференции PiterPy 2023",
+//                                "«100 к 1» на подведении итогов онлайн-части PiterPy 2023",
+//                                "Открытие офлайн-части конференции PiterPy 2023", "Lightning Talks",
+//                                "Квиз наоборот")));
 //        loadTalksSpeakersEvent(Conference.VIDEO_TECH, LocalDate.of(2023, 11, 16), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("VideoTech 2023", null, List.of(24L, 28L)),
