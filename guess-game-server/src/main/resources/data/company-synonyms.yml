@@ -162,6 +162,11 @@ companySynonyms:
     synonyms: [
         eyeota.com
     ]
+  - name: "Freight One"
+    synonyms: [
+        "PGK Digital",
+        "ПГК Диджитал"
+    ]
   - name: Gazpromneft
     synonyms: [
         Gpn-trade,
@@ -315,6 +320,10 @@ companySynonyms:
     synonyms: [
         www.looc.io"
     ]
+  - name: Magnit
+    synonyms: [
+        "Magnit Tech"
+    ]
   - name: "Minimal Modeling"
     synonyms: [
         MinimalModeling.com
@@ -344,13 +353,14 @@ companySynonyms:
     ]
   - name: MTS
     synonyms: [
-        "MTS IT",
-        "МТС ИТ",
+        "MTS AI",
+        "MTS Bank",
+        "МТС Банк",
         "MTS DIGITAL",
         "МТS Digital",
         "МТС Digital",
-        "MTS Bank",
-        "МТС Банк"
+        "MTS IT",
+        "МТС ИТ"
     ]
   - name: Naviteq
     synonyms: [
@@ -509,7 +519,9 @@ companySynonyms:
     ]
   - name: Sber
     synonyms: [
+        Sberb,
         Sberbank,
+        Сбербанк,
         SberTech,
         СберТех,
         Sberbank-Technology,
@@ -701,6 +713,8 @@ companySynonyms:
         Яндекс.Облако,
         Yandex.Taxi,
         Яндекс.Такси,
+        "Yandex Taxi Technologies",
+        "Яндекс Такси Технологии",
         Yandex.Toloka,
         Яндекс.Толока,
         "Yandex (Auto.ru)",

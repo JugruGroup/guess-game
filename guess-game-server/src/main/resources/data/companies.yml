@@ -4410,3 +4410,21 @@ companies:
     name:
       - {language: en, text: Rentu}
     siteLink: https://rentu.ru
+  - id: 1206
+    name:
+      - {language: en, text: Skoltech}
+      - {language: ru, text: Сколтех}
+    siteLink: https://www.skoltech.ru
+  - id: 1207
+    name:
+      - {language: en, text: FeedbackAI}
+    siteLink: https://feedbackai.ru
+  - id: 1208
+    name:
+      - {language: en, text: "GS Labs"}
+    siteLink: https://gs-labs.ru
+  - id: 1209
+    name:
+      - {language: en, text: "Crazy Paleontologist"}
+      - {language: ru, text: "Упоротый Палеонтолог"}
+    siteLink: https://www.youtube.com/c/crazy_paleontologist
