@@ -33,8 +33,8 @@ eventTypes:
     name:
       - {language: en, text: DevOops}
     shortDescription:
-      - {language: en, text: "DevOps conference"}
-      - {language: ru, text: "Конференция по инженерным DevOps-решениям"}
+      - {language: en, text: "Engineering solutions and DevOps culture conference"}
+      - {language: ru, text: "Конференция по инженерным решениям и DevOps-культуре"}
     longDescription:
       - {language: en, text: "DevOops is\_a\_conference from [JUG\_Ru\_Group](https://jugru.org/en) devoted to\_DevOps\
             \ practices. It\_strives to\_unify people with different backgrounds (development and operations) so\_that everyone\
@@ -89,7 +89,7 @@ eventTypes:
     name:
       - {language: en, text: Heisenbug}
     shortDescription:
-      - {language: en, text: "Testing conference not only for testers"}
+      - {language: en, text: "Testing conference not just for testers"}
       - {language: ru, text: "Конференция по тестированию не только для тестировщиков"}
     longDescription:
       - {language: en, text: "Heisenbug is\_the biggest Russian testing conference. Its talks and discussions appeal to\_\
@@ -205,8 +205,8 @@ eventTypes:
     name:
       - {language: en, text: JPoint}
     shortDescription:
-      - {language: en, text: "The largest Java conference in Russia"}
-      - {language: ru, text: "Международная Java-конференция для опытных разработчиков"}
+      - {language: en, text: "Conference for experienced Java developers"}
+      - {language: ru, text: "Конференция для опытных Java‑разработчиков"}
     longDescription:
       - {language: en, text: "JPoint is\_a\_conference for Java developers that’s been held since 2013. It’s one of\_\
             the two largest and oldest Java conferences in\_Russia (the other is\_its «twin», the Joker conference). It\_\
@@ -261,7 +261,7 @@ eventTypes:
     name:
       - {language: en, text: Mobius}
     shortDescription:
-      - {language: en, text: "Conference for mobile developers"}
+      - {language: en, text: "The conference for mobile developers"}
       - {language: ru, text: "Конференция для мобильных разработчиков"}
     longDescription:
       - {language: en, text: "Mobius is\_a\_conference for everyone involved in\_mobile app development: iOS and Android\
@@ -316,8 +316,8 @@ eventTypes:
     name:
       - {language: en, text: SmartData}
     shortDescription:
-      - {language: en, text: "Conference for data engineers"}
-      - {language: ru, text: "Конференция для дата‑инженеров"}
+      - {language: en, text: "Conference on Data Engineering"}
+      - {language: ru, text: "Конференция по инженерии данных"}
     longDescription:
       - {language: en, text: "SmartData is\_a\_data engineering conference. It’s full of\_tech talks related to\_all the\
             \ topics that are important for a\_data engineer, ranging from reliability to\_MLOps. The conference is\_held\
@@ -342,8 +342,8 @@ eventTypes:
     name:
       - {language: en, text: TechTrain}
     shortDescription:
-      - {language: en, text: "Festival for everyone interested in software development"}
-      - {language: ru, text: "Фестиваль для разработчиков и им сочувствующих"}
+      - {language: en, text: "Festival on ML&AI for development and life"}
+      - {language: ru, text: "Фестиваль по ML&AI для разработки и жизни"}
     longDescription:
       - {language: en, text: "TechTrain is a free online event for everyone interested in software development. Our speakers\
             \ are experienced developers coming from a wide array of fields: server- and client-side, mobile development,\
@@ -447,8 +447,8 @@ eventTypes:
     name:
       - {language: en, text: VideoTech}
     shortDescription:
-      - {language: en, text: "Video and streaming technologies conference"}
-      - {language: ru, text: "Конференция по технологиям видео и стриминга"}
+      - {language: en, text: "Video technologies conference"}
+      - {language: ru, text: "Конференция по технологиям видео"}
     longDescription:
       - {language: en, text: "VideoTech is a conference about video and streaming technologies. Its mission is to connect\
             \ people who work on streaming platforms, video players, content delivery and other tech projects related to video\
@@ -473,7 +473,7 @@ eventTypes:
     name:
       - {language: en, text: PiterPy}
     shortDescription:
-      - {language: en, text: "Conference for those who write in Python and use it at work"}
+      - {language: en, text: "The conference for those who code in Python and use it in practice"}
       - {language: ru, text: "Конференция для тех, кто пишет на Python и использует его в работе"}
     longDescription:
       - {language: en, text: "PiterPy is\_a\_tech conference for a\_wide array of\_professionals who use Python: developers,\
