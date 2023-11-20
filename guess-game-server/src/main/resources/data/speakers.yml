@@ -43344,6 +43344,8 @@ speakers:
             \ the infrastructure around Python and learns Japanese.</p>"}
       - {language: ru, text: "<p>Бэкенд-разработчик в Яндекс Такси. Подсел на Python в 2016. В свободное время дорабатывае\
             т напильником инфру вокруг Python и изучает японский язык.</p>"}
+    gitHub: serjflint
+    habr: sergflint
   - id: 3016
     photoFileName: 3016.jpg
     photoUpdatedAt: "2023-10-17T10:43:55Z"
@@ -43373,6 +43375,8 @@ speakers:
             \ &mdash; a framework for building high-loaded microservices in C++.</p>"}
       - {language: ru, text: "<p>Окончил ВМК МГУ. Занимался исследованиями в области безопасности ядра Linux. Сейчас работ\
             ает над проектом userver &mdash; фреймворком для построения высоконагруженных микросервисов на языке С++.</p>"}
+    gitHub: segoon
+    habr: segoon
   - id: 3018
     photoFileName: 3018.jpg
     photoUpdatedAt: "2023-09-18T11:38:18Z"
@@ -43414,6 +43418,7 @@ speakers:
       - {language: ru, text: "<p>QA-инженер. Запустил собственный фреймворк по автоматизации тестирования на Python, включ\
             ающий в себя сети Петри и Combidata.</p>"}
     gitHub: Warrfie
+    habr: Warrfie
   - id: 3021
     photoFileName: 3021.jpg
     photoUpdatedAt: "2023-11-05T15:35:41Z"
@@ -43430,6 +43435,7 @@ speakers:
         text: "<p>Занимается инфраструктурой в Yandex Infrastructure. Ex-team lead команды PyCharm в JetBrains. Контрибьют\
             ор в open source: IdeaVim, funcparserlib, PEP 484. Спикер конференций по Python.</p>\n<p>Личный сайт: <a href=\"\
             https://pirx.ru\" target=\"_blank\" rel=\"noopener noreferrer\">https://pirx.ru</a></p>"
+    gitHub: vlasovskikh
   - id: 3022
     photoFileName: 3022.jpg
     photoUpdatedAt: "2022-09-05T12:30:43Z"
@@ -43468,6 +43474,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Viacheslav develops a tool for analysing Python code, joined the Python world in 2013.</p>"}
       - {language: ru, text: "<p>Разработчик инструмента для анализа кода на Python. Пришел в мир Python в 2013 году.</p>"}
+    gitHub: tamarinvs19
+    habr: badger239
   - id: 3025
     photoFileName: 3025.jpg
     photoUpdatedAt: "2023-10-03T10:48:23Z"
@@ -43480,6 +43488,8 @@ speakers:
             \ and VK.</p>"}
       - {language: ru, text: "<p>Тимлид-разработчик. Питонист, Rust'ист и любитель кофе. В прошлом работал в Яндексе и VK.</p>"}
     twitter: GamePad64
+    gitHub: GamePad64
+    habr: GamePad64
   - id: 3026
     photoFileName: 3026.jpg
     photoUpdatedAt: "2023-07-10T11:20:08Z"
@@ -43504,6 +43514,8 @@ speakers:
     bio:
       - {language: en, text: "<p>NLP engineer with 10 years of experience. Head of NLP research at MTS AI.</p>"}
       - {language: ru, text: "<p>NLP-инженер с 10-летним опытом. Руководитель направления NLP-исследований в MTS AI.</p>"}
+    gitHub: madrugado
+    habr: madrugado
   - id: 3028
     photoFileName: 3028.jpg
     photoUpdatedAt: "2023-08-30T11:56:29Z"
@@ -43528,6 +43540,8 @@ speakers:
             \ Ex.S&amp;P Global, Cian.</p>"}
       - {language: ru, text: "<p>10 лет занимается машинным обучением. Работал в крупных международных компаниях. Ex.S&amp;P\
             \ Global, Циан.</p>"}
+    gitHub: legchikov
+    habr: legchikov
   - id: 3030
     photoFileName: 3030.jpg
     photoUpdatedAt: "2023-07-10T12:33:51Z"
@@ -43585,6 +43599,7 @@ speakers:
             \ DevOps. Так же он создал и развивает корпоративное сообщество питонистов, отвечает за найм и развитие, станд\
             арты, проводит митапы и выступает на конференциях.&nbsp;</p>"}
     gitHub: xfenix
+    habr: xfenix
   - id: 3034
     photoFileName: 3034.jpg
     photoUpdatedAt: "2023-08-06T07:45:24Z"
@@ -43609,6 +43624,8 @@ speakers:
             \ For the last 4 years he's been engaged in backend development in Python using Django as the main framework.</p>"}
       - {language: ru, text: "<p>Начинал как frontend-разработчик и разрабатывал мобильные и веб-игры на AS3 и Starling. П\
             оследние 4 года занимается backend-разработкой на Python с использованием Django как основного фреймворка.</p>"}
+    gitHub: pgubarev
+    habr: pgubarev
   - id: 3036
     photoFileName: 3036.jpg
     photoUpdatedAt: "2023-07-10T11:36:38Z"
@@ -43621,6 +43638,9 @@ speakers:
             \ to the masses of the Python community.</p>"}
       - {language: ru, text: "<p>Разработчик из Точки. Пишет enterprise на Python, пропагандирует DDD и FP в массы &laquo;з\
             меиного&raquo; сообщества.</p>"}
+    twitter: NKhitrov
+    gitHub: nkhitrov
+    habr: Nick_5015
   - id: 3037
     photoFileName: 3037.jpg
     photoUpdatedAt: "2023-07-28T10:02:17Z"
@@ -43652,6 +43672,8 @@ speakers:
             \ Graduate of School 21.</p>"}
       - {language: ru, text: "<p>Синьор-помидор ML-engineer в сервисе SafeData. Занимается машинным обучением и немного MLOps.\
             \ Выпускник Школы 21.</p>"}
+    gitHub: daniiomir
+    habr: daniiomir
   - id: 3039
     photoFileName: 3039.jpg
     photoUpdatedAt: "2023-09-14T13:59:34Z"
@@ -43710,6 +43732,8 @@ speakers:
             \ как его правильно готовить для больших корпоративных систем с высокой нагрузкой. Также активно пишет на Go и\
             \ немного на JS. Любит микросервисную архитектуру и проектировать крупные highload-системы. Сейчас сильно погр\
             ужен в DevOps и инфраструктуру &ndash; на текущем месте это одно из направлений работы.</p>"
+    gitHub: anisov
+    habr: Anisov
   - id: 3043
     photoFileName: 3043.jpg
     photoUpdatedAt: "2023-09-12T07:37:46Z"
