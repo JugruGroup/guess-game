@@ -4428,3 +4428,41 @@ companies:
       - {language: en, text: "Crazy Paleontologist"}
       - {language: ru, text: "Упоротый Палеонтолог"}
     siteLink: https://www.youtube.com/c/crazy_paleontologist
+  - id: 1210
+    name:
+      - {language: en, text: Inventos}
+      - {language: ru, text: Инвентос}
+    siteLink: https://inventos.ru
+  - id: 1211
+    name:
+      - {language: en, text: START}
+    siteLink: https://start.ru
+  - id: 1212
+    name:
+      - {language: en, text: KION}
+    siteLink: https://kion.ru
+  - id: 1213
+    name:
+      - {language: en, text: "Peking University"}
+      - {language: ru, text: "Пекинский университет"}
+    siteLink: http://www.pku.edu.cn
+  - id: 1214
+    name:
+      - {language: en, text: "IT Entrepreneur"}
+      - {language: ru, text: IT-предприниматель}
+  - id: 1215
+    name:
+      - {language: en, text: AlexxIT}
+    siteLink: https://github.com/AlexxIT
+  - id: 1216
+    name:
+      - {language: en, text: Viasat}
+    siteLink: https://viasat.ru
+  - id: 1217
+    name:
+      - {language: en, text: Atmosfera}
+      - {language: ru, text: Атмосфера}
+  - id: 1218
+    name:
+      - {language: en, text: Ivideon}
+    siteLink: https://ivideon.com

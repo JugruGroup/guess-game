@@ -12,6 +12,10 @@ companySynonyms:
         AkBars,
         "АкБарс Цифровые Технологии"
     ]
+  - name: AlexxIT
+    synonyms: [
+        "@AlexxIT"
+    ]
   - name: Alfa-Bank
     synonyms: [
         Alfa-Lab,
@@ -637,6 +641,10 @@ companySynonyms:
     synonyms: [
         "Vevy Europe S.p.A."
     ]
+  - name: Viasat
+    synonyms: [
+        "Viasat Tech"
+    ]
   - name: VK
     synonyms: [
         VKontakte,
@@ -671,7 +679,9 @@ companySynonyms:
         "VK / VK Maps",
         "VK / VK Карты",
         "VK / vk business",
-        "VK / ВКонтакте для бизнеса"
+        "VK / ВКонтакте для бизнеса",
+        "VK/VK Video",
+        "VK/VK Видео"
     ]
   - name: VMware
     synonyms: [
@@ -724,6 +734,8 @@ companySynonyms:
         "Yandex 360",
         "Яндекс 360",
         "Yandex Infrastructure",
+        "Yandex Self-driving Technologies",
+        "Яндекс Беспилотные Технологии",
         "Kinopoisk (Yandex)",
         "Кинопоиск (Яндекс)",
         Zen,
@@ -731,13 +743,13 @@ companySynonyms:
         Kinopoisk,
         Кинопоиск
     ]
-  - name: "ZeptoLab LLC"
-    synonyms: [
-        Zeptolab
-    ]
   - name: YooMoney
     synonyms: [
         ЮМани
+    ]
+  - name: "ZeptoLab LLC"
+    synonyms: [
+        Zeptolab
     ]
   - name: ""
     synonyms: [
