@@ -43883,6 +43883,7 @@ speakers:
             \ compression.</p>"}
       - {language: ru, text: "<p>7+ лет опыта разработки видеокодеков (MPEG-2, H.264/AVC, H.265/HEVC), 5+ лет опыта разраб\
             отки сетевых протоколов. Кандидат технических наук, диссертация по алгоритмам сжатия в рамках стандарта H.265/HEVC.</p>"}
+    gitHub: maxsharabayko
   - id: 3053
     photoFileName: 3053.jpg
     photoUpdatedAt: "2023-10-31T13:03:37Z"
@@ -43974,6 +43975,7 @@ speakers:
             \ vision в качестве CV-инженера, где получил классный опыт решения ML'ных задач (обработка спутниковых изображ\
             ений, классификация пользовательского контента, обнаружение ошибок в дорожном графе), а также получил первый п\
             олноценный опыт разработки внутренних сервисов и инструментов для картографов.</p>"
+    gitHub: Arseha
   - id: 3059
     photoFileName: 3059.jpg
     photoUpdatedAt: "2023-11-13T06:42:37Z"
@@ -44022,6 +44024,8 @@ speakers:
     bio:
       - {language: en, text: "<p>CV Engineer @ SberDevices.</p>"}
     twitter: gracikk
+    gitHub: gracikk-ds
+    habr: gracikk
   - id: 3063
     photoFileName: 3063.jpg
     photoUpdatedAt: "2023-10-20T12:54:56Z"
@@ -44035,6 +44039,7 @@ speakers:
       - {language: ru, text: "<p>Руководитель исследовательской команды видеосжатия в Кинопоиске. Несколько лет занимается\
             \ задачей исследования кодеков и их оптимизации.</p>"}
     twitter: ImpyAngel
+    gitHub: ImpyAngel
   - id: 3064
     photoFileName: 3064.jpg
     photoUpdatedAt: "2023-10-30T10:31:02Z"
@@ -44103,6 +44108,7 @@ speakers:
             мандой занимается разработкой решений в области компьютерного зрения, в том числе решений для онлайн-кинотеатр\
             а KION &mdash; таких как пропуск заставок и титров, Super Resolution, распознавание актеров в кадре, определен\
             ие места для вставки рекламы, генерация постеров.</p>"
+    gitHub: adugin
   - id: 3068
     photoFileName: 3068.jpg
     photoUpdatedAt: "2023-09-29T12:24:27Z"
@@ -44115,6 +44121,8 @@ speakers:
             \ He specialises in B2C web services. His main language is TypeScript.</p>"}
       - {language: ru, text: "<p>Пишет код с детства, 17 лет &ndash; профессионально. Специализируется на B2C web-сервисах\
             . Основной язык &ndash; TypeScript.</p>"}
+    gitHub: octaharon
+    habr: octaharon
   - id: 3069
     photoFileName: 3069.jpg
     photoUpdatedAt: "2023-10-04T15:51:13Z"
@@ -44165,6 +44173,8 @@ speakers:
             и синтетических постеров, хайлайтов и поиска по внутреннему содержанию фильмов.</p>\n<p>Увлекается написанием\
             \ музыки и музыкальным продакшеном, интересуется генерацией музыки с помощью Deep Learning-моделей.</p>"
     twitter: sashulyak
+    gitHub: sashulyak
+    habr: SashulyaK
   - id: 3072
     photoFileName: 3072.jpg
     photoUpdatedAt: "2023-09-06T09:04:53Z"
@@ -44234,6 +44244,7 @@ speakers:
             их задач в индустрии Евгений занимается исследованиями и ведет преподавательскую деятельность в МГУ имени М.В\
             . Ломоносова на факультете вычислительной математики и кибернетики. Область научных интересов в первую очередь\
             \ связана с разработкой методов и средств, позволяющих создавать робастные системы ИИ.</p>"}
+    gitHub: Ilyushin
   - id: 3077
     photoFileName: 3077.jpg
     photoUpdatedAt: "2023-08-04T09:49:14Z"
@@ -44252,6 +44263,8 @@ speakers:
             я администрированием. Около 10 лет назад занялся разработкой и администрированием системы вещания.</p>\n<p>Сей\
             час выступает в роли менеджера, архитектора и R&amp;D в Атмосфере &mdash; компании, работающей в сфере развлеч\
             ений.</p>"
+    gitHub: sochkasov
+    habr: sochkasov
   - id: 3078
     photoFileName: 3078.jpg
     photoUpdatedAt: "2023-10-25T06:18:37Z"
@@ -44287,6 +44300,7 @@ speakers:
             \ in its launch acceleration, now he has shifted his attention to the overall quality of its operation and stability.</p>"}
       - {language: ru, text: "<p>Разрабатывает видеоплеер в Яндексе. Долгое время занимался ускорением запуска, теперь пер\
             еключил свое внимание на общее качество его работы и стабильность.</p>"}
+    gitHub: NumminorihSF
   - id: 3081
     photoFileName: 3081.jpg
     photoUpdatedAt: "2023-11-02T08:51:46Z"
@@ -44304,6 +44318,7 @@ speakers:
             огнозы продаж для 100 000 SKU. Последние 4 года занимается полным циклом работ по разработке видеоаналитики.</p>\n\
             <p>Сейчас &mdash; руководитель отдела машинного зрения в Ivideon. В свободное от работы время ведет преподават\
             ельскую деятельность в Тюменском государственном<strong> </strong>университете.</p>"
+    gitHub: DanilZittser
   - id: 3082
     photoFileName: 3082.jpg
     photoUpdatedAt: "2023-10-11T15:16:42Z"
