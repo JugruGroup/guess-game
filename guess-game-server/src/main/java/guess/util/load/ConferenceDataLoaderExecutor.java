@@ -2634,6 +2634,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.VIDEO_TECH, LocalDate.of(2023, 11, 16), "2023",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("VideoTech 2023", null, List.of(24L, 28L)),
-//                        Set.of()));
+//                        Set.of("Открытие второго дня онлайн-части", "Подведение итогов онлайн-части",
+//                                "Открытие офлайн-части конференции", "Lightning Talks")));
     }
 }
