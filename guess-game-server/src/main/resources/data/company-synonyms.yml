@@ -372,14 +372,10 @@ companySynonyms:
         "Naviteq Ltd",
         "Naviteq Ltd."
     ]
-  - name: "NRU HSE"
+  - name: Neoflex
     synonyms: [
-        "National Research University Higher School of Economics",
-        "Национальный исследовательский университет «Высшая школа экономики»",
-        "HSE University — Saint Petersburg",
-        "НИУ ВШЭ — Санкт-Петербург",
-        "Higher School of Economics (HSE)",
-        "Высшая Школа Экономики (ВШЭ)"
+        "Neoflex Consulting",
+        "Неофлекс Консалтинг"
     ]
   - name: Netflix
     synonyms: [
@@ -393,6 +389,15 @@ companySynonyms:
     synonyms: [
         "Facebook Calibra"
     ]
+  - name: "NRU HSE"
+    synonyms: [
+        "National Research University Higher School of Economics",
+        "Национальный исследовательский университет «Высшая школа экономики»",
+        "HSE University — Saint Petersburg",
+        "НИУ ВШЭ — Санкт-Петербург",
+        "Higher School of Economics (HSE)",
+        "Высшая Школа Экономики (ВШЭ)"
+    ]
   - name: "Object Computing"
     synonyms: [
         "Object Computing, Inc."
@@ -405,9 +410,18 @@ companySynonyms:
         "VK / Odnoklassniki",
         "VK / Одноклассники"
     ]
+  - name: Okko
+    synonyms: [
+        Оkko
+    ]
   - name: "OKTET Labs"
     synonyms: [
         OKTET
+    ]
+  - name: "Open Mobile Platform"
+    synonyms: [
+        OMP,
+        ОМП
     ]
   - name: Oracle
     synonyms: [
@@ -584,6 +598,10 @@ companySynonyms:
   - name: Tarantool
     synonyms: [
         "Tarantool (VK tech)"
+    ]
+  - name: "Test IT"
+    synonyms: [
+        TestIT
     ]
   - name: Tinkoff
     synonyms: [

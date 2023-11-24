@@ -27412,7 +27412,7 @@ speakers:
     name:
       - {language: en, text: "Sergey Vikhlyaev"}
       - {language: ru, text: "Сергей Вихляев"}
-    companyIds: [1189]
+    companyIds: [377]
     bio:
       - language: en
         text: "<p>iOS TeamLead in Okko.</p>\n<p>&nbsp;</p>\n<p>7 years in iOS development. Speaker of Mobius 2021 Autumn,\
@@ -40302,7 +40302,7 @@ speakers:
     name:
       - {language: en, text: "Aleksei Danshin"}
       - {language: ru, text: "Алексей Даньшин"}
-    companyIds: [1147]
+    companyIds: [1119]
     bio:
       - {language: en, text: "<p>System analyst at Neoflex, on a current project at a large bank &mdash; 2 years. He spoke\
             \ at Analyst Days conference last year.</p>"}
@@ -41750,7 +41750,7 @@ speakers:
     name:
       - {language: en, text: "Karim Aminov"}
       - {language: ru, text: "Карим Аминов"}
-    companyIds: [1169]
+    companyIds: [704]
     bio:
       - {language: en, text: "<p>Head of QA at TestIT. Karim has been in IT for as long as he can remember. He's engaged in\
             \ quality matters and building processes to ensure it. Also, he likes to develop teams.</p>"}
@@ -42522,7 +42522,7 @@ speakers:
     name:
       - {language: en, text: "Aleksey Koriukin"}
       - {language: ru, text: "Алексей Корюкин"}
-    companyIds: [1187]
+    companyIds: [1021]
     bio:
       - {language: en, text: "<p>Lead designer at Aurora OS. He has been involved in mobile and web interfaces since 2009.\
             \ Before joining OMP, he worked with such companies as PSA (Peugeot Citro&euml;n Automobiles), BOX, Qatar Airways,\
@@ -42664,7 +42664,7 @@ speakers:
     name:
       - {language: en, text: "Yaroslav Andreyev"}
       - {language: ru, text: "Ярослав Андреев"}
-    companyIds: [1187]
+    companyIds: [1021]
     bio:
       - {language: en, text: "<p>A programmer at OMP. He develops graphical components of the OS and is also an open source\
             \ developer for Aurora OS / Sailfish OS. Yaroslav is a big fan of computer games, so he has ported several open\
