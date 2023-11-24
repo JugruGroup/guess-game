@@ -106,10 +106,6 @@ companies:
     name:
       - {language: en, text: Allegro}
     siteLink: https://allegro.pl
-  - id: 31
-    name:
-      - {language: en, text: alwaysdata}
-    siteLink: https://www.alwaysdata.com
   - id: 32
     name:
       - {language: en, text: Amazon}
@@ -551,10 +547,6 @@ companies:
     name:
       - {language: en, text: dotdigital}
     siteLink: https://dotdigital.com
-  - id: 165
-    name:
-      - {language: en, text: DotNetRu}
-    siteLink: https://dotnet.ru
   - id: 166
     name:
       - {language: en, text: "DPI.Solutions"}
@@ -929,10 +921,6 @@ companies:
     name:
       - {language: en, text: Inuits}
     siteLink: https://inuits.eu
-  - id: 270
-    name:
-      - {language: en, text: Invitae}
-    siteLink: https://www.invitae.com
   - id: 273
     name:
       - {language: en, text: Isovalent}
@@ -1544,10 +1532,6 @@ companies:
     name:
       - {language: en, text: Reindex}
     siteLink: https://www.reindex.io
-  - id: 442
-    name:
-      - {language: en, text: "Relex Oy"}
-    siteLink: https://www.relexsolutions.com
   - id: 444
     name:
       - {language: en, text: "Resolve Systems"}
@@ -1600,10 +1584,6 @@ companies:
     name:
       - {language: en, text: "San José State University"}
     siteLink: https://www.sjsu.edu
-  - id: 461
-    name:
-      - {language: en, text: "Sanctuary Computer"}
-    siteLink: https://www.sanctuary.computer
   - id: 462
     name:
       - {language: en, text: SAP}
@@ -1935,10 +1915,6 @@ companies:
     name:
       - {language: en, text: UiPath}
     siteLink: https://www.uipath.com
-  - id: 554
-    name:
-      - {language: en, text: "Uncle Bob Consulting LLC"}
-    siteLink: http://cleancoder.com
   - id: 556
     name:
       - {language: en, text: "Unity Technologies"}
@@ -2361,11 +2337,6 @@ companies:
       - {language: en, text: SibGUTI}
       - {language: ru, text: СибГУТИ}
     siteLink: https://sibsutis.ru
-  - id: 668
-    name:
-      - {language: en, text: "Computer Vision Systems"}
-      - {language: ru, text: "Системы компьютерного зрения"}
-    siteLink: https://comvisionsys.ru
   - id: 671
     name:
       - {language: en, text: "Thumbtack Technology"}
@@ -2655,10 +2626,6 @@ companies:
     name:
       - {language: en, text: Selectel}
     siteLink: https://selectel.ru
-  - id: 753
-    name:
-      - {language: en, text: Oncoshot}
-    siteLink: https://www.oncoshot.com
   - id: 754
     name:
       - {language: en, text: Karuna}
@@ -2743,11 +2710,6 @@ companies:
     name:
       - {language: en, text: Astronomer}
     siteLink: https://www.astronomer.io
-  - id: 780
-    name:
-      - {language: en, text: Infoculture}
-      - {language: ru, text: Инфокультура}
-    siteLink: https://www.infoculture.ru
   - id: 781
     name:
       - {language: en, text: "Databricks Inc"}
@@ -3164,10 +3126,6 @@ companies:
     name:
       - {language: en, text: TC39}
     siteLink: https://tc39.es
-  - id: 896
-    name:
-      - {language: en, text: MindView}
-    siteLink: https://www.mindviewllc.com
   - id: 897
     name:
       - {language: en, text: AllStarsIT}
@@ -3211,10 +3169,6 @@ companies:
     name:
       - {language: en, text: "IceRock Development"}
     siteLink: https://icerockdev.com
-  - id: 909
-    name:
-      - {language: en, text: InDriver}
-    siteLink: https://indriver.com
   - id: 910
     name:
       - {language: en, text: RSTQB}
@@ -3532,10 +3486,6 @@ companies:
     name:
       - {language: en, text: Sytac}
     siteLink: https://sytac.io
-  - id: 990
-    name:
-      - {language: en, text: CraftTalk}
-    siteLink: https://crafttalk.ru
   - id: 991
     name:
       - {language: en, text: Waliot}
@@ -3629,11 +3579,6 @@ companies:
     name:
       - {language: en, text: Roche}
     siteLink: https://www.roche.ru
-  - id: 1014
-    name:
-      - {language: en, text: "Web standards"}
-      - {language: ru, text: Веб-стандарты}
-    siteLink: https://web-standards.ru
   - id: 1016
     name:
       - {language: en, text: "Linearity GmbH"}
@@ -3684,10 +3629,6 @@ companies:
     name:
       - {language: en, text: HackerOne}
     siteLink: https://www.hackerone.com
-  - id: 1029
-    name:
-      - {language: en, text: SimBaze}
-    siteLink: https://simbaze.com
   - id: 1030
     name:
       - {language: en, text: Snapview.de}
@@ -3820,14 +3761,6 @@ companies:
     name:
       - {language: en, text: SoftSwiss}
     siteLink: https://www.softswiss.com
-  - id: 1063
-    name:
-      - {language: en, text: "QA team"}
-    siteLink: https://t.me/dev_qa
-  - id: 1064
-    name:
-      - {language: en, text: "Prisma Medios de Pago"}
-    siteLink: https://www.prismamediosdepago.com
   - id: 1065
     name:
       - {language: en, text: NLMK}
@@ -4132,10 +4065,6 @@ companies:
     name:
       - {language: en, text: "Agro Software"}
     siteLink: https://agromon.ru
-  - id: 1140
-    name:
-      - {language: en, text: "Rayo Data"}
-    siteLink: https://rayodata.com
   - id: 1141
     name:
       - {language: en, text: Whoosh}
