@@ -6,7 +6,6 @@ import { EventDetails } from '../../../shared/models/event/event-details.model';
 import { EventService } from '../../../shared/services/event.service';
 import {
   getEventDates,
-  getEventDisplayName,
   getSpeakersWithCompaniesString,
   getTalksWithMaterialsOrderNumber,
   getTalksWithSpeakersString
@@ -66,10 +65,6 @@ export class EventComponent implements OnInit {
   }
 
   getEventDetailsWithFilledAttributes(eventDetails: EventDetails): EventDetails {
-    if (eventDetails?.event) {
-      eventDetails.event.displayName = getEventDisplayName(eventDetails.event, this.translateService);
-    }
-
     if (eventDetails?.speakers) {
       eventDetails.speakers = getSpeakersWithCompaniesString(eventDetails.speakers);
     }
@@ -83,10 +78,6 @@ export class EventComponent implements OnInit {
 
   isDisplayPlacesVisible() {
     return ((this.eventDetails.event?.days) && (this.eventDetails.event.days.length > 0));
-  }
-
-  isEventDaysVisible() {
-    return ((this.eventDetails.event?.days) && (this.eventDetails.event.days.length > 1));
   }
 
   isEventLinksVisible() {
