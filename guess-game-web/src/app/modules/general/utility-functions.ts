@@ -102,7 +102,7 @@ export function getEventDates(startDate: Date, endDate: Date, translateService: 
   }
 
   if (isEventHyphenVisibleFlag) {
-    result += ' – ';
+    result += '–';
   }
 
   if (isEventEndDateVisibleFlag) {
@@ -136,7 +136,7 @@ export function getTalkTimes(startTime: Date, endTime: Date, translateService: T
   }
 
   if (isTalkHyphenVisibleFlag) {
-    result += ' – ';
+    result += '–';
   }
 
   if (isTalkEndTimeVisibleFlag) {
