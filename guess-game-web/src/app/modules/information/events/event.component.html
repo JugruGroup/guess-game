@@ -16,10 +16,9 @@
 
       <div *ngIf="isDisplayPlacesVisible()" class="row mt-1">
         <div *ngFor="let eventDays of eventDetails.event.days" class="col-auto">
-          <span>{{getEventDays(eventDays)}} (</span>
+          <span><i class="far fa-calendar"></i> {{getEventDays(eventDays)}} / <i class="fas fa-location-dot"></i>&nbsp;</span>
           <a *ngIf="eventDays.mapCoordinates" href="{{googleMapsUrlPrefix}}/{{eventDays.mapCoordinates}}" class="text-dark">{{getDisplayPlace(eventDays)}}</a>
           <span *ngIf="!eventDays.mapCoordinates">{{getDisplayPlace(eventDays)}}</span>
-          <span>)</span>
         </div>
       </div>
 
