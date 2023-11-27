@@ -147,7 +147,6 @@ speakers:
     gitHub: 23derevo
     habr: 23derevo
     javaChampion: true
-    javaChampion: true
   - id: 8
     photoFileName: 0008.jpg
     photoUpdatedAt: 2021-02-17T17:41:28.371Z[UTC]
@@ -5390,6 +5389,7 @@ speakers:
             \ совместно искать решения. В свободное время любит кататься на роликах, читать книги на абсолютно разнообразн\
             ые темы и слушать истории других людей."}
     twitter: lemonjet
+    gitHub: alena1108
   - id: 362
     photoFileName: 0362.jpg
     photoUpdatedAt: 2020-01-17T12:48:56.198Z[UTC]
@@ -6543,6 +6543,8 @@ speakers:
             ботают. Поддерживает движение DevOps и помогает командам внедрить практики DevOps для улучшения качества проду\
             кта, получения более надёжных релизов и увеличения эффективности."}
     twitter: aensidhe
+    gitHub: aensidhe
+    habr: aensidhe
   - id: 437
     photoFileName: 0437.jpg
     name:
@@ -8549,6 +8551,7 @@ speakers:
     bio:
       - {language: en, text: "Mail.Ru Group senior developer."}
       - {language: ru, text: "Ведущий программист проекта «Поиск» компании Mail.Ru Group."}
+    gitHub: VadimPushtaev
     habr: pushtaev
   - id: 576
     photoFileName: 0576.jpg
@@ -10047,6 +10050,7 @@ speakers:
             ользовательского интерфейса, что привело его к фронтенд-разработке, а позже к машинному обучению и компьютерно\
             му зрению, при помощи которых он и пытается улучшить пользовательское взаимодействие с технологиями."}
     twitter: apilguk
+    gitHub: apilguk
   - id: 676
     photoFileName: 0676.jpg
     name:
@@ -10301,6 +10305,7 @@ speakers:
             лся контрибьютором в Zephir Language & Phalcon framework."
     twitter: ovrweb
     gitHub: ovr
+    habr: zaets28rus
   - id: 693
     photoFileName: 0693.jpg
     name:
@@ -13544,6 +13549,8 @@ speakers:
             ательной платформы по анализу данных — Kaggle. С тех пор профессионально участвует и помогает организовывать о\
             нлайн-соревнования и хакатоны по DS/ML. Увлекается путешествиями, мотоциклами и кайтсерфингом."}
     twitter: ppleskov
+    gitHub: ppleskov
+    habr: paske57
   - id: 923
     photoFileName: 0923.jpg
     photoUpdatedAt: 2022-03-31T19:06Z
@@ -15101,6 +15108,7 @@ speakers:
             юбит нетривиальные технические задачи, требующие глубокого погружения. Ведет блог и поддерживает несколько open\
             \ source-библиотек. Постоянно учится у других и старается делиться своим опытом с сообществом."
     twitter: AndreyPechkurov
+    gitHub: puzpuzpuz
   - id: 1041
     photoFileName: 1041.jpg
     name:
@@ -17472,6 +17480,7 @@ speakers:
             \ Netty и AeroGear. Участвовал в разработке интернет-протокола для доставки пуш-уведомлений RFC8030 — Generic\
             \ Event Delivery Using HTTP Push."
     twitter: idelpivnitskiy
+    gitHub: idelpivnitskiy
   - id: 1233
     photoFileName: 1233.jpg
     name:
@@ -19737,6 +19746,7 @@ speakers:
             \ На протяжении своей карьеры Павел был соучредителем и участвовал в нескольких успешных стартапах по разработ\
             ке ПО в России и США."}
     twitter: ppetroshenko
+    gitHub: ppetrosh
   - id: 1406
     photoFileName: 1406.jpg
     photoUpdatedAt: 2020-07-01T11:43:06.177Z[UTC]
@@ -22004,6 +22014,7 @@ speakers:
             я дорог.</p>\n<p>До Android занимался бэкенд-разработкой на Java, Python. Является автором Text-To-Speech сист\
             емы для пилотного исследования по обучению детей английскому языку при помощи антропоморфного робота (DOI: 10.1109/DeSE.2019.00055).</p>"
     gitHub: valeryvpetrov-dev
+    habr: valeryvpetrov
   - id: 1564
     photoFileName: 1564.jpg
     photoUpdatedAt: 2021-03-03T09:03:50.469Z[UTC]
@@ -24973,6 +24984,7 @@ speakers:
       - {language: ru, text: "<p>Техлид в Додо Инжиниринг. Не любит программирование. Любит гладить собак. Кошек гладить т\
             оже любит.</p>"}
     twitter: Pr1vetAndrey
+    gitHub: AndrewP-GH
   - id: 1764
     photoFileName: 1764.jpg
     photoUpdatedAt: 2021-09-15T16:02:14.814Z[UTC]
@@ -27273,6 +27285,7 @@ speakers:
       - {language: ru, text: "В Яндексе с 2014 года. С самого начала занимается производительностью Яндекс.Браузера. Сейча\
             с руководит службой, которая работает над скоростью различных приложений Яндекса под Android."}
     gitHub: PetrovVadim
+    habr: Lof
   - id: 1922
     photoFileName: 1922.jpg
     photoUpdatedAt: 2021-10-21T11:12:13.128Z[UTC]
@@ -30746,6 +30759,7 @@ speakers:
             исал требования и код, лидил команды разработки. Входит в Программный комитет ArchDays.</p>"}
     twitter: apolomodov
     gitHub: polomodov
+    habr: apolomodov
   - id: 2159
     photoFileName: 2159.jpg
     photoUpdatedAt: "2022-08-24T08:12:06Z"
@@ -30864,6 +30878,7 @@ speakers:
             ку, конференции, хакатоны. Сейчас &mdash; Head of Developer Relations в Evrone.</p>"}
     twitter: grigoryvp
     gitHub: grigoryvp
+    habr: grigoryvp
   - id: 2168
     photoFileName: 2168.jpg
     photoUpdatedAt: 2022-06-07T08:08:30Z[UTC]
@@ -40718,6 +40733,7 @@ speakers:
             тересны технологии вокруг .NET и JVM. Нравится писать эффективный и надежный код."}
     twitter: NikolayPyanikov
     gitHub: NikolayPianikov
+    habr: NikolayPyanikov
   - id: 2850
     photoFileName: 2850.jpg
     photoUpdatedAt: "2022-03-31T19:05:16Z"
