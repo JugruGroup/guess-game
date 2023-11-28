@@ -405,6 +405,7 @@ speakers:
             е Java. За свою карьеру в индустрии он собрал опыт разработки решений в таких отраслях, как телеком, E-commerce,\
             \ здравоохранение и финтех.</p>"}
     gitHub: aragozin
+    habr: aragozin
   - id: 22
     photoFileName: 0022.jpg
     name:
@@ -8077,6 +8078,8 @@ speakers:
             ми способами автоматизации рутинных задач пентестера, написанием собственных скриптов и анализом эффективности\
             \ существующих решений. Багбаунтер, ресёрчер, спикер, а также другие пафосные слова."}
     twitter: _ttffdd_
+    gitHub: ttffdd
+    habr: ttffdd
   - id: 545
     photoFileName: 0545.jpg
     name:
@@ -8601,6 +8604,8 @@ speakers:
             \ Selendroid). Сейчас работает в JetBrains в отделе командных продуктов. Писал и пишет тесты на Java, JavaScript,\
             \ Python, Groovy и Kotlin."}
     twitter: LeonSabr
+    gitHub: leonsabr
+    habr: LeonSabr
   - id: 579
     photoFileName: 0579.jpg
     name:
@@ -8956,6 +8961,7 @@ speakers:
             \ Toptal, крупнейшем в мире распределенном сообществе высококлассных специалистов. Контрибьютор Mozilla. Разра\
             ботчик Watir. Коммитер Selenium, где отвечает за Ruby-часть."}
     twitter: p0deje
+    gitHub: p0deje
   - id: 604
     photoFileName: 0604.jpg
     name:
@@ -10412,6 +10418,8 @@ speakers:
             нгбордах.</p>\n<p>* согласно TVL, например, см.&nbsp;<a href=\"https://defillama.com/protocols\" target=\"_blank\"\
             \ rel=\"noopener noreferrer\">https://defillama.com/protocols</a></p>"
     twitter: jabher
+    gitHub: Jabher
+    habr: Jabher
   - id: 700
     photoFileName: 0700.jpg
     name:
@@ -10602,6 +10610,7 @@ speakers:
             _blank\">воркшоп</a>, организатор конференций React Amsterdam, AmsterdamJS. Любит WebGL, synthwave, горы."}
     twitter: pixelscommander
     gitHub: PixelsCommander
+    habr: PixelCommander
   - id: 712
     photoFileName: 0712.jpg
     name:
@@ -11412,6 +11421,7 @@ speakers:
             енд-разработке в 2011-2014 году, с тех пор в связях, порочащих его, замечен не был. Придерживается реактивных\
             \ взглядов. Отмечен сертификатами и благодарностями."}
     twitter: the_ghost_minsk
+    gitHub: theghostbel
   - id: 769
     photoFileName: 0769.jpg
     name:
@@ -13038,7 +13048,8 @@ speakers:
             азработкой Android приложений на Kotlin + Rx. Основной язык программирования на протяжении последних лет — Kotlin.\
             \ Один из лидеров GDG Minsk, частый гость и докладчик DevFest’ов и JVM конференций Европы и СНГ."}
     twitter: AntonRutkevich
-    gitHub: AntonRutkevich
+    gitHub: roottony
+    habr: roottony
   - id: 880
     photoFileName: 0880.jpg
     name:
@@ -13219,6 +13230,7 @@ speakers:
       - {language: ru, text: "Senior Developer, Technical Evangelist DataArt. 12+ лет опыта разработки игр для мобильных у\
             стройств из них 5 в компании Gameloft"}
     twitter: al_rybakov
+    gitHub: alrybakov
   - id: 893
     photoFileName: 0893.jpg
     name:
@@ -22348,6 +22360,7 @@ speakers:
             \ DSL HTTP-клиента](https://github.com/rybalkinsd/kohttp) и [Redex](https://fbredex.com/), оптимизатора байтко\
             да для Android."}
     twitter: lightdelay
+    gitHub: rybalkinsd
   - id: 1585
     photoFileName: 1585.jpg
     photoUpdatedAt: 2021-04-09T08:23:45.344Z[UTC]
@@ -29376,6 +29389,8 @@ speakers:
             \ мобильном финтехе и embedded-проектах.</p>\n<p>Специализируется на архитектуре и инфраструктуре разработки м\
             обильных приложений.</p>\n<p>В коммерческой разработке с 2011 года.</p>"
     twitter: VasilyRylov
+    gitHub: VasilyRylov
+    habr: VasiliyRylov
   - id: 2065
     photoFileName: 2065.jpg
     photoUpdatedAt: 2022-05-20T07:35:30Z[UTC]
@@ -29702,6 +29717,7 @@ speakers:
       - {language: ru, text: "<p>Виталий занимается разработкой мобильных приложений с 2019 года. Работал в дейтинг-старта\
             пе и нескольких банках. Сейчас &mdash; техлид iOS-направления в Альфа-банке.</p>"}
     gitHub: RVetas
+    habr: RVetas
   - id: 2085
     photoFileName: 2085.jpg
     photoUpdatedAt: 2022-04-29T09:46:18Z[UTC]
@@ -30061,6 +30077,7 @@ speakers:
       - {language: en, text: "<p>Principal Quality Engineer at Dell.</p>"}
       - {language: ru, text: "<p>Principal Quality Engineer в Dell.</p>"}
     gitHub: daymer
+    habr: daymer
   - id: 2109
     photoFileName: 2109.jpg
     photoUpdatedAt: 2022-05-16T06:54:32Z[UTC]
@@ -36144,6 +36161,7 @@ speakers:
             ктов по реализации инструментов платного продвижения в выдаче.</span></p>"}
     twitter: fedor57
     gitHub: fedor57
+    habr: fedor5757
   - id: 2533
     photoFileName: 2533.jpg
     photoUpdatedAt: "2022-11-26T15:21:56Z"
