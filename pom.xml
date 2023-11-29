@@ -28,10 +28,7 @@
 
         <allure-junit5.version>2.24.0</allure-junit5.version>
         <aspectj.version>1.9.20.1</aspectj.version>
-        <commons-lang3.version>3.14.0</commons-lang3.version>
         <kumo.version>1.28</kumo.version>
-        <mockito.version>5.2.0</mockito.version>
-        <snakeyaml.version>2.2</snakeyaml.version>
         <imageio.version>3.10.1</imageio.version>
         <spring-boot.version>3.2.0</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
@@ -89,9 +86,7 @@
                     <source>${project.build.javaVersion}</source>
                     <target>${project.build.javaVersion}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
+                    <parameters>true</parameters>
                 </configuration>
             </plugin>
             <plugin>
