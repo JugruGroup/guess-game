@@ -5236,6 +5236,7 @@ speakers:
       - {language: ru, text: "Ведущий разработчик в «Яндекс.Такси», занимается разработкой асинхронного фреймворка для бэк\
             енда Такси. Большой любитель метапрограммирования и open source."}
     gitHub: zmij
+    habr: zmij
   - id: 351
     photoFileName: 0351.jpg
     photoUpdatedAt: "2022-04-25T13:05:28Z"
@@ -7405,6 +7406,8 @@ speakers:
       - {language: ru, text: "<p>Работает в проекте Rider. В свободное время любит разбираться и фиксить баги в open source-п\
             роектах &mdash; mono и MSBuild.</p>"}
     twitter: filippovma
+    gitHub: mfilippov
+    habr: mfilippov
   - id: 490
     photoFileName: 0490.jpg
     name:
@@ -7480,6 +7483,7 @@ speakers:
             ропоезда. Работает с платформой .NET с 2003 года. Профессионально занимается разработкой ПО более 7 лет в осно\
             вном на платформе .NET. Основной интерес сосредоточен в desktop front-end разработке."}
     twitter: engineerspock
+    gitHub: EngineerSpock
     habr: EngineerSpock
   - id: 495
     photoFileName: 0495.jpg
@@ -12390,6 +12394,7 @@ speakers:
             ты занимался распознаванием образов и разработкой на .NET (WPF). В Яндексе занимался разработкой карт под Windows,\
             \ сейчас разрабатывает iOS-версию карт. В свободное время спорит с коллегами обо всем, что связано с архитекту\
             рой ПО. Не может представить жизнь без реактивщины."}
+    gitHub: trimonovds
     habr: trimonovds
   - id: 834
     photoFileName: 0834.jpg
@@ -12960,6 +12965,7 @@ speakers:
             ьшой поклонник концепции Open Source by Default. В свободное время развивает несколько Telegram-каналов с мате\
             риалами по мобильной разработке."}
     twitter: igrekde
+    gitHub: etolstoy
   - id: 873
     photoFileName: 0873.jpg
     name:
@@ -13679,6 +13685,7 @@ speakers:
             чных проектах.\n\nСовместно с крутыми командами веду подкасты Mobile People Talks и Apple Treats."
     twitter: edeniska
     gitHub: eDeniska
+    habr: eDeniska
   - id: 930
     photoFileName: 0930.jpg
     photoUpdatedAt: 2019-04-17T08:58:57.021Z[UTC]
@@ -16074,6 +16081,8 @@ speakers:
             елось поработать с разными технологиями и фреймворками. Последние несколько лет его основной выбор — Angular.\
             \ Живет и работает в Берлине."}
     twitter: fetis26
+    gitHub: fetis
+    habr: Fetis
   - id: 1124
     photoFileName: 1124.jpg
     photoUpdatedAt: 2020-02-20T11:13:12.248Z[UTC]
@@ -30206,6 +30215,7 @@ speakers:
             ет тестировщиков в Контур и не только.</p>\n<p>Каждый раз, когда заканчивается какая-то одна движуха, тут же н\
             аходится другая, которой Марине интересно заниматься.</p>"
     gitHub: m1r2nda
+    habr: marina_mezentseva
   - id: 2116
     photoFileName: 2116.jpg
     photoUpdatedAt: "2022-10-19T11:19:33Z"
@@ -31003,6 +31013,7 @@ speakers:
       - {language: ru, text: "<p>Программист, руководитель, подкастер. 18 лет в IT. Делает опенсорс, подкаст <a href=\"https://scalalaz.ru\"\
             >Scalalaz</a>.</p>"}
     gitHub: fomkin
+    habr: yelbota
   - id: 2173
     photoFileName: 2173.jpg
     photoUpdatedAt: 2022-06-03T14:21:16Z[UTC]
@@ -33565,6 +33576,7 @@ speakers:
             ектуры решений. Технолоджист. Разбирается в облаках и не только.</p>"}
     twitter: dtabolich
     gitHub: dtabolich
+    habr: dtabolich
   - id: 2355
     photoFileName: 2355.jpg
     photoUpdatedAt: 2022-11-16T06:51:03Z[UTC]
@@ -43621,6 +43633,7 @@ speakers:
             \ ВШЭ анализ данных и машинное обучение. Ведет курс Master in Marketing Analytics Skolkovo.</p>\n<p>Обожает вс\
             ё, что связано с данными и то, как алгоритмы могут помогать бизнесу в принятии решений.</p>"
     twitter: aa_tolmachev
+    gitHub: aa-tolmachev
   - id: 3033
     photoFileName: 3033.jpg
     photoUpdatedAt: "2023-08-01T12:10:51Z"
