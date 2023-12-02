@@ -2522,6 +2522,7 @@ speakers:
             ду его коллег: Александра Тарасова и Кирилла Толкачёва «WILD microservices». Илья вдохновился этим докладом дл\
             я создания архитектуры приложения и написал <a href=\"https://github.com/sergeevii123/thriftvsrestbenchmark\"\
             \ target=\"_blank\">бэнчмарк для сравнения скорости передачи Rest и Thrift</a>."}
+    gitHub: sergeevii123
     habr: sergeevii123
   - id: 152
     photoFileName: 0152.jpg
@@ -4178,6 +4179,7 @@ speakers:
             \ Основная специализация: автоматизированное тестирование, низкоуровневая разработка на C++ и ниже, менеджмент\
             , тренинги, продажи."}
     twitter: comaqa
+    gitHub: COMAQA
   - id: 280
     photoFileName: 0280.jpg
     photoUpdatedAt: 2020-06-12T15:35:13.160Z[UTC]
@@ -4778,6 +4780,7 @@ speakers:
             ругие).</p>"
     twitter: AlexSerbul
     gitHub: AlexanderSerbul
+    habr: AlexSerbul
   - id: 322
     photoFileName: 0322.jpg
     name:
@@ -4905,6 +4908,7 @@ speakers:
             оил автоматическое разрешение ложных срабатываний. Интересуется проблемами обработки данных в больших объемах\
             \ и информационного поиска."}
     gitHub: sibiryakov
+    habr: asibiryakov
   - id: 330
     photoFileName: 0330.jpg
     name:
@@ -5232,6 +5236,7 @@ speakers:
       - {language: ru, text: "Ведущий разработчик в «Яндекс.Такси», занимается разработкой асинхронного фреймворка для бэк\
             енда Такси. Большой любитель метапрограммирования и open source."}
     gitHub: zmij
+    habr: zmij
   - id: 351
     photoFileName: 0351.jpg
     photoUpdatedAt: "2022-04-25T13:05:28Z"
@@ -7401,6 +7406,8 @@ speakers:
       - {language: ru, text: "<p>Работает в проекте Rider. В свободное время любит разбираться и фиксить баги в open source-п\
             роектах &mdash; mono и MSBuild.</p>"}
     twitter: filippovma
+    gitHub: mfilippov
+    habr: mfilippov
   - id: 490
     photoFileName: 0490.jpg
     name:
@@ -7476,6 +7483,7 @@ speakers:
             ропоезда. Работает с платформой .NET с 2003 года. Профессионально занимается разработкой ПО более 7 лет в осно\
             вном на платформе .NET. Основной интерес сосредоточен в desktop front-end разработке."}
     twitter: engineerspock
+    gitHub: EngineerSpock
     habr: EngineerSpock
   - id: 495
     photoFileName: 0495.jpg
@@ -7783,6 +7791,7 @@ speakers:
             .</p>"
     twitter: sidristij
     gitHub: sidristij
+    habr: sidristij
   - id: 521
     photoFileName: 0521.jpg
     name:
@@ -9394,6 +9403,7 @@ speakers:
             \ грамотное сочетание инструментов автоматизации, то автотесты обязательно принесут существенную ценность для\
             \ бизнеса, т.к. будут предоставлять актуальную и достоверную информацию о текущем состоянии продукта."}
     twitter: senin24
+    gitHub: senin24
     habr: senin24
   - id: 632
     photoFileName: 0632.jpg
@@ -11074,6 +11084,8 @@ speakers:
             \ Автор storybook readme addon, rockey и awesome-create-react-app. Готов говорить вечно об архитектуре приложе\
             ний и UX."}
     twitter: tuchk4
+    gitHub: tuchk4
+    habr: tuchk4
   - id: 744
     photoFileName: 0744.jpg
     name:
@@ -11330,6 +11342,8 @@ speakers:
             \ собирал команды. Последние 4 года акцентирует своё внимание на front-end и на работе с командами. Работает в\
             \ компании ЦИАН руководителем группы front-end разработки."}
     twitter: vslinko
+    gitHub: vslinko
+    habr: KeepYourMind
   - id: 761
     photoFileName: 0761.jpg
     name:
@@ -11780,6 +11794,7 @@ speakers:
             \ также разработкой внутренних инструментов. Интересуется разработкой плагинов под Android Studio, вопросами а\
             рхитектуры приложений, нейронными сетями. Участвовал в Android Academy MSK в качестве ментора и лектора."}
     twitter: StrelZtrel
+    gitHub: PStrelchenko
     habr: Ztrel
   - id: 794
     photoFileName: 0794.jpg
@@ -11876,6 +11891,7 @@ speakers:
       - {language: ru, text: "Старший Android-разработчик компании ВКонтакте. Занимается разработкой раздела сообщений. Пр\
             ограммирует под Android с 2011 года, ранее занимался фрилансом для PHP/Node.js. Любит задачи, где надо возитьс\
             я с многопоточностью, оптимизациями и нетривиальной логикой."}
+    gitHub: alexoro
     habr: alexoro
   - id: 801
     photoFileName: 0801.jpg
@@ -12378,6 +12394,7 @@ speakers:
             ты занимался распознаванием образов и разработкой на .NET (WPF). В Яндексе занимался разработкой карт под Windows,\
             \ сейчас разрабатывает iOS-версию карт. В свободное время спорит с коллегами обо всем, что связано с архитекту\
             рой ПО. Не может представить жизнь без реактивщины."}
+    gitHub: trimonovds
     habr: trimonovds
   - id: 834
     photoFileName: 0834.jpg
@@ -12775,6 +12792,8 @@ speakers:
             ремя разрабатывает и поддерживает несколько библиотек на Swift (TableKit попадал в Trending in open source на\
             \ Github). Также интересуется бэкенд-разработкой на Node.js"}
     twitter: max_sokolov
+    gitHub: maxsokolov
+    habr: max_sokolov
   - id: 861
     photoFileName: 0861.jpg
     name:
@@ -12946,6 +12965,7 @@ speakers:
             ьшой поклонник концепции Open Source by Default. В свободное время развивает несколько Telegram-каналов с мате\
             риалами по мобильной разработке."}
     twitter: igrekde
+    gitHub: etolstoy
   - id: 873
     photoFileName: 0873.jpg
     name:
@@ -13665,6 +13685,7 @@ speakers:
             чных проектах.\n\nСовместно с крутыми командами веду подкасты Mobile People Talks и Apple Treats."
     twitter: edeniska
     gitHub: eDeniska
+    habr: eDeniska
   - id: 930
     photoFileName: 0930.jpg
     photoUpdatedAt: 2019-04-17T08:58:57.021Z[UTC]
@@ -16060,6 +16081,8 @@ speakers:
             елось поработать с разными технологиями и фреймворками. Последние несколько лет его основной выбор — Angular.\
             \ Живет и работает в Берлине."}
     twitter: fetis26
+    gitHub: fetis
+    habr: Fetis
   - id: 1124
     photoFileName: 1124.jpg
     photoUpdatedAt: 2020-02-20T11:13:12.248Z[UTC]
@@ -16291,6 +16314,7 @@ speakers:
       - {language: en, text: "Software developer at Yandex, RuHaskell activist, distributed systems enthusiast."}
       - {language: ru, text: "Разработчик в Яндексе, активист сообщества RuHaskell, энтузиаст распределённых систем."}
     twitter: cblp_su
+    gitHub: cblp
     habr: cblp
   - id: 1145
     photoFileName: 1145.jpg
@@ -18780,6 +18804,7 @@ speakers:
             льзованием Java и C#. Интересуется машинным обучением, изучает JavaScript/TypeScript и разрабатывает сервис с\
             \ открытым кодом для визуального тестирования интерфейсов Visual Regression Tracker."}
     twitter: VisualReTracker
+    gitHub: pashidlos
   - id: 1340
     photoFileName: 1340.jpg
     photoUpdatedAt: 2020-09-21T07:14:29.377Z[UTC]
@@ -19575,6 +19600,7 @@ speakers:
       - {language: ru, text: "Константин работает инженером-программистом в Google. Его команда разрабатывает и развертыва\
             ет динамические инструменты тестирования, такие как AddressSanitizer и ThreadSanitizer."}
     twitter: kayseesee
+    gitHub: kcc
   - id: 1393
     photoFileName: 1393.jpg
     photoUpdatedAt: 2020-09-23T13:08:03.706Z[UTC]
@@ -26289,20 +26315,6 @@ speakers:
             \ catches up on emails."}
     twitter: gregthelaw
     gitHub: gregthelaw
-  - id: 1848
-    photoFileName: 1848.jpg
-    photoUpdatedAt: 2021-10-07T15:23:31.824Z[UTC]
-    name:
-      - {language: en, text: "Vyacheslav Slutsker"}
-      - {language: ru, text: "Вячеслав Слуцкер"}
-    companyIds: [810]
-    bio:
-      - {language: en, text: "Head of mobile platform development with strong technical background and management skills,\
-            \ worked as iOS developer and fullstack web developer"}
-      - {language: ru, text: "Руководитель разработки мобильной платформы группы приложений Skyeng, ранее руководитель сек\
-            тора в мобильной разработке компании Тензор. Имеет большой опыт в разработке, в том числе iOS-разработке и fullstack-web-р\
-            азработке."}
-    twitter: SlavaSlutsker
   - id: 1849
     photoFileName: 1849.jpg
     photoUpdatedAt: 2021-10-11T13:17:46.991Z[UTC]
@@ -29149,6 +29161,7 @@ speakers:
         text: "<p>Timofey solves developers' pains to build the application.</p>\n<p>He also makes cheese and brews beer.</p>"
       - {language: ru, text: "<p>Решает боли разработчиков по сборке приложения. А еще делает сыр и варит пиво.</p>"}
     gitHub: abdulowork
+    habr: timofey-solonin
   - id: 2047
     photoFileName: 2047.jpg
     photoUpdatedAt: 2022-05-17T12:24:22Z[UTC]
@@ -30202,6 +30215,7 @@ speakers:
             ет тестировщиков в Контур и не только.</p>\n<p>Каждый раз, когда заканчивается какая-то одна движуха, тут же н\
             аходится другая, которой Марине интересно заниматься.</p>"
     gitHub: m1r2nda
+    habr: marina_mezentseva
   - id: 2116
     photoFileName: 2116.jpg
     photoUpdatedAt: "2022-10-19T11:19:33Z"
@@ -30999,6 +31013,7 @@ speakers:
       - {language: ru, text: "<p>Программист, руководитель, подкастер. 18 лет в IT. Делает опенсорс, подкаст <a href=\"https://scalalaz.ru\"\
             >Scalalaz</a>.</p>"}
     gitHub: fomkin
+    habr: yelbota
   - id: 2173
     photoFileName: 2173.jpg
     photoUpdatedAt: 2022-06-03T14:21:16Z[UTC]
@@ -31535,6 +31550,7 @@ speakers:
             ку.</p>"
     twitter: once_dev
     gitHub: asundukov
+    habr: asundukov
   - id: 2209
     photoFileName: 2209.jpg
     photoUpdatedAt: 2022-09-27T08:39:42Z[UTC]
@@ -33560,6 +33576,7 @@ speakers:
             ектуры решений. Технолоджист. Разбирается в облаках и не только.</p>"}
     twitter: dtabolich
     gitHub: dtabolich
+    habr: dtabolich
   - id: 2355
     photoFileName: 2355.jpg
     photoUpdatedAt: 2022-11-16T06:51:03Z[UTC]
@@ -39014,6 +39031,7 @@ speakers:
             УСУРе, получил к.т.н. в области моделирования физических процессов. Обучал детей C++ и Scratch. В IT более 6 л\
             ет. Любит настраивать процессы так, чтобы не было ничего лишнего и все были довольны.</p>"}
     twitter: starosekdan
+    habr: kriptokarino
   - id: 2732
     photoFileName: 2732.jpg
     photoUpdatedAt: "2023-08-23T15:46:35Z"
@@ -41512,6 +41530,7 @@ speakers:
             д спикера объединяет в себе технические навыки и стремление к эффективности, позволяя Ахмату предлагать решени\
             я, которые улучшают качество и скорость разработки.</span></p>"
     twitter: ZeroCode999
+    habr: ZeroCode999
   - id: 2895
     photoFileName: 2895.jpg
     photoUpdatedAt: "2023-09-08T07:08:08Z"
@@ -43614,6 +43633,7 @@ speakers:
             \ ВШЭ анализ данных и машинное обучение. Ведет курс Master in Marketing Analytics Skolkovo.</p>\n<p>Обожает вс\
             ё, что связано с данными и то, как алгоритмы могут помогать бизнесу в принятии решений.</p>"
     twitter: aa_tolmachev
+    gitHub: aa-tolmachev
   - id: 3033
     photoFileName: 3033.jpg
     photoUpdatedAt: "2023-08-01T12:10:51Z"
