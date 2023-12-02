@@ -14,7 +14,7 @@
       </a>
       <span class="h4 ms-2 align-middle">{{eventDetails.event?.name}}</span>
 
-      <div *ngIf="isDisplayPlacesVisible()" class="row mt-1">
+      <div *ngIf="isDisplayPlacesVisible()" class="row mt-2">
         <div *ngFor="let eventDays of eventDetails.event.days" class="col-auto">
           <span><i class="far fa-calendar"></i> {{getEventDays(eventDays)}} / <i class="fas fa-location-dot"></i>&nbsp;</span>
           <a *ngIf="eventDays.mapCoordinates" href="{{googleMapsUrlPrefix}}/{{eventDays.mapCoordinates}}" class="text-dark">{{getDisplayPlace(eventDays)}}</a>
