@@ -16,7 +16,9 @@
                       (onChange)="onCubeTypeChange()" name="cubeType" styleClass="w-100"
                       optionLabel="label" optionValue="value">
             <ng-template let-cubeType pTemplate="selectedItem">
-              {{ cubeType.label | translate }}
+              <div *ngIf="cubeType">
+                {{ cubeType.label | translate }}
+              </div>
             </ng-template>
             <ng-template let-cubeType pTemplate="item">
               {{ cubeType.label | translate }}
@@ -29,7 +31,9 @@
                       (onChange)="onMeasureTypeChange()" name="measureType" styleClass="w-100"
                       optionLabel="label" optionValue="value">
             <ng-template let-measureType pTemplate="selectedItem">
-              {{ measureType.label | translate }}
+              <div *ngIf="measureType">
+                {{ measureType.label | translate }}
+              </div>
             </ng-template>
             <ng-template let-measureType pTemplate="item">
               {{ measureType.label | translate }}

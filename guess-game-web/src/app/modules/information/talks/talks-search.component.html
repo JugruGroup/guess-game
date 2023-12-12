@@ -28,7 +28,9 @@
                       emptyMessage="{{'common.list.emptyMessage' | translate}}"
                       optionLabel="label" optionValue="value">
             <ng-template let-event pTemplate="selectedItem">
-              {{event.value.name}}
+              <div *ngIf="event">
+                {{event.value.name}}
+              </div>
             </ng-template>
             <ng-template let-event pTemplate="item">
               {{event.value.displayName}}
