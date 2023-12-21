@@ -2424,6 +2424,7 @@ speakers:
             \ механизмов работы с native кодом и off-heap данными (Project Panama)."}
     twitter: iwan0www
     gitHub: iwanowww
+    habr: iwanowww
   - id: 145
     photoFileName: 0145.jpg
     name:
@@ -5286,6 +5287,7 @@ speakers:
             \ стандартной библиотеки C++ для применения в области автономного вождения (Tech Lead). Интересуется С++ как п\
             редметной областью, любит копаться в деталях, чтобы в итоге сложить картину целиком. Любит делиться знаниями и\
             \ учиться чему-то новому."}
+    gitHub: rarutyun
   - id: 354
     photoFileName: 0354.jpg
     name:
@@ -7822,6 +7824,8 @@ speakers:
       - {language: en, text: "Vladimir Almaev"}
       - {language: ru, text: "Владимир Алмаев"}
     companyIds: []
+    twitter: vladimir_almaev
+    gitHub: valmaev
   - id: 524
     photoFileName: 0524.jpg
     name:
@@ -12215,6 +12219,7 @@ speakers:
             \ приложений &mdash; от сайтов знакомств до банковского. В свободное время занимался reverse engineering и кри\
             птографией. Всегда интересовался IoT-устройствами и взаимодействием с ними посредством телефона, но всегда хот\
             елось это делать на Swift.</p>"}
+    gitHub: antigp
   - id: 821
     photoFileName: 0821.jpg
     name:
@@ -21389,6 +21394,7 @@ speakers:
       - {language: ru, text: "Последние 3 года работает в компании Miro. Мигрирует данные сервиса из Redis в PostgreSQL. Р\
             еализует multi-tenant-архитектуру хранения данных на уровне приложения. Занимается вопросами масштабирования и\
             \ отказоустойчивости баз данных. Наполовину бэкенд-инженер, наполовину DBA."}
+    habr: nikolai-averin
   - id: 1519
     photoFileName: 1519.jpg
     photoUpdatedAt: "2022-03-31T19:06:33Z"
@@ -23402,6 +23408,8 @@ speakers:
             \ Space — новой интегрированной среды для работы команд. Также она выступает на конференциях, митапах и встреч\
             ах пользователей, пишет о командных продуктах и совместной работе.\nПо мнению Валерии, личные качества и навык\
             и межличностного общения в работе не менее важны, чем технические знания."
+    gitHub: andrianova
+    habr: vandrianova
   - id: 1652
     photoFileName: 1652.jpg
     photoUpdatedAt: 2022-09-13T08:28:12Z[UTC]
@@ -33742,6 +33750,7 @@ speakers:
             \ inquisitive guy. He studies information security and brings secure code to the masses.</p>"}
       - {language: ru, text: "<p>Разработчик статического анализатора кода C# в команде PVS-Studio. По совместительству ст\
             удент и любознательный парень. Изучает информационную безопасность и несет безопасный код в массы.</p>"}
+    habr: QwizizRidus
   - id: 2364
     photoFileName: 2364.jpg
     photoUpdatedAt: 2022-10-23T20:51:13Z[UTC]
@@ -34167,6 +34176,8 @@ speakers:
       - {language: ru, text: "<p>Разрабатывает фронтенд в Яндексе. До этого 10 лет писал бэкенд. Специализируется на автот\
             естах, локализации и инфраструктуре для разработки. В свободное время ходит в походы и учится играть на бараба\
             нах.</p>"}
+    gitHub: dima117
+    habr: dima117
   - id: 2395
     photoFileName: 2395.jpg
     photoUpdatedAt: 2023-02-22T13:06:16Z[UTC]
@@ -34404,6 +34415,7 @@ speakers:
             \ уже 17 лет. В команде главный двигатель внедрения новых технологий, очень много работал над обновлением стек\
             а, в том числе над ORM. Старается следить за происходящим за пределами мира Java в других языках, чтобы приним\
             ать решения, смотря чуть за рамки. Выступал на dump-ekb, jug.ekb и внутренних конференциях.</p>"}
+    gitHub: arkaev
   - id: 2411
     photoFileName: 2411.jpg
     photoUpdatedAt: 2022-10-15T15:42:14Z[UTC]
@@ -36619,6 +36631,7 @@ speakers:
             \ &mdash; Selenium, Robot Framework, Cypress и так далее. Работала в компаниях Петер-Сервис, Яндекс, Grid Dynamics,\
             \ EPAM. Летом 2022 релоцировалась в Финляндию, где сейчас работает в IT-компании из healthcare-отрасли. Есть б\
             ольшой опыт преподавания на профильных курсах (курс по автоматизации API-тестирования: REST, SOAP).</p>"}
+    gitHub: YuliaAtlasova
   - id: 2565
     photoFileName: 2565.jpg
     photoUpdatedAt: "2023-02-27T13:54:27Z"
@@ -36910,6 +36923,7 @@ speakers:
             \ in particular at Sber and IT-NLMK.</p>"}
       - {language: ru, text: "<p>Общий опыт разработки &mdash; 13 лет. На Java &mdash; 7 лет. Работал в крупных компаниях\
             , в частности в Сбере и ИТ-НЛМК.</p>"}
+    gitHub: justTimTim
   - id: 2590
     photoFileName: 2590.jpg
     photoUpdatedAt: 2023-03-15T15:48:20Z[UTC]
@@ -39737,6 +39751,7 @@ speakers:
         text: "<p class=\"p1\">Менеджер системы IPS (интеграционной инвестиционной платформы). Организует сопровождение пл\
             атформы, мониторинг, алертинг и оповещения.</p>\n<p class=\"p1\">Денис занимается деплоями в промышленный конт\
             ур и выстраивает взаимодействие с центром компетенций IPS.</p>"
+    habr: DeAntonov
   - id: 2775
     photoFileName: 2775.jpg
     photoUpdatedAt: "2023-08-24T13:59:56Z"
