@@ -2081,6 +2081,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadTags(CmsType.CONTENTFUL, "2021");
 //        loadTags(CmsType.JUGRUGROUP_CMS, "2022");
 //        loadTags(CmsType.JUGRUGROUP_CMS, "2023");
+//        loadTags(CmsType.JUGRUGROUP_CMS, "2024");
 
         // Load event types
 //        loadEventTypes(CmsType.CONTENTFUL);
