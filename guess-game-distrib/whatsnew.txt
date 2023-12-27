@@ -1,5 +1,10 @@
 Guess Game
 
+Version 2.11.0 - December 27, 2023
+* Enhanced search of talks.
+* Event display changes.
+* Chart scaling support for OLAP statistics.
+
 Version 2.10.0 - June 3, 2023
 * New attributes of talks.
 
