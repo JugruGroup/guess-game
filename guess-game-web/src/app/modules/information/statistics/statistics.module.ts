@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
-import { ChartZoomInComponent } from './chart-zoom-in.component';
+import { ChartZoomInComponent } from './olap/chart/chart-zoom-in.component';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
 import { MessageModule } from '../../message/message.module';

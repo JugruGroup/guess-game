@@ -38,7 +38,7 @@ import {
   hexToRgbA
 } from '../../general/utility-functions';
 import { ChartKind } from '../../../shared/models/statistics/olap/chart-kind.model';
-import { ChartZoomInComponent } from './chart-zoom-in.component';
+import { ChartZoomInComponent } from './olap/chart/chart-zoom-in.component';
 import { DynamicDialogChartData } from '../../../shared/models/statistics/olap/dynamic-dialog-chart-data.model';
 
 @Component({
