@@ -24,6 +24,8 @@ import { SpeakerStatisticsComponent } from './speaker-statistics.component';
 import { CompanyStatisticsComponent } from './company-statistics.component';
 import { OlapStatisticsComponent } from './olap-statistics.component';
 import { StatisticsTabMenuComponent } from './statistics-tabmenu.component';
+import { ThreeDimensionsCubeComponent } from './olap/three-dimensions/three-dimensions-cube.component';
+import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-dimensions-zoom-in.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { StatisticsTabMenuComponent } from './statistics-tabmenu.component';
     SpeakerStatisticsComponent,
     CompanyStatisticsComponent,
     OlapStatisticsComponent,
-    StatisticsTabMenuComponent
+    StatisticsTabMenuComponent,
+    ThreeDimensionsCubeComponent,
+    ThreeDimensionsZoomInComponent
   ],
   imports: [
     AutoCompleteModule,

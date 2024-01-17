@@ -40,6 +40,13 @@ import {
 import { ChartKind } from '../../../shared/models/statistics/olap/chart-kind.model';
 import { ChartZoomInComponent } from './olap/chart/chart-zoom-in.component';
 import { DynamicDialogChartData } from '../../../shared/models/statistics/olap/dynamic-dialog-chart-data.model';
+import {
+  ThreeDimensionsCubeData
+} from '../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-data.model';
+import {
+  ThreeDimensionsCubeOptions
+} from '../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-options.model';
+import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-dimensions-zoom-in.component';
 
 @Component({
   selector: 'app-olap-statistics',
@@ -84,6 +91,9 @@ export class OlapStatisticsComponent implements OnInit {
   private readonly SMALL_BOX_WIDTH = 30;
   private readonly DEFAULT_BOX_WIDTH = 40;
 
+  private readonly DEFAULT_CUBE_CANVAS_ASPECT_RATIO = 1;
+  private readonly DEFAULT_CUBE_CANVAS_HEIGHT = '100px';
+
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
@@ -127,6 +137,7 @@ export class OlapStatisticsComponent implements OnInit {
   public lineOptions: any = {};
   public pieOptions: any = {};
   public radarOptions: any = {};
+  public cubeOptions: ThreeDimensionsCubeOptions = new ThreeDimensionsCubeOptions(this.DEFAULT_CUBE_CANVAS_ASPECT_RATIO, this.DEFAULT_CUBE_CANVAS_HEIGHT);
 
   public allLineData: any = {};
   public totalLineData: any = {};
@@ -135,6 +146,7 @@ export class OlapStatisticsComponent implements OnInit {
   public pieData: any = {};
   public allRadarData: any = {};
   public totalRadarData: any = {};
+  public cubeData: ThreeDimensionsCubeData = new ThreeDimensionsCubeData([], [], []);
 
   public chartTypes: SelectItem[] = [
     {label: 'statistics.olap.chart.detailsLabel', value: ChartType.Details},
@@ -162,6 +174,7 @@ export class OlapStatisticsComponent implements OnInit {
   private topicMetricsMap = new Map<number, OlapEntityMetrics>();
 
   private zoomInDialogRef: DynamicDialogRef;
+  public zoomInDialogClosed: boolean = true;
 
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, private organizerService: OrganizerService,
@@ -312,9 +325,12 @@ export class OlapStatisticsComponent implements OnInit {
       const aspectRatio = this.getAspectRatio(clientWidth);
       const boxWidth = this.getBoxWidth(clientWidth);
 
-      this.lineOptions = this.createLineOptions(true, aspectRatio, boxWidth);
-      this.pieOptions = this.createPieOptions(true, aspectRatio, boxWidth);
-      this.radarOptions = this.createRadarOptions(true, aspectRatio, boxWidth);
+      if (clientWidth > 0) {
+        this.lineOptions = this.createLineOptions(true, aspectRatio, boxWidth);
+        this.pieOptions = this.createPieOptions(true, aspectRatio, boxWidth);
+        this.radarOptions = this.createRadarOptions(true, aspectRatio, boxWidth);
+        this.cubeOptions = this.createCubeOptions(aspectRatio, clientWidth / aspectRatio);
+      }
     }
   }
 
@@ -756,6 +772,10 @@ export class OlapStatisticsComponent implements OnInit {
     };
   }
 
+  createCubeOptions(aspectRatio: number, height: number): ThreeDimensionsCubeOptions {
+    return new ThreeDimensionsCubeOptions(aspectRatio, `${height}px`);
+  }
+
   loadLineChartDetailsData(olapEntityStatistics: OlapEntityStatistics<number, OlapEntityMetrics>,
                            sortedMetricsList: OlapEntityMetrics[], quantity: number) {
     const metricsList = (quantity <= 0) ? sortedMetricsList : sortedMetricsList.slice(0, quantity);
@@ -1009,6 +1029,10 @@ export class OlapStatisticsComponent implements OnInit {
     return ((this.selectedChartType === ChartType.Total) && (this.selectedChartKind === ChartKind.Radar));
   }
 
+  isCubeVisible() {
+    return (this.selectedChartKind === ChartKind.Cube);
+  }
+
   sortEventTypeStatistics(value) {
     this.loadLineChartDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
@@ -1061,7 +1085,7 @@ export class OlapStatisticsComponent implements OnInit {
       plugins = this.chartPlugins;
       data = this.pieData;
       options = this.createPieOptions(false, 1, this.DEFAULT_BOX_WIDTH);
-    } else {
+    } else if (this.selectedChartKind === ChartKind.Radar) {
       type = 'radar';
       plugins = [];
       options = this.createRadarOptions(false, 1, this.DEFAULT_BOX_WIDTH);
@@ -1071,12 +1095,18 @@ export class OlapStatisticsComponent implements OnInit {
       } else {
         data = this.totalRadarData;
       }
+    } else {
+      type = 'cube';
+      plugins = [];
+      data = this.cubeData;
+      options = new ThreeDimensionsCubeOptions(this.DEFAULT_CUBE_CANVAS_ASPECT_RATIO, '100%');
     }
 
     const cubeTypeMessageKey = this.getCubeTypeMessageKeyByCube(this.selectedCubeType);
     const measureTypeMessageKey = this.getMeasureTypeMessageKeyByCube(this.selectedMeasureType);
     const keys = [cubeTypeMessageKey, measureTypeMessageKey];
     const dynamicDialogChartData = new DynamicDialogChartData(type, plugins, data, options);
+    const componentType = (this.selectedChartKind === ChartKind.Cube) ? ThreeDimensionsZoomInComponent : ChartZoomInComponent;
     const dynamicDialogConfig = new DynamicDialogConfig<DynamicDialogChartData>();
 
     dynamicDialogConfig.data = dynamicDialogChartData;
@@ -1091,7 +1121,12 @@ export class OlapStatisticsComponent implements OnInit {
 
         dynamicDialogConfig.header = `${cubeTypeMessage} – ${measureTypeMessage}`;
 
-        this.zoomInDialogRef = this.dialogService.open(ChartZoomInComponent, dynamicDialogConfig);
+        this.zoomInDialogClosed = false;
+        this.zoomInDialogRef = this.dialogService.open(componentType, dynamicDialogConfig);
+
+        this.zoomInDialogRef.onClose.subscribe(() => {
+          this.zoomInDialogClosed = true;
+        });
       });
   }
 }

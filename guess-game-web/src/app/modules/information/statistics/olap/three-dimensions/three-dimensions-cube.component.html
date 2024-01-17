@@ -1,0 +1,37 @@
+<div [style.height]="options.height">
+<!--  <atft-orbit-controls #orbitControls [rotateSpeed]="ORBIT_CONTROLS_ROTATE_SPEED" [zoomSpeed]="ORBIT_CONTROLS_ZOOM_SPEED">-->
+<!--    <atft-renderer-canvas #rendererCanvas>-->
+<!--      <atft-perspective-camera [fov]="PERSPECTIVE_CAMERA_FOV_DEGREES" [near]="PERSPECTIVE_CAMERA_NEAR" [far]="PERSPECTIVE_CAMERA_FAR"-->
+<!--                               [positionX]="PERSPECTIVE_CAMERA_POSITION_X" [positionY]="PERSPECTIVE_CAMERA_POSITION_Y"-->
+<!--                               [positionZ]="perspectiveCameraPositionZ">-->
+<!--      </atft-perspective-camera>-->
+
+<!--      <atft-scene>-->
+<!--        <atft-point-light *ngFor="let pl of internalData.pointLights" [intensity]="POINT_LIGHT_INTENSITY"-->
+<!--                          [distance]="POINT_LIGHT_DISTANCE"-->
+<!--                          [translateX]="pl.translateX" [translateY]="pl.translateY"-->
+<!--                          [translateZ]="pl.translateZ"></atft-point-light>-->
+
+<!--        <app-three-dimensions-grid [sizeX]="internalData.gridSizeX" [divisionsX]="internalData.gridDivisionsX"-->
+<!--                                   [sizeY]="internalData.gridSizeY" [divisionsY]="internalData.gridDivisionsY"-->
+<!--                                   [sizeZ]="internalData.gridSizeZ" [divisionsZ]="internalData.gridDivisionsZ">-->
+<!--        </app-three-dimensions-grid>-->
+
+<!--        <app-three-dimensions-batched-sphere-mesh *ngFor="let s of internalData.sphereGroups" [widthSegments]="SPHERE_SEGMENTS"-->
+<!--                                                  [heightSegments]="SPHERE_SEGMENTS" [materialColor]="s.color"-->
+<!--                                                  [sphereGroupItems]="s.items">-->
+<!--        </app-three-dimensions-batched-sphere-mesh>-->
+
+<!--        <app-three-dimensions-batched-text-mesh [materialColor]="TEXT_MATERIAL_COLOR" [bevelEnabled]="TEXT_BEVEL_ENABLED"-->
+<!--                                                [curveSegments]="TEXT_CURVE_SEGMENTS" [textGroups]="internalData.textGroups">-->
+<!--        </app-three-dimensions-batched-text-mesh>-->
+<!--      </atft-scene>-->
+<!--    </atft-renderer-canvas>-->
+<!--  </atft-orbit-controls>-->
+  <p>
+    options.aspectRatio: {{options.aspectRatio}}
+  </p>
+  <p>
+    options.height: {{options.height}}
+  </p>
+</div>

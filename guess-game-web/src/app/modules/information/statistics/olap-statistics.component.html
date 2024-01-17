@@ -122,7 +122,7 @@
                   styleClass="chart-zoom-in-button"></p-button>
       </div>
 
-      <div class="mt-1 ms-2 me-2 mb-2">
+      <div *ngIf="zoomInDialogClosed" class="mt-1 ms-2 me-2 mb-2">
         <p-chart *ngIf="isDetailsLineChartVisible()" type="line" [data]="allLineData" [options]="lineOptions"></p-chart>
         <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="lineOptions"></p-chart>
         <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="lineOptions"></p-chart>
@@ -130,6 +130,7 @@
         <p-chart *ngIf="isPieChartVisible()" type="pie" [plugins]="chartPlugins" [data]="pieData" [options]="pieOptions"></p-chart>
         <p-chart *ngIf="isDetailsRadarChartVisible()" type="radar" [data]="allRadarData" [options]="radarOptions"></p-chart>
         <p-chart *ngIf="isTotalRadarChartVisible()" type="radar" [data]="totalRadarData" [options]="radarOptions"></p-chart>
+        <app-three-dimensions-cube *ngIf="isCubeVisible()" [options]="cubeOptions" [data]="cubeData"></app-three-dimensions-cube>
       </div>
     </div>
 
