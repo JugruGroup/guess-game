@@ -150,7 +150,8 @@ export class OlapStatisticsComponent implements OnInit {
       label: 'statistics.olap.chart.lineChartWithCumulativeTotalToolTipText'
     },
     {icon: 'bi-pie-chart', value: ChartKind.Pie, label: 'statistics.olap.chart.pieChartToolTipText'},
-    {icon: 'bi-pentagon', value: ChartKind.Radar, label: 'statistics.olap.chart.radarChartToolTipText'}];
+    {icon: 'bi-pentagon', value: ChartKind.Radar, label: 'statistics.olap.chart.radarChartToolTipText'},
+    {icon: 'bi-box', value: ChartKind.Cube, label: 'statistics.olap.chart.3dCubeToolTipText'}];
   public selectedChartKind = ChartKind.Line;
 
   @ViewChildren('chartDiv') chartDivs: QueryList<ElementRef<HTMLDivElement>>;
@@ -977,7 +978,7 @@ export class OlapStatisticsComponent implements OnInit {
   }
 
   isChartTypeSwitcherVisible() {
-    return (this.selectedChartKind !== ChartKind.Pie);
+    return ((this.selectedChartKind !== ChartKind.Pie) && (this.selectedChartKind !== ChartKind.Cube));
   }
 
   isDetailsLineChartVisible() {

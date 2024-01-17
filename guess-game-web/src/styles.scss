@@ -114,6 +114,12 @@
     height: 98px;
   }
 
+  // Styles for OLAP chart button
+  .olap-chart-button {
+    font-size: 0.6rem;
+    line-height: 1;
+  }
+
   @media (min-width: 576px) {
     html {
       font-size: 14px;
@@ -162,6 +168,10 @@
 
     .event-listbox-start {
       height: 120px;
+    }
+
+    .olap-chart-button {
+      font-size: 0.8rem;
     }
   }
 
@@ -419,14 +429,8 @@
     box-shadow: none;
   }
 
-  // Styles for OLAP chart button
-  .olap-chart-button {
-    font-size: 0.8rem;
-    line-height: 1;
+  // Increase height of chart zoom-in dialog
+  .p-dialog.chart-zoom-in-dialog {
+    max-height: 100%;
   }
-}
-
-// Increase height of chart zoom-in dialog
-.p-dialog.chart-zoom-in-dialog {
-  max-height: 100%;
 }
