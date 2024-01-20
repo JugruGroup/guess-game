@@ -1,8 +1,8 @@
-import { OlapCommonParameters } from "./olap-common-parameters.model";
-import { CubeType } from "./cube-type.model";
-import { MeasureType } from "./measure-type.model";
+import { CubeType } from '../cube-type.model';
+import { OlapCommonParameters } from './olap-common-parameters.model';
+import { MeasureType } from '../measure-type.model';
 
-export class OlapEventTypeParameters extends OlapCommonParameters {
+export class OlapParameters extends OlapCommonParameters {
     constructor(
         public cubeType?: CubeType,
         public measureType?: MeasureType,
@@ -10,8 +10,8 @@ export class OlapEventTypeParameters extends OlapCommonParameters {
         public meetups?: boolean,
         public organizerId?: number,
         public eventTypeIds?: number[],
-        public speakerId?: number,
-        public companyId?: number
+        public speakerIds?: number[],
+        public companyIds?: number[]
     ) {
         super(cubeType, measureType, conferences, meetups, organizerId, eventTypeIds);
     }

@@ -1,5 +1,5 @@
-import { CubeType } from "./cube-type.model";
-import { MeasureType } from "./measure-type.model";
+import { CubeType } from '../cube-type.model';
+import { MeasureType } from '../measure-type.model';
 
 export class OlapCommonParameters {
     constructor(

@@ -1,6 +1,6 @@
 import { OlapEntityMetrics } from './olap-entity-metrics.model';
-import { SortableEventTypeMetrics } from '../sortable-event-type-metrics.model';
-import { OlapEntityStatistics } from './olap-entity-statistics.model';
+import { SortableEventTypeMetrics } from '../../sortable-event-type-metrics.model';
+import { OlapEntityStatistics } from '../statistics/olap-entity-statistics.model';
 import { OlapCityMetrics } from './olap-city-metrics.model';
 import { OlapSpeakerMetrics } from './olap-speaker-metrics.model';
 

@@ -1,4 +1,4 @@
-import { SortableEventTypeMetrics } from './sortable-event-type-metrics.model';
+import { SortableEventTypeMetrics } from '../sortable-event-type-metrics.model';
 
 export class EventTypeMetrics implements SortableEventTypeMetrics {
   constructor(
