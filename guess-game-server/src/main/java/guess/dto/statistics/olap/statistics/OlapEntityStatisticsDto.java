@@ -1,4 +1,6 @@
-package guess.dto.statistics.olap;
+package guess.dto.statistics.olap.statistics;
+
+import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;
 
 import java.util.List;
 

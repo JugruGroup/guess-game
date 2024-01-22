@@ -7,10 +7,10 @@ import guess.domain.source.Speaker;
 import guess.domain.source.Topic;
 import guess.domain.statistics.olap.*;
 import guess.domain.statistics.olap.dimension.City;
-import guess.dto.statistics.olap.OlapCityParametersDto;
-import guess.dto.statistics.olap.OlapEventTypeParametersDto;
-import guess.dto.statistics.olap.OlapParametersDto;
-import guess.dto.statistics.olap.OlapSpeakerParametersDto;
+import guess.dto.statistics.olap.parameters.OlapCityParametersDto;
+import guess.dto.statistics.olap.parameters.OlapEventTypeParametersDto;
+import guess.dto.statistics.olap.parameters.OlapParametersDto;
+import guess.dto.statistics.olap.parameters.OlapSpeakerParametersDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

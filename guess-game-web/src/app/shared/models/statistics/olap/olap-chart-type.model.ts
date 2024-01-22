@@ -1,4 +1,4 @@
-export enum ChartType {
+export enum OlapChartType {
   Details = 'DETAILS',
   Total = 'TOTAL'
 }

@@ -1,4 +1,4 @@
-export enum ChartKind {
+export enum OlapChartKind {
   Line = 'LINE',
   LineWithCumulativeTotal = 'LINE_WITH_CUMULATIVE_TOTAL',
   Pie = 'PIE',

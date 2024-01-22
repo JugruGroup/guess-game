@@ -1,4 +1,4 @@
-export enum MeasureType {
+export enum OlapMeasureType {
   Duration = 'DURATION',
   EventTypesQuantity = 'EVENT_TYPES_QUANTITY',
   EventsQuantity = 'EVENTS_QUANTITY',

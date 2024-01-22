@@ -1,14 +1,15 @@
-package guess.dto.statistics.olap;
+package guess.dto.statistics.olap.parameters;
 
 import guess.domain.statistics.olap.CubeType;
 import guess.domain.statistics.olap.MeasureType;
 
 /**
- * OLAP city parameters DTO.
+ * OLAP speaker parameters DTO.
  */
-public class OlapCityParametersDto {
+public class OlapSpeakerParametersDto {
     private CubeType cubeType;
     private MeasureType measureType;
+    private Long companyId;
     private Long eventTypeId;
 
     public CubeType getCubeType() {
@@ -25,6 +26,14 @@ public class OlapCityParametersDto {
 
     public void setMeasureType(MeasureType measureType) {
         this.measureType = measureType;
+    }
+
+    public Long getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
     }
 
     public Long getEventTypeId() {

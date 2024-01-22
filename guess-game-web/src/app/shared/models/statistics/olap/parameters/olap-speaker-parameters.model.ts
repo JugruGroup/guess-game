@@ -1,10 +1,10 @@
-import { CubeType } from '../cube-type.model';
-import { MeasureType } from '../measure-type.model';
+import { OlapCubeType } from '../olap-cube-type.model';
+import { OlapMeasureType } from '../olap-measure-type.model';
 
 export class OlapSpeakerParameters {
   constructor(
-    public cubeType?: CubeType,
-    public measureType?: MeasureType,
+    public cubeType?: OlapCubeType,
+    public measureType?: OlapMeasureType,
     public companyId?: number,
     public eventTypeId?: number
   ) {

@@ -5,9 +5,9 @@ import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dy
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Company } from '../../../../shared/models/company/company.model';
-import { CubeType } from '../../../../shared/models/statistics/olap/cube-type.model';
+import { OlapCubeType } from '../../../../shared/models/statistics/olap/olap-cube-type.model';
 import { EventType } from '../../../../shared/models/event-type/event-type.model';
-import { MeasureType } from '../../../../shared/models/statistics/olap/measure-type.model';
+import { OlapMeasureType } from '../../../../shared/models/statistics/olap/olap-measure-type.model';
 import { OlapParameters } from '../../../../shared/models/statistics/olap/parameters/olap-parameters.model';
 import { OlapStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-statistics.model';
 import { Organizer } from '../../../../shared/models/organizer/organizer.model';
@@ -22,7 +22,7 @@ import { OlapSpeakerParameters } from '../../../../shared/models/statistics/olap
 import { OlapEntityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
 import { OlapCityParameters } from '../../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
 import { OlapCityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
-import { ChartType } from '../../../../shared/models/statistics/olap/chart-type.model';
+import { OlapChartType } from '../../../../shared/models/statistics/olap/olap-chart-type.model';
 import { EventTypeService } from '../../../../shared/services/event-type.service';
 import { EventService } from '../../../../shared/services/event.service';
 import { OrganizerService } from '../../../../shared/services/organizer.service';
@@ -37,7 +37,7 @@ import {
   getOlapEventTypeStatisticsWithSortName,
   hexToRgbA
 } from '../../../general/utility-functions';
-import { ChartKind } from '../../../../shared/models/statistics/olap/chart-kind.model';
+import { OlapChartKind } from '../../../../shared/models/statistics/olap/olap-chart-kind.model';
 import { ChartZoomInComponent } from './chart/chart-zoom-in.component';
 import { DynamicDialogChartData } from '../../../../shared/models/statistics/olap/dynamic-dialog-chart-data.model';
 import {
@@ -99,12 +99,12 @@ export class OlapStatisticsComponent implements OnInit {
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
 
-  public cubeTypes: CubeType[] = [];
-  public selectedCubeType: CubeType;
+  public cubeTypes: OlapCubeType[] = [];
+  public selectedCubeType: OlapCubeType;
   public cubeTypeSelectItems: SelectItem[] = [];
 
-  public measureTypes: MeasureType[] = [];
-  public selectedMeasureType: MeasureType;
+  public measureTypes: OlapMeasureType[] = [];
+  public selectedMeasureType: OlapMeasureType;
   public measureTypeSelectItems: SelectItem[] = [];
 
   public isConferences = true;
@@ -149,22 +149,22 @@ export class OlapStatisticsComponent implements OnInit {
   public cubeData: ThreeDimensionsCubeData = new ThreeDimensionsCubeData([], [], []);
 
   public chartTypes: SelectItem[] = [
-    {label: 'statistics.olap.chart.detailsLabel', value: ChartType.Details},
-    {label: 'statistics.olap.chart.totalLabel', value: ChartType.Total}
+    {label: 'statistics.olap.chart.detailsLabel', value: OlapChartType.Details},
+    {label: 'statistics.olap.chart.totalLabel', value: OlapChartType.Total}
   ];
-  public selectedChartType = ChartType.Details;
+  public selectedChartType = OlapChartType.Details;
 
   public chartKinds: SelectItem[] = [
-    {icon: 'bi-graph-up', value: ChartKind.Line, label: 'statistics.olap.chart.lineChartToolTipText'},
+    {icon: 'bi-graph-up', value: OlapChartKind.Line, label: 'statistics.olap.chart.lineChartToolTipText'},
     {
       icon: 'bi-graph-up-arrow',
-      value: ChartKind.LineWithCumulativeTotal,
+      value: OlapChartKind.LineWithCumulativeTotal,
       label: 'statistics.olap.chart.lineChartWithCumulativeTotalToolTipText'
     },
-    {icon: 'bi-pie-chart', value: ChartKind.Pie, label: 'statistics.olap.chart.pieChartToolTipText'},
-    {icon: 'bi-pentagon', value: ChartKind.Radar, label: 'statistics.olap.chart.radarChartToolTipText'},
-    {icon: 'bi-box', value: ChartKind.Cube, label: 'statistics.olap.chart.3dCubeToolTipText'}];
-  public selectedChartKind = ChartKind.Line;
+    {icon: 'bi-pie-chart', value: OlapChartKind.Pie, label: 'statistics.olap.chart.pieChartToolTipText'},
+    {icon: 'bi-pentagon', value: OlapChartKind.Radar, label: 'statistics.olap.chart.radarChartToolTipText'},
+    {icon: 'bi-box', value: OlapChartKind.Cube, label: 'statistics.olap.chart.3dCubeToolTipText'}];
+  public selectedChartKind = OlapChartKind.Line;
 
   @ViewChildren('chartDiv') chartDivs: QueryList<ElementRef<HTMLDivElement>>;
   private chartDiv: ElementRef<HTMLDivElement>;
@@ -217,15 +217,15 @@ export class OlapStatisticsComponent implements OnInit {
     window.removeEventListener('resize', this.onResize);
   }
 
-  getCubeTypeMessageKeyByCube(cubeType: CubeType): string {
+  getCubeTypeMessageKeyByCube(cubeType: OlapCubeType): string {
     switch (cubeType) {
-      case CubeType.EventTypes: {
+      case OlapCubeType.EventTypes: {
         return this.EVENT_TYPES_CUBE_TYPE_KEY;
       }
-      case CubeType.Speakers: {
+      case OlapCubeType.Speakers: {
         return this.SPEAKERS_CUBE_TYPE_KEY;
       }
-      case CubeType.Companies: {
+      case OlapCubeType.Companies: {
         return this.COMPANIES_CUBE_TYPE_KEY;
       }
       default: {
@@ -234,30 +234,30 @@ export class OlapStatisticsComponent implements OnInit {
     }
   }
 
-  getMeasureTypeMessageKeyByCube(measureType: MeasureType): string {
+  getMeasureTypeMessageKeyByCube(measureType: OlapMeasureType): string {
     switch (measureType) {
-      case MeasureType.Duration: {
+      case OlapMeasureType.Duration: {
         return this.DURATION_MEASURE_TYPE_KEY;
       }
-      case MeasureType.EventTypesQuantity: {
+      case OlapMeasureType.EventTypesQuantity: {
         return this.EVENT_TYPES_QUANTITY_MEASURE_TYPE_KEY;
       }
-      case MeasureType.EventsQuantity: {
+      case OlapMeasureType.EventsQuantity: {
         return this.EVENTS_QUANTITY_MEASURE_TYPE_KEY;
       }
-      case MeasureType.TalksQuantity: {
+      case OlapMeasureType.TalksQuantity: {
         return this.TALKS_QUANTITY_MEASURE_TYPE_KEY;
       }
-      case MeasureType.SpeakersQuantity: {
+      case OlapMeasureType.SpeakersQuantity: {
         return this.SPEAKERS_QUANTITY_MEASURE_TYPE_KEY;
       }
-      case MeasureType.CompaniesQuantity: {
+      case OlapMeasureType.CompaniesQuantity: {
         return this.COMPANIES_QUANTITY_MEASURE_TYPE_KEY;
       }
-      case MeasureType.JavaChampionsQuantity: {
+      case OlapMeasureType.JavaChampionsQuantity: {
         return this.JAVA_CHAMPIONS_QUANTITY_MEASURE_TYPE_KEY;
       }
-      case MeasureType.MvpsQuantity: {
+      case OlapMeasureType.MvpsQuantity: {
         return this.MVPS_QUANTITY_MEASURE_TYPE_KEY;
       }
       default: {
@@ -266,7 +266,7 @@ export class OlapStatisticsComponent implements OnInit {
     }
   }
 
-  fillCubeTypes(cubeTypes: CubeType[]) {
+  fillCubeTypes(cubeTypes: OlapCubeType[]) {
     this.cubeTypes = cubeTypes;
     this.cubeTypeSelectItems = this.cubeTypes.map(c => {
         const messageKey = this.getCubeTypeMessageKeyByCube(c);
@@ -276,7 +276,7 @@ export class OlapStatisticsComponent implements OnInit {
     );
   }
 
-  fillMeasureTypes(measureTypes: MeasureType[]) {
+  fillMeasureTypes(measureTypes: OlapMeasureType[]) {
     this.measureTypes = measureTypes;
     this.measureTypeSelectItems = this.measureTypes.map(m => {
         const messageKey = this.getMeasureTypeMessageKeyByCube(m);
@@ -414,17 +414,17 @@ export class OlapStatisticsComponent implements OnInit {
 
   loadSelectedEntities(complete?: (() => void)) {
     switch (this.selectedCubeType) {
-      case CubeType.EventTypes:
+      case OlapCubeType.EventTypes:
         complete();
         break;
-      case CubeType.Speakers:
+      case OlapCubeType.Speakers:
         this.speakerService.getSelectedSpeakers(new SelectedEntities(this.selectedSpeakers.map(s => s.id)))
           .subscribe(speakersData => {
             this.selectedSpeakers = speakersData;
             complete();
           });
         break;
-      case CubeType.Companies:
+      case OlapCubeType.Companies:
         this.companyService.getSelectedCompanies(new SelectedEntities(this.selectedCompanies.map(c => c.id)))
           .subscribe(companiesData => {
             this.selectedCompanies = companiesData;
@@ -433,7 +433,7 @@ export class OlapStatisticsComponent implements OnInit {
     }
   }
 
-  loadOlapStatistics(cubeType: CubeType, measureType: MeasureType, isConferences: boolean, isMeetups: boolean,
+  loadOlapStatistics(cubeType: OlapCubeType, measureType: OlapMeasureType, isConferences: boolean, isMeetups: boolean,
                      organizer: Organizer, eventTypes: EventType[], speakers: Speaker[], companies: Company[]) {
     this.statisticsService.getOlapStatistics(
       new OlapParameters(
@@ -524,11 +524,11 @@ export class OlapStatisticsComponent implements OnInit {
   }
 
   isSpeakersVisible(): boolean {
-    return (CubeType.Speakers === this.selectedCubeType);
+    return (OlapCubeType.Speakers === this.selectedCubeType);
   }
 
   isCompaniesVisible(): boolean {
-    return (CubeType.Companies == this.selectedCubeType);
+    return (OlapCubeType.Companies == this.selectedCubeType);
   }
 
   speakerSearch(event) {
@@ -568,37 +568,37 @@ export class OlapStatisticsComponent implements OnInit {
   }
 
   isNoEventTypesDataFoundVisible() {
-    return ((this.selectedCubeType === CubeType.EventTypes) &&
+    return ((this.selectedCubeType === OlapCubeType.EventTypes) &&
       this.olapStatistics?.eventTypeStatistics?.metricsList &&
       (this.olapStatistics.eventTypeStatistics.metricsList.length === 0));
   }
 
   isEventTypesListVisible() {
-    return ((this.selectedCubeType === CubeType.EventTypes) &&
+    return ((this.selectedCubeType === OlapCubeType.EventTypes) &&
       this.olapStatistics?.eventTypeStatistics?.metricsList &&
       (this.olapStatistics.eventTypeStatistics.metricsList.length > 0));
   }
 
   isNoSpeakersDataFoundVisible() {
-    return ((this.selectedCubeType === CubeType.Speakers) &&
+    return ((this.selectedCubeType === OlapCubeType.Speakers) &&
       this.olapStatistics?.speakerStatistics?.metricsList &&
       (this.olapStatistics.speakerStatistics.metricsList.length === 0));
   }
 
   isSpeakersListVisible() {
-    return ((this.selectedCubeType === CubeType.Speakers) &&
+    return ((this.selectedCubeType === OlapCubeType.Speakers) &&
       this.olapStatistics?.speakerStatistics?.metricsList &&
       (this.olapStatistics.speakerStatistics.metricsList.length > 0));
   }
 
   isNoCompaniesDataFoundVisible() {
-    return ((this.selectedCubeType === CubeType.Companies) &&
+    return ((this.selectedCubeType === OlapCubeType.Companies) &&
       this.olapStatistics?.companyStatistics?.metricsList &&
       (this.olapStatistics.companyStatistics.metricsList.length === 0));
   }
 
   isCompaniesListVisible() {
-    return ((this.selectedCubeType === CubeType.Companies) &&
+    return ((this.selectedCubeType === OlapCubeType.Companies) &&
       this.olapStatistics?.companyStatistics?.metricsList &&
       (this.olapStatistics.companyStatistics.metricsList.length > 0));
   }
@@ -998,39 +998,39 @@ export class OlapStatisticsComponent implements OnInit {
   }
 
   isChartTypeSwitcherVisible() {
-    return ((this.selectedChartKind !== ChartKind.Pie) && (this.selectedChartKind !== ChartKind.Cube));
+    return ((this.selectedChartKind !== OlapChartKind.Pie) && (this.selectedChartKind !== OlapChartKind.Cube));
   }
 
   isDetailsLineChartVisible() {
-    return ((this.selectedChartType === ChartType.Details) && (this.selectedChartKind === ChartKind.Line));
+    return ((this.selectedChartType === OlapChartType.Details) && (this.selectedChartKind === OlapChartKind.Line));
   }
 
   isTotalLineChartVisible() {
-    return ((this.selectedChartType === ChartType.Total) && (this.selectedChartKind === ChartKind.Line));
+    return ((this.selectedChartType === OlapChartType.Total) && (this.selectedChartKind === OlapChartKind.Line));
   }
 
   isDetailsLineWithCumulativeChartVisible() {
-    return ((this.selectedChartType === ChartType.Details) && (this.selectedChartKind === ChartKind.LineWithCumulativeTotal));
+    return ((this.selectedChartType === OlapChartType.Details) && (this.selectedChartKind === OlapChartKind.LineWithCumulativeTotal));
   }
 
   isTotalLineWithCumulativeChartVisible() {
-    return ((this.selectedChartType === ChartType.Total) && (this.selectedChartKind === ChartKind.LineWithCumulativeTotal));
+    return ((this.selectedChartType === OlapChartType.Total) && (this.selectedChartKind === OlapChartKind.LineWithCumulativeTotal));
   }
 
   isPieChartVisible() {
-    return (this.selectedChartKind === ChartKind.Pie);
+    return (this.selectedChartKind === OlapChartKind.Pie);
   }
 
   isDetailsRadarChartVisible() {
-    return ((this.selectedChartType === ChartType.Details) && (this.selectedChartKind === ChartKind.Radar));
+    return ((this.selectedChartType === OlapChartType.Details) && (this.selectedChartKind === OlapChartKind.Radar));
   }
 
   isTotalRadarChartVisible() {
-    return ((this.selectedChartType === ChartType.Total) && (this.selectedChartKind === ChartKind.Radar));
+    return ((this.selectedChartType === OlapChartType.Total) && (this.selectedChartKind === OlapChartKind.Radar));
   }
 
   isCubeVisible() {
-    return (this.selectedChartKind === ChartKind.Cube);
+    return (this.selectedChartKind === OlapChartKind.Cube);
   }
 
   sortEventTypeStatistics(value) {
@@ -1060,37 +1060,37 @@ export class OlapStatisticsComponent implements OnInit {
     let data: any;
     let options: any;
 
-    if (this.selectedChartKind === ChartKind.Line) {
+    if (this.selectedChartKind === OlapChartKind.Line) {
       type = 'line';
       plugins = [];
       options = this.createLineOptions(false, 2, this.DEFAULT_BOX_WIDTH);
 
-      if (this.selectedChartType === ChartType.Details) {
+      if (this.selectedChartType === OlapChartType.Details) {
         data = this.allLineData;
       } else {
         data = this.totalLineData;
       }
-    } else if (this.selectedChartKind === ChartKind.LineWithCumulativeTotal) {
+    } else if (this.selectedChartKind === OlapChartKind.LineWithCumulativeTotal) {
       type = 'line';
       plugins = [];
       options = this.createLineOptions(false, 2, this.DEFAULT_BOX_WIDTH);
 
-      if (this.selectedChartType === ChartType.Details) {
+      if (this.selectedChartType === OlapChartType.Details) {
         data = this.allLineWithCumulativeData;
       } else {
         data = this.totalLineWithCumulativeData;
       }
-    } else if (this.selectedChartKind === ChartKind.Pie) {
+    } else if (this.selectedChartKind === OlapChartKind.Pie) {
       type = 'pie';
       plugins = this.chartPlugins;
       data = this.pieData;
       options = this.createPieOptions(false, 1, this.DEFAULT_BOX_WIDTH);
-    } else if (this.selectedChartKind === ChartKind.Radar) {
+    } else if (this.selectedChartKind === OlapChartKind.Radar) {
       type = 'radar';
       plugins = [];
       options = this.createRadarOptions(false, 1, this.DEFAULT_BOX_WIDTH);
 
-      if (this.selectedChartType === ChartType.Details) {
+      if (this.selectedChartType === OlapChartType.Details) {
         data = this.allRadarData;
       } else {
         data = this.totalRadarData;
@@ -1106,7 +1106,7 @@ export class OlapStatisticsComponent implements OnInit {
     const measureTypeMessageKey = this.getMeasureTypeMessageKeyByCube(this.selectedMeasureType);
     const keys = [cubeTypeMessageKey, measureTypeMessageKey];
     const dynamicDialogChartData = new DynamicDialogChartData(type, plugins, data, options);
-    const componentType = (this.selectedChartKind === ChartKind.Cube) ? ThreeDimensionsZoomInComponent : ChartZoomInComponent;
+    const componentType = (this.selectedChartKind === OlapChartKind.Cube) ? ThreeDimensionsZoomInComponent : ChartZoomInComponent;
     const dynamicDialogConfig = new DynamicDialogConfig<DynamicDialogChartData>();
 
     dynamicDialogConfig.data = dynamicDialogChartData;

@@ -1,4 +1,4 @@
-package guess.dto.statistics.olap;
+package guess.dto.statistics.olap.parameters;
 
 /**
  * OLAP event type parameters DTO.

@@ -1,8 +1,10 @@
-package guess.dto.statistics.olap;
+package guess.dto.statistics.olap.statistics;
 
 import guess.domain.Language;
 import guess.domain.source.Company;
 import guess.domain.statistics.olap.OlapEntityStatistics;
+import guess.dto.statistics.olap.metrics.OlapCompanyMetricsDto;
+import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;
 
 import java.util.List;
 

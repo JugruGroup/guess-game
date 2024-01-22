@@ -1,4 +1,4 @@
-package guess.dto.statistics.olap;
+package guess.dto.statistics.olap.parameters;
 
 import guess.domain.statistics.olap.CubeType;
 import guess.domain.statistics.olap.MeasureType;
