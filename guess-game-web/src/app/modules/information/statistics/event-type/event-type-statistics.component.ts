@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
-import { EventTypeStatistics } from '../../../shared/models/statistics/event-type/event-type-statistics.model';
-import { Organizer } from '../../../shared/models/organizer/organizer.model';
-import { Topic } from '../../../shared/models/topic/topic.model';
-import { StatisticsService } from '../../../shared/services/statistics.service';
-import { OrganizerService } from '../../../shared/services/organizer.service';
-import { TopicService } from '../../../shared/services/topic.service';
-import { findOrganizerById, findTopicById, getEventTypeStatisticsWithSortName } from '../../general/utility-functions';
+import { EventTypeStatistics } from '../../../../shared/models/statistics/event-type/event-type-statistics.model';
+import { Organizer } from '../../../../shared/models/organizer/organizer.model';
+import { Topic } from '../../../../shared/models/topic/topic.model';
+import { StatisticsService } from '../../../../shared/services/statistics.service';
+import { OrganizerService } from '../../../../shared/services/organizer.service';
+import { TopicService } from '../../../../shared/services/topic.service';
+import { findOrganizerById, findTopicById, getEventTypeStatisticsWithSortName } from '../../../general/utility-functions';
 
 @Component({
   selector: 'app-event-type-statistics',

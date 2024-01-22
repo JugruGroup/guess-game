@@ -4,31 +4,31 @@ import { SelectItem } from 'primeng/api';
 import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { Company } from '../../../shared/models/company/company.model';
-import { CubeType } from '../../../shared/models/statistics/olap/cube-type.model';
-import { EventType } from '../../../shared/models/event-type/event-type.model';
-import { MeasureType } from '../../../shared/models/statistics/olap/measure-type.model';
-import { OlapParameters } from '../../../shared/models/statistics/olap/parameters/olap-parameters.model';
-import { OlapStatistics } from '../../../shared/models/statistics/olap/statistics/olap-statistics.model';
-import { Organizer } from '../../../shared/models/organizer/organizer.model';
-import { Speaker } from '../../../shared/models/speaker/speaker.model';
-import { SelectedEntities } from '../../../shared/models/common/selected-entities.model';
-import { OlapSpeakerMetrics } from '../../../shared/models/statistics/olap/metrics/olap-speaker-metrics.model';
-import { OlapCompanyMetrics } from '../../../shared/models/statistics/olap/metrics/olap-company-metrics.model';
-import { OlapEventTypeParameters } from '../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
-import { OlapEntityStatistics } from '../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
-import { OlapEventTypeMetrics } from '../../../shared/models/statistics/olap/metrics/olap-event-type-metrics.model';
-import { OlapSpeakerParameters } from '../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
-import { OlapEntityMetrics } from '../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
-import { OlapCityParameters } from '../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
-import { OlapCityMetrics } from '../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
-import { ChartType } from '../../../shared/models/statistics/olap/chart-type.model';
-import { EventTypeService } from '../../../shared/services/event-type.service';
-import { EventService } from '../../../shared/services/event.service';
-import { OrganizerService } from '../../../shared/services/organizer.service';
-import { StatisticsService } from '../../../shared/services/statistics.service';
-import { SpeakerService } from '../../../shared/services/speaker.service';
-import { CompanyService } from '../../../shared/services/company.service';
+import { Company } from '../../../../shared/models/company/company.model';
+import { CubeType } from '../../../../shared/models/statistics/olap/cube-type.model';
+import { EventType } from '../../../../shared/models/event-type/event-type.model';
+import { MeasureType } from '../../../../shared/models/statistics/olap/measure-type.model';
+import { OlapParameters } from '../../../../shared/models/statistics/olap/parameters/olap-parameters.model';
+import { OlapStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-statistics.model';
+import { Organizer } from '../../../../shared/models/organizer/organizer.model';
+import { Speaker } from '../../../../shared/models/speaker/speaker.model';
+import { SelectedEntities } from '../../../../shared/models/common/selected-entities.model';
+import { OlapSpeakerMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-speaker-metrics.model';
+import { OlapCompanyMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-company-metrics.model';
+import { OlapEventTypeParameters } from '../../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
+import { OlapEntityStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
+import { OlapEventTypeMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-event-type-metrics.model';
+import { OlapSpeakerParameters } from '../../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
+import { OlapEntityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
+import { OlapCityParameters } from '../../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
+import { OlapCityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
+import { ChartType } from '../../../../shared/models/statistics/olap/chart-type.model';
+import { EventTypeService } from '../../../../shared/services/event-type.service';
+import { EventService } from '../../../../shared/services/event.service';
+import { OrganizerService } from '../../../../shared/services/organizer.service';
+import { StatisticsService } from '../../../../shared/services/statistics.service';
+import { SpeakerService } from '../../../../shared/services/speaker.service';
+import { CompanyService } from '../../../../shared/services/company.service';
 import {
   findEventTypesByIds,
   findOrganizerById,
@@ -36,17 +36,17 @@ import {
   getColorByIndex,
   getOlapEventTypeStatisticsWithSortName,
   hexToRgbA
-} from '../../general/utility-functions';
-import { ChartKind } from '../../../shared/models/statistics/olap/chart-kind.model';
-import { ChartZoomInComponent } from './olap/chart/chart-zoom-in.component';
-import { DynamicDialogChartData } from '../../../shared/models/statistics/olap/dynamic-dialog-chart-data.model';
+} from '../../../general/utility-functions';
+import { ChartKind } from '../../../../shared/models/statistics/olap/chart-kind.model';
+import { ChartZoomInComponent } from './chart/chart-zoom-in.component';
+import { DynamicDialogChartData } from '../../../../shared/models/statistics/olap/dynamic-dialog-chart-data.model';
 import {
   ThreeDimensionsCubeData
-} from '../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-data.model';
+} from '../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-data.model';
 import {
   ThreeDimensionsCubeOptions
-} from '../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-options.model';
-import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-dimensions-zoom-in.component';
+} from '../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-options.model';
+import { ThreeDimensionsZoomInComponent } from './three-dimensions/three-dimensions-zoom-in.component';
 
 @Component({
   selector: 'app-olap-statistics',

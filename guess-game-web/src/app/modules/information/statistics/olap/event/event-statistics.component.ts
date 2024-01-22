@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
-import { EventType } from '../../../shared/models/event-type/event-type.model';
-import { SpeakerStatistics } from '../../../shared/models/statistics/speaker/speaker-statistics.model';
-import { Organizer } from '../../../shared/models/organizer/organizer.model';
-import { StatisticsService } from '../../../shared/services/statistics.service';
-import { EventTypeService } from '../../../shared/services/event-type.service';
-import { EventService } from '../../../shared/services/event.service';
-import { OrganizerService } from '../../../shared/services/organizer.service';
-import { findEventTypeById, findOrganizerById } from '../../general/utility-functions';
+import { EventType } from '../../../../../shared/models/event-type/event-type.model';
+import { EventStatistics } from '../../../../../shared/models/statistics/event/event-statistics.model';
+import { Organizer } from '../../../../../shared/models/organizer/organizer.model';
+import { StatisticsService } from '../../../../../shared/services/statistics.service';
+import { EventTypeService } from '../../../../../shared/services/event-type.service';
+import { EventService } from '../../../../../shared/services/event.service';
+import { OrganizerService } from '../../../../../shared/services/organizer.service';
+import { findEventTypeById, findOrganizerById } from '../../../../general/utility-functions';
 
 @Component({
-  selector: 'app-speaker-statistics',
-  templateUrl: './speaker-statistics.component.html'
+  selector: 'app-event-statistics',
+  templateUrl: './event-statistics.component.html'
 })
-export class SpeakerStatisticsComponent implements OnInit {
+export class EventStatisticsComponent implements OnInit {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
-  public degreesImageDirectory = `${this.imageDirectory}/degrees`;
-  public speakersImageDirectory = `${this.imageDirectory}/speakers`;
 
   public isConferences = true;
   public isMeetups = true;
@@ -31,15 +29,13 @@ export class SpeakerStatisticsComponent implements OnInit {
   public selectedEventType: EventType;
   public eventTypeSelectItems: SelectItem[] = [];
 
-  public speakerStatistics = new SpeakerStatistics();
+  public eventStatistics = new EventStatistics();
   public multiSortMeta: any[] = [];
 
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, public organizerService: OrganizerService,
               public translateService: TranslateService) {
-    this.multiSortMeta.push({field: 'talksQuantity', order: -1});
-    this.multiSortMeta.push({field: 'eventsQuantity', order: -1});
-    this.multiSortMeta.push({field: 'eventTypesQuantity', order: -1});
+    this.multiSortMeta.push({field: 'name', order: 1});
   }
 
   ngOnInit(): void {
@@ -81,7 +77,7 @@ export class SpeakerStatisticsComponent implements OnInit {
                   this.selectedEventType = null;
                 }
 
-                this.loadSpeakerStatistics(this.selectedOrganizer, this.selectedEventType);
+                this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
               });
           });
       });
@@ -94,14 +90,14 @@ export class SpeakerStatisticsComponent implements OnInit {
 
         this.selectedEventType = null;
 
-        this.loadSpeakerStatistics(this.selectedOrganizer, this.selectedEventType);
+        this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
       });
   }
 
-  loadSpeakerStatistics(organizer: Organizer, eventType: EventType) {
-    this.statisticsService.getSpeakerStatistics(this.isConferences, this.isMeetups, organizer, eventType)
+  loadEventStatistics(organizer: Organizer, eventType: EventType) {
+    this.statisticsService.getEventStatistics(this.isConferences, this.isMeetups, organizer, eventType)
       .subscribe(data => {
-          this.speakerStatistics = data;
+          this.eventStatistics = data;
         }
       );
   }
@@ -115,7 +111,7 @@ export class SpeakerStatisticsComponent implements OnInit {
   }
 
   onEventTypeChange() {
-    this.loadSpeakerStatistics(this.selectedOrganizer, this.selectedEventType);
+    this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
   }
 
   onLanguageChange() {
@@ -138,16 +134,16 @@ export class SpeakerStatisticsComponent implements OnInit {
               this.selectedEventType = null;
             }
 
-            this.loadSpeakerStatistics(this.selectedOrganizer, this.selectedEventType);
+            this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
           });
       });
   }
 
-  isNoSpeakersFoundVisible() {
-    return (this.speakerStatistics?.speakerMetricsList && (this.speakerStatistics.speakerMetricsList.length === 0));
+  isNoEventsFoundVisible() {
+    return (this.eventStatistics?.eventMetricsList && (this.eventStatistics.eventMetricsList.length === 0));
   }
 
-  isSpeakersListVisible() {
-    return (this.speakerStatistics?.speakerMetricsList && (this.speakerStatistics.speakerMetricsList.length > 0));
+  isEventsListVisible() {
+    return (this.eventStatistics?.eventMetricsList && (this.eventStatistics.eventMetricsList.length > 0));
   }
 }
