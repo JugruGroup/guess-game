@@ -13,7 +13,8 @@ import guess.domain.statistics.olap.OlapStatistics;
 public record OlapStatisticsDto(OlapEventTypeStatisticsDto eventTypeStatistics,
                                 OlapSpeakerStatisticsDto speakerStatistics,
                                 OlapCompanyStatisticsDto companyStatistics,
-                                OlapTopicStatisticsDto topicStatistics) {
+                                OlapTopicStatisticsDto topicStatistics,
+                                OlapCubeStatisticsDto cubeStatistics) {
     public static OlapStatisticsDto convertToDto(OlapStatistics olapStatistics, Language language) {
         OlapEntityStatistics<Integer, EventType> eventTypeStatistics = olapStatistics.yearEventTypeStatistics();
         OlapEntityStatistics<Integer, Speaker> speakerStatistics = olapStatistics.yearSpeakerStatistics();
@@ -23,6 +24,7 @@ public record OlapStatisticsDto(OlapEventTypeStatisticsDto eventTypeStatistics,
                 (eventTypeStatistics != null) ? OlapEventTypeStatisticsDto.convertToDto(eventTypeStatistics, language) : null,
                 (speakerStatistics != null) ? OlapSpeakerStatisticsDto.convertToDto(speakerStatistics, language) : null,
                 (companyStatistics != null) ? OlapCompanyStatisticsDto.convertToDto(companyStatistics, language) : null,
-                OlapTopicStatisticsDto.convertToDto(olapStatistics, language));
+                OlapTopicStatisticsDto.convertToDto(olapStatistics, language),
+                OlapCubeStatisticsDto.convertToDto(olapStatistics, language));
     }
 }
