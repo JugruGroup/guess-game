@@ -1,9 +1,9 @@
-import { OlapEntityStatistics } from './olap-entity-statistics.model';
-import { OlapEventTypeMetrics } from '../metrics/olap-event-type-metrics.model';
-import { OlapSpeakerMetrics } from '../metrics/olap-speaker-metrics.model';
 import { OlapCompanyMetrics } from '../metrics/olap-company-metrics.model';
 import { OlapCubeStatistics } from './olap-cube-statistics.model';
 import { OlapEntityMetrics } from '../metrics/olap-entity-metrics.model';
+import { OlapEntityStatistics } from './olap-entity-statistics.model';
+import { OlapEventTypeMetrics } from '../metrics/olap-event-type-metrics.model';
+import { OlapSpeakerMetrics } from '../metrics/olap-speaker-metrics.model';
 
 export class OlapStatistics {
   constructor(
