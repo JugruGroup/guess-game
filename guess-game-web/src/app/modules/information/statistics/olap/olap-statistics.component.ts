@@ -5,24 +5,26 @@ import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dy
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Company } from '../../../../shared/models/company/company.model';
-import { OlapCubeType } from '../../../../shared/models/statistics/olap/olap-cube-type.model';
 import { EventType } from '../../../../shared/models/event-type/event-type.model';
+import { OlapChartKind } from '../../../../shared/models/statistics/olap/olap-chart-kind.model';
+import { OlapChartType } from '../../../../shared/models/statistics/olap/olap-chart-type.model';
+import { OlapCityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
+import { OlapCityParameters } from '../../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
+import { OlapCompanyMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-company-metrics.model';
+import { OlapCubeStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-cube-statistics.model';
+import { OlapCubeType } from '../../../../shared/models/statistics/olap/olap-cube-type.model';
+import { OlapEntityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
+import { OlapEntityStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
+import { OlapEventTypeMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-event-type-metrics.model';
+import { OlapEventTypeParameters } from '../../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
 import { OlapMeasureType } from '../../../../shared/models/statistics/olap/olap-measure-type.model';
+import { OlapSpeakerMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-speaker-metrics.model';
+import { OlapSpeakerParameters } from '../../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
 import { OlapParameters } from '../../../../shared/models/statistics/olap/parameters/olap-parameters.model';
 import { OlapStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-statistics.model';
 import { Organizer } from '../../../../shared/models/organizer/organizer.model';
-import { Speaker } from '../../../../shared/models/speaker/speaker.model';
 import { SelectedEntities } from '../../../../shared/models/common/selected-entities.model';
-import { OlapSpeakerMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-speaker-metrics.model';
-import { OlapCompanyMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-company-metrics.model';
-import { OlapEventTypeParameters } from '../../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
-import { OlapEntityStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
-import { OlapEventTypeMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-event-type-metrics.model';
-import { OlapSpeakerParameters } from '../../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
-import { OlapEntityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
-import { OlapCityParameters } from '../../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
-import { OlapCityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
-import { OlapChartType } from '../../../../shared/models/statistics/olap/olap-chart-type.model';
+import { Speaker } from '../../../../shared/models/speaker/speaker.model';
 import { EventTypeService } from '../../../../shared/services/event-type.service';
 import { EventService } from '../../../../shared/services/event.service';
 import { OrganizerService } from '../../../../shared/services/organizer.service';
@@ -37,7 +39,6 @@ import {
   getOlapEventTypeStatisticsWithSortName,
   hexToRgbA
 } from '../../../general/utility-functions';
-import { OlapChartKind } from '../../../../shared/models/statistics/olap/olap-chart-kind.model';
 import { ChartZoomInComponent } from './chart/chart-zoom-in.component';
 import { DynamicDialogChartData } from '../../../../shared/models/statistics/olap/dynamic-dialog-chart-data.model';
 import {
@@ -477,6 +478,7 @@ export class OlapStatisticsComponent implements OnInit {
           }
 
           this.fillTopicMetricsMap(olapStatistics.topicStatistics);
+          this.fillCubeMetricsMap(olapStatistics.cubeStatistics);
 
           this.olapStatistics = olapStatistics;
         }
@@ -489,6 +491,10 @@ export class OlapStatisticsComponent implements OnInit {
     olapEntityStatistics.metricsList.forEach(m => {
       this.topicMetricsMap.set(m.id, m);
     });
+  }
+
+  fillCubeMetricsMap(olapCubeStatistics: OlapCubeStatistics) {
+    // TODO: implement
   }
 
   onCubeTypeChange() {
