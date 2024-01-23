@@ -54,7 +54,24 @@ public class Olap3dCubeStatisticsDto {
                                 List.of(new Olap3dCubeMeasureValueDto(0, List.of(0L, 0L, 1L, 1L, 1L, 1L, 1L, 1L, 0L, 0L, 1L, 1L)),
                                         new Olap3dCubeMeasureValueDto(2, List.of(0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 2L, 2L, 2L)),
                                         new Olap3dCubeMeasureValueDto(3, List.of(0L, 0L, 1L, 1L, 1L, 1L, 1L, 1L, 0L, 0L, 1L)),
-                                        new Olap3dCubeMeasureValueDto(4, List.of(0L, 0L, 0L, 0L, 1L))))
+                                        new Olap3dCubeMeasureValueDto(4, List.of(0L, 0L, 0L, 0L, 1L)))),
+                        new Olap3dCubeMetricsDto(3, "Heisenbug", List.of()),
+                        new Olap3dCubeMetricsDto(4, "HolyJS", List.of()),
+                        new Olap3dCubeMetricsDto(5, "Hydra", List.of()),
+                        new Olap3dCubeMetricsDto(6, "JBreak", List.of()),
+                        new Olap3dCubeMetricsDto(7, "JPoint", List.of()),
+                        new Olap3dCubeMetricsDto(8, "Joker", List.of()),
+                        new Olap3dCubeMetricsDto(9, "Mobius", List.of()),
+                        new Olap3dCubeMetricsDto(10, "SPTDC", List.of()),
+                        new Olap3dCubeMetricsDto(11, "SmartData", List.of()),
+                        new Olap3dCubeMetricsDto(12, "TechTrain", List.of()),
+                        new Olap3dCubeMetricsDto(13, "JUG.MSK", List.of()),
+                        new Olap3dCubeMetricsDto(14, "JUG.ru", List.of()),
+                        new Olap3dCubeMetricsDto(15, "JUGNsk", List.of()),
+                        new Olap3dCubeMetricsDto(16, "SnowOne", List.of()),
+                        new Olap3dCubeMetricsDto(17, "VideoTech", List.of()),
+                        new Olap3dCubeMetricsDto(18, "PiterPy", List.of()),
+                        new Olap3dCubeMetricsDto(19, "Flow", List.of())
                 )
         );
     }
