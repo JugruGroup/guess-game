@@ -1,4 +1,4 @@
-package guess.dto.statistics;
+package guess.dto.statistics.speaker;
 
 import guess.domain.Language;
 import guess.domain.statistics.speaker.SpeakerStatistics;

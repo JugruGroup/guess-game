@@ -3,7 +3,7 @@ package guess.dto.statistics.olap.metrics;
 import guess.domain.Language;
 import guess.domain.source.Speaker;
 import guess.domain.statistics.olap.OlapEntityMetrics;
-import guess.dto.statistics.SpeakerMetricsDtoDegrees;
+import guess.dto.statistics.speaker.SpeakerMetricsDegreesDto;
 import guess.util.LocalizationUtils;
 
 import java.util.List;
@@ -15,9 +15,9 @@ import java.util.Set;
  */
 public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
     private final String photoFileName;
-    private final SpeakerMetricsDtoDegrees degrees;
+    private final SpeakerMetricsDegreesDto degrees;
 
-    public OlapSpeakerMetricsDto(long id, String name, String photoFileName, SpeakerMetricsDtoDegrees degrees,
+    public OlapSpeakerMetricsDto(long id, String name, String photoFileName, SpeakerMetricsDegreesDto degrees,
                                  List<Long> measureValues, List<Long> cumulativeMeasureValues, Long total) {
         super(id, name, measureValues, cumulativeMeasureValues, total);
 
@@ -53,7 +53,7 @@ public class OlapSpeakerMetricsDto extends OlapEntityMetricsDto {
                 speaker.getId(),
                 name,
                 speaker.getPhotoFileName(),
-                new SpeakerMetricsDtoDegrees(
+                new SpeakerMetricsDegreesDto(
                         speaker.isJavaChampion(),
                         speaker.isMvp(),
                         speaker.isMvpReconnect(),

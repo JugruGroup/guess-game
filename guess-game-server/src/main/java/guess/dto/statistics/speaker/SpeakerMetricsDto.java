@@ -1,4 +1,4 @@
-package guess.dto.statistics;
+package guess.dto.statistics.speaker;
 
 import guess.domain.Language;
 import guess.domain.source.Speaker;
@@ -17,9 +17,9 @@ public class SpeakerMetricsDto extends AbstractSpeakerCompanyMetrics {
     private final long id;
     private final String name;
     private final String photoFileName;
-    private final SpeakerMetricsDtoDegrees degrees;
+    private final SpeakerMetricsDegreesDto degrees;
 
-    public SpeakerMetricsDto(long id, String name, String photoFileName, SpeakerMetricsDtoDegrees degrees, AbstractSpeakerCompanyMetrics speakerMetrics) {
+    public SpeakerMetricsDto(long id, String name, String photoFileName, SpeakerMetricsDegreesDto degrees, AbstractSpeakerCompanyMetrics speakerMetrics) {
         super(speakerMetrics.getTalksQuantity(), speakerMetrics.getEventsQuantity(), speakerMetrics.getEventTypesQuantity(),
                 speakerMetrics.getJavaChampionsQuantity(), speakerMetrics.getMvpsQuantity());
 
@@ -65,7 +65,7 @@ public class SpeakerMetricsDto extends AbstractSpeakerCompanyMetrics {
                 speaker.getId(),
                 name,
                 speaker.getPhotoFileName(),
-                new SpeakerMetricsDtoDegrees(
+                new SpeakerMetricsDegreesDto(
                         speaker.isJavaChampion(),
                         speaker.isMvp(),
                         speaker.isMvpReconnect(),

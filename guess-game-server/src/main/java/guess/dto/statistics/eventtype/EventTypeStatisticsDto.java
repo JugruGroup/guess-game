@@ -1,4 +1,4 @@
-package guess.dto.statistics;
+package guess.dto.statistics.eventtype;
 
 import guess.domain.Language;
 import guess.domain.statistics.eventtype.EventTypeStatistics;

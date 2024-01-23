@@ -1,12 +1,12 @@
-package guess.dto.statistics;
+package guess.dto.statistics.speaker;
 
-public class SpeakerMetricsDtoDegrees {
+public class SpeakerMetricsDegreesDto {
     private final boolean javaChampion;
     private final boolean mvp;
     private final boolean mvpReconnect;
     private final boolean anyMvp;
 
-    public SpeakerMetricsDtoDegrees(boolean javaChampion, boolean mvp, boolean mvpReconnect, boolean anyMvp) {
+    public SpeakerMetricsDegreesDto(boolean javaChampion, boolean mvp, boolean mvpReconnect, boolean anyMvp) {
         this.javaChampion = javaChampion;
         this.mvp = mvp;
         this.mvpReconnect = mvpReconnect;
