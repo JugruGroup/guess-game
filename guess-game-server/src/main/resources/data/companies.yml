@@ -4299,7 +4299,7 @@ companies:
   - id: 1200
     name:
       - {language: en, text: AIT}
-    siteLink: https://www.ait.ru
+    siteLink: https://altinntech.com
   - id: 1201
     name:
       - {language: en, text: Altel}
