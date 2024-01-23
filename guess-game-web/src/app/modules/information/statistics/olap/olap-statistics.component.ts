@@ -48,6 +48,7 @@ import {
   ThreeDimensionsCubeOptions
 } from '../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-options.model';
 import { ThreeDimensionsZoomInComponent } from './three-dimensions/three-dimensions-zoom-in.component';
+import { Olap3dCubeMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-3d-cube-metrics.model';
 
 @Component({
   selector: 'app-olap-statistics',
@@ -173,6 +174,7 @@ export class OlapStatisticsComponent implements OnInit {
   public chartPlugins = [ChartDataLabels];
 
   private topicMetricsMap = new Map<number, OlapEntityMetrics>();
+  private cubeMetricsMap = new Map<number, Olap3dCubeMetrics>();
 
   private zoomInDialogRef: DynamicDialogRef;
   public zoomInDialogClosed: boolean = true;
@@ -493,8 +495,12 @@ export class OlapStatisticsComponent implements OnInit {
     });
   }
 
-  fillCubeMetricsMap(olapCubeStatistics: Olap3dCubeStatistics) {
-    // TODO: implement
+  fillCubeMetricsMap(olap3dCubeStatistics: Olap3dCubeStatistics) {
+    this.cubeMetricsMap.clear();
+
+    olap3dCubeStatistics.metricsList.forEach(m => {
+      this.cubeMetricsMap.set(m.id, m);
+    });
   }
 
   onCubeTypeChange() {
