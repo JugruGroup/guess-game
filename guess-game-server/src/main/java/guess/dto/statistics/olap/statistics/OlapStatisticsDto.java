@@ -14,7 +14,7 @@ public record OlapStatisticsDto(OlapEventTypeStatisticsDto eventTypeStatistics,
                                 OlapSpeakerStatisticsDto speakerStatistics,
                                 OlapCompanyStatisticsDto companyStatistics,
                                 OlapTopicStatisticsDto topicStatistics,
-                                OlapCubeStatisticsDto cubeStatistics) {
+                                Olap3dCubeStatisticsDto cubeStatistics) {
     public static OlapStatisticsDto convertToDto(OlapStatistics olapStatistics, Language language) {
         OlapEntityStatistics<Integer, EventType> eventTypeStatistics = olapStatistics.yearEventTypeStatistics();
         OlapEntityStatistics<Integer, Speaker> speakerStatistics = olapStatistics.yearSpeakerStatistics();
@@ -25,6 +25,6 @@ public record OlapStatisticsDto(OlapEventTypeStatisticsDto eventTypeStatistics,
                 (speakerStatistics != null) ? OlapSpeakerStatisticsDto.convertToDto(speakerStatistics, language) : null,
                 (companyStatistics != null) ? OlapCompanyStatisticsDto.convertToDto(companyStatistics, language) : null,
                 OlapTopicStatisticsDto.convertToDto(olapStatistics, language),
-                OlapCubeStatisticsDto.convertToDto(olapStatistics, language));
+                Olap3dCubeStatisticsDto.convertToDto(olapStatistics, language));
     }
 }

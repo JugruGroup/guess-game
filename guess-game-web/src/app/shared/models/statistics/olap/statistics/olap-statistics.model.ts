@@ -1,5 +1,5 @@
 import { OlapCompanyMetrics } from '../metrics/olap-company-metrics.model';
-import { OlapCubeStatistics } from './olap-cube-statistics.model';
+import { Olap3dCubeStatistics } from './olap-3d-cube-statistics.model';
 import { OlapEntityMetrics } from '../metrics/olap-entity-metrics.model';
 import { OlapEntityStatistics } from './olap-entity-statistics.model';
 import { OlapEventTypeMetrics } from '../metrics/olap-event-type-metrics.model';
@@ -11,7 +11,7 @@ export class OlapStatistics {
     public speakerStatistics?: OlapEntityStatistics<number, OlapSpeakerMetrics>,
     public companyStatistics?: OlapEntityStatistics<number, OlapCompanyMetrics>,
     public topicStatistics?: OlapEntityStatistics<string, OlapEntityMetrics>,
-    public cubeStatistics?: OlapCubeStatistics
+    public cubeStatistics?: Olap3dCubeStatistics
   ) {
   }
 }

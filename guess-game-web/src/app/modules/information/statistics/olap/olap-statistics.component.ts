@@ -11,7 +11,7 @@ import { OlapChartType } from '../../../../shared/models/statistics/olap/olap-ch
 import { OlapCityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
 import { OlapCityParameters } from '../../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
 import { OlapCompanyMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-company-metrics.model';
-import { OlapCubeStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-cube-statistics.model';
+import { Olap3dCubeStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-3d-cube-statistics.model';
 import { OlapCubeType } from '../../../../shared/models/statistics/olap/olap-cube-type.model';
 import { OlapEntityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
 import { OlapEntityStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
@@ -493,7 +493,7 @@ export class OlapStatisticsComponent implements OnInit {
     });
   }
 
-  fillCubeMetricsMap(olapCubeStatistics: OlapCubeStatistics) {
+  fillCubeMetricsMap(olapCubeStatistics: Olap3dCubeStatistics) {
     // TODO: implement
   }
 
