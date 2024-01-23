@@ -32,8 +32,8 @@ topics:
     orderNumber: 6
   - id: 7
     name:
-      - {language: en, text: "Testing"}
-      - {language: ru, text: "Тестирование"}
+      - {language: en, text: "QA / Testing"}
+      - {language: ru, text: "QA / Тестирование"}
     orderNumber: 7
   - id: 8
     name:
@@ -46,8 +46,8 @@ topics:
     orderNumber: 9
   - id: 10
     name:
-      - {language: en, text: "Distributed computing"}
-      - {language: ru, text: "Распределённые вычисления"}
+      - {language: en, text: "Concurrent and distributed computing"}
+      - {language: ru, text: "Параллельные и распределённые вычисления"}
     orderNumber: 10
   - id: 11
     name:
