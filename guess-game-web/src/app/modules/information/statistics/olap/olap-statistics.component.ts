@@ -49,6 +49,9 @@ import {
 } from '../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-options.model';
 import { ThreeDimensionsZoomInComponent } from './three-dimensions/three-dimensions-zoom-in.component';
 import { Olap3dCubeMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-3d-cube-metrics.model';
+import {
+  ThreeDimensionsCubeDataset
+} from "../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-dataset.model";
 
 @Component({
   selector: 'app-olap-statistics',
@@ -480,7 +483,7 @@ export class OlapStatisticsComponent implements OnInit {
           }
 
           this.fillTopicMetricsMap(olapStatistics.topicStatistics);
-          this.fillCubeMetricsMap(olapStatistics.cubeStatistics);
+          this.fill3dCubeMetricsMap(olapStatistics.cubeStatistics);
 
           this.olapStatistics = olapStatistics;
         }
@@ -490,17 +493,13 @@ export class OlapStatisticsComponent implements OnInit {
   fillTopicMetricsMap(olapEntityStatistics: OlapEntityStatistics<string, OlapEntityMetrics>) {
     this.topicMetricsMap.clear();
 
-    olapEntityStatistics.metricsList.forEach(m => {
-      this.topicMetricsMap.set(m.id, m);
-    });
+    olapEntityStatistics.metricsList.forEach(m => this.topicMetricsMap.set(m.id, m));
   }
 
-  fillCubeMetricsMap(olap3dCubeStatistics: Olap3dCubeStatistics) {
+  fill3dCubeMetricsMap(olap3dCubeStatistics: Olap3dCubeStatistics) {
     this.cubeMetricsMap.clear();
 
-    olap3dCubeStatistics.metricsList.forEach(m => {
-      this.cubeMetricsMap.set(m.id, m);
-    });
+    olap3dCubeStatistics.metricsList.forEach(m => this.cubeMetricsMap.set(m.id, m));
   }
 
   onCubeTypeChange() {
@@ -977,6 +976,45 @@ export class OlapStatisticsComponent implements OnInit {
       );
   }
 
+  getUsedDimensionIds(metricsList: Olap3dCubeMetrics[]): Set<number> {
+    const result = new Set<number>();
+
+    for (let metrics of metricsList) {
+      for (let measureValue of metrics.measureValueList) {
+        result.add(measureValue.dimensionId);
+      }
+    }
+
+    return result;
+  }
+
+  load3dCubeChartData(olap3dCubeStatistics: Olap3dCubeStatistics, sortedMetricsList: OlapEntityMetrics[], quantity: number) {
+    const metricsList = (quantity <= 0) ? sortedMetricsList : sortedMetricsList.slice(0, quantity);
+    const cubeMetricsList = metricsList.map(value => this.cubeMetricsMap.get(value.id));
+    const labelsX = olap3dCubeStatistics.dimensionValues1.map(value => value.toString());
+    const usedDimensionIds = this.getUsedDimensionIds(cubeMetricsList);
+    const filteredDimensionValues2 = olap3dCubeStatistics.dimensionValues2
+      .filter((element, index) => usedDimensionIds.has(index));
+    const labelsY = filteredDimensionValues2.map(value => value.name);
+
+    const datasets = cubeMetricsList
+      .map((value, index) => {
+        const data = [];
+        const map = new Map<number, number[]>();
+
+        value.measureValueList.forEach(m => map.set(m.dimensionId, m.measureValues));
+        filteredDimensionValues2.forEach(v => data.push(map.get(v.id)));
+
+        return new ThreeDimensionsCubeDataset(
+          value.name,
+          getColorByIndex(index),
+          data
+        );
+      });
+
+    this.cubeData = new ThreeDimensionsCubeData(labelsX, labelsY, datasets);
+  }
+
   onResize = (): void => {
     this.fillChartOptions();
   }
@@ -1050,6 +1088,7 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
+    this.load3dCubeChartData(this.olapStatistics.cubeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
   }
 
   sortSpeakerStatistics(value) {
@@ -1057,6 +1096,7 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
+    this.load3dCubeChartData(this.olapStatistics.cubeStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
   }
 
   sortCompanyStatistics(value) {
@@ -1064,6 +1104,7 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
+    this.load3dCubeChartData(this.olapStatistics.cubeStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
   }
 
   zoomInChart() {

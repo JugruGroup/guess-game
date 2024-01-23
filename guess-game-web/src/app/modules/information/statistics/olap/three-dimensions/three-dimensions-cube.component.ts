@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, Input, OnChanges, SimpleChange, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 // import { OrbitControlsComponent, RendererCanvasComponent } from 'atft';
 import {
   ThreeDimensionsCubeDataset
@@ -318,5 +318,13 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
 
   deg2rad(degrees: number) {
     return (degrees / 180) * Math.PI;
+  }
+
+  stringifyDatasets(datasets: ThreeDimensionsCubeDataset[]): string {
+    let result = '';
+
+    datasets.forEach(d => result += (JSON.stringify(d) + ', '));
+
+    return result;
   }
 }
