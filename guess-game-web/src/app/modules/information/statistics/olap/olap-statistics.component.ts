@@ -454,6 +454,8 @@ export class OlapStatisticsComponent implements OnInit {
       .subscribe(data => {
           const olapStatistics = data;
 
+          fixOlapEntityStatistics(olapStatistics.topicStatistics, null);
+
           if (olapStatistics?.eventTypeStatistics) {
             olapStatistics.eventTypeStatistics = getOlapEventTypeStatisticsWithSortName(olapStatistics.eventTypeStatistics);
             fixOlapEntityStatistics(olapStatistics.eventTypeStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX);

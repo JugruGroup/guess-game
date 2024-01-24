@@ -280,14 +280,14 @@ export function getTalksWithMaterialsOrderNumber(talks: Talk[]): Talk[] {
 export function getFixedMeasureValues(measureValues: number[], quantity: number): number[] {
   if (measureValues) {
     if (measureValues.length < quantity) {
-      return measureValues.concat(Array(quantity - measureValues.length).fill(null))
+      return measureValues.concat(Array(quantity - measureValues.length).fill(0))
     } else if (measureValues.length > quantity) {
       return measureValues.slice(0, quantity);
     } else {
       return measureValues;
     }
   } else {
-    return Array(quantity).fill(null);
+    return Array(quantity).fill(0);
   }
 }
 
@@ -299,8 +299,10 @@ export function fixOlapEntityStatistics<T, S extends OlapEntityMetrics>(entitySt
     metrics.measureValues = getFixedMeasureValues(metrics.measureValues, quantity);
     metrics.cumulativeMeasureValues = getFixedMeasureValues(metrics.cumulativeMeasureValues, quantity);
 
-    for (let i = 0; i < metrics.measureValues.length; i++) {
-      metrics[measureValueFieldNamePrefix + i] = metrics.measureValues[i];
+    if (measureValueFieldNamePrefix) {
+      for (let i = 0; i < metrics.measureValues.length; i++) {
+        metrics[measureValueFieldNamePrefix + i] = metrics.measureValues[i];
+      }
     }
   });
 

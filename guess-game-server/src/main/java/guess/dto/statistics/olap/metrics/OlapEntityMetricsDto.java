@@ -1,6 +1,7 @@
 package guess.dto.statistics.olap.metrics;
 
 import guess.domain.statistics.olap.OlapEntityMetrics;
+import guess.util.OlapUtils;
 
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public class OlapEntityMetricsDto {
     public OlapEntityMetricsDto(long id, String name, List<Long> measureValues, List<Long> cumulativeMeasureValues, Long total) {
         this.id = id;
         this.name = name;
-        this.measureValues = measureValues;
+        this.measureValues = OlapUtils.removeTrailingZeroes(measureValues);
         this.cumulativeMeasureValues = cumulativeMeasureValues;
         this.total = total;
     }
