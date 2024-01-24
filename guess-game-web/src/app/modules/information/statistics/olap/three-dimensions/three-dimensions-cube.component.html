@@ -51,7 +51,12 @@
       labelsY: {{data.labelsY}}
     </li>
     <li>
-      datasets: {{stringifyDatasets(data.datasets)}}
+      datasets:
+      <ul>
+        <li *ngFor="let dataset of data.datasets">
+          label: {{dataset.label}} color: {{dataset.color}} data: {{stringifyData(dataset.data)}}
+        </li>
+      </ul>
     </li>
   </ul>
 

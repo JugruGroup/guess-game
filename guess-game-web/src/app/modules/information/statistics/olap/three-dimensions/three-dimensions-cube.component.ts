@@ -320,11 +320,7 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
     return (degrees / 180) * Math.PI;
   }
 
-  stringifyDatasets(datasets: ThreeDimensionsCubeDataset[]): string {
-    let result = '';
-
-    datasets.forEach(d => result += (JSON.stringify(d) + ', '));
-
-    return result;
+  stringifyData(data: number[][]): string {
+    return JSON.stringify(data);
   }
 }
