@@ -1000,10 +1000,10 @@ export class OlapStatisticsComponent implements OnInit {
     const datasets = cubeMetricsList
       .map((value, index) => {
         const data = [];
-        const map = new Map<number, number[]>();
+        const measureValuesMap = new Map<number, number[]>();
 
-        value.measureValueList.forEach(m => map.set(m.dimensionId, m.measureValues));
-        filteredDimensionValues2.forEach(v => data.push(map.get(v.id)));
+        value.measureValueList.forEach(m => measureValuesMap.set(m.dimensionId, m.measureValues));
+        filteredDimensionValues2.forEach(v => data.push(measureValuesMap.get(v.id)));
 
         return new ThreeDimensionsCubeDataset(
           value.name,
