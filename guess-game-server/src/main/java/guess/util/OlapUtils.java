@@ -13,7 +13,7 @@ public class OlapUtils {
     public static List<Long> removeTrailingZeroes(List<Long> source) {
         List<Long> result = new ArrayList<>(source);
 
-        while ((result.size() > 0) && (result.get(result.size() - 1) == 0)) {
+        while (!result.isEmpty() && (result.get(result.size() - 1) == 0)) {
             result.remove(result.size() - 1);
         }
 
