@@ -3,11 +3,13 @@ package guess.dto.statistics.olap.statistics;
 import guess.domain.Language;
 import guess.domain.source.Nameable;
 import guess.domain.source.Topic;
+import guess.domain.statistics.olap.OlapEntityMetrics;
 import guess.domain.statistics.olap.OlapEntityStatistics;
 import guess.domain.statistics.olap.OlapStatistics;
 import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;
 import guess.util.LocalizationUtils;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -40,13 +42,17 @@ public class OlapTopicStatisticsDto extends OlapEntityStatisticsDto<String, Olap
                         m.entity().getId(),
                         LocalizationUtils.getString(m.entity().getName(), language),
                         m.measureValues(),
-                        m.cumulativeMeasureValues(),
+                        Collections.emptyList(),
                         m.total()))
                 .toList();
+
+        OlapEntityMetrics<Void> totals = statistics.getTotals();
+        OlapEntityMetrics<Void> totalsWithEmptyCumulativeMeasureValues = new OlapEntityMetrics<>(
+                totals.entity(), totals.measureValues(), Collections.emptyList(), totals.total());
 
         return new OlapTopicStatisticsDto(
                 dimensionValues,
                 metricsList,
-                OlapEntityMetricsDto.convertToDto(statistics.getTotals()));
+                OlapEntityMetricsDto.convertToDto(totalsWithEmptyCumulativeMeasureValues));
     }
 }

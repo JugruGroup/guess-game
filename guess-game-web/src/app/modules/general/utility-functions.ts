@@ -292,12 +292,16 @@ export function getFixedMeasureValues(measureValues: number[], quantity: number)
 }
 
 export function fixOlapEntityStatistics<T, S extends OlapEntityMetrics>(entityStatistics: OlapEntityStatistics<T, S>,
-                                                                        measureValueFieldNamePrefix: string) {
+                                                                        measureValueFieldNamePrefix: string,
+                                                                        fixCumulative: boolean = true) {
   const quantity = entityStatistics.dimensionValues.length;
 
   entityStatistics.metricsList.forEach(metrics => {
     metrics.measureValues = getFixedMeasureValues(metrics.measureValues, quantity);
-    metrics.cumulativeMeasureValues = getFixedMeasureValues(metrics.cumulativeMeasureValues, quantity);
+
+    if (fixCumulative) {
+      metrics.cumulativeMeasureValues = getFixedMeasureValues(metrics.cumulativeMeasureValues, quantity);
+    }
 
     if (measureValueFieldNamePrefix) {
       for (let i = 0; i < metrics.measureValues.length; i++) {
@@ -307,7 +311,10 @@ export function fixOlapEntityStatistics<T, S extends OlapEntityMetrics>(entitySt
   });
 
   entityStatistics.totals.measureValues = getFixedMeasureValues(entityStatistics.totals.measureValues, quantity);
-  entityStatistics.totals.cumulativeMeasureValues = getFixedMeasureValues(entityStatistics.totals.cumulativeMeasureValues, quantity);
+
+  if (fixCumulative) {
+    entityStatistics.totals.cumulativeMeasureValues = getFixedMeasureValues(entityStatistics.totals.cumulativeMeasureValues, quantity);
+  }
 }
 
 export function getColorByIndex(index: number): string {

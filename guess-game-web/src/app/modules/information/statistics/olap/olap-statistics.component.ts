@@ -454,8 +454,6 @@ export class OlapStatisticsComponent implements OnInit {
       .subscribe(data => {
           const olapStatistics = data;
 
-          fixOlapEntityStatistics(olapStatistics.topicStatistics, null);
-
           if (olapStatistics?.eventTypeStatistics) {
             olapStatistics.eventTypeStatistics = getOlapEventTypeStatisticsWithSortName(olapStatistics.eventTypeStatistics);
             fixOlapEntityStatistics(olapStatistics.eventTypeStatistics, this.MEASURE_VALUE_FIELD_NAME_PREFIX);
@@ -463,7 +461,6 @@ export class OlapStatisticsComponent implements OnInit {
 
             this.loadLineChartTotalData(olapStatistics.eventTypeStatistics);
             this.loadLineChartWithCumulativeTotalData(olapStatistics.eventTypeStatistics);
-            this.loadRadarChartTotalData(olapStatistics.topicStatistics);
           }
 
           if (olapStatistics?.speakerStatistics) {
@@ -472,7 +469,6 @@ export class OlapStatisticsComponent implements OnInit {
 
             this.loadLineChartTotalData(olapStatistics.speakerStatistics);
             this.loadLineChartWithCumulativeTotalData(olapStatistics.speakerStatistics);
-            this.loadRadarChartTotalData(olapStatistics.topicStatistics);
           }
 
           if (olapStatistics?.companyStatistics) {
@@ -481,6 +477,10 @@ export class OlapStatisticsComponent implements OnInit {
 
             this.loadLineChartTotalData(olapStatistics.companyStatistics);
             this.loadLineChartWithCumulativeTotalData(olapStatistics.companyStatistics);
+          }
+
+          if (olapStatistics?.topicStatistics) {
+            fixOlapEntityStatistics(olapStatistics.topicStatistics, null, false);
             this.loadRadarChartTotalData(olapStatistics.topicStatistics);
           }
 
