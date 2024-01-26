@@ -1,4 +1,4 @@
-package guess.domain.statistics.olap;
+package guess.domain.statistics.olap.statistics;
 
 import guess.domain.source.Company;
 import guess.domain.source.EventType;

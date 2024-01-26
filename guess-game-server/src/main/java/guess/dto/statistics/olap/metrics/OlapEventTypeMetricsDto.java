@@ -2,7 +2,7 @@ package guess.dto.statistics.olap.metrics;
 
 import guess.domain.Language;
 import guess.domain.source.EventType;
-import guess.domain.statistics.olap.OlapEntityMetrics;
+import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
 import guess.util.LocalizationUtils;
 
 import java.util.List;

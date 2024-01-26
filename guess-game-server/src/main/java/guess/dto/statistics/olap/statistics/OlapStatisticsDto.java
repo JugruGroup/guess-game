@@ -4,8 +4,8 @@ import guess.domain.Language;
 import guess.domain.source.Company;
 import guess.domain.source.EventType;
 import guess.domain.source.Speaker;
-import guess.domain.statistics.olap.OlapEntityStatistics;
-import guess.domain.statistics.olap.OlapStatistics;
+import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
+import guess.domain.statistics.olap.statistics.OlapStatistics;
 
 /**
  * OLAP statistics DTO.

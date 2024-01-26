@@ -3,9 +3,9 @@ package guess.dto.statistics.olap.statistics;
 import guess.domain.Language;
 import guess.domain.source.Nameable;
 import guess.domain.source.Topic;
-import guess.domain.statistics.olap.OlapEntityMetrics;
-import guess.domain.statistics.olap.OlapEntityStatistics;
-import guess.domain.statistics.olap.OlapStatistics;
+import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
+import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
+import guess.domain.statistics.olap.statistics.OlapStatistics;
 import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;
 import guess.util.LocalizationUtils;
 

@@ -1,7 +1,7 @@
 package guess.dto.statistics.olap.statistics;
 
 import guess.domain.Language;
-import guess.domain.statistics.olap.OlapStatistics;
+import guess.domain.statistics.olap.statistics.OlapStatistics;
 import guess.dto.statistics.olap.Olap3dCubeDimensionDto;
 import guess.dto.statistics.olap.Olap3dCubeMeasureValueDto;
 import guess.dto.statistics.olap.metrics.Olap3dCubeMetricsDto;
@@ -11,29 +11,8 @@ import java.util.List;
 /**
  * OLAP 3D cube statistics DTO.
  */
-public class Olap3dCubeStatisticsDto {
-    private final List<Integer> dimensionValues1;
-    private final List<Olap3dCubeDimensionDto> dimensionValues2;
-    private final List<Olap3dCubeMetricsDto> metricsList;
-
-    public Olap3dCubeStatisticsDto(List<Integer> dimensionValues1, List<Olap3dCubeDimensionDto> dimensionValues2,
-                                   List<Olap3dCubeMetricsDto> metricsList) {
-        this.dimensionValues1 = dimensionValues1;
-        this.dimensionValues2 = dimensionValues2;
-        this.metricsList = metricsList;
-    }
-
-    public List<Integer> getDimensionValues1() {
-        return dimensionValues1;
-    }
-
-    public List<Olap3dCubeDimensionDto> getDimensionValues2() {
-        return dimensionValues2;
-    }
-
-    public List<Olap3dCubeMetricsDto> getMetricsList() {
-        return metricsList;
-    }
+public record Olap3dCubeStatisticsDto(List<Integer> dimensionValues1, List<Olap3dCubeDimensionDto> dimensionValues2,
+                                      List<Olap3dCubeMetricsDto> metricsList) {
 
     public static Olap3dCubeStatisticsDto convertToDto(OlapStatistics olapStatistics, Language language) {
         //TODO: implement

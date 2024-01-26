@@ -1,4 +1,4 @@
-package guess.domain.statistics.olap;
+package guess.domain.statistics.olap.metrics;
 
 import java.util.List;
 
