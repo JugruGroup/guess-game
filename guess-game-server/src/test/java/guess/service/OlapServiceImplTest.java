@@ -396,19 +396,19 @@ class OlapServiceImplTest {
             OlapEntityStatistics<Topic, Company> topicCompanyStatistics2 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList11, topicTotals11);
             OlapEntityStatistics<Topic, Company> topicCompanyStatistics3 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList12, topicTotals12);
 
-            OlapStatistics expected0 = new OlapStatistics(yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null);
-            OlapStatistics expected1 = new OlapStatistics(null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null);
-            OlapStatistics expected2 = new OlapStatistics(null, null, yearCompanyStatistics0, null, null, topicCompanyStatistics0);
-            OlapStatistics expected3 = new OlapStatistics(yearEventTypeStatistics1, null, null, topicEventTypeStatistics1, null, null);
-            OlapStatistics expected4 = new OlapStatistics(yearEventTypeStatistics2, null, null, topicEventTypeStatistics2, null, null);
-            OlapStatistics expected5 = new OlapStatistics(yearEventTypeStatistics3, null, null, topicEventTypeStatistics3, null, null);
-            OlapStatistics expected6 = new OlapStatistics(yearEventTypeStatistics4, null, null, topicEventTypeStatistics4, null, null);
-            OlapStatistics expected7 = new OlapStatistics(null, yearSpeakerStatistics1, null, null, topicSpeakerStatistics1, null);
-            OlapStatistics expected8 = new OlapStatistics(null, yearSpeakerStatistics2, null, null, topicSpeakerStatistics2, null);
-            OlapStatistics expected9 = new OlapStatistics(null, yearSpeakerStatistics3, null, null, topicSpeakerStatistics3, null);
-            OlapStatistics expected10 = new OlapStatistics(null, null, yearCompanyStatistics1, null, null, topicCompanyStatistics1);
-            OlapStatistics expected11 = new OlapStatistics(null, null, yearCompanyStatistics2, null, null, topicCompanyStatistics2);
-            OlapStatistics expected12 = new OlapStatistics(null, null, yearCompanyStatistics3, null, null, topicCompanyStatistics3);
+            OlapStatistics expected0 = new OlapStatistics(yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null, null);
+            OlapStatistics expected1 = new OlapStatistics(null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null, null);
+            OlapStatistics expected2 = new OlapStatistics(null, null, yearCompanyStatistics0, null, null, topicCompanyStatistics0, null);
+            OlapStatistics expected3 = new OlapStatistics(yearEventTypeStatistics1, null, null, topicEventTypeStatistics1, null, null, null);
+            OlapStatistics expected4 = new OlapStatistics(yearEventTypeStatistics2, null, null, topicEventTypeStatistics2, null, null, null);
+            OlapStatistics expected5 = new OlapStatistics(yearEventTypeStatistics3, null, null, topicEventTypeStatistics3, null, null, null);
+            OlapStatistics expected6 = new OlapStatistics(yearEventTypeStatistics4, null, null, topicEventTypeStatistics4, null, null, null);
+            OlapStatistics expected7 = new OlapStatistics(null, yearSpeakerStatistics1, null, null, topicSpeakerStatistics1, null, null);
+            OlapStatistics expected8 = new OlapStatistics(null, yearSpeakerStatistics2, null, null, topicSpeakerStatistics2, null, null);
+            OlapStatistics expected9 = new OlapStatistics(null, yearSpeakerStatistics3, null, null, topicSpeakerStatistics3, null, null);
+            OlapStatistics expected10 = new OlapStatistics(null, null, yearCompanyStatistics1, null, null, topicCompanyStatistics1, null);
+            OlapStatistics expected11 = new OlapStatistics(null, null, yearCompanyStatistics2, null, null, topicCompanyStatistics2, null);
+            OlapStatistics expected12 = new OlapStatistics(null, null, yearCompanyStatistics3, null, null, topicCompanyStatistics3, null);
 
             OlapParametersDto op0 = new OlapParametersDto();
             op0.setCubeType(CubeType.EVENT_TYPES);

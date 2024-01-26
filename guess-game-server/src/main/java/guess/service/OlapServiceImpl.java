@@ -80,7 +80,7 @@ public class OlapServiceImpl implements OlapService {
         }
 
         return new OlapStatistics(yearEventTypeStatistics, yearSpeakerStatistics, yearCompanyStatistics,
-                topicEventTypeStatistics, topicSpeakerStatistics, topicCompanyStatistics);
+                topicEventTypeStatistics, topicSpeakerStatistics, topicCompanyStatistics, null);
     }
 
     @Override
