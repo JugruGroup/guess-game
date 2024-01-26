@@ -485,7 +485,7 @@ export class OlapStatisticsComponent implements OnInit {
           }
 
           this.fillTopicMetricsMap(olapStatistics.topicStatistics);
-          this.fill3dCubeMetricsMap(olapStatistics.cubeStatistics);
+          this.fill3dCubeMetricsMap(olapStatistics.threeDimensionsStatistics);
 
           this.olapStatistics = olapStatistics;
         }
@@ -1090,7 +1090,7 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.eventTypeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
-    this.load3dCubeChartData(this.olapStatistics.cubeStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
+    this.load3dCubeChartData(this.olapStatistics.threeDimensionsStatistics, value, this.EVENT_TYPE_CHART_DATASET_QUANTITY);
   }
 
   sortSpeakerStatistics(value) {
@@ -1098,7 +1098,7 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.speakerStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
-    this.load3dCubeChartData(this.olapStatistics.cubeStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
+    this.load3dCubeChartData(this.olapStatistics.threeDimensionsStatistics, value, this.SPEAKER_CHART_DATASET_QUANTITY);
   }
 
   sortCompanyStatistics(value) {
@@ -1106,7 +1106,7 @@ export class OlapStatisticsComponent implements OnInit {
     this.loadLineChartWithCumulativeDetailsData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadPieChartData(this.olapStatistics.companyStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
     this.loadRadarChartDetailsData(this.olapStatistics.topicStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
-    this.load3dCubeChartData(this.olapStatistics.cubeStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
+    this.load3dCubeChartData(this.olapStatistics.threeDimensionsStatistics, value, this.COMPANY_CHART_DATASET_QUANTITY);
   }
 
   zoomInChart() {

@@ -14,7 +14,7 @@ public record OlapStatisticsDto(OlapEventTypeStatisticsDto eventTypeStatistics,
                                 OlapSpeakerStatisticsDto speakerStatistics,
                                 OlapCompanyStatisticsDto companyStatistics,
                                 OlapTopicStatisticsDto topicStatistics,
-                                Olap3dCubeStatisticsDto cubeStatistics) {
+                                Olap3dCubeStatisticsDto threeDimensionsStatistics) {
     public static OlapStatisticsDto convertToDto(OlapStatistics olapStatistics, Language language) {
         OlapEntityStatistics<Integer, EventType> eventTypeStatistics = olapStatistics.yearEventTypeStatistics();
         OlapEntityStatistics<Integer, Speaker> speakerStatistics = olapStatistics.yearSpeakerStatistics();

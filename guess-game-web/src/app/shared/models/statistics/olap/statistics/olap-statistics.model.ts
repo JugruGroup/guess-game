@@ -11,7 +11,7 @@ export class OlapStatistics {
     public speakerStatistics?: OlapEntityStatistics<number, OlapSpeakerMetrics>,
     public companyStatistics?: OlapEntityStatistics<number, OlapCompanyMetrics>,
     public topicStatistics?: OlapEntityStatistics<string, OlapEntityMetrics>,
-    public cubeStatistics?: Olap3dCubeStatistics
+    public threeDimensionsStatistics?: Olap3dCubeStatistics
   ) {
   }
 }
