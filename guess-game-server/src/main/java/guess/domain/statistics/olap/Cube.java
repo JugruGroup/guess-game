@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
  * OLAP cube.
  */
 public class Cube {
-    private record MeasureMaps<T, S>(Map<T, List<Measure<?>>> firstDimensionTotalMeasures,
-                                     Map<S, List<Measure<?>>> secondDimensionTotalMeasures,
-                                     Map<S, List<Measure<?>>> measuresBySecondDimensionValue) {
+    private record MeasureMaps<T, S>(Map<T, List<Measure<?>>> dimensionTotalMeasures1,
+                                     Map<S, List<Measure<?>>> dimensionTotalMeasures2,
+                                     Map<S, List<Measure<?>>> measuresByDimensionValue2) {
     }
 
     private final Set<DimensionType> dimensionTypes;
@@ -215,8 +215,8 @@ public class Cube {
      * <p>
      * Fast, used in the application.
      *
-     * @param firstDimensionTypeValues  values of first dimension type
-     * @param secondDimensionTypeValues values of second dimension type
+     * @param dimensionTypeValues1      values of first dimension type
+     * @param dimensionTypeValues2      values of second dimension type
      * @param filterDimensionTypeValues values of filter dimension type
      * @param measureType               measure type
      * @param entityQuadFunction        result element function
@@ -231,43 +231,43 @@ public class Cube {
      * @return measure value entities
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public <T, S, U, V, W, Y> Y getMeasureValueEntities(DimensionTypeValues<T> firstDimensionTypeValues,
-                                                        DimensionTypeValues<S> secondDimensionTypeValues,
+    public <T, S, U, V, W, Y> Y getMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
+                                                        DimensionTypeValues<S> dimensionTypeValues2,
                                                         DimensionTypeValues<U> filterDimensionTypeValues,
                                                         MeasureType measureType,
                                                         QuadFunction<T, List<Long>, List<Long>, Long, V> entityQuadFunction,
                                                         TriFunction<List<Long>, List<Long>, Long, W> totalsTriFunction,
                                                         TriFunction<List<S>, List<V>, W, Y> resultTriFunction) {
-        Set<Dimension> firstDimensions = firstDimensionTypeValues.values().stream()
-                .map(v -> DimensionFactory.create(firstDimensionTypeValues.type(), v))
+        Set<Dimension> dimensions1 = dimensionTypeValues1.values().stream()
+                .map(v -> DimensionFactory.create(dimensionTypeValues1.type(), v))
                 .collect(Collectors.toSet());
-        Set<Dimension> secondDimensions = secondDimensionTypeValues.values().stream()
-                .map(v -> DimensionFactory.create(secondDimensionTypeValues.type(), v))
+        Set<Dimension> dimensions2 = dimensionTypeValues2.values().stream()
+                .map(v -> DimensionFactory.create(dimensionTypeValues2.type(), v))
                 .collect(Collectors.toSet());
         Set<Dimension> filterDimensions = filterDimensionTypeValues.values().stream()
                 .map(v -> DimensionFactory.create(filterDimensionTypeValues.type(), v))
                 .collect(Collectors.toSet());
-        Map<T, Map<S, List<Measure<?>>>> measuresByFirstDimensionValue = new HashMap<>();
-        Map<T, List<Measure<?>>> firstDimensionTotalMeasures = new HashMap<>();
-        Map<S, List<Measure<?>>> secondDimensionTotalMeasures = new HashMap<>();
+        Map<T, Map<S, List<Measure<?>>>> measuresByDimensionValue1 = new HashMap<>();
+        Map<T, List<Measure<?>>> dimensionTotalMeasures1 = new HashMap<>();
+        Map<S, List<Measure<?>>> dimensionTotalMeasures2 = new HashMap<>();
 
         // Create intermediate measure map
         for (Map.Entry<Set<Dimension<?>>, Map<MeasureType, Measure<?>>> entry : measureMap.entrySet()) {
             Set<Dimension<?>> entryDimensions = entry.getKey();
 
             // Search first dimension value
-            for (Dimension<?> firstEntryDimension : entryDimensions) {
-                if (firstDimensions.contains(firstEntryDimension)) {
-                    T firstDimensionValue = (T) firstEntryDimension.getValue();
-                    Map<S, List<Measure<?>>> measuresBySecondDimensionValue = measuresByFirstDimensionValue.computeIfAbsent(firstDimensionValue, k -> new HashMap<>());
+            for (Dimension<?> entryDimension1 : entryDimensions) {
+                if (dimensions1.contains(entryDimension1)) {
+                    T dimensionValue1 = (T) entryDimension1.getValue();
+                    Map<S, List<Measure<?>>> measuresByDimensionValue2 = measuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
 
                     // Search second dimension value
-                    for (Dimension<?> secondEntryDimension : entryDimensions) {
-                        if (secondDimensions.contains(secondEntryDimension)) {
+                    for (Dimension<?> entryDimension2 : entryDimensions) {
+                        if (dimensions2.contains(entryDimension2)) {
 
                             // Filter by values of third dimension
-                            MeasureMaps<T, S> measureMaps = new MeasureMaps<>(firstDimensionTotalMeasures, secondDimensionTotalMeasures, measuresBySecondDimensionValue);
-                            filterByThirdDimensionValues(measureType, filterDimensions, measureMaps, entry, firstDimensionValue, secondEntryDimension);
+                            MeasureMaps<T, S> measureMaps = new MeasureMaps<>(dimensionTotalMeasures1, dimensionTotalMeasures2, measuresByDimensionValue2);
+                            filterByDimensionValues3(measureType, filterDimensions, measureMaps, entry, dimensionValue1, entryDimension2);
 
                             break;
                         }
@@ -281,21 +281,21 @@ public class Cube {
         // Fill resulting list
         List<V> measureValueEntities = new ArrayList<>();
 
-        fillResultingList(firstDimensionTypeValues, secondDimensionTypeValues, measureType, entityQuadFunction,
-                measuresByFirstDimensionValue, firstDimensionTotalMeasures, measureValueEntities);
+        fillResultingList(dimensionTypeValues1, dimensionTypeValues2, measureType, entityQuadFunction,
+                measuresByDimensionValue1, dimensionTotalMeasures1, measureValueEntities);
 
         // Fill totals
         List<Long> totals = new ArrayList<>();
         List<Long> cumulativeTotals = new ArrayList<>();
         List<Measure<?>> allTotalMeasures = new ArrayList<>();
 
-        fillTotals(secondDimensionTypeValues, secondDimensionTotalMeasures, measureType, totals, cumulativeTotals, allTotalMeasures);
+        fillTotals(dimensionTypeValues2, dimensionTotalMeasures2, measureType, totals, cumulativeTotals, allTotalMeasures);
 
         // Fill all total
         long allTotal = getMeasureValue(allTotalMeasures, measureType);
 
         return resultTriFunction.apply(
-                secondDimensionTypeValues.values(),
+                dimensionTypeValues2.values(),
                 measureValueEntities,
                 totalsTriFunction.apply(totals, cumulativeTotals, allTotal));
     }
@@ -303,46 +303,46 @@ public class Cube {
     /**
      * Filters by third dimension values.
      *
-     * @param measureType          measure type
-     * @param filterDimensions     filter dimensions
-     * @param measureMaps          measure maps
-     * @param entry                entry of measure map
-     * @param firstDimensionValue  first dimension value
-     * @param secondEntryDimension second entry dimension
-     * @param <T>                  first dimension type
-     * @param <S>                  second dimension type
+     * @param measureType      measure type
+     * @param filterDimensions filter dimensions
+     * @param measureMaps      measure maps
+     * @param entry            entry of measure map
+     * @param dimensionValue1  first dimension value
+     * @param entryDimension2  second entry dimension
+     * @param <T>              first dimension type
+     * @param <S>              second dimension type
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
-    private <T, S> void filterByThirdDimensionValues(MeasureType measureType,
-                                                     Set<Dimension> filterDimensions,
-                                                     MeasureMaps<T, S> measureMaps,
-                                                     Map.Entry<Set<Dimension<?>>, Map<MeasureType, Measure<?>>> entry,
-                                                     T firstDimensionValue,
-                                                     Dimension<?> secondEntryDimension) {
+    private <T, S> void filterByDimensionValues3(MeasureType measureType,
+                                                 Set<Dimension> filterDimensions,
+                                                 MeasureMaps<T, S> measureMaps,
+                                                 Map.Entry<Set<Dimension<?>>, Map<MeasureType, Measure<?>>> entry,
+                                                 T dimensionValue1,
+                                                 Dimension<?> entryDimension2) {
         Set<Dimension<?>> entryDimensions = entry.getKey();
 
-        for (Dimension<?> thirdEntryDimension : entryDimensions) {
-            if (filterDimensions.contains(thirdEntryDimension)) {
+        for (Dimension<?> entryDimension3 : entryDimensions) {
+            if (filterDimensions.contains(entryDimension3)) {
 
                 // filterByThirdDimensionValues
                 Measure<?> measure = entry.getValue().get(measureType);
 
                 if (measure != null) {
-                    S secondDimensionValue = (S) secondEntryDimension.getValue();
+                    S dimensionValue2 = (S) entryDimension2.getValue();
 
                     // Measures of first and second dimension
-                    measureMaps.measuresBySecondDimensionValue
-                            .computeIfAbsent(secondDimensionValue, k -> new ArrayList<>())
+                    measureMaps.measuresByDimensionValue2
+                            .computeIfAbsent(dimensionValue2, k -> new ArrayList<>())
                             .add(measure);
 
                     // Measures for total of first dimension
-                    measureMaps.firstDimensionTotalMeasures
-                            .computeIfAbsent(firstDimensionValue, k -> new ArrayList<>())
+                    measureMaps.dimensionTotalMeasures1
+                            .computeIfAbsent(dimensionValue1, k -> new ArrayList<>())
                             .add(measure);
 
                     // Measures for total of second dimension
-                    measureMaps.secondDimensionTotalMeasures
-                            .computeIfAbsent(secondDimensionValue, k -> new ArrayList<>())
+                    measureMaps.dimensionTotalMeasures2
+                            .computeIfAbsent(dimensionValue2, k -> new ArrayList<>())
                             .add(measure);
                 }
 
@@ -354,39 +354,39 @@ public class Cube {
     /**
      * Fill resulting list.
      *
-     * @param firstDimensionTypeValues      values of first dimension type
-     * @param secondDimensionTypeValues     values of second dimension type
-     * @param measureType                   measure type
-     * @param entityQuadFunction            result element function
-     * @param measuresByFirstDimensionValue measures by first dimension value
-     * @param firstDimensionTotalMeasures   total measures of first dimension
-     * @param measureValueEntities          measure value entities
-     * @param <T>                           first dimension type
-     * @param <S>                           second dimension type
-     * @param <V>                           result element type
+     * @param dimensionTypeValues1      values of first dimension type
+     * @param dimensionTypeValues2      values of second dimension type
+     * @param measureType               measure type
+     * @param entityQuadFunction        result element function
+     * @param measuresByDimensionValue1 measures by first dimension value
+     * @param dimensionTotalMeasures1   total measures of first dimension
+     * @param measureValueEntities      measure value entities
+     * @param <T>                       first dimension type
+     * @param <S>                       second dimension type
+     * @param <V>                       result element type
      */
-    private <T, S, V> void fillResultingList(DimensionTypeValues<T> firstDimensionTypeValues,
-                                             DimensionTypeValues<S> secondDimensionTypeValues,
+    private <T, S, V> void fillResultingList(DimensionTypeValues<T> dimensionTypeValues1,
+                                             DimensionTypeValues<S> dimensionTypeValues2,
                                              MeasureType measureType,
                                              QuadFunction<T, List<Long>, List<Long>, Long, V> entityQuadFunction,
-                                             Map<T, Map<S, List<Measure<?>>>> measuresByFirstDimensionValue,
-                                             Map<T, List<Measure<?>>> firstDimensionTotalMeasures,
+                                             Map<T, Map<S, List<Measure<?>>>> measuresByDimensionValue1,
+                                             Map<T, List<Measure<?>>> dimensionTotalMeasures1,
                                              List<V> measureValueEntities) {
-        for (T firstDimensionValue : firstDimensionTypeValues.values()) {
-            Map<S, List<Measure<?>>> measuresBySecondDimensionValue = measuresByFirstDimensionValue.get(firstDimensionValue);
+        for (T dimensionValue1 : dimensionTypeValues1.values()) {
+            Map<S, List<Measure<?>>> measuresByDimensionValue2 = measuresByDimensionValue1.get(dimensionValue1);
             List<Long> measureValues;
             List<Long> cumulativeMeasureValues;
 
-            if (measuresBySecondDimensionValue == null) {
-                measureValues = Collections.nCopies(secondDimensionTypeValues.values().size(), 0L);
-                cumulativeMeasureValues = Collections.nCopies(secondDimensionTypeValues.values().size(), 0L);
+            if (measuresByDimensionValue2 == null) {
+                measureValues = Collections.nCopies(dimensionTypeValues2.values().size(), 0L);
+                cumulativeMeasureValues = Collections.nCopies(dimensionTypeValues2.values().size(), 0L);
             } else {
                 measureValues = new ArrayList<>();
                 cumulativeMeasureValues = new ArrayList<>();
                 List<Measure<?>> cumulativeMeasures = new ArrayList<>();
 
-                for (S secondDimensionValue : secondDimensionTypeValues.values()) {
-                    List<Measure<?>> measures = measuresBySecondDimensionValue.get(secondDimensionValue);
+                for (S dimensionValue2 : dimensionTypeValues2.values()) {
+                    List<Measure<?>> measures = measuresByDimensionValue2.get(dimensionValue2);
 
                     if ((measures != null) && !measures.isEmpty()) {
                         cumulativeMeasures.addAll(measures);
@@ -397,32 +397,32 @@ public class Cube {
                 }
             }
 
-            List<Measure<?>> measures = firstDimensionTotalMeasures.get(firstDimensionValue);
+            List<Measure<?>> measures = dimensionTotalMeasures1.get(dimensionValue1);
             long total = getMeasureValue(measures, measureType);
 
-            measureValueEntities.add(entityQuadFunction.apply(firstDimensionValue, measureValues, cumulativeMeasureValues, total));
+            measureValueEntities.add(entityQuadFunction.apply(dimensionValue1, measureValues, cumulativeMeasureValues, total));
         }
     }
 
     /**
      * Fill totals.
      *
-     * @param secondDimensionTypeValues    values of second dimension type
-     * @param secondDimensionTotalMeasures total measures of second dimension
-     * @param measureType                  measure type
-     * @param totals                       totals
-     * @param cumulativeTotals             cumulative totals
-     * @param allTotalMeasures             all total measures
-     * @param <S>                          second dimension type
+     * @param dimensionTypeValues2    values of second dimension type
+     * @param dimensionTotalMeasures2 total measures of second dimension
+     * @param measureType             measure type
+     * @param totals                  totals
+     * @param cumulativeTotals        cumulative totals
+     * @param allTotalMeasures        all total measures
+     * @param <S>                     second dimension type
      */
-    private <S> void fillTotals(DimensionTypeValues<S> secondDimensionTypeValues,
-                                Map<S, List<Measure<?>>> secondDimensionTotalMeasures,
+    private <S> void fillTotals(DimensionTypeValues<S> dimensionTypeValues2,
+                                Map<S, List<Measure<?>>> dimensionTotalMeasures2,
                                 MeasureType measureType, List<Long> totals, List<Long> cumulativeTotals,
                                 List<Measure<?>> allTotalMeasures) {
         List<Measure<?>> cumulativeMeasures = new ArrayList<>();
-        
-        for (S secondDimensionValue : secondDimensionTypeValues.values()) {
-            List<Measure<?>> measures = secondDimensionTotalMeasures.get(secondDimensionValue);
+
+        for (S dimensionValue2 : dimensionTypeValues2.values()) {
+            List<Measure<?>> measures = dimensionTotalMeasures2.get(dimensionValue2);
 
             if ((measures != null) && !measures.isEmpty()) {
                 cumulativeMeasures.addAll(measures);

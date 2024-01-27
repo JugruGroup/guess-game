@@ -133,17 +133,17 @@ public class OlapServiceImpl implements OlapService {
 
     @SuppressWarnings("unchecked")
     <T, S, U> OlapEntityStatistics<T, S> getOlapEntityStatistics(CubeType cubeType, MeasureType measureType,
-                                                                 DimensionType firstDimensionType,
-                                                                 Predicate<S> firstDimensionPredicate,
-                                                                 DimensionType secondDimensionType,
+                                                                 DimensionType dimensionType1,
+                                                                 Predicate<S> dimensionPredicate1,
+                                                                 DimensionType dimensionType2,
                                                                  DimensionType filterDimensionType,
                                                                  Predicate<U> filterDimensionPredicate) {
         Cube cube = olapDao.getCube(cubeType);
-        List<S> firstDimensionValues = cube.getDimensionValues(firstDimensionType).stream()
+        List<S> dimensionValues1 = cube.getDimensionValues(dimensionType1).stream()
                 .map(v -> (S) v)
-                .filter(firstDimensionPredicate)
+                .filter(dimensionPredicate1)
                 .toList();
-        List<T> secondDimensionValues = cube.getDimensionValues(secondDimensionType).stream()
+        List<T> dimensionValues2 = cube.getDimensionValues(dimensionType2).stream()
                 .map(v -> (T) v)
                 .sorted()
                 .toList();
@@ -153,11 +153,12 @@ public class OlapServiceImpl implements OlapService {
                 .toList();
 
         return cube.getMeasureValueEntities(
-                new DimensionTypeValues<>(firstDimensionType, firstDimensionValues),
-                new DimensionTypeValues<>(secondDimensionType, secondDimensionValues),
+                new DimensionTypeValues<>(dimensionType1, dimensionValues1),
+                new DimensionTypeValues<>(dimensionType2, dimensionValues2),
                 new DimensionTypeValues<>(filterDimensionType, filterDimensionValues),
                 measureType, OlapEntityMetrics::new,
-                (measureValues, cumulativeMeasureValues, total) -> new OlapEntityMetrics<Void>(null, measureValues, cumulativeMeasureValues, total),
+                (measureValues, cumulativeMeasureValues, total) ->
+                        new OlapEntityMetrics<Void>(null, measureValues, cumulativeMeasureValues, total),
                 OlapEntityStatistics::new);
     }
 }
