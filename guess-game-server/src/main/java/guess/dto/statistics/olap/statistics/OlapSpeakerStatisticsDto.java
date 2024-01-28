@@ -19,7 +19,7 @@ public class OlapSpeakerStatisticsDto extends OlapEntityStatisticsDto<Integer, O
 
     public static OlapSpeakerStatisticsDto convertToDto(OlapEntityStatistics<Integer, Speaker> speakerStatistics, Language language) {
         return new OlapSpeakerStatisticsDto(
-                speakerStatistics.getDimensionValues(),
+                speakerStatistics.getDimensionValues1(),
                 OlapSpeakerMetricsDto.convertToDto(speakerStatistics.getMetricsList(), language),
                 OlapEntityMetricsDto.convertToDto(speakerStatistics.getTotals()));
     }

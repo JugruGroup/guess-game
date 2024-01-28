@@ -19,7 +19,7 @@ public class OlapCompanyStatisticsDto extends OlapEntityStatisticsDto<Integer, O
 
     public static OlapCompanyStatisticsDto convertToDto(OlapEntityStatistics<Integer, Company> companyStatistics, Language language) {
         return new OlapCompanyStatisticsDto(
-                companyStatistics.getDimensionValues(),
+                companyStatistics.getDimensionValues1(),
                 OlapCompanyMetricsDto.convertToDto(companyStatistics.getMetricsList(), language),
                 OlapEntityMetricsDto.convertToDto(companyStatistics.getTotals()));
     }

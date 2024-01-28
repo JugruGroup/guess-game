@@ -34,7 +34,7 @@ public class OlapTopicStatisticsDto extends OlapEntityStatisticsDto<String, Olap
 
     public static OlapTopicStatisticsDto convertToDto(OlapStatistics olapStatistics, Language language) {
         OlapEntityStatistics<Topic, ? extends Nameable> statistics = getFirstStatistics(olapStatistics);
-        List<String> dimensionValues = statistics.getDimensionValues().stream()
+        List<String> dimensionValues = statistics.getDimensionValues1().stream()
                 .map(t -> LocalizationUtils.getString(t.getName(), language))
                 .toList();
         List<OlapEntityMetricsDto> metricsList = statistics.getMetricsList().stream()

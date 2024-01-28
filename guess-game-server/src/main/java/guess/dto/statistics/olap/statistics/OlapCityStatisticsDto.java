@@ -19,7 +19,7 @@ public class OlapCityStatisticsDto extends OlapEntityStatisticsDto<Integer, Olap
 
     public static OlapCityStatisticsDto convertToDto(OlapEntityStatistics<Integer, City> cityStatistics, Language language) {
         return new OlapCityStatisticsDto(
-                cityStatistics.getDimensionValues(),
+                cityStatistics.getDimensionValues1(),
                 OlapCityMetricsDto.convertToDto(cityStatistics.getMetricsList(), language),
                 OlapEntityMetricsDto.convertToDto(cityStatistics.getTotals()));
     }

@@ -19,7 +19,7 @@ public class OlapEventTypeStatisticsDto extends OlapEntityStatisticsDto<Integer,
 
     public static OlapEventTypeStatisticsDto convertToDto(OlapEntityStatistics<Integer, EventType> eventTypeStatistics, Language language) {
         return new OlapEventTypeStatisticsDto(
-                eventTypeStatistics.getDimensionValues(),
+                eventTypeStatistics.getDimensionValues1(),
                 OlapEventTypeMetricsDto.convertToDto(eventTypeStatistics.getMetricsList(), language),
                 OlapEntityMetricsDto.convertToDto(eventTypeStatistics.getTotals()));
     }

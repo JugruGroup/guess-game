@@ -9,18 +9,18 @@ import java.util.Objects;
  * OLAP entity statistics.
  */
 public class OlapEntityStatistics<T, S> {
-    private final List<T> dimensionValues;
+    private final List<T> dimensionValues1;
     private List<OlapEntityMetrics<S>> metricsList;
     private final OlapEntityMetrics<Void> totals;
 
-    public OlapEntityStatistics(List<T> dimensionValues, List<OlapEntityMetrics<S>> metricsList, OlapEntityMetrics<Void> totals) {
-        this.dimensionValues = dimensionValues;
+    public OlapEntityStatistics(List<T> dimensionValues1, List<OlapEntityMetrics<S>> metricsList, OlapEntityMetrics<Void> totals) {
+        this.dimensionValues1 = dimensionValues1;
         this.metricsList = metricsList;
         this.totals = totals;
     }
 
-    public List<T> getDimensionValues() {
-        return dimensionValues;
+    public List<T> getDimensionValues1() {
+        return dimensionValues1;
     }
 
     public List<OlapEntityMetrics<S>> getMetricsList() {
@@ -40,18 +40,18 @@ public class OlapEntityStatistics<T, S> {
         if (this == o) return true;
         if (!(o instanceof OlapEntityStatistics)) return false;
         OlapEntityStatistics<?, ?> that = (OlapEntityStatistics<?, ?>) o;
-        return Objects.equals(getDimensionValues(), that.getDimensionValues()) && Objects.equals(getMetricsList(), that.getMetricsList()) && Objects.equals(getTotals(), that.getTotals());
+        return Objects.equals(getDimensionValues1(), that.getDimensionValues1()) && Objects.equals(getMetricsList(), that.getMetricsList()) && Objects.equals(getTotals(), that.getTotals());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getDimensionValues(), getMetricsList(), getTotals());
+        return Objects.hash(getDimensionValues1(), getMetricsList(), getTotals());
     }
 
     @Override
     public String toString() {
         return "OlapEntityStatistics{" +
-                "dimensionValues=" + dimensionValues +
+                "dimensionValues=" + dimensionValues1 +
                 ", metricsList=" + metricsList +
                 ", totals=" + totals +
                 '}';
