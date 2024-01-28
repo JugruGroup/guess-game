@@ -40,6 +40,7 @@ import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -320,6 +321,9 @@ class StatisticsControllerTest {
     class GetOlapStatisticsTest {
         private Stream<Arguments> data() {
             List<Integer> yearDimensionValues0 = List.of(2020, 2021);
+            List<City> cityDimensionValues0 = Collections.emptyList();
+            List<EventType> eventTypeDimensionValues0 = Collections.emptyList();
+            List<Void> voidDimensionValues0 = Collections.emptyList();
 
             Topic topic0 = new Topic();
             topic0.setId(0);
@@ -392,12 +396,12 @@ class StatisticsControllerTest {
             );
             OlapEntityMetrics<Void> topicTotals2 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
-            OlapEntityStatistics<Integer, EventType> yearEventTypeStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList0, yearTotals0);
-            OlapEntityStatistics<Integer, Speaker> yearSpeakerStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList1, yearTotals1);
-            OlapEntityStatistics<Integer, Company> yearCompanyStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList2, yearTotals2);
-            OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList0, topicTotals0);
-            OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList1, topicTotals1);
-            OlapEntityStatistics<Topic, Company> topicCompanyStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList2, topicTotals2);
+            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, yearMetricsList0, yearTotals0);
+            OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList1, yearTotals1);
+            OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList2, yearTotals2);
+            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList0, topicTotals0);
+            OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList1, topicTotals1);
+            OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList2, topicTotals2);
 
             OlapStatistics olapStatistics0 = new OlapStatistics(yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null);
             OlapStatistics olapStatistics1 = new OlapStatistics(null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null);
@@ -468,7 +472,8 @@ class StatisticsControllerTest {
         eventType1.setId(1);
         eventType1.setOrganizer(organizer0);
 
-        List<Integer> dimensionValues0 = List.of(2020, 2021);
+        List<Integer> yearDimensionValues0 = List.of(2020, 2021);
+        List<Void> voidDimensionValues0 = Collections.emptyList();
 
         List<OlapEntityMetrics<EventType>> metricsList0 = List.of(
                 new OlapEntityMetrics<>(eventType0, List.of(0L, 1L), List.of(0L, 1L), 1L),
@@ -476,7 +481,8 @@ class StatisticsControllerTest {
         );
         OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(1L, 1L), List.of(1L, 2L), 2L);
 
-        OlapEntityStatistics<Integer, EventType> eventTypeStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
+        OlapEntityStatistics<Integer, Void, EventType> eventTypeStatistics0 =
+                new OlapEntityStatistics<>(yearDimensionValues0, voidDimensionValues0, metricsList0, totals0);
 
         MockHttpSession httpSession = new MockHttpSession();
 
@@ -506,7 +512,8 @@ class StatisticsControllerTest {
         speaker1.setId(1);
         speaker1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
 
-        List<Integer> dimensionValues0 = List.of(2020, 2021);
+        List<Integer> yearDimensionValues0 = List.of(2020, 2021);
+        List<Void> voidDimensionValues0 = Collections.emptyList();
 
         List<OlapEntityMetrics<Speaker>> metricsList0 = List.of(
                 new OlapEntityMetrics<>(speaker0, List.of(0L, 1L), List.of(0L, 1L), 1L),
@@ -514,7 +521,8 @@ class StatisticsControllerTest {
         );
         OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
-        OlapEntityStatistics<Integer, Speaker> speakerStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
+        OlapEntityStatistics<Integer, Void, Speaker> speakerStatistics0 =
+                new OlapEntityStatistics<>(yearDimensionValues0, voidDimensionValues0, metricsList0, totals0);
 
         MockHttpSession httpSession = new MockHttpSession();
 
@@ -539,7 +547,8 @@ class StatisticsControllerTest {
         City city0 = new City(0, List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
         City city1 = new City(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name1")));
 
-        List<Integer> dimensionValues0 = List.of(2020, 2021);
+        List<Integer> yearDimensionValues0 = List.of(2020, 2021);
+        List<Void> voidDimensionValues0 = Collections.emptyList();
 
         List<OlapEntityMetrics<City>> metricsList0 = List.of(
                 new OlapEntityMetrics<>(city1, List.of(2L, 0L), List.of(2L, 2L), 2L),
@@ -547,7 +556,8 @@ class StatisticsControllerTest {
         );
         OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
-        OlapEntityStatistics<Integer, City> cityStatistics0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
+        OlapEntityStatistics<Integer, Void, City> cityStatistics0 =
+                new OlapEntityStatistics<>(yearDimensionValues0, voidDimensionValues0, metricsList0, totals0);
 
         MockHttpSession httpSession = new MockHttpSession();
 

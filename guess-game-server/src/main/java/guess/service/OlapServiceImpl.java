@@ -46,12 +46,12 @@ public class OlapServiceImpl implements OlapService {
         Predicate<EventType> eventTypePredicate = createEventTypePredicate(op);
         Predicate<Speaker> speakerPredicate = s -> (op.getSpeakerIds() == null) || op.getSpeakerIds().isEmpty() || op.getSpeakerIds().contains(s.getId());
         Predicate<Company> companyPredicate = c -> (op.getCompanyIds() == null) || op.getCompanyIds().isEmpty() || op.getCompanyIds().contains(c.getId());
-        OlapEntityStatistics<Integer, EventType> yearEventTypeStatistics = null;
-        OlapEntityStatistics<Integer, Speaker> yearSpeakerStatistics = null;
-        OlapEntityStatistics<Integer, Company> yearCompanyStatistics = null;
-        OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics = null;
-        OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics = null;
-        OlapEntityStatistics<Topic, Company> topicCompanyStatistics = null;
+        OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics = null;
+        OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics = null;
+        OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics = null;
+        OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics = null;
+        OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics = null;
+        OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics = null;
 
         if (CubeType.EVENT_TYPES.equals(op.getCubeType())) {
             yearEventTypeStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(), DimensionType.EVENT_TYPE, eventTypePredicate,
@@ -85,9 +85,9 @@ public class OlapServiceImpl implements OlapService {
     }
 
     @Override
-    public OlapEntityStatistics<Integer, EventType> getOlapEventTypeStatistics(OlapEventTypeParametersDto op) {
+    public OlapEntityStatistics<Integer, Void, EventType> getOlapEventTypeStatistics(OlapEventTypeParametersDto op) {
         Predicate<EventType> eventTypePredicate = createEventTypePredicate(op);
-        OlapEntityStatistics<Integer, EventType> olapEventTypeStatistics;
+        OlapEntityStatistics<Integer, Void, EventType> olapEventTypeStatistics;
 
         switch (op.getCubeType()) {
             case SPEAKERS -> {
@@ -109,10 +109,10 @@ public class OlapServiceImpl implements OlapService {
     }
 
     @Override
-    public OlapEntityStatistics<Integer, Speaker> getOlapSpeakerStatistics(OlapSpeakerParametersDto op) {
+    public OlapEntityStatistics<Integer, Void, Speaker> getOlapSpeakerStatistics(OlapSpeakerParametersDto op) {
         Predicate<Speaker> speakerPredicate = s -> (op.getCompanyId() != null) && (s.getCompanyIds().contains(op.getCompanyId()));
         Predicate<EventType> eventTypePredicate = et -> (op.getEventTypeId() != null) && (et.getId() == op.getEventTypeId());
-        OlapEntityStatistics<Integer, Speaker> olapSpeakerStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(),
+        OlapEntityStatistics<Integer, Void, Speaker> olapSpeakerStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(),
                 DimensionType.SPEAKER, speakerPredicate, DimensionType.YEAR, null, DimensionType.EVENT_TYPE, eventTypePredicate);
 
         olapSpeakerStatistics.getMetricsList().removeIf(m -> m.total() == 0);
@@ -121,10 +121,10 @@ public class OlapServiceImpl implements OlapService {
     }
 
     @Override
-    public OlapEntityStatistics<Integer, City> getOlapCityStatistics(OlapCityParametersDto op) {
+    public OlapEntityStatistics<Integer, Void, City> getOlapCityStatistics(OlapCityParametersDto op) {
         Predicate<City> cityPredicate = c -> true;
         Predicate<EventType> eventTypePredicate = et -> (op.getEventTypeId() != null) && (et.getId() == op.getEventTypeId());
-        OlapEntityStatistics<Integer, City> olapCityStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(),
+        OlapEntityStatistics<Integer, Void, City> olapCityStatistics = getOlapEntityStatistics(op.getCubeType(), op.getMeasureType(),
                 DimensionType.CITY, cityPredicate, DimensionType.YEAR, null, DimensionType.EVENT_TYPE, eventTypePredicate);
 
         olapCityStatistics.getMetricsList().removeIf(m -> m.total() == 0);
@@ -133,20 +133,20 @@ public class OlapServiceImpl implements OlapService {
     }
 
     @SuppressWarnings("unchecked")
-    <T, S, U, V> OlapEntityStatistics<T, S> getOlapEntityStatistics(CubeType cubeType, MeasureType measureType,
+    <T, S, U, V> OlapEntityStatistics<S, U, T> getOlapEntityStatistics(CubeType cubeType, MeasureType measureType,
                                                                     DimensionType dimensionType1,
-                                                                    Predicate<S> dimensionPredicate1,
+                                                                    Predicate<T> dimensionPredicate1,
                                                                     DimensionType dimensionType2,
                                                                     DimensionType dimensionType3,
                                                                     DimensionType filterDimensionType,
                                                                     Predicate<V> filterDimensionPredicate) {
         Cube cube = olapDao.getCube(cubeType);
-        List<S> dimensionValues1 = cube.getDimensionValues(dimensionType1).stream()
-                .map(v -> (S) v)
+        List<T> dimensionValues1 = cube.getDimensionValues(dimensionType1).stream()
+                .map(v -> (T) v)
                 .filter(dimensionPredicate1)
                 .toList();
-        List<T> dimensionValues2 = cube.getDimensionValues(dimensionType2).stream()
-                .map(v -> (T) v)
+        List<S> dimensionValues2 = cube.getDimensionValues(dimensionType2).stream()
+                .map(v -> (S) v)
                 .sorted()
                 .toList();
         List<U> dimensionValues3 = (dimensionType3 != null) ? cube.getDimensionValues(dimensionType3).stream()

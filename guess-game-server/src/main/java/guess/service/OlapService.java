@@ -22,9 +22,9 @@ public interface OlapService {
 
     OlapStatistics getOlapStatistics(OlapParametersDto olapParameters);
 
-    OlapEntityStatistics<Integer, EventType> getOlapEventTypeStatistics(OlapEventTypeParametersDto olapParameters);
+    OlapEntityStatistics<Integer, Void, EventType> getOlapEventTypeStatistics(OlapEventTypeParametersDto olapParameters);
 
-    OlapEntityStatistics<Integer, Speaker> getOlapSpeakerStatistics(OlapSpeakerParametersDto olapParameters);
+    OlapEntityStatistics<Integer, Void, Speaker> getOlapSpeakerStatistics(OlapSpeakerParametersDto olapParameters);
 
-    OlapEntityStatistics<Integer, City> getOlapCityStatistics(OlapCityParametersDto olapParameters);
+    OlapEntityStatistics<Integer, Void, City> getOlapCityStatistics(OlapCityParametersDto olapParameters);
 }

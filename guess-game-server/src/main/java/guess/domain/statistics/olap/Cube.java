@@ -234,13 +234,13 @@ public class Cube {
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
     public <T, S, U, V, W, X, Y> Y getMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
-                                                        DimensionTypeValues<S> dimensionTypeValues2,
-                                                        DimensionTypeValues<U> dimensionTypeValues3,
-                                                        DimensionTypeValues<V> filterDimensionTypeValues,
-                                                        MeasureType measureType,
-                                                        QuadFunction<T, List<Long>, List<Long>, Long, W> entityQuadFunction,
-                                                        TriFunction<List<Long>, List<Long>, Long, X> totalsTriFunction,
-                                                        TriFunction<List<S>, List<W>, X, Y> resultTriFunction) {
+                                                           DimensionTypeValues<S> dimensionTypeValues2,
+                                                           DimensionTypeValues<U> dimensionTypeValues3,
+                                                           DimensionTypeValues<V> filterDimensionTypeValues,
+                                                           MeasureType measureType,
+                                                           QuadFunction<T, List<Long>, List<Long>, Long, W> entityQuadFunction,
+                                                           TriFunction<List<Long>, List<Long>, Long, X> totalsTriFunction,
+                                                           QuadFunction<List<S>, List<U>, List<W>, X, Y> resultTriFunction) {
         Set<Dimension> dimensions1 = dimensionTypeValues1.values().stream()
                 .map(v -> DimensionFactory.create(dimensionTypeValues1.type(), v))
                 .collect(Collectors.toSet());
@@ -299,6 +299,7 @@ public class Cube {
 
         return resultTriFunction.apply(
                 dimensionTypeValues2.values(),
+                dimensionTypeValues3.values(),
                 measureValueEntities,
                 totalsTriFunction.apply(totals, cumulativeTotals, allTotal));
     }

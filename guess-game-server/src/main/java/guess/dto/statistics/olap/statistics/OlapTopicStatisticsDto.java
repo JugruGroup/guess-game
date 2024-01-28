@@ -20,7 +20,7 @@ public class OlapTopicStatisticsDto extends OlapEntityStatisticsDto<String, Olap
         super(dimensionValues, metricsList, totals);
     }
 
-    private static OlapEntityStatistics<Topic, ? extends Nameable> getFirstStatistics(OlapStatistics olapStatistics) {
+    private static OlapEntityStatistics<Topic, Void, ? extends Nameable> getFirstStatistics(OlapStatistics olapStatistics) {
         if (olapStatistics.topicEventTypeStatistics() != null) {
             return olapStatistics.topicEventTypeStatistics();
         } else if (olapStatistics.topicSpeakerStatistics() != null) {
@@ -33,7 +33,7 @@ public class OlapTopicStatisticsDto extends OlapEntityStatisticsDto<String, Olap
     }
 
     public static OlapTopicStatisticsDto convertToDto(OlapStatistics olapStatistics, Language language) {
-        OlapEntityStatistics<Topic, ? extends Nameable> statistics = getFirstStatistics(olapStatistics);
+        OlapEntityStatistics<Topic, Void, ? extends Nameable> statistics = getFirstStatistics(olapStatistics);
         List<String> dimensionValues = statistics.getDimensionValues1().stream()
                 .map(t -> LocalizationUtils.getString(t.getName(), language))
                 .toList();

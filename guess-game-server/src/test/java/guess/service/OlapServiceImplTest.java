@@ -238,6 +238,8 @@ class OlapServiceImplTest {
         private Stream<Arguments> data() {
             // Year statistics
             List<Integer> yearDimensionValues0 = List.of(2020, 2021);
+            List<City> cityDimensionValues0 = Collections.emptyList();
+            List<EventType> eventTypeDimensionValues0 = Collections.emptyList();
 
             List<OlapEntityMetrics<EventType>> yearMetricsList0 = Collections.emptyList();
             OlapEntityMetrics<Void> yearTotals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
@@ -300,24 +302,25 @@ class OlapServiceImplTest {
             );
             OlapEntityMetrics<Void> yearTotals12 = new OlapEntityMetrics<>(null, List.of(1L, 1L), List.of(1L, 2L), 2L);
 
-            OlapEntityStatistics<Integer, EventType> yearEventTypeStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList0, yearTotals0);
-            OlapEntityStatistics<Integer, EventType> yearEventTypeStatistics1 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList3, yearTotals3);
-            OlapEntityStatistics<Integer, EventType> yearEventTypeStatistics2 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList4, yearTotals4);
-            OlapEntityStatistics<Integer, EventType> yearEventTypeStatistics3 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList5, yearTotals5);
-            OlapEntityStatistics<Integer, EventType> yearEventTypeStatistics4 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList6, yearTotals6);
+            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, yearMetricsList0, yearTotals0);
+            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics1 = new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, yearMetricsList3, yearTotals3);
+            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics2 = new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, yearMetricsList4, yearTotals4);
+            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics3 = new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, yearMetricsList5, yearTotals5);
+            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics4 = new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, yearMetricsList6, yearTotals6);
 
-            OlapEntityStatistics<Integer, Speaker> yearSpeakerStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList1, yearTotals1);
-            OlapEntityStatistics<Integer, Speaker> yearSpeakerStatistics1 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList7, yearTotals7);
-            OlapEntityStatistics<Integer, Speaker> yearSpeakerStatistics2 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList8, yearTotals8);
-            OlapEntityStatistics<Integer, Speaker> yearSpeakerStatistics3 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList9, yearTotals9);
+            OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList1, yearTotals1);
+            OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics1 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList7, yearTotals7);
+            OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics2 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList8, yearTotals8);
+            OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics3 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList9, yearTotals9);
 
-            OlapEntityStatistics<Integer, Company> yearCompanyStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList2, yearTotals2);
-            OlapEntityStatistics<Integer, Company> yearCompanyStatistics1 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList10, yearTotals10);
-            OlapEntityStatistics<Integer, Company> yearCompanyStatistics2 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList11, yearTotals11);
-            OlapEntityStatistics<Integer, Company> yearCompanyStatistics3 = new OlapEntityStatistics<>(yearDimensionValues0, yearMetricsList12, yearTotals12);
+            OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList2, yearTotals2);
+            OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics1 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList10, yearTotals10);
+            OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics2 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList11, yearTotals11);
+            OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics3 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearMetricsList12, yearTotals12);
 
             // Topic statistics
             List<Topic> topicDimensionValues0 = List.of(topic0, topic1);
+            List<Void> voidDimensionValues0 = Collections.emptyList();
 
             List<OlapEntityMetrics<EventType>> topicMetricsList0 = Collections.emptyList();
             OlapEntityMetrics<Void> topicTotals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
@@ -380,21 +383,21 @@ class OlapServiceImplTest {
             );
             OlapEntityMetrics<Void> topicTotals12 = new OlapEntityMetrics<>(null, List.of(2L, 0L), List.of(2L, 2L), 2L);
 
-            OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList0, topicTotals0);
-            OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics1 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList3, topicTotals3);
-            OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics2 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList4, topicTotals4);
-            OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics3 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList5, topicTotals5);
-            OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics4 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList6, topicTotals6);
+            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList0, topicTotals0);
+            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics1 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList3, topicTotals3);
+            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics2 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList4, topicTotals4);
+            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics3 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList5, topicTotals5);
+            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics4 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList6, topicTotals6);
 
-            OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList1, topicTotals1);
-            OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics1 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList7, topicTotals7);
-            OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics2 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList8, topicTotals8);
-            OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics3 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList9, topicTotals9);
+            OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList1, topicTotals1);
+            OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics1 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList7, topicTotals7);
+            OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics2 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList8, topicTotals8);
+            OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics3 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList9, topicTotals9);
 
-            OlapEntityStatistics<Topic, Company> topicCompanyStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList2, topicTotals2);
-            OlapEntityStatistics<Topic, Company> topicCompanyStatistics1 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList10, topicTotals10);
-            OlapEntityStatistics<Topic, Company> topicCompanyStatistics2 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList11, topicTotals11);
-            OlapEntityStatistics<Topic, Company> topicCompanyStatistics3 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList12, topicTotals12);
+            OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList2, topicTotals2);
+            OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics1 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList10, topicTotals10);
+            OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics2 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList11, topicTotals11);
+            OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics3 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicMetricsList12, topicTotals12);
 
             OlapStatistics expected0 = new OlapStatistics(yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null);
             OlapStatistics expected1 = new OlapStatistics(null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null);
@@ -612,6 +615,7 @@ class OlapServiceImplTest {
     class GetOlapEventTypeStatisticsTest {
         private Stream<Arguments> data() {
             List<Integer> dimensionValues0 = List.of(2020, 2021);
+            List<Void> voidDimensionValues0 = Collections.emptyList();
 
             List<OlapEntityMetrics<EventType>> metricsList0 = Collections.emptyList();
             OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
@@ -782,10 +786,10 @@ class OlapServiceImplTest {
             op22.setEventTypeIds(List.of(0L));
             op22.setCompanyId(0L);
 
-            OlapEntityStatistics<Integer, EventType> expected0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
-            OlapEntityStatistics<Integer, EventType> expected1 = new OlapEntityStatistics<>(dimensionValues0, metricsList1, totals1);
-            OlapEntityStatistics<Integer, EventType> expected2 = new OlapEntityStatistics<>(dimensionValues0, metricsList2, totals2);
-            OlapEntityStatistics<Integer, EventType> expected3 = new OlapEntityStatistics<>(dimensionValues0, metricsList3, totals3);
+            OlapEntityStatistics<Integer, Void, EventType> expected0 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList0, totals0);
+            OlapEntityStatistics<Integer, Void, EventType> expected1 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList1, totals1);
+            OlapEntityStatistics<Integer, Void, EventType> expected2 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList2, totals2);
+            OlapEntityStatistics<Integer, Void, EventType> expected3 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList3, totals3);
 
             return Stream.of(
                     arguments(op0, IllegalArgumentException.class, null),
@@ -819,7 +823,7 @@ class OlapServiceImplTest {
         @ParameterizedTest
         @MethodSource("data")
         void getOlapEventTypeStatistics(OlapEventTypeParametersDto op, Class<? extends Throwable> expectedException,
-                                        OlapEntityStatistics<Integer, EventType> expectedValue) {
+                                        OlapEntityStatistics<Integer, Void, EventType> expectedValue) {
             if (expectedException == null) {
                 assertEquals(expectedValue, olapService.getOlapEventTypeStatistics(op));
             } else {
@@ -834,6 +838,7 @@ class OlapServiceImplTest {
     class GetOlapSpeakerStatisticsTest {
         private Stream<Arguments> data() {
             List<Integer> dimensionValues0 = List.of(2020, 2021);
+            List<Void> voidDimensionValues0 = Collections.emptyList();
 
             List<OlapEntityMetrics<Speaker>> metricsList0 = Collections.emptyList();
             OlapEntityMetrics<Void> totals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
@@ -896,9 +901,9 @@ class OlapServiceImplTest {
             op8.setCompanyId(1L);
             op8.setEventTypeId(1L);
 
-            OlapEntityStatistics<Integer, Speaker> expected0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
-            OlapEntityStatistics<Integer, Speaker> expected1 = new OlapEntityStatistics<>(dimensionValues0, metricsList1, totals1);
-            OlapEntityStatistics<Integer, Speaker> expected2 = new OlapEntityStatistics<>(dimensionValues0, metricsList2, totals2);
+            OlapEntityStatistics<Integer, Void, Speaker> expected0 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList0, totals0);
+            OlapEntityStatistics<Integer, Void, Speaker> expected1 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList1, totals1);
+            OlapEntityStatistics<Integer, Void, Speaker> expected2 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList2, totals2);
 
             return Stream.of(
                     arguments(op0, expected0),
@@ -915,7 +920,7 @@ class OlapServiceImplTest {
 
         @ParameterizedTest
         @MethodSource("data")
-        void getOlapSpeakerStatistics(OlapSpeakerParametersDto op, OlapEntityStatistics<Integer, Speaker> expected) {
+        void getOlapSpeakerStatistics(OlapSpeakerParametersDto op, OlapEntityStatistics<Integer, Void, Speaker> expected) {
             assertEquals(expected, olapService.getOlapSpeakerStatistics(op));
         }
     }
@@ -926,6 +931,7 @@ class OlapServiceImplTest {
     class GetOlapCityStatisticsTest {
         private Stream<Arguments> data() {
             List<Integer> dimensionValues0 = List.of(2020, 2021);
+            List<Void> voidDimensionValues0 = Collections.emptyList();
 
             City city0 = new City(0, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City0")));
             City city1 = new City(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City1")));
@@ -962,9 +968,9 @@ class OlapServiceImplTest {
             op3.setMeasureType(MeasureType.EVENTS_QUANTITY);
             op3.setEventTypeId(1L);
 
-            OlapEntityStatistics<Integer, City> expected0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
-            OlapEntityStatistics<Integer, City> expected1 = new OlapEntityStatistics<>(dimensionValues0, metricsList1, totals1);
-            OlapEntityStatistics<Integer, City> expected2 = new OlapEntityStatistics<>(dimensionValues0, metricsList2, totals2);
+            OlapEntityStatistics<Integer, Void, City> expected0 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList0, totals0);
+            OlapEntityStatistics<Integer, Void, City> expected1 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList1, totals1);
+            OlapEntityStatistics<Integer, Void, City> expected2 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList2, totals2);
 
             return Stream.of(
                     arguments(op0, expected0),
@@ -976,7 +982,7 @@ class OlapServiceImplTest {
 
         @ParameterizedTest
         @MethodSource("data")
-        void getOlapCityStatistics(OlapCityParametersDto op, OlapEntityStatistics<Integer, City> expected) {
+        void getOlapCityStatistics(OlapCityParametersDto op, OlapEntityStatistics<Integer, Void, City> expected) {
             assertEquals(expected, olapService.getOlapCityStatistics(op));
         }
     }
@@ -999,6 +1005,7 @@ class OlapServiceImplTest {
             op1.setMeetups(false);
 
             List<Integer> dimensionValues0 = List.of(2020, 2021);
+            List<Void> voidDimensionValues0 = Collections.emptyList();
 
             List<OlapEntityMetrics<EventType>> metricsList0 = List.of(
                     new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L),
@@ -1012,8 +1019,8 @@ class OlapServiceImplTest {
             );
             OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(2L, 0L), List.of(2L, 2L), 2L);
 
-            OlapEntityStatistics<Integer, EventType> expected0 = new OlapEntityStatistics<>(dimensionValues0, metricsList0, totals0);
-            OlapEntityStatistics<Integer, EventType> expected1 = new OlapEntityStatistics<>(dimensionValues0, metricsList1, totals1);
+            OlapEntityStatistics<Integer, Void, EventType> expected0 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList0, totals0);
+            OlapEntityStatistics<Integer, Void, EventType> expected1 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList1, totals1);
 
             return Stream.of(
                     arguments(op0, expected0),
@@ -1023,13 +1030,13 @@ class OlapServiceImplTest {
 
         @ParameterizedTest
         @MethodSource("data")
-        void getOlapEntityStatistics(OlapParametersDto op, OlapEntityStatistics<Integer, EventType> expected) {
+        void getOlapEntityStatistics(OlapParametersDto op, OlapEntityStatistics<Integer, Void, EventType> expected) {
             OlapServiceImpl olapServiceImpl = new OlapServiceImpl(olapDao);
             Predicate<EventType> eventTypePredicate = et ->
                     ((op.isConferences() && et.isEventTypeConference()) || (op.isMeetups() && !et.isEventTypeConference())) &&
                             ((op.getOrganizerId() == null) || (et.getOrganizer().getId() == op.getOrganizerId())) &&
                             ((op.getEventTypeIds() == null) || op.getEventTypeIds().isEmpty() || op.getEventTypeIds().contains(et.getId()));
-            OlapEntityStatistics<Integer, EventType> actual = olapServiceImpl.getOlapEntityStatistics(
+            OlapEntityStatistics<Integer, Void, EventType> actual = olapServiceImpl.getOlapEntityStatistics(
                     op.getCubeType(), op.getMeasureType(), DimensionType.EVENT_TYPE, eventTypePredicate,
                     DimensionType.YEAR, DimensionType.CITY, DimensionType.EVENT_TYPE, eventTypePredicate);
 

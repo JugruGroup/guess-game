@@ -8,13 +8,16 @@ import java.util.Objects;
 /**
  * OLAP entity statistics.
  */
-public class OlapEntityStatistics<T, S> {
+public class OlapEntityStatistics<T, S, U> {
     private final List<T> dimensionValues1;
-    private List<OlapEntityMetrics<S>> metricsList;
+    private final List<S> dimensionValues2;
+    private List<OlapEntityMetrics<U>> metricsList;
     private final OlapEntityMetrics<Void> totals;
 
-    public OlapEntityStatistics(List<T> dimensionValues1, List<OlapEntityMetrics<S>> metricsList, OlapEntityMetrics<Void> totals) {
+    public OlapEntityStatistics(List<T> dimensionValues1, List<S> dimensionValues2, List<OlapEntityMetrics<U>> metricsList,
+                                OlapEntityMetrics<Void> totals) {
         this.dimensionValues1 = dimensionValues1;
+        this.dimensionValues2 = dimensionValues2;
         this.metricsList = metricsList;
         this.totals = totals;
     }
@@ -23,11 +26,15 @@ public class OlapEntityStatistics<T, S> {
         return dimensionValues1;
     }
 
-    public List<OlapEntityMetrics<S>> getMetricsList() {
+    public List<S> getDimensionValues2() {
+        return dimensionValues2;
+    }
+
+    public List<OlapEntityMetrics<U>> getMetricsList() {
         return metricsList;
     }
 
-    public void setMetricsList(List<OlapEntityMetrics<S>> metricsList) {
+    public void setMetricsList(List<OlapEntityMetrics<U>> metricsList) {
         this.metricsList = metricsList;
     }
 
@@ -39,19 +46,22 @@ public class OlapEntityStatistics<T, S> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof OlapEntityStatistics)) return false;
-        OlapEntityStatistics<?, ?> that = (OlapEntityStatistics<?, ?>) o;
-        return Objects.equals(getDimensionValues1(), that.getDimensionValues1()) && Objects.equals(getMetricsList(), that.getMetricsList()) && Objects.equals(getTotals(), that.getTotals());
+        OlapEntityStatistics<?, ?, ?> that = (OlapEntityStatistics<?, ?, ?>) o;
+        return Objects.equals(getDimensionValues1(), that.getDimensionValues1()) &&
+                Objects.equals(getDimensionValues2(), that.getDimensionValues2()) &&
+                Objects.equals(getMetricsList(), that.getMetricsList()) && Objects.equals(getTotals(), that.getTotals());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getDimensionValues1(), getMetricsList(), getTotals());
+        return Objects.hash(getDimensionValues1(), getDimensionValues2(), getMetricsList(), getTotals());
     }
 
     @Override
     public String toString() {
         return "OlapEntityStatistics{" +
-                "dimensionValues=" + dimensionValues1 +
+                "dimensionValues1=" + dimensionValues1 +
+                ", dimensionValues2=" + dimensionValues2 +
                 ", metricsList=" + metricsList +
                 ", totals=" + totals +
                 '}';

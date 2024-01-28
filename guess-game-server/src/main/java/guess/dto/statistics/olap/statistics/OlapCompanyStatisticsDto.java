@@ -2,6 +2,7 @@ package guess.dto.statistics.olap.statistics;
 
 import guess.domain.Language;
 import guess.domain.source.Company;
+import guess.domain.source.EventType;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
 import guess.dto.statistics.olap.metrics.OlapCompanyMetricsDto;
 import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;
@@ -17,7 +18,7 @@ public class OlapCompanyStatisticsDto extends OlapEntityStatisticsDto<Integer, O
         super(dimensionValues, metricsList, totals);
     }
 
-    public static OlapCompanyStatisticsDto convertToDto(OlapEntityStatistics<Integer, Company> companyStatistics, Language language) {
+    public static OlapCompanyStatisticsDto convertToDto(OlapEntityStatistics<Integer, ?, Company> companyStatistics, Language language) {
         return new OlapCompanyStatisticsDto(
                 companyStatistics.getDimensionValues1(),
                 OlapCompanyMetricsDto.convertToDto(companyStatistics.getMetricsList(), language),

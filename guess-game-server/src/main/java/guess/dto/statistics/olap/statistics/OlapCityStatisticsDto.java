@@ -1,8 +1,8 @@
 package guess.dto.statistics.olap.statistics;
 
 import guess.domain.Language;
-import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
 import guess.domain.statistics.olap.dimension.City;
+import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
 import guess.dto.statistics.olap.metrics.OlapCityMetricsDto;
 import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;
 
@@ -17,7 +17,7 @@ public class OlapCityStatisticsDto extends OlapEntityStatisticsDto<Integer, Olap
         super(dimensionValues, metricsList, totals);
     }
 
-    public static OlapCityStatisticsDto convertToDto(OlapEntityStatistics<Integer, City> cityStatistics, Language language) {
+    public static OlapCityStatisticsDto convertToDto(OlapEntityStatistics<Integer, Void, City> cityStatistics, Language language) {
         return new OlapCityStatisticsDto(
                 cityStatistics.getDimensionValues1(),
                 OlapCityMetricsDto.convertToDto(cityStatistics.getMetricsList(), language),
