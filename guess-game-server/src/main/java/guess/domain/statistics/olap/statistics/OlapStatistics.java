@@ -13,6 +13,5 @@ public record OlapStatistics(OlapEntityStatistics<Integer, EventType> yearEventT
                              OlapEntityStatistics<Integer, Company> yearCompanyStatistics,
                              OlapEntityStatistics<Topic, EventType> topicEventTypeStatistics,
                              OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics,
-                             OlapEntityStatistics<Topic, Company> topicCompanyStatistics,
-                             Olap3dCubeStatistics threeDimensionsStatistics) {
+                             OlapEntityStatistics<Topic, Company> topicCompanyStatistics) {
 }

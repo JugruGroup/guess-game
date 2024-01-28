@@ -399,9 +399,9 @@ class StatisticsControllerTest {
             OlapEntityStatistics<Topic, Speaker> topicSpeakerStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList1, topicTotals1);
             OlapEntityStatistics<Topic, Company> topicCompanyStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, topicMetricsList2, topicTotals2);
 
-            OlapStatistics olapStatistics0 = new OlapStatistics(yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null, null);
-            OlapStatistics olapStatistics1 = new OlapStatistics(null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null, null);
-            OlapStatistics olapStatistics2 = new OlapStatistics(null, null, yearCompanyStatistics0, null, null, topicCompanyStatistics0, null);
+            OlapStatistics olapStatistics0 = new OlapStatistics(yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null);
+            OlapStatistics olapStatistics1 = new OlapStatistics(null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null);
+            OlapStatistics olapStatistics2 = new OlapStatistics(null, null, yearCompanyStatistics0, null, null, topicCompanyStatistics0);
 
             return Stream.of(
                     arguments(CubeType.EVENT_TYPES, olapStatistics0),
