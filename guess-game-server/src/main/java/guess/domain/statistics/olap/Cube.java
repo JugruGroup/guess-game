@@ -217,6 +217,7 @@ public class Cube {
      *
      * @param dimensionTypeValues1      values of first dimension type
      * @param dimensionTypeValues2      values of second dimension type
+     * @param dimensionTypeValues2      values of third dimension type
      * @param filterDimensionTypeValues values of filter dimension type
      * @param measureType               measure type
      * @param entityQuadFunction        result element function
@@ -224,20 +225,22 @@ public class Cube {
      * @param resultTriFunction         result function
      * @param <T>                       first dimension type
      * @param <S>                       second dimension type
-     * @param <U>                       filter dimension type
-     * @param <V>                       result element type
-     * @param <W>                       totals type
+     * @param <U>                       third dimension type
+     * @param <V>                       filter dimension type
+     * @param <W>                       result element type
+     * @param <X>                       totals type
      * @param <Y>                       result type
      * @return measure value entities
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public <T, S, U, V, W, Y> Y getMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
+    public <T, S, U, V, W, X, Y> Y getMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
                                                         DimensionTypeValues<S> dimensionTypeValues2,
-                                                        DimensionTypeValues<U> filterDimensionTypeValues,
+                                                        DimensionTypeValues<U> dimensionTypeValues3,
+                                                        DimensionTypeValues<V> filterDimensionTypeValues,
                                                         MeasureType measureType,
-                                                        QuadFunction<T, List<Long>, List<Long>, Long, V> entityQuadFunction,
-                                                        TriFunction<List<Long>, List<Long>, Long, W> totalsTriFunction,
-                                                        TriFunction<List<S>, List<V>, W, Y> resultTriFunction) {
+                                                        QuadFunction<T, List<Long>, List<Long>, Long, W> entityQuadFunction,
+                                                        TriFunction<List<Long>, List<Long>, Long, X> totalsTriFunction,
+                                                        TriFunction<List<S>, List<W>, X, Y> resultTriFunction) {
         Set<Dimension> dimensions1 = dimensionTypeValues1.values().stream()
                 .map(v -> DimensionFactory.create(dimensionTypeValues1.type(), v))
                 .collect(Collectors.toSet());
@@ -279,7 +282,7 @@ public class Cube {
         }
 
         // Fill resulting list
-        List<V> measureValueEntities = new ArrayList<>();
+        List<W> measureValueEntities = new ArrayList<>();
 
         fillResultingList(dimensionTypeValues1, dimensionTypeValues2, measureType, entityQuadFunction,
                 measuresByDimensionValue1, dimensionTotalMeasures1, measureValueEntities);
@@ -363,15 +366,15 @@ public class Cube {
      * @param measureValueEntities      measure value entities
      * @param <T>                       first dimension type
      * @param <S>                       second dimension type
-     * @param <V>                       result element type
+     * @param <U>                       result element type
      */
-    private <T, S, V> void fillResultingList(DimensionTypeValues<T> dimensionTypeValues1,
+    private <T, S, U> void fillResultingList(DimensionTypeValues<T> dimensionTypeValues1,
                                              DimensionTypeValues<S> dimensionTypeValues2,
                                              MeasureType measureType,
-                                             QuadFunction<T, List<Long>, List<Long>, Long, V> entityQuadFunction,
+                                             QuadFunction<T, List<Long>, List<Long>, Long, U> entityQuadFunction,
                                              Map<T, Map<S, List<Measure<?>>>> measuresByDimensionValue1,
                                              Map<T, List<Measure<?>>> dimensionTotalMeasures1,
-                                             List<V> measureValueEntities) {
+                                             List<U> measureValueEntities) {
         for (T dimensionValue1 : dimensionTypeValues1.values()) {
             Map<S, List<Measure<?>>> measuresByDimensionValue2 = measuresByDimensionValue1.get(dimensionValue1);
             List<Long> measureValues;
