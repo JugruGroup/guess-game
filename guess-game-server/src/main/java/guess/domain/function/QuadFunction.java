@@ -1,4 +1,4 @@
-package guess.domain;
+package guess.domain.function;
 
 @FunctionalInterface
 public interface QuadFunction<T, U, V, W, R> {

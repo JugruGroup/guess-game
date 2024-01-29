@@ -1,6 +1,7 @@
 package guess.domain.statistics.olap;
 
-import guess.domain.QuadFunction;
+import guess.domain.function.QuadFunction;
+import guess.domain.function.QuintFunction;
 import guess.domain.statistics.olap.dimension.Dimension;
 import guess.domain.statistics.olap.dimension.DimensionFactory;
 import guess.domain.statistics.olap.measure.Measure;
@@ -217,30 +218,31 @@ public class Cube {
      *
      * @param dimensionTypeValues1      values of first dimension type
      * @param dimensionTypeValues2      values of second dimension type
-     * @param dimensionTypeValues2      values of third dimension type
+     * @param dimensionTypeValues3      values of third dimension type
      * @param filterDimensionTypeValues values of filter dimension type
      * @param measureType               measure type
      * @param entityQuadFunction        result element function
      * @param totalsTriFunction         totals function
-     * @param resultTriFunction         result function
+     * @param resultQuintFunction       result function
      * @param <T>                       first dimension type
      * @param <S>                       second dimension type
      * @param <U>                       third dimension type
      * @param <V>                       filter dimension type
-     * @param <W>                       result element type
-     * @param <X>                       totals type
-     * @param <Y>                       result type
+     * @param <W>                       result sub metrics element type
+     * @param <X>                       result metrics element type
+     * @param <Y>                       totals type
+     * @param <Z>                       result type
      * @return measure value entities
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public <T, S, U, V, W, X, Y> Y getMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
-                                                           DimensionTypeValues<S> dimensionTypeValues2,
-                                                           DimensionTypeValues<U> dimensionTypeValues3,
-                                                           DimensionTypeValues<V> filterDimensionTypeValues,
-                                                           MeasureType measureType,
-                                                           QuadFunction<T, List<Long>, List<Long>, Long, W> entityQuadFunction,
-                                                           TriFunction<List<Long>, List<Long>, Long, X> totalsTriFunction,
-                                                           QuadFunction<List<S>, List<U>, List<W>, X, Y> resultTriFunction) {
+    public <T, S, U, V, W, X, Y, Z> Z getMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
+                                                              DimensionTypeValues<S> dimensionTypeValues2,
+                                                              DimensionTypeValues<U> dimensionTypeValues3,
+                                                              DimensionTypeValues<V> filterDimensionTypeValues,
+                                                              MeasureType measureType,
+                                                              QuadFunction<T, List<Long>, List<Long>, Long, X> entityQuadFunction,
+                                                              TriFunction<List<Long>, List<Long>, Long, Y> totalsTriFunction,
+                                                              QuintFunction<List<S>, List<U>, List<W>, List<X>, Y, Z> resultQuintFunction) {
         Set<Dimension> dimensions1 = dimensionTypeValues1.values().stream()
                 .map(v -> DimensionFactory.create(dimensionTypeValues1.type(), v))
                 .collect(Collectors.toSet());
@@ -282,7 +284,7 @@ public class Cube {
         }
 
         // Fill resulting list
-        List<W> measureValueEntities = new ArrayList<>();
+        List<X> measureValueEntities = new ArrayList<>();
 
         fillResultingList(dimensionTypeValues1, dimensionTypeValues2, measureType, entityQuadFunction,
                 measuresByDimensionValue1, dimensionTotalMeasures1, measureValueEntities);
@@ -297,9 +299,10 @@ public class Cube {
         // Fill all total
         long allTotal = getMeasureValue(allTotalMeasures, measureType);
 
-        return resultTriFunction.apply(
+        return resultQuintFunction.apply(
                 dimensionTypeValues2.values(),
                 dimensionTypeValues3.values(),
+                Collections.emptyList(),        //TODO: implement
                 measureValueEntities,
                 totalsTriFunction.apply(totals, cumulativeTotals, allTotal));
     }

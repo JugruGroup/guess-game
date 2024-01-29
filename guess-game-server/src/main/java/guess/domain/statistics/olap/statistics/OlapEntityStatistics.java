@@ -1,6 +1,7 @@
 package guess.domain.statistics.olap.statistics;
 
 import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
+import guess.domain.statistics.olap.metrics.OlapEntitySubMetrics;
 
 import java.util.List;
 import java.util.Objects;
@@ -11,13 +12,15 @@ import java.util.Objects;
 public class OlapEntityStatistics<T, S, U> {
     private final List<T> dimensionValues1;
     private List<S> dimensionValues2;
+    private List<OlapEntitySubMetrics<U, S>> subMetricsList;
     private List<OlapEntityMetrics<U>> metricsList;
     private final OlapEntityMetrics<Void> totals;
 
-    public OlapEntityStatistics(List<T> dimensionValues1, List<S> dimensionValues2, List<OlapEntityMetrics<U>> metricsList,
-                                OlapEntityMetrics<Void> totals) {
+    public OlapEntityStatistics(List<T> dimensionValues1, List<S> dimensionValues2, List<OlapEntitySubMetrics<U, S>> subMetricsList,
+                                List<OlapEntityMetrics<U>> metricsList, OlapEntityMetrics<Void> totals) {
         this.dimensionValues1 = dimensionValues1;
         this.dimensionValues2 = dimensionValues2;
+        this.subMetricsList = subMetricsList;
         this.metricsList = metricsList;
         this.totals = totals;
     }
@@ -32,6 +35,14 @@ public class OlapEntityStatistics<T, S, U> {
 
     public void setDimensionValues2(List<S> dimensionValues2) {
         this.dimensionValues2 = dimensionValues2;
+    }
+
+    public List<OlapEntitySubMetrics<U, S>> getSubMetricsList() {
+        return subMetricsList;
+    }
+
+    public void setSubMetricsList(List<OlapEntitySubMetrics<U, S>> subMetricsList) {
+        this.subMetricsList = subMetricsList;
     }
 
     public List<OlapEntityMetrics<U>> getMetricsList() {
@@ -53,12 +64,14 @@ public class OlapEntityStatistics<T, S, U> {
         OlapEntityStatistics<?, ?, ?> that = (OlapEntityStatistics<?, ?, ?>) o;
         return Objects.equals(getDimensionValues1(), that.getDimensionValues1()) &&
                 Objects.equals(getDimensionValues2(), that.getDimensionValues2()) &&
-                Objects.equals(getMetricsList(), that.getMetricsList()) && Objects.equals(getTotals(), that.getTotals());
+                Objects.equals(getSubMetricsList(), that.getSubMetricsList()) &&
+                Objects.equals(getMetricsList(), that.getMetricsList()) &&
+                Objects.equals(getTotals(), that.getTotals());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getDimensionValues1(), getDimensionValues2(), getMetricsList(), getTotals());
+        return Objects.hash(getDimensionValues1(), getDimensionValues2(), getSubMetricsList(), getMetricsList(), getTotals());
     }
 
     @Override
@@ -66,6 +79,7 @@ public class OlapEntityStatistics<T, S, U> {
         return "OlapEntityStatistics{" +
                 "dimensionValues1=" + dimensionValues1 +
                 ", dimensionValues2=" + dimensionValues2 +
+                ", subMetricsList=" + subMetricsList +
                 ", metricsList=" + metricsList +
                 ", totals=" + totals +
                 '}';
