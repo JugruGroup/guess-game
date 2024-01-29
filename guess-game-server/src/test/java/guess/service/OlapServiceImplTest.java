@@ -5,9 +5,12 @@ import guess.dao.OlapDao;
 import guess.dao.OlapDaoImpl;
 import guess.dao.TopicDao;
 import guess.domain.Conference;
+import guess.domain.Identifier;
 import guess.domain.Language;
 import guess.domain.source.*;
-import guess.domain.statistics.olap.*;
+import guess.domain.statistics.olap.CubeType;
+import guess.domain.statistics.olap.DimensionType;
+import guess.domain.statistics.olap.MeasureType;
 import guess.domain.statistics.olap.dimension.City;
 import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
@@ -238,8 +241,13 @@ class OlapServiceImplTest {
         private Stream<Arguments> data() {
             // Year statistics
             List<Integer> yearDimensionValues0 = List.of(2020, 2021);
-            List<City> cityDimensionValues0 = Collections.emptyList();
-            List<EventType> eventTypeDimensionValues0 = Collections.emptyList();
+
+            City city0 = new City(0, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City0")));
+            City city1 = new City(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City1")));
+            City city2 = new City(2, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City2")));
+            List<City> cityDimensionValues0 = List.of(city0, city1, city2);
+
+            List<EventType> eventTypeDimensionValues0 = List.of(eventType0, eventType1, eventType2);
 
             List<OlapEntityMetrics<EventType>> yearMetricsList0 = Collections.emptyList();
             OlapEntityMetrics<Void> yearTotals0 = new OlapEntityMetrics<>(null, List.of(0L, 0L), List.of(0L, 0L), 0L);
@@ -558,51 +566,50 @@ class OlapServiceImplTest {
             );
         }
 
+        private <T extends Identifier> void sortDimensionValues2(OlapEntityStatistics<?, T, ?> olapEntityStatistics) {
+            List<T> sortedDimensionValues2 = olapEntityStatistics.getDimensionValues2().stream()
+                    .sorted(Comparator.comparing(Identifier::getId))
+                    .toList();
+            olapEntityStatistics.setDimensionValues2(sortedDimensionValues2);
+        }
+
+        private <T extends Identifier> void sortMetricsList(OlapEntityStatistics<?, ?, T> olapEntityStatistics) {
+            List<OlapEntityMetrics<T>> sortedYearMetricsList = olapEntityStatistics.getMetricsList().stream()
+                    .sorted(Comparator.comparing(m -> m.entity().getId()))
+                    .toList();
+            olapEntityStatistics.setMetricsList(sortedYearMetricsList);
+        }
+
         @ParameterizedTest
         @MethodSource("data")
         void getOlapStatistics(OlapParametersDto op, OlapStatistics expected) {
             OlapStatistics actual = olapService.getOlapStatistics(op);
 
             if (actual.yearEventTypeStatistics() != null) {
-                List<OlapEntityMetrics<EventType>> sortedYearMetricsList = actual.yearEventTypeStatistics().getMetricsList().stream()
-                        .sorted(Comparator.comparing(m -> m.entity().getId()))
-                        .toList();
-                actual.yearEventTypeStatistics().setMetricsList(sortedYearMetricsList);
+                sortDimensionValues2(actual.yearEventTypeStatistics());
+                sortMetricsList(actual.yearEventTypeStatistics());
             }
 
             if (actual.topicEventTypeStatistics() != null) {
-                List<OlapEntityMetrics<EventType>> sortedTopicMetricsList = actual.topicEventTypeStatistics().getMetricsList().stream()
-                        .sorted(Comparator.comparing(m -> m.entity().getId()))
-                        .toList();
-                actual.topicEventTypeStatistics().setMetricsList(sortedTopicMetricsList);
+                sortMetricsList(actual.topicEventTypeStatistics());
             }
 
             if (actual.yearSpeakerStatistics() != null) {
-                List<OlapEntityMetrics<Speaker>> sortedYearMetricsList = actual.yearSpeakerStatistics().getMetricsList().stream()
-                        .sorted(Comparator.comparing(m -> m.entity().getId()))
-                        .toList();
-                actual.yearSpeakerStatistics().setMetricsList(sortedYearMetricsList);
+                sortDimensionValues2(actual.yearSpeakerStatistics());
+                sortMetricsList(actual.yearSpeakerStatistics());
             }
 
             if (actual.topicSpeakerStatistics() != null) {
-                List<OlapEntityMetrics<Speaker>> sortedTopicMetricsList = actual.topicSpeakerStatistics().getMetricsList().stream()
-                        .sorted(Comparator.comparing(m -> m.entity().getId()))
-                        .toList();
-                actual.topicSpeakerStatistics().setMetricsList(sortedTopicMetricsList);
+                sortMetricsList(actual.topicSpeakerStatistics());
             }
 
             if (actual.yearCompanyStatistics() != null) {
-                List<OlapEntityMetrics<Company>> sortedYearMetricsList = actual.yearCompanyStatistics().getMetricsList().stream()
-                        .sorted(Comparator.comparing(m -> m.entity().getId()))
-                        .toList();
-                actual.yearCompanyStatistics().setMetricsList(sortedYearMetricsList);
+                sortDimensionValues2(actual.yearCompanyStatistics());
+                sortMetricsList(actual.yearCompanyStatistics());
             }
 
             if (actual.topicCompanyStatistics() != null) {
-                List<OlapEntityMetrics<Company>> sortedTopicMetricsList = actual.topicCompanyStatistics().getMetricsList().stream()
-                        .sorted(Comparator.comparing(m -> m.entity().getId()))
-                        .toList();
-                actual.topicCompanyStatistics().setMetricsList(sortedTopicMetricsList);
+                sortMetricsList(actual.topicCompanyStatistics());
             }
 
             assertEquals(expected, actual);
@@ -1004,8 +1011,12 @@ class OlapServiceImplTest {
             op1.setConferences(true);
             op1.setMeetups(false);
 
-            List<Integer> dimensionValues0 = List.of(2020, 2021);
-            List<Void> voidDimensionValues0 = Collections.emptyList();
+            List<Integer> yearDimensionValues0 = List.of(2020, 2021);
+
+            City city0 = new City(0, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City0")));
+            City city1 = new City(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City1")));
+            City city2 = new City(2, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City2")));
+            List<City> cityDimensionValues0 = List.of(city0, city1, city2);
 
             List<OlapEntityMetrics<EventType>> metricsList0 = List.of(
                     new OlapEntityMetrics<>(eventType0, List.of(1L, 0L), List.of(1L, 1L), 1L),
@@ -1019,8 +1030,10 @@ class OlapServiceImplTest {
             );
             OlapEntityMetrics<Void> totals1 = new OlapEntityMetrics<>(null, List.of(2L, 0L), List.of(2L, 2L), 2L);
 
-            OlapEntityStatistics<Integer, Void, EventType> expected0 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList0, totals0);
-            OlapEntityStatistics<Integer, Void, EventType> expected1 = new OlapEntityStatistics<>(dimensionValues0, voidDimensionValues0, metricsList1, totals1);
+            OlapEntityStatistics<Integer, City, EventType> expected0 =
+                    new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, metricsList0, totals0);
+            OlapEntityStatistics<Integer, City, EventType> expected1 =
+                    new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, metricsList1, totals1);
 
             return Stream.of(
                     arguments(op0, expected0),
@@ -1030,15 +1043,20 @@ class OlapServiceImplTest {
 
         @ParameterizedTest
         @MethodSource("data")
-        void getOlapEntityStatistics(OlapParametersDto op, OlapEntityStatistics<Integer, Void, EventType> expected) {
+        void getOlapEntityStatistics(OlapParametersDto op, OlapEntityStatistics<Integer, City, EventType> expected) {
             OlapServiceImpl olapServiceImpl = new OlapServiceImpl(olapDao);
             Predicate<EventType> eventTypePredicate = et ->
                     ((op.isConferences() && et.isEventTypeConference()) || (op.isMeetups() && !et.isEventTypeConference())) &&
                             ((op.getOrganizerId() == null) || (et.getOrganizer().getId() == op.getOrganizerId())) &&
                             ((op.getEventTypeIds() == null) || op.getEventTypeIds().isEmpty() || op.getEventTypeIds().contains(et.getId()));
-            OlapEntityStatistics<Integer, Void, EventType> actual = olapServiceImpl.getOlapEntityStatistics(
+            OlapEntityStatistics<Integer, City, EventType> actual = olapServiceImpl.getOlapEntityStatistics(
                     op.getCubeType(), op.getMeasureType(), DimensionType.EVENT_TYPE, eventTypePredicate,
                     DimensionType.YEAR, DimensionType.CITY, DimensionType.EVENT_TYPE, eventTypePredicate);
+
+            List<City> sortedDimensionValues2 = actual.getDimensionValues2().stream()
+                    .sorted(Comparator.comparing(Identifier::getId))
+                    .toList();
+            actual.setDimensionValues2(sortedDimensionValues2);
 
             List<OlapEntityMetrics<EventType>> sortedMetricsList = actual.getMetricsList().stream()
                     .sorted(Comparator.comparing(m -> m.entity().getId()))

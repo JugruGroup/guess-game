@@ -10,7 +10,7 @@ import java.util.Objects;
  */
 public class OlapEntityStatistics<T, S, U> {
     private final List<T> dimensionValues1;
-    private final List<S> dimensionValues2;
+    private List<S> dimensionValues2;
     private List<OlapEntityMetrics<U>> metricsList;
     private final OlapEntityMetrics<Void> totals;
 
@@ -28,6 +28,10 @@ public class OlapEntityStatistics<T, S, U> {
 
     public List<S> getDimensionValues2() {
         return dimensionValues2;
+    }
+
+    public void setDimensionValues2(List<S> dimensionValues2) {
+        this.dimensionValues2 = dimensionValues2;
     }
 
     public List<OlapEntityMetrics<U>> getMetricsList() {
