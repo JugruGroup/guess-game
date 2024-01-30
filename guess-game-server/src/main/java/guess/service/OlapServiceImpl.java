@@ -8,6 +8,7 @@ import guess.domain.source.Topic;
 import guess.domain.statistics.olap.*;
 import guess.domain.statistics.olap.dimension.City;
 import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
+import guess.domain.statistics.olap.metrics.OlapEntitySubMetrics;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
 import guess.domain.statistics.olap.statistics.OlapStatistics;
 import guess.dto.statistics.olap.parameters.*;
@@ -134,12 +135,12 @@ public class OlapServiceImpl implements OlapService {
 
     @SuppressWarnings("unchecked")
     <T, S, U, V> OlapEntityStatistics<S, U, T> getOlapEntityStatistics(CubeType cubeType, MeasureType measureType,
-                                                                    DimensionType dimensionType1,
-                                                                    Predicate<T> dimensionPredicate1,
-                                                                    DimensionType dimensionType2,
-                                                                    DimensionType dimensionType3,
-                                                                    DimensionType filterDimensionType,
-                                                                    Predicate<V> filterDimensionPredicate) {
+                                                                       DimensionType dimensionType1,
+                                                                       Predicate<T> dimensionPredicate1,
+                                                                       DimensionType dimensionType2,
+                                                                       DimensionType dimensionType3,
+                                                                       DimensionType filterDimensionType,
+                                                                       Predicate<V> filterDimensionPredicate) {
         Cube cube = olapDao.getCube(cubeType);
         List<T> dimensionValues1 = cube.getDimensionValues(dimensionType1).stream()
                 .map(v -> (T) v)
@@ -163,7 +164,7 @@ public class OlapServiceImpl implements OlapService {
                 new DimensionTypeValues<>(dimensionType2, dimensionValues2),
                 new DimensionTypeValues<>(dimensionType3, dimensionValues3),
                 new DimensionTypeValues<>(filterDimensionType, filterDimensionValues),
-                measureType, OlapEntityMetrics::new,
+                measureType, OlapEntitySubMetrics::new, OlapEntityMetrics::new,
                 (measureValues, cumulativeMeasureValues, total) ->
                         new OlapEntityMetrics<Void>(null, measureValues, cumulativeMeasureValues, total),
                 OlapEntityStatistics::new);
