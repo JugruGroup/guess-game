@@ -511,12 +511,16 @@ public class Cube {
                             subMeasureValues.add(getMeasureValue(measures, measureType));
                         }
 
-                        measureValues.put(dimensionValue3, subMeasureValues);
+                        if (!subMeasureValues.isEmpty()) {
+                            measureValues.put(dimensionValue3, subMeasureValues);
+                        }
                     }
                 }
             }
 
-            subMeasureValueEntities.add(resultSubMetricsBiFunction.apply(dimensionValue1, measureValues));
+            if (!measureValues.isEmpty()) {
+                subMeasureValueEntities.add(resultSubMetricsBiFunction.apply(dimensionValue1, measureValues));
+            }
         }
 
         return subMeasureValueEntities;
