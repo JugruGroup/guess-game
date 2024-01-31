@@ -14,8 +14,33 @@ import java.util.List;
 /**
  * OLAP 3D cube statistics DTO.
  */
-public record Olap3dCubeStatisticsDto(List<Integer> dimensionValues1, List<Olap3dCubeDimensionDto> dimensionValues2,
-                                      List<Olap3dCubeMetricsDto> metricsList) {
+public class Olap3dCubeStatisticsDto {
+    private final List<Integer> dimensionValues1;
+    private List<Olap3dCubeDimensionDto> dimensionValues2;
+    private final List<Olap3dCubeMetricsDto> metricsList;
+
+    public Olap3dCubeStatisticsDto(List<Integer> dimensionValues1, List<Olap3dCubeDimensionDto> dimensionValues2,
+                                   List<Olap3dCubeMetricsDto> metricsList) {
+        this.dimensionValues1 = dimensionValues1;
+        this.dimensionValues2 = dimensionValues2;
+        this.metricsList = metricsList;
+    }
+
+    public List<Integer> getDimensionValues1() {
+        return dimensionValues1;
+    }
+
+    public List<Olap3dCubeDimensionDto> getDimensionValues2() {
+        return dimensionValues2;
+    }
+
+    public void setDimensionValues2(List<Olap3dCubeDimensionDto> dimensionValues2) {
+        this.dimensionValues2 = dimensionValues2;
+    }
+
+    public List<Olap3dCubeMetricsDto> getMetricsList() {
+        return metricsList;
+    }
 
     private static OlapEntityStatistics<Integer, ? extends Nameable, ? extends Nameable> getFirstStatistics(OlapStatistics olapStatistics) {
         if (olapStatistics.yearEventTypeStatistics() != null) {
