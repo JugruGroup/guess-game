@@ -1,7 +1,6 @@
 package guess.dto.statistics.olap.statistics;
 
 import guess.domain.Language;
-import guess.domain.source.EventType;
 import guess.domain.source.Speaker;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
 import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;
