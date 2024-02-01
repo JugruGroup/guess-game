@@ -271,18 +271,22 @@ public class Cube {
             for (Dimension<?> entryDimension1 : entryDimensions) {
                 if (dimensions1.contains(entryDimension1)) {
                     T dimensionValue1 = (T) entryDimension1.getValue();
-                    Map<S, List<Measure<?>>> measuresByDimensionValue2 = measuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
-                    Map<U, Map<S, List<Measure<?>>>> subMeasuresByDimensionValue2 = subMeasuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
 
                     // Search filter dimension values
                     for (Dimension<?> entryDimension3 : entryDimensions) {
                         if (filterDimensions.contains(entryDimension3)) {
-                            MeasureMaps<T, S> measureMaps = new MeasureMaps<>(dimensionTotalMeasures1, dimensionTotalMeasures2, measuresByDimensionValue2);
+                            Map<S, List<Measure<?>>> measuresByDimensionValue2 =
+                                    measuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
+                            MeasureMaps<T, S> measureMaps =
+                                    new MeasureMaps<>(dimensionTotalMeasures1, dimensionTotalMeasures2, measuresByDimensionValue2);
 
                             // Search second dimension values
                             fillMeasureValues(measureType, dimensions2, measureMaps, entry, dimensionValue1);
 
                             if (!dimensions3.isEmpty()) {
+                                Map<U, Map<S, List<Measure<?>>>> subMeasuresByDimensionValue2 =
+                                        subMeasuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
+
                                 // Search second and third dimension values
                                 fillSubMeasureValues(measureType, dimensions2, dimensions3, subMeasuresByDimensionValue2, entry);
                             }
@@ -439,15 +443,10 @@ public class Cube {
 
         for (T dimensionValue1 : dimensionTypeValues1.values()) {
             Map<S, List<Measure<?>>> measuresByDimensionValue2 = measuresByDimensionValue1.get(dimensionValue1);
-            List<Long> measureValues;
-            List<Long> cumulativeMeasureValues;
+            List<Long> measureValues = new ArrayList<>();
+            List<Long> cumulativeMeasureValues = new ArrayList<>();
 
-            if (measuresByDimensionValue2 == null) {
-                measureValues = Collections.nCopies(dimensionTypeValues2.values().size(), 0L);
-                cumulativeMeasureValues = Collections.nCopies(dimensionTypeValues2.values().size(), 0L);
-            } else {
-                measureValues = new ArrayList<>();
-                cumulativeMeasureValues = new ArrayList<>();
+            if (measuresByDimensionValue2 != null) {
                 List<Measure<?>> cumulativeMeasures = new ArrayList<>();
 
                 for (S dimensionValue2 : dimensionTypeValues2.values()) {
