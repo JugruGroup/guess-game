@@ -996,7 +996,7 @@ export class OlapStatisticsComponent implements OnInit {
     const labelsX = olap3dCubeStatistics.dimensionValues1.map(value => value.toString());
     const usedDimensionIds = this.getUsedDimensionIds(cubeMetricsList);
     const filteredDimensionValues2 = olap3dCubeStatistics.dimensionValues2
-      .filter((element, index) => usedDimensionIds.has(index));
+      .filter(element => usedDimensionIds.has(element.id));
     const labelsY = filteredDimensionValues2.map(value => value.name);
 
     const datasets = cubeMetricsList
