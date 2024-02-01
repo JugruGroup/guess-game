@@ -11,6 +11,7 @@ import guess.dto.statistics.olap.Olap3dCubeDimensionDto;
 import guess.dto.statistics.olap.Olap3dCubeMeasureValueDto;
 import guess.dto.statistics.olap.metrics.Olap3dCubeMetricsDto;
 import guess.util.LocalizationUtils;
+import guess.util.OlapUtils;
 
 import java.util.Comparator;
 import java.util.List;
@@ -68,7 +69,7 @@ public record Olap3dCubeStatisticsDto(List<Integer> dimensionValues1, List<Olap3
                     List<Olap3dCubeMeasureValueDto> measureValueList = m.measureValues().entrySet().stream()
                             .map(e -> new Olap3dCubeMeasureValueDto(
                                     e.getKey().getId(),
-                                    e.getValue())
+                                    OlapUtils.removeTrailingZeroes(e.getValue()))
                             )
                             .toList();
 
