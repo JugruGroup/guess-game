@@ -8,7 +8,6 @@ import guess.dto.statistics.event.EventMetricsDto;
 import guess.dto.statistics.event.EventStatisticsDto;
 import guess.dto.statistics.eventtype.EventTypeMetricsDto;
 import guess.dto.statistics.eventtype.EventTypeStatisticsDto;
-import guess.dto.statistics.olap.Olap3dCubeDimensionDto;
 import guess.dto.statistics.olap.metrics.OlapCityMetricsDto;
 import guess.dto.statistics.olap.metrics.OlapCompanyMetricsDto;
 import guess.dto.statistics.olap.metrics.OlapEventTypeMetricsDto;
@@ -170,14 +169,6 @@ public class StatisticsController {
                     .toList();
 
             olapStatisticsDto.companyStatistics().setMetricsList(sortedMetricsList);
-        }
-
-        if (olapStatisticsDto.threeDimensionsStatistics() != null) {
-            List<Olap3dCubeDimensionDto> sortedDimensionValues2 = olapStatisticsDto.threeDimensionsStatistics().getDimensionValues2().stream()
-                    .sorted(Comparator.comparing(Olap3dCubeDimensionDto::name))
-                    .toList();
-
-            olapStatisticsDto.threeDimensionsStatistics().setDimensionValues2(sortedDimensionValues2);
         }
 
         return olapStatisticsDto;
