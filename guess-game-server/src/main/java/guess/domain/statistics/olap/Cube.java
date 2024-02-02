@@ -2,11 +2,11 @@ package guess.domain.statistics.olap;
 
 import guess.domain.function.QuadFunction;
 import guess.domain.function.QuintFunction;
+import guess.domain.function.TriFunction;
 import guess.domain.statistics.olap.dimension.Dimension;
 import guess.domain.statistics.olap.dimension.DimensionFactory;
 import guess.domain.statistics.olap.measure.Measure;
 import guess.domain.statistics.olap.measure.MeasureFactory;
-import org.apache.commons.lang3.function.TriFunction;
 
 import java.util.*;
 import java.util.function.BiFunction;
@@ -270,11 +270,10 @@ public class Cube {
             // Search first dimension values
             for (Dimension<?> entryDimension1 : entryDimensions) {
                 if (dimensions1.contains(entryDimension1)) {
-                    T dimensionValue1 = (T) entryDimension1.getValue();
-
                     // Search filter dimension values
-                    for (Dimension<?> entryDimension3 : entryDimensions) {
-                        if (filterDimensions.contains(entryDimension3)) {
+                    for (Dimension<?> filterEntryDimension : entryDimensions) {
+                        if (filterDimensions.contains(filterEntryDimension)) {
+                            T dimensionValue1 = (T) entryDimension1.getValue();
                             Map<S, List<Measure<?>>> measuresByDimensionValue2 =
                                     measuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
                             MeasureMaps<T, S> measureMaps =
@@ -404,7 +403,7 @@ public class Cube {
                         if (measure != null) {
                             S dimensionValue2 = (S) entryDimension2.getValue();
 
-                            //Sub measures of first, second and third dimensions
+                            // Sub measures of first, second and third dimensions
                             subMeasuresByDimensionValue3
                                     .computeIfAbsent(dimensionValue2, k -> new ArrayList<>())
                                     .add(measure);
