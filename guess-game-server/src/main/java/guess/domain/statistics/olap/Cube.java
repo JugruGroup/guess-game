@@ -195,7 +195,7 @@ public class Cube {
     /**
      * Gets measure value by dimensions.
      * <p>
-     * Slow, only used in unit tests.
+     * Slow, used only in unit tests.
      *
      * @param dimensions  dimension set
      * @param measureType measure type
@@ -300,18 +300,18 @@ public class Cube {
         }
 
         // Fill resulting list
-        List<X> measureValueEntities = getMeasureValueEntities(dimensionTypeValues1, dimensionTypeValues2, measureType,
-                measuresByDimensionValue1, resultMetricsQuadFunction, dimensionTotalMeasures1);
+        List<X> measureValueEntities = getMeasureValueEntities(dimensionTypeValues1.values(), dimensionTypeValues2.values(),
+                measureType, measuresByDimensionValue1, resultMetricsQuadFunction, dimensionTotalMeasures1);
         List<W> subMeasureValueEntities = dimensions3.isEmpty() ? Collections.emptyList() :
-                getSubMeasureValueEntities(dimensionTypeValues1, dimensionTypeValues2, dimensionTypeValues3, measureType,
-                        subMeasuresByDimensionValue1, resultSubMetricsBiFunction);
+                getSubMeasureValueEntities(dimensionTypeValues1.values(), dimensionTypeValues2.values(),
+                        dimensionTypeValues3.values(), measureType, subMeasuresByDimensionValue1, resultSubMetricsBiFunction);
 
         // Fill totals
         List<Long> totals = new ArrayList<>();
         List<Long> cumulativeTotals = new ArrayList<>();
         List<Measure<?>> allTotalMeasures = new ArrayList<>();
 
-        fillTotals(dimensionTypeValues2, dimensionTotalMeasures2, measureType, totals, cumulativeTotals, allTotalMeasures);
+        fillTotals(dimensionTypeValues2.values(), dimensionTotalMeasures2, measureType, totals, cumulativeTotals, allTotalMeasures);
 
         // Fill all total
         long allTotal = getMeasureValue(allTotalMeasures, measureType);
@@ -421,8 +421,8 @@ public class Cube {
     /**
      * Gets measure value entities.
      *
-     * @param dimensionTypeValues1      values of first dimension type
-     * @param dimensionTypeValues2      values of second dimension type
+     * @param dimensionValues1          values of first dimension type
+     * @param dimensionValues2          values of second dimension type
      * @param measureType               measure type
      * @param measuresByDimensionValue1 measures by first dimension value
      * @param resultMetricsQuadFunction result metrics element function
@@ -432,15 +432,15 @@ public class Cube {
      * @param <U>                       result metrics element type
      * @return measure value entities
      */
-    private <T, S, U> List<U> getMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
-                                                      DimensionTypeValues<S> dimensionTypeValues2,
+    private <T, S, U> List<U> getMeasureValueEntities(List<T> dimensionValues1,
+                                                      List<S> dimensionValues2,
                                                       MeasureType measureType,
                                                       Map<T, Map<S, List<Measure<?>>>> measuresByDimensionValue1,
                                                       QuadFunction<T, List<Long>, List<Long>, Long, U> resultMetricsQuadFunction,
                                                       Map<T, List<Measure<?>>> dimensionTotalMeasures1) {
         List<U> measureValueEntities = new ArrayList<>();
 
-        for (T dimensionValue1 : dimensionTypeValues1.values()) {
+        for (T dimensionValue1 : dimensionValues1) {
             Map<S, List<Measure<?>>> measuresByDimensionValue2 = measuresByDimensionValue1.get(dimensionValue1);
             List<Long> measureValues = new ArrayList<>();
             List<Long> cumulativeMeasureValues = new ArrayList<>();
@@ -448,7 +448,7 @@ public class Cube {
             if (measuresByDimensionValue2 != null) {
                 List<Measure<?>> cumulativeMeasures = new ArrayList<>();
 
-                for (S dimensionValue2 : dimensionTypeValues2.values()) {
+                for (S dimensionValue2 : dimensionValues2) {
                     List<Measure<?>> measures = measuresByDimensionValue2.get(dimensionValue2);
 
                     if ((measures != null) && !measures.isEmpty()) {
@@ -472,9 +472,9 @@ public class Cube {
     /**
      * Gets sub measure value entities.
      *
-     * @param dimensionTypeValues1         values of first dimension type
-     * @param dimensionTypeValues2         values of second dimension type
-     * @param dimensionTypeValues3         values of third dimension type
+     * @param dimensionValues1             values of first dimension type
+     * @param dimensionValues2             values of second dimension type
+     * @param dimensionValues3             values of third dimension type
      * @param measureType                  measure type
      * @param subMeasuresByDimensionValue1 sub measures by first dimension value
      * @param resultSubMetricsBiFunction   result sub metrics element function
@@ -484,26 +484,26 @@ public class Cube {
      * @param <V>                          result sub metrics element type
      * @return sub measure value entities
      */
-    private <T, S, U, V> List<V> getSubMeasureValueEntities(DimensionTypeValues<T> dimensionTypeValues1,
-                                                            DimensionTypeValues<S> dimensionTypeValues2,
-                                                            DimensionTypeValues<U> dimensionTypeValues3,
+    private <T, S, U, V> List<V> getSubMeasureValueEntities(List<T> dimensionValues1,
+                                                            List<S> dimensionValues2,
+                                                            List<U> dimensionValues3,
                                                             MeasureType measureType,
                                                             Map<T, Map<U, Map<S, List<Measure<?>>>>> subMeasuresByDimensionValue1,
                                                             BiFunction<T, Map<U, List<Long>>, V> resultSubMetricsBiFunction) {
         List<V> subMeasureValueEntities = new ArrayList<>();
 
-        for (T dimensionValue1 : dimensionTypeValues1.values()) {
+        for (T dimensionValue1 : dimensionValues1) {
             Map<U, Map<S, List<Measure<?>>>> subMeasuresByDimensionValue2 = subMeasuresByDimensionValue1.get(dimensionValue1);
             Map<U, List<Long>> measureValues = new HashMap<>();
 
             if (subMeasuresByDimensionValue2 != null) {
-                for (U dimensionValue3 : dimensionTypeValues3.values()) {
+                for (U dimensionValue3 : dimensionValues3) {
                     Map<S, List<Measure<?>>> subMeasuresByDimensionValue3 = subMeasuresByDimensionValue2.get(dimensionValue3);
 
                     if (subMeasuresByDimensionValue3 != null) {
                         List<Long> subMeasureValues = new ArrayList<>();
 
-                        for (S dimensionValue2 : dimensionTypeValues2.values()) {
+                        for (S dimensionValue2 : dimensionValues2) {
                             List<Measure<?>> measures = subMeasuresByDimensionValue3.get(dimensionValue2);
 
                             subMeasureValues.add(getMeasureValue(measures, measureType));
@@ -527,7 +527,7 @@ public class Cube {
     /**
      * Fill totals.
      *
-     * @param dimensionTypeValues2    values of second dimension type
+     * @param dimensionValues2        values of second dimension type
      * @param dimensionTotalMeasures2 total measures of second dimension
      * @param measureType             measure type
      * @param totals                  totals
@@ -535,13 +535,13 @@ public class Cube {
      * @param allTotalMeasures        all total measures
      * @param <S>                     second dimension type
      */
-    private <S> void fillTotals(DimensionTypeValues<S> dimensionTypeValues2,
+    private <S> void fillTotals(List<S> dimensionValues2,
                                 Map<S, List<Measure<?>>> dimensionTotalMeasures2,
                                 MeasureType measureType, List<Long> totals, List<Long> cumulativeTotals,
                                 List<Measure<?>> allTotalMeasures) {
         List<Measure<?>> cumulativeMeasures = new ArrayList<>();
 
-        for (S dimensionValue2 : dimensionTypeValues2.values()) {
+        for (S dimensionValue2 : dimensionValues2) {
             List<Measure<?>> measures = dimensionTotalMeasures2.get(dimensionValue2);
 
             if ((measures != null) && !measures.isEmpty()) {

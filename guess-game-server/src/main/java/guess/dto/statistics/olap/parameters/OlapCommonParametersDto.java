@@ -1,36 +1,15 @@
 package guess.dto.statistics.olap.parameters;
 
-import guess.domain.statistics.olap.CubeType;
-import guess.domain.statistics.olap.MeasureType;
-
 import java.util.List;
 
 /**
  * OLAP common parameters DTO.
  */
-public class OlapCommonParametersDto {
-    private CubeType cubeType;
-    private MeasureType measureType;
+public abstract class OlapCommonParametersDto extends OlapBasicParametersDto {
     private boolean isConferences;
     private boolean isMeetups;
     private Long organizerId;
     private List<Long> eventTypeIds;
-
-    public CubeType getCubeType() {
-        return cubeType;
-    }
-
-    public void setCubeType(CubeType cubeType) {
-        this.cubeType = cubeType;
-    }
-
-    public MeasureType getMeasureType() {
-        return measureType;
-    }
-
-    public void setMeasureType(MeasureType measureType) {
-        this.measureType = measureType;
-    }
 
     public boolean isConferences() {
         return isConferences;

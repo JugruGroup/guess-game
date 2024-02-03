@@ -1139,8 +1139,8 @@ class OlapServiceImplTest {
                             ((op.getOrganizerId() == null) || (et.getOrganizer().getId() == op.getOrganizerId())) &&
                             ((op.getEventTypeIds() == null) || op.getEventTypeIds().isEmpty() || op.getEventTypeIds().contains(et.getId()));
             OlapEntityStatistics<Integer, City, EventType> actual = olapServiceImpl.getOlapEntityStatistics(
-                    op.getCubeType(), op.getMeasureType(), DimensionType.EVENT_TYPE, eventTypePredicate,
-                    DimensionType.YEAR, DimensionType.CITY, DimensionType.EVENT_TYPE, eventTypePredicate);
+                    op, DimensionType.EVENT_TYPE, eventTypePredicate, DimensionType.YEAR, DimensionType.CITY,
+                    DimensionType.EVENT_TYPE, eventTypePredicate);
 
             List<City> sortedDimensionValues2 = actual.getDimensionValues2().stream()
                     .sorted(Comparator.comparing(Identifier::getId))
