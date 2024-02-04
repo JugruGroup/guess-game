@@ -1,7 +1,7 @@
 package guess.dto.statistics.olap.statistics;
 
 import guess.domain.Language;
-import guess.domain.statistics.olap.dimension.City;
+import guess.domain.source.City;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
 import guess.dto.statistics.olap.metrics.OlapCityMetricsDto;
 import guess.dto.statistics.olap.metrics.OlapEntityMetricsDto;

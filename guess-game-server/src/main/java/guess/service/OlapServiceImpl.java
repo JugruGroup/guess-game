@@ -1,12 +1,8 @@
 package guess.service;
 
 import guess.dao.OlapDao;
-import guess.domain.source.Company;
-import guess.domain.source.EventType;
-import guess.domain.source.Speaker;
-import guess.domain.source.Topic;
+import guess.domain.source.*;
 import guess.domain.statistics.olap.*;
-import guess.domain.statistics.olap.dimension.City;
 import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
 import guess.domain.statistics.olap.metrics.OlapEntitySubMetrics;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;

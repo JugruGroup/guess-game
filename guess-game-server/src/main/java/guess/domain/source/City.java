@@ -1,4 +1,4 @@
-package guess.domain.statistics.olap.dimension;
+package guess.domain.source;
 
 import guess.domain.source.LocaleItem;
 import guess.domain.source.Nameable;

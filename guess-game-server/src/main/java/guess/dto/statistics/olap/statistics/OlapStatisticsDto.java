@@ -1,10 +1,10 @@
 package guess.dto.statistics.olap.statistics;
 
 import guess.domain.Language;
+import guess.domain.source.City;
 import guess.domain.source.Company;
 import guess.domain.source.EventType;
 import guess.domain.source.Speaker;
-import guess.domain.statistics.olap.dimension.City;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;
 import guess.domain.statistics.olap.statistics.OlapStatistics;
 

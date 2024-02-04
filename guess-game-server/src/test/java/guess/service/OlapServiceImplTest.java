@@ -11,7 +11,6 @@ import guess.domain.source.*;
 import guess.domain.statistics.olap.CubeType;
 import guess.domain.statistics.olap.DimensionType;
 import guess.domain.statistics.olap.MeasureType;
-import guess.domain.statistics.olap.dimension.City;
 import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
 import guess.domain.statistics.olap.metrics.OlapEntitySubMetrics;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;

@@ -254,7 +254,6 @@ public class Cube {
         Map<T, List<Measure<?>>> dimensionTotalMeasures1 = new HashMap<>();
         Map<S, List<Measure<?>>> dimensionTotalMeasures2 = new HashMap<>();
 
-        // Create intermediate measure map
         for (Map.Entry<Set<Dimension<?>>, Map<MeasureType, Measure<?>>> entry : measureMap.entrySet()) {
             Set<Dimension<?>> entryDimensions = entry.getKey();
 
@@ -451,10 +450,12 @@ public class Cube {
                 }
             }
 
-            List<Measure<?>> measures = dimensionTotalMeasures1.get(dimensionValue1);
-            long total = getMeasureValue(measures, measureType);
+            if (!measureValues.isEmpty()) {
+                List<Measure<?>> measures = dimensionTotalMeasures1.get(dimensionValue1);
+                long total = getMeasureValue(measures, measureType);
 
-            measureValueEntities.add(resultMetricsQuadFunction.apply(dimensionValue1, measureValues, cumulativeMeasureValues, total));
+                measureValueEntities.add(resultMetricsQuadFunction.apply(dimensionValue1, measureValues, cumulativeMeasureValues, total));
+            }
         }
 
         return measureValueEntities;

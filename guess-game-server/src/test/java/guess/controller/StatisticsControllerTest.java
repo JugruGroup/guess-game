@@ -10,7 +10,6 @@ import guess.domain.statistics.event.EventStatistics;
 import guess.domain.statistics.eventtype.EventTypeMetrics;
 import guess.domain.statistics.eventtype.EventTypeStatistics;
 import guess.domain.statistics.olap.CubeType;
-import guess.domain.statistics.olap.dimension.City;
 import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
 import guess.domain.statistics.olap.metrics.OlapEntitySubMetrics;
 import guess.domain.statistics.olap.statistics.OlapEntityStatistics;

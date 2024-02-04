@@ -1,8 +1,8 @@
 package guess.dto.statistics.olap.metrics;
 
 import guess.domain.Language;
+import guess.domain.source.City;
 import guess.domain.statistics.olap.metrics.OlapEntityMetrics;
-import guess.domain.statistics.olap.dimension.City;
 import guess.util.LocalizationUtils;
 
 import java.util.List;
