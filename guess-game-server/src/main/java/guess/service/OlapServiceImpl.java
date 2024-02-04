@@ -164,9 +164,13 @@ public class OlapServiceImpl implements OlapService {
                 new DimensionTypeValues<>(dimensionType2, dimensionValues2),
                 new DimensionTypeValues<>(dimensionType3, dimensionValues3),
                 new DimensionTypeValues<>(filterDimensionType, filterDimensionValues),
-                op.getMeasureType(), OlapEntitySubMetrics::new, OlapEntityMetrics::new,
-                (measureValues, cumulativeMeasureValues, total) ->
-                        new OlapEntityMetrics<Void>(null, measureValues, cumulativeMeasureValues, total),
-                OlapEntityStatistics::new);
+                op.getMeasureType(),
+                new ResultFunctions<>(
+                        OlapEntitySubMetrics::new,
+                        OlapEntityMetrics::new,
+                        (measureValues, cumulativeMeasureValues, total) ->
+                                new OlapEntityMetrics<Void>(null, measureValues, cumulativeMeasureValues, total),
+                        OlapEntityStatistics::new
+                ));
     }
 }

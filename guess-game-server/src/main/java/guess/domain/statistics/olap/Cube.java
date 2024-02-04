@@ -1,8 +1,6 @@
 package guess.domain.statistics.olap;
 
 import guess.domain.function.QuadFunction;
-import guess.domain.function.QuintFunction;
-import guess.domain.function.TriFunction;
 import guess.domain.statistics.olap.dimension.Dimension;
 import guess.domain.statistics.olap.dimension.DimensionFactory;
 import guess.domain.statistics.olap.measure.Measure;
@@ -222,10 +220,6 @@ public class Cube {
      * @param dimensionTypeValues3       values of third dimension type
      * @param filterDimensionTypeValues  values of filter dimension type
      * @param measureType                measure type
-     * @param resultSubMetricsBiFunction result sub metrics element function
-     * @param resultMetricsQuadFunction  result metrics element function
-     * @param totalsTriFunction          totals function
-     * @param resultQuintFunction        result function
      * @param <T>                        first dimension type
      * @param <S>                        second dimension type
      * @param <U>                        third dimension type
@@ -242,10 +236,7 @@ public class Cube {
                                                               DimensionTypeValues<U> dimensionTypeValues3,
                                                               DimensionTypeValues<V> filterDimensionTypeValues,
                                                               MeasureType measureType,
-                                                              BiFunction<T, Map<U, List<Long>>, W> resultSubMetricsBiFunction,
-                                                              QuadFunction<T, List<Long>, List<Long>, Long, X> resultMetricsQuadFunction,
-                                                              TriFunction<List<Long>, List<Long>, Long, Y> totalsTriFunction,
-                                                              QuintFunction<List<S>, List<U>, List<W>, List<X>, Y, Z> resultQuintFunction) {
+                                                              ResultFunctions<T, S, U, W, X, Y, Z> resultFunctions) {
         Set<Dimension> dimensions1 = dimensionTypeValues1.values().stream()
                 .map(v -> DimensionFactory.create(dimensionTypeValues1.type(), v))
                 .collect(Collectors.toSet());
@@ -301,10 +292,10 @@ public class Cube {
 
         // Fill resulting list
         List<X> measureValueEntities = getMeasureValueEntities(dimensionTypeValues1.values(), dimensionTypeValues2.values(),
-                measureType, measuresByDimensionValue1, resultMetricsQuadFunction, dimensionTotalMeasures1);
+                measureType, measuresByDimensionValue1, resultFunctions.resultMetricsQuadFunction(), dimensionTotalMeasures1);
         List<W> subMeasureValueEntities = dimensions3.isEmpty() ? Collections.emptyList() :
                 getSubMeasureValueEntities(dimensionTypeValues1.values(), dimensionTypeValues2.values(),
-                        dimensionTypeValues3.values(), measureType, subMeasuresByDimensionValue1, resultSubMetricsBiFunction);
+                        dimensionTypeValues3.values(), measureType, subMeasuresByDimensionValue1, resultFunctions.resultSubMetricsBiFunction());
 
         // Fill totals
         List<Long> totals = new ArrayList<>();
@@ -316,12 +307,12 @@ public class Cube {
         // Fill all total
         long allTotal = getMeasureValue(allTotalMeasures, measureType);
 
-        return resultQuintFunction.apply(
+        return resultFunctions.resultQuintFunction().apply(
                 dimensionTypeValues2.values(),
                 dimensionTypeValues3.values(),
                 subMeasureValueEntities,
                 measureValueEntities,
-                totalsTriFunction.apply(totals, cumulativeTotals, allTotal));
+                resultFunctions.totalsTriFunction().apply(totals, cumulativeTotals, allTotal));
     }
 
     /**
