@@ -1,8 +1,5 @@
 package guess.domain.source;
 
-import guess.domain.source.LocaleItem;
-import guess.domain.source.Nameable;
-
 import java.util.List;
 
 public class City extends Nameable {

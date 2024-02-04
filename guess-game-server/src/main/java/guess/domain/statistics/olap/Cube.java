@@ -215,19 +215,19 @@ public class Cube {
      * <p>
      * Fast, used in the application.
      *
-     * @param dimensionTypeValues1       values of first dimension type
-     * @param dimensionTypeValues2       values of second dimension type
-     * @param dimensionTypeValues3       values of third dimension type
-     * @param filterDimensionTypeValues  values of filter dimension type
-     * @param measureType                measure type
-     * @param <T>                        first dimension type
-     * @param <S>                        second dimension type
-     * @param <U>                        third dimension type
-     * @param <V>                        filter dimension type
-     * @param <W>                        result sub metrics element type
-     * @param <X>                        result metrics element type
-     * @param <Y>                        totals type
-     * @param <Z>                        result type
+     * @param dimensionTypeValues1      values of first dimension type
+     * @param dimensionTypeValues2      values of second dimension type
+     * @param dimensionTypeValues3      values of third dimension type
+     * @param filterDimensionTypeValues values of filter dimension type
+     * @param measureType               measure type
+     * @param <T>                       first dimension type
+     * @param <S>                       second dimension type
+     * @param <U>                       third dimension type
+     * @param <V>                       filter dimension type
+     * @param <W>                       result sub metrics element type
+     * @param <X>                       result metrics element type
+     * @param <Y>                       totals type
+     * @param <Z>                       result type
      * @return measure value entities
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
@@ -272,13 +272,8 @@ public class Cube {
                             // Search second dimension values
                             fillMeasureValues(measureType, dimensions2, measureMaps, entry, dimensionValue1);
 
-                            if (!dimensions3.isEmpty()) {
-                                Map<U, Map<S, List<Measure<?>>>> subMeasuresByDimensionValue2 =
-                                        subMeasuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
-
-                                // Search second and third dimension values
-                                fillSubMeasureValues(measureType, dimensions2, dimensions3, subMeasuresByDimensionValue2, entry);
-                            }
+                            // Search second and third dimension values
+                            fillSubMeasureValues(measureType, dimensions2, dimensions3, subMeasuresByDimensionValue1, entry, dimensionValue1);
 
                             break;
                         }
@@ -292,9 +287,8 @@ public class Cube {
         // Fill resulting list
         List<X> measureValueEntities = getMeasureValueEntities(dimensionTypeValues1.values(), dimensionTypeValues2.values(),
                 measureType, measuresByDimensionValue1, resultFunctions.resultMetricsQuadFunction(), dimensionTotalMeasures1);
-        List<W> subMeasureValueEntities = dimensions3.isEmpty() ? Collections.emptyList() :
-                getSubMeasureValueEntities(dimensionTypeValues1.values(), dimensionTypeValues2.values(),
-                        dimensionTypeValues3.values(), measureType, subMeasuresByDimensionValue1, resultFunctions.resultSubMetricsBiFunction());
+        List<W> subMeasureValueEntities = getSubMeasureValueEntities(dimensionTypeValues1.values(), dimensionTypeValues2.values(),
+                dimensionTypeValues3.values(), measureType, subMeasuresByDimensionValue1, resultFunctions.resultSubMetricsBiFunction());
 
         // Fill totals
         List<Long> totals = new ArrayList<>();
@@ -367,18 +361,27 @@ public class Cube {
      * @param measureType                  measure type
      * @param dimensions2                  second dimensions
      * @param dimensions3                  third dimensions
-     * @param subMeasuresByDimensionValue2 sub measures
+     * @param subMeasuresByDimensionValue1 sub measures
      * @param entry                        entry of measure map
+     * @param dimensionValue1              first dimension value
+     * @param <T>                          first dimension type
      * @param <S>                          second dimension type
      * @param <U>                          third dimension type
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
-    private <S, U> void fillSubMeasureValues(MeasureType measureType,
-                                             Set<Dimension> dimensions2,
-                                             Set<Dimension> dimensions3,
-                                             Map<U, Map<S, List<Measure<?>>>> subMeasuresByDimensionValue2,
-                                             Map.Entry<Set<Dimension<?>>, Map<MeasureType, Measure<?>>> entry) {
+    private <T, S, U> void fillSubMeasureValues(MeasureType measureType,
+                                                Set<Dimension> dimensions2,
+                                                Set<Dimension> dimensions3,
+                                                Map<T, Map<U, Map<S, List<Measure<?>>>>> subMeasuresByDimensionValue1,
+                                                Map.Entry<Set<Dimension<?>>, Map<MeasureType, Measure<?>>> entry,
+                                                T dimensionValue1) {
+        if (dimensions3.isEmpty()) {
+            return;
+        }
+
         Set<Dimension<?>> entryDimensions = entry.getKey();
+        Map<U, Map<S, List<Measure<?>>>> subMeasuresByDimensionValue2 =
+                subMeasuresByDimensionValue1.computeIfAbsent(dimensionValue1, k -> new HashMap<>());
 
         for (Dimension<?> entryDimension3 : entryDimensions) {
             if (dimensions3.contains(entryDimension3)) {
@@ -482,6 +485,10 @@ public class Cube {
                                                             MeasureType measureType,
                                                             Map<T, Map<U, Map<S, List<Measure<?>>>>> subMeasuresByDimensionValue1,
                                                             BiFunction<T, Map<U, List<Long>>, V> resultSubMetricsBiFunction) {
+        if (dimensionValues3.isEmpty()) {
+            return Collections.emptyList();
+        }
+
         List<V> subMeasureValueEntities = new ArrayList<>();
 
         for (T dimensionValue1 : dimensionValues1) {
