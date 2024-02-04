@@ -404,16 +404,25 @@ class StatisticsControllerTest {
             );
             OlapEntityMetrics<Void> topicTotals2 = new OlapEntityMetrics<>(null, List.of(2L, 1L), List.of(2L, 3L), 3L);
 
-            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, cityDimensionValues0, yearCityEventTypeSubMetricsList0, yearMetricsList0, yearTotals0);
-            OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearEventTypeSpeakerSubMetricsList0, yearMetricsList1, yearTotals1);
-            OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics0 = new OlapEntityStatistics<>(yearDimensionValues0, eventTypeDimensionValues0, yearEventTypeCompanySubMetricsList0, yearMetricsList2, yearTotals2);
-            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicVoidEventTypeSubMetricsList0, topicMetricsList0, topicTotals0);
-            OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicVoidSpeakerSubMetricsList0, topicMetricsList1, topicTotals1);
-            OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics0 = new OlapEntityStatistics<>(topicDimensionValues0, voidDimensionValues0, topicVoidCompanySubMetricsList0, topicMetricsList2, topicTotals2);
+            OlapEntityStatistics<Integer, City, EventType> yearEventTypeStatistics0 = new OlapEntityStatistics<>(
+                    yearDimensionValues0, cityDimensionValues0, yearCityEventTypeSubMetricsList0, yearMetricsList0, yearTotals0);
+            OlapEntityStatistics<Integer, EventType, Speaker> yearSpeakerStatistics0 = new OlapEntityStatistics<>(
+                    yearDimensionValues0, eventTypeDimensionValues0, yearEventTypeSpeakerSubMetricsList0, yearMetricsList1, yearTotals1);
+            OlapEntityStatistics<Integer, EventType, Company> yearCompanyStatistics0 = new OlapEntityStatistics<>(
+                    yearDimensionValues0, eventTypeDimensionValues0, yearEventTypeCompanySubMetricsList0, yearMetricsList2, yearTotals2);
+            OlapEntityStatistics<Topic, Void, EventType> topicEventTypeStatistics0 = new OlapEntityStatistics<>(
+                    topicDimensionValues0, voidDimensionValues0, topicVoidEventTypeSubMetricsList0, topicMetricsList0, topicTotals0);
+            OlapEntityStatistics<Topic, Void, Speaker> topicSpeakerStatistics0 = new OlapEntityStatistics<>(
+                    topicDimensionValues0, voidDimensionValues0, topicVoidSpeakerSubMetricsList0, topicMetricsList1, topicTotals1);
+            OlapEntityStatistics<Topic, Void, Company> topicCompanyStatistics0 = new OlapEntityStatistics<>(
+                    topicDimensionValues0, voidDimensionValues0, topicVoidCompanySubMetricsList0, topicMetricsList2, topicTotals2);
 
-            OlapStatistics olapStatistics0 = new OlapStatistics(yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null);
-            OlapStatistics olapStatistics1 = new OlapStatistics(null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null);
-            OlapStatistics olapStatistics2 = new OlapStatistics(null, null, yearCompanyStatistics0, null, null, topicCompanyStatistics0);
+            OlapStatistics olapStatistics0 = new OlapStatistics(
+                    yearEventTypeStatistics0, null, null, topicEventTypeStatistics0, null, null);
+            OlapStatistics olapStatistics1 = new OlapStatistics(
+                    null, yearSpeakerStatistics0, null, null, topicSpeakerStatistics0, null);
+            OlapStatistics olapStatistics2 = new OlapStatistics(
+                    null, null, yearCompanyStatistics0, null, null, topicCompanyStatistics0);
 
             return Stream.of(
                     arguments(CubeType.EVENT_TYPES, olapStatistics0),
@@ -431,35 +440,30 @@ class StatisticsControllerTest {
             given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
             switch (cubeType) {
-                case EVENT_TYPES:
-                    mvc.perform(post("/api/statistics/olap-statistics")
-                                    .contentType(MediaType.APPLICATION_JSON)
-                                    .content(JsonUtil.toJson(new OlapParametersDto()))
-                                    .session(httpSession))
-                            .andExpect(status().isOk())
-                            .andExpect(jsonPath("$.eventTypeStatistics.metricsList", hasSize(2)))
-                            .andExpect(jsonPath("$.eventTypeStatistics.metricsList[0].id", is(1)))
-                            .andExpect(jsonPath("$.eventTypeStatistics.metricsList[1].id", is(0)));
-                    break;
-                case SPEAKERS:
-                    mvc.perform(post("/api/statistics/olap-statistics")
-                                    .contentType(MediaType.APPLICATION_JSON)
-                                    .content(JsonUtil.toJson(new OlapParametersDto()))
-                                    .session(httpSession))
-                            .andExpect(status().isOk())
-                            .andExpect(jsonPath("$.speakerStatistics.metricsList", hasSize(2)))
-                            .andExpect(jsonPath("$.speakerStatistics.metricsList[0].id", is(1)))
-                            .andExpect(jsonPath("$.speakerStatistics.metricsList[1].id", is(0)));
-                    break;
-                case COMPANIES:
-                    mvc.perform(post("/api/statistics/olap-statistics")
-                                    .contentType(MediaType.APPLICATION_JSON)
-                                    .content(JsonUtil.toJson(new OlapParametersDto()))
-                                    .session(httpSession))
-                            .andExpect(status().isOk())
-                            .andExpect(jsonPath("$.companyStatistics.metricsList", hasSize(2)))
-                            .andExpect(jsonPath("$.companyStatistics.metricsList[0].id", is(1)))
-                            .andExpect(jsonPath("$.companyStatistics.metricsList[1].id", is(0)));
+                case EVENT_TYPES -> mvc.perform(post("/api/statistics/olap-statistics")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(JsonUtil.toJson(new OlapParametersDto()))
+                                .session(httpSession))
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$.eventTypeStatistics.metricsList", hasSize(2)))
+                        .andExpect(jsonPath("$.eventTypeStatistics.metricsList[0].id", is(1)))
+                        .andExpect(jsonPath("$.eventTypeStatistics.metricsList[1].id", is(0)));
+                case SPEAKERS -> mvc.perform(post("/api/statistics/olap-statistics")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(JsonUtil.toJson(new OlapParametersDto()))
+                                .session(httpSession))
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$.speakerStatistics.metricsList", hasSize(2)))
+                        .andExpect(jsonPath("$.speakerStatistics.metricsList[0].id", is(1)))
+                        .andExpect(jsonPath("$.speakerStatistics.metricsList[1].id", is(0)));
+                case COMPANIES -> mvc.perform(post("/api/statistics/olap-statistics")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(JsonUtil.toJson(new OlapParametersDto()))
+                                .session(httpSession))
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$.companyStatistics.metricsList", hasSize(2)))
+                        .andExpect(jsonPath("$.companyStatistics.metricsList[0].id", is(1)))
+                        .andExpect(jsonPath("$.companyStatistics.metricsList[1].id", is(0)));
             }
 
             Mockito.verify(olapService, VerificationModeFactory.times(1)).getOlapStatistics(Mockito.any());
