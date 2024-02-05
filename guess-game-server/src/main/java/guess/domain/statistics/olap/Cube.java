@@ -457,6 +457,7 @@ public class Cube {
                                                       Map<T, List<Measure<?>>> dimensionTotalMeasures1) {
         List<U> measureValueEntities = new ArrayList<>();
 
+        // Iterate values of first dimension type
         for (T dimensionValue1 : dimensionValues1) {
             Map<S, List<Measure<?>>> measuresByDimensionValue2 = measuresByDimensionValue1.get(dimensionValue1);
             List<Long> measureValues = new ArrayList<>();
@@ -465,14 +466,19 @@ public class Cube {
             if (measuresByDimensionValue2 != null) {
                 List<Measure<?>> cumulativeMeasures = new ArrayList<>();
 
+                // Iterate values of second dimension type
                 for (S dimensionValue2 : dimensionValues2) {
                     List<Measure<?>> measures = measuresByDimensionValue2.get(dimensionValue2);
 
+                    // Measure values
+                    measureValues.add(getMeasureValue(measures, measureType));
+
+                    // Cumulative measures
                     if ((measures != null) && !measures.isEmpty()) {
                         cumulativeMeasures.addAll(measures);
                     }
 
-                    measureValues.add(getMeasureValue(measures, measureType));
+                    // Cumulative measure values
                     cumulativeMeasureValues.add(getMeasureValue(cumulativeMeasures, measureType));
                 }
             }
@@ -515,26 +521,19 @@ public class Cube {
 
         List<V> subMeasureValueEntities = new ArrayList<>();
 
+        // Iterate values of first dimension type
         for (T dimensionValue1 : dimensionValues1) {
             Map<U, Map<S, List<Measure<?>>>> subMeasuresByDimensionValue2 = subMeasuresByDimensionValue1.get(dimensionValue1);
             Map<U, List<Long>> measureValues = new HashMap<>();
 
             if (subMeasuresByDimensionValue2 != null) {
+                // Iterate values of third dimension type
                 for (U dimensionValue3 : dimensionValues3) {
                     Map<S, List<Measure<?>>> subMeasuresByDimensionValue3 = subMeasuresByDimensionValue2.get(dimensionValue3);
 
                     if (subMeasuresByDimensionValue3 != null) {
-                        List<Long> subMeasureValues = new ArrayList<>();
-
-                        for (S dimensionValue2 : dimensionValues2) {
-                            List<Measure<?>> measures = subMeasuresByDimensionValue3.get(dimensionValue2);
-
-                            subMeasureValues.add(getMeasureValue(measures, measureType));
-                        }
-
-                        if (!subMeasureValues.isEmpty()) {
-                            measureValues.put(dimensionValue3, subMeasureValues);
-                        }
+                        // Iterate values of second dimension type
+                        iterateDimensionValues2(dimensionValues2, subMeasuresByDimensionValue3, measureType, measureValues, dimensionValue3);
                     }
                 }
             }
@@ -545,6 +544,35 @@ public class Cube {
         }
 
         return subMeasureValueEntities;
+    }
+
+    /**
+     * Iterates values of second dimension type.
+     *
+     * @param dimensionValues2             values of second dimension type
+     * @param subMeasuresByDimensionValue3 sub measures by second dimension value
+     * @param measureType                  measure type
+     * @param measureValues                measure values
+     * @param dimensionValue3              third dimension value
+     * @param <S>                          second dimension type
+     * @param <U>                          third dimension type
+     */
+    private <S, U> void iterateDimensionValues2(List<S> dimensionValues2,
+                                                Map<S, List<Measure<?>>> subMeasuresByDimensionValue3,
+                                                MeasureType measureType,
+                                                Map<U, List<Long>> measureValues,
+                                                U dimensionValue3) {
+        List<Long> subMeasureValues = new ArrayList<>();
+
+        for (S dimensionValue2 : dimensionValues2) {
+            List<Measure<?>> measures = subMeasuresByDimensionValue3.get(dimensionValue2);
+
+            subMeasureValues.add(getMeasureValue(measures, measureType));
+        }
+
+        if (!subMeasureValues.isEmpty()) {
+            measureValues.put(dimensionValue3, subMeasureValues);
+        }
     }
 
     /**
