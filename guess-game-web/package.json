@@ -30,7 +30,7 @@
     "chartjs-plugin-datalabels": "^2.2.0",
     "core-js": "^3.35.1",
     "get-video-id": "^3.6.5",
-    "marked": "^9.0.0",
+    "marked": "^9.1.6",
     "ngx-markdown": "^17.1.1",
     "primeicons": "^6.0.1",
     "primeng": "^17.6.0",
