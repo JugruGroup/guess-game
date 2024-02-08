@@ -285,6 +285,7 @@
         "lineChartWithCumulativeTotalToolTipText": "Линейный график с нарастающим итогом",
         "pieChartToolTipText": "Круговая диаграмма",
         "radarChartToolTipText": "Лепестковая диаграмма",
+        "3dCubeToolTipText": "Трёхмерный куб",
         "zoomInToolTipText": "Увеличить"
       },
       "table": {

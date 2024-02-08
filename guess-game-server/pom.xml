@@ -102,12 +102,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Utils -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-
         <!-- YAML -->
         <dependency>
             <groupId>org.yaml</groupId>

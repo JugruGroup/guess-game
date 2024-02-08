@@ -1,5 +1,7 @@
 package guess.domain.statistics.olap.dimension;
 
+import guess.domain.source.City;
+
 /**
  * City dimension.
  */

@@ -50,11 +50,11 @@ import { SpeakersSearchComponent } from './modules/information/speakers/speakers
 import { CompanyComponent } from './modules/information/companies/company.component';
 import { CompaniesListComponent } from './modules/information/companies/companies-list.component';
 import { CompaniesSearchComponent } from './modules/information/companies/companies-search.component';
-import { EventTypeStatisticsComponent } from './modules/information/statistics/event-type-statistics.component';
-import { EventStatisticsComponent } from './modules/information/statistics/event-statistics.component';
-import { SpeakerStatisticsComponent } from './modules/information/statistics/speaker-statistics.component';
-import { CompanyStatisticsComponent } from './modules/information/statistics/company-statistics.component';
-import { OlapStatisticsComponent } from './modules/information/statistics/olap-statistics.component';
+import { EventTypeStatisticsComponent } from './modules/information/statistics/event-type/event-type-statistics.component';
+import { EventStatisticsComponent } from './modules/information/statistics/olap/event/event-statistics.component';
+import { SpeakerStatisticsComponent } from './modules/information/statistics/speaker/speaker-statistics.component';
+import { CompanyStatisticsComponent } from './modules/information/statistics/company/company-statistics.component';
+import { OlapStatisticsComponent } from './modules/information/statistics/olap/olap-statistics.component';
 import { AnswerService } from './shared/services/answer.service';
 import { EventService } from './shared/services/event.service';
 import { EventTypeService } from './shared/services/event-type.service';

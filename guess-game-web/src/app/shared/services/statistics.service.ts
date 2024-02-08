@@ -3,22 +3,22 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { EventType } from '../models/event-type/event-type.model';
-import { EventTypeStatistics } from '../models/statistics/event-type-statistics.model';
-import { EventStatistics } from '../models/statistics/event-statistics.model';
-import { SpeakerStatistics } from '../models/statistics/speaker-statistics.model';
-import { CompanyStatistics } from '../models/statistics/company-statistics.model';
+import { EventTypeStatistics } from '../models/statistics/event-type/event-type-statistics.model';
+import { EventStatistics } from '../models/statistics/event/event-statistics.model';
+import { SpeakerStatistics } from '../models/statistics/speaker/speaker-statistics.model';
+import { CompanyStatistics } from '../models/statistics/company/company-statistics.model';
 import { Organizer } from '../models/organizer/organizer.model';
-import { CubeType } from '../models/statistics/olap/cube-type.model';
-import { MeasureType } from '../models/statistics/olap/measure-type.model';
-import { OlapParameters } from "../models/statistics/olap/olap-parameters.model";
-import { OlapStatistics } from "../models/statistics/olap/olap-statistics.model";
-import { OlapEventTypeParameters } from "../models/statistics/olap/olap-event-type-parameters.model";
-import { OlapEntityStatistics } from "../models/statistics/olap/olap-entity-statistics.model";
-import { OlapEventTypeMetrics } from "../models/statistics/olap/olap-event-type-metrics.model";
-import { OlapSpeakerMetrics } from '../models/statistics/olap/olap-speaker-metrics.model';
-import { OlapSpeakerParameters } from '../models/statistics/olap/olap-speaker-parameters.model';
-import { OlapCityMetrics } from '../models/statistics/olap/olap-city-metrics.model';
-import { OlapCityParameters } from '../models/statistics/olap/olap-city-parameters.model';
+import { OlapCubeType } from '../models/statistics/olap/olap-cube-type.model';
+import { OlapMeasureType } from '../models/statistics/olap/olap-measure-type.model';
+import { OlapCityMetrics } from '../models/statistics/olap/metrics/olap-city-metrics.model';
+import { OlapCityParameters } from '../models/statistics/olap/parameters/olap-city-parameters.model';
+import { OlapEntityStatistics } from '../models/statistics/olap/statistics/olap-entity-statistics.model';
+import { OlapEventTypeMetrics } from '../models/statistics/olap/metrics/olap-event-type-metrics.model';
+import { OlapEventTypeParameters } from '../models/statistics/olap/parameters/olap-event-type-parameters.model';
+import { OlapParameters } from '../models/statistics/olap/parameters/olap-parameters.model';
+import { OlapSpeakerMetrics } from '../models/statistics/olap/metrics/olap-speaker-metrics.model';
+import { OlapSpeakerParameters } from '../models/statistics/olap/parameters/olap-speaker-parameters.model';
+import { OlapStatistics } from '../models/statistics/olap/statistics/olap-statistics.model';
 import { Topic } from '../models/topic/topic.model';
 import { MessageService } from '../../modules/message/message.service';
 
@@ -111,8 +111,8 @@ export class StatisticsService {
       );
   }
 
-  getCubeTypes(): Observable<CubeType[]> {
-    return this.http.get<CubeType[]>(`${this.baseUrl}/cube-types`)
+  getCubeTypes(): Observable<OlapCubeType[]> {
+    return this.http.get<OlapCubeType[]>(`${this.baseUrl}/cube-types`)
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -121,11 +121,11 @@ export class StatisticsService {
       );
   }
 
-  getMeasureTypes(cubeType: CubeType): Observable<MeasureType[]> {
+  getMeasureTypes(cubeType: OlapCubeType): Observable<OlapMeasureType[]> {
     const params = new HttpParams()
       .set('cubeType', (cubeType) ? cubeType.toString() : null);
 
-    return this.http.get<MeasureType[]>(`${this.baseUrl}/measure-types`, {params: params})
+    return this.http.get<OlapMeasureType[]>(`${this.baseUrl}/measure-types`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

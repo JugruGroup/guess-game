@@ -285,6 +285,7 @@
         "lineChartWithCumulativeTotalToolTipText": "Line chart with cumulative total",
         "pieChartToolTipText": "Pie chart",
         "radarChartToolTipText": "Radar chart",
+        "3dCubeToolTipText": "3D cube",
         "zoomInToolTipText": "Zoom in"
       },
       "table": {
