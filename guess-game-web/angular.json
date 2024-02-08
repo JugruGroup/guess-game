@@ -73,19 +73,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "guess-game:build",
-            "proxyConfig": "proxy.conf.js"
+            "proxyConfig": "proxy.conf.js",
+            "buildTarget": "guess-game:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "guess-game:build:production"
+              "buildTarget": "guess-game:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "guess-game:build"
+            "buildTarget": "guess-game:build"
           }
         },
         "test": {
