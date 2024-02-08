@@ -17,6 +17,10 @@ Information and statistics of conferences, meetups, talks, speakers:
 
 ![OLAP](/documents/images/olap.png)
 
+3D visualization of OLAP cube:
+
+![3D](/documents/images/3d.png)
+
 You need to guess the speaker, talk, company or tag cloud in the game:
 
 ![Game](/documents/images/game.png)
