@@ -46,8 +46,8 @@ topics:
     orderNumber: 9
   - id: 10
     name:
-      - {language: en, text: "Concurrent and distributed computing"}
-      - {language: ru, text: "Параллельные и распределённые вычисления"}
+      - {language: en, text: "Distributed computing"}
+      - {language: ru, text: "Распределённые вычисления"}
     orderNumber: 10
   - id: 11
     name:
