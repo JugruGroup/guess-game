@@ -1,5 +1,5 @@
-import { AfterViewChecked, Component, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
-// import { OrbitControlsComponent, RendererCanvasComponent } from 'atft';
+import { AfterViewChecked, Component, Input, OnChanges, SimpleChange, SimpleChanges, ViewChild } from '@angular/core';
+import { OrbitControlsComponent, RendererCanvasComponent } from 'atft';
 import {
   ThreeDimensionsCubeDataset
 } from '../../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-dataset.model';
@@ -67,8 +67,8 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
   @Input() public options!: ThreeDimensionsCubeOptions;
   @Input() public data!: ThreeDimensionsCubeData;
 
-  // @ViewChild('orbitControls') orbitControls!: OrbitControlsComponent;
-  // @ViewChild('rendererCanvas') rendererCanvas!: RendererCanvasComponent;
+  @ViewChild('orbitControls') orbitControls!: OrbitControlsComponent;
+  @ViewChild('rendererCanvas') rendererCanvas!: RendererCanvasComponent;
 
   private heightUpdated = false;
 
@@ -107,9 +107,9 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
 
   ngAfterViewChecked() {
     if (this.heightUpdated) {
-      // if (this.rendererCanvas) {
-      //   this.rendererCanvas.onResize(null as unknown as Event);
-      // }
+      if (this.rendererCanvas) {
+        this.rendererCanvas.onResize(null as unknown as Event);
+      }
 
       this.heightUpdated = false;
     }
@@ -259,9 +259,9 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
         gridSizeX, gridDivisionsX, gridSizeY, gridDivisionsY, gridSizeZ, gridDivisionsZ,
         sphereGroups, textGroups);
 
-      // if (this.orbitControls) {
-      //   this.orbitControls.reset();
-      // }
+      if (this.orbitControls) {
+        this.orbitControls.reset();
+      }
     }
   }
 
@@ -318,9 +318,5 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
 
   deg2rad(degrees: number) {
     return (degrees / 180) * Math.PI;
-  }
-
-  stringifyData(data: number[][]): string {
-    return JSON.stringify(data);
   }
 }

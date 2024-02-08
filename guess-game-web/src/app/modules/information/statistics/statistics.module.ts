@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { AtftModule } from 'atft';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
@@ -25,6 +26,13 @@ import { CompanyStatisticsComponent } from './company/company-statistics.compone
 import { OlapStatisticsComponent } from './olap/olap-statistics.component';
 import { StatisticsTabMenuComponent } from './statistics-tabmenu.component';
 import { ThreeDimensionsCubeComponent } from './olap/three-dimensions/three-dimensions-cube.component';
+import { ThreeDimensionsGridComponent } from './olap/three-dimensions/three-dimensions-grid.component';
+import {
+  ThreeDimensionsBatchedSphereMeshComponent
+} from './olap/three-dimensions/three-dimensions-batched-sphere-mesh.component';
+import {
+  ThreeDimensionsBatchedTextMeshComponent
+} from './olap/three-dimensions/three-dimensions-batched-text-mesh.component';
 import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-dimensions-zoom-in.component';
 
 @NgModule({
@@ -37,9 +45,13 @@ import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-di
     OlapStatisticsComponent,
     StatisticsTabMenuComponent,
     ThreeDimensionsCubeComponent,
+    ThreeDimensionsGridComponent,
+    ThreeDimensionsBatchedSphereMeshComponent,
+    ThreeDimensionsBatchedTextMeshComponent,
     ThreeDimensionsZoomInComponent
   ],
   imports: [
+    AtftModule,
     AutoCompleteModule,
     ButtonModule,
     ChartModule,
