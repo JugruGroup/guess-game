@@ -10,8 +10,8 @@ import {
   template: '<ng-content></ng-content>'
 })
 export class ThreeDimensionsBatchedSphereMeshComponent extends AbstractMesh {
-  public readonly VERTEX_COUNT_FACTOR = 1024;
-  public readonly INDEX_COUNT_FACTOR = 1024 + 512;
+  public readonly VERTEX_COUNT_FACTOR = 2048;
+  public readonly INDEX_COUNT_FACTOR = 2048;
 
   @Input() widthSegments!: number;
   @Input() heightSegments!: number;
