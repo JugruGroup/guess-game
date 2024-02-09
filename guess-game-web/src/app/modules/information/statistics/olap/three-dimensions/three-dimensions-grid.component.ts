@@ -34,9 +34,9 @@ export class ThreeDimensionsGridComponent extends AbstractObject3D<THREE.LineSeg
 
     const color = new THREE.Color(this.color);
 
-    const stepX = (divisionsX > 0) ? sizeX / divisionsX : 0;
-    const stepY = (divisionsY > 0) ? sizeY / divisionsY : 0;
-    const stepZ = (divisionsZ > 0) ? sizeZ / divisionsZ : 0;
+    const stepX = (divisionsX > 0) ? sizeX / divisionsX : 1;
+    const stepY = (divisionsY > 0) ? sizeY / divisionsY : 1;
+    const stepZ = (divisionsZ > 0) ? sizeZ / divisionsZ : 1;
     const halfSizeX = sizeX / 2;
     const halfSizeY = sizeY / 2;
     const halfSizeZ = sizeZ / 2;
