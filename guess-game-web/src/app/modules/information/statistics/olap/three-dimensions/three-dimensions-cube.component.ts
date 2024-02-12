@@ -253,15 +253,15 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
         textGroups.push(new ThreeDimensionsTextGroup(data.labelsY[i], this.Y_LABEL_TEXT_SIZE, items));
       }
 
-      this.perspectiveCameraPositionZ = this.getPositionZ(gridSizeX, gridSizeY, gridSizeZ);
+      if (this.orbitControls) {
+        this.orbitControls.reset();
+      }
+
+      this.perspectiveCameraPositionZ = this.getPositionZ(gridSizeX, gridSizeY, gridSizeZ) + Math.random();
       this.internalData = new ThreeDimensionsCubeInternalData(
         pointLights,
         gridSizeX, gridDivisionsX, gridSizeY, gridDivisionsY, gridSizeZ, gridDivisionsZ,
         sphereGroups, textGroups);
-
-      if (this.orbitControls) {
-        this.orbitControls.reset();
-      }
     }
   }
 
