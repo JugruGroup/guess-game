@@ -201,7 +201,7 @@ public abstract class CmsDataLoader {
 
         // Change last names
         for (var fixedLastName : fixedLastNames.entrySet()) {
-            String nameWithFixedLastName = name.replaceAll(String.format("\\b%s$", fixedLastName.getKey()), fixedLastName.getValue());
+            String nameWithFixedLastName = name.replaceAll(String.format("(?U)\\b%s$", fixedLastName.getKey()), fixedLastName.getValue());
 
             if (!name.equals(nameWithFixedLastName)) {
                 log.warn("Speaker last name is changed; original: {}, changed: {}", name, nameWithFixedLastName);
@@ -213,7 +213,7 @@ public abstract class CmsDataLoader {
 
         // Change first names
         for (var fixedFirstName : fixedFirstNames.entrySet()) {
-            String nameWithFixedFirstName = name.replaceAll(String.format("^%s\\b", fixedFirstName.getKey()), fixedFirstName.getValue());
+            String nameWithFixedFirstName = name.replaceAll(String.format("(?U)^%s\\b", fixedFirstName.getKey()), fixedFirstName.getValue());
 
             if (!name.equals(nameWithFixedFirstName)) {
                 log.warn("Speaker first name is changed; original: {}, changed: {}", name, nameWithFixedFirstName);
