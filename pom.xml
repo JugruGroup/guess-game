@@ -12,7 +12,7 @@
         <app.finalName>guess-game</app.finalName>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.build.javaVersion>17</project.build.javaVersion>
+        <project.build.javaVersion>21</project.build.javaVersion>
 
         <allure.plugin.version>2.12.0</allure.plugin.version>
         <assembly.plugin.version>3.6.0</assembly.plugin.version>
