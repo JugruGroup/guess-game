@@ -83,7 +83,7 @@ public class LocalizationUtils {
      * @return locale string
      */
     public static String getResourceString(String key, Language language) {
-        var bundle = ResourceBundle.getBundle(BUNDLE_NAME, new Locale(language.getCode()));
+        var bundle = ResourceBundle.getBundle(BUNDLE_NAME, new Locale.Builder().setLanguage(language.getCode()).build());
 
         return bundle.getString(key);
     }

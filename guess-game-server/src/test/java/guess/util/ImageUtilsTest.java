@@ -14,6 +14,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.Objects;
@@ -65,7 +66,7 @@ class ImageUtilsTest {
         final String VALID_HTTP_URL_STRING = "https://valid.com";
         final String IMAGE_PARAMETERS_TEMPLATE = "w=%d&h=%d";
         final String IMAGE_PARAMETERS = String.format(IMAGE_PARAMETERS_TEMPLATE, ImageUtils.IMAGE_WIDTH, ImageUtils.IMAGE_HEIGHT);
-        final URL validUrlWithParameters = new URL(String.format("%s?%s", VALID_HTTP_URL_STRING, IMAGE_PARAMETERS));
+        final URL validUrlWithParameters = URI.create(String.format("%s?%s", VALID_HTTP_URL_STRING, IMAGE_PARAMETERS)).toURL();
         BufferedImage expected = createImage(1, 1);
 
         try (MockedStatic<ImageUtils> mockedStatic = Mockito.mockStatic(ImageUtils.class)) {
