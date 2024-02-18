@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.Map;
 
@@ -52,7 +53,7 @@ public class ImageUtils {
     static BufferedImage getImageByUrlString(String urlString, String imageParametersTemplate) throws IOException {
         var imageParameters = String.format(imageParametersTemplate, IMAGE_WIDTH, IMAGE_HEIGHT);
         var urlSpec = String.format("%s?%s", urlString, imageParameters);
-        var url = new URL(urlSpec);
+        var url = URI.create(urlSpec).toURL();
 
         return getImageByUrl(url);
     }
