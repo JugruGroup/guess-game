@@ -15,11 +15,11 @@ Information and statistics of conferences, meetups, talks, speakers:
 
 *Statistics* page contains OLAP cubes for event types, speakers and companies:
 
-![OLAP](/documents/images/olap.png)
+![OLAP](/documents/images/olap-chart.png)
 
 3D visualization of OLAP cube:
 
-![3D](/documents/images/3d.png)
+![3D](/documents/images/olap-3d.png)
 
 You need to guess the speaker, talk, company or tag cloud in the game:
 
