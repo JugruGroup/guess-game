@@ -107,11 +107,13 @@
   // Style for event type listbox on start page
   .event-type-listbox-start {
     height: 222px;
+    max-height: 222px !important;
   }
 
   // Style for event listbox on start page
   .event-listbox-start {
     height: 98px;
+    max-height: 98px !important;
   }
 
   // Styles for OLAP chart button
@@ -164,10 +166,12 @@
 
     .event-type-listbox-start {
       height: 276px;
+      max-height: 276px !important;
     }
 
     .event-listbox-start {
       height: 120px;
+      max-height: 120px !important;
     }
 
     .olap-chart-button {
