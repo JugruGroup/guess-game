@@ -1471,6 +1471,7 @@ events:
       - {language: en, text: "TechTrain 2023 Autumn"}
     days:
       - {startDate: "2023-08-30", endDate: "2023-08-30", placeId: 24}
+    youtubeLink: https://www.youtube.com/playlist?list=PLmJD_ICvgPy3Av7kYuY57b8aapX5Q5mjm
     talkIds: [4695, 4696, 4697, 4698, 4699, 4700, 4701, 4702, 4703, 4704, 4705]
   # JUG.MSK
   - eventTypeId: 13

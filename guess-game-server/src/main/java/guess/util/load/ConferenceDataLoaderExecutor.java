@@ -2637,5 +2637,10 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("VideoTech 2023", null, List.of(24L, 28L)),
 //                        Set.of("Открытие второго дня онлайн-части", "Подведение итогов онлайн-части",
 //                                "Открытие офлайн-части конференции", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.FLOW, LocalDate.of(2024, 3, 12), "2024 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Flow 2024 Spring", null, List.of(24L)),
+//                        Set.of("Открытие конференции Flow 2024 Spring", "Закрытие конференции Flow 2024 Spring",
+//                                "Технологические тренды и PESTEL-анализ", "Квиз")));
     }
 }
