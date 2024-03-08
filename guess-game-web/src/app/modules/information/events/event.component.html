@@ -40,7 +40,7 @@
         </div>
         <div *ngIf="eventDetails.event?.twitterLink" class="col-auto">
           <a href="{{eventDetails.event.twitterLink}}" class="text-dark">
-            <i class="fab fa-twitter"></i><span class="d-none d-sm-inline"> Twitter</span>
+            <i class="fab fa-square-x-twitter"></i><span class="d-none d-sm-inline"> Twitter</span>
           </a>
         </div>
         <div *ngIf="eventDetails.event?.youtubeLink" class="col-auto">
@@ -130,7 +130,7 @@
             </td>
             <td>
               <a *ngIf="speaker.twitter" href="{{twitterUrlPrefix}}/{{speaker.twitter}}" class="text-primary">
-                <i class="fab fa-twitter"></i>{{speaker.twitter}}
+                <i class="fab fa-square-x-twitter"></i>{{speaker.twitter}}
               </a>
             </td>
             <td>

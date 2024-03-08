@@ -79,7 +79,9 @@ events:
     days:
       - {startDate: "2023-05-11", endDate: "2023-05-12", placeId: 24}
       - {startDate: "2023-05-23", endDate: "2023-05-24", placeId: 28}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://cppconf.ru/en/archive/2023/"}
+      - {language: ru, text: "https://cppconf.ru/archive/2023/"}
     talkIds: [4539, 4540, 4541, 4542, 4543, 4544, 4545, 4546, 4547, 4548, 4549, 4550, 4551, 4552, 4553, 4554, 4555, 4556,
               4557, 4558, 4559, 4560, 4561, 4562, 4563, 4564, 4565, 4566, 4567, 4568, 4569, 4570, 4571, 4572, 4573, 4574, 4575,
               4576, 4577, 4578, 4579, 4580, 4581, 4582, 4583, 4584, 4585, 4586, 4587, 4588, 4589, 4590, 4591, 4592]
@@ -170,6 +172,9 @@ events:
     days:
       - {startDate: "2023-09-05", endDate: "2023-09-06", placeId: 24}
       - {startDate: "2023-09-17", endDate: "2023-09-18", placeId: 9}
+    siteLink:
+      - {language: en, text: "https://devoops.ru/en/archive/2023/"}
+      - {language: ru, text: "https://devoops.ru/archive/2023/"}
     talkIds: [4761, 4762, 4763, 4764, 4765, 4766, 4767, 4768, 4769, 4770, 4771, 4772, 4773, 4774, 4775, 4776, 4777, 4778,
               4779, 4780, 4781, 4782, 4783, 4784, 4785, 4786, 4787, 4788, 4789, 4790, 4791, 4792, 4793, 4794, 4795, 4796, 4797,
               4798, 4799, 4800, 4801, 4802, 4803, 4804, 4805, 4806, 4807, 4808, 4809, 4810, 4811, 4812, 4813, 4814, 4815, 4816,
@@ -403,6 +408,9 @@ events:
       - {language: en, text: "DotNext 2023"}
     days:
       - {startDate: "2023-09-15", endDate: "2023-09-16", placeId: 9}
+    siteLink:
+      - {language: en, text: "https://dotnext.ru/en/archive/2023/"}
+      - {language: ru, text: "https://dotnext.ru/archive/2023/"}
     talkIds: [4877, 4878, 4879, 4880, 4881, 4882, 4883, 4884, 4885, 4886, 4887, 4888, 4889, 4890, 4906, 4891, 4892, 4893,
               4894, 4895, 4896, 4897, 4898, 4899, 4900, 4901, 4902, 4903, 4904, 4905]
   # Heisenbug
@@ -583,6 +591,9 @@ events:
     days:
       - {startDate: "2023-10-10", endDate: "2023-10-11", placeId: 24}
       - {startDate: "2023-10-15", endDate: "2023-10-16", placeId: 4}
+    siteLink:
+      - {language: en, text: "https://heisenbug.ru/en/archive/2023 Autumn/"}
+      - {language: ru, text: "https://heisenbug.ru/archive/2023 Autumn/"}
     talkIds: [4963, 4964, 4965, 4966, 4967, 4968, 4969, 4970, 4971, 4972, 4973, 4974, 4975, 4976, 4977, 4978, 4979, 4980,
               4981, 4982, 4983, 4984, 4985, 4986, 4987, 4988, 4989, 4990, 4991, 4992, 4993, 4994, 4995, 4996, 4997, 4998, 4999,
               5000, 5001, 5002, 5003, 5004, 5005, 5006, 5007, 5008, 5009, 5010, 5011, 5012, 5013, 5014, 5015, 5016, 5017, 5018,
@@ -779,9 +790,12 @@ events:
     days:
       - {startDate: "2023-11-02", endDate: "2023-11-03", placeId: 24}
       - {startDate: "2023-11-11", endDate: "2023-11-12", placeId: 4}
+    siteLink:
+      - {language: en, text: "https://holyjs.ru/en/archive/2023 Autumn/"}
+      - {language: ru, text: "https://holyjs.ru/archive/2023 Autumn/"}
     talkIds: [5079, 5080, 5081, 5082, 5083, 5084, 5085, 5086, 5087, 5088, 5089, 5090, 5091, 5092, 5093, 5094, 5095, 5096,
               5097, 5098, 5099, 5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111, 5112, 5113, 5114, 5115,
-              5116, 5117, 5118, 5119, 5120, 5121, 5122, 5123, 5124, 5125, 5126, 5127, 5128, 5129, 5130, 5131, 5132]
+              5116, 5117, 5118, 5119, 5120, 5121, 5122, 5123, 5124, 5125, 5126, 5127, 5128, 5129, 5130, 5131, 5132, 5220]
   # Hydra
   - eventTypeId: 5
     name:
@@ -971,7 +985,9 @@ events:
     days:
       - {startDate: "2023-04-12", endDate: "2023-04-13", placeId: 24}
       - {startDate: "2023-04-18", endDate: "2023-04-19", placeId: 11}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://jpoint.ru/en/archive/2023/"}
+      - {language: ru, text: "https://jpoint.ru/archive/2023/"}
     talkIds: [4482, 4483, 4484, 4486, 4487, 4488, 4489, 4490, 4491, 4492, 4493, 4494, 4495, 4496, 4497, 4498, 4499, 4500,
               4501, 4502, 4503, 4504, 4505, 4506, 4507, 4508, 4509, 4510, 4511, 4512, 4513, 4514, 4515, 4516, 4517, 4518, 4519,
               4520, 4521, 4694, 4523, 4524, 4525, 4526, 4527, 4528, 4529, 4530, 4531, 4532, 4533, 4534, 4535, 4536, 4537]
@@ -1302,6 +1318,9 @@ events:
     days:
       - {startDate: "2023-11-01", endDate: "2023-11-02", placeId: 24}
       - {startDate: "2023-11-09", endDate: "2023-11-10", placeId: 4}
+    siteLink:
+      - {language: en, text: "https://mobiusconf.com/en/archive/2023 Autumn/"}
+      - {language: ru, text: "https://mobiusconf.com/archive/2023 Autumn/"}
     talkIds: [5024, 5025, 5026, 5027, 5028, 5029, 5030, 5031, 5032, 5033, 5034, 5035, 5036, 5037, 5038, 5039, 5040, 5041,
               5042, 5043, 5044, 5045, 5046, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057, 5058, 5059, 5060,
               5061, 5062, 5063, 5064, 5065, 5066, 5067, 5068, 5069, 5070, 5071, 5072, 5073, 5074, 5075, 5076, 5077, 5078]
@@ -1377,6 +1396,9 @@ events:
     days:
       - {startDate: "2023-09-06", endDate: "2023-09-07", placeId: 24}
       - {startDate: "2023-09-13", endDate: "2023-09-14", placeId: 9}
+    siteLink:
+      - {language: en, text: "https://smartdataconf.ru/en/archive/2023/"}
+      - {language: ru, text: "https://smartdataconf.ru/archive/2023/"}
     talkIds: [4822, 4823, 4824, 4825, 4826, 4827, 4828, 4829, 4830, 4831, 4832, 4833, 4834, 4835, 4836, 4837, 4838, 4839,
               4840, 4841, 4842, 4843, 4844, 4845, 4846, 4847, 4848, 4849, 4850, 4851, 4852, 4853, 4854, 4855, 4856, 4857, 4858,
               4859, 4860, 4861, 4862, 4863, 4864, 4865, 4866, 4867, 4868, 4869, 4870, 4871, 4872, 4873, 4874, 4875, 4876]
@@ -1471,6 +1493,8 @@ events:
       - {language: en, text: "TechTrain 2023 Autumn"}
     days:
       - {startDate: "2023-08-30", endDate: "2023-08-30", placeId: 24}
+    siteLink:
+      - {language: en, text: "https://techtrain.ru/archive/2023 Autumn/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLmJD_ICvgPy3Av7kYuY57b8aapX5Q5mjm
     talkIds: [4695, 4696, 4697, 4698, 4699, 4700, 4701, 4702, 4703, 4704, 4705]
   # JUG.MSK
@@ -2728,7 +2752,7 @@ events:
       - {language: en, text: "SnowOne 2023"}
     days:
       - {startDate: "2023-03-03", endDate: "2023-03-04", placeId: 13}
-    youtubeLink: https://www.youtube.com/c/JUGNsk
+    youtubeLink: https://www.youtube.com/playlist?list=PLecWId-JT7S5ZHU65ivWoal29YfDT42Y7
     talkIds: [4385, 4386, 4387, 4388, 4389, 4390, 4391, 4392, 4393]
   # VideoTech
   - eventTypeId: 17
@@ -2760,6 +2784,9 @@ events:
     days:
       - {startDate: "2023-11-16", endDate: "2023-11-17", placeId: 24}
       - {startDate: "2023-11-20", endDate: "2023-11-21", placeId: 28}
+    siteLink:
+      - {language: en, text: "https://vtconf.com/en/archive/2023/"}
+      - {language: ru, text: "https://vtconf.com/archive/2023/"}
     talkIds: [5176, 5177, 5178, 5179, 5180, 5181, 5182, 5183, 5184, 5185, 5186, 5187, 5188, 5189, 5190, 5191, 5192, 5193,
               5194, 5195, 5196, 5197, 5198, 5199, 5200, 5201, 5202, 5203, 5204, 5205, 5206, 5207, 5208, 5209, 5210, 5211, 5212,
               5213, 5214, 5215, 5216, 5217, 5218]
@@ -2771,8 +2798,8 @@ events:
       - {startDate: "2022-10-18", endDate: "2022-10-19", placeId: 24}
       - {startDate: "2022-10-28", endDate: "2022-10-28", placeId: 4}
     siteLink:
-      - {language: en, text: "https://piterpy.com/archive/2022/"}
-      - {language: ru, text: "https://piterpy.com/en/archive/2022/"}
+      - {language: en, text: "https://piterpy.com/en/archive/2022/"}
+      - {language: ru, text: "https://piterpy.com/archive/2022/"}
     talkIds: [4029, 4030, 4031, 4032, 4033, 4034, 4035, 4036, 4037, 4038, 4039, 4040, 4041, 4042, 4043, 4044, 4045, 4046,
               4047, 4048, 4049, 4050, 4051, 4052, 4059, 4055, 4054, 4056, 4058, 4060, 4061, 4062, 4053, 4064]
   - eventTypeId: 18
@@ -2781,6 +2808,9 @@ events:
     days:
       - {startDate: "2023-11-07", endDate: "2023-11-07", placeId: 24}
       - {startDate: "2023-11-13", endDate: "2023-11-14", placeId: 4}
+    siteLink:
+      - {language: en, text: "https://piterpy.com/en/archive/2023/"}
+      - {language: ru, text: "https://piterpy.com/archive/2023/"}
     talkIds: [5133, 5134, 5135, 5136, 5137, 5138, 5139, 5140, 5141, 5142, 5143, 5144, 5145, 5146, 5147, 5148, 5149, 5150,
               5151, 5152, 5153, 5154, 5155, 5156, 5157, 5158, 5159, 5160, 5161, 5162, 5163, 5164, 5165, 5166, 5167, 5168, 5169,
               5170, 5171, 5172, 5173, 5174, 5175]
@@ -2801,6 +2831,9 @@ events:
     days:
       - {startDate: "2023-09-04", endDate: "2023-09-05", placeId: 24}
       - {startDate: "2023-09-11", endDate: "2023-09-12", placeId: 9}
+    siteLink:
+      - {language: en, text: "https://flowconf.ru/en/archive/2023/"}
+      - {language: ru, text: "https://flowconf.ru/archive/2023/"}
     talkIds: [4706, 4707, 4708, 4709, 4710, 4711, 4712, 4713, 4714, 4715, 4716, 4717, 4718, 4719, 4720, 4721, 4722, 4723,
               4724, 4725, 4726, 4727, 4728, 4729, 4730, 4731, 4732, 4733, 4734, 4735, 4736, 4737, 4738, 4739, 4740, 4741, 4742,
               4743, 4744, 4745, 4746, 4747, 4748, 4749, 4750, 4751, 4752, 4753, 4754, 4755, 4756, 4757, 4758, 4759, 4760]
