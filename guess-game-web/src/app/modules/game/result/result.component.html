@@ -199,7 +199,7 @@
             </figure>
           </div>
           <div *ngIf="!isQuestionImage">
-            <span *ngIf="accountErrorDetails.twitter" class="text-primary"><i class="fab fa-twitter"></i>{{accountErrorDetails.twitter}}</span>
+            <span *ngIf="accountErrorDetails.twitter" class="text-primary"><i class="fab fa-square-x-twitter"></i>{{accountErrorDetails.twitter}}</span>
             <br *ngIf="accountErrorDetails.twitter && accountErrorDetails.gitHub"/>
             <span *ngIf="accountErrorDetails.gitHub" class="text-dark"><i class="fab fa-github"></i>{{accountErrorDetails.gitHub}}</span>
           </div>
@@ -212,7 +212,7 @@
             </figure>
           </div>
           <div *ngIf="isQuestionImage">
-            <span *ngIf="accountErrorDetails.twitter" class="text-primary"><i class="fab fa-twitter"></i>{{accountErrorDetails.twitter}}</span>
+            <span *ngIf="accountErrorDetails.twitter" class="text-primary"><i class="fab fa-square-x-twitter"></i>{{accountErrorDetails.twitter}}</span>
             <br *ngIf="accountErrorDetails.twitter && accountErrorDetails.gitHub"/>
             <span *ngIf="accountErrorDetails.gitHub" class="text-dark"><i class="fab fa-github"></i>{{accountErrorDetails.gitHub}}</span>
           </div>
@@ -228,7 +228,7 @@
           </div>
           <div *ngIf="isQuestionImage">
             <p *ngFor="let yourAnswer of accountErrorDetails.yourAnswers">
-              <span *ngIf="yourAnswer.twitter" class="text-primary"><i class="fab fa-twitter"></i>{{yourAnswer.twitter}}</span>
+              <span *ngIf="yourAnswer.twitter" class="text-primary"><i class="fab fa-square-x-twitter"></i>{{yourAnswer.twitter}}</span>
               <br *ngIf="yourAnswer.twitter && yourAnswer.gitHub"/>
               <span *ngIf="yourAnswer.gitHub" class="text-dark"><i class="fab fa-github"></i>{{yourAnswer.gitHub}}</span>
             </p>
