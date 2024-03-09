@@ -77,8 +77,6 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
         const width = yp.width;
         const height = yp.height;
 
-        console.log('yp, videoId: ' + yp.videoId + ', width: ' + yp.width + ', height: ' + yp.height);
-
         if (videoId && !isNaN(width) && !isNaN(height)) {
           this.initialVideoSizes.set(videoId, new VideoSize(width, height));
 
@@ -147,12 +145,9 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
   }
 
   onResize = (): void => {
-    console.log('onResize');
-
     if (this.youtubePlayerDiv && this.youtubePlayers) {
       this.youtubePlayers.forEach((yp) => {
         const videoSize = this.initialVideoSizes.get(yp.videoId);
-        console.log('videoId: ' + yp.videoId + ', videoSize: ' + JSON.stringify(videoSize));
 
         if (videoSize) {
           const videoWidth = Math.min(this.youtubePlayerDiv.nativeElement.clientWidth, videoSize.width);
@@ -160,14 +155,7 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
           if (videoWidth != yp.width) {
             const videoHeight = videoWidth * videoSize.height / videoSize.width;
 
-            console.log('(Before) videoId: ' + yp.videoId + ', videoWidth: ' + videoWidth + ', videoHeight: ' + videoHeight);
-
-            // yp.width = videoWidth;
-            // yp.height = videoHeight;
-
             this.resizedVideoSizes.set(yp.videoId, new VideoSize(videoWidth, videoHeight));
-
-            console.log('(After) videoId: ' + yp.videoId + ', videoWidth: ' + yp.width + ', videoHeight: ' + yp.height);
           }
         }
       });
