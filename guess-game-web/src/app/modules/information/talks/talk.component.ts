@@ -1,5 +1,7 @@
 import {
+  AfterViewChecked,
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   OnDestroy,
@@ -21,7 +23,7 @@ import getVideoId from 'get-video-id';
   selector: 'app-talk',
   templateUrl: './talk.component.html'
 })
-export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
+export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public eventsImageDirectory = `${this.imageDirectory}/events`;
@@ -35,10 +37,12 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
 
   @ViewChild('youtubePlayerDiv') youtubePlayerDiv: ElementRef<HTMLDivElement>;
   @ViewChildren('youtubePlayer') youtubePlayers: QueryList<YouTubePlayer>;
-  private videoSizes: Map<string, VideoSize> = new Map<string, VideoSize>();
+  private initialVideoSizes: Map<string, VideoSize> = new Map<string, VideoSize>();
+  private resizedVideoSizes: Map<string, VideoSize> = new Map<string, VideoSize>();
+  private isVideoSizesInitialized = false;
 
   constructor(private talkService: TalkService, public translateService: TranslateService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute, private changeDetector: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
@@ -62,6 +66,31 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.onResize);
+  }
+
+  ngAfterViewChecked() {
+    if (!this.isVideoSizesInitialized && this.youtubePlayerDiv && this.youtubePlayers) {
+      let needResize = false;
+
+      this.youtubePlayers.forEach((yp) => {
+        const videoId = yp.videoId;
+        const width = yp.width;
+        const height = yp.height;
+
+        if (videoId && !isNaN(width) && !isNaN(height)) {
+          this.initialVideoSizes.set(videoId, new VideoSize(width, height));
+
+          needResize = true;
+        }
+      });
+
+      if (needResize) {
+        this.onResize();
+        this.changeDetector.detectChanges();
+      }
+
+      this.isVideoSizesInitialized = true;
+    }
   }
 
   loadTalk(id: number) {
@@ -115,23 +144,10 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
     document.body.appendChild(tag);
   }
 
-  onReady = (event): void => {
-    if (event?.target) {
-      const videoId: string = event.target.videoId;
-      const videoSize: VideoSize = event.target.getSize();
-
-      if (videoId && !isNaN(videoSize?.width) && !isNaN(videoSize?.height)) {
-        this.videoSizes.set(videoId, videoSize);
-
-        this.onResize();
-      }
-    }
-  }
-
   onResize = (): void => {
     if (this.youtubePlayerDiv && this.youtubePlayers) {
       this.youtubePlayers.forEach((yp) => {
-        const videoSize = this.videoSizes.get(yp.videoId);
+        const videoSize = this.initialVideoSizes.get(yp.videoId);
 
         if (videoSize) {
           const videoWidth = Math.min(this.youtubePlayerDiv.nativeElement.clientWidth, videoSize.width);
@@ -139,8 +155,7 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
           if (videoWidth != yp.width) {
             const videoHeight = videoWidth * videoSize.height / videoSize.width;
 
-            yp.width = videoWidth;
-            yp.height = videoHeight;
+            this.resizedVideoSizes.set(yp.videoId, new VideoSize(videoWidth, videoHeight));
           }
         }
       });
@@ -169,5 +184,17 @@ export class TalkComponent implements AfterViewInit, OnInit, OnDestroy {
 
   isMaterialsVisible() {
     return this.isLinksListsVisible() || this.isVideoLinksVideoIdsListVisible();
+  }
+
+  getPlayerWidth(videoId: string): number {
+    const videoSize = this.resizedVideoSizes.get(videoId);
+
+    return (videoSize) ? videoSize.width : null;
+  }
+
+  getPlayerHeight(videoId: string): number {
+    const videoSize = this.resizedVideoSizes.get(videoId);
+
+    return (videoSize) ? videoSize.height : null;
   }
 }
