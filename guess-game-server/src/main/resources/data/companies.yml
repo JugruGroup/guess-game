@@ -4377,3 +4377,7 @@ companies:
     name:
       - {language: en, text: Ivideon}
     siteLink: https://ivideon.com
+  - id: 1219
+    name:
+      - {language: en, text: deffun}
+    siteLink: https://www.deffun.io

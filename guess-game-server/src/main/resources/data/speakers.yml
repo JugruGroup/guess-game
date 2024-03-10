@@ -44467,3 +44467,41 @@ speakers:
             \ to play with the browser.</p>"}
       - {language: ru, text: "<p>Виталий занимается фронтендом 12 лет. Трехмерная графика давно вошла в круг его интересов\
             . Любит поиграться с 3D-редакторами или игровыми движками на досуге. Вот дошла очередь и до браузера.</p>"}
+  - id: 3084
+    photoFileName: 3084.jpg
+    photoUpdatedAt: "2024-03-10T18:46:00Z"
+    name:
+      - {language: en, text: "Artyom Shaburov"}
+      - {language: ru, text: "Артём Шабуров"}
+    companyIds: [1219]
+    bio:
+      - {language: ru, text: "Fullstonks-developer со стажем 8 лет.\n\nРаботал в таких компаниях как СберТех и Ingram\
+            \ Micro Cloud (ex. Odin, ex. Parallels), в которых работал и над монолитами, и над микросервисами, и превращал\
+            \ ~~воду в вино~~ одно в другое, и мигрировал с NoSQL на SQL (именно так, а не наоборот).\n\nПосле исхода\
+            \ иностранных компаний решил создать свою компанию, где мы делаем low-code платформу, конечно же, на Java."}
+    gitHub: artipop
+    habr: artipop
+  - id: 3085
+    photoFileName: 3085.jpg
+    photoUpdatedAt: "2024-03-10T18:56:00Z"
+    name:
+      - {language: en, text: "Konstantin Kastyrin"}
+      - {language: ru, text: "Константин Кастырин"}
+    companyIds: [1122]
+    bio:
+      - {language: ru, text: "В бэкенд-разработке более 7 лет. Сторонник инженерной культуры. Считает, что язык\
+            \ программирования — это инструмент, так же как и фреймворк. Более важное значение имеют инженерные приемы\
+            \ и паттерны, которые не зависят от конкретного языка программирования."}
+    gitHub: strictkod1899
+    habr: strictkod1899
+  - id: 3086
+    photoFileName: 3086.jpg
+    photoUpdatedAt: "2024-03-10T19:00:00Z"
+    name:
+      - {language: en, text: "Prokhor Krylov"}
+      - {language: ru, text: "Прохор Крылов"}
+    companyIds: [776]
+    bio:
+      - {language: ru, text: "Руководитель отдела серверной разработки."}
+    gitHub: proshik
+    habr: proshik
