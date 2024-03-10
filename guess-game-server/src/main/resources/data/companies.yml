@@ -4381,3 +4381,8 @@ companies:
     name:
       - {language: en, text: deffun}
     siteLink: https://www.deffun.io
+  - id: 1220
+    name:
+      - {language: en, text: NSU}
+      - {language: ru, text: НГУ}
+    siteLink: https://www.nsu.ru
