@@ -2720,6 +2720,20 @@ events:
     days:
       - {startDate: "2022-08-04", endDate: "2022-08-04", placeId: 13}
     talkIds: [3970, 3971]
+  - eventTypeId: 15
+    name:
+      - {language: en, text: "JUGNsk Meetup #21"}
+      - {language: ru, text: "Митап #21 JUGNsk"}
+    days:
+      - {startDate: "2023-08-15", endDate: "2023-08-15", placeId: 13}
+    talkIds: [5221, 5222]
+  - eventTypeId: 15
+    name:
+      - {language: en, text: "JUGNsk Meetup #22"}
+      - {language: ru, text: "Митап #22 JUGNsk"}
+    days:
+      - {startDate: "2023-09-21", endDate: "2023-09-21", placeId: 13}
+    talkIds: [5223, 5224]
   # SnowOne
   - eventTypeId: 16
     name:
@@ -2754,6 +2768,13 @@ events:
       - {startDate: "2023-03-03", endDate: "2023-03-04", placeId: 13}
     youtubeLink: https://www.youtube.com/playlist?list=PLecWId-JT7S5ZHU65ivWoal29YfDT42Y7
     talkIds: [4385, 4386, 4387, 4388, 4389, 4390, 4391, 4392, 4393]
+  - eventTypeId: 16
+    name:
+      - {language: en, text: "SnowOne 2024"}
+    days:
+      - {startDate: "2024-03-01", endDate: "2024-03-02", placeId: 13}
+    talkIds: [5225, 5226, 5227, 5228, 5229, 5230, 5231, 5232, 5233, 5234, 5235, 5236, 5237, 5238, 5239, 5240, 5241, 5242,
+        5243]
   # VideoTech
   - eventTypeId: 17
     name:

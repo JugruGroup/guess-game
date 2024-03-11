@@ -4377,3 +4377,20 @@ companies:
     name:
       - {language: en, text: Ivideon}
     siteLink: https://ivideon.com
+  - id: 1219
+    name:
+      - {language: en, text: deffun}
+    siteLink: https://www.deffun.io
+  - id: 1220
+    name:
+      - {language: en, text: NSU}
+      - {language: ru, text: НГУ}
+    siteLink: https://www.nsu.ru
+  - id: 1221
+    name:
+      - {language: en, text: "Apache Tika"}
+    siteLink: https://tika.apache.org
+  - id: 1222
+    name:
+      - {language: en, text: Squad}
+    siteLink: https://squadsec.ru/

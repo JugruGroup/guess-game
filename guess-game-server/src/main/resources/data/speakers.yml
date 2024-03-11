@@ -21572,14 +21572,10 @@ speakers:
       - {language: ru, text: "Константин Воливач"}
     companyIds: [630]
     bio:
-      - language: en
-        text: "Konstantin Volivach is Teamlead at SKB Kontur, for some time worked at Eltex, periodically contributes to\
-            \ opensource. All commercial experience is made up of working on Kotlin. Wrote the kfixture library for generating\
-            \ test data in the company."
       - language: ru
-        text: "Константин Воливач - Teamlead в СКБ Контур, какое-то время работал в Eltex, периодически вносит вклад в\
-            \ opensource. Весь коммерческий опыт составляет работа на Kotlin. Написал библиотеку kfixture для генерации\
-            \ тестовых данных в компании."
+        text: "Руководитель кластера java разработчиков в направлении PropTech в Контуре.\n\nБольшую часть карьеры пишу\
+        \ на kotlin и проектирую b2b системы, в IT почти 6 лет.\n\nИногда преподаю в УРФУ и помогаю делать стажировки в\
+        \ Контуре."
     twitter: Kostya05983
     gitHub: kostya05983
     habr: kostya05983
@@ -29081,11 +29077,8 @@ speakers:
       - {language: ru, text: "Сергей Луговой"}
     companyIds: [686]
     bio:
-      - {language: ru, text: "Занимается программированием уже 30 лет. Много лет разрабатывал системы, использующие\
-            \ реляционные БД. Затем 15 лет работал над созданием центров передачи сообщений в телекоммуникационной\
-            \ области, что потребовало изменить подходы к организации данных для обеспечения быстрой обработки больших\
-            \ потоков сообщений. Последнее время специализируюсь на разработке горизонтально масштабируемых систем\
-            \ обработки данных, использующих нереляционные БД и грид системы."}
+      - {language: ru, text: "Архитектор подразделения по работе с большими данными и машинному обучению в ЦФТ.\n\nПреподает\
+            \ на курсах ФокусШИФТ там же."}
   - id: 2039
     photoFileName: 2039.jpg
     name:
@@ -37038,14 +37031,14 @@ speakers:
     name:
       - {language: en, text: "Sergey Petrelevich"}
       - {language: ru, text: "Сергей Петрелевич"}
-    companyIds: [643]
+    companyIds: [1222]
     bio:
-      - {language: en, text: "<p>In professional development since 2003. He has been programming in Java since 2010. Basically\
-            \ works in the financial sector. Worked in the Moscow tech center of Deutsche Bank, Raiffeisen Bank, now works\
-            \ on the authorization system in Mir Plat.Form.</p>"}
-      - {language: ru, text: "<p>В профессиональной разработке с 2003 года. С 2010 года программирует на Java. В основном\
-            \ работает в финансовой сфере. Работал в московском техцентре Deutsche Bank, Райффайзен Банке, сейчас занимает\
-            ся системой авторизации в Мир Plat.Form.</p>"}
+      - {language: en, text: "In professional development since 2003. He has been programming in Java since 2010.\n\nWorked\
+            \ in the Moscow tech center of Deutsche Bank, Raiffeisen Bank, NSPK.\n\nInterested in effective means of solving\
+            \ technical problems.\n\nCurrently developing an information security system in Squad."}
+      - {language: ru, text: "В профессиональной разработке с 2003 года. С 2010 года программирует на Java.\n\nРаботал в\
+            \ московском техцентре Deutsche Bank, Райффайзен Банке, НСПК.\n\nИнтересуется эффективными средствами решения\
+            \ технических задач.\n\nCейчас разрабатывает систему информационной безопасности в Squad."}
     gitHub: petrelevich
     habr: Petrelevich
   - id: 2598
@@ -44467,3 +44460,89 @@ speakers:
             \ to play with the browser.</p>"}
       - {language: ru, text: "<p>Виталий занимается фронтендом 12 лет. Трехмерная графика давно вошла в круг его интересов\
             . Любит поиграться с 3D-редакторами или игровыми движками на досуге. Вот дошла очередь и до браузера.</p>"}
+  - id: 3084
+    photoFileName: 3084.jpg
+    name:
+      - {language: en, text: "Artyom Shaburov"}
+      - {language: ru, text: "Артём Шабуров"}
+    companyIds: [1219]
+    bio:
+      - {language: ru, text: "Fullstonks-developer со стажем 8 лет.\n\nРаботал в таких компаниях как СберТех и Ingram\
+            \ Micro Cloud (ex. Odin, ex. Parallels), в которых работал и над монолитами, и над микросервисами, и превращал\
+            \ ~~воду в вино~~ одно в другое, и мигрировал с NoSQL на SQL (именно так, а не наоборот).\n\nПосле исхода\
+            \ иностранных компаний решил создать свою компанию, где мы делаем low-code платформу, конечно же, на Java."}
+    gitHub: artipop
+    habr: artipop
+  - id: 3085
+    photoFileName: 3085.jpg
+    name:
+      - {language: en, text: "Konstantin Kastyrin"}
+      - {language: ru, text: "Константин Кастырин"}
+    companyIds: [1122]
+    bio:
+      - {language: ru, text: "В бэкенд-разработке более 7 лет. Сторонник инженерной культуры. Считает, что язык\
+            \ программирования — это инструмент, так же как и фреймворк. Более важное значение имеют инженерные приемы\
+            \ и паттерны, которые не зависят от конкретного языка программирования."}
+    gitHub: strictkod1899
+    habr: strictkod1899
+  - id: 3086
+    photoFileName: 3086.jpg
+    name:
+      - {language: en, text: "Prokhor Krylov"}
+      - {language: ru, text: "Прохор Крылов"}
+    companyIds: [776]
+    bio:
+      - {language: ru, text: "Руководитель отдела серверной разработки."}
+    gitHub: proshik
+    habr: proshik
+  - id: 3087
+    photoFileName: 3087.jpg
+    name:
+      - {language: en, text: "Ivan Bondarenko"}
+      - {language: ru, text: "Иван Бондаренко"}
+    companyIds: [1220]
+    bio:
+      - {language: ru, text: "Любит свою семью и машинное обучение, преподает в НГУ, делает нейросети, ходит в горы.\n\nС\
+            \ 2006 до 2013 года преподавал и занимался научными исследованиями в Донецком национальном техническом\
+            \ университете, затем перешёл в IT-индустрию и работал на различных должностях — от инженера-разработчика\
+            \ до специалиста по машинному обучению — в ряде компаний, таких как 2ГИС, Huawei, Global Logic, Data\
+            \ Monsters.\n\nВ период с 2018 до 2020 года удалённо работал в МФТИ (в том числе в команде проекта\
+            \ DeepPavlov), сочетая это с работой в Data Monsters — индустриальном партнёре Физтеха — на позиции Solution\
+            \ Architect.\n\nНачиная с 2022 года, решил окончательно вернуться в академическую сферу из индустриальной,\
+            \ уволился с должности инженера ключевых проектов Huawei Russian Research Institute, и теперь целиком и\
+            \ полностью работает в Новосибирском государственном университете."}
+    gitHub: bond005
+    habr: bond005
+  - id: 3088
+    photoFileName: 3088.jpg
+    name:
+      - {language: en, text: "Konstantin Gribov"}
+      - {language: ru, text: "Константин Грибов"}
+    companyIds: [1221]
+    bio:
+      - {language: ru, text: "Константин состоит в Project Management Committee проекта Apache Tika, а также активно\
+            \ контрибьютит в другие известные open-source проекты, например, Gradle и Apache Solr."}
+    twitter: grossws
+    gitHub: grossws
+    habr: grossws
+  - id: 3089
+    photoFileName: 3089.jpg
+    name:
+      - {language: en, text: "Ilya Gavrilin"}
+      - {language: ru, text: "Илья Гаврилин"}
+    companyIds: [919]
+    bio:
+      - {language: ru, text: "Работаю в Syntacore, занимаюсь оптимизацией OpenJDK под архитектуру RISC-V, добавлением\
+            \ недостающих интринсиков. Контрибьютер в апстрим OpenJDK."}
+    gitHub: Ilyagavrilin
+  - id: 3090
+    photoFileName: 3090.jpg
+    name:
+      - {language: en, text: "Ekaterina Shevchuk"}
+      - {language: ru, text: "Екатерина Шевчук"}
+    companyIds: [686]
+    bio:
+      - {language: ru, text: "Я старший инженер-программист в компании ЦФТ. Опыт работы 2,5+ года. Являюсь тимлидом\
+            \ инфраструктурной команды.\n\nВ компанию пришла с ШИФТ-интенсива. Изначально была в бизнесовой команде,\
+            \ потом позвали в инфраструктурную. Делаем интересные технические задачи, помогаем с улучшением процессов\
+            \ выпуска бизнесовых задач, немного участвуем в самих бизнесовых задачах."}
