@@ -4386,3 +4386,11 @@ companies:
       - {language: en, text: NSU}
       - {language: ru, text: НГУ}
     siteLink: https://www.nsu.ru
+  - id: 1221
+    name:
+      - {language: en, text: "Apache Tika"}
+    siteLink: https://tika.apache.org
+  - id: 1222
+    name:
+      - {language: en, text: Squad}
+    siteLink: https://squadsec.ru/

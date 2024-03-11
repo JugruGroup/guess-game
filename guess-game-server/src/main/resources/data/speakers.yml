@@ -37031,14 +37031,14 @@ speakers:
     name:
       - {language: en, text: "Sergey Petrelevich"}
       - {language: ru, text: "Сергей Петрелевич"}
-    companyIds: [643]
+    companyIds: [1222]
     bio:
-      - {language: en, text: "<p>In professional development since 2003. He has been programming in Java since 2010. Basically\
-            \ works in the financial sector. Worked in the Moscow tech center of Deutsche Bank, Raiffeisen Bank, now works\
-            \ on the authorization system in Mir Plat.Form.</p>"}
-      - {language: ru, text: "<p>В профессиональной разработке с 2003 года. С 2010 года программирует на Java. В основном\
-            \ работает в финансовой сфере. Работал в московском техцентре Deutsche Bank, Райффайзен Банке, сейчас занимает\
-            ся системой авторизации в Мир Plat.Form.</p>"}
+      - {language: en, text: "In professional development since 2003. He has been programming in Java since 2010.\n\nWorked\
+            \ in the Moscow tech center of Deutsche Bank, Raiffeisen Bank, NSPK.\n\nInterested in effective means of solving\
+            \ technical problems.\n\nCurrently developing an information security system in Squad."}
+      - {language: ru, text: "В профессиональной разработке с 2003 года. С 2010 года программирует на Java.\n\nРаботал в\
+            \ московском техцентре Deutsche Bank, Райффайзен Банке, НСПК.\n\nИнтересуется эффективными средствами решения\
+            \ технических задач.\n\nCейчас разрабатывает систему информационной безопасности в Squad."}
     gitHub: petrelevich
     habr: Petrelevich
   - id: 2598
@@ -44462,7 +44462,6 @@ speakers:
             . Любит поиграться с 3D-редакторами или игровыми движками на досуге. Вот дошла очередь и до браузера.</p>"}
   - id: 3084
     photoFileName: 3084.jpg
-    photoUpdatedAt: "2024-03-10T18:46:00Z"
     name:
       - {language: en, text: "Artyom Shaburov"}
       - {language: ru, text: "Артём Шабуров"}
@@ -44476,7 +44475,6 @@ speakers:
     habr: artipop
   - id: 3085
     photoFileName: 3085.jpg
-    photoUpdatedAt: "2024-03-10T18:56:00Z"
     name:
       - {language: en, text: "Konstantin Kastyrin"}
       - {language: ru, text: "Константин Кастырин"}
@@ -44489,7 +44487,6 @@ speakers:
     habr: strictkod1899
   - id: 3086
     photoFileName: 3086.jpg
-    photoUpdatedAt: "2024-03-10T19:00:00Z"
     name:
       - {language: en, text: "Prokhor Krylov"}
       - {language: ru, text: "Прохор Крылов"}
@@ -44500,7 +44497,6 @@ speakers:
     habr: proshik
   - id: 3087
     photoFileName: 3087.jpg
-    photoUpdatedAt: "2024-03-10T20:07:00Z"
     name:
       - {language: en, text: "Ivan Bondarenko"}
       - {language: ru, text: "Иван Бондаренко"}
@@ -44517,3 +44513,36 @@ speakers:
             \ полностью работает в Новосибирском государственном университете."}
     gitHub: bond005
     habr: bond005
+  - id: 3088
+    photoFileName: 3088.jpg
+    name:
+      - {language: en, text: "Konstantin Gribov"}
+      - {language: ru, text: "Константин Грибов"}
+    companyIds: [1221]
+    bio:
+      - {language: ru, text: "Константин состоит в Project Management Committee проекта Apache Tika, а также активно\
+            \ контрибьютит в другие известные open-source проекты, например, Gradle и Apache Solr."}
+    twitter: grossws
+    gitHub: grossws
+    habr: grossws
+  - id: 3089
+    photoFileName: 3089.jpg
+    name:
+      - {language: en, text: "Ilya Gavrilin"}
+      - {language: ru, text: "Илья Гаврилин"}
+    companyIds: [919]
+    bio:
+      - {language: ru, text: "Работаю в Syntacore, занимаюсь оптимизацией OpenJDK под архитектуру RISC-V, добавлением\
+            \ недостающих интринсиков. Контрибьютер в апстрим OpenJDK."}
+    gitHub: Ilyagavrilin
+  - id: 3090
+    photoFileName: 3090.jpg
+    name:
+      - {language: en, text: "Ekaterina Shevchuk"}
+      - {language: ru, text: "Екатерина Шевчук"}
+    companyIds: [686]
+    bio:
+      - {language: ru, text: "Я старший инженер-программист в компании ЦФТ. Опыт работы 2,5+ года. Являюсь тимлидом\
+            \ инфраструктурной команды.\n\nВ компанию пришла с ШИФТ-интенсива. Изначально была в бизнесовой команде,\
+            \ потом позвали в инфраструктурную. Делаем интересные технические задачи, помогаем с улучшением процессов\
+            \ выпуска бизнесовых задач, немного участвуем в самих бизнесовых задачах."}
