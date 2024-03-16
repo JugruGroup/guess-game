@@ -4,7 +4,7 @@ topics:
       - {language: en, text: "Other"}
       - {language: ru, text: "Прочее"}
     defaultTopic: true
-    orderNumber: 13
+    orderNumber: 16
   - id: 1
     name:
       - {language: en, text: "Java"}
@@ -29,33 +29,47 @@ topics:
     name:
       - {language: en, text: "Mobile development"}
       - {language: ru, text: "Мобильная разработка"}
-    orderNumber: 6
+    orderNumber: 7
   - id: 7
     name:
       - {language: en, text: "QA / Testing"}
       - {language: ru, text: "QA / Тестирование"}
-    orderNumber: 7
+    orderNumber: 8
   - id: 8
     name:
       - {language: en, text: "DevOps"}
-    orderNumber: 8
+    orderNumber: 9
   - id: 9
     name:
       - {language: en, text: "Data engineering"}
       - {language: ru, text: "Обработка данных"}
-    orderNumber: 9
+    orderNumber: 10
   - id: 10
     name:
       - {language: en, text: "Distributed computing"}
       - {language: ru, text: "Распределённые вычисления"}
-    orderNumber: 10
+    orderNumber: 11
   - id: 11
     name:
       - {language: en, text: "Video and streaming"}
       - {language: ru, text: "Видео и стриминг"}
-    orderNumber: 11
+    orderNumber: 12
   - id: 12
     name:
       - {language: en, text: "Systems and business analysis"}
       - {language: ru, text: "Системный и бизнес-анализ"}
-    orderNumber: 12
+    orderNumber: 13
+  - id: 13
+    name:
+      - {language: en, text: "Go"}
+    orderNumber: 6
+  - id: 14
+    name:
+      - {language: en, text: "Application security"}
+      - {language: ru, text: "Безопасность приложений"}
+    orderNumber: 14
+  - id: 15
+    name:
+      - {language: en, text: "Machine learning"}
+      - {language: ru, text: "Машинное обучение"}
+    orderNumber: 15
