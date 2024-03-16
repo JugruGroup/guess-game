@@ -342,8 +342,8 @@ eventTypes:
     name:
       - {language: en, text: TechTrain}
     shortDescription:
-      - {language: en, text: "Festival on ML&AI for development and life"}
-      - {language: ru, text: "Фестиваль по ML&AI для разработки и жизни"}
+      - {language: en, text: "Festival on professional development in IT"}
+      - {language: ru, text: "Фестиваль по профессиональному росту в IT"}
     longDescription:
       - {language: en, text: "TechTrain is a free online event for everyone interested in software development. Our speakers\
             \ are experienced developers coming from a wide array of fields: server- and client-side, mobile development,\
