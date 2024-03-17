@@ -70,6 +70,5 @@ topics:
     orderNumber: 14
   - id: 15
     name:
-      - {language: en, text: "Machine learning"}
-      - {language: ru, text: "Машинное обучение"}
+      - {language: en, text: "AI / ML"}
     orderNumber: 15
