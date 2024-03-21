@@ -645,7 +645,11 @@ companySynonyms:
         "Т1 Sfera",
         "Т1 Сфера",
         "Sfera Platform",
-        "Платформа Сфера"
+        "Платформа Сфера",
+        "NOTA",
+        "НОТА",
+        "NOTA (T1)",
+        "НОТА (Т1)"
     ]
   - name: UCB
     synonyms: [
