@@ -35097,21 +35097,22 @@ speakers:
     habr: glazzkoff
   - id: 2458
     photoFileName: 2458.jpg
-    photoUpdatedAt: 2022-10-04T14:46:23Z[UTC]
+    photoUpdatedAt: "2024-02-26T14:54:41Z"
     name:
-      - {language: en, text: "Roman Alyautdin"}
+      - {language: en, text: "Roman Aliautdin"}
       - {language: ru, text: "Роман Аляутдин"}
     companyIds: [1021]
     bio:
-      - {language: en, text: "<p>Director of the Development Department, whose team is responsible for Aurora OS and Aurora\
-            \ TEE development. He graduated from the Moscow Aviation Institute with a degree in Computer Software and Automated\
-            \ Systems. He has been involved in system programming, embedded systems design, operating systems design and hardware\
-            \ and software systems. In his spare time Roman lectured for several years on designing Linux drivers at the MAI.</p>"}
-      - {language: ru, text: "<p>Директор департамента разработки, команда отвечает за разработку ОС &laquo;Аврора&raquo;\
-            \ и Аврора TEE. Окончил Московский Авиационный Институт по специальности &laquo;Программное обеспечение вычисл\
-            ительной техники и автоматизированных систем&raquo;. Занимался системным программированием, проектированием вс\
-            траиваемых систем, дизайном операционных систем и программно-аппаратными комплексами. В свободное время Роман\
-            \ несколько лет читал лекции по проектированию драйверов Linux в МАИ.</p>"}
+      - {language: en, text: "<p>Director of the Development Department, the team is responsible for the development of Aurora\
+            \ OS and Aurora TEE. Roman graduated from the Moscow Aviation Institute with a specialisation in computer software\
+            \ and automated systems. He was involved in system programming, embedded systems design, operating systems design\
+            \ and hardware and software systems. In his spare time, Roman lectured on Linux driver design at MAI for several\
+            \ years.</p>"}
+      - {language: ru, text: "<p><span style=\"color: #0f172a;\">Директор департамента разработки, команда отвечает за раз\
+            работку ОС Аврора и Аврора TEE. Окончил Московский авиационный институт по специальности &laquo;программное об\
+            еспечение вычислительной техники и автоматизированных систем&raquo;. Занимался системным программированием, пр\
+            оектированием встраиваемых систем, дизайном операционных систем и программно-аппаратными комплексами. В свобод\
+            ное время Роман несколько лет читал лекции по проектированию драйверов Linux в МАИ.</span></p>"}
   - id: 2459
     photoFileName: 2459.jpg
     photoUpdatedAt: "2023-11-01T20:00:27Z"
@@ -35724,30 +35725,28 @@ speakers:
     name:
       - {language: en, text: "Mikhail Maksimov"}
       - {language: ru, text: "Михаил Максимов"}
-    companyIds: [1054]
+    companyIds: [975]
     bio:
       - {language: en, text: "<p>Producer, business analyst. Author and host of the YouTube channel for business and systems\
-            \ analysts \"FigraBukova\". TOGAF certified. One of the leaders of the St. Petersburg Thinking Club.</p>"}
+            \ analysts \"Cifra Bukva\". TOGAF certified. One of the leaders of Thinking Club St. Petersburg.</p>"}
       - {language: ru, text: "<p>Продакт, бизнес-аналитик. Кандидат экономических наук. Автор и ведущий YouTube-канала для\
-            \ системных и бизнес-аналитиков &laquo;ЦифраБуква&raquo;. TOGAF certified. Один из лидеров Клуба Мышления &laquo;С\
-            анкт-Петербург&raquo;.</p>"}
+            \ системных и бизнес-аналитиков &laquo;Цифра Буква&raquo;. TOGAF certified. Один из лидеров Клуба Мышления Сан\
+            кт-Петербург.</p>"}
     twitter: mikhmax
   - id: 2501
     photoFileName: 2501.jpg
-    photoUpdatedAt: 2023-03-22T11:48:29Z[UTC]
+    photoUpdatedAt: "2024-01-18T15:44:48Z"
     name:
       - {language: en, text: "Denis Bogdanov"}
       - {language: ru, text: "Денис Богданов"}
-    companyIds: [1037]
+    companyIds: [1225]
     bio:
-      - {language: en, text: "<p>More than 13 years in IT (developer, system and business analyst, project manager, product\
-            \ owner). Now he is engaged in the development of the system analysis function, as well as the development of\
-            \ internal processes and tools in BIA-Technologies. Author and host of the \"TsifraBukva\" YouTube channel about\
-            \ business / system analysts.</p>"}
-      - {language: ru, text: "<p>Более 13 лет в IT (разработчик, системный и бизнес-аналитик, руководитель проектов, product\
-            \ owner). Сейчас занимается развитием функции системного анализа, а также развитием внутренних процессов и инс\
-            трументов в BIA-Technologies. Автор и ведущий канала про бизнес/системных аналитиков &ndash; &laquo;ЦифраБуква\
-            &raquo;</p>"}
+      - {language: en, text: "<p>Denis is engaged in the development of the analysis function, as well as the development\
+            \ of internal processes and IT tools. Author and host of the YouTube channel \"CifraBukva\". Lecturer in disciplines\
+            \ related to business and systems analysis.</p>"}
+      - {language: ru, text: "<p>Занимается развитием функции анализа, а также развитием внутренних процессов и IT-инструм\
+            ентов. Автор и ведущий YouTube-канала &laquo;Цифра Буква&raquo;. Преподаватель дисциплин, связанных с бизнес-\
+            \ и системным анализом.</p>"}
   - id: 2502
     photoFileName: 2502.jpg
     photoUpdatedAt: 2022-10-06T11:03:11Z[UTC]
@@ -35769,17 +35768,16 @@ speakers:
     companyIds: [1038]
     bio:
       - language: en
-        text: "<p>Designs systems, builds teams, trains analysts, and hosts a channel about analysis and architecture: <a\
-            \ href=\"https://telergam.ru/another_sa\" target=\"_blank\" rel=\"noopener noreferrer\">Yet Another SA</a>.</p>\n\
-            <p>Over 10 years as a developer, analyst, and team leader at custom development and product companies.</p>\n<p>Founder\
-            \ of the <a href=\"https://nextway.pro\" target=\"_blank\" rel=\"noopener noreferrer\">NextWay</a> school of analysis\
-            \ and design.</p>"
+        text: "<p>Andrey has been involved in the development of IT systems and digital products for more than 10 years. He\
+            \ was a developer, analyst, team leader, product manager in classical banking, large retail and fintech startups.</p>\n\
+            <p>Founder and teacher of <a href=\"https://nextway.pro\" target=\"_blank\" rel=\"noopener noreferrer\">NextWay</a>\
+            \ school of analysis and design.</p>"
       - language: ru
-        text: "<p>Проектирует системы, создает команды, обучает аналитиков, ведет канал об анализе и архитектуре: <a href=\"\
-            https://telergam.ru/another_sa\" target=\"_blank\" rel=\"noopener noreferrer\">Yet Another SA</a>.</p>\n<p>Бол\
-            ее 10 лет в роли разработчика, аналитика и тимлида в заказной разработке и продуктовых компаниях.</p>\n<p>Осно\
-            ватель школы анализа и проектирования <a href=\"https://nextway.pro\" target=\"_blank\" rel=\"noopener noreferrer\"\
-            >NextWay</a>.</p>"
+        text: "<p>Более 10 лет в разработке IT-систем и цифровых продуктов. Был разработчиком, аналитиком, тимлидом, руков\
+            одителем продукта в классическом банкинге, крупном ритейле, финтех-стартапах.</p>\n<p>Основатель и преподавате\
+            ль школы анализа и проектирования <a href=\"https://nextway.pro\" target=\"_blank\" rel=\"noopener noreferrer\"\
+            >NextWay</a>. Ведет Telegram-канал об анализе и архитектуре <a href=\"https://t.me/another_sa\" target=\"_blank\"\
+            \ rel=\"noopener\">Yet another SA</a>.</p>"
   - id: 2504
     photoFileName: 2504.jpg
     photoUpdatedAt: 2022-10-28T07:14:30Z[UTC]
@@ -35829,24 +35827,22 @@ speakers:
             \ системный анализ чуть более системным и понятным.</p>"}
   - id: 2507
     photoFileName: 2507.jpg
-    photoUpdatedAt: 2022-11-02T15:19:43Z[UTC]
+    photoUpdatedAt: "2024-02-14T11:19:03Z"
     name:
-      - {language: en, text: "Irina Gertovskaia"}
+      - {language: en, text: "Irina Gertovskaya"}
       - {language: ru, text: "Ирина Гертовская"}
-    companyIds: [1040]
+    companyIds: []
     bio:
-      - language: en
-        text: "<p>System and business analyst. Program director of the conference \"Summer Analytical Festival\". Author and\
-            \ trainer of courses on system and business analysis in IT.</p>\n<p>Co-author of the professional standard of\
-            \ the Russian Federation \"Business Analyst\" (2018). Ex-head of IT analyst units (~10 years). Ex-deputy director\
-            \ of OTR-2000 production department. Before 2010 &mdash; development and implementation of IT systems for big\
-            \ business and FinTech.</p>"
+      - {language: en, text: "<p>System and business analyst in IT, consultant and trainer. Co-author of RF professional standard\
+            \ \"System Analyst\", 2023.<br /><br />Speaker at Analyst Days, INFOSTART, SQA Days, SECR, LAF, Tochka Sborki,\
+            \ Analyst Marathon, DUMP conferences.<br /><br />Irina previously participated in the development and implementation\
+            \ of IT systems for large industrial enterprises and fintech, and was an Analyst Business Unit Manager.<br /><br\
+            \ /></p>"}
       - language: ru
-        text: "<p>Системный и бизнес-аналитик. Программный директор конференции &laquo;Летний аналитический фестиваль&raquo;.\
-            \ Автор и тренер курсов по системному и бизнес-анализу в IT.</p>\n<p>Соавтор профессионального стандарта РФ &laquo;Б\
-            изнес-аналитик&raquo; (2018). Экс-руководитель подразделений IT-аналитиков (~10 лет). Экс-зам.директора Произв\
-            одственного департамента ОТР-2000. Ранее 2010 &mdash; разработка и внедрение IT-систем для крупного бизнеса и\
-            \ финтеха.</p>"
+        text: "<p>Системный и бизнес-аналитик в ИТ, консультант, тренер. Соавтор профессионального стандарта РФ &laquo;Сис\
+            темный аналитик&raquo; 2023 года.</p>\n<p>Выступала на конференциях Analyst Days, INFOSTART, SQA Days, SECR, Л\
+            АФ, Точка сборки, Analyst Marathon, DUMP.</p>\n<p>Ранее участвовала в разработке и внедрении ИТ-систем для кру\
+            пных промышленных предприятий и финтеха, была руководителем подразделений аналитиков.</p>"
   - id: 2508
     photoFileName: 2508.jpg
     photoUpdatedAt: "2022-09-16T07:40:55Z"
@@ -35980,14 +35976,14 @@ speakers:
     habr: nick_volynkin
   - id: 2516
     photoFileName: 2516.jpg
-    photoUpdatedAt: 2022-11-19T10:55:08Z[UTC]
+    photoUpdatedAt: "2022-11-19T10:55:08Z"
     name:
       - {language: en, text: "Roman Tsirulnikov"}
       - {language: ru, text: "Роман Цирульников"}
     companyIds: [864]
     bio:
-      - {language: en, text: "<p>Solution Architect. Makes complex things simple.</p>"}
-      - {language: ru, text: "<p>Архитектор решений. Делает сложные вещи простыми.</p>"}
+      - {language: en, text: "<p>Architect with more than 20 years overall IT experience. Makes complex things simple.</p>"}
+      - {language: ru, text: "<p>Архитектор с опытом в ИТ более 20 лет. Делает сложные вещи простыми.</p>"}
     gitHub: romkavt
     habr: romkavt
   - id: 2517
@@ -38792,10 +38788,10 @@ speakers:
     companyIds: [613]
     bio:
       - language: en
-        text: "<p>Solution-architect in Alfa-Bank. He is engaged in projects in the direction of \"Remote call center\" and\
+        text: "<p>Solution Architect in Alfa-Bank. She is engaged in projects in the direction of \"Remote call center\" and\
             \ \"Telemarketing\". &nbsp;</p>\n<p>Author of the course \"System Analyst from scratch\" on the Stepik platform.\
-            \ Over 9 years in IT. Passed the way from a system analyst to a certified architect. Writes articles on Habr about\
-            \ systems analysis.</p>"
+            \ Over 9 years in IT. Worked her way up from a system analyst to a certified architect. Writes articles on Habr\
+            \ about systems analysis.</p>"
       - language: ru
         text: "<p>Solution-архитектор в Альфа-Банке. Занимается проектами в направлении &laquo;Дистанционный call center&raquo;\
             \ и &laquo;Телемаркетинг&raquo;.&nbsp;&nbsp;</p>\n<p>Автор курса &laquo;Системный аналитик с нуля&raquo; на пл\
@@ -38944,12 +38940,17 @@ speakers:
       - {language: ru, text: "Иннокентий Бодров"}
     companyIds: [1117]
     bio:
-      - {language: en, text: "<p>15 years in IT, almost all the time in systems and business analysis. He is smoothly transitioning\
-            \ into product management. Regularly speaks at Analyst Days, for two years successfully leads and teaches the\
-            \ course \"System Analyst. Advanced\" course at otus.ru.</p>"}
-      - {language: ru, text: "<p>15 лет в ИТ, практически все время в системном и бизнес-анализе. Плавно переходит в проду\
-            ктовый менеджмент. Регулярно выступает на Analyst Days, два года успешно руководит и ведет занятия курса &laquo;С\
-            истемный аналитик. Advanced&raquo; на площадке otus.ru.</p>"}
+      - language: en
+        text: "<p>Innokenty has been in IT for 16 years, most of the time in system and business analysis. He has been smoothly\
+            \ moving into product management. Innokenty regularly speaks at conferences for analysts and not only.</p>\n<p>For\
+            \ three years he has been managing the course \"System Analyst. Advanced\" on Otus.ru and teaches classes. During\
+            \ this time he has trained more than 1000 students.</p>\n<p>Founder of the personalised development service for\
+            \ analysts \"Analytical Workshop\".</p>"
+      - language: ru
+        text: "<p>16 лет в ИТ, практически все время в системном и бизнес-анализе. Плавно переходит в продуктовый менеджме\
+            нт. Регулярно выступает на конференциях для аналитиков и не только.</p>\n<p>Три года руководит курсом &laquo;С\
+            истемный аналитик. Advanced&raquo; на площадке Otus.ru и ведет занятия. За это время обучил более 1000 студент\
+            ов.</p>\n<p>Фаундер сервиса персонализированного развития аналитиков &laquo;Аналитическая мастерская&raquo;.</p>"
   - id: 2723
     photoFileName: 2723.jpg
     photoUpdatedAt: "2023-08-29T13:53:57Z"
@@ -39017,12 +39018,12 @@ speakers:
       - {language: ru, text: "Максим Смирнов"}
     companyIds: [259]
     bio:
-      - {language: en, text: "<p>IT Architect. He was Chief Architect at B&amp;N Bank Digital. Before that he was Chief Architect\
-            \ of Information Systems at the Central Bank of the Russian Federation, and before that he was Head of the IT\
-            \ Architecture Department at VimpelCom (Beeline trademark).</p>"}
-      - {language: ru, text: "<p>ИТ-архитектор. Был главным архитектором в &laquo;БИНБАНК Диджитал&raquo;, до этого главны\
-            м архитектором информационных систем ЦБ РФ, а до этого руководителем Департамента ИТ архитектуры ОАО &laquo;Вы\
-            мпелКом&raquo; (торговая марка &laquo;Билайн&raquo;).</p>"}
+      - {language: en, text: "<p>IT Architect. He was Chief Architect at B&amp;N Bank Digital. He also was Chief Architect\
+            \ of Information Systems at the Central Bank of the Russian Federation and Head of the IT Architecture Department\
+            \ at VimpelCom (Beeline trademark).</p>"}
+      - {language: ru, text: "<p>ИТ-архитектор. Был главным архитектором в &laquo;БИНБАНК Диджитал&raquo;, главным архитек\
+            тором информационных систем ЦБ РФ и руководителем Департамента ИТ-архитектуры ОАО &laquo;ВымпелКом&raquo; (тор\
+            говая марка &laquo;Билайн&raquo;).</p>"}
   - id: 2728
     photoFileName: 2728.jpg
     photoUpdatedAt: "2023-07-03T14:10:58Z"
@@ -44546,3 +44547,80 @@ speakers:
             \ инфраструктурной команды.\n\nВ компанию пришла с ШИФТ-интенсива. Изначально была в бизнесовой команде,\
             \ потом позвали в инфраструктурную. Делаем интересные технические задачи, помогаем с улучшением процессов\
             \ выпуска бизнесовых задач, немного участвуем в самих бизнесовых задачах."}
+  - id: 3091
+    photoFileName: 3091.jpg
+    photoUpdatedAt: "2023-12-22T14:55:10Z"
+    name:
+      - {language: en, text: "Dmitry Ulanov"}
+      - {language: ru, text: "Дмитрий Уланов"}
+    companyIds: [1121]
+    bio:
+      - {language: en, text: "<p>Dmitry has been engaged in system analysis and IT system development for over 6 years. He\
+            \ has participated in the development of existing products and the creation of new ones. Dmitry has a passion\
+            \ for technically elegant and user-friendly solutions. His areas of interest include integrations, high load systems,\
+            \ artificial intelligence, Python, and personal knowledge management.</p>"}
+      - {language: ru, text: "<p>Анализирует, синтезирует. Более 6 лет занимается системным анализом и разработкой ИТ-сист\
+            ем. Участвовал в развитии существующих продуктов и создании новых. Любит технически изящные и удобные для поль\
+            зователей решения. Области интересов: интеграции, highload, ИИ, Python, управление личными знаниями.</p>"}
+  - id: 3092
+    photoFileName: 3092.jpg
+    photoUpdatedAt: "2024-02-26T12:27:28Z"
+    name:
+      - {language: en, text: "Natalia Semenova"}
+      - {language: ru, text: "Наталья Семенова"}
+    companyIds: [1121]
+    bio:
+      - language: en
+        text: "<p>Business analyst, head of the analysis group at NOTA (T1). Natalia was Lead business analyst and resource\
+            \ manager at EPAM Systems (St. Petersburg) until 2022. She is the inspirer of the Smart-Effect project and author\
+            \ of Smart-Speaker courses on preparing speakers for speaking at professional IT conferences.</p>\n<p>Regular\
+            \ speaker and representative of the Programme Committee of Analyst Days conference. Certified and practicing coach\
+            \ (Level 1 ICF certificate).</p>"
+      - language: ru
+        text: "<p>Бизнес-аналитик, руководитель группы анализа в компании НОТА (Т1). До 2022 года &mdash; ведущий бизнес-а\
+            налитик и ресурсный менеджер в EPAM Systems (Санкт-Петербург). Вдохновитель проекта <a href=\"https://smart-effect.ru/home\"\
+            >Smart-Effect</a> и автор курсов <a href=\"https://smart-effect.ru/smart-speaker\">Smart-Speaker</a> по подгот\
+            овке спикеров к выступлению на профессиональных IT-конференциях.</p>\n<p>Постоянный спикер и представитель Про\
+            граммного комитета конференции Analyst Days. Сертифицированный и практикующий коуч (сертификат Level 1 ICF).</p>"
+    habr: nletra
+  - id: 3093
+    photoFileName: 3093.jpg
+    photoUpdatedAt: "2024-02-27T16:05:49Z"
+    name:
+      - {language: en, text: "Petr Chernyshev"}
+      - {language: ru, text: "Пётр Чернышев"}
+    companyIds: [1223]
+    bio:
+      - {language: en, text: "<p>CEO of Friflex, founder of the idsport.ai ecosystem of digitised sports products, and host\
+            \ of the Guests from IT podcast.</p>"}
+      - {language: ru, text: "<p>Генеральный директор компании Friflex, основатель экосистемы продуктов для оцифровки спор\
+            та idsport.ai, ведущий подкаста <a href=\"https://itgosti.mave.digital/\">&laquo;Гости из IT&raquo;</a>.</p>"}
+  - id: 3094
+    photoFileName: 3094.jpg
+    photoUpdatedAt: "2024-02-27T16:08:59Z"
+    name:
+      - {language: en, text: "Denis Ramazanov"}
+      - {language: ru, text: "Денис Рамазанов"}
+    companyIds: [1224]
+    bio:
+      - {language: en, text: "<p>Development Director and co-founder of the first Russian source code service GitFlic. Since\
+            \ 2021, he has been responsible for the development and implementation of the development strategy of ReSolut\
+            \ LLC (GitFlic service). Denis has more than 8 years of experience in marketing and project management in B2B\
+            \ and B2C under his belt.</p>"}
+      - {language: ru, text: "<p>Директор по развитию и соучредитель первого российского сервиса для работы с исходным код\
+            ом GitFlic. С 2021 года отвечает за разработку и реализацию стратегии развития компании ООО &laquo;РеСолют&raquo;\
+            \ (сервис GitFlic). Более 8 лет опыта работы в маркетинге и управлении проектами в направлениях B2B и B2C.</p>"}
+  - id: 3095
+    photoFileName: 3095.jpg
+    photoUpdatedAt: 2024-02-08T14:14Z
+    name:
+      - {language: en, text: "Andrei Moskalenko"}
+      - {language: ru, text: "Андрей Москаленко"}
+    companyIds: [1226]
+    bio:
+      - {language: en, text: "<p>Andrey has been a Business Analyst at Reksoft since 2021. He leads the Information Technology\
+            \ course at Voronezh State University, Faculty of Computer Science. Andrey is also engaged in a large import substitution\
+            \ project.</p>"}
+      - {language: ru, text: "<p>Бизнес-аналитик в Рексофт с 2021 года. Ведет курс &laquo;Информационные технологии&raquo;\
+            \ в Воронежском государственном университете на факультете компьютерных наук. Работает в крупном проекте по им\
+            портозамещению.</p>"}

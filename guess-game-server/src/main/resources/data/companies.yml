@@ -4393,4 +4393,21 @@ companies:
   - id: 1222
     name:
       - {language: en, text: Squad}
-    siteLink: https://squadsec.ru/
+    siteLink: https://squadsec.ru
+  - id: 1223
+    name:
+      - {language: en, text: Friflex}
+    siteLink: https://friflex.com
+  - id: 1224
+    name:
+      - {language: en, text: GitFlic}
+    siteLink: https://gitflic.ru
+  - id: 1225
+    name:
+      - {language: en, text: "BIA Technologies"}
+    siteLink: https://bia-tech.ru
+  - id: 1226
+    name:
+      - {language: en, text: Reksoft}
+      - {language: ru, text: Рексофт}
+    siteLink: https://www.reksoft.com

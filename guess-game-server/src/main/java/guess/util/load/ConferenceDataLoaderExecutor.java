@@ -2641,6 +2641,6 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Flow 2024 Spring", null, List.of(24L)),
 //                        Set.of("Открытие конференции Flow 2024 Spring", "Закрытие конференции Flow 2024 Spring",
-//                                "Технологические тренды и PESTEL-анализ", "Квиз")));
+//                                "Технологические тренды и PESTEL-анализ", "100 к 1")));
     }
 }
