@@ -35861,25 +35861,26 @@ speakers:
     twitter: revealthedata
   - id: 2509
     photoFileName: 2509.jpg
-    photoUpdatedAt: 2022-10-20T14:00:33Z[UTC]
+    photoUpdatedAt: "2024-03-01T13:54:27Z"
     name:
       - {language: en, text: "Nikita Harichkin"}
       - {language: ru, text: "Никита Харичкин"}
     companyIds: [665]
     bio:
       - language: en
-        text: "<p>Nikita is the creator of the Analyst Boost course, on which:</p>\n<ul>\n<li>trains systems analysts from\
-            \ scratch to an offer</li>\n<li>helps practitioners build their skills</li>\n<li>advises on careers, resumes,\
-            \ plantUML, and more</li>\n</ul>\n<p>Team leader systems analysts at SberDevices and head of the unit's competency\
-            \ center. Teaches systems analysis at a large online school. Previously taught at his alma mater, the Kalashnikov\
-            \ Learning Center at MIPT. He has spoken at many conferences: International Analyst Days 12 and 14, Analyst Marathon\
-            \ 6, Sber Meetup.</p>\n<p>He won the SberCode 2020 hackathon.</p>"
-      - {language: ru, text: "Никита — создатель курса Analyst Boost, на котором:</p><ul><li>готовит системных аналитиков\
-            \ с нуля и до получения офера;</li><li>помогает практикующим специалистам прокачать навыки;</li><li>консультир\
-            ует по карьере, резюме, plantUML и прочему.</li></ul><p>Тимлид команды системных аналитиков в SberDevices и гл\
-            ава центра компетенций подразделения. Преподает системный анализ в крупной онлайн-школе. Ранее преподавал в Ал\
-            ьма-матер в учебном центре Калашникова при МФТИ. Выступал на многих конференциях: международные Analyst Days 12\
-            \ и 14, Analyst Marathon 6, Sber Meetup.</p><p>Победил в хакатоне SberCode 2020."}
+        text: "<p>Nikita is the creator of the Analyst Boost course, on which he:</p>\n<ul>\n<li>trains systems analysts from\
+            \ scratch to an offer;</li>\n<li>helps practitioners build their skills;</li>\n<li>advises on careers, resumes,\
+            \ plantUML, and more.</li>\n</ul>\n<p>Team leader systems analysts at SberDevices and head of the unit's competency\
+            \ center. He teaches systems analysis at a large online school. Nikita previously taught at his alma mater, the\
+            \ Kalashnikov Learning Center at MIPT. He has spoken at many conferences: International Analyst Days 12 and 14,\
+            \ Analyst Marathon 6, Sber Meetup.</p>\n<p>He won the SberCode 2020 hackathon.</p>"
+      - language: ru
+        text: "<p>Никита &mdash; создатель курса Analyst Boost, на котором:</p>\n<ul>\n<li>готовит системных аналитиков с\
+            \ нуля и до получения офера;</li>\n<li>помогает практикующим специалистам прокачать навыки;</li>\n<li>консульт\
+            ирует по карьере, резюме, plantUML и прочему.</li>\n</ul>\n<p>Тимлид команды системных аналитиков в SberDevices\
+            \ и глава центра компетенций подразделения. Преподает системный анализ в крупной онлайн-школе. Ранее преподава\
+            л в альма-матер &mdash; в учебном центре Калашникова при МФТИ. Выступал на конференциях: международных Analyst\
+            \ Days 12 и 14, Analyst Marathon 6, Sber Meetup.</p>\n<p>Победил в хакатоне SberCode 2020.</p>"
   - id: 2510
     photoFileName: 2510.jpg
     photoUpdatedAt: "2023-06-29T04:31:41Z"
