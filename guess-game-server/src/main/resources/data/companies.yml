@@ -4411,3 +4411,45 @@ companies:
       - {language: en, text: Reksoft}
       - {language: ru, text: Рексофт}
     siteLink: https://www.reksoft.com
+  - id: 1227
+    name:
+      - {language: en, text: Raft}
+    siteLink: https://teamraft.com
+  - id: 1228
+    name:
+      - {language: en, text: Solar}
+      - {language: ru, text: "ГК «Солар»"}
+    siteLink: https://rt-solar.ru
+  - id: 1229
+    name:
+      - {language: en, text: "USCC"}
+      - {language: ru, text: "Уральский центр систем безопасности"}
+    siteLink: https://www.ussc.ru
+  - id: 1230
+    name:
+      - {language: en, text: "RAD COP"}
+      - {language: ru, text: "ПК «РАД КОП»"}
+    siteLink: https://radcop.online
+  - id: 1231
+    name:
+      - {language: en, text: R-Vision}
+    siteLink: https://rvision.ru
+  - id: 1232
+    name:
+      - {language: en, text: "Consortium Inforus"}
+      - {language: ru, text: "Консорциум Инфорус"}
+  - id: 1233
+    name:
+      - {language: en, text: K2Tech}
+      - {language: ru, text: К2Тех}
+    siteLink: https://k2.tech
+  - id: 1234
+    name:
+      - {language: en, text: Torex}
+      - {language: ru, text: ТОРЭКС}
+    siteLink: https://itorex.ru
+  - id: 1235
+    name:
+      - {language: en, text: WebmonitorX}
+      - {language: ru, text: Вебмониторэкс}
+    siteLink: https://webmonitorx.ru

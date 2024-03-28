@@ -304,6 +304,10 @@ companySynonyms:
     synonyms: [
         Kt.Academy
     ]
+  - name: K2Tech
+    synonyms: [
+        "К2 Кибербезопасность"
+    ]
   - name: Lanit
     synonyms: [
         Lanit-Tercom,
@@ -363,6 +367,7 @@ companySynonyms:
         "MTS DIGITAL",
         "МТS Digital",
         "МТС Digital",
+        "MTC Digital",
         "MTS IT",
         "МТС ИТ"
     ]
