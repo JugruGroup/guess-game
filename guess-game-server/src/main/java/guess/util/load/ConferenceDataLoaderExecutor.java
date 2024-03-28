@@ -2642,5 +2642,10 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("Flow 2024 Spring", null, List.of(24L)),
 //                        Set.of("Открытие конференции Flow 2024 Spring", "Закрытие конференции Flow 2024 Spring",
 //                                "Технологические тренды и PESTEL-анализ", "100 к 1")));
+//        loadTalksSpeakersEvent(Conference.SAFE_CODE, LocalDate.of(2024, 3, 13), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("SafeCode 2024", null, List.of(24L)),
+//                        Set.of("Открытие конференции SafeCode 2024", "Закрытие конференции SafeCode 2024",
+//                                "Открытие второго дня конференции SafeCode 2024")));
     }
 }

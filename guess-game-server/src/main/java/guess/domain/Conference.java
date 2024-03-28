@@ -20,5 +20,6 @@ public enum Conference {
     VIDEO_TECH,
     PITER_PY,
     FLOW,
+    SAFE_CODE,
     SNOW_ONE
 }

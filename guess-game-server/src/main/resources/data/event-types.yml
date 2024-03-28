@@ -530,3 +530,36 @@ eventTypes:
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
     topicId: 12
+  - id: 20
+    conference: SAFE_CODE
+    logoFileName: safecode.png
+    organizerId: 0
+    name:
+      - {language: en, text: SafeCode}
+    shortDescription:
+      - {language: en, text: "Conference on Application Security"}
+      - {language: ru, text: "Конференция по безопасности приложений"}
+    longDescription:
+      - language: en
+        text: "SafeCode is\_a\_conference on\_Application Security where we\_discuss tools and processes, vulnerabilities,\
+            \ clouds and containers, regulations, and careers in\_AppSec.\n\nWe\_will bring together AppSec specialists of\_\
+            various backgrounds: IS\_experts and analysts, security champions, testers, pentesters, developers, hackers, system\
+            \ administrators, DevOps and SRE engineers. Together, we\_will discuss safe code in\_particular and secure development\
+            \ culture in\_general.\n\nHeld\_by [JUG Ru\_Group](https://jugru.org/)."
+      - language: ru
+        text: "SafeCode\_— конференция, где обсуждают инструменты и\_процессы, анализ уязвимостей и\_построение защиты\
+            , стандарты и\_политики, и\_всё, что касается безопасности приложений.\n\nЗдесь собираются\_те, кто так или ин\
+            аче связан с\_безопасностью разработки: эксперты и\_аналитики по\_ИБ, security-чемпионы, тестировщики, пентест\
+            еры, разработчики, хакеры, системные администраторы, DevOps- и\_SRE-инженеры. \n\nВместе мы\_обсуждаем как тео\
+            рию, так и\_практику. От\_аналитики и\_исследований безопасности до\_применения конкретных инструментов и\_тех\
+            нологий. От\_Secure SDL и\_DevSecOps до\_SAST/DAST, OSA/SCA и\_управления секретами. А\_также мы\_разбираем во\
+            просы образования и\_карьеры в\_AppSec.\n\nОрганизатор\_— [JUG Ru\_Group](https://jugru.org/)."
+    siteLink:
+      - {language: en, text: "https://safecodeconf.ru/"}
+    vkLink: https://vk.com/safecodeconf
+    twitterLink: https://twitter.com/safecodeconf
+    youtubeLink: https://www.youtube.com/@SafeCodeConf
+    telegramLink: https://t.me/safecode_channel
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow
+    topicId: 14

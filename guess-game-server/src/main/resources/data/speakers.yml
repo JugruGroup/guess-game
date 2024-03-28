@@ -201,22 +201,22 @@ speakers:
     javaChampion: true
   - id: 10
     photoFileName: 0010.jpg
-    photoUpdatedAt: 2022-03-31T19:05:52Z[UTC]
+    photoUpdatedAt: "2024-03-07T13:55:19Z"
     name:
       - {language: en, text: "Maxim Gorelikov"}
       - {language: ru, text: "Максим Гореликов"}
     companyIds: [642]
     bio:
-      - {language: en, text: "10+ years experience in IT, starting from C/C++ and geophysics and now basically JVM languages/JS\
-            \ and financial services. Basically, he uses Spring and Netflix ecosystem, but checks out everything that is worth\
-            \ trying on GitHub. He is experimenting with reactive approaches. He wants to understand not only his apps but\
-            \ also everything around them, thus he is working with all the infrastructure (logs, CI/CD, orchestration) and\
-            \ tests. To sum up, DevOps is our everything."}
+      - {language: en, text: "Более 10 лет разрабатывает всё подряд, начинал с С/С++ и геофизики, сейчас в основном JVM-яз\
+            ыки, немного JS и финансовые сервисы и сервисы недвижимости. В основном использует экосистему Spring в разрабо\
+            тке, но иногда нужны альтернативы, поэтому пробует всё, что найдет хорошего на GitHub. Хочет понимать, как раб\
+            отают приложения от начала до конца, поэтому интересуется архитектурой, инфраструктурой и процессами деплоя и\
+            \ поддержки. Очень ценит DevOps как методологию."}
       - {language: ru, text: "Более 10 лет разрабатывает всё подряд, начинал с С/С++ и геофизики, сейчас в основном JVM-яз\
-            ыки, немного JS и финансовые сервисы. В основном использует экосистему Spring в разработке, но иногда нужны ал\
-            ьтернативы, поэтому пробует всё, что найдет хорошего на GitHub. Хочет понимать, как работают приложения от нач\
-            ала до конца, поэтому интересуется архитектурой, инфраструктурой и процессами деплоя и поддержки. Очень ценит\
-            \ DevOps как методологию."}
+            ыки, немного JS,  финансовые сервисы и сервисы недвижимости. В основном использует экосистему Spring в разрабо\
+            тке, но иногда нужны альтернативы, поэтому пробует всё, что найдет хорошего на GitHub. Хочет понимать, как раб\
+            отают приложения от начала до конца, поэтому интересуется архитектурой, инфраструктурой и процессами деплоя и\
+            \ поддержки. Очень ценит DevOps как методологию."}
     twitter: gorelikoff
     gitHub: gorelikov
     habr: somemaxim
@@ -5144,20 +5144,20 @@ speakers:
     habr: alexeymalov
   - id: 344
     photoFileName: 0344.jpg
-    photoUpdatedAt: 2019-01-10T06:33:02.188Z[UTC]
+    photoUpdatedAt: "2024-01-12T12:19:02Z"
     name:
       - {language: en, text: "Andrey Karpov"}
       - {language: ru, text: "Андрей Карпов"}
     companyIds: [424]
     bio:
-      - {language: en, text: "Andrey is a co-founder of PVS-Studio project and CTO at Program Verification Systems. He is\
-            \ Microsoft MVP in the nomination \"Developer Technologies\". He is an author of large number of articles dedicated\
-            \ to the code quality and error patterns that C++ developers make. He promotes methodology of static and dynamic\
-            \ code analysis."}
-      - {language: ru, text: "Андрей Карпов — один из основателей проекта PVS-Studio, технический директор компании «Систе\
-            мы программной верификации». Microsoft MVP в номинации «Developer Technologies». Является автором большого кол\
-            ичества статей, посвященных качеству кода и рассказывающих о различных паттернах ошибок, которые допускают про\
-            граммисты C++. Популяризирует методологию статического и динамического анализа кода."}
+      - {language: en, text: "<p>Andrey has been dealing with static code analysis and software quality for more than 15 years.\
+            \ Author of many articles on writing high-quality code in C++. A cofounder of the PVS-Studio project. He has been\
+            \ a CTO for a long time and took part in the development of the C++ analyzer core. Now Andrey is engaged in team\
+            \ management, employee training, and DevRel activities.</p>"}
+      - language: ru
+        text: "<p>Андрей более 15 лет занимается статическим анализом кода и качеством ПО. Автор большого количества стате\
+            й о написании качественного кода на языке C++.</p>\n<p>Сооснователь PVS-Studio: был CTO компании и разрабатыва\
+            л С++ ядро анализатора. Основная деятельность сейчас &mdash; управление командами, обучение сотрудников и DevRel.</p>"
     twitter: Code_Analysis
     gitHub: AndreyKarpov
     habr: Andrey2008
@@ -9356,23 +9356,22 @@ speakers:
     habr: lamamer
   - id: 627
     photoFileName: 0627.jpg
-    photoUpdatedAt: "2023-03-16T12:26:33Z"
+    photoUpdatedAt: "2024-01-30T14:24:13Z"
     name:
       - {language: en, text: "Andrey Kuleshov"}
       - {language: ru, text: "Андрей Кулешов"}
     companyIds: [242]
     bio:
-      - {language: en, text: "<p>Andrey worked in well-known companies like Intel, Deutsche Bank, and Huawei. Developed mostly\
-            \ everything: from optimizing C/C++ compilers to high-load Java applications for investment banking; from Big\
-            \ Data applications to static analyzers and dev tools.<br /><br />Team Lead of Java/Kotlin team at Huawei.<br\
-            \ /><br />He is an active open-source enthusiast and a contributor to the Kotlin ecosystem. Creator of ktoml library\
-            \ and diktat static analyzer.</p>"}
+      - {language: en, text: "Andrey worked at Intel, Deutsche Bank, and Huawei. He was involved in development in very different\
+            \ spheres: from C/C++ compilers to high-loaded trading services in Java, from Big Data storages for banking data\
+            \ to static analysers and services for developers.Team lead of Java/Kotlin team at Huawei.Active open-source enthusiast,\
+            \ contributor to the Kotlin ecosystem. Creator of ktoml library and diktat static analyzer."}
       - language: ru
-        text: "<p>Работал в Intel, Deutsche Bank, Huawei. Занимался разработкой в очень разных сферах: от C/C++- компилято\
-            ров до высоконагруженных торговых сервисов на Java, от Big Data-хранилищ для банковских данных до статических\
-            \ анализаторов и сервисов для разработчиков.</p>\n<p>Тимлид Java/Kotlin R&amp;D команды в Huawei.</p>\n<p>Акти\
-            вный open source-энтузиаст, контрибьютор в экосистему Kotlin. Создатель библиотеки ktoml и статического анализ\
-            атора diktat.</p>"
+        text: "<p>Опыт Андрея разносторонний: работал в Intel, Deutsche Bank, Huawei. Разрабатывал C/C++ компиляторы, высо\
+            конагруженные торговые сервисы на Java, Big Data-хранилища для банковских данных, статические анализаторы и се\
+            рвисы для разработчиков.</p>\n<p>Сейчас &mdash; руководитель Java/Kotlin R&amp;D-команды в Huawei. Активный open\
+            \ source-энтузиаст, контрибьютор в экосистему Kotlin. Участник комитета COSV (China Open Source Vulnerabilities)\
+            \ по агрегации уязвимостей.</p>\n<p>Создатель библиотеки <code>ktoml</code> и статического анализатора <code>diktat</code>.</p>"
     twitter: akuleshov7
     gitHub: akuleshov7
     habr: akuleshov7
@@ -10416,18 +10415,18 @@ speakers:
     habr: gritzko
   - id: 698
     photoFileName: 0698.jpg
-    photoUpdatedAt: "2023-03-27T20:24:11Z"
+    photoUpdatedAt: "2024-02-12T12:53:17Z"
     name:
-      - {language: en, text: "Viktor Vershansky"}
-      - {language: ru, text: "Виктор Вершанский"}
-    companyIds: []
+      - {language: en, text: "Виктор Вершанский"}
+    companyIds: [1231]
     bio:
-      - {language: en, text: "<p>He has been consulting on Node.js solution development since 2011. He was a bit old when\
-            \ there was no JavaScript, no \"snowflakes\", no layers in Netscape Navigator. Has been interested in data transformation\
-            \ topology lately. Sometimes imagines himself as a musician. Dreamer.</p>"}
-      - {language: ru, text: "<p>С 2011 года занимается консалтингом по разработке решений на Node.js. Застал времена, ког\
-            да еще не было ни JavaScript, ни &laquo;снежинок&raquo;, ни layers в Netscape Navigator. В последнее время инт\
-            ересуется топологией трансформации данных. Иногда воображает себя музыкантом. Мечтатель.</p>"}
+      - {language: en, text: "<span style=\"color: rgb(15, 23, 42);\">С 2011 года занимается консалтингом по разработке ре\
+            шений на Node.js. Застал времена, когда еще не было ни JavaScript, ни «снежинок», ни layers в Netscape Navigator.\
+            \ В последнее время интересуется топологией трансформации данных. Иногда воображает себя музыкантом. Мечтатель\
+            .</span>"}
+      - {language: ru, text: "С 2011 года занимается консалтингом по разработке решений на Node.js. Застал времена, когда\
+            \ еще не было ни JavaScript, ни «снежинок», ни layers в Netscape Navigator. В последнее время интересуется топ\
+            ологией трансформации данных. Иногда воображает себя музыкантом. Мечтатель."}
     twitter: went_out
     gitHub: wentout
     habr: wentout
@@ -17772,10 +17771,9 @@ speakers:
     habr: ARG89
   - id: 1247
     photoFileName: 1247.jpg
-    photoUpdatedAt: "2023-07-03T10:37:53Z"
+    photoUpdatedAt: "2024-01-16T09:39:15Z"
     name:
-      - {language: en, text: "Pavel Filonov"}
-      - {language: ru, text: "Павел Филонов"}
+      - {language: en, text: "Павел Филонов"}
     companyIds: [257]
     bio:
       - language: en
@@ -26317,20 +26315,17 @@ speakers:
     gitHub: anthonywilliams
   - id: 1845
     photoFileName: 1845.jpg
-    photoUpdatedAt: 2021-10-22T15:56:17.916Z[UTC]
+    photoUpdatedAt: "2024-02-02T11:12:26Z"
     name:
-      - {language: en, text: "Anna Melehova"}
-      - {language: ru, text: "Анна Мелехова"}
+      - {language: en, text: "Анна Мелехова"}
     companyIds: [635]
     bio:
-      - {language: en, text: "Software Architect, Team Lead. In charge of Secure Platform Development in cybernetic KasperskyOS.\
-            \ She has over 10 years of experience in virtual machine kernel development, as well as in cloud development and\
-            \ microservices architecture. She teaches at MIPT and Innopolis, likes to turn study into a process of mutual\
-            \ knowledge enrichment, and work into an equally shared drive."}
-      - {language: ru, text: "Архитектор ПО, тимлид. Занимается Secure Platform Development в кибериммунной KasperskyOS. З\
-            а плечами — более 10 лет в разработке ядра виртуальной машины, а также в облачной разработке и архитектуре мик\
-            росервисов. Преподает в МФТИ и в Иннополисе, любит превращать учебу в процесс взаимного обогащения знаниями, а\
-            \ работу — в столь же совместный драйв."}
+      - {language: en, text: "Архитектор ПО, тимлид, системщик. 10+ лет провела в ядре виртуальной машины, потом 5 лет зан\
+            ималась архитектурой в распределенных сервисах (не особенно микро). Последние два года вернулась к системному\
+            \ программированию в Kaspersky OS и погрузилась в дивный мир безопасного программирования."}
+      - {language: ru, text: "<p>Архитектор ПО, тимлид, системщик. Более 10 лет провела в ядре виртуальной машины, затем 5\
+            \ лет занималась архитектурой в распределенных (не особенно микро) сервисах. Вернулась к системному программир\
+            ованию, последние 2 года &mdash; в Kaspersky OS. Погружена в дивный мир безопасного программирования.</p>"}
   - id: 1846
     photoFileName: 1846.jpg
     photoUpdatedAt: "2022-03-31T19:06:53Z"
@@ -32882,7 +32877,8 @@ speakers:
       - {language: ru, text: "<p>20 лет в коммерческой разработке: от разработчика до руководителя и владельца бизнеса. Ос\
             новная специализация последних 10 лет &mdash; обработка текстовых данных в контексте анализа исходных кодов. 15\
             \ лет преподавал Python в СПбГУ. С 2019 года &mdash; организатор трека и конференции Code Mining в сообществе\
-            \ ODS.ai. Основал систему композиционного анализа CodeScoring.</p>"}
+            \ ODS.ai. Основал платформу композиционного анализа CodeScoring для оценки безопасности open source и качества\
+            \ исходного кода.</p>"}
     gitHub: alsmirn
   - id: 2298
     photoFileName: 2298.jpg
@@ -37712,20 +37708,23 @@ speakers:
             анизатор митапов и воркшопов по мобильной разработке в Екатеринбурге. Контрибьютер библиотеки VisualFSM."}
   - id: 2644
     photoFileName: 2644.jpg
-    photoUpdatedAt: "2023-03-09T12:14:35Z"
+    photoUpdatedAt: "2023-08-23T13:58:52Z"
     name:
       - {language: en, text: "Yury Shabalin"}
       - {language: ru, text: "Юрий Шабалин"}
     companyIds: [1084]
     bio:
-      - {language: en, text: "<p>He has worked in security all his life, and has devoted a significant part of his life to\
-            \ mobile app security. He likes to speak and share his knowledge and experience. Co-founder of a company that\
-            \ develops solutions for automating mobile application security analysis. Author of a Telegram-channel about mobile\
-            \ security.</p>"}
-      - {language: ru, text: "<p>Всю свою жизнь работает в безопасности, и значительную часть посвятил безопасности мобиль\
-            ных приложений.&nbsp;Любит выступать и делиться своими знаниями и наработками.&nbsp;Сооснователь компании, раз\
-            рабатывающей решения по автоматизации анализа защищенности мобильных приложений.&nbsp;Автор <a href=\"https://t.me/mobile_appsec_world\"\
-            >Telegram-канала про безопасность мобилок</a>.</p>"}
+      - {language: en, text: "CEO and co-founder of Stingray Technologies, Lead Architect of Swordfish Security Group. He\
+            \ is a cybersecurity expert specialising in implementing secure development practices, building DevSecOps processes,\
+            \ analytics and application testing. He has successful hands-on experience in building a unified secure development\
+            \ process from scratch, SSDL implementation and vulnerability testing of mobile banking applications. Сhief Architect\
+            \ and project manager of Stingray, a mobile application security analysis product."}
+      - {language: ru, text: "Генеральный директор и один из основателей Стингрей Технолоджиз, ведущий архитектор ГК Swordfish\
+            \ Security. Эксперт в области кибербезопасности, специализируется на внедрении практик безопасной разработки,\
+            \ построении процессов DevSecOps, аналитике и тестировании приложений. Имеет успешный практический опыт в созд\
+            ании единого процесса безопасной разработки с нуля, внедрения SSDL и тестировании на уязвимость мобильных банк\
+            овских приложений. Главный архитектор и руководитель проекта «Стингрей», продукта по анализу защищенности моби\
+            льных приложений."}
   - id: 2645
     photoFileName: 2645.jpg
     photoUpdatedAt: "2022-11-02T11:15:26Z"
@@ -39517,7 +39516,7 @@ speakers:
             м по ИБ. Предпочитает практическую информационную безопасность и принцип доказательной медицины.</p>"}
   - id: 2759
     photoFileName: 2759.jpg
-    photoUpdatedAt: "2023-08-11T09:09:20Z"
+    photoUpdatedAt: "2024-03-07T14:30:35Z"
     name:
       - {language: en, text: "Anton Zhabolenko"}
       - {language: ru, text: "Антон Жаболенко"}
@@ -39885,7 +39884,7 @@ speakers:
             \ Middle от Тинькофф Образования.</p>"}
   - id: 2785
     photoFileName: 2785.jpg
-    photoUpdatedAt: "2023-05-24T18:29:02Z"
+    photoUpdatedAt: "2024-01-15T15:47:50Z"
     name:
       - {language: en, text: "Sergei Kanibor"}
       - {language: ru, text: "Сергей Канибор"}
@@ -44625,3 +44624,432 @@ speakers:
       - {language: ru, text: "<p>Бизнес-аналитик в Рексофт с 2021 года. Ведет курс &laquo;Информационные технологии&raquo;\
             \ в Воронежском государственном университете на факультете компьютерных наук. Работает в крупном проекте по им\
             портозамещению.</p>"}
+  - id: 3096
+    photoFileName: 3096.jpg
+    photoUpdatedAt: "2024-01-30T11:20:05Z"
+    name:
+      - {language: en, text: "Olga Rachich"}
+      - {language: ru, text: "Ольга Рачич"}
+    companyIds: [635]
+    bio:
+      - {language: ru, text: "<p>Окончила НИЯУ МИФИ по специальности &laquo;информационно-аналитические системы безопаснос\
+            ти&raquo;. На третьем курсе стала стажером-системным аналитиком в отделе внутренней автоматизации Kaspersky. З\
+            а пять лет выросла до старшего системного аналитика и перешла в проектный менеджмент. Два года управляет крити\
+            чески важными проектами Kaspersky.</p>"}
+  - id: 3097
+    photoFileName: 3097.jpg
+    photoUpdatedAt: "2024-03-13T08:42:10Z"
+    name:
+      - {language: en, text: "Pavel Nikitin"}
+      - {language: ru, text: "Павел Никитин"}
+    companyIds: [620]
+    bio:
+      - {language: ru, text: "<p>Этичный хакер и&nbsp;руководитель&nbsp;команды&nbsp;Red &amp; Purple Team VK.</p>"}
+  - id: 3098
+    photoFileName: 3098.jpg
+    photoUpdatedAt: "2024-03-07T15:04:14Z"
+    name:
+      - {language: en, text: "Andrey Ivanov"}
+      - {language: ru, text: "Андрей Иванов"}
+    companyIds: [620]
+    bio:
+      - {language: ru, text: "<p>Отвечал за команду инженерной ИБ в Yandex Cloud и недавно присоединился к команде Wildberries\
+            \ в качестве заместителя CISO.</p>"}
+  - id: 3099
+    photoFileName: 3099.jpg
+    photoUpdatedAt: "2024-02-29T12:09:45Z"
+    name:
+      - {language: en, text: "Alexei Rybalko"}
+      - {language: ru, text: "Алексей Рыбалко"}
+    companyIds: [635]
+    bio:
+      - {language: en, text: "I am a tech presale @ Kaspersky Labs on the topic of DevSecOps. I am focused on security of\
+            \ software development &amp; modern apps. I also focus on mobile device management topic and lecture students\
+            \ in Moscow Aviation Institute on particularly dull evenings."}
+      - {language: ru, text: "<p>Технический пресейл-инженер в DevSecOps. Занимается безопасностью разработки контейнеров\
+            \ и контейнерных приложений и управлением мобильными устройствами. Ведет занятия в Московском авиационном инст\
+            итуте.</p>"}
+  - id: 3100
+    photoFileName: 3100.jpg
+    photoUpdatedAt: "2024-02-12T10:50:30Z"
+    name:
+      - {language: en, text: "Aziz Alimov"}
+      - {language: ru, text: "Азиз Алимов"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Инженер информационной безопасности в Яндексе. 10 лет опыта в ИБ в качестве AppSec/Pentest/Red\
+            \ Team- специалиста.</p>"}
+  - id: 3101
+    photoFileName: 3101.jpg
+    photoUpdatedAt: "2024-01-22T09:47:01Z"
+    name:
+      - {language: en, text: "Evgeny Kokuykin"}
+      - {language: ru, text: "Евгений Кокуйкин"}
+    companyIds: [1227]
+    bio:
+      - {language: en, text: "Has experience working on projects with Microsoft, Google, and MyTutor.co.uk, where he was involved\
+            \ in implementing complex technological solutions across various industries from fintech to healthcare. He has\
+            \ brought specialized products to market for marketplaces like AWS, PowerBI, Slack, and Atlassian. Currently,\
+            \ he is developing innovative solutions based on LLM."}
+      - {language: ru, text: "<p>Работал в проектах Microsoft, Google и Сбера, где занимался внедрением сложных технологич\
+            еских решений в различные отрасли: от финтеха до медицины. Выводил на рынок специализированные продукты для ма\
+            ркетплейсов AWS, PowerBI, Slack, и Atlassian. Сейчас разрабатывает инновационные решения на базе LLM и рассказ\
+            ывает об этом в <a href=\"https://t.me/kokuykin\">Telegram-канале</a>.</p>"}
+    gitHub: artmaro
+  - id: 3102
+    photoFileName: 3102.jpg
+    photoUpdatedAt: "2024-02-02T15:03:26Z"
+    name:
+      - {language: en, text: "Tatiana Kutsovol"}
+      - {language: ru, text: "Татьяна Куцовол"}
+    companyIds: [1228]
+    bio:
+      - language: ru
+        text: "<p>Ведущий аналитик-исследователь ИБ в продукте Solar appScreener.</p>\n<p>&laquo;Исследовать, исследовать\
+            \ и еще раз исследовать. Сегодня исследовать supply chain security, а завтра что-нибудь еще&raquo;.</p>"
+  - id: 3103
+    photoFileName: 3103.jpg
+    photoUpdatedAt: "2023-10-27T15:42:27Z"
+    name:
+      - {language: en, text: "Svetlana Gazizova"}
+      - {language: ru, text: "Светлана Газизова"}
+    companyIds: [410]
+    bio:
+      - language: ru
+        text: "<p>Руководитель направления построения процессов безопасной разработки в Positive Technologies.</p>\n<p>Нес\
+            колько лет занимается консалтингом и аудитом в области безопасной разработки. До этого поработала в роли систе\
+            много аналитика и заместителя ИТ-директора. В информационную безопасность Светлана пришла через разработку, по\
+            этому понимает, что, как и почему происходит. Опыт в технологиях и консалтинге &mdash; более 6 лет.</p>\n<p>Со\
+            бирала команды, учила аппсеков, придумывала подходы. Любит и старается развиваться внутри безопасности приложе\
+            ний во всех направлениях. Знает, как сделать так, чтобы ваши процессы наконец-то заработали.</p>"
+  - id: 3104
+    photoFileName: 3104.jpg
+    photoUpdatedAt: "2024-03-07T14:01:57Z"
+    name:
+      - {language: en, text: "Ruslan Morozov"}
+      - {language: en, text: "Руслан Морозов"}
+    companyIds: [635]
+    bio:
+      - {language: ru, text: "Руководитель отдела разработки мобильной и десктопной версий KasperskyOS.</p><p>Занимается с\
+            истемной разработкой и практическим применением методологий безопасной разработки.</p><p>Основным вызовом види\
+            т построение информационной экосистемы, позволяющей пользователю сосредоточиться на своих проблемах и задачах\
+            , а не противостоянию киберзлодеям."}
+  - id: 3105
+    photoFileName: 3105.jpg
+    photoUpdatedAt: "2024-02-27T13:02:41Z"
+    name:
+      - {language: en, text: "Robert Aldini"}
+      - {language: ru, text: "Роберт Альдини"}
+    companyIds: [635]
+    bio:
+      - {language: ru, text: "<p>L&amp;D partner в компаниях ESET NOD32, L&amp;D partner в Group-IB и позднее в F.A.C.C.T.\
+            \ Team Lead в группе обучения в Тинькофф Банке. 8 лет в обучении цифровым продуктам.</p>"}
+  - id: 3106
+    photoFileName: 3106.jpg
+    photoUpdatedAt: "2024-02-28T07:09:05Z"
+    name:
+      - {language: en, text: "Sergei Sobolev"}
+      - {language: ru, text: "Сергей Соболев"}
+    companyIds: [635]
+    bio:
+      - {language: en, text: "in software engineering since 1999. Worked in various roles - software developer, team lead,\
+            \ resource manager, architect"}
+      - {language: ru, text: "<p>Старший архитектор по информационной безопасности. В ИТ с 1999 года в роли программиста,\
+            \ тимлида, менеджера, архитектора.</p>"}
+  - id: 3107
+    photoFileName: 3107.jpg
+    photoUpdatedAt: "2024-02-14T08:37:10Z"
+    name:
+      - {language: en, text: "Nikita Raspopov"}
+      - {language: ru, text: "Никита Распопов"}
+    companyIds: [1229]
+    bio:
+      - {language: ru, text: "<p>Занимается внешним пентестом веб- и мобильных приложений в компании УЦСБ на протяжении по\
+            чти трех лет. Периодически участвует в проектах по безопасной разработке. В свободное время участвует в Bug Bounty.</p>"}
+  - id: 3108
+    photoFileName: 3108.jpg
+    photoUpdatedAt: "2024-02-22T09:58:18Z"
+    name:
+      - {language: en, text: "Rustam Guseynov"}
+      - {language: ru, text: "Рустам Гусейнов"}
+    companyIds: [1230]
+    bio:
+      - language: ru
+        text: "<p>В сфере информационной безопасности с 2014 года и за время работы побывал в разных компаниях и ролях &mdash;\
+            \ как на стороне конечных заказчиков, так и в консалтинговых организациях и интеграторах. Занимал должности ад\
+            министратора, начальника отдела, консультанта, аудитора. Участвовал в развитии продукта, занимался продажами,\
+            \ выступал в роли профильного эксперта при анализе регуляторных инициатив, разрабатывал стандарты и методологи\
+            и, публиковал тематические статьи и организовывал профильные конференции.</p>\n<p>Сфера профессиональных интер\
+            есов: стандартизация в информационной безопасности, внедрение и оценка качества систем управления информационн\
+            ой безопасностью, менеджмент проектов, системный анализ и моделирование.</p>\n<p>Владеет как зарубежными метод\
+            ологиями (PCI DSS, ISO 27ххх, CIS Controls), так и отечественными практиками (Банк России, ФСТЭК, ФСБ). В 2022\
+            \ году основал первый в России производственный кооператив специалистов по информационной безопасности &mdash;\
+            \ ПК &laquo;РАД КОП&raquo;.</p>"
+    twitter: SurmatMG
+  - id: 3109
+    photoFileName: 3109.jpg
+    photoUpdatedAt: "2024-02-12T12:48:10Z"
+    name:
+      - {language: en, text: "Alexander Savin"}
+      - {language: ru, text: "Александр Савин"}
+    companyIds: [1128]
+    bio:
+      - {language: ru, text: "<p>Выпускник кафедры информационной безопасности ВМК МГУ. Начинал заниматься ИБ с offensive-с\
+            тороны. Сейчас отвечает за безопасность корпоративной инфраструктуры компании.</p>"}
+  - id: 3110
+    photoFileName: 3110.jpg
+    photoUpdatedAt: "2024-01-18T07:45:09Z"
+    name:
+      - {language: en, text: "Dmitry Shmoilov"}
+      - {language: ru, text: "Дмитрий Шмойлов"}
+    companyIds: [635]
+    bio:
+      - language: ru
+        text: "<p>Более 20 лет опыта в IT, из них 17 &mdash; в сфере ИБ (от специалиста до CISO) и разработки (архитектура\
+            \ ИБ). Последние 6 лет руководит AppSec-подразделением в Kaspersky. Отвечает за поддержку и совершенствование\
+            \ процессов безопасной разработки.</p>\n<p>Сфера профессиональных интересов: безопасная архитектура, безопасна\
+            я разработка, DevSecOps, пентест, Bug Bounty, data privacy (в том числе GDPR).</p>"
+  - id: 3111
+    photoFileName: 3111.jpg
+    photoUpdatedAt: "2024-02-29T11:46:56Z"
+    name:
+      - {language: en, text: "Nikolay Kutin"}
+      - {language: ru, text: "Николай Кутьин"}
+    companyIds: [264]
+    bio:
+      - {language: ru, text: "<p>Архитектор системы обнаружения сетевых вторжений (IDS) и системы анализа сетевого трафика\
+            \ (NTA). Автор публикаций по теме цифровой обработки сигналов (DSP). Основная разработка на C++. Занимается вс\
+            траиванием моделей машинного обучения в IDS и NTA.</p>"}
+  - id: 3112
+    photoFileName: 3112.jpg
+    photoUpdatedAt: "2024-01-12T08:35:45Z"
+    name:
+      - {language: en, text: "Artem Puzankov"}
+      - {language: ru, text: "Артём Пузанков"}
+    companyIds: [648]
+    bio:
+      - {language: en, text: "DevSecOps Cluster Lead at MTC Digital: build processes, deal with strategy and everything\
+            \ related to secure development."}
+      - {language: ru, text: "DevSecOps Cluster Lead в MTC Digital. Строит процессы, занимается стратегией и всем, что\
+            \ связано с безопасной разработкой."}
+  - id: 3113
+    photoFileName: 3113.jpg
+    photoUpdatedAt: "2024-02-07T07:46:46Z"
+    name:
+      - {language: en, text: "Igor Verbitsky"}
+      - {language: ru, text: "Игорь Вербицкий"}
+    companyIds: [302]
+    bio:
+      - {language: ru, text: "<p>Более 10 лет занимается информационной безопасностью. Работал в разных сферах: в государс\
+            твенном секторе, банковской сфере, нефтяной отрасли, геймдеве и ритейле.</p>"}
+  - id: 3114
+    photoFileName: 3114.jpg
+    photoUpdatedAt: "2024-02-07T07:48:26Z"
+    name:
+      - {language: en, text: "Alexander Rakhmanny"}
+      - {language: ru, text: "Александр Рахманный"}
+    companyIds: [302]
+    bio:
+      - {language: ru, text: "<p>Занимался развертыванием и автоматизацией ИТ-инфраструктуры крупных предприятий (Infrastructure\
+            \ as Code), в 2020-м перешел в разработку. В Lamoda Tech создает внутренние инструменты в области ИБ &mdash; с\
+            канеры уязвимостей, инструменты поиска токенов и секретов во внутренних ресурсах с помощью ML, а также занимае\
+            тся автоматизацией доступов к ресурсам.</p>"}
+  - id: 3115
+    photoFileName: 3115.jpg
+    photoUpdatedAt: "2024-03-12T11:21:08Z"
+    name:
+      - {language: en, text: "Maria Zubchenko"}
+      - {language: ru, text: "Мария Зубченко"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p><span style=\"color: rgba(0, 0, 0, 0.85);\">Инженер в группе продуктовой архитектуры Security\
+            \ &amp; Compliance в Yandex Cloud. Занимается развитием сервиса Container Registry и сканера уязвимостей.</span></p>"}
+  - id: 3116
+    photoFileName: 3116.jpg
+    photoUpdatedAt: 2024-03-04T14:32Z
+    name:
+      - {language: en, text: "Andrey Masalovich"}
+      - {language: ru, text: "Андрей Масалович"}
+    companyIds: [1232]
+    bio:
+      - {language: ru, text: "<p>Бывший полковник КГБ. Кандидат физико-математических наук. Президент Консорциума Инфорус\
+            . Ведущий <a href=\"https://www.youtube.com/@KiberDed_Forever\">YouTube-канала &laquo;Кибердед&raquo;</a>. Вет\
+            еран интернет-разведки. Разработчик технологии Avalanche.</p>"}
+  - id: 3117
+    photoFileName: 3117.jpg
+    photoUpdatedAt: "2024-03-14T06:39:58Z"
+    name:
+      - {language: en, text: "Vladislav Feofilaktov"}
+      - {language: ru, text: "Владислав Феофилактов"}
+    companyIds: [410]
+    bio:
+      - {language: ru, text: "<p class=\"p1\">Разработчик команды интеграции Application Inspector в Positive Technologies.\
+            \ Меинтейнер сообщества POSIdev в <a href=\"https://github.com/POSIdev-community/\">GitHub</a>. Любит улучшать\
+            \ жизнь разработчикам при помощи тулинга.</p>"}
+  - id: 3118
+    photoFileName: 3118.jpg
+    photoUpdatedAt: "2024-02-28T13:55:34Z"
+    name:
+      - {language: en, text: "Daniil Bakin"}
+      - {language: ru, text: "Даниил Бакин"}
+    companyIds: [410]
+    bio:
+      - {language: ru, text: "Software engineer из команды разработки средств интеграции Application Inspector.</p><p>Спик\
+            ер <a href=\"https://www.ptsecurity.com/ru-ru/research/webinar/pt-ai-and-ide-plugins-new-opportunities-for-team-development/\"\
+            \ rel=\"noopener noreferrer\" target=\"_blank\">вебинаров</a> Positive Technologies. Победитель <a href=\"https://www.ipkn.itmo.ru/news/devdays-fall2023\"\
+            \ rel=\"noopener noreferrer\" target=\"_blank\">хакатона DevDays2023</a>."}
+  - id: 3119
+    photoFileName: 3119.jpg
+    photoUpdatedAt: "2024-02-26T15:06:33Z"
+    name:
+      - {language: en, text: "Askar Dobryakov"}
+      - {language: ru, text: "Аскар Добряков"}
+    companyIds: [1233]
+    bio:
+      - {language: ru, text: "<p>Ведущий эксперт направления защиты бизнес-приложений К2 Кибербезопасность.</p>"}
+  - id: 3120
+    photoFileName: 3120.jpg
+    photoUpdatedAt: "2024-02-13T15:29:24Z"
+    name:
+      - {language: en, text: "Pavel Dovgalyuk"}
+      - {language: ru, text: "Павел Довгалюк"}
+    companyIds: [627]
+    bio:
+      - {language: ru, text: "<p>Занимается системным программированием и обратной инженерией. Разработчик системы анализа\
+            \ поверхности атаки Natch, ментейнер полносистемного эмулятора QEMU.</p>"}
+  - id: 3121
+    photoFileName: 3121.jpg
+    photoUpdatedAt: "2024-01-19T12:58:57Z"
+    name:
+      - {language: en, text: "Artyom Semenov"}
+      - {language: ru, text: "Артём Семенов"}
+    companyIds: [410]
+    bio:
+      - {language: en, text: "<p>Penetration testing and application security practitioner. Immersed in security. Interested\
+            \ in cybersecurity since childhood. I have spoken at specialized conferences: PHDAYS, KAZHACKSTAN, OFFZONE. Recently\
+            \ I have been interested in machine learning security (I have my own channel on this topic telegram @pwnai).</p>"}
+      - {language: ru, text: "<p>Penetration testing and application security practitioner. Погружен в безопасность. Кибер\
+            безопасностью интересуется с детства. Выступал на профильных конференциях: PHDays, KazHackStan, OFFZONE. В пос\
+            леднее время интересуется безопасностью машинного обучения и ведет <a href=\"https://t.me/pwnai\" target=\"_blank\"\
+            \ rel=\"noopener\">Telegram-канал</a> на эту тему.</p>"}
+    twitter: wearetyomsmnv
+  - id: 3122
+    photoFileName: 3122.jpg
+    photoUpdatedAt: "2024-02-12T14:26:35Z"
+    name:
+      - {language: en, text: "Kirill Muchov"}
+      - {language: ru, text: "Кирилл Мухов"}
+    companyIds: [620]
+    bio:
+      - {language: ru, text: "<p>В разработке более 18 лет. Прошел насыщенный путь от разработчика до архитектора решений\
+            . Участвовал в разработке и проектировании крупных технических решений для различных компаний: от государствен\
+            ных (Госуслуги, Роструд) и крупных банков (ВТБ) до международных (Google). Сейчас &mdash; архитектор корпорати\
+            вного супераппа VK Teams. Придерживается подхода &laquo;экспертности в простоте проектируемых систем&raquo;.</p>"}
+  - id: 3123
+    photoFileName: 3123.jpg
+    photoUpdatedAt: "2024-03-05T07:46:24Z"
+    name:
+      - {language: en, text: "iTorry Team"}
+      - {language: ru, text: "iТорри Team"}
+    companyIds: [1234]
+    bio:
+      - {language: ru, text: "Привет. Я iТорри, и я расскажу тебе о том, как можно защищать свои приложения."}
+  - id: 3124
+    photoFileName: 3124.jpg
+    photoUpdatedAt: "2024-03-07T15:10:26Z"
+    name:
+      - {language: en, text: "Ekaterina Starostina"}
+      - {language: ru, text: "Екатерина Старостина"}
+    companyIds: [1235]
+    bio:
+      - {language: ru, text: "<p>Директор по развитию бизнеса компании Вебмониторэкс.</p>"}
+  - id: 3125
+    photoFileName: 3125.jpg
+    photoUpdatedAt: "2024-03-11T21:02:23Z"
+    name:
+      - {language: en, text: "Alexander Lunev"}
+      - {language: ru, text: "Александр Лунев"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Руководитель Security Awareness в Яндекс. Отвечает за построение обучения и осведомление\
+            \ сотрудников в области ИБ. Ранее &mdash; Product Manager линейки продуктов Awareness в Лаборатории Касперског\
+            о.</p>"}
+  - id: 3126
+    photoFileName: 3126.jpg
+    photoUpdatedAt: "2024-03-06T07:50:21Z"
+    name:
+      - {language: en, text: "Valery Sashchenko"}
+      - {language: ru, text: "Валерий Сащенко"}
+    companyIds: [641]
+    bio:
+      - {language: ru, text: "<p>MBA CISO. В ИТ и ИБ почти 20 лет, из которых 14 &mdash; в ГК МегаФон, в том числе в роли\
+            \ CISO Yota. Основные зоны интересов: автоматизация работы и процессов ИБ, безопасность разработки, защита кон\
+            тейнеризации, BI и ML в ИБ.</p>"}
+  - id: 3127
+    photoFileName: 3127.jpg
+    photoUpdatedAt: "2024-02-27T19:58:31Z"
+    name:
+      - {language: en, text: "Vitaly Astrakhantsev"}
+      - {language: ru, text: "Виталий Астраханцев"}
+    companyIds: [665]
+    bio:
+      - {language: ru, text: "<p>В ИТ 14 лет, последние 5 выводит на рынок новые российские программные продукты. Променял\
+            \ AI на DevSecOps, чтобы доказать себе, что хард скиллы Product Owner'а можно успешно применять в любой сфере\
+            .</p>"}
+  - id: 3128
+    photoFileName: 3128.jpg
+    photoUpdatedAt: "2024-03-12T11:38:25Z"
+    name:
+      - {language: en, text: "Alexander Borisenko"}
+      - {language: ru, text: "Александр Борисенко"}
+    companyIds: [1228]
+    bio:
+      - {language: ru, text: "Технический эксперт, пресейл-инженер в ГК \"Солар\""}
+  - id: 3129
+    photoFileName: 3129.jpg
+    photoUpdatedAt: "2024-01-17T08:40:14Z"
+    name:
+      - {language: en, text: "Александр Трифанов"}
+      - {language: ru, text: "Александр Трифанов"}
+    companyIds: [611]
+    bio:
+      - {language: ru, text: "<p>Более 7 лет занимается тестированием на проникновение и разработкой решений для продуктов\
+            ой безопасности. Неравнодушен к реверс-инжинирингу, эксплуатации бинарных уязвимостей и языку Rust.</p>"}
+  - id: 3130
+    photoFileName: 3130.jpg
+    photoUpdatedAt: "2024-02-12T12:36:54Z"
+    name:
+      - {language: en, text: "Niyaz Kashapov"}
+      - {language: ru, text: "Нияз Кашапов"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>AppSec Team Lead at SberMarket. Has AppSec experience at fintech companies. Actively develops\
+            \ secure development practices.</p>"}
+      - {language: ru, text: "<p>AppSec Team Lead в СберМаркете. 3 года в сфере ИБ/AppSec в финтех-индустрии. Развивается\
+            \ как тимлид, развивает практики AppSec/DevSecOps.</p>"}
+  - id: 3131
+    photoFileName: 3131.jpg
+    photoUpdatedAt: "2024-03-06T07:40:33Z"
+    name:
+      - {language: en, text: "Petr Bogdanov"}
+      - {language: ru, text: "Пётр Богданов"}
+    companyIds: [635]
+    bio:
+      - language: ru
+        text: "<p>Product-менеджер решения Kaspersky Container Security.</p>\n<p>Опыт в ИБ &mdash; более 10 лет, из которы\
+            х более пяти по направлению DevSecOps.</p>\n<p>Прошел путь от инженера внедрения до product-менеджера. Занимал\
+            ся внедрением ИБ-систем, консалтингом, выстраиванием процессов безопасной разработки. Сейчас сфокусирован на с\
+            оздании и развитии флагманского продукта, направленного на защиту контейнеров и контейнерных сред.</p>"
+  - id: 3132
+    photoFileName: 3132.jpg
+    photoUpdatedAt: "2024-03-13T07:27:26Z"
+    name:
+      - {language: en, text: "Dmitry Zhurikhin"}
+      - {language: ru, text: "Дмитрий Журихин"}
+    companyIds: [627]
+    bio:
+      - {language: en, text: "Researching static analysis for more than a decade. Compilers - even longer. One of the developers\
+            \ of Svace, a static analyzer for multiple languages. Teacher at the faculty of Computational Mathematics and\
+            \ Cybernetics of Lomonosov Moscow State University."}
+      - {language: ru, text: "<p>Занимается статическим анализом больше десяти лет. Компиляторами еще дольше. Один из разр\
+            аботчиков статического анализатора Svace. Преподаватель факультета ВМК МГУ им. М. В. Ломоносова.</p>"}
