@@ -207,16 +207,16 @@ speakers:
       - {language: ru, text: "Максим Гореликов"}
     companyIds: [642]
     bio:
-      - {language: en, text: "Более 10 лет разрабатывает всё подряд, начинал с С/С++ и геофизики, сейчас в основном JVM-яз\
-            ыки, немного JS и финансовые сервисы и сервисы недвижимости. В основном использует экосистему Spring в разрабо\
-            тке, но иногда нужны альтернативы, поэтому пробует всё, что найдет хорошего на GitHub. Хочет понимать, как раб\
-            отают приложения от начала до конца, поэтому интересуется архитектурой, инфраструктурой и процессами деплоя и\
-            \ поддержки. Очень ценит DevOps как методологию."}
+      - {language: en, text: "10+ years experience in IT, starting from C/C++ and geophysics and now basically JVM languages/JS\
+            \ and financial services. Basically, he uses Spring and Netflix ecosystem, but checks out everything that is worth\
+            \ trying on GitHub. He is experimenting with reactive approaches. He wants to understand not only his apps but\
+            \ also everything around them, thus he is working with all the infrastructure (logs, CI/CD, orchestration) and\
+            \ tests. To sum up, DevOps is our everything."}
       - {language: ru, text: "Более 10 лет разрабатывает всё подряд, начинал с С/С++ и геофизики, сейчас в основном JVM-яз\
-            ыки, немного JS,  финансовые сервисы и сервисы недвижимости. В основном использует экосистему Spring в разрабо\
-            тке, но иногда нужны альтернативы, поэтому пробует всё, что найдет хорошего на GitHub. Хочет понимать, как раб\
-            отают приложения от начала до конца, поэтому интересуется архитектурой, инфраструктурой и процессами деплоя и\
-            \ поддержки. Очень ценит DevOps как методологию."}
+            ыки, немного JS и финансовые сервисы. В основном использует экосистему Spring в разработке, но иногда нужны ал\
+            ьтернативы, поэтому пробует всё, что найдет хорошего на GitHub. Хочет понимать, как работают приложения от нач\
+            ала до конца, поэтому интересуется архитектурой, инфраструктурой и процессами деплоя и поддержки. Очень ценит\
+            \ DevOps как методологию."}
     twitter: gorelikoff
     gitHub: gorelikov
     habr: somemaxim
@@ -10417,17 +10417,16 @@ speakers:
     photoFileName: 0698.jpg
     photoUpdatedAt: "2024-02-12T12:53:17Z"
     name:
-      - {language: en, text: "Victor Vershansky"}
+      - {language: en, text: "Viktor Vershansky"}
       - {language: ru, text: "Виктор Вершанский"}
     companyIds: [1231]
     bio:
-      - {language: en, text: "<span style=\"color: rgb(15, 23, 42);\">С 2011 года занимается консалтингом по разработке ре\
-            шений на Node.js. Застал времена, когда еще не было ни JavaScript, ни «снежинок», ни layers в Netscape Navigator.\
-            \ В последнее время интересуется топологией трансформации данных. Иногда воображает себя музыкантом. Мечтатель\
-            .</span>"}
-      - {language: ru, text: "С 2011 года занимается консалтингом по разработке решений на Node.js. Застал времена, когда\
-            \ еще не было ни JavaScript, ни «снежинок», ни layers в Netscape Navigator. В последнее время интересуется топ\
-            ологией трансформации данных. Иногда воображает себя музыкантом. Мечтатель."}
+      - {language: en, text: "<p>He has been consulting on Node.js solution development since 2011. He was a bit old when\
+            \ there was no JavaScript, no \"snowflakes\", no layers in Netscape Navigator. Has been interested in data transformation\
+            \ topology lately. Sometimes imagines himself as a musician. Dreamer.</p>"}
+      - {language: ru, text: "<p>С 2011 года занимается консалтингом по разработке решений на Node.js. Застал времена, ког\
+            да еще не было ни JavaScript, ни &laquo;снежинок&raquo;, ни layers в Netscape Navigator. В последнее время инт\
+            ересуется топологией трансформации данных. Иногда воображает себя музыкантом. Мечтатель.</p>"}
     twitter: went_out
     gitHub: wentout
     habr: wentout
@@ -26323,9 +26322,6 @@ speakers:
       - {language: ru, text: "Анна Мелехова"}
     companyIds: [635]
     bio:
-      - {language: en, text: "Архитектор ПО, тимлид, системщик. 10+ лет провела в ядре виртуальной машины, потом 5 лет зан\
-            ималась архитектурой в распределенных сервисах (не особенно микро). Последние два года вернулась к системному\
-            \ программированию в Kaspersky OS и погрузилась в дивный мир безопасного программирования."}
       - {language: ru, text: "<p>Архитектор ПО, тимлид, системщик. Более 10 лет провела в ядре виртуальной машины, затем 5\
             \ лет занималась архитектурой в распределенных (не особенно микро) сервисах. Вернулась к системному программир\
             ованию, последние 2 года &mdash; в Kaspersky OS. Погружена в дивный мир безопасного программирования.</p>"}
@@ -44758,7 +44754,7 @@ speakers:
       - {language: ru, text: "Сергей Соболев"}
     companyIds: [635]
     bio:
-      - {language: en, text: "in software engineering since 1999. Worked in various roles - software developer, team lead,\
+      - {language: en, text: "In software engineering since 1999. Worked in various roles - software developer, team lead,\
             \ resource manager, architect"}
       - {language: ru, text: "<p>Старший архитектор по информационной безопасности. В ИТ с 1999 года в роли программиста,\
             \ тимлида, менеджера, архитектора.</p>"}
