@@ -10417,7 +10417,8 @@ speakers:
     photoFileName: 0698.jpg
     photoUpdatedAt: "2024-02-12T12:53:17Z"
     name:
-      - {language: en, text: "Виктор Вершанский"}
+      - {language: en, text: "Victor Vershansky"}
+      - {language: ru, text: "Виктор Вершанский"}
     companyIds: [1231]
     bio:
       - {language: en, text: "<span style=\"color: rgb(15, 23, 42);\">С 2011 года занимается консалтингом по разработке ре\
@@ -17773,7 +17774,8 @@ speakers:
     photoFileName: 1247.jpg
     photoUpdatedAt: "2024-01-16T09:39:15Z"
     name:
-      - {language: en, text: "Павел Филонов"}
+      - {language: en, text: "Pavel Filonov"}
+      - {language: ru, text: "Павел Филонов"}
     companyIds: [257]
     bio:
       - language: en
@@ -26317,7 +26319,8 @@ speakers:
     photoFileName: 1845.jpg
     photoUpdatedAt: "2024-02-02T11:12:26Z"
     name:
-      - {language: en, text: "Анна Мелехова"}
+      - {language: en, text: "Anna Melekhova"}
+      - {language: ru, text: "Анна Мелехова"}
     companyIds: [635]
     bio:
       - {language: en, text: "Архитектор ПО, тимлид, системщик. 10+ лет провела в ядре виртуальной машины, потом 5 лет зан\
@@ -44695,7 +44698,9 @@ speakers:
             еских решений в различные отрасли: от финтеха до медицины. Выводил на рынок специализированные продукты для ма\
             ркетплейсов AWS, PowerBI, Slack, и Atlassian. Сейчас разрабатывает инновационные решения на базе LLM и рассказ\
             ывает об этом в <a href=\"https://t.me/kokuykin\">Telegram-канале</a>.</p>"}
+    twitter: artmaro
     gitHub: artmaro
+    habr: artmaro
   - id: 3102
     photoFileName: 3102.jpg
     photoUpdatedAt: "2024-02-02T15:03:26Z"
@@ -44722,12 +44727,13 @@ speakers:
             этому понимает, что, как и почему происходит. Опыт в технологиях и консалтинге &mdash; более 6 лет.</p>\n<p>Со\
             бирала команды, учила аппсеков, придумывала подходы. Любит и старается развиваться внутри безопасности приложе\
             ний во всех направлениях. Знает, как сделать так, чтобы ваши процессы наконец-то заработали.</p>"
+    habr: gazizovasg
   - id: 3104
     photoFileName: 3104.jpg
     photoUpdatedAt: "2024-03-07T14:01:57Z"
     name:
       - {language: en, text: "Ruslan Morozov"}
-      - {language: en, text: "Руслан Морозов"}
+      - {language: ru, text: "Руслан Морозов"}
     companyIds: [635]
     bio:
       - {language: ru, text: "Руководитель отдела разработки мобильной и десктопной версий KasperskyOS.</p><p>Занимается с\
@@ -44756,6 +44762,7 @@ speakers:
             \ resource manager, architect"}
       - {language: ru, text: "<p>Старший архитектор по информационной безопасности. В ИТ с 1999 года в роли программиста,\
             \ тимлида, менеджера, архитектора.</p>"}
+    gitHub: sergey-sobolev
   - id: 3107
     photoFileName: 3107.jpg
     photoUpdatedAt: "2024-02-14T08:37:10Z"
@@ -44786,6 +44793,7 @@ speakers:
             \ году основал первый в России производственный кооператив специалистов по информационной безопасности &mdash;\
             \ ПК &laquo;РАД КОП&raquo;.</p>"
     twitter: SurmatMG
+    habr: Surmatmg
   - id: 3109
     photoFileName: 3109.jpg
     photoUpdatedAt: "2024-02-12T12:48:10Z"
@@ -44832,6 +44840,7 @@ speakers:
             \ related to secure development."}
       - {language: ru, text: "DevSecOps Cluster Lead в MTC Digital. Строит процессы, занимается стратегией и всем, что\
             \ связано с безопасной разработкой."}
+    habr: puzankov7
   - id: 3113
     photoFileName: 3113.jpg
     photoUpdatedAt: "2024-02-07T07:46:46Z"
@@ -44854,6 +44863,7 @@ speakers:
             \ as Code), в 2020-м перешел в разработку. В Lamoda Tech создает внутренние инструменты в области ИБ &mdash; с\
             канеры уязвимостей, инструменты поиска токенов и секретов во внутренних ресурсах с помощью ML, а также занимае\
             тся автоматизацией доступов к ресурсам.</p>"}
+    habr: rahmanny
   - id: 3115
     photoFileName: 3115.jpg
     photoUpdatedAt: "2024-03-12T11:21:08Z"
@@ -44864,6 +44874,7 @@ speakers:
     bio:
       - {language: ru, text: "<p><span style=\"color: rgba(0, 0, 0, 0.85);\">Инженер в группе продуктовой архитектуры Security\
             \ &amp; Compliance в Yandex Cloud. Занимается развитием сервиса Container Registry и сканера уязвимостей.</span></p>"}
+    gitHub: MariaZubchenko
   - id: 3116
     photoFileName: 3116.jpg
     photoUpdatedAt: 2024-03-04T14:32Z
@@ -44886,6 +44897,8 @@ speakers:
       - {language: ru, text: "<p class=\"p1\">Разработчик команды интеграции Application Inspector в Positive Technologies.\
             \ Меинтейнер сообщества POSIdev в <a href=\"https://github.com/POSIdev-community/\">GitHub</a>. Любит улучшать\
             \ жизнь разработчикам при помощи тулинга.</p>"}
+    gitHub: vldF
+    habr: vldF
   - id: 3118
     photoFileName: 3118.jpg
     photoUpdatedAt: "2024-02-28T13:55:34Z"
@@ -44898,6 +44911,7 @@ speakers:
             ер <a href=\"https://www.ptsecurity.com/ru-ru/research/webinar/pt-ai-and-ide-plugins-new-opportunities-for-team-development/\"\
             \ rel=\"noopener noreferrer\" target=\"_blank\">вебинаров</a> Positive Technologies. Победитель <a href=\"https://www.ipkn.itmo.ru/news/devdays-fall2023\"\
             \ rel=\"noopener noreferrer\" target=\"_blank\">хакатона DevDays2023</a>."}
+    gitHub: donebd
   - id: 3119
     photoFileName: 3119.jpg
     photoUpdatedAt: "2024-02-26T15:06:33Z"
@@ -44907,6 +44921,7 @@ speakers:
     companyIds: [1233]
     bio:
       - {language: ru, text: "<p>Ведущий эксперт направления защиты бизнес-приложений К2 Кибербезопасность.</p>"}
+    habr: asdobryakov
   - id: 3120
     photoFileName: 3120.jpg
     photoUpdatedAt: "2024-02-13T15:29:24Z"
@@ -44917,6 +44932,8 @@ speakers:
     bio:
       - {language: ru, text: "<p>Занимается системным программированием и обратной инженерией. Разработчик системы анализа\
             \ поверхности атаки Natch, ментейнер полносистемного эмулятора QEMU.</p>"}
+    gitHub: Dovgalyuk
+    habr: Dovgaluk
   - id: 3121
     photoFileName: 3121.jpg
     photoUpdatedAt: "2024-01-19T12:58:57Z"
@@ -44933,6 +44950,8 @@ speakers:
             леднее время интересуется безопасностью машинного обучения и ведет <a href=\"https://t.me/pwnai\" target=\"_blank\"\
             \ rel=\"noopener\">Telegram-канал</a> на эту тему.</p>"}
     twitter: wearetyomsmnv
+    gitHub: wearetyomsmnv
+    habr: wearetyomsmnv
   - id: 3122
     photoFileName: 3122.jpg
     photoUpdatedAt: "2024-02-12T14:26:35Z"
@@ -45009,7 +45028,7 @@ speakers:
     photoFileName: 3129.jpg
     photoUpdatedAt: "2024-01-17T08:40:14Z"
     name:
-      - {language: en, text: "Александр Трифанов"}
+      - {language: en, text: "Alexander Trifanov"}
       - {language: ru, text: "Александр Трифанов"}
     companyIds: [611]
     bio:
