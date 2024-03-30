@@ -21,5 +21,6 @@ public enum Conference {
     PITER_PY,
     FLOW,
     SAFE_CODE,
+    GO_FUNC,
     SNOW_ONE
 }

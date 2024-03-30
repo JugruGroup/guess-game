@@ -4299,15 +4299,15 @@ speakers:
             елезом (фискальный регистратор, терминал безналичной оплаты, весы)."
   - id: 288
     photoFileName: 0288.jpg
+    photoUpdatedAt: "2024-01-14T15:35:35Z"
     name:
       - {language: en, text: "Aleksey Akulovich"}
       - {language: ru, text: "Алексей Акулович"}
     companyIds: [620]
     bio:
-      - {language: ru, text: "Алексей Акулович — старший разработчик проекта «ВКонтакте». Занимается бэкенд-стороной сложн\
-            ых и интересных проектов, общей архитектурой и инфраструктурой. В основном мультимедиа-бэкендом — фото, аудио\
-            , видео, upload и подобные смежные области. Активный участник сообщества GolangRU."}
-    twitter: AterCattus
+      - {language: ru, text: "<p>Занимается бэкенд-стороной сложных и интересных проектов. Работал во ВКонтакте, Тинькофф\
+            , теперь ушел в международную компанию. Фанат Go, любитель GameDev'а.</p>"}
+    twitter: atercattus
     gitHub: atercattus
     habr: AterCattus
   - id: 289
@@ -30645,15 +30645,17 @@ speakers:
       - {language: ru, text: "<p>Студентка бакалавриата факультета компьютерных технологий Университета ИТМО.</p>"}
   - id: 2146
     photoFileName: 2146.jpg
-    photoUpdatedAt: 2022-06-20T11:55:04Z[UTC]
+    photoUpdatedAt: "2024-02-22T10:17:10Z"
     name:
       - {language: en, text: "Daniil Podolsky"}
-    companyIds: []
+      - {language: ru, text: "Даниил Подольский"}
+    companyIds: [773]
     bio:
-      - {language: en, text: "<p>Project manager of Git in Sky, IT consultant, freelancer. In IT since 1990. Since 2000, consults\
-            \ a variety of Internet startups on building efficient and secure server systems.</p>"}
-      - {language: ru, text: "<p>Project manager of Git in Sky, IT consultant, freelancer. In IT since 1990. Since 2000, consults\
-            \ a variety of Internet startups&nbsp; on building efficient and secure server systems.</p>"}
+      - {language: en, text: "<p>In IT since 1990. Since 2000, consults a variety of Internet startups on building\
+            \ efficient and secure server systems.</p>"}
+      - {language: ru, text: "<p>В IT c 1990 года. С 2000 года консультирует интернет-стартапы по вопросам построения эффе\
+            ктивных и безопасных серверных систем.</p>"}
+    twitter: onokonem
     gitHub: onokonem
     habr: onokonem
   - id: 2147
@@ -34734,9 +34736,9 @@ speakers:
             \ architect, system architect. Key areas of projects:</p>\n<ul>\n<li>high-load integration solutions;</li>\n<li>Distributed\
             \ platform solutions based on cloud technologies;</li>\n<li>CI/CD solutions for cloud environments;</li>\n<li>AI&amp;ML\
             \ solutions.</li>\n</ul>"
-      - {language: ru, text: "<ul><li>Более 10 лет опыта разработки ПО в различных ролях: developer, product manager, solution\
-            \ architect, system architect. Ключевые области проектов: высоконагруженные интеграционные решения;</li><li>ра\
-            спределенные платформенные решения на базе облачных технологий;</li><li>CI/CD-решения для облачных сред;</li><li>AI&amp;ML-р\
+      - {language: ru, text: "Более 10 лет опыта разработки ПО в различных ролях: developer, product manager, solution architect,\
+            \ system architect. Ключевые области проектов: </p><ul><li>высоконагруженные интеграционные решения;</li><li>р\
+            аспределенные платформенные решения на базе облачных технологий;</li><li>CI/CD-решения для облачных сред;</li><li>AI&amp;ML-р\
             ешения.</li></ul>"}
     twitter: mchudnovskiy
     habr: chudnovskiy
@@ -43453,18 +43455,18 @@ speakers:
     photoFileName: 3016.jpg
     photoUpdatedAt: "2023-10-17T10:43:55Z"
     name:
-      - {language: en, text: "Aleksandr Kondrashov"}
+      - {language: en, text: "Alexander Kondrashov"}
       - {language: ru, text: "Александр Кондрашов"}
     companyIds: [715]
     bio:
-      - language: en
-        text: "<p>Alexander is the leader of several development teams that make services for an enterprise. His stack is\
-            \ balanced between Go and Python. Alexander has been In the industry since the early days of Go.</p>\n<p>He specialises\
-            \ in architecture and stands for development culture.</p>"
-      - language: ru
-        text: "<p>Лидер нескольких команд разработки, которые делают сервисы для кровавого энтерпрайза. В стеке балансируе\
-            т между Go и Python. В индустрии с начала зарождения Go.</p>\n<p>Специализируется на архитектуре, &laquo;топит\
-            &raquo; за культуру разработки.</p>"
+      - {language: en, text: "<p>IT leader of several development teams. He has been in the industry since the early days\
+            \ when no one had heard of Go and the frontend was only vanilla CSR. He specializes in architecture, advocates\
+            \ development culture, is involved in people management and likes to code his own spacecraft with poker and blackjack\
+            \ at night.</p>"}
+      - {language: ru, text: "IT-лидер нескольких команд разработки. В индустрии с начала времен, когда про Go никто не сл\
+            ышал, а фронтенд представлял собой исключительно ванильный SSR. Специализируется на архитектуре, топит за куль\
+            туру разработки, занимается people management'ом и любит кодить собственные космолеты с покером и блэкджеком п\
+            о ночам."}
   - id: 3017
     photoFileName: 3017.jpg
     photoUpdatedAt: "2023-10-14T12:49:40Z"
@@ -43816,7 +43818,7 @@ speakers:
             стемы видеоаналитики.</p>"}
   - id: 3042
     photoFileName: 3042.jpg
-    photoUpdatedAt: "2023-08-21T14:38:48Z"
+    photoUpdatedAt: "2024-02-16T12:01:10Z"
     name:
       - {language: en, text: "Dmitry Anisov"}
       - {language: ru, text: "Дмитрий Анисов"}
@@ -43830,12 +43832,12 @@ speakers:
             \ in Go and a bit in JS. He loves microservice architecture and designing large high-load systems. Now Dmitry\
             \ is deeply immersed in DevOps and infrastructure, which is one of the areas at his current place of work.</p>"
       - language: ru
-        text: "<p>Более 7 лет является бэкенд-разработчиком, сейчас &ndash; ведущий разработчик в GS Labs. Прошел путь от\
-            \ фриланса до крупных компаний, в одной из которых руководил группой из 5 человек и курировал одно из подразде\
-            лений разработки.</p>\n<p>Основной язык &mdash; Python и весь его необходимый стек технологий. Дмитрий знает,\
-            \ как его правильно готовить для больших корпоративных систем с высокой нагрузкой. Также активно пишет на Go и\
-            \ немного на JS. Любит микросервисную архитектуру и проектировать крупные highload-системы. Сейчас сильно погр\
-            ужен в DevOps и инфраструктуру &ndash; на текущем месте это одно из направлений работы.</p>"
+        text: "<p>Более 7 лет бэкенд-разработчик, сейчас занимает должность ведущего разработчика в GS Labs. Прошел путь о\
+            т фриланса до крупных компаний, в одной из которых руководил группой разработчиков и курировал одно из подразд\
+            елений разработки. Основные языки &mdash; Python/Go и весь их необходимый стек технологий. Знает, как их прави\
+            льно готовить для больших корпоративных систем с высокой нагрузкой.</p>\n<p>Любит микросервисную архитектуру и\
+            \ проектировать крупные highload-системы. Сильно погружен в DevOps и инфраструктуру &mdash; на текущем месте э\
+            то одно из направлений работы Дмитрия.</p>"
     gitHub: anisov
     habr: Anisov
   - id: 3043
@@ -44475,14 +44477,15 @@ speakers:
     habr: artipop
   - id: 3085
     photoFileName: 3085.jpg
+    photoUpdatedAt: "2024-01-30T07:24:49Z"
     name:
       - {language: en, text: "Konstantin Kastyrin"}
       - {language: ru, text: "Константин Кастырин"}
     companyIds: [1122]
     bio:
-      - {language: ru, text: "В бэкенд-разработке более 7 лет. Сторонник инженерной культуры. Считает, что язык\
-            \ программирования — это инструмент, так же как и фреймворк. Более важное значение имеют инженерные приемы\
-            \ и паттерны, которые не зависят от конкретного языка программирования."}
+      - {language: ru, text: "<p>В бэкенд-разработке более 7 лет. Сторонник инженерной культуры. Считает, что язык програм\
+            мирования &mdash; это инструмент, так же как и фреймворк. Более важное значение имеют инженерные приемы и патт\
+            ерны, которые не зависят от конкретного языка программирования.</p>"}
     gitHub: strictkod1899
     habr: strictkod1899
   - id: 3086
@@ -45068,3 +45071,259 @@ speakers:
             \ Cybernetics of Lomonosov Moscow State University."}
       - {language: ru, text: "<p>Занимается статическим анализом больше десяти лет. Компиляторами еще дольше. Один из разр\
             аботчиков статического анализатора Svace. Преподаватель факультета ВМК МГУ им. М. В. Ломоносова.</p>"}
+  - id: 3133
+    photoFileName: 3133.jpg
+    photoUpdatedAt: "2024-02-29T07:37:48Z"
+    name:
+      - {language: en, text: "Anton Zhukov"}
+      - {language: ru, text: "Антон Жуков"}
+    companyIds: [665]
+    bio:
+      - {language: ru, text: "<p>Тимлид в платформенной команде СберМаркета. Пишет на Go с 2016 года</p>"}
+    gitHub: antonzhukov
+  - id: 3134
+    photoFileName: 3134.jpg
+    photoUpdatedAt: "2024-01-25T13:15:34Z"
+    name:
+      - {language: en, text: "Aleksandr Ivanov"}
+      - {language: ru, text: "Александр Иванов"}
+    companyIds: [773]
+    bio:
+      - language: en
+        text: "<p>Aleksandr has been programming multimedia <span style=\"color: #495057;\">C/C++</span> applications for\
+            \ more than 20 years, and then accidentally switched to Go because the task appeared to speed up the code in Go.\
+            \ He liked the language for the simplicity and speed of implementing his ideas so much that he has not yet had\
+            \ a desire to return to the world of C/C++.</p>\n<p>Aleksandr is currently working in the telecom sector at YADRO\
+            \ and working on base station software services at the head of a small group of talented engineers.</p>"
+      - language: ru
+        text: "<p>Более 20 лет программировал на C/C++ мультимедиа-приложения, а затем случайно перешел на Go, потому что\
+            \ появилась задача ускорить код на Go. Язык понравился простотой и скоростью воплощения идей Александру настол\
+            ько, что желания вернуться в мир C/C++ пока не возникало.</p>\n<p>Сейчас работает в телеком-направлении компан\
+            ии YADRO и разрабатывает сервисы для администрирования базовых станций во главе небольшой группы талантливых и\
+            нженеров.</p>"
+  - id: 3135
+    photoFileName: 3135.jpg
+    photoUpdatedAt: "2024-02-16T14:08:07Z"
+    name:
+      - {language: en, text: "Ilya Sukhov"}
+      - {language: ru, text: "Илья Сухов"}
+    companyIds: [665]
+    bio:
+      - {language: ru, text: "<p>Разработчик с пятилетним опытом промышленной разработки на Go. Разрабатывал геоинформацио\
+            нные сервисы, сервисы доставки. Сейчас разрабатывает Terraform-провайдер для внутренних нужд компании.</p>"}
+    gitHub: TovarischSuhov
+    habr: TovarischSuhov
+  - id: 3136
+    photoFileName: 3136.jpg
+    photoUpdatedAt: "2024-02-09T13:45:21Z"
+    name:
+      - {language: en, text: "Dmitry Kulagin"}
+      - {language: ru, text: "Дмитрий Кулагин"}
+    companyIds: []
+    bio:
+      - {language: ru, text: "<p>Бэкенд-разработчик. Работал в Ozon, Авито и с медицинским софтом. Любит закапываться в &laquo;к\
+            ишки&raquo; форматов/протоколов и исследовать. Примеры проектов: <a href=\"https://github.com/kulaginds/rdp-html5\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">[rdp-html5]</a>, <a href=\"https://github.com/kulaginds/lzma\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">[lzma]</a>. О последнем расскажет на конференции.</p>"}
+    twitter: kulaginds
+    gitHub: kulaginds
+    habr: kulaginds
+  - id: 3137
+    photoFileName: 3137.jpg
+    photoUpdatedAt: "2023-08-30T15:10:51Z"
+    name:
+      - {language: en, text: "Vladimir Romanko"}
+      - {language: ru, text: "Владимир Романько"}
+    companyIds: [635]
+    bio:
+      - {language: en, text: "Programmer for 25 years, teamleader for over 10 years, saving the world from cyber threats at\
+            \ Kaspersky Lab."}
+      - {language: ru, text: "<p>Программирует 25 лет, тимлид более 10 лет, спасает мир от киберугроз в Kaspersky.</p>"}
+    habr: icoder
+  - id: 3139
+    photoFileName: 3139.jpg
+    photoUpdatedAt: "2023-12-11T11:22:53Z"
+    name:
+      - {language: en, text: "Vladislav Belogrudov"}
+      - {language: ru, text: "Владислав Белогрудов"}
+    companyIds: [773]
+    bio:
+      - language: ru
+        text: "<p>Первую промышленную программу написал на C под Unix в 1998 году. Разрабатывал ПО для роботов и телеком-о\
+            борудования, поисковики.</p>\n<p>Сейчас работает в YADRO. Вместе с командой создает драйверы для облаков OpenStack,\
+            \ системы регистрации и поддержки программно-аппаратных комплексов и многое другое.</p>"
+    gitHub: vlad-belogrudov
+    habr: vbelogrudov
+  - id: 3140
+    photoFileName: 3140.jpg
+    photoUpdatedAt: "2024-02-05T11:13:46Z"
+    name:
+      - {language: en, text: "Evgeniy Konechny"}
+      - {language: ru, text: "Евгений Конечный"}
+    companyIds: [1086]
+    bio:
+      - {language: ru, text: "<p>7 лет опыта коммерческой разработки на Golang. Последние 4 года занимается FoodTech. Такж\
+            е имеет специфичный опыт в MedTech.</p>"}
+  - id: 3141
+    photoFileName: 3141.jpg
+    photoUpdatedAt: "2024-02-04T12:12:09Z"
+    name:
+      - {language: en, text: "Svyatoslav Petrov"}
+      - {language: ru, text: "Святослав Петров"}
+    companyIds: [390]
+    bio:
+      - {language: en, text: "<p>Ozon Tech, 2 years in Go Language Platform, nowadays he develops infrastructure-level solutions.\
+            \ Previously, he worked in small business where he was managing the whole stack &mdash; from hardware setup to\
+            \ software development. Svyatoslav loves figuring out systems to the deepest details and understanding how they\
+            \ work.</p>"}
+      - {language: ru, text: "<p>2 года в языковой платформе Ozon Tech, сейчас занимается инфраструктурными компонентами.\
+            \ До Ozon работал в малом бизнесе, занимался всем: от настройки железа до написания софта. Любит разбираться в\
+            \ системах до самого низкого уровня и понимать, как они функционируют.</p>"}
+  - id: 3142
+    photoFileName: 3142.jpg
+    photoUpdatedAt: "2024-03-14T12:59:08Z"
+    name:
+      - {language: en, text: "Vladimir Bogrintsev"}
+      - {language: ru, text: "Владимир Богринцев"}
+    companyIds: [904]
+    bio:
+      - {language: en, text: "<p class=\"ql-align-center\">I was trained as a cryptographer, after which I worked as a network\
+            \ engineer of backbone networks for 5 years. Ever since university, I have been interested in programming and\
+            \ have worked in various positions: from developer to architect and team leader in such companies as MTS, Ozon,\
+            \ Garage8 and others. Apart from work, I enjoy active sports and learning languages."}
+      - language: ru
+        text: "<p>Получил образование криптографа, после чего 5 лет работал сетевым инженером магистральных сетей. Со врем\
+            ен университета увлекается программированием и успел поработать на разных позициях: от разработчика до архитек\
+            тора и тимлида в таких компаниях, как МТС, Ozon, Garage Eight и других.</p>\n<p>Увлекается активными видами сп\
+            орта и изучением языков.</p>"
+    gitHub: aliocode
+  - id: 3143
+    photoFileName: 3143.jpg
+    photoUpdatedAt: "2023-12-08T14:13:46Z"
+    name:
+      - {language: en, text: "Iskander Sharipov"}
+      - {language: ru, text: "Искандер Шарипов"}
+    companyIds: [1236]
+    bio:
+      - {language: en, text: "<p>Iskander makes compilers and video games.</p>"}
+      - {language: ru, text: "<p>Разрабатывает видеоигры и компиляторы.</p>"}
+    twitter: quasilyte
+    gitHub: quasilyte
+    habr: quasilyte
+  - id: 3144
+    photoFileName: 3144.jpg
+    photoUpdatedAt: "2024-02-10T05:55:49Z"
+    name:
+      - {language: en, text: "Alexander Shakmaev"}
+      - {language: ru, text: "Александр Шакмаев"}
+    companyIds: [1034]
+    bio:
+      - {language: ru, text: "<p>В коммерческой разработке более 10 лет. Работал над интересными проектами, среди которых\
+            \ Кидзания, ВкусВилл, Мираторг и Международная Федерация танкового биатлона. Хорошо знает, что такое цугцванг\
+            \ и эндшпиль.</p>"}
+    gitHub: echo0x00
+    habr: echo0x00
+  - id: 3145
+    photoFileName: 3145.jpg
+    photoUpdatedAt: "2024-02-16T12:11:29Z"
+    name:
+      - {language: en, text: "Dmitry Korolev"}
+      - {language: ru, text: "Дмитрий Королёв"}
+    companyIds: [611]
+    bio:
+      - language: ru
+        text: "<p>Инженер-программист с успешным опытом разработки и внедрения высокопроизводительных микросервисов &mdash;\
+            \ с достижением пиковой нагрузки более 5 тысяч запросов в секунду на Авито.</p>\n<p>Влюбился в Golang с первог\
+            о взгляда и с тех пор активно работает с ним, не переставая укреплять свои знания. Опубликовал несколько <a href=\"\
+            https://habr.com/ru/users/Jimiliani2/publications/articles/\">статей о Golang и его периферии</a>.</p>"
+    gitHub: Jimiliani
+    habr: Jimiliani2
+  - id: 3146
+    photoFileName: 3146.jpg
+    photoUpdatedAt: "2024-02-12T14:19:49Z"
+    name:
+      - {language: en, text: "Vladislav Sidorov"}
+      - {language: ru, text: "Владислав Сидоров"}
+    companyIds: [390]
+    bio:
+      - {language: ru, text: "<p>Первый Golang-разработчик в Ozon. Пишет на Go с версии 1.7. Ранее занимался разработкой н\
+            а Qt, LAMP. Больше любит давать, чем получать.</p>"}
+  - id: 3147
+    photoFileName: 3147.jpg
+    photoUpdatedAt: "2024-01-16T12:40:55Z"
+    name:
+      - {language: en, text: "Egor Lazarenkov"}
+      - {language: ru, text: "Егор Лазаренков"}
+    companyIds: [665]
+    bio:
+      - {language: ru, text: "<p>Разрабатывает энтерпрайз-решения более 17 лет.</p>"}
+  - id: 3148
+    photoFileName: 3148.jpg
+    photoUpdatedAt: "2024-02-29T08:08:28Z"
+    name:
+      - {language: en, text: "Denis Bozhok"}
+      - {language: ru, text: "Денис Божок"}
+    companyIds: [1092]
+    bio:
+      - {language: ru, text: "<p><span style=\"color: #000000;\">CTO </span>Ostrovok.ru. За 10 лет в компании износил не о\
+            дну пару клавиатур и ноутбуков &mdash; это был и кодинг, и девопсинг, и инфраструктурных дел мастерство. После\
+            дние 3 года &mdash; CTO. Вместе с крутой командой раздвигает границы возможностей с помощью технологий.</p>"}
+  - id: 3149
+    photoFileName: 3149.jpg
+    photoUpdatedAt: "2024-01-18T15:38:13Z"
+    name:
+      - {language: en, text: "Max Riveiro"}
+      - {language: ru, text: "Макс Ривейро"}
+    companyIds: [390]
+    bio:
+      - {language: ru, text: "<p>Ведущий разработчик в команде языковой платформы Go в департаменте платформы Ozon. Работа\
+            л в Gett, Kaspersky и разных небольших стартапах. Разрабатывает на Go c 2012 года.</p>"}
+    gitHub: kavu
+    habr: Kavu
+  - id: 3150
+    photoFileName: 3150.jpg
+    photoUpdatedAt: "2024-01-18T01:57:22Z"
+    name:
+      - {language: en, text: "Roman Chaly"}
+      - {language: ru, text: "Роман Чалый"}
+    companyIds: [620]
+    bio:
+      - {language: ru, text: "<p>Go-разработчик. Познакомился с языком в 2016&ndash;2017 годах. Сейчас работает в VK.</p>"}
+  - id: 3151
+    photoFileName: 3151.jpg
+    photoUpdatedAt: "2024-02-16T11:44:10Z"
+    name:
+      - {language: en, text: "Anton Tsitulsky"}
+      - {language: ru, text: "Антон Цитульский"}
+    companyIds: [1086]
+    bio:
+      - language: ru
+        text: "<p>В бэкенде более 5 лет. Основной стек технологий: Golang, PostgreSQL, Kafka, Redis. Занимается разработко\
+            й, проектированием и развитием микросервисов в своей предметной области. Любит узнавать новое и делиться знани\
+            ями.</p>\n<p>Окончил бакалавриат и магистратуру в МГТУ им. Н.Э. Баумана, а также программу Технопарка по специ\
+            альности &laquo;системный архитектор&raquo;.</p>"
+  - id: 3152
+    photoFileName: 3152.jpg
+    photoUpdatedAt: "2023-08-30T16:31:25Z"
+    name:
+      - {language: en, text: "Michael Kabischev"}
+      - {language: ru, text: "Михаил Кабищев"}
+    companyIds: [390]
+    bio:
+      - {language: en, text: "<p>Leads at Ozon the development of a platform that makes developers' lives easier and simpler.\
+            \ Organizes Go conferences and meetups.</p>"}
+      - {language: ru, text: "<p><span style=\"color: #000000;\">Руководит в Ozon разработкой платформы, которая делает жи\
+            знь разработчиков легче и проще. Организует конференции и митапы по Go.</span></p>"}
+    twitter: mkabischev
+    gitHub: mkabischev
+    habr: soines
+  - id: 3153
+    photoFileName: 3153.jpg
+    photoUpdatedAt: 2024-02-15T13:41Z
+    name:
+      - {language: en, text: "Nikolay Ushkov"}
+      - {language: ru, text: "Николай Ушков"}
+    companyIds: [674]
+    bio:
+      - {language: ru, text: "<p>Опыт коммерческой разработки более 10 лет, из них 7 на Golang. Занимал позицию как просто\
+            го разработчика, так и технического директора. Сейчас работает в Тинькофф.</p>"}

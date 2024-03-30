@@ -2647,5 +2647,9 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("SafeCode 2024", null, List.of(24L)),
 //                        Set.of("Открытие конференции SafeCode 2024", "Закрытие конференции SafeCode 2024",
 //                                "Открытие второго дня конференции SafeCode 2024")));
+//        loadTalksSpeakersEvent(Conference.GO_FUNC, LocalDate.of(2024, 3, 14), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("GoFunc 2024", null, List.of(24L)),
+//                        Set.of("Открытие конференции GoFunc 2024", "Открытие. 2 день", "Закрытие конференции GoFunc 2024")));
     }
 }
