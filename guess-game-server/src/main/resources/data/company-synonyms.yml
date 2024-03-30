@@ -84,6 +84,10 @@ companySynonyms:
     synonyms: [
         "Chronicle Software Ltd"
     ]
+  - name: Cloud.ru
+    synonyms: [
+        Cloud
+    ]
   - name: "Cisco Systems"
     synonyms: [
         Cisco
@@ -432,6 +436,10 @@ companySynonyms:
     synonyms: [
         "Oracle Labs"
     ]
+  - name: Ostrovok
+    synonyms: [
+        Ostrovok.ru
+    ]
   - name: OZON
     synonyms: [
         "Ozon Fintech"
@@ -663,6 +671,10 @@ companySynonyms:
   - name: "Unity Technologies"
     synonyms: [
         Unity
+    ]
+  - name: Uzum
+    synonyms: [
+        "Uzum Tezkor"
     ]
   - name: "Vevy Europe"
     synonyms: [

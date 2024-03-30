@@ -3646,7 +3646,7 @@ companies:
       - {language: en, text: "Pink Unicorn"}
   - id: 1034
     name:
-      - {language: en, text: Cloud}
+      - {language: en, text: Cloud.ru}
   - id: 1035
     name:
       - {language: en, text: IIBA}
@@ -4453,3 +4453,6 @@ companies:
       - {language: en, text: WebmonitorX}
       - {language: ru, text: Вебмониторэкс}
     siteLink: https://webmonitorx.ru
+  - id: 1236
+    name:
+      - {language: en, text: "quasilyte tech"}

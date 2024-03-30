@@ -563,3 +563,32 @@ eventTypes:
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
     topicId: 14
+  - id: 21
+    conference: GO_FUNC
+    logoFileName: gofunc.png
+    organizerId: 0
+    name:
+      - {language: en, text: GoFunc}
+    shortDescription:
+      - {language: en, text: "Conference on Go development"}
+      - {language: ru, text: "Конференция по разработке на Go"}
+    longDescription:
+      - language: en
+        text: "GoFunc is a conference for those who use Go in their projects.\n\nWe'll focus on how to properly build\
+            \ and operate services in Go. We will learn to effectively use modern approaches and frameworks when\
+            \ developing applications, processing data and deploying loaded systems. In addition, we will try to look\
+            \ beyond the standard capabilities of the Go runtime.\n\nHeld\_by [JUG Ru\_Group](https://jugru.org/)."
+      - language: ru
+        text: "GoFunc\_— конференция для тех, кто использует\_Go в\_своих проектах.\n\nМы\_сосредоточимся на\_том, как\
+            \ правильно создавать и\_эксплуатировать сервисы на\_Go. Будем учиться эффективно использовать современные под\
+            ходы и\_фреймворки при разработке приложений, обработке данных и\_разворачивании нагруженных систем. Кроме тог\
+            о, постараемся заглянуть за\_пределы стандартных возможностей\_Go runtime.\n\nОрганизатор – [JUG Ru&nbsp;Group](https://jugru.org/)."
+    siteLink:
+      - {language: en, text: "https://gofunc.ru/"}
+    vkLink: https://vk.com/gofuncconf
+    twitterLink: https://twitter.com/GoFuncConf
+    youtubeLink: https://www.youtube.com/@GoFuncConf
+    telegramLink: https://t.me/GoFuncConf
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow
+    topicId: 13
