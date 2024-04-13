@@ -4456,3 +4456,25 @@ companies:
   - id: 1236
     name:
       - {language: en, text: "quasilyte tech"}
+  - id: 1237
+    name:
+      - {language: en, text: "David Shekunts' IT-Kachalka"}
+      - {language: ru, text: "IT-Качалка Давида Шекунца"}
+    siteLink: https://t.me/it_kachalka
+  - id: 1238
+    name:
+      - {language: en, text: VicMan}
+    siteLink: http://vicman.ru
+  - id: 1239
+    name:
+      - {language: en, text: Crossover}
+    siteLink: https://www.crossover.com
+  - id: 1240
+    name:
+      - {language: en, text: GetMentor.dev}
+    siteLink: https://getmentor.dev
+  - id: 1241
+    name:
+      - {language: en, text: Hexlet}
+      - {language: ru, text: Хекслет}
+    siteLink: https://hexlet.io

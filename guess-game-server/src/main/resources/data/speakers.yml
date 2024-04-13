@@ -470,14 +470,14 @@ speakers:
       - {language: ru, text: "Владимир Ситников"}
     companyIds: []
     bio:
-      - {language: en, text: "<p>Vladimir has been working on performance and scalability of NetCracker platform (a software\
-            \ used by telecom operators for automatization of network management processes and network equipment) for ten\
-            \ years. His focus is Java and Oracle Database performance optimisations. Vladimir is an author of more than a\
-            \ dozen of performance improvements in the official PostgreSQL JDBC driver.</p>"}
-      - {language: ru, text: "Более десяти лет работает над производительностью и масштабируемостью Netcracker OSS — ПО, и\
-            спользуемого операторами связи для автоматизации процессов управления сетью и сетевым оборудованием. Увлекаетс\
-            я вопросами производительности Java и Oracle Database. Автор более десятка улучшений производительности в офиц\
-            иальном PostgreSQL JDBC-драйвере."}
+      - {language: en, text: "<p><span style=\"color: #495057;\">Vladimir optimizes enterprise systems since 2006. He maintains\
+            \ PostgreSQL JDBC driver and Apache JMeter load testing tool. Vladimir likes spreading knowledge and helps others\
+            \ preparing their talks. Vladimir participates in Program committees of JPoint, Joker, Heisenbug, Hydra, DevOops\
+            \ conferences.</span></p>"}
+      - {language: ru, text: "<p>Владимир работает над надежностью и производительностью enterprise-систем с 2006 года. По\
+            ддерживает PostgreSQL JDBC драйвер и инструмент нагрузочного тестирования Apache JMeter. Любит делиться знания\
+            ми и помогает другим с подготовкой докладов. Участвует в Программных комитетах конференций JPoint, Joker, Heisenbug,\
+            \ Hydra, DevOops.</p>"}
     twitter: VladimirSitnikv
     gitHub: vlsi
     habr: vladimirsitnikov
@@ -540,7 +540,7 @@ speakers:
     habr: tolkkv
   - id: 29
     photoFileName: 0029.jpg
-    photoUpdatedAt: 2022-03-31T19:06:16Z[UTC]
+    photoUpdatedAt: "2024-03-21T14:32:52Z"
     name:
       - {language: en, text: "Ivan Ugliansky"}
       - {language: ru, text: "Иван Углянский"}
@@ -549,16 +549,15 @@ speakers:
       - {language: en, text: "<p>He worked for Excelsior in the Excelsior JET project (Java SE certified implementation based\
             \ on optimizing AOT compilation).<br />Now he works for Huawei on JVMs, compilers, and new programming languages.<br\
             \ /><br />Basically, he works with runtime: GC, class loading, concurrency maintenance, profiling, and so on.<br\
-            \ /><br />He is also the co-founder and co-leader of JUGNsk, an official Java Users Group in Novosibirsk, and\
-            \ a member of the SnowOne conference's Program Committee.<br /><br />In his free time, he teaches C/C++ courses\
-            \ at Novosibirsk State University.</p>"}
-      - language: ru
-        text: "<p>Работал в компании Excelsior c 2011 года, где был одним из разработчиков Excelsior JET: сертифицированно\
-            й реализации Java SE, основанной на оптимизирующей AOT-компиляции. Сейчас работает в Huawei над компиляторами\
-            , JVM и новыми языками программирования.</p>\n<p>В основном занимается рантаймом: GC, загрузкой классов, подде\
-            ржкой многопоточности, профилированием и т. д.</p>\n<p>Один из основателей и лидеров JUGNsk &mdash; официально\
-            й Java User Group в Новосибирске, и член Программного комитета конференции SnowOne.</p>\n<p>Куратор профиля &laquo;С\
-            истемное программирование&raquo; на мехмате НГУ.</p>"
+            \ /><br />He is also the co-founder and co-lead of JUGNsk, an official Java Users Group in Novosibirsk and a Program\
+            \ Committee member of the SnowOne conference.<br /><br />In his free time, he teaches C/C++ courses at Novosibirsk\
+            \ State University.</p>"}
+      - {language: ru, text: "<p>Работал в компании Excelsior c 2011 года, где был одним из разработчиков Excelsior JET: с\
+            ертифицированной реализации Java SE, основанной на оптимизирующей AOT-компиляции. Сейчас работает в Huawei над\
+            \ компиляторами, JVM и новыми языками программирования.<br /><br />В основном занимается рантаймом: GC, загруз\
+            кой классов, поддержкой многопоточности, профилированием и т. д.<br /><br />Один из основателей и лидеров JUGNsk\
+            \ &mdash; официальной Java User Group в Новосибирске &mdash; и член Программного комитета конференции SnowOne.<br\
+            \ /><br />В качестве хобби ведет курсы по C/C++ в НГУ.</p>"}
     twitter: dbg_nsk
     gitHub: ugliansky
     habr: dbg_nsk
@@ -19205,20 +19204,16 @@ speakers:
       - {language: ru, text: "Анна Жаркова"}
     companyIds: [567]
     bio:
-      - language: en
-        text: "<p>Lead Mobile developer with more than 9 years of experience. Kotlin GDE. Develops both native (iOS: Swift/Objective-C,\
-            \ Android: Kotlin/Java) and cross-platform (Xamarin, Kotlin Multiplatform) applications. Mobile architect in mobile\
-            \ projects. Also mentors junior developers and leads the mobile team. Tutor at Otus for the course \"iOS Advanced\
-            \ 2.0\".</p>\n<p>She talks about native and cross-platform mobile development and IT in general in her Telegram\
-            \ channel <a href=\"https://t.me/prettygeeknotes\">\"Developer Notes\"</a>.</p>"
-      - language: ru
-        text: "<p>Мобильный разработчик с 9 годами опыта коммерческой разработки. KMM Developer Expert. Занимается нативно\
-            й разработкой iOS (Swift/Objective-С), Android (Kotlin/Java) и кроссплатформенной (KMM, Xamarin). Разрабатывае\
-            т архитектуру мобильных приложений для обеих платформ, управляет командой направления.</p>\n<p>Менторит младши\
-            х разработчиков. Преподает на курсах &laquo;iOS Advanced 2.0&raquo; и &laquo;iOS Базовый&raquo; в Otus. В своб\
-            одное время увлекается живописью, изучает китайский и немецкий языки.</p>\n<p class=\"p1\">Рассказывает о нати\
-            вной и кроссплатформенной мобильной разработке, а также про IT в целом в Telegram-канале <a href=\"https://t.me/prettygeeknotes\"\
-            >&laquo;Записки разработчицы&raquo;</a>.</p>"
+      - {language: en, text: "Mobile developer with over 7 years of commercial development experience. Kotlin GDE. She does\
+            \ native iOS (Swift/Objective-c) and Android (Kotlin/Java) development, cross-platform (KMP, Xamarin). She develops\
+            \ mobile application architecture for both platforms and manages the direction team. Leads junior developers (mentoring).\
+            \ Lecturer in \"iOS Advanced 2.0\" and \"iOS Basic\" courses at Otus. In her spare time, she enjoys painting and\
+            \ studying Chinese and German."}
+      - {language: ru, text: "Мобильный разработчик с опытом коммерческой разработки более 10 лет. Kotlin Developer Expert.\
+            \ MBE.  Занимается нативной разработкой iOS (Swift/Objective-C) и Android (Kotlin/Java), кроссплатформенной (KMP,\
+            \ Xamarin). Разрабатывает архитектуру мобильных приложений для обеих платформ, управляет командой направления\
+            . Ведет младших разработчиков (менторство). Преподаватель на курсах «iOS Advanced 2.0» и «iOS Базовый» в Otus.\
+            \  Эксперт Skillbox</p><p>В свободное время увлекается живописью, изучает китайский и немецкий языки."}
     twitter: anioutkajarkova
     gitHub: anioutkazharkova
     habr: anioutka
@@ -30578,7 +30573,7 @@ speakers:
             етним стажем.</p>"}
   - id: 2141
     photoFileName: 2141.jpg
-    photoUpdatedAt: 2022-06-03T10:35:02Z[UTC]
+    photoUpdatedAt: "2024-03-14T15:23:18Z"
     name:
       - {language: en, text: "Sergey Yakushkin"}
       - {language: ru, text: "Сергей Якушкин"}
@@ -37364,7 +37359,7 @@ speakers:
     habr: mathbunnyru
   - id: 2619
     photoFileName: 2619.jpg
-    photoUpdatedAt: "2023-03-02T21:28:46Z"
+    photoUpdatedAt: "2024-02-07T16:32:14Z"
     name:
       - {language: en, text: "Elena Veselovskaia"}
       - {language: ru, text: "Елена Веселовская"}
@@ -37869,7 +37864,7 @@ speakers:
             л на локальных митапах и на Podlodka Android Crew.</p>"}
   - id: 2655
     photoFileName: 2655.jpg
-    photoUpdatedAt: "2023-05-02T11:02:46Z"
+    photoUpdatedAt: "2024-03-26T08:03:24Z"
     name:
       - {language: en, text: "Konstantin Kulakov"}
       - {language: ru, text: "Константин Кулаков"}
@@ -37879,8 +37874,9 @@ speakers:
         text: "<p>Manages iOS product development team in the projects for Businesses and Buyers in VK: Yula, VKontakte Market,\
             \ VKontakte for Business.</p>\n<p>Teaches iOS mobile development in VK educational projects.</p>"
       - language: ru
-        text: "<p>Управляет продуктовой командой iOS-разработки в проектах для Бизнесов и Покупателей в VK: Юла, Маркет ВК\
-            онтакте, ВКонтакте для бизнеса.</p>\n<p>Преподает мобильную разработку под iOS в образовательных проектах VK.</p>"
+        text: "<p>Управляет продуктовой командой iOS-разработки в проектах для бизнесов и покупателей в VK: в Юле, Маркете\
+            \ ВКонтакте, ВКонтакте для бизнеса.</p>\n<p>Преподает мобильную разработку под iOS в образовательных проектах\
+            \ VK.</p>"
   - id: 2656
     photoFileName: 2656.jpg
     photoUpdatedAt: "2023-02-16T13:11:31Z"
@@ -41294,8 +41290,8 @@ speakers:
             \ as implemented Agile, DevOps and other practices. Certified in Java, Cloud, Agile and PRINCE2. Adores hackathons\
             \ and engineering culture.</p>"
       - language: ru
-        text: "<p>Руководитель IT-некредитных продуктов розничного бизнеса в Росбанке. 19 лет в IT. Вся карьера &ndash; ок\
-            оло Java: Desktop, Java EE, микросервисы.</p>\n<p>В разные годы создавал банковское ПО, высоконагруженные трей\
+        text: "<p>Руководитель IT-некредитных продуктов розничного бизнеса в Росбанке. 19 лет в IT. Вся карьера &mdash; ок\
+            оло Java: desktop, Java EE, микросервисы.</p>\n<p>В разные годы создавал банковское ПО, высоконагруженные трей\
             динговые платформы и геоинформационные системы. Писал код, руководил командами, проектами и департаментами. Вн\
             едрял Agile-, DevOps- и другие практики. Сертифицирован по Java, Cloud, Agile и PRINCE2. Обожает хакатоны и ин\
             женерную культуру.</p>"
@@ -45225,17 +45221,18 @@ speakers:
     habr: echo0x00
   - id: 3145
     photoFileName: 3145.jpg
-    photoUpdatedAt: "2024-02-16T12:11:29Z"
+    photoUpdatedAt: "2024-03-11T13:41:09Z"
     name:
       - {language: en, text: "Dmitry Korolev"}
       - {language: ru, text: "Дмитрий Королёв"}
     companyIds: [611]
     bio:
       - language: ru
-        text: "<p>Инженер-программист с успешным опытом разработки и внедрения высокопроизводительных микросервисов &mdash;\
-            \ с достижением пиковой нагрузки более 5 тысяч запросов в секунду на Авито.</p>\n<p>Влюбился в Golang с первог\
-            о взгляда и с тех пор активно работает с ним, не переставая укреплять свои знания. Опубликовал несколько <a href=\"\
-            https://habr.com/ru/users/Jimiliani2/publications/articles/\">статей о Golang и его периферии</a>.</p>"
+        text: "<p class=\"ql-align-justify\">Инженер-программист с успешным опытом разработки и внедрения высокопроизводит\
+            ельных микросервисов &mdash; с достижением пиковой нагрузки более 5 тысяч запросов в секунду на Авито.</p>\n<p\
+            \ class=\"ql-align-justify\">Влюбился в Golang с первого взгляда и с тех пор активно работает с ним, не перест\
+            авая укреплять свои знания. Опубликовал несколько&nbsp;<a style=\"color: var(--primary-color);\" href=\"https://habr.com/ru/users/Jimiliani2/publications/articles/\"\
+            \ target=\"_blank\" rel=\"noopener\">статей о Golang и его периферии</a>.</p>"
     gitHub: Jimiliani
     habr: Jimiliani2
   - id: 3146
@@ -45327,3 +45324,162 @@ speakers:
     bio:
       - {language: ru, text: "<p>Опыт коммерческой разработки более 10 лет, из них 7 на Golang. Занимал позицию как просто\
             го разработчика, так и технического директора. Сейчас работает в Тинькофф.</p>"}
+  - id: 3154
+    photoFileName: 3154.jpg
+    photoUpdatedAt: "2024-02-19T09:16:26Z"
+    name:
+      - {language: en, text: "Ilya Ivankin"}
+      - {language: ru, text: "Илья Иванкин"}
+    companyIds: [975]
+    bio:
+      - {language: ru, text: "<p>В разработке более 7 лет. Успел &laquo;покодить&raquo; крупные безбарьерные системы взима\
+            ния платы и тарификации на дорогах. Работал в EPAM. Cейчас занимает позицию Head of backend. Сервисы выстраива\
+            ются вокруг UGC, и Илья с командой обеспечивают стабильность их нагруженной платформы для более чем 11 миллион\
+            ов клиентов.&nbsp;</p>"}
+  - id: 3155
+    photoFileName: 3155.jpg
+    photoUpdatedAt: "2024-03-13T09:24:42Z"
+    name:
+      - {language: en, text: "David Shekunts"}
+      - {language: ru, text: "Давид Шекунц"}
+    companyIds: [1237]
+    bio:
+      - language: ru
+        text: "<p>Занимается разработкой почти 10 лет и любит делиться тем, что нашел за это время.</p>\n<p>Полезные матер\
+            иалы, созданные Давидом:</p>\n<ul>\n<li><a style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',\
+            \ Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\" href=\"https://t.me/it_kachalka\"\
+            >Блог в Telegram</a><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,\
+            \ Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> о скиллах в fullstack-разработке. </span></li>\n\
+            <li><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,\
+            \ 'Open Sans', 'Helvetica Neue', sans-serif;\">Книга </span><a style=\"font-family: -apple-system, BlinkMacSystemFont,\
+            \ 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\" href=\"https://fop.davidshekunts.ru\"\
+            >(&lambda;)&nbsp;Функционально Ориентированное Программирование (ФОП)</a><span style=\"font-family: -apple-system,\
+            \ BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"\
+            > </span></li>\n<li><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,\
+            \ Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">Методичка по backend-разработке </span><a style=\"\
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica\
+            \ Neue', sans-serif;\" href=\"https://fdd.davidshekunts.ru\">Fatigue Driven Development (FDD)</a><span style=\"\
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica\
+            \ Neue', sans-serif;\">.</span></li>\n</ul>"
+    gitHub: Dionid
+    habr: Dionid
+  - id: 3156
+    photoFileName: 3156.jpg
+    photoUpdatedAt: "2024-03-14T15:02:50Z"
+    name:
+      - {language: en, text: "Alexander Shinkarev"}
+      - {language: ru, text: "Александр Шинкарев"}
+    companyIds: [1078]
+    bio:
+      - {language: ru, text: "<p>Профессионально занимается разработкой 12 лет.&nbsp;В начале карьеры разрабатывал ПО в Byndyusoft,\
+            \ позднее стал тимлидом в проектах для Deloitte и Nielsen. Сейчас руководит IT-компанией Tourmaline Core и пре\
+            подает в Южно-Уральском государственном университете. Увлечен созданием культуры развития людей в IT.</p>"}
+  - id: 3157
+    photoFileName: 3157.jpg
+    photoUpdatedAt: "2024-03-26T08:11:44Z"
+    name:
+      - {language: en, text: "Kirill Morozov"}
+      - {language: ru, text: "Кирилл Морозов"}
+    companyIds: [567]
+    bio:
+      - {language: ru, text: "<p>Основатель трех стартапов с двумя успешными выходами. Поработал менеджером среднего звена\
+            \ в маркетинге двух крупных компаний. Дважды создавал бирюзовые компании. Руководит программой лояльности в ГК\
+            \ Юзтех, повысив вовлеченность сотрудников. Активный участник профильных мероприятий и автор статей по управле\
+            нию персоналом.</p>"}
+  - id: 3158
+    photoFileName: 3158.jpg
+    photoUpdatedAt: "2024-03-26T08:17:49Z"
+    name:
+      - {language: en, text: "Dmitry Anikin"}
+      - {language: ru, text: "Дмитрий Аникин"}
+    companyIds: [635]
+    bio:
+      - {language: ru, text: "<p>Магистр прикладной математики и информатики. Более 5 лет работает в сфере анализа данных\
+            . Занимается полным жизненным циклом проектов с применением машинного обучения.</p>"}
+  - id: 3159
+    photoFileName: 3159.jpg
+    photoUpdatedAt: "2024-03-15T07:29:12Z"
+    name:
+      - {language: en, text: "Ainur Gainetdinov"}
+      - {language: ru, text: "Айнур Гайнетдинов"}
+    companyIds: [1238]
+    bio:
+      - language: ru
+        text: "<p>Разработчик искусственного интеллекта и тимлид отдела исследований и разработки в международной компании\
+            \ VicMan. Разработчик приложения для редактирования лиц с помощью ИИ ToonMe, которое стало одним из мировых ли\
+            деров с 260 млн загрузок по всему миру. Проводил судейство официального чемпионата России и чемпионата мира по\
+            \ спортивному программированию с участниками из 16 стран, организованному Минспортом и Федерацией спортивного\
+            \ программирования.</p>\n<p>Пишет научные статьи, которые можно почитать в журналах ВАК и на платформах <a href=\"\
+            https://medium.com/@imoon_light\">Medium</a> и <a href=\"https://hackernoon.com/how-an-ai-understands-scenes-panoptic-scene-graph-generation\"\
+            >HackerNoon</a>. Лауреат премии &laquo;Время инноваций 2023&raquo; в категории &laquo;Искусственный интеллект\
+            &raquo;.</p>"
+    twitter: moon_light699
+  - id: 3160
+    photoFileName: 3160.jpg
+    photoUpdatedAt: "2024-03-13T09:23:56Z"
+    name:
+      - {language: en, text: "Lev Nazarov"}
+      - {language: ru, text: "Лев Назаров"}
+    companyIds: [814]
+    bio:
+      - {language: ru, text: "<p>Руководитель Android-сообщества в Почтатехе, консультант по разработке, ментор. 5 лет опы\
+            та в Android/Backend/DevOps, 2 неудачных стартапа. Ex-Wildberries, ex-Microsoft.</p>"}
+    gitHub: leffsu
+    habr: leffsu
+  - id: 3161
+    photoFileName: 3161.jpg
+    photoUpdatedAt: "2024-03-21T14:26:19Z"
+    name:
+      - {language: en, text: "Nikolay Laptev"}
+      - {language: ru, text: "Николай Лаптев"}
+    companyIds: [1239]
+    bio:
+      - {language: ru, text: "CTO, архитектор и предприниматель </p><p>15+ лет в IT. Проработал почти на всех позициях, св\
+            язанных с разработкой. Работал с различными бизнес областями, включая банкинг, авиацию, биоинформатику, ритейл\
+            , образование."}
+    twitter: NickLaptev
+    gitHub: laptevn
+  - id: 3162
+    photoFileName: 3162.jpg
+    photoUpdatedAt: "2024-02-22T11:52:54Z"
+    name:
+      - {language: en, text: "Georgiy Mogelashvili"}
+      - {language: ru, text: "Георгий Могелашвили"}
+    companyIds: [1240]
+    bio:
+      - {language: ru, text: "<p>В ИТ более 15 лет. Начинал как простой разработчик и за это время поработал в компаниях р\
+            азной величины и разного рода деятельности, от нонпрофита до кровавого энтерпрайза с госзаказчиками. Управлял\
+            \ командами в амстердамском офисе Booking.com, распределенными командами в Shopify. Создал и развивает проект\
+            \ <a href=\"https://getmentor.dev/\">GetMentor.dev</a>.</p>"}
+    twitter: glamcoder
+    gitHub: glamcoder
+    habr: glamcoder
+  - id: 3163
+    photoFileName: 3163.jpg
+    photoUpdatedAt: "2024-02-08T14:14:40Z"
+    name:
+      - {language: en, text: "Kirill Mokevnin"}
+      - {language: ru, text: "Кирилл Мокевнин"}
+    companyIds: [1241]
+    bio:
+      - language: ru
+        text: "<p><span style=\"font-weight: 400;\">Сооснователь онлайн-школы программирования Хекслет.&nbsp;</span></p>\n\
+            <p><span style=\"font-weight: 400;\">Программирует с 2007 года, прошел путь от разработчика до технического ди\
+            ректора. Разрабатывал ПО в Skype и UNDEV, управлял командами, состоящими из более 50 разработчиков. Лауреат пр\
+            емии HighLoad++ 2019 за вклад в развитие экосистемы ИТ. </span></p>"
+    twitter: mokevnin
+    gitHub: mokevnin
+    habr: toxicmt
+  - id: 3164
+    photoFileName: 3164.jpg
+    photoUpdatedAt: "2024-03-14T15:06:42Z"
+    name:
+      - {language: en, text: "Alexander Byndyu"}
+      - {language: ru, text: "Александр Бындю"}
+    companyIds: [1152]
+    bio:
+      - {language: ru, text: "<p>Автор книги &laquo;Антихрупкость в IT&raquo; и метода &laquo;Карта гипотез&raquo;. Владел\
+            ец IT-компании, IT-архитектор, методолог, ментор, преподаватель.</p>"}
+    twitter: alexanderbyndyu
+    gitHub: AlexanderByndyu
+    habr: AlexanderByndyu

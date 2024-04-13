@@ -2651,5 +2651,9 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("GoFunc 2024", null, List.of(24L)),
 //                        Set.of("Открытие конференции GoFunc 2024", "Открытие. 2 день", "Закрытие конференции GoFunc 2024")));
+//        loadTalksSpeakersEvent(Conference.TECH_TRAIN, LocalDate.of(2024, 4, 6), "2024 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("TechTrain 2024 Spring", null, List.of(24L)),
+//                        Set.of("Открытие фестиваля TechTrain 2024 Spring", "Закрытие фестиваля TechTrain 2024 Spring")));
     }
 }

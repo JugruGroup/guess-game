@@ -1499,6 +1499,12 @@ events:
       - {language: en, text: "https://techtrain.ru/archive/2023 Autumn/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLmJD_ICvgPy3Av7kYuY57b8aapX5Q5mjm
     talkIds: [4695, 4696, 4697, 4698, 4699, 4700, 4701, 4702, 4703, 4704, 4705]
+  - eventTypeId: 12
+    name:
+      - {language: en, text: "TechTrain 2024 Spring"}
+    days:
+      - {startDate: "2024-04-06", endDate: "2024-04-06", placeId: 24}
+    talkIds: [5321, 5322, 5323, 5324, 5325, 5326, 5327, 5328, 5329, 5330, 5331, 5332, 5333, 5334, 5335, 5336, 5337]
   # JUG.MSK
   - eventTypeId: 13
     name:
