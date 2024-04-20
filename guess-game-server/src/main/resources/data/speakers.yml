@@ -317,6 +317,7 @@ speakers:
             щества, ведет курсы, выступает на конференциях. Java Champion."
     twitter: RMehmandarov
     gitHub: mehmandarov
+    javaChampion: true
   - id: 16
     photoFileName: 0016.jpg
     name:
@@ -327,6 +328,7 @@ speakers:
             \ free platform for language development."}
     twitter: headius
     gitHub: headius
+    javaChampion: true
   - id: 17
     photoFileName: 0017.jpg
     name:
@@ -679,6 +681,7 @@ speakers:
     twitter: jbaruch
     gitHub: jbaruch
     habr: jbaruch
+    javaChampion: true
   - id: 36
     photoFileName: 0036.jpg
     photoUpdatedAt: "2022-03-31T19:06:46Z"
@@ -800,6 +803,7 @@ speakers:
             \ from the Royal Institute of Technology in Stockholm."}
     twitter: hirt
     gitHub: hirt
+    javaChampion: true
   - id: 43
     photoFileName: 0043.jpg
     name:
@@ -891,6 +895,7 @@ speakers:
             \ products) Sébastien likes advocating his passion through different conferences (Devoxx, JUDCon, JavaOne, SpringOne)."}
     twitter: sebi2706
     gitHub: sebastienblanc
+    javaChampion: true
   - id: 49
     photoFileName: 0049.jpg
     photoUpdatedAt: 2022-10-25T11:21:55Z[UTC]
@@ -1026,6 +1031,7 @@ speakers:
             \ done most of the implementations to support the Java 9+ features."}
     twitter: rfscholte
     gitHub: rfscholte
+    javaChampion: true
   - id: 58
     photoFileName: 0058.jpg
     photoUpdatedAt: 2022-03-31T19:06:12Z[UTC]
@@ -1282,6 +1288,7 @@ speakers:
             \ the open source work that led to Jenkins."
     twitter: kohsukekawa
     gitHub: kohsuke
+    javaChampion: true
   - id: 73
     photoFileName: 0073.jpg
     photoUpdatedAt: 2017-03-13T15:42:22.540Z[UTC]
@@ -1606,6 +1613,7 @@ speakers:
             \ technologies for application development. You can find him on Twitter @brunoborges."}
     twitter: brunoborges
     gitHub: brunoborges
+    javaChampion: true
   - id: 93
     photoFileName: 0093.jpg
     name:
@@ -1618,6 +1626,7 @@ speakers:
             \ messaging."}
     twitter: springjuergen
     gitHub: jhoeller
+    javaChampion: true
   - id: 94
     photoFileName: 0094.jpg
     photoUpdatedAt: 2020-03-16T13:25:25.735Z[UTC]
@@ -1810,6 +1819,7 @@ speakers:
             \ has authored over 10 technical papers and a number of technical patents."}
     twitter: sanhong_li
     gitHub: alijvm
+    javaChampion: true
   - id: 106
     photoFileName: 0106.jpg
     photoUpdatedAt: 2019-06-19T09:29:55.174Z[UTC]
@@ -1854,6 +1864,7 @@ speakers:
             \ through his blog at http://branchandbound.net, and also as a [Pluralsight instructor](https://bit.ly/sander-ps)."}
     twitter: Sander_Mak
     gitHub: sandermak
+    javaChampion: true
   - id: 108
     photoFileName: 0108.jpg
     name:
@@ -1999,6 +2010,7 @@ speakers:
             \ JavaZone, QCon, JAX, etc."}
     twitter: axelfontaine
     gitHub: axelfontaine
+    javaChampion: true
   - id: 117
     photoFileName: 0117.jpg
     name:
@@ -2012,6 +2024,7 @@ speakers:
             \ world domination, Nitsan enjoys pinnacoladas and getting caught in the rain."
     twitter: nitsanw
     gitHub: nitsanw
+    javaChampion: true
   - id: 118
     photoFileName: 0118.jpg
     name:
@@ -2463,6 +2476,7 @@ speakers:
             \ interception systems."}
     twitter: giltene
     gitHub: giltene
+    javaChampion: true
   - id: 148
     photoFileName: 0148.jpg
     photoUpdatedAt: 2020-03-16T08:18:29.020Z[UTC]
@@ -2953,6 +2967,7 @@ speakers:
             \ when he is not cutting code to make systems better."
     twitter: mjpt777
     gitHub: mjpt777
+    javaChampion: true
   - id: 181
     photoFileName: 0181.jpg
     name:
@@ -3006,6 +3021,7 @@ speakers:
             аборатории алгоритмической биологии Академического университета. Сейчас работает в компании Sidenis."}
     twitter: yakov_sirotkin
     gitHub: YakovSirotkin
+    javaChampion: true
   - id: 186
     photoFileName: 0186.jpg
     name:
@@ -3053,6 +3069,7 @@ speakers:
             \ Press).\n\nЯков является лидером Princeton Java Users Group."
     twitter: yfain
     gitHub: yfain
+    javaChampion: true
   - id: 190
     photoFileName: 0190.jpg
     name:
@@ -3066,6 +3083,7 @@ speakers:
             \ working for Hazelcast."
     twitter: noctarius2k
     gitHub: noctarius
+    javaChampion: true
   - id: 191
     photoFileName: 0191.jpg
     photoUpdatedAt: 2020-09-21T09:10:19.398Z[UTC]
@@ -3093,6 +3111,7 @@ speakers:
             \ on the iJUG e.V. As a Java Champion and former ACE Director he is well known in the community."}
     twitter: myfear
     gitHub: myfear
+    javaChampion: true
   - id: 193
     photoFileName: 0193.jpg
     name:
@@ -3149,6 +3168,7 @@ speakers:
             \ and author of \"Mastering Lambdas: Java Programming in a Multicore World\" (Oracle Press, forthcoming)."}
     twitter: MauriceNaftalin
     gitHub: MauriceNaftalin
+    javaChampion: true
   - id: 198
     photoFileName: 0198.jpg
     name:
@@ -3192,6 +3212,7 @@ speakers:
     companyIds: [299]
     twitter: kcpeppe
     gitHub: kcpeppe
+    javaChampion: true
   - id: 202
     photoFileName: 0202.jpg
     photoUpdatedAt: 2022-10-18T10:27:21Z[UTC]
@@ -3549,6 +3570,7 @@ speakers:
             \ than 20 patents."
     twitter: cliff_click
     gitHub: cliffclick
+    javaChampion: true
   - id: 234
     photoFileName: 0234.jpg
     photoUpdatedAt: 2022-04-12T13:42:31Z[UTC]
@@ -3678,6 +3700,7 @@ speakers:
             \ despite the product centric title, has been praised as the best book ever written on JVM internals."
     twitter: lagergren
     gitHub: lagergren
+    javaChampion: true
   - id: 244
     photoFileName: 0244.jpg
     name:
@@ -8776,6 +8799,7 @@ speakers:
             \ he helps \nothers, blogs, records videos, writes, and tweets as well."
     twitter: davsclaus
     gitHub: davsclaus
+    javaChampion: true
   - id: 590
     photoFileName: 0590.jpg
     name:
@@ -13907,6 +13931,7 @@ speakers:
             \ detour into Smalltalk development."}
     twitter: DanHeidinga
     gitHub: DanHeidinga
+    javaChampion: true
   - id: 956
     photoFileName: 0956.jpg
     name:
@@ -13934,6 +13959,7 @@ speakers:
             \ PaaS, Mobile, and IoT."
     twitter: burrsutter
     gitHub: burrsutter
+    javaChampion: true
   - id: 958
     photoFileName: 0958.jpg
     name:
@@ -13962,6 +13988,7 @@ speakers:
             \ in Hamburg, Germany."}
     twitter: gunnarmorling
     gitHub: gunnarmorling
+    javaChampion: true
   - id: 960
     photoFileName: 0960.jpg
     name:
@@ -13989,6 +14016,7 @@ speakers:
             \ web network protocols (HTTP, WebSocket, SPDY, HTTP/2) and in high performance JVM tuning."
     twitter: simonebordet
     gitHub: sbordet
+    javaChampion: true
   - id: 962
     photoFileName: 0962.jpg
     name:
@@ -14011,7 +14039,9 @@ speakers:
             \ of invokedynamic introduces in Java 7. Helped to create the specifications of lambdas (Java 8), modules (Java\
             \ 9) and constant dynamic (Java 11). Currently working to deliver pattern matching (project Amber) and inline\
             \ types (project Valhalla) to Java."}
+    twitter: RemiForaxOff
     gitHub: forax
+    javaChampion: true
   - id: 964
     photoFileName: 0964.jpg
     photoUpdatedAt: 2020-02-18T12:45:09.533Z[UTC]
@@ -14047,6 +14077,7 @@ speakers:
             \ computer games and spends time with family."}
     twitter: radcortez
     gitHub: radcortez
+    javaChampion: true
   - id: 966
     photoFileName: 0966.jpg
     name:
@@ -14072,6 +14103,7 @@ speakers:
             \ and a distributed configuration repository Central Dogma, to facilitate the adoption of microservice architecture."}
     twitter: trustin
     gitHub: trustin
+    javaChampion: true
   - id: 968
     photoFileName: 0968.jpg
     name:
@@ -17308,6 +17340,8 @@ speakers:
     bio:
       - {language: en, text: "The father of Java, distinguished engineer at Amazon Web Services."}
     twitter: errcraft
+    gitHub: JamesGosling
+    javaChampion: true
   - id: 1217
     photoFileName: 1217.jpg
     photoUpdatedAt: 2020-03-16T09:08:44.557Z[UTC]
@@ -17408,6 +17442,7 @@ speakers:
             \ published Thinking Architecturally and Responsible Microservices available as a free download from VMware."}
     twitter: ntschutta
     gitHub: ntschutta
+    javaChampion: true
   - id: 1223
     photoFileName: 1223.jpg
     photoUpdatedAt: 2022-05-23T08:03:55Z[UTC]
@@ -18496,6 +18531,7 @@ speakers:
             \ microservices, continuous delivery in the 21st century, and Java."}
     twitter: alexsotob
     gitHub: lordofthejars
+    javaChampion: true
   - id: 1309
     photoFileName: 1309.jpg
     photoUpdatedAt: 2020-06-26T15:57:36.255Z[UTC]
@@ -21422,6 +21458,7 @@ speakers:
             \ available free of charge at https://books.japila.pl/."}
     twitter: jaceklaskowski
     gitHub: jaceklaskowski
+    javaChampion: true
   - id: 1521
     photoFileName: 1521.jpg
     photoUpdatedAt: 2020-12-03T08:25:30.948Z[UTC]
@@ -21587,6 +21624,7 @@ speakers:
             \ Group (CJUG), as well as a co-organizer for several IBM-sponsored meetup groups in the Greater Chicago area."
     twitter: mgrygles
     gitHub: mgrygles
+    javaChampion: true
   - id: 1531
     photoFileName: 1531.jpg
     name:
@@ -21687,6 +21725,7 @@ speakers:
             \ STEM and especially Technology careers."
     twitter: gracejansen27
     gitHub: GraceJansen
+    javaChampion: true
   - id: 1537
     photoFileName: 1537.jpg
     name:
@@ -25299,6 +25338,7 @@ speakers:
             \ Vert.x, Quarkus and SmallRye Mutiny projects."}
     twitter: jponge
     gitHub: jponge
+    javaChampion: true
   - id: 1779
     photoFileName: 1779.jpg
     photoUpdatedAt: 2021-09-14T13:04:03.727Z[UTC]
@@ -25419,6 +25459,7 @@ speakers:
             \ and Apache Cassandra. Mark is also is the project lead of the Lettuce Redis driver and R2DBC spec lead."}
     twitter: mp911de
     gitHub: mp911de
+    javaChampion: true
   - id: 1789
     photoFileName: 1789.jpg
     photoUpdatedAt: 2021-10-25T13:06:00.571Z[UTC]
@@ -25448,6 +25489,7 @@ speakers:
             \ GC and the Lilliput project."}
     twitter: rkennke
     gitHub: rkennke
+    javaChampion: true
   - id: 1791
     photoFileName: 1791.jpg
     photoUpdatedAt: 2021-08-25T10:18:37.007Z[UTC]
@@ -26810,6 +26852,7 @@ speakers:
             \ in Switzerland"}
     twitter: simas_ch
     gitHub: simasch
+    javaChampion: true
   - id: 1881
     photoFileName: 1881.jpg
     photoUpdatedAt: 2021-10-14T15:16:45.006Z[UTC]
@@ -27265,6 +27308,7 @@ speakers:
             \ @cote in Twitter."}
     twitter: cote
     gitHub: cote
+    javaChampion: true
   - id: 1916
     photoFileName: 1916.jpg
     photoUpdatedAt: 2021-10-19T11:53:17.587Z[UTC]
