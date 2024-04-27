@@ -219,6 +219,7 @@
         "nameColumn": "Name",
         "topicNameColumn": "Topic",
         "startDateColumn": "Start date",
+        "endDateColumn": "End date",
         "ageColumn": "Age, years",
         "durationColumn": "Duration, days",
         "eventsColumn": "Events",
@@ -235,6 +236,7 @@
       "table": {
         "nameColumn": "Name",
         "startDateColumn": "Start date",
+        "endDateColumn": "End date",
         "durationColumn": "Duration, days",
         "talksColumn": "Talks",
         "speakersColumn": "Speakers",

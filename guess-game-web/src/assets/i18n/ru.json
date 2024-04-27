@@ -219,6 +219,7 @@
         "nameColumn": "Наименование",
         "topicNameColumn": "Тема",
         "startDateColumn": "Начальная дата",
+        "endDateColumn": "Конечная дата",
         "ageColumn": "Возраст, лет",
         "durationColumn": "Длительность, дней",
         "eventsColumn": "Событий",
@@ -235,6 +236,7 @@
       "table": {
         "nameColumn": "Наименование",
         "startDateColumn": "Начальная дата",
+        "endDateColumn": "Конечная дата",
         "durationColumn": "Длительность, дней",
         "talksColumn": "Докладов",
         "speakersColumn": "Спикеров",

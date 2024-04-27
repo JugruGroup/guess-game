@@ -72,6 +72,10 @@
               {{'statistics.events.table.startDateColumn' | translate}}
               <p-sortIcon [field]="'startDate'"></p-sortIcon>
             </th>
+            <th class="text-center" [pSortableColumn]="'endDate'" pResizableColumn>
+              {{'statistics.events.table.endDateColumn' | translate}}
+              <p-sortIcon [field]="'endDate'"></p-sortIcon>
+            </th>
             <th class="text-center" [pSortableColumn]="'duration'" pResizableColumn>
               {{'statistics.events.table.durationColumn' | translate}}
               <p-sortIcon [field]="'duration'"></p-sortIcon>
@@ -107,6 +111,7 @@
               </a>
             </td>
             <td class="text-center">{{eventMetrics.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{eventMetrics.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
             <td class="text-center">{{eventMetrics.duration | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventMetrics.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventMetrics.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
@@ -119,6 +124,7 @@
           <tr>
             <td colspan="2">{{'common.table.totalsText' | translate}}</td>
             <td class="text-center">{{eventStatistics.totals?.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{eventStatistics.totals?.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
             <td class="text-center">{{eventStatistics.totals?.duration | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventStatistics.totals?.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{eventStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
