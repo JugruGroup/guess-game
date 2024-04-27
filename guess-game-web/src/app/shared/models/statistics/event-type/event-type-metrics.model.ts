@@ -7,6 +7,7 @@ export class EventTypeMetrics implements SortableEventTypeMetrics {
     public conference?: boolean,
     public logoFileName?: string,
     public startDate?: Date,
+    public endDate?: Date,
     public age?: number,
     public duration?: number,
     public eventsQuantity?: number,

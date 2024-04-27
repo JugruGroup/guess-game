@@ -4,6 +4,7 @@ export class EventMetrics {
     public name?: string,
     public eventTypeLogoFileName?: string,
     public startDate?: Date,
+    public endDate?: Date,
     public duration?: number,
     public talksQuantity?: number,
     public speakersQuantity?: number,

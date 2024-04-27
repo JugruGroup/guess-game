@@ -51,7 +51,7 @@ import { CompanyComponent } from './modules/information/companies/company.compon
 import { CompaniesListComponent } from './modules/information/companies/companies-list.component';
 import { CompaniesSearchComponent } from './modules/information/companies/companies-search.component';
 import { EventTypeStatisticsComponent } from './modules/information/statistics/event-type/event-type-statistics.component';
-import { EventStatisticsComponent } from './modules/information/statistics/olap/event/event-statistics.component';
+import { EventStatisticsComponent } from './modules/information/statistics/event/event-statistics.component';
 import { SpeakerStatisticsComponent } from './modules/information/statistics/speaker/speaker-statistics.component';
 import { CompanyStatisticsComponent } from './modules/information/statistics/company/company-statistics.component';
 import { OlapStatisticsComponent } from './modules/information/statistics/olap/olap-statistics.component';

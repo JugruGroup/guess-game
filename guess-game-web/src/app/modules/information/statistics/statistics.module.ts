@@ -20,7 +20,7 @@ import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
 import { MessageModule } from '../../message/message.module';
 import { EventTypeStatisticsComponent } from './event-type/event-type-statistics.component';
-import { EventStatisticsComponent } from './olap/event/event-statistics.component';
+import { EventStatisticsComponent } from './event/event-statistics.component';
 import { SpeakerStatisticsComponent } from './speaker/speaker-statistics.component';
 import { CompanyStatisticsComponent } from './company/company-statistics.component';
 import { OlapStatisticsComponent } from './olap/olap-statistics.component';

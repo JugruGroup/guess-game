@@ -10,18 +10,24 @@ import java.util.Objects;
  */
 public abstract class AbstractEventMetrics extends EventTypeEventMetrics {
     private final LocalDate startDate;
+    private final LocalDate endDate;
     private final long duration;
 
-    protected AbstractEventMetrics(LocalDate startDate, long duration, EventTypeEventMetrics metrics) {
+    protected AbstractEventMetrics(LocalDate startDate, LocalDate endDate, long duration, EventTypeEventMetrics metrics) {
         super(metrics.getTalksQuantity(), metrics.getSpeakersQuantity(), metrics.getCompaniesQuantity(),
                 metrics.getJavaChampionsQuantity(), metrics.getMvpsQuantity());
 
         this.startDate = startDate;
+        this.endDate = endDate;
         this.duration = duration;
     }
 
     public LocalDate getStartDate() {
         return startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
     }
 
     public long getDuration() {
@@ -35,18 +41,20 @@ public abstract class AbstractEventMetrics extends EventTypeEventMetrics {
         if (!super.equals(o)) return false;
         AbstractEventMetrics that = (AbstractEventMetrics) o;
         return duration == that.duration &&
-                Objects.equals(startDate, that.startDate);
+                Objects.equals(startDate, that.startDate) &&
+                Objects.equals(endDate, that.endDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), startDate, duration);
+        return Objects.hash(super.hashCode(), startDate, endDate, duration);
     }
 
     @Override
     public String toString() {
         return "AbstractEventMetrics{" +
                 "startDate=" + startDate +
+                ", endDate=" + endDate +
                 ", duration=" + duration +
                 ", speakersQuantity=" + getSpeakersQuantity() +
                 ", companiesQuantity=" + getCompaniesQuantity() +

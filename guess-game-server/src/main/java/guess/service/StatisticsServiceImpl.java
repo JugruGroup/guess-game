@@ -52,6 +52,7 @@ public class StatisticsServiceImpl implements StatisticsService {
         List<EventTypeMetrics> eventTypeMetricsList = new ArrayList<>();
         var currentLocalDateTime = LocalDateTime.now(ZoneId.of("UTC"));
         LocalDate totalsStartDate = null;
+        LocalDate totalsEndDate = null;
         long totalsAge = 0;
         long totalsDuration = 0;
         long totalsEventsQuantity = 0;
@@ -62,6 +63,7 @@ public class StatisticsServiceImpl implements StatisticsService {
         for (EventType eventType : eventTypes) {
             // Event type metrics
             LocalDate eventTypeStartDate = null;
+            LocalDate eventTypeEndDate = null;
             ZoneId eventTypeZoneId = null;
             long eventTypeDuration = 0;
             long eventTypeTalksQuantity = 0;
@@ -70,10 +72,15 @@ public class StatisticsServiceImpl implements StatisticsService {
 
             for (Event event : eventType.getEvents()) {
                 LocalDate eventStartDate = event.getFirstStartDate();
+                LocalDate eventEndDate = event.getLastEndDate();
 
                 if ((eventTypeStartDate == null) || eventStartDate.isBefore(eventTypeStartDate)) {
                     eventTypeStartDate = eventStartDate;
                     eventTypeZoneId = event.getFinalTimeZoneId();
+                }
+
+                if ((eventTypeEndDate == null) || eventEndDate.isAfter(eventTypeEndDate)) {
+                    eventTypeEndDate = eventEndDate;
                 }
 
                 eventTypeDuration += event.getDuration();
@@ -101,6 +108,7 @@ public class StatisticsServiceImpl implements StatisticsService {
             eventTypeMetricsList.add(new EventTypeMetrics(
                     eventType,
                     eventTypeStartDate,
+                    eventTypeEndDate,
                     eventTypeAge,
                     eventTypeDuration,
                     eventType.getEvents().size(),
@@ -116,6 +124,11 @@ public class StatisticsServiceImpl implements StatisticsService {
             if ((eventTypeStartDate != null) &&
                     ((totalsStartDate == null) || eventTypeStartDate.isBefore(totalsStartDate))) {
                 totalsStartDate = eventTypeStartDate;
+            }
+
+            if ((eventTypeEndDate != null) &&
+                    ((totalsEndDate == null) || eventTypeEndDate.isAfter(totalsEndDate))) {
+                totalsEndDate = eventTypeEndDate;
             }
 
             if (totalsAge < eventTypeAge) {
@@ -141,6 +154,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                 new EventTypeMetrics(
                         new EventType(),
                         totalsStartDate,
+                        totalsEndDate,
                         totalsAge,
                         totalsDuration,
                         totalsEventsQuantity,
@@ -186,6 +200,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                 .toList();
         List<EventMetrics> eventMetricsList = new ArrayList<>();
         LocalDate totalsStartDate = null;
+        LocalDate totalsEndDate = null;
         long totalsDuration = 0;
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
@@ -215,10 +230,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                     .filter(Speaker::isAnyMvp)
                     .count();
             LocalDate eventStartDate = event.getFirstStartDate();
+            LocalDate eventEndDate = event.getLastEndDate();
 
             eventMetricsList.add(new EventMetrics(
                     event,
                     eventStartDate,
+                    eventEndDate,
                     eventDuration,
                     new EventTypeEventMetrics(eventTalksQuantity,
                             eventSpeakers.size(),
@@ -230,6 +247,10 @@ public class StatisticsServiceImpl implements StatisticsService {
             // Totals metrics
             if ((totalsStartDate == null) || eventStartDate.isBefore(totalsStartDate)) {
                 totalsStartDate = eventStartDate;
+            }
+
+            if ((totalsEndDate == null) || eventEndDate.isAfter(totalsEndDate)) {
+                totalsEndDate = eventEndDate;
             }
 
             totalsDuration += eventDuration;
@@ -250,6 +271,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                 new EventMetrics(
                         new Event(),
                         totalsStartDate,
+                        totalsEndDate,
                         totalsDuration,
                         new EventTypeEventMetrics(totalsTalksQuantity,
                                 totalsSpeakers.size(),

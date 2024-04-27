@@ -10,16 +10,18 @@ import java.util.Objects;
  */
 public abstract class AbstractEventTypeMetrics extends EventTypeEventMetrics {
     private final LocalDate startDate;
+    private final LocalDate endDate;
     private final long age;
     private final long duration;
     private final long eventsQuantity;
 
-    protected AbstractEventTypeMetrics(LocalDate startDate, long age, long duration, long eventsQuantity,
+    protected AbstractEventTypeMetrics(LocalDate startDate, LocalDate endDate, long age, long duration, long eventsQuantity,
                                        EventTypeEventMetrics metrics) {
         super(metrics.getTalksQuantity(), metrics.getSpeakersQuantity(), metrics.getCompaniesQuantity(),
                 metrics.getJavaChampionsQuantity(), metrics.getMvpsQuantity());
 
         this.startDate = startDate;
+        this.endDate = endDate;
         this.age = age;
         this.duration = duration;
         this.eventsQuantity = eventsQuantity;
@@ -27,6 +29,10 @@ public abstract class AbstractEventTypeMetrics extends EventTypeEventMetrics {
 
     public LocalDate getStartDate() {
         return startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
     }
 
     public long getAge() {
@@ -50,18 +56,20 @@ public abstract class AbstractEventTypeMetrics extends EventTypeEventMetrics {
         return age == that.age &&
                 duration == that.duration &&
                 eventsQuantity == that.eventsQuantity &&
-                Objects.equals(startDate, that.startDate);
+                Objects.equals(startDate, that.startDate) &&
+                Objects.equals(endDate, that.endDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), startDate, age, duration, eventsQuantity);
+        return Objects.hash(super.hashCode(), startDate, endDate, age, duration, eventsQuantity);
     }
 
     @Override
     public String toString() {
         return "AbstractEventTypeMetrics{" +
                 "startDate=" + startDate +
+                ", endDate=" + endDate +
                 ", age=" + age +
                 ", duration=" + duration +
                 ", eventsQuantity=" + eventsQuantity +
