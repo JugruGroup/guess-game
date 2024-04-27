@@ -271,14 +271,16 @@ class StatisticsServiceImplTest {
     }
 
     private EventTypeStatistics createEventTypeStatistics(List<EventTypeMetrics> eventTypeMetricsList,
-                                                          EventType eventType, LocalDate startDate, long age, long duration,
-                                                          long eventsQuantity, long speakersQuantity, long companiesQuantity,
-                                                          long talksQuantity, long javaChampionsQuantity, long mvpsQuantity) {
+                                                          EventType eventType, LocalDate startDate, LocalDate endDate,
+                                                          long age, long duration, long eventsQuantity, long speakersQuantity,
+                                                          long companiesQuantity, long talksQuantity, long javaChampionsQuantity,
+                                                          long mvpsQuantity) {
         return new EventTypeStatistics(
                 eventTypeMetricsList,
                 new EventTypeMetrics(
                         eventType,
                         startDate,
+                        endDate,
                         age,
                         duration,
                         eventsQuantity,
@@ -358,6 +360,7 @@ class StatisticsServiceImplTest {
         EventTypeMetrics eventTypeMetrics0 = new EventTypeMetrics(
                 eventType0,
                 EVENT_START_DATE0,
+                EVENT_END_DATE0,
                 ChronoUnit.YEARS.between(EVENT_START_DATE0, NOW_DATE),
                 2,
                 1,
@@ -366,6 +369,7 @@ class StatisticsServiceImplTest {
         EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
                 eventType1,
                 EVENT_START_DATE1,
+                EVENT_END_DATE1,
                 ChronoUnit.YEARS.between(EVENT_START_DATE1, NOW_DATE),
                 1,
                 1,
@@ -374,6 +378,7 @@ class StatisticsServiceImplTest {
         EventTypeMetrics eventTypeMetrics2 = new EventTypeMetrics(
                 eventType2,
                 EVENT_START_DATE3,
+                EVENT_END_DATE4,
                 ChronoUnit.YEARS.between(EVENT_START_DATE3, NOW_DATE),
                 3,
                 3,
@@ -382,6 +387,7 @@ class StatisticsServiceImplTest {
         EventTypeMetrics eventTypeMetrics3 = new EventTypeMetrics(
                 eventType3,
                 EVENT_START_DATE5,
+                EVENT_END_DATE5,
                 ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
                 1,
                 1,
@@ -389,6 +395,7 @@ class StatisticsServiceImplTest {
         );
         EventTypeMetrics eventTypeMetrics4 = new EventTypeMetrics(
                 eventType4,
+                null,
                 null,
                 0,
                 0,
@@ -399,6 +406,7 @@ class StatisticsServiceImplTest {
         EventTypeStatistics expected0 = createEventTypeStatistics(
                 Collections.emptyList(),
                 new EventType(),
+                null,
                 null,
                 0,
                 0,
@@ -414,6 +422,7 @@ class StatisticsServiceImplTest {
                 List.of(eventTypeMetrics1, eventTypeMetrics3, eventTypeMetrics4),
                 new EventType(),
                 EVENT_START_DATE5,
+                EVENT_END_DATE1,
                 ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
                 2,
                 2,
@@ -428,6 +437,7 @@ class StatisticsServiceImplTest {
                 List.of(eventTypeMetrics0, eventTypeMetrics2),
                 new EventType(),
                 EVENT_START_DATE0,
+                EVENT_END_DATE4,
                 ChronoUnit.YEARS.between(EVENT_START_DATE0, NOW_DATE),
                 5,
                 4,
@@ -442,6 +452,7 @@ class StatisticsServiceImplTest {
                 List.of(eventTypeMetrics0, eventTypeMetrics1, eventTypeMetrics2, eventTypeMetrics3, eventTypeMetrics4),
                 new EventType(),
                 EVENT_START_DATE5,
+                EVENT_END_DATE4,
                 ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
                 7,
                 6,

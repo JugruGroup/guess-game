@@ -88,19 +88,19 @@ class StatisticsControllerTest {
 
         EventTypeMetrics eventTypeMetrics0 = new EventTypeMetrics(
                 eventType0,
-                LocalDate.of(2016, 11, 1), 4, 4, 1,
+                LocalDate.of(2016, 11, 1), LocalDate.of(2016, 11, 1), 4, 4, 1,
                 new EventTypeEventMetrics(21, 20, 10, 3, 0)
         );
 
         EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
                 eventType1,
-                LocalDate.of(2018, 1, 1), 2, 10, 4,
+                LocalDate.of(2018, 1, 1), LocalDate.of(2018, 1, 2), 2, 10, 4,
                 new EventTypeEventMetrics(61, 40, 25, 5, 1)
         );
 
         EventTypeMetrics eventTypeMetricsTotals = new EventTypeMetrics(
                 new EventType(),
-                LocalDate.of(2016, 11, 1), 4, 14, 5,
+                LocalDate.of(2016, 11, 1), LocalDate.of(2018, 1, 2), 4, 14, 5,
                 new EventTypeEventMetrics(82, 60, 30, 7, 1)
         );
 

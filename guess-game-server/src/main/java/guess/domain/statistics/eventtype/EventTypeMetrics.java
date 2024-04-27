@@ -12,9 +12,9 @@ import java.util.Objects;
 public class EventTypeMetrics extends AbstractEventTypeMetrics {
     private final EventType eventType;
 
-    public EventTypeMetrics(EventType eventType, LocalDate startDate, long age, long duration, long eventsQuantity,
+    public EventTypeMetrics(EventType eventType, LocalDate startDate, LocalDate endDate, long age, long duration, long eventsQuantity,
                             EventTypeEventMetrics metrics) {
-        super(startDate, age, duration, eventsQuantity, metrics);
+        super(startDate, endDate, age, duration, eventsQuantity, metrics);
 
         this.eventType = eventType;
     }
@@ -42,6 +42,7 @@ public class EventTypeMetrics extends AbstractEventTypeMetrics {
         return "EventTypeMetrics{" +
                 "eventType=" + eventType +
                 ", startDate=" + getStartDate() +
+                ", endDate=" + getEndDate() +
                 ", age=" + getAge() +
                 ", duration=" + getDuration() +
                 ", eventsQuantity=" + getEventsQuantity() +

@@ -22,7 +22,7 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
 
     public EventTypeMetricsDto(long id, String displayName, boolean conference, String logoFileName,
                                AbstractEventTypeMetrics eventTypeMetrics, String organizerName, String topicName) {
-        super(eventTypeMetrics.getStartDate(), eventTypeMetrics.getAge(), eventTypeMetrics.getDuration(),
+        super(eventTypeMetrics.getStartDate(), eventTypeMetrics.getEndDate(), eventTypeMetrics.getAge(), eventTypeMetrics.getDuration(),
                 eventTypeMetrics.getEventsQuantity(),
                 new EventTypeEventMetrics(eventTypeMetrics.getTalksQuantity(), eventTypeMetrics.getSpeakersQuantity(),
                         eventTypeMetrics.getCompaniesQuantity(), eventTypeMetrics.getJavaChampionsQuantity(),
