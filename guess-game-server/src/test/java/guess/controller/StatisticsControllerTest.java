@@ -142,17 +142,17 @@ class StatisticsControllerTest {
 
         EventMetrics eventMetrics0 = new EventMetrics(
                 event0,
-                LocalDate.of(2016, 11, 1), 4, new EventTypeEventMetrics(21, 20, 10, 3, 0)
+                LocalDate.of(2016, 11, 1), LocalDate.of(2016, 11, 1), 4, new EventTypeEventMetrics(21, 20, 10, 3, 0)
         );
 
         EventMetrics eventMetrics1 = new EventMetrics(
                 event1,
-                LocalDate.of(2018, 1, 1), 10, new EventTypeEventMetrics(61, 40, 25, 5, 1)
+                LocalDate.of(2018, 1, 1), LocalDate.of(2018, 1, 2), 10, new EventTypeEventMetrics(61, 40, 25, 5, 1)
         );
 
         EventMetrics eventMetricsTotals = new EventMetrics(
                 new Event(),
-                LocalDate.of(2016, 11, 1), 14, new EventTypeEventMetrics(81, 60, 30, 5, 1)
+                LocalDate.of(2016, 11, 1), LocalDate.of(2018, 1, 2), 14, new EventTypeEventMetrics(81, 60, 30, 5, 1)
         );
 
         EventStatistics eventStatistics = new EventStatistics(

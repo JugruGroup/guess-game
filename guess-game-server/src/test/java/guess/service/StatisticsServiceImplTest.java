@@ -465,13 +465,14 @@ class StatisticsServiceImplTest {
     }
 
     private EventStatistics createEventStatistics(List<EventMetrics> eventMetricsList, Event event, LocalDate startDate,
-                                                  long duration, long talksQuantity, long speakersQuantity,
+                                                  LocalDate endDate, long duration, long talksQuantity, long speakersQuantity,
                                                   long companiesQuantity, long javaChampionsQuantity, long mvpsQuantity) {
         return new EventStatistics(
                 eventMetricsList,
                 new EventMetrics(
                         event,
                         startDate,
+                        endDate,
                         duration,
                         new EventTypeEventMetrics(talksQuantity,
                                 speakersQuantity,
@@ -536,6 +537,7 @@ class StatisticsServiceImplTest {
         EventMetrics eventMetrics0 = new EventMetrics(
                 event0,
                 EVENT_START_DATE0,
+                EVENT_END_DATE0,
                 2,
                 new EventTypeEventMetrics(1,
                         1,
@@ -546,6 +548,7 @@ class StatisticsServiceImplTest {
         EventMetrics eventMetrics2 = new EventMetrics(
                 event2,
                 EVENT_START_DATE2,
+                EVENT_END_DATE2,
                 1,
                 new EventTypeEventMetrics(1,
                         1,
@@ -556,6 +559,7 @@ class StatisticsServiceImplTest {
         EventMetrics eventMetrics3 = new EventMetrics(
                 event3,
                 EVENT_START_DATE3,
+                EVENT_END_DATE3,
                 1,
                 new EventTypeEventMetrics(0,
                         0,
@@ -566,6 +570,7 @@ class StatisticsServiceImplTest {
         EventMetrics eventMetrics4 = new EventMetrics(
                 event4,
                 EVENT_START_DATE4,
+                EVENT_END_DATE4,
                 1,
                 new EventTypeEventMetrics(0,
                         0,
@@ -576,6 +581,7 @@ class StatisticsServiceImplTest {
         EventMetrics eventMetrics5 = new EventMetrics(
                 event1,
                 EVENT_START_DATE1,
+                EVENT_END_DATE1,
                 1,
                 new EventTypeEventMetrics(1,
                         1,
@@ -586,6 +592,7 @@ class StatisticsServiceImplTest {
         EventMetrics eventMetrics6 = new EventMetrics(
                 event5,
                 EVENT_START_DATE5,
+                EVENT_END_DATE5,
                 1,
                 new EventTypeEventMetrics(0,
                         0,
@@ -598,6 +605,7 @@ class StatisticsServiceImplTest {
                 List.of(eventMetrics0, eventMetrics2, eventMetrics3, eventMetrics4),
                 new Event(),
                 EVENT_START_DATE0,
+                EVENT_END_DATE4,
                 5,
                 2,
                 2,
@@ -611,6 +619,7 @@ class StatisticsServiceImplTest {
                 List.of(eventMetrics0),
                 new Event(),
                 EVENT_START_DATE0,
+                EVENT_END_DATE0,
                 2,
                 1,
                 1,
@@ -624,6 +633,7 @@ class StatisticsServiceImplTest {
         EventStatistics expected2 = createEventStatistics(
                 Collections.emptyList(),
                 new Event(),
+                null,
                 null,
                 0,
                 0,
@@ -639,6 +649,7 @@ class StatisticsServiceImplTest {
                 List.of(eventMetrics2, eventMetrics3, eventMetrics4),
                 new Event(),
                 EVENT_START_DATE3,
+                EVENT_END_DATE4,
                 3,
                 1,
                 1,
@@ -653,6 +664,7 @@ class StatisticsServiceImplTest {
                 Collections.emptyList(),
                 new Event(),
                 null,
+                null,
                 0,
                 0,
                 0,
@@ -666,6 +678,7 @@ class StatisticsServiceImplTest {
                 List.of(eventMetrics5, eventMetrics6),
                 new Event(),
                 EVENT_START_DATE5,
+                EVENT_END_DATE1,
                 2,
                 1,
                 1,
@@ -678,6 +691,7 @@ class StatisticsServiceImplTest {
                 List.of(eventMetrics0, eventMetrics5, eventMetrics2, eventMetrics3, eventMetrics4, eventMetrics6),
                 new Event(),
                 EVENT_START_DATE5,
+                EVENT_END_DATE4,
                 7,
                 3,
                 3,

@@ -200,6 +200,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                 .toList();
         List<EventMetrics> eventMetricsList = new ArrayList<>();
         LocalDate totalsStartDate = null;
+        LocalDate totalsEndDate = null;
         long totalsDuration = 0;
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
@@ -229,10 +230,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                     .filter(Speaker::isAnyMvp)
                     .count();
             LocalDate eventStartDate = event.getFirstStartDate();
+            LocalDate eventEndDate = event.getLastEndDate();
 
             eventMetricsList.add(new EventMetrics(
                     event,
                     eventStartDate,
+                    eventEndDate,
                     eventDuration,
                     new EventTypeEventMetrics(eventTalksQuantity,
                             eventSpeakers.size(),
@@ -244,6 +247,10 @@ public class StatisticsServiceImpl implements StatisticsService {
             // Totals metrics
             if ((totalsStartDate == null) || eventStartDate.isBefore(totalsStartDate)) {
                 totalsStartDate = eventStartDate;
+            }
+
+            if ((totalsEndDate == null) || eventEndDate.isAfter(totalsEndDate)) {
+                totalsEndDate = eventEndDate;
             }
 
             totalsDuration += eventDuration;
@@ -264,6 +271,7 @@ public class StatisticsServiceImpl implements StatisticsService {
                 new EventMetrics(
                         new Event(),
                         totalsStartDate,
+                        totalsEndDate,
                         totalsDuration,
                         new EventTypeEventMetrics(totalsTalksQuantity,
                                 totalsSpeakers.size(),
