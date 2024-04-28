@@ -60,6 +60,16 @@ public class StatisticsServiceImpl implements StatisticsService {
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
         Set<Company> totalsCompanies = new HashSet<>();
+        BiPredicate<LocalDate, LocalDate> targetNullPredicate = (targetLocalDate, sourceLocalDate) -> (targetLocalDate == null);
+        BiPredicate<LocalDate, LocalDate> targetNullOrBeforePredicate = targetNullPredicate
+                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isBefore(targetLocalDate));
+        BiPredicate<LocalDate, LocalDate> targetNullOrAfterPredicate = targetNullPredicate
+                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isAfter(targetLocalDate));
+        BiPredicate<LocalDate, LocalDate> sourceNotNullPredicate = (targetLocalDate, sourceLocalDate) -> (sourceLocalDate != null);
+        BiPredicate<LocalDate, LocalDate> sourceNotNullAndBeforePredicate = sourceNotNullPredicate
+                .and(targetNullOrBeforePredicate);
+        BiPredicate<LocalDate, LocalDate> sourceNotNullAndAfterPredicate = sourceNotNullPredicate
+                .and(targetNullOrAfterPredicate);
 
         for (EventType eventType : eventTypes) {
             // Event type metrics
@@ -70,21 +80,17 @@ public class StatisticsServiceImpl implements StatisticsService {
             long eventTypeTalksQuantity = 0;
             Set<Speaker> eventTypeSpeakers = new HashSet<>();
             Set<Company> eventTypeCompanies = new HashSet<>();
-            BiPredicate<LocalDate, LocalDate> localDateBeforePredicate = (targetLocalDate, sourceLocalDate) ->
-                    (targetLocalDate == null) || sourceLocalDate.isBefore(targetLocalDate);
-            BiPredicate<LocalDate, LocalDate> localDateAfterPredicate = (targetLocalDate, sourceLocalDate) ->
-                    (targetLocalDate == null) || sourceLocalDate.isAfter(targetLocalDate);
 
             for (Event event : eventType.getEvents()) {
                 LocalDate eventStartDate = event.getFirstStartDate();
                 LocalDate eventEndDate = event.getLastEndDate();
 
-                if (localDateBeforePredicate.test(eventTypeStartDate, eventStartDate)) {
+                if (targetNullOrBeforePredicate.test(eventTypeStartDate, eventStartDate)) {
                     eventTypeStartDate = eventStartDate;
                     eventTypeZoneId = event.getFinalTimeZoneId();
                 }
 
-                if (localDateAfterPredicate.test(eventTypeEndDate, eventEndDate)) {
+                if (targetNullOrAfterPredicate.test(eventTypeEndDate, eventEndDate)) {
                     eventTypeEndDate = eventEndDate;
                 }
 
@@ -126,11 +132,11 @@ public class StatisticsServiceImpl implements StatisticsService {
             ));
 
             // Totals metrics
-            if ((eventTypeStartDate != null) && localDateBeforePredicate.test(totalsStartDate, eventTypeStartDate)) {
+            if (sourceNotNullAndBeforePredicate.test(totalsStartDate, eventTypeStartDate)) {
                 totalsStartDate = eventTypeStartDate;
             }
 
-            if ((eventTypeEndDate != null) && localDateAfterPredicate.test(totalsEndDate, eventTypeEndDate)) {
+            if (sourceNotNullAndAfterPredicate.test(totalsEndDate, eventTypeEndDate)) {
                 totalsEndDate = eventTypeEndDate;
             }
 
