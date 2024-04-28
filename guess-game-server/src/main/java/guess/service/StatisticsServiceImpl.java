@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.function.BiPredicate;
 import java.util.stream.Collectors;
 
 /**
@@ -69,17 +70,21 @@ public class StatisticsServiceImpl implements StatisticsService {
             long eventTypeTalksQuantity = 0;
             Set<Speaker> eventTypeSpeakers = new HashSet<>();
             Set<Company> eventTypeCompanies = new HashSet<>();
+            BiPredicate<LocalDate, LocalDate> localDateBeforePredicate = (targetLocalDate, sourceLocalDate) ->
+                    (targetLocalDate == null) || sourceLocalDate.isBefore(targetLocalDate);
+            BiPredicate<LocalDate, LocalDate> localDateAfterPredicate = (targetLocalDate, sourceLocalDate) ->
+                    (targetLocalDate == null) || sourceLocalDate.isAfter(targetLocalDate);
 
             for (Event event : eventType.getEvents()) {
                 LocalDate eventStartDate = event.getFirstStartDate();
                 LocalDate eventEndDate = event.getLastEndDate();
 
-                if ((eventTypeStartDate == null) || eventStartDate.isBefore(eventTypeStartDate)) {
+                if (localDateBeforePredicate.test(eventTypeStartDate, eventStartDate)) {
                     eventTypeStartDate = eventStartDate;
                     eventTypeZoneId = event.getFinalTimeZoneId();
                 }
 
-                if ((eventTypeEndDate == null) || eventEndDate.isAfter(eventTypeEndDate)) {
+                if (localDateAfterPredicate.test(eventTypeEndDate, eventEndDate)) {
                     eventTypeEndDate = eventEndDate;
                 }
 
@@ -121,13 +126,11 @@ public class StatisticsServiceImpl implements StatisticsService {
             ));
 
             // Totals metrics
-            if ((eventTypeStartDate != null) &&
-                    ((totalsStartDate == null) || eventTypeStartDate.isBefore(totalsStartDate))) {
+            if ((eventTypeStartDate != null) && localDateBeforePredicate.test(totalsStartDate, eventTypeStartDate)) {
                 totalsStartDate = eventTypeStartDate;
             }
 
-            if ((eventTypeEndDate != null) &&
-                    ((totalsEndDate == null) || eventTypeEndDate.isAfter(totalsEndDate))) {
+            if ((eventTypeEndDate != null) && localDateAfterPredicate.test(totalsEndDate, eventTypeEndDate)) {
                 totalsEndDate = eventTypeEndDate;
             }
 
