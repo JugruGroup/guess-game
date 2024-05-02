@@ -2781,6 +2781,7 @@ events:
       - {language: en, text: "SnowOne 2024"}
     days:
       - {startDate: "2024-03-01", endDate: "2024-03-02", placeId: 13}
+    youtubeLink: https://www.youtube.com/playlist?list=PLecWId-JT7S48iIjcrFmKfVwufMx3Ce1Q
     talkIds: [5225, 5226, 5227, 5228, 5229, 5230, 5231, 5232, 5233, 5234, 5235, 5236, 5237, 5238, 5239, 5240, 5241, 5242,
         5243]
   # VideoTech
