@@ -358,6 +358,11 @@
     pointer-events: none;
   }
 
+  // Fix menubar button decoration
+  .p-menubar-button:hover {
+    text-decoration: none;
+  }
+
   // Fix active and checked colors
   .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.dropdown-toggle {
     color: #000;
