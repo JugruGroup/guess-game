@@ -4478,3 +4478,35 @@ companies:
       - {language: en, text: Hexlet}
       - {language: ru, text: Хекслет}
     siteLink: https://hexlet.io
+  - id: 1242
+    name:
+      - {language: en, text: "KORE Wireless"}
+    siteLink: https://www.korewireless.com
+  - id: 1243
+    name:
+      - {language: en, text: Itez}
+    siteLink: https://itez.com
+  - id: 1244
+    name:
+      - {language: en, text: "YouTube channel \"Vadik Uglov\""}
+      - {language: ru, text: "YouTube-канал «Вадик Углов»"}
+    siteLink: https://www.youtube.com/@vadikuglov
+  - id: 1245
+    name:
+      - {language: en, text: KTS}
+    siteLink: https://kts.tech
+  - id: 1246
+    name:
+      - {language: en, text: FITGAME}
+    siteLink: https://fitgame.me
+  - id: 1247
+    name:
+      - {language: en, text: Chipsa}
+    siteLink: https://chipsa.ru
+  - id: 1248
+    name:
+      - {language: en, text: EverX}
+    siteLink: http://everx.dev
+  - id: 1249
+    name:
+      - {language: en, text: GIBRelations}

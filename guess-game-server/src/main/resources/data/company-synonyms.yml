@@ -674,7 +674,8 @@ companySynonyms:
     ]
   - name: Uzum
     synonyms: [
-        "Uzum Tezkor"
+        "Uzum Tezkor",
+        "Uzum Technologies"
     ]
   - name: "Vevy Europe"
     synonyms: [
@@ -766,6 +767,8 @@ companySynonyms:
         "Яндекс Такси Технологии",
         Yandex.Toloka,
         Яндекс.Толока,
+        "Yandex Travel",
+        "Яндекс Путешествия",
         "Yandex (Auto.ru)",
         "Яндекс (Авто.ру)",
         "Yandex Practicum",
@@ -799,5 +802,8 @@ companySynonyms:
         Стартап,
         "JMeter Committer",
         "PostgreSQL JDBC maintainer",
-        TatarinFrontend
+        TatarinFrontend,
+        sports,
+        ex-Yandex,
+        ex-Яндекс
     ]
