@@ -60,8 +60,8 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Krasnopresnenskaya Emb., 12, «WTC» Congress Center"}
-      - {language: ru, text: "Краснопресненская наб., 12, Конгресс-центр «ЦМТ»"}
+      - {language: en, text: "Krasnopresnenskaya Emb., 12, WTC Congress Center"}
+      - {language: ru, text: "Краснопресненская наб., 12, Конгресс-центр ЦМТ"}
     mapCoordinates: "55.754203, 37.556388"
   - id: 8
     city:
