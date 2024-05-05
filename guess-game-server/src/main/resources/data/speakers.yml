@@ -45607,6 +45607,8 @@ speakers:
       - {language: ru, text: "<p>Инженерный менеджер на работе, фулстек Linux-админ для души. Автор и ведущий подкастов дл\
             я инженеров и менеджеров. &laquo;Выжимает&raquo; программистов, печет хлеб, печатает на своей клавиатуре.</p>"}
     twitter: softwarevlogger
+    gitHub: nLight
+    habr: nLight
   - id: 3169
     photoFileName: 3169.jpg
     photoUpdatedAt: "2024-02-29T06:16:12Z"
@@ -45620,13 +45622,15 @@ speakers:
       - {language: ru, text: "<p>Руководитель направления в SberDevices, фронтлид, спикер SPB Frontend, PiterCSS, WSD, FrontendConf,\
             \ MODXpo, ITGM.</p>"}
     twitter: realetive
+    gitHub: Realetive
+    habr: Realetive
   - id: 3170
     photoFileName: 3170.jpg
     photoUpdatedAt: "2024-02-12T13:17:06Z"
     name:
       - {language: en, text: "Vsevolod Kochnev"}
       - {language: ru, text: "Всеволод Кочнев"}
-    companyIds: []
+    companyIds: [1250]
     bio:
       - {language: en, text: "Vsevolod is a frontend developer at Sirena Creative Studio, which specialises in the development\
             \ of special projects. He creates interactive and innovative solutions that help clients to realise their ideas\
@@ -45658,6 +45662,8 @@ speakers:
             \ стартапам и заняться продуктовой разработкой. Попал в Qase и разрабатывал там одну из лучших TMS на рынке.</p>\n\
             <p>А уже во ВКонтакте целиком и полностью погрузился в инфраструктуру фронтенда &mdash; в сборку, DX, архитект\
             уру и производительность. Этим сейчас и занимается.</p>"
+    gitHub: pyatyispyatil
+    habr: pyatyispyatil
   - id: 3172
     photoFileName: 3172.jpg
     photoUpdatedAt: "2024-01-09T11:54:20Z"
@@ -45670,6 +45676,7 @@ speakers:
             \ from start to finish. She has over 10 years of experience.</p>"}
       - {language: ru, text: "<p>Руководитель команды разработчиков в блокчейн-проекте. Проектирует архитектуру и разрабат\
             ывает проекты от начала до конца. Опыт работы &mdash; более 10 лет.</p>"}
+    gitHub: waksund
   - id: 3173
     photoFileName: 3173.jpg
     photoUpdatedAt: "2023-12-28T15:40:03Z"
@@ -45683,6 +45690,8 @@ speakers:
       - {language: ru, text: "<p>Разрабатывает веб-платформу в Kaspersky, соорганизатор MoscowJS. Пишет на JS во всех его\
             \ проявлениях, занимается дизайн-системами и system design. В свободное время познает азы видеоподкастов.</p>"}
     twitter: vos3k
+    gitHub: vostrik
+    habr: vostrik
   - id: 3174
     photoFileName: 3174.jpg
     photoUpdatedAt: "2024-02-28T14:43:45Z"
@@ -45710,6 +45719,7 @@ speakers:
             >YouTube-канала</a>. Специализируется на методологии написания текстов песен. Основная задача Вадика &mdash; д\
             онести принципы пошагового сонграйтинга до максимального количества талантливых людей, чтобы в мире было как м\
             ожно больше хороших песен.</p>"}
+    twitter: uglvvdm
   - id: 3176
     photoFileName: 3176.jpg
     photoUpdatedAt: "2024-02-26T09:04:56Z"
@@ -45789,6 +45799,8 @@ speakers:
             \ с ассемблером, залезал в ML на Python. Во фронтенде около трех лет: сейчас в команде Taiga UI Kit, до этого\
             \ полтора года разрабатывал микрофронтенды в Тинькофф Обслуживании. За это время удалось накопить достаточно и\
             нтересный опыт работы с микрофронтендами, которым Герман будет рад поделиться.</p>"}
+    gitHub: mdlufy
+    habr: mdlufy
   - id: 3181
     photoFileName: 3181.jpg
     photoUpdatedAt: 2024-02-08T11:20Z
@@ -45803,6 +45815,8 @@ speakers:
       - {language: ru, text: "<p>Тимлид в отделе рекламных спецпроектов KTS. Специализируется на разработке проектов с нес\
             тандартными игровыми механиками и сложными анимациями. Развивает внутренние инструменты, настраивает процессы\
             \ в команде, менторит младших разработчиков.&nbsp;</p>"}
+    gitHub: n-merkulova
+    habr: nmerk
   - id: 3182
     photoFileName: 3182.jpg
     photoUpdatedAt: "2024-02-19T21:16:17Z"
@@ -45815,6 +45829,7 @@ speakers:
             \ travelling.</p>"}
       - {language: ru, text: "<p>Сейчас занимается скоростью фронтенда SberDevices. ex-Яндекс Маркет. Любит путешествовать\
             .</p>"}
+    gitHub: akhdrv
   - id: 3183
     photoFileName: 3183.jpg
     photoUpdatedAt: "2024-03-31T20:12:22Z"
@@ -45828,6 +45843,8 @@ speakers:
       - {language: ru, text: "С 2017 года — издатель HTML5-игр. Партнер Яндекса, VK. Сотрудничает с HTML5-платформами. Спе\
             циализируется на HTML5-играх с мультиплеером и midcore."}
     twitter: swanrnd
+    gitHub: swanrnd
+    habr: swanrnd
   - id: 3184
     photoFileName: 3184.jpg
     photoUpdatedAt: "2024-01-19T02:24:53Z"
@@ -45844,11 +45861,12 @@ speakers:
             рстает, пишет анимации, &laquo;упарывается&raquo; в производительность рендеринга. В последнее время углубляет\
             ся в WebGL/WebGPU и хочет полностью перейти в эту сферу. В свободное время пишет демки, в основном WebGL.</p>"}
     twitter: PMazhuga
+    gitHub: pavel-mazhuga
   - id: 3185
     photoFileName: 3185.jpg
     photoUpdatedAt: "2024-04-24T14:42:48Z"
     name:
-      - {language: en, text: "Nikita Zyanov"}
+      - {language: en, text: "Nikita Zuyanov"}
       - {language: ru, text: "Никита Зуянов"}
     companyIds: [390]
     bio:
@@ -45858,6 +45876,7 @@ speakers:
       - {language: ru, text: "<p>Фронтенд-разработчик платформы Ozon. Создает инструменты и сервисы, которые помогают друг\
             им разработчикам работать эффективнее. За спиной &mdash; много интересных проектов в геймдеве, финтехе и e-commerce.\
             \ Любит тяжелую музыку, сноубординг и настольные игры.</p>"}
+    gitHub: thelastpride
   - id: 3186
     photoFileName: 3186.jpg
     photoUpdatedAt: "2024-02-28T14:06:12Z"
@@ -45875,6 +45894,7 @@ speakers:
             \ noreferrer\" target=\"_blank\">open source-проект</a>. Любит свободное ПО, системное программирование и изоб\
             ретательство. Выступает на IT-мероприятиях и ведет местное IT-сообщество в Санкт-Петербурге."}
     twitter: mr150_
+    gitHub: mr150
   - id: 3187
     photoFileName: 3187.jpg
     photoUpdatedAt: "2024-02-16T14:30:08Z"
@@ -45887,6 +45907,8 @@ speakers:
             \ Yandex Rent service from scratch. Roman likes to set up near-frontend infrastructure.</p>"}
       - {language: ru, text: "<p>Прошел путь от стажера до руководителя фронтенд-разработки. Запустил Яндекс Аренду. Любит\
             \ заниматься разного рода инфраструктурой около фронтенда.</p>"}
+    gitHub: Pomkaize
+    habr: Pomkaize
   - id: 3188
     photoFileName: 3188.jpg
     photoUpdatedAt: "2024-02-27T15:31:58Z"
@@ -45900,6 +45922,7 @@ speakers:
       - {language: ru, text: "<p>Frontend Tech Lead в Uzum Tezkor, ранее разрабатывал аналитические инструменты для маркет\
             ологов. Очень любит метрики, оптимизации и тесты. Когда появляется свободное время &mdash; пишет pet-проекты и\
             \ путешествует.</p>"}
+    gitHub: MaksimLavrenyuk
   - id: 3189
     photoFileName: 3189.jpg
     photoUpdatedAt: "2024-02-19T14:28:51Z"
@@ -45957,6 +45980,7 @@ speakers:
       - {language: ru, text: "<p>Тимлид команды фронтенда в PT NAD. В разработке с 2007 года. Начинал как фулстек, последн\
             ие 9 лет специализируется на фронтенде и Angular.</p>"}
     twitter: fyzlog
+    gitHub: fyzlog
   - id: 3193
     photoFileName: 3193.jpg
     photoUpdatedAt: "2024-03-01T13:28:40Z"
@@ -45995,6 +46019,7 @@ speakers:
       - {language: ru, text: "<p>Доводит идеи до продукта, отделы до команд, а стартапы до единорогов. Работал в Yugabyte,\
             \ GridGain и других. 13 лет в разработке.</p>"}
     twitter: vitpankin
+    gitHub: vitpankin
   - id: 3195
     photoFileName: 3195.jpg
     photoUpdatedAt: "2024-02-26T18:01:46Z"
@@ -46010,6 +46035,8 @@ speakers:
             \ Cisco Systems, потом сделал небольшой перерыв в 11 лет и отвлекся на рекламную фотографию. Сейчас руководит\
             \ командой, создающей лучший внутренний PaaS в мире.</p>"}
     twitter: salsaly4
+    gitHub: salsaly4
+    habr: salsaly4
   - id: 3196
     photoFileName: 3196.jpg
     photoUpdatedAt: "2024-01-19T11:47:42Z"
@@ -46023,3 +46050,4 @@ speakers:
       - {language: ru, text: "<p>Paul Karol is an American Business speaker living in Russia. He is known as a Russian-Chinese\
             \ relations expert. Paul is currently working a lot with Russian IT and helping them deal with America and other\
             \ Western countries. He specializes in presales to America and passing project interviews in America.</p>"}
+    habr: PaulKarol
