@@ -575,6 +575,10 @@ companySynonyms:
         "SIBUR Digital",
         "СИБУР Диджитал"
     ]
+  - name: Sirena
+    synonyms: [
+        sports
+    ]
   - name: Skyeng
     synonyms: [
         Skeyng
@@ -803,7 +807,6 @@ companySynonyms:
         "JMeter Committer",
         "PostgreSQL JDBC maintainer",
         TatarinFrontend,
-        sports,
         ex-Yandex,
         ex-Яндекс
     ]

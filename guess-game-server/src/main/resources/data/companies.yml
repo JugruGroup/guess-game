@@ -4490,7 +4490,7 @@ companies:
     name:
       - {language: en, text: "YouTube channel \"Vadik Uglov\""}
       - {language: ru, text: "YouTube-канал «Вадик Углов»"}
-    siteLink: https://www.youtube.com/@vadikuglov
+    siteLink: https://www.youtube.com/@VadikUglov
   - id: 1245
     name:
       - {language: en, text: KTS}
@@ -4510,3 +4510,8 @@ companies:
   - id: 1249
     name:
       - {language: en, text: GIBRelations}
+  - id: 1250
+    name:
+      - {language: en, text: Sirena}
+      - {language: ru, text: Сирена}
+    siteLink: https://sirena.sports.ru
