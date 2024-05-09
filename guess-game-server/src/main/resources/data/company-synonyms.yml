@@ -1,154 +1,154 @@
 companySynonyms:
   - name: Aiven
     synonyms: [
-        "Aiven (aiven.io)"
+      "Aiven (aiven.io)"
     ]
   - name: AGIMA
     synonyms: [
-        AGIMA.AI
+      AGIMA.AI
     ]
   - name: "Ak Bars"
     synonyms: [
-        AkBars,
-        "АкБарс Цифровые Технологии"
+      AkBars,
+      "АкБарс Цифровые Технологии"
     ]
   - name: AlexxIT
     synonyms: [
-        "@AlexxIT"
+      "@AlexxIT"
     ]
   - name: Alfa-Bank
     synonyms: [
-        Alfa-Lab,
-        "Alpha Laboratory",
-        "Альфа-Банк: Альфа-Лаборатория"
+      Alfa-Lab,
+      "Alpha Laboratory",
+      "Альфа-Банк: Альфа-Лаборатория"
     ]
   - name: "Align Technology"
     synonyms: [
-        "Align Technology Inc."
+      "Align Technology Inc."
     ]
   - name: "Amazon Web Services"
     synonyms: [
-        AWS
+      AWS
     ]
   - name: "Alibaba Group"
     synonyms: [
-        Alibaba
+      Alibaba
     ]
   - name: "Align Technology"
     synonyms: [
-        "Align Technology Inc"
+      "Align Technology Inc"
     ]
   - name: Arrival
     synonyms: [
-        "Arrival Ltd",
-        "Arrival Robotics"
+      "Arrival Ltd",
+      "Arrival Robotics"
     ]
   - name: Astronomer
     synonyms: [
-        Astronomer.io
+      Astronomer.io
     ]
   - name: "Avast Software"
     synonyms: [
-        AVAST
+      AVAST
     ]
   - name: "Ax-Team"
     synonyms: [
-        AxTeam,
-        "Ax-Team (ex. Accenture)",
-        "АксТим (ex-Accenture)",
-        Accenture
+      AxTeam,
+      "Ax-Team (ex. Accenture)",
+      "АксТим (ex-Accenture)",
+      Accenture
     ]
   - name: "Azul Systems"
     synonyms: [
-        Azul
+      Azul
     ]
   - name: Badoo
     synonyms: [
-        "Badoo Limited",
-        "Badoo (by MagicLab)"
+      "Badoo Limited",
+      "Badoo (by MagicLab)"
     ]
   - name: Bloomberg
     synonyms: [
-        "Bloomberg L.P.",
-        "Bloomberg LP"
+      "Bloomberg L.P.",
+      "Bloomberg LP"
     ]
   - name: CFT
     synonyms: [
-        СFT
+      СFT
     ]
   - name: Careem
     synonyms: [
-        "Careem (UAE)"
+      "Careem (UAE)"
     ]
   - name: "Chronicle Software"
     synonyms: [
-        "Chronicle Software Ltd"
+      "Chronicle Software Ltd"
     ]
   - name: Cloud.ru
     synonyms: [
-        Cloud
+      Cloud
     ]
   - name: "Cisco Systems"
     synonyms: [
-        Cisco
+      Cisco
     ]
   - name: Computas
     synonyms: [
-        Сomputas,
-        "Computas AS"
+      Сomputas,
+      "Computas AS"
     ]
   - name: Confluent
     synonyms: [
-        "Confluent, Inc."
+      "Confluent, Inc."
     ]
   - name: CROC
     synonyms: [
-        KROK,
-        "Croc Code"
+      KROK,
+      "Croc Code"
     ]
   - name: DuckStax
     synonyms: [
-        duckstax.com
+      duckstax.com
     ]
   - name: "Delivery Club"
     synonyms: [
-        "Delivery Club Tech"
+      "Delivery Club Tech"
     ]
   - name: "Dell Technologies"
     synonyms: [
-        "Dell EMC"
+      "Dell EMC"
     ]
   - name: "Deutsche Bank"
     synonyms: [
-        "Deutsche Bank Technology Centre",
-        "Deutsche Bank Technology Center",
-        "Deutsche Bank Tech Center",
-        "Russian Tech Centre Deutsche Bank"
+      "Deutsche Bank Technology Centre",
+      "Deutsche Bank Technology Center",
+      "Deutsche Bank Tech Center",
+      "Russian Tech Centre Deutsche Bank"
     ]
   - name: "Deutsche Telekom"
     synonyms: [
-        "Deutsche Telekom IT Solutions",
-        T-Systems
+      "Deutsche Telekom IT Solutions",
+      T-Systems
     ]
   - name: "Dev Academy"
     synonyms: [
-        angular-academy.com
+      angular-academy.com
     ]
   - name: DINS
     synonyms: [
-        "DINO Systems"
+      "DINO Systems"
     ]
   - name: "Digital Zone"
     synonyms: [
-        DZ
+      DZ
     ]
   - name: dotdigital
     synonyms: [
-        dotmailer
+      dotmailer
     ]
   - name: "DPI.Solutions"
     synonyms: [
-        "DPI Solutions"
+      "DPI Solutions"
     ]
   - name: "Electrolux AB"
     synonyms: [
@@ -156,96 +156,96 @@ companySynonyms:
     ]
   - name: "Emma Technologies"
     synonyms: [
-        Emma
+      Emma
     ]
   - name: "EPAM Systems"
     synonyms: [
-        EPAM
+      EPAM
     ]
   - name: Egeniq
     synonyms: [
-        "Google Developer Expert for Android / Egeniq"
+      "Google Developer Expert for Android / Egeniq"
     ]
   - name: Eyeota
     synonyms: [
-        eyeota.com
+      eyeota.com
     ]
   - name: "Freight One"
     synonyms: [
-        "PGK Digital",
-        "ПГК Диджитал"
+      "PGK Digital",
+      "ПГК Диджитал"
     ]
   - name: Gazpromneft
     synonyms: [
-        Gpn-trade,
-        "Газпромнефть-Региональные продажи"
+      Gpn-trade,
+      "Газпромнефть-Региональные продажи"
     ]
   - name: GitLab
     synonyms: [
-        "GitLab (Previously Fuzzit)"
+      "GitLab (Previously Fuzzit)"
     ]
   - name: GlowByte
     synonyms: [
-        "GlowByte Consulting"
+      "GlowByte Consulting"
     ]
   - name: "Grid Dynamics"
     synonyms: [
-        GridDynamics
+      GridDynamics
     ]
   - name: "GridGain Systems"
     synonyms: [
-        GridGain
+      GridGain
     ]
   - name: HeadHunter
     synonyms: [
-        hh.ru
+      hh.ru
     ]
   - name: "Hibernating Rhinos"
     synonyms: [
-        "Hibernating Rhinos LTD"
+      "Hibernating Rhinos LTD"
     ]
   - name: Huawei
     synonyms: [
-        Excelsior@Huawei,
-        "Huawei Technologies"
+      Excelsior@Huawei,
+      "Huawei Technologies"
     ]
   - name: Hypothesis
     synonyms: [
-        hypothes.is
+      hypothes.is
     ]
   - name: IBM
     synonyms: [
-        "IBM Canada"
+      "IBM Canada"
     ]
   - name: Innotech
     synonyms: [
-        Innotechnum
+      Innotechnum
     ]
   - name: Intel
     synonyms: [
-        "Intel Corporation"
+      "Intel Corporation"
     ]
   - name: "Instituto Superior Técnico"
     synonyms: [
-        IST
+      IST
     ]
   - name: "IT Territory/MY.GAMES"
     synonyms: [
-        "IT Territory/My.Games",
-        "IT Territory/MyGames",
-        "IT Territory (MY.GAMES)"
+      "IT Territory/My.Games",
+      "IT Territory/MyGames",
+      "IT Territory (MY.GAMES)"
     ]
   - name: JavaSpecialists
     synonyms: [
-        JavaSpecialists.eu
+      JavaSpecialists.eu
     ]
   - name: JetBrains
     synonyms: [
-        "JetBrains Research"
+      "JetBrains Research"
     ]
   - name: JFrog
     synonyms: [
-        JFrog/Conan
+      JFrog/Conan
     ]
   - name: JobLeads
     synonyms: [
@@ -253,12 +253,12 @@ companySynonyms:
     ]
   - name: "JUG Ru Group"
     synonyms: [
-        "JUG.ru Group"
+      "JUG.ru Group"
     ]
   - name: Kontur
     synonyms: [
-        "SKB Contur",
-        "СКБ Контур"
+      "SKB Contur",
+      "СКБ Контур"
     ]
   - name: Kronshtadt
     synonyms: [
@@ -272,73 +272,73 @@ companySynonyms:
     ]
   - name: LightSource
     synonyms: [
-        Lightsource.ai
+      Lightsource.ai
     ]
   - name: Lamoda
     synonyms: [
-        "Lamoda Tech",
-        "Lamoda Tech"
+      "Lamoda Tech",
+      "Lamoda Tech"
     ]
   - name: "Mail.ru Group"
     synonyms: [
-        "Mail.ru",
-        "Mail.ru Cloud Solutions"
+      "Mail.ru",
+      "Mail.ru Cloud Solutions"
     ]
   - name: Microsoft
     synonyms: [
-        Microsoft/GitHub
+      Microsoft/GitHub
     ]
   - name: "Mir Plat.Form"
     synonyms: [
-        "Mir Plat.Form (NSPK)",
-        "NSPK JSC",
-        "Мир Plat.Form (АО НСПК)",
-        "Мир Plat.Form (НСПК)"
+      "Mir Plat.Form (NSPK)",
+      "NSPK JSC",
+      "Мир Plat.Form (АО НСПК)",
+      "Мир Plat.Form (НСПК)"
     ]
   - name: "Kaspersky Lab"
     synonyms: [
-        Kaspersky
+      Kaspersky
     ]
   - name: Komus
     synonyms: [
-        Komus-tech,
-        Комус-тех
+      Komus-tech,
+      Комус-тех
     ]
   - name: "Kt. Academy"
     synonyms: [
-        Kt.Academy
+      Kt.Academy
     ]
   - name: K2Tech
     synonyms: [
-        "К2 Кибербезопасность"
+      "К2 Кибербезопасность"
     ]
   - name: Lanit
     synonyms: [
-        Lanit-Tercom,
-        Ланит-Терком,
-        "LANIT Expertise",
-        "ЛАНИТ Экспертиза"
+      Lanit-Tercom,
+      Ланит-Терком,
+      "LANIT Expertise",
+      "ЛАНИТ Экспертиза"
     ]
   - name: "Last Week in AWS"
     synonyms: [
-        "Editor, lastweekinaws.com"
+      "Editor, lastweekinaws.com"
     ]
   - name: "LG Electronics"
     synonyms: [
-        LG,
-        "LG Russia R&D Lab"
+      LG,
+      "LG Russia R&D Lab"
     ]
   - name: LooC
     synonyms: [
-        www.looc.io"
+      www.looc.io"
     ]
   - name: Magnit
     synonyms: [
-        "Magnit Tech"
+      "Magnit Tech"
     ]
   - name: "Minimal Modeling"
     synonyms: [
-        MinimalModeling.com
+      MinimalModeling.com
     ]
   - name: "Modernes C++"
     synonyms: [
@@ -346,467 +346,484 @@ companySynonyms:
     ]
   - name: "Monitor Electric"
     synonyms: [
-        "Monitor Electric (monitel.com)",
-        "Монитор Электрик (monitel.ru)"
+      "Monitor Electric (monitel.com)",
+      "Монитор Электрик (monitel.ru)"
+    ]
+  - name: MSU
+    synonyms: [
+      "Lomonosov Moscow State University",
+      "МГУ имени М. В. Ломоносова"
     ]
   - name: NLMK
     synonyms: [
-        IT-NLMK,
-        ИТ-НЛМК
+      IT-NLMK,
+      ИТ-НЛМК
     ]
   - name: MPI-SWS
     synonyms: [
-        "Max Planck Institute for Software Systems"
+      "Max Planck Institute for Software Systems"
     ]
   - name: Magnit
     synonyms: [
-        "Magnit IT Lab",
-        "Магнит ИТ Лаб"
+      "Magnit IT Lab",
+      "Магнит ИТ Лаб"
     ]
   - name: MTS
     synonyms: [
-        "MTS AI",
-        "MTS Bank",
-        "МТС Банк",
-        "MTS DIGITAL",
-        "МТS Digital",
-        "МТС Digital",
-        "MTC Digital",
-        "MTS IT",
-        "МТС ИТ"
+      "MTS AI",
+      "MTS Bank",
+      "МТС Банк",
+      "MTS DIGITAL",
+      "МТS Digital",
+      "МТС Digital",
+      "MTC Digital",
+      "MTS IT",
+      "МТС ИТ"
     ]
   - name: Naviteq
     synonyms: [
-        "Naviteq LTD",
-        "Naviteq Ltd",
-        "Naviteq Ltd."
+      "Naviteq LTD",
+      "Naviteq Ltd",
+      "Naviteq Ltd."
     ]
   - name: Neoflex
     synonyms: [
-        "Neoflex Consulting",
-        "Неофлекс Консалтинг"
+      "Neoflex Consulting",
+      "Неофлекс Консалтинг"
     ]
   - name: Netflix
     synonyms: [
-        "Netflix Inc."
+      "Netflix Inc."
     ]
   - name: nipafx
     synonyms: [
-        CodeFX
+      CodeFX
     ]
   - name: Novi
     synonyms: [
-        "Facebook Calibra"
+      "Facebook Calibra"
     ]
   - name: "NRU HSE"
     synonyms: [
-        "National Research University Higher School of Economics",
-        "Национальный исследовательский университет «Высшая школа экономики»",
-        "HSE University — Saint Petersburg",
-        "НИУ ВШЭ — Санкт-Петербург",
-        "Higher School of Economics (HSE)",
-        "Высшая Школа Экономики (ВШЭ)"
+      "National Research University Higher School of Economics",
+      "Национальный исследовательский университет «Высшая школа экономики»",
+      "HSE University — Saint Petersburg",
+      "НИУ ВШЭ — Санкт-Петербург",
+      "Higher School of Economics (HSE)",
+      "Высшая Школа Экономики (ВШЭ)"
     ]
   - name: "Object Computing"
     synonyms: [
-        "Object Computing, Inc."
+      "Object Computing, Inc."
     ]
   - name: Odnoklassniki
     synonyms: [
-        OK.RU,
-        VK/Odnoklassniki,
-        VK/Одноклассники,
-        "VK / Odnoklassniki",
-        "VK / Одноклассники"
+      OK.RU,
+      VK/Odnoklassniki,
+      VK/Одноклассники,
+      "VK / Odnoklassniki",
+      "VK / Одноклассники"
     ]
   - name: Okko
     synonyms: [
-        Оkko
+      Оkko
     ]
   - name: "OKTET Labs"
     synonyms: [
-        OKTET
+      OKTET
     ]
   - name: "Open Mobile Platform"
     synonyms: [
-        OMP,
-        ОМП
+      OMP,
+      ОМП
     ]
   - name: Oracle
     synonyms: [
-        "Oracle Labs"
+      "Oracle Labs"
     ]
   - name: Ostrovok
     synonyms: [
-        Ostrovok.ru
+      Ostrovok.ru
     ]
   - name: OZON
     synonyms: [
-        "Ozon Fintech"
+      "Ozon Fintech",
+      "Ozon Bank",
+      "Ozon Банк"
     ]
   - name: "Particular Software"
     synonyms: [
-        "Particular Software Ltd"
+      "Particular Software Ltd"
     ]
   - name: "Performance Lab"
     synonyms: [
-        performance-lab.ru
+      performance-lab.ru
     ]
   - name: "RT Labs"
     synonyms: [
-        RTLabs,
-        РТЛабс
+      RTLabs,
+      РТЛабс
     ]
   - name: PVS-Studio
     synonyms: [
-        "PVS-Studio LLC"
+      "PVS-Studio LLC"
+    ]
+  - name: Reksoft
+    synonyms: [
+      "Reksoft Group",
+      "Группа «Рексофт»"
     ]
   - name: Rostelecom
     synonyms: [
-        Rostelekom,
-        "Rostelecom Information Technologies",
-        "Ростелеком Информационные Технологии",
-        "Rostelecom IT",
-        "Ростелеком ИТ"
+      Rostelekom,
+      "Rostelecom Information Technologies",
+      "Ростелеком Информационные Технологии",
+      "Rostelecom IT",
+      "Ростелеком ИТ"
     ]
   - name: SouJava
     synonyms: [
-        Platform.sh,
-        Platform.sh/SouJava
+      Platform.sh,
+      Platform.sh/SouJava
     ]
   - name: "Postgres Professional"
     synonyms: [
-        PostgresPro
+      PostgresPro
     ]
   - name: "Progress Software"
     synonyms: [
-        Progress
+      Progress
     ]
   - name: PromSvyasBank
     synonyms: [
-        PSB,
-        ПСБ
+      PSB,
+      ПСБ
     ]
   - name: PVS-Studio
     synonyms: [
-        "PVS Studio"
+      "PVS Studio"
     ]
   - name: QIWI
     synonyms: [
-        qiwi.ru
+      qiwi.ru
     ]
   - name: "Rambler Group"
     synonyms: [
-        "Rambler&Co",
-        "Rambler Digital Solutions"
+      "Rambler&Co",
+      "Rambler Digital Solutions"
     ]
   - name: "Red Hat"
     synonyms: [
-        "Red Hat, Inc."
+      "Red Hat, Inc."
     ]
   - name: "Raiffeisen Bank International"
     synonyms: [
-        "Raiffeisen Bank International AG",
-        Raiffeisen,
-        Райффайзен,
-        RaiffeisenBank,
-        Райффайзенбанк,
-        "Raiffeisen Bank",
-        "Райффайзен Банк",
-        "Raiffeisen Capital",
-        "Райффайзен Капитал"
+      "Raiffeisen Bank International AG",
+      Raiffeisen,
+      Райффайзен,
+      RaiffeisenBank,
+      Райффайзенбанк,
+      "Raiffeisen Bank",
+      "Райффайзен Банк",
+      "Raiffeisen Capital",
+      "Райффайзен Капитал"
     ]
   - name: RTSoft
     synonyms: [
-        "CPR RTSoft",
-        "ЦПР РТСофт"
+      "CPR RTSoft",
+      "ЦПР РТСофт"
     ]
   - name: SAP
     synonyms: [
-        hybris
+      hybris
     ]
   - name: "Self Employed"
     synonyms: [
-        Self-employed
+      Self-employed
     ]
   - name: S7
     synonyms: [
-        "S7 IT",
-        "S7 Techlab",
-        "S7 Техлаб"
+      "S7 IT",
+      "S7 Techlab",
+      "S7 Техлаб"
     ]
   - name: Samokat
     synonyms: [
-        Samokat.tech
+      Samokat.tech
     ]
   - name: Samsung
     synonyms: [
-        "Samsung NEXT/GDE",
-        "Samsung R&D Russia"
+      "Samsung NEXT/GDE",
+      "Samsung R&D Russia"
     ]
   - name: SAP
     synonyms: [
-        SAP/Gigya
+      SAP/Gigya
     ]
   - name: Sber
     synonyms: [
-        Sberb,
-        Sberbank,
-        Сбербанк,
-        SberTech,
-        СберТех,
-        Sberbank-Technology,
-        Сбербанк-Технологии,
-        SberX,
-        "SberBank Online",
-        "СберБанк Онлайн",
-        SberHealth,
-        СберЗдоровье,
-        SberDevices,
-        SberMarket,
-        СберМаркет,
-        "Sber Process Mining",
-        "Sber Life Insurance",
-        "Сбер Страхование Жизни",
-        SberAutoTech
+      Sberb,
+      Sberbank,
+      Сбербанк,
+      SberTech,
+      СберТех,
+      Sberbank-Technology,
+      Сбербанк-Технологии,
+      SberX,
+      "SberBank Online",
+      "СберБанк Онлайн",
+      SberHealth,
+      СберЗдоровье,
+      SberDevices,
+      SberMarket,
+      СберМаркет,
+      "Sber Process Mining",
+      "Sber Life Insurance",
+      "Сбер Страхование Жизни",
+      SberAutoTech
     ]
   - name: Sibur
     synonyms: [
-        "SIBUR Digital",
-        "СИБУР Диджитал"
+      "SIBUR Digital",
+      "СИБУР Диджитал"
     ]
   - name: Sirena
     synonyms: [
-        sports
+      sports
     ]
   - name: Skyeng
     synonyms: [
-        Skeyng
+      Skeyng
     ]
   - name: SkyHive
     synonyms: [
-        skyhive.ai
+      skyhive.ai
     ]
   - name: Sovcombank
     synonyms: [
-        SovcomTech,
-        "Sovcombank Technologies",
-        "Совкомбанк Технологии"
+      SovcomTech,
+      "Sovcombank Technologies",
+      "Совкомбанк Технологии"
     ]
   - name: Sportmaster
     synonyms: [
-        "Sportmaster Lab",
-        "SM Lab",
-        SportmasterLab
+      "Sportmaster Lab",
+      "SM Lab",
+      SportmasterLab
     ]
   - name: Sudo
     synonyms: [
-        "Sudo Ltd",
-        "ООО «Судо»"
+      "Sudo Ltd",
+      "ООО «Судо»"
     ]
   - name: "Summer Analytical Festival"
     synonyms: [
-        "Summer Analytical Festival (lafest.ru)"
+      "Summer Analytical Festival (lafest.ru)"
     ]
   - name: "Systems Education"
     synonyms: [
-        Systems.Education
+      Systems.Education
     ]
   - name: Tarantool
     synonyms: [
-        "Tarantool (VK tech)"
+      "Tarantool (VK tech)",
+      "VK / Tarantool"
     ]
   - name: "Test IT"
     synonyms: [
-        TestIT
+      TestIT
     ]
   - name: Tinkoff
     synonyms: [
-        Tinkoff.ru,
-        "TCS Bank",
-        "ТКС Банк",
-        "IT's Tinkoff",
-        "Mobile Developer. Tinkoff",
-        "Mobile Developer. Тинькофф"
+      Tinkoff.ru,
+      "TCS Bank",
+      "ТКС Банк",
+      "IT's Tinkoff",
+      "Mobile Developer. Tinkoff",
+      "Mobile Developer. Тинькофф"
     ]
   - name: Toloka
     synonyms: [
-        "Toloka Ai",
-        "Toloka Ai Inc",
-        Toloka.ai
+      "Toloka Ai",
+      "Toloka Ai Inc",
+      Toloka.ai
     ]
   - name: "Tune IT"
     synonyms: [
-        Tune-IT
+      Tune-IT
     ]
   - name: "Telecom Paris, Institut Polytechnique Paris"
     synonyms: [
-        "Professor, Telecom Paris, Institut Polytechnique Paris"
+      "Professor, Telecom Paris, Institut Polytechnique Paris"
     ]
   - name: "The Atlantic Systems Guild Inc."
     synonyms: [
-        "The Atlantic Systems Guild Inc., co-author of the \"Peopleware: Productive Projects and Teams\""
+      "The Atlantic Systems Guild Inc., co-author of the \"Peopleware: Productive Projects and Teams\""
     ]
   - name: think-cell
     synonyms: [
-        "think-cell Software"
+      "think-cell Software"
     ]
   - name: "Uber Technologies"
     synonyms: [
-        Uber
+      Uber
     ]
   - name: "Т1 Holding"
     synonyms: [
-        "T1 Consulting",
-        "Т1 Консалтинг",
-        "Т1 Sfera",
-        "Т1 Сфера",
-        "Sfera Platform",
-        "Платформа Сфера",
-        "NOTA",
-        "НОТА",
-        "NOTA (T1)",
-        "НОТА (Т1)"
+      "T1 Consulting",
+      "Т1 Консалтинг",
+      "Т1 Sfera",
+      "Т1 Сфера",
+      "Sfera Platform",
+      "Платформа Сфера",
+      "NOTA",
+      "НОТА",
+      "NOTA (T1)",
+      "НОТА (Т1)"
     ]
   - name: UCB
     synonyms: [
-        "UCB BioPharma"
+      "UCB BioPharma"
     ]
   - name: "Unity Technologies"
     synonyms: [
-        Unity
+      Unity
     ]
   - name: Uzum
     synonyms: [
-        "Uzum Tezkor",
-        "Uzum Technologies"
+      "Uzum Tezkor",
+      "Uzum Technologies"
     ]
   - name: "Vevy Europe"
     synonyms: [
-        "Vevy Europe S.p.A."
+      "Vevy Europe S.p.A."
     ]
   - name: Viasat
     synonyms: [
-        "Viasat Tech"
+      "Viasat Tech"
     ]
   - name: VK
     synonyms: [
-        VKontakte,
-        VK.com,
-        "VK / VKontakte",
-        "VK / ВКонтакте",
-        "VK Calls",
-        "VK / VK Clips",
-        "VK Cloud",
-        "VK Cloud Solutions",
-        "VK Education",
-        "VK for Business",
-        "VK Play",
-        "VK / VK Play",
-        "VK / RuStore",
-        "VK Tech",
-        "VK Video",
-        "VK / Youla.ru",
-        "VK / Zen",
-        "VK / Дзен",
-        "VK / VK Клипы",
-        "VK / Юла",
-        "VK Видео",
-        "VK Звонки",
-        "VK Образование",
-        "ВКонтакте для бизнеса",
-        "VK / VK Cloud",
-        "VK / Ads",
-        "VK / Реклама",
-        "VK Clips",
-        "VK Клипы",
-        "VK / VK Maps",
-        "VK / VK Карты",
-        "VK / vk business",
-        "VK / ВКонтакте для бизнеса",
-        "VK/VK Video",
-        "VK/VK Видео"
+      VKontakte,
+      VK.com,
+      "VK / VKontakte",
+      "VK / ВКонтакте",
+      "VK Calls",
+      "VK / VK Clips",
+      "VK Cloud",
+      "VK Cloud Solutions",
+      "VK Education",
+      "VK for Business",
+      "VK Play",
+      "VK / VK Play",
+      "VK / RuStore",
+      "VK Tech",
+      "VK Video",
+      "VK / Youla.ru",
+      "VK / Zen",
+      "VK / Дзен",
+      "VK / VK Клипы",
+      "VK / Юла",
+      "VK Видео",
+      "VK Звонки",
+      "VK Образование",
+      "ВКонтакте для бизнеса",
+      "VK / VK Cloud",
+      "VK / Ads",
+      "VK / Реклама",
+      "VK Clips",
+      "VK Клипы",
+      "VK / VK Maps",
+      "VK / VK Карты",
+      "VK / vk business",
+      "VK / ВКонтакте для бизнеса",
+      "VK/VK Video",
+      "VK/VK Видео",
+      "VK / Business VKontakte",
+      "VK / Бизнес ВКонтакте",
+      "VK / VK Ads",
+      "VK / VK Реклама"
     ]
   - name: VMware
     synonyms: [
-        "VMware Tanzu"
+      "VMware Tanzu"
     ]
   - name: "X5 Group"
     synonyms: [
-        "X5 Tech",
-        "X5 Digital"
+      "X5 Tech",
+      "X5 Digital"
     ]
   - name: "Yahoo!"
     synonyms: [
-        "Yahoo! Research"
+      "Yahoo! Research"
     ]
   - name: Yandex
     synonyms: [
-        "Yandex Games",
-        "Яндекс Игры",
-        "Yandex Go",
-        "Yandex GO",
-        "Яндекс GO",
-        "Яндекс Go",
-        Yandex.Go,
-        Яндекс.Go,
-        "Yandex.Classifieds Technology",
-        "Яндекс.Вертикали Технологии",
-        Yandex.Money,
-        Яндекс.Деньги,
-        Yandex.Drive,
-        "Yandex Eda",
-        "Яндекс Еда",
-        Яндекс.Драйв,
-        Yandex.Market,
-        Яндекс.Маркет,
-        "Yandex Market",
-        "Яндекс Маркет",
-        Yandex.Cloud,
-        "Yandex Cloud",
-        Яндекс.Облако,
-        Yandex.Taxi,
-        Яндекс.Такси,
-        "Yandex Taxi Technologies",
-        "Яндекс Такси Технологии",
-        Yandex.Toloka,
-        Яндекс.Толока,
-        "Yandex Travel",
-        "Яндекс Путешествия",
-        "Yandex (Auto.ru)",
-        "Яндекс (Авто.ру)",
-        "Yandex Practicum",
-        "Яндекс Практикум",
-        "Yandex 360",
-        "Яндекс 360",
-        "Yandex Infrastructure",
-        "Yandex Self-driving Technologies",
-        "Яндекс Беспилотные Технологии",
-        "Kinopoisk (Yandex)",
-        "Кинопоиск (Яндекс)",
-        Zen,
-        Дзен,
-        Kinopoisk,
-        Кинопоиск
+      "Yandex Games",
+      "Яндекс Игры",
+      "Yandex Go",
+      "Yandex GO",
+      "Яндекс GO",
+      "Яндекс Go",
+      Yandex.Go,
+      Яндекс.Go,
+      "Yandex.Classifieds Technology",
+      "Яндекс.Вертикали Технологии",
+      Yandex.Money,
+      Яндекс.Деньги,
+      Yandex.Drive,
+      "Yandex Eda",
+      "Яндекс Еда",
+      Яндекс.Драйв,
+      Yandex.Market,
+      Яндекс.Маркет,
+      "Yandex Market",
+      "Яндекс Маркет",
+      Yandex.Cloud,
+      "Yandex Cloud",
+      Яндекс.Облако,
+      Yandex.Taxi,
+      Яндекс.Такси,
+      "Yandex Taxi Technologies",
+      "Яндекс Такси Технологии",
+      Yandex.Toloka,
+      Яндекс.Толока,
+      "Yandex Travel",
+      "Яндекс Путешествия",
+      "Yandex (Auto.ru)",
+      "Яндекс (Авто.ру)",
+      "Yandex Practicum",
+      "Яндекс Практикум",
+      "Yandex 360",
+      "Яндекс 360",
+      "Yandex Infrastructure",
+      "Yandex Self-driving Technologies",
+      "Яндекс Беспилотные Технологии",
+      "Kinopoisk (Yandex)",
+      "Кинопоиск (Яндекс)",
+      Zen,
+      Дзен,
+      Kinopoisk,
+      Кинопоиск
     ]
   - name: YooMoney
     synonyms: [
-        ЮМани
+      ЮМани
     ]
   - name: "ZeptoLab LLC"
     synonyms: [
-        Zeptolab
+      Zeptolab
     ]
   - name: ""
     synonyms: [
-        "Author of \"The C++ Standard Library\" and \"C++ Templates\"",
-        "Автор книг «The C++ Standard Library» и «C++ Templates»",
-        "Acme Corp",
-        Startup,
-        Стартап,
-        "JMeter Committer",
-        "PostgreSQL JDBC maintainer",
-        TatarinFrontend,
-        ex-Yandex,
-        ex-Яндекс
+      "Author of \"The C++ Standard Library\" and \"C++ Templates\"",
+      "Автор книг «The C++ Standard Library» и «C++ Templates»",
+      "Acme Corp",
+      Startup,
+      Стартап,
+      "JMeter Committer",
+      "PostgreSQL JDBC maintainer",
+      TatarinFrontend,
+      ex-Yandex,
+      ex-Яндекс
     ]

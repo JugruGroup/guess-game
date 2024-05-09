@@ -1,4517 +1,4539 @@
 companies:
   - id: 0
     name:
-      - {language: en, text: "10up Inc"}
+      - { language: en, text: "10up Inc" }
     siteLink: https://10up.com
   - id: 1
     name:
-      - {language: en, text: 1C-Bitrix}
-      - {language: ru, text: 1С-Битрикс}
+      - { language: en, text: 1C-Bitrix }
+      - { language: ru, text: 1С-Битрикс }
     siteLink: https://www.1c-bitrix.ru
   - id: 2
     name:
-      - {language: en, text: "1C Rarus"}
-      - {language: ru, text: 1С-Рарус}
+      - { language: en, text: "1C Rarus" }
+      - { language: ru, text: 1С-Рарус }
     siteLink: https://rarus.ru
   - id: 3
     name:
-      - {language: en, text: 2GIS}
-      - {language: ru, text: 2ГИС}
+      - { language: en, text: 2GIS }
+      - { language: ru, text: 2ГИС }
     siteLink: https://2gis.ru
   - id: 4
     name:
-      - {language: en, text: "47 Degrees"}
+      - { language: en, text: "47 Degrees" }
     siteLink: https://www.47deg.com
   - id: 5
     name:
-      - {language: en, text: 65apps}
+      - { language: en, text: 65apps }
     siteLink: https://65apps.com
   - id: 6
     name:
-      - {language: en, text: ABBYY}
+      - { language: en, text: ABBYY }
     siteLink: https://www.abbyy.com
   - id: 7
     name:
-      - {language: en, text: "ABL - The Problem Solver"}
+      - { language: en, text: "ABL - The Problem Solver" }
     siteLink: http://www.theproblemsolver.nl
   - id: 9
     name:
-      - {language: en, text: Acumatica}
+      - { language: en, text: Acumatica }
     siteLink: https://www.acumatica.com
   - id: 10
     name:
-      - {language: en, text: Adevinta}
+      - { language: en, text: Adevinta }
     siteLink: https://www.adevinta.com
   - id: 11
     name:
-      - {language: en, text: Adform}
+      - { language: en, text: Adform }
     siteLink: http://www.adform.com
   - id: 12
     name:
-      - {language: en, text: Adobe}
+      - { language: en, text: Adobe }
     siteLink: https://www.adobe.com
   - id: 13
     name:
-      - {language: en, text: Advantum}
+      - { language: en, text: Advantum }
     siteLink: https://advantum.ru
   - id: 15
     name:
-      - {language: en, text: Aerokube}
+      - { language: en, text: Aerokube }
     siteLink: https://aerokube.com
   - id: 16
     name:
-      - {language: en, text: "Agile Developer, Inc."}
+      - { language: en, text: "Agile Developer, Inc." }
     siteLink: https://agiledeveloper.com
   - id: 17
     name:
-      - {language: en, text: AGIMA}
+      - { language: en, text: AGIMA }
     siteLink: https://www.agima.ru
   - id: 18
     name:
-      - {language: en, text: Airbus}
+      - { language: en, text: Airbus }
     siteLink: https://www.airbus.com
   - id: 19
     name:
-      - {language: en, text: airhacks.live}
+      - { language: en, text: airhacks.live }
     siteLink: https://airhacks.live
   - id: 20
     name:
-      - {language: en, text: Akelius}
+      - { language: en, text: Akelius }
     siteLink: https://akelius.com
   - id: 21
     name:
-      - {language: en, text: AKQA}
+      - { language: en, text: AKQA }
     siteLink: https://www.akqa.com
   - id: 22
     name:
-      - {language: en, text: Akvelon}
+      - { language: en, text: Akvelon }
     siteLink: https://akvelon.com
   - id: 23
     name:
-      - {language: en, text: Algolia}
+      - { language: en, text: Algolia }
     siteLink: https://www.algolia.com
   - id: 24
     name:
-      - {language: en, text: Algorand}
+      - { language: en, text: Algorand }
     siteLink: https://www.algorand.com
   - id: 26
     name:
-      - {language: en, text: "Alibaba Group"}
+      - { language: en, text: "Alibaba Group" }
     siteLink: https://www.alibabagroup.com
   - id: 27
     name:
-      - {language: en, text: "Align Technology"}
+      - { language: en, text: "Align Technology" }
     siteLink: https://www.aligntech.com
   - id: 29
     name:
-      - {language: en, text: Allegro}
+      - { language: en, text: Allegro }
     siteLink: https://allegro.pl
   - id: 32
     name:
-      - {language: en, text: Amazon}
+      - { language: en, text: Amazon }
     siteLink: https://www.amazon.com
   - id: 33
     name:
-      - {language: en, text: "Amazon Robotics"}
+      - { language: en, text: "Amazon Robotics" }
     siteLink: https://www.amazonrobotics.com
   - id: 34
     name:
-      - {language: en, text: "Amazon Web Services"}
+      - { language: en, text: "Amazon Web Services" }
     siteLink: https://aws.amazon.com
   - id: 35
     name:
-      - {language: en, text: "Amixr Inc."}
+      - { language: en, text: "Amixr Inc." }
     siteLink: https://amixr.io
   - id: 36
     name:
-      - {language: en, text: "Dev Academy"}
+      - { language: en, text: "Dev Academy" }
     siteLink: https://dev-academy.com
   - id: 37
     name:
-      - {language: en, text: AngularZone}
+      - { language: en, text: AngularZone }
     siteLink: https://www.meetup.com/AngularZone
   - id: 39
     name:
-      - {language: en, text: "App in the Air"}
+      - { language: en, text: "App in the Air" }
     siteLink: https://www.appintheair.mobi
   - id: 40
     name:
-      - {language: en, text: Appium}
+      - { language: en, text: Appium }
     siteLink: https://appium.io
   - id: 41
     name:
-      - {language: en, text: Applause}
+      - { language: en, text: Applause }
     siteLink: https://www.applause.com
   - id: 42
     name:
-      - {language: en, text: Apple}
+      - { language: en, text: Apple }
     siteLink: https://www.apple.com
   - id: 43
     name:
-      - {language: en, text: Applitools}
+      - { language: en, text: Applitools }
     siteLink: https://applitools.com
   - id: 44
     name:
-      - {language: en, text: "Aqua Security"}
+      - { language: en, text: "Aqua Security" }
     siteLink: https://www.aquasec.com
   - id: 45
     name:
-      - {language: en, text: "Aquatic Capital Management"}
+      - { language: en, text: "Aquatic Capital Management" }
     siteLink: https://aquatic.com
   - id: 46
     name:
-      - {language: en, text: Arcadia}
+      - { language: en, text: Arcadia }
     siteLink: https://softwarecountry.com
   - id: 47
     name:
-      - {language: en, text: "Arello Mobile"}
+      - { language: en, text: "Arello Mobile" }
     siteLink: http://www.arello-mobile.com
   - id: 48
     name:
-      - {language: en, text: Arenadata}
+      - { language: en, text: Arenadata }
     siteLink: https://arenadata.tech
   - id: 51
     name:
-      - {language: en, text: "Artec 3D"}
+      - { language: en, text: "Artec 3D" }
     siteLink: https://www.artec3d.com
   - id: 52
     name:
-      - {language: en, text: Artsy}
+      - { language: en, text: Artsy }
     siteLink: https://www.artsy.net
   - id: 54
     name:
-      - {language: en, text: "Australia Post"}
+      - { language: en, text: "Australia Post" }
     siteLink: https://auspost.com.au
   - id: 57
     name:
-      - {language: en, text: AVA}
+      - { language: en, text: AVA }
     siteLink: https://ava.info
   - id: 58
     name:
-      - {language: en, text: "Avalonia OÜ"}
+      - { language: en, text: "Avalonia OÜ" }
     siteLink: https://avaloniaui.net
   - id: 59
     name:
-      - {language: en, text: "Avast Software"}
+      - { language: en, text: "Avast Software" }
     siteLink: https://www.avast.com
   - id: 60
     name:
-      - {language: en, text: "Axelerant Technologies Pvt. Ltd."}
+      - { language: en, text: "Axelerant Technologies Pvt. Ltd." }
     siteLink: https://www.axelerant.com
   - id: 61
     name:
-      - {language: en, text: Axmor}
+      - { language: en, text: Axmor }
     siteLink: https://axmor.ru
   - id: 62
     name:
-      - {language: en, text: AxonIQ}
+      - { language: en, text: AxonIQ }
     siteLink: https://axoniq.io
   - id: 63
     name:
-      - {language: en, text: "Azul Systems"}
+      - { language: en, text: "Azul Systems" }
     siteLink: https://www.azul.com
   - id: 64
     name:
-      - {language: en, text: Babel}
+      - { language: en, text: Babel }
     siteLink: https://babeljs.io
   - id: 65
     name:
-      - {language: en, text: Badoo}
+      - { language: en, text: Badoo }
     siteLink: https://badoo.com
   - id: 66
     name:
-      - {language: en, text: BANKEX}
+      - { language: en, text: BANKEX }
     siteLink: https://bankex.com
   - id: 67
     name:
-      - {language: en, text: BaxEnergy}
+      - { language: en, text: BaxEnergy }
     siteLink: https://www.baxenergy.com
   - id: 68
     name:
-      - {language: en, text: BellSoft}
+      - { language: en, text: BellSoft }
     siteLink: https://bell-sw.com
   - id: 69
     name:
-      - {language: en, text: "Ben-Gurion University of the Negev"}
+      - { language: en, text: "Ben-Gurion University of the Negev" }
     siteLink: https://in.bgu.ac.il
   - id: 70
     name:
-      - {language: en, text: Betajob}
+      - { language: en, text: Betajob }
     siteLink: https://www.betajob.com
   - id: 71
     name:
-      - {language: en, text: "Big Fish Games"}
+      - { language: en, text: "Big Fish Games" }
     siteLink: https://www.bigfishgames.com
   - id: 72
     name:
-      - {language: en, text: Bitfury}
+      - { language: en, text: Bitfury }
     siteLink: https://bitfury.com
   - id: 73
     name:
-      - {language: en, text: BlackBuck}
+      - { language: en, text: BlackBuck }
     siteLink: https://www.blackbuck.com
   - id: 74
     name:
-      - {language: en, text: blog.ploeh.dk}
+      - { language: en, text: blog.ploeh.dk }
     siteLink: https://blog.ploeh.dk
   - id: 75
     name:
-      - {language: en, text: Bloomberg}
+      - { language: en, text: Bloomberg }
     siteLink: https://www.bloomberg.com
   - id: 76
     name:
-      - {language: en, text: Bolt}
+      - { language: en, text: Bolt }
     siteLink: https://bolt.eu
   - id: 77
     name:
-      - {language: en, text: Bouvet}
+      - { language: en, text: Bouvet }
     siteLink: https://www.bouvet.no
   - id: 78
     name:
-      - {language: en, text: "Boxfuse GmbH"}
+      - { language: en, text: "Boxfuse GmbH" }
     siteLink: https://boxfuse.com
   - id: 79
     name:
-      - {language: en, text: BrainGarden}
+      - { language: en, text: BrainGarden }
     siteLink: https://braingarden.ai
   - id: 80
     name:
-      - {language: en, text: Broadridge}
+      - { language: en, text: Broadridge }
     siteLink: https://www.broadridge.com
   - id: 81
     name:
-      - {language: en, text: "Brown University"}
+      - { language: en, text: "Brown University" }
     siteLink: https://www.brown.edu
   - id: 82
     name:
-      - {language: en, text: "C++ Alliance"}
+      - { language: en, text: "C++ Alliance" }
     siteLink: https://cppalliance.org
   - id: 85
     name:
-      - {language: en, text: Camunda}
+      - { language: en, text: Camunda }
     siteLink: https://camunda.com
   - id: 87
     name:
-      - {language: en, text: ChilliCream}
+      - { language: en, text: ChilliCream }
     siteLink: https://chillicream.com
   - id: 88
     name:
-      - {language: en, text: "Chronicle Software"}
+      - { language: en, text: "Chronicle Software" }
     siteLink: https://chronicle.software
   - id: 90
     name:
-      - {language: en, text: "Cirrus Labs"}
+      - { language: en, text: "Cirrus Labs" }
     siteLink: https://www.cirruslabs.io
   - id: 91
     name:
-      - {language: en, text: "Cisco Systems"}
+      - { language: en, text: "Cisco Systems" }
     siteLink: https://www.cisco.com
   - id: 92
     name:
-      - {language: en, text: "Citadel Securities"}
+      - { language: en, text: "Citadel Securities" }
     siteLink: https://www.citadelsecurities.com
   - id: 93
     name:
-      - {language: en, text: "Clean Code Craftsman"}
+      - { language: en, text: "Clean Code Craftsman" }
     siteLink: https://www.cleancodeacademy.com
   - id: 94
     name:
-      - {language: en, text: Cleverics}
+      - { language: en, text: Cleverics }
     siteLink: https://cleverics.com
   - id: 95
     name:
-      - {language: en, text: "Cloud Consult London Ltd"}
+      - { language: en, text: "Cloud Consult London Ltd" }
   - id: 96
     name:
-      - {language: en, text: "Cloud Horizon"}
+      - { language: en, text: "Cloud Horizon" }
     siteLink: https://cloudhorizon.com
   - id: 97
     name:
-      - {language: en, text: CloudBees}
+      - { language: en, text: CloudBees }
     siteLink: https://www.cloudbees.com
   - id: 98
     name:
-      - {language: en, text: Cloudflare}
+      - { language: en, text: Cloudflare }
     siteLink: https://www.cloudflare.com
   - id: 99
     name:
-      - {language: en, text: "Code Hipsters"}
+      - { language: en, text: "Code Hipsters" }
     siteLink: https://codehipsters.com
   - id: 100
     name:
-      - {language: en, text: Codeborne}
+      - { language: en, text: Codeborne }
     siteLink: https://codeborne.com
   - id: 101
     name:
-      - {language: en, text: "codecentric AG"}
+      - { language: en, text: "codecentric AG" }
     siteLink: https://www.codecentric.de
   - id: 102
     name:
-      - {language: en, text: nipafx}
+      - { language: en, text: nipafx }
     siteLink: https://nipafx.dev
   - id: 103
     name:
-      - {language: en, text: CodeValue}
+      - { language: en, text: CodeValue }
     siteLink: https://codevalue.com
   - id: 104
     name:
-      - {language: en, text: CommodiTrader}
+      - { language: en, text: CommodiTrader }
     siteLink: https://commoditrader.com
   - id: 105
     name:
-      - {language: en, text: Component-Driven}
+      - { language: en, text: Component-Driven }
     siteLink: https://www.component-driven.dev
   - id: 106
     name:
-      - {language: en, text: Computas}
+      - { language: en, text: Computas }
     siteLink: https://computas.com
   - id: 108
     name:
-      - {language: en, text: Confluent}
+      - { language: en, text: Confluent }
     siteLink: https://www.confluent.io
   - id: 109
     name:
-      - {language: en, text: Consultant}
+      - { language: en, text: Consultant }
   - id: 111
     name:
-      - {language: en, text: Contino}
+      - { language: en, text: Contino }
     siteLink: https://www.contino.io
   - id: 112
     name:
-      - {language: en, text: Converge}
+      - { language: en, text: Converge }
     siteLink: https://convergetp.com
   - id: 114
     name:
-      - {language: en, text: Couchbase}
+      - { language: en, text: Couchbase }
     siteLink: https://www.couchbase.com
   - id: 115
     name:
-      - {language: en, text: "Count-Zero Ltd"}
+      - { language: en, text: "Count-Zero Ltd" }
     siteLink: http://www.count-zero.ltd.uk
   - id: 116
     name:
-      - {language: en, text: CountMyCrypto}
+      - { language: en, text: CountMyCrypto }
     siteLink: https://www.countmycrypto.com
   - id: 117
     name:
-      - {language: en, text: Coursedog}
+      - { language: en, text: Coursedog }
     siteLink: https://www.coursedog.com
   - id: 118
     name:
-      - {language: en, text: CRATUS}
+      - { language: en, text: CRATUS }
     siteLink: https://www.cratustech.com
   - id: 120
     name:
-      - {language: en, text: "Creative Assembly"}
+      - { language: en, text: "Creative Assembly" }
     siteLink: https://www.creative-assembly.com
   - id: 121
     name:
-      - {language: en, text: Criteo}
+      - { language: en, text: Criteo }
     siteLink: https://www.criteo.com
   - id: 122
     name:
-      - {language: en, text: "Crossover (GFI)"}
+      - { language: en, text: "Crossover (GFI)" }
     siteLink: https://www.crossover.com
   - id: 123
     name:
-      - {language: en, text: CSSSR}
+      - { language: en, text: CSSSR }
     siteLink: https://csssr.com
   - id: 124
     name:
-      - {language: en, text: Curbralan}
+      - { language: en, text: Curbralan }
     siteLink: http://curbralan.com
   - id: 125
     name:
-      - {language: en, text: CUSTIS}
+      - { language: en, text: CUSTIS }
     siteLink: https://custis.ru
   - id: 126
     name:
-      - {language: en, text: Cypress.io}
+      - { language: en, text: Cypress.io }
     siteLink: https://www.cypress.io
   - id: 127
     name:
-      - {language: en, text: Dailymotion}
+      - { language: en, text: Dailymotion }
     siteLink: https://www.dailymotion.com
   - id: 128
     name:
-      - {language: en, text: Dartmouth}
+      - { language: en, text: Dartmouth }
     siteLink: https://home.dartmouth.edu
   - id: 129
     name:
-      - {language: en, text: Hyperdivision}
+      - { language: en, text: Hyperdivision }
     siteLink: https://hyperdivision.dk
   - id: 130
     name:
-      - {language: en, text: DataArt}
+      - { language: en, text: DataArt }
     siteLink: https://dataart.team
   - id: 131
     name:
-      - {language: en, text: DataStax}
+      - { language: en, text: DataStax }
     siteLink: https://www.datastax.com
   - id: 133
     name:
-      - {language: en, text: "DefinedCrowd Corp."}
+      - { language: en, text: "DefinedCrowd Corp." }
     siteLink: https://www.defined.ai
   - id: 134
     name:
-      - {language: en, text: "Dejavoo Systems"}
+      - { language: en, text: "Dejavoo Systems" }
     siteLink: https://www.dejavoosystems.com
   - id: 135
     name:
-      - {language: en, text: Delightex}
+      - { language: en, text: Delightex }
     siteLink: https://www.delightex.com
   - id: 136
     name:
-      - {language: en, text: "Delivery Club"}
+      - { language: en, text: "Delivery Club" }
     siteLink: https://www.delivery-club.ru
   - id: 139
     name:
-      - {language: en, text: "Dell Technologies"}
+      - { language: en, text: "Dell Technologies" }
     siteLink: https://www.delltechnologies.com
   - id: 140
     name:
-      - {language: en, text: Derivco}
+      - { language: en, text: Derivco }
     siteLink: https://derivco.com
   - id: 141
     name:
-      - {language: en, text: "Deutsche Bank"}
+      - { language: en, text: "Deutsche Bank" }
     siteLink: https://www.db.com
   - id: 143
     name:
-      - {language: en, text: "Deutsche Telekom"}
+      - { language: en, text: "Deutsche Telekom" }
     siteLink: https://www.telekom.com
   - id: 145
     name:
-      - {language: en, text: Devbridge}
+      - { language: en, text: Devbridge }
     siteLink: https://www.devbridge.com
   - id: 146
     name:
-      - {language: en, text: DevelopSense}
+      - { language: en, text: DevelopSense }
     siteLink: https://www.developsense.com
   - id: 147
     name:
-      - {language: en, text: Devexperts}
+      - { language: en, text: Devexperts }
     siteLink: https://devexperts.com
   - id: 148
     name:
-      - {language: en, text: DevExpress}
+      - { language: en, text: DevExpress }
     siteLink: https://www.devexpress.com
   - id: 149
     name:
-      - {language: en, text: Devim}
+      - { language: en, text: Devim }
     siteLink: https://www.devim.com
   - id: 150
     name:
-      - {language: en, text: "diconium digital solutions"}
+      - { language: en, text: "diconium digital solutions" }
     siteLink: https://diconium.com
   - id: 151
     name:
-      - {language: en, text: "Digital Natives"}
+      - { language: en, text: "Digital Natives" }
     siteLink: https://www.digitalnatives.hu
   - id: 152
     name:
-      - {language: en, text: "Digital Nomad & Freelancer"}
+      - { language: en, text: "Digital Nomad & Freelancer" }
   - id: 153
     name:
-      - {language: en, text: "Digital Security"}
+      - { language: en, text: "Digital Security" }
     siteLink: https://dsec.ru
   - id: 154
     name:
-      - {language: en, text: "Digital Zone"}
+      - { language: en, text: "Digital Zone" }
     siteLink: https://dz.ru
   - id: 156
     name:
-      - {language: en, text: DINS}
+      - { language: en, text: DINS }
     siteLink: https://dins.ru
   - id: 157
     name:
-      - {language: en, text: Directual}
+      - { language: en, text: Directual }
     siteLink: https://www.directual.com
   - id: 160
     name:
-      - {language: en, text: "DM Labs"}
+      - { language: en, text: "DM Labs" }
     siteLink: http://dmlabs.tech
   - id: 161
     name:
-      - {language: en, text: "Dodo Engineering"}
+      - { language: en, text: "Dodo Engineering" }
     siteLink: https://dodo.dev
   - id: 162
     name:
-      - {language: en, text: Dostavista}
+      - { language: en, text: Dostavista }
     siteLink: https://dostavista.ru
   - id: 163
     name:
-      - {language: en, text: DotControl}
+      - { language: en, text: DotControl }
     siteLink: https://dotcontrol.com
   - id: 164
     name:
-      - {language: en, text: dotdigital}
+      - { language: en, text: dotdigital }
     siteLink: https://dotdigital.com
   - id: 166
     name:
-      - {language: en, text: "DPI.Solutions"}
+      - { language: en, text: "DPI.Solutions" }
     siteLink: https://dpi.solutions
   - id: 167
     name:
-      - {language: en, text: "Droids On Roids"}
+      - { language: en, text: "Droids On Roids" }
     siteLink: https://www.thedroidsonroids.com
   - id: 169
     name:
-      - {language: en, text: e-square.io}
+      - { language: en, text: e-square.io }
     siteLink: https://e-square.io
   - id: 170
     name:
-      - {language: en, text: "Eagle Labs"}
+      - { language: en, text: "Eagle Labs" }
     siteLink: https://labs.uk.barclays
   - id: 171
     name:
-      - {language: en, text: eBay}
+      - { language: en, text: eBay }
     siteLink: https://www.ebay.com/
   - id: 172
     name:
-      - {language: en, text: Ecmanauten}
+      - { language: en, text: Ecmanauten }
     siteLink: http://ecmanauten.de
   - id: 173
     name:
-      - {language: en, text: "Last Week in AWS"}
+      - { language: en, text: "Last Week in AWS" }
     siteLink: https://www.lastweekinaws.com
   - id: 174
     name:
-      - {language: en, text: Effective}
+      - { language: en, text: Effective }
     siteLink: https://effective.band
   - id: 175
     name:
-      - {language: en, text: Elastic}
+      - { language: en, text: Elastic }
     siteLink: https://www.elastic.co
   - id: 176
     name:
-      - {language: en, text: "Element34 Solutions GmbH"}
+      - { language: en, text: "Element34 Solutions GmbH" }
     siteLink: https://element34.com
   - id: 177
     name:
-      - {language: en, text: Embox}
+      - { language: en, text: Embox }
     siteLink: http://www.embox.rocks
   - id: 178
     name:
-      - {language: en, text: EmDev}
+      - { language: en, text: EmDev }
     siteLink: https://www.emdev.ru
   - id: 180
     name:
-      - {language: en, text: Empear}
+      - { language: en, text: Empear }
     siteLink: https://empear.com
   - id: 181
     name:
-      - {language: en, text: EngineerSpock}
+      - { language: en, text: EngineerSpock }
     siteLink: https://www.engineerspock.com
   - id: 182
     name:
-      - {language: en, text: "Enterprise Craftsmanship LLC"}
+      - { language: en, text: "Enterprise Craftsmanship LLC" }
     siteLink: https://enterprisecraftsmanship.com
   - id: 183
     name:
-      - {language: en, text: "EPAM Systems"}
+      - { language: en, text: "EPAM Systems" }
     siteLink: https://www.epam.com
   - id: 184
     name:
-      - {language: en, text: "ePayments Technologies"}
+      - { language: en, text: "ePayments Technologies" }
     siteLink: https://www.epayments.com
   - id: 185
     name:
-      - {language: en, text: EPFL}
+      - { language: en, text: EPFL }
     siteLink: https://www.epfl.ch
   - id: 186
     name:
-      - {language: en, text: "Epic Games"}
+      - { language: en, text: "Epic Games" }
     siteLink: https://www.epicgames.com
   - id: 187
     name:
-      - {language: en, text: "Evil Martians"}
+      - { language: en, text: "Evil Martians" }
     siteLink: https://evilmartians.com
   - id: 188
     name:
-      - {language: en, text: "Evolution Engineering"}
+      - { language: en, text: "Evolution Engineering" }
     siteLink: https://evolutioneng.com
   - id: 189
     name:
-      - {language: en, text: "Evolution Gaming"}
+      - { language: en, text: "Evolution Gaming" }
     siteLink: https://www.evolution.com
   - id: 190
     name:
-      - {language: en, text: Exadel}
+      - { language: en, text: Exadel }
     siteLink: https://exadel.com
   - id: 191
     name:
-      - {language: en, text: Exness}
+      - { language: en, text: Exness }
     siteLink: https://www.exness.com
   - id: 192
     name:
-      - {language: en, text: "Exonum, the Bitfury Group"}
+      - { language: en, text: "Exonum, the Bitfury Group" }
     siteLink: https://exonum.com
   - id: 194
     name:
-      - {language: en, text: Facebook}
+      - { language: en, text: Facebook }
     siteLink: https://www.facebook.com
   - id: 195
     name:
-      - {language: en, text: Novi}
+      - { language: en, text: Novi }
     siteLink: https://www.novi.com
   - id: 196
     name:
-      - {language: en, text: Faithlife}
+      - { language: en, text: Faithlife }
     siteLink: https://faithlife.com
   - id: 197
     name:
-      - {language: en, text: Fandom}
+      - { language: en, text: Fandom }
     siteLink: https://www.fandom.com
   - id: 198
     name:
-      - {language: en, text: Findify}
+      - { language: en, text: Findify }
     siteLink: https://www.findify.io
   - id: 200
     name:
-      - {language: en, text: FivexL}
+      - { language: en, text: FivexL }
     siteLink: https://fivexl.io
   - id: 201
     name:
-      - {language: en, text: "Focus Reactive"}
+      - { language: en, text: "Focus Reactive" }
     siteLink: https://focusreactive.com
   - id: 202
     name:
-      - {language: en, text: ForgeRock}
+      - { language: en, text: ForgeRock }
     siteLink: https://www.forgerock.com
   - id: 203
     name:
-      - {language: en, text: Freelance}
+      - { language: en, text: Freelance }
   - id: 204
     name:
-      - {language: en, text: "Freelance Software Architect"}
+      - { language: en, text: "Freelance Software Architect" }
   - id: 205
     name:
-      - {language: en, text: "Freelance — Posva Solutions"}
+      - { language: en, text: "Freelance — Posva Solutions" }
   - id: 206
     name:
-      - {language: en, text: Freeletics}
+      - { language: en, text: Freeletics }
     siteLink: https://www.freeletics.com
   - id: 207
     name:
-      - {language: en, text: FunCorp}
+      - { language: en, text: FunCorp }
     siteLink: https://fun.co
   - id: 208
     name:
-      - {language: en, text: Futurice}
+      - { language: en, text: Futurice }
     siteLink: https://futurice.com
   - id: 209
     name:
-      - {language: en, text: gapfruit}
+      - { language: en, text: gapfruit }
     siteLink: https://www.gapfruit.com
   - id: 210
     name:
-      - {language: en, text: "GDG Riga"}
+      - { language: en, text: "GDG Riga" }
     siteLink: https://gdgriga.lv
   - id: 211
     name:
-      - {language: en, text: Genestack}
+      - { language: en, text: Genestack }
     siteLink: https://genestack.com
   - id: 212
     name:
-      - {language: en, text: GetIntent}
+      - { language: en, text: GetIntent }
     siteLink: https://getintent.com
   - id: 214
     name:
-      - {language: en, text: GitLab}
+      - { language: en, text: GitLab }
     siteLink: https://gitlab.com
   - id: 215
     name:
-      - {language: en, text: "Go SPb"}
+      - { language: en, text: "Go SPb" }
     siteLink: https://www.meetup.com/Golang-Peter
   - id: 216
     name:
-      - {language: en, text: "Godel Technologies"}
+      - { language: en, text: "Godel Technologies" }
     siteLink: https://www.godeltech.com
   - id: 217
     name:
-      - {language: en, text: Google}
+      - { language: en, text: Google }
     siteLink: https://www.google.com
   - id: 218
     name:
-      - {language: en, text: Egeniq}
+      - { language: en, text: Egeniq }
     siteLink: https://www.egeniq.com
   - id: 219
     name:
-      - {language: en, text: "GP Solutions"}
+      - { language: en, text: "GP Solutions" }
     siteLink: https://gpsolutions.com
   - id: 220
     name:
-      - {language: en, text: Grab}
+      - { language: en, text: Grab }
     siteLink: https://www.grab.com
   - id: 221
     name:
-      - {language: en, text: "Gradle Inc."}
+      - { language: en, text: "Gradle Inc." }
     siteLink: https://gradle.com
   - id: 222
     name:
-      - {language: en, text: Gremlin}
+      - { language: en, text: Gremlin }
     siteLink: https://www.gremlin.com
   - id: 223
     name:
-      - {language: en, text: "Grid Dynamics"}
+      - { language: en, text: "Grid Dynamics" }
     siteLink: https://www.griddynamics.com
   - id: 224
     name:
-      - {language: en, text: "GridGain Systems"}
+      - { language: en, text: "GridGain Systems" }
     siteLink: https://www.gridgain.com
   - id: 225
     name:
-      - {language: en, text: Gritstep}
+      - { language: en, text: Gritstep }
     siteLink: http://gritstep.com
   - id: 226
     name:
-      - {language: en, text: Groupon}
+      - { language: en, text: Groupon }
     siteLink: https://www.groupon.com
   - id: 227
     name:
-      - {language: en, text: "Guidepost Systems"}
+      - { language: en, text: "Guidepost Systems" }
     siteLink: http://guidepostsystems.com
   - id: 228
     name:
-      - {language: en, text: "Hacking with Swift"}
+      - { language: en, text: "Hacking with Swift" }
     siteLink: https://www.hackingwithswift.com
   - id: 229
     name:
-      - {language: en, text: Halide}
+      - { language: en, text: Halide }
     siteLink: https://halide.cam
   - id: 230
     name:
-      - {language: en, text: HashiCorp}
+      - { language: en, text: HashiCorp }
     siteLink: https://www.hashicorp.com
   - id: 231
     name:
-      - {language: en, text: Hasura}
+      - { language: en, text: Hasura }
     siteLink: https://hasura.io
   - id: 232
     name:
-      - {language: en, text: Haulmont}
+      - { language: en, text: Haulmont }
     siteLink: https://www.haulmont.com
   - id: 233
     name:
-      - {language: en, text: Hazelcast}
+      - { language: en, text: Hazelcast }
     siteLink: https://hazelcast.com
   - id: 234
     name:
-      - {language: en, text: HeadHunter}
+      - { language: en, text: HeadHunter }
     siteLink: https://hh.ru
   - id: 235
     name:
-      - {language: en, text: "Health Samurai"}
+      - { language: en, text: "Health Samurai" }
     siteLink: https://www.health-samurai.io
   - id: 236
     name:
-      - {language: en, text: "Hladky IT"}
+      - { language: en, text: "Hladky IT" }
   - id: 237
     name:
-      - {language: en, text: Honeycomb}
+      - { language: en, text: Honeycomb }
     siteLink: https://www.honeycomb.io
   - id: 238
     name:
-      - {language: en, text: "Horsdal Consult"}
+      - { language: en, text: "Horsdal Consult" }
     siteLink: https://www.horsdal-consult.dk
   - id: 239
     name:
-      - {language: en, text: "House of Test GmbH"}
+      - { language: en, text: "House of Test GmbH" }
     siteLink: https://www.houseoftest.rocks
   - id: 240
     name:
-      - {language: en, text: HpyDev}
+      - { language: en, text: HpyDev }
     siteLink: https://hpy.dev
   - id: 241
     name:
-      - {language: en, text: "HTML Academy"}
+      - { language: en, text: "HTML Academy" }
     siteLink: https://htmlacademy.ru
   - id: 242
     name:
-      - {language: en, text: Huawei}
+      - { language: en, text: Huawei }
     siteLink: https://www.huawei.com
   - id: 243
     name:
-      - {language: en, text: Huddle}
+      - { language: en, text: Huddle }
     siteLink: https://www.huddle.com
   - id: 244
     name:
-      - {language: en, text: HUMANS}
+      - { language: en, text: HUMANS }
     siteLink: https://humans.uz
   - id: 246
     name:
-      - {language: en, text: HyOO}
+      - { language: en, text: HyOO }
     siteLink: https://hyoo.ru
   - id: 247
     name:
-      - {language: en, text: Hyper}
+      - { language: en, text: Hyper }
     siteLink: https://www.hyper.no
   - id: 249
     name:
-      - {language: en, text: Hypothesis}
+      - { language: en, text: Hypothesis }
     siteLink: https://hypothes.is
   - id: 250
     name:
-      - {language: en, text: IBM}
+      - { language: en, text: IBM }
     siteLink: https://www.ibm.com
   - id: 251
     name:
-      - {language: en, text: IG}
+      - { language: en, text: IG }
     siteLink: https://www.ig.com
   - id: 252
     name:
-      - {language: en, text: Igalia}
+      - { language: en, text: Igalia }
     siteLink: https://www.igalia.com
   - id: 253
     name:
-      - {language: en, text: iHeartRadio}
+      - { language: en, text: iHeartRadio }
     siteLink: https://www.iheart.com
   - id: 254
     name:
-      - {language: en, text: "IHS Markit"}
+      - { language: en, text: "IHS Markit" }
     siteLink: https://ihsmarkit.com
   - id: 255
     name:
-      - {language: en, text: IMDEA}
+      - { language: en, text: IMDEA }
     siteLink: https://www.imdea.org
   - id: 256
     name:
-      - {language: en, text: Independent}
+      - { language: en, text: Independent }
   - id: 257
     name:
-      - {language: en, text: "Independent Consultant"}
-      - {language: ru, text: "Независимый консультант"}
+      - { language: en, text: "Independent Consultant" }
+      - { language: ru, text: "Независимый консультант" }
   - id: 258
     name:
-      - {language: en, text: "Independent Developer"}
-      - {language: ru, text: "Независимый разработчик"}
+      - { language: en, text: "Independent Developer" }
+      - { language: ru, text: "Независимый разработчик" }
   - id: 259
     name:
-      - {language: en, text: "Independent Trainer"}
-      - {language: ru, text: "Независимый тренер"}
+      - { language: en, text: "Independent Trainer" }
+      - { language: ru, text: "Независимый тренер" }
   - id: 260
     name:
-      - {language: en, text: Indie}
+      - { language: en, text: Indie }
   - id: 261
     name:
-      - {language: en, text: "Info Support"}
+      - { language: en, text: "Info Support" }
     siteLink: https://www.infosupport.com
   - id: 262
     name:
-      - {language: en, text: Infobip}
+      - { language: en, text: Infobip }
     siteLink: https://www.infobip.com
   - id: 264
     name:
-      - {language: en, text: Infotecs}
+      - { language: en, text: Infotecs }
     siteLink: http://infotecs.ru
   - id: 265
     name:
-      - {language: en, text: ING}
+      - { language: en, text: ING }
     siteLink: https://www.ing.com
   - id: 266
     name:
-      - {language: en, text: Insolar}
+      - { language: en, text: Insolar }
     siteLink: https://insolar.io
   - id: 267
     name:
-      - {language: en, text: Intel}
+      - { language: en, text: Intel }
     siteLink: https://www.intel.com
   - id: 269
     name:
-      - {language: en, text: Inuits}
+      - { language: en, text: Inuits }
     siteLink: https://inuits.eu
   - id: 273
     name:
-      - {language: en, text: Isovalent}
+      - { language: en, text: Isovalent }
     siteLink: https://isovalent.com
   - id: 274
     name:
-      - {language: en, text: iSpring}
+      - { language: en, text: iSpring }
     siteLink: https://www.ispring.ru
   - id: 275
     name:
-      - {language: en, text: "Instituto Superior Técnico"}
+      - { language: en, text: "Instituto Superior Técnico" }
     siteLink: https://tecnico.ulisboa.pt
   - id: 276
     name:
-      - {language: en, text: "IST Austria"}
+      - { language: en, text: "IST Austria" }
     siteLink: https://ist.ac.at
   - id: 277
     name:
-      - {language: en, text: "IT HR"}
+      - { language: en, text: "IT HR" }
     siteLink: https://vk.com/ithrmeetup
   - id: 278
     name:
-      - {language: en, text: "IT Territory/MY.GAMES"}
+      - { language: en, text: "IT Territory/MY.GAMES" }
     siteLink: https://www.it-territory.ru
   - id: 279
     name:
-      - {language: en, text: "ITMO University"}
-      - {language: ru, text: "Университет ИТМО"}
+      - { language: en, text: "ITMO University" }
+      - { language: ru, text: "Университет ИТМО" }
     siteLink: https://itmo.ru
   - id: 280
     name:
-      - {language: en, text: ivi}
+      - { language: en, text: ivi }
     siteLink: https://www.ivi.ru
   - id: 281
     name:
-      - {language: en, text: Ixtens}
+      - { language: en, text: Ixtens }
     siteLink: https://www.alekta.ru
   - id: 282
     name:
-      - {language: en, text: JavaSpecialists}
+      - { language: en, text: JavaSpecialists }
     siteLink: https://www.javaspecialists.eu
   - id: 283
     name:
-      - {language: en, text: "JDI Team"}
+      - { language: en, text: "JDI Team" }
     siteLink: https://github.com/jdi-testing
   - id: 284
     name:
-      - {language: en, text: Jelastic}
+      - { language: en, text: Jelastic }
     siteLink: https://jelastic.com
   - id: 285
     name:
-      - {language: en, text: Jet.com}
+      - { language: en, text: Jet.com }
     siteLink: https://jet.com
   - id: 286
     name:
-      - {language: en, text: JetBrains}
+      - { language: en, text: JetBrains }
     siteLink: https://www.jetbrains.com
   - id: 287
     name:
-      - {language: en, text: JFrog}
+      - { language: en, text: JFrog }
     siteLink: https://jfrog.com
   - id: 289
     name:
-      - {language: en, text: Jinnius}
+      - { language: en, text: Jinnius }
   - id: 290
     name:
-      - {language: en, text: "JP Morgan Chase"}
+      - { language: en, text: "JP Morgan Chase" }
     siteLink: https://www.jpmorganchase.com
   - id: 291
     name:
-      - {language: en, text: "JUG Ru Group"}
+      - { language: en, text: "JUG Ru Group" }
     siteLink: https://jugru.org
   - id: 292
     name:
-      - {language: en, text: Juno}
+      - { language: en, text: Juno }
     siteLink: https://gojuno.com
   - id: 293
     name:
-      - {language: en, text: "Karakun AG"}
+      - { language: en, text: "Karakun AG" }
     siteLink: https://karakun.com
   - id: 294
     name:
-      - {language: en, text: KDE}
+      - { language: en, text: KDE }
     siteLink: https://kde.org
   - id: 295
     name:
-      - {language: en, text: KeepSolid}
+      - { language: en, text: KeepSolid }
     siteLink: https://www.keepsolid.com
   - id: 296
     name:
-      - {language: en, text: King}
+      - { language: en, text: King }
     siteLink: https://www.king.com
   - id: 297
     name:
-      - {language: en, text: "Kitab Sawti"}
+      - { language: en, text: "Kitab Sawti" }
     siteLink: https://kitabsawti.com
   - id: 298
     name:
-      - {language: en, text: Klarna}
+      - { language: en, text: Klarna }
     siteLink: https://www.klarna.com
   - id: 299
     name:
-      - {language: en, text: "Kodewerk Ltd."}
+      - { language: en, text: "Kodewerk Ltd." }
     siteLink: http://www.kodewerk.com
   - id: 300
     name:
-      - {language: en, text: "Kt. Academy"}
+      - { language: en, text: "Kt. Academy" }
     siteLink: https://kt.academy
   - id: 301
     name:
-      - {language: en, text: "KTH Royal Institute of Technology"}
+      - { language: en, text: "KTH Royal Institute of Technology" }
     siteLink: https://www.kth.se
   - id: 302
     name:
-      - {language: en, text: Lamoda}
+      - { language: en, text: Lamoda }
     siteLink: https://www.lamoda.ru
   - id: 303
     name:
-      - {language: en, text: LaunchDarkly}
+      - { language: en, text: LaunchDarkly }
     siteLink: https://launchdarkly.com
   - id: 304
     name:
-      - {language: en, text: "LEDGR Inc"}
+      - { language: en, text: "LEDGR Inc" }
     siteLink: https://ledgrinc.com
   - id: 305
     name:
-      - {language: en, text: lessmess.agency}
+      - { language: en, text: lessmess.agency }
     siteLink: https://lessmess.agency
   - id: 306
     name:
-      - {language: en, text: "LG Electronics"}
+      - { language: en, text: "LG Electronics" }
     siteLink: https://www.lg.com
   - id: 307
     name:
-      - {language: en, text: "Liberty Associates"}
+      - { language: en, text: "Liberty Associates" }
     siteLink: https://www.libertyassociates.com
   - id: 308
     name:
-      - {language: en, text: "Licel Corporation"}
+      - { language: en, text: "Licel Corporation" }
     siteLink: https://licelus.com
   - id: 309
     name:
-      - {language: en, text: Liferay}
+      - { language: en, text: Liferay }
     siteLink: https://www.liferay.com
   - id: 310
     name:
-      - {language: en, text: Lightbend}
+      - { language: en, text: Lightbend }
     siteLink: https://www.lightbend.com
   - id: 311
     name:
-      - {language: en, text: "LINE+ Corporation"}
+      - { language: en, text: "LINE+ Corporation" }
     siteLink: https://linecorp.com
   - id: 312
     name:
-      - {language: en, text: LINKIT}
+      - { language: en, text: LINKIT }
     siteLink: https://linkit.com
   - id: 313
     name:
-      - {language: en, text: linkmeup}
+      - { language: en, text: linkmeup }
     siteLink: https://linkmeup.ru
   - id: 314
     name:
-      - {language: en, text: LogMeIn}
+      - { language: en, text: LogMeIn }
     siteLink: https://www.logmein.com
   - id: 316
     name:
-      - {language: en, text: "Luminis Technologies"}
+      - { language: en, text: "Luminis Technologies" }
     siteLink: https://www.luminis.eu
   - id: 317
     name:
-      - {language: en, text: "Lux Optics"}
+      - { language: en, text: "Lux Optics" }
     siteLink: https://lux.camera
   - id: 318
     name:
-      - {language: en, text: Luxoft}
+      - { language: en, text: Luxoft }
     siteLink: https://www.luxoft.com
   - id: 319
     name:
-      - {language: en, text: Lyft}
+      - { language: en, text: Lyft }
     siteLink: https://www.lyft.com
   - id: 320
     name:
-      - {language: en, text: Macroscop}
+      - { language: en, text: Macroscop }
     siteLink: https://macroscop.com
   - id: 321
     name:
-      - {language: en, text: "Mail.Ru Group"}
+      - { language: en, text: "Mail.Ru Group" }
     siteLink: https://mail.ru
   - id: 322
     name:
-      - {language: en, text: ManyChat}
+      - { language: en, text: ManyChat }
     siteLink: https://manychat.com
   - id: 323
     name:
-      - {language: en, text: Meetup}
+      - { language: en, text: Meetup }
     siteLink: https://www.meetup.com
   - id: 324
     name:
-      - {language: en, text: MEKOS}
+      - { language: en, text: MEKOS }
     siteLink: https://mekos.de
   - id: 327
     name:
-      - {language: en, text: Micromata}
+      - { language: en, text: Micromata }
     siteLink: https://www.micromata.de
   - id: 328
     name:
-      - {language: en, text: Microsoft}
+      - { language: en, text: Microsoft }
     siteLink: https://www.microsoft.com
   - id: 329
     name:
-      - {language: en, text: Midrive}
+      - { language: en, text: Midrive }
     siteLink: https://www.midrive.com
   - id: 330
     name:
-      - {language: en, text: Miles}
+      - { language: en, text: Miles }
     siteLink: https://www.miles.no
   - id: 331
     name:
-      - {language: en, text: Miro}
+      - { language: en, text: Miro }
     siteLink: https://miro.com
   - id: 332
     name:
-      - {language: en, text: MIT}
+      - { language: en, text: MIT }
     siteLink: https://www.mit.edu
   - id: 333
     name:
-      - {language: en, text: mnogosdelal.ru}
+      - { language: en, text: mnogosdelal.ru }
     siteLink: https://mnogosdelal.ru
   - id: 335
     name:
-      - {language: en, text: "Modelus LLC"}
+      - { language: en, text: "Modelus LLC" }
     siteLink: http://www.modelus.com
   - id: 336
     name:
-      - {language: en, text: "Modernes C++"}
+      - { language: en, text: "Modernes C++" }
     siteLink: https://www.modernescpp.com
   - id: 337
     name:
-      - {language: en, text: Monday.com}
+      - { language: en, text: Monday.com }
     siteLink: https://monday.com
   - id: 338
     name:
-      - {language: en, text: MongoDB}
+      - { language: en, text: MongoDB }
     siteLink: https://www.mongodb.com
   - id: 339
     name:
-      - {language: en, text: Moovit}
+      - { language: en, text: Moovit }
     siteLink: https://moovit.com
   - id: 340
     name:
-      - {language: en, text: "Morgan Stanley"}
+      - { language: en, text: "Morgan Stanley" }
     siteLink: https://www.morganstanley.com
   - id: 341
     name:
-      - {language: en, text: "Morningside Light Ltd."}
+      - { language: en, text: "Morningside Light Ltd." }
     siteLink: http://www.morninglight.co.uk
   - id: 342
     name:
-      - {language: en, text: Motify}
+      - { language: en, text: Motify }
     siteLink: https://motify.com
   - id: 343
     name:
-      - {language: en, text: Mozilla}
+      - { language: en, text: Mozilla }
     siteLink: https://www.mozilla.org
   - id: 344
     name:
-      - {language: en, text: MPI-SWS}
+      - { language: en, text: MPI-SWS }
     siteLink: https://www.mpi-sws.org
   - id: 345
     name:
-      - {language: en, text: "msu solutions GmbH"}
+      - { language: en, text: "msu solutions GmbH" }
     siteLink: https://msu-solutions.de
   - id: 346
     name:
-      - {language: en, text: "mtrail GmbH"}
+      - { language: en, text: "mtrail GmbH" }
     siteLink: https://www.mtrail.ch
   - id: 347
     name:
-      - {language: en, text: Multitracks.com}
+      - { language: en, text: Multitracks.com }
     siteLink: https://www.multitracks.com
   - id: 348
     name:
-      - {language: en, text: "Murano Software"}
+      - { language: en, text: "Murano Software" }
     siteLink: https://muranosoft.ru
   - id: 349
     name:
-      - {language: en, text: Mustlab}
+      - { language: en, text: Mustlab }
     siteLink: http://mustlab.ru
   - id: 350
     name:
-      - {language: en, text: mytaxi}
+      - { language: en, text: mytaxi }
     siteLink: https://www.mytaxi.com
   - id: 351
     name:
-      - {language: en, text: "NEO Saint Petersburg Competence Center"}
+      - { language: en, text: "NEO Saint Petersburg Competence Center" }
     siteLink: https://nspcc.ru
   - id: 352
     name:
-      - {language: en, text: NestJS}
+      - { language: en, text: NestJS }
     siteLink: https://nestjs.com
   - id: 353
     name:
-      - {language: en, text: "Net Insight"}
+      - { language: en, text: "Net Insight" }
     siteLink: https://netinsight.net
   - id: 354
     name:
-      - {language: en, text: Net2Phone}
+      - { language: en, text: Net2Phone }
     siteLink: https://www.net2phone.com
   - id: 355
     name:
-      - {language: en, text: Netcentric}
+      - { language: en, text: Netcentric }
     siteLink: https://www.netcentric.biz
   - id: 357
     name:
-      - {language: en, text: Netcracker}
+      - { language: en, text: Netcracker }
     siteLink: https://www.netcracker.com
   - id: 358
     name:
-      - {language: en, text: Netflix}
+      - { language: en, text: Netflix }
     siteLink: https://www.netflix.com
   - id: 360
     name:
-      - {language: en, text: Netlify}
+      - { language: en, text: Netlify }
     siteLink: https://www.netlify.com
   - id: 361
     name:
-      - {language: en, text: Neurosity}
+      - { language: en, text: Neurosity }
     siteLink: https://neurosity.co
   - id: 362
     name:
-      - {language: en, text: "New York Times"}
+      - { language: en, text: "New York Times" }
     siteLink: https://www.nytimes.com
   - id: 363
     name:
-      - {language: en, text: "Neward & Associates, LLC"}
+      - { language: en, text: "Neward & Associates, LLC" }
     siteLink: https://www.newardassociates.com
   - id: 364
     name:
-      - {language: en, text: Nitor}
+      - { language: en, text: Nitor }
     siteLink: https://nitor.com
   - id: 365
     name:
-      - {language: en, text: Nix}
+      - { language: en, text: Nix }
     siteLink: https://www.nixsolutions.com
   - id: 366
     name:
-      - {language: en, text: "Node University"}
+      - { language: en, text: "Node University" }
     siteLink: https://node.university
   - id: 367
     name:
-      - {language: en, text: Nokia}
+      - { language: en, text: Nokia }
     siteLink: https://www.nokia.com
   - id: 368
     name:
-      - {language: en, text: NowSecure}
+      - { language: en, text: NowSecure }
     siteLink: https://www.nowsecure.com
   - id: 369
     name:
-      - {language: en, text: NRK}
+      - { language: en, text: NRK }
     siteLink: https://www.nrk.no
   - id: 370
     name:
-      - {language: en, text: NVIDIA}
+      - { language: en, text: NVIDIA }
     siteLink: https://www.nvidia.com
   - id: 371
     name:
-      - {language: en, text: "NWTN Berlin"}
+      - { language: en, text: "NWTN Berlin" }
     siteLink: http://www.nwtn-berlin.com
   - id: 372
     name:
-      - {language: en, text: Oath}
+      - { language: en, text: Oath }
     siteLink: https://www.oath.com
   - id: 373
     name:
-      - {language: en, text: "Object Computing"}
+      - { language: en, text: "Object Computing" }
     siteLink: https://objectcomputing.com
   - id: 374
     name:
-      - {language: en, text: "ObjectStyle LLC"}
+      - { language: en, text: "ObjectStyle LLC" }
     siteLink: https://www.objectstyle.com
   - id: 375
     name:
-      - {language: en, text: "Ocado Technology"}
+      - { language: en, text: "Ocado Technology" }
     siteLink: https://www.ocadogroup.com
   - id: 376
     name:
-      - {language: en, text: OCS.LAB}
+      - { language: en, text: OCS.LAB }
     siteLink: https://ocs.ru
   - id: 377
     name:
-      - {language: en, text: Okko}
+      - { language: en, text: Okko }
     siteLink: https://okko.tv
   - id: 379
     name:
-      - {language: en, text: onqtam.com}
+      - { language: en, text: onqtam.com }
     siteLink: https://onqtam.com
   - id: 381
     name:
-      - {language: en, text: Opbeat}
+      - { language: en, text: Opbeat }
     siteLink: https://opbeat.com
   - id: 382
     name:
-      - {language: en, text: Oper.ru}
+      - { language: en, text: Oper.ru }
     siteLink: https://oper.ru
   - id: 383
     name:
-      - {language: en, text: Oracle}
+      - { language: en, text: Oracle }
     siteLink: https://www.oracle.com
   - id: 385
     name:
-      - {language: en, text: ORION}
+      - { language: en, text: ORION }
     siteLink: https://orion.sh
   - id: 386
     name:
-      - {language: en, text: "Orion Innovation"}
+      - { language: en, text: "Orion Innovation" }
     siteLink: https://www.orioninc.com
   - id: 387
     name:
-      - {language: en, text: "Otomato Software"}
+      - { language: en, text: "Otomato Software" }
     siteLink: https://otomato.io
   - id: 388
     name:
-      - {language: en, text: "OTS Lab"}
+      - { language: en, text: "OTS Lab" }
     siteLink: https://www.otslab.ru
   - id: 389
     name:
-      - {language: en, text: OTUS}
+      - { language: en, text: OTUS }
     siteLink: https://otus.ru
   - id: 390
     name:
-      - {language: en, text: OZON}
+      - { language: en, text: OZON }
     siteLink: https://www.ozon.ru
   - id: 392
     name:
-      - {language: en, text: "Particular Software"}
+      - { language: en, text: "Particular Software" }
     siteLink: https://particular.net
   - id: 393
     name:
-      - {language: en, text: Paysystem.tech}
+      - { language: en, text: Paysystem.tech }
     siteLink: https://paysystem.tech
   - id: 394
     name:
-      - {language: en, text: "Peculiar Ventures"}
+      - { language: en, text: "Peculiar Ventures" }
     siteLink: https://peculiarventures.com
   - id: 395
     name:
-      - {language: en, text: Percona}
+      - { language: en, text: Percona }
     siteLink: https://www.percona.com
   - id: 396
     name:
-      - {language: en, text: "Performance Lab"}
+      - { language: en, text: "Performance Lab" }
     siteLink: https://www.performance-lab.ru
   - id: 397
     name:
-      - {language: en, text: PerfPerfPerf}
+      - { language: en, text: PerfPerfPerf }
     siteLink: https://3perf.com
   - id: 398
     name:
-      - {language: en, text: Petabridge}
+      - { language: en, text: Petabridge }
     siteLink: https://petabridge.com
   - id: 399
     name:
-      - {language: en, text: Pinect}
+      - { language: en, text: Pinect }
     siteLink: https://www.pinect.ru
   - id: 400
     name:
-      - {language: en, text: PingCAP}
+      - { language: en, text: PingCAP }
     siteLink: https://pingcap.com
   - id: 401
     name:
-      - {language: en, text: Pinterest}
+      - { language: en, text: Pinterest }
     siteLink: https://www.pinterest.com
   - id: 402
     name:
-      - {language: en, text: PiterJS}
+      - { language: en, text: PiterJS }
     siteLink: https://piterjs.org
   - id: 403
     name:
-      - {language: en, text: Pivotal}
+      - { language: en, text: Pivotal }
     siteLink: https://pivotal.io
   - id: 404
     name:
-      - {language: en, text: Pixplicity}
+      - { language: en, text: Pixplicity }
     siteLink: https://pixplicity.com
   - id: 405
     name:
-      - {language: en, text: Plarium}
+      - { language: en, text: Plarium }
     siteLink: https://plarium.com
   - id: 406
     name:
-      - {language: en, text: Platform.sh}
+      - { language: en, text: Platform.sh }
     siteLink: https://platform.sh
   - id: 407
     name:
-      - {language: en, text: Plesk}
+      - { language: en, text: Plesk }
     siteLink: https://www.plesk.com
   - id: 408
     name:
-      - {language: en, text: Plumbr}
+      - { language: en, text: Plumbr }
     siteLink: https://plumbr.io
   - id: 409
     name:
-      - {language: en, text: "Point API"}
+      - { language: en, text: "Point API" }
     siteLink: https://pointapi.com
   - id: 410
     name:
-      - {language: en, text: "Positive Technologies"}
+      - { language: en, text: "Positive Technologies" }
     siteLink: https://www.ptsecurity.com
   - id: 411
     name:
-      - {language: en, text: "PostgreSQL Russia"}
+      - { language: en, text: "PostgreSQL Russia" }
   - id: 412
     name:
-      - {language: en, text: Postmates}
+      - { language: en, text: Postmates }
     siteLink: https://postmates.com
   - id: 413
     name:
-      - {language: en, text: "PostSharp Technologies"}
+      - { language: en, text: "PostSharp Technologies" }
     siteLink: https://www.postsharp.net
   - id: 414
     name:
-      - {language: en, text: Pragmatists}
+      - { language: en, text: Pragmatists }
     siteLink: https://pragmatists.com
   - id: 415
     name:
-      - {language: en, text: Pressjitsu}
+      - { language: en, text: Pressjitsu }
     siteLink: https://pressjitsu.com
   - id: 416
     name:
-      - {language: en, text: "Prisma AI"}
+      - { language: en, text: "Prisma AI" }
     siteLink: https://prisma-ai.com
   - id: 417
     name:
-      - {language: en, text: "Telecom Paris, Institut Polytechnique Paris"}
+      - { language: en, text: "Telecom Paris, Institut Polytechnique Paris" }
     siteLink: https://www.telecom-paris.fr
   - id: 419
     name:
-      - {language: en, text: "Progress Software"}
+      - { language: en, text: "Progress Software" }
     siteLink: https://www.progress.com
   - id: 421
     name:
-      - {language: en, text: PS.kz}
+      - { language: en, text: PS.kz }
     siteLink: https://www.ps.kz
   - id: 422
     name:
-      - {language: en, text: "PSPDFKit GmbH"}
+      - { language: en, text: "PSPDFKit GmbH" }
     siteLink: https://pspdfkit.com
   - id: 423
     name:
-      - {language: en, text: Pulumi}
+      - { language: en, text: Pulumi }
     siteLink: https://www.pulumi.com
   - id: 424
     name:
-      - {language: en, text: PVS-Studio}
+      - { language: en, text: PVS-Studio }
     siteLink: https://pvs-studio.com
   - id: 425
     name:
-      - {language: en, text: "Qameta Software"}
+      - { language: en, text: "Qameta Software" }
     siteLink: https://qameta.io
   - id: 426
     name:
-      - {language: en, text: QIWI}
+      - { language: en, text: QIWI }
     siteLink: https://qiwi.com
   - id: 427
     name:
-      - {language: en, text: Quantori}
+      - { language: en, text: Quantori }
     siteLink: https://www.quantori.com
   - id: 429
     name:
-      - {language: en, text: "Raiffeisen Bank International"}
+      - { language: en, text: "Raiffeisen Bank International" }
     siteLink: https://www.rbinternational.com
   - id: 431
     name:
-      - {language: en, text: "Rambler Group"}
+      - { language: en, text: "Rambler Group" }
     siteLink: https://rambler-co.ru
   - id: 432
     name:
-      - {language: en, text: "Rancher Labs"}
+      - { language: en, text: "Rancher Labs" }
     siteLink: https://rancher.com
   - id: 433
     name:
-      - {language: en, text: "Ray Wenderlich"}
+      - { language: en, text: "Ray Wenderlich" }
     siteLink: https://www.raywenderlich.com
   - id: 434
     name:
-      - {language: en, text: RBCS}
+      - { language: en, text: RBCS }
     siteLink: https://www.rbcs-us.com
   - id: 436
     name:
-      - {language: en, text: Realdolmen}
+      - { language: en, text: Realdolmen }
     siteLink: https://www.realdolmen.com
   - id: 437
     name:
-      - {language: en, text: "Reality Games"}
+      - { language: en, text: "Reality Games" }
     siteLink: https://reality.co
   - id: 438
     name:
-      - {language: en, text: "Red Hat"}
+      - { language: en, text: "Red Hat" }
     siteLink: https://www.redhat.com
   - id: 439
     name:
-      - {language: en, text: "Kiwi TCMS"}
+      - { language: en, text: "Kiwi TCMS" }
     siteLink: https://kiwitcms.org
   - id: 440
     name:
-      - {language: en, text: Redmadrobot}
+      - { language: en, text: Redmadrobot }
     siteLink: https://www.redmadrobot.com
   - id: 441
     name:
-      - {language: en, text: Reindex}
+      - { language: en, text: Reindex }
     siteLink: https://www.reindex.io
   - id: 444
     name:
-      - {language: en, text: "Resolve Systems"}
+      - { language: en, text: "Resolve Systems" }
     siteLink: https://resolve.io
   - id: 446
     name:
-      - {language: en, text: Retable}
+      - { language: en, text: Retable }
     siteLink: https://www.retable.ai
   - id: 447
     name:
-      - {language: en, text: Revolut}
+      - { language: en, text: Revolut }
     siteLink: https://www.revolut.com
   - id: 448
     name:
-      - {language: en, text: "Riga Dev Days"}
+      - { language: en, text: "Riga Dev Days" }
     siteLink: https://rigadevdays.lv
   - id: 449
     name:
-      - {language: en, text: RIGANTI}
+      - { language: en, text: RIGANTI }
     siteLink: https://www.riganti.cz
   - id: 450
     name:
-      - {language: en, text: RoboQA}
+      - { language: en, text: RoboQA }
     siteLink: https://www.roboqa.com
   - id: 451
     name:
-      - {language: en, text: Robotise}
+      - { language: en, text: Robotise }
     siteLink: https://robotise.eu
   - id: 452
     name:
-      - {language: en, text: "Romero Games"}
+      - { language: en, text: "Romero Games" }
     siteLink: https://romerogames.com
   - id: 453
     name:
-      - {language: en, text: "Roox Solutions"}
+      - { language: en, text: "Roox Solutions" }
     siteLink: https://roox.ru
   - id: 454
     name:
-      - {language: en, text: "S7"}
+      - { language: en, text: "S7" }
     siteLink: https://www.s7.ru
   - id: 456
     name:
-      - {language: en, text: Salesforce}
+      - { language: en, text: Salesforce }
     siteLink: https://www.salesforce.com
   - id: 457
     name:
-      - {language: en, text: Samsung}
+      - { language: en, text: Samsung }
     siteLink: https://www.samsung.com
   - id: 460
     name:
-      - {language: en, text: "San José State University"}
+      - { language: en, text: "San José State University" }
     siteLink: https://www.sjsu.edu
   - id: 462
     name:
-      - {language: en, text: SAP}
+      - { language: en, text: SAP }
     siteLink: https://www.sap.com
   - id: 464
     name:
-      - {language: en, text: SauceLabs}
+      - { language: en, text: SauceLabs }
     siteLink: https://saucelabs.com
   - id: 466
     name:
-      - {language: en, text: "Scienta AS"}
+      - { language: en, text: "Scienta AS" }
     siteLink: https://scienta.no
   - id: 467
     name:
-      - {language: en, text: Scrapinghub}
+      - { language: en, text: Scrapinghub }
     siteLink: https://scrapinghub.com
   - id: 468
     name:
-      - {language: en, text: ScrumTrek}
+      - { language: en, text: ScrumTrek }
     siteLink: https://scrumtrek.ru
   - id: 470
     name:
-      - {language: en, text: "Sela Group"}
+      - { language: en, text: "Sela Group" }
     siteLink: http://www.selagroup.com
   - id: 471
     name:
-      - {language: en, text: SEMrush}
+      - { language: en, text: SEMrush }
     siteLink: https://www.semrush.com
   - id: 472
     name:
-      - {language: en, text: Serverless}
+      - { language: en, text: Serverless }
     siteLink: https://www.serverless.com
   - id: 473
     name:
-      - {language: en, text: ServiceTalk}
+      - { language: en, text: ServiceTalk }
     siteLink: https://servicetalk.io
   - id: 474
     name:
-      - {language: en, text: "Shepherd's Oasis"}
+      - { language: en, text: "Shepherd's Oasis" }
     siteLink: https://soasis.org
   - id: 475
     name:
-      - {language: en, text: Sidenis}
+      - { language: en, text: Sidenis }
     siteLink: https://syncretis.com
   - id: 476
     name:
-      - {language: en, text: "Sigma Software"}
+      - { language: en, text: "Sigma Software" }
     siteLink: https://sigma.software
   - id: 477
     name:
-      - {language: en, text: Signavio}
+      - { language: en, text: Signavio }
     siteLink: https://www.signavio.com
   - id: 478
     name:
-      - {language: en, text: Simudyne}
+      - { language: en, text: Simudyne }
     siteLink: https://www.simudyne.com
   - id: 479
     name:
-      - {language: en, text: SinnerSchrader}
+      - { language: en, text: SinnerSchrader }
     siteLink: https://sinnerschrader.com
   - id: 480
     name:
-      - {language: en, text: Smalley.IT}
+      - { language: en, text: Smalley.IT }
     siteLink: http://smalley.it
   - id: 481
     name:
-      - {language: en, text: smartHelios}
+      - { language: en, text: smartHelios }
     siteLink: https://smarthelios.de
   - id: 482
     name:
-      - {language: en, text: "Smashing Magazine"}
+      - { language: en, text: "Smashing Magazine" }
     siteLink: https://www.smashingmagazine.com
   - id: 483
     name:
-      - {language: en, text: Snaptortoise}
+      - { language: en, text: Snaptortoise }
     siteLink: https://snaptortoise.com
   - id: 484
     name:
-      - {language: en, text: "Snyk Ltd."}
+      - { language: en, text: "Snyk Ltd." }
     siteLink: https://snyk.io
   - id: 485
     name:
-      - {language: en, text: Software-Testing.Ru}
+      - { language: en, text: Software-Testing.Ru }
     siteLink: https://software-testing.ru
   - id: 486
     name:
-      - {language: en, text: SoftwareMill}
+      - { language: en, text: SoftwareMill }
     siteLink: https://softwaremill.com
   - id: 487
     name:
-      - {language: en, text: Solanteq}
+      - { language: en, text: Solanteq }
     siteLink: https://solanteq.com
   - id: 489
     name:
-      - {language: en, text: SonarSource}
+      - { language: en, text: SonarSource }
     siteLink: https://www.sonarsource.com
   - id: 490
     name:
-      - {language: en, text: Sonova}
+      - { language: en, text: Sonova }
     siteLink: https://www.sonova.com
   - id: 491
     name:
-      - {language: en, text: Soundbrenner}
+      - { language: en, text: Soundbrenner }
     siteLink: https://www.soundbrenner.com
   - id: 492
     name:
-      - {language: en, text: SourceGear}
+      - { language: en, text: SourceGear }
     siteLink: https://sourcegear.com
   - id: 493
     name:
-      - {language: en, text: Sourcegrounds}
+      - { language: en, text: Sourcegrounds }
     siteLink: https://sourcegrounds.com
   - id: 494
     name:
-      - {language: en, text: "Sowatec AG"}
+      - { language: en, text: "Sowatec AG" }
     siteLink: https://www.sowatec.com
   - id: 495
     name:
-      - {language: en, text: Space307}
+      - { language: en, text: Space307 }
     siteLink: https://space307.com
   - id: 496
     name:
-      - {language: en, text: "Spiral Code Studio"}
+      - { language: en, text: "Spiral Code Studio" }
     siteLink: https://spiralcodestudio.com
   - id: 497
     name:
-      - {language: en, text: Splunk}
+      - { language: en, text: Splunk }
     siteLink: https://www.splunk.com
   - id: 499
     name:
-      - {language: en, text: sporttotal.tv}
+      - { language: en, text: sporttotal.tv }
     siteLink: https://sporttotal.tv
   - id: 500
     name:
-      - {language: en, text: Spotify}
+      - { language: en, text: Spotify }
     siteLink: https://www.spotify.com
   - id: 501
     name:
-      - {language: en, text: Square}
+      - { language: en, text: Square }
     siteLink: https://squareup.com
   - id: 502
     name:
-      - {language: en, text: Squerist}
+      - { language: en, text: Squerist }
     siteLink: https://www.squerist.nl
   - id: 503
     name:
-      - {language: en, text: "Stack Overflow"}
+      - { language: en, text: "Stack Overflow" }
     siteLink: https://stackoverflow.com
   - id: 504
     name:
-      - {language: en, text: "Staroid, Inc."}
+      - { language: en, text: "Staroid, Inc." }
     siteLink: https://staroid.com
   - id: 505
     name:
-      - {language: en, text: "Styra, Inc."}
+      - { language: en, text: "Styra, Inc." }
     siteLink: https://www.styra.com
   - id: 506
     name:
-      - {language: en, text: Surf}
+      - { language: en, text: Surf }
     siteLink: https://surf.ru
   - id: 507
     name:
-      - {language: en, text: Sweatcoin}
+      - { language: en, text: Sweatcoin }
     siteLink: https://sweatco.in
   - id: 508
     name:
-      - {language: en, text: Symentis}
+      - { language: en, text: Symentis }
     siteLink: https://www.symentis.com
   - id: 509
     name:
-      - {language: en, text: TabMo}
+      - { language: en, text: TabMo }
     siteLink: https://hawk-tech.io
   - id: 510
     name:
-      - {language: en, text: Talkdesk}
+      - { language: en, text: Talkdesk }
     siteLink: https://www.talkdesk.com
   - id: 511
     name:
-      - {language: en, text: Tarantool}
+      - { language: en, text: Tarantool }
     siteLink: https://www.tarantool.io
   - id: 512
     name:
-      - {language: en, text: Targetprocess}
+      - { language: en, text: Targetprocess }
     siteLink: https://targetprocess.com
   - id: 513
     name:
-      - {language: en, text: Tazeros}
+      - { language: en, text: Tazeros }
     siteLink: https://tazeros.com
   - id: 514
     name:
-      - {language: en, text: teachcode.org}
+      - { language: en, text: teachcode.org }
     siteLink: https://www.teachcode.org
   - id: 515
     name:
-      - {language: en, text: Technion}
+      - { language: en, text: Technion }
     siteLink: https://www.technion.ac.il
   - id: 516
     name:
-      - {language: en, text: "Tel Aviv University"}
+      - { language: en, text: "Tel Aviv University" }
     siteLink: https://www.tau.ac.il
   - id: 517
     name:
-      - {language: en, text: "Temporal Technologies"}
+      - { language: en, text: "Temporal Technologies" }
     siteLink: https://temporal.io
   - id: 518
     name:
-      - {language: en, text: "The App Business"}
+      - { language: en, text: "The App Business" }
     siteLink: https://www.theappbusiness.com
   - id: 519
     name:
-      - {language: en, text: "The Atlantic Systems Guild Inc."}
+      - { language: en, text: "The Atlantic Systems Guild Inc." }
     siteLink: https://systemsguild.eu
   - id: 521
     name:
-      - {language: en, text: "The Selenium Project"}
+      - { language: en, text: "The Selenium Project" }
     siteLink: https://www.selenium.dev
   - id: 522
     name:
-      - {language: en, text: "The University of Manchester"}
+      - { language: en, text: "The University of Manchester" }
     siteLink: https://www.manchester.ac.uk
   - id: 523
     name:
-      - {language: en, text: TheWhite}
+      - { language: en, text: TheWhite }
     siteLink: https://thewhite.ru
   - id: 524
     name:
-      - {language: en, text: think-cell}
+      - { language: en, text: think-cell }
     siteLink: https://www.think-cell.com
   - id: 525
     name:
-      - {language: en, text: Thinkmill}
+      - { language: en, text: Thinkmill }
     siteLink: https://www.thinkmill.com.au
   - id: 526
     name:
-      - {language: en, text: ThoughtWorks}
+      - { language: en, text: ThoughtWorks }
     siteLink: https://www.thoughtworks.com
   - id: 527
     name:
-      - {language: en, text: TIBCO}
+      - { language: en, text: TIBCO }
     siteLink: https://www.tibco.com
   - id: 528
     name:
-      - {language: en, text: "Tieto Austria GmbH"}
+      - { language: en, text: "Tieto Austria GmbH" }
     siteLink: https://www.tietoevry.com
   - id: 530
     name:
-      - {language: en, text: Toothpic}
+      - { language: en, text: Toothpic }
     siteLink: https://www.toothpic.com
   - id: 531
     name:
-      - {language: en, text: Toptal}
+      - { language: en, text: Toptal }
     siteLink: https://www.toptal.com
   - id: 532
     name:
-      - {language: en, text: ToroDB}
+      - { language: en, text: ToroDB }
     siteLink: https://www.torodb.com
   - id: 533
     name:
-      - {language: en, text: "Toughbyte Ltd"}
+      - { language: en, text: "Toughbyte Ltd" }
     siteLink: https://www.toughbyte.com
   - id: 534
     name:
-      - {language: en, text: TradingView}
+      - { language: en, text: TradingView }
     siteLink: https://www.tradingview.com
   - id: 535
     name:
-      - {language: en, text: TransCrypt}
+      - { language: en, text: TransCrypt }
     siteLink: https://transcrypt.eu
   - id: 536
     name:
-      - {language: en, text: TransferWise}
+      - { language: en, text: TransferWise }
     siteLink: https://transferwise.com
   - id: 537
     name:
-      - {language: en, text: "Trinity Digital"}
+      - { language: en, text: "Trinity Digital" }
     siteLink: https://trinitydigital.ru
   - id: 538
     name:
-      - {language: en, text: "True Engineering"}
+      - { language: en, text: "True Engineering" }
     siteLink: https://trueengineering.ru
   - id: 539
     name:
-      - {language: en, text: "TTNR Labs"}
+      - { language: en, text: "TTNR Labs" }
   - id: 540
     name:
-      - {language: en, text: "Tune IT"}
+      - { language: en, text: "Tune IT" }
     siteLink: https://www.tune-it.ru
   - id: 541
     name:
-      - {language: en, text: TurtleSec}
+      - { language: en, text: TurtleSec }
     siteLink: https://turtlesec.no
   - id: 542
     name:
-      - {language: en, text: Tver.IO}
+      - { language: en, text: Tver.IO }
     siteLink: https://tver.io
   - id: 543
     name:
-      - {language: en, text: Twitter}
+      - { language: en, text: Twitter }
     siteLink: https://twitter.com
   - id: 544
     name:
-      - {language: en, text: TYME}
+      - { language: en, text: TYME }
     siteLink: https://www.tyme.com
   - id: 545
     name:
-      - {language: en, text: "Uber Technologies"}
+      - { language: en, text: "Uber Technologies" }
     siteLink: https://www.uber.com
   - id: 546
     name:
-      - {language: en, text: "Uberchord GmbH"}
+      - { language: en, text: "Uberchord GmbH" }
     siteLink: https://www.uberchord.com
   - id: 547
     name:
-      - {language: en, text: Ubilabs}
+      - { language: en, text: Ubilabs }
     siteLink: https://ubilabs.com
   - id: 548
     name:
-      - {language: en, text: "Ubiquitous AS"}
+      - { language: en, text: "Ubiquitous AS" }
     siteLink: https://ubiquitous.no
   - id: 549
     name:
-      - {language: en, text: UCB}
+      - { language: en, text: UCB }
     siteLink: https://www.ucb.com
   - id: 550
     name:
-      - {language: en, text: UCLA}
+      - { language: en, text: UCLA }
     siteLink: https://www.ucla.edu
   - id: 551
     name:
-      - {language: en, text: UiPath}
+      - { language: en, text: UiPath }
     siteLink: https://www.uipath.com
   - id: 556
     name:
-      - {language: en, text: "Unity Technologies"}
+      - { language: en, text: "Unity Technologies" }
     siteLink: https://unity.com
   - id: 557
     name:
-      - {language: en, text: "University of Bern"}
+      - { language: en, text: "University of Bern" }
     siteLink: https://www.unibe.ch
   - id: 558
     name:
-      - {language: en, text: "University of Cambridge"}
+      - { language: en, text: "University of Cambridge" }
     siteLink: https://www.cam.ac.uk
   - id: 559
     name:
-      - {language: en, text: "University of Nantes"}
+      - { language: en, text: "University of Nantes" }
     siteLink: https://english.univ-nantes.fr
   - id: 560
     name:
-      - {language: en, text: "University of Rochester"}
+      - { language: en, text: "University of Rochester" }
     siteLink: https://www.rochester.edu
   - id: 561
     name:
-      - {language: en, text: "University of Texas at Austin"}
+      - { language: en, text: "University of Texas at Austin" }
     siteLink: https://www.utexas.edu
   - id: 562
     name:
-      - {language: en, text: "University of Waterloo"}
+      - { language: en, text: "University of Waterloo" }
     siteLink: https://uwaterloo.ca
   - id: 563
     name:
-      - {language: en, text: "University of Wisconsin - Madison"}
+      - { language: en, text: "University of Wisconsin - Madison" }
     siteLink: https://www.wisc.edu
   - id: 564
     name:
-      - {language: en, text: "University Paris East Marne la Vallee"}
+      - { language: en, text: "University Paris East Marne la Vallee" }
     siteLink: http://www.u-pem.fr
   - id: 565
     name:
-      - {language: en, text: UNUM}
+      - { language: en, text: UNUM }
     siteLink: https://www.unum.la
   - id: 566
     name:
-      - {language: en, text: "Ursatile Ltd"}
+      - { language: en, text: "Ursatile Ltd" }
     siteLink: https://ursatile.com
   - id: 567
     name:
-      - {language: en, text: Usetech}
+      - { language: en, text: Usetech }
     siteLink: https://usetech.ru
   - id: 568
     name:
-      - {language: en, text: "Vaadin Ltd."}
+      - { language: en, text: "Vaadin Ltd." }
     siteLink: https://vaadin.com
   - id: 569
     name:
-      - {language: en, text: "Valorem Reply"}
+      - { language: en, text: "Valorem Reply" }
     siteLink: https://www.valoremreply.com
   - id: 570
     name:
-      - {language: en, text: Variti}
+      - { language: en, text: Variti }
     siteLink: https://www.variti.io
   - id: 571
     name:
-      - {language: en, text: "VAS Experts"}
+      - { language: en, text: "VAS Experts" }
     siteLink: https://vasexperts.ru
   - id: 573
     name:
-      - {language: en, text: "Vinogradov IT-Beratung"}
+      - { language: en, text: "Vinogradov IT-Beratung" }
     siteLink: http://pro-tester.de
   - id: 574
     name:
-      - {language: en, text: "Virginia Tech"}
+      - { language: en, text: "Virginia Tech" }
     siteLink: https://vt.edu
   - id: 575
     name:
-      - {language: en, text: VirtualHealth}
+      - { language: en, text: VirtualHealth }
     siteLink: https://www.virtualhealth.com
   - id: 576
     name:
-      - {language: en, text: Vivy}
+      - { language: en, text: Vivy }
     siteLink: https://www.vivy.com
   - id: 577
     name:
-      - {language: en, text: VMware}
+      - { language: en, text: VMware }
     siteLink: https://www.vmware.com
   - id: 578
     name:
-      - {language: en, text: "Volosoft Computer and Technology"}
+      - { language: en, text: "Volosoft Computer and Technology" }
     siteLink: https://volosoft.com
   - id: 579
     name:
-      - {language: en, text: vvvv}
+      - { language: en, text: vvvv }
     siteLink: https://vvvv.org
   - id: 581
     name:
-      - {language: en, text: "Wallaroo Labs"}
+      - { language: en, text: "Wallaroo Labs" }
     siteLink: https://www.wallaroo.ai
   - id: 582
     name:
-      - {language: en, text: Wargaming}
+      - { language: en, text: Wargaming }
     siteLink: https://wargaming.com
   - id: 583
     name:
-      - {language: en, text: WaveRoll.io}
+      - { language: en, text: WaveRoll.io }
     siteLink: http://waveroll.io
   - id: 584
     name:
-      - {language: en, text: Waves}
+      - { language: en, text: Waves }
     siteLink: https://www.waves.com
   - id: 585
     name:
-      - {language: en, text: Webtide}
+      - { language: en, text: Webtide }
     siteLink: https://webtide.com
   - id: 586
     name:
-      - {language: en, text: wemake.services}
+      - { language: en, text: wemake.services }
     siteLink: https://wemake.services
   - id: 587
     name:
-      - {language: en, text: willhaben}
+      - { language: en, text: willhaben }
     siteLink: https://www.willhaben.at
   - id: 588
     name:
-      - {language: en, text: "Windy Coast Consulting"}
+      - { language: en, text: "Windy Coast Consulting" }
   - id: 589
     name:
-      - {language: en, text: Wintellect}
+      - { language: en, text: Wintellect }
     siteLink: https://www.wintellect.com
   - id: 590
     name:
-      - {language: en, text: WiseBits}
+      - { language: en, text: WiseBits }
     siteLink: https://wisebits.com
   - id: 591
     name:
-      - {language: en, text: Wix}
+      - { language: en, text: Wix }
     siteLink: https://www.wix.com
   - id: 593
     name:
-      - {language: en, text: wolfSSL}
+      - { language: en, text: wolfSSL }
     siteLink: https://www.wolfssl.com
   - id: 594
     name:
-      - {language: en, text: Work&Co}
+      - { language: en, text: Work&Co }
     siteLink: https://work.co
   - id: 595
     name:
-      - {language: en, text: Workable}
+      - { language: en, text: Workable }
     siteLink: https://www.workable.com
   - id: 596
     name:
-      - {language: en, text: Wrike}
+      - { language: en, text: Wrike }
     siteLink: https://www.wrike.com
   - id: 597
     name:
-      - {language: en, text: LooC}
+      - { language: en, text: LooC }
     siteLink: https://www.looc.io
   - id: 598
     name:
-      - {language: en, text: "XB Software"}
+      - { language: en, text: "XB Software" }
     siteLink: https://xbsoftware.com
   - id: 599
     name:
-      - {language: en, text: xHUB}
+      - { language: en, text: xHUB }
     siteLink: https://www.x-hub.io
   - id: 600
     name:
-      - {language: en, text: "XP Injection"}
+      - { language: en, text: "XP Injection" }
     siteLink: https://xpinjection.com
   - id: 601
     name:
-      - {language: en, text: Xpirit}
+      - { language: en, text: Xpirit }
     siteLink: https://xpirit.com
   - id: 602
     name:
-      - {language: en, text: "Yahoo!"}
+      - { language: en, text: "Yahoo!" }
     siteLink: https://www.yahoo.com
   - id: 603
     name:
-      - {language: en, text: Yota}
+      - { language: en, text: Yota }
     siteLink: https://www.yota.ru
   - id: 604
     name:
-      - {language: en, text: Yugabyte}
+      - { language: en, text: Yugabyte }
     siteLink: https://www.yugabyte.com
   - id: 605
     name:
-      - {language: en, text: Zalando}
+      - { language: en, text: Zalando }
     siteLink: https://www.zalando.com
   - id: 606
     name:
-      - {language: en, text: "ZEDEDA Inc."}
+      - { language: en, text: "ZEDEDA Inc." }
     siteLink: https://zededa.com
   - id: 607
     name:
-      - {language: en, text: ZEIT}
+      - { language: en, text: ZEIT }
     siteLink: https://www.zeit.de
   - id: 608
     name:
-      - {language: en, text: "ZeptoLab LLC"}
+      - { language: en, text: "ZeptoLab LLC" }
     siteLink: https://www.zeptolab.com
   - id: 609
     name:
-      - {language: en, text: Zerocracy}
+      - { language: en, text: Zerocracy }
     siteLink: https://www.zerocracy.com
   - id: 610
     name:
-      - {language: en, text: ÜberResearch}
+      - { language: en, text: ÜberResearch }
     siteLink: https://uberresearch.com
   - id: 611
     name:
-      - {language: en, text: Avito}
-      - {language: ru, text: Авито}
+      - { language: en, text: Avito }
+      - { language: ru, text: Авито }
     siteLink: https://www.avito.ru
   - id: 613
     name:
-      - {language: en, text: Alfa-Bank}
-      - {language: ru, text: Альфа-Банк}
+      - { language: en, text: Alfa-Bank }
+      - { language: ru, text: Альфа-Банк }
     siteLink: https://alfabank.ru
   - id: 615
     name:
-      - {language: en, text: Amperka}
-      - {language: ru, text: Амперка}
+      - { language: en, text: Amperka }
+      - { language: ru, text: Амперка }
     siteLink: https://amperka.ru
   - id: 616
     name:
-      - {language: en, text: Bazis-Center}
-      - {language: ru, text: Базис-Центр}
+      - { language: en, text: Bazis-Center }
+      - { language: ru, text: Базис-Центр }
     siteLink: https://www.bazissoft.ru
   - id: 617
     name:
-      - {language: en, text: "BARS Group"}
-      - {language: ru, text: "БАРС Груп"}
+      - { language: en, text: "BARS Group" }
+      - { language: ru, text: "БАРС Груп" }
     siteLink: https://bars.group
   - id: 618
     name:
-      - {language: en, text: Beeline}
-      - {language: ru, text: Билайн}
+      - { language: en, text: Beeline }
+      - { language: ru, text: Билайн }
     siteLink: https://www.beeline.ru
   - id: 619
     name:
-      - {language: en, text: BKS-Technologies}
-      - {language: ru, text: БКС-Технологии}
+      - { language: en, text: BKS-Technologies }
+      - { language: ru, text: БКС-Технологии }
     siteLink: https://www.bkstechnology.com
   - id: 620
     name:
-      - {language: en, text: VK}
-      - {language: ru, text: ВКонтакте}
+      - { language: en, text: VK }
+      - { language: ru, text: ВКонтакте }
     siteLink: https://vk.com
   - id: 621
     name:
-      - {language: en, text: VTB}
-      - {language: ru, text: ВТБ}
+      - { language: en, text: VTB }
+      - { language: ru, text: ВТБ }
     siteLink: https://www.vtb.ru
   - id: 622
     name:
-      - {language: en, text: "Dodo Pizza"}
-      - {language: ru, text: "Додо Пицца"}
+      - { language: en, text: "Dodo Pizza" }
+      - { language: ru, text: "Додо Пицца" }
     siteLink: https://dodopizza.ru
   - id: 623
     name:
-      - {language: en, text: DonRiver}
-      - {language: ru, text: ДонРивер}
+      - { language: en, text: DonRiver }
+      - { language: ru, text: ДонРивер }
     siteLink: https://www.donriver.com
   - id: 624
     name:
-      - {language: en, text: "Zolotaya Korona"}
-      - {language: ru, text: "Золотая Корона"}
+      - { language: en, text: "Zolotaya Korona" }
+      - { language: ru, text: "Золотая Корона" }
     siteLink: https://koronapay.com
   - id: 625
     name:
-      - {language: en, text: Inetra}
-      - {language: ru, text: Инетра}
+      - { language: en, text: Inetra }
+      - { language: ru, text: Инетра }
     siteLink: https://inetra.ru
   - id: 626
     name:
-      - {language: en, text: Intelkon}
-      - {language: ru, text: ИнтелКон}
+      - { language: en, text: Intelkon }
+      - { language: ru, text: ИнтелКон }
     siteLink: https://intelkon.com
   - id: 627
     name:
-      - {language: en, text: "ISP RAS"}
-      - {language: ru, text: "ИСП РАН"}
+      - { language: en, text: "ISP RAS" }
+      - { language: ru, text: "ИСП РАН" }
     siteLink: https://www.ispras.ru
   - id: 630
     name:
-      - {language: en, text: Kontur}
-      - {language: ru, text: Контур}
+      - { language: en, text: Kontur }
+      - { language: ru, text: Контур }
     siteLink: https://kontur.ru
   - id: 631
     name:
-      - {language: en, text: CardsMobile}
-      - {language: ru, text: Кошелёк}
+      - { language: en, text: CardsMobile }
+      - { language: ru, text: Кошелёк }
     siteLink: https://cardsmobile.ru
   - id: 632
     name:
-      - {language: en, text: "Redis creative agency"}
-      - {language: ru, text: "Креативное агентство Redis"}
+      - { language: en, text: "Redis creative agency" }
+      - { language: ru, text: "Креативное агентство Redis" }
     siteLink: https://redis.agency
   - id: 633
     name:
-      - {language: en, text: CROC}
-      - {language: ru, text: КРОК}
+      - { language: en, text: CROC }
+      - { language: ru, text: КРОК }
     siteLink: https://www.croc.ru
   - id: 634
     name:
-      - {language: en, text: KURS-IT}
-      - {language: ru, text: КУРС-ИТ}
+      - { language: en, text: KURS-IT }
+      - { language: ru, text: КУРС-ИТ }
     siteLink: http://www.curs.ru
   - id: 635
     name:
-      - {language: en, text: "Kaspersky Lab"}
-      - {language: ru, text: "Лаборатория Касперского"}
+      - { language: en, text: "Kaspersky Lab" }
+      - { language: ru, text: "Лаборатория Касперского" }
     siteLink: https://www.kaspersky.com
   - id: 636
     name:
-      - {language: en, text: Lanit}
-      - {language: ru, text: ЛАНИТ}
+      - { language: en, text: Lanit }
+      - { language: ru, text: ЛАНИТ }
     siteLink: https://www.lanit.ru
   - id: 638
     name:
-      - {language: en, text: Liptsoft}
-      - {language: ru, text: Липтсофт}
+      - { language: en, text: Liptsoft }
+      - { language: ru, text: Липтсофт }
     siteLink: https://www.lipt-soft.ru
   - id: 639
     name:
-      - {language: en, text: M.Video}
-      - {language: ru, text: М.Видео}
+      - { language: en, text: M.Video }
+      - { language: ru, text: М.Видео }
     siteLink: https://www.mvideo.ru
   - id: 640
     name:
-      - {language: en, text: Mamba}
-      - {language: ru, text: Мамба}
+      - { language: en, text: Mamba }
+      - { language: ru, text: Мамба }
     siteLink: https://www.mamba.ru
   - id: 641
     name:
-      - {language: en, text: MegaFon}
-      - {language: ru, text: МегаФон}
+      - { language: en, text: MegaFon }
+      - { language: ru, text: МегаФон }
     siteLink: https://www.megafon.ru
   - id: 642
     name:
-      - {language: en, text: "Square meter"}
-      - {language: ru, text: "Метр квадратный"}
+      - { language: en, text: "Square meter" }
+      - { language: ru, text: "Метр квадратный" }
     siteLink: https://m2.ru
   - id: 643
     name:
-      - {language: en, text: "Mir Plat.Form"}
-      - {language: ru, text: "Мир Plat.Form"}
+      - { language: en, text: "Mir Plat.Form" }
+      - { language: ru, text: "Мир Plat.Form" }
     siteLink: https://mir-platform.ru
   - id: 646
     name:
-      - {language: en, text: MyOffice}
-      - {language: ru, text: МойОфис}
+      - { language: en, text: MyOffice }
+      - { language: ru, text: МойОфис }
     siteLink: https://myoffice.ru
   - id: 648
     name:
-      - {language: en, text: MTS}
-      - {language: ru, text: МТС}
+      - { language: en, text: MTS }
+      - { language: ru, text: МТС }
     siteLink: ttps://mts.ru
   - id: 650
     name:
-      - {language: en, text: "NRU HSE"}
-      - {language: ru, text: "НИУ ВШЭ"}
+      - { language: en, text: "NRU HSE" }
+      - { language: ru, text: "НИУ ВШЭ" }
     siteLink: https://www.hse.ru
   - id: 652
     name:
-      - {language: en, text: Notissimus}
-      - {language: ru, text: Нотиссимус}
+      - { language: en, text: Notissimus }
+      - { language: ru, text: Нотиссимус }
     siteLink: https://notissimus.com
   - id: 653
     name:
-      - {language: en, text: Odnoklassniki}
-      - {language: ru, text: Одноклассники}
+      - { language: en, text: Odnoklassniki }
+      - { language: ru, text: Одноклассники }
     siteLink: https://ok.ru
   - id: 654
     name:
-      - {language: en, text: Ontiko}
-      - {language: ru, text: Онтико}
+      - { language: en, text: Ontiko }
+      - { language: ru, text: Онтико }
     siteLink: https://ontico.ru
   - id: 655
     name:
-      - {language: en, text: "OTP Bank Russia"}
-      - {language: ru, text: "ОТП Банк"}
+      - { language: en, text: "OTP Bank Russia" }
+      - { language: ru, text: "ОТП Банк" }
     siteLink: https://www.otpbank.ru
   - id: 656
     name:
-      - {language: en, text: Peleng}
-      - {language: ru, text: Пеленг}
+      - { language: en, text: Peleng }
+      - { language: ru, text: Пеленг }
     siteLink: https://peleng.by
   - id: 657
     name:
-      - {language: en, text: "PDMI RAS"}
-      - {language: ru, text: "ПОМИ РАН"}
+      - { language: en, text: "PDMI RAS" }
+      - { language: ru, text: "ПОМИ РАН" }
     siteLink: https://www.pdmi.ras.ru
   - id: 659
     name:
-      - {language: en, text: "Postgres Professional"}
-      - {language: ru, text: "Постгрес Профессиональный"}
+      - { language: en, text: "Postgres Professional" }
+      - { language: ru, text: "Постгрес Профессиональный" }
     siteLink: https://postgrespro.com
   - id: 660
     name:
-      - {language: en, text: Prosoft-Systems}
-      - {language: ru, text: Прософт-Системы}
+      - { language: en, text: Prosoft-Systems }
+      - { language: ru, text: Прософт-Системы }
     siteLink: https://prosoftsystems.ru
   - id: 663
     name:
-      - {language: en, text: Rosatom}
-      - {language: ru, text: Росатом}
+      - { language: en, text: Rosatom }
+      - { language: ru, text: Росатом }
     siteLink: https://rosatom.ru
   - id: 664
     name:
-      - {language: en, text: "RT Labs"}
-      - {language: ru, text: "РТ Лабс"}
+      - { language: en, text: "RT Labs" }
+      - { language: ru, text: "РТ Лабс" }
     siteLink: https://rtlabs.ru
   - id: 665
     name:
-      - {language: en, text: Sber}
-      - {language: ru, text: Сбер}
+      - { language: en, text: Sber }
+      - { language: ru, text: Сбер }
     siteLink: https://www.sberbank.ru
   - id: 667
     name:
-      - {language: en, text: SibGUTI}
-      - {language: ru, text: СибГУТИ}
+      - { language: en, text: SibGUTI }
+      - { language: ru, text: СибГУТИ }
     siteLink: https://sibsutis.ru
   - id: 671
     name:
-      - {language: en, text: "Thumbtack Technology"}
-      - {language: ru, text: Тамтэк}
+      - { language: en, text: "Thumbtack Technology" }
+      - { language: ru, text: Тамтэк }
     siteLink: https://www.thumbtack.ru
   - id: 672
     name:
-      - {language: en, text: Tensor}
-      - {language: ru, text: Тензор}
+      - { language: en, text: Tensor }
+      - { language: ru, text: Тензор }
     siteLink: https://tensor.ru
   - id: 674
     name:
-      - {language: en, text: Tinkoff}
-      - {language: ru, text: Тинькофф}
+      - { language: en, text: Tinkoff }
+      - { language: ru, text: Тинькофф }
     siteLink: https://www.tinkoff.ru
   - id: 676
     name:
-      - {language: en, text: Tutu.ru}
-      - {language: ru, text: Туту.ру}
+      - { language: en, text: Tutu.ru }
+      - { language: ru, text: Туту.ру }
     siteLink: https://www.tutu.ru
   - id: 677
     name:
-      - {language: en, text: "University Of Dmitry Pozharsky"}
-      - {language: ru, text: "Университет Дмитрия Пожарского"}
+      - { language: en, text: "University Of Dmitry Pozharsky" }
+      - { language: ru, text: "Университет Дмитрия Пожарского" }
     siteLink: http://usdp.ru
   - id: 678
     name:
-      - {language: en, text: "Innopolis University"}
-      - {language: ru, text: "Университет Иннополис"}
+      - { language: en, text: "Innopolis University" }
+      - { language: ru, text: "Университет Иннополис" }
     siteLink: https://innopolis.university
   - id: 679
     name:
-      - {language: en, text: Unipro}
-      - {language: ru, text: Унипро}
+      - { language: en, text: Unipro }
+      - { language: ru, text: Унипро }
     siteLink: https://unipro.ru
   - id: 680
     name:
-      - {language: en, text: "Fast Reports"}
-      - {language: ru, text: "Фаст Репортс"}
+      - { language: en, text: "Fast Reports" }
+      - { language: ru, text: "Фаст Репортс" }
     siteLink: https://www.fastreport.ru
   - id: 681
     name:
-      - {language: en, text: Flant}
-      - {language: ru, text: Флант}
+      - { language: en, text: Flant }
+      - { language: ru, text: Флант }
     siteLink: https://flant.ru
   - id: 682
     name:
-      - {language: en, text: "HighTech Group"}
-      - {language: ru, text: "Хайтек Груп"}
+      - { language: en, text: "HighTech Group" }
+      - { language: ru, text: "Хайтек Груп" }
     siteLink: https://hightech.group
   - id: 683
     name:
-      - {language: en, text: CIAN}
-      - {language: ru, text: ЦИАН}
+      - { language: en, text: CIAN }
+      - { language: ru, text: ЦИАН }
     siteLink: https://www.cian.ru
   - id: 684
     name:
-      - {language: en, text: RTSoft}
-      - {language: ru, text: РТСофт}
+      - { language: en, text: RTSoft }
+      - { language: ru, text: РТСофт }
     siteLink: https://www.rtsoft.ru
   - id: 686
     name:
-      - {language: en, text: CFT}
-      - {language: ru, text: ЦФТ}
+      - { language: en, text: CFT }
+      - { language: ru, text: ЦФТ }
     siteLink: https://www.cft.ru
   - id: 687
     name:
-      - {language: en, text: "Express 42"}
-      - {language: ru, text: "Экспресс 42"}
+      - { language: en, text: "Express 42" }
+      - { language: ru, text: "Экспресс 42" }
     siteLink: https://express42.com
   - id: 688
     name:
-      - {language: en, text: Youla}
-      - {language: ru, text: Юла}
+      - { language: en, text: Youla }
+      - { language: ru, text: Юла }
     siteLink: https://youla.ru
   - id: 689
     name:
-      - {language: en, text: Yandex}
-      - {language: ru, text: Яндекс}
+      - { language: en, text: Yandex }
+      - { language: ru, text: Яндекс }
     siteLink: https://yandex.ru
   - id: 697
     name:
-      - {language: en, text: "Russian Microsoft MVP Community"}
+      - { language: en, text: "Russian Microsoft MVP Community" }
     siteLink: https://www.meetup.com/Russian-MVP-Community
   - id: 698
     name:
-      - {language: en, text: Datadog}
+      - { language: en, text: Datadog }
     siteLink: https://www.datadoghq.com
   - id: 699
     name:
-      - {language: en, text: "Fontem Ventures"}
+      - { language: en, text: "Fontem Ventures" }
     siteLink: https://www.fontemventures.com
   - id: 700
     name:
-      - {language: en, text: "Virtual machinist"}
-      - {language: ru, text: "Виртуальный машинист"}
+      - { language: en, text: "Virtual machinist" }
+      - { language: ru, text: "Виртуальный машинист" }
   - id: 701
     name:
-      - {language: en, text: Canva}
+      - { language: en, text: Canva }
     siteLink: https://www.canva.com
   - id: 702
     name:
-      - {language: en, text: Synthesized}
+      - { language: en, text: Synthesized }
     siteLink: https://www.synthesized.io
   - id: 703
     name:
-      - {language: en, text: Matemarketing}
-      - {language: ru, text: Матемаркетинг}
+      - { language: en, text: Matemarketing }
+      - { language: ru, text: Матемаркетинг }
     siteLink: https://matemarketing.ru
   - id: 704
     name:
-      - {language: en, text: "Test IT"}
+      - { language: en, text: "Test IT" }
     siteLink: https://testit.software
   - id: 705
     name:
-      - {language: en, text: KeenTools}
+      - { language: en, text: KeenTools }
     siteLink: https://keentools.io
   - id: 707
     name:
-      - {language: en, text: "PrecisionLender, a Q2 Company"}
+      - { language: en, text: "PrecisionLender, a Q2 Company" }
     siteLink: https://precisionlender.com
   - id: 708
     name:
-      - {language: en, text: "ETH Zurich"}
+      - { language: en, text: "ETH Zurich" }
     siteLink: https://ethz.ch
   - id: 709
     name:
-      - {language: en, text: TestinGil}
+      - { language: en, text: TestinGil }
     siteLink: http://www.testingil.com
   - id: 711
     name:
-      - {language: en, text: "Zyfra Group"}
-      - {language: ru, text: "ГК Цифра"}
+      - { language: en, text: "Zyfra Group" }
+      - { language: ru, text: "ГК Цифра" }
     siteLink: https://www.zyfra.com
   - id: 712
     name:
-      - {language: en, text: Technokratos}
-      - {language: ru, text: Технократия}
+      - { language: en, text: Technokratos }
+      - { language: ru, text: Технократия }
     siteLink: https://technokratos.com
   - id: 713
     name:
-      - {language: en, text: "Savage Software Group"}
+      - { language: en, text: "Savage Software Group" }
     siteLink: https://savage.si
   - id: 714
     name:
-      - {language: en, text: Distillery}
+      - { language: en, text: Distillery }
     siteLink: https://distillery.com
   - id: 715
     name:
-      - {language: en, text: DomClick}
-      - {language: ru, text: ДомКлик}
+      - { language: en, text: DomClick }
+      - { language: ru, text: ДомКлик }
     siteLink: https://domclick.ru
   - id: 716
     name:
-      - {language: en, text: "Vivid Money"}
+      - { language: en, text: "Vivid Money" }
     siteLink: https://vivid.money
   - id: 717
     name:
-      - {language: en, text: Auto.ru}
-      - {language: ru, text: Авто.ру}
+      - { language: en, text: Auto.ru }
+      - { language: ru, text: Авто.ру }
     siteLink: https://auto.ru
   - id: 720
     name:
-      - {language: en, text: RBC}
-      - {language: ru, text: РБК}
+      - { language: en, text: RBC }
+      - { language: ru, text: РБК }
     siteLink: https://www.rbc.ru
   - id: 721
     name:
-      - {language: en, text: "Doctor Evidence"}
+      - { language: en, text: "Doctor Evidence" }
     siteLink: https://www.drevidence.com
   - id: 722
     name:
-      - {language: en, text: Vsegda.Da}
-      - {language: ru, text: Всегда.Да}
+      - { language: en, text: Vsegda.Da }
+      - { language: ru, text: Всегда.Да }
     siteLink: https://vsegda-da.com
   - id: 723
     name:
-      - {language: en, text: "Eclipse Foundation"}
+      - { language: en, text: "Eclipse Foundation" }
     siteLink: https://www.eclipse.org
   - id: 724
     name:
-      - {language: en, text: "New Relic"}
+      - { language: en, text: "New Relic" }
     siteLink: https://newrelic.com
   - id: 725
     name:
-      - {language: en, text: SoftwareGarden.dev}
+      - { language: en, text: SoftwareGarden.dev }
     siteLink: https://softwaregarden.dev
   - id: 726
     name:
-      - {language: en, text: Arenum}
+      - { language: en, text: Arenum }
     siteLink: https://arenum.games
   - id: 727
     name:
-      - {language: en, text: "OnTarget Group, Inc."}
+      - { language: en, text: "OnTarget Group, Inc." }
     siteLink: https://ontarget-group.com
   - id: 728
     name:
-      - {language: en, text: "Ax-Team"}
-      - {language: ru, text: АксТим}
+      - { language: en, text: "Ax-Team" }
+      - { language: ru, text: АксТим }
   - id: 729
     name:
-      - {language: en, text: Sportmaster}
-      - {language: ru, text: Спортмастер}
+      - { language: en, text: Sportmaster }
+      - { language: ru, text: Спортмастер }
     siteLink: https://sportmaster.com
   - id: 730
     name:
-      - {language: en, text: Arrival}
+      - { language: en, text: Arrival }
     siteLink: https://arrival.com
   - id: 731
     name:
-      - {language: en, text: Lineate}
+      - { language: en, text: Lineate }
     siteLink: https://lineate.ru
   - id: 732
     name:
-      - {language: en, text: Werkspot}
+      - { language: en, text: Werkspot }
     siteLink: https://www.werkspot.nl
   - id: 733
     name:
-      - {language: en, text: "MetaCall OÜ"}
+      - { language: en, text: "MetaCall OÜ" }
     siteLink: https://metacall.io
   - id: 734
     name:
-      - {language: en, text: ClauseMatch}
+      - { language: en, text: ClauseMatch }
     siteLink: https://www.clausematch.com
   - id: 735
     name:
-      - {language: en, text: Resume.io}
+      - { language: en, text: Resume.io }
     siteLink: https://resume.io
   - id: 737
     name:
-      - {language: en, text: "OpenSoft Inc"}
+      - { language: en, text: "OpenSoft Inc" }
     siteLink: http://www.opensoftinc.net
   - id: 738
     name:
-      - {language: en, text: SpurIT}
+      - { language: en, text: SpurIT }
     siteLink: https://spur-i-t.com
   - id: 739
     name:
-      - {language: en, text: "ECOMMPAY IT"}
+      - { language: en, text: "ECOMMPAY IT" }
     siteLink: https://ecommpay.com
   - id: 740
     name:
-      - {language: en, text: UBS}
+      - { language: en, text: UBS }
     siteLink: https://www.ubs.com
   - id: 741
     name:
-      - {language: en, text: "Involved NV"}
+      - { language: en, text: "Involved NV" }
     siteLink: https://www.involved-it.be
   - id: 742
     name:
-      - {language: en, text: "Hibernating Rhinos"}
+      - { language: en, text: "Hibernating Rhinos" }
     siteLink: https://hibernatingrhinos.com
   - id: 743
     name:
-      - {language: en, text: SoftPro}
+      - { language: en, text: SoftPro }
     siteLink: https://softpro.com
   - id: 744
     name:
-      - {language: en, text: "Vevy Europe"}
+      - { language: en, text: "Vevy Europe" }
     siteLink: https://www.vevy.com
   - id: 745
     name:
-      - {language: en, text: "Active Solution"}
+      - { language: en, text: "Active Solution" }
     siteLink: https://www.activesolution.se
   - id: 746
     name:
-      - {language: en, text: "Uno Platform"}
+      - { language: en, text: "Uno Platform" }
     siteLink: https://platform.uno
   - id: 747
     name:
-      - {language: en, text: "ServiceTitan, Inc."}
+      - { language: en, text: "ServiceTitan, Inc." }
     siteLink: https://www.servicetitan.com
   - id: 749
     name:
-      - {language: en, text: Monopoly}
-      - {language: ru, text: "ГК Монополия"}
+      - { language: en, text: Monopoly }
+      - { language: ru, text: "ГК Монополия" }
     siteLink: https://monopoly.ru
   - id: 750
     name:
-      - {language: en, text: "Orbital Express"}
+      - { language: en, text: "Orbital Express" }
     siteLink: https://orbital.express
   - id: 751
     name:
-      - {language: en, text: Mindbox}
+      - { language: en, text: Mindbox }
     siteLink: https://mindbox.ru
   - id: 752
     name:
-      - {language: en, text: Selectel}
+      - { language: en, text: Selectel }
     siteLink: https://selectel.ru
   - id: 754
     name:
-      - {language: en, text: Karuna}
+      - { language: en, text: Karuna }
     siteLink: https://karuna.group
   - id: 755
     name:
-      - {language: en, text: SolidBridge}
+      - { language: en, text: SolidBridge }
     siteLink: https://solid-bridge.pt
   - id: 756
     name:
-      - {language: en, text: "Carnegie Mellon University"}
+      - { language: en, text: "Carnegie Mellon University" }
     siteLink: https://www.cmu.edu
   - id: 757
     name:
-      - {language: en, text: DianemoDB}
+      - { language: en, text: DianemoDB }
     siteLink: http://dianemodb.com
   - id: 758
     name:
-      - {language: en, text: "Sii Poland"}
+      - { language: en, text: "Sii Poland" }
     siteLink: https://sii.pl
   - id: 759
     name:
-      - {language: en, text: "Cockroach Labs"}
+      - { language: en, text: "Cockroach Labs" }
     siteLink: https://www.cockroachlabs.com
   - id: 760
     name:
-      - {language: en, text: Vectorized}
+      - { language: en, text: Vectorized }
     siteLink: https://vectorized.io
   - id: 762
     name:
-      - {language: en, text: PulsePoint}
+      - { language: en, text: PulsePoint }
     siteLink: https://pulsepoint.com
   - id: 764
     name:
-      - {language: en, text: ExoAtlet}
-      - {language: ru, text: ЭкзоАтлет}
+      - { language: en, text: ExoAtlet }
+      - { language: ru, text: ЭкзоАтлет }
     siteLink: https://exoatlet.ru
   - id: 766
     name:
-      - {language: en, text: "Filina Consulting"}
+      - { language: en, text: "Filina Consulting" }
     siteLink: https://afilina.com
   - id: 767
     name:
-      - {language: en, text: Automician}
+      - { language: en, text: Automician }
     siteLink: http://automician.com
   - id: 768
     name:
-      - {language: en, text: GustoHQ}
+      - { language: en, text: GustoHQ }
     siteLink: https://gusto.com
   - id: 770
     name:
-      - {language: en, text: Citymobil}
-      - {language: ru, text: Ситимобил}
+      - { language: en, text: Citymobil }
+      - { language: ru, text: Ситимобил }
     siteLink: https://city-mobil.ru
   - id: 771
     name:
-      - {language: en, text: "Inspired Testing"}
+      - { language: en, text: "Inspired Testing" }
     siteLink: https://www.inspiredtesting.com
   - id: 773
     name:
-      - {language: en, text: YADRO}
+      - { language: en, text: YADRO }
     siteLink: https://yadro.com
   - id: 774
     name:
-      - {language: en, text: Wolt}
+      - { language: en, text: Wolt }
     siteLink: https://wolt.com
   - id: 775
     name:
-      - {language: en, text: PromSvyasBank}
-      - {language: ru, text: Промсвязьбанк}
+      - { language: en, text: PromSvyasBank }
+      - { language: ru, text: Промсвязьбанк }
     siteLink: https://www.psbank.ru
   - id: 776
     name:
-      - {language: en, text: Samokat}
-      - {language: ru, text: Самокат}
+      - { language: en, text: Samokat }
+      - { language: ru, text: Самокат }
     siteLink: https://samokat.ru
   - id: 777
     name:
-      - {language: en, text: SkyHive}
+      - { language: en, text: SkyHive }
     siteLink: https://www.skyhive.ai
   - id: 779
     name:
-      - {language: en, text: Astronomer}
+      - { language: en, text: Astronomer }
     siteLink: https://www.astronomer.io
   - id: 781
     name:
-      - {language: en, text: "Databricks Inc"}
+      - { language: en, text: "Databricks Inc" }
     siteLink: https://databricks.com
   - id: 782
     name:
-      - {language: en, text: "Querify Labs"}
+      - { language: en, text: "Querify Labs" }
     siteLink: https://www.querifylabs.com
   - id: 783
     name:
-      - {language: en, text: Tele2}
+      - { language: en, text: Tele2 }
     siteLink: https://www.tele2.com
   - id: 784
     name:
-      - {language: en, text: Profitero}
+      - { language: en, text: Profitero }
     siteLink: https://www.profitero.com
   - id: 785
     name:
-      - {language: en, text: Vertica}
+      - { language: en, text: Vertica }
     siteLink: https://www.vertica.com
   - id: 786
     name:
-      - {language: en, text: Eyeota}
+      - { language: en, text: Eyeota }
     siteLink: https://www.eyeota.com
   - id: 787
     name:
-      - {language: en, text: "Leroy Merlin"}
+      - { language: en, text: "Leroy Merlin" }
     siteLink: https://www.leroymerlin.com
   - id: 788
     name:
-      - {language: en, text: Dremio}
+      - { language: en, text: Dremio }
     siteLink: https://www.dremio.com
   - id: 789
     name:
-      - {language: en, text: "Cherry Labs"}
+      - { language: en, text: "Cherry Labs" }
     siteLink: https://www.cherrylabs.ai
   - id: 790
     name:
-      - {language: en, text: Exasol}
+      - { language: en, text: Exasol }
     siteLink: https://www.exasol.com
   - id: 791
     name:
-      - {language: en, text: Treeverse}
+      - { language: en, text: Treeverse }
     siteLink: https://www.treeverse.net
   - id: 792
     name:
-      - {language: en, text: "Valiotti Analytics"}
+      - { language: en, text: "Valiotti Analytics" }
     siteLink: https://valiotti.com
   - id: 793
     name:
-      - {language: en, text: Evolution}
+      - { language: en, text: Evolution }
   - id: 794
     name:
-      - {language: en, text: Iyuno-SDI}
+      - { language: en, text: Iyuno-SDI }
     siteLink: https://iyuno-sdi.com
   - id: 795
     name:
-      - {language: en, text: "The Data Farm"}
+      - { language: en, text: "The Data Farm" }
     siteLink: https://thedatafarm.com
   - id: 796
     name:
-      - {language: en, text: DevBrothers}
+      - { language: en, text: DevBrothers }
   - id: 798
     name:
-      - {language: en, text: "The Secret Circle Solutions"}
+      - { language: en, text: "The Secret Circle Solutions" }
     siteLink: https://secretcircle.solutions
   - id: 799
     name:
-      - {language: en, text: Witailer}
+      - { language: en, text: Witailer }
     siteLink: https://www.witailer.com
   - id: 800
     name:
-      - {language: en, text: "72 Services LLC"}
+      - { language: en, text: "72 Services LLC" }
     siteLink: https://72.services
   - id: 801
     name:
-      - {language: en, text: "National Technical University of Ukraine"}
+      - { language: en, text: "National Technical University of Ukraine" }
     siteLink: https://kpi.ua
   - id: 802
     name:
-      - {language: en, text: Sonatype}
+      - { language: en, text: Sonatype }
     siteLink: https://www.sonatype.com
   - id: 803
     name:
-      - {language: en, text: FlowTraders}
+      - { language: en, text: FlowTraders }
     siteLink: https://www.flowtraders.com
   - id: 804
     name:
-      - {language: en, text: "BeZero Carbon"}
+      - { language: en, text: "BeZero Carbon" }
     siteLink: https://bezerocarbon.com
   - id: 805
     name:
-      - {language: en, text: Okta}
+      - { language: en, text: Okta }
     siteLink: https://www.okta.com
   - id: 806
     name:
-      - {language: en, text: Altenar}
+      - { language: en, text: Altenar }
     siteLink: https://altenar.com
   - id: 807
     name:
-      - {language: en, text: CircleCI}
+      - { language: en, text: CircleCI }
     siteLink: https://circleci.com
   - id: 808
     name:
-      - {language: en, text: APC}
+      - { language: en, text: APC }
     siteLink: https://www.apc.com
   - id: 809
     name:
-      - {language: en, text: Disco}
+      - { language: en, text: Disco }
     siteLink: https://www.getdisco.com
   - id: 810
     name:
-      - {language: en, text: Skyeng}
+      - { language: en, text: Skyeng }
     siteLink: https://skyeng.ru
   - id: 811
     name:
-      - {language: en, text: Metarhia}
+      - { language: en, text: Metarhia }
     siteLink: https://metarhia.com
   - id: 812
     name:
-      - {language: en, text: MoleculerJS}
+      - { language: en, text: MoleculerJS }
     siteLink: https://moleculer.services
   - id: 813
     name:
-      - {language: en, text: Aviasales}
-      - {language: ru, text: Авиасейлс}
+      - { language: en, text: Aviasales }
+      - { language: ru, text: Авиасейлс }
     siteLink: https://www.aviasales.ru
   - id: 814
     name:
-      - {language: en, text: "Pochta tech"}
-      - {language: ru, text: Почтатех}
+      - { language: en, text: "Pochta tech" }
+      - { language: ru, text: Почтатех }
     siteLink: https://pochta.tech
   - id: 815
     name:
-      - {language: en, text: "Joyn GmbH"}
+      - { language: en, text: "Joyn GmbH" }
     siteLink: https://www.joyn.de
   - id: 816
     name:
-      - {language: en, text: LightSource}
+      - { language: en, text: LightSource }
     siteLink: https://lightsource.ai
   - id: 817
     name:
-      - {language: en, text: "1inch Network"}
+      - { language: en, text: "1inch Network" }
     siteLink: https://1inch.io
   - id: 819
     name:
-      - {language: en, text: Bling}
+      - { language: en, text: Bling }
     siteLink: https://www.bling.eu
   - id: 820
     name:
-      - {language: en, text: "Simplinic GmbH"}
+      - { language: en, text: "Simplinic GmbH" }
     siteLink: https://www.simplinic.de
   - id: 821
     name:
-      - {language: en, text: Elastisys}
+      - { language: en, text: Elastisys }
     siteLink: https://elastisys.com
   - id: 822
     name:
-      - {language: en, text: Cloudthread}
+      - { language: en, text: Cloudthread }
     siteLink: https://www.cloudthread.io
   - id: 823
     name:
-      - {language: en, text: "TLA Tech"}
+      - { language: en, text: "TLA Tech" }
   - id: 824
     name:
-      - {language: en, text: "Grafana Labs"}
+      - { language: en, text: "Grafana Labs" }
     siteLink: https://grafana.com
   - id: 826
     name:
-      - {language: en, text: MIPT}
-      - {language: ru, text: МФТИ}
+      - { language: en, text: MIPT }
+      - { language: ru, text: МФТИ }
     siteLink: https://mipt.ru
   - id: 827
     name:
-      - {language: en, text: "Unique Code GmbH"}
+      - { language: en, text: "Unique Code GmbH" }
     siteLink: https://andreasfertig.info
   - id: 828
     name:
-      - {language: en, text: "Mad Devs"}
+      - { language: en, text: "Mad Devs" }
     siteLink: https://maddevs.io
   - id: 829
     name:
-      - {language: en, text: ScyllaDB}
+      - { language: en, text: ScyllaDB }
     siteLink: https://www.scylladb.com
   - id: 830
     name:
-      - {language: en, text: Zivid}
+      - { language: en, text: Zivid }
     siteLink: https://www.zivid.com
   - id: 832
     name:
-      - {language: en, text: "Woven Planet"}
+      - { language: en, text: "Woven Planet" }
     siteLink: https://www.woven-planet.global
   - id: 833
     name:
-      - {language: en, text: Undo}
+      - { language: en, text: Undo }
     siteLink: https://undo.io
   - id: 835
     name:
-      - {language: en, text: Stream}
+      - { language: en, text: Stream }
     siteLink: https://getstream.io
   - id: 836
     name:
-      - {language: en, text: Apalon}
+      - { language: en, text: Apalon }
     siteLink: https://www.apalon.com
   - id: 837
     name:
-      - {language: en, text: Maxima}
+      - { language: en, text: Maxima }
     siteLink: https://maxima.life
   - id: 838
     name:
-      - {language: en, text: "Ak Bars"}
-      - {language: ru, text: "Ак Барс Цифровые Технологии"}
+      - { language: en, text: "Ak Bars" }
+      - { language: ru, text: "Ак Барс Цифровые Технологии" }
     siteLink: https://akbars.digital
   - id: 839
     name:
-      - {language: en, text: SmartCAT}
+      - { language: en, text: SmartCAT }
     siteLink: https://www.smartcat.com
   - id: 840
     name:
-      - {language: en, text: Belkasoft}
+      - { language: en, text: Belkasoft }
     siteLink: https://belkasoft.com
   - id: 841
     name:
-      - {language: en, text: Sovcombank}
-      - {language: ru, text: Совкомбанк}
+      - { language: en, text: Sovcombank }
+      - { language: ru, text: Совкомбанк }
     siteLink: https://sovcombank.ru
   - id: 844
     name:
-      - {language: en, text: Gazprombank}
-      - {language: ru, text: Газпромбанк}
+      - { language: en, text: Gazprombank }
+      - { language: ru, text: Газпромбанк }
     siteLink: https://www.gazprombank.ru
   - id: 845
     name:
-      - {language: en, text: Sibur}
-      - {language: ru, text: Сибур}
+      - { language: en, text: Sibur }
+      - { language: ru, text: Сибур }
     siteLink: https://www.sibur.ru
   - id: 846
     name:
-      - {language: en, text: "Banks Soft Systems"}
+      - { language: en, text: "Banks Soft Systems" }
     siteLink: https://bssys.com
   - id: 847
     name:
-      - {language: en, text: OCS}
+      - { language: en, text: OCS }
     siteLink: https://www.ocs.ru
   - id: 848
     name:
-      - {language: en, text: "Freight One"}
-      - {language: ru, text: "Первая Грузовая Компания"}
+      - { language: en, text: "Freight One" }
+      - { language: ru, text: "Первая Грузовая Компания" }
     siteLink: https://pgk.ru
   - id: 849
     name:
-      - {language: en, text: "Unicon Business Solutions"}
+      - { language: en, text: "Unicon Business Solutions" }
     siteLink: https://www.unicon.ru
   - id: 851
     name:
-      - {language: en, text: Kong}
+      - { language: en, text: Kong }
     siteLink: https://konghq.com
   - id: 852
     name:
-      - {language: en, text: "Spark Networks"}
+      - { language: en, text: "Spark Networks" }
     siteLink: https://www.spark.net
   - id: 853
     name:
-      - {language: en, text: "Capital One"}
+      - { language: en, text: "Capital One" }
     siteLink: https://www.capitalone.com
   - id: 854
     name:
-      - {language: en, text: fin_hood}
+      - { language: en, text: fin_hood }
     siteLink: https://finhood.team
   - id: 855
     name:
-      - {language: en, text: ‹div›RIOTS}
+      - { language: en, text: ‹div›RIOTS }
     siteLink: https://divriots.com
   - id: 857
     name:
-      - {language: en, text: Buffer}
+      - { language: en, text: Buffer }
     siteLink: https://buffer.com
   - id: 858
     name:
-      - {language: en, text: FreeNow}
+      - { language: en, text: FreeNow }
     siteLink: https://free-now.com
   - id: 859
     name:
-      - {language: en, text: VSU}
-      - {language: ru, text: "Воронежский государственный университет"}
+      - { language: en, text: VSU }
+      - { language: ru, text: "Воронежский государственный университет" }
     siteLink: http://www.vsu.ru
   - id: 860
     name:
-      - {language: en, text: AtomicJar}
+      - { language: en, text: AtomicJar }
     siteLink: https://www.atomicjar.com
   - id: 861
     name:
-      - {language: en, text: "Zinc Prod Podcast"}
-      - {language: ru, text: "Цинковый прод"}
+      - { language: en, text: "Zinc Prod Podcast" }
+      - { language: ru, text: "Цинковый прод" }
     siteLink: https://znprod.io
   - id: 862
     name:
-      - {language: en, text: LuckyGroup}
+      - { language: en, text: LuckyGroup }
     siteLink: https://lucky-group.com
   - id: 864
     name:
-      - {language: en, text: YooMoney}
-      - {language: ru, text: ЮMoney}
+      - { language: en, text: YooMoney }
+      - { language: ru, text: ЮMoney }
     siteLink: https://yoomoney.ru
   - id: 865
     name:
-      - {language: en, text: "Cube Dev"}
+      - { language: en, text: "Cube Dev" }
     siteLink: https://cube.dev
   - id: 867
     name:
-      - {language: en, text: BeerJS}
+      - { language: en, text: BeerJS }
     siteLink: https://beerjs.moscow
   - id: 869
     name:
-      - {language: en, text: ArangoDB}
+      - { language: en, text: ArangoDB }
     siteLink: https://www.arangodb.com
   - id: 870
     name:
-      - {language: en, text: V-Nova}
+      - { language: en, text: V-Nova }
     siteLink: https://www.v-nova.com
   - id: 871
     name:
-      - {language: en, text: "Stanford University"}
+      - { language: en, text: "Stanford University" }
     siteLink: https://www.stanford.edu
   - id: 872
     name:
-      - {language: en, text: "UfoStation Podcast"}
+      - { language: en, text: "UfoStation Podcast" }
     siteLink: https://podcast.ru/1572186425
   - id: 873
     name:
-      - {language: en, text: Dynatrace}
+      - { language: en, text: Dynatrace }
     siteLink: https://www.dynatrace.com
   - id: 874
     name:
-      - {language: en, text: Enabling.team}
+      - { language: en, text: Enabling.team }
     siteLink: https://enabling.team
   - id: 875
     name:
-      - {language: en, text: "G-Core Labs"}
+      - { language: en, text: "G-Core Labs" }
     siteLink: https://gcorelabs.com
   - id: 876
     name:
-      - {language: en, text: Squire}
+      - { language: en, text: Squire }
     siteLink: https://www.squire.com
   - id: 877
     name:
-      - {language: en, text: MERA}
+      - { language: en, text: MERA }
     siteLink: http://www.meranetworks.com
   - id: 879
     name:
-      - {language: en, text: "IVA Technologies"}
+      - { language: en, text: "IVA Technologies" }
     siteLink: https://iva-tech.ru
   - id: 880
     name:
-      - {language: en, text: MSU}
-      - {language: ru, text: МГУ}
+      - { language: en, text: MSU }
+      - { language: ru, text: МГУ }
     siteLink: https://www.msu.ru
   - id: 881
     name:
-      - {language: en, text: Erlyvideo}
-      - {language: ru, text: Эрливидео}
+      - { language: en, text: Erlyvideo }
+      - { language: ru, text: Эрливидео }
     siteLink: https://flussonic.com
   - id: 882
     name:
-      - {language: en, text: "Millicast, Inc."}
+      - { language: en, text: "Millicast, Inc." }
     siteLink: https://www.millicast.com
   - id: 883
     name:
-      - {language: en, text: Voximplant}
+      - { language: en, text: Voximplant }
     siteLink: https://voximplant.com
   - id: 884
     name:
-      - {language: en, text: "Itseez3D Inc."}
+      - { language: en, text: "Itseez3D Inc." }
     siteLink: https://itseez3d.com
   - id: 885
     name:
-      - {language: en, text: "Self Employed"}
+      - { language: en, text: "Self Employed" }
   - id: 886
     name:
-      - {language: en, text: Tango}
+      - { language: en, text: Tango }
     siteLink: https://tango.tech
   - id: 887
     name:
-      - {language: en, text: Reddit}
+      - { language: en, text: Reddit }
     siteLink: https://www.reddit.com
   - id: 888
     name:
-      - {language: en, text: VLC}
+      - { language: en, text: VLC }
     siteLink: https://www.videolan.org
   - id: 889
     name:
-      - {language: en, text: Facecast}
+      - { language: en, text: Facecast }
     siteLink: https://facecast.net
   - id: 890
     name:
-      - {language: en, text: "Arktur"}
+      - { language: en, text: "Arktur" }
   - id: 891
     name:
-      - {language: en, text: "Open Data Science"}
+      - { language: en, text: "Open Data Science" }
     siteLink: https://ods.ai
   - id: 892
     name:
-      - {language: en, text: Dotnetos}
+      - { language: en, text: Dotnetos }
     siteLink: https://dotnetos.org
   - id: 893
     name:
-      - {language: en, text: odgAssist}
+      - { language: en, text: odgAssist }
     siteLink: https://odgassist.ru
   - id: 894
     name:
-      - {language: en, text: SouJava}
+      - { language: en, text: SouJava }
     siteLink: https://soujava.org.br
   - id: 895
     name:
-      - {language: en, text: TC39}
+      - { language: en, text: TC39 }
     siteLink: https://tc39.es
   - id: 897
     name:
-      - {language: en, text: AllStarsIT}
+      - { language: en, text: AllStarsIT }
     siteLink: https://www.allstarsit.com
   - id: 898
     name:
-      - {language: en, text: Innotech}
-      - {language: ru, text: Иннотех}
+      - { language: en, text: Innotech }
+      - { language: ru, text: Иннотех }
     siteLink: https://inno.tech
   - id: 899
     name:
-      - {language: en, text: "CDEK IT"}
+      - { language: en, text: "CDEK IT" }
     siteLink: https://cdek-it.ru
   - id: 900
     name:
-      - {language: en, text: Ordina}
+      - { language: en, text: Ordina }
     siteLink: https://www.ordina.nl
   - id: 902
     name:
-      - {language: en, text: YetiCrab}
+      - { language: en, text: YetiCrab }
     siteLink: https://yeticrab.org
   - id: 904
     name:
-      - {language: en, text: "Garage Eight"}
+      - { language: en, text: "Garage Eight" }
     siteLink: https://garage-eight.com
   - id: 905
     name:
-      - {language: en, text: Rabota.ru}
-      - {language: ru, text: Работа.ру}
+      - { language: en, text: Rabota.ru }
+      - { language: ru, text: Работа.ру }
     siteLink: https://www.rabota.ru
   - id: 906
     name:
-      - {language: en, text: "Mad Brains"}
+      - { language: en, text: "Mad Brains" }
     siteLink: https://madbrains.ru
   - id: 907
     name:
-      - {language: en, text: "Credit Bank of Moscow"}
-      - {language: ru, text: "Московский кредитный банк"}
+      - { language: en, text: "Credit Bank of Moscow" }
+      - { language: ru, text: "Московский кредитный банк" }
     siteLink: https://mkb.ru
   - id: 908
     name:
-      - {language: en, text: "IceRock Development"}
+      - { language: en, text: "IceRock Development" }
     siteLink: https://icerockdev.com
   - id: 910
     name:
-      - {language: en, text: RSTQB}
+      - { language: en, text: RSTQB }
     siteLink: https://www.rstqb.org
   - id: 911
     name:
-      - {language: en, text: "X5 Group"}
+      - { language: en, text: "X5 Group" }
     siteLink: https://www.x5.ru
   - id: 912
     name:
-      - {language: en, text: Wallarm}
+      - { language: en, text: Wallarm }
     siteLink: https://www.wallarm.com
   - id: 913
     name:
-      - {language: en, text: JettyCloud}
+      - { language: en, text: JettyCloud }
     siteLink: https://www.jettycloud.com
   - id: 915
     name:
-      - {language: en, text: Celsus.ai}
-      - {language: ru, text: Цельс}
+      - { language: en, text: Celsus.ai }
+      - { language: ru, text: Цельс }
     siteLink: https://celsus.ai
   - id: 916
     name:
-      - {language: en, text: "Université Paris-Saclay, CNRS, LISN"}
+      - { language: en, text: "Université Paris-Saclay, CNRS, LISN" }
     siteLink: https://www.lisn.upsaclay.fr
   - id: 917
     name:
-      - {language: en, text: NetSpring}
+      - { language: en, text: NetSpring }
     siteLink: https://www.netspring.io
   - id: 918
     name:
-      - {language: en, text: "OKTET Labs"}
+      - { language: en, text: "OKTET Labs" }
     siteLink: http://oktetlabs.ru
   - id: 919
     name:
-      - {language: en, text: Syntacore}
+      - { language: en, text: Syntacore }
     siteLink: https://syntacore.com
   - id: 920
     name:
-      - {language: en, text: "Speech Technology Center"}
+      - { language: en, text: "Speech Technology Center" }
     siteLink: https://speechpro.com
   - id: 921
     name:
-      - {language: en, text: Workato}
+      - { language: en, text: Workato }
     siteLink: https://www.workato.com
   - id: 922
     name:
-      - {language: en, text: "RTU MIREA"}
-      - {language: ru, text: "РТУ МИРЭА"}
+      - { language: en, text: "RTU MIREA" }
+      - { language: ru, text: "РТУ МИРЭА" }
     siteLink: https://www.mirea.ru
   - id: 923
     name:
-      - {language: en, text: "Catalyst Aerospace Technologies"}
+      - { language: en, text: "Catalyst Aerospace Technologies" }
     siteLink: https://ctlst.tech
   - id: 925
     name:
-      - {language: en, text: Sudo}
-      - {language: ru, text: Судо}
+      - { language: en, text: Sudo }
+      - { language: ru, text: Судо }
     siteLink: https://sudo.team
   - id: 927
     name:
-      - {language: en, text: "Parity Technologies"}
+      - { language: en, text: "Parity Technologies" }
     siteLink: https://www.parity.io
   - id: 928
     name:
-      - {language: en, text: Evrone}
+      - { language: en, text: Evrone }
     siteLink: https://evrone.com
   - id: 929
     name:
-      - {language: en, text: MediaSoft}
+      - { language: en, text: MediaSoft }
     siteLink: https://mediasoft.team
   - id: 930
     name:
-      - {language: en, text: "White Frame"}
+      - { language: en, text: "White Frame" }
     siteLink: https://whiteframe.ru
   - id: 931
     name:
-      - {language: en, text: Invent.us}
+      - { language: en, text: Invent.us }
     siteLink: https://invent.us
   - id: 932
     name:
-      - {language: en, text: "Fusion Tech"}
+      - { language: en, text: "Fusion Tech" }
     siteLink: https://fusion-tech.pro
   - id: 933
     name:
-      - {language: en, text: "Kapital Bank"}
+      - { language: en, text: "Kapital Bank" }
     siteLink: https://www.kapitalbank.az
   - id: 934
     name:
-      - {language: en, text: slay_lines}
+      - { language: en, text: slay_lines }
     siteLink: https://slaylines.io
   - id: 935
     name:
-      - {language: en, text: Roketo}
+      - { language: en, text: Roketo }
     siteLink: https://www.roke.to
   - id: 937
     name:
-      - {language: en, text: "Emma Technologies"}
+      - { language: en, text: "Emma Technologies" }
     siteLink: https://emma-app.com
   - id: 938
     name:
-      - {language: en, text: Machinet.net}
+      - { language: en, text: Machinet.net }
     siteLink: https://machinet.net
   - id: 939
     name:
-      - {language: en, text: "Data Egret"}
+      - { language: en, text: "Data Egret" }
     siteLink: https://dataegret.ru
   - id: 940
     name:
-      - {language: en, text: Rosbank}
-      - {language: ru, text: Росбанк}
+      - { language: en, text: Rosbank }
+      - { language: ru, text: Росбанк }
     siteLink: https://www.rosbank.ru
   - id: 941
     name:
-      - {language: en, text: Natera}
+      - { language: en, text: Natera }
     siteLink: https://www.natera.com
   - id: 942
     name:
-      - {language: en, text: InfraTech}
-      - {language: ru, text: ИнфраТех}
+      - { language: en, text: InfraTech }
+      - { language: ru, text: ИнфраТех }
     siteLink: https://rosinfra.ru/infratech
   - id: 943
     name:
-      - {language: en, text: AproximaLabs}
+      - { language: en, text: AproximaLabs }
   - id: 944
     name:
-      - {language: en, text: Icons8}
+      - { language: en, text: Icons8 }
     siteLink: https://icons8.ru
   - id: 945
     name:
-      - {language: en, text: Rostelecom}
-      - {language: ru, text: Ростелеком}
+      - { language: en, text: Rostelecom }
+      - { language: ru, text: Ростелеком }
     siteLink: https://rt.ru
   - id: 946
     name:
-      - {language: en, text: "Otkritie Bank"}
-      - {language: ru, text: "Банк Открытие"}
+      - { language: en, text: "Otkritie Bank" }
+      - { language: ru, text: "Банк Открытие" }
     siteLink: https://www.open.ru
   - id: 947
     name:
-      - {language: en, text: "Tibbo Systems"}
+      - { language: en, text: "Tibbo Systems" }
     siteLink: https://aggregate.digital
   - id: 948
     name:
-      - {language: en, text: "Korus Сonsulting"}
-      - {language: ru, text: "Корус Консалтинг"}
+      - { language: en, text: "Korus Сonsulting" }
+      - { language: ru, text: "Корус Консалтинг" }
     siteLink: https://korusconsulting.ru
   - id: 949
     name:
-      - {language: en, text: MAI}
-      - {language: ru, text: МАИ}
+      - { language: en, text: MAI }
+      - { language: ru, text: МАИ }
     siteLink: https://mai.ru
   - id: 950
     name:
-      - {language: en, text: IBS}
+      - { language: en, text: IBS }
     siteLink: https://ibs.ru
   - id: 951
     name:
-      - {language: en, text: "Center for Research in Perspective Technologies"}
-      - {language: ru, text: "Центр развития перспективных технологий"}
+      - { language: en, text: "Center for Research in Perspective Technologies" }
+      - { language: ru, text: "Центр развития перспективных технологий" }
     siteLink: https://crpt.ru
   - id: 952
     name:
-      - {language: en, text: Toloka}
+      - { language: en, text: Toloka }
     siteLink: https://toloka.ai
   - id: 953
     name:
-      - {language: en, text: "Smart Prediction Technologies"}
+      - { language: en, text: "Smart Prediction Technologies" }
   - id: 954
     name:
-      - {language: en, text: "SMP Bank"}
-      - {language: ru, text: "СМП Банк"}
+      - { language: en, text: "SMP Bank" }
+      - { language: ru, text: "СМП Банк" }
     siteLink: https://smpbank.ru
   - id: 955
     name:
-      - {language: en, text: Axenix}
+      - { language: en, text: Axenix }
     siteLink: https://axenix.pro
   - id: 956
     name:
-      - {language: en, text: "Schwarz group"}
+      - { language: en, text: "Schwarz group" }
     siteLink: https://gruppe.schwarz
   - id: 958
     name:
-      - {language: en, text: "Minimal Modeling"}
+      - { language: en, text: "Minimal Modeling" }
     siteLink: https://minimalmodeling.com
   - id: 959
     name:
-      - {language: en, text: oneFactor}
+      - { language: en, text: oneFactor }
     siteLink: https://onefactor.com
   - id: 960
     name:
-      - {language: en, text: more.tv}
+      - { language: en, text: more.tv }
     siteLink: https://more.tv
   - id: 961
     name:
-      - {language: en, text: "Apache Software Foundation"}
+      - { language: en, text: "Apache Software Foundation" }
     siteLink: https://www.apache.org
   - id: 962
     name:
-      - {language: en, text: AgileCode}
+      - { language: en, text: AgileCode }
     siteLink: https://agilecode.io
   - id: 963
     name:
-      - {language: en, text: Nordcurrent}
+      - { language: en, text: Nordcurrent }
     siteLink: https://www.nordcurrent.com
   - id: 964
     name:
-      - {language: en, text: "Lesta Group"}
+      - { language: en, text: "Lesta Group" }
     siteLink: https://lesta.ru
   - id: 965
     name:
-      - {language: en, text: "Open Source Evangelist MLOps"}
+      - { language: en, text: "Open Source Evangelist MLOps" }
   - id: 966
     name:
-      - {language: en, text: EUSP}
-      - {language: ru, text: "ПЦ МАСТ ЕУ"}
+      - { language: en, text: EUSP }
+      - { language: ru, text: "ПЦ МАСТ ЕУ" }
     siteLink: https://eusp.org
   - id: 967
     name:
-      - {language: en, text: Gazpromneft}
-      - {language: ru, text: Газпромнефть}
+      - { language: en, text: Gazpromneft }
+      - { language: ru, text: Газпромнефть }
     siteLink: https://www.gazprom-neft.ru
   - id: 968
     name:
-      - {language: en, text: Maxilect}
-      - {language: ru, text: Максилект}
+      - { language: en, text: Maxilect }
+      - { language: ru, text: Максилект }
     siteLink: https://maxilect.com
   - id: 969
     name:
-      - {language: en, text: Tochka}
-      - {language: ru, text: Точка}
+      - { language: en, text: Tochka }
+      - { language: ru, text: Точка }
   - id: 970
     name:
-      - {language: en, text: "The School of Strong Programmers"}
-      - {language: ru, text: "Школа Сильных Программистов"}
+      - { language: en, text: "The School of Strong Programmers" }
+      - { language: ru, text: "Школа Сильных Программистов" }
     siteLink: https://education.borshev.com
   - id: 971
     name:
-      - {language: en, text: CVisionLab}
+      - { language: en, text: CVisionLab }
     siteLink: https://www.cvisionlab.com
   - id: 972
     name:
-      - {language: en, text: Astera}
+      - { language: en, text: Astera }
     siteLink: https://astera.ru
   - id: 973
     name:
-      - {language: en, text: CodeScoring}
+      - { language: en, text: CodeScoring }
     siteLink: https://codescoring.ru
   - id: 974
     name:
-      - {language: en, text: "Git in Sky"}
+      - { language: en, text: "Git in Sky" }
     siteLink: https://gitinsky.com
   - id: 975
     name:
-      - {language: en, text: "Independent Expert"}
-      - {language: ru, text: "Независимый эксперт"}
+      - { language: en, text: "Independent Expert" }
+      - { language: ru, text: "Независимый эксперт" }
   - id: 976
     name:
-      - {language: en, text: BIMeister}
-      - {language: ru, text: Bimeister}
+      - { language: en, text: BIMeister }
+      - { language: ru, text: Bimeister }
     siteLink: https://bimeister.com
   - id: 977
     name:
-      - {language: en, text: MY.GAMES}
+      - { language: en, text: MY.GAMES }
     siteLink: https://my.games
   - id: 978
     name:
-      - {language: en, text: "Independent researcher"}
-      - {language: ru, text: "Независимый исследователь"}
+      - { language: en, text: "Independent researcher" }
+      - { language: ru, text: "Независимый исследователь" }
   - id: 979
     name:
-      - {language: en, text: "Jet Infosystems"}
-      - {language: ru, text: "Инфосистемы Джет"}
+      - { language: en, text: "Jet Infosystems" }
+      - { language: ru, text: "Инфосистемы Джет" }
     siteLink: https://jetinfosystems.com
   - id: 980
     name:
-      - {language: en, text: VisionLabs}
+      - { language: en, text: VisionLabs }
     siteLink: https://www.visionlabs.ru
   - id: 981
     name:
-      - {language: en, text: VRCast}
+      - { language: en, text: VRCast }
     siteLink: https://vrcast.tv
   - id: 982
     name:
-      - {language: en, text: EdgeCenter}
-      - {language: ru, text: EdgeЦентр}
+      - { language: en, text: EdgeCenter }
+      - { language: ru, text: EdgeЦентр }
     siteLink: https://edgecenter.ru
   - id: 983
     name:
-      - {language: en, text: "Effective Video Transcoding"}
+      - { language: en, text: "Effective Video Transcoding" }
     siteLink: https://www.compression.ru/video/video_codec_optimization/
   - id: 984
     name:
-      - {language: en, text: Elecard}
-      - {language: ru, text: Элекард}
+      - { language: en, text: Elecard }
+      - { language: ru, text: Элекард }
     siteLink: https://www.elecard.com
   - id: 985
     name:
-      - {language: en, text: "Teleport Media"}
+      - { language: en, text: "Teleport Media" }
     siteLink: https://teleport.media
   - id: 986
     name:
-      - {language: en, text: Fastvideo}
-      - {language: ru, text: Фаствидео}
+      - { language: en, text: Fastvideo }
+      - { language: ru, text: Фаствидео }
     siteLink: https://www.fastvideo.ru
   - id: 987
     name:
-      - {language: en, text: GaraninApps}
+      - { language: en, text: GaraninApps }
     siteLink: https://garaninapps.com
   - id: 988
     name:
-      - {language: en, text: IT_ONE}
+      - { language: en, text: IT_ONE }
     siteLink: https://www.it-one.ru
   - id: 989
     name:
-      - {language: en, text: Sytac}
+      - { language: en, text: Sytac }
     siteLink: https://sytac.io
   - id: 991
     name:
-      - {language: en, text: Waliot}
+      - { language: en, text: Waliot }
     siteLink: https://waliot.com
   - id: 992
     name:
-      - {language: en, text: krd.dev}
+      - { language: en, text: krd.dev }
     siteLink: https://krd.dev
   - id: 993
     name:
-      - {language: en, text: "Control Systems"}
-      - {language: ru, text: "Контрол Системс"}
+      - { language: en, text: "Control Systems" }
+      - { language: ru, text: "Контрол Системс" }
     siteLink: https://controlsystems.ru
   - id: 994
     name:
-      - {language: en, text: Komus}
-      - {language: ru, text: Комус}
+      - { language: en, text: Komus }
+      - { language: ru, text: Комус }
     siteLink: https://www.komus.ru
   - id: 995
     name:
-      - {language: en, text: "Wis Software"}
+      - { language: en, text: "Wis Software" }
     siteLink: https://wis.software
   - id: 996
     name:
-      - {language: en, text: Citydrive}
-      - {language: ru, text: Ситидрайв}
+      - { language: en, text: Citydrive }
+      - { language: ru, text: Ситидрайв }
     siteLink: https://citydrive.ru
   - id: 997
     name:
-      - {language: en, text: Lido}
+      - { language: en, text: Lido }
   - id: 999
     name:
-      - {language: en, text: "ALM Works"}
+      - { language: en, text: "ALM Works" }
     siteLink: https://almworks.com
   - id: 1000
     name:
-      - {language: en, text: HintEd}
+      - { language: en, text: HintEd }
     siteLink: https://hinted.me
   - id: 1001
     name:
-      - {language: en, text: Careem}
+      - { language: en, text: Careem }
     siteLink: https://www.careem.com
   - id: 1002
     name:
-      - {language: en, text: Indeed}
+      - { language: en, text: Indeed }
     siteLink: https://www.indeed.com
   - id: 1003
     name:
-      - {language: en, text: 1CUPIS}
-      - {language: ru, text: "ЕДИНЫЙ ЦУПИС"}
+      - { language: en, text: 1CUPIS }
+      - { language: ru, text: "ЕДИНЫЙ ЦУПИС" }
     siteLink: https://1cupis.ru
   - id: 1004
     name:
-      - {language: en, text: ATI.SU}
+      - { language: en, text: ATI.SU }
     siteLink: https://ati.su
   - id: 1005
     name:
-      - {language: en, text: Qualitica}
+      - { language: en, text: Qualitica }
     siteLink: https://qualitica.ru
   - id: 1006
     name:
-      - {language: en, text: DeteAct}
+      - { language: en, text: DeteAct }
     siteLink: https://deteact.ru
   - id: 1007
     name:
-      - {language: en, text: RUTUBE}
+      - { language: en, text: RUTUBE }
     siteLink: https://rutube.ru
   - id: 1008
     name:
-      - {language: en, text: "Monitor Electric"}
-      - {language: ru, text: "Монитор Электрик"}
+      - { language: en, text: "Monitor Electric" }
+      - { language: ru, text: "Монитор Электрик" }
     siteLink: https://monitel.com
   - id: 1009
     name:
-      - {language: en, text: Naumen}
+      - { language: en, text: Naumen }
     siteLink: https://naumen.com
   - id: 1010
     name:
-      - {language: en, text: Tempo}
+      - { language: en, text: Tempo }
     siteLink: https://www.tempo.io
   - id: 1011
     name:
-      - {language: en, text: Rostselmash}
-      - {language: ru, text: Ростсельмаш}
+      - { language: en, text: Rostselmash }
+      - { language: ru, text: Ростсельмаш }
     siteLink: https://rostselmash.com
   - id: 1012
     name:
-      - {language: en, text: ITentika}
+      - { language: en, text: ITentika }
     siteLink: https://itentika.ru
   - id: 1013
     name:
-      - {language: en, text: Roche}
+      - { language: en, text: Roche }
     siteLink: https://www.roche.ru
   - id: 1016
     name:
-      - {language: en, text: "Linearity GmbH"}
+      - { language: en, text: "Linearity GmbH" }
     siteLink: https://www.vectornator.io
   - id: 1017
     name:
-      - {language: en, text: Adapty}
+      - { language: en, text: Adapty }
     siteLink: https://adapty.io
   - id: 1018
     name:
-      - {language: en, text: CocoaHeads}
+      - { language: en, text: CocoaHeads }
     siteLink: https://cocoa.heads.club
   - id: 1019
     name:
-      - {language: en, text: Ziina}
+      - { language: en, text: Ziina }
     siteLink: https://ziina.com
   - id: 1020
     name:
-      - {language: en, text: Joom}
+      - { language: en, text: Joom }
     siteLink: https://www.joom.com
   - id: 1021
     name:
-      - {language: en, text: "Open Mobile Platform"}
-      - {language: ru, text: "Открытая Мобильная Платформа"}
+      - { language: en, text: "Open Mobile Platform" }
+      - { language: ru, text: "Открытая Мобильная Платформа" }
     siteLink: https://www.omp.ru
   - id: 1023
     name:
-      - {language: en, text: RuStore}
+      - { language: en, text: RuStore }
     siteLink: https://www.rustore.ru
   - id: 1024
     name:
-      - {language: en, text: GetSquire}
+      - { language: en, text: GetSquire }
     siteLink: https://getsquire.com
   - id: 1025
     name:
-      - {language: en, text: Simla.com}
+      - { language: en, text: Simla.com }
     siteLink: https://www.simla.com
   - id: 1026
     name:
-      - {language: en, text: RetailCRM}
+      - { language: en, text: RetailCRM }
     siteLink: https://www.retailcrm.ru
   - id: 1027
     name:
-      - {language: en, text: Delimobil}
-      - {language: ru, text: Делимобиль}
+      - { language: en, text: Delimobil }
+      - { language: ru, text: Делимобиль }
     siteLink: https://delimobil.ru
   - id: 1028
     name:
-      - {language: en, text: HackerOne}
+      - { language: en, text: HackerOne }
     siteLink: https://www.hackerone.com
   - id: 1030
     name:
-      - {language: en, text: Snapview.de}
+      - { language: en, text: Snapview.de }
     siteLink: https://www.snapview.de
   - id: 1031
     name:
-      - {language: en, text: lumen5}
+      - { language: en, text: lumen5 }
     siteLink: https://lumen5.com
   - id: 1032
     name:
-      - {language: en, text: GeekBoards}
+      - { language: en, text: GeekBoards }
     siteLink: https://geekboards.ru
   - id: 1033
     name:
-      - {language: en, text: "Pink Unicorn"}
+      - { language: en, text: "Pink Unicorn" }
   - id: 1034
     name:
-      - {language: en, text: Cloud.ru}
+      - { language: en, text: Cloud.ru }
   - id: 1035
     name:
-      - {language: en, text: IIBA}
+      - { language: en, text: IIBA }
     siteLink: https://www.iiba.org
   - id: 1036
     name:
-      - {language: en, text: Сonsaltica}
-      - {language: ru, text: Консалтика}
+      - { language: en, text: Сonsaltica }
+      - { language: ru, text: Консалтика }
     siteLink: https://consaltica.ru
   - id: 1037
     name:
-      - {language: en, text: BIA-Technologies}
+      - { language: en, text: BIA-Technologies }
     siteLink: https://bia-tech.ru
   - id: 1038
     name:
-      - {language: en, text: NextWay}
+      - { language: en, text: NextWay }
     siteLink: https://nextway.pro
   - id: 1039
     name:
-      - {language: en, text: Center-Invest}
-      - {language: ru, text: "Банк «Центр-инвест»"}
+      - { language: en, text: Center-Invest }
+      - { language: ru, text: "Банк «Центр-инвест»" }
     siteLink: https://www.centrinvest.ru
   - id: 1040
     name:
-      - {language: en, text: "Summer Analytical Festival"}
-      - {language: ru, text: "ЛАФ (Летний аналитический фестиваль)"}
+      - { language: en, text: "Summer Analytical Festival" }
+      - { language: ru, text: "ЛАФ (Летний аналитический фестиваль)" }
     siteLink: https://lafest.ru
   - id: 1041
     name:
-      - {language: en, text: E-Legion}
+      - { language: en, text: E-Legion }
     siteLink: https://www.e-legion.com
   - id: 1042
     name:
-      - {language: en, text: "Systems Education"}
+      - { language: en, text: "Systems Education" }
     siteLink: https://systems.education
   - id: 1043
     name:
-      - {language: en, text: documentat.io}
+      - { language: en, text: documentat.io }
     siteLink: https://documentat.io
   - id: 1045
     name:
-      - {language: en, text: "\"Provetrimsya!\" podcast"}
-      - {language: ru, text: "Подкаст «Проветримся!»"}
+      - { language: en, text: "\"Provetrimsya!\" podcast" }
+      - { language: ru, text: "Подкаст «Проветримся!»" }
     siteLink: https://progulka.yamshchikov.info
   - id: 1046
     name:
-      - {language: en, text: "Data Monsters"}
+      - { language: en, text: "Data Monsters" }
     siteLink: https://www.datamonsters.com
   - id: 1047
     name:
-      - {language: en, text: CyberDacha}
+      - { language: en, text: CyberDacha }
     siteLink: https://www.youtube.com/channel/UCdiwSVi1wq6wnd4gbpjbIAg
   - id: 1048
     name:
-      - {language: en, text: "Marathon Labs"}
+      - { language: en, text: "Marathon Labs" }
     siteLink: https://marathonlabs.io
   - id: 1049
     name:
-      - {language: en, text: "Electrolux AB"}
+      - { language: en, text: "Electrolux AB" }
     siteLink: https://www.electrolux.com
   - id: 1050
     name:
-      - {language: en, text: "Product Psychology"}
+      - { language: en, text: "Product Psychology" }
     siteLink: https://psychologyproduct.ru
   - id: 1051
     name:
-      - {language: en, text: Yoonion}
+      - { language: en, text: Yoonion }
     siteLink: https://yoonion.ru
   - id: 1052
     name:
-      - {language: en, text: RSHB-Intech}
-      - {language: ru, text: РСХБ-Интех}
+      - { language: en, text: RSHB-Intech }
+      - { language: ru, text: РСХБ-Интех }
     siteLink: https://rshb-intech.ru
   - id: 1053
     name:
-      - {language: en, text: Supabase}
+      - { language: en, text: Supabase }
     siteLink: https://supabase.com
   - id: 1054
     name:
-      - {language: en, text: DigitLetter}
-      - {language: ru, text: ЦифраБуква}
+      - { language: en, text: DigitLetter }
+      - { language: ru, text: ЦифраБуква }
     siteLink: https://www.youtube.com/@digitletter
   - id: 1055
     name:
-      - {language: en, text: BrowserStack}
+      - { language: en, text: BrowserStack }
     siteLink: https://www.browserstack.com
   - id: 1056
     name:
-      - {language: en, text: Evocargo}
+      - { language: en, text: Evocargo }
     siteLink: https://evocargo.com
   - id: 1057
     name:
-      - {language: en, text: "Signant Health"}
+      - { language: en, text: "Signant Health" }
     siteLink: https://www.signanthealth.com
   - id: 1058
     name:
-      - {language: en, text: Aero}
+      - { language: en, text: Aero }
   - id: 1059
     name:
-      - {language: en, text: "TestOps enthusiast"}
-      - {language: ru, text: TestOps-энтузиаст}
+      - { language: en, text: "TestOps enthusiast" }
+      - { language: ru, text: TestOps-энтузиаст }
   - id: 1060
     name:
-      - {language: en, text: "Flipper devices"}
+      - { language: en, text: "Flipper devices" }
     siteLink: https://www.flipperdevices.com
   - id: 1061
     name:
-      - {language: en, text: Astral-soft}
-      - {language: ru, text: Астрал-софт}
+      - { language: en, text: Astral-soft }
+      - { language: ru, text: Астрал-софт }
     siteLink: https://astral-soft.ru
   - id: 1062
     name:
-      - {language: en, text: SoftSwiss}
+      - { language: en, text: SoftSwiss }
     siteLink: https://www.softswiss.com
   - id: 1065
     name:
-      - {language: en, text: NLMK}
-      - {language: ru, text: НЛМК}
+      - { language: en, text: NLMK }
+      - { language: ru, text: НЛМК }
     siteLink: https://nlmk.com
   - id: 1066
     name:
-      - {language: en, text: "Marco Schulz Consulting"}
+      - { language: en, text: "Marco Schulz Consulting" }
     siteLink: https://www.service-schulz.eu
   - id: 1067
     name:
-      - {language: en, text: "Zodia Markets"}
+      - { language: en, text: "Zodia Markets" }
     siteLink: https://zodia-markets.com
   - id: 1068
     name:
-      - {language: en, text: Aiven}
+      - { language: en, text: Aiven }
     siteLink: https://aiven.io
   - id: 1069
     name:
-      - {language: en, text: "Dijkstra Markets"}
+      - { language: en, text: "Dijkstra Markets" }
   - id: 1070
     name:
-      - {language: en, text: "SolarWinds"}
+      - { language: en, text: "SolarWinds" }
     siteLink: https://www.solarwinds.com
   - id: 1071
     name:
-      - {language: en, text: "Mekhovyye Kulaki"}
+      - { language: en, text: "Mekhovyye Kulaki" }
   - id: 1072
     name:
-      - {language: en, text: WANNA}
+      - { language: en, text: WANNA }
   - id: 1073
     name:
-      - {language: en, text: Sphinx}
+      - { language: en, text: Sphinx }
     siteLink: https://sphinxsearch.com
   - id: 1074
     name:
-      - {language: en, text: "Renaissance Credit"}
-      - {language: ru, text: "Ренессанс Банк"}
+      - { language: en, text: "Renaissance Credit" }
+      - { language: ru, text: "Ренессанс Банк" }
     siteLink: https://rencredit.ru
   - id: 1076
     name:
-      - {language: en, text: "Project Jupyter"}
+      - { language: en, text: "Project Jupyter" }
     siteLink: https://jupyter.org
   - id: 1077
     name:
-      - {language: en, text: "NT Progress"}
-      - {language: ru, text: "НТ Прогресс"}
+      - { language: en, text: "NT Progress" }
+      - { language: ru, text: "НТ Прогресс" }
     siteLink: https://ntprogress.ru
   - id: 1078
     name:
-      - {language: en, text: "Tourmaline Core"}
+      - { language: en, text: "Tourmaline Core" }
     siteLink: https://www.tourmalinecore.com
   - id: 1079
     name:
-      - {language: en, text: IntelliVision}
+      - { language: en, text: IntelliVision }
     siteLink: https://intellivision.com
   - id: 1080
     name:
-      - {language: en, text: MCST}
-      - {language: ru, text: МЦСТ}
+      - { language: en, text: MCST }
+      - { language: ru, text: МЦСТ }
     siteLink: http://www.mcst.ru
   - id: 1081
     name:
-      - {language: en, text: Kronshtadt}
-      - {language: ru, text: Кронштадт}
+      - { language: en, text: Kronshtadt }
+      - { language: ru, text: Кронштадт }
     siteLink: https://kronshtadt.ru
   - id: 1082
     name:
-      - {language: en, text: Elverils}
+      - { language: en, text: Elverils }
     siteLink: https://elverils.com
   - id: 1084
     name:
-      - {language: en, text: "Stingray Technologies"}
-      - {language: ru, text: "Стингрей Технолоджиз"}
+      - { language: en, text: "Stingray Technologies" }
+      - { language: ru, text: "Стингрей Технолоджиз" }
     siteLink: https://stingray-mobile.ru
   - id: 1085
     name:
-      - {language: en, text: "Somnio Software"}
+      - { language: en, text: "Somnio Software" }
     siteLink: https://somniosoftware.com
   - id: 1086
     name:
-      - {language: en, text: Uzum}
+      - { language: en, text: Uzum }
     siteLink: https://uzum.com
   - id: 1087
     name:
-      - {language: en, text: Doubletapp}
+      - { language: en, text: Doubletapp }
     siteLink: https://doubletapp.ai
   - id: 1088
     name:
-      - {language: en, text: Linen}
+      - { language: en, text: Linen }
   - id: 1089
     name:
-      - {language: en, text: WebElArt}
+      - { language: en, text: WebElArt }
     siteLink: https://webelart.com
   - id: 1090
     name:
-      - {language: en, text: Neogenda}
+      - { language: en, text: Neogenda }
     siteLink: https://neogenda.com
   - id: 1091
     name:
-      - {language: en, text: Mapbox}
+      - { language: en, text: Mapbox }
     siteLink: https://www.mapbox.com
   - id: 1092
     name:
-      - {language: en, text: Ostrovok}
-      - {language: ru, text: Островок}
+      - { language: en, text: Ostrovok }
+      - { language: ru, text: Островок }
     siteLink: https://ostrovok.ru
   - id: 1093
     name:
-      - {language: en, text: IDDQD}
+      - { language: en, text: IDDQD }
     siteLink: https://iddqd.pro
   - id: 1094
     name:
-      - {language: en, text: DRPC}
+      - { language: en, text: DRPC }
   - id: 1095
     name:
-      - {language: en, text: "Art. Lebedev Studio"}
-      - {language: ru, text: "Студия Артемия Лебедева"}
+      - { language: en, text: "Art. Lebedev Studio" }
+      - { language: ru, text: "Студия Артемия Лебедева" }
     siteLink: https://www.artlebedev.ru
   - id: 1096
     name:
-      - {language: en, text: "МТС Exolve"}
+      - { language: en, text: "МТС Exolve" }
     siteLink: https://exolve.ru
   - id: 1097
     name:
-      - {language: en, text: Elvees}
-      - {language: ru, text: "НПЦ ЭЛВИС"}
+      - { language: en, text: Elvees }
+      - { language: ru, text: "НПЦ ЭЛВИС" }
     siteLink: https://elvees.ru
   - id: 1098
     name:
-      - {language: en, text: "Tochka Bank"}
-      - {language: ru, text: "Банк Точка"}
+      - { language: en, text: "Tochka Bank" }
+      - { language: ru, text: "Банк Точка" }
     siteLink: https://tochka.com
   - id: 1099
     name:
-      - {language: en, text: "Artem Gorbunov Design Bureau"}
-      - {language: ru, text: "Дизайн-бюро Артёма Горбунова"}
+      - { language: en, text: "Artem Gorbunov Design Bureau" }
+      - { language: ru, text: "Дизайн-бюро Артёма Горбунова" }
     siteLink: https://bureau.ru
   - id: 1100
     name:
-      - {language: en, text: BIOCAD}
+      - { language: en, text: BIOCAD }
     siteLink: https://biocad.ru
   - id: 1101
     name:
-      - {language: en, text: Skillbox}
+      - { language: en, text: Skillbox }
     siteLink: https://skillbox.ru
   - id: 1102
     name:
-      - {language: en, text: FrontendConf}
+      - { language: en, text: FrontendConf }
     siteLink: https://frontendconf.ru
   - id: 1103
     name:
-      - {language: en, text: "Phoenix Creative Group"}
-      - {language: ru, text: "Креативная группа «Феникс»"}
+      - { language: en, text: "Phoenix Creative Group" }
+      - { language: ru, text: "Креативная группа «Феникс»" }
     siteLink: https://phoenix-cg.ru
   - id: 1104
     name:
-      - {language: en, text: "Nezhno Space"}
-      - {language: ru, text: "Нежно Space"}
+      - { language: en, text: "Nezhno Space" }
+      - { language: ru, text: "Нежно Space" }
     siteLink: https://nezhno.space
   - id: 1105
     name:
-      - {language: en, text: TrainingData.Solutions}
+      - { language: en, text: TrainingData.Solutions }
     siteLink: https://trainingdata.solutions
   - id: 1106
     name:
-      - {language: en, text: TerraTech}
-      - {language: ru, text: "Терра Тех"}
+      - { language: en, text: TerraTech }
+      - { language: ru, text: "Терра Тех" }
     siteLink: https://terratech.ru
   - id: 1107
     name:
-      - {language: en, text: "RADAR Agency"}
+      - { language: en, text: "RADAR Agency" }
     siteLink: https://radar-research.ru
   - id: 1108
     name:
-      - {language: en, text: "Napoleon IT"}
+      - { language: en, text: "Napoleon IT" }
     siteLink: https://napoleonit.ru
   - id: 1109
     name:
-      - {language: en, text: Unleashing.AI}
+      - { language: en, text: Unleashing.AI }
     siteLink: https://www.unleashing.ai
   - id: 1110
     name:
-      - {language: en, text: Webtronics}
+      - { language: en, text: Webtronics }
     siteLink: https://webtronics.ru
   - id: 1111
     name:
-      - {language: en, text: TravelX}
+      - { language: en, text: TravelX }
     siteLink: https://travelx.io
   - id: 1112
     name:
-      - {language: en, text: Rubytech}
+      - { language: en, text: Rubytech }
     siteLink: https://rubytech.ru
   - id: 1113
     name:
-      - {language: en, text: Poscredit}
+      - { language: en, text: Poscredit }
     siteLink: https://pos-credit.ru
   - id: 1114
     name:
-      - {language: en, text: GetAnalyst}
+      - { language: en, text: GetAnalyst }
     siteLink: https://getanalyst.ru
   - id: 1115
     name:
-      - {language: en, text: "Analytic Workspace"}
+      - { language: en, text: "Analytic Workspace" }
     siteLink: https://analyticworkspace.ru
   - id: 1116
     name:
-      - {language: en, text: JobLeads}
+      - { language: en, text: JobLeads }
     siteLink: https://www.jobleads.com
   - id: 1117
     name:
-      - {language: en, text: Finom}
+      - { language: en, text: Finom }
     siteLink: https://finom.co
   - id: 1118
     name:
-      - {language: en, text: "ITFB Group"}
+      - { language: en, text: "ITFB Group" }
     siteLink: https://itfbgroup.ru
   - id: 1119
     name:
-      - {language: en, text: Neoflex}
+      - { language: en, text: Neoflex }
     siteLink: https://www.neoflex.ru
   - id: 1120
     name:
-      - {language: en, text: O2Consulting}
+      - { language: en, text: O2Consulting }
     siteLink: https://o2consult.com
   - id: 1121
     name:
-      - {language: en, text: "Т1 Holding"}
-      - {language: ru, text: "Т1 Холдинг"}
+      - { language: en, text: "Т1 Holding" }
+      - { language: ru, text: "Т1 Холдинг" }
     siteLink: https://t1.ru
   - id: 1122
     name:
-      - {language: en, text: Magnit}
-      - {language: ru, text: Магнит}
+      - { language: en, text: Magnit }
+      - { language: ru, text: Магнит }
     siteLink: https://magnit.ru
   - id: 1123
     name:
-      - {language: en, text: "TSQ Consulting"}
+      - { language: en, text: "TSQ Consulting" }
     siteLink: https://tsqconsulting.ru
   - id: 1124
     name:
-      - {language: en, text: SimbirSoft}
+      - { language: en, text: SimbirSoft }
     siteLink: https://www.simbirsoft.com
   - id: 1125
     name:
-      - {language: en, text: USABILITYLAB}
+      - { language: en, text: USABILITYLAB }
     siteLink: https://usabilitylab.ru
   - id: 1126
     name:
-      - {language: en, text: AlfaStrakhovanie}
-      - {language: ru, text: АльфаСтрахование}
+      - { language: en, text: AlfaStrakhovanie }
+      - { language: ru, text: АльфаСтрахование }
     siteLink: https://www.alfastrah.ru
   - id: 1127
     name:
-      - {language: en, text: Sogaz}
-      - {language: ru, text: Согаз}
+      - { language: en, text: Sogaz }
+      - { language: ru, text: Согаз }
     siteLink: https://www.sogaz.ru
   - id: 1128
     name:
-      - {language: en, text: Wildberries}
+      - { language: en, text: Wildberries }
     siteLink: https://www.wildberries.ru
   - id: 1129
     name:
-      - {language: en, text: Luntry}
+      - { language: en, text: Luntry }
     siteLink: https://luntry.ru
   - id: 1130
     name:
-      - {language: en, text: Naviteq}
+      - { language: en, text: Naviteq }
     siteLink: https://www.naviteq.io
   - id: 1131
     name:
-      - {language: en, text: GlobalDots}
+      - { language: en, text: GlobalDots }
     siteLink: https://www.globaldots.com
   - id: 1132
     name:
-      - {language: en, text: "Kolesa Group"}
+      - { language: en, text: "Kolesa Group" }
     siteLink: https://kolesa.group
   - id: 1133
     name:
-      - {language: en, text: DeusOps}
+      - { language: en, text: DeusOps }
     siteLink: https://deusops.com
   - id: 1134
     name:
-      - {language: en, text: "IT Enduro"}
+      - { language: en, text: "IT Enduro" }
     siteLink: https://it-endu.ro
   - id: 1136
     name:
-      - {language: en, text: PPR}
-      - {language: ru, text: "Передовые Платежные Решения"}
+      - { language: en, text: PPR }
+      - { language: ru, text: "Передовые Платежные Решения" }
     siteLink: https://www.petrolplus.ru
   - id: 1137
     name:
-      - {language: en, text: GNIVC}
-      - {language: ru, text: "АО ГНИВЦ"}
+      - { language: en, text: GNIVC }
+      - { language: ru, text: "АО ГНИВЦ" }
     siteLink: https://www.gnivc.ru
   - id: 1138
     name:
-      - {language: en, text: DuckStax}
+      - { language: en, text: DuckStax }
     siteLink: https://duckstax.com
   - id: 1139
     name:
-      - {language: en, text: "Agro Software"}
+      - { language: en, text: "Agro Software" }
     siteLink: https://agromon.ru
   - id: 1141
     name:
-      - {language: en, text: Whoosh}
+      - { language: en, text: Whoosh }
     siteLink: https://whoosh-bike.ru
   - id: 1142
     name:
-      - {language: en, text: "ASC LPI"}
-      - {language: ru, text: "АКЦ ФИАН"}
+      - { language: en, text: "ASC LPI" }
+      - { language: ru, text: "АКЦ ФИАН" }
     siteLink: https://www.asc-lebedev.ru
   - id: 1143
     name:
-      - {language: en, text: YTsaurus}
+      - { language: en, text: YTsaurus }
     siteLink: https://ytsaurus.tech
   - id: 1144
     name:
-      - {language: en, text: Gett}
+      - { language: en, text: Gett }
     siteLink: https://www.gett.com
   - id: 1145
     name:
-      - {language: en, text: Surfalytics}
+      - { language: en, text: Surfalytics }
     siteLink: https://surfalytics.com
   - id: 1146
     name:
-      - {language: en, text: "API Crafter"}
+      - { language: en, text: "API Crafter" }
     siteLink: https://apicrafter.ru
   - id: 1148
     name:
-      - {language: en, text: GlowByte}
+      - { language: en, text: GlowByte }
     siteLink: https://glowbyteconsulting.com
   - id: 1149
     name:
-      - {language: en, text: "Data Sapience"}
+      - { language: en, text: "Data Sapience" }
     siteLink: https://datasapience.ru
   - id: 1150
     name:
-      - {language: en, text: "SR Data"}
+      - { language: en, text: "SR Data" }
     siteLink: https://srdata.ru
   - id: 1151
     name:
-      - {language: en, text: sibedge}
+      - { language: en, text: sibedge }
     siteLink: https://sibedge.team
   - id: 1152
     name:
-      - {language: en, text: Byndyusoft}
+      - { language: en, text: Byndyusoft }
     siteLink: https://byndyusoft.com
   - id: 1154
     name:
-      - {language: en, text: "Digitalization of engineering"}
-      - {language: ru, text: "Цифровизация инженерного дела"}
+      - { language: en, text: "Digitalization of engineering" }
+      - { language: ru, text: "Цифровизация инженерного дела" }
     siteLink: https://rusde.ru
   - id: 1155
     name:
-      - {language: en, text: ASE}
-      - {language: ru, text: АСЭ}
+      - { language: en, text: ASE }
+      - { language: ru, text: АСЭ }
     siteLink: https://ase-ec.ru
   - id: 1156
     name:
-      - {language: en, text: ProgMsk}
-      - {language: ru, text: "Московский клуб программистов"}
+      - { language: en, text: ProgMsk }
+      - { language: ru, text: "Московский клуб программистов" }
     siteLink: https://prog.msk.ru
   - id: 1157
     name:
-      - {language: en, text: "C Teleport"}
+      - { language: en, text: "C Teleport" }
     siteLink: https://cteleport.com
   - id: 1158
     name:
-      - {language: en, text: "Axiom JDK"}
+      - { language: en, text: "Axiom JDK" }
     siteLink: https://axiomjdk.ru
   - id: 1159
     name:
-      - {language: en, text: "RNT Group"}
+      - { language: en, text: "RNT Group" }
     siteLink: https://www.rntgroup.com
   - id: 1160
     name:
-      - {language: en, text: Lightrun}
+      - { language: en, text: Lightrun }
     siteLink: https://lightrun.com
   - id: 1161
     name:
-      - {language: en, text: "Nedremlyushchee oko"}
-      - {language: ru, text: "Недремлющее око"}
+      - { language: en, text: "Nedremlyushchee oko" }
+      - { language: ru, text: "Недремлющее око" }
     siteLink: https://kvs-sb.ru
   - id: 1162
     name:
-      - {language: en, text: "Institute of Linguistics of the Russian Academy of Sciences"}
-      - {language: ru, text: "Институт языкознания РАН"}
+      - { language: en, text: "Institute of Linguistics of the Russian Academy of Sciences" }
+      - { language: ru, text: "Институт языкознания РАН" }
     siteLink: https://iling-ran.ru
   - id: 1163
     name:
-      - {language: en, text: "Zend by Perforce"}
+      - { language: en, text: "Zend by Perforce" }
     siteLink: https://www.perforce.com
   - id: 1164
     name:
-      - {language: en, text: "Russian Quantum Center"}
-      - {language: ru, text: "Российский квантовый центр"}
+      - { language: en, text: "Russian Quantum Center" }
+      - { language: ru, text: "Российский квантовый центр" }
     siteLink: https://www.rqc.ru
   - id: 1165
     name:
-      - {language: en, text: Samolet}
-      - {language: ru, text: Самолет}
+      - { language: en, text: Samolet }
+      - { language: ru, text: Самолет }
     siteLink: https://samolet.ru
   - id: 1166
     name:
-      - {language: en, text: Qubit}
-      - {language: ru, text: Кубит}
+      - { language: en, text: Qubit }
+      - { language: ru, text: Кубит }
     siteLink: https://qubit.su
   - id: 1167
     name:
-      - {language: en, text: AVO}
+      - { language: en, text: AVO }
     siteLink: https://avo.business
   - id: 1168
     name:
-      - {language: en, text: DoorDash}
+      - { language: en, text: DoorDash }
     siteLink: https://www.doordash.com
   - id: 1170
     name:
-      - {language: en, text: Yclients}
+      - { language: en, text: Yclients }
     siteLink: https://www.yclients.com
   - id: 1171
     name:
-      - {language: en, text: Amediateka}
+      - { language: en, text: Amediateka }
     siteLink: https://www.amediateka.ru
   - id: 1172
     name:
-      - {language: en, text: Zvuk}
-      - {language: ru, text: Звук}
+      - { language: en, text: Zvuk }
+      - { language: ru, text: Звук }
     siteLink: https://zvuk.com
   - id: 1173
     name:
-      - {language: en, text: Aladdin}
-      - {language: ru, text: Аладдин}
+      - { language: en, text: Aladdin }
+      - { language: ru, text: Аладдин }
     siteLink: https://www.aladdin-rd.ru
   - id: 1174
     name:
-      - {language: en, text: Granch}
-      - {language: ru, text: Гранч}
+      - { language: en, text: Granch }
+      - { language: ru, text: Гранч }
     siteLink: https://granch.ru
   - id: 1175
     name:
-      - {language: en, text: Auriga}
-      - {language: ru, text: Аурига}
+      - { language: en, text: Auriga }
+      - { language: ru, text: Аурига }
     siteLink: https://auriga.ru
   - id: 1176
     name:
-      - {language: en, text: "Lebedev Physical Institute"}
-      - {language: ru, text: "Физический институт им. П.Н. Лебедева РАН"}
+      - { language: en, text: "Lebedev Physical Institute" }
+      - { language: ru, text: "Физический институт им. П.Н. Лебедева РАН" }
     siteLink: http://www.lebedev.ru
   - id: 1177
     name:
-      - {language: en, text: PayPal}
+      - { language: en, text: PayPal }
     siteLink: https://www.paypal.com
   - id: 1178
     name:
-      - {language: en, text: Snoonu}
+      - { language: en, text: Snoonu }
     siteLink: https://snoonu.com
   - id: 1179
     name:
-      - {language: en, text: Global}
+      - { language: en, text: Global }
     siteLink: https://global.com
   - id: 1180
     name:
-      - {language: en, text: "Zloy Sport"}
-      - {language: ru, text: "Злой Спорт"}
+      - { language: en, text: "Zloy Sport" }
+      - { language: ru, text: "Злой Спорт" }
   - id: 1181
     name:
-      - {language: en, text: "Mobile Compose"}
+      - { language: en, text: "Mobile Compose" }
     siteLink: https://t.me/mobile_compose
   - id: 1182
     name:
-      - {language: en, text: slutsker.pro}
+      - { language: en, text: slutsker.pro }
     siteLink: https://slutsker.pro
   - id: 1183
     name:
-      - {language: en, text: Yappy}
+      - { language: en, text: Yappy }
     siteLink: https://www.yappy.com
   - id: 1184
     name:
-      - {language: en, text: RoadAR}
+      - { language: en, text: RoadAR }
     siteLink: https://roadar.ru
   - id: 1185
     name:
-      - {language: en, text: Movavi}
+      - { language: en, text: Movavi }
     siteLink: https://www.movavi.ru
   - id: 1186
     name:
-      - {language: en, text: BCS}
-      - {language: ru, text: БКС}
+      - { language: en, text: BCS }
+      - { language: ru, text: БКС }
     siteLink: https://bcs.ru
   - id: 1188
     name:
-      - {language: en, text: "Mobile Developer"}
+      - { language: en, text: "Mobile Developer" }
     siteLink: https://t.me/mobiledevnews
   - id: 1190
     name:
-      - {language: en, text: DION}
+      - { language: en, text: DION }
     siteLink: https://diongo.ru
   - id: 1191
     name:
-      - {language: en, text: Aspirity}
-      - {language: ru, text: Аспирити}
+      - { language: en, text: Aspirity }
+      - { language: ru, text: Аспирити }
     siteLink: https://www.aspirity.ru
   - id: 1192
     name:
-      - {language: en, text: "Android Tools"}
+      - { language: en, text: "Android Tools" }
     siteLink: https://android-tools.ru/en/
   - id: 1193
     name:
-      - {language: en, text: Fojin}
-      - {language: ru, text: ФОДЖИН}
+      - { language: en, text: Fojin }
+      - { language: ru, text: ФОДЖИН }
     siteLink: https://fojin.tech
   - id: 1194
     name:
-      - {language: en, text: NEWHR}
+      - { language: en, text: NEWHR }
     siteLink: https://newhr.org
   - id: 1195
     name:
-      - {language: en, text: "Hello New Job!"}
+      - { language: en, text: "Hello New Job!" }
     siteLink: https://hellonewjob.org
   - id: 1196
     name:
-      - {language: en, text: "Islamic Coin"}
+      - { language: en, text: "Islamic Coin" }
     siteLink: https://islamiccoin.net
   - id: 1197
     name:
-      - {language: en, text: "June Homes"}
+      - { language: en, text: "June Homes" }
     siteLink: https://junehomes.com
   - id: 1198
     name:
-      - {language: en, text: ArmenoTech}
+      - { language: en, text: ArmenoTech }
     siteLink: https://armenotech.com
   - id: 1199
     name:
-      - {language: en, text: "Bettor IO"}
+      - { language: en, text: "Bettor IO" }
   - id: 1200
     name:
-      - {language: en, text: AIT}
+      - { language: en, text: AIT }
     siteLink: https://altinntech.com
   - id: 1201
     name:
-      - {language: en, text: Altel}
+      - { language: en, text: Altel }
     siteLink: https://altel.kz
   - id: 1202
     name:
-      - {language: en, text: Ziteh}
+      - { language: en, text: Ziteh }
     siteLink: https://ziteh.ru
   - id: 1203
     name:
-      - {language: en, text: Pole.rf}
-      - {language: ru, text: Поле.рф}
+      - { language: en, text: Pole.rf }
+      - { language: ru, text: Поле.рф }
     siteLink: https://поле.рф
   - id: 1204
     name:
-      - {language: en, text: "Qatar Insurance Company"}
+      - { language: en, text: "Qatar Insurance Company" }
     siteLink: https://qic-group.com
   - id: 1205
     name:
-      - {language: en, text: Rentu}
+      - { language: en, text: Rentu }
     siteLink: https://rentu.ru
   - id: 1206
     name:
-      - {language: en, text: Skoltech}
-      - {language: ru, text: Сколтех}
+      - { language: en, text: Skoltech }
+      - { language: ru, text: Сколтех }
     siteLink: https://www.skoltech.ru
   - id: 1207
     name:
-      - {language: en, text: FeedbackAI}
+      - { language: en, text: FeedbackAI }
     siteLink: https://feedbackai.ru
   - id: 1208
     name:
-      - {language: en, text: "GS Labs"}
+      - { language: en, text: "GS Labs" }
     siteLink: https://gs-labs.ru
   - id: 1209
     name:
-      - {language: en, text: "Crazy Paleontologist"}
-      - {language: ru, text: "Упоротый Палеонтолог"}
+      - { language: en, text: "Crazy Paleontologist" }
+      - { language: ru, text: "Упоротый Палеонтолог" }
     siteLink: https://www.youtube.com/c/crazy_paleontologist
   - id: 1210
     name:
-      - {language: en, text: Inventos}
-      - {language: ru, text: Инвентос}
+      - { language: en, text: Inventos }
+      - { language: ru, text: Инвентос }
     siteLink: https://inventos.ru
   - id: 1211
     name:
-      - {language: en, text: START}
+      - { language: en, text: START }
     siteLink: https://start.ru
   - id: 1212
     name:
-      - {language: en, text: KION}
+      - { language: en, text: KION }
     siteLink: https://kion.ru
   - id: 1213
     name:
-      - {language: en, text: "Peking University"}
-      - {language: ru, text: "Пекинский университет"}
+      - { language: en, text: "Peking University" }
+      - { language: ru, text: "Пекинский университет" }
     siteLink: http://www.pku.edu.cn
   - id: 1214
     name:
-      - {language: en, text: "IT Entrepreneur"}
-      - {language: ru, text: IT-предприниматель}
+      - { language: en, text: "IT Entrepreneur" }
+      - { language: ru, text: IT-предприниматель }
   - id: 1215
     name:
-      - {language: en, text: AlexxIT}
+      - { language: en, text: AlexxIT }
     siteLink: https://github.com/AlexxIT
   - id: 1216
     name:
-      - {language: en, text: Viasat}
+      - { language: en, text: Viasat }
     siteLink: https://viasat.ru
   - id: 1217
     name:
-      - {language: en, text: Atmosfera}
-      - {language: ru, text: Атмосфера}
+      - { language: en, text: Atmosfera }
+      - { language: ru, text: Атмосфера }
   - id: 1218
     name:
-      - {language: en, text: Ivideon}
+      - { language: en, text: Ivideon }
     siteLink: https://ivideon.com
   - id: 1219
     name:
-      - {language: en, text: deffun}
+      - { language: en, text: deffun }
     siteLink: https://www.deffun.io
   - id: 1220
     name:
-      - {language: en, text: NSU}
-      - {language: ru, text: НГУ}
+      - { language: en, text: NSU }
+      - { language: ru, text: НГУ }
     siteLink: https://www.nsu.ru
   - id: 1221
     name:
-      - {language: en, text: "Apache Tika"}
+      - { language: en, text: "Apache Tika" }
     siteLink: https://tika.apache.org
   - id: 1222
     name:
-      - {language: en, text: Squad}
+      - { language: en, text: Squad }
     siteLink: https://squadsec.ru
   - id: 1223
     name:
-      - {language: en, text: Friflex}
+      - { language: en, text: Friflex }
     siteLink: https://friflex.com
   - id: 1224
     name:
-      - {language: en, text: GitFlic}
+      - { language: en, text: GitFlic }
     siteLink: https://gitflic.ru
   - id: 1225
     name:
-      - {language: en, text: "BIA Technologies"}
+      - { language: en, text: "BIA Technologies" }
     siteLink: https://bia-tech.ru
   - id: 1226
     name:
-      - {language: en, text: Reksoft}
-      - {language: ru, text: Рексофт}
+      - { language: en, text: Reksoft }
+      - { language: ru, text: Рексофт }
     siteLink: https://www.reksoft.com
   - id: 1227
     name:
-      - {language: en, text: Raft}
+      - { language: en, text: Raft }
     siteLink: https://teamraft.com
   - id: 1228
     name:
-      - {language: en, text: Solar}
-      - {language: ru, text: "ГК «Солар»"}
+      - { language: en, text: Solar }
+      - { language: ru, text: "ГК «Солар»" }
     siteLink: https://rt-solar.ru
   - id: 1229
     name:
-      - {language: en, text: "USCC"}
-      - {language: ru, text: "Уральский центр систем безопасности"}
+      - { language: en, text: "USCC" }
+      - { language: ru, text: "Уральский центр систем безопасности" }
     siteLink: https://www.ussc.ru
   - id: 1230
     name:
-      - {language: en, text: "RAD COP"}
-      - {language: ru, text: "ПК «РАД КОП»"}
+      - { language: en, text: "RAD COP" }
+      - { language: ru, text: "ПК «РАД КОП»" }
     siteLink: https://radcop.online
   - id: 1231
     name:
-      - {language: en, text: R-Vision}
+      - { language: en, text: R-Vision }
     siteLink: https://rvision.ru
   - id: 1232
     name:
-      - {language: en, text: "Consortium Inforus"}
-      - {language: ru, text: "Консорциум Инфорус"}
+      - { language: en, text: "Consortium Inforus" }
+      - { language: ru, text: "Консорциум Инфорус" }
   - id: 1233
     name:
-      - {language: en, text: K2Tech}
-      - {language: ru, text: К2Тех}
+      - { language: en, text: K2Tech }
+      - { language: ru, text: К2Тех }
     siteLink: https://k2.tech
   - id: 1234
     name:
-      - {language: en, text: Torex}
-      - {language: ru, text: ТОРЭКС}
+      - { language: en, text: Torex }
+      - { language: ru, text: ТОРЭКС }
     siteLink: https://itorex.ru
   - id: 1235
     name:
-      - {language: en, text: WebmonitorX}
-      - {language: ru, text: Вебмониторэкс}
+      - { language: en, text: WebmonitorX }
+      - { language: ru, text: Вебмониторэкс }
     siteLink: https://webmonitorx.ru
   - id: 1236
     name:
-      - {language: en, text: "quasilyte tech"}
+      - { language: en, text: "quasilyte tech" }
   - id: 1237
     name:
-      - {language: en, text: "David Shekunts' IT-Kachalka"}
-      - {language: ru, text: "IT-Качалка Давида Шекунца"}
+      - { language: en, text: "David Shekunts' IT-Kachalka" }
+      - { language: ru, text: "IT-Качалка Давида Шекунца" }
     siteLink: https://t.me/it_kachalka
   - id: 1238
     name:
-      - {language: en, text: VicMan}
+      - { language: en, text: VicMan }
     siteLink: http://vicman.ru
   - id: 1239
     name:
-      - {language: en, text: Crossover}
+      - { language: en, text: Crossover }
     siteLink: https://www.crossover.com
   - id: 1240
     name:
-      - {language: en, text: GetMentor.dev}
+      - { language: en, text: GetMentor.dev }
     siteLink: https://getmentor.dev
   - id: 1241
     name:
-      - {language: en, text: Hexlet}
-      - {language: ru, text: Хекслет}
+      - { language: en, text: Hexlet }
+      - { language: ru, text: Хекслет }
     siteLink: https://hexlet.io
   - id: 1242
     name:
-      - {language: en, text: "KORE Wireless"}
+      - { language: en, text: "KORE Wireless" }
     siteLink: https://www.korewireless.com
   - id: 1243
     name:
-      - {language: en, text: Itez}
+      - { language: en, text: Itez }
     siteLink: https://itez.com
   - id: 1244
     name:
-      - {language: en, text: "YouTube channel \"Vadik Uglov\""}
-      - {language: ru, text: "YouTube-канал «Вадик Углов»"}
+      - { language: en, text: "YouTube channel \"Vadik Uglov\"" }
+      - { language: ru, text: "YouTube-канал «Вадик Углов»" }
     siteLink: https://www.youtube.com/@VadikUglov
   - id: 1245
     name:
-      - {language: en, text: KTS}
+      - { language: en, text: KTS }
     siteLink: https://kts.tech
   - id: 1246
     name:
-      - {language: en, text: FITGAME}
+      - { language: en, text: FITGAME }
     siteLink: https://fitgame.me
   - id: 1247
     name:
-      - {language: en, text: Chipsa}
+      - { language: en, text: Chipsa }
     siteLink: https://chipsa.ru
   - id: 1248
     name:
-      - {language: en, text: EverX}
+      - { language: en, text: EverX }
     siteLink: http://everx.dev
   - id: 1249
     name:
-      - {language: en, text: GIBRelations}
+      - { language: en, text: GIBRelations }
   - id: 1250
     name:
-      - {language: en, text: Sirena}
-      - {language: ru, text: Сирена}
+      - { language: en, text: Sirena }
+      - { language: ru, text: Сирена }
     siteLink: https://sirena.sports.ru
+  - id: 1251
+    name:
+      - { language: en, text: Pro-Test.Studio }
+    siteLink: https://pro-test.studio
+  - id: 1252
+    name:
+      - { language: en, text: YDB }
+    siteLink: https://ydb.tech
+  - id: 1253
+    name:
+      - { language: en, text: MarathonLabs }
+    siteLink: https://marathonlabs.io
+  - id: 1254
+    name:
+      - { language: en, text: EtalonTech }
+      - { language: ru, text: ЭталонТех }
+    siteLink: https://etalontech.ru
+  - id: 1255
+    name:
+      - { language: en, text: Aquarius }
+      - { language: ru, text: Аквариус }
+    siteLink: https://www.aq.ru
