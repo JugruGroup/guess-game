@@ -175,10 +175,16 @@ companySynonyms:
       "PGK Digital",
       "ПГК Диджитал"
     ]
-  - name: Gazpromneft
+  - name: Gazprom
     synonyms: [
+      Gazprombank,
+      Gazprombank.Tech,
+      Газпромбанк.Тех,
+      Gazpromneft,
       Gpn-trade,
-      "Газпромнефть-Региональные продажи"
+      "Газпромнефть-Региональные продажи",
+      "Gazprom ID",
+      "Газпром ID"
     ]
   - name: GitLab
     synonyms: [
@@ -323,6 +329,11 @@ companySynonyms:
     synonyms: [
       "Editor, lastweekinaws.com"
     ]
+  - name: "Lebedev Physical Institute"
+    synonyms: [
+      "Lebedev Physical Institute of the Russian Academy of Sciences",
+      "Физический институт им. П. Н. Лебедева РАН"
+    ]
   - name: "LG Electronics"
     synonyms: [
       LG,
@@ -357,7 +368,9 @@ companySynonyms:
   - name: NLMK
     synonyms: [
       IT-NLMK,
-      ИТ-НЛМК
+      ИТ-НЛМК,
+      "NLMK-Information Technologies",
+      "НЛМК-Информационные технологии"
     ]
   - name: MPI-SWS
     synonyms: [
@@ -782,6 +795,7 @@ companySynonyms:
       Yandex.Cloud,
       "Yandex Cloud",
       Яндекс.Облако,
+      "Yandex Crowd",
       Yandex.Taxi,
       Яндекс.Такси,
       "Yandex Taxi Technologies",

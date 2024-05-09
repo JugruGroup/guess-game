@@ -2938,9 +2938,9 @@ companies:
     siteLink: https://sovcombank.ru
   - id: 844
     name:
-      - { language: en, text: Gazprombank }
-      - { language: ru, text: Газпромбанк }
-    siteLink: https://www.gazprombank.ru
+      - { language: en, text: Gazprom }
+      - { language: ru, text: Газпром }
+    siteLink: https://www.gazprom.ru
   - id: 845
     name:
       - { language: en, text: Sibur }
@@ -3386,11 +3386,6 @@ companies:
       - { language: en, text: EUSP }
       - { language: ru, text: "ПЦ МАСТ ЕУ" }
     siteLink: https://eusp.org
-  - id: 967
-    name:
-      - { language: en, text: Gazpromneft }
-      - { language: ru, text: Газпромнефть }
-    siteLink: https://www.gazprom-neft.ru
   - id: 968
     name:
       - { language: en, text: Maxilect }
@@ -4537,3 +4532,22 @@ companies:
       - { language: en, text: Aquarius }
       - { language: ru, text: Аквариус }
     siteLink: https://www.aq.ru
+  - id: 1256
+    name:
+      - {language: en, text: RRI}
+      - {language: ru, text: РИИ}
+  - id: 1257
+    name:
+      - {language: en, text: "Javaswag Podcast"}
+      - {language: ru, text: "Подкаст Javaswag"}
+    siteLink: https://javaswag.github.io
+  - id: 1258
+    name:
+      - {language: en, text: Grinatom}
+      - {language: ru, text: Гринатом}
+    siteLink: https://www.greenatom.ru
+  - id: 1259
+    name:
+      - {language: en, text: "Post Bank"}
+      - {language: ru, text: "Почта Банк"}
+    siteLink: https://www.pochtabank.ru

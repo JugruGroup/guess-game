@@ -2669,5 +2669,12 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов онлайн-части конференции Heisenbug 2024 Spring",
 //                                "Открытие офлайн-части конференции Heisenbug 2024 Spring", "Lightning Talks",
 //                                "Закрытие конференции Heisenbug 2024 Spring", "Как следить за трендами в IT-индустрии?")));
+//        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2024, 4, 17), "2024",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("JPoint 2024", null, List.of(24L, 7L)),
+//                        Map.of(new NameCompany("Иван Пономарёв", null), 19L),
+//                        Set.of("Открытие конференции", "Подведение итогов онлайн-части", "Открытие офлайн-части",
+//                                "Lightning Talks", "Закрытие конференции",
+//                                "Кофе-код: разработчики против YandexGPT и Бульвар Холивар")));
     }
 }
