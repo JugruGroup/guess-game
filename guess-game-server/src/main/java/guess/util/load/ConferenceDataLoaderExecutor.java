@@ -2655,12 +2655,26 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("TechTrain 2024 Spring", null, List.of(24L)),
 //                        Set.of("Открытие фестиваля TechTrain 2024 Spring", "Закрытие фестиваля TechTrain 2024 Spring")));
-//        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2023, 4, 15), "2024 Spring",
+//        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2024, 4, 15), "2024 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("HolyJS 2024 Spring", null, List.of(24L, 7L)),
 //                        Set.of("Открытие конференции HolyJS 2024 Spring",
 //                                "Подведение итогов онлайн-части конференции HolyJS 2024 Spring",
 //                                "Открытие офлайн-части HolyJS 2024 Spring", "Закрытие конференции HolyJS 2024 Spring",
 //                                "Просмотр документального фильма", "Code in the Dark", "Открытый микрофон")));
+//        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2024, 4, 16), "2024 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Heisenbug 2024 Spring", null, List.of(24L, 7L)),
+//                        Set.of("Открытие онлайн-части конференции Heisenbug 2024 Spring",
+//                                "Подведение итогов онлайн-части конференции Heisenbug 2024 Spring",
+//                                "Открытие офлайн-части конференции Heisenbug 2024 Spring", "Lightning Talks",
+//                                "Закрытие конференции Heisenbug 2024 Spring", "Как следить за трендами в IT-индустрии?")));
+//        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2024, 4, 17), "2024",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("JPoint 2024", null, List.of(24L, 7L)),
+//                        Map.of(new NameCompany("Иван Пономарёв", null), 19L),
+//                        Set.of("Открытие конференции", "Подведение итогов онлайн-части", "Открытие офлайн-части",
+//                                "Lightning Talks", "Закрытие конференции",
+//                                "Кофе-код: разработчики против YandexGPT и Бульвар Холивар")));
     }
 }

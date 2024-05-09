@@ -1,132 +1,142 @@
 companyGroups:
   - name: "Adapty, CocoaHeads"
     items: [
-        Adapty,
-        CocoaHeads
+      Adapty,
+      CocoaHeads
     ]
   - name: "ALM Works / Tempo"
     items: [
-        "ALM Works",
-        Tempo
+      "ALM Works",
+      Tempo
     ]
   - name: "Avito / Sphinx"
     items: [
-        Avito,
-        Sphinx
+      Avito,
+      Sphinx
     ]
   - name: "BeerJS / TC39"
     items: [
-        BeerJS,
-        TC39
+      BeerJS,
+      TC39
+    ]
+  - name: "DevBrothers, Tinkoff"
+    items: [
+      DevBrothers,
+      Тинькофф
     ]
   - name: "DM Labs, Arktur, Open Data Science"
     items: [
-        "DM Labs",
-        "Arktur",
-        "Open Data Science"
+      "DM Labs",
+      "Arktur",
+      "Open Data Science"
     ]
   - name: "DPI.Solutions, EPAM"
     items: [
-        "DPI.Solutions",
-        "EPAM"
+      "DPI.Solutions",
+      "EPAM"
     ]
   - name: "DZ, E-Legion"
     items: [
-        DZ,
-        "E-Legion"
+      DZ,
+      "E-Legion"
     ]
   - name: Gritstep/Dotnetos
     items: [
-        Gritstep,
-        Dotnetos
+      Gritstep,
+      Dotnetos
     ]
   - name: "hh.ru, CyberDacha"
     items: [
-        hh.ru,
-        CyberDacha
+      hh.ru,
+      CyberDacha
     ]
   - name: "MAI / HSE / ex-Microsoft"
     items: [
-        MAI,
-        "NRU HSE"
+      MAI,
+      "NRU HSE"
     ]
   - name: "MAI / NRU HSE"
     items: [
-        MAI,
-        "NRU HSE"
+      MAI,
+      "NRU HSE"
     ]
   - name: "MAI / NRU HSE / ex-Microsoft"
     items: [
-        MAI,
-        "NRU HSE"
+      MAI,
+      "NRU HSE"
     ]
   - name: "Moscow State University/Russian Quantum Center"
     items: [
-        MSU,
-        "Russian Quantum Center"
+      MSU,
+      "Russian Quantum Center"
     ]
   - name: "MPI-SWS, JetBrains Research, NRU HSE"
     items: [
-        MPI-SWS,
-        "JetBrains Research",
-        "NRU HSE"
+      MPI-SWS,
+      "JetBrains Research",
+      "NRU HSE"
     ]
   - name: "МТS Digital, Big Data"
     items: [
-        "МТS Digital"
+      "МТS Digital"
     ]
   - name: "NEWHR | Hello New Job!"
     items: [
-        NEWHR,
-        "Hello New Job!"
+      NEWHR,
+      "Hello New Job!"
     ]
   - name: "OTS Lab / odgAssist"
     items: [
-        "OTS Lab",
-        odgAssist
+      "OTS Lab",
+      odgAssist
     ]
   - name: "Red Hat / Kiwi TCMS"
     items: [
-        "Red Hat",
-        "Kiwi TCMS"
+      "Red Hat",
+      "Kiwi TCMS"
     ]
   - name: "Simla.com / RetailCRM"
     items: [
-        Simla.com,
-        RetailCRM
+      Simla.com,
+      RetailCRM
     ]
   - name: "Skillbox, FrontendConf"
     items: [
-        Skillbox,
-        FrontendConf
+      Skillbox,
+      FrontendConf
     ]
   - name: "Synthesized / MIPT"
     items: [
-        Synthesized,
-        MIPT
+      Synthesized,
+      MIPT
     ]
   - name: "Tele2 Kazakhstan / Altel Digital"
     items: [
       Tele2,
       Altel
     ]
+  - name: "VK / Skillbox"
+    items: [
+      VK,
+      Skillbox
+    ]
   - name: VK/Tarantool
     items: [
-        VK,
-        Tarantool
+      VK,
+      Tarantool
     ]
   - name: "Waliot, krd.dev"
     items: [
-        Waliot,
-        krd.dev
+      Waliot,
+      krd.dev
+    ]
+  - name: "Yandex Infrastructure, YDB"
+    items: [
+      "Yandex Infrastructure",
+      YDB
     ]
   - name: "Тинькофф, DevBrothers"
     items: [
-        Тинькофф,
-        DevBrothers
-    ]
-  - name: "DevBrothers, Tinkoff"
-    items: [
-        DevBrothers,
-        Тинькофф
+      Тинькофф,
+      DevBrothers
     ]
