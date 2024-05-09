@@ -2892,6 +2892,9 @@ events:
       - {language: en, text: "Flow 2024 Spring"}
     days:
       - {startDate: "2024-03-12", endDate: "2024-03-12", placeId: 24}
+    siteLink:
+      - {language: en, text: "https://flowconf.ru/en/archive/2024 Spring/"}
+      - {language: ru, text: "https://flowconf.ru/archive/2024 Spring/"}
     talkIds: [5244, 5245, 5246, 5247, 5248, 5249, 5250, 5251, 5252, 5253, 5254, 5255, 5256]
   - eventTypeId: 20
     name:
