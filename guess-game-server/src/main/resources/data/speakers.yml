@@ -46654,6 +46654,7 @@ speakers:
       - {language: ru, text: "Начальник отдела платформенных разработок. Поддерживает систему оркестрации бизнес-процессов\
             \ и сервисов на базе Conductor. Ратует за качественный код и не оставляет pull requests без комментариев. Рабо\
             тал с Java EE, Spring, Ktor, а также с различными базами данных: PostgreSQL, Oracle, Redis, Elasticsearch."}
+    gitHub: korolkevich7
   - id: 3236
     photoFileName: 3236.jpg
     photoUpdatedAt: "2024-02-13T14:02:14Z"
@@ -46668,6 +46669,8 @@ speakers:
       - {language: ru, text: "Изначально desktop-разработчик, потом ударился в backend. За спиной почти 15 лет Java, C++,\
             \ Python, Scala, C#. С 2020 года работает в Яндексе, до этого — 9 лет в Acronis.</p><p>Любит принципы KISS, DRY\
             \ и YAGNI."}
+    gitHub: sergiorussia
+    habr: sergiorussia
   - id: 3237
     photoFileName: 3237.jpg
     photoUpdatedAt: "2024-03-13T09:33:01Z"
@@ -46700,6 +46703,7 @@ speakers:
             м сервисам подразделения. Следит за актуальностью технологий, развивает разработческую инфраструктуру. Неравно\
             душен к перфомансу в целом и многопоточке в частности. Любит экспериментировать, обмениваться опытом и узнават\
             ь новое.</p>"}
+    gitHub: ddd127
   - id: 3239
     photoFileName: 3239.jpg
     photoUpdatedAt: "2024-03-15T14:04:52Z"
@@ -46734,6 +46738,8 @@ speakers:
             кторе.</p>\n<p>Соведущий подкаста &laquo;Скрамное ИТ&raquo;. Преподаватель, автор курсов и спикер на различных\
             \ конференциях и митапах. В свободное время занимается гончарным делом, масштабным моделированием и путешеству\
             ет.</p>"
+    gitHub: BelyiZ
+    habr: belyiz
   - id: 3241
     photoFileName: 3241.jpg
     photoUpdatedAt: "2024-03-15T13:47:44Z"
@@ -46746,6 +46752,7 @@ speakers:
             \ years of experience in Data projects. Co-author of the podcast \"Scrumnoye IT\".</p>"}
       - {language: ru, text: "<p>Руководитель регионального подразделения группы &laquo;Рексофт&raquo;. Более 15 лет в ИТ\
             . 10 лет опыта в Data-проектах. Музыкант-любитель. Соведущий подкаста &laquo;Скрамное ИТ&raquo;.</p>"}
+    habr: kazartsev
   - id: 3242
     photoFileName: 3242.jpg
     photoUpdatedAt: "2024-03-06T07:53:13Z"
@@ -46766,6 +46773,9 @@ speakers:
             итетов, проектировал платформу для разработки ERP-систем.</p>\n<p>Сейчас Илья &ndash; участник команд R&amp;D\
             \ и DevRel, а также занимается разработкой и развитием инструментов, которые позволяют разработчикам с большим\
             \ удовольствием и большей эффективностью пользоваться мейнстрим-технологиями.</p>"
+    twitter: ikuchmin
+    gitHub: ikuchmin
+    habr: ikuchmin
   - id: 3243
     photoFileName: 3243.jpg
     photoUpdatedAt: "2024-02-19T15:25:01Z"
@@ -46793,6 +46803,7 @@ speakers:
             >Javaswag</a> о разработке на Java. Ведет <a href=\"https://t.me/faangtalk\" rel=\"noopener noreferrer\" target=\"\
             _blank\">встречи</a> по подготовке к System Design-интервью. Работает в БигТехе над Augmented Reality (AR)."}
     twitter: volyx
+    gitHub: volyx
   - id: 3245
     photoFileName: 3245.jpg
     photoUpdatedAt: "2024-02-09T13:09:17Z"
@@ -46867,7 +46878,6 @@ speakers:
             \ all child rakes \"on behalf of\" the conference audience.</p>"}
       - {language: ru, text: "<p>Делал свой профилировщик. Ковырял исходники JDK и сломал безопасный eBPF. Собрал все детс\
             кие грабельки за зрителей конференции.</p>"}
-    javaChampion: true
   - id: 3250
     photoFileName: 3250.jpg
     photoUpdatedAt: "2024-02-14T08:01:18Z"
@@ -46938,6 +46948,8 @@ speakers:
       - {language: ru, text: "<p>Тимлид в СберТехе: решает проблемы в высоконагруженных приложениях, помогает проектам усп\
             ешно использовать Platform V DataGrid. 18 лет опыта коммерческой разработки на Java. VP продукта Apache Ignite\
             \ в Apache Software Foundation.</p>"}
+    gitHub: dspavlov
+    habr: dspavlov
   - id: 3254
     photoFileName: 3254.jpg
     photoUpdatedAt: "2024-02-28T21:40:51Z"
@@ -46963,6 +46975,7 @@ speakers:
       - {language: en, text: "<p>Pragmatic Java developer. He likes to talk about technology and teaches Java in Sber.</p>"}
       - {language: ru, text: "<p>Прагматичный Java-разработчик. Любит рассказывать про технологии и занимается преподавани\
             ем Java в Сбере.</p>"}
+    gitHub: AberonMan
   - id: 3256
     photoFileName: 3256.jpg
     photoUpdatedAt: "2024-04-03T13:57:35Z"
@@ -47021,6 +47034,7 @@ speakers:
             \ В 2010-х реализовывал автоматизацию кредитных продуктов в крупных банках. В 2020-м с нуля поднял инфраструкт\
             уру мультирегионального SaaS-решения со 100%-м покрытием кодом. </p><p>Сейчас выстраивает архитектурные практи\
             ки в поле.рф.</p><p>Интересный факт о Петре: обучался психоанализу 6 лет."}
+    gitHub: pit
   - id: 3260
     photoFileName: 3260.jpg
     photoUpdatedAt: "2024-01-29T09:40:55Z"
@@ -47048,6 +47062,7 @@ speakers:
       - {language: ru, text: "<p>Более 5 лет разрабатывает бэкенд на Kotlin и не только (но в основном &mdash; на Kotlin).\
             \ Техлид команды JVM backend-разработки в банке &laquo;Центр-инвест&raquo;. Любит писать собственные инструмен\
             ты для упрощения работы и решения возникающих проблем.</p>"}
+    gitHub: LimeBeck
   - id: 3262
     photoFileName: 3262.jpg
     photoUpdatedAt: "2023-09-15T12:35:05Z"
@@ -47073,6 +47088,7 @@ speakers:
             \ и альтернативная модульная реализация игрового сервера.</p>\n<p>Ранее работал в геймдеве, создавал игровые с\
             ерверы и инфраструктуру вокруг них.</p>"
     twitter: PROgrm_JARvis
+    gitHub: JarvisCraft
   - id: 3263
     photoFileName: 3263.jpg
     photoUpdatedAt: "2024-02-28T11:53:17Z"
@@ -47089,6 +47105,8 @@ speakers:
         text: "<p>Более десяти лет занимался проектами на микросервисной архитектуре. В каждом проекте старался обеспечить\
             \ себе комфорт как разработчику, выработав ряд полезных практик командной разработки.</p>\n<p>Сейчас работает\
             \ во ВКонтакте над VK Звонками.</p>"
+    gitHub: Fuud
+    habr: Fuud
   - id: 3264
     photoFileName: 3264.jpg
     photoUpdatedAt: "2024-04-03T11:56:20Z"
@@ -47104,6 +47122,7 @@ speakers:
             нтересы входят вопросы производительности работы программ, алгоритмы и структуры данных. Сейчас активно пишет\
             \ на Java и руководит командой разработчиков в НЛМК-ИТ.</p>"}
     twitter: _gligor
+    habr: gligor
   - id: 3265
     photoFileName: 3265.jpg
     photoUpdatedAt: "2024-02-26T13:48:15Z"
