@@ -403,30 +403,10 @@ speakers:
     bio:
       - language: en
         text: "<p>Java, performance and high load systems enthusiast. Alexey worked on projects in telecommunications, stock\
-            \ trading and e-commerce.</p>\n<h3>Alexey participates in the ASK EXPERT activity in the offline part of the conference.</h3>\n\
-            <h4>He will be advising on the following topics:</h4>\n<ul>\n<li>Data design patterns for distributed databases.</li>\n\
-            <li>Profiling and monitoring of Java applications and JVM.</li>\n<li>Load testing.</li>\n<li>Response time optimisation\
-            \ in JVM applications.</li>\n</ul>"
+            \ trading and e-commerce.</p>"
       - language: ru
         text: "<p>Энтузиаст Java, производительности и высоконагруженных систем. Работал над проектами в области телекомму\
-            никаций, биржевой торговли иe-commerce.</p>\n<h3>Алексей участвует в активности ASK EXPERT в офлайн-части конф\
-            еренции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;- Дизайн схемы данных для распределённых баз данных \\n- Профилирование и\
-            \ мониторинг Java приложений и JVM\\n- Нагрузочное тестирование\\n- Оптимизация времени отклика в приложениях\
-            \ на JVM&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Дизайн-схемы данных для распределенных баз данных.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;- Дизайн схемы данных для распределённых баз данных \\n- Профилирование и\
-            \ мониторинг Java приложений и JVM\\n- Нагрузочное тестирование\\n- Оптимизация времени отклика в приложениях\
-            \ на JVM&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Профилирование и мониторинг Java-приложений и JVM.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;- Дизайн схемы данных для распределённых баз данных \\n- Профилирование и\
-            \ мониторинг Java приложений и JVM\\n- Нагрузочное тестирование\\n- Оптимизация времени отклика в приложениях\
-            \ на JVM&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Нагрузочное тестирование.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;-\
-            \ Дизайн схемы данных для распределённых баз данных \\n- Профилирование и мониторинг Java приложений и JVM\\n-\
-            \ Нагрузочное тестирование\\n- Оптимизация времени отклика в приложениях на JVM&quot;}\" data-sheets-userformat=\"\
-            {&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\">Оптими\
-            зация времени отклика в приложениях на JVM.</span></li>\n</ul>"
+            никаций, биржевой торговли и e-commerce.</p>"
     gitHub: aragozin
     habr: aragozin
   - id: 22
@@ -497,25 +477,12 @@ speakers:
         text: "<p>Vladimir has been working on performance and scalability of a software used by telecom operators for automatization\
             \ of network management processes and network equipment) for more than ten years. His focus is Java and Oracle\
             \ Database performance optimizations. Vladimir is an author of more than a dozen of performance improvements in\
-            \ the official PostgreSQL JDBC driver.</p>\n<h3>Vladimir participates in the ASK EXPERT activity in the offline\
-            \ part of the conference.</h3>\n<h4>He will be advising on the following topics:</h4>\n<ul>\n<li>Performance.</li>\n\
-            <li>JVM structure.</li>\n<li>Databases.</li>\n<li>Kotlin.</li>\n<li>Testing.</li>\n</ul>"
+            \ the official PostgreSQL JDBC driver.</p>"
       - language: ru
         text: "<p>Более десяти лет работает над производительностью и масштабируемостью ПО, которое используют операторы с\
             вязи для автоматизации процессов управления сетью и сетевым оборудованием. Увлекается вопросами производительн\
             ости Java и Oracle Database. Автор более десятка улучшений производительности в официальном PostgreSQL JDBC-др\
-            айвере.</p>\n<h3>Владимир участвует в активности ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет кон\
-            сультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;П\
-            роизводительность, устройство JVM, базы данных, Kotlin, тестирование&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Производительность.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;П\
-            роизводительность, устройство JVM, базы данных, Kotlin, тестирование&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Устройство JVM.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;П\
-            роизводительность, устройство JVM, базы данных, Kotlin, тестирование&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Базы данных.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;П\
-            роизводительность, устройство JVM, базы данных, Kotlin, тестирование&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Kotlin. </span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;П\
-            роизводительность, устройство JVM, базы данных, Kotlin, тестирование&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Тестирование.</span></li>\n</ul>"
+            айвере.</p>"
     twitter: VladimirSitnikv
     gitHub: vlsi
     habr: vladimirsitnikov
@@ -1719,35 +1686,13 @@ speakers:
         text: "<p>Andrei has been working in IT for more than 15 years, head of the Java developers at KROK. During his career\
             \ he took part in many custom development projects, mainly e-document flow systems and business processes automatization\
             \ for several big Russian companies as a senior developer and an architect. Organizer and leader of <a href=\"\
-            https://jugmsk.timepad.ru/events/\" target=\"_blank\" rel=\"noopener noreferrer\">Moscow Java developers community</a>.</p>\n\
-            <h3>Andrei participates in the ASK EXPERT activity in the offline part of the conference.</h3>\n<h4>He will be\
-            \ advising on the following topics:</h4>\n<ul>\n<li>Spring Framework &amp; Spring Boot.</li>\n<li>Migration to\
-            \ Spring Boot 3.2.</li>\n<li>Maven.</li>\n<li>Development with AI (Copilot vs AI Assistant vs...).</li>\n<li>Non-IDEA\
-            \ development (Eclipse, VS Code, etc.).</li>\n</ul>"
+            https://jugmsk.timepad.ru/events/\" target=\"_blank\" rel=\"noopener noreferrer\">Moscow Java developers community</a>.</p>"
       - language: ru
         text: "<p>В IT более 15 лет. Руководитель группы Java-разработчиков в КРОК. За свою карьеру принял участие в больш\
             ом количестве проектов по заказной разработке, в основном систем электронного документооборота и автоматизации\
             \ бизнес-процессов для ряда крупных российских компаний в роли ведущего разработчика и архитектора. Основатель\
             \ и организатор встреч московского сообщества Java-разработчиков <a href=\"https://jugmsk.timepad.ru/events/\"\
-            \ target=\"_blank\" rel=\"noopener noreferrer\">JUG.MSK</a>.</p>\n<h3>Андрей участвует в активности ASK EXPERT\
-            \ в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"\
-            1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Spring Framework &amp; Spring Boot, Maven, Миграц\
-            ия на Spring Boot 3.2, Разработка с AI (Copilot vs AI Assistant vs ...), Разработка не в IDEA (Eclipse, VS Code,\
-            \ etc.)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Spring Framework &amp; Spring Boot.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Spring\
-            \ Framework &amp; Spring Boot, Maven, Миграция на Spring Boot 3.2, Разработка с AI (Copilot vs AI Assistant vs\
-            \ ...), Разработка не в IDEA (Eclipse, VS Code, etc.)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Миграция на Spring Boot 3.2.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Spring\
-            \ Framework &amp; Spring Boot, Maven, Миграция на Spring Boot 3.2, Разработка с AI (Copilot vs AI Assistant vs\
-            \ ...), Разработка не в IDEA (Eclipse, VS Code, etc.)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Maven.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Spring\
-            \ Framework &amp; Spring Boot, Maven, Миграция на Spring Boot 3.2, Разработка с AI (Copilot vs AI Assistant vs\
-            \ ...), Разработка не в IDEA (Eclipse, VS Code, etc.)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Разработка с AI (Copilot vs AI Assistant vs...).</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;Spring Framework &amp; Spring Boot, Maven, Миграция на Spring Boot 3.2, Р\
-            азработка с AI (Copilot vs AI Assistant vs ...), Разработка не в IDEA (Eclipse, VS Code, etc.)&quot;}\" data-sheets-userformat=\"\
-            {&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Разработка не в IDEA (Eclipse, VS Code, etc.)</span></li>\n</ul>"
+            \ target=\"_blank\" rel=\"noopener noreferrer\">JUG.MSK</a>.</p>"
     twitter: andrei_kogun
     gitHub: kogun
     habr: AKogun47
@@ -2826,17 +2771,12 @@ speakers:
         text: "<p>Alexander is Executive director at Sber. He has 15 years of experience in Java development. He is responsible\
             \ for the development of the bank's anti-fraud system for corporate and individual customers, which executes several\
             \ billion anti-fraud rules a day. Alexander also teaches courses on Java and distributed systems within SberTech\
-            \ master's program at MIPT.</p>\n<h3>Alexander participates in the ASK EXPERT activity in the offline part of\
-            \ the conference.</h3>\n<h4>He will be advising on the following topics:</h4>\n<ul>\n<li>Java + Kotlin</li>\n\
-            <li>Multithreading, virtual threads, coroutines</li>\n<li>Architecture, microservices, distributed systems</li>\n\
-            <li>Batch processing</li>\n<li>Teaching.</li>\n</ul>"
+            \ master's program at MIPT.</p>"
       - language: ru
         text: "<p>Исполнительный директор в Сбере. 15 лет опыта разработки на Java. Отвечает за разработку антифрод-систем\
             ы банка для корпоративных и физических лиц, выполняющую несколько миллиардов антифрод-правил в день. Ведет кур\
-            сы по Java и распределенным системам в магистратуре СберТеха в МФТИ.</p>\n<p>&nbsp;</p>\n<h3>Александр участву\
-            ет в активности ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n\
-            <ul>\n<li>Java + Kotlin.</li>\n<li>Многопоточность, виртуальные потоки, корутины.</li>\n<li>Архитектура, микро\
-            сервисы, распределенные системы.</li>\n<li>Batch processing.</li>\n<li>Преподавание.</li>\n</ul>"
+            сы по Java и распределенным системам в магистратуре СберТеха в МФТИ.</p>"
+    gitHub: alxmatorin
   - id: 164
     photoFileName: 0164.jpg
     name:
@@ -3559,23 +3499,14 @@ speakers:
             \ at Sun and Oracle. When working on Java application performance, there were many questions about the JVM and\
             \ its internals, so Vladimir immersed himself in the world of JVM development at Azul Systems, where he became\
             \ the first Distinguished Engineer in the company's history. After Azul left Russia, Vladimir and his team joined\
-            \ Sber to build an independent Russian software stack.</p>\n<h3>Vladimir participates in the ASK EXPERT activity\
-            \ in the offline part of the conference.</h3>\n<h4>He will be advising on the following topics:</h4>\n<ul>\n<li>JVM\
-            \ internals.</li>\n<li>A career as a JVM engineer.</li>\n<li>JIT.</li>\n</ul>"
+            \ Sber to build an independent Russian software stack.</p>"
       - language: ru
         text: "<p>25 лет в IT, из них последние 20 &mdash; в Java-мире. Прошел путь от разработчика до Principal Engineer\
             \ в качестве техлида NetBeans C/C++ IDE и Oracle Solaris Studio IDE в компаниях Sun и Oracle. При работе над п\
             роизводительностью Java-приложений появлялось много вопросов к JVM и ее внутренностям, поэтому Владимир погруз\
             ился в мир разработки самих JVM в компании Azul Systems, где стал первым Distinguished Engineer в истории комп\
             ании. После ухода Azul из России Владимир с командой присоединился к Сберу для создания независимого российско\
-            го стека ПО.</p>\n<h3>Владимир участвует в активности ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он буде\
-            т консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Внутренности JVM.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Карьера JVM-инженера.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >JIT.</span></li>\n</ul>"
+            го стека ПО.</p>"
     gitHub: vladimir-voskresensky
     habr: vladimir_vv
   - id: 225
@@ -11703,35 +11634,12 @@ speakers:
     bio:
       - language: en
         text: "<p>Android Google Developer Expert, Kaspresso founder, author of <a href=\"https://habr.com/ru/users/xoxol_89/publications/articles/\"\
-            >articles</a> and talks on Android, architecture and autotests.</p>\n<h3>Evgenii participates in the ASK EXPERT\
-            \ activity in the offline part of the conference.</h3>\n<h4>He will be advising on the following topics:</h4>\n\
-            <ul>\n<li>Mobile testing.</li>\n<li>Mobile development.</li>\n<li>Development of cloud services.</li>\n<li>iOS\
-            \ testing.</li>\n<li>Android testing.</li>\n<li>Entrepreneurship.</li>\n</ul>"
+            >articles</a> and talks on Android, architecture and autotests.</p>"
       - language: ru
         text: "<p>Android Google Developer Expert, Kaspresso founder, автор <a href=\"https://habr.com/ru/users/xoxol_89/publications/articles/\"\
-            >статей</a> и докладов об Android, архитектуре и автотестах.</p>\n<h3>Евгений участвует в активности ASK EXPERT\
-            \ в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"\
-            1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;мобильное тестирование, мобильная разработка, раз\
-            работка облачных сервисов, ios тестирование, android тестирование, предпринимательство, за жизнь =)&quot;}\" data-sheets-userformat=\"\
-            {&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\">Мобильное тестирование\
-            .</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;мобил\
-            ьное тестирование, мобильная разработка, разработка облачных сервисов, ios тестирование, android тестирование\
-            , предпринимательство, за жизнь =)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Мобильная разработка.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;м\
-            обильное тестирование, мобильная разработка, разработка облачных сервисов, ios тестирование, android тестирова\
-            ние, предпринимательство, за жизнь =)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Разработка облачных сервисов.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;м\
-            обильное тестирование, мобильная разработка, разработка облачных сервисов, ios тестирование, android тестирова\
-            ние, предпринимательство, за жизнь =)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >iOS-тестирование.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;м\
-            обильное тестирование, мобильная разработка, разработка облачных сервисов, ios тестирование, android тестирова\
-            ние, предпринимательство, за жизнь =)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Android-тестирование.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;м\
-            обильное тестирование, мобильная разработка, разработка облачных сервисов, ios тестирование, android тестирова\
-            ние, предпринимательство, за жизнь =)&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Предпринимательство.</span></li>\n</ul>"
+            >статей</a> и докладов об Android, архитектуре и автотестах.</p>"
     twitter: e_matsyuk
-    gitHub: KasperskyLab
+    gitHub: matzuk
     habr: xoxol_89
   - id: 780
     photoFileName: 0780.jpg
@@ -22696,23 +22604,13 @@ speakers:
             \ research and even dived briefly into gamedev. He's interested in organizing code in fast-growing projects with\
             \ lots of participants. He is also engaged in educational activities &mdash; he takes part in creating SkyPro\
             \ courses in Java. Currently he works in fintech &mdash; he's in charge of backend development at the installment\
-            \ service Vsegda.Da.</p>\n<h3>Ilya participates in the ASK EXPERT activity in the offline part of the conference.</h3>\n\
-            <h4>He will be advising on the following topics:</h4>\n<ul>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;Spring, Hibernate&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Spring.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Spring,\
-            \ Hibernate&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Hibernate.</span></li>\n</ul>"
+            \ service Vsegda.Da.</p>"
       - language: ru
         text: "<p>Разработчик. Большую часть своей карьеры занимается бэкендом, но успел также зацепить патентные исследов\
             ания и даже ненадолго занырнуть в геймдев.</p>\n<p>Интересуется вопросами организации кода в стремительно разв\
             ивающихся проектах с большим количеством участников. Также занимается образовательной деятельностью &mdash; уч\
             аствует в создании курсов SkyPro по Java. Сейчас работает в финтехе, руководит бэкенд-разработкой в сервисе ра\
-            ссрочек &laquo;Всегда.Да&raquo;.</p>\n<h3>Илья участвует в активности ASK EXPERT в офлайн-части конференции.</h3>\n\
-            <h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;Spring, Hibernate&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Spring.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Spring,\
-            \ Hibernate&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Hibernate.</span></li>\n</ul>"
+            ссрочек &laquo;Всегда.Да&raquo;.</p>"
     gitHub: poxu
     habr: poxvuibr
   - id: 1593
@@ -25456,10 +25354,7 @@ speakers:
             \ JetBrains Research, where he is engaged in the creation of scientific software.</p>\n<p>He has a Ph.D. in particle\
             \ physics, and more than 18 years of development experience, including commercial development. Mostly Java, but\
             \ the last 7 years in Kotlin, other than that, Python, Groovy, Julia, and so on. Kotlin GDE in 2021.</p>\n<p>Leader\
-            \ of the Moscow KUG (Kotlin User Group).&nbsp;&nbsp;</p>\n<h3>Alexander participates in the&nbsp;ASK EXPERT activity\
-            \ in the offline part of the conference.</h3>\n<h4>He will be advising on the following topics:</h4>\n<ul>\n<li>Scientific\
-            \ programming.</li>\n<li>Kotlin in general and full-stack in particular.</li>\n<li>The junction of R&amp;D with\
-            \ industry and education.</li>\n<li>Modelling.</li>\n<li>Data collection and processing systems.</li>\n</ul>"
+            \ of the Moscow KUG (Kotlin User Group).</p>"
       - language: ru
         text: "<p>В школе у Александра было три увлечения: настольные ролевые игры, физика и программирование. Когда пришл\
             о время выбирать профессию, он выбрал физику, думая, что она интереснее. И не ошибся. Но в результате занимает\
@@ -25467,11 +25362,7 @@ speakers:
             учного программирования МФТИ, ex-руководитель направления в JetBrains Research. Имеет кандидатскую степень по\
             \ физике частиц, с 2006 года в разработке, в том числе коммерческой. В основном на Java, но с 2017 года в осно\
             вном на Kotlin, кроме этого были Python, Groovy, Julia и так далее. GDE по Kotlin в 2021.</p>\n<p>Лидер москов\
-            ского KUG (Kotlin User Group).</p>\n<h3>Александр участвует в активности ASK EXPERT в офлайн-части конференции\
-            .</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li class=\"p2\">Научное программирование\
-            .</li>\n<li class=\"p2\">Kotlin вообще и full-stack в частности.</li>\n<li class=\"p2\">Стык R&amp;D с индустр\
-            ией и образованием.</li>\n<li class=\"p2\">Моделирование.</li>\n<li class=\"p2\">Системы сбора и обработки дан\
-            ных.</li>\n</ul>"
+            ского KUG (Kotlin User Group).</p>"
     twitter: noraltavir
     gitHub: altavir
     habr: darksnake
@@ -36944,26 +36835,10 @@ speakers:
     bio:
       - language: en
         text: "<p>Daniil develops and maintains VK's test infrastructure, sets up pipelines, writes autotests and invents\
-            \ new tools.</p>\n<h3>Daniil participates in the ASK EXPERT activity in the offline part of the conference.</h3>\n\
-            <h4>He will be advising on the following topics:</h4>\n<ul>\n<li>Testing tools: when it's better to take a ready-made\
-            \ one, and when it's worth investing in development.</li>\n<li>Process automation in testing with the help of\
-            \ bots.</li>\n<li>Experimentation: why it is important to allocate time for it.</li>\n</ul>"
+            \ new tools.</p>"
       - language: ru
         text: "<p>Разрабатывает и поддерживает тестовую инфраструктуру ВКонтакте, настраивает пайплайны, пишет автотесты,\
-            \ придумывает новые инструменты.</p>\n<h3>Даниил участвует в активности ASK EXPERT в офлайн-части конференции\
-            .</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;- Инструменты для тестирования, когда лучше взять готовое, а когда стоит\
-            \ вложиться в разработку\\n- Автоматизация процессов в тестировании с помощью ботов\\n- Почему важно выделять\
-            \ время на эксперимент&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:2817,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}}\"\
-            >Инструменты для тестирования: когда лучше взять готовые, а когда стоит вложиться в разработку.</span></li>\n\
-            <li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;- Инструменты для те\
-            стирования, когда лучше взять готовое, а когда стоит вложиться в разработку\\n- Автоматизация процессов в тест\
-            ировании с помощью ботов\\n- Почему важно выделять время на эксперимент&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:2817,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}}\"\
-            >Автоматизация процессов в тестировании с помощью ботов.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;- Инструменты для тестирования, когда лучше взять готовое, а когда стоит\
-            \ вложиться в разработку\\n- Автоматизация процессов в тестировании с помощью ботов\\n- Почему важно выделять\
-            \ время на эксперимент&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:2817,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}}\"\
-            >Эксперимент: почему важно выделять на него время.</span></li>\n</ul>"
+            \ придумывает новые инструменты.</p>"
   - id: 2575
     photoFileName: 2575.jpg
     photoUpdatedAt: 2023-03-20T09:46:57Z[UTC]
@@ -37261,28 +37136,11 @@ speakers:
       - language: en
         text: "<p>In the Mir Plat.Form team, Alexander develops and optimises one of the key components of the Mir payment\
             \ system &mdash; clearing of financial transactions. Prior to that, he was engaged in the development of algorithmic\
-            \ trading systems for a long time. He is interested in low latency and multithreaded programming.</p>\n<h3>Alexander\
-            \ participates in the&nbsp;ASK EXPERT activity in the offline part of the conference.</h3>\n<h4>He will be advising\
-            \ on the following topics:</h4>\n<ul>\n<li>Low latency.</li>\n<li>Multithreading.</li>\n<li>Profiling and performance\
-            \ optimisation of existing systems.</li>\n<li>Algotrading.</li>\n</ul>"
+            \ trading systems for a long time. He is interested in low latency and multithreaded programming.</p>"
       - language: ru
         text: "<p>В команде Мир Plat.Form разрабатывает и оптимизирует один из ключевых компонентов платежной системы &laquo;М\
             ир&raquo; &mdash; клиринг финансовых операций. До этого долгое время занимался разработкой алготрейдинговых си\
-            стем. Интересуется low latency и многопоточным программированием.</p>\n<h3>Александр участвует в активности ASK\
-            \ EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span\
-            \ data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;low-latency, многопоточность\
-            , профилирование и оптимизация производительности существующих систем, алготрейдинг&quot;}\" data-sheets-userformat=\"\
-            {&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Low latency.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;low-latency,\
-            \ многопоточность, профилирование и оптимизация производительности существующих систем, алготрейдинг&quot;}\"\
-            \ data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Многопоточность.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;low-latency,\
-            \ многопоточность, профилирование и оптимизация производительности существующих систем, алготрейдинг&quot;}\"\
-            \ data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Профилирование и оптимизация производительности существующих систем.</span></li>\n<li><span data-sheets-root=\"\
-            1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;low-latency, многопоточность, профилирование и оп\
-            тимизация производительности существующих систем, алготрейдинг&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:961,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Алготрейдинг.</span></li>\n</ul>"
+            стем. Интересуется low latency и многопоточным программированием.</p>"
     gitHub: lantalex
   - id: 2599
     photoFileName: 2599.jpg
@@ -46413,6 +46271,7 @@ speakers:
             \ different frameworks.</p>"}
       - {language: ru, text: "<p>Занимается автоматизированным функциональным и нагрузочным тестированием. Любит экспериме\
             нтировать и пробовать разные фреймворки.</p>"}
+    habr: Anna_Rukavitsyna
   - id: 3211
     photoFileName: 3211.jpg
     photoUpdatedAt: "2024-03-04T13:14:06Z"
@@ -46425,66 +46284,13 @@ speakers:
         text: "<p>Wide-ranging test engineer: developed, tested, automated and focused on system performance in the fintech\
             \ industry. Now he develops testing, profiling and development tools around the Tarantool middleware platform.\
             \ Senior lecturer at the Department of Computer Science and Computational Mathematics at Samara University. Mentor\
-            \ on the GetMentor platform.</p>\n<h3>Oleg participates in the ASK EXPERT activity in the offline part of the\
-            \ conference.</h3>\n<h4>He will be advising on the following topics:</h4>\n<ul>\n<li>Designing and implementing\
-            \ a test automation system from scratch at the system and integration levels using Python.</li>\n<li>Specialist\
-            \ growth points on a specific project.</li>\n<li>Analysis of testing processes to start automation; prioritisation\
-            \ of test coverage in microservice architecture.</li>\n<li>Main approaches in test automation: E2E scripts, API-based\
-            \ testing, writing mock/stub.</li>\n<li>Development vector of a specialist in test automation: choice of programming\
-            \ language (scope of application, its evaluation), necessary knowledge and skills, development and information\
-            \ sources.</li>\n</ul>"
+            \ on the GetMentor platform.</p>"
       - language: ru
         text: "<p>Инженер по тестированию широкого профиля: разрабатывал, тестировал, автоматизировал и занимался производ\
             ительностью систем в области финтеха. Сейчас развивает инструменты тестирования, профилирования и разработки в\
             округ middleware-платформы Tarantool. Старший преподаватель кафедры информатики и вычислительной математики в\
-            \ Самарском университете. Ментор на платформе GetMentor.</p>\n<h3>Олег участвует в активности ASK EXPERT в офл\
-            айн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"\
-            1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;С чем помогу\\n- спроектировать и реализовать сис\
-            тему автоматизации тестирования с нуля на системном и интеграционном уровнях используя язык Python;\\n- выполн\
-            ить код-ревью проекта, обозначить точки роста специалиста на конкретном проекте;\\n- выполнить анализ процессо\
-            в тестирования для старта автоматизации и обозначить подход к приоритизации тестового покрытия в микросервисно\
-            й архитектуре;\\n- объяснить основные подходы при автоматизации тестирования: e2e-сценарии, API-based тестиров\
-            ание, написание mock/stub;\\n- обозначить вектор развития специалиста в области автоматизации тестирования: вы\
-            бор языка программирования(сфера применения, его оценка), необходимые знания и навыки, развитие и источники ин\
-            формации.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Проектирование и реализация системы автоматизации тестирования с нуля на системном и интеграционном уровнях,\
-            \ используя Python.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;С\
-            \ чем помогу\\n- спроектировать и реализовать систему автоматизации тестирования с нуля на системном и интегра\
-            ционном уровнях используя язык Python;\\n- выполнить код-ревью проекта, обозначить точки роста специалиста на\
-            \ конкретном проекте;\\n- выполнить анализ процессов тестирования для старта автоматизации и обозначить подход\
-            \ к приоритизации тестового покрытия в микросервисной архитектуре;\\n- объяснить основные подходы при автомати\
-            зации тестирования: e2e-сценарии, API-based тестирование, написание mock/stub;\\n- обозначить вектор развития\
-            \ специалиста в области автоматизации тестирования: выбор языка программирования(сфера применения, его оценка\
-            ), необходимые знания и навыки, развитие и источники информации.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Точки роста специалиста на конкретном проекте.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;С чем помогу\\n- спроектировать и реализовать систему автоматизации тести\
-            рования с нуля на системном и интеграционном уровнях используя язык Python;\\n- выполнить код-ревью проекта, о\
-            бозначить точки роста специалиста на конкретном проекте;\\n- выполнить анализ процессов тестирования для старт\
-            а автоматизации и обозначить подход к приоритизации тестового покрытия в микросервисной архитектуре;\\n- объяс\
-            нить основные подходы при автоматизации тестирования: e2e-сценарии, API-based тестирование, написание mock/stub;\\\
-            n- обозначить вектор развития специалиста в области автоматизации тестирования: выбор языка программирования(с\
-            фера применения, его оценка), необходимые знания и навыки, развитие и источники информации.&quot;}\" data-sheets-userformat=\"\
-            {&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\">Анализ процессов тести\
-            рования для старта автоматизации; приоритизация тестового покрытия в микросервисной архитектуре.</span></li>\n\
-            <li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;С чем помогу\\n- спр\
-            оектировать и реализовать систему автоматизации тестирования с нуля на системном и интеграционном уровнях испо\
-            льзуя язык Python;\\n- выполнить код-ревью проекта, обозначить точки роста специалиста на конкретном проекте;\\\
-            n- выполнить анализ процессов тестирования для старта автоматизации и обозначить подход к приоритизации тестов\
-            ого покрытия в микросервисной архитектуре;\\n- объяснить основные подходы при автоматизации тестирования: e2e-с\
-            ценарии, API-based тестирование, написание mock/stub;\\n- обозначить вектор развития специалиста в области авт\
-            оматизации тестирования: выбор языка программирования(сфера применения, его оценка), необходимые знания и навы\
-            ки, развитие и источники информации.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Основные подходы при автоматизации тестирования: E2E-сценарии, API-based тестирование, написание mock/stub.</span></li>\n\
-            <li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;С чем помогу\\n- спр\
-            оектировать и реализовать систему автоматизации тестирования с нуля на системном и интеграционном уровнях испо\
-            льзуя язык Python;\\n- выполнить код-ревью проекта, обозначить точки роста специалиста на конкретном проекте;\\\
-            n- выполнить анализ процессов тестирования для старта автоматизации и обозначить подход к приоритизации тестов\
-            ого покрытия в микросервисной архитектуре;\\n- объяснить основные подходы при автоматизации тестирования: e2e-с\
-            ценарии, API-based тестирование, написание mock/stub;\\n- обозначить вектор развития специалиста в области авт\
-            оматизации тестирования: выбор языка программирования(сфера применения, его оценка), необходимые знания и навы\
-            ки, развитие и источники информации.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}\"\
-            >Вектор развития специалиста в области автоматизации тестирования: выбор языка программирования (сфера примене\
-            ния, его оценка), необходимые знания и навыки, развитие и источники информации.</span></li>\n</ul>"
+            \ Самарском университете. Ментор на платформе GetMentor.</p>"
+    gitHub: ochaplashkin
   - id: 3212
     photoFileName: 3212.jpg
     photoUpdatedAt: "2024-02-20T13:54:35Z"
@@ -46509,6 +46315,7 @@ speakers:
             \ testing in product teams, and he likes this approach. He promotes shift-left testing in teams.</p>"}
       - {language: ru, text: "<p>В IT более 12 лет. Последние годы Александр руководит тестированием в продуктовых команда\
             х и ему нравится этот подход. Пропагандирует shift-left testing в командах.</p>"}
+    habr: AlNaumov
   - id: 3214
     photoFileName: 3214.jpg
     photoUpdatedAt: "2024-03-15T14:36:03Z"
@@ -46618,6 +46425,7 @@ speakers:
     companyIds: [620, 1101]
     bio:
       - {language: en, text: "<p>QA Automation Lead.</p>"}
+    gitHub: pomel0v
   - id: 3221
     photoFileName: 3221.jpg
     photoUpdatedAt: "2024-03-04T13:03:42Z"
@@ -46720,6 +46528,7 @@ speakers:
             тов с автоматизацией тестирования web, desktop, mobile, API и DB в различных стеках и с использованием различн\
             ых инструментов.</p>\n<p>Ментор и Chapter Lead по автоматизации тестирования на нескольких трайбах в RNT Group.\
             \ Увлекается музыкой, наукой и горными лыжами.</p>"
+    gitHub: dobriyanchik
   - id: 3228
     photoFileName: 3228.jpg
     photoUpdatedAt: "2024-04-15T09:34:07Z"
@@ -46821,10 +46630,7 @@ speakers:
             \ at the VK Education Centre at Bauman Moscow State Technical University &mdash; he explains how to build CI/CD\
             \ automation and why it is necessary.</p>\n<p>Education:</p>\n<ul>\n<li>Bachelor of Software Engineering (IS-7)\
             \ at N.E. Bauman Moscow State Technical University.</li>\n<li>Two-year system architect course from Mail.ru Technopark.</li>\n\
-            <li>Master of Software Engineering (PI, course in English) at Higher School of Economics.</li>\n</ul>\n<h3>Nikita\
-            \ participates in the ASK EXPERT activity in the offline part of the conference.</h3>\n<h4>He will be advising\
-            \ on the following topics:</h4>\n<ul>\n<li>Load testing.</li>\n<li>ML model testing.</li>\n<li>ML/AI.</li>\n<li>Web\
-            \ (frontend, backend).</li>\n<li>Teaching.</li>\n</ul>"
+            <li>Master of Software Engineering (PI, course in English) at Higher School of Economics.</li>\n</ul>"
       - language: ru
         text: "<p>Cтарший программист в команде генерации рекламных креативов VK Рекламы. Занимается всеми хайповыми MLным\
             и штуками &mdash; от поиска информации до генерации текстов, картинок и видео. В основном в его задачи входит\
@@ -46833,10 +46639,7 @@ speakers:
             \ в образовательном центре VK в МГТУ им. Н. Э. Баумана &mdash; рассказывает, как выстраивать автоматизацию CI/CD\
             \ и для чего это нужно.</p>\n<p>Образование:</p>\n<ul>\n<li>Бакалавр программной инженерии (ИУ-7) в МГТУ им. Н\
             .Э. Баумана.</li>\n<li>Двухгодовой курс системного архитектора от Технопарка Mail.ru.</li>\n<li>Магистр програ\
-            ммной инженерии (ПИ, курс на английском языке) во ВШЭ.</li>\n</ul>\n<h3>Никита участвует в активности ASK EXPERT\
-            \ в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li>Нагрузочно\
-            е тестирование.</li>\n<li>Тестирование ML-моделей.</li>\n<li>ML/AI.</li>\n<li>Web (frontend, backend).</li>\n\
-            <li>Преподавание.</li>\n</ul>"
+            ммной инженерии (ПИ, курс на английском языке) во ВШЭ.</li>\n</ul>"
   - id: 3235
     photoFileName: 3235.jpg
     photoUpdatedAt: "2024-02-12T18:10:43Z"
