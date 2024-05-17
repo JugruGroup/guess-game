@@ -18664,7 +18664,7 @@ speakers:
             форм. Особая страсть — компьютерные игры: стратегии, RPG, а также настольные RPG."}
   - id: 1318
     photoFileName: 1318.jpg
-    photoUpdatedAt: "2023-03-02T20:02:44Z"
+    photoUpdatedAt: "2024-01-26T15:55:03Z"
     name:
       - {language: en, text: "Evgeny Erokhin"}
       - {language: ru, text: "Евгений Ерохин"}
@@ -19718,7 +19718,7 @@ speakers:
     gitHub: tituswinters
   - id: 1394
     photoFileName: 1394.jpg
-    photoUpdatedAt: "2022-03-31T19:06:20Z"
+    photoUpdatedAt: "2024-05-13T16:04:06Z"
     name:
       - {language: en, text: "Ilya Shishkov"}
       - {language: ru, text: "Илья Шишков"}
@@ -26403,7 +26403,7 @@ speakers:
             ованию, последние 2 года &mdash; в Kaspersky OS. Погружена в дивный мир безопасного программирования.</p>"}
   - id: 1846
     photoFileName: 1846.jpg
-    photoUpdatedAt: "2022-03-31T19:06:53Z"
+    photoUpdatedAt: "2024-03-21T15:03:55Z"
     name:
       - {language: en, text: "Sergey Talantov"}
       - {language: ru, text: "Сергей Талантов"}
@@ -37402,7 +37402,7 @@ speakers:
             зоне.</p>"}
   - id: 2615
     photoFileName: 2615.jpg
-    photoUpdatedAt: "2023-04-05T09:01:54Z"
+    photoUpdatedAt: "2024-05-06T13:49:46Z"
     name:
       - {language: en, text: "Anton Potapov"}
       - {language: ru, text: "Антон Потапов"}
@@ -37538,7 +37538,7 @@ speakers:
     habr: MrFeod
   - id: 2625
     photoFileName: 2625.jpg
-    photoUpdatedAt: "2023-03-06T07:18:08Z"
+    photoUpdatedAt: "2024-03-29T13:41:14Z"
     name:
       - {language: en, text: "Marsel Galimullin"}
       - {language: ru, text: "Марсель Галимуллин"}
@@ -37567,7 +37567,7 @@ speakers:
     habr: alexlyapunov
   - id: 2627
     photoFileName: 2627.jpg
-    photoUpdatedAt: "2023-03-09T10:25:10Z"
+    photoUpdatedAt: "2024-01-17T14:18:29Z"
     name:
       - {language: en, text: "Viktor Shamparov"}
       - {language: ru, text: "Виктор Шампаров"}
@@ -46657,7 +46657,7 @@ speakers:
     gitHub: korolkevich7
   - id: 3236
     photoFileName: 3236.jpg
-    photoUpdatedAt: "2024-02-13T14:02:14Z"
+    photoUpdatedAt: "2024-05-14T13:08:05Z"
     name:
       - {language: en, text: "Sergey Valkov"}
       - {language: ru, text: "Сергей Вальков"}
