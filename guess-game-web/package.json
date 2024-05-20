@@ -27,7 +27,7 @@
     "atft": "^1.6.5",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "chart.js": "^4.4.2",
+    "chart.js": "^4.4.3",
     "chartjs-plugin-datalabels": "^2.2.0",
     "core-js": "^3.37.1",
     "dagre": "^0.8.5",
