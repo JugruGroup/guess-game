@@ -2676,5 +2676,11 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции", "Подведение итогов онлайн-части", "Открытие офлайн-части",
 //                                "Lightning Talks", "Закрытие конференции",
 //                                "Кофе-код: разработчики против YandexGPT и Бульвар Холивар")));
+//        loadTalksSpeakersEvent(Conference.IML, LocalDate.of(2024, 5, 21), "2024",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("I'ML 2024", null, List.of(24L)),
+//                        Map.of(new NameCompany("Владимир Кочетков", null), 3266L),
+//                        Set.of("Открытие конференции I'ML", "Закрытие конференции I'ML 2024",
+//                                "Открытие второго дня конференции I'ML 2024", "100 к 1")));
     }
 }

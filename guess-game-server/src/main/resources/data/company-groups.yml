@@ -140,3 +140,9 @@ companyGroups:
       Тинькофф,
       DevBrothers
     ]
+  - name: "МТС, МФТИ, ВШЭ"
+    items: [
+      MTS,
+      MIPT,
+      "NRU HSE"
+    ]

@@ -4534,20 +4534,41 @@ companies:
     siteLink: https://www.aq.ru
   - id: 1256
     name:
-      - {language: en, text: RRI}
-      - {language: ru, text: РИИ}
+      - { language: en, text: RRI }
+      - { language: ru, text: РИИ }
   - id: 1257
     name:
-      - {language: en, text: "Javaswag Podcast"}
-      - {language: ru, text: "Подкаст Javaswag"}
+      - { language: en, text: "Javaswag Podcast" }
+      - { language: ru, text: "Подкаст Javaswag" }
     siteLink: https://javaswag.github.io
   - id: 1258
     name:
-      - {language: en, text: Grinatom}
-      - {language: ru, text: Гринатом}
+      - { language: en, text: Grinatom }
+      - { language: ru, text: Гринатом }
     siteLink: https://www.greenatom.ru
   - id: 1259
     name:
-      - {language: en, text: "Post Bank"}
-      - {language: ru, text: "Почта Банк"}
+      - { language: en, text: "Post Bank" }
+      - { language: ru, text: "Почта Банк" }
     siteLink: https://www.pochtabank.ru
+  - id: 1260
+    name:
+      - { language: en, text: Upgini }
+    siteLink: https://upgini.com
+  - id: 1261
+    name:
+      - { language: en, text: Bestplace }
+    siteLink: https://bestplace.ai
+  - id: 1262
+    name:
+      - { language: en, text: AskGuru }
+    siteLink: https://www.askguru.ai
+  - id: 1263
+    name:
+      - { language: en, text: "ALMA Services Company" }
+      - { language: ru, text: "АЛЬМА Сервисез Компани" }
+    siteLink: https://almaservices.ru
+  - id: 1264
+    name:
+      - { language: en, text: ClearML }
+    siteLink: https://clear.ml

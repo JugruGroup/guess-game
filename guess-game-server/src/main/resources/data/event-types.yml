@@ -592,3 +592,37 @@ eventTypes:
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
     topicId: 13
+  - id: 22
+    conference: IML
+    logoFileName: iml.png
+    organizerId: 0
+    name:
+      - {language: en, text: I'ML}
+    shortDescription:
+      - {language: en, text: "Training, application and maintenance of models in production"}
+      - {language: ru, text: "Обучение, применение и сопровождение моделей в продакшене"}
+    longDescription:
+      - language: en
+        text: "I’ML is a technical conference for everyone who uses ML in projects.\n\nThe program includes diverse\
+            \ presentations: from general problems of machine learning to real applications in products. From tabular\
+            \ data, NLP and CV to Big Data ML and specific cases from industrial, fintech, medical and social ML. MLOps,\
+            \ RL, RecSys, Uplift Modeling, Causal Inference — all this and much more.\n\nDiscussion formats can be very\
+            \ different: reports, master classes or workshops, discussions or interviews, and even battles. ML engineers,\
+            \ data scientists, researchers, analysts and developers gather here to share both successful experience in\
+            \ implementing ML projects and failures when implementing ML. Join us!\n\nHeld\_by [JUG Ru\_Group](https://jugru.org/)."
+      - language: ru
+        text: "I’ML\_— техническая конференция для всех, кто использует ML\_в проектах. \n\nВ\_программе\_— разносторонние\
+            \ выступления: от\_общих проблем машинного обучения до\_реальных приложений в\_продуктах. От\_табличных данных\
+            , NLP и\_CV\_— до\_Big Data ML\_и\_конкретных кейсов из\_industrial, fintech, medical и\_social ML. MLOps, RL,\
+            \ RecSys, Uplift Modelling, Causal Inference\_— всё это и\_многое другое.\n\nФорматы обсуждения могут быть сам\
+            ыми разными: доклады, мастер-классы или воркшопы, дискуссии или интервью, и\_даже баттлы. Здесь собираются ML-и\
+            нженеры, дата-сайентисты, исследователи, аналитики и\_разработчики, чтобы поделиться как успешным опытом реали\
+            зации ML-проектов, так и\_фейлами при внедрении ML. Присоединяйтесь!\n\nОрганизатор\_— [JUG Ru\_Group](https://jugru.org/)."
+    siteLink:
+      - {language: en, text: "https://imlconf.com/"}
+    vkLink: https://vk.com/imlconf
+    youtubeLink: http://www.youtube.com/@iml_conf
+    telegramLink: https://t.me/iml_conf
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow
+    topicId: 15

@@ -112,6 +112,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.FLOW, "FLOW");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SAFE_CODE, "SAFECODE");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.GO_FUNC, "GOFUNC");
+        CONFERENCE_EVENT_PROJECT_MAP.put(Conference.IML, "I'ML");
 
         EVENT_PROJECT_CONFERENCE_MAP = CONFERENCE_EVENT_PROJECT_MAP.entrySet().stream()
                 .collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
@@ -309,7 +310,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
             // https://squidex.jugru.team/api/content/sites/conf-site-content?$filter=data/eventProject/iv in ('MOBIUS', 'CPP')&$orderby=data/eventProject/iv
             var eventVersions = CONFERENCE_EVENT_PROJECT_MAP.values().stream()
                     .filter(Objects::nonNull)
-                    .map(s -> "'" + s + "'")
+                    .map(s -> "'" + s.replace("'", "''") + "'")
                     .collect(Collectors.joining(","));
             var builder = UriComponentsBuilder
                     .fromUriString(CONFERENCE_SITE_CONTENT_URL)
@@ -449,7 +450,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
             String eventProject = CONFERENCE_EVENT_PROJECT_MAP.get(conference);
             var builder = UriComponentsBuilder
                     .fromUriString(CONFERENCE_SITE_CONTENT_URL)
-                    .queryParam(FILTER_PARAM_NAME, String.format("data/eventProject/iv eq '%s' and data/eventVersion/iv eq '%s'", eventProject, conferenceCode));
+                    .queryParam(FILTER_PARAM_NAME, String.format("data/eventProject/iv eq '%s' and data/eventVersion/iv eq '%s'", eventProject.replace("'", "''"), conferenceCode));
             var uri = builder
                     .build()
                     .encode()
