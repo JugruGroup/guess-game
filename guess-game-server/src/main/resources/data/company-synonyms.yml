@@ -184,7 +184,9 @@ companySynonyms:
       Gpn-trade,
       "Газпромнефть-Региональные продажи",
       "Gazprom ID",
-      "Газпром ID"
+      "Газпром ID",
+      "Operator Gazprom ID",
+      "Оператор Газпром ИД"
     ]
   - name: GitLab
     synonyms: [

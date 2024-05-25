@@ -22,5 +22,6 @@ public enum Conference {
     FLOW,
     SAFE_CODE,
     GO_FUNC,
+    IML,
     SNOW_ONE
 }
