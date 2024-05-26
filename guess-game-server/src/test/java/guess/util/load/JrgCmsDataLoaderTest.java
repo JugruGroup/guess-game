@@ -331,6 +331,25 @@ class JrgCmsDataLoaderTest {
         }
     }
 
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getFilterValue method tests")
+    class GetFilterValueTest {
+        private Stream<Arguments> data() {
+            return Stream.of(
+                    arguments(null, null),
+                    arguments("GOFUNC", "GOFUNC"),
+                    arguments("I'ML", "I''ML")
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getFilterValue(String source, String expected) {
+            assertEquals(expected, JrgCmsDataLoader.getFilterValue(source));
+        }
+    }
+
     @Test
     @SuppressWarnings("unchecked")
     void getEventTypes() throws IOException, NoSuchFieldException {
