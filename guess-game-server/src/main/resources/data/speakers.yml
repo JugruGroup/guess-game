@@ -7232,6 +7232,7 @@ speakers:
             ечах user group разработчиков. Принимает участие в развитии сообщества русскоязычных разработчиков RSDN. Один\
             \ из организаторов Positive Development User Group — инициативы, направленной на погружение разработчиков в пр\
             едметную область защиты приложений. Ведет блог kochetkov.github.io."
+    gitHub: kochetkov
   - id: 476
     photoFileName: 0476.jpg
     name:
@@ -44139,6 +44140,7 @@ speakers:
     companyIds: [665]
     bio:
       - {language: ru, text: "<p>Лид команды разработки Computer Vision-пайплайнов для платформы видеоконференций SberJazz.</p>"}
+    gitHub: BalievDmitri
   - id: 3058
     photoFileName: 3058.jpg
     photoUpdatedAt: "2023-10-20T15:34:17Z"
@@ -47149,6 +47151,8 @@ speakers:
     bio:
       - {language: ru, text: "<p>Работал MLE в Яндексе, Booking.com, JetBrains. CEO askguru.ai. Ведет <a href=\"https://asmirnov.xyz/\"\
             >блог</a> об ML и не только.</p>"}
+    twitter: asmirnovxyz
+    gitHub: furiousteabag
   - id: 3268
     photoFileName: 3268.jpg
     photoUpdatedAt: "2024-04-08T09:36:30Z"
@@ -47183,6 +47187,8 @@ speakers:
     bio:
       - {language: ru, text: "<p>Senior ML Engineer в SberDevices. Ранее работал над alignment YandexGPT, сейчас отвечает\
             \ за разработку и обучение pretrain-моделей GigaChat. Читает курс по анализу данных в РЭШ.</p>"}
+    gitHub: EvgenijGod
+    habr: evgenijkkk
   - id: 3271
     photoFileName: 3271.jpg
     photoUpdatedAt: "2024-04-26T11:22:08Z"
@@ -47205,6 +47211,9 @@ speakers:
             \ поработать в hh.ru, Mail.ru, Lamoda. Сейчас развивает бренд машинного обучения Яндекса. Участвует в развитии\
             \ сообщества ODS. Интересуется технологиями для умного дома и строит умную теплицу. В свободное время занимает\
             ся трейлраннингом.</span></p>"}
+    twitter: ermakovpetr
+    gitHub: ermakovpetr
+    habr: couatl
   - id: 3273
     photoFileName: 3273.jpg
     photoUpdatedAt: "2024-04-26T11:08:24Z"
@@ -47219,6 +47228,8 @@ speakers:
             \ обучения и анализа данных Яндекс.Такси, запустил Академию больших данных Mail.ru. С марта 2021 года возглавл\
             яет центр Big Data МТС.</p>\n<p>Образование:</p>\n<ul>\n<li>МФТИ, прикладная математика и информатика, 2014.</li>\n\
             <li>МФТИ, исследователь, преподаватель, 2018.</li>\n</ul>"
+    gitHub: vkantor
+    habr: vkantor
   - id: 3274
     photoFileName: 3274.jpg
     photoUpdatedAt: "2024-04-29T09:30:10Z"
@@ -47249,6 +47260,8 @@ speakers:
             >выступает</a>. Лучший ментор <a href=\"https://ods.ai/\">ODS</a> 2022 и 2023 годов. Ведет собственный канал <a\
             \ href=\"https://t.me/artificial_stupid\">об анализе данных и не только</a>. Увлекается литературой и сценарис\
             тикой.</p>"
+    gitHub: gofat
+    habr: gofat
   - id: 3276
     photoFileName: 3276.jpg
     photoUpdatedAt: "2024-04-10T11:16:47Z"
@@ -47258,6 +47271,7 @@ speakers:
     companyIds: [1128]
     bio:
       - {language: ru, text: "<p>Занимается компьютерным зрением и рекомендательными системами в Wildberries.</p>"}
+    gitHub: minemile
   - id: 3277
     photoFileName: 3277.jpg
     photoUpdatedAt: "2024-04-03T16:21:08Z"
@@ -47269,6 +47283,7 @@ speakers:
       - {language: ru, text: "<p>Разработчик с опытом в ML. Руководит разработкой в компании Bestplace: они создают аналит\
             ическую ML-платформу для геоданных. Раньше занимался машинным обучением и разработкой в Яндексе и КонсультантП\
             люс.</p>"}
+    gitHub: mityakrylov
   - id: 3278
     photoFileName: 3278.jpg
     photoUpdatedAt: "2024-02-19T15:25:29Z"
@@ -47279,6 +47294,8 @@ speakers:
     bio:
       - {language: ru, text: "<p>Более 7 лет занимается разработкой на Python, в прошлом занимался системным администриров\
             анием и DevOps. Последние три года влюблен в MLOps как идеальное для Евгения сочетание ML, разработки и DevOps.</p>"}
+    twitter: zaharinea
+    gitHub: zaharinea
   - id: 3279
     photoFileName: 3279.jpg
     photoUpdatedAt: "2024-04-09T06:59:59Z"
@@ -47292,6 +47309,7 @@ speakers:
             и музыки, e-com, механизмами аукционов рекламы. Теперь занимается рекомендательными системами для визуального\
             \ контента.</p>"
     twitter: meleodr
+    habr: meleodr
   - id: 3280
     photoFileName: 3280.jpg
     photoUpdatedAt: "2024-04-08T10:04:29Z"
@@ -47318,6 +47336,7 @@ speakers:
             в:</p>\n<ul>\n<li>Прожил 11 лет в Китае, чтобы вернуться.</li>\n<li>Живет с тремя мейн-кунами и все еще жив.</li>\n\
             <li>Видел, как ML спасал жизнь.</li>\n<li>Сделал первый поиск для онлайн-кинотеатра на регулярках, и это работ\
             ало.</li>\n<li>Провел более тысячи собеседований за последние 5 лет.</li>\n</ul>\n<p>&nbsp;</p>"
+    habr: voronov_ad
   - id: 3282
     photoFileName: 3282.jpg
     photoUpdatedAt: "2024-03-22T15:10:28Z"
@@ -47327,7 +47346,7 @@ speakers:
     companyIds: [665]
     bio:
       - {language: ru, text: "<p>Руководитель направления в команде AGI NLP в SaluteDevices. Ex-Тинькофф, MTS AI.</p>"}
-    gitHub: ai-forever
+    gitHub: meduzick
   - id: 3283
     photoFileName: 3283.jpg
     photoUpdatedAt: "2024-04-12T19:12:21Z"
@@ -47337,6 +47356,7 @@ speakers:
     companyIds: [1165]
     bio:
       - {language: ru, text: "<p>Дата-сайентист и техлид в отделе компьютерного зрения.</p>"}
+    habr: AlexeyLugovoy
   - id: 3284
     photoFileName: 3284.jpg
     photoUpdatedAt: "2024-04-08T08:50:48Z"
@@ -47366,6 +47386,8 @@ speakers:
     companyIds: [620]
     bio:
       - {language: ru, text: "<p>Занимается NLP в deep vk, руководит VK Lab.</p>"}
+    twitter: spirin_egor
+    gitHub: SpirinEgor
   - id: 3287
     photoFileName: 3287.jpg
     photoUpdatedAt: "2024-04-08T13:41:25Z"
@@ -47375,6 +47397,7 @@ speakers:
     companyIds: [911]
     bio:
       - {language: ru, text: "<p>Head of DA/DS. Реализует data-driven подход на практике.</p>"}
+    habr: amsakhnov
   - id: 3288
     photoFileName: 3288.jpg
     photoUpdatedAt: "2024-04-11T08:07:43Z"

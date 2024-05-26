@@ -304,13 +304,23 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         });
     }
 
+    /**
+     * Gets filter value.
+     *
+     * @param source source value
+     * @return result value
+     */
+    static String getFilterValue(String source) {
+        return (source != null) ? source.replace("'", "''") : null;
+    }
+
     @Override
     public List<EventType> getEventTypes() throws IOException, NoSuchFieldException {
         return makeRequest(token -> {
             // https://squidex.jugru.team/api/content/sites/conf-site-content?$filter=data/eventProject/iv in ('MOBIUS', 'CPP')&$orderby=data/eventProject/iv
             var eventVersions = CONFERENCE_EVENT_PROJECT_MAP.values().stream()
                     .filter(Objects::nonNull)
-                    .map(s -> "'" + s.replace("'", "''") + "'")
+                    .map(s -> "'" + getFilterValue(s) + "'")
                     .collect(Collectors.joining(","));
             var builder = UriComponentsBuilder
                     .fromUriString(CONFERENCE_SITE_CONTENT_URL)
@@ -450,7 +460,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
             String eventProject = CONFERENCE_EVENT_PROJECT_MAP.get(conference);
             var builder = UriComponentsBuilder
                     .fromUriString(CONFERENCE_SITE_CONTENT_URL)
-                    .queryParam(FILTER_PARAM_NAME, String.format("data/eventProject/iv eq '%s' and data/eventVersion/iv eq '%s'", eventProject.replace("'", "''"), conferenceCode));
+                    .queryParam(FILTER_PARAM_NAME, String.format("data/eventProject/iv eq '%s' and data/eventVersion/iv eq '%s'", getFilterValue(eventProject), conferenceCode));
             var uri = builder
                     .build()
                     .encode()
