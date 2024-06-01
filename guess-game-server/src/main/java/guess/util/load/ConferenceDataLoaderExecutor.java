@@ -2534,8 +2534,7 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции C++ Russia 2023", "Подведение итогов online-части конференции",
 //                                "Открытие офлайн-части конференции C++ Russia 2023", "Lightning Talks",
 //                                "Закрытие конференции C++ Russia 2023", "Нужны ли профсоюзы в IT?", "Тренды от HR",
-//                                "Актуальные проблемы GPGPU-разработки", "Вопросы преподавания языка в вузе",
-//                                "Тот самый стендап от Павла Филонова ")));
+//                                "Актуальные проблемы GPGPU-разработки", "Вопросы преподавания языка в вузе")));
 //        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2023, 5, 12), "2023 Spring",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Mobius 2023 Spring", null, List.of(24L, 28L)),
@@ -2682,5 +2681,20 @@ public class ConferenceDataLoaderExecutor {
 //                        Map.of(new NameCompany("Владимир Кочетков", null), 3266L),
 //                        Set.of("Открытие конференции I'ML", "Закрытие конференции I'ML 2024",
 //                                "Открытие второго дня конференции I'ML 2024", "100 к 1")));
+//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2024, 5, 23), "2024 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Mobius 2024 Spring", null, List.of(24L, 29L)),
+//                        Set.of("Открытие конференции Mobius 2024 Spring",
+//                                "Подведение итогов online-части конференции Mobius 2024 Spring",
+//                                "Открытие офлайн-части конференции Mobius 2024 Spring",
+//                                "Yandex Mobile Afterparty", "Открытый микрофон Mobius 2024 Spring",
+//                                "Закрытие конференции Mobius 2024 Spring")));
+//        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2024, 5, 24), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("C++ Russia 2024", null, List.of(24L, 29L)),
+//                        Set.of("Открытие конференции С++ Russia", "100 к 1",
+//                                "Подведение итогов online-части конференции С++ Russia 2024",
+//                                "Открытие офлайн-части конференции С++ Russia 2024",
+//                                "Yandex C++ Afterparty", "Lightning Talks", "Закрытие конференции С++ Russia 2024")));
     }
 }
