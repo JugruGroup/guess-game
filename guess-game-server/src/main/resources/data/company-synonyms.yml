@@ -437,7 +437,8 @@ companySynonyms:
       VK/Odnoklassniki,
       VK/Одноклассники,
       "VK / Odnoklassniki",
-      "VK / Одноклассники"
+      "VK / Одноклассники",
+      "VK / OK"
     ]
   - name: Okko
     synonyms: [
@@ -724,6 +725,7 @@ companySynonyms:
       "VK / VKontakte",
       "VK / ВКонтакте",
       "VK Calls",
+      "VK / VK Calls",
       "VK / VK Clips",
       "VK Cloud",
       "VK Cloud Solutions",
@@ -733,6 +735,7 @@ companySynonyms:
       "VK / VK Play",
       "VK / RuStore",
       "VK Tech",
+      "VK / VK Tech",
       "VK Video",
       "VK / Youla.ru",
       "VK / Zen",
@@ -741,6 +744,7 @@ companySynonyms:
       "VK / Юла",
       "VK Видео",
       "VK Звонки",
+      "VK / VK Звонки",
       "VK Образование",
       "ВКонтакте для бизнеса",
       "VK / VK Cloud",

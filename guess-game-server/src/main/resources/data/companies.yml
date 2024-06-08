@@ -4572,3 +4572,16 @@ companies:
     name:
       - { language: en, text: ClearML }
     siteLink: https://clear.ml
+  - id: 1265
+    name:
+      - {language: en, text: Xymatic}
+    siteLink: https://xymatic.com
+  - id: 1266
+    name:
+      - {language: en, text: "Go Invest"}
+    siteLink: https://goinvest.ru
+  - id: 1267
+    name:
+      - {language: en, text: SPbSUE}
+      - {language: ru, text: СПбГЭУ}
+    siteLink: https://unecon.ru
