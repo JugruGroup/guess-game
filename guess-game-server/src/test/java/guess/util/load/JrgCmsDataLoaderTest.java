@@ -1350,6 +1350,7 @@ class JrgCmsDataLoaderTest {
             final String ACTIVITY_ID0 = "42";
             final String ACTIVITY_ID1 = "43";
             final String ACTIVITY_ID2 = "44";
+            final String ACTIVITY_ID3 = "45";
 
             // Talks
             JrgCmsTalk jrgCmsTalk0 = new JrgCmsTalk();
@@ -1360,6 +1361,9 @@ class JrgCmsDataLoaderTest {
 
             JrgCmsTalk jrgCmsTalk2 = new JrgCmsTalk();
             jrgCmsTalk2.setTitle(Collections.emptyMap());
+
+            JrgCmsTalk jrgCmsTalk3 = new JrgCmsTalk();
+            jrgCmsTalk3.setTitle(Collections.emptyMap());
 
             // Speakers
             JrgCmsSpeaker jrgCmsSpeaker0 = new JrgCmsSpeaker();
@@ -1403,13 +1407,20 @@ class JrgCmsDataLoaderTest {
             jrgCmsActivity2.setData(jrgCmsTalk2);
             jrgCmsActivity2.setParticipants(List.of(jrgCmsParticipant0));
 
+            JrgCmsActivity jrgCmsActivity3 = new JrgCmsActivity();
+            jrgCmsActivity3.setId(ACTIVITY_ID3);
+            jrgCmsActivity3.setData(jrgCmsTalk3);
+            jrgCmsActivity3.setParticipants(null);
+
             Map<String, Speaker> speakerMap = Map.of(SPEAKER_ID0, speaker0, SPEAKER_ID1, speaker1);
-            Map<String, DayTrackTime> dayTrackTimeMap = Map.of(ACTIVITY_ID0, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
+            Map<String, DayTrackTime> dayTrackTimeMap = Map.of(ACTIVITY_ID0, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)),
+                    ACTIVITY_ID3, new DayTrackTime(1L, 1L, LocalTime.of(10, 15), LocalTime.of(10, 30)));
 
             return Stream.of(
                     arguments(jrgCmsActivity0, speakerMap, new AtomicLong(-1), dayTrackTimeMap, null),
                     arguments(jrgCmsActivity1, speakerMap, new AtomicLong(-1), dayTrackTimeMap, NullPointerException.class),
-                    arguments(jrgCmsActivity2, speakerMap, new AtomicLong(-1), dayTrackTimeMap, NullPointerException.class)
+                    arguments(jrgCmsActivity2, speakerMap, new AtomicLong(-1), dayTrackTimeMap, NullPointerException.class),
+                    arguments(jrgCmsActivity3, speakerMap, new AtomicLong(-1), dayTrackTimeMap, null)
             );
         }
 
