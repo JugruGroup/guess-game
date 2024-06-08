@@ -1945,7 +1945,7 @@ companies:
     siteLink: https://uwaterloo.ca
   - id: 563
     name:
-      - { language: en, text: "University of Wisconsin - Madison" }
+      - { language: en, text: "University of Wisconsin–Madison" }
     siteLink: https://www.wisc.edu
   - id: 564
     name:
@@ -4585,3 +4585,21 @@ companies:
       - {language: en, text: SPbSUE}
       - {language: ru, text: СПбГЭУ}
     siteLink: https://unecon.ru
+  - id: 1268
+    name:
+      - {language: en, text: "Order Capital"}
+    siteLink: https://www.ordercapital.com
+  - id: 1269
+    name:
+      - {language: en, text: "Stream Theatre"}
+      - {language: ru, text: "Стрим Театр"}
+    siteLink: https://streamtheater.ru
+  - id: 1270
+    name:
+      - {language: en, text: "Budapest University of Technology and Economics"}
+      - {language: ru, text: "Будапештский университет технологии и экономики"}
+    siteLink: https://www.bme.hu
+  - id: 1271
+    name:
+      - {language: en, text: "Lesta Games"}
+    siteLink: https://lesta.ru
