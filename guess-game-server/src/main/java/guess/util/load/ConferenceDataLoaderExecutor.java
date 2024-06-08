@@ -2681,7 +2681,7 @@ public class ConferenceDataLoaderExecutor {
 //                        Map.of(new NameCompany("Владимир Кочетков", null), 3266L),
 //                        Set.of("Открытие конференции I'ML", "Закрытие конференции I'ML 2024",
 //                                "Открытие второго дня конференции I'ML 2024", "100 к 1")));
-//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2024, 5, 23), "2024 Spring",
+//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2024, 5, 23), "2024 Spring ",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Mobius 2024 Spring", null, List.of(24L, 29L)),
 //                        Set.of("Открытие конференции Mobius 2024 Spring",
@@ -2690,8 +2690,9 @@ public class ConferenceDataLoaderExecutor {
 //                                "Yandex Mobile Afterparty", "Открытый микрофон Mobius 2024 Spring",
 //                                "Закрытие конференции Mobius 2024 Spring")));
 //        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2024, 5, 24), "2024",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("C++ Russia 2024", null, List.of(24L, 29L)),
+//                        Map.of(new NameCompany("Павел Новиков", null), 351L),
 //                        Set.of("Открытие конференции С++ Russia", "100 к 1",
 //                                "Подведение итогов online-части конференции С++ Russia 2024",
 //                                "Открытие офлайн-части конференции С++ Russia 2024",

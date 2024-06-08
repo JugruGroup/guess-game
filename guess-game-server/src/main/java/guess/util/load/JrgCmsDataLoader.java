@@ -774,15 +774,17 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     static Talk createTalk(JrgCmsActivity jrgCmsActivity, Map<String, Speaker> speakerMap, AtomicLong talkId,
                            Map<String, DayTrackTime> dayTrackTimeMap) {
         JrgCmsTalk jrgCmsTalk = jrgCmsActivity.getData();
-        List<Speaker> speakers = jrgCmsActivity.getParticipants().stream()
-                .filter(JrgCmsDataLoader::isValidSpeaker)
-                .map(p -> {
-                    String speakerId = p.getData().getId();
-                    var speaker = speakerMap.get(speakerId);
-                    return Objects.requireNonNull(speaker,
-                            () -> String.format("Speaker id %s not found for '%s' talk", speakerId, jrgCmsTalk.getTitle().get(ENGLISH_TEXT_KEY)));
-                })
-                .toList();
+        List<Speaker> speakers = (jrgCmsActivity.getParticipants() == null) ?
+                Collections.emptyList() :
+                jrgCmsActivity.getParticipants().stream()
+                        .filter(JrgCmsDataLoader::isValidSpeaker)
+                        .map(p -> {
+                            String speakerId = p.getData().getId();
+                            var speaker = speakerMap.get(speakerId);
+                            return Objects.requireNonNull(speaker,
+                                    () -> String.format("Speaker id %s not found for '%s' talk", speakerId, jrgCmsTalk.getTitle().get(ENGLISH_TEXT_KEY)));
+                        })
+                        .toList();
         DayTrackTime dayTrackTime = Objects.requireNonNull(dayTrackTimeMap.get(jrgCmsActivity.getId()),
                 () -> String.format("Activity id %s not found for '%s' talk", jrgCmsActivity.getId(), jrgCmsTalk.getTitle().get(ENGLISH_TEXT_KEY)));
 
