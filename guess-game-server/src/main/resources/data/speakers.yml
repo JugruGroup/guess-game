@@ -2588,7 +2588,7 @@ speakers:
     name:
       - {language: en, text: "Sviatoslav Stumpf"}
       - {language: ru, text: "Святослав Штумпф"}
-    companyIds: [122]
+    companyIds: [1239]
     bio:
       - language: en
         text: "20 years in IT. Main specialty — mass customer care and selfcare solutions. Technical basis — Java-stack.\n\
@@ -11637,7 +11637,7 @@ speakers:
     name:
       - {language: en, text: "Evgenii Matsiuk"}
       - {language: ru, text: "Евгений Мацюк"}
-    companyIds: [1253]
+    companyIds: [1048]
     bio:
       - language: en
         text: "<p>Android Google Developer Expert, Kaspresso founder, author of <a href=\"https://habr.com/ru/users/xoxol_89/publications/articles/\"\
@@ -48365,7 +48365,7 @@ speakers:
     name:
       - {language: en, text: "Filipp Belozerov"}
       - {language: ru, text: "Филипп Белозёров"}
-    companyIds: [1271]
+    companyIds: [964]
     bio:
       - {language: en, text: "<p>Filipp has been with the company for about 9 years in the company. He has more than 13 years\
             \ of experience in using C++ for production purposes. He was involved in toolkit and engine development. Now he\
@@ -48379,7 +48379,7 @@ speakers:
     name:
       - {language: en, text: "Vladislav Gordienko"}
       - {language: ru, text: "Владислав Гордиенко"}
-    companyIds: [1271]
+    companyIds: [964]
     bio:
       - language: en
         text: "<p>Vladislav has been into gamdev for over 13 years. He has about 10 years of experience in C++. He started\
