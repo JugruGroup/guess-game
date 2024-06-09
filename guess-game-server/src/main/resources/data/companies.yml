@@ -408,10 +408,6 @@ companies:
     name:
       - { language: en, text: Criteo }
     siteLink: https://www.criteo.com
-  - id: 122
-    name:
-      - { language: en, text: "Crossover (GFI)" }
-    siteLink: https://www.crossover.com
   - id: 123
     name:
       - { language: en, text: CSSSR }
@@ -700,10 +696,6 @@ companies:
     name:
       - { language: en, text: Futurice }
     siteLink: https://futurice.com
-  - id: 209
-    name:
-      - { language: en, text: gapfruit }
-    siteLink: https://www.gapfruit.com
   - id: 210
     name:
       - { language: en, text: "GDG Riga" }
@@ -1233,10 +1225,6 @@ companies:
     name:
       - { language: en, text: Netcentric }
     siteLink: https://www.netcentric.biz
-  - id: 357
-    name:
-      - { language: en, text: Netcracker }
-    siteLink: https://www.netcracker.com
   - id: 358
     name:
       - { language: en, text: Netflix }
@@ -2207,11 +2195,6 @@ companies:
       - { language: en, text: CardsMobile }
       - { language: ru, text: Кошелёк }
     siteLink: https://cardsmobile.ru
-  - id: 632
-    name:
-      - { language: en, text: "Redis creative agency" }
-      - { language: ru, text: "Креативное агентство Redis" }
-    siteLink: https://redis.agency
   - id: 633
     name:
       - { language: en, text: CROC }
@@ -2357,11 +2340,6 @@ companies:
       - { language: en, text: Tutu.ru }
       - { language: ru, text: Туту.ру }
     siteLink: https://www.tutu.ru
-  - id: 677
-    name:
-      - { language: en, text: "University Of Dmitry Pozharsky" }
-      - { language: ru, text: "Университет Дмитрия Пожарского" }
-    siteLink: http://usdp.ru
   - id: 678
     name:
       - { language: en, text: "Innopolis University" }
@@ -2967,10 +2945,6 @@ companies:
     name:
       - { language: en, text: Kong }
     siteLink: https://konghq.com
-  - id: 852
-    name:
-      - { language: en, text: "Spark Networks" }
-    siteLink: https://www.spark.net
   - id: 853
     name:
       - { language: en, text: "Capital One" }
@@ -3285,11 +3259,6 @@ companies:
     name:
       - { language: en, text: Natera }
     siteLink: https://www.natera.com
-  - id: 942
-    name:
-      - { language: en, text: InfraTech }
-      - { language: ru, text: ИнфраТех }
-    siteLink: https://rosinfra.ru/infratech
   - id: 943
     name:
       - { language: en, text: AproximaLabs }
@@ -3354,10 +3323,6 @@ companies:
     name:
       - { language: en, text: "Minimal Modeling" }
     siteLink: https://minimalmodeling.com
-  - id: 959
-    name:
-      - { language: en, text: oneFactor }
-    siteLink: https://onefactor.com
   - id: 960
     name:
       - { language: en, text: more.tv }
@@ -3494,11 +3459,6 @@ companies:
       - { language: en, text: "Control Systems" }
       - { language: ru, text: "Контрол Системс" }
     siteLink: https://controlsystems.ru
-  - id: 994
-    name:
-      - { language: en, text: Komus }
-      - { language: ru, text: Комус }
-    siteLink: https://www.komus.ru
   - id: 995
     name:
       - { language: en, text: "Wis Software" }
@@ -3519,10 +3479,6 @@ companies:
     name:
       - { language: en, text: HintEd }
     siteLink: https://hinted.me
-  - id: 1001
-    name:
-      - { language: en, text: Careem }
-    siteLink: https://www.careem.com
   - id: 1002
     name:
       - { language: en, text: Indeed }
@@ -3651,10 +3607,6 @@ companies:
       - { language: en, text: Сonsaltica }
       - { language: ru, text: Консалтика }
     siteLink: https://consaltica.ru
-  - id: 1037
-    name:
-      - { language: en, text: BIA-Technologies }
-    siteLink: https://bia-tech.ru
   - id: 1038
     name:
       - { language: en, text: NextWay }
@@ -3664,11 +3616,6 @@ companies:
       - { language: en, text: Center-Invest }
       - { language: ru, text: "Банк «Центр-инвест»" }
     siteLink: https://www.centrinvest.ru
-  - id: 1040
-    name:
-      - { language: en, text: "Summer Analytical Festival" }
-      - { language: ru, text: "ЛАФ (Летний аналитический фестиваль)" }
-    siteLink: https://lafest.ru
   - id: 1041
     name:
       - { language: en, text: E-Legion }
@@ -3696,7 +3643,7 @@ companies:
     siteLink: https://www.youtube.com/channel/UCdiwSVi1wq6wnd4gbpjbIAg
   - id: 1048
     name:
-      - { language: en, text: "Marathon Labs" }
+      - { language: en, text: MarathonLabs }
     siteLink: https://marathonlabs.io
   - id: 1049
     name:
@@ -3719,11 +3666,6 @@ companies:
     name:
       - { language: en, text: Supabase }
     siteLink: https://supabase.com
-  - id: 1054
-    name:
-      - { language: en, text: DigitLetter }
-      - { language: ru, text: ЦифраБуква }
-    siteLink: https://www.youtube.com/@digitletter
   - id: 1055
     name:
       - { language: en, text: BrowserStack }
@@ -4051,10 +3993,6 @@ companies:
       - { language: en, text: GNIVC }
       - { language: ru, text: "АО ГНИВЦ" }
     siteLink: https://www.gnivc.ru
-  - id: 1138
-    name:
-      - { language: en, text: DuckStax }
-    siteLink: https://duckstax.com
   - id: 1139
     name:
       - { language: en, text: "Agro Software" }
@@ -4237,10 +4175,6 @@ companies:
     name:
       - { language: en, text: RoadAR }
     siteLink: https://roadar.ru
-  - id: 1185
-    name:
-      - { language: en, text: Movavi }
-    siteLink: https://www.movavi.ru
   - id: 1186
     name:
       - { language: en, text: BCS }
@@ -4254,11 +4188,6 @@ companies:
     name:
       - { language: en, text: DION }
     siteLink: https://diongo.ru
-  - id: 1191
-    name:
-      - { language: en, text: Aspirity }
-      - { language: ru, text: Аспирити }
-    siteLink: https://www.aspirity.ru
   - id: 1192
     name:
       - { language: en, text: "Android Tools" }
@@ -4518,10 +4447,6 @@ companies:
     name:
       - { language: en, text: YDB }
     siteLink: https://ydb.tech
-  - id: 1253
-    name:
-      - { language: en, text: MarathonLabs }
-    siteLink: https://marathonlabs.io
   - id: 1254
     name:
       - { language: en, text: EtalonTech }
@@ -4599,7 +4524,3 @@ companies:
       - {language: en, text: "Budapest University of Technology and Economics"}
       - {language: ru, text: "Будапештский университет технологии и экономики"}
     siteLink: https://www.bme.hu
-  - id: 1271
-    name:
-      - {language: en, text: "Lesta Games"}
-    siteLink: https://lesta.ru
