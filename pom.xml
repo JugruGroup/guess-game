@@ -29,7 +29,7 @@
         <allure-junit5.version>2.27.0</allure-junit5.version>
         <aspectj.version>1.9.22.1</aspectj.version>
         <kumo.version>1.28</kumo.version>
-        <imageio.version>3.10.1</imageio.version>
+        <imageio.version>3.11.0</imageio.version>
         <spring-boot.version>3.3.0</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
