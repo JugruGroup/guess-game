@@ -26430,6 +26430,7 @@ speakers:
             \ He developed desktop and server software in the past. Currently he is concentrated on software security."}
       - {language: ru, text: "Архитектор, Security Champion.&nbsp;Опыт на С++ более 20 лет. В прошлом разрабатывал серверн\
             ое и десктопное ПО.&nbsp;Сейчас основные интересы — проектирование и разработка безопасного ПО."}
+    habr: gmc
   - id: 1847
     photoFileName: 1847.jpg
     photoUpdatedAt: 2021-10-07T13:12:38.169Z[UTC]
@@ -48021,6 +48022,8 @@ speakers:
     bio:
       - {language: en, text: "<p>C/C++ developer in VirtualMinds and VK / Tarantool.</p>"}
       - {language: ru, text: "<p>Разработчик C/C++ в VirtualMinds и VK / Tarantool.</p>"}
+    gitHub: Gerold103
+    habr: gerold103
   - id: 3323
     photoFileName: 3323.jpg
     photoUpdatedAt: "2024-03-05T12:08:51Z"
@@ -48034,6 +48037,8 @@ speakers:
             \ at Yandex.</p>"}
       - {language: ru, text: "<p>Работает над инструментацией dataplane виртуальной сети, любит performance, сети, OS'и, р\
             аспределенные системы и просто большой прод. Ранее работал в инфраструктуре в Яндексе.</p>"}
+    gitHub: feldsherov
+    habr: feldsherov
   - id: 3324
     photoFileName: 3324.jpg
     photoUpdatedAt: "2024-03-28T16:10:52Z"
@@ -48048,6 +48053,7 @@ speakers:
       - {language: ru, text: "<p>Руководитель группы разработки распределенного хранилища YDB. 10 лет в Yandex Infrastructure.\
             \ Участвовал в создании множества высоконагруженных систем хранения и обработки данных. Занимается уменьшением\
             \ latency, увеличением throughput, шедулеростроительством, работой с дисками.</p>"}
+    gitHub: the-ancient-1
   - id: 3325
     photoFileName: 3325.jpg
     photoUpdatedAt: "2024-02-05T13:48:04Z"
@@ -48070,6 +48076,7 @@ speakers:
             \ He has prior experience as a deep learning engineer at Morgan Stanley, HSBC and Google Research, as a researcher\
             \ at Imperial College London, as an author and as a deep learning speaker for OS Python conferences.&nbsp;</p>"
     twitter: abhilash1396
+    gitHub: abhilash1910
   - id: 3326
     photoFileName: 3326.jpg
     photoUpdatedAt: "2024-04-01T15:33:52Z"
@@ -48080,6 +48087,7 @@ speakers:
     bio:
       - {language: en, text: "<p>Experienced game developer, mentor, entrepreneur.</p>"}
       - {language: ru, text: "Опытный разработчик игр, ментор, предприниматель."}
+    twitter: AnthonyYakovlev
   - id: 3327
     photoFileName: 3327.jpg
     photoUpdatedAt: "2024-02-01T20:40:31Z"
@@ -48094,6 +48102,7 @@ speakers:
             \ He has been creating software systems to simplify the building of performance-critical applications. These software\
             \ systems are being used by thousands of people in industry and academia.</p>"}
     twitter: twh760812
+    gitHub: tsung-wei-huang
   - id: 3328
     photoFileName: 3328.jpg
     photoUpdatedAt: "2024-04-10T10:03:48Z"
@@ -48172,6 +48181,7 @@ speakers:
             рь участвует в разработке систем хранения данных.</p>\n<p><a href=\"https://gitflic.ru/user/kolkir\">Профиль К\
             ирилла на GitFlic</a>.</p>"
     gitHub: Kolkir
+    habr: KolKir
   - id: 3332
     photoFileName: 3332.jpg
     photoUpdatedAt: "2024-04-10T09:29:13Z"
@@ -48234,6 +48244,7 @@ speakers:
             \ product at Kaspersky Lab.</p>"}
       - {language: ru, text: "<p>Разрабатывает на C++/Qt в VK. Ранее работал над продуктом на базе KasperskyOS в Лаборатор\
             ии Касперского.</p>"}
+    gitHub: sssersh
   - id: 3336
     photoFileName: 3336.jpg
     photoUpdatedAt: "2023-04-26T20:15:25Z"
@@ -48246,6 +48257,8 @@ speakers:
             \ Currently, he is engaged in optimizing software for various hardware platforms, including GPUs and VLIW processors.</p>"}
       - {language: ru, text: "<p>С 2010 года разрабатывает прикладные алгоритмы на GPU и оптимизирует производительность.\
             \ Сейчас занимается оптимизациями под различное железо &mdash; от видеокарт до VLIW-процессоров.</p>"}
+    gitHub: tmagomedov
+    habr: Magistr
   - id: 3337
     photoFileName: 3337.jpg
     photoUpdatedAt: "2024-03-21T12:23:30Z"
@@ -48258,6 +48271,8 @@ speakers:
             \ at the Higher School of Economics. His mind is sharp, his tongue is long, his character is bad, he is married.</p>"}
       - {language: ru, text: "<p>Работал в Яндексе, потом в Microsoft и вот снова в Яндексе. Преподавал около 5 лет в НИУ\
             \ ВШЭ. Ум острый, язык длинный, характер скверный, женат.</p>"}
+    gitHub: Cadovvl
+    habr: cadovvl
   - id: 3338
     photoFileName: 3338.jpg
     photoUpdatedAt: "2024-03-21T16:28:55Z"
@@ -48272,6 +48287,7 @@ speakers:
       - {language: ru, text: "<p>25 лет опыта разработки на C++. В основном разработка игр и 3D-графика. Работал в компани\
             ях &laquo;Аниматек&raquo;, &laquo;Новый Диск&raquo;, Nival, Obsidian Entertainment. Последние 10 лет &mdash; г\
             енеральный и технический директор собственной компании, которая специализируется на заказной разработке.</p>"}
+    gitHub: Sippul
   - id: 3339
     photoFileName: 3339.jpg
     photoUpdatedAt: "2024-04-17T15:42:50Z"
@@ -48294,6 +48310,7 @@ speakers:
             ндекс.Такси, после чего 1,5 года разрабатывал десктопное приложение VK Звонков во ВКонтакте. Немного пробовал\
             \ себя в криптографии и высокочастотной торговле.</p>\n<p>Помимо C++ увлекается дискретной математикой и теори\
             ей алгоритмов.</p>"
+    gitHub: mesyarik
   - id: 3340
     photoFileName: 3340.jpg
     photoUpdatedAt: "2024-02-02T10:55:39Z"
@@ -48309,6 +48326,7 @@ speakers:
             \ target=\"_blank\" rel=\"noopener noreferrer\">GAMESS (US)</a> и <a href=\"https://mrcc.hu\" target=\"_blank\"\
             \ rel=\"noopener\">MRCC</a>. Любит запускать большие задачи на больших кластерах и чтобы код соответствовал сп\
             ецификации языка.</p>"}
+    gitHub: foxtran
   - id: 3341
     photoFileName: 3341.jpg
     photoUpdatedAt: "2024-04-17T16:07:56Z"
@@ -48321,6 +48339,7 @@ speakers:
             \ He loves beautiful C++ and fast code.</p>"}
       - {language: ru, text: "<p>Руководитель службы в рантайме Яндекс.Поиска. Оптимизирует поисковые системы. Любит краси\
             вый C++ и быстрый код.</p>"}
+    gitHub: BigRedEye
   - id: 3342
     photoFileName: 3342.jpg
     photoUpdatedAt: "2024-03-25T13:23:54Z"
@@ -48345,6 +48364,8 @@ speakers:
             ставил след в таких проектах, как AOSP и pytorch/glow.</p>\n<p>Сейчас работает в Сбере, занимается перспективн\
             ыми вычислительными разработками. Читает курс лекций по компиляторам в Новосибирском государственном университ\
             ете.</p>"
+    gitHub: xortator
+    habr: xortator
   - id: 3343
     photoFileName: 3343.jpg
     photoUpdatedAt: "2024-04-10T07:46:31Z"

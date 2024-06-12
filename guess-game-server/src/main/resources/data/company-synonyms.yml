@@ -661,8 +661,10 @@ companySynonyms:
     synonyms: [
       TestIT
     ]
-  - name: Tinkoff
+  - name: T-Bank
     synonyms: [
+      Tinkoff,
+      Тинькофф,
       Tinkoff.ru,
       "TCS Bank",
       "ТКС Банк",

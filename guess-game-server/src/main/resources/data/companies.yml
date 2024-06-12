@@ -2332,9 +2332,9 @@ companies:
     siteLink: https://tensor.ru
   - id: 674
     name:
-      - { language: en, text: Tinkoff }
-      - { language: ru, text: Тинькофф }
-    siteLink: https://www.tinkoff.ru
+      - { language: en, text: T-Bank }
+      - { language: ru, text: Т-Банк }
+    siteLink: https://www.tbank.ru
   - id: 676
     name:
       - { language: en, text: Tutu.ru }
