@@ -41140,6 +41140,7 @@ speakers:
     bio:
       - {language: en, text: "<p>12 years in IT. Egor develops and implements high load systems in Sber Online.</p>"}
       - {language: ru, text: "<p>В IT 12 лет. Разрабатывает и внедряет highload в Сбер Онлайн.</p>"}
+    gitHub: WinZib
   - id: 2862
     photoFileName: 2862.jpg
     photoUpdatedAt: "2023-09-11T08:38:51Z"
