@@ -44007,6 +44007,8 @@ speakers:
             \ and evolutionary biology.</p>"}
       - {language: ru, text: "<p><span style=\"color: #000000;\">Автор YouTube-канала &laquo;Упоротый Палеонтолог&raquo;,\
             \ популяризатор палеонтологии и эволюционной биологии.</span></p>"}
+    twitter: CrazyPaleoSci
+    habr: crazypaleo
   - id: 3046
     photoFileName: 3046.jpg
     photoUpdatedAt: "2023-09-18T12:17:45Z"
