@@ -1,5 +1,9 @@
 Guess Game
 
+Version 3.0.0 - July 6, 2024
+* 3D visualization of OLAP statistics.
+* UI improvements.
+
 Version 2.11.0 - December 27, 2023
 * Enhanced search of talks.
 * Event display changes.
