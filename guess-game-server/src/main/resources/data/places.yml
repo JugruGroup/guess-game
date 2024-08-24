@@ -76,8 +76,8 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Leningrad Avenue, 31А, building 1, Hotel MonArch"}
-      - {language: ru, text: "Ленинградский проспект, 31А, строение 1, Отель «МонАрх»"}
+      - {language: en, text: "Leningrad Avenue, 31А, building 1, MonArch Moscow Hotel"}
+      - {language: ru, text: "Ленинградский проспект, 31А, строение 1, МонАрх Москва Отель"}
     mapCoordinates: "55.783321, 37.560867"
   - id: 10
     city:
@@ -235,3 +235,11 @@ places:
       - {language: en, text: "\"Lomonosov\" Cluster: Ramensky Boulevard, 1"}
       - {language: ru, text: "Кластер «Ломоносов»: Раменский бульвар, 1"}
     mapCoordinates: "55.692120, 37.516557"
+  - id: 30
+    city:
+      - {language: en, text: "Saint Petersburg"}
+      - {language: ru, text: Санкт-Петербург}
+    venueAddress:
+      - {language: en, text: "Airportcity Plaza Congress Hotel: Ulitsa Startovaya, 6, litera A"}
+      - {language: ru, text: "Конгресс-отель Airportcity Plaza: ул. Стартовая, 6, литера А"}
+    mapCoordinates: "59.8060362,30.3137783"

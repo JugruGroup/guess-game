@@ -2697,5 +2697,21 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов online-части конференции С++ Russia 2024",
 //                                "Открытие офлайн-части конференции С++ Russia 2024",
 //                                "Yandex C++ Afterparty", "Lightning Talks", "Закрытие конференции С++ Russia 2024")));
+//        loadTalksSpeakersEvent(Conference.SMART_DATA, LocalDate.of(2024, 9, 4), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("SmartData 2024", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции SmartData 2024", "Закрытие конференции SmartData 2024",
+//                                "Подведение итогов онлайн-части конференции SmartData 2024",
+//                                "Открытие офлайн-части конференции SmartData 2024")));
+//        loadTalksSpeakersEvent(Conference.DOT_NEXT, LocalDate.of(2024, 9, 10), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("DotNext 2024", null, List.of(9L)),
+//                        Set.of("Открытие конференции DotNext 2024", "Закрытие конференции DotNext 2024")));
+//        loadTalksSpeakersEvent(Conference.FLOW, LocalDate.of(2024, 9, 17), "2024 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Flow 2024 Autumn", null, List.of(24L, 30L)),
+//                        Set.of("Открытие конференции Flow 2024 Autumn", "Закрытие конференции Flow 2024 Autumn",
+//                                "Подведение итогов онлайн-части конференции Flow 2024 Autumn",
+//                                "Открытие офлайн-части конференции Flow 2024 Autumn", "Доклады в стиле SMART", "Fail Night")));
     }
 }

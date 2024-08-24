@@ -419,30 +419,39 @@
         <td>2023&nbsp;Autumn<br>(2023&nbsp;Autumn)</td>
     </tr>
     <tr>
-        <th>2024</th>
-        <td>2024<br>(2024)</td>
-        <td></td>
-        <td></td>
+        <th rowspan="2">2024</th>
+        <td rowspan="2">2024<br>(2024)</td>
+        <td rowspan="2">2024<br>(2024)</td>
+        <td rowspan="2">2024<br>(2024)</td>
         <td>2024&nbsp;Spring<br>(2024&nbsp;Spring)</td>
         <td>2024&nbsp;Spring<br>(2024&nbsp;Spring)</td>
-        <td></td>
-        <td></td>
-        <td>2024<br>(2024)</td>
-        <td></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2024<br>(2024)</td>
+        <td rowspan="2">2024<br>(2024)</td>
         <td>2024&nbsp;Spring<br>(2024&nbsp;Spring)</td>
-        <td></td>
-        <td></td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2024<br>(2024)</td>
+        <td rowspan="2">2024&nbsp;Spring<br>(2024&nbsp;Spring)</td>
+        <td rowspan="2">2024<br>(2024)</td>
+        <td rowspan="2">2024<br>(2024)</td>
         <td>2024&nbsp;Spring<br>(2024&nbsp;Spring)</td>
-        <td></td>
-        <td></td>
-        <td>2024&nbsp;Spring<br>(2024&nbsp;Spring)</td>
         <td>2024<br>(2024)</td>
         <td>2024<br>(2024)</td>
+        <td rowspan="2">2024<br>(2024)</td>
         <td>2024<br>(2024)</td>
-        <td>2024<br>(2024)</td>
-        <td>2024</td>
-        <td></td>
-        <td>2024</td>
-        <td></td>
+        <td rowspan="2">2024</td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2024</td>
+        <td rowspan="2">2024</td>
+    </tr>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+    <tr>
     </tr>
 </table>

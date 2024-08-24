@@ -76,10 +76,6 @@ companySynonyms:
     synonyms: [
       СFT
     ]
-  - name: Careem
-    synonyms: [
-      "Careem (UAE)"
-    ]
   - name: "Chronicle Software"
     synonyms: [
       "Chronicle Software Ltd"
@@ -109,10 +105,6 @@ companySynonyms:
   - name: Crossover
     synonyms: [
       "Crossover (GFI)"
-    ]
-  - name: DuckStax
-    synonyms: [
-      duckstax.com
     ]
   - name: "Delivery Club"
     synonyms: [
@@ -310,11 +302,6 @@ companySynonyms:
   - name: "Kaspersky Lab"
     synonyms: [
       Kaspersky
-    ]
-  - name: Komus
-    synonyms: [
-      Komus-tech,
-      Комус-тех
     ]
   - name: "Kt. Academy"
     synonyms: [
@@ -643,10 +630,6 @@ companySynonyms:
     synonyms: [
       "Sudo Ltd",
       "ООО «Судо»"
-    ]
-  - name: "Summer Analytical Festival"
-    synonyms: [
-      "Summer Analytical Festival (lafest.ru)"
     ]
   - name: "Systems Education"
     synonyms: [
