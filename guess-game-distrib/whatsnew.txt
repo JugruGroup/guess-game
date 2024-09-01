@@ -1,5 +1,8 @@
 Guess Game
 
+Version 3.1.0 - September 1, 2024
+* Reducing the build size.
+
 Version 3.0.0 - July 6, 2024
 * 3D visualization of OLAP statistics.
 * UI improvements.
