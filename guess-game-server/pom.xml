@@ -31,6 +31,12 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>guess-game</groupId>
+                            <artifactId>guess-game-web</artifactId>
+                        </exclude>
+                    </excludes>
                     <executable>true</executable>
                     <mainClass>guess.App</mainClass>
                 </configuration>
