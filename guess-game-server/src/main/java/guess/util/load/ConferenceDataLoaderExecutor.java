@@ -2713,5 +2713,16 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции Flow 2024 Autumn", "Закрытие конференции Flow 2024 Autumn",
 //                                "Подведение итогов онлайн-части конференции Flow 2024 Autumn",
 //                                "Открытие офлайн-части конференции Flow 2024 Autumn", "Доклады в стиле SMART", "Fail Night")));
+//        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2024, 9, 18), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("PiterPy 2024", null, List.of(24L, 30L)),
+//                        Set.of("Открытие онлайн-части конференции PiterPy 2024", "Закрытие конференции PiterPy 2024",
+//                                "Ask Expert 26 сентября", "Игра «100 к 1» и закрытие онлайн-части конференции PiterPy 2024",
+//                                "Открытие оффлайн-части конференции PiterPy 2024", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.VIDEO_TECH, LocalDate.of(2024, 9, 19), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("VideoTech 2024", null, List.of(24L, 30L)),
+//                        Set.of("Открытие конференции", "Закрытие конференции", "Подведение итогов онлайн-части",
+//                                "Открытие офлайн-части конференции", "Lightning Talks")));
     }
 }
