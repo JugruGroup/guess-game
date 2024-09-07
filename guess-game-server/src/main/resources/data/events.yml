@@ -420,6 +420,7 @@ events:
     siteLink:
       - {language: en, text: "https://dotnext.ru/en/archive/2023/"}
       - {language: ru, text: "https://dotnext.ru/archive/2023/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLtWrKx3nUGBcck70YpO-88XB70iE7fVW4
     talkIds: [4877, 4878, 4879, 4880, 4881, 4882, 4883, 4884, 4885, 4886, 4887, 4888, 4889, 4890, 4906, 4891, 4892, 4893,
               4894, 4895, 4896, 4897, 4898, 4899, 4900, 4901, 4902, 4903, 4904, 4905]
   # Heisenbug
