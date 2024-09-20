@@ -30,7 +30,7 @@
         <aspectj.version>1.9.22.1</aspectj.version>
         <kumo.version>1.28</kumo.version>
         <imageio.version>3.11.0</imageio.version>
-        <spring-boot.version>3.3.3</spring-boot.version>
+        <spring-boot.version>3.3.4</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
         <node.version>v20.17.0</node.version>
