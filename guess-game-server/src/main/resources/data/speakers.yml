@@ -2327,15 +2327,18 @@ speakers:
     name:
       - {language: en, text: "Vladimir Ozerov"}
       - {language: ru, text: "Владимир Озеров"}
-    companyIds: [782]
+    companyIds: [1278]
     bio:
-      - {language: en, text: "Vladimir Ozerov is CEO of Querify Labs which researches and develops components of DBMS for\
-            \ tech companies. Before this, Vladimir more than 8 years developed distributed in-memory platforms Apache Ignite\
-            \ and Hazelcast. Vladimir is a committer of open source projects Apache Calcite and Apache Ignite."}
-      - {language: ru, text: "<p>Владимир руководит компанией Querify Labs, которая занимается созданием систем управления\
-            \ данными для технологических компаний, а также разрабатывает высокопроизводительную аналитическую платформу CedrusData\
-            \ на основе Trino. До этого Владимир занимался разработкой распределенных SQL-движков для опенсорс-проектов Apache\
-            \ Ignite и Hazelcast.</p>"}
+      - language: en
+        text: "<p>Vladimir runs Querify Labs, which develops Trino-based high-performance analytics platform CedrusData, and\
+            \ also develops data management systems for technology companies. Prior to that he developed distributed SQL-engines\
+            \ for Apache Ignite and Hazelcast.</p>\n<p>He develops the Russian community of database developers <a href=\"\
+            https://t.me/databaseinternalschat\">Database Internals</a>.</p>"
+      - language: ru
+        text: "<p>Руководит компанией Querify Labs, которая разрабатывает высокопроизводительную аналитическую платформу CedrusData\
+            \ на основе Trino, а также занимается созданием систем управления данными для технологических компаний. До это\
+            го разрабатывал распределенные SQL-движки для опенсорс-проектов Apache Ignite и Hazelcast.</p>\n<p>Развивает р\
+            оссийское сообщество разработчиков СУБД <a href=\"https://t.me/databaseinternalschat\">Database Internals</a>.</p>"
     twitter: devozerov
     gitHub: devozerov
     habr: devozerov
@@ -8738,17 +8741,24 @@ speakers:
     gitHub: dougsillars
   - id: 582
     photoFileName: 0582.jpg
+    photoUpdatedAt: "2022-10-10T13:12:34Z"
     name:
       - {language: en, text: "Nikita Sobolev"}
       - {language: ru, text: "Никита Соболев"}
     companyIds: [586]
     bio:
       - language: en
-        text: "CTO at wemake.services, ElixirLangMoscow and MoscowPythonConf++ organizer.\n\nWriting provocative <a href=\"\
-            https://sobolevn.me/\" target=\"_blank\">articles</a>."
+        text: "<p>Full-time open source developer. He makes CPython. More about its design &mdash; on the <a href=\"https://www.youtube.com/@sobolevn\"\
+            >author's YouTube-channel</a>.</p>\n<p>He maintains a Telegram channel <a href=\"https://t.me/opensource_findings\"\
+            >\"Finds in open source\"</a>, where he shares his interesting projects, commits, talks and so on.</p>"
       - language: ru
-        text: "CTO в wemake.services, организатор ElixirLangMoscow и MoscowPythonConf++.\n\nВедет провокационный <a href=\"\
-            https://sobolevn.me/\" target=\"_blank\">блог</a>."
+        text: "<p>Full-time open source-разработчик. Делает CPython. Подробнее о его устройстве &mdash; на <a href=\"https://www.youtube.com/@sobolevn\"\
+            >авторском YouTube-канале</a>.</p>\n<p><span style=\"color: #000000;\">Ведет Telegram-канал <a href=\"https://t.me/opensource_findings\"\
+            >&laquo;Находки в опенсорсе&raquo;</a>, в котором рассказывает </span>про свои интересные проекты, коммиты, до\
+            клады и прочее.</p>"
+    twitter: sobolevn
+    gitHub: sobolevn
+    habr: sobolevn
   - id: 583
     photoFileName: 0583.jpg
     name:
@@ -17848,24 +17858,20 @@ speakers:
     habr: ARG89
   - id: 1247
     photoFileName: 1247.jpg
-    photoUpdatedAt: "2024-01-16T09:39:15Z"
+    photoUpdatedAt: "2024-08-26T14:16:52Z"
     name:
       - {language: en, text: "Pavel Filonov"}
       - {language: ru, text: "Павел Филонов"}
     companyIds: [257]
     bio:
-      - language: en
-        text: "<div class=\"PersonContent_personContent__text__LS5lM\">Pavel is engaged in online education in the field of\
-            \ C ++ and ML. As a leader, he developed the Data Science team at Kaspersky, which provides functionality based\
-            \ on machine learning for the company's products and services. In the role of Data Scientist, he participated\
-            \ in the development of Kaspersky MLAD and MDR AI Analyst. As a C ++ developer, he participated in the creation\
-            \ of MaxPatrol SIEM. For many years Pavel has been teaching computer science disciplines at MSTU GA.</div>\n<div\
-            \ class=\"PersonContent_personContent__talks__7yMyH\">&nbsp;</div>"
-      - {language: ru, text: "<p>Занимается онлайн образованием в области C++ и ML. В роли руководителя развивал Data Science\
-            \ команду в Kaspersky, которая предоставляет для продуктов и сервисов компании функционал на основе машинного\
-            \ обучения. В роли Data Scientist участвовал в разработке Kaspersky MLAD и MDR AI Analyst. В роли разработчика\
-            \ C++ участвовал в создании MaxPatrol SIEM. В течение многих лет преподает computer science дисциплины в МГТУ\
-            \ ГА.</p>"}
+      - {language: en, text: "<p>He has worked extensively in IS development and machine learning at Positive Technologies\
+            \ and Kaspersky. Now he helps companies to test how much ML will help improve their business processes. Regularly\
+            \ teaches at universities and professional development courses. Periodically gives talks and masterclasses on\
+            \ ML, MLOps, C++, Python and Security.</p>"}
+      - {language: ru, text: "Много занимался разработкой и машинным обучением в области ИБ в Positive Technologies и Kaspersky.\
+            \ Сейчас помогает компаниям проверить, насколько ML поможет улучшить их бизнес-процессы. Постоянно ведет препо\
+            давательскую деятельность в вузах и на курсах повышения квалификации. Периодически выступает с докладами и мас\
+            тер-классами про ML, MLOps, С++, Python и Security."}
     twitter: filonovpv
     gitHub: sdukshis
   - id: 1248
@@ -21250,18 +21256,21 @@ speakers:
     gitHub: zjffdu
   - id: 1503
     photoFileName: 1503.jpg
-    photoUpdatedAt: "2023-06-15T13:18:56Z"
+    photoUpdatedAt: "2024-07-12T07:34:36Z"
     name:
       - {language: en, text: "Bronislav Zhitnikov"}
       - {language: ru, text: "Бронислав Житников"}
-    companyIds: [674]
+    companyIds: [410]
     bio:
-      - {language: en, text: "<p>Senior Architect at Tinkoff. In charge of developing the data uploading platform, in particular,\
-            \ of fine-tuning Apache NiFi and its environment to the company's needs. Moderates the Apache NiFi user chat in\
-            \ Telegram nifi_users.</p>"}
-      - {language: ru, text: "<p>Старший архитектор в компании Тинькофф. Занимается разработкой платформы загрузки данных\
-            , в частности доработкой Apache NiFi и его окружения под нужды компании. Модерирует чат пользователей Apache NiFi\
-            \ в <a href=\"https://t.me/nifiusers\">Telegram nifi_users.</a></p>"}
+      - language: en
+        text: "<p>Lead data engineer in Positive Technologies. Bronislav is in charge of developing the data uploading platform.\
+            \ Actively participates in the development of practices for working with the Apache NiFi tool.</p>\n<p>He moderates\
+            \ the Apache NiFi user chat in Telegram <a href=\"https://t.me/nifiusers\" target=\"_blank\" rel=\"noopener noreferrer\"\
+            >nifiusers</a>.</p>"
+      - language: ru
+        text: "<p>Ведущий инженер по работе с данными в Positive Technologies. Разрабатывает платформу загрузки данных. Ак\
+            тивно участвует в развитии практик работы с инструментом Apache NiFi.</p>\n<p>Модерирует чат пользователей Apache\
+            \ NiFi <a href=\"https://t.me/nifiusers\" target=\"_blank\" rel=\"noopener noreferrer\">nifiusers</a> в Telegram.</p>"
   - id: 1504
     photoFileName: 1504.jpg
     photoUpdatedAt: "2022-09-20T11:33:57Z"
@@ -24555,14 +24564,14 @@ speakers:
             ботает в команде, в которой каждый баг очень легко измерить в денежном эквиваленте."}
   - id: 1725
     photoFileName: 1725.jpg
-    photoUpdatedAt: 2021-10-04T09:58:56.750Z[UTC]
+    photoUpdatedAt: "2024-07-26T12:04:09Z"
     name:
-      - {language: en, text: "Nikolay Izhikov"}
+      - {language: en, text: "Nikolai Izhikov"}
       - {language: ru, text: "Николай Ижиков"}
-    companyIds: [665]
+    companyIds: [961]
     bio:
-      - {language: en, text: "I write code."}
-      - {language: ru, text: "Пишу код."}
+      - {language: en, text: "<p>I write code.</p>"}
+      - {language: ru, text: "<p>Пишу код.</p>"}
     gitHub: nizhikov
     habr: NorthDragon
   - id: 1726
@@ -24925,15 +24934,21 @@ speakers:
             \ в core-команде баннерной системы и поисковых проектах (Pandao, Маруся) Mail.Ru. Окончил физтех и ШАД."}
   - id: 1749
     photoFileName: 1749.jpg
-    photoUpdatedAt: 2021-09-06T08:59:15.367Z[UTC]
+    photoUpdatedAt: "2024-07-26T11:41:41Z"
     name:
-      - {language: en, text: "Vishnu Chanderraju"}
-    companyIds: [786]
+      - {language: en, text: "Sri Vishnu Chanderraju"}
+    companyIds: [1274]
     bio:
       - language: en
-        text: "DataStore Enthusiast, Doodle Maker, Tango Lover & fellow coder.\r\n\r\nCurrently a senior data engineer at\
-            \ eyeota.com — the world's largest audience data marketplace. Formerly at Flipkart.com — India's largest e-commerce\
-            \ company, was part of its data team, MySQL engineering team, website & warehouse/order management teams."
+        text: "<p>Chief Inspiration Officer at byteSpire.io, Database Enthusiast, Cost Based Engineer. Was the MySQL expert\
+            \ at Flipkart &mdash; India's largest e-commerce company. Currently Sri Vishnu is the data guy at CueZen &mdash;\
+            \ helping build cool health tech.</p>\n<p>Writes articles for <a href=\"https://medium.com/@HumanDimension2DataEngineering\"\
+            >Medium</a>.&nbsp;</p>"
+      - language: ru
+        text: "<p>Chief Inspiration Officer at byteSpire.io, Database Enthusiast, Cost Based Engineer. Was the MySQL expert\
+            \ at Flipkart &mdash; India's largest e-commerce company. Currently Sri Vishnu is the data guy at CueZen &mdash;\
+            \ helping build cool health tech.</p>\n<p>Writes articles for <a href=\"https://medium.com/@HumanDimension2DataEngineering\"\
+            >Medium</a>.</p>"
     twitter: sweetweet213
   - id: 1750
     photoFileName: 1750.jpg
@@ -24952,26 +24967,25 @@ speakers:
             У им. Ломоносова."
   - id: 1751
     photoFileName: 1751.jpg
-    photoUpdatedAt: 2021-09-10T13:53:53.894Z[UTC]
+    photoUpdatedAt: "2024-07-18T11:34:43Z"
     name:
       - {language: en, text: "Dmitry Ibragimov"}
       - {language: ru, text: "Дмитрий Ибрагимов"}
-    companyIds: [787]
+    companyIds: [1281]
     bio:
-      - language: en
-        text: "If \"data is the new oil\", then Dmitry is responsible for all steps in working with this it, from well drilling\
-            \ and production to refining and transportation.\r\nDmitry has been building and maintaining data warehouses and\
-            \ data lakes in companies and startups on the Apache technology stack (Hadoop, Hive, Impala, Spark) for the past\
-            \ 8 years. In Leroy Merlin he built a ~500TB storage data platform based on DWH Greenplum, with a lake on top\
-            \ of S3, NiFI, and Flink ETL tools, and an operational layer at Clickhouse. Fan of open source and good dialog\
-            \ partner."
+      - {language: en, text: "If \"data is the new oil\", then Dmitry has been drlling it out of the ground, refining it and\
+            \ moving it through the pipeline.He has been building and maintaining data warehouses and data lakes in companies\
+            \ and startups on the Apache technology stack (Hadoop, Hive, Impala, Spark) for the past 10 years. At Leroy Merlin\
+            \ he built a ~1 PB storage data platform based on DWH Greenplum, with a data lake on top of S3, using/utilising\
+            \ NiFI, Airflow, Flink as ETL tools, and an operational layer over ClickHouse.He is a fan of open source and always\
+            \ open to new conversations."}
       - language: ru
-        text: "Если «данные – это новая нефть», то Дмитрий отвечает за все шаги по работе с этой нефтью – от бурения скваж\
-            ин и добычи, до переработки и транспортировки. \r\nДмитрий занимается построением и поддержкой хранилищ и озер\
-            \ данных в компаниях и стартапах на технологическом стеке Apache (Hadoop, Hive, Impala, Spark) в течение после\
-            дних 8 лет. В Леруа Мерлен построил платформу данных с хранилищем на ~500TB на базе DWH Greenplum, с озером по\
-            верх S3, ETL-инструментами NiFI и Flink и операционным слоем в Clickhouse. Фанат open source и просто хороший\
-            \ собеседник."
+        text: "<p>Если &laquo;данные &mdash; это новая нефть&raquo;, то Дмитрий отвечает за все шаги по работе с этой нефт\
+            ью &mdash; от бурения скважин и добычи до переработки и транспортировки.</p>\n<p>Занимается построением и подд\
+            ержкой хранилищ и озер данных в компаниях и стартапах на технологическом стеке Apache (Hadoop, Hive, Impala, Spark)\
+            \ в течение последних 10 лет. В Леруа Мерлен построил платформу данных с хранилищем на ~1 PB на базе DWH Greenplum,\
+            \ озером поверх S3, ETL-инструментами NiFI, Airflow и Flink и операционным слоем в ClickHouse.</p>\n<p>Фанат open\
+            \ source и просто хороший собеседник.</p>"
     gitHub: diarworld
     habr: diarworld
   - id: 1752
@@ -25107,18 +25121,17 @@ speakers:
             имал участие в разработке Big Data ETL framework. Теперь строит Feature store."
   - id: 1760
     photoFileName: 1760.jpg
-    photoUpdatedAt: 2021-09-08T08:15:02.122Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:06:46Z"
     name:
       - {language: en, text: "Natalia Khapaeva"}
       - {language: ru, text: "Наталья Хапаева"}
-    companyIds: [648]
+    companyIds: [302, 648]
     bio:
-      - {language: en, text: "Graduate of MSU Faculty of Computational Mathematics and Cybernetics. More than 14 years of\
-            \ experience in fintech and telecom as a developer, architect, expert of data governance, and product owner. Now\
-            \ he builds the MLOps platform at MTS."}
-      - {language: ru, text: "Окончила ВМК МГУ. Более 14 лет опыта в ИТ-индустрии в финтех и телеком компаниях в качестве\
-            \ разработчика, архитектора, эксперта по data governance и владельца продукта. Сейчас строит MLOps-платформу в\
-            \ МТС."}
+      - {language: en, text: "<p>Graduate of MSU Faculty of Computational Mathematics and Cybernetics. More than 14 years\
+            \ of experience in fintech and telecom as a developer, architect, expert of data governance, and product owner.\
+            \ Now builds the MLOps platform at MTS.</p>"}
+      - {language: ru, text: "Окончила ВМК МГУ. Более 10 лет занимаюсь архитектурой, data governance и продуктами в данных\
+            \ и инфраструктуре для работы с ними. Сейчас строю платформу данных и DG."}
     twitter: madhape
     gitHub: madhape
   - id: 1761
@@ -26217,15 +26230,15 @@ speakers:
     name:
       - {language: en, text: "Alexander Borgardt"}
       - {language: ru, text: "Александр Боргардт"}
-    companyIds: []
+    companyIds: [1272]
     bio:
-      - {language: en, text: "<p>For more than 10 years he has been researching new approaches and creating solutions in AdTech,\
-            \ FinTech, MedTech and ML. Areas of interest include distributed systems development, parallel and competitive\
-            \ information processing. Makes the world better by <a href=\"https://duckstax.com/\">opensource</a>.</p>"}
-      - {language: ru, text: "<p>Более 10 лет занимается исследованием новых подходов и созданием решений в областях AdTech,\
-            \ FinTech, MedTech и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и к\
-            онкурентной обработки информации. Улучшает мир посредством <a href=\"https://duckstax.com/\" target=\"_blank\"\
-            \ rel=\"noopener noreferrer\">опенсорса.</a></p>"}
+      - {language: en, text: "More than 10 years researches new approaches and creates solutions for advertisements, fintech\
+            \ and ML. Among fields of interests there are questions of developing distributed systems, parallel and concurrent\
+            \ handle of information. Makes the world better by <a href=\"https://duckstax.com/\" rel=\"noopener noreferrer\"\
+            \ target=\"_blank\">opensource</a>.&nbsp;"}
+      - {language: ru, text: "<p>Более 10 лет занимается исследованием новых подходов и созданием решений в областях рекла\
+            мы, финтеха и ML. В область интересов входят вопросы разработки распределенных систем, параллельной и конкурен\
+            тной обработки информации. Улучшает мир посредством <a href=\"https://duckstax.com/\">опенсорса</a>.</p>"}
     twitter: k0tbegem0t
     gitHub: kotbegemot
   - id: 1833
@@ -32248,20 +32261,22 @@ speakers:
             раховых компаний.</p>"}
   - id: 2242
     photoFileName: 2242.jpg
-    photoUpdatedAt: 2022-08-29T09:17:09Z[UTC]
+    photoUpdatedAt: "2024-08-01T08:48:10Z"
     name:
       - {language: en, text: "Nikita Blagodarnyi"}
       - {language: ru, text: "Никита Благодарный"}
-    companyIds: [951]
+    companyIds: [1271]
     bio:
       - language: en
-        text: "<p>Data engineer with 15 years of experience. Started at Sber with Oracle/Teradata, then did some Hadoop projects\
-            \ at CROC, worked with manydata at Gazpromneft.</p>\n<p>Now he is working on some analytical solutions in the\
-            \ CRPT.</p>\n<p>Writes at:</p>\n<p>https://t.me/moscowspark</p>\n<p>https://t.me/hadoopusers.</p>"
+        text: "<p>Data engineer with 17 years of experience. Started at Sber with Oracle/Teradata, then did some Hadoop projects\
+            \ at CROC, worked with manydata at Gazprom Neft.</p>\n<p>Now he is working on Big Data solutions at CRPT (Chestnyj\
+            \ znak).</p>\n<p>Participates in Telegram communities <a href=\"https://t.me/moscowspark\">Moscow Spark</a> and\
+            \ <a href=\"https://t.me/hadoopusers\">Data Engineers</a>.</p>"
       - language: ru
-        text: "<p>Дата-инженер c 15-летним cтажем. Начинал в Сбере на Oracle/Teradata, потом делал несколько Hadoop-проект\
-            ов в КРОК, работал с manydata в Газпромнефть.</p>\n<p>Сейчас занимается аналитическими решениями в ЦРПТ.</p>\n\
-            <p>Пишет в:</p>\n<p>https://t.me/moscowspark</p>\n<p>https://t.me/hadoopusers.</p>"
+        text: "<p>Data Engineer c 17-летним cтажем. Начинал в Сбере на Oracle/Teradata, потом работал над несколькими Hadoop-п\
+            роектами в КРОК. Работал с manydata в &laquo;Газпром нефти&raquo;.</p>\n<p>Сейчас занимается Big Data-решениям\
+            и в ЦРПТ (Честный знак).</p>\n<p>Участник Telegram-сообществ <a href=\"https://t.me/moscowspark\">Moscow Spark</a>\
+            \ и <a href=\"https://t.me/hadoopusers\">Data Engineers</a>.</p>"
   - id: 2243
     photoFileName: 2243.jpg
     photoUpdatedAt: 2022-09-08T08:46:45Z[UTC]
@@ -32373,17 +32388,19 @@ speakers:
     habr: kuzin_d
   - id: 2250
     photoFileName: 2250.jpg
-    photoUpdatedAt: 2022-09-20T12:13:25Z[UTC]
+    photoUpdatedAt: "2024-07-22T07:36:08Z"
     name:
       - {language: en, text: "Leonid Kozhinov"}
       - {language: ru, text: "Леонид Кожинов"}
     companyIds: [952]
     bio:
-      - {language: en, text: "<p>Developer, DevOps engineer, IT polyglot. Ruined my karma by writing the backend for a browser-based\
-            \ MMORPG. Helped build search anti-spam and moderate ads. Makes a happy future for analysts and data scientists.</p>"}
-      - {language: ru, text: "<p>Разработчик, DevOps-инженер, IT-полиглот. Подпортил карму написанием бэкенда для браузерн\
-            ой ММОРПГ. Помогал строить поисковый антиспам и модерировать рекламу. Делает счастливое будущее аналитиков и д\
-            ата-сайентистов.</p>"}
+      - language: en
+        text: "<p>Developer, DevOps engineer, IT polyglot. Ruined his karma by writing the backend for a browser-based MMORPG.</p>\n\
+            <p>Helped build search anti-spam and moderate ads. Makes a happy future for analysts and data scientists.</p>"
+      - language: ru
+        text: "<p>Разработчик, DevOps-инженер, IT-полиглот. Подпортил карму написанием бэкенда для браузерной ММОРПГ.</p>\n\
+            <p>Помогал строить поисковый антиспам и модерировать рекламу. Делает счастливое будущее аналитиков и дата-сайе\
+            нтистов.</p>"
   - id: 2251
     photoFileName: 2251.jpg
     photoUpdatedAt: 2022-09-05T10:40:30Z[UTC]
@@ -32534,13 +32551,12 @@ speakers:
     name:
       - {language: en, text: "Oleg Kochergin"}
       - {language: ru, text: "Олег Кочергин"}
-    companyIds: []
+    companyIds: [410]
     bio:
-      - {language: en, text: "<p>Over twenty years in IT: first 15 in development, last 7 in data. Led projects in multiple\
-            \ domains: geodata, product analytics platforms, feature store, data platforms.</p>"}
-      - {language: ru, text: "<p>Более двадцати лет в IT: первые 15 в разработке, последние 7 &mdash; в data. Лидировал пр\
-            оекты во множестве доменов &ndash; геоданных, платформах продуктовой аналитики, feature store, платформах данн\
-            ых.</p>"}
+      - {language: en, text: "<p>Oleg has over twenty years in IT: first 15 &mdash; in development, last 7 in data. He led\
+            \ projects in multiple domains: geodata, product analytics platforms, feature store, data platforms.</p>"}
+      - {language: ru, text: "<p>Более 20 лет в IT: первые 15 в разработке, последние 7 &mdash; в data. Вел проекты во мно\
+            жестве доменов: геоданные, платформы продуктовой аналитики, feature store, платформы данных.</p>"}
   - id: 2267
     photoFileName: 2267.jpg
     photoUpdatedAt: "2023-07-04T11:03:34Z"
@@ -32576,31 +32592,28 @@ speakers:
             ейчас развивает алгоритмы поиска и отбора данных для ML-моделей в Upgini.</p>"}
   - id: 2269
     photoFileName: 2269.jpg
-    photoUpdatedAt: "2022-09-19T15:28:09Z"
+    photoUpdatedAt: "2024-06-25T13:31:12Z"
     name:
       - {language: en, text: "Valentin Panovskiy"}
       - {language: ru, text: "Валентин Пановский"}
-    companyIds: [960]
+    companyIds: [1277]
     bio:
-      - {language: en, text: "<p>PhD in Physics and Mathematics, about 10 years of cumulative experience in commerce and research\
-            \ projects: was involved in building and developing machine learning algorithms to solve applied problems in various\
-            \ areas (from E-commerce to ecology and EdTech), as well as digitization of business with subsequent transition\
-            \ to DDD management strategy. Currently, the CDO of video service more.tv, previously headed the data processing\
-            \ department at Skillbox. Associate Professor in the Department of Information Technology and Applied Mathematics\
-            \ at the MAI (National Research University). Founder of <a style=\"font-family: -apple-system, BlinkMacSystemFont,\
-            \ 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\" href=\"https://foxdriven.ru/\"\
-            >Fox Driven</a>.</p>"}
+      - language: en
+        text: "<p>CDO of BestDoctor Holding, PhD in Physics and Mathematics, Associate Professor at the Faculty of Information\
+            \ Technologies and Applied Mathematics of MAI (National Research University), founder of the <a href=\"https://datakata.ru/\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">Data Kata</a> project.</p>\n<p>About ten years of cumulative experience\
+            \ in working and running scientific projects. Was engaged in building and developing machine learning algorithms\
+            \ for solving applied problems in various spheres, as well as for digitization of business with subsequent transition\
+            \ to DDD management strategy (from e-commerce and ecology to EdTech and InsurTech).</p>\n<p>Ex-CDO of the streaming\
+            \ service more.tv and the EdTech platform Skillbox. Ex-director of the data platform of the Wildberries marketplace.</p>"
       - language: ru
-        text: "<p>Кандидат физико-математических наук, около десяти лет суммарного опыта работы и ведения научных проектов\
-            . Занимался построением и развитием алгоритмов машинного обучения для решения прикладных задач в разных сферах\
-            \ (от E-commerce до экологии и EdTech), а также для оцифровки бизнеса с последующим переходом на DDD-стратегию\
-            \ управления.</p>\n<p>CDO видеосервиса more.tv, ранее руководил департаментом обработки данных в Skillbox. Доц\
-            ент факультета &laquo;Информационные технологии и прикладная математика&raquo; МАИ (НИУ).&nbsp;<span style=\"\
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica\
-            \ Neue', sans-serif;\">Основатель проекта </span><a style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe\
-            \ UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\" href=\"https://foxdriven.ru/\"\
-            >Fox Driven</a><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,\
-            \ Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">.</span></p>"
+        text: "<p>CDO холдинга BestDoctor, кандидат физико-математических наук, доцент факультета &laquo;Информационные те\
+            хнологии и прикладная математика&raquo; МАИ (НИУ), основатель проекта <a href=\"https://datakata.ru/\" target=\"\
+            _blank\" rel=\"noopener noreferrer\">Data Kata</a>.</p>\n<p>Около десяти лет суммарного опыта работы и ведения\
+            \ научных проектов. Занимался построением и развитием алгоритмов машинного обучения для решения прикладных зад\
+            ач в разных сферах, а также для оцифровки бизнеса с последующим переходом на DDD-стратегию управления (от e-commerce\
+            \ и экологии до EdTech и InsurTech).</p>\n<p>Ex-CDO стримингового сервиса more.tv и EdTech-платформы Skillbox.\
+            \ Ex-директор платформы данных маркетплейса Wildberries.</p>"
     gitHub: wol4aravio
     habr: wol4aravio
   - id: 2270
@@ -40652,14 +40665,14 @@ speakers:
             ми в области обработки данных для управления транспортными потоками.</p>"}
   - id: 2829
     photoFileName: 2829.jpg
-    photoUpdatedAt: "2023-07-18T11:23:13Z"
+    photoUpdatedAt: "2024-07-18T14:12:08Z"
     name:
       - {language: en, text: "Alina Kocheva"}
       - {language: ru, text: "Алина Кочева"}
     companyIds: [410]
     bio:
       - {language: en, text: "<p>DevOps with a bias toward MLOps.</p>"}
-      - {language: ru, text: "<p>DevOps с уклоном в MLOps.</p>"}
+      - {language: ru, text: "DevOps с уклоном в MLOps."}
     habr: alina_kocheva
   - id: 2830
     photoFileName: 2830.jpg
@@ -47335,15 +47348,16 @@ speakers:
     gitHub: minemile
   - id: 3277
     photoFileName: 3277.jpg
-    photoUpdatedAt: "2024-04-03T16:21:08Z"
+    photoUpdatedAt: "2024-07-22T12:01:30Z"
     name:
-      - {language: en, text: "Dmitry Krylov"}
+      - {language: en, text: "Dmitrii Krylov"}
       - {language: ru, text: "Дмитрий Крылов"}
     companyIds: [1261]
     bio:
-      - {language: ru, text: "<p>Разработчик с опытом в ML. Руководит разработкой в компании Bestplace: они создают аналит\
-            ическую ML-платформу для геоданных. Раньше занимался машинным обучением и разработкой в Яндексе и КонсультантП\
-            люс.</p>"}
+      - {language: en, text: "<p>Developer with experience in ML. Leads development at Bestplace, a company creating an analytical\
+            \ ML platform for geodata. Previously worked in machine learning and development at Yandex and ConsultantPlus.</p>"}
+      - {language: ru, text: "Разработчик с опытом в ML. Руководит разработкой в компании Bestplace, создающей аналитическ\
+            ую ML-платформу для геоданных. Раньше занимался машинным обучением и разработкой в Яндексе и КонсультантПлюс."}
     gitHub: mityakrylov
   - id: 3278
     photoFileName: 3278.jpg
@@ -48421,3 +48435,788 @@ speakers:
             рными вставками, так и для написания высокоуровневой игровой логики.</p>\n<p>Около 8 лет в компании. Занимался\
             \ разработкой игрового движка, инструментов и графики. Сейчас возглавляет команду Tech &amp; Tools на проекте\
             \ &laquo;Мир кораблей&raquo;.</p>"
+  - id: 3346
+    photoFileName: 3346.jpg
+    photoUpdatedAt: "2024-06-14T06:02:06Z"
+    name:
+      - {language: en, text: "Dmitrii Vertlib"}
+      - {language: ru, text: "Дмитрий Вертлиб"}
+    companyIds: [1271]
+    bio:
+      - {language: en, text: "<p>He has been working with data for more than 10 years, with big data &mdash; for 4 years.\
+            \ He is passionate about optimisation of data processing and distributed computing.</p>"}
+      - {language: ru, text: "<p>Работает с данными больше 10 лет, с большими данными &mdash; 4 года. Увлекается оптимизац\
+            ией процессов обработки данных и направлением распределенных вычислений.</p>"}
+  - id: 3347
+    photoFileName: 3347.jpg
+    photoUpdatedAt: "2024-07-19T07:29:56Z"
+    name:
+      - {language: en, text: "Evgenii Ivanov"}
+      - {language: ru, text: "Евгений Иванов"}
+    companyIds: [689]
+    bio:
+      - language: en
+        text: "<p>Evgenii has had a passion for programming since his teenage years and has been fortunate to accumulate a\
+            \ wide range of experience. He contributed to the MINIX 3 operating system under the supervision of Professor\
+            \ Andrew Tanenbaum. Later, he worked at a fintech startup, where he developed a keen interest in performance optimization.</p>\n\
+            <p>Currently, the speaker is a principal developer at Yandex, where he is deeply committed to enhancing various\
+            \ aspects of YDB performance.</p>"
+      - language: ru
+        text: "<p>Увлекается программированием со школы. Евгению очень повезло, и за свою карьеру он получил самый разнооб\
+            разный опыт. Посчастливилось поработать над операционной системой MINIX 3 под руководством профессора Эндрю Та\
+            ненбаума. Потом был финтех, где полюбил задачи, связанные с производительностью.</p>\n<p>Сейчас спикер &mdash;\
+            \ ведущий разработчик в Яндексе, занимается анализом и улучшением производительности YDB.</p>"
+    twitter: eivanov89
+    gitHub: eivanov89
+    habr: eivanov
+  - id: 3348
+    photoFileName: 3348.jpg
+    photoUpdatedAt: "2024-08-14T15:34:08Z"
+    name:
+      - {language: en, text: "Oleg Bondar"}
+      - {language: ru, text: "Олег Бондарь"}
+    companyIds: [689]
+    bio:
+      - language: en
+        text: "<p>YDB Product Director. Responsible for YDB development. Participated in the release of YDB into open source.</p>\n\
+            <p>Before joining Yandex, he developed software and hardware-software complexes in telecommunications.</p>\n<p>Has\
+            \ been in the industry for over 20 years.</p>"
+      - language: ru
+        text: "<p>Директор продукта YDB. Отвечает за развитие YDB, участвовал в ее выходе в open source.</p>\n<p>До приход\
+            а в Яндекс разрабатывал ПО и программно-аппаратные комплексы в сфере телекоммуникаций.</p>\n<p>В индустрии бол\
+            ьше 20 лет.</p>"
+  - id: 3349
+    photoFileName: 3349.jpg
+    photoUpdatedAt: "2024-08-22T08:05:13Z"
+    name:
+      - {language: en, text: "Dmitrii Ustiugov"}
+      - {language: ru, text: "Дмитрий Устюгов"}
+    companyIds: [1273]
+    bio:
+      - language: en
+        text: "<p>Dmitrii is an Assistant Professor at NTU Singapore. Previously, he was a Postdoctoral Researcher at ETH\
+            \ Zurich. Dmitrii received a Ph.D. from the University of Edinburgh.</p>\n<p>Dmitrii&rsquo;s research interests\
+            \ lie at the intersection of Computer Systems and Architecture with a current focus on support for serverless\
+            \ cloud and large-scale AI systems. His works are published in the materials of top-tier computer systems and\
+            \ architecture venues, such as OSDI, ASPLOS, and ISCA.</p>"
+      - language: ru
+        text: "<p>Доцент NTU Singapore. Ранее был постдоком в <span class=\"mw-page-title-main\">Швейцарской высшей технич\
+            еской школе Цюриха</span>. Получил степень кандидата наук в Эдинбургском университете.</p>\n<p>Исследовательск\
+            ие интересы Дмитрия находятся на пересечении компьютерных систем и архитектуры с текущим акцентом на поддержку\
+            \ serverless-облаков и крупномасштабных AI-систем. Его работы публикуются в материалах ведущих конференций по\
+            \ компьютерным системам и архитектуре, таких как OSDI, ASPLOS и ISCA.</p>"
+    twitter: DmitriiUstiugov
+    gitHub: ustiugov
+  - id: 3350
+    photoFileName: 3350.jpg
+    photoUpdatedAt: "2024-07-29T11:58:22Z"
+    name:
+      - {language: en, text: "Dmitrii Ulianin"}
+      - {language: ru, text: "Дмитрий Ульянин"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>He has been working at Yandex for 6 years. He has been in Search for about 3 years and has\
+            \ been developing ML Inference services in Advertising for 3 years.</p>"}
+      - {language: ru, text: "<p>Работает в Яндексе 6 лет. Примерно 3 года в Поиске и 3 года разрабатывает сервисы ML Inference\
+            \ в Рекламе.</p>"}
+    gitHub: ulyanin
+    habr: ulyanin
+  - id: 3351
+    photoFileName: 3351.jpg
+    photoUpdatedAt: "2024-06-10T11:32:19Z"
+    name:
+      - {language: en, text: "Aleksandra Popova"}
+      - {language: ru, text: "Александра Попова"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p spellcheck=\"false\">All of Aleksandra's professional experience is related to data. She\
+            \ has worked on DWH projects for more than 8 years and believes that data is one of the main assets ​​of any company.</p>"}
+      - {language: ru, text: "Вся профессиональная деятельность Александры связана с данными. Больше 8 лет работает на про\
+            ектах по построению и развитию DWH и считает, что данные – одна из главных ценностей любой компании."}
+    gitHub: coca-alex
+  - id: 3353
+    photoFileName: 3353.jpg
+    photoUpdatedAt: "2024-08-15T15:53:28Z"
+    name:
+      - {language: en, text: "Anton Bukreev"}
+      - {language: ru, text: "Антон Букреев"}
+    companyIds: [1275]
+    bio:
+      - {language: en, text: "<p spellcheck=\"false\">Data Engineer at Cryptology. Is engaged in the construction and development\
+            \ of the company's data warehouse. Active member of Airbyte and NiFi Telegram communities.</p>"}
+      - {language: ru, text: "<p>Инженер данных в Cryptology. Строит и развивает хранилище данных компании. Активный участ\
+            ник Telegram-сообществ Airbyte и NiFi.</p>"}
+  - id: 3354
+    photoFileName: 3354.jpg
+    photoUpdatedAt: "2024-08-16T14:14:15Z"
+    name:
+      - {language: en, text: "Vasily Safronov"}
+      - {language: ru, text: "Василий Сафронов"}
+    companyIds: [975]
+    bio:
+      - {language: en, text: "Independent expert. The main focus of projects is building data platforms for business."}
+      - {language: ru, text: "Независимый эксперт. Основной фокус проектов — построение платформ данных для бизнеса."}
+    gitHub: gingeard
+  - id: 3355
+    photoFileName: 3355.jpg
+    photoUpdatedAt: "2022-10-05T12:22:34Z"
+    name:
+      - {language: en, text: "Nikolay Akimov"}
+      - {language: ru, text: "Николай Акимов"}
+    companyIds: [1276]
+    bio:
+      - language: en
+        text: "<p>In 1989, he soldered his first computer with his own hands. Later his professional career was mainly in\
+            \ IT. For the last year he has been actively developing various business scenarios in Apache NiFi.</p>\n<p>Active\
+            \ member of the NiFi user community in Russia <a href=\"https://t.me/nifiusers\">nifiusers</a>.</p>"
+      - language: ru
+        text: "<p>В 1989 году собственноручно спаял свой первый компьютер. В дальнейшем профессиональная карьера была связ\
+            ана в основном с IT. Последний год разрабатывает бизнес-сценарии в Apache NiFi.</p>\n<p>Активный участник сооб\
+            щества пользователей NiFi в России <a href=\"https://t.me/nifiusers\">nifiusers</a>.</p>"
+  - id: 3356
+    photoFileName: 3356.jpg
+    photoUpdatedAt: "2024-07-18T07:44:55Z"
+    name:
+      - {language: en, text: "Alsu Nurutdinova"}
+      - {language: ru, text: "Алсу Нурутдинова"}
+    companyIds: [410]
+    bio:
+      - language: en
+        text: "<p>A specialist in the field of machine learning. Deals with attack detection, anomaly detection, NLP.</p>\n\
+            <p>Candidate of Physical and Mathematical Sciences. Participant of scientific and practical conferences, e.g.\
+            \ Data Fest Siberia (2022), Moscow Python Conf++ 2023.</p>"
+      - language: ru
+        text: "<p>Специалист в области машинного обучения. Занимается задачами детектирования атак, поиском аномалий, NLP.</p>\n\
+            <p>Кандидат физико-математических наук. Участник научных и практических конференций, например Data Fest Siberia\
+            \ (2022), Moscow Python Conf++ 2023.</p>"
+  - id: 3357
+    photoFileName: 3357.jpg
+    photoUpdatedAt: "2024-07-19T12:59:34Z"
+    name:
+      - {language: en, text: "Igor Shemarov"}
+      - {language: ru, text: "Игорь Шемаров"}
+    companyIds: [955]
+    bio:
+      - language: en
+        text: "<p>Middle Java developer at Axenix.</p>\n<p>Graduated from TvSU, specialising in computer security and mathematical\
+            \ control methods.</p>"
+      - language: ru
+        text: "<p>Middle Java-разработчик в Axenix.</p>\n<p>Окончил ТвГУ по специальности &laquo;компьютерная безопасность\
+            \ и математические методы управления&raquo;.</p>"
+  - id: 3358
+    photoFileName: 3358.jpg
+    photoUpdatedAt: "2024-07-22T07:33:40Z"
+    name:
+      - {language: en, text: "Nikita Yurasov"}
+      - {language: ru, text: "Никита Юрасов"}
+    companyIds: [952]
+    bio:
+      - {language: en, text: "<p>As a developer by vocation, a data engineer by profession, and a mathematician at heart,\
+            \ Nikita embarked on his career in data science. However, he soon realized that programming, particularly when\
+            \ it involves data processing, truly fascinates him.</p>"}
+      - {language: ru, text: "Разработчик по призванию, data engineer по профессии и математик в душе. Начал свою карьеру\
+            \ в data science, но быстро понял, что любое программирование интереснее, особенно если оно связано с обработк\
+            ой данных."}
+    gitHub: NikitaYurasov
+  - id: 3359
+    photoFileName: 3359.jpg
+    photoUpdatedAt: "2024-07-26T08:21:42Z"
+    name:
+      - {language: en, text: "Milena Bulkina"}
+      - {language: ru, text: "Милена Булкина"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Data Engineer at T-Bank. Graduated from ITMO this year.</p>"}
+      - {language: ru, text: "<p>Data Engineer в Т-Банке. Окончила ИТМО ПМИ в этом году.</p>"}
+  - id: 3360
+    photoFileName: 3360.jpg
+    photoUpdatedAt: "2024-07-24T09:22:03Z"
+    name:
+      - {language: en, text: "Anastasiya Sashina"}
+      - {language: ru, text: "Анастасия Сашина"}
+    companyIds: [674]
+    bio:
+      - language: en
+        text: "<p>Anastasiya has been a backend developer in Java / Kotlin for more than 2 years already. She has a bachelor's\
+            \ degree, is a student of the ITMO Master's program \"Design and Development of Big Data Systems\".</p>\n<p>\"\
+            I'm a professional\" and \"ITMO Megaolympiad\" competitions winner, author of articles about Debezium in VSU's\
+            \ scientific journal. She is interested in backend development with big data processing.</p>"
+      - language: ru
+        text: "<p>Разрабатывает бэкенд для приложений на Java / Kotlin уже более 2 лет. Окончила бакалавриат, студент маги\
+            стратуры ИТМО &laquo;Проектирование и разработка систем больших данных&raquo;.</p>\n<p>Призер олимпиад &laquo;Я\
+            \ &mdash; профессионал&raquo; и &laquo;Мегаолимпиада ИТМО&raquo;, автор статей по использованию Debezium для н\
+            аучного журнала ВГУ. Интересуется обработкой больших данных на стыке разработки.</p>"
+  - id: 3361
+    photoFileName: 3361.jpg
+    photoUpdatedAt: "2024-06-17T08:39:47Z"
+    name:
+      - {language: en, text: "Anar Baghirov"}
+      - {language: ru, text: "Анар Багиров"}
+    companyIds: [611]
+    bio:
+      - {language: en, text: "<p>Frontend developer in the Tools team. Former data engineer and backend developer. During\
+            \ his career, interacted a lot with analysts and business.</p>"}
+      - {language: ru, text: "<p>Frontend-разработчик в команде Tools. В прошлом data-инженер и backend-разработчик. За ка\
+            рьеру очень много взаимодействовал с аналитиками и бизнесом.</p>"}
+  - id: 3362
+    photoFileName: 3362.jpg
+    photoUpdatedAt: "2024-07-08T08:08:47Z"
+    name:
+      - {language: en, text: "Roman Ananev"}
+      - {language: ru, text: "Роман Ананьев"}
+    companyIds: [611]
+    bio:
+      - {language: en, text: "<p>Engineer of the DBA unit and NoSQL team at Avito.</p>"}
+      - {language: ru, text: "<p>Инженер юнита DBA и команды NoSQL в Авито.</p>"}
+  - id: 3363
+    photoFileName: 3363.jpg
+    photoUpdatedAt: "2024-07-15T12:17:59Z"
+    name:
+      - {language: en, text: "Denis Lukianov"}
+      - {language: ru, text: "Денис Лукьянов"}
+    companyIds: [1279]
+    bio:
+      - {language: en, text: "<p>Supervises DWH data model architecture at Ecom.tech. About 10 years in DWH in roles from\
+            \ BI developer to DWH system architecture manager and architect. Successfully implemented DWH migration projects\
+            \ from different stacks to Greenplum using Data Vault methodology.</p>"}
+      - {language: ru, text: "<p>Курирует направление архитектуры модели данных DWH в Ecom.tech. Около 10 лет в сфере DWH\
+            \ в ролях от BI-разработчика до руководителя системной архитектуры DWH и архитектора. Успешно реализовывал про\
+            екты миграции DWH с различных стеков на Greenplum по методологии Data Vault.</p>"}
+  - id: 3364
+    photoFileName: 3364.jpg
+    photoUpdatedAt: "2024-09-07T12:31:57Z"
+    name:
+      - {language: en, text: "Dmitrii Rudnev"}
+      - {language: ru, text: "Дмитрий Руднев"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Over 10 years of experience in developing tools for data visualization and management. Currently,\
+            \ Dmitrii leads the data management tools development division at T-Bank. His team develops and implements data\
+            \ quality control tools, data catalogs, and a new area &mdash; data contracts.</p>"}
+      - {language: ru, text: "<p>Более 10 лет опыта в разработке инструментов для визуализации и работы с данными. Сейчас\
+            \ руководит направлением разработки инструментов управления данными в T-Банке. Команда Дмитрия разрабатывает и\
+            \ внедряет инструменты контроля качества данных, дата-каталоги и новое направление &mdash; дата-контракты.</p>"}
+  - id: 3365
+    photoFileName: 3365.jpg
+    photoUpdatedAt: "2024-07-15T11:24:06Z"
+    name:
+      - {language: en, text: "Antony Aleksandrov"}
+      - {language: ru, text: "Антон Александров"}
+    companyIds: [1280]
+    bio:
+      - language: en
+        text: "<p>Graduated from MIIT with a degree in applied mathematics and computer science and from MIPT with a degree\
+            \ in applied mathematics and physics.</p>\n<p>Has been working with Big Data tools for 9 years.</p>\n<p>He is\
+            \ now creating a Big Data platform at Detsky Mir.</p>"
+      - language: ru
+        text: "<p>Окончил МИИТ по специальности &laquo;прикладная математика и информатика&raquo; и МФТИ по специальности\
+            \ &laquo;прикладная математика и физика&raquo;.</p>\n<p>Работает с Big Data tools 9 лет.</p>\n<p>Сейчас создае\
+            т Big Data-платформу в &laquo;Детском мире&raquo;.</p>\n<p>&nbsp;</p>"
+    twitter: BioQwer
+    gitHub: BioQwer
+    habr: BioQwer
+  - id: 3366
+    photoFileName: 3366.jpg
+    photoUpdatedAt: "2024-07-18T07:12:50Z"
+    name:
+      - {language: en, text: "Sergey Zhemzhitsky"}
+      - {language: ru, text: "Сергей Жемжицкий"}
+    companyIds: [48]
+    bio:
+      - {language: en, text: "<p>Likes finding and applying simple solutions to complex issues. Having about 15 years of experience\
+            \ in data collection and processing, Sergey has been a co-founder and CTO of a startup collecting and processing\
+            \ user behavioural data (Customer Data Platform) and worked as a Head of Data in the RnD department of quite a\
+            \ large bank.</p>"}
+      - {language: ru, text: "<p>Любит технологии и простые решения непростых задач. Почти 15 лет занимается вопросами сбо\
+            ра и обработки данных. В прошлом &mdash; Head of Data RnD-подразделения крупного банка, а также сооснователь и\
+            \ CTO стартапа по сбору, обработке и анализу пользовательских данных (Customer Data Platform).</p>"}
+  - id: 3367
+    photoFileName: 3367.jpg
+    photoUpdatedAt: "2024-07-17T14:42:39Z"
+    name:
+      - {language: en, text: "Petr Gurinov"}
+      - {language: ru, text: "Пётр Гуринов"}
+    companyIds: [1281]
+    bio:
+      - {language: en, text: "DE Practice Lead at Lemana PRO (ex-Leroy Merlin). Responsible for the growth of data engineers\
+            \ in the company, launching R&amp;D projects, and implementing lakehouse."}
+      - {language: ru, text: "<p>Руководитель практики DE в Лемана ПРО (Леруа Мерлен). Отвечает за рост дата-инженеров в к\
+            омпании, запускает RnD-проекты, внедряет lakehouse.</p>"}
+  - id: 3368
+    photoFileName: 3368.jpg
+    photoUpdatedAt: "2024-08-01T09:14:54Z"
+    name:
+      - {language: en, text: "Aleksandra Chekmareva"}
+      - {language: ru, text: "Александра Чекмарева"}
+    companyIds: [1271]
+    bio:
+      - {language: en, text: "<p>Alexandra has been working as a DevOps/MLOps within Big Data projects during the last 6 years.\
+            \ Her core competences are the development of CI/CD processes and Big Data platform improvement.</p>"}
+      - {language: ru, text: "<p>Работает DevOps/MLOps на проектах Big Data последние 6 лет. Занимается разработкой CI/CD-п\
+            роцессов и развитием Big Data-платформы.</p>"}
+  - id: 3369
+    photoFileName: 3369.jpg
+    photoUpdatedAt: "2024-06-19T07:08:36Z"
+    name:
+      - {language: en, text: "Leonid Borchuk"}
+      - {language: ru, text: "Леонид Борчук"}
+    companyIds: [689]
+    bio:
+      - language: en
+        text: "<p>Team lead of the Managed Greenplum team at Yandex. He started his career with administration of large commercial\
+            \ databases and analytics, now he develops the Greenplum managed database service in Yandex Cloud.</p>\n<p>He\
+            \ defended his thesis on optimising queries in databases at MAI.</p>"
+      - language: ru
+        text: "<p>Team lead команды Managed Greenplum в Яндексе. Начинал свой путь с администрирования больших коммерчески\
+            х баз данных и аналитики, сейчас разрабатывает сервис управляемых баз данных Greenplum в Yandex Cloud.</p>\n<p>В\
+            \ МАИ защитил диссертацию по оптимизации запросов в базах данных.</p>"
+    gitHub: leborchuk
+    habr: leborchuk
+  - id: 3370
+    photoFileName: 3370.jpg
+    photoUpdatedAt: "2024-07-19T08:27:22Z"
+    name:
+      - {language: en, text: "Aleksei Stytsenko"}
+      - {language: ru, text: "Алексей Стыценко"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>8 years of Big Data at Yandex, team lead of DMP Logos.</p>"}
+      - {language: ru, text: "<p>8 лет занимается Big Data в Яндексе, руководит командой разработки DMP Logos.</p>"}
+  - id: 3371
+    photoFileName: 3371.jpg
+    photoUpdatedAt: "2024-06-03T20:34:46Z"
+    name:
+      - {language: en, text: "Bulat Usmanov"}
+      - {language: ru, text: "Булат Усманов"}
+    companyIds: [1282]
+    bio:
+      - {language: en, text: "An experienced Solutions Architect, engineer, and Development Manager with over 10 years in\
+            \ IT. Possesses in-depth knowledge and skills in modern technologies such as Java, AWS, Data Warehouse and beyond.</p><p>Successfully\
+            \ implemented projects across various industries, including fintech, agriculture, biotechnology, healthcare along\
+            \ with others. Led the development and implementation of AWS Resilience Hub, etc."}
+      - {language: ru, text: "Опытный архитектор решений, инженер и руководитель разработки с более чем 10-летним стажем в\
+            \ IT. Обладает глубокими знаниями и навыками в современных технологиях, таких как Java, AWS, Data Warehouse и\
+            \ не только. Успешно реализовывал проекты в различных сферах, включая финтех, агропромышленность, биотехнологи\
+            и, медицину и т. д. Руководил разработкой и реализовывал AWS Resilience Hub."}
+  - id: 3372
+    photoFileName: 3372.jpg
+    photoUpdatedAt: "2024-07-17T12:46:19Z"
+    name:
+      - {language: en, text: "Pavel Solodovnikov"}
+      - {language: ru, text: "Павел Солодовников"}
+    companyIds: [1278]
+    bio:
+      - language: en
+        text: "<p>C++ developer interested in building DBMSes, query engines and everything else related to the data processing\
+            \ systems.</p>\n<p>Areas of interest: distributed consensus protocols (Paxos, Raft), Apache Arrow.</p>"
+      - language: ru
+        text: "<p>C++ разработчик, последние несколько лет активно интересуется СУБД, движками исполнения запросов и всем\
+            , что связано с системами обработки данных.</p>\n<p>Интересы: распределенные протоколы консенсуса (Paxos, Raft),\
+            \ Apache Arrow.</p>"
+    gitHub: ManManson
+    habr: ManManson
+  - id: 3373
+    photoFileName: 3373.jpg
+    photoUpdatedAt: "2024-07-30T11:27:45Z"
+    name:
+      - {language: en, text: "Natalia Zhuravleva"}
+      - {language: ru, text: "Наталья Журавлева"}
+    companyIds: [390]
+    bio:
+      - language: en
+        text: "<p>She has been working at Ozon for 5 years, worked her way up from a data analyst to the head of the DWH support\
+            \ team &mdash; she has been a product analyst, an analyst in the data engineering team, and a data quality specialist.\
+            \ When she joined the company, she was surprised by the volume of data and the complete lack of data description.</p>\n\
+            <p>Natalia's main goal is to make the user experience of using data at Ozon a positive one.</p>"
+      - language: ru
+        text: "<p>Работает в Ozon 5 лет, прошла путь от аналитика данных до руководителя команды сопровождения DWH &mdash;\
+            \ успела побывать продуктовым аналитиком, аналитиком в команде дата-инженеров, специалистом по data quality. К\
+            огда пришла в компанию, сильно была удивлена объемами данных и при это полным отсутствием их описания.</p>\n<p>О\
+            сновная цель Натальи &mdash; сделать так, чтобы пользовательский опыт использования данных в Ozon был позитивн\
+            ым.</p>"
+  - id: 3374
+    photoFileName: 3374.jpg
+    photoUpdatedAt: "2024-08-08T11:44:18Z"
+    name:
+      - {language: en, text: "Sergei Mukhanov"}
+      - {language: ru, text: "Сергей Муханов"}
+    companyIds: [429]
+    bio:
+      - {language: en, text: "<p>Director of data platform and data management at Raiffeisen Bank (12 teams, over 120 people).\
+            \ Prior to that, he worked in almost all data-related roles at Tinkoff Bank, Tinkoff Mobile, and Vivid Money.</p>"}
+      - {language: ru, text: "<p>Директор по платформе данных и управлению данными в Райффайзен Банке (12 команд, более 120\
+            \ человек). До этого поработал почти во всех ролях в сфере данных в Тинькофф Банке, Тинькофф Мобайле, Vivid Money.</p>"}
+  - id: 3375
+    photoFileName: 3375.jpg
+    photoUpdatedAt: "2024-09-08T13:26:22Z"
+    name:
+      - {language: en, text: "Ivan Dashchinskii"}
+      - {language: ru, text: "Иван Дащинский"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Apache Ignite committer, maintainer of Apache Ignite python client. In charge of Apache Ignite\
+            \ development.</p>"}
+      - {language: ru, text: "<p><span style=\"color: #000000;\">Apache Ignite committer, мейнтейнер Apache Ignite python\
+            \ client. Занимается разработкой Apache Ignite.</span></p>"}
+    twitter: ivandasch
+    gitHub: ivandasch
+    habr: ivandasch
+  - id: 3376
+    photoFileName: 3376.jpg
+    photoUpdatedAt: "2024-08-08T15:42:30Z"
+    name:
+      - {language: en, text: "Alina Baimasheva"}
+      - {language: ru, text: "Алина Баймашева"}
+    companyIds: [715]
+    bio:
+      - {language: en, text: "<p>Alina has a great experience in developing and launching apps in different spheres like accounting,\
+            \ media, realty, ads and crypto fintech. At this time she works in \"Domclick\" company as technical lead and\
+            \ architect of AI platform and AI services, such as text and voice AI assistants, speech analytics and fraud detection,\
+            \ apps with LLMs, real estate price prediction, anti-fraud systems, recommendation systems and computer vision\
+            \ technologies.</p>"}
+      - language: ru
+        text: "<p>Работает в Домклик и руководит разработкой различных <span style=\"color: #495057;\">AI-</span>сервисов\
+            , включая текстовых и голосовых AI-ассистентов, речевую аналитику, большие языковые модели, оценку недвижимост\
+            и, антифрод, рекомендательные системы и компьютерное зрение.</p>\n<p>У Алины большой опыт разработки в таких с\
+            ферах, как бухгалтерия и кадры, медиа, реклама, недвижимость, крипто-финтех.</p>"
+  - id: 3377
+    photoFileName: 3377.jpg
+    photoUpdatedAt: "2024-08-08T15:34:55Z"
+    name:
+      - {language: en, text: "Elizaveta Viksne"}
+      - {language: ru, text: "Елизавета Виксне"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>More than 3 years in analytics. Worked in Ozon, now she is engaged in BI analytics in VK.\
+            \ She has knowledge and experience in data analysis and BI technologies.</p>"}
+      - {language: ru, text: "<p>В аналитике более 3 лет. Работала в Ozon, сейчас занимается BI-аналитикой в VK. Обладает\
+            \ знаниями и опытом в области анализа данных и BI-технологий.</p>"}
+  - id: 3378
+    photoFileName: 3378.jpg
+    photoUpdatedAt: "2024-08-08T15:41:09Z"
+    name:
+      - {language: en, text: "Denis Volkov"}
+      - {language: ru, text: "Денис Волков"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Develops PostgreSQL in Yandex Cloud in the Open Source DBMS development team.</p>"}
+      - {language: ru, text: "<p>Разрабатывает PostgreSQL в Yandex Cloud в команде Open Source DBMS development.</p>"}
+    gitHub: Denchick
+  - id: 3379
+    photoFileName: 3379.jpg
+    photoUpdatedAt: 2024-08-19T13:56Z
+    name:
+      - {language: en, text: "Evgenii Dashchenko"}
+      - {language: ru, text: "Евгений Дащенко"}
+    companyIds: [715]
+    bio:
+      - {language: en, text: "<p>Manages the development team of AI services for property valuation at Domclick. He has extensive\
+            \ development experience in such areas as real estate, banking, commercial development.</p>"}
+      - {language: ru, text: "<p class=\"ql-align-justify\">Управляет командой разработки AI-сервисов для оценки недвижимо\
+            сти в Домклик. Имеет большой опыт коммерческой разработки, а также разработки в сфере недвижимости и банковско\
+            й.</p>"}
+  - id: 3380
+    photoFileName: 3380.jpg
+    photoUpdatedAt: "2024-07-16T19:34:45Z"
+    name:
+      - {language: en, text: "Sergei Emelianov"}
+      - {language: ru, text: "Сергей Емельянов"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Over 15 years of IT experience, specialising in DevOps and full-stack development. During\
+            \ his career, he has worked in various spheres, such as e-commerce, cryptocurrencies and financial technologies.\
+            \ Now he is the leader of the team developing the core of the data platform.</p>"}
+      - {language: ru, text: "<p>Свыше 15 лет опыта работы в области информационных технологий, специализируется на DevOps\
+            \ и full stack-разработке. За время карьеры успел поработать в различных сферах, таких как e-commerce, криптов\
+            алюты и финансовые технологии. Сейчас &mdash; лидер команды, разрабатывающей ядро платформы данных.</p>"}
+  - id: 3381
+    photoFileName: 3381.jpg
+    photoUpdatedAt: "2024-08-08T15:26:36Z"
+    name:
+      - {language: en, text: "Alexander Maksimovich"}
+      - {language: ru, text: "Александр Максимович"}
+    companyIds: [844]
+    bio:
+      - language: en
+        text: "<p>An ETL developer at Gazprombank. His responsibilities include developing and implementing a library for\
+            \ generating synthetic data and conceptualizing a service based on it. Additionally, he handles various data engineering\
+            \ tasks at a startup focused on developing a resume recommendation system for job vacancies.</p>\n<p>Alexander\
+            \ has completed internships at Tinkoff and Avito.</p>"
+      - language: ru
+        text: "<p>ETL-разработчик в Газпромбанке. Занимается разработкой и внедрением библиотеки генерации синтетических д\
+            анных и проработкой концепции сервиса на ее основе. Решает различные дата-инженерные задачи в стартапе, которы\
+            й разрабатывает рекомендательную систему резюме по вакансии.</p>\n<p>Прошел стажировки в Тинькофф и Авито.</p>"
+  - id: 3382
+    photoFileName: 3382.jpg
+    photoUpdatedAt: "2024-07-18T08:21:40Z"
+    name:
+      - {language: en, text: "Evgenii Glotov"}
+      - {language: ru, text: "Евгений Глотов"}
+    companyIds: [1283]
+    bio:
+      - language: en
+        text: "<p>Graduated from Moscow State University with a degree in Big Data mining. He has worked on building data\
+            \ warehouses in large Russian companies.</p>\n<p>At SberAutoTech, he organised the work of a Big Data team that\
+            \ deployed a data warehouse based on PySpark, S3 and K8s. He then switched to creating high-precision maps of\
+            \ Russian roads for the needs of long-haul unmanned trucking.</p>\n<p>In his spare time, he studies deep learning\
+            \ and gives his lecture course on distributed data processing at the Higher School of Economics.</p>"
+      - language: ru
+        text: "<p>Закончил ВМК МГУ по направлению &laquo;интеллектуальный анализ больших данных&raquo;. Работал над постро\
+            ением хранилищ данных в крупных российских компаниях.</p>\n<p>В SberAutoTech организовал работу команды Big Data,\
+            \ которая развернула хранилище данных на основе PySpark, S3 и K8s. Затем переключился на создание высокоточных\
+            \ карт дорог России для нужд магистральных беспилотных грузоперевозок.</p>\n<p>В свободное время изучает deep\
+            \ learning и читает свой курс лекций по распределенной обработке данных во ВШЭ.</p>"
+  - id: 3383
+    photoFileName: 3383.jpg
+    photoUpdatedAt: "2024-07-15T09:11:08Z"
+    name:
+      - {language: en, text: "Tatiana Didova"}
+      - {language: ru, text: "Татьяна Дидова"}
+    companyIds: [1058]
+    bio:
+      - {language: en, text: "<p>5 years in IT. Is engaged in the development of flexible DWH architectural solutions for\
+            \ various data volumes. The main vector of work is aimed at technological development of companies.</p>"}
+      - {language: ru, text: "<p>5 лет в IT. Занимается разработкой гибких архитектурных решений DWH для различного объема\
+            \ данных. Основной вектор работы направлен на технологическое развитие компаний.</p>"}
+  - id: 3384
+    photoFileName: 3384.jpg
+    photoUpdatedAt: "2024-07-22T08:18:07Z"
+    name:
+      - {language: en, text: "Igor Baliuk"}
+      - {language: ru, text: "Игорь Балюк"}
+    companyIds: [611]
+    bio:
+      - language: en
+        text: "<p>As a senior Software Engineer at Avito, Igor develops service mesh and an observability platform. He helps\
+            \ make microservice communication robust, reliable, and flexible and develops tools to troubleshoot the whole\
+            \ system.</p>\n<p>A big fan of distributed systems. Igor also has a successful track record in algorithmic competitions.</p>"
+      - language: ru
+        text: "<p>В роли senior-разработчика в Авито развивает service mesh и собственную observability-платформу. Помогае\
+            т сделать общение микросервисов надежным и гибким, разрабатывает инструменты для помощи в отладке микросервисн\
+            ого общения.</p>\n<p>Изучает распределенные системы и имеет опыт участия в алгоритмических соревнованиях.</p>"
+    gitHub: lodthe
+    habr: lodthe
+  - id: 3385
+    photoFileName: 3385.jpg
+    photoUpdatedAt: "2024-07-30T09:47:01Z"
+    name:
+      - {language: en, text: "Aleksandr Madumarov"}
+      - {language: ru, text: "Александр Мадумаров"}
+    companyIds: [1284]
+    bio:
+      - language: en
+        text: "<p>Graduated from SmolGU with a degree in Applied Mathematics and Informatics. Since 2022 he has been Data\
+            \ Engineer at the Innovation Centre \"Bezopasnyj transport\".</p>\n<p>The Innovation Centre is the unified big\
+            \ data repository of the entire Moscow Transport Complex. Their stack: Hadoop, Spark, Kafka, Vertica, PostgreSQL,\
+            \ Python.</p>"
+      - language: ru
+        text: "<p>Окончил СмолГу по направлению &laquo;прикладная математика и информатика&raquo;. С 2022 года &mdash; Data\
+            \ Engineer в Инновационном центре &laquo;Безопасный Транспорт&raquo;.</p>\n<p>ИЦ &mdash; единое хранилище боль\
+            ших данных всего Транспортного комплекса Москвы. Их стек: Hadoop, Spark, Kafka, Vertica, PostgreSQL, Python.</p>"
+  - id: 3386
+    photoFileName: 3386.jpg
+    photoUpdatedAt: "2024-07-30T09:10:40Z"
+    name:
+      - {language: en, text: "Arsenii Biriukov"}
+      - {language: ru, text: "Арсений Бирюков"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>16 years in data warehousing and analytics. Started with MS SQL Server, then moved to Vertica,\
+            \ Greenplum and ClickHouse. Loves optimising queries and solving performance problems.</p>"}
+      - {language: ru, text: "<p>16 лет занимается хранилищами данных и аналитикой. Начинал с MS SQL Server, потом перешел\
+            \ на Vertica, Greenplum и ClickHouse. Любит оптимизировать запросы и решать проблемы с производительностью.</p>"}
+  - id: 3387
+    photoFileName: 3387.jpg
+    photoUpdatedAt: "2024-08-14T08:12:32Z"
+    name:
+      - {language: en, text: "Danil Sabirov"}
+      - {language: ru, text: "Данил Сабиров"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Leads the streaming data development team in DMP of Yandex Go. Integrates Apache Flink into\
+            \ Yandex infrastructure. In the past he developed NRT processing at Belka Games.</p>"}
+      - {language: ru, text: "<p>Руководит группой развития потоковой обработки данных в DMP Яндекс Go. Интегрирует Apache\
+            \ Flink в инфраструктуру Яндекса. В прошлом разрабатывал NRT-процессинг в Belka Games.</p>"}
+  - id: 3388
+    photoFileName: 3388.jpg
+    photoUpdatedAt: "2024-07-31T12:47:34Z"
+    name:
+      - {language: en, text: "Mariia Buchenkova"}
+      - {language: ru, text: "Мария Бученкова"}
+    companyIds: [1280]
+    bio:
+      - language: en
+        text: "<p>Graduated from MIPT with a degree in applied mathematics and physics.</p>\n<p>In data for more than 8 years.</p>\n\
+            <p>Mariia worked her way up from ML &rarr; MLOps &rarr; Data engineer and worked in the banks of all colours.</p>\n\
+            <p>She is applying the experience gained at Detsky Mir, implementing new tools for data collection and processing.</p>"
+      - language: ru
+        text: "<p>Окончила МФТИ по специальности &laquo;прикладная математика и физика&raquo;.</p>\n<p>В data больше 8 лет\
+            .</p>\n<p>Прошла путь ML &rarr; MLOps &rarr; Data engineer и перебрала цвета всех банков.</p>\n<p>Применяет по\
+            лученный опыт в &laquo;Детском мире&raquo;, внедряя новые инструменты сбора и обработки данных.</p>\n<p>&nbsp;</p>"
+  - id: 3389
+    photoFileName: 3389.jpg
+    photoUpdatedAt: "2024-07-31T12:40:23Z"
+    name:
+      - {language: en, text: "Vladimir Sedelnikov"}
+      - {language: ru, text: "Владимир Седельников"}
+    companyIds: [1280]
+    bio:
+      - language: en
+        text: "<p>Lead data engineer at Detsky Mir. Now he leads the implementation of dbt.</p>\n<p>Manages the implementation\
+            \ of cluster ClickHouse, defines the methodology for uploading data to the Yandex database and participates in\
+            \ the organisation of the architecture. Directly involved in adapting Snowplow to work with the Hadoop platform.</p>\n\
+            <p>He has experience working on a recommendation service in VimpelCom and in the cybersecurity department of Sberbank.</p>\n\
+            <p>The only things he likes more than complex tasks are drawbridges and sheepdog puppies.</p>"
+      - language: ru
+        text: "<p>Ведущий инженер по работе с данными в &laquo;Детском мире&raquo;. Сейчас &mdash; ведущий специалист по dbt.</p>\n\
+            <p>Руководит внедрением кластерного ClickHouse, определяет методологию выгрузки данных в БД от Yandex и участв\
+            ует в организации архитектуры. Непосредственно участвует в адаптации Snowplow для работы с платформой Hadoop.</p>\n\
+            <p>Имеет опыт работы над сервисом по выдаче рекомендаций в &laquo;ВымпелКом&raquo; и в отделе кибербезопасност\
+            и Сбербанка.</p>\n<p>Больше сложных задач любит только разводные мосты и щенков овчарок.</p>"
+  - id: 3390
+    photoFileName: 3390.jpg
+    photoUpdatedAt: "2024-08-12T11:02:40Z"
+    name:
+      - {language: en, text: "Ivan Klimenko"}
+      - {language: ru, text: "Иван Клименко"}
+    companyIds: [48]
+    bio:
+      - language: en
+        text: "<p>All his conscious life he has been engaged in automation of data delivery processes in various systems.\
+            \ Started as a system administrator and .NET developer. Finally found himself in data engineering, the main area\
+            \ &mdash; loading data into storage. Lately has been working on the NiFi stack, Airflow. He believes that you\
+            \ can load any data, any structure and complexity. The main thing is to choose the right tool.</p>\n<p>In touch\
+            \ on the <a href=\"https://t.me/nifiusers\">Powerful NiFi</a> Telegram channel.</p>"
+      - language: ru
+        text: "<p>Всю сознательную жизнь занимается автоматизацией процессов поставки данных в различные системы. Начинал\
+            \ системным администратором и разработчиком .NET. Окончательно нашел себя в инженерии данных, основная область\
+            \ &mdash; загрузка данных в хранилище. В последнее время работает на стеке NiFi, Airflow. Считает, что загрузи\
+            ть можно любые данные, любой структуры и сложности. Главное &mdash; выбрать верный инструмент.&nbsp;</p>\n<p>Н\
+            а связи в Telegram-канале <a href=\"https://t.me/nifiusers\">Powerful NiFi</a>.</p>"
+  - id: 3391
+    photoFileName: 3391.jpg
+    photoUpdatedAt: "2024-07-26T12:32:58Z"
+    name:
+      - {language: en, text: "Maksim Gudzikevich"}
+      - {language: ru, text: "Максим Гудзикевич"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Works at Yandex in the DataCatalog team. Loves to create and play through games. Doesn't\
+            \ like big pull requests.</p>"}
+      - {language: ru, text: "<p>Работает в Яндексе в команде DataCatalog. Любит создавать и проходить игры. Не любит боль\
+            шие пул-реквесты.</p>"}
+    gitHub: MassterMax
+  - id: 3392
+    photoFileName: 3392.jpg
+    photoUpdatedAt: "2024-07-26T12:38:02Z"
+    name:
+      - {language: en, text: "Kirill Osintsev"}
+      - {language: ru, text: "Кирилл Осинцев"}
+    companyIds: [689]
+    bio:
+      - language: en
+        text: "<p>Has been involved in frontend development for about 3 years. He has written interfaces for a travel agency,\
+            \ an analytics company, a factory, and a robotics school. He and his team won prizes at hackathons and became\
+            \ the absolute winner of an international competition on artificial intelligence in 2021.</p>\n<p>He has been\
+            \ working at Yandex for the last year. He and his team are creating a service that helps analysts find the data\
+            \ they need quickly and easily.</p>"
+      - language: ru
+        text: "<p>Занимается фронтенд-разработкой около 3 лет. Писал интерфейсы для турагентства, аналитической компании,\
+            \ завода, школы робототехники. Занимал с командой призовые места на хакатонах и стал абсолютным победителем ме\
+            ждународного конкурса по искусственному интеллекту в 2021 году.</p>\n<p>Последний год работает в Яндексе. Созд\
+            ает с командой сервис, помогающий аналитикам быстро и просто находить нужные данные.</p>"
+    gitHub: crashzky
+  - id: 3393
+    photoFileName: 3393.jpg
+    photoUpdatedAt: "2024-08-02T08:45:06Z"
+    name:
+      - {language: en, text: "Danila Samoshkin"}
+      - {language: ru, text: "Данила Самошкин"}
+    companyIds: [1119]
+    bio:
+      - {language: en, text: "<p>At Neoflex, he is responsible for implementing MLOps solutions for customers.</p>"}
+      - {language: ru, text: "<p>В Neoflex отвечает за внедрение MLOps-решений для заказчиков.</p>"}
+  - id: 3394
+    photoFileName: 3394.jpg
+    photoUpdatedAt: "2024-08-02T08:46:31Z"
+    name:
+      - {language: en, text: "Anastasiia Kotkova"}
+      - {language: ru, text: "Анастасия Коткова"}
+    companyIds: [1119]
+    bio:
+      - {language: en, text: "<p>Anastasiia is engaged in Data Science in the RnD division.</p>"}
+      - {language: ru, text: "<p>Занимается Data Science в отделе RnD.</p>"}
+  - id: 3395
+    photoFileName: 3395.jpg
+    photoUpdatedAt: "2024-08-12T11:31:52Z"
+    name:
+      - {language: en, text: "Ilia Asadullin"}
+      - {language: ru, text: "Илья Асадуллин"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Developer in the VK database infrastructure department.</p>"}
+      - {language: ru, text: "<p>Программист-разработчик в отделе инфраструктуры баз данных VK.</p>"}
+  - id: 3396
+    photoFileName: 3396.jpg
+    photoUpdatedAt: "2024-08-12T11:29:52Z"
+    name:
+      - {language: en, text: "Ilia Kokorin"}
+      - {language: ru, text: "Илья Кокорин"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Senior developer in the database infrastructure department of VK. Student project supervisor\
+            \ in the VK Infrastructure development department. Postgraduate student of ITMO university.</p>"}
+      - {language: ru, text: "<p>Старший разработчик в отделе инфраструктуры баз данных VK. Куратор студенческих проектов\
+            \ в департаменте инфраструктурной разработки VK. Аспирант университета ИТМО.</p>"}
+    gitHub: KokorinIlya
+    habr: ilyambda
+  - id: 3397
+    photoFileName: 3397.jpg
+    photoUpdatedAt: "2024-07-30T15:51:01Z"
+    name:
+      - {language: en, text: "Aleksei Zavalskii"}
+      - {language: ru, text: "Алексей Завальский"}
+    companyIds: [1261]
+    bio:
+      - {language: en, text: "<p>He spent five years in information security before moving into data engineering. For the\
+            \ last two years, he has been involved in data platform development at Bestplace.&nbsp;</p>"}
+      - {language: ru, text: "<p>Пять лет занимался информационной безопасностью, после чего перешел в инженерию данных. П\
+            оследние два года участвует в развитии дата-платформы в компании Bestplace.&nbsp;</p>"}
+  - id: 3398
+    photoFileName: 3398.jpg
+    photoUpdatedAt: "2024-08-02T11:56:01Z"
+    name:
+      - {language: en, text: "Aleksandr Kazanskii"}
+      - {language: ru, text: "Александр Казанский"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>20 years in IT, the last 10 years he has been involved in building large infrastructures.\
+            \ Now he is Head SRE of T-Bank's data platform.</p>"}
+      - {language: ru, text: "<p>20 лет в ИТ, последние лет 10 участвует в построении крупных инфраструктур. Сейчас &mdash;\
+            \ Head SRE платформы данных Т-Банка.</p>"}
+  - id: 3399
+    photoFileName: 3399.jpg
+    photoUpdatedAt: "2024-07-09T07:45:26Z"
+    name:
+      - {language: en, text: "Iana Kharlan"}
+      - {language: ru, text: "Яна Харлан"}
+    companyIds: [1285]
+    bio:
+      - {language: en, text: "<p>Expert in space technology, head of satellite propulsion development, ex-CEO of a startup\
+            \ developing an ion engine for small spacecraft.</p>"}
+      - {language: ru, text: "Эксперт в области космических технологий, руководитель разработки двигателей для спутников,\
+            \ ex-CEO стартапа по созданию ионного двигателя для малых космических аппаратов."}
+  - id: 3400
+    photoFileName: 3400.jpg
+    photoUpdatedAt: "2024-07-09T11:11:08Z"
+    name:
+      - {language: en, text: "Aleksandr Tokarev"}
+      - {language: ru, text: "Александр Токарев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Developer with over 15 years of experience. Worked for QIWI, CleverData and Leroy Merlin.\
+            \ For the last 10 years he has been developing distributed systems for storing and processing large amounts of\
+            \ unstructured data. Currently at Yandex he is integrating Apache Spark with YTsaurus.</p>"}
+      - {language: ru, text: "<p>Разработчик с опытом более 15 лет. Работал в компаниях QIWI, CleverData и Leroy Merlin. П\
+            оследние 10 лет разрабатывает распределенные системы для хранения и обработки больших объемов неструктурирован\
+            ных данных. Сейчас в Яндексе занимается интеграцией Apache Spark с YTsaurus.</p>"}

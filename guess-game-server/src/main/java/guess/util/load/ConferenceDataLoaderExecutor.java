@@ -2698,8 +2698,10 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-части конференции С++ Russia 2024",
 //                                "Yandex C++ Afterparty", "Lightning Talks", "Закрытие конференции С++ Russia 2024")));
 //        loadTalksSpeakersEvent(Conference.SMART_DATA, LocalDate.of(2024, 9, 4), "2024",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("SmartData 2024", null, List.of(24L, 9L)),
+//                        Map.of(new NameCompany("Владимир Озеров", new Company(1278, "CedrusData")), 136L,
+//                                new NameCompany("Sri Vishnu Chanderraju", new Company(1274, "CueZen")), 1749L),
 //                        Set.of("Открытие конференции SmartData 2024", "Закрытие конференции SmartData 2024",
 //                                "Подведение итогов онлайн-части конференции SmartData 2024",
 //                                "Открытие офлайн-части конференции SmartData 2024")));
