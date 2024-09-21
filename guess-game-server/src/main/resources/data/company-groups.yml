@@ -50,6 +50,11 @@ companyGroups:
       hh.ru,
       CyberDacha
     ]
+  - name: "LamodaTech, MTS"
+    items: [
+      LamodaTech,
+      MTS
+    ]
   - name: "MAI / HSE / ex-Microsoft"
     items: [
       MAI,

@@ -4524,3 +4524,69 @@ companies:
       - {language: en, text: "Budapest University of Technology and Economics"}
       - {language: ru, text: "Будапештский университет технологии и экономики"}
     siteLink: https://www.bme.hu
+  - id: 1271
+    name:
+      - {language: en, text: "Chestnyj znak"}
+      - {language: ru, text: "Честный знак"}
+    siteLink: https://chestnyznak.ru
+  - id: 1272
+    name:
+      - {language: en, text: BigDataDuck}
+    siteLink: https://www.bigdataduck.ru
+  - id: 1273
+    name:
+      - {language: en, text: "NTU Singapore"}
+    siteLink: https://www.ntu.edu.sg
+  - id: 1274
+    name:
+      - {language: en, text: CueZen}
+    siteLink: https://cuezen.com
+  - id: 1275
+    name:
+      - {language: en, text: Cryptology}
+    siteLink: https://cryptology.com
+  - id: 1276
+    name:
+      - {language: en, text: TaskData}
+    siteLink: http://taskdata.ru
+  - id: 1277
+    name:
+      - {language: en, text: BestDoctor}
+    siteLink: https://bestdoctor.ru
+  - id: 1278
+    name:
+      - {language: en, text: CedrusData}
+    siteLink: https://www.cedrusdata.ru
+  - id: 1279
+    name:
+      - {language: en, text: Ecom.tech}
+    siteLink: https://ecom.tech
+  - id: 1280
+    name:
+      - {language: en, text: "Detsky Mir"}
+      - {language: ru, text: "Детский мир"}
+    siteLink: https://www.detmir.ru
+  - id: 1281
+    name:
+      - {language: en, text: "Lemana PRO (Leroy Merlin)"}
+      - {language: ru, text: "Лемана ПРО (Леруа Мерлен)"}
+    siteLink: https://lemanapro.ru
+  - id: 1282
+    name:
+      - {language: en, text: "Kuper"}
+      - {language: ru, text: "Купер"}
+    siteLink: https://kuper.ru
+  - id: 1283
+    name:
+      - {language: en, text: AutoTech}
+    siteLink: https://autotech.team
+  - id: 1284
+    name:
+      - {language: en, text: "Innovation Centre \"Bezopasnyj transport\" GKU CODD"}
+      - {language: ru, text: "Инновационный центр «Безопасный транспорт» ГКУ ЦОДД"}
+    siteLink: https://ictransport.ru
+  - id: 1285
+    name:
+      - {language: en, text: "Bureau 1440"}
+      - {language: ru, text: "Бюро 1440"}
+    siteLink: https://1440.space

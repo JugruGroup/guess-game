@@ -47,6 +47,10 @@ companySynonyms:
     synonyms: [
       Astronomer.io
     ]
+  - name: AutoTech
+    synonyms: [
+      Autotech
+    ]
   - name: "Avast Software"
     synonyms: [
       AVAST
@@ -71,6 +75,10 @@ companySynonyms:
     synonyms: [
       "Bloomberg L.P.",
       "Bloomberg LP"
+    ]
+  - name: BigDataDuck
+    synonyms: [
+      bigdataduck
     ]
   - name: CFT
     synonyms: [
@@ -161,6 +169,10 @@ companySynonyms:
   - name: Egeniq
     synonyms: [
       "Google Developer Expert for Android / Egeniq"
+    ]
+  - name: Ecom.tech
+    synonyms: [
+      Samokat.tech
     ]
   - name: Eyeota
     synonyms: [
@@ -274,6 +286,13 @@ companySynonyms:
       KURS,
       КУРС
     ]
+  - name: Kuper
+    synonyms: [
+      "Kuper (ex-SberMarket)",
+      "Купер (ex-СберМаркет)",
+      SberMarket,
+      СберМаркет,
+    ]
   - name: LightSource
     synonyms: [
       Lightsource.ai
@@ -281,7 +300,8 @@ companySynonyms:
   - name: Lamoda
     synonyms: [
       "Lamoda Tech",
-      "Lamoda Tech"
+      "Lamoda Tech",
+      LamodaTech
     ]
   - name: "Mail.ru Group"
     synonyms: [
@@ -562,10 +582,6 @@ companySynonyms:
       "S7 Techlab",
       "S7 Техлаб"
     ]
-  - name: Samokat
-    synonyms: [
-      Samokat.tech
-    ]
   - name: Samsung
     synonyms: [
       "Samsung NEXT/GDE",
@@ -590,8 +606,6 @@ companySynonyms:
       SberHealth,
       СберЗдоровье,
       SberDevices,
-      SberMarket,
-      СберМаркет,
       "Sber Process Mining",
       "Sber Life Insurance",
       "Сбер Страхование Жизни",
@@ -799,6 +813,7 @@ companySynonyms:
       "Yandex Self-driving Technologies",
       "Yandex Taxi Technologies",
       Yandex.Taxi,
+      "Yandex.Taxi Technologies",
       Yandex.Toloka,
       "Yandex Travel",
       "Yandex (Auto.ru)",
@@ -824,6 +839,7 @@ companySynonyms:
       "Яндекс Путешествия",
       "Яндекс Такси Технологии",
       Яндекс.Такси,
+      "Яндекс.Такси Технологии",
       Яндекс.Толока,
       "Яндекс (Авто.ру)",
       "Яндекс 360",
