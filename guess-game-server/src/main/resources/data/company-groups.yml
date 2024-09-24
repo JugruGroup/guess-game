@@ -24,6 +24,11 @@ companyGroups:
       DevBrothers,
       Тинькофф
     ]
+  - name: "DevBrothers, T-Bank"
+    items: [
+      DevBrothers,
+      T-Bank
+    ]
   - name: "DM Labs, Arktur, Open Data Science"
     items: [
       "DM Labs",
