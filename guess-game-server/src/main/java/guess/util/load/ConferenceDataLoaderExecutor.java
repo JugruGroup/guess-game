@@ -2708,7 +2708,9 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.DOT_NEXT, LocalDate.of(2024, 9, 10), "2024",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("DotNext 2024", null, List.of(9L)),
-//                        Set.of("Открытие конференции DotNext 2024", "Закрытие конференции DotNext 2024")));
+//                        Set.of("Открытие конференции DotNext 2024", "Закрытие конференции DotNext 2024",
+//                                "BoF-сессия. О развитии в IT и внутренних противоречиях на работе",
+//                                ".NET под нагрузкой — секреты, баги, лайфхаки", "Концерт группы НТР")));
 //        loadTalksSpeakersEvent(Conference.FLOW, LocalDate.of(2024, 9, 17), "2024 Autumn",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Flow 2024 Autumn", null, List.of(24L, 30L)),

@@ -4568,8 +4568,8 @@ companies:
     siteLink: https://www.detmir.ru
   - id: 1281
     name:
-      - {language: en, text: "Lemana PRO (Leroy Merlin)"}
-      - {language: ru, text: "Лемана ПРО (Леруа Мерлен)"}
+      - {language: en, text: "Lemana PRO"}
+      - {language: ru, text: "Лемана ПРО"}
     siteLink: https://lemanapro.ru
   - id: 1282
     name:
@@ -4590,3 +4590,48 @@ companies:
       - {language: en, text: "Bureau 1440"}
       - {language: ru, text: "Бюро 1440"}
     siteLink: https://1440.space
+  - id: 1286
+    name:
+      - {language: en, text: KiraSoft}
+    siteLink: https://www.kirasoft.com
+  - id: 1287
+    name:
+      - {language: en, text: SKAI}
+    siteLink: https://skai.online
+  - id: 1288
+    name:
+      - {language: en, text: Volosoft}
+    siteLink: https://volosoft.com
+  - id: 1289
+    name:
+      - {language: en, text: "DoiT International"}
+    siteLink: https://www.doit.com
+  - id: 1290
+    name:
+      - {language: en, text: Artsofte}
+    siteLink: https://artsofte.ru
+  - id: 1291
+    name:
+      - {language: en, text: Profit}
+    siteLink: https://www.profit.co
+  - id: 1292
+    name:
+      - {language: en, text: CallCTO}
+    siteLink: https://callcto.com
+  - id: 1293
+    name:
+      - {language: en, text: "PIX Robotics"}
+    siteLink: https://pix.ru
+  - id: 1294
+    name:
+      - {language: en, text: "NP4 GmbH"}
+    siteLink: https://www.np4.net
+  - id: 1295
+    name:
+      - {language: en, text: CodeAlive}
+    siteLink: https://codealive.ru
+  - id: 1296
+    name:
+      - {language: en, text: EREMEX}
+      - {language: ru, text: ЭРЕМЕКС}
+    siteLink: https://www.eremex.ru

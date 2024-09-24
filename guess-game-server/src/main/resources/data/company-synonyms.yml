@@ -347,6 +347,11 @@ companySynonyms:
       "Lebedev Physical Institute of the Russian Academy of Sciences",
       "Физический институт им. П. Н. Лебедева РАН"
     ]
+  - name: "Lemana PRO"
+    synonyms: [
+      "Lemana PRO (Leroy Merlin)",
+      "Лемана ПРО (Леруа Мерлен)"
+    ]
   - name: "Lesta Group"
     synonyms: [
       "Lesta Games"
@@ -699,6 +704,8 @@ companySynonyms:
     synonyms: [
       "T1 Consulting",
       "Т1 Консалтинг",
+      "T1 Holding",
+      "ИТ-холдинг Т1",
       "Т1 Sfera",
       "Т1 Сфера",
       "Sfera Platform",
@@ -866,5 +873,6 @@ companySynonyms:
       "PostgreSQL JDBC maintainer",
       TatarinFrontend,
       ex-Yandex,
-      ex-Яндекс
+      ex-Яндекс,
+      Ex-Ozon
     ]

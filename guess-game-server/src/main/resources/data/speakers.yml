@@ -2782,18 +2782,30 @@ speakers:
     gitHub: alxmatorin
   - id: 164
     photoFileName: 0164.jpg
+    photoUpdatedAt: "2024-06-20T06:46:39Z"
     name:
-      - {language: en, text: "Maxim Dorofeev"}
+      - {language: en, text: "Maksim Dorofeev"}
       - {language: ru, text: "Максим Дорофеев"}
-    companyIds: [333]
+    companyIds: []
     bio:
+      - language: en
+        text: "<p>Author of books and developer of the unique personal effectiveness training course of the same name, \"\
+            Jedi Techniques\". Until 2013, he was Head of Development at Kaspersky Lab, after which he continued in the role\
+            \ of corporate procrastinator, founding the company. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
+            \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
+            \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n<p>Since 2012,\
+            \ he has been conducting trainings, educational events and advising companies on how to improve productivity and\
+            \ reliability within his own project mnogosdelal.ru. He develops <a href=\"https://www.youtube.com/user/Cartmendum\"\
+            >a YouTube channel about productivity</a>.</p>\n<p>He has been interested in psychology and mathematical statistics\
+            \ all his conscious life.</p>"
       - language: ru
-        text: "Автор проекта mnogosdelal.ru, бизнес-тренер, консультант.\n\nРеализовал ряд проектов по обучению и техничес\
-            кому консультированию в компаниях: Mail.Ru, Одноклассники.ру, СКБ Контур, QIWI, General Satellite, Peter-Service,\
-            \ Лаборатория Касперского и др.\n\nМаксим проработал в области разработки ПО почти 15 лет. Поэтому не понаслыш\
-            ке знаком с болями и проблемами ИТ-компаний и учитывает их в своих тренингах.\n\nСам использует эти техники уж\
-            е 8й год. Поэтому большинство примеров будут показываться в живую и на самом себе. А также, Максим умеет объяс\
-            нять сложные вещи простыми словами. Не будет слайдов с кучей печатного текста — только карандашные человечки."
+        text: "<p>Автор книг и разработчик одноименного уникального тренинга по личной эффективности &laquo;Джедайские тех\
+            ники&raquo;. До 2013 года был руководителем отдела разработки в &laquo;Лаборатории Касперского&raquo;, после ч\
+            его продолжил работу в роли корпоративного прокрастинатолога, основав компанию.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n\
+            <p>С 2012 года ведет тренинги, обучающие мероприятия и консультирует компании по вопросам повышения продуктивн\
+            ости и надежности работы в рамках собственного проекта mnogosdelal.ru. Развивает <a href=\"https://www.youtube.com/user/Cartmendum\"\
+            >YouTube-канал о продуктивности</a>.</p>\n<p>Всю свою сознательную жизнь увлекается психологией и математическ\
+            ой статистикой.&nbsp;</p>"
     twitter: cartmendum
     habr: Cartmendum
   - id: 165
@@ -4264,18 +4276,21 @@ speakers:
             участник переводов книг по тестированию Вайнберга и Копланда."
   - id: 282
     photoFileName: 0282.jpg
-    photoUpdatedAt: 2022-03-31T19:05:12Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:05:12Z"
     name:
       - {language: en, text: "Dmitri Nesteruk"}
       - {language: ru, text: "Дмитрий Нестерук"}
     companyIds: []
     bio:
-      - {language: en, text: "Dmitri is a quantitative analyst. He has authored multiple books and courses on development\
-            \ and design patterns. His interests include computation, quanitative finance and algorithmic trading. He works\
-            \ with C# and C++ as well as HPC technologies such as CUDA and FPGAs."}
-      - {language: ru, text: "Квант, разработчик и просто увлеченный человек. Автор нескольких книг и курсов по разработке\
-            \ и паттернам проектирования. Интересуется разработкой в сфере вычислений, численных финансов и алгоритмическо\
-            й торговли. Интересуется C# и C++, а также технологиями высокопроизводительных вычислений, такими как CUDA и FPGA."}
+      - language: en
+        text: "<p>Dmitri is a quantitative analyst. He has authored books and courses on development and design patterns.</p>\n\
+            <p>His interests include:</p>\n<ul>\n<li>computation, quanitative finance and algorithmic trading;</li>\n<li>C#\
+            \ and C++;</li>\n<li>HPC technologies such as CUDA and FPGAs.</li>\n</ul>"
+      - language: ru
+        text: "<p>Квант, разработчик и просто увлеченный человек. Автор книг и курсов по разработке и паттернам проектиров\
+            ания.</p>\n<p>Интересы:</p>\n<ul>\n<li>разработка в сфере вычислений, численных финансов и алгоритмической тор\
+            говли;</li>\n<li>C# и C++;</li>\n<li>технологии высокопроизводительных вычислений, такие как CUDA и FPGA.</li>\n\
+            </ul>"
     twitter: dnesteruk
     gitHub: nesteruk
     habr: mezastel
@@ -6640,15 +6655,21 @@ speakers:
     gitHub: chrisdunelm
   - id: 438
     photoFileName: 0438.jpg
+    photoUpdatedAt: "2024-05-07T09:10:31Z"
     name:
       - {language: en, text: "Halil İbrahim Kalkan"}
-    companyIds: [578]
+    companyIds: [1288]
     bio:
-      - {language: en, text: "Halil is the lead developer of the [ASP.NET Boilerplate](https://aspnetboilerplate.com), an\
-            \ open source web application framework. He is a full stack software architect and developer who focuses on enterprise\
-            \ application architectures and developer productivity. He is co-founder of Volosoft, a startup that produces\
-            \ tools for developers. He develops frameworks and talks on software architectures, DDD, microservices, multi-tenancy\
-            \ and modularity."}
+      - {language: en, text: "<p>Halil İbrahim is a software architect and developer. He loves to work on open source projects,\
+            \ producing articles, videos and having talks on software development. He is a co-founder of Volosoft, a company\
+            \ that produces open source and commercial frameworks, libraries and tools for .NET developers. He is the lead\
+            \ developer of the open source <a href=\"https://abp.io/\">ABP Framework project</a> and author of the \"Mastering\
+            \ ABP Framework\" book.&nbsp;&nbsp;</p>"}
+      - {language: ru, text: "<p>Halil İbrahim is a software architect and developer. He loves to work on open source projects,\
+            \ producing articles, videos and having talks on software development. He is a co-founder of Volosoft, a company\
+            \ that produces open source and commercial frameworks, libraries and tools for .NET developers. He is the lead\
+            \ developer of the open source <a href=\"https://abp.io/\">ABP Framework project</a> and author of the \"Mastering\
+            \ ABP Framework\" book.&nbsp;</p>"}
     twitter: hibrahimkalkan
     gitHub: hikalkan
   - id: 439
@@ -7084,11 +7105,16 @@ speakers:
       - {language: ru, text: "Евгений Пешков"}
     companyIds: []
     bio:
-      - {language: en, text: "Previously developed JetBrains Rider, dealt with infrastructure in Kontur. Interested in the\
-            \ inner workings of .NET and Windows and uses this knowledge in practice."}
-      - {language: ru, text: "Занимается высоконагруженными сервисами. Ранее разрабатывал JetBrains Rider, занимался в Кон\
-            туре общей инфраструктурой — системой хостинга приложений. Спикер DotNext, Dump, Codefest, .NET Summit.</p><p>И\
-            нтересуется lock-free алгоритмами и структурами данных, внутренним устройством .NET и операционных систем."}
+      - language: en
+        text: "<p>He is engaged in high-loaded services. Previously, he developed JetBrains Rider, and worked in Kontur on\
+            \ common infrastructure &mdash; an application hosting system.</p>\n<p>Speaker at DotNext, DUMP, CodeFest, .NET\
+            \ Summit.</p>\n<p>Is interested in lock-free algorithms and data structures, the inner workings of .NET and operating\
+            \ systems.</p>"
+      - language: ru
+        text: "<p>Занимается высоконагруженными сервисами. Ранее разрабатывал JetBrains Rider, занимался в Контуре общей и\
+            нфраструктурой &mdash; системой хостинга приложений.</p>\n<p>Спикер DotNext, DUMP, CodeFest, .NET Summit.</p>\n\
+            <p>Интересуется lock-free алгоритмами и структурами данных, внутренним устройством .NET и операционных систем\
+            .</p>"
     twitter: epeshk
     gitHub: epeshk
     habr: epeshk
@@ -7641,19 +7667,21 @@ speakers:
     habr: SergVasiliev
   - id: 500
     photoFileName: 0500.jpg
-    photoUpdatedAt: "2023-07-14T11:41:37Z"
+    photoUpdatedAt: "2024-05-16T08:23:53Z"
     name:
-      - {language: en, text: "Denis Tsvetsikh"}
+      - {language: en, text: "Denis Tsvettsikh"}
       - {language: ru, text: "Денис Цветцих"}
     companyIds: [796, 674]
     bio:
-      - {language: en, text: "<p>Denis has more than 10 years of experience in the development of enterprise applications\
-            \ using C# and .NET. Now his interests are in software architecture and design patterns. He thinks that the best\
-            \ metaphor for software architecture is not an onion, but an accordion. Denis is the author of courses about software\
-            \ architecture on Udemy.</p>"}
-      - {language: ru, text: "<p>Более 10 лет разрабатывает кровавый Enterprise на C# и .NET. Текущая область интересов &mdash;\
-            \ архитектура и паттерны проектирования. Считает, что лучшая метафора для архитектуры ПО &mdash; это не лукови\
-            ца, а баян. Автор курсов об архитектуре ПО на Udemy.</p>"}
+      - language: en
+        text: "<p>Denis has more than 10 years of experience in the development of enterprise applications using C# and .NET.\
+            \ Now his interests are in software architecture and design patterns.</p>\n<p>Denis is the author of courses about\
+            \ software architecture on Udemy.</p>\n<p>He thinks that the best metaphor for software architecture is not an\
+            \ onion, but an accordion.&nbsp;</p>"
+      - language: ru
+        text: "<p>Более 10 лет разрабатывает кровавый энтерпрайз на C# и .NET. Текущая область интересов &mdash; архитекту\
+            ра и паттерны проектирования.</p>\n<p>Автор курсов об архитектуре ПО на Udemy.</p>\n<p>Считает, что лучшая мет\
+            афора для архитектуры ПО &mdash; это не луковица, а баян.</p>\n<p>&nbsp;</p>"
     gitHub: denis-tsv
   - id: 501
     photoFileName: 0501.jpg
@@ -7845,27 +7873,28 @@ speakers:
     companyIds: []
   - id: 520
     photoFileName: 0520.jpg
-    photoUpdatedAt: 2022-05-13T13:49:56Z[UTC]
+    photoUpdatedAt: "2024-08-25T12:09:16Z"
     name:
       - {language: en, text: "Stanislav Sidristij"}
       - {language: ru, text: "Станислав Сидристый"}
-    companyIds: [920]
+    companyIds: []
     bio:
-      - {language: en, text: "Stanislav worked in many large companies, gaining experience developing on the .NET platform.\
-            \ Stanislav is a speaker at many conferences, including .NEXT, SpbDotNet, the author and the main speaker of CLRium\
-            \ seminars. For a long time, Stanislav has been interested in the field of memory management algorithms and unsafe\
-            \ code manipulation of CLR runtime. But lately the vector has been changed for more practical part of development:\
-            \ multithreading, blocking and non-blocking algorithms, memory optimization practices. He is the author of the\
-            \ online book .NET Platform Architecture, which has been widely distributed thanks to a good translation into\
-            \ English and Chinese."}
+      - language: en
+        text: "<p>Stanislav worked in many large companies, gaining experience developing on the .NET platform.</p>\n<p>Stanislav\
+            \ is a speaker at many conferences, including DotNext, SpbDotNet, the author and the main speaker of CLRium seminars.</p>\n\
+            <p>For a long time, Stanislav has been interested in the field of memory management algorithms and unsafe code\
+            \ manipulation of CLR runtime. But lately the vector has been changed for more practical part of development:\
+            \ multithreading, blocking and non-blocking algorithms, memory optimization practices.</p>\n<p>He is the author\
+            \ of the online book <a href=\"https://github.com/sidristij/dotnetbook\">\".NET Platform Architecture\",</a> which\
+            \ has been widely distributed thanks to a good translation into English and Chinese.</p>"
       - language: ru
-        text: "<p>Станислав работал во многих крупных компаниях, набирая опыт разработки на платформе .NET. Спикер многих\
-            \ конференций, в том числе DotNext и SpbDotNet, автор и основной спикер семинаров CLRium. Интересы Станислава\
-            \ долгое время лежали в области алгоритмов управления памятью и техник манипулирования рантаймом CLR из unsafe-к\
-            ода.</p>\n<p>Но в последнее время вектор изменен на более практичную часть разработки: многопоточность, блокир\
-            ующие и неблокирующие алгоритмы, практика оптимизации памяти. Станислав &mdash; автор онлайн-книги .NET Platform\
-            \ Architecture, получившей широкое распространение благодаря хорошему переводу на английский и китайский языки\
-            .</p>"
+        text: "<p>Станислав работал во многих крупных компаниях, набирая опыт разработки на платформе .NET.</p>\n<p>Спикер\
+            \ многих конференций, в том числе DotNext и SpbDotNet, автор и основной спикер семинаров CLRium.</p>\n<p>Интер\
+            есы Станислава долгое время лежали в области алгоритмов управления памятью и техник манипулирования рантаймом\
+            \ CLR из unsafe-кода. Но в последнее время вектор изменен на более практичную часть разработки: многопоточност\
+            ь, блокирующие и неблокирующие алгоритмы, практику оптимизации памяти.</p>\n<p>Автор онлайн-книги <a href=\"https://github.com/sidristij/dotnetbook\"\
+            >&laquo;.NET Platform Architecture&raquo;</a>, получившей широкое распространение благодаря хорошему переводу\
+            \ на английский и китайский языки.</p>"
     twitter: sidristij
     gitHub: sidristij
     habr: sidristij
@@ -13945,16 +13974,14 @@ speakers:
     name:
       - {language: en, text: "Mark Shevchenko"}
       - {language: ru, text: "Марк Шевченко"}
-    companyIds: [1156]
+    companyIds: [1121]
     bio:
-      - language: en
-        text: "<p>Mark has been programming since 1989. He has written in C, C++, Delphi, Perl, PHP, C#, Ruby and F#. He has\
-            \ been writing in C# since 2003.</p>\n<p>He organizes the meetings of the Moscow Club of Programmers. Helps his\
-            \ colleagues to make interesting talks and write good articles.</p>"
-      - language: ru
-        text: "<p>Программирует с 1989 года. Писал на C, C++, Delphi, Perl, PHP, C#, Ruby и F#. На C# пишет с 2003 года.</p>\n\
-            <p>Организует встречи Московского клуба программистов. Помогает коллегам делать интересные доклады и писать хо\
-            рошие статьи.</p>"
+      - {language: en, text: "Mark has been programming since 1989. Programming polyglot, he knows C, C++, Delphi, Perl, PHP,\
+            \ C#, Ruby and F#. Mark has been writing in C# since 2003. He organizes meetups of the Moscow Programmers Club,\
+            \ and helps his colleagues to make interesting talks and write good articles."}
+      - {language: ru, text: "<p>Программирует с 1989 года. Писал на C, C++, Delphi, Perl, PHP, C#, Ruby и F#. На C# пишет\
+            \ с 2003 года. Организует встречи Московского клуба программистов. Помогает коллегам делать интересные доклады\
+            \ и писать хорошие статьи.</p>"}
   - id: 954
     photoFileName: 0954.jpg
     photoUpdatedAt: 2019-04-05T12:23:25.306Z[UTC]
@@ -14879,16 +14906,16 @@ speakers:
     gitHub: azhmur
   - id: 1015
     photoFileName: 1015.jpg
-    photoUpdatedAt: 2022-03-31T19:05:08Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:05:08Z"
     name:
       - {language: en, text: "Roman Prosin"}
       - {language: ru, text: "Роман Просин"}
     companyIds: [429]
     bio:
-      - {language: en, text: "<p>.NET developer at Raiffeisenbank. Roman is a bright representative of the new school of innovation\
-            \ in software development. He believes that any impact should lead to an improvement in the system. He convinced\
-            \ that each person is able to understand the program code created by another person, regardless of the programming\
-            \ language and experience in IT.</p>"}
+      - {language: en, text: "<p>Senior Community Lead Raiffeisen .NET Community. Roman is a bright representative of the\
+            \ new school of innovation in software development. He believes that any impact should lead to an improvement\
+            \ in the system. He is convinced that each person is able to understand the program code created by another person,\
+            \ regardless of the programming language and experience in IT.</p>"}
       - {language: ru, text: "<p>Senior Community Lead Raiffeisen .NET Community. Яркий представитель новой школы инновати\
             ки в разработке программного обеспечения. Считает, что любое воздействие должно приводить к улучшению системы\
             . Убежден, что каждый человек способен понимать программный код, созданный другим человеком, независимо от язы\
@@ -21027,16 +21054,16 @@ speakers:
     gitHub: jaredpar
   - id: 1485
     photoFileName: 1485.jpg
-    photoUpdatedAt: 2021-10-18T11:59:33.571Z[UTC]
+    photoUpdatedAt: "2024-06-20T09:05:48Z"
     name:
       - {language: en, text: "Artem Akulyakov"}
       - {language: ru, text: "Артём Акуляков"}
-    companyIds: [376]
+    companyIds: [1292]
     bio:
-      - {language: en, text: "Architect at OCS Distribution, DotNetRu activist, regular on the DotNet & More podcast, ardent\
-            \ fan of C# and .NET since 2007."}
-      - {language: ru, text: "Архитектор в OCS Distribution, активист DotNetRu, завсегдатай подкаста DotNet & More, горячи\
-            й фанат С# и .NET c 2007."}
+      - {language: en, text: "<p>DotNetRu activist, regular on the DotNet &amp; More podcast, ardent fan of C# and .NET since\
+            \ 2007.</p>"}
+      - {language: ru, text: "<p>Активист DotNetRu, завсегдатай подкаста DotNet &amp; More, горячий фанат С# и .NET c 2007\
+            \ года.</p>"}
     gitHub: oxffaa
   - id: 1486
     photoFileName: 1486.jpg
@@ -21090,18 +21117,22 @@ speakers:
     gitHub: badamczewski
   - id: 1490
     photoFileName: 1490.jpg
-    photoUpdatedAt: 2022-05-25T12:06:48Z[UTC]
+    photoUpdatedAt: "2022-05-25T12:06:48Z"
     name:
       - {language: en, text: "Andrey Tsvettsikh"}
       - {language: ru, text: "Андрей Цветцих"}
-    companyIds: [674, 796]
+    companyIds: [796, 674]
     bio:
-      - {language: en, text: "Andrey has been developing corporate applications for over 10 years. He was involved in both\
-            \ the creation of new applications and the support and refactoring of existing ones. The main area of interest\
-            \ is the application of architectures and design patterns in practice."}
-      - {language: ru, text: "Более 10 лет занимается разработкой корпоративных приложений. Занимался как созданием новых\
-            \ приложений, так и поддержкой и рефакторингом существующих. Основная область интересов — применение архитекту\
-            р и паттернов проектирования на практике."}
+      - language: en
+        text: "<p>Andrey has been developing corporate applications for over 10 years. He was involved in both the creation\
+            \ of new applications and the support and refactoring of existing ones.</p>\n<p>The main area of interest is the\
+            \ application of architectures and design patterns in practice.</p>"
+      - language: ru
+        text: "<p>Более 10 лет разрабатывает корпоративные приложения. Занимался как созданием новых приложений, так и под\
+            держкой и рефакторингом существующих.</p>\n<p>Основная область интересов &mdash; применение архитектур и патте\
+            рнов проектирования на практике.</p>"
+    gitHub: andrewtsw
+    habr: andrew_tsw
   - id: 1491
     photoFileName: 1491.jpg
     photoUpdatedAt: 2020-09-02T14:24:34.855Z[UTC]
@@ -23236,16 +23267,16 @@ speakers:
     gitHub: ayende
   - id: 1633
     photoFileName: 1633.jpg
-    photoUpdatedAt: 2021-03-22T08:22:45.970Z[UTC]
+    photoUpdatedAt: "2024-07-02T16:10:30Z"
     name:
       - {language: en, text: "Mikhail Kuznetsov"}
       - {language: ru, text: "Михаил Кузнецов"}
-    companyIds: [743]
+    companyIds: [751]
     bio:
-      - {language: en, text: "Since 2004 he started writing in .NET. Likes to make high-performance scalable systems, create\
-            \ more value for less code."}
-      - {language: ru, text: "С 2004 года начал писать на .NET. Любит делать высоконагруженные масштабируемые системы, соз\
-            давать больше пользы за меньшее количество кода."}
+      - {language: en, text: "<p>He started writing in .NET in 2004. Likes to make high-performance scalable systems and create\
+            \ more value for less code.</p>"}
+      - {language: ru, text: "<p>В 2004 году начал писать на .NET. Любит делать высоконагруженные масштабируемые системы,\
+            \ создавать больше пользы за меньшее количество кода.</p>"}
   - id: 1634
     photoFileName: 1634.jpg
     photoUpdatedAt: 2022-10-11T15:16:27Z[UTC]
@@ -32169,14 +32200,22 @@ speakers:
             еские статьи и ни дня не может прожить без музыки."}
   - id: 2236
     photoFileName: 2236.jpg
-    photoUpdatedAt: "2023-07-02T21:33:44Z"
+    photoUpdatedAt: "2024-05-31T15:17:08Z"
     name:
       - {language: en, text: "Boris Kuzovatkin"}
       - {language: ru, text: "Борис Кузоваткин"}
-    companyIds: [390]
+    companyIds: []
     bio:
-      - {language: en, text: "<p>Head of Central Logistics at Ozon.</p>"}
-      - {language: ru, text: "<p>Руководитель направления центральной логистики в Ozon.</p>"}
+      - language: en
+        text: "<p>He has worked for many years in large IT companies, where he develops highly loaded fault-tolerant systems.\
+            \ For the last 5 years out of 13, he was head of central logistics at Ozon.</p>\n<p>Deeply believes that any,\
+            \ even the most complex system, should consist of many simple ones. But writing a simple system that works like\
+            \ clockwork is a real art.</p>"
+      - language: ru
+        text: "<p>Много лет работает в больших IT-компаниях, где разрабатывает высоконагруженные отказоустойчивые системы\
+            . Последние 5 лет из 13 руководил центральной логистикой в Ozon.</p>\n<p>Глубоко уверен, что любая, даже самая\
+            \ сложная система, должна состоять из множества простых. Но написать простую систему, работающую как часы, &mdash;\
+            \ настоящее искусство.</p>"
   - id: 2237
     photoFileName: 2237.jpg
     photoUpdatedAt: 2022-09-23T16:09:36Z[UTC]
@@ -33912,14 +33951,15 @@ speakers:
             \ развитии нет, есть только ограничения конкретных технологий.</p>"
   - id: 2368
     photoFileName: 2368.jpg
-    photoUpdatedAt: 2022-11-14T14:24:16Z[UTC]
+    photoUpdatedAt: 2024-03-17T13:38Z
     name:
       - {language: en, text: "Aleksandr Kuznetsov"}
       - {language: ru, text: "Александр Кузнецов"}
     companyIds: [630]
     bio:
-      - {language: en, text: "<p>22 years in IT. Trainer and lead developer. Specializes in .NET.</p>"}
-      - {language: ru, text: "<p>22 года в IT. Тренер и ведущий разработчик. Специализируется в .NET.</p>"}
+      - {language: en, text: "<p>Trainer and lead developer. Specialises in .NET. Loves programming and sharing his knowledge.</p>"}
+      - {language: ru, text: "<p>Тренер и ведущий разработчик. Специализируется на .NET. Любит программировать и делиться\
+            \ своими знаниями.</p>"}
   - id: 2369
     photoFileName: 2369.jpg
     photoUpdatedAt: "2024-04-02T07:41:57Z"
@@ -40804,18 +40844,20 @@ speakers:
     habr: Chkon
   - id: 2840
     photoFileName: 2840.jpg
-    photoUpdatedAt: 2023-06-13T15:09Z
+    photoUpdatedAt: "2024-05-24T08:40:11Z"
     name:
       - {language: en, text: "Aleksei Fadeev"}
       - {language: ru, text: "Алексей Фадеев"}
     companyIds: [1151]
     bio:
-      - {language: en, text: "<p>C#/.NET backend developer, expert in relational DBMS, including performance optimization.\
-            \ Loved Postgres when it was not yet mainstream. Has spoken at PGConf.Russia conferences. Passionate about music,\
-            \ plays and sings in a rock band.</p>"}
-      - {language: ru, text: "<p>Бэкенд-разработчик на C#/.NET, эксперт по работе с реляционными СУБД, в том числе с оптим\
-            изацией производительности. Полюбил Postgres, когда это еще не было мейнстримом. Выступал на конференциях PGConf.Russia.\
-            \ Увлекается музыкой, играет и поет в рок-группе.</p>"}
+      - language: en
+        text: "<p>C#/.NET backend developer, expert in relational DBMS, including performance optimization.</p>\n<p>Loved\
+            \ Postgres when it was not yet mainstream. Has spoken at PGConf.Russia conferences.</p>\n<p>Passionate about music,\
+            \ plays and sings in a rock band.</p>"
+      - language: ru
+        text: "<p>Бэкенд-разработчик на C#/.NET, эксперт по работе с реляционными СУБД, включая оптимизацию производительн\
+            ости.</p>\n<p>Полюбил Postgres, когда это еще не было мейнстримом. Выступал на конференциях PGConf.Russia.</p>\n\
+            <p>Увлекается музыкой, поет в рок-группе.</p>"
     gitHub: alexeyfadeev
   - id: 2841
     photoFileName: 2841.jpg
@@ -40915,17 +40957,18 @@ speakers:
     habr: DenisNP
   - id: 2847
     photoFileName: 2847.jpg
-    photoUpdatedAt: "2023-06-05T07:08:58Z"
+    photoUpdatedAt: "2024-07-02T14:16:18Z"
     name:
       - {language: en, text: "Alexander Khimushkin"}
       - {language: ru, text: "Александр Химушкин"}
     companyIds: [1155]
     bio:
-      - {language: en, text: "<p>Alexander is a team architect for the ASE engineering division. Main stack of C#, .NET and\
+      - {language: en, text: "<p>Alexander is a team architect for the ASE engineering division. Main stack is C#, .NET and\
             \ anything else that can be made friends with it. Prefers to put any development into DDD and clear boundaries\
             \ of responsibility.</p>"}
-      - {language: ru, text: "<p>Архитектор команд инжинирингового дивизиона АСЭ. Основной стек C#, .NET и всё, что с этим\
-            \ можно подружить. Предпочитает любую разработку загонять в DDD и четкие границы ответственности.</p>"}
+      - {language: ru, text: "<p>Архитектор команд инжинирингового дивизиона АСЭ. Основной стек &mdash; C#, .NET и все, чт\
+            о с этим можно подружить. Предпочитает любую разработку, связанную с бизнесом, помещать в парадигму DDD и четк\
+            ие границы ответственности.</p>"}
   - id: 2848
     photoFileName: 2848.jpg
     photoUpdatedAt: "2023-06-10T13:26:59Z"
@@ -40942,17 +40985,17 @@ speakers:
     habr: gbal
   - id: 2849
     photoFileName: 2849.jpg
-    photoUpdatedAt: "2023-06-16T12:16:23Z"
+    photoUpdatedAt: "2024-04-11T14:55:25Z"
     name:
       - {language: en, text: "Nikolay Pyanikov"}
       - {language: ru, text: "Николай Пьяников"}
     companyIds: []
     bio:
-      - {language: en, text: "Nikolai has been programming for over 20 years. Worked at Beeline, Deutsche Bank and JetBrains.\
+      - {language: en, text: "<p>Nikolai has been programming for over 20 years. He worked at Beeline, Deutsche Bank and JetBrains.\
             \ At the moment he is interested in technologies around .NET and JVM. He likes to write efficient and reliable\
-            \ code."}
-      - {language: ru, text: "Программирует более 20 лет. Работал в Beeline, Deutsche Bank и JetBrains. В данный момент ин\
-            тересны технологии вокруг .NET и JVM. Нравится писать эффективный и надежный код."}
+            \ code.</p>"}
+      - {language: ru, text: "<p>Программирует более 20 лет. Работал в Beeline, Deutsche Bank и JetBrains. Сейчас интересн\
+            ы технологии вокруг .NET и JVM. Нравится писать эффективный и надежный код.</p>"}
     twitter: NikolayPyanikov
     gitHub: NikolayPianikov
     habr: NikolayPyanikov
@@ -49220,3 +49263,349 @@ speakers:
       - {language: ru, text: "<p>Разработчик с опытом более 15 лет. Работал в компаниях QIWI, CleverData и Leroy Merlin. П\
             оследние 10 лет разрабатывает распределенные системы для хранения и обработки больших объемов неструктурирован\
             ных данных. Сейчас в Яндексе занимается интеграцией Apache Spark с YTsaurus.</p>"}
+  - id: 3401
+    photoFileName: 3401.jpg
+    photoUpdatedAt: "2024-04-24T04:40:24Z"
+    name:
+      - {language: en, text: "Sergei Benzenko"}
+      - {language: ru, text: "Сергей Бензенко"}
+    companyIds: [1286]
+    bio:
+      - {language: en, text: "<p>Developer with over 20 years of experience, with the last 6 years in .NET. Author of Telegram\
+            \ channel <a href=\"https://t.me/NetDeveloperDiary\">\".NET Developer\"</a>.&nbsp;</p>"}
+      - {language: ru, text: "<p>Разработчик со стажем более 20 лет, последние 6 лет в .NET. Автор Telegram-канала <a href=\"\
+            https://t.me/NetDeveloperDiary\">&laquo;.NET Разработчик&raquo;</a>.&nbsp;</p>"}
+    twitter: sbenzenko
+    gitHub: sbenzenko
+    habr: SBenzenko
+  - id: 3402
+    photoFileName: 3402.jpg
+    photoUpdatedAt: "2024-06-18T11:35:19Z"
+    name:
+      - {language: en, text: "Vitalii Sushkov"}
+      - {language: ru, text: "Виталий Сушков"}
+    companyIds: [674]
+    bio:
+      - language: en
+        text: "<p>Mathematician-programmer by education. Has been developing software since 2010. Used different languages\
+            \ and platforms, since 2018 &mdash; mainly .NET and C#.</p>\n<p>Since 2022 Vitalii has been a .NET developer and\
+            \ technical lead at T-Bank.</p>"
+      - language: ru
+        text: "<p>Математик-программист по образованию. Разрабатывает ПО с 2010 года. Использовал разные языки и платформы\
+            , с 2018-го преимущественно .NET и C#.</p>\n<p>С 2022 года &mdash; .NET-разработчик и техлид в Т-Банке.</p>"
+  - id: 3403
+    photoFileName: 3403.jpg
+    photoUpdatedAt: "2024-06-13T10:23:33Z"
+    name:
+      - {language: en, text: "Igor Fedchenko"}
+      - {language: ru, text: "Игорь Федченко"}
+    companyIds: []
+    bio:
+      - language: en
+        text: "<p>Developer and architect of .NET solutions. He specialises in cloud platforms such as AWS and Azure.</p>\n\
+            <p>During his career Igor has created several projects from scratch and gained good experience in choosing optimal\
+            \ solutions and technologies for different products.</p>\n<p>He was part of Akka.NET Core Team. He has a weakness\
+            \ for multithreading, optimisation and serverless solutions.</p>"
+      - language: ru
+        text: "<p>Разработчик и архитектор .NET-решений. Специализируется на облачных платформах, таких как AWS и Azure.</p>\n\
+            <p>За время карьеры Игорь создал несколько проектов с нуля и получил хороший опыт выбора оптимальных решений и\
+            \ технологий для разных продуктов.</p>\n<p>Был частью Akka.NET Core Team. Питает слабость к многопоточности, о\
+            птимизации и serverless-решениям.</p>"
+    gitHub: IgorFedchenko
+  - id: 3404
+    photoFileName: 3404.jpg
+    photoUpdatedAt: "2024-05-24T11:59:22Z"
+    name:
+      - {language: en, text: "Andrei Porozhniakov"}
+      - {language: ru, text: "Андрей Порожняков"}
+    companyIds: [1287]
+    bio:
+      - {language: en, text: "<p>.NET developer, specialising in Web API development. Author of a series of talks on Minimal\
+            \ API.</p>"}
+      - {language: ru, text: "<p>.NET-разработчик, специализируется на разработке Web API. Автор серии докладов по Minimal\
+            \ API.</p>"}
+    habr: m3ta10ph0b
+  - id: 3405
+    photoFileName: 3405.jpg
+    photoUpdatedAt: "2024-05-27T15:16:34Z"
+    name:
+      - {language: en, text: "Stepan Minin"}
+      - {language: ru, text: "Степан Минин"}
+    companyIds: [775]
+    bio:
+      - language: en
+        text: "<p>Senior C# Developer, compiler enthusiast.</p>\n<p>Speaker at the SIYSS 2018 workshop in Stockholm as part\
+            \ of Nobel Week. Speaker at the Stachka conference and MskDotNet Meetup.</p>\n<p>One of the top 10 best authors\
+            \ of articles about C# on <a href=\"https://habr.com/ru/users/Stefanio/publications/articles/\">Habr</a>. Maintains\
+            \ <a href=\"https://t.me/steponeit\">a Telegram channel</a> about C# and the IT world.</p>\n<p>Develops two open\
+            \ source projects with a total of 80 stars.</p>"
+      - language: ru
+        text: "<p>Senior C# Developer, compiler enthusiast.</p>\n<p>Выступал в рамках Нобелевской недели на семинаре SIYSS\
+            \ 2018 в Стокгольме. Спикер конференции &laquo;Стачка&raquo; и MskDotNet Meetup.</p>\n<p>Входит в топ-10 лучши\
+            х авторов статей о C# на <a href=\"https://habr.com/ru/users/Stefanio/publications/articles/\">Хабре</a>. Веде\
+            т <a href=\"https://t.me/steponeit\">Telegram-канал</a> про C# и мир IT.</p>\n<p>Развивает два open source-про\
+            екта на 80 звезд суммарно.</p>"
+    gitHub: Stepami
+    habr: stefanio
+  - id: 3406
+    photoFileName: 3406.jpg
+    photoUpdatedAt: "2024-06-18T09:26:09Z"
+    name:
+      - {language: en, text: "Alena Melnik"}
+      - {language: ru, text: "Алёна Мельник"}
+    companyIds: [618]
+    bio:
+      - language: en
+        text: "<p>Lead developer of the b2c digital block in beeline. Develops reference architecture, promotes developer\
+            \ training.</p>\n<p>Main areas of professional interests include: distributed systems problems, event sourcing,\
+            \ DDD.</p>"
+      - language: ru
+        text: "<p>Ведущий разработчик блока b2c digital в билайне. Развивает референсную архитектуру, продвигает обучение\
+            \ разработчиков.</p>\n<p>Основные области профессиональных интересов: проблемы распределенных систем, event sourcing,\
+            \ DDD.&nbsp;</p>"
+  - id: 3407
+    photoFileName: 3407.jpg
+    photoUpdatedAt: "2024-06-18T08:53:33Z"
+    name:
+      - {language: en, text: "Vlad Khononov"}
+      - {language: ru, text: "Влад Хононов"}
+    companyIds: [1289]
+    bio:
+      - language: en
+        text: "<p>Vlad Khononov is a software engineer with extensive industry experience, working for companies large and\
+            \ small in roles ranging from webmaster to chief architect. His core areas of expertise are distributed systems\
+            \ and software design. Vlad consults with companies to make sense of their business domains, untangle monoliths,\
+            \ and tackle complex architectural challenges.</p>\n<p>Vlad maintains an active media career as a public speaker\
+            \ and author. Prior to <a href=\"https://www.oreilly.com/library/view/balancing-coupling-in/9780137353514/\">\"\
+            Balancing Coupling in Software Design\"</a>, he authored the best-selling O'Reilly book <a href=\"https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/\"\
+            >\"Learning Domain-Driven Design\"</a>. He is a keynote speaker, presenting on topics such as domain-driven design,\
+            \ microservices, and software architecture in general.</p>"
+      - language: ru
+        text: "<p class=\"p1\">Влад Хононов &mdash; инженер-программист с обширным опытом в индустрии. Работал в больших и\
+            \ малых компаниях на должностях от веб-мастера до главного архитектора. Основные области компетенции &mdash; р\
+            аспределенные системы и проектирование программного обеспечения. Влад консультирует компании по вопросам осмыс\
+            ления их бизнес-доменов, распутывания монолитов и решения сложных архитектурных задач.</p>\n<p class=\"p1\">Вл\
+            ад заработал известность в качестве публичного спикера и автора. До выхода книги <a href=\"https://www.oreilly.com/library/view/balancing-coupling-in/9780137353514/\"\
+            >&laquo;Balancing Coupling in Software Design&raquo;</a> он стал автором бестселлера O'Reilly <a href=\"https://www.oreilly.com/library/view/learning-domain-driven-design/9781098100124/\"\
+            >&laquo;Learning Domain-Driven Design&raquo;</a>. Выступает с кейноутами на такие темы, как domain-driven design,\
+            \ микросервисы и архитектура программного обеспечения в целом.</p>"
+    twitter: vladikk
+    gitHub: vladikk
+  - id: 3408
+    photoFileName: 3408.jpg
+    photoUpdatedAt: "2024-09-05T07:58:49Z"
+    name:
+      - {language: en, text: "Dmitrii Egorov"}
+      - {language: ru, text: "Дмитрий Егоров"}
+    companyIds: [1290]
+    bio:
+      - {language: en, text: "<p>Dmitry develops the Nocode.ru product and supports infrastructure services used by various\
+            \ teams in the company. In his spare time he lectures at programming courses at UrFU.</p>"}
+      - {language: ru, text: "<p>Разрабатывает продукт Nocode.ru и поддерживает инфраструктурные сервисы, которые использу\
+            ют разные команды в компании. В свободное время читает лекции на курсах по программированию в УрФУ.</p>"}
+  - id: 3409
+    photoFileName: 3409.jpg
+    photoUpdatedAt: "2024-04-11T15:04:07Z"
+    name:
+      - {language: en, text: "Alexander Goldebaev"}
+      - {language: ru, text: "Александр Гольдебаев"}
+    companyIds: [1291]
+    bio:
+      - {language: en, text: "Full-stack web developer on C# + React technology stack. Student of ITMO University."}
+      - {language: ru, text: "Full stack web-разработчик на стеке технологий C# + React. Студент ИТМО."}
+  - id: 3410
+    photoFileName: 3410.jpg
+    photoUpdatedAt: "2024-04-11T13:51:55Z"
+    name:
+      - {language: en, text: "Kirill Pronin"}
+      - {language: ru, text: "Кирилл Пронин"}
+    companyIds: [1293]
+    bio:
+      - language: en
+        text: "<p>Kirill is a software C# developer and at the same time a teacher. Since his student years, he has been very\
+            \ fond of technical areas and science. But most of all he liked sharing his experience and skills. Talk about\
+            \ how and what can be done faster, easier, cooler.</p>\n<p>Kirill doesn't load up with very theory. Everything\
+            \ is actually very simple, concise and beautiful. After all, he believes that everything can be learned only through\
+            \ practice and simple explanation using examples from life.</p>\n<p>Now Kirill works in the Russian &Iota;&Tau;\
+            \ company PIX Robotics, develops an RPA platform and teaches students how to develop software robots.</p>"
+      - language: ru
+        text: "<p>Разработчик программного обеспечения на C# и параллельно педагог. Со студенческих лет очень любил технич\
+            еские направления, науку. Но больше всего Кириллу нравилось делиться своим опытом, мастерством. Говорить, как\
+            \ и что можно сделать быстрее, проще, круче.</p>\n<p>Кирилл не грузит сложной теорией. Все на самом деле очень\
+            \ просто, лаконично и красиво. Считает, что всему можно научиться только с помощью практики и простого объясне\
+            ния на примерах из жизни.</p>\n<p>Сейчас работает в отечественной &Iota;&Tau;-компании PIX Robotics, разрабаты\
+            вает RPA-платформу и учит студентов разработке программных роботов.</p>"
+  - id: 3411
+    photoFileName: 3411.jpg
+    photoUpdatedAt: "2024-06-20T07:10:23Z"
+    name:
+      - {language: en, text: "Aleksandr Busygin"}
+      - {language: ru, text: "Александр Бусыгин"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>.NET developer. Passionate about DIY.</p>"}
+      - {language: ru, text: "<p>.NET-разработчик. Увлекается DIY.</p>"}
+  - id: 3412
+    photoFileName: 3412.jpg
+    photoUpdatedAt: "2024-04-11T13:22:42Z"
+    name:
+      - {language: en, text: "Yury Malich"}
+      - {language: ru, text: "Юрий Малич"}
+    companyIds: [1294]
+    bio:
+      - language: en
+        text: "<p>Yuri has been programming since about 1996 with MS-DOS, i386. He has been writing in C# .NET since the first\
+            \ versions.</p>\n<p>In 2002 he graduated from St. Petersburg State Transport University with a degree in Railway\
+            \ Signalling &amp; Interlocking. From 2007 to 2011 he worked at Nero AG on the Nero Burning Rom project. From\
+            \ 2011 to 2013 he worked at Tuneup Utilities on system utilities for Windows. Currently he is working at NP4 GmbH.\
+            \ His main specialisations are backend, databases and desktop applications for Windows.</p>\n<p>In 2016 he received\
+            \ Microsoft Certified Professional and Microsoft Specialist Programming in C# certificates.</p>\n<p>Author of\
+            \ articles on microprocessor architecture:</p>\n<ul>\n<li><a href=\"https://www.ixbt.com/optical/magia-chisel.shtml\"\
+            >The Magic of Numbers, or The Detective Story of Unreadable CDs</a>.&nbsp;&nbsp;</li>\n<li><a href=\"https://www.ixbt.com/cpu/amd-hammer-family2.shtml\"\
+            \ target=\"_blank\" rel=\"noopener\">A detailed study of the AMD64 architecture</a>, 2003 (collective, co-author).</li>\n\
+            <li><a href=\"https://fcenter.ru/online/hardarticles/processors/12033-Replay_neizvestnye_osobennosti_funkcionirovaniya_yadra_Netburst\"\
+            \ target=\"_blank\" rel=\"noopener\">Replay: unknown features of Netburst kernel operation</a>, 2005 (collective,\
+            \ co-author).</li>\n<li><a href=\"https://fcenter.ru/online/hardarticles/processors/17685-Issledovanie_skorosti_obmena_dannymi_mezhdu_yadrami_v_dvuhyadernyh_processorah\"\
+            \ target=\"_blank\" rel=\"noopener\">Study of data exchange rate between cores in dual-core processors</a>, 2006.</li>\n\
+            <li><a href=\"https://overclockers.ru/lab/show/23141/Mikroarhitektura_processorov_AMD_sledujuschego_pokoleniya_ot_K8_k_K8L\"\
+            \ target=\"_blank\" rel=\"noopener\">AMD next generation processor microarchitecture: from K8 to K8L</a>, 2006.</li>\n\
+            <li><a href=\"https://fcenter.ru/online/hardarticles/processors/22080-Mikroarhitektura_K10\" target=\"_blank\"\
+            \ rel=\"noopener\">K10 microarchitecture</a>, 2007.</li>\n</ul>"
+      - language: ru
+        text: "<p>Программирует примерно с 1996 года с MS-DOS, i386. На C# .NET пишет с первых версий.</p>\n<p>В 2002-м ок\
+            ончил ПГУПС по специальности &laquo;автоматика и телемеханика на железнодорожном транспорте&raquo;. С 2007 по\
+            \ 2011 год работал в Nero AG над проектом Nero Burning Rom. С 2011 по 2013 год работал в Tuneup Utilities над\
+            \ системными утилитами для Windows. Сейчас &mdash; в NP4 GmbH. Основные специализации &mdash; бэкенд, базы дан\
+            ных и десктоп-приложения для Windows.</p>\n<p>В 2016-м получил сертификаты Microsoft Certified Professional и\
+            \ Microsoft Specialist Programming in C#.</p>\n<p>Автор статей по архитектуре микропроцессоров:</p>\n<ul>\n<li><a\
+            \ href=\"https://www.ixbt.com/optical/magia-chisel.shtml\">Магия чисел, или Детективная история о нечитаемых к\
+            опмакт-дисках</a>.&nbsp;&nbsp;</li>\n<li><a href=\"https://www.ixbt.com/cpu/amd-hammer-family2.shtml\" target=\"\
+            _blank\" rel=\"noopener noreferrer\">Детальное исследование архитектуры AMD64</a>, 2003 (коллективная, соавтор\
+            ).</li>\n<li><a href=\"https://fcenter.ru/online/hardarticles/processors/12033-Replay_neizvestnye_osobennosti_funkcionirovaniya_yadra_Netburst\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">Replay: неизвестные особенности функционирования ядра Netburst</a>,\
+            \ 2005 (коллективная, соавтор).</li>\n<li><a href=\"https://fcenter.ru/online/hardarticles/processors/17685-Issledovanie_skorosti_obmena_dannymi_mezhdu_yadrami_v_dvuhyadernyh_processorah\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">Исследование скорости обмена данными между ядрами в двухъядерн\
+            ых процессорах</a>, 2006.</li>\n<li><a href=\"https://overclockers.ru/lab/show/23141/Mikroarhitektura_processorov_AMD_sledujuschego_pokoleniya_ot_K8_k_K8L\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">Микроархитектура процессоров AMD следующего поколения: от K8 к\
+            \ K8L</a>, 2006.</li>\n<li><a href=\"https://fcenter.ru/online/hardarticles/processors/22080-Mikroarhitektura_K10\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">Микроархитектура K10</a>, 2007.</li>\n</ul>\n<p>&nbsp;</p>"
+  - id: 3413
+    photoFileName: 3413.jpg
+    photoUpdatedAt: "2024-06-24T07:47:22Z"
+    name:
+      - {language: en, text: "Rodion Mostovoi"}
+      - {language: ru, text: "Родион Мостовой"}
+    companyIds: [1295]
+    bio:
+      - {language: en, text: "Rodion has been programming for money for the .NET platform for over 10 years. He has been teaching\
+            \ and mentoring for almost 3 years. For more than a year he has been successfully delegating all programming routine\
+            \ and not only to different LLMs and developing products on their basis. He runs several open <a href=\"https://github.com/rodion-m/\"\
+            \ rel=\"noopener noreferrer\" target=\"_blank\">source projects</a> on GitHub."}
+      - {language: ru, text: "<p>Более 10 лет программирует под платформу .NET за деньги. Почти 3 года преподает и ментори\
+            т. Более года успешно делегирует программистскую рутину и не только разным LLM и разрабатывает продукты на их\
+            \ основе. Ведет <a href=\"https://github.com/rodion-m/\">open source-проекты</a> на GitHub.</p>"}
+    twitter: RodionMostovoy
+    gitHub: rodion-m
+    habr: rodion-m
+  - id: 3414
+    photoFileName: 3414.jpg
+    photoUpdatedAt: "2024-05-06T13:55:07Z"
+    name:
+      - {language: en, text: "Gleb Aslamov"}
+      - {language: ru, text: "Глеб Асламов"}
+    companyIds: [424]
+    bio:
+      - {language: en, text: "<p>C# &amp; .NET developer. He talks about technologies in the sphere of secure development\
+            \ and code quality at conferences, and writes <a href=\"https://habr.com/ru/users/A-G-B/publications/articles/\"\
+            >articles for Habr</a>.</p>"}
+      - {language: ru, text: "<p>C# и .NET-разработчик. Рассказывает о технологиях в сфере безопасной разработки и качеств\
+            а кода на конференциях, пишет <a href=\"https://habr.com/ru/users/A-G-B/publications/articles/\">статьи на Хаб\
+            р</a>.</p>"}
+    habr: A-G-B
+  - id: 3415
+    photoFileName: 3415.jpg
+    photoUpdatedAt: "2024-08-13T09:53:32Z"
+    name:
+      - {language: en, text: "Sergei Pilkin"}
+      - {language: ru, text: "Сергей Пилкин"}
+    companyIds: [1296]
+    bio:
+      - language: en
+        text: "<p>Software developer with over 30 years of experience. Main stack: .NET, C#, desktop.</p>\n<p>Chief developer\
+            \ of the Russian CAD system Delta Design for radio electronic equipment design. General Director of AO \"EREMEX\"\
+            .</p>"
+      - language: ru
+        text: "<p>Разработчик ПО с опытом более 30 лет. Основной стек: .NET, C#, desktop.</p>\n<p>Главный разработчик росс\
+            ийской САПР Delta Design для проектирования РЭА. Генеральный директор АО &laquo;ЭРЕМЕКС&raquo;.</p>"
+  - id: 3416
+    photoFileName: 3416.jpg
+    photoUpdatedAt: "2024-05-21T13:29:58Z"
+    name:
+      - {language: en, text: "Mikhail Rukovishnikov"}
+      - {language: ru, text: "Михаил Руковишников"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>He has been working at T-Bank for more than 2 years in B2G, developing .NET services to facilitate\
+            \ business participation in public procurement.</p>"}
+      - {language: ru, text: "<p>Более 2 лет работает в Т-Банке в направлении B2G &mdash; разрабатывает .NET-сервисы, обле\
+            гчающие бизнесу участие в госзакупках.</p>"}
+  - id: 3417
+    photoFileName: 3417.jpg
+    photoUpdatedAt: "2024-05-15T15:47:08Z"
+    name:
+      - {language: en, text: "Dmitrii Orlov"}
+      - {language: ru, text: "Дмитрий Орлов"}
+    companyIds: [390]
+    bio:
+      - language: en
+        text: "<p>Dmitrii has been writing in .NET for money for 11 years. He was a developer, a teamleader, and again a developer.\
+            \ He automated the energy industry, alcohol sales, medical school, government, and now Ozon.</p>\n<p>He teaches\
+            \ external courses at Ozon Route 256, and talks about technologies that are actively used in his work, including\
+            \ Postgres and Apache Kafka.</p>"
+      - language: ru
+        text: "<p>Пишет на .NET за деньги уже 11 лет. Был разработчиком, тимлидом и опять разработчиком. Автоматизировал э\
+            нергетику, продажи алкоголя, медицинский колледж, государство, а теперь &mdash; Ozon.</p>\n<p>Преподает на вне\
+            шних курсах Ozon Route 256, рассказывает про технологии, которые активно применяются в работе &mdash; в том чи\
+            сле Postgres и Apache Kafka.</p>"
+  - id: 3418
+    photoFileName: 3418.jpg
+    photoUpdatedAt: "2024-07-10T13:34:02Z"
+    name:
+      - {language: en, text: "Aleksei Galliamov"}
+      - {language: ru, text: "Алексей Галлямов"}
+    companyIds: [618]
+    bio:
+      - {language: en, text: "<p>Head of cross-platform solutions at beeline. Expert in .NET, C# language and enterprise application\
+            \ architecture.</p>"}
+      - {language: ru, text: "<p>Руководитель управления кросс-платформенных решений в билайне. Эксперт по .NET, языку C#\
+            \ и архитектуре корпоративных приложений.</p>"}
+  - id: 3419
+    photoFileName: 3419.jpg
+    photoUpdatedAt: "2024-03-15T10:01:09Z"
+    name:
+      - {language: en, text: "Alper Ebicoglu"}
+    companyIds: [1288]
+    bio:
+      - {language: en, text: "<p>Alper has been a passionate .NET software architect since the early 2000s. He is the co-founder\
+            \ of Volosoft company, which produces tools and open-source frameworks for .NET developers. And he's one of the\
+            \ owners of <a href=\"https://github.com/abpframework/abp\">the ABP Framework</a>.</p>"}
+    twitter: alperebicoglu
+    gitHub: ebicoglu
+  - id: 3420
+    photoFileName: 3420.jpg
+    photoUpdatedAt: "2024-05-06T14:31:15Z"
+    name:
+      - {language: en, text: "Artem Manchenkov"}
+      - {language: ru, text: "Артём Манченков"}
+    companyIds: [328]
+    bio:
+      - {language: en, text: "<p>Software engineer with over 10 years of experience. Artem started the career as an IT disciplines\
+            \ instructor in a college, progressed from a developer to team lead at VK in 3 years, and later moved to Prague\
+            \ to work at Microsoft. He actively participated as an instructor in online courses at various renowned schools,\
+            \ such as Skillbox, Geekbrains, etc.</p>"}
+      - {language: ru, text: "<p>Разработчик со стажем больше 10 лет. Начал карьеру как преподаватель IT-дисциплин в колле\
+            дже, за 3 года прошел путь от разработчика до тимлида в VK, позже перебрался в Прагу для работы в Microsoft. В\
+            ел онлайн-курсы во многих известных школах, таких как Skillbox, Geekbrains.</p>"}
+    twitter: AMAnchenkov
+    gitHub: manchenkoff
+    habr: manchenkoff
