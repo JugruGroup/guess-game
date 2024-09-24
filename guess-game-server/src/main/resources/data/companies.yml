@@ -4568,8 +4568,8 @@ companies:
     siteLink: https://www.detmir.ru
   - id: 1281
     name:
-      - {language: en, text: "Lemana PRO (Leroy Merlin)"}
-      - {language: ru, text: "Лемана ПРО (Леруа Мерлен)"}
+      - {language: en, text: "Lemana PRO"}
+      - {language: ru, text: "Лемана ПРО"}
     siteLink: https://lemanapro.ru
   - id: 1282
     name:
