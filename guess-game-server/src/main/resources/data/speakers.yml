@@ -22010,6 +22010,7 @@ speakers:
             \ Senior Software Developer at Sber.</p>"}
       - {language: ru, text: "<p>Участник 1/2 финала 2018 ICPC (the International Collegiate Programming Contest). Старший\
             \ разработчик в Сбере.</p>"}
+    gitHub: nikita-sakharin
   - id: 1550
     photoFileName: 1550.jpg
     photoUpdatedAt: 2021-03-09T11:36:08.037Z[UTC]
