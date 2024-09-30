@@ -2823,6 +2823,13 @@ events:
     days:
       - {startDate: "2024-08-15", endDate: "2024-08-15", placeId: 13}
     talkIds: [5613]
+  - eventTypeId: 15
+    name:
+      - {language: en, text: "JUGNsk Meetup #24"}
+      - {language: ru, text: "Митап #24 JUGNsk"}
+    days:
+      - {startDate: "2024-09-26", endDate: "2024-09-26", placeId: 13}
+    talkIds: [5705, 5706]
   # SnowOne
   - eventTypeId: 16
     name:

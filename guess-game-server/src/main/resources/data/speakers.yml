@@ -49610,3 +49610,10 @@ speakers:
     twitter: AMAnchenkov
     gitHub: manchenkoff
     habr: manchenkoff
+  - id: 3421
+    photoFileName: 3421.jpg
+    photoUpdatedAt: "2024-09-30T08:25:00Z"
+    name:
+      - {language: en, text: "Mikhail Kirichenko"}
+      - {language: ru, text: "Михаил Кириченко"}
+    companyIds: [674]
