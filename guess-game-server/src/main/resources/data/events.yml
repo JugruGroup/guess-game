@@ -2980,6 +2980,7 @@ events:
       - {language: en, text: "GoFunc 2024"}
     days:
       - {startDate: "2024-03-14", endDate: "2024-03-15", placeId: 24}
+    youtubeLink: https://www.youtube.com/playlist?list=PLMUIztSQmR0Xh72fUZbcv_DjbusTKbvHF
     talkIds: [5298, 5299, 5300, 5301, 5302, 5303, 5304, 5305, 5306, 5307, 5308, 5309, 5310, 5311, 5312, 5313, 5314, 5315,
               5316, 5317, 5318, 5319, 5320]
   - eventTypeId: 22
