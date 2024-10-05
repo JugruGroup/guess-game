@@ -2716,7 +2716,8 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("Flow 2024 Autumn", null, List.of(24L, 30L)),
 //                        Set.of("Открытие конференции Flow 2024 Autumn", "Закрытие конференции Flow 2024 Autumn",
 //                                "Подведение итогов онлайн-части конференции Flow 2024 Autumn",
-//                                "Открытие офлайн-части конференции Flow 2024 Autumn", "Доклады в стиле SMART", "Fail Night")));
+//                                "Открытие офлайн-части конференции Flow 2024 Autumn", "Доклады в стиле SMART", "Fail Night",
+//                                "25 сентября 13:15-14:00", "25 сентября 14:45-15:30")));
 //        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2024, 9, 18), "2024",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("PiterPy 2024", null, List.of(24L, 30L)),
