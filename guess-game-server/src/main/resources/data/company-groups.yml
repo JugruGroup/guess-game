@@ -90,10 +90,22 @@ companyGroups:
     items: [
       "МТS Digital"
     ]
+  - name: "Nexign, MegaFon, Yota"
+    items: [
+      Nexign,
+      MegaFon,
+      Yota
+    ]
   - name: "NEWHR | Hello New Job!"
     items: [
       NEWHR,
       "Hello New Job!"
+    ]
+  - name: "OTUS, School 21, LAF"
+    items: [
+      OTUS,
+      "School 21",
+      LAF
     ]
   - name: "OTS Lab / odgAssist"
     items: [

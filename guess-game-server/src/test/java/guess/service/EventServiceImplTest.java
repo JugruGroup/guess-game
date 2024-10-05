@@ -376,26 +376,26 @@ class EventServiceImplTest {
     @DisplayName("getEventsFromDateTime method tests")
     class GetEventsFromDateTimeTest {
         private Stream<Arguments> data() {
-            EventType eventType0 = new EventType();
-            eventType0.setId(0);
-            eventType0.setConference(Conference.JPOINT);
+            EventType localEventType0 = new EventType();
+            localEventType0.setId(0);
+            localEventType0.setConference(Conference.JPOINT);
 
-            EventType eventType1 = new EventType();
-            eventType1.setId(1);
+            EventType localEventType1 = new EventType();
+            localEventType1.setId(1);
 
-            Event event0 = new Event();
-            event0.setId(0);
-            event0.setEventType(eventType0);
+            Event localEvent0 = new Event();
+            localEvent0.setId(0);
+            localEvent0.setEventType(localEventType0);
 
-            Event event1 = new Event();
-            event1.setId(1);
-            event1.setEventType(eventType1);
+            Event localEvent1 = new Event();
+            localEvent1.setId(1);
+            localEvent1.setEventType(localEventType1);
 
             return Stream.of(
-                    arguments(false, false, null, List.of(event0, event1), Collections.emptyList()),
-                    arguments(false, true, null, List.of(event0, event1), List.of(event1)),
-                    arguments(true, false, null, List.of(event0, event1), List.of(event0)),
-                    arguments(true, true, null, List.of(event0, event1), List.of(event0, event1))
+                    arguments(false, false, null, List.of(localEvent0, localEvent1), Collections.emptyList()),
+                    arguments(false, true, null, List.of(localEvent0, localEvent1), List.of(localEvent1)),
+                    arguments(true, false, null, List.of(localEvent0, localEvent1), List.of(localEvent0)),
+                    arguments(true, true, null, List.of(localEvent0, localEvent1), List.of(localEvent0, localEvent1))
             );
         }
 
@@ -418,17 +418,17 @@ class EventServiceImplTest {
     @Test
     void testGetDefaultEventPart() {
         EventServiceImpl eventService = Mockito.mock(EventServiceImpl.class);
-        final boolean IS_CONFERENCES = Boolean.TRUE;
-        final boolean IS_MEETUPS = Boolean.FALSE;
-        final LocalDateTime DATE_TIME = LocalDateTime.now();
+        final boolean isConferences = Boolean.TRUE;
+        final boolean isMeetups = Boolean.FALSE;
+        final LocalDateTime dateTime = LocalDateTime.now();
 
-        Mockito.doCallRealMethod().when(eventService).getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS, DATE_TIME);
-        Mockito.when(eventService.getDefaultEvent(IS_CONFERENCES, IS_MEETUPS, DATE_TIME)).thenReturn(new Event());
+        Mockito.doCallRealMethod().when(eventService).getDefaultEventPart(isConferences, isMeetups, dateTime);
+        Mockito.when(eventService.getDefaultEvent(isConferences, isMeetups, dateTime)).thenReturn(new Event());
 
-        eventService.getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS, DATE_TIME);
-        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS, DATE_TIME);
-        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(IS_CONFERENCES, IS_MEETUPS, DATE_TIME);
-        Mockito.verify(eventService, VerificationModeFactory.times(1)).getEventPartFromEvent(Mockito.any(Event.class), Mockito.eq(DATE_TIME));
+        eventService.getDefaultEventPart(isConferences, isMeetups, dateTime);
+        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(isConferences, isMeetups, dateTime);
+        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(isConferences, isMeetups, dateTime);
+        Mockito.verify(eventService, VerificationModeFactory.times(1)).getEventPartFromEvent(Mockito.any(Event.class), Mockito.eq(dateTime));
         Mockito.verifyNoMoreInteractions(eventService);
     }
 
@@ -437,49 +437,49 @@ class EventServiceImplTest {
     @DisplayName("getEventPartFromEvent method tests")
     class GetEventPartFromEventTest {
         private Stream<Arguments> data() {
-            final LocalDate DATE0 = LocalDate.of(2022, 6, 23);
-            final LocalDate DATE1 = LocalDate.of(2022, 6, 24);
-            final LocalDateTime DATE_TIME0 = LocalDateTime.of(2022, 7, 1, 0, 0, 0);
-            final LocalDateTime DATE_TIME1 = LocalDateTime.of(2022, 6, 1, 0, 0, 0);
+            final LocalDate date0 = LocalDate.of(2022, 6, 23);
+            final LocalDate date1 = LocalDate.of(2022, 6, 24);
+            final LocalDateTime dateTime0 = LocalDateTime.of(2022, 7, 1, 0, 0, 0);
+            final LocalDateTime dateTime1 = LocalDateTime.of(2022, 6, 1, 0, 0, 0);
 
             Place place0 = new Place();
 
             EventDays eventDays0 = new EventDays(
-                    DATE0,
-                    DATE1,
+                    date0,
+                    date1,
                     place0
             );
 
             ZoneId zoneId0 = ZoneId.of("Europe/Moscow");
 
-            Event event0 = new Event();
-            event0.setId(0);
+            Event localEvent0 = new Event();
+            localEvent0.setId(0);
 
-            Event event1 = new Event();
-            event1.setId(1);
-            event1.setDays(Collections.emptyList());
+            Event localEvent1 = new Event();
+            localEvent1.setId(1);
+            localEvent1.setDays(Collections.emptyList());
 
-            Event event2 = new Event();
-            event2.setId(2);
-            event2.setDays(List.of(eventDays0));
-            event2.setTimeZoneId(zoneId0);
+            Event localEvent2 = new Event();
+            localEvent2.setId(2);
+            localEvent2.setDays(List.of(eventDays0));
+            localEvent2.setTimeZoneId(zoneId0);
 
             EventPart eventPart0 = new EventPart(
                     2,
                     new EventType(),
-                    DATE0,
-                    DATE1
+                    date0,
+                    date1
             );
 
             return Stream.of(
                     arguments(null, null, null),
-                    arguments(null, DATE_TIME0, null),
-                    arguments(event0, null, null),
-                    arguments(event0, DATE_TIME0, null),
-                    arguments(event1, null, null),
-                    arguments(event1, DATE_TIME0, null),
-                    arguments(event2, DATE_TIME0, null),
-                    arguments(event2, DATE_TIME1, eventPart0)
+                    arguments(null, dateTime0, null),
+                    arguments(localEvent0, null, null),
+                    arguments(localEvent0, dateTime0, null),
+                    arguments(localEvent1, null, null),
+                    arguments(localEvent1, dateTime0, null),
+                    arguments(localEvent2, dateTime0, null),
+                    arguments(localEvent2, dateTime1, eventPart0)
             );
         }
 
@@ -501,50 +501,50 @@ class EventServiceImplTest {
     @DisplayName("getDefaultEvent method tests")
     class GetDefaultEventTest {
         private Stream<Arguments> data() {
-            final boolean IS_CONFERENCES = Boolean.TRUE;
-            final boolean IS_MEETUPS = Boolean.TRUE;
-            final LocalDateTime DATE_TIME = LocalDateTime.of(2021, 2, 7, 10, 0);
+            final boolean isConferences = Boolean.TRUE;
+            final boolean isMeetups = Boolean.TRUE;
+            final LocalDateTime dateTime = LocalDateTime.of(2021, 2, 7, 10, 0);
 
-            Event event0 = new Event();
-            event0.setId(0);
+            Event localEvent0 = new Event();
+            localEvent0.setId(0);
 
-            Event event1 = new Event();
-            event1.setId(1);
+            Event localEvent1 = new Event();
+            localEvent1.setId(1);
 
             EventDateMinStartTime eventDateMinStartTime0 = new EventDateMinStartTime(
-                    event0,
+                    localEvent0,
                     LocalDate.of(2021, 2, 7),
                     LocalTime.of(10, 0)
             );
 
             EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime0 = new EventMinStartTimeEndDayTime(
-                    event0,
+                    localEvent0,
                     LocalDateTime.of(2021, 2, 7, 10, 0),
                     LocalDateTime.of(2021, 2, 8, 0, 0)
             );
 
             EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime1 = new EventMinStartTimeEndDayTime(
-                    event1,
+                    localEvent1,
                     LocalDateTime.of(2021, 2, 7, 12, 0),
                     LocalDateTime.of(2021, 2, 8, 0, 0)
             );
 
             return Stream.of(
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, Collections.emptyList(), null, null, null),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, List.of(event0), Collections.emptyList(), null, null),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME, List.of(event0), List.of(eventDateMinStartTime0), Collections.emptyList(), null),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(1, ChronoUnit.DAYS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), null),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.minus(1, ChronoUnit.DAYS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event0),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME,
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event0),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(1, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event0),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(2, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event1),
-                    arguments(IS_CONFERENCES, IS_MEETUPS, DATE_TIME.plus(3, ChronoUnit.HOURS),
-                            List.of(event0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), event1)
+                    arguments(isConferences, isMeetups, dateTime, Collections.emptyList(), null, null, null),
+                    arguments(isConferences, isMeetups, dateTime, List.of(localEvent0), Collections.emptyList(), null, null),
+                    arguments(isConferences, isMeetups, dateTime, List.of(localEvent0), List.of(eventDateMinStartTime0), Collections.emptyList(), null),
+                    arguments(isConferences, isMeetups, dateTime.plus(1, ChronoUnit.DAYS),
+                            List.of(localEvent0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), null),
+                    arguments(isConferences, isMeetups, dateTime.minus(1, ChronoUnit.DAYS),
+                            List.of(localEvent0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), localEvent0),
+                    arguments(isConferences, isMeetups, dateTime,
+                            List.of(localEvent0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), localEvent0),
+                    arguments(isConferences, isMeetups, dateTime.plus(1, ChronoUnit.HOURS),
+                            List.of(localEvent0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), localEvent0),
+                    arguments(isConferences, isMeetups, dateTime.plus(2, ChronoUnit.HOURS),
+                            List.of(localEvent0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), localEvent1),
+                    arguments(isConferences, isMeetups, dateTime.plus(3, ChronoUnit.HOURS),
+                            List.of(localEvent0), List.of(eventDateMinStartTime0), List.of(eventMinStartTimeEndDayTime0, eventMinStartTimeEndDayTime1), localEvent1)
             );
         }
 
@@ -618,46 +618,46 @@ class EventServiceImplTest {
 
     @Test
     void getEventMinStartTimeEndDayTimeList() {
-        Event event0 = new Event();
-        event0.setId(0);
-        event0.setTimeZoneId(ZoneId.of("Europe/Moscow"));
+        Event localEvent0 = new Event();
+        localEvent0.setId(0);
+        localEvent0.setTimeZoneId(ZoneId.of("Europe/Moscow"));
 
-        Event event1 = new Event();
-        event1.setId(1);
-        event1.setTimeZoneId(ZoneId.of("Asia/Novosibirsk"));
+        Event localEvent1 = new Event();
+        localEvent1.setId(1);
+        localEvent1.setTimeZoneId(ZoneId.of("Asia/Novosibirsk"));
 
         EventDateMinStartTime eventDateMinStartTime0 = new EventDateMinStartTime(
-                event0,
+                localEvent0,
                 LocalDate.of(2021, 2, 4),
                 LocalTime.of(15, 0)
         );
 
         EventDateMinStartTime eventDateMinStartTime1 = new EventDateMinStartTime(
-                event1,
+                localEvent1,
                 LocalDate.of(2021, 2, 4),
                 LocalTime.of(15, 0)
         );
 
         EventDateMinStartTime eventDateMinStartTime2 = new EventDateMinStartTime(
-                event0,
+                localEvent0,
                 LocalDate.of(2021, 2, 4),
                 LocalTime.of(0, 0)
         );
 
         EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime0 = new EventMinStartTimeEndDayTime(
-                event0,
+                localEvent0,
                 LocalDateTime.of(2021, 2, 4, 12, 0),
                 LocalDateTime.of(2021, 2, 4, 21, 0)
         );
 
         EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime1 = new EventMinStartTimeEndDayTime(
-                event1,
+                localEvent1,
                 LocalDateTime.of(2021, 2, 4, 8, 0),
                 LocalDateTime.of(2021, 2, 4, 17, 0)
         );
 
         EventMinStartTimeEndDayTime eventMinStartTimeEndDayTime2 = new EventMinStartTimeEndDayTime(
-                event0,
+                localEvent0,
                 LocalDateTime.of(2021, 2, 3, 21, 0),
                 LocalDateTime.of(2021, 2, 4, 21, 0)
         );
@@ -691,11 +691,11 @@ class EventServiceImplTest {
 
         Mockito.doCallRealMethod().when(eventService).convertEventToEventParts(Mockito.any(Event.class));
 
-        Event event0 = new Event();
-        event0.setId(0);
-        event0.setDays(Collections.emptyList());
+        Event localEvent0 = new Event();
+        localEvent0.setId(0);
+        localEvent0.setDays(Collections.emptyList());
 
-        eventService.convertEventToEventParts(event0);
+        eventService.convertEventToEventParts(localEvent0);
         Mockito.verify(eventService, VerificationModeFactory.times(1)).convertEventToEventParts(Mockito.any(Event.class));
         Mockito.verifyNoMoreInteractions(eventService);
     }
@@ -706,13 +706,13 @@ class EventServiceImplTest {
 
         Mockito.doCallRealMethod().when(eventService).convertEventsToEventParts(Mockito.anyList());
 
-        Event event0 = new Event();
-        event0.setId(0);
+        Event localEvent0 = new Event();
+        localEvent0.setId(0);
 
-        Event event1 = new Event();
-        event1.setId(1);
+        Event localEvent1 = new Event();
+        localEvent1.setId(1);
 
-        eventService.convertEventsToEventParts(List.of(event0, event1));
+        eventService.convertEventsToEventParts(List.of(localEvent0, localEvent1));
         Mockito.verify(eventService, VerificationModeFactory.times(1)).convertEventsToEventParts(Mockito.anyList());
         Mockito.verify(eventService, VerificationModeFactory.times(2)).convertEventToEventParts(Mockito.any(Event.class));
         Mockito.verifyNoMoreInteractions(eventService);

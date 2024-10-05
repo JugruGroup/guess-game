@@ -115,9 +115,9 @@ class CompanyServiceImplTest {
 
                 SpeakerDao speakerDao = Mockito.mock(SpeakerDao.class);
 
-                CompanyService companyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
+                CompanyService localCompanyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
 
-                assertEquals(expected, companyService.getCompanies(name));
+                assertEquals(expected, localCompanyService.getCompanies(name));
             }
         }
     }
@@ -133,10 +133,10 @@ class CompanyServiceImplTest {
 
     @Test
     void getCompaniesByIds() {
-        final List<Long> IDS = List.of(0L, 1L, 2L);
+        final List<Long> ids = List.of(0L, 1L, 2L);
 
-        companyService.getCompaniesByIds(IDS);
-        Mockito.verify(companyDao, VerificationModeFactory.times(1)).getCompaniesByIds(IDS);
+        companyService.getCompaniesByIds(ids);
+        Mockito.verify(companyDao, VerificationModeFactory.times(1)).getCompaniesByIds(ids);
         Mockito.verifyNoMoreInteractions(companyDao);
     }
 
@@ -176,9 +176,9 @@ class CompanyServiceImplTest {
 
                 SpeakerDao speakerDao = Mockito.mock(SpeakerDao.class);
 
-                CompanyService companyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
+                CompanyService localCompanyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
 
-                assertEquals(expected, companyService.getCompaniesByFirstLetter(isDigit, firstLetter, language));
+                assertEquals(expected, localCompanyService.getCompaniesByFirstLetter(isDigit, firstLetter, language));
             }
         }
     }
@@ -213,9 +213,9 @@ class CompanyServiceImplTest {
 
                 SpeakerDao speakerDao = Mockito.mock(SpeakerDao.class);
 
-                CompanyService companyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
+                CompanyService localCompanyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
 
-                assertEquals(expected, companyService.getCompaniesByFirstLetters(firstLetters, language));
+                assertEquals(expected, localCompanyService.getCompaniesByFirstLetters(firstLetters, language));
             }
         }
     }
@@ -248,9 +248,9 @@ class CompanyServiceImplTest {
             SpeakerDao speakerDao = Mockito.mock(SpeakerDao.class);
             Mockito.when(speakerDao.getSpeakers()).thenReturn(speakers);
 
-            CompanyService companyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
+            CompanyService localCompanyService = new CompanyServiceImpl(companyDaoMock, speakerDao);
 
-            assertEquals(expected, companyService.getCompanySearchResults(companies));
+            assertEquals(expected, localCompanyService.getCompanySearchResults(companies));
         }
     }
 }

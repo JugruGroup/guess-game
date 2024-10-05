@@ -4635,3 +4635,69 @@ companies:
       - {language: en, text: EREMEX}
       - {language: ru, text: ЭРЕМЕКС}
     siteLink: https://www.eremex.ru
+  - id: 1297
+    name:
+      - {language: en, text: "QIC digital hub"}
+    siteLink: https://qic.online
+  - id: 1298
+    name:
+      - {language: en, text: "MD Audit"}
+    siteLink: https://mdaudit.ru
+  - id: 1299
+    name:
+      - {language: en, text: "School 21"}
+      - {language: ru, text: "Школа 21"}
+    siteLink: https://21-school.ru
+  - id: 1300
+    name:
+      - {language: en, text: LAF}
+      - {language: ru, text: ЛАФ}
+    siteLink: https://www.youtube.com/@LAFest
+  - id: 1301
+    name:
+      - {language: en, text: "Epsilon Metrics"}
+      - {language: ru, text: "Эпсилон Метрикс"}
+    siteLink: https://epsilonmetrics.ru
+  - id: 1302
+    name:
+      - {language: en, text: "1C Bit"}
+      - {language: ru, text: "Первый Бит"}
+    siteLink: https://www.1cbit.ru
+  - id: 1303
+    name:
+      - {language: en, text: Nexign}
+    siteLink: https://nexign.com
+  - id: 1304
+    name:
+      - {language: en, text: DocHub}
+    siteLink: https://dochub.info
+  - id: 1305
+    name:
+      - {language: en, text: Stormbpmn}
+    siteLink: https://stormbpmn.com
+  - id: 1306
+    name:
+      - {language: en, text: Terralink}
+    siteLink: https://terralink.ru
+  - id: 1307
+    name:
+      - {language: en, text: "Smart Effect"}
+    siteLink: https://smart-effect.ru
+  - id: 1308
+    name:
+      - {language: en, text: "Moscow exchange"}
+      - {language: ru, text: "Московская биржа"}
+    siteLink: https://www.moex.com
+  - id: 1309
+    name:
+      - {language: en, text: "TN Digital"}
+    siteLink: https://digital.tn.ru
+  - id: 1310
+    name:
+      - {language: en, text: "System Swing"}
+      - {language: ru, text: "Системный сдвиг"}
+    siteLink: https://t.me/systemswing
+  - id: 1311
+    name:
+      - {language: en, text: "Soft Skills Lab"}
+    siteLink: https://skillslab.center

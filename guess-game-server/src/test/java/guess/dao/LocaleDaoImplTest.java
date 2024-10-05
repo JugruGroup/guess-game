@@ -11,7 +11,7 @@ import org.springframework.mock.web.MockHttpSession;
 
 @DisplayName("LocaleDaoImpl class tests")
 class LocaleDaoImplTest {
-    private final static LocaleDao localeDao = new LocaleDaoImpl();
+    private static final LocaleDao localeDao = new LocaleDaoImpl();
 
     @Test
     void getLanguage() {
