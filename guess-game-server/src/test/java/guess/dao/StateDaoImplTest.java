@@ -22,7 +22,7 @@ import java.util.List;
 
 @DisplayName("StateDaoImpl class tests")
 class StateDaoImplTest {
-    private final static StateDao stateDao = new StateDaoImpl();
+    private static final StateDao stateDao = new StateDaoImpl();
 
     @Test
     void getGameState() {

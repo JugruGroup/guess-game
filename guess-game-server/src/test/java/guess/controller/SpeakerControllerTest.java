@@ -64,8 +64,8 @@ class SpeakerControllerTest {
 
     @Test
     void getSpeakersByFirstLetter() throws Exception {
-        final Language LANGUAGE = Language.ENGLISH;
-        final String FIRST_LETTER = "a";
+        final Language language = Language.ENGLISH;
+        final String firstLetter = "a";
 
         MockHttpSession httpSession = new MockHttpSession();
 
@@ -75,23 +75,23 @@ class SpeakerControllerTest {
         Speaker speaker1 = new Speaker();
         speaker1.setId(1);
 
-        given(localeService.getLanguage(httpSession)).willReturn(LANGUAGE);
-        given(speakerService.getSpeakersByFirstLetter(FIRST_LETTER, LANGUAGE)).willReturn(List.of(speaker0, speaker1));
+        given(localeService.getLanguage(httpSession)).willReturn(language);
+        given(speakerService.getSpeakersByFirstLetter(firstLetter, language)).willReturn(List.of(speaker0, speaker1));
 
         mvc.perform(get("/api/speaker/first-letter-speakers")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .param("firstLetter", FIRST_LETTER)
+                        .param("firstLetter", firstLetter)
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
-        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakersByFirstLetter(FIRST_LETTER, LANGUAGE);
+        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakersByFirstLetter(firstLetter, language);
     }
 
     @Test
     void getSpeakersByFirstLetters() throws Exception {
-        final Language LANGUAGE = Language.ENGLISH;
-        final String FIRST_LETTERS = "abc";
+        final Language language = Language.ENGLISH;
+        final String firstLetters = "abc";
 
         MockHttpSession httpSession = new MockHttpSession();
 
@@ -101,28 +101,28 @@ class SpeakerControllerTest {
         Speaker speaker1 = new Speaker();
         speaker1.setId(1);
 
-        given(localeService.getLanguage(httpSession)).willReturn(LANGUAGE);
-        given(speakerService.getSpeakersByFirstLetters(FIRST_LETTERS, LANGUAGE)).willReturn(List.of(speaker0, speaker1));
+        given(localeService.getLanguage(httpSession)).willReturn(language);
+        given(speakerService.getSpeakersByFirstLetters(firstLetters, language)).willReturn(List.of(speaker0, speaker1));
 
         mvc.perform(get("/api/speaker/first-letters-speakers")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .param("firstLetters", FIRST_LETTERS)
+                        .param("firstLetters", firstLetters)
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
-        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakersByFirstLetters(FIRST_LETTERS, LANGUAGE);
+        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakersByFirstLetters(firstLetters, language);
     }
 
     @Test
     void getSelectedSpeakers() throws Exception {
-        final Language LANGUAGE = Language.ENGLISH;
-        final List<Long> IDS = List.of(0L, 1L);
+        final Language language = Language.ENGLISH;
+        final List<Long> ids = List.of(0L, 1L);
 
         MockHttpSession httpSession = new MockHttpSession();
 
         SelectedEntitiesDto selectedEntities = new SelectedEntitiesDto();
-        selectedEntities.setIds(IDS);
+        selectedEntities.setIds(ids);
 
         Speaker speaker0 = new Speaker();
         speaker0.setId(0);
@@ -130,8 +130,8 @@ class SpeakerControllerTest {
         Speaker speaker1 = new Speaker();
         speaker1.setId(1);
 
-        given(localeService.getLanguage(httpSession)).willReturn(LANGUAGE);
-        given(speakerService.getSpeakerByIds(IDS)).willReturn(List.of(speaker0, speaker1));
+        given(localeService.getLanguage(httpSession)).willReturn(language);
+        given(speakerService.getSpeakerByIds(ids)).willReturn(List.of(speaker0, speaker1));
 
         mvc.perform(post("/api/speaker/selected-speakers")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -140,7 +140,7 @@ class SpeakerControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
-        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakerByIds(IDS);
+        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakerByIds(ids);
     }
 
     @Test
@@ -243,7 +243,7 @@ class SpeakerControllerTest {
     @DisplayName("convertToBriefDtoAndSort method tests")
     class ConvertToBriefDtoAndSortTest {
         private Stream<Arguments> data() {
-            final Language LANGUAGE = Language.ENGLISH;
+            final Language language = Language.ENGLISH;
 
             Company company0 = new Company(0, List.of(new LocaleItem(Language.ENGLISH.getCode(), "Company0")));
             Company company1 = new Company(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "Company1")));
@@ -263,11 +263,11 @@ class SpeakerControllerTest {
             speaker2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
             speaker2.setCompanies(List.of(company1));
 
-            Function<List<Speaker>, List<SpeakerBriefDto>> speakerFunction = s -> SpeakerBriefDto.convertToBriefDto(s, LANGUAGE);
+            Function<List<Speaker>, List<SpeakerBriefDto>> speakerFunction = s -> SpeakerBriefDto.convertToBriefDto(s, language);
 
-            SpeakerBriefDto speakerBriefDto0 = SpeakerBriefDto.convertToBriefDto(speaker0, LANGUAGE);
-            SpeakerBriefDto speakerBriefDto1 = SpeakerBriefDto.convertToBriefDto(speaker1, LANGUAGE);
-            SpeakerBriefDto speakerBriefDto2 = SpeakerBriefDto.convertToBriefDto(speaker2, LANGUAGE);
+            SpeakerBriefDto speakerBriefDto0 = SpeakerBriefDto.convertToBriefDto(speaker0, language);
+            SpeakerBriefDto speakerBriefDto1 = SpeakerBriefDto.convertToBriefDto(speaker1, language);
+            SpeakerBriefDto speakerBriefDto2 = SpeakerBriefDto.convertToBriefDto(speaker2, language);
 
             return Stream.of(
                     arguments(List.of(speaker1, speaker0), speakerFunction, List.of(speakerBriefDto0, speakerBriefDto1)),
@@ -288,7 +288,7 @@ class SpeakerControllerTest {
     @DisplayName("createDuplicatesAndConvertToDtoAndSort method tests")
     class CreateDuplicatesAndConvertToDtoAndSortTest {
         private Stream<Arguments> data() {
-            final Language LANGUAGE = Language.ENGLISH;
+            final Language language = Language.ENGLISH;
 
             Company company0 = new Company(0, List.of(new LocaleItem(Language.ENGLISH.getCode(), "Company0")));
             Company company1 = new Company(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "Company1")));
@@ -314,9 +314,9 @@ class SpeakerControllerTest {
             SpeakerSuperBriefDto speakerSuperBriefDto3 = new SpeakerSuperBriefDto(2L, "Name0 (Company1)");
 
             return Stream.of(
-                    arguments(List.of(speaker1, speaker0), LANGUAGE, List.of(speakerSuperBriefDto0, speakerSuperBriefDto1)),
-                    arguments(List.of(speaker2, speaker0), LANGUAGE, List.of(speakerSuperBriefDto2, speakerSuperBriefDto3)),
-                    arguments(List.of(speaker2, speaker0, speaker1), LANGUAGE, List.of(speakerSuperBriefDto2, speakerSuperBriefDto3, speakerSuperBriefDto1))
+                    arguments(List.of(speaker1, speaker0), language, List.of(speakerSuperBriefDto0, speakerSuperBriefDto1)),
+                    arguments(List.of(speaker2, speaker0), language, List.of(speakerSuperBriefDto2, speakerSuperBriefDto3)),
+                    arguments(List.of(speaker2, speaker0, speaker1), language, List.of(speakerSuperBriefDto2, speakerSuperBriefDto3, speakerSuperBriefDto1))
             );
         }
 

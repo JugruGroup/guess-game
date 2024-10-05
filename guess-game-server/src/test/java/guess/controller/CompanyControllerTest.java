@@ -58,21 +58,21 @@ class CompanyControllerTest {
 
     @Test
     void getCompaniesByFirstLetters() throws Exception {
-        final Language LANGUAGE = Language.ENGLISH;
-        final String FIRST_LETTERS = "c";
+        final Language language = Language.ENGLISH;
+        final String firstLetters = "c";
 
         MockHttpSession httpSession = new MockHttpSession();
 
-        Company company0 = new Company(0, List.of(new LocaleItem(LANGUAGE.getCode(), "Company0")));
-        Company company1 = new Company(1, List.of(new LocaleItem(LANGUAGE.getCode(), "Company1")));
-        Company company2 = new Company(2, List.of(new LocaleItem(LANGUAGE.getCode(), "Company2")));
+        Company company0 = new Company(0, List.of(new LocaleItem(language.getCode(), "Company0")));
+        Company company1 = new Company(1, List.of(new LocaleItem(language.getCode(), "Company1")));
+        Company company2 = new Company(2, List.of(new LocaleItem(language.getCode(), "Company2")));
 
-        given(companyService.getCompaniesByFirstLetters(FIRST_LETTERS, LANGUAGE)).willReturn(List.of(company2, company1, company0));
-        given(localeService.getLanguage(httpSession)).willReturn(LANGUAGE);
+        given(companyService.getCompaniesByFirstLetters(firstLetters, language)).willReturn(List.of(company2, company1, company0));
+        given(localeService.getLanguage(httpSession)).willReturn(language);
 
         mvc.perform(get("/api/company/first-letters-companies")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .param("firstLetters", FIRST_LETTERS)
+                        .param("firstLetters", firstLetters)
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
@@ -82,26 +82,26 @@ class CompanyControllerTest {
                 .andExpect(jsonPath("$[1].name", is("Company1")))
                 .andExpect(jsonPath("$[2].id", is(2)))
                 .andExpect(jsonPath("$[2].name", is("Company2")));
-        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetters(FIRST_LETTERS, LANGUAGE);
+        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetters(firstLetters, language);
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
     void getSelectedCompanies() throws Exception {
-        final Language LANGUAGE = Language.ENGLISH;
-        final List<Long> IDS = List.of(0L, 1L, 2L);
+        final Language language = Language.ENGLISH;
+        final List<Long> ids = List.of(0L, 1L, 2L);
 
         MockHttpSession httpSession = new MockHttpSession();
 
         SelectedEntitiesDto selectedEntities = new SelectedEntitiesDto();
-        selectedEntities.setIds(IDS);
+        selectedEntities.setIds(ids);
 
-        Company company0 = new Company(0, List.of(new LocaleItem(LANGUAGE.getCode(), "Company0")));
-        Company company1 = new Company(1, List.of(new LocaleItem(LANGUAGE.getCode(), "Company1")));
-        Company company2 = new Company(2, List.of(new LocaleItem(LANGUAGE.getCode(), "Company2")));
+        Company company0 = new Company(0, List.of(new LocaleItem(language.getCode(), "Company0")));
+        Company company1 = new Company(1, List.of(new LocaleItem(language.getCode(), "Company1")));
+        Company company2 = new Company(2, List.of(new LocaleItem(language.getCode(), "Company2")));
 
-        given(companyService.getCompaniesByIds(IDS)).willReturn(List.of(company2, company1, company0));
-        given(localeService.getLanguage(httpSession)).willReturn(LANGUAGE);
+        given(companyService.getCompaniesByIds(ids)).willReturn(List.of(company2, company1, company0));
+        given(localeService.getLanguage(httpSession)).willReturn(language);
 
         mvc.perform(post("/api/company/selected-companies")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -115,23 +115,23 @@ class CompanyControllerTest {
                 .andExpect(jsonPath("$[1].name", is("Company1")))
                 .andExpect(jsonPath("$[2].id", is(2)))
                 .andExpect(jsonPath("$[2].name", is("Company2")));
-        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByIds(IDS);
+        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByIds(ids);
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
     void getCompanyNamesByFirstLetters() throws Exception {
-        final Language LANGUAGE = Language.ENGLISH;
+        final Language language = Language.ENGLISH;
         final String FIRST_LETTERS = "c";
 
         MockHttpSession httpSession = new MockHttpSession();
 
-        Company company0 = new Company(0, List.of(new LocaleItem(LANGUAGE.getCode(), "Company0")));
-        Company company1 = new Company(1, List.of(new LocaleItem(LANGUAGE.getCode(), "Company1")));
-        Company company2 = new Company(2, List.of(new LocaleItem(LANGUAGE.getCode(), "Company2")));
+        Company company0 = new Company(0, List.of(new LocaleItem(language.getCode(), "Company0")));
+        Company company1 = new Company(1, List.of(new LocaleItem(language.getCode(), "Company1")));
+        Company company2 = new Company(2, List.of(new LocaleItem(language.getCode(), "Company2")));
 
-        given(companyService.getCompaniesByFirstLetters(FIRST_LETTERS, LANGUAGE)).willReturn(List.of(company2, company1, company0));
-        given(localeService.getLanguage(httpSession)).willReturn(LANGUAGE);
+        given(companyService.getCompaniesByFirstLetters(FIRST_LETTERS, language)).willReturn(List.of(company2, company1, company0));
+        given(localeService.getLanguage(httpSession)).willReturn(language);
 
         mvc.perform(get("/api/company/first-letters-company-names")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -142,7 +142,7 @@ class CompanyControllerTest {
                 .andExpect(jsonPath("$[0]", is("Company0")))
                 .andExpect(jsonPath("$[1]", is("Company1")))
                 .andExpect(jsonPath("$[2]", is("Company2")));
-        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetters(FIRST_LETTERS, LANGUAGE);
+        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetters(FIRST_LETTERS, language);
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
@@ -188,9 +188,9 @@ class CompanyControllerTest {
 
     @Test
     void getCompaniesByFirstLetter() throws Exception {
-        final boolean IS_DIGIT = false;
-        final String FIRST_LETTER = "a";
-        final Language LANGUAGE = Language.ENGLISH;
+        final boolean isDigit = false;
+        final String firstLetter = "a";
+        final Language language = Language.ENGLISH;
 
         MockHttpSession httpSession = new MockHttpSession();
 
@@ -206,20 +206,20 @@ class CompanyControllerTest {
         CompanySearchResult companySearchResult1 = new CompanySearchResult(company1, 1, 0, 0);
 
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
-        given(companyService.getCompaniesByFirstLetter(IS_DIGIT, FIRST_LETTER, LANGUAGE)).willReturn(List.of(company1, company0));
+        given(companyService.getCompaniesByFirstLetter(isDigit, firstLetter, language)).willReturn(List.of(company1, company0));
         given(companyService.getCompanySearchResults(Mockito.anyList())).willReturn(List.of(companySearchResult1, companySearchResult0));
 
         mvc.perform(get("/api/company/first-letter-companies")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .param("digit", Boolean.toString(IS_DIGIT))
-                        .param("firstLetter", FIRST_LETTER)
+                        .param("digit", Boolean.toString(isDigit))
+                        .param("firstLetter", firstLetter)
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(0)))
                 .andExpect(jsonPath("$[1].id", is(1)));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
-        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetter(IS_DIGIT, FIRST_LETTER, LANGUAGE);
+        Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetter(isDigit, firstLetter, language);
         Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompanySearchResults(Mockito.anyList());
     }
 

@@ -119,8 +119,8 @@ class StateControllerTest {
     @DisplayName("getDto method tests")
     class GetDtoTest {
         private Stream<Arguments> data() {
-            final Language LANGUAGE = Language.ENGLISH;
-            final String NAME0 = "Name0";
+            final Language language = Language.ENGLISH;
+            final String name0 = "Name0";
 
             Speaker speaker0 = new Speaker();
             speaker0.setId(0);
@@ -147,13 +147,13 @@ class StateControllerTest {
                     new Quadruple<>(speakerAnswer0, speakerAnswer1, speakerAnswer2, speakerAnswer3));
 
             QuestionAnswersSet questionAnswersSet0 = new QuestionAnswersSet(
-                    List.of(new LocaleItem(LANGUAGE.getCode(), NAME0)),
+                    List.of(new LocaleItem(language.getCode(), name0)),
                     null,
                     List.of(questionAnswers0));
 
             PhotoNamesDto photoNamesDto0 = new PhotoNamesDto(
                     new QuestionAnswersSourceDto(
-                            NAME0,
+                            name0,
                             0,
                             0,
                             null,
@@ -168,8 +168,8 @@ class StateControllerTest {
 
             return Stream.of(
                     arguments(0, null, null, null, null),
-                    arguments(0, questionAnswersSet0, LANGUAGE, dtoFunction, photoNamesDto0),
-                    arguments(1, questionAnswersSet0, LANGUAGE, dtoFunction, null)
+                    arguments(0, questionAnswersSet0, language, dtoFunction, photoNamesDto0),
+                    arguments(1, questionAnswersSet0, language, dtoFunction, null)
             );
         }
 

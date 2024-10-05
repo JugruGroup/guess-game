@@ -16,7 +16,6 @@ import org.mockito.Mockito;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -214,7 +213,7 @@ class OlapDaoImplTest {
     private static <T> List<T> convertList(List<Object> source) {
         return source.stream()
                 .map(e -> (T) e)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Test
@@ -229,13 +228,13 @@ class OlapDaoImplTest {
 
         List<Integer> years = List.of(2020, 2021);
 
-        Topic topic0 = new Topic();
-        topic0.setId(0);
+        Topic localTopic0 = new Topic();
+        localTopic0.setId(0);
 
-        Topic topic1 = new Topic();
-        topic1.setId(1);
+        Topic localTopic1 = new Topic();
+        localTopic1.setId(1);
 
-        List<Topic> topics = List.of(topic0, topic1);
+        List<Topic> topics = List.of(localTopic0, localTopic1);
 
         for (DimensionType dimensionType : List.of(DimensionType.EVENT_TYPE, DimensionType.CITY, DimensionType.YEAR, DimensionType.TOPIC)) {
             assertEquals(Collections.emptyList(), convertList(eventTypesCube.getDimensionValues(dimensionType)));
@@ -273,19 +272,19 @@ class OlapDaoImplTest {
     @DisplayName("fillMeasures method with parameters tests")
     class FillMeasuresTest {
         private Stream<Arguments> data() {
-            Topic topic0 = new Topic();
-            topic0.setId(0);
+            Topic localTopic0 = new Topic();
+            localTopic0.setId(0);
 
-            Topic topic1 = new Topic();
-            topic1.setId(1);
+            Topic localTopic1 = new Topic();
+            localTopic1.setId(1);
 
             return Stream.of(
                     arguments(
                             eventType0, new City(0, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City0"))),
-                            2020, topic0, 2L, 1L, 1L),
+                            2020, localTopic0, 2L, 1L, 1L),
                     arguments(
                             eventType1, new City(1, List.of(new LocaleItem(Language.ENGLISH.getCode(), "City1"))),
-                            2021, topic1, 3L, 1L, 1L
+                            2021, localTopic1, 3L, 1L, 1L
                     )
             );
         }
@@ -331,14 +330,14 @@ class OlapDaoImplTest {
             YearDimension yearDimension0 = new YearDimension(2020);
             YearDimension yearDimension1 = new YearDimension(2021);
 
-            Topic topic0 = new Topic();
-            topic0.setId(0);
+            Topic localTopic0 = new Topic();
+            localTopic0.setId(0);
 
-            Topic topic1 = new Topic();
-            topic1.setId(1);
+            Topic localTopic1 = new Topic();
+            localTopic1.setId(1);
 
-            TopicDimension topicDimension0 = new TopicDimension(topic0);
-            TopicDimension topicDimension1 = new TopicDimension(topic1);
+            TopicDimension topicDimension0 = new TopicDimension(localTopic0);
+            TopicDimension topicDimension1 = new TopicDimension(localTopic1);
 
             return Stream.of(
                     arguments(
@@ -402,14 +401,14 @@ class OlapDaoImplTest {
             YearDimension yearDimension0 = new YearDimension(2020);
             YearDimension yearDimension1 = new YearDimension(2021);
 
-            Topic topic0 = new Topic();
-            topic0.setId(0);
+            Topic localTopic0 = new Topic();
+            localTopic0.setId(0);
 
-            Topic topic1 = new Topic();
-            topic1.setId(1);
+            Topic localTopic1 = new Topic();
+            localTopic1.setId(1);
 
-            TopicDimension topicDimension0 = new TopicDimension(topic0);
-            TopicDimension topicDimension1 = new TopicDimension(topic1);
+            TopicDimension topicDimension0 = new TopicDimension(localTopic0);
+            TopicDimension topicDimension1 = new TopicDimension(localTopic1);
 
             return Stream.of(
                     arguments(

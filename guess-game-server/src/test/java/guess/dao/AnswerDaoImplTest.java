@@ -13,7 +13,7 @@ import java.util.List;
 
 @DisplayName("AnswerDaoImpl class tests")
 class AnswerDaoImplTest {
-    private final static AnswerDao answerDao = new AnswerDaoImpl();
+    private static final AnswerDao answerDao = new AnswerDaoImpl();
 
     @Test
     void getAnswerSets() {
