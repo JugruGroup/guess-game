@@ -357,24 +357,24 @@ class TagCloudUtilsTest {
     @DisplayName("getImage method tests")
     class GetImageTest {
         private Stream<Arguments> data() {
-            final byte[] IMAGE0 = new byte[]{0x00, 0x01, 0x02};
-            final byte[] IMAGE1 = new byte[]{0x03, 0x04, 0x05};
-            final byte[] IMAGE2 = new byte[]{};
+            final byte[] image0 = new byte[]{0x00, 0x01, 0x02};
+            final byte[] image1 = new byte[]{0x03, 0x04, 0x05};
+            final byte[] image2 = new byte[]{};
             Map<Language, byte[]> languageImageMap0 = Map.of(
-                    Language.ENGLISH, IMAGE0,
-                    Language.RUSSIAN, IMAGE1);
+                    Language.ENGLISH, image0,
+                    Language.RUSSIAN, image1);
             Map<Language, byte[]> languageImageMap1 = Map.of(
-                    Language.ENGLISH, IMAGE0);
+                    Language.ENGLISH, image0);
             Map<Language, byte[]> languageImageMap2 = Map.of(
-                    Language.RUSSIAN, IMAGE1);
+                    Language.RUSSIAN, image1);
             Map<Language, byte[]> languageImageMap3 = Collections.emptyMap();
 
             return Stream.of(
-                    arguments(languageImageMap0, Language.ENGLISH, IMAGE0),
-                    arguments(languageImageMap0, Language.RUSSIAN, IMAGE1),
-                    arguments(languageImageMap1, Language.RUSSIAN, IMAGE0),
-                    arguments(languageImageMap2, Language.ENGLISH, IMAGE1),
-                    arguments(languageImageMap3, Language.ENGLISH, IMAGE2)
+                    arguments(languageImageMap0, Language.ENGLISH, image0),
+                    arguments(languageImageMap0, Language.RUSSIAN, image1),
+                    arguments(languageImageMap1, Language.RUSSIAN, image0),
+                    arguments(languageImageMap2, Language.ENGLISH, image1),
+                    arguments(languageImageMap3, Language.ENGLISH, image2)
             );
         }
 

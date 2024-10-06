@@ -46,7 +46,6 @@ import org.mockito.stubbing.Answer;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -123,7 +122,7 @@ class ContentfulDataLoaderTest {
     }
 
     @Test
-    void getLocales() throws URISyntaxException {
+    void getLocales() {
         try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
             mockedStatic.when(ContentfulDataLoader::getLocales)
                     .thenCallRealMethod();
@@ -799,7 +798,7 @@ class ContentfulDataLoaderTest {
     @DisplayName("extractPhoto method tests")
     class ExtractPhotoTest {
         private static final String ASSET_URL = "https://valid.com";
-        private final ZonedDateTime NOW = ZonedDateTime.now();
+        private final ZonedDateTime now = ZonedDateTime.now();
 
         private Stream<Arguments> data() {
             ContentfulSys contentfulSys0 = new ContentfulSys();
@@ -813,8 +812,8 @@ class ContentfulDataLoaderTest {
 
             ContentfulSys contentfulSys3 = new ContentfulSys();
             contentfulSys3.setId("id3");
-            contentfulSys3.setCreatedAt(NOW);
-            contentfulSys3.setUpdatedAt(NOW);
+            contentfulSys3.setCreatedAt(now);
+            contentfulSys3.setUpdatedAt(now);
 
             ContentfulAssetFields contentfulAssetFields2 = new ContentfulAssetFields();
             contentfulAssetFields2.setFile(new ContentfulAssetFieldsFile());
@@ -837,7 +836,7 @@ class ContentfulDataLoaderTest {
             return Stream.of(
                     arguments(link0, Collections.emptyMap(), Set.of("id0"), "Name0", null, new UrlDates(null, null, null)),
                     arguments(link1, Collections.emptyMap(), Collections.emptySet(), "Name1", NullPointerException.class, null),
-                    arguments(link2, assetMap2, Collections.emptySet(), "Name2", null, new UrlDates(ASSET_URL, NOW, NOW))
+                    arguments(link2, assetMap2, Collections.emptySet(), "Name2", null, new UrlDates(ASSET_URL, now, now))
             );
         }
 
@@ -905,21 +904,21 @@ class ContentfulDataLoaderTest {
             mockedStatic.when(() -> ContentfulDataLoader.isValidTalk(Mockito.any(ContentfulTalk.class), Mockito.anyBoolean()))
                     .thenCallRealMethod();
 
-            final Long TALK_DAY = 1L;
-            final LocalTime TRACK_TIME = LocalTime.now();
-            final Long TRACK = 1L;
+            final Long talkDay = 1L;
+            final LocalTime trackTime = LocalTime.now();
+            final Long track = 1L;
 
             ContentfulTalkResponse<ContentfulTalkFieldsCommon> response = new ContentfulTalkResponseCommon();
             response.setItems(List.of(
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, null),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, Boolean.TRUE),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, Boolean.FALSE),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, null),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, Boolean.TRUE),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, Boolean.FALSE),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, null),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, Boolean.TRUE),
-                    createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, Boolean.FALSE)
+                    createContentfulTalk(talkDay, trackTime, track, null, null),
+                    createContentfulTalk(talkDay, trackTime, track, null, Boolean.TRUE),
+                    createContentfulTalk(talkDay, trackTime, track, null, Boolean.FALSE),
+                    createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, null),
+                    createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, Boolean.TRUE),
+                    createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, Boolean.FALSE),
+                    createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, null),
+                    createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, Boolean.TRUE),
+                    createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, Boolean.FALSE)
             ));
 
             RestTemplate restTemplateMock = Mockito.mock(RestTemplate.class);

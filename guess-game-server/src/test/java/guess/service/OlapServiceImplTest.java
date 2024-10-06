@@ -226,13 +226,13 @@ class OlapServiceImplTest {
 
     @Test
     void getMeasureTypes() {
-        OlapDao olapDao = Mockito.mock(OlapDao.class);
-        OlapService olapService = new OlapServiceImpl(olapDao);
+        OlapDao localOlapDao = Mockito.mock(OlapDao.class);
+        OlapService localOlapService = new OlapServiceImpl(localOlapDao);
 
-        olapService.getMeasureTypes(CubeType.EVENT_TYPES);
+        localOlapService.getMeasureTypes(CubeType.EVENT_TYPES);
 
-        Mockito.verify(olapDao, VerificationModeFactory.times(1)).getMeasureTypes(CubeType.EVENT_TYPES);
-        Mockito.verifyNoMoreInteractions(olapDao);
+        Mockito.verify(localOlapDao, VerificationModeFactory.times(1)).getMeasureTypes(CubeType.EVENT_TYPES);
+        Mockito.verifyNoMoreInteractions(localOlapDao);
     }
 
     @Nested

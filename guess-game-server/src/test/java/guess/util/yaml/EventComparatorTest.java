@@ -39,16 +39,16 @@ class EventComparatorTest {
     @DisplayName("compare method tests")
     class CompareTest {
         private Stream<Arguments> data() {
-            final int COMPARE_START_DATE_RESULT = 42;
+            final int compareStartDateResult = 42;
 
             Event event0 = new Event();
             Event event1 = new Event();
 
             return Stream.of(
-                    arguments(null, null, COMPARE_START_DATE_RESULT, 0),
-                    arguments(null, event0, COMPARE_START_DATE_RESULT, -1),
-                    arguments(event0, null, COMPARE_START_DATE_RESULT, 1),
-                    arguments(event0, event1, COMPARE_START_DATE_RESULT, 1)
+                    arguments(null, null, compareStartDateResult, 0),
+                    arguments(null, event0, compareStartDateResult, -1),
+                    arguments(event0, null, compareStartDateResult, 1),
+                    arguments(event0, event1, compareStartDateResult, 1)
             );
         }
 
@@ -71,10 +71,10 @@ class EventComparatorTest {
     @DisplayName("compareStartDate method tests")
     class CompareStartDateTest {
         private Stream<Arguments> data() {
-            final int COMPARE_START_TIME_RESULT = 42;
-            LocalDate START_DATE0 = LocalDate.of(2021, 3, 29);
-            LocalDate START_DATE1 = LocalDate.of(2021, 3, 31);
-            LocalDate START_DATE2 = LocalDate.of(2021, 3, 27);
+            final int compareStartTimeResult = 42;
+            final LocalDate startDate0 = LocalDate.of(2021, 3, 29);
+            final LocalDate startDate1 = LocalDate.of(2021, 3, 31);
+            final LocalDate startDate2 = LocalDate.of(2021, 3, 27);
 
             Event event0 = new Event();
 
@@ -82,39 +82,39 @@ class EventComparatorTest {
 
             Event event2 = new Event();
             event2.setDays(List.of(new EventDays(
-                    START_DATE0,
+                    startDate0,
                     null,
                     new Place()
             )));
 
             Event event3 = new Event();
             event3.setDays(List.of(new EventDays(
-                    START_DATE1,
+                    startDate1,
                     null,
                     new Place()
             )));
 
             Event event4 = new Event();
             event4.setDays(List.of(new EventDays(
-                    START_DATE2,
+                    startDate2,
                     null,
                     new Place()
             )));
 
             Event event5 = new Event();
             event5.setDays(List.of(new EventDays(
-                    START_DATE0,
+                    startDate0,
                     null,
                     new Place()
             )));
 
             return Stream.of(
-                    arguments(event0, event1, COMPARE_START_TIME_RESULT, 0),
-                    arguments(event1, event2, COMPARE_START_TIME_RESULT, -1),
-                    arguments(event2, event1, COMPARE_START_TIME_RESULT, 1),
-                    arguments(event2, event3, COMPARE_START_TIME_RESULT, -1),
-                    arguments(event2, event4, COMPARE_START_TIME_RESULT, 1),
-                    arguments(event2, event5, COMPARE_START_TIME_RESULT, 1)
+                    arguments(event0, event1, compareStartTimeResult, 0),
+                    arguments(event1, event2, compareStartTimeResult, -1),
+                    arguments(event2, event1, compareStartTimeResult, 1),
+                    arguments(event2, event3, compareStartTimeResult, -1),
+                    arguments(event2, event4, compareStartTimeResult, 1),
+                    arguments(event2, event5, compareStartTimeResult, 1)
             );
         }
 

@@ -292,9 +292,9 @@ class ConferenceDataLoaderExecutorTest {
     @DisplayName("loadTalksSpeakersEvent method tests")
     class LoadTalksSpeakersEventTest {
         private Stream<Arguments> data() {
-            final Conference JPOINT_CONFERENCE = Conference.JPOINT;
-            final LocalDate EVENT_DATE = LocalDate.of(2020, 6, 29);
-            final String EVENT_CODE = "2020-jpoint";
+            final Conference jpointConference = Conference.JPOINT;
+            final LocalDate eventDate = LocalDate.of(2020, 6, 29);
+            final String eventCode = "2020-jpoint";
 
             Place place0 = new Place();
 
@@ -305,14 +305,14 @@ class ConferenceDataLoaderExecutorTest {
             Event event0 = new Event();
             event0.setId(0);
             event0.setDays(List.of(new EventDays(
-                    EVENT_DATE,
-                    EVENT_DATE,
+                    eventDate,
+                    eventDate,
                     place0
             )));
 
             EventType eventType0 = new EventType();
             eventType0.setId(0);
-            eventType0.setConference(JPOINT_CONFERENCE);
+            eventType0.setConference(jpointConference);
             eventType0.setOrganizer(organizer0);
             eventType0.setEvents(List.of(event0));
 
@@ -327,7 +327,7 @@ class ConferenceDataLoaderExecutorTest {
             speaker0.setCompanies(List.of(company0));
 
             return Stream.of(
-                    arguments(JPOINT_CONFERENCE, EVENT_DATE, EVENT_CODE, LoadSettings.defaultSettings(),
+                    arguments(jpointConference, eventDate, eventCode, LoadSettings.defaultSettings(),
                             new SourceInformation(
                                     List.of(place0),
                                     List.of(organizer0),
@@ -347,7 +347,7 @@ class ConferenceDataLoaderExecutorTest {
                             List.of(company0),
                             Map.of("name0", company0),
                             Level.INFO),
-                    arguments(JPOINT_CONFERENCE, EVENT_DATE, EVENT_CODE, LoadSettings.defaultSettings(),
+                    arguments(jpointConference, eventDate, eventCode, LoadSettings.defaultSettings(),
                             new SourceInformation(
                                     List.of(place0),
                                     List.of(organizer0),
@@ -367,7 +367,7 @@ class ConferenceDataLoaderExecutorTest {
                             List.of(company0),
                             Map.of("name0", company0),
                             Level.WARN),
-                    arguments(JPOINT_CONFERENCE, LocalDate.of(2020, 6, 30), null, LoadSettings.defaultSettings(),
+                    arguments(jpointConference, LocalDate.of(2020, 6, 30), null, LoadSettings.defaultSettings(),
                             new SourceInformation(
                                     List.of(place0),
                                     List.of(organizer0),
@@ -1299,23 +1299,23 @@ class ConferenceDataLoaderExecutorTest {
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("getSpeakerLoadResult method tests")
     class GetSpeakerLoadResultTest {
-        final String PHOTO_FILE_NAME0 = "0000.jpg";
-        final String PHOTO_FILE_NAME1 = "0001.jpg";
-        final String PHOTO_FILE_NAME2 = "http://valid.com/2.jpg";
-        final String IMAGE_PARAMETERS_TEMPLATE = "w=%d&h=%d";
+        final String photoFileName0 = "0000.jpg";
+        final String photoFileName1 = "0001.jpg";
+        final String photoFileName2 = "http://valid.com/2.jpg";
+        final String imageParametersTemplate = "w=%d&h=%d";
 
         private Stream<Arguments> data() {
             Speaker speaker0 = new Speaker();
             speaker0.setId(0);
-            speaker0.setPhotoFileName(PHOTO_FILE_NAME0);
+            speaker0.setPhotoFileName(photoFileName0);
 
             Speaker speaker1 = new Speaker();
             speaker1.setId(1);
-            speaker1.setPhotoFileName(PHOTO_FILE_NAME1);
+            speaker1.setPhotoFileName(photoFileName1);
 
             Speaker speaker2 = new Speaker();
             speaker2.setId(2);
-            speaker2.setPhotoFileName(PHOTO_FILE_NAME2);
+            speaker2.setPhotoFileName(photoFileName2);
 
             SpeakerLoadMaps speakerLoadMaps = new SpeakerLoadMaps(
                     Collections.emptyMap(),
@@ -1340,7 +1340,7 @@ class ConferenceDataLoaderExecutorTest {
                             Collections.emptyList()),
                     new LoadResult<>(
                             Collections.emptyList(),
-                            List.of(new UrlFilename(PHOTO_FILE_NAME2, "0000.jpg")),
+                            List.of(new UrlFilename(photoFileName2, "0000.jpg")),
                             Collections.emptyList()));
 
             SpeakerLoadResult speakerLoadResult2 = new SpeakerLoadResult(
@@ -1351,7 +1351,7 @@ class ConferenceDataLoaderExecutorTest {
                     new LoadResult<>(
                             Collections.emptyList(),
                             Collections.emptyList(),
-                            List.of(new UrlFilename(PHOTO_FILE_NAME0, PHOTO_FILE_NAME0))));
+                            List.of(new UrlFilename(photoFileName0, photoFileName0))));
 
             SpeakerLoadResult speakerLoadResult3 = new SpeakerLoadResult(
                     new LoadResult<>(
@@ -1365,13 +1365,13 @@ class ConferenceDataLoaderExecutorTest {
 
             return Stream.of(
                     arguments(Collections.emptyList(), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult0,
-                            IMAGE_PARAMETERS_TEMPLATE),
+                            imageParametersTemplate),
                     arguments(List.of(speaker2), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult1,
-                            IMAGE_PARAMETERS_TEMPLATE),
+                            imageParametersTemplate),
                     arguments(List.of(speaker0), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult2,
-                            IMAGE_PARAMETERS_TEMPLATE),
+                            imageParametersTemplate),
                     arguments(List.of(speaker1), speakerLoadMaps, new AtomicLong(-1), speakerLoadResult3,
-                            IMAGE_PARAMETERS_TEMPLATE)
+                            imageParametersTemplate)
             );
         }
 
@@ -1387,7 +1387,7 @@ class ConferenceDataLoaderExecutorTest {
                                 (Answer<Boolean>) invocation -> {
                                     Object[] args = invocation.getArguments();
 
-                                    return PHOTO_FILE_NAME0.equals(args[3]);
+                                    return photoFileName0.equals(args[3]);
                                 }
                         );
                 conferenceDataLoaderExecutorMockedStatic.when(() -> ConferenceDataLoaderExecutor.needUpdate(Mockito.any(Speaker.class), Mockito.any(Speaker.class)))
@@ -1808,9 +1808,9 @@ class ConferenceDataLoaderExecutorTest {
         }
 
         private Stream<Arguments> data() {
-            final List<LocaleItem> EMPTY_SPEAKER_NAME = Collections.emptyList();
-            final List<LocaleItem> RESOURCE_SPEAKER_NAME = List.of(new LocaleItem(Language.ENGLISH.getCode(), "resourceSpeakerName"));
-            final List<LocaleItem> TARGET_SPEAKER_NAME = List.of(new LocaleItem(Language.ENGLISH.getCode(), "targetSpeakerName"));
+            final List<LocaleItem> emptySpeakerName = Collections.emptyList();
+            final List<LocaleItem> resourceSpeakerName = List.of(new LocaleItem(Language.ENGLISH.getCode(), "resourceSpeakerName"));
+            final List<LocaleItem> targetSpeakerName = List.of(new LocaleItem(Language.ENGLISH.getCode(), "targetSpeakerName"));
 
             Speaker targetSpeaker0 = createSpeaker(null);
             Supplier<List<LocaleItem>> targetSupplier0 = targetSpeaker0::getName;
@@ -1818,13 +1818,13 @@ class ConferenceDataLoaderExecutorTest {
             Speaker resourceSpeaker0 = createSpeaker(null);
             Supplier<List<LocaleItem>> resourceSupplier0 = resourceSpeaker0::getName;
 
-            Speaker targetSpeaker1 = createSpeaker(EMPTY_SPEAKER_NAME);
+            Speaker targetSpeaker1 = createSpeaker(emptySpeakerName);
             Supplier<List<LocaleItem>> targetSupplier1 = targetSpeaker1::getName;
             Consumer<List<LocaleItem>> targetConsumer1 = targetSpeaker1::setName;
             Speaker resourceSpeaker1 = createSpeaker(null);
             Supplier<List<LocaleItem>> resourceSupplier1 = resourceSpeaker1::getName;
 
-            Speaker targetSpeaker2 = createSpeaker(TARGET_SPEAKER_NAME);
+            Speaker targetSpeaker2 = createSpeaker(targetSpeakerName);
             Supplier<List<LocaleItem>> targetSupplier2 = targetSpeaker2::getName;
             Consumer<List<LocaleItem>> targetConsumer2 = targetSpeaker2::setName;
             Speaker resourceSpeaker2 = createSpeaker(null);
@@ -1833,49 +1833,49 @@ class ConferenceDataLoaderExecutorTest {
             Speaker targetSpeaker3 = createSpeaker(null);
             Supplier<List<LocaleItem>> targetSupplier3 = targetSpeaker3::getName;
             Consumer<List<LocaleItem>> targetConsumer3 = targetSpeaker3::setName;
-            Speaker resourceSpeaker3 = createSpeaker(EMPTY_SPEAKER_NAME);
+            Speaker resourceSpeaker3 = createSpeaker(emptySpeakerName);
             Supplier<List<LocaleItem>> resourceSupplier3 = resourceSpeaker3::getName;
 
-            Speaker targetSpeaker4 = createSpeaker(EMPTY_SPEAKER_NAME);
+            Speaker targetSpeaker4 = createSpeaker(emptySpeakerName);
             Supplier<List<LocaleItem>> targetSupplier4 = targetSpeaker4::getName;
             Consumer<List<LocaleItem>> targetConsumer4 = targetSpeaker4::setName;
-            Speaker resourceSpeaker4 = createSpeaker(EMPTY_SPEAKER_NAME);
+            Speaker resourceSpeaker4 = createSpeaker(emptySpeakerName);
             Supplier<List<LocaleItem>> resourceSupplier4 = resourceSpeaker4::getName;
 
-            Speaker targetSpeaker5 = createSpeaker(TARGET_SPEAKER_NAME);
+            Speaker targetSpeaker5 = createSpeaker(targetSpeakerName);
             Supplier<List<LocaleItem>> targetSupplier5 = targetSpeaker5::getName;
             Consumer<List<LocaleItem>> targetConsumer5 = targetSpeaker5::setName;
-            Speaker resourceSpeaker5 = createSpeaker(EMPTY_SPEAKER_NAME);
+            Speaker resourceSpeaker5 = createSpeaker(emptySpeakerName);
             Supplier<List<LocaleItem>> resourceSupplier5 = resourceSpeaker5::getName;
 
             Speaker targetSpeaker6 = createSpeaker(null);
             Supplier<List<LocaleItem>> targetSupplier6 = targetSpeaker6::getName;
             Consumer<List<LocaleItem>> targetConsumer6 = targetSpeaker6::setName;
-            Speaker resourceSpeaker6 = createSpeaker(RESOURCE_SPEAKER_NAME);
+            Speaker resourceSpeaker6 = createSpeaker(resourceSpeakerName);
             Supplier<List<LocaleItem>> resourceSupplier6 = resourceSpeaker6::getName;
 
-            Speaker targetSpeaker7 = createSpeaker(EMPTY_SPEAKER_NAME);
+            Speaker targetSpeaker7 = createSpeaker(emptySpeakerName);
             Supplier<List<LocaleItem>> targetSupplier7 = targetSpeaker7::getName;
             Consumer<List<LocaleItem>> targetConsumer7 = targetSpeaker7::setName;
-            Speaker resourceSpeaker7 = createSpeaker(RESOURCE_SPEAKER_NAME);
+            Speaker resourceSpeaker7 = createSpeaker(resourceSpeakerName);
             Supplier<List<LocaleItem>> resourceSupplier7 = resourceSpeaker7::getName;
 
-            Speaker targetSpeaker8 = createSpeaker(TARGET_SPEAKER_NAME);
+            Speaker targetSpeaker8 = createSpeaker(targetSpeakerName);
             Supplier<List<LocaleItem>> targetSupplier8 = targetSpeaker8::getName;
             Consumer<List<LocaleItem>> targetConsumer8 = targetSpeaker8::setName;
-            Speaker resourceSpeaker8 = createSpeaker(RESOURCE_SPEAKER_NAME);
+            Speaker resourceSpeaker8 = createSpeaker(resourceSpeakerName);
             Supplier<List<LocaleItem>> resourceSupplier8 = resourceSpeaker8::getName;
 
             return Stream.of(
                     arguments(resourceSupplier0, targetSupplier0, targetConsumer0, null),
-                    arguments(resourceSupplier1, targetSupplier1, targetConsumer1, EMPTY_SPEAKER_NAME),
-                    arguments(resourceSupplier2, targetSupplier2, targetConsumer2, TARGET_SPEAKER_NAME),
+                    arguments(resourceSupplier1, targetSupplier1, targetConsumer1, emptySpeakerName),
+                    arguments(resourceSupplier2, targetSupplier2, targetConsumer2, targetSpeakerName),
                     arguments(resourceSupplier3, targetSupplier3, targetConsumer3, null),
-                    arguments(resourceSupplier4, targetSupplier4, targetConsumer4, EMPTY_SPEAKER_NAME),
-                    arguments(resourceSupplier5, targetSupplier5, targetConsumer5, TARGET_SPEAKER_NAME),
-                    arguments(resourceSupplier6, targetSupplier6, targetConsumer6, RESOURCE_SPEAKER_NAME),
-                    arguments(resourceSupplier7, targetSupplier7, targetConsumer7, RESOURCE_SPEAKER_NAME),
-                    arguments(resourceSupplier8, targetSupplier8, targetConsumer8, TARGET_SPEAKER_NAME)
+                    arguments(resourceSupplier4, targetSupplier4, targetConsumer4, emptySpeakerName),
+                    arguments(resourceSupplier5, targetSupplier5, targetConsumer5, targetSpeakerName),
+                    arguments(resourceSupplier6, targetSupplier6, targetConsumer6, resourceSpeakerName),
+                    arguments(resourceSupplier7, targetSupplier7, targetConsumer7, resourceSpeakerName),
+                    arguments(resourceSupplier8, targetSupplier8, targetConsumer8, targetSpeakerName)
             );
         }
 
@@ -1901,16 +1901,16 @@ class ConferenceDataLoaderExecutorTest {
         }
 
         private Stream<Arguments> data() {
-            final ZonedDateTime NOW = ZonedDateTime.now();
-            final ZonedDateTime YESTERDAY = NOW.minus(1, ChronoUnit.DAYS);
+            final ZonedDateTime now = ZonedDateTime.now();
+            final ZonedDateTime yesterday = now.minus(1, ChronoUnit.DAYS);
 
             return Stream.of(
                     arguments(createSpeaker(null), createSpeaker(null), null),
-                    arguments(createSpeaker(null), createSpeaker(NOW), null),
-                    arguments(createSpeaker(NOW), createSpeaker(null), NOW),
-                    arguments(createSpeaker(NOW), createSpeaker(NOW), NOW),
-                    arguments(createSpeaker(YESTERDAY), createSpeaker(NOW), NOW),
-                    arguments(createSpeaker(NOW), createSpeaker(YESTERDAY), NOW)
+                    arguments(createSpeaker(null), createSpeaker(now), null),
+                    arguments(createSpeaker(now), createSpeaker(null), now),
+                    arguments(createSpeaker(now), createSpeaker(now), now),
+                    arguments(createSpeaker(yesterday), createSpeaker(now), now),
+                    arguments(createSpeaker(now), createSpeaker(yesterday), now)
             );
         }
 
@@ -3125,32 +3125,32 @@ class ConferenceDataLoaderExecutorTest {
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("findResourceTalkByName method tests")
     class FindResourceTalkByNameTest {
-        final String TALK_NAME0 = "Name0";
-        final String TALK_NAME1 = "Name1";
-        final String TALK_NAME2 = "Name2";
-        final String TALK_NAME3 = "Name3";
+        final String talkName0 = "Name0";
+        final String talkName1 = "Name1";
+        final String talkName2 = "Name2";
+        final String talkName3 = "Name3";
 
         private Stream<Arguments> data() {
             Talk talk0 = new Talk();
             talk0.setId(0);
-            talk0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), TALK_NAME0)));
+            talk0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), talkName0)));
 
             Talk talk1 = new Talk();
             talk1.setId(1);
-            talk1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), TALK_NAME1)));
+            talk1.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), talkName1)));
 
             Talk talk2 = new Talk();
             talk2.setId(2);
-            talk2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), TALK_NAME2)));
+            talk2.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), talkName2)));
 
             Talk talk3 = new Talk();
             talk3.setId(3);
-            talk3.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), TALK_NAME3)));
+            talk3.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), talkName3)));
 
             Map<String, Set<Talk>> resourceNameTalks0 = new HashMap<>();
-            resourceNameTalks0.put(TALK_NAME0, Set.of(talk0));
-            resourceNameTalks0.put(TALK_NAME2, Collections.emptySet());
-            resourceNameTalks0.put(TALK_NAME3, Set.of(talk0, talk3));
+            resourceNameTalks0.put(talkName0, Set.of(talk0));
+            resourceNameTalks0.put(talkName2, Collections.emptySet());
+            resourceNameTalks0.put(talkName3, Set.of(talk0, talk3));
 
             return Stream.of(
                     arguments(talk1, resourceNameTalks0, Language.ENGLISH, null, null),
@@ -3189,24 +3189,24 @@ class ConferenceDataLoaderExecutorTest {
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("findResourcePlaceByCityVenueAddress method tests")
     class FindResourcePlaceByCityVenueAddressTest {
-        final String CITY0 = "City0";
-        final String CITY1 = "City1";
-        final String VENUE_ADDRESS0 = "Venue Address0";
-        final String VENUE_ADDRESS1 = "Venue Address1";
+        final String city0 = "City0";
+        final String city1 = "City1";
+        final String venueAddress0 = "Venue Address0";
+        final String venueAddress1 = "Venue Address1";
 
         private Stream<Arguments> data() {
             Place place0 = new Place();
             place0.setId(0);
-            place0.setCity(List.of(new LocaleItem(Language.ENGLISH.getCode(), CITY0)));
-            place0.setVenueAddress(List.of(new LocaleItem(Language.ENGLISH.getCode(), VENUE_ADDRESS0)));
+            place0.setCity(List.of(new LocaleItem(Language.ENGLISH.getCode(), city0)));
+            place0.setVenueAddress(List.of(new LocaleItem(Language.ENGLISH.getCode(), venueAddress0)));
 
             Place place1 = new Place();
             place1.setId(1);
-            place1.setCity(List.of(new LocaleItem(Language.ENGLISH.getCode(), CITY1)));
-            place1.setVenueAddress(List.of(new LocaleItem(Language.ENGLISH.getCode(), VENUE_ADDRESS1)));
+            place1.setCity(List.of(new LocaleItem(Language.ENGLISH.getCode(), city1)));
+            place1.setVenueAddress(List.of(new LocaleItem(Language.ENGLISH.getCode(), venueAddress1)));
 
             Map<CityVenueAddress, Place> resourceCityVenueAddressPlaces0 = Map.of(
-                    new CityVenueAddress(CITY0, VENUE_ADDRESS0), place0);
+                    new CityVenueAddress(city0, venueAddress0), place0);
 
             return Stream.of(
                     arguments(place0, resourceCityVenueAddressPlaces0, Language.ENGLISH, place0),
@@ -4454,7 +4454,7 @@ class ConferenceDataLoaderExecutorTest {
     @DisplayName("needUpdate method tests (Event)")
     class NeedUpdateEventTest {
         private Stream<Arguments> data() {
-            final List<EventDays> VALID_EVENT_DAYS = List.of(new EventDays(
+            final List<EventDays> validEventDays = List.of(new EventDays(
                     LocalDate.of(2020, 8, 5),
                     LocalDate.of(2020, 8, 6),
                     new Place(
@@ -4464,7 +4464,7 @@ class ConferenceDataLoaderExecutorTest {
                             null
                     )
             ));
-            final List<EventDays> INVALID_EVENT_DAYS = List.of(new EventDays(
+            final List<EventDays> invalidEventDays = List.of(new EventDays(
                     LocalDate.of(2020, 8, 6),
                     LocalDate.of(2020, 8, 6),
                     new Place(
@@ -4478,7 +4478,7 @@ class ConferenceDataLoaderExecutorTest {
             Event event0 = new Event();
             event0.setEventTypeId(0);
             event0.setName(List.of(new LocaleItem("en", "name0")));
-            event0.setDays(VALID_EVENT_DAYS);
+            event0.setDays(validEventDays);
             event0.setSiteLink(List.of(new LocaleItem("en", "siteLink0")));
             event0.setYoutubeLink("youtubeLink0");
             event0.setTalkIds(List.of(0L));
@@ -4494,25 +4494,25 @@ class ConferenceDataLoaderExecutorTest {
             Event event3 = new Event();
             event3.setEventTypeId(0);
             event3.setName(List.of(new LocaleItem("en", "name0")));
-            event3.setDays(INVALID_EVENT_DAYS);
+            event3.setDays(invalidEventDays);
 
             Event event4 = new Event();
             event4.setEventTypeId(0);
             event4.setName(List.of(new LocaleItem("en", "name0")));
-            event4.setDays(VALID_EVENT_DAYS);
+            event4.setDays(validEventDays);
             event4.setSiteLink(List.of(new LocaleItem("en", "siteLink5")));
 
             Event event5 = new Event();
             event5.setEventTypeId(0);
             event5.setName(List.of(new LocaleItem("en", "name0")));
-            event5.setDays(VALID_EVENT_DAYS);
+            event5.setDays(validEventDays);
             event5.setSiteLink(List.of(new LocaleItem("en", "siteLink0")));
             event5.setYoutubeLink("youtubeLink6");
 
             Event event6 = new Event();
             event6.setEventTypeId(0);
             event6.setName(List.of(new LocaleItem("en", "name0")));
-            event6.setDays(VALID_EVENT_DAYS);
+            event6.setDays(validEventDays);
             event6.setSiteLink(List.of(new LocaleItem("en", "siteLink0")));
             event6.setYoutubeLink("youtubeLink0");
             event6.setTalkIds(List.of(8L));
@@ -4520,7 +4520,7 @@ class ConferenceDataLoaderExecutorTest {
             Event event7 = new Event();
             event7.setEventTypeId(0);
             event7.setName(List.of(new LocaleItem("en", "name0")));
-            event7.setDays(VALID_EVENT_DAYS);
+            event7.setDays(validEventDays);
             event7.setSiteLink(List.of(new LocaleItem("en", "siteLink0")));
             event7.setYoutubeLink("youtubeLink0");
             event7.setTalkIds(List.of(0L));
@@ -4549,25 +4549,25 @@ class ConferenceDataLoaderExecutorTest {
     @DisplayName("needPhotoUpdate method tests")
     class NeedPhotoUpdateTest {
         private Stream<Arguments> data() {
-            final ZonedDateTime NOW = ZonedDateTime.now();
-            final ZonedDateTime YESTERDAY = NOW.minus(1, ChronoUnit.DAYS);
-            final String VALID_URL = "https://valid.com";
-            final String PHOTO_FILE_NAME = "0000.jpg";
-            final String IMAGE_PARAMETERS_TEMPLATE = "w=%d&h=%d";
+            final ZonedDateTime now = ZonedDateTime.now();
+            final ZonedDateTime yesterday = now.minus(1, ChronoUnit.DAYS);
+            final String validUrl = "https://valid.com";
+            final String photoFileName = "0000.jpg";
+            final String imageParametersTemplate = "w=%d&h=%d";
 
             return Stream.of(
-                    arguments(null, null, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, true, true),
-                    arguments(null, NOW, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, true, true),
-                    arguments(null, null, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, false, false),
-                    arguments(null, NOW, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, false, false),
-                    arguments(NOW, null, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, true, true),
-                    arguments(NOW, null, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, false, true),
-                    arguments(NOW, NOW, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, true, false),
-                    arguments(NOW, NOW, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, false, false),
-                    arguments(NOW, YESTERDAY, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, true, true),
-                    arguments(NOW, YESTERDAY, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, false, true),
-                    arguments(YESTERDAY, NOW, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, true, false),
-                    arguments(YESTERDAY, NOW, VALID_URL, PHOTO_FILE_NAME, IMAGE_PARAMETERS_TEMPLATE, false, false)
+                    arguments(null, null, validUrl, photoFileName, imageParametersTemplate, true, true),
+                    arguments(null, now, validUrl, photoFileName, imageParametersTemplate, true, true),
+                    arguments(null, null, validUrl, photoFileName, imageParametersTemplate, false, false),
+                    arguments(null, now, validUrl, photoFileName, imageParametersTemplate, false, false),
+                    arguments(now, null, validUrl, photoFileName, imageParametersTemplate, true, true),
+                    arguments(now, null, validUrl, photoFileName, imageParametersTemplate, false, true),
+                    arguments(now, now, validUrl, photoFileName, imageParametersTemplate, true, false),
+                    arguments(now, now, validUrl, photoFileName, imageParametersTemplate, false, false),
+                    arguments(now, yesterday, validUrl, photoFileName, imageParametersTemplate, true, true),
+                    arguments(now, yesterday, validUrl, photoFileName, imageParametersTemplate, false, true),
+                    arguments(yesterday, now, validUrl, photoFileName, imageParametersTemplate, true, false),
+                    arguments(yesterday, now, validUrl, photoFileName, imageParametersTemplate, false, false)
             );
         }
 
