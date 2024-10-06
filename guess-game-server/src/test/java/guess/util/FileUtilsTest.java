@@ -17,16 +17,19 @@ class FileUtilsTest {
     static final String DIRECTORY_NAME0 = "directory0";
     static final String DIRECTORY_NAME1 = "directory1";
 
-    @BeforeAll
-    static void setUp() throws IOException {
+    private static void deleteAllDirectories() throws IOException {
         FileUtils.deleteDirectory(DIRECTORY_NAME0);
         FileUtils.deleteDirectory(DIRECTORY_NAME1);
     }
 
+    @BeforeAll
+    static void setUp() throws IOException {
+        deleteAllDirectories();
+    }
+
     @AfterAll
     static void tearDown() throws IOException {
-        FileUtils.deleteDirectory(DIRECTORY_NAME0);
-        FileUtils.deleteDirectory(DIRECTORY_NAME1);
+        deleteAllDirectories();
     }
 
     @Test

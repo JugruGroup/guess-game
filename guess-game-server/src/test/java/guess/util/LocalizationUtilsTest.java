@@ -24,13 +24,13 @@ public class LocalizationUtilsTest {
     @DisplayName("getString method tests")
     class GetStringTest {
         private Stream<Arguments> data() {
-            final List<LocaleItem> STANDARD_LOCALE_ITEMS = Arrays.asList(
+            final List<LocaleItem> standardLocaleItems = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "Text"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Текст"));
-            final List<LocaleItem> EMPTY_LOCALE_ITEMS = Collections.emptyList();
-            final List<LocaleItem> ONLY_ENGLISH_LOCALE_ITEMS = Collections.singletonList(
+            final List<LocaleItem> emptyLocaleItems = Collections.emptyList();
+            final List<LocaleItem> onlyEnglishLocaleItems = Collections.singletonList(
                     new LocaleItem(Language.ENGLISH.getCode(), "Text"));
-            final List<LocaleItem> ONLY_RUSSIAN_LOCALE_ITEMS = Collections.singletonList(
+            final List<LocaleItem> onlyRussianLocaleItems = Collections.singletonList(
                     new LocaleItem(Language.RUSSIAN.getCode(), "Текст"));
 
             return Stream.of(
@@ -39,24 +39,24 @@ public class LocalizationUtilsTest {
                     arguments(null, Language.ENGLISH, null, ""),
                     arguments(null, Language.ENGLISH, Language.ENGLISH, ""),
 
-                    arguments(STANDARD_LOCALE_ITEMS, Language.ENGLISH, Language.ENGLISH, "Text"),
-                    arguments(STANDARD_LOCALE_ITEMS, Language.RUSSIAN, Language.ENGLISH, "Текст"),
-                    arguments(STANDARD_LOCALE_ITEMS, null, Language.ENGLISH, "Text"),
-                    arguments(STANDARD_LOCALE_ITEMS, Language.ENGLISH, null, "Text"),
-                    arguments(STANDARD_LOCALE_ITEMS, null, null, ""),
+                    arguments(standardLocaleItems, Language.ENGLISH, Language.ENGLISH, "Text"),
+                    arguments(standardLocaleItems, Language.RUSSIAN, Language.ENGLISH, "Текст"),
+                    arguments(standardLocaleItems, null, Language.ENGLISH, "Text"),
+                    arguments(standardLocaleItems, Language.ENGLISH, null, "Text"),
+                    arguments(standardLocaleItems, null, null, ""),
 
-                    arguments(EMPTY_LOCALE_ITEMS, Language.ENGLISH, Language.ENGLISH, ""),
-                    arguments(EMPTY_LOCALE_ITEMS, Language.RUSSIAN, Language.ENGLISH, ""),
+                    arguments(emptyLocaleItems, Language.ENGLISH, Language.ENGLISH, ""),
+                    arguments(emptyLocaleItems, Language.RUSSIAN, Language.ENGLISH, ""),
 
-                    arguments(ONLY_ENGLISH_LOCALE_ITEMS, Language.ENGLISH, Language.ENGLISH, "Text"),
-                    arguments(ONLY_ENGLISH_LOCALE_ITEMS, Language.RUSSIAN, Language.ENGLISH, "Text"),
-                    arguments(ONLY_ENGLISH_LOCALE_ITEMS, Language.ENGLISH, Language.RUSSIAN, "Text"),
-                    arguments(ONLY_ENGLISH_LOCALE_ITEMS, Language.RUSSIAN, Language.RUSSIAN, ""),
+                    arguments(onlyEnglishLocaleItems, Language.ENGLISH, Language.ENGLISH, "Text"),
+                    arguments(onlyEnglishLocaleItems, Language.RUSSIAN, Language.ENGLISH, "Text"),
+                    arguments(onlyEnglishLocaleItems, Language.ENGLISH, Language.RUSSIAN, "Text"),
+                    arguments(onlyEnglishLocaleItems, Language.RUSSIAN, Language.RUSSIAN, ""),
 
-                    arguments(ONLY_RUSSIAN_LOCALE_ITEMS, Language.ENGLISH, Language.ENGLISH, ""),
-                    arguments(ONLY_RUSSIAN_LOCALE_ITEMS, Language.RUSSIAN, Language.ENGLISH, "Текст"),
-                    arguments(ONLY_RUSSIAN_LOCALE_ITEMS, Language.ENGLISH, Language.RUSSIAN, "Текст"),
-                    arguments(ONLY_RUSSIAN_LOCALE_ITEMS, Language.RUSSIAN, Language.RUSSIAN, "Текст")
+                    arguments(onlyRussianLocaleItems, Language.ENGLISH, Language.ENGLISH, ""),
+                    arguments(onlyRussianLocaleItems, Language.RUSSIAN, Language.ENGLISH, "Текст"),
+                    arguments(onlyRussianLocaleItems, Language.ENGLISH, Language.RUSSIAN, "Текст"),
+                    arguments(onlyRussianLocaleItems, Language.RUSSIAN, Language.RUSSIAN, "Текст")
             );
         }
 
@@ -131,10 +131,10 @@ public class LocalizationUtilsTest {
     @DisplayName("getSpeakerNameWithCompanies method tests")
     class GetSpeakerNameWithCompaniesTest {
         private Stream<Arguments> data() {
-            final List<LocaleItem> FULL_NAME_LOCALE_ITEMS = Arrays.asList(
+            final List<LocaleItem> fullNameLocaleItems = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "Name"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Имя"));
-            final List<LocaleItem> ENGLISH_NAME_LOCALE_ITEMS = Collections.singletonList(
+            final List<LocaleItem> englishNameLocaleItems = Collections.singletonList(
                     new LocaleItem(Language.ENGLISH.getCode(), "Name"));
 
             Company company0 = new Company(0, List.of(
@@ -143,11 +143,11 @@ public class LocalizationUtilsTest {
             Company company1 = new Company(1, List.of(
                     new LocaleItem(Language.ENGLISH.getCode(), "Company1")));
 
-            final List<Company> EMPTY_COMPANY_LIST = Collections.emptyList();
-            final List<Company> FULL_LANGUAGE_COMPANY_LIST = List.of(company0);
-            final List<Company> ENGLISH_LANGUAGE_COMPANY_LIST = List.of(company1);
-            final List<Company> SOME_COMPANY_LIST = List.of(company0, company1);
-            final List<Company> SOME_COMPANY_REVERSE_LIST = List.of(company1, company0);
+            final List<Company> emptyCompanyList = Collections.emptyList();
+            final List<Company> fullLanguageCompanyList = List.of(company0);
+            final List<Company> englishLanguageCompanyList = List.of(company1);
+            final List<Company> someCompanyList = List.of(company0, company1);
+            final List<Company> someCompanyReverseList = List.of(company1, company0);
 
             return Stream.of(
                     arguments(new Speaker(
@@ -196,7 +196,7 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
+                                    fullNameLocaleItems,
                                     new ArrayList<>(),
                                     null,
                                     new Speaker.SpeakerSocials(
@@ -216,7 +216,7 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
+                                    fullNameLocaleItems,
                                     new ArrayList<>(),
                                     null,
                                     new Speaker.SpeakerSocials(
@@ -236,8 +236,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    EMPTY_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    emptyCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -256,8 +256,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    EMPTY_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    emptyCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -276,8 +276,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    FULL_LANGUAGE_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    fullLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -296,8 +296,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    FULL_LANGUAGE_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    fullLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -316,8 +316,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    ENGLISH_LANGUAGE_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    englishLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -336,8 +336,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    FULL_LANGUAGE_COMPANY_LIST,
+                                    englishNameLocaleItems,
+                                    fullLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -356,8 +356,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    ENGLISH_LANGUAGE_COMPANY_LIST,
+                                    englishNameLocaleItems,
+                                    englishLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -376,8 +376,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    SOME_COMPANY_LIST,
+                                    englishNameLocaleItems,
+                                    someCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -396,8 +396,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    SOME_COMPANY_REVERSE_LIST,
+                                    englishNameLocaleItems,
+                                    someCompanyReverseList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -426,10 +426,10 @@ public class LocalizationUtilsTest {
     @DisplayName("getSpeakerNameWithLastNameFirstWithCompanies method tests")
     class GetSpeakerNameWithLastNameFirstWithCompaniesTest {
         private Stream<Arguments> data() {
-            final List<LocaleItem> FULL_NAME_LOCALE_ITEMS = Arrays.asList(
+            final List<LocaleItem> fullNameLocaleItems = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "FirstName LastName"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Имя Фамилия"));
-            final List<LocaleItem> ENGLISH_NAME_LOCALE_ITEMS = Collections.singletonList(
+            final List<LocaleItem> englishNameLocaleItems = Collections.singletonList(
                     new LocaleItem(Language.ENGLISH.getCode(), "FirstName LastName"));
 
             Company company0 = new Company(0, List.of(
@@ -438,11 +438,11 @@ public class LocalizationUtilsTest {
             Company company1 = new Company(1, List.of(
                     new LocaleItem(Language.ENGLISH.getCode(), "Company1")));
 
-            final List<Company> EMPTY_COMPANY_LIST = Collections.emptyList();
-            final List<Company> FULL_LANGUAGE_COMPANY_LIST = List.of(company0);
-            final List<Company> ENGLISH_LANGUAGE_COMPANY_LIST = List.of(company1);
-            final List<Company> SOME_COMPANY_LIST = List.of(company0, company1);
-            final List<Company> SOME_COMPANY_REVERSE_LIST = List.of(company1, company0);
+            final List<Company> emptyCompanyList = Collections.emptyList();
+            final List<Company> fullLanguageCompanyList = List.of(company0);
+            final List<Company> englishLanguageCompanyList = List.of(company1);
+            final List<Company> someCompanyList = List.of(company0, company1);
+            final List<Company> someCompanyReverseList = List.of(company1, company0);
 
             return Stream.of(
                     arguments(new Speaker(0L,
@@ -490,7 +490,7 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
+                                    fullNameLocaleItems,
                                     new ArrayList<>(),
                                     null,
                                     new Speaker.SpeakerSocials(
@@ -510,7 +510,7 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
+                                    fullNameLocaleItems,
                                     new ArrayList<>(),
                                     null,
                                     new Speaker.SpeakerSocials(
@@ -530,8 +530,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    EMPTY_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    emptyCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -550,8 +550,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    EMPTY_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    emptyCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -570,8 +570,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    FULL_LANGUAGE_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    fullLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -590,8 +590,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    FULL_LANGUAGE_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    fullLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -610,8 +610,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    FULL_NAME_LOCALE_ITEMS,
-                                    ENGLISH_LANGUAGE_COMPANY_LIST,
+                                    fullNameLocaleItems,
+                                    englishLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -630,8 +630,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    FULL_LANGUAGE_COMPANY_LIST,
+                                    englishNameLocaleItems,
+                                    fullLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -650,8 +650,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    ENGLISH_LANGUAGE_COMPANY_LIST,
+                                    englishNameLocaleItems,
+                                    englishLanguageCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -670,8 +670,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    SOME_COMPANY_LIST,
+                                    englishNameLocaleItems,
+                                    someCompanyList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -690,8 +690,8 @@ public class LocalizationUtilsTest {
                                             "0000.jpg",
                                             null
                                     ),
-                                    ENGLISH_NAME_LOCALE_ITEMS,
-                                    SOME_COMPANY_REVERSE_LIST,
+                                    englishNameLocaleItems,
+                                    someCompanyReverseList,
                                     null,
                                     new Speaker.SpeakerSocials(
                                             null,
@@ -720,7 +720,7 @@ public class LocalizationUtilsTest {
     @DisplayName("getSpeakerName method tests")
     class GetSpeakerNameTest {
         private Stream<Arguments> data() {
-            final List<LocaleItem> FULL_NAME_LOCALE_ITEMS = Arrays.asList(
+            final List<LocaleItem> fullNameLocaleItems = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "FirstName LastName"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Имя Фамилия"));
 
@@ -734,7 +734,7 @@ public class LocalizationUtilsTest {
                             "0000.jpg",
                             null
                     ),
-                    FULL_NAME_LOCALE_ITEMS,
+                    fullNameLocaleItems,
                     List.of(company),
                     null,
                     new Speaker.SpeakerSocials(
@@ -749,12 +749,12 @@ public class LocalizationUtilsTest {
                     )
             );
 
-            Set<Speaker> EMPTY_SPEAKER_DUPLICATES = Collections.emptySet();
-            Set<Speaker> FULL_SPEAKER_DUPLICATES = Set.of(speaker0);
+            Set<Speaker> emptySpeakerDuplicates = Collections.emptySet();
+            Set<Speaker> fullSpeakerDuplicates = Set.of(speaker0);
 
             return Stream.of(
-                    arguments(speaker0, Language.ENGLISH, EMPTY_SPEAKER_DUPLICATES, "FirstName LastName"),
-                    arguments(speaker0, Language.ENGLISH, FULL_SPEAKER_DUPLICATES, "FirstName LastName (Company)")
+                    arguments(speaker0, Language.ENGLISH, emptySpeakerDuplicates, "FirstName LastName"),
+                    arguments(speaker0, Language.ENGLISH, fullSpeakerDuplicates, "FirstName LastName (Company)")
             );
         }
 
@@ -770,7 +770,7 @@ public class LocalizationUtilsTest {
     @DisplayName("getSpeakerNameWithLastNameFirst method tests")
     class GetSpeakerNameWithLastNameFirstTest {
         private Stream<Arguments> data() {
-            final List<LocaleItem> FULL_NAME_LOCALE_ITEMS = Arrays.asList(
+            final List<LocaleItem> fullNameLocaleItems = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "FirstName LastName"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Имя Фамилия"));
 
@@ -783,7 +783,7 @@ public class LocalizationUtilsTest {
                             "0000.jpg",
                             null
                     ),
-                    FULL_NAME_LOCALE_ITEMS,
+                    fullNameLocaleItems,
                     List.of(company0),
                     null,
                     new Speaker.SpeakerSocials(
@@ -798,14 +798,14 @@ public class LocalizationUtilsTest {
                     )
             );
 
-            Set<Speaker> EMPTY_SPEAKER_DUPLICATES = Collections.emptySet();
-            Set<Speaker> FULL_SPEAKER_DUPLICATES = Set.of(speaker0);
+            Set<Speaker> emptySpeakerDuplicates = Collections.emptySet();
+            Set<Speaker> fullSpeakerDuplicates = Set.of(speaker0);
 
             return Stream.of(
-                    arguments(speaker0, Language.ENGLISH, EMPTY_SPEAKER_DUPLICATES, "LastName FirstName"),
-                    arguments(speaker0, Language.RUSSIAN, EMPTY_SPEAKER_DUPLICATES, "Фамилия Имя"),
-                    arguments(speaker0, Language.ENGLISH, FULL_SPEAKER_DUPLICATES, "LastName FirstName (Company)"),
-                    arguments(speaker0, Language.RUSSIAN, FULL_SPEAKER_DUPLICATES, "Фамилия Имя (Компания)")
+                    arguments(speaker0, Language.ENGLISH, emptySpeakerDuplicates, "LastName FirstName"),
+                    arguments(speaker0, Language.RUSSIAN, emptySpeakerDuplicates, "Фамилия Имя"),
+                    arguments(speaker0, Language.ENGLISH, fullSpeakerDuplicates, "LastName FirstName (Company)"),
+                    arguments(speaker0, Language.RUSSIAN, fullSpeakerDuplicates, "Фамилия Имя (Компания)")
             );
         }
 

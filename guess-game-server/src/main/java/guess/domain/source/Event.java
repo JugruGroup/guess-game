@@ -64,7 +64,6 @@ public class Event extends AbstractEvent {
     public String toString() {
         return "Event{" +
                 "id=" + getId() +
-                ", eventType=" + getEventType() +
                 ", name=" + getName() +
                 ", talks=" + getTalks() +
                 '}';

@@ -500,24 +500,24 @@ class JrgCmsDataLoaderTest {
         }
 
         private Stream<Arguments> data() {
-            final long ID0 = 42;
-            final long ID1 = 43;
-            final String ENGLISH_LONG_DESCRIPTION0 = "LongDescription0";
-            final String ENGLISH_LONG_DESCRIPTION1 = "LongDescription1";
-            final String RUSSIAN_LONG_DESCRIPTION0 = "ДлинноеОписание0";
-            final String RUSSIAN_LONG_DESCRIPTION1 = "ДлинноеОписание1";
-            final Conference CONFERENCE0 = Conference.HEISENBUG;
-            final Conference CONFERENCE1 = Conference.MOBIUS;
+            final long id0 = 42;
+            final long id1 = 43;
+            final String englishLongDescription0 = "LongDescription0";
+            final String englishLongDescription1 = "LongDescription1";
+            final String russianLongDescription0 = "ДлинноеОписание0";
+            final String russianLongDescription1 = "ДлинноеОписание1";
+            final Conference conference0 = Conference.HEISENBUG;
+            final Conference conference1 = Conference.MOBIUS;
 
-            JrgCmsEvent jrgCmsEvent0 = createJrgCmsEvent(ENGLISH_LONG_DESCRIPTION0, RUSSIAN_LONG_DESCRIPTION0);
-            JrgCmsEvent jrgCmsEvent1 = createJrgCmsEvent(ENGLISH_LONG_DESCRIPTION1, RUSSIAN_LONG_DESCRIPTION1);
+            JrgCmsEvent jrgCmsEvent0 = createJrgCmsEvent(englishLongDescription0, russianLongDescription0);
+            JrgCmsEvent jrgCmsEvent1 = createJrgCmsEvent(englishLongDescription1, russianLongDescription1);
 
-            EventType eventType0 = createEventType(ID0, CONFERENCE0, ENGLISH_LONG_DESCRIPTION0, RUSSIAN_LONG_DESCRIPTION0);
-            EventType eventType1 = createEventType(ID1, CONFERENCE1, ENGLISH_LONG_DESCRIPTION1, RUSSIAN_LONG_DESCRIPTION1);
+            EventType eventType0 = createEventType(id0, conference0, englishLongDescription0, russianLongDescription0);
+            EventType eventType1 = createEventType(id1, conference1, englishLongDescription1, russianLongDescription1);
 
             return Stream.of(
-                    arguments(jrgCmsEvent0, new AtomicLong(ID0), CONFERENCE0, eventType0),
-                    arguments(jrgCmsEvent1, new AtomicLong(ID1), CONFERENCE1, eventType1)
+                    arguments(jrgCmsEvent0, new AtomicLong(id0), conference0, eventType0),
+                    arguments(jrgCmsEvent1, new AtomicLong(id1), conference1, eventType1)
             );
         }
 
@@ -537,31 +537,31 @@ class JrgCmsDataLoaderTest {
     @DisplayName("getEvent method tests")
     class GetEventTest {
         private Stream<Arguments> data() {
-            final String EN_NAME0 = "Name0";
-            final String RU_NAME0 = "Наименование0";
-            final String EN_NAME1 = "Name1";
-            final String RU_NAME1 = "Наименование1";
-            final String EN_NAME2 = "Name2";
-            final String RU_NAME2 = "Наименование2";
-            final LocalDate START_DATE0 = LocalDate.of(2022, 6, 29);
-            final LocalDate END_DATE0 = LocalDate.of(2022, 6, 30);
-            final LocalDate START_DATE1 = LocalDate.of(2022, 7, 1);
-            final LocalDate END_DATE1 = LocalDate.of(2022, 7, 2);
+            final String enName0 = "Name0";
+            final String ruName0 = "Наименование0";
+            final String enName1 = "Name1";
+            final String ruName1 = "Наименование1";
+            final String enName2 = "Name2";
+            final String ruName2 = "Наименование2";
+            final LocalDate startDate0 = LocalDate.of(2022, 6, 29);
+            final LocalDate endDate0 = LocalDate.of(2022, 6, 30);
+            final LocalDate startDate1 = LocalDate.of(2022, 7, 1);
+            final LocalDate endDate1 = LocalDate.of(2022, 7, 2);
 
             // Names
             List<LocaleItem> name0 = List.of(
-                    new LocaleItem(Language.ENGLISH.getCode(), EN_NAME0),
-                    new LocaleItem(Language.RUSSIAN.getCode(), RU_NAME0)
+                    new LocaleItem(Language.ENGLISH.getCode(), enName0),
+                    new LocaleItem(Language.RUSSIAN.getCode(), ruName0)
             );
 
             List<LocaleItem> name1 = List.of(
-                    new LocaleItem(Language.ENGLISH.getCode(), EN_NAME1),
-                    new LocaleItem(Language.RUSSIAN.getCode(), RU_NAME1)
+                    new LocaleItem(Language.ENGLISH.getCode(), enName1),
+                    new LocaleItem(Language.RUSSIAN.getCode(), ruName1)
             );
 
             List<LocaleItem> name2 = List.of(
-                    new LocaleItem(Language.ENGLISH.getCode(), EN_NAME2),
-                    new LocaleItem(Language.RUSSIAN.getCode(), RU_NAME2)
+                    new LocaleItem(Language.ENGLISH.getCode(), enName2),
+                    new LocaleItem(Language.RUSSIAN.getCode(), ruName2)
             );
 
             // Places
@@ -588,20 +588,20 @@ class JrgCmsDataLoaderTest {
             Event event0 = new Event();
             event0.setId(-1L);
             event0.setName(name1);
-            event0.setDays(List.of(new EventDays(START_DATE0, END_DATE0, place0)));
+            event0.setDays(List.of(new EventDays(startDate0, endDate0, place0)));
 
             Event event1 = new Event();
             event1.setId(-1L);
             event1.setName(name2);
-            event1.setDays(List.of(new EventDays(START_DATE1, END_DATE1, place1)));
+            event1.setDays(List.of(new EventDays(startDate1, endDate1, place1)));
 
             // Results of getEventDatesList method
             List<JrgCmsDataLoader.EventDates> getEventDatesListResult0 = List.of(
-                    new JrgCmsDataLoader.EventDates(START_DATE0, END_DATE0)
+                    new JrgCmsDataLoader.EventDates(startDate0, endDate0)
             );
 
             List<JrgCmsDataLoader.EventDates> getEventDatesListResult1 = List.of(
-                    new JrgCmsDataLoader.EventDates(START_DATE1, END_DATE1)
+                    new JrgCmsDataLoader.EventDates(startDate1, endDate1)
             );
 
             return Stream.of(
@@ -682,17 +682,17 @@ class JrgCmsDataLoaderTest {
     @DisplayName("getEventId method tests")
     class GetEventIdTest {
         private Stream<Arguments> data() {
-            final Conference CONFERENCE = Conference.JPOINT;
-            final String CONFERENCE_CODE = "2022 Spring";
-            final long IV0 = 42;
-            final long IV1 = 43;
+            final Conference conference = Conference.JPOINT;
+            final String conferenceCode = "2022 Spring";
+            final long iv0 = 42;
+            final long iv1 = 43;
 
             // Events ids
             JrgCmsObject<Long> eventId0 = new JrgCmsObject<>();
-            eventId0.setIv(IV0);
+            eventId0.setIv(iv0);
 
             JrgCmsObject<Long> eventId1 = new JrgCmsObject<>();
-            eventId1.setIv(IV1);
+            eventId1.setIv(iv1);
 
             // Events
             JrgCmsEvent jrgCmsEvent0 = new JrgCmsEvent();
@@ -709,10 +709,10 @@ class JrgCmsDataLoaderTest {
             jrgCmsConferenceSiteContent1.setData(jrgCmsEvent1);
 
             return Stream.of(
-                    arguments(CONFERENCE, CONFERENCE_CODE, Collections.emptyList(), IllegalStateException.class, 0),
-                    arguments(CONFERENCE, CONFERENCE_CODE, List.of(jrgCmsConferenceSiteContent0, jrgCmsConferenceSiteContent1), IllegalStateException.class, 0),
-                    arguments(CONFERENCE, CONFERENCE_CODE, List.of(jrgCmsConferenceSiteContent0), null, IV0),
-                    arguments(CONFERENCE, CONFERENCE_CODE, List.of(jrgCmsConferenceSiteContent1), null, IV1)
+                    arguments(conference, conferenceCode, Collections.emptyList(), IllegalStateException.class, 0),
+                    arguments(conference, conferenceCode, List.of(jrgCmsConferenceSiteContent0, jrgCmsConferenceSiteContent1), IllegalStateException.class, 0),
+                    arguments(conference, conferenceCode, List.of(jrgCmsConferenceSiteContent0), null, iv0),
+                    arguments(conference, conferenceCode, List.of(jrgCmsConferenceSiteContent1), null, iv1)
             );
         }
 
@@ -1612,24 +1612,24 @@ class JrgCmsDataLoaderTest {
     @DisplayName("extractPhoto method tests")
     class ExtractPhotoTest {
         private Stream<Arguments> data() {
-            final UrlDates EMPTY_URL_DATES = new UrlDates(null, null, null);
-            final String CONTENT = "https://valid.com/fileName0.jpg";
-            final ZonedDateTime DATE0 = ZonedDateTime.of(2022, 5, 20, 21, 0, 0, 0, ZoneId.of("UTC"));
-            final ZonedDateTime DATE1 = ZonedDateTime.of(2022, 5, 20, 22, 0, 0, 0, ZoneId.of("UTC"));
-            final ZonedDateTime DATE2 = ZonedDateTime.of(2022, 5, 20, 22, 30, 0, 0, ZoneId.of("UTC"));
+            final UrlDates emptyUrlDates = new UrlDates(null, null, null);
+            final String content = "https://valid.com/fileName0.jpg";
+            final ZonedDateTime date0 = ZonedDateTime.of(2022, 5, 20, 21, 0, 0, 0, ZoneId.of("UTC"));
+            final ZonedDateTime date1 = ZonedDateTime.of(2022, 5, 20, 22, 0, 0, 0, ZoneId.of("UTC"));
+            final ZonedDateTime date2 = ZonedDateTime.of(2022, 5, 20, 22, 30, 0, 0, ZoneId.of("UTC"));
 
             JrgCmsLinks jrgCmsLinks0 = new JrgCmsLinks();
-            jrgCmsLinks0.setContent(CONTENT);
+            jrgCmsLinks0.setContent(content);
 
             JrgCmsPhoto jrgCmsPhoto0 = new JrgCmsPhoto();
             jrgCmsPhoto0.setLinks(jrgCmsLinks0);
-            jrgCmsPhoto0.setCreated(DATE0);
-            jrgCmsPhoto0.setLastModified(DATE1);
+            jrgCmsPhoto0.setCreated(date0);
+            jrgCmsPhoto0.setLastModified(date1);
 
             JrgCmsPhoto jrgCmsPhoto1 = new JrgCmsPhoto();
             jrgCmsPhoto1.setLinks(jrgCmsLinks0);
-            jrgCmsPhoto1.setCreated(DATE0);
-            jrgCmsPhoto1.setLastModified(DATE2);
+            jrgCmsPhoto1.setCreated(date0);
+            jrgCmsPhoto1.setLastModified(date2);
 
             JrgCmsSpeaker jrgCmsSpeaker0 = new JrgCmsSpeaker();
             jrgCmsSpeaker0.setLastName(Collections.emptyMap());
@@ -1651,10 +1651,10 @@ class JrgCmsDataLoaderTest {
             jrgCmsSpeaker3.setPhoto(List.of(jrgCmsPhoto0, jrgCmsPhoto1));
 
             return Stream.of(
-                    arguments(jrgCmsSpeaker0, EMPTY_URL_DATES),
-                    arguments(jrgCmsSpeaker1, EMPTY_URL_DATES),
-                    arguments(jrgCmsSpeaker2, new UrlDates(CONTENT, DATE0, DATE1)),
-                    arguments(jrgCmsSpeaker3, new UrlDates(CONTENT, DATE0, DATE1))
+                    arguments(jrgCmsSpeaker0, emptyUrlDates),
+                    arguments(jrgCmsSpeaker1, emptyUrlDates),
+                    arguments(jrgCmsSpeaker2, new UrlDates(content, date0, date1)),
+                    arguments(jrgCmsSpeaker3, new UrlDates(content, date0, date1))
             );
         }
 

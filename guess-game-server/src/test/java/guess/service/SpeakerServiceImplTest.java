@@ -87,15 +87,15 @@ class SpeakerServiceImplTest {
 
     @Test
     void getSpeakerByIds() {
-        final List<Long> IDS = List.of(0L, 1L, 2L);
+        final List<Long> ids = List.of(0L, 1L, 2L);
 
         SpeakerDao speakerDao = Mockito.mock(SpeakerDao.class);
         SpeakerService speakerService = new SpeakerServiceImpl(speakerDao);
 
         Mockito.when(speakerDao.getSpeakerByIds(Mockito.anyList())).thenReturn(List.of(speaker0, speaker1, speaker2));
 
-        speakerService.getSpeakerByIds(IDS);
-        Mockito.verify(speakerDao, VerificationModeFactory.times(1)).getSpeakerByIds(IDS);
+        speakerService.getSpeakerByIds(ids);
+        Mockito.verify(speakerDao, VerificationModeFactory.times(1)).getSpeakerByIds(ids);
         Mockito.verifyNoMoreInteractions(speakerDao);
     }
 

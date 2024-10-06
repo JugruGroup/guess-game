@@ -89,7 +89,7 @@ class QuestionServiceImplTest {
         eventType.setId(-1L);
         eventType.setOrganizer(organizer);
 
-        final List<Event> ALL_EVENTS_OPTION_EVENTS = Collections.singletonList(
+        final List<Event> allEventsOptionEvents = Collections.singletonList(
                 new Event(
                         new Nameable(
                                 -1L,
@@ -119,19 +119,19 @@ class QuestionServiceImplTest {
                 questionService.getEvents(List.of(0L))
         );
         assertEquals(
-                ALL_EVENTS_OPTION_EVENTS,
+                allEventsOptionEvents,
                 questionService.getEvents(List.of(1L))
         );
         assertEquals(
-                ALL_EVENTS_OPTION_EVENTS,
+                allEventsOptionEvents,
                 questionService.getEvents(List.of(2L))
         );
         assertEquals(
-                ALL_EVENTS_OPTION_EVENTS,
+                allEventsOptionEvents,
                 questionService.getEvents(List.of(0L, 1L))
         );
         assertEquals(
-                ALL_EVENTS_OPTION_EVENTS,
+                allEventsOptionEvents,
                 questionService.getEvents(List.of(0L, 1L, 2L))
         );
     }

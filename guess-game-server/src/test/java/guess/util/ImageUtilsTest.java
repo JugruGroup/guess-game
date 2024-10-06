@@ -25,10 +25,10 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("ImageUtils class tests")
 class ImageUtilsTest {
-    private static final String JPG_IMAGE_400x400_PATH = createImagePath("400x400.jpg");
-    private static final String PNG_IMAGE_400x400_PATH = createImagePath("400x400.png");
-    private static final String JPG_IMAGE_1x1_PATH = createImagePath("1x1.jpg");
-    private static final String JPG_IMAGE_400x1_PATH = createImagePath("400x1.jpg");
+    private static final String JPG_IMAGE_400_X_400_PATH = createImagePath("400x400.jpg");
+    private static final String PNG_IMAGE_400_X_400_PATH = createImagePath("400x400.png");
+    private static final String JPG_IMAGE_1_X_1_PATH = createImagePath("1x1.jpg");
+    private static final String JPG_IMAGE_400_X_1_PATH = createImagePath("400x1.jpg");
     private static final String INVALID_IMAGE_PATH = "invalid.jpg";
 
     private static String createImagePath(String resourceFileName) {
@@ -54,7 +54,7 @@ class ImageUtilsTest {
 
     @Test
     void getImageByUrl() throws IOException {
-        URL validUrl = Paths.get(JPG_IMAGE_400x400_PATH).toUri().toURL();
+        URL validUrl = Paths.get(JPG_IMAGE_400_X_400_PATH).toUri().toURL();
         URL invalidUrl = Paths.get(INVALID_IMAGE_PATH).toUri().toURL();
 
         assertNotNull(ImageUtils.getImageByUrl(validUrl));
@@ -102,14 +102,14 @@ class ImageUtilsTest {
             final String IMAGE_PARAMETERS_TEMPLATE = "w=%d&h=%d";
 
             return Stream.of(
-                    arguments(null, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
-                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
-                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_400x400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(null, JPG_IMAGE_400_X_400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_400_X_400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_400_X_400_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
 
-                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE, true),
-                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_400x1_PATH, IMAGE_PARAMETERS_TEMPLATE, true),
-                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_1x1_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
-                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_400x1_PATH, IMAGE_PARAMETERS_TEMPLATE, false)
+                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_1_X_1_PATH, IMAGE_PARAMETERS_TEMPLATE, true),
+                    arguments(IMAGE_400X400_URL_STRING, JPG_IMAGE_400_X_1_PATH, IMAGE_PARAMETERS_TEMPLATE, true),
+                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_1_X_1_PATH, IMAGE_PARAMETERS_TEMPLATE, false),
+                    arguments(IMAGE_1X1_URL_STRING, JPG_IMAGE_400_X_1_PATH, IMAGE_PARAMETERS_TEMPLATE, false)
             );
         }
 
@@ -165,7 +165,7 @@ class ImageUtilsTest {
 
     @Test
     void convertPngToJpg() throws IOException {
-        BufferedImage pngImage = ImageIO.read(Paths.get(PNG_IMAGE_400x400_PATH).toUri().toURL());
+        BufferedImage pngImage = ImageIO.read(Paths.get(PNG_IMAGE_400_X_400_PATH).toUri().toURL());
         BufferedImage image = ImageUtils.convertPngToJpg(pngImage);
 
         assertNotNull(image);
@@ -196,11 +196,11 @@ class ImageUtilsTest {
 
                                 return switch (urlString) {
                                     case JPG_IMAGE_400X400_URL_STRING ->
-                                            ImageIO.read(Paths.get(JPG_IMAGE_400x400_PATH).toUri().toURL());
+                                            ImageIO.read(Paths.get(JPG_IMAGE_400_X_400_PATH).toUri().toURL());
                                     case PNG_IMAGE_400X400_URL_STRING ->
-                                            ImageIO.read(Paths.get(PNG_IMAGE_400x400_PATH).toUri().toURL());
+                                            ImageIO.read(Paths.get(PNG_IMAGE_400_X_400_PATH).toUri().toURL());
                                     case JPG_IMAGE_1X1_URL_STRING ->
-                                            ImageIO.read(Paths.get(JPG_IMAGE_1x1_PATH).toUri().toURL());
+                                            ImageIO.read(Paths.get(JPG_IMAGE_1_X_1_PATH).toUri().toURL());
                                     default -> null;
                                 };
                             }
