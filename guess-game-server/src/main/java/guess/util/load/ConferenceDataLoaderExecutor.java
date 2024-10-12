@@ -2726,8 +2726,10 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-части конференции PiterPy 2024", "Lightning Talks",
 //                                "Yandex Multitrack for Python Afterparty")));
 //        loadTalksSpeakersEvent(Conference.VIDEO_TECH, LocalDate.of(2024, 9, 19), "2024",
-//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("VideoTech 2024", null, List.of(24L, 30L)),
+//                        Map.of(new NameCompany("Андрей Кузнецов", new Company(1321, "AIRI")), 3482L,
+//                                new NameCompany("Илья Смирнов", new Company(567, "Usetech")), 3483L),
 //                        Set.of("Открытие конференции", "Закрытие конференции", "Подведение итогов онлайн-части",
 //                                "Открытие офлайн-части конференции", "Lightning Talks")));
     }

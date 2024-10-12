@@ -647,6 +647,10 @@ companySynonyms:
       "SM Lab",
       SportmasterLab
     ]
+  - name: START
+    synonyms: [
+      "Онлайн-кинотеатр START"
+    ]
   - name: Sudo
     synonyms: [
       "Sudo Ltd",
@@ -728,6 +732,10 @@ companySynonyms:
   - name: "University of Wisconsin–Madison"
     synonyms: [
       "University of Wisconsin - Madison"
+    ]
+  - name: Usetech
+    synonyms: [
+      "ГК Юзтех"
     ]
   - name: Uzum
     synonyms: [

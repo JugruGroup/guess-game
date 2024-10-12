@@ -28067,18 +28067,19 @@ speakers:
             ых. Специализируется на разработке под GPU. Интересуется автоматизацией процессов разработки."}
   - id: 1960
     photoFileName: 1960.jpg
-    photoUpdatedAt: "2023-08-16T14:19:06Z"
+    photoUpdatedAt: "2024-05-22T14:13:01Z"
     name:
       - {language: en, text: "Olga Popova"}
       - {language: ru, text: "Ольга Попова"}
     companyIds: [689]
     bio:
-      - {language: en, text: "<p>For more than four years, Olga has been developing the Yandex video player. She's interested\
+      - {language: en, text: "For more than five years, Olga has been developing the Yandex video player. She's interested\
             \ in the streaming industry and the extensive range of challenges arising in this sphere. Olga's favourite topics\
-            \ are ABR and QoE. She is also a co-author of the Telegram channel @video_engineer_pains.</p>"}
-      - {language: ru, text: "<p>Более четырёх лет занимается разработкой видеоплеера Яндекса. Интересуется индустрией стр\
-            иминга и широким спектром проблем, возникающих в этой сфере. Любимые темы: ABR и QoE. Соавтор Telegram-канала\
-            \ @video_engineer_pains.</p>"}
+            \ are ABR and QoE.</p><p>She is also a co-author of <a href=\"https://t.me/video_engineer_pains\" rel=\"noopener\
+            \ noreferrer\" target=\"_blank\">the Telegram news channel</a> about video and streaming technologies."}
+      - {language: ru, text: "Более пяти лет разрабатывает видеоплеер Яндекса. Интересуется индустрией стриминга и широким\
+            \ спектром проблем, возникающих в этой сфере. Любимые темы: ABR и QoE.</p><p>Соавтор новостного <a href=\"https://t.me/video_engineer_pains\"\
+            \ rel=\"noopener noreferrer\" target=\"_blank\">Telegram-канала</a> о технологиях видео и стриминга."}
   - id: 1961
     photoFileName: 1961.jpg
     photoUpdatedAt: 2021-10-29T10:29:18.537Z[UTC]
@@ -28519,7 +28520,7 @@ speakers:
       - {language: ru, text: "Разрабатывает видеозвонки и серверные части конференций. Увлекается скалолазанием."}
   - id: 1989
     photoFileName: 1989.jpg
-    photoUpdatedAt: 2022-03-31T19:07:02Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:07:02Z"
     name:
       - {language: en, text: "Dmitry Vatolin"}
       - {language: ru, text: "Дмитрий Ватолин"}
@@ -28551,19 +28552,18 @@ speakers:
     habr: 3Dvideo
   - id: 1990
     photoFileName: 1990.jpg
-    photoUpdatedAt: 2022-11-11T11:58:57Z[UTC]
+    photoUpdatedAt: "2024-08-29T09:35:10Z"
     name:
       - {language: en, text: "Maksim Lapshin"}
       - {language: ru, text: "Максим Лапшин"}
     companyIds: [881]
     bio:
-      - {language: en, text: "<p>Maksim is a graduate of the Faculty of Computational Mathematics and Cybernetics at Moscow\
-            \ State University. For more than 10 years he has been interested in technologies of video transmission over the\
-            \ Internet. He created a video streaming server and Erlyvideo company, which is included in the list of 50 most\
-            \ important online video companies.</p>"}
-      - {language: ru, text: "<p>Максим &mdash; выпускник факультета вычислительной математики и кибернетики МГУ. Уже боле\
-            е 10 лет интересуется технологиями передачи видео через интернет. Создал видеостриминговый сервер и компанию Э\
-            рливидео, которая входит в список 50 самых важных в сфере онлайн-видео.</p>"}
+      - {language: en, text: "<p>Maxim is a graduate of the Faculty of Computational Mathematics and Cybernetics of Moscow\
+            \ State University and has been interested in video transmission technologies over the Internet for more than\
+            \ 10 years. He created a video streaming server and a company called Erlyvideo.</p>"}
+      - {language: ru, text: "<p>Выпускник факультета вычислительной математики и кибернетики МГУ, уже более 10 лет интере\
+            суется технологиями передачи видео через интернет. Создал видеостриминговый сервер и компанию &laquo;Эрливидео\
+            &raquo;.</p>"}
     gitHub: maxlapshin
     habr: erlyvideo
   - id: 1991
@@ -28622,12 +28622,12 @@ speakers:
     photoFileName: 1994.jpg
     photoUpdatedAt: 2022-11-11T11:57:46Z[UTC]
     name:
-      - {language: en, text: "Aleksei Gusev"}
+      - {language: en, text: "Alexey Gusev"}
       - {language: ru, text: "Алексей Гусев"}
     companyIds: [689]
     bio:
-      - {language: en, text: "<p>Makes a video player in Yandex. Gives talks at conferences, contributes to Open Source.</p>"}
-      - {language: ru, text: "Делает видеоплеер в Яндексе. Выступает на конференциях, контрибьютит в open-source."}
+      - {language: en, text: "<p>He develops a video player in Yandex. He speaks at conferences, contributes to open source.</p>"}
+      - {language: ru, text: "<p>Разрабатывает видеоплеер в Яндексе. Выступает на конференциях, контрибьютит в open source.</p>"}
   - id: 1995
     photoFileName: 1995.jpg
     photoUpdatedAt: 2021-11-08T07:55:12.682Z[UTC]
@@ -28675,12 +28675,19 @@ speakers:
     companyIds: [620]
     bio:
       - language: en
-        text: "Последние полтора года руководит командой разработки нативных клиентов VK Звонки.\n\nПеред этим работал над\
-            \ распределенным бэкендом в другой крупной технологической компании. В прошлом занимался научными исследования\
-            ми в области математического и имитационного моделирования, в том числе разрабатывал интерпретатор для языка м\
-            оделирования, а также долгое время читал лекции по C++ и АСД в университете.\n\nНаибольший интерес вызывают за\
-            дачи оптимизации производительности любого кода, до которого удается дотянуться. Профессионально занимался муз\
-            ыкой, поэтому отдельный личный интерес представляют задачи обработки аудио в реальном времени."
+        text: "<p>For the last three years Pavel has been managing the development team of VK Calls native clients. Before\
+            \ that, he worked on a distributed backend and Big Data at another large technology company.</p>\n<p>In the past,\
+            \ he has done research in mathematical and simulation modelling, including developing an interpreter for a modelling\
+            \ language, and has lectured on C++ and ASD at university for a long time.</p>\n<p>He is most interested in performance\
+            \ optimization. Pavel was professionally involved in music, so a separate personal interest are the tasks of audio\
+            \ processing in real time.</p>"
+      - language: ru
+        text: "<p>Последние три года руководит командой разработки нативных клиентов VK Звонков. Перед этим работал над ра\
+            спределенным бэкендом и Big Data в другой крупной технологической компании.</p>\n<p>В прошлом занимался научны\
+            ми исследованиями в области математического и имитационного моделирования, в том числе разрабатывал интерпрета\
+            тор для языка моделирования, а также долгое время читал лекции по C++ и АСД в университете.</p>\n<p>Наибольший\
+            \ интерес вызывают задачи оптимизации производительности. Профессионально занимался музыкой, поэтому отдельный\
+            \ личный интерес представляют задачи обработки аудио в реальном времени.</p>"
   - id: 1998
     photoFileName: 1998.jpg
     photoUpdatedAt: 2021-11-11T14:40:38.623Z[UTC]
@@ -29125,7 +29132,7 @@ speakers:
     companyIds: [377]
     bio:
       - {language: en, text: "<p>CTO in Okko. For more than 10 years has been in Yandex, he has engaged in the development\
-            \ of the Main page, Ether, Zen. Не likes to understand what is happening on client devices using metrics. I manage\
+            \ of the Main page, Efir, Zen. Не likes to understand what is happening on client devices using metrics. He manages\
             \ several development teams. For the last few years, he has been studying the work of videos, from creation to\
             \ playback.</p>"}
       - {language: ru, text: "CTO в Okko, занимается развитием сервиса. Проработал больше 10 лет в Яндексе, занимался разр\
@@ -29672,18 +29679,20 @@ speakers:
             , вопросами инфраструктуры, автоматизацией тестирования Android.</p>"}
   - id: 2069
     photoFileName: 2069.jpg
-    photoUpdatedAt: 2022-10-07T16:17:42Z[UTC]
+    photoUpdatedAt: "2024-08-15T10:18:13Z"
     name:
       - {language: en, text: "Vladislav Kozhushko"}
       - {language: ru, text: "Владислав Кожушко"}
     companyIds: [620]
     bio:
-      - {language: en, text: "<p>Interested in Android development since 2013, implemented the voiceovers \"your coffers are\
-            \ empty, my lord\" and \"women and wine cost the crown dearly, sire\" in the Rocketbank app. In his spare time,\
-            \ he entertains himself with a 3D printer.</p>"}
-      - {language: ru, text: "Начал погружение в Android-разработку в 2013 году. Внедрил озвучку «ваша казна пустеет, мило\
-            рд» и «женщины и вино дорого обходятся короне, сир» в приложение Рокетбанка. Интересуется 3D-печатью, самоделк\
-            ами и стрелковымм видами спорта."}
+      - language: en
+        text: "<p>Has been interested in Android development since 2013, making the world and user experience better.</p>\n\
+            <p>Master candidate in solving non-standard problems. A good solution is a combination of other good solutions.</p>\n\
+            <p>Interested in 3D printing, DIY and shooting sports.</p>"
+      - language: ru
+        text: "<p>Интересуется Android-разработкой с 2013 года, делает мир и пользовательский опыт лучше.</p>\n<p>Кандидат\
+            \ в мастера спорта по велосипедостроению и решению нестандартных задач. Хорошее решение есть комбинация других\
+            \ хороших решений.</p>\n<p>Интересуется 3D-печатью, самоделками и стрелковыми видами спорта.</p>"
   - id: 2070
     photoFileName: 2070.jpg
     photoUpdatedAt: "2022-05-06T13:07:40Z"
@@ -31416,19 +31425,20 @@ speakers:
       - {language: ru, text: "<p>Специалист по технической архитектуре в компании АксТим (ex-Accenture).&nbsp;</p>"}
   - id: 2186
     photoFileName: 2186.jpg
-    photoUpdatedAt: "2022-05-27T12:17:22Z"
+    photoUpdatedAt: "2024-07-16T15:23:42Z"
     name:
-      - {language: en, text: "Stepa Mikhailyuk"}
+      - {language: en, text: "Stepan Mikhailiuk"}
       - {language: ru, text: "Степан Михайлюк"}
     companyIds: [1031]
     bio:
-      - {language: en, text: "<p>A \"javascript cyclist\", trying to solve problems that no one else dares to solve. Sometimes\
-            \ gets into infrastructure, sometimes into components, sometimes into guidelines and processes, etc. Likes to\
-            \ work on a problem in a group of people. Lately works on optimizing video rendering using web technologies.</p>"}
-      - {language: ru, text: "<p>Велосипедист-джаваскриптизер, старается решать проблемы, которые никто не берется решить\
-            . Иногда заносит в инфру, иногда &mdash; в компоненты, иногда &mdash; в гайдлайны и процессы, и т. д. Любит ра\
-            ботать над задачей в группе людей. Последний год занимается вопросами оптимизаций рендеринга видео с помощью web-т\
-            ехнологий.</p>"}
+      - language: en
+        text: "<p>A developer with 12 years of experience.</p>\n<p>Set fire to his father's motorbike at the age of 6 because\
+            \ Stepan wondered if a trickle of petrol could burn upwards.</p>\n<p>A bit of a traveller. The most recent: travelled\
+            \ 6,000 km by car in 5 days to see bears.</p>"
+      - language: ru
+        text: "<p>Разработчик с 12 годами опыта.</p>\n<p>В 6 лет поджег отцовский мотоцикл, потому что Степану было интере\
+            сно, может ли струйка бензина гореть вверх.</p>\n<p>Немного путешественник. Из последнего: проехал 6 000 км на\
+            \ машине за 5 дней, чтобы посмотреть на медведей.</p>"
   - id: 2187
     photoFileName: 2187.jpg
     photoUpdatedAt: 2022-05-20T12:00:51Z[UTC]
@@ -33684,18 +33694,18 @@ speakers:
             ешениями в области декодирования видео и аудио, а также вещания.</p>"}
   - id: 2347
     photoFileName: 2347.jpg
-    photoUpdatedAt: 2022-10-05T11:25:49Z[UTC]
+    photoUpdatedAt: "2022-10-05T11:25:49Z"
     name:
       - {language: en, text: "Sergey Ikonin"}
       - {language: ru, text: "Сергей Иконин"}
     companyIds: [242]
     bio:
-      - {language: en, text: "More than 15 years or experience in algorithms research and development in area of multimedia\
-            \ communication, including audio and video compression, international standardization, AI-based image and video\
-            \ compression, ultra-low latency communication, and joint source-channel coding."}
-      - {language: ru, text: "Более 15 лет опыта в области цифровой мультимедийной связи, включая разработку алгоритмов ко\
-            дирования аудио и видео сигналов, нейросетевых методов сжатия, методов совместного кодирования канала и источн\
-            ика, и участие в международной стандартизации."}
+      - {language: en, text: "<p>Over 15 years of experience in digital multimedia communications, including the development\
+            \ of audio and video coding algorithms, neural network compression techniques, joint channel and source coding\
+            \ methods, and participation in international standardisation.</p>"}
+      - {language: ru, text: "<p>Более 15 лет опыта в области цифровой мультимедийной связи, включая разработку алгоритмов\
+            \ кодирования аудио- и видеосигналов, нейросетевых методов сжатия, методов совместного кодирования канала и ис\
+            точника, а также участие в международной стандартизации.</p>"}
   - id: 2348
     photoFileName: 2348.jpg
     photoUpdatedAt: "2022-09-09T12:40:40Z"
@@ -41544,23 +41554,18 @@ speakers:
             нде, позволяющих совместить желания бизнеса и интересы исполнителей.</p>"}
   - id: 2880
     photoFileName: 2880.jpg
-    photoUpdatedAt: "2023-10-11T12:48:01Z"
+    photoUpdatedAt: "2024-06-24T11:57:20Z"
     name:
-      - {language: en, text: "Dmitrii Nekrylov"}
+      - {language: en, text: "Dmitry Nekrylov"}
       - {language: ru, text: "Дмитрий Некрылов"}
     companyIds: [689]
     bio:
       - language: en
-        text: "<p>14 years in commercial Java development. Started with full-stack development in Order Capture and Order\
-            \ Management systems in world-class Enterprise solutions. About 5 years worked on performance monitoring and optimization\
-            \ of these solutions. In particular, he was responsible for implementation and finalization of Application Performance\
-            \ Monitoring tools. Dmitry likes reliable solutions that can handle large non-trivial loads and work without bugs.</p>\n\
-            <p>For the last year, the speaker has been working with a team from Yandex.Telemost on a million-dollar service.</p>"
-      - {language: ru, text: "14 лет в коммерческой разработке на Java. Начинал с full-stack разработки в системах Order Capture\
-            \ и Order Management в Enterprise-решениях мирового уровня. Около 5 лет работал над контролем и оптимизацией п\
-            роизводительности этих решений. В частности — отвечал за внедрение и доработку средств Application Performance\
-            \ Monitoring. Дмитрию нравятся надежные решения, которые держат большую нетривиальную нагрузку и работают без\
-            \ багов.</p><p>Последний год спикер делает с командой из Яндекс.Телемоста сервис-миллионник."}
+        text: "<p>Team lead. In the past &mdash; tech lead, tech man, performance lead. Worked in Kinopoisk, Yandex 360, Netcracker.</p>\n\
+            <p>He loves when large, complex systems work flawlessly and robots do the heavy lifting.</p>"
+      - language: ru
+        text: "<p>Тимлид. В прошлом &mdash; техлид, техмен, перф лид. Работал в Кинопоиске, Яндекс 360, Netcracker.</p>\n\
+            <p>Любит, когда сложные системы работают идеально. Вкалывают роботы, счастлив человек!</p>"
   - id: 2881
     photoFileName: 2881.jpg
     photoUpdatedAt: "2023-07-24T10:36:09Z"
@@ -44448,7 +44453,7 @@ speakers:
             тся разработкой авиационного оборудования, вертолетных тренажеров и беспилотных самолетов (самых больших в Рос\
             сии). Там в последние годы руководил оптическим отделом и разработкой различных оптико-электронных систем. Зак\
             ончил университет ИТМО со специальностью &laquo;оптико-электронные системы и комплексы&raquo;. Кандидат технич\
-            еских наук.</p>"}
+            еских наук</p>"}
   - id: 3066
     photoFileName: 3066.jpg
     photoUpdatedAt: "2023-11-08T13:49:06Z"
@@ -50659,3 +50664,523 @@ speakers:
       - {language: ru, text: "Около четырех лет разрабатывает на Python, делает фронтенды, занимается DevOps. Любит писать\
             \ на Go и Rust.</p><p>Выступает на конференциях, пишет статьи, занимается опенсорсом.</p><p>Увлекается шахмата\
             ми и горными лыжами."}
+  - id: 3482
+    photoFileName: 3482.jpg
+    photoUpdatedAt: "2024-08-15T12:03:57Z"
+    name:
+      - {language: en, text: "Andrei Kuznetsov"}
+      - {language: ru, text: "Андрей Кузнецов"}
+    companyIds: [1321]
+    bio:
+      - language: en
+        text: "<p>He has been involved in machine learning since 2010. He defended his dissertation in 2013 (Candidate of\
+            \ Technical Sciences) and is writing his doctoral thesis on the application of multimodal architectures for passive\
+            \ security of multimedia content.</p>\n<p>He leads the FusionBrain lab at the AIRI Artificial Intelligence Institute,\
+            \ where he develops multimodal and generative models.</p>\n<p>He is one of the &lsquo;founders&rsquo; of the Kandinsky\
+            \ family of models.</p>\n<p>He teaches at Samara University and ITMO, gives lectures and writes about developments\
+            \ in AI and ML in his <a href=\"https://t.me/complete_ai\">author's Telegram channel</a>.&nbsp;</p>\n<p>Author\
+            \ of more than 100 scientific publications, including top journals (Q1/Q2) and Core A/A* proceedings of ACL, EMNLP,\
+            \ EACL conferences. Hirsch index &mdash; 12.</p>"
+      - language: ru
+        text: "<p>Занимается машинным обучением с 2010 года. Защитил диссертацию в 2013 году (к. т. н.), пишет докторскую\
+            \ диссертацию про применение мультимодальных архитектур для задач обеспечения пассивной безопасности мультимед\
+            ийного контента.</p>\n<p>Руководит лабораторией FusionBrain в Институте искусственного интеллекта AIRI, где за\
+            нимаются разработкой мультимодальных и генеративных моделей.</p>\n<p>Один из &laquo;основателей&raquo; семейст\
+            ва моделей Kandinsky.</p>\n<p>Преподает в Самарском университете и ИТМО, выступает с лекциями и пишет о событи\
+            ях в AI и ML в <a href=\"https://t.me/complete_ai\">авторском Telegram-канале</a>.</p>\n<p>Автор более 100 нау\
+            чных публикаций, в том числе в топ-журналах (Q1/Q2) и сборниках Core A/A* конференций ACL, EMNLP, EACL. Индекс\
+            \ Хирша &mdash; 12.</p>"
+  - id: 3483
+    photoFileName: 3483.jpg
+    photoUpdatedAt: "2024-08-23T09:28:13Z"
+    name:
+      - {language: en, text: "Ilya Smirnov"}
+      - {language: ru, text: "Илья Смирнов"}
+    companyIds: [567]
+    bio:
+      - language: en
+        text: "<p>Head of ML/AI practice of Usetech Group of Companies with over 15 years of experience.</p>\n<p>Graduated\
+            \ from Lomonosov Moscow State University and postgraduate studies at the Faculty of Mathematics and Computer Science.\
+            \ D. in Physics and Mathematics, author of <a href=\"https://istina.cemi-ras.ru/workers/492527/publications/\"\
+            >more than 30 scientific papers</a> in Applicable Analysis, Mathematical and Computational Applications (MDPI),\
+            \ Journal of Marine Science and Engineering.</p>\n<p>For the last 15 years he has been developing mathematical\
+            \ models using machine learning for different classes of problems. Recently he has been working on trajectory\
+            \ processing technology for vector 3D data.</p>\n<p>He participated as an expert in the foresight session of the\
+            \ Higher School of Logistics of the Financial University under the Government of the Russian Federation, as well\
+            \ as at the Cnews conference, iFin, Kazan Digital, and IT Dialogue forums.</p>"
+      - language: ru
+        text: "<p>Руководитель практики ML/AI ГК Юзтех с опытом более 15 лет.</p>\n<p>Окончил Московский государственный у\
+            ниверситет им М. В. Ломоносова и аспирантуру факультета ВМК. Кандидат физико-математических наук, автор <a href=\"\
+            https://istina.cemi-ras.ru/workers/492527/publications/\">более 30 научных работ</a> в журналах Applicable Analysis,\
+            \ Mathematical and Computational Applications (MDPI), Journal of Marine Science and Engineering.</p>\n<p>На пр\
+            отяжении последних 15 лет разрабатывает математические модели с использованием машинного обучения для разных к\
+            лассов задач. В последнее время занимается технологией траекторной обработки векторных трехмерных данных.</p>\n\
+            <p>Участвовал в качестве эксперта в форсайт-сессии Высшей школы логистики Финансового университета при Правите\
+            льстве РФ, а также на конференции Cnews, форумах iFin, Kazan Digital, ИТ-Диалог.</p>"
+  - id: 3484
+    photoFileName: 3484.jpg
+    photoUpdatedAt: "2024-08-02T08:11:10Z"
+    name:
+      - {language: en, text: "Konstantin Sobolev"}
+      - {language: ru, text: "Константин Соболев"}
+    companyIds: [1321]
+    bio:
+      - language: en
+        text: "<p>Researcher, leads the AI video generation team at AIRI. Previously worked at Samsung AI Centre.</p>\n<p>Experience\
+            \ in AI &mdash; 6 years, in video generation &mdash; 2 years. MIPT and Skoltech graduate.</p>"
+      - language: ru
+        text: "<p>Исследователь, руководит командой генерации видео с помощью ИИ в AIRI. Ранее работал в Samsung AI Center.</p>\n\
+            <p>Опыт в ИИ &mdash; 6 лет, в генерации видео &mdash; 2 года. Окончил МФТИ и Сколтех.</p>"
+  - id: 3485
+    photoFileName: 3485.jpg
+    photoUpdatedAt: "2024-07-22T14:53:59Z"
+    name:
+      - {language: en, text: "Egor Saturiants"}
+      - {language: ru, text: "Егор Сатурьянц"}
+    companyIds: [1322]
+    bio:
+      - {language: en, text: "<p>QA Engineer at streaming dept. Has been working as QA for more than 7 years. Since the beginning\
+            \ of 2023, has been working on video streaming and loves it.</p>"}
+      - {language: ru, text: "<p>QA Engineer в команде стриминга. Занимается тестированием больше семи лет. С начала 2023\
+            \ года воодушевлен работой над видеостримингом.</p>"}
+  - id: 3486
+    photoFileName: 3486.jpg
+    photoUpdatedAt: "2024-09-04T07:33:51Z"
+    name:
+      - {language: en, text: "Oleg Anisimov"}
+      - {language: ru, text: "Олег Анисимов"}
+    companyIds: [377]
+    bio:
+      - {language: en, text: "<p>Developer of Okko application for Smart TV. He looks for ways to make a web application work\
+            \ quickly and beautifully on slow TVs with very old browsers.</p>"}
+      - {language: ru, text: "<p>Разработчик приложения Okko для Smart TV. Ищет способы, как заставить быстро и красиво ра\
+            ботать web-приложение на медленных телевизорах с очень старыми браузерами.</p>"}
+  - id: 3487
+    photoFileName: 3487.jpg
+    photoUpdatedAt: "2024-09-16T11:12:12Z"
+    name:
+      - {language: en, text: "Дмитрий Ермаков"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "Ответственно тестирую Android TV и Smart TV"}
+      - {language: ru, text: "Ответственно тестирую видеосервисы на AndroidTV и SmartTV уже более 2 лет"}
+  - id: 3488
+    photoFileName: 3488.jpg
+    photoUpdatedAt: "2024-09-12T05:24:41Z"
+    name:
+      - {language: en, text: "Александр Монетчиков"}
+    companyIds: [280]
+    bio:
+      - {language: en, text: "Обеспечивает качество разработки видеоплееров в Иви"}
+  - id: 3489
+    photoFileName: 3489.jpg
+    photoUpdatedAt: "2024-09-16T09:19:34Z"
+    name:
+      - {language: en, text: "Alex Goldberg"}
+      - {language: ru, text: "Алекс Голдберг"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "Began QA career in 2021.</p><p>Most professional experience is related to video apps (like Okko\
+            \ or VK Video) and its performance on smartTV devices (LG)."}
+      - {language: ru, text: "Пришел в тестирование в 2021 г. Основной профессиональный опыт связан с телевизорами и прове\
+            ркой видеосервисов (Okko, VK Video, приемочное тестирование приложений на умных тв от LG)."}
+  - id: 3490
+    photoFileName: 3490.jpg
+    photoUpdatedAt: "2024-09-17T09:27:32Z"
+    name:
+      - {language: en, text: "Илья Истомин"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "Пришёл в разработку приложений для смарт тв в 2019. Для смарт тв делал разные проекты: и гол\
+            осовой поиск и воспроизведение видео контента. Сейчас делаю плеер для онлайн кинотеатра и для смарт-тв телевиз\
+            оров, и для приставок, и для веба. Забочусь о качестве воспроизведения. Считаю, что без телеметрии и без иссле\
+            дований плеер для смарт тв лучше не сделать."}
+      - {language: ru, text: "Пришёл в разработку приложений для смарт тв в 2019. Для смарт тв делал разные проекты: и гол\
+            осовой поиск и воспроизведение видео контента. Сейчас делаю плеер для онлайн кинотеатра и для смарт-тв телевиз\
+            оров, и для приставок, и для веба. Забочусь о качестве воспроизведения. Считаю, что без телеметрии и без иссле\
+            дований плеер для смарт тв лучше не сделать. Люблю смотреть контент на смарт тв и автоматизировать задачи, свя\
+            занные со смарт тв."}
+  - id: 3491
+    photoFileName: 3491.jpg
+    photoUpdatedAt: "2024-08-20T13:40:34Z"
+    name:
+      - {language: en, text: "Ivan Beskrovnyi"}
+      - {language: ru, text: "Иван Бескровный"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Development engineer in VKontakte's sound technology team (Unified Video). Is in charge of\
+            \ audio algorithms in VK Calls. Loves fast, optimised on-device algorithms, and developments that work for people\
+            \ right here and now.</p>"}
+      - {language: ru, text: "<p>Инженер-разработчик в команде звуковых технологий ВКонтакте (Единое Видео). Занимается ау\
+            диоалгоритмами в VK Звонках. Любит быстрые, оптимизированные on-device алгоритмы, а также разработки, которые\
+            \ работают для людей здесь и сейчас.</p>"}
+  - id: 3492
+    photoFileName: 3492.jpg
+    photoUpdatedAt: "2024-07-10T08:25:42Z"
+    name:
+      - {language: en, text: "Elena Alshina"}
+      - {language: ru, text: "Елена Альшина"}
+    companyIds: [242]
+    bio:
+      - language: en
+        text: "<p>Technical expert of the MPEG Committee and active participant in the development of international video\
+            \ coding standards HEVC/H.265 and VVC/H.266. Editor and co-chair of the JPEG AI standard development working group.</p>\n\
+            <p>Elena now works at Huawei Technologies as Chief Video Scientist, Audiovisual Technology and Media Coding Technologies\
+            \ Lab Director.</p>"
+      - language: ru
+        text: "<p>Технический эксперт комитета MPEG и активный участник разработки международных стандартов видеокодирован\
+            ия HEVC/H.265 и VVC/H.266. Редактор и сопредседатель рабочей группы разработки стандарта JPEG AI.</p>\n<p>Сейч\
+            ас Елена работает в Huawei Technologies на позиции Chief Video Scientist, Audiovisual Technology и Media Coding\
+            \ Technologies Lab Director.</p>"
+  - id: 3493
+    photoFileName: 3493.jpg
+    photoUpdatedAt: "2024-08-28T10:53:34Z"
+    name:
+      - {language: en, text: "Evgenii Rossinskii"}
+      - {language: ru, text: "Евгений Россинский"}
+    companyIds: [280]
+    bio:
+      - {language: en, text: "<p>He led Netstream, a high-loaded project development company, whose fruits were projects related\
+            \ to online broadcasting and video (smotri.com, ivi). In 2012, Netstream, together with the entire team, was amicably\
+            \ absorbed by one of its customers &ndash; Ivi. From 2012 to the present day, Evgeny has been working as Ivi's\
+            \ CTO.</p>"}
+      - {language: ru, text: "<p>Руководил компанией по разработке высоконагруженных проектов Netstream, плодами которой б\
+            ыли проекты, связанные с online-вещанием и видео (smotri.com, Иви). В 2012 году Netstream вместе со всей коман\
+            дой был дружественно поглощен одним из своих заказчиков &mdash; Иви. C 2012 года по сей день Евгений &mdash; CTO\
+            \ Иви.</p>"}
+  - id: 3494
+    photoFileName: 3494.jpg
+    photoUpdatedAt: "2024-09-13T09:06:18Z"
+    name:
+      - {language: en, text: "Александр Шашов"}
+    companyIds: [1211]
+    bio:
+      - {language: en, text: "CTO онлайн-кинотеатра START. 16 лет в разработке, 7 лет из которых на руководящих должностях\
+            . До START работал в канадской компании Hostopia — ведущем поставщике коммуникационных вебсервисов для малого\
+            \ и среднего бизнеса.&nbsp;</p><p>В START руководит командой, состоящей из 100+ инженеров, вместе с которой пе\
+            режил нагрузку на платформу х10 во время выхода премьерных серий «Слово пацана» в ноябре-декабре 2023 и запуст\
+            ил новое Smart TV приложение.&nbsp;"}
+  - id: 3495
+    photoFileName: 3495.jpg
+    photoUpdatedAt: "2024-08-13T12:43:01Z"
+    name:
+      - {language: en, text: "Dmitrii Shatnev"}
+      - {language: ru, text: "Дмитрий Шатнёв"}
+    companyIds: [1210]
+    bio:
+      - language: en
+        text: "<p>ML Engineer at Inventos, specialises in natural language processing and speech recognition system development.</p>\n\
+            <p>He is actively involved in projects on automation of audio and video content processing, constantly researching\
+            \ and applying the latest methods and technologies in this field. He has experience in working with various machine\
+            \ learning models for NLP and speech technology tasks.</p>\n<p>He is convinced of the importance of creating accessible\
+            \ content and is keen to use AI to improve user experience in the media sphere.</p>"
+      - language: ru
+        text: "<p>ML Engineer в Инвентос, специализируется на обработке естественного языка и разработке систем распознава\
+            ния речи.</p>\n<p>Активно занимается проектами по автоматизации обработки аудио- и видеоконтента, постоянно ис\
+            следуя и применяя новейшие методы и технологии в этой области. Имеет опыт работы с различными моделями машинно\
+            го обучения для задач NLP и речевых технологий.</p>\n<p>Убежден в важности создания доступного контента и стре\
+            мится использовать AI для улучшения пользовательского опыта в медиасфере.</p>"
+  - id: 3496
+    photoFileName: 3496.jpg
+    photoUpdatedAt: "2024-08-23T09:18:52Z"
+    name:
+      - {language: en, text: "Aleksandr Strogonov"}
+      - {language: ru, text: "Александр Строгонов"}
+    companyIds: [1322]
+    bio:
+      - language: en
+        text: "<p>DevOps with over 10 years of experience. Has been supporting Streaming Platform for the last 3 years.</p>\n\
+            <p>Programmes in Python and hammers servers.</p>"
+      - language: ru
+        text: "<p>DevOps со стажем более 10 лет. Последние 3 года поддерживает Streaming Platform.</p>\n<p>Программирует н\
+            а Python и бьет молотком серверы.</p>"
+  - id: 3497
+    photoFileName: 3497.jpg
+    photoUpdatedAt: "2024-08-20T13:32:38Z"
+    name:
+      - {language: en, text: "Timofei Mokienko"}
+      - {language: ru, text: "Тимофей Мокиенко"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>Director of animation and computer graphics, theatre video artist and scriptwriter. He has\
+            \ participated in the creation and staging of many productions in Russia and abroad. In the past, he worked in\
+            \ television for many years and, fascinated by its history, began collecting and restoring old television equipment\
+            \ and, together with a group of like-minded people, organising reconstructions of live broadcasts using old technologies.</p>"}
+      - {language: ru, text: "<p>Режиссер анимации и компьютерной графики, театральный видеохудожник и сценарист. Участвов\
+            ал в создании и постановке многих спектаклей в России и за рубежом. В прошлом много лет работал на телевидении\
+            \ и, увлекшись его историей, стал собирать и восстанавливать старую телевизионную технику, вместе с группой ед\
+            иномышленников устраивать реконструкции прямых эфиров с использованием старых технологий.</p>"}
+  - id: 3498
+    photoFileName: 3498.jpg
+    photoUpdatedAt: "2024-09-24T13:08:49Z"
+    name:
+      - {language: en, text: "Ruslan Revel"}
+      - {language: ru, text: "Руслан Ревель"}
+    companyIds: [1323]
+    bio:
+      - language: en
+        text: "<p>Experience in IT &mdash; 9 years, 5 of them in the position of Team Lead. Worked his way up from a service\
+            \ engineer to managing his own development team of 5 people. He has experience of a successful launch of an AR\
+            \ application.</p>\n<p>At NtechLab he develops user interfaces for video analytics and manages the development\
+            \ of a Flutter mobile application to search for intruders.</p>"
+      - language: ru
+        text: "<p>Опыт в IT &mdash; 9 лет, из них 5 на позиции Team Lead. Из сервисного инженера дорос до управления своей\
+            \ командой разработки из 5 человек. За плечами &mdash; опыт успешного запуска AR-приложения.</p>\n<p>В NtechLab\
+            \ развивает пользовательские интерфейсы для видеоаналитики, а также управляет процессами разработки мобильного\
+            \ приложения на Flutter для поиска злоумышленников.</p>"
+  - id: 3499
+    photoFileName: 3499.jpg
+    photoUpdatedAt: "2024-08-27T12:15:38Z"
+    name:
+      - {language: en, text: "Aleksandr Alekseev"}
+      - {language: ru, text: "Александр Алексеев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "Alexander has been working on the Yandex video platform for several years. Previously he was\
+            \ involved in the stability of live broadcasts, and now he works with real-time video via WebRTC.Alexander also\
+            \ teaches at the Department of Programming Algorithms and Technologies at the Moscow Institute of Physics and\
+            \ Technology."}
+      - language: ru
+        text: "<p>Александр несколько лет работает над видеоплатформой Яндекса. Ранее занимался стабильностью прямых транс\
+            ляций, сейчас работает с real time-видео через WebRTC.</p>\n<p>Преподает на кафедре алгоритмов и технологий пр\
+            ограммирования Московского физико-технического института.</p>"
+  - id: 3500
+    photoFileName: 3500.jpg
+    photoUpdatedAt: "2024-08-20T13:56:07Z"
+    name:
+      - {language: en, text: "Maria Serova"}
+      - {language: ru, text: "Мария Серова"}
+    companyIds: [689]
+    bio:
+      - language: en
+        text: "<p>2nd year master student (Software Engineering) in BMSTU. Is keen on everything that's out of bounds of terms\
+            \ of usual and casual. Loves to research non-trivial tasks in search for answers.</p>\n<p>Has been working in\
+            \ Yandex's Alice and Smart Devices for a year and a half as an Android developer of video, TV and web players\
+            \ and on an application that's used in factories for quality control check of smart devices based on Android.</p>"
+      - language: ru
+        text: "<p>Студентка 2-го курса МГТУ им. Н. Э.Баумана по направлению &laquo;программная инженерия&raquo;. Интересуе\
+            тся всем, что выходит за рамки обычного и привычного, любит ломать мозг над нетривиальными задачами в поисках\
+            \ ответа.</p>\n<p>Работает в Яндексе (в Алисе и Умных устройствах) полтора года. Разрабатывает видео-, ТВ- и в\
+            еб-плееры, а также приложения для контроля качества производимых на заводе умных устройств на платформе Android.</p>"
+  - id: 3501
+    photoFileName: 3501.jpg
+    photoUpdatedAt: "2024-07-11T11:17:50Z"
+    name:
+      - {language: en, text: "Dmitrii Ilin"}
+      - {language: ru, text: "Дмитрий Ильин"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>He has been involved in media for over 25 years: from sensors to VR players. Co-founder of\
+            \ the <a href=\"https://github.com/OpenIPC\">OpenIPC</a> project.</p>"}
+      - {language: ru, text: "<p>Занимается медиа более 25 лет: от сенсоров до VR-плееров. Сооснователь проекта <a href=\"\
+            https://github.com/OpenIPC\">OpenIPC</a>.</p>"}
+  - id: 3502
+    photoFileName: 3502.jpg
+    photoUpdatedAt: "2024-08-29T09:03:11Z"
+    name:
+      - {language: en, text: "Vadim Kleba"}
+      - {language: ru, text: "Вадим Клеба"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "Has been developing highly loaded fault-tolerant systems since 2015. Built Search as a Service\
+            \ solution with full-text relevance-based search. For the last 2 years, having immersed himself in the world of\
+            \ VCS, has been leading the Telemost team at Yandex 360 into a bright future in a leadership role. Loves doing\
+            \ DevRel stuff."}
+      - {language: ru, text: "Разрабатывает высоконагруженные отказоустойчивые системы с 2015 года. Строил решение Search\
+            \ as a Service с полнотекстовым поиском с учетом релевантности. Последние 2 года, погрузившись в мир ВКС, веде\
+            т команду Телемоста в Яндекс 360 в светлое будущее в роли руководителя. Любит заниматься DevRel-скими делами."}
+  - id: 3503
+    photoFileName: 3503.jpg
+    photoUpdatedAt: "2024-06-27T08:07:43Z"
+    name:
+      - {language: en, text: "Aleksei Zhiriakov"}
+      - {language: ru, text: "Алексей Жиряков"}
+    companyIds: [1212]
+    bio:
+      - language: en
+        text: "<p>Head of backend direction of the storefront team at KION. More than 10 years in media IT.</p>\n<p>Wrote\
+            \ a distributed search engine as a hobby.</p>\n<p>Knows what tail recursion control is. Loves Python and comedy.</p>"
+      - language: ru
+        text: "<p>Руководитель бэкенд-направления команды витрины в KION. Больше 10 лет в медиа ИТ.</p>\n<p>В качестве хоб\
+            би написал распределенную поисковую систему.</p>\n<p>Знает, что такое контроль хвостовой рекурсии. Любит Python\
+            \ и комедии.</p>"
+  - id: 3504
+    photoFileName: 3504.jpg
+    photoUpdatedAt: "2024-08-26T08:32:03Z"
+    name:
+      - {language: en, text: "Viacheslav Danilov"}
+      - {language: ru, text: "Вячеслав Данилов"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Started his career in testing over a year ago and since that time has gained a variety of\
+            \ experience and knowledge. For the past 10 months he has been focusing on testing a video player, which turned\
+            \ out to be not only fun but also quite challenging.</p>"}
+      - {language: ru, text: "<p>Начал карьеру в области тестирования чуть больше года назад и за это время наработал разн\
+            ообразный опыт и знания. На протяжении последних 10 месяцев сосредоточился на тестировании видеоплеера, что ок\
+            азалось не только увлекательной, но и весьма сложной задачей.</p>"}
+  - id: 3505
+    photoFileName: 3505.jpg
+    photoUpdatedAt: "2024-08-22T09:21:25Z"
+    name:
+      - {language: en, text: "Leonid Elenin"}
+      - {language: ru, text: "Леонид Еленин"}
+    companyIds: [1324]
+    bio:
+      - language: en
+        text: "<p>For more than 15 years he has been studying asteroids and comets as well as space debris issues. In 2010\
+            \ he discovered the first comet in the history of the Russian Federation.</p>\n<p>To date, Leonid is the discoverer\
+            \ of 6 comets and more than 300 asteroids. Popularizer of science, lecturer of the Russian Society &ldquo;Znanie&rdquo;.</p>\n\
+            <p>Writer, author of the novel &ldquo;Bortle's Limit&rdquo; and popular science book &ldquo;Comets. Wanderers\
+            \ of the Solar System&rdquo;.&nbsp;</p>"
+      - language: ru
+        text: "<p>Более 15 лет изучает астероиды и кометы, а также вопросы космического мусора. В 2010 году открыл первую\
+            \ комету в истории Российской Федерации.</p>\n<p>Сегодня Леонид &mdash; первооткрыватель 6 комет и более 300 а\
+            стероидов. Популяризатор науки, лектор Российского общества &laquo;Знание&raquo;.</p>\n<p>Писатель, автор рома\
+            на &laquo;Предел Бортля&raquo; и научно-популярной книги &laquo;Кометы. Странники Солнечной системы&raquo;.</p>"
+  - id: 3506
+    photoFileName: 3506.jpg
+    photoUpdatedAt: "2024-08-23T09:11:11Z"
+    name:
+      - {language: en, text: "Aleksandr Sokolov"}
+      - {language: ru, text: "Александр Соколов"}
+    companyIds: [1325]
+    bio:
+      - language: en
+        text: "<p>ML engineer at GPM Data. Candidate of Technical Sciences.</p>\n<p>Area of interest includes CV, NLP.</p>"
+      - language: ru
+        text: "<p>ML-инженер в &laquo;ГПМ Дата&raquo;. Кандидат технических наук.</p>\n<p>Область интересов &mdash; CV, NLP.</p>"
+  - id: 3507
+    photoFileName: 3507.jpg
+    photoUpdatedAt: "2024-08-26T08:50:55Z"
+    name:
+      - {language: en, text: "Gennadii Osipov"}
+      - {language: ru, text: "Геннадий Осипов"}
+    companyIds: [1212]
+    bio:
+      - {language: en, text: "<p>Senior backend developer in Python on the KION online cinema storefront team. He is in charge\
+            \ of the backend of the recommendation system and ETL processes.</p>"}
+      - {language: ru, text: "<p>Senior бэкенд-разработчик на Python в команде витрины онлайн-кинотеатра KION. Занимается\
+            \ бэкендом системы рекомендаций и ETL-процессами.</p>"}
+  - id: 3508
+    photoFileName: 3508.jpg
+    photoUpdatedAt: "2024-08-29T09:25:35Z"
+    name:
+      - {language: en, text: "Ildar Karimov"}
+      - {language: ru, text: "Ильдар Каримов"}
+    companyIds: [1326]
+    bio:
+      - {language: en, text: "<p>Architect and developer of the goodgame.ru streaming service.</p>"}
+      - {language: ru, text: "<p>Архитектор и разработчик стримингового сервиса goodgame.ru. В сфере стриминга с 2012 года\
+            .</p>"}
+  - id: 3509
+    photoFileName: 3509.jpg
+    photoUpdatedAt: "2024-08-22T20:21:05Z"
+    name:
+      - {language: en, text: "Mikhail Mirchuk"}
+      - {language: ru, text: "Михаил Мирчук"}
+    companyIds: [1326]
+    bio:
+      - {language: en, text: "<p>CEO and founder of the game streaming platform goodgame.ru.</p>"}
+      - {language: ru, text: "<p>CEO и founder игровой стриминговой платформы goodgame.ru.</p>"}
+  - id: 3510
+    photoFileName: 3510.jpg
+    photoUpdatedAt: "2024-08-28T16:06:56Z"
+    name:
+      - {language: en, text: "Aleksandr Dolgikh"}
+      - {language: ru, text: "Александр Долгих"}
+    companyIds: [620]
+    bio:
+      - language: en
+        text: "<p>Android developer in the VK Clips team. He has been working on tasks related to video for about 4 years.</p>\n\
+            <p>He is fond of mathematics. Perhaps that's why he found a lot of interesting things about video and audio processing.</p>"
+      - language: ru
+        text: "<p>Android-разработчик в команде VK Клипов. Около 4 лет занимается задачами, так или иначе связанными с вид\
+            ео.</p>\n<p>Увлекается математикой. Возможно, поэтому нашел для себя много интересного в теме обработки видео\
+            \ и аудио.</p>"
+  - id: 3511
+    photoFileName: 3511.jpg
+    photoUpdatedAt: "2024-08-28T16:09:29Z"
+    name:
+      - {language: en, text: "Denis Sviridov"}
+      - {language: ru, text: "Денис Свиридов"}
+    companyIds: [620]
+    bio:
+      - {language: en, text: "<p>Android developer in the VK Clips team for the last 5 years. Is in charge of developing VKontakte's\
+            \ media flow and camera.</p>"}
+      - {language: ru, text: "<p>Android-разработчик в команде VK Клипов последние 5 лет. Занимается проработкой медиафлоу\
+            \ и камерой ВКонтакте.</p>"}
+  - id: 3512
+    photoFileName: 3512.jpg
+    photoUpdatedAt: "2024-09-17T12:04:48Z"
+    name:
+      - {language: en, text: "Pyotr Khvesiuk"}
+      - {language: ru, text: "Пётр Хвесюк"}
+    companyIds: [1327]
+    bio:
+      - {language: en, text: "<p>He has been developing solutions based on machine vision and neural networks for more than\
+            \ 5 years, managing projects from startup to implementation. He has been underground in mines, visited coal mines\
+            \ and hazardous production facilities, so he knows about the real work of industrial enterprises. In addition\
+            \ to his main job, he developed an ML problem for the nationwide Digital Breakthrough competition and was a speaker\
+            \ at the Digital Factory conference.&nbsp;</p>"}
+      - {language: ru, text: "Более 5 лет занимается разработкой решений на основе машинного зрения и нейросетей, руководи\
+            т проектами от старта до внедрения. Побывал под землей в шахтах, посещал угольные разрезы и опасные производст\
+            венные предприятия, поэтому знает о реальной работе промышленных предприятий. Кроме основной работы разрабатыв\
+            ал ML задачу для общероссийского конкурса Цифровой прорыв и был спикером на конференции Цифровой завод.&nbsp;"}
+  - id: 3513
+    photoFileName: 3513.jpg
+    photoUpdatedAt: "2024-08-20T09:26:16Z"
+    name:
+      - {language: en, text: "Egor Domnin"}
+      - {language: ru, text: "Егор Домнин"}
+    companyIds: [280]
+    bio:
+      - language: en
+        text: "<p>Has been involved in Computer Vision / ML for the last 4 years at Ivi. Before that, he was involved in frontend\
+            \ for 2 years.</p>\n<p>Graduated from bachelor's and master's programmes at Bauman Moscow State Technical University,\
+            \ specialising in software engineering.</p>\n<p>Speaker at ODS Data Fest. Author of <a href=\"https://habr.com/ru/companies/ivi/articles/589209/\"\
+            >an article on synthetic film posters</a> on Habr.&nbsp;</p>"
+      - language: ru
+        text: "<p>Последние 4 года занимается Computer Vision / ML в Иви. До этого 2 года занимался фронтендом.</p>\n<p>Ок\
+            ончил бакалавриат и магистратуру МГТУ им. Н. Э. Баумана по специальности &laquo;программная инженерия&raquo;.</p>\n\
+            <p>Спикер ODS Data Fest. Автор <a href=\"https://habr.com/ru/companies/ivi/articles/589209/\">статьи о синтети\
+            ческих постерах для кино</a> на Хабре.&nbsp;</p>"
+  - id: 3514
+    photoFileName: 3514.jpg
+    photoUpdatedAt: "2024-07-04T13:54:10Z"
+    name:
+      - {language: en, text: "Iurii Minchenko-Pervak"}
+      - {language: ru, text: "Юрий Минченко-Первак"}
+    companyIds: [648]
+    bio:
+      - {language: en, text: "<p>Fullstack developer (Python, JS) in the KION backend team. The main part of his work was\
+            \ creating web services. Worked in such companies as VTB, Sber, and MTS. At the age of 23, he took the position\
+            \ of team leader of the product team. He is now leading a project to develop a platform for remote configuration\
+            \ and A/B testing.</p>"}
+      - {language: ru, text: "<p>Fullstack-разработчик (Python, JS) в бэкенд-команде KION. Основную часть своей деятельнос\
+            ти занимался созданием веб-сервисов. Работал в таких компаниях, как ВТБ, Сбер, МТС. В 23 года занял должность\
+            \ тимлида продуктовой команды. Сейчас ведет проект по разработке платформы удаленной конфигурации и A/B-тестир\
+            ования.</p>"}
+  - id: 3515
+    photoFileName: 3515.jpg
+    photoUpdatedAt: "2024-08-02T07:46:40Z"
+    name:
+      - {language: en, text: "Yana Lysova"}
+      - {language: ru, text: "Яна Лысова"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Deep learning engineer in the SaluteSpeech team at SaluteDevices. Participates in the noise\
+            \ cancellation development project for SaluteJazz.</p>"}
+      - {language: ru, text: "<p>Deep learning engineer в команде SaluteSpeech в SaluteDevices. Участвует в проекте разраб\
+            отки шумоподавления для SaluteJazz.</p>"}
+  - id: 3516
+    photoFileName: 3516.jpg
+    photoUpdatedAt: "2024-08-27T08:57:58Z"
+    name:
+      - {language: en, text: "Viktor Vitiuk"}
+      - {language: ru, text: "Виктор Витюк"}
+    companyIds: [1328]
+    bio:
+      - {language: en, text: "<p>Head of IT support, senior direction of unmanned aviation and coordinator in St. Petersburg\
+            \ and Leningrad region, and curator of &ldquo;LizaAlert&rdquo; Pskov region.</p>"}
+      - {language: ru, text: "Руководитель ИТ-направления поисково-спасательного отряда \"ЛизаАлерт\", старший&nbsp;направ\
+            ления беспилотников и координатор поисков в Санкт-Петербурге и ЛенОбласти"}

@@ -945,6 +945,7 @@ companies:
   - id: 280
     name:
       - { language: en, text: ivi }
+      - { language: ru, text: Иви }
     siteLink: https://www.ivi.ru
   - id: 281
     name:
@@ -1950,6 +1951,7 @@ companies:
   - id: 567
     name:
       - { language: en, text: Usetech }
+      - { language: en, text: Юзтех }
     siteLink: https://usetech.ru
   - id: 568
     name:
@@ -4740,3 +4742,40 @@ companies:
       - {language: en, text: "Festival of DIY electronics Undefined DIY fest"}
       - {language: ru, text: "Фестиваль самодельной электроники Undefined DIY fest"}
     siteLink: https://undefined.chaosconstructions.ru
+  - id: 1321
+    name:
+      - {language: en, text: AIRI}
+    siteLink: https://airi.net
+  - id: 1322
+    name:
+      - {language: en, text: Mayflower}
+    siteLink: https://mayflower.work
+  - id: 1323
+    name:
+      - {language: en, text: NtechLab}
+    siteLink: https://ntechlab.ru
+  - id: 1324
+    name:
+      - {language: en, text: "KIAM RAS"}
+      - {language: ru, text: "Институт прикладной математики им. М. В. Келдыша РАН"}
+    siteLink: https://www.keldysh.ru
+  - id: 1325
+    name:
+      - {language: en, text: "GPM Data"}
+      - {language: ru, text: "ГПМ Дата"}
+    siteLink: https://gpmdata.ru
+  - id: 1326
+    name:
+      - {language: en, text: Midian}
+      - {language: ru, text: Мидиан}
+    siteLink: https://goodgame.ru
+  - id: 1327
+    name:
+      - {language: en, text: "Nord Clan"}
+      - {language: ru, text: "Норд Клан"}
+    siteLink: https://nordclan.com
+  - id: 1328
+    name:
+      - {language: en, text: "Liza Alert"}
+      - {language: ru, text: ЛизаАлерт}
+    siteLink: https://lizaalert.org
