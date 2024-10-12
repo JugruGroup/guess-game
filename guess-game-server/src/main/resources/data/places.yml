@@ -242,4 +242,4 @@ places:
     venueAddress:
       - {language: en, text: "Airportcity Plaza Congress Hotel: Ulitsa Startovaya, 6, litera A"}
       - {language: ru, text: "Конгресс-отель Airportcity Plaza: ул. Стартовая, 6, литера А"}
-    mapCoordinates: "59.8060362,30.3137783"
+    mapCoordinates: "59.806140, 30.316422"

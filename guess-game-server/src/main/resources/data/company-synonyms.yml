@@ -32,7 +32,8 @@ companySynonyms:
     ]
   - name: "Alibaba Group"
     synonyms: [
-      Alibaba
+      Alibaba,
+      "Alibaba Cloud"
     ]
   - name: "Align Technology"
     synonyms: [
@@ -819,6 +820,7 @@ companySynonyms:
       Yandex.Money,
       "Yandex Practicum",
       "Yandex Self-driving Technologies",
+      "Yandex Taxi",
       "Yandex Taxi Technologies",
       Yandex.Taxi,
       "Yandex.Taxi Technologies",
@@ -829,6 +831,7 @@ companySynonyms:
       Дзен
       "Кинопоиск (Яндекс)",
       Кинопоиск,
+      "Техплатформа Екома и Райдтеха Яндекса",
       Яндекс.Go,
       "Яндекс GO",
       "Яндекс Go",

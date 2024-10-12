@@ -4701,3 +4701,42 @@ companies:
     name:
       - {language: en, text: "Soft Skills Lab"}
     siteLink: https://skillslab.center
+  - id: 1312
+    name:
+      - {language: en, text: DoubleCloud}
+    siteLink: https://double.cloud
+  - id: 1313
+    name:
+      - {language: en, text: "Rotten Grapes Private Limited"}
+    siteLink: https://rottengrapes.tech
+  - id: 1314
+    name:
+      - {language: en, text: Sigmadevs}
+    siteLink: https://sigmadevs.ru
+  - id: 1315
+    name:
+      - {language: en, text: "Institute of Astronomy of the Russian Academy of Sciences"}
+      - {language: ru, text: "Институт астрономии Российской академии наук"}
+    siteLink: http://www.inasan.ru
+  - id: 1316
+    name:
+      - {language: en, text: Cinimex}
+      - {language: ru, text: Синимекс}
+    siteLink: https://cinimex.ru
+  - id: 1317
+    name:
+      - {language: en, text: AirtAI}
+    siteLink: https://airt.ai
+  - id: 1318
+    name:
+      - {language: en, text: ContactPay}
+    siteLink: https://www.contactpay.com
+  - id: 1319
+    name:
+      - {language: en, text: "Digievo Labs"}
+    siteLink: https://digievolabs.com
+  - id: 1320
+    name:
+      - {language: en, text: "Festival of DIY electronics Undefined DIY fest"}
+      - {language: ru, text: "Фестиваль самодельной электроники Undefined DIY fest"}
+    siteLink: https://undefined.chaosconstructions.ru
