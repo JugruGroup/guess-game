@@ -151,33 +151,33 @@ class TagCloudUtilsTest {
     @DisplayName("getSpeakerStopWords method tests")
     class GetSpeakerStopWordsTest {
         private Stream<Arguments> data() {
-            final String FIRST_NAME0 = "First0";
-            final String LAST_NAME0 = "Last0";
-            final String FIRST_NAME1 = "First1";
-            final String LAST_NAME1 = "Last1";
+            final String firstName0 = "First0";
+            final String lastName0 = "Last0";
+            final String firstName1 = "First1";
+            final String lastName1 = "Last1";
 
             Speaker speaker0 = new Speaker();
             speaker0.setName(List.of(
-                    new LocaleItem(Language.ENGLISH.getCode(), String.format("%s %s", FIRST_NAME0, LAST_NAME0))
+                    new LocaleItem(Language.ENGLISH.getCode(), String.format("%s %s", firstName0, lastName0))
             ));
 
             Speaker speaker1 = new Speaker();
             speaker1.setName(List.of(
-                    new LocaleItem(Language.ENGLISH.getCode(), String.format("%s %s", FIRST_NAME0, LAST_NAME0)),
-                    new LocaleItem(Language.RUSSIAN.getCode(), String.format("%s %s", FIRST_NAME1, LAST_NAME1))
+                    new LocaleItem(Language.ENGLISH.getCode(), String.format("%s %s", firstName0, lastName0)),
+                    new LocaleItem(Language.RUSSIAN.getCode(), String.format("%s %s", firstName1, lastName1))
             ));
 
             Speaker speaker2 = new Speaker();
             speaker2.setName(List.of(
-                    new LocaleItem(Language.ENGLISH.getCode(), String.format("%s %s", FIRST_NAME0, LAST_NAME0)),
+                    new LocaleItem(Language.ENGLISH.getCode(), String.format("%s %s", firstName0, lastName0)),
                     new LocaleItem(Language.RUSSIAN.getCode(), "")
             ));
 
             return Stream.of(
-                    arguments(speaker0, List.of(FIRST_NAME0.toLowerCase(), LAST_NAME0.toLowerCase())),
-                    arguments(speaker1, List.of(FIRST_NAME0.toLowerCase(), LAST_NAME0.toLowerCase(),
-                            FIRST_NAME1.toLowerCase(), LAST_NAME1.toLowerCase())),
-                    arguments(speaker2, List.of(FIRST_NAME0.toLowerCase(), LAST_NAME0.toLowerCase()))
+                    arguments(speaker0, List.of(firstName0.toLowerCase(), lastName0.toLowerCase())),
+                    arguments(speaker1, List.of(firstName0.toLowerCase(), lastName0.toLowerCase(),
+                            firstName1.toLowerCase(), lastName1.toLowerCase())),
+                    arguments(speaker2, List.of(firstName0.toLowerCase(), lastName0.toLowerCase()))
             );
         }
 

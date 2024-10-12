@@ -93,21 +93,21 @@ class JrgCmsDataLoaderTest {
             mockedStatic.when(JrgCmsDataLoader::getTokenFromCache)
                     .thenCallRealMethod();
 
-            final String ACCESS_TOKEN = "ACCESS_TOKEN";
+            final String accessToken = "ACCESS_TOKEN";
 
             JrgCmsTokenResponse tokenResponse = JrgCmsDataLoader.getTokenFromCache();
 
             assertNull(tokenResponse);
 
             JrgCmsTokenResponse jrgCmsTokenResponse = new JrgCmsTokenResponse();
-            jrgCmsTokenResponse.setAccessToken(ACCESS_TOKEN);
+            jrgCmsTokenResponse.setAccessToken(accessToken);
 
             assertDoesNotThrow(() -> JrgCmsDataLoader.storeTokenInCache(jrgCmsTokenResponse));
 
             tokenResponse = JrgCmsDataLoader.getTokenFromCache();
 
             assertNotNull(tokenResponse);
-            assertEquals(ACCESS_TOKEN, tokenResponse.getAccessToken());
+            assertEquals(accessToken, tokenResponse.getAccessToken());
         }
     }
 
@@ -116,14 +116,14 @@ class JrgCmsDataLoaderTest {
     @DisplayName("getToken method tests")
     class GetTokenTest {
         private Stream<Arguments> data() {
-            final String CLIENT_ID = "clientId";
-            final String CLIENT_SECRET = "clientSecret";
+            final String clientId = "clientId";
+            final String clientSecret = "clientSecret";
 
             return Stream.of(
                     arguments(null, null, IllegalArgumentException.class),
-                    arguments(null, CLIENT_SECRET, IllegalArgumentException.class),
-                    arguments(CLIENT_ID, null, IllegalArgumentException.class),
-                    arguments(CLIENT_ID, CLIENT_SECRET, null)
+                    arguments(null, clientSecret, IllegalArgumentException.class),
+                    arguments(clientId, null, IllegalArgumentException.class),
+                    arguments(clientId, clientSecret, null)
             );
         }
 
@@ -135,10 +135,10 @@ class JrgCmsDataLoaderTest {
                         .thenCallRealMethod();
 
                 if (expectedException == null) {
-                    final String ACCESS_TOKEN = "accessToken";
+                    final String accessToken = "accessToken";
 
                     JrgCmsTokenResponse tokenResponse = new JrgCmsTokenResponse();
-                    tokenResponse.setAccessToken(ACCESS_TOKEN);
+                    tokenResponse.setAccessToken(accessToken);
 
                     ResponseEntity<JrgCmsTokenResponse> responseEntity = new ResponseEntity<>(tokenResponse, HttpStatus.OK);
 
@@ -152,7 +152,7 @@ class JrgCmsDataLoaderTest {
 
                     JrgCmsTokenResponse actual = JrgCmsDataLoader.getToken(clientId, clientSecret);
 
-                    assertEquals(ACCESS_TOKEN, actual.getAccessToken());
+                    assertEquals(accessToken, actual.getAccessToken());
                 } else {
                     assertThrows(expectedException, () -> JrgCmsDataLoader.getToken(clientId, clientSecret));
                 }
@@ -179,19 +179,19 @@ class JrgCmsDataLoaderTest {
     @DisplayName("makeRequest method tests")
     class MakeRequestTest {
         private Stream<Arguments> data() {
-            final int RESULT = 42;
-            final String ACCESS_TOKEN0 = "accessToken0";
-            final String ACCESS_TOKEN1 = "accessToken1";
-            final String ACCESS_TOKEN2 = "accessToken2";
-            final String ACCESS_TOKEN3 = "accessToken3";
+            final int result = 42;
+            final String accessToken0 = "accessToken0";
+            final String accessToken1 = "accessToken1";
+            final String accessToken2 = "accessToken2";
+            final String accessToken3 = "accessToken3";
 
-            Function<String, Integer> requestFunction0 = s -> RESULT;
+            Function<String, Integer> requestFunction0 = s -> result;
 
             Function<String, Integer> requestFunction1 = s -> {
                 return switch (s) {
-                    case ACCESS_TOKEN0, ACCESS_TOKEN2 ->
+                    case accessToken0, accessToken2 ->
                             throw HttpClientErrorException.create(null, HttpStatus.UNAUTHORIZED, "", new HttpHeaders(), null, null);
-                    case ACCESS_TOKEN1 -> RESULT;
+                    case accessToken1 -> result;
                     default ->
                             throw HttpClientErrorException.create(null, HttpStatus.BAD_REQUEST, "", new HttpHeaders(), null, null);
                 };
@@ -200,22 +200,22 @@ class JrgCmsDataLoaderTest {
             JrgCmsTokenResponse tokenResponse0 = new JrgCmsTokenResponse();
 
             JrgCmsTokenResponse tokenResponse1 = new JrgCmsTokenResponse();
-            tokenResponse1.setAccessToken(ACCESS_TOKEN0);
+            tokenResponse1.setAccessToken(accessToken0);
 
             JrgCmsTokenResponse tokenResponse2 = new JrgCmsTokenResponse();
-            tokenResponse2.setAccessToken(ACCESS_TOKEN1);
+            tokenResponse2.setAccessToken(accessToken1);
 
             JrgCmsTokenResponse tokenResponse3 = new JrgCmsTokenResponse();
-            tokenResponse3.setAccessToken(ACCESS_TOKEN2);
+            tokenResponse3.setAccessToken(accessToken2);
 
             JrgCmsTokenResponse tokenResponse4 = new JrgCmsTokenResponse();
-            tokenResponse4.setAccessToken(ACCESS_TOKEN3);
+            tokenResponse4.setAccessToken(accessToken3);
 
             return Stream.of(
-                    arguments(requestFunction0, null, tokenResponse0, null, RESULT),
-                    arguments(requestFunction0, tokenResponse0, tokenResponse0, null, RESULT),
-                    arguments(requestFunction0, tokenResponse1, null, null, RESULT),
-                    arguments(requestFunction1, tokenResponse1, tokenResponse2, null, RESULT),
+                    arguments(requestFunction0, null, tokenResponse0, null, result),
+                    arguments(requestFunction0, tokenResponse0, tokenResponse0, null, result),
+                    arguments(requestFunction0, tokenResponse1, null, null, result),
+                    arguments(requestFunction1, tokenResponse1, tokenResponse2, null, result),
                     arguments(requestFunction1, tokenResponse1, tokenResponse3, HttpClientErrorException.Unauthorized.class, null),
                     arguments(requestFunction1, tokenResponse1, tokenResponse4, HttpClientErrorException.BadRequest.class, null)
             );
@@ -248,24 +248,24 @@ class JrgCmsDataLoaderTest {
     @SuppressWarnings("unchecked")
     void getTags() throws IOException, NoSuchFieldException {
         try (MockedStatic<JrgCmsDataLoader> mockedStatic = Mockito.mockStatic(JrgCmsDataLoader.class)) {
-            final String MOBIUS_EVENT_PROJECT = "MOBIUS";
-            final String HEISENBUG_EVENT_PROJECT = "HEISENBUG";
-            final String SPRING_EVENT_VERSION = "2022 Spring";
-            final String AUTUMN_EVENT_VERSION = "2022 Autumn";
+            final String mobiusEventProject = "MOBIUS";
+            final String heisenbugEventProject = "HEISENBUG";
+            final String springEventVersion = "2022 Spring";
+            final String autumnEventVersion = "2022 Autumn";
 
             // Event projects
             JrgCmsObject<String> eventProjectObject0 = new JrgCmsObject<>();
-            eventProjectObject0.setIv(MOBIUS_EVENT_PROJECT);
+            eventProjectObject0.setIv(mobiusEventProject);
 
             JrgCmsObject<String> eventProjectObject1 = new JrgCmsObject<>();
-            eventProjectObject1.setIv(HEISENBUG_EVENT_PROJECT);
+            eventProjectObject1.setIv(heisenbugEventProject);
 
             // Event versions
             JrgCmsObject<String> eventVersion0 = new JrgCmsObject<>();
-            eventVersion0.setIv(SPRING_EVENT_VERSION);
+            eventVersion0.setIv(springEventVersion);
 
             JrgCmsObject<String> eventVersion1 = new JrgCmsObject<>();
-            eventVersion1.setIv(AUTUMN_EVENT_VERSION);
+            eventVersion1.setIv(autumnEventVersion);
 
             // Events
             JrgCmsEvent jrgCmsEvent0 = new JrgCmsEvent();
@@ -321,8 +321,8 @@ class JrgCmsDataLoaderTest {
 
             // Expected result
             Map<String, List<String>> expected = new LinkedHashMap<>();
-            expected.put(HEISENBUG_EVENT_PROJECT, List.of(AUTUMN_EVENT_VERSION, SPRING_EVENT_VERSION));
-            expected.put(MOBIUS_EVENT_PROJECT, List.of(SPRING_EVENT_VERSION));
+            expected.put(heisenbugEventProject, List.of(autumnEventVersion, springEventVersion));
+            expected.put(mobiusEventProject, List.of(springEventVersion));
 
             // Actual result
             Map<String, List<String>> actual = jrgCmsDataLoader.getTags("2022");
@@ -354,24 +354,24 @@ class JrgCmsDataLoaderTest {
     @SuppressWarnings("unchecked")
     void getEventTypes() throws IOException, NoSuchFieldException {
         try (MockedStatic<JrgCmsDataLoader> mockedStatic = Mockito.mockStatic(JrgCmsDataLoader.class)) {
-            final String MOBIUS_EVENT_PROJECT = "MOBIUS";
-            final String HEISENBUG_EVENT_PROJECT = "HEISENBUG";
-            final String SPRING_EVENT_VERSION = "2022 Spring";
-            final String AUTUMN_EVENT_VERSION = "2022 Autumn";
+            final String mobiusEventProject = "MOBIUS";
+            final String heisenbugEventProject = "HEISENBUG";
+            final String springEventVersion = "2022 Spring";
+            final String autumnEventVersion = "2022 Autumn";
 
             // Event projects
             JrgCmsObject<String> eventProjectObject0 = new JrgCmsObject<>();
-            eventProjectObject0.setIv(MOBIUS_EVENT_PROJECT);
+            eventProjectObject0.setIv(mobiusEventProject);
 
             JrgCmsObject<String> eventProjectObject1 = new JrgCmsObject<>();
-            eventProjectObject1.setIv(HEISENBUG_EVENT_PROJECT);
+            eventProjectObject1.setIv(heisenbugEventProject);
 
             // Event versions
             JrgCmsObject<String> eventVersion0 = new JrgCmsObject<>();
-            eventVersion0.setIv(SPRING_EVENT_VERSION);
+            eventVersion0.setIv(springEventVersion);
 
             JrgCmsObject<String> eventVersion1 = new JrgCmsObject<>();
-            eventVersion1.setIv(AUTUMN_EVENT_VERSION);
+            eventVersion1.setIv(autumnEventVersion);
 
             // Event about pages
             JrgCmsAboutPage jrgCmsAboutPage0 = new JrgCmsAboutPage();
@@ -824,7 +824,7 @@ class JrgCmsDataLoaderTest {
 
     @Test
     void getEventDatesList() {
-        final long EVENT_ID = 42;
+        final long eventId = 42;
 
         JrgCmsDataLoader jrgCmsDataLoader = Mockito.mock(JrgCmsDataLoader.class);
         Mockito.when(jrgCmsDataLoader.getEventDatesList(Mockito.anyLong()))
@@ -832,32 +832,32 @@ class JrgCmsDataLoaderTest {
         Mockito.when(jrgCmsDataLoader.getScheduleInfo(Mockito.anyLong()))
                 .thenReturn(new JrgCmsDataLoader.ScheduleInfo(Collections.emptyList(), Collections.emptyList()));
 
-        assertDoesNotThrow(() -> jrgCmsDataLoader.getEventDatesList(EVENT_ID));
-        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getEventDatesList(EVENT_ID);
-        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getScheduleInfo(EVENT_ID);
+        assertDoesNotThrow(() -> jrgCmsDataLoader.getEventDatesList(eventId));
+        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getEventDatesList(eventId);
+        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getScheduleInfo(eventId);
         Mockito.verifyNoMoreInteractions(jrgCmsDataLoader);
     }
 
     @Test
     void getDayTrackTimeMap() {
         try (MockedStatic<CmsDataLoader> cmsDataLoaderMockedStatic = Mockito.mockStatic(CmsDataLoader.class)) {
-            final String ACTIVITY_ID1 = "1";
-            final String ACTIVITY_ID2 = "2";
-            final String ACTIVITY_ID3 = "3";
-            final String ACTIVITY_ID4 = "4";
+            final String activityId1 = "1";
+            final String activityId2 = "2";
+            final String activityId3 = "3";
+            final String activityId4 = "4";
 
             // Activities
             JrgCmsActivity jrgCmsActivity1 = new JrgCmsActivity();
-            jrgCmsActivity1.setId(ACTIVITY_ID1);
+            jrgCmsActivity1.setId(activityId1);
 
             JrgCmsActivity jrgCmsActivity2 = new JrgCmsActivity();
-            jrgCmsActivity2.setId(ACTIVITY_ID2);
+            jrgCmsActivity2.setId(activityId2);
 
             JrgCmsActivity jrgCmsActivity3 = new JrgCmsActivity();
-            jrgCmsActivity3.setId(ACTIVITY_ID3);
+            jrgCmsActivity3.setId(activityId3);
 
             JrgCmsActivity jrgCmsActivity4 = new JrgCmsActivity();
-            jrgCmsActivity4.setId(ACTIVITY_ID4);
+            jrgCmsActivity4.setId(activityId4);
 
             // Slots
             JrgCmsSlot jrgCmsSlot0 = new JrgCmsSlot();
@@ -938,10 +938,10 @@ class JrgCmsDataLoaderTest {
 
             // Expected result
             Map<String, DayTrackTime> expected = new HashMap<>();
-            expected.put(ACTIVITY_ID1, new DayTrackTime(1L, 2L, LocalTime.of(8, 45), LocalTime.of(9, 0)));
-            expected.put(ACTIVITY_ID2, new DayTrackTime(2L, 3L, LocalTime.of(9, 45), LocalTime.of(10, 0)));
-            expected.put(ACTIVITY_ID3, new DayTrackTime(2L, 4L, LocalTime.of(11, 15), LocalTime.of(11, 30)));
-            expected.put(ACTIVITY_ID4, new DayTrackTime(3L, 5L, LocalTime.of(13, 0), LocalTime.of(13, 15)));
+            expected.put(activityId1, new DayTrackTime(1L, 2L, LocalTime.of(8, 45), LocalTime.of(9, 0)));
+            expected.put(activityId2, new DayTrackTime(2L, 3L, LocalTime.of(9, 45), LocalTime.of(10, 0)));
+            expected.put(activityId3, new DayTrackTime(2L, 4L, LocalTime.of(11, 15), LocalTime.of(11, 30)));
+            expected.put(activityId4, new DayTrackTime(3L, 5L, LocalTime.of(13, 0), LocalTime.of(13, 15)));
 
             assertEquals(expected, jrgCmsDataLoader.getDayTrackTimeMap(42));
         }
@@ -951,19 +951,19 @@ class JrgCmsDataLoaderTest {
     @SuppressWarnings("unchecked")
     void getTalks() {
         try (MockedStatic<JrgCmsDataLoader> mockedStatic = Mockito.mockStatic(JrgCmsDataLoader.class)) {
-            final String ID0 = "0";
-            final String ID1 = "1";
-            final String ID2 = "2";
+            final String id0 = "0";
+            final String id1 = "1";
+            final String id2 = "2";
 
             // Activities
             JrgCmsActivity jrgCmsActivity0 = new JrgCmsActivity();
-            jrgCmsActivity0.setId(ID0);
+            jrgCmsActivity0.setId(id0);
 
             JrgCmsActivity jrgCmsActivity1 = new JrgCmsActivity();
-            jrgCmsActivity1.setId(ID1);
+            jrgCmsActivity1.setId(id1);
 
             JrgCmsActivity jrgCmsActivity2 = new JrgCmsActivity();
-            jrgCmsActivity2.setId(ID2);
+            jrgCmsActivity2.setId(id2);
 
             // Activity response
             JrgCmsActivityResponse response = new JrgCmsActivityResponse();
@@ -1004,8 +1004,8 @@ class JrgCmsDataLoaderTest {
                     .thenCallRealMethod();
 
             Map<String, DayTrackTime> dayTrackTimeMap = new HashMap<>();
-            dayTrackTimeMap.put(ID0, new DayTrackTime(2L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
-            dayTrackTimeMap.put(ID1, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
+            dayTrackTimeMap.put(id0, new DayTrackTime(2L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
+            dayTrackTimeMap.put(id1, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)));
 
             List<Talk> actual = jrgCmsDataLoader.getTalks(42, false, dayTrackTimeMap);
 
@@ -1145,9 +1145,9 @@ class JrgCmsDataLoaderTest {
 
     @Test
     void getSpeakerMap() {
-        final String ID0 = "0";
-        final String ID1 = "1";
-        final String ID2 = "2";
+        final String id0 = "0";
+        final String id1 = "1";
+        final String id2 = "2";
 
         try (MockedStatic<JrgCmsDataLoader> mockedStatic = Mockito.mockStatic(JrgCmsDataLoader.class)) {
             // Mock methods
@@ -1161,13 +1161,13 @@ class JrgCmsDataLoaderTest {
 
             // Speakers
             JrgCmsSpeaker jrgCmsSpeaker0 = new JrgCmsSpeaker();
-            jrgCmsSpeaker0.setId(ID0);
+            jrgCmsSpeaker0.setId(id0);
 
             JrgCmsSpeaker jrgCmsSpeaker1 = new JrgCmsSpeaker();
-            jrgCmsSpeaker1.setId(ID1);
+            jrgCmsSpeaker1.setId(id1);
 
             JrgCmsSpeaker jrgCmsSpeaker2 = new JrgCmsSpeaker();
-            jrgCmsSpeaker2.setId(ID2);
+            jrgCmsSpeaker2.setId(id2);
 
             // Participants
             JrgCmsParticipant jrgCmsParticipant0 = new JrgCmsParticipant();
@@ -1191,32 +1191,32 @@ class JrgCmsDataLoaderTest {
             Map<String, Speaker> actual = JrgCmsDataLoader.getSpeakerMap(List.of(jrgCmsActivity0, jrgCmsActivity1, jrgCmsActivity2));
 
             assertEquals(3, actual.size());
-            assertTrue(actual.containsKey(ID0));
-            assertTrue(actual.containsKey(ID1));
-            assertTrue(actual.containsKey(ID2));
+            assertTrue(actual.containsKey(id0));
+            assertTrue(actual.containsKey(id1));
+            assertTrue(actual.containsKey(id2));
         }
     }
 
     @Test
     void getFixedContacts() {
-        final String VALUE0 = "user";
-        final String VALUE1 = "-";
-        final String VALUE2 = "t.me/alexmeta";
-        final String VALUE3 = "igerta (тг)";
+        final String value0 = "user";
+        final String value1 = "-";
+        final String value2 = "t.me/alexmeta";
+        final String value3 = "igerta (тг)";
 
         JrgContact jrgContact0 = new JrgContact();
 
         JrgContact jrgContact1 = new JrgContact();
-        jrgContact1.setValue(VALUE0);
+        jrgContact1.setValue(value0);
 
         JrgContact jrgContact2 = new JrgContact();
-        jrgContact2.setValue(VALUE1);
+        jrgContact2.setValue(value1);
 
         JrgContact jrgContact3 = new JrgContact();
-        jrgContact3.setValue(VALUE2);
+        jrgContact3.setValue(value2);
 
         JrgContact jrgContact4 = new JrgContact();
-        jrgContact4.setValue(VALUE3);
+        jrgContact4.setValue(value3);
 
         List<JrgContact> jrgContacts = List.of(jrgContact0, jrgContact1, jrgContact2, jrgContact3, jrgContact4);
 
@@ -1225,16 +1225,16 @@ class JrgCmsDataLoaderTest {
                 .filter(c -> c.getValue() == null)
                 .count());
         assertEquals(1, jrgContacts.stream()
-                .filter(c -> VALUE0.equals(c.getValue()))
+                .filter(c -> value0.equals(c.getValue()))
                 .count());
         assertEquals(1, jrgContacts.stream()
-                .filter(c -> VALUE1.equals(c.getValue()))
+                .filter(c -> value1.equals(c.getValue()))
                 .count());
         assertEquals(1, jrgContacts.stream()
-                .filter(c -> VALUE2.equals(c.getValue()))
+                .filter(c -> value2.equals(c.getValue()))
                 .count());
         assertEquals(1, jrgContacts.stream()
-                .filter(c -> VALUE3.equals(c.getValue()))
+                .filter(c -> value3.equals(c.getValue()))
                 .count());
 
         assertEquals(Collections.emptyList(), JrgCmsDataLoader.getFixedContacts(null));
@@ -1246,16 +1246,16 @@ class JrgCmsDataLoaderTest {
                 .filter(c -> c.getValue() == null)
                 .count());
         assertEquals(1, actual.stream()
-                .filter(c -> VALUE0.equals(c.getValue()))
+                .filter(c -> value0.equals(c.getValue()))
                 .count());
         assertEquals(0, actual.stream()
-                .filter(c -> VALUE1.equals(c.getValue()))
+                .filter(c -> value1.equals(c.getValue()))
                 .count());
         assertEquals(0, actual.stream()
-                .filter(c -> VALUE2.equals(c.getValue()))
+                .filter(c -> value2.equals(c.getValue()))
                 .count());
         assertEquals(0, actual.stream()
-                .filter(c -> VALUE3.equals(c.getValue()))
+                .filter(c -> value3.equals(c.getValue()))
                 .count());
     }
 
@@ -1344,13 +1344,13 @@ class JrgCmsDataLoaderTest {
     @DisplayName("createTalk method tests")
     class CreateTalkTest {
         private Stream<Arguments> data() {
-            final String SPEAKER_ID0 = "0";
-            final String SPEAKER_ID1 = "1";
-            final String SPEAKER_ID2 = "2";
-            final String ACTIVITY_ID0 = "42";
-            final String ACTIVITY_ID1 = "43";
-            final String ACTIVITY_ID2 = "44";
-            final String ACTIVITY_ID3 = "45";
+            final String speakerId0 = "0";
+            final String speakerId1 = "1";
+            final String speakerId2 = "2";
+            final String activityId0 = "42";
+            final String activityId1 = "43";
+            final String activityId2 = "44";
+            final String activityId3 = "45";
 
             // Talks
             JrgCmsTalk jrgCmsTalk0 = new JrgCmsTalk();
@@ -1367,13 +1367,13 @@ class JrgCmsDataLoaderTest {
 
             // Speakers
             JrgCmsSpeaker jrgCmsSpeaker0 = new JrgCmsSpeaker();
-            jrgCmsSpeaker0.setId(SPEAKER_ID0);
+            jrgCmsSpeaker0.setId(speakerId0);
 
             JrgCmsSpeaker jrgCmsSpeaker1 = new JrgCmsSpeaker();
-            jrgCmsSpeaker1.setId(SPEAKER_ID1);
+            jrgCmsSpeaker1.setId(speakerId1);
 
             JrgCmsSpeaker jrgCmsSpeaker2 = new JrgCmsSpeaker();
-            jrgCmsSpeaker2.setId(SPEAKER_ID2);
+            jrgCmsSpeaker2.setId(speakerId2);
 
             Speaker speaker0 = new Speaker();
             speaker0.setId(0);
@@ -1393,28 +1393,28 @@ class JrgCmsDataLoaderTest {
 
             // Activities
             JrgCmsActivity jrgCmsActivity0 = new JrgCmsActivity();
-            jrgCmsActivity0.setId(ACTIVITY_ID0);
+            jrgCmsActivity0.setId(activityId0);
             jrgCmsActivity0.setData(jrgCmsTalk0);
             jrgCmsActivity0.setParticipants(List.of(jrgCmsParticipant0, jrgCmsParticipant1));
 
             JrgCmsActivity jrgCmsActivity1 = new JrgCmsActivity();
-            jrgCmsActivity1.setId(ACTIVITY_ID1);
+            jrgCmsActivity1.setId(activityId1);
             jrgCmsActivity1.setData(jrgCmsTalk1);
             jrgCmsActivity1.setParticipants(List.of(jrgCmsParticipant2));
 
             JrgCmsActivity jrgCmsActivity2 = new JrgCmsActivity();
-            jrgCmsActivity2.setId(ACTIVITY_ID2);
+            jrgCmsActivity2.setId(activityId2);
             jrgCmsActivity2.setData(jrgCmsTalk2);
             jrgCmsActivity2.setParticipants(List.of(jrgCmsParticipant0));
 
             JrgCmsActivity jrgCmsActivity3 = new JrgCmsActivity();
-            jrgCmsActivity3.setId(ACTIVITY_ID3);
+            jrgCmsActivity3.setId(activityId3);
             jrgCmsActivity3.setData(jrgCmsTalk3);
             jrgCmsActivity3.setParticipants(null);
 
-            Map<String, Speaker> speakerMap = Map.of(SPEAKER_ID0, speaker0, SPEAKER_ID1, speaker1);
-            Map<String, DayTrackTime> dayTrackTimeMap = Map.of(ACTIVITY_ID0, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)),
-                    ACTIVITY_ID3, new DayTrackTime(1L, 1L, LocalTime.of(10, 15), LocalTime.of(10, 30)));
+            Map<String, Speaker> speakerMap = Map.of(speakerId0, speaker0, speakerId1, speaker1);
+            Map<String, DayTrackTime> dayTrackTimeMap = Map.of(activityId0, new DayTrackTime(1L, 1L, LocalTime.of(10, 0), LocalTime.of(10, 15)),
+                    activityId3, new DayTrackTime(1L, 1L, LocalTime.of(10, 15), LocalTime.of(10, 30)));
 
             return Stream.of(
                     arguments(jrgCmsActivity0, speakerMap, new AtomicLong(-1), dayTrackTimeMap, null),
@@ -1514,8 +1514,8 @@ class JrgCmsDataLoaderTest {
             jrgCmsDataLoaderMockedStatic.when(() -> JrgCmsDataLoader.getSpeakerName(Mockito.nullable(String.class), Mockito.nullable(String.class)))
                     .thenReturn("");
 
-            final String FIRST_NAME = "First";
-            final String LAST_NAME = "Last";
+            final String firstName = "First";
+            final String lastName = "Last";
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.nullable(Language.class)))
                     .thenAnswer(
                             (Answer<String>) invocation -> {
@@ -1523,9 +1523,9 @@ class JrgCmsDataLoaderTest {
                                 List<LocaleItem> localeItems = (List<LocaleItem>) args[0];
 
                                 if (localeItems.isEmpty()) {
-                                    return LAST_NAME;
+                                    return lastName;
                                 } else if (localeItems.size() == 1) {
-                                    return FIRST_NAME;
+                                    return firstName;
                                 } else {
                                     return null;
                                 }
@@ -1535,7 +1535,7 @@ class JrgCmsDataLoaderTest {
             assertDoesNotThrow(() -> JrgCmsDataLoader.getSpeakerName(Collections.emptyList(), List.of(new LocaleItem()), Language.ENGLISH));
             localizationUtilsMockedStatic.verify(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.nullable(Language.class)),
                     VerificationModeFactory.times(2));
-            jrgCmsDataLoaderMockedStatic.verify(() -> JrgCmsDataLoader.getSpeakerName(LAST_NAME, FIRST_NAME),
+            jrgCmsDataLoaderMockedStatic.verify(() -> JrgCmsDataLoader.getSpeakerName(lastName, firstName),
                     VerificationModeFactory.times(1));
             localizationUtilsMockedStatic.verifyNoMoreInteractions();
         }
@@ -1569,14 +1569,14 @@ class JrgCmsDataLoaderTest {
     @DisplayName("extractPresentationLinks method tests")
     class ExtractPresentationLinksTest {
         private Stream<Arguments> data() {
-            final String CONTENT0 = "https://valid.com/fileName0.pdf";
-            final String CONTENT1 = "https://valid.com/fileName1.pdf";
+            final String content0 = "https://valid.com/fileName0.pdf";
+            final String content1 = "https://valid.com/fileName1.pdf";
 
             JrgCmsLinks jrgCmsLinks0 = new JrgCmsLinks();
-            jrgCmsLinks0.setContent(CONTENT0);
+            jrgCmsLinks0.setContent(content0);
 
             JrgCmsLinks jrgCmsLinks1 = new JrgCmsLinks();
-            jrgCmsLinks1.setContent(CONTENT1);
+            jrgCmsLinks1.setContent(content1);
 
             JrgTalkPresentationFile jrgTalkPresentationFile0 = new JrgTalkPresentationFile();
             jrgTalkPresentationFile0.setLinks(jrgCmsLinks0);
@@ -1595,8 +1595,8 @@ class JrgCmsDataLoaderTest {
             return Stream.of(
                     arguments(null, Collections.emptyList()),
                     arguments(jrgTalkPresentation0, Collections.emptyList()),
-                    arguments(jrgTalkPresentation1, List.of(CONTENT0)),
-                    arguments(jrgTalkPresentation2, List.of(CONTENT0, CONTENT1))
+                    arguments(jrgTalkPresentation1, List.of(content0)),
+                    arguments(jrgTalkPresentation2, List.of(content0, content1))
             );
         }
 
@@ -1677,41 +1677,41 @@ class JrgCmsDataLoaderTest {
     @DisplayName("extractContactValue method tests")
     class ExtractContactValueTest {
         private Stream<Arguments> data() {
-            final String TWITTER_CONTACT_TYPE = "twitter";
-            final String FACEBOOK_CONTACT_TYPE = "facebook";
-            final String GITHUB_CONTACT_TYPE = "github";
-            final String HABR_CONTACT_TYPE = "habr";
-            final String UNKNOWN_CONTACT_TYPE = "unknown";
+            final String twitterContactType = "twitter";
+            final String facebookContactType = "facebook";
+            final String githubContactType = "github";
+            final String habrContactType = "habr";
+            final String unknownContactType = "unknown";
 
-            final String TWITTER_CONTACT_VALUE = "user";
-            final String HABR_CONTACT_VALUE = "";
+            final String twitterContactValue = "user";
+            final String habrContactValue = "";
 
             final JrgContact jrgContact0 = new JrgContact();
-            jrgContact0.setType(TWITTER_CONTACT_TYPE);
-            jrgContact0.setValue(TWITTER_CONTACT_VALUE);
+            jrgContact0.setType(twitterContactType);
+            jrgContact0.setValue(twitterContactValue);
 
             final JrgContact jrgContact1 = new JrgContact();
-            jrgContact1.setType(FACEBOOK_CONTACT_TYPE);
+            jrgContact1.setType(facebookContactType);
             jrgContact1.setValue(null);
 
             final JrgContact jrgContact2 = new JrgContact();
-            jrgContact2.setType(HABR_CONTACT_TYPE);
-            jrgContact2.setValue(HABR_CONTACT_VALUE);
+            jrgContact2.setType(habrContactType);
+            jrgContact2.setValue(habrContactValue);
 
             UnaryOperator<String> extractionOperator = v -> v;
 
             Map<String, JrgContact> contactMap = new HashMap<>();
-            contactMap.put(TWITTER_CONTACT_TYPE, jrgContact0);
-            contactMap.put(GITHUB_CONTACT_TYPE, null);
-            contactMap.put(FACEBOOK_CONTACT_TYPE, jrgContact1);
-            contactMap.put(HABR_CONTACT_TYPE, jrgContact2);
+            contactMap.put(twitterContactType, jrgContact0);
+            contactMap.put(githubContactType, null);
+            contactMap.put(facebookContactType, jrgContact1);
+            contactMap.put(habrContactType, jrgContact2);
 
             return Stream.of(
-                    arguments(contactMap, UNKNOWN_CONTACT_TYPE, null, null),
-                    arguments(contactMap, GITHUB_CONTACT_TYPE, null, null),
-                    arguments(contactMap, FACEBOOK_CONTACT_TYPE, null, null),
-                    arguments(contactMap, HABR_CONTACT_TYPE, null, null),
-                    arguments(contactMap, TWITTER_CONTACT_TYPE, extractionOperator, extractionOperator.apply(TWITTER_CONTACT_VALUE))
+                    arguments(contactMap, unknownContactType, null, null),
+                    arguments(contactMap, githubContactType, null, null),
+                    arguments(contactMap, facebookContactType, null, null),
+                    arguments(contactMap, habrContactType, null, null),
+                    arguments(contactMap, twitterContactType, extractionOperator, extractionOperator.apply(twitterContactValue))
             );
         }
 

@@ -346,28 +346,28 @@ class EventServiceImplTest {
     @Test
     void getDefaultEvent() {
         EventServiceImpl eventService = Mockito.mock(EventServiceImpl.class);
-        final boolean IS_CONFERENCES = Boolean.TRUE;
-        final boolean IS_MEETUPS = Boolean.FALSE;
+        final boolean isConferences = Boolean.TRUE;
+        final boolean isMeetups = Boolean.FALSE;
 
-        Mockito.doCallRealMethod().when(eventService).getDefaultEvent(IS_CONFERENCES, IS_MEETUPS);
+        Mockito.doCallRealMethod().when(eventService).getDefaultEvent(isConferences, isMeetups);
 
-        eventService.getDefaultEvent(IS_CONFERENCES, IS_MEETUPS);
-        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(IS_CONFERENCES, IS_MEETUPS);
-        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(Mockito.eq(IS_CONFERENCES), Mockito.eq(IS_MEETUPS), Mockito.any(LocalDateTime.class));
+        eventService.getDefaultEvent(isConferences, isMeetups);
+        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(isConferences, isMeetups);
+        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(Mockito.eq(isConferences), Mockito.eq(isMeetups), Mockito.any(LocalDateTime.class));
         Mockito.verifyNoMoreInteractions(eventService);
     }
 
     @Test
     void getDefaultEventPart() {
         EventServiceImpl eventService = Mockito.mock(EventServiceImpl.class);
-        final boolean IS_CONFERENCES = Boolean.TRUE;
-        final boolean IS_MEETUPS = Boolean.FALSE;
+        final boolean isConferences = Boolean.TRUE;
+        final boolean isMeetups = Boolean.FALSE;
 
-        Mockito.doCallRealMethod().when(eventService).getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS);
+        Mockito.doCallRealMethod().when(eventService).getDefaultEventPart(isConferences, isMeetups);
 
-        eventService.getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS);
-        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS);
-        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(Mockito.eq(IS_CONFERENCES), Mockito.eq(IS_MEETUPS), Mockito.any(LocalDateTime.class));
+        eventService.getDefaultEventPart(isConferences, isMeetups);
+        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(isConferences, isMeetups);
+        Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(Mockito.eq(isConferences), Mockito.eq(isMeetups), Mockito.any(LocalDateTime.class));
         Mockito.verifyNoMoreInteractions(eventService);
     }
 
