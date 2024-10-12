@@ -145,12 +145,12 @@ class SpeakerControllerTest {
 
     @Test
     void getSpeakers() throws Exception {
-        final String NAME = "name";
-        final String COMPANY = "company";
-        final String TWITTER = "twitter";
-        final String GITHUB = "gitHub";
-        final boolean JAVA_CHAMPION = true;
-        final boolean MVP = false;
+        final String name = "name";
+        final String company = "company";
+        final String twitter = "twitter";
+        final String gitHub = "gitHub";
+        final boolean javaChampion = true;
+        final boolean mvp = false;
 
         MockHttpSession httpSession = new MockHttpSession();
 
@@ -161,21 +161,21 @@ class SpeakerControllerTest {
         speaker1.setId(1);
 
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
-        given(speakerService.getSpeakers(NAME, COMPANY, TWITTER, GITHUB, JAVA_CHAMPION, MVP)).willReturn(List.of(speaker0, speaker1));
+        given(speakerService.getSpeakers(name, company, twitter, gitHub, javaChampion, mvp)).willReturn(List.of(speaker0, speaker1));
 
         mvc.perform(get("/api/speaker/speakers")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .param("name", NAME)
-                        .param("company", COMPANY)
-                        .param("twitter", TWITTER)
-                        .param("gitHub", GITHUB)
-                        .param("javaChampion", Boolean.toString(JAVA_CHAMPION))
-                        .param("mvp", Boolean.toString(MVP))
+                        .param("name", name)
+                        .param("company", company)
+                        .param("twitter", twitter)
+                        .param("gitHub", gitHub)
+                        .param("javaChampion", Boolean.toString(javaChampion))
+                        .param("mvp", Boolean.toString(mvp))
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
-        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakers(NAME, COMPANY, TWITTER, GITHUB, JAVA_CHAMPION, MVP);
+        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakers(name, company, twitter, gitHub, javaChampion, mvp);
     }
 
     @Test

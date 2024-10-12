@@ -82,19 +82,19 @@ class ContentfulDataLoaderTest {
 
     @Test
     void getTags() {
-        final String CODE1 = "code1";
-        final String CODE2 = "code2";
-        final String CODE3 = "code3";
-        final String CODE4 = "code4";
+        final String code1 = "code1";
+        final String code2 = "code2";
+        final String code3 = "code3";
+        final String code4 = "code4";
 
         try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
             ContentfulTalkResponse<ContentfulTalkFieldsCommon> response = new ContentfulTalkResponseCommon();
             response.setItems(List.of(
-                    createContentfulTalk(CODE2, null),
-                    createContentfulTalk(null, CODE1),
-                    createContentfulTalk(CODE4, null),
-                    createContentfulTalk(null, CODE3),
-                    createContentfulTalk(null, CODE2)
+                    createContentfulTalk(code2, null),
+                    createContentfulTalk(null, code1),
+                    createContentfulTalk(code4, null),
+                    createContentfulTalk(null, code3),
+                    createContentfulTalk(null, code2)
             ));
 
             RestTemplate restTemplateMock = Mockito.mock(RestTemplate.class);
@@ -105,11 +105,11 @@ class ContentfulDataLoaderTest {
                     .thenReturn(restTemplateMock);
 
             Map<String, List<String>> expected = Map.of(
-                    ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO.toString(), List.of(CODE1, CODE2, CODE3, CODE4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.HOLY_JS_SPACE_INFO.toString(), List.of(CODE1, CODE2, CODE3, CODE4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.DOT_NEXT_SPACE_INFO.toString(), List.of(CODE1, CODE2, CODE3, CODE4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.HEISENBUG_SPACE_INFO.toString(), List.of(CODE1, CODE2, CODE3, CODE4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.MOBIUS_SPACE_INFO.toString(), List.of(CODE1, CODE2, CODE3, CODE4));
+                    ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ContentfulDataLoader.ConferenceSpaceInfo.HOLY_JS_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ContentfulDataLoader.ConferenceSpaceInfo.DOT_NEXT_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ContentfulDataLoader.ConferenceSpaceInfo.HEISENBUG_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ContentfulDataLoader.ConferenceSpaceInfo.MOBIUS_SPACE_INFO.toString(), List.of(code1, code2, code3, code4));
 
             ContentfulDataLoader contentfulDataLoader = Mockito.mock(ContentfulDataLoader.class);
             Mockito.when(contentfulDataLoader.getTags(Mockito.nullable(String.class)))
@@ -174,11 +174,11 @@ class ContentfulDataLoaderTest {
     @DisplayName("createEventType method tests")
     class CreateEventTypeTest {
         private Stream<Arguments> data() {
-            final String VK_LINK = "https://vk.com";
-            final String TWITTER_LINK = "https://twitter.com";
-            final String FACEBOOK_LINK = "https://twitter.com";
-            final String YOUTUBE_LINK = "https://youtube.com";
-            final String TELEGRAM_LINK = "https://telegram.org";
+            final String vkLink = "https://vk.com";
+            final String twitterLink = "https://twitter.com";
+            final String facebookLink = "https://twitter.com";
+            final String youtubeLink = "https://youtube.com";
+            final String telegramLink = "https://telegram.org";
 
             ContentfulEventTypeFields contentfulEventTypeFields0 = new ContentfulEventTypeFields();
             contentfulEventTypeFields0.setEventName(Map.of(
@@ -192,7 +192,7 @@ class ContentfulDataLoaderTest {
             contentfulEventTypeFields1.setEventDescriptions(Collections.emptyMap());
             contentfulEventTypeFields1.setSiteLink(Collections.emptyMap());
             contentfulEventTypeFields1.setVkLink(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, VK_LINK));
+                    ContentfulDataLoader.ENGLISH_LOCALE, vkLink));
 
             ContentfulEventTypeFields contentfulEventTypeFields2 = new ContentfulEventTypeFields();
             contentfulEventTypeFields2.setEventName(Map.of(
@@ -200,7 +200,7 @@ class ContentfulDataLoaderTest {
             contentfulEventTypeFields2.setEventDescriptions(Collections.emptyMap());
             contentfulEventTypeFields2.setSiteLink(Collections.emptyMap());
             contentfulEventTypeFields2.setTwLink(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, TWITTER_LINK));
+                    ContentfulDataLoader.ENGLISH_LOCALE, twitterLink));
 
             ContentfulEventTypeFields contentfulEventTypeFields3 = new ContentfulEventTypeFields();
             contentfulEventTypeFields3.setEventName(Map.of(
@@ -208,7 +208,7 @@ class ContentfulDataLoaderTest {
             contentfulEventTypeFields3.setEventDescriptions(Collections.emptyMap());
             contentfulEventTypeFields3.setSiteLink(Collections.emptyMap());
             contentfulEventTypeFields3.setFbLink(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, FACEBOOK_LINK));
+                    ContentfulDataLoader.ENGLISH_LOCALE, facebookLink));
 
             ContentfulEventTypeFields contentfulEventTypeFields4 = new ContentfulEventTypeFields();
             contentfulEventTypeFields4.setEventName(Map.of(
@@ -216,7 +216,7 @@ class ContentfulDataLoaderTest {
             contentfulEventTypeFields4.setEventDescriptions(Collections.emptyMap());
             contentfulEventTypeFields4.setSiteLink(Collections.emptyMap());
             contentfulEventTypeFields4.setYoutubeLink(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, YOUTUBE_LINK));
+                    ContentfulDataLoader.ENGLISH_LOCALE, youtubeLink));
 
             ContentfulEventTypeFields contentfulEventTypeFields5 = new ContentfulEventTypeFields();
             contentfulEventTypeFields5.setEventName(Map.of(
@@ -224,7 +224,7 @@ class ContentfulDataLoaderTest {
             contentfulEventTypeFields5.setEventDescriptions(Collections.emptyMap());
             contentfulEventTypeFields5.setSiteLink(Collections.emptyMap());
             contentfulEventTypeFields5.setTelegramLink(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, TELEGRAM_LINK));
+                    ContentfulDataLoader.ENGLISH_LOCALE, telegramLink));
 
             ContentfulEventTypeFields contentfulEventTypeFields6 = new ContentfulEventTypeFields();
             contentfulEventTypeFields6.setEventName(Map.of(
@@ -258,23 +258,23 @@ class ContentfulDataLoaderTest {
 
             EventType eventType1 = new EventType();
             eventType1.setId(-1);
-            eventType1.setVkLink(VK_LINK);
+            eventType1.setVkLink(vkLink);
 
             EventType eventType2 = new EventType();
             eventType2.setId(-1);
-            eventType2.setTwitterLink(TWITTER_LINK);
+            eventType2.setTwitterLink(twitterLink);
 
             EventType eventType3 = new EventType();
             eventType3.setId(-1);
-            eventType3.setFacebookLink(FACEBOOK_LINK);
+            eventType3.setFacebookLink(facebookLink);
 
             EventType eventType4 = new EventType();
             eventType4.setId(-1);
-            eventType4.setYoutubeLink(YOUTUBE_LINK);
+            eventType4.setYoutubeLink(youtubeLink);
 
             EventType eventType5 = new EventType();
             eventType5.setId(-1);
-            eventType5.setTelegramLink(TELEGRAM_LINK);
+            eventType5.setTelegramLink(telegramLink);
 
             EventType eventType6 = new EventType();
             eventType6.setId(-1);
@@ -396,13 +396,13 @@ class ContentfulDataLoaderTest {
     @DisplayName("createEvent method tests")
     class CreateEventTest {
         private Stream<Arguments> data() {
-            final String YOUTUBE_PLAY_LIST = "https://youtube.com";
-            final String MAP_COORDINATES = "59.762236, 30.356121";
-            final String CITY_NAME0 = "City Name0";
-            final String CITY_NAME1 = "City Name1";
-            final String CITY_NAME2 = "City Name2";
-            final String CITY_NAME3 = "City Name3";
-            final String CITY_NAME4 = "City Name4";
+            final String youtubePlayList = "https://youtube.com";
+            final String mapCoordinates = "59.762236, 30.356121";
+            final String cityName0 = "City Name0";
+            final String cityName1 = "City Name1";
+            final String cityName2 = "City Name2";
+            final String cityName3 = "City Name3";
+            final String cityName4 = "City Name4";
 
             ContentfulSys contentfulSys0 = new ContentfulSys();
             contentfulSys0.setId("sys0");
@@ -458,14 +458,14 @@ class ContentfulDataLoaderTest {
                     ContentfulDataLoader.ENGLISH_LOCALE, "Event Name3"));
             contentfulEventFields3.setEventStart(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, "2020-01-01T00:00+03:00"));
             contentfulEventFields3.setEventCity(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, contentfulLink3));
-            contentfulEventFields3.setYoutubePlayList(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, YOUTUBE_PLAY_LIST));
+            contentfulEventFields3.setYoutubePlayList(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, youtubePlayList));
 
             ContentfulEventFields contentfulEventFields4 = new ContentfulEventFields();
             contentfulEventFields4.setConferenceName(Map.of(
                     ContentfulDataLoader.ENGLISH_LOCALE, "Event Name4"));
             contentfulEventFields4.setEventStart(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, "2020-01-01T00:00+03:00"));
             contentfulEventFields4.setEventCity(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, contentfulLink4));
-            contentfulEventFields4.setAddressLink(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, MAP_COORDINATES));
+            contentfulEventFields4.setAddressLink(Map.of(ContentfulDataLoader.ENGLISH_LOCALE, mapCoordinates));
 
             ContentfulEvent contentfulEvent0 = new ContentfulEvent();
             contentfulEvent0.setFields(contentfulEventFields0);
@@ -491,7 +491,7 @@ class ContentfulDataLoaderTest {
                     LocalDate.of(2020, 1, 1),
                     new Place(
                             -1,
-                            List.of(new LocaleItem(Language.ENGLISH.getCode(), CITY_NAME0)),
+                            List.of(new LocaleItem(Language.ENGLISH.getCode(), cityName0)),
                             Collections.emptyList(),
                             null
                     )
@@ -505,7 +505,7 @@ class ContentfulDataLoaderTest {
                     LocalDate.of(2020, 1, 1),
                     new Place(
                             -1,
-                            List.of(new LocaleItem(Language.ENGLISH.getCode(), CITY_NAME1)),
+                            List.of(new LocaleItem(Language.ENGLISH.getCode(), cityName1)),
                             Collections.emptyList(),
                             null
                     )
@@ -519,7 +519,7 @@ class ContentfulDataLoaderTest {
                     LocalDate.of(2020, 1, 2),
                     new Place(
                             -1,
-                            List.of(new LocaleItem(Language.ENGLISH.getCode(), CITY_NAME2)),
+                            List.of(new LocaleItem(Language.ENGLISH.getCode(), cityName2)),
                             Collections.emptyList(),
                             null
                     )
@@ -533,12 +533,12 @@ class ContentfulDataLoaderTest {
                     LocalDate.of(2020, 1, 1),
                     new Place(
                             -1,
-                            List.of(new LocaleItem(Language.ENGLISH.getCode(), CITY_NAME3)),
+                            List.of(new LocaleItem(Language.ENGLISH.getCode(), cityName3)),
                             Collections.emptyList(),
                             null
                     )
             )));
-            event3.setYoutubeLink(YOUTUBE_PLAY_LIST);
+            event3.setYoutubeLink(youtubePlayList);
 
             Event event4 = new Event();
             event4.setId(-1);
@@ -548,32 +548,32 @@ class ContentfulDataLoaderTest {
                     LocalDate.of(2020, 1, 1),
                     new Place(
                             -1,
-                            List.of(new LocaleItem(Language.ENGLISH.getCode(), CITY_NAME4)),
+                            List.of(new LocaleItem(Language.ENGLISH.getCode(), cityName4)),
                             Collections.emptyList(),
-                            MAP_COORDINATES
+                            mapCoordinates
                     )
             )));
 
             // Cities
             ContentfulCityFields contentfulCityFields0 = new ContentfulCityFields();
             contentfulCityFields0.setCityName(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, CITY_NAME0));
+                    ContentfulDataLoader.ENGLISH_LOCALE, cityName0));
 
             ContentfulCityFields contentfulCityFields1 = new ContentfulCityFields();
             contentfulCityFields1.setCityName(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, CITY_NAME1));
+                    ContentfulDataLoader.ENGLISH_LOCALE, cityName1));
 
             ContentfulCityFields contentfulCityFields2 = new ContentfulCityFields();
             contentfulCityFields2.setCityName(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, CITY_NAME2));
+                    ContentfulDataLoader.ENGLISH_LOCALE, cityName2));
 
             ContentfulCityFields contentfulCityFields3 = new ContentfulCityFields();
             contentfulCityFields3.setCityName(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, CITY_NAME3));
+                    ContentfulDataLoader.ENGLISH_LOCALE, cityName3));
 
             ContentfulCityFields contentfulCityFields4 = new ContentfulCityFields();
             contentfulCityFields4.setCityName(Map.of(
-                    ContentfulDataLoader.ENGLISH_LOCALE, CITY_NAME4));
+                    ContentfulDataLoader.ENGLISH_LOCALE, cityName4));
 
             ContentfulCity contentfulCity0 = new ContentfulCity();
             contentfulCity0.setSys(contentfulSys0);
@@ -943,37 +943,37 @@ class ContentfulDataLoaderTest {
     @DisplayName("isValidTalk method tests")
     class IsValidTalkTest {
         private Stream<Arguments> data() {
-            final Long TALK_DAY = 1L;
-            final LocalTime TRACK_TIME = LocalTime.now();
-            final Long TRACK = 1L;
+            final Long talkDay = 1L;
+            final LocalTime trackTime = LocalTime.now();
+            final Long track = 1L;
 
             return Stream.of(
-                    arguments(createContentfulTalk(null, TRACK_TIME, TRACK, null, null), false, false),
-                    arguments(createContentfulTalk(null, TRACK_TIME, TRACK, null, null), true, false),
-                    arguments(createContentfulTalk(TALK_DAY, null, TRACK, null, null), false, false),
-                    arguments(createContentfulTalk(TALK_DAY, null, TRACK, null, null), true, false),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, null, null, null), false, false),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, null, null, null), true, false),
+                    arguments(createContentfulTalk(null, trackTime, track, null, null), false, false),
+                    arguments(createContentfulTalk(null, trackTime, track, null, null), true, false),
+                    arguments(createContentfulTalk(talkDay, null, track, null, null), false, false),
+                    arguments(createContentfulTalk(talkDay, null, track, null, null), true, false),
+                    arguments(createContentfulTalk(talkDay, trackTime, null, null, null), false, false),
+                    arguments(createContentfulTalk(talkDay, trackTime, null, null, null), true, false),
 
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, null), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, Boolean.TRUE), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, Boolean.FALSE), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, null), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, Boolean.TRUE), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, Boolean.FALSE), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, null), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, Boolean.TRUE), false, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, Boolean.FALSE), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, null, null), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, null, Boolean.TRUE), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, null, Boolean.FALSE), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, null), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, Boolean.TRUE), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, Boolean.FALSE), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, null), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, Boolean.TRUE), false, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, Boolean.FALSE), false, true),
 
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, null), true, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, Boolean.TRUE), true, false),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, null, Boolean.FALSE), true, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, null), true, false),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, Boolean.TRUE), true, false),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.TRUE, Boolean.FALSE), true, false),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, null), true, true),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, Boolean.TRUE), true, false),
-                    arguments(createContentfulTalk(TALK_DAY, TRACK_TIME, TRACK, Boolean.FALSE, Boolean.FALSE), true, true)
+                    arguments(createContentfulTalk(talkDay, trackTime, track, null, null), true, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, null, Boolean.TRUE), true, false),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, null, Boolean.FALSE), true, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, null), true, false),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, Boolean.TRUE), true, false),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.TRUE, Boolean.FALSE), true, false),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, null), true, true),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, Boolean.TRUE), true, false),
+                    arguments(createContentfulTalk(talkDay, trackTime, track, Boolean.FALSE, Boolean.FALSE), true, true)
             );
         }
 

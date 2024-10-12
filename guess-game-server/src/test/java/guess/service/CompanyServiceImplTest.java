@@ -124,10 +124,10 @@ class CompanyServiceImplTest {
 
     @Test
     void getCompanyById() {
-        final long ID = 0;
+        final long id = 0;
 
-        companyService.getCompanyById(ID);
-        Mockito.verify(companyDao, VerificationModeFactory.times(1)).getCompanyById(ID);
+        companyService.getCompanyById(id);
+        Mockito.verify(companyDao, VerificationModeFactory.times(1)).getCompanyById(id);
         Mockito.verifyNoMoreInteractions(companyDao);
     }
 
