@@ -50230,6 +50230,7 @@ speakers:
       - language: ru
         text: "<p>Работает в Яндексе 4 года, разрабатывает системы сборки.</p>\n<p>Увлекается съемками с дрона и путешеств\
             иями.</p>"
+    gitHub: AzaubaevViktor
   - id: 3457
     photoFileName: 3457.jpg
     photoUpdatedAt: "2024-06-20T11:32:53Z"
@@ -50241,6 +50242,8 @@ speakers:
             \ runtime (CPython, Java, Node.js) and machine learning frameworks.</p>"}
       - {language: ru, text: "<p>Yichen Yan now works as a senior software engineer at Alibaba, focusing on optimization of\
             \ runtime (CPython, Java, Node.js) and machine learning frameworks.&nbsp;</p>"}
+    twitter: yiycan
+    gitHub: oraluben
   - id: 3458
     photoFileName: 3458.jpg
     photoUpdatedAt: "2024-09-11T09:00:41Z"
@@ -50286,6 +50289,8 @@ speakers:
         text: "<p>A web GIS Developer focusing on FOSS stack. Krishna helps his clients escape the trap of paying $$$ every\
             \ month for technologies that are available for free using FOSS.</p>\n<p>Apart from development, he also does\
             \ a lot of content creation related to GIS on <a href=\"https://www.youtube.com/c/krishnalodha\">YouTube</a>.&nbsp;</p>"
+    twitter: krishnaglodha
+    gitHub: krishnaglodha
   - id: 3461
     photoFileName: 3461.jpg
     photoUpdatedAt: "2024-08-23T14:27:22Z"
@@ -50304,6 +50309,9 @@ speakers:
             > командами разработки. </span></p>\n<p><span style=\"background-color: transparent;\">В свободное время контр\
             ибьютит в open source &mdash; например в <span style=\"background-color: transparent;\"><a href=\"https://github.com/aio-libs\"\
             >aio-libs</a>.</span></span></p>"
+    twitter: virmir49
+    gitHub: vir-mir
+    habr: lesha_firs
   - id: 3462
     photoFileName: 3462.jpg
     photoUpdatedAt: "2024-08-23T08:14:13Z"
@@ -50335,6 +50343,7 @@ speakers:
             \ generative models and not only in the field of CV and NLP. She takes part in meetups.</p>"}
       - {language: ru, text: "<p>Учится в магистратуре МФТИ и параллельно работает дата-сайентистом в Ozon. Разрабатывает\
             \ генеративные модели и не только в области CV и NLP. Выступает на митапах.</p>"}
+    gitHub: YoungBlackWitch
   - id: 3464
     photoFileName: 3464.jpg
     photoUpdatedAt: "2024-07-29T11:39:27Z"
@@ -50347,6 +50356,8 @@ speakers:
             \ at Yandex. He is now implementing AI at X5 Tech.</p>"}
       - {language: ru, text: "<p>Team Lead в X5 Tech. Занимался научными исследованиями в ИТМО, разрабатывал бэкенд в Янде\
             ксе. Внедряет AI в X5 Tech.</p>"}
+    gitHub: EgorovM
+    habr: EgorovM
   - id: 3465
     photoFileName: 3465.jpg
     photoUpdatedAt: "2024-05-24T08:15:53Z"
@@ -50365,6 +50376,7 @@ speakers:
             \ Delphi + Oracle. Последние годы активно использует стек Python + Django + Django REST framework и немного FastAPI.С\
             ейчас Денис один из разработчиков модуля для Django-проектов <a href=\"https://github.com/liveconfigs/django-liveconfigs\"\
             \ rel=\"noopener noreferrer\" target=\"_blank\">django-liveconfigs</a>."}
+    gitHub: DenisDudnik
   - id: 3466
     photoFileName: 3466.jpg
     photoUpdatedAt: "2024-05-28T07:33:41Z"
@@ -50382,6 +50394,7 @@ speakers:
         text: "<p>Успел попрограммировать много на чем. Лет десять назад остановился на Python и продолжает на нем писать\
             .</p>\n<p>В качестве тимлида помогает команде разрабатывать сервис для транспортной логистики.</p>\n<p>Считает\
             , что чем меньше кода, тем меньше проблем.</p>\n<p>Иногда участвует в open source-проектах.</p>"
+    gitHub: eugene-katsevman
   - id: 3467
     photoFileName: 3467.jpg
     photoUpdatedAt: "2024-07-10T17:45:59Z"
@@ -50422,6 +50435,7 @@ speakers:
     bio:
       - {language: en, text: "<p>Middle Python developer at MTS. Develops user-friendly ETL tools in the DataOPS platform.</p>"}
       - {language: ru, text: "<p>Middle Python-разработчик в МТС. Разрабатывает удобные ETL-инструменты в платформе DataOPS.</p>"}
+    gitHub: maxim-lixakov
   - id: 3470
     photoFileName: 3470.jpg
     photoUpdatedAt: "2024-07-30T12:02:38Z"
@@ -50489,6 +50503,9 @@ speakers:
             омьюнити &mdash; создатель <a href=\"https://github.com/airtai/faststream\">FastStream</a> (Propan), контрибью\
             тор FastAPI, Litestar, nats-py и других проектов. Немного автор <a href=\"https://habr.com/ru/users/Propan671/publications/articles/\"\
             >на Хабре</a> и чуть-чуть спикер.</p>"}
+    twitter: diementros
+    gitHub: Lancetnik
+    habr: Propan671
   - id: 3475
     photoFileName: 3475.jpg
     photoUpdatedAt: "2024-07-30T11:48:08Z"
@@ -50499,8 +50516,10 @@ speakers:
     bio:
       - {language: en, text: "<p>Has over 10 years of experience in commercial development in Python, mostly in FinTech. Leads\
             \ a small development unit on the current project, works on architecture aspects.</p>"}
-      - {language: ru, text: "<p>Занимается коммерческой разработкой на Pyhon более 10 лет, из них большую часть в финтехе\
+      - {language: ru, text: "<p>Занимается коммерческой разработкой на Python более 10 лет, из них большую часть в финтехе\
             . Управляет небольшим юнитом разработчиков на текущем проекте, занимается вопросами архитектуры.</p>"}
+    gitHub: defance
+    habr: DeFANCE
   - id: 3476
     photoFileName: 3476.jpg
     photoUpdatedAt: "2024-07-10T08:11:25Z"
@@ -50524,6 +50543,7 @@ speakers:
             \ noreferrer\">personal website</a> and <a href=\"https://blog.adarshd.dev\" target=\"_blank\" rel=\"noopener\
             \ noreferrer\">blog</a>.</p>"
     twitter: adarshd905
+    gitHub: adarshdigievo
   - id: 3477
     photoFileName: 3477.jpg
     photoUpdatedAt: "2024-06-11T17:59:51Z"
@@ -50536,6 +50556,8 @@ speakers:
             \ products for users, doing it fast, and tackling DevEx problems from every angle."}
       - {language: ru, text: "<p>Сейчас на 50% Head of Python, на 50% Senior Python Developer в Циан. Нравится разрабатыва\
             ть качественный продукт для пользователей, делать это быстро и искать точки улучшения DevEx с разных сторон.</p>"}
+    gitHub: v2v21
+    habr: v2v21
   - id: 3478
     photoFileName: 3478.jpg
     photoUpdatedAt: "2024-08-20T16:26:42Z"
@@ -50561,6 +50583,9 @@ speakers:
       - {language: ru, text: "<p>Более 10 лет в продуктовой разработке. Руководил лабораторией ИБ в ЮФУ. Тренировал команд\
             у по CTF (соревнования по ИБ), организовывали свои соревнования UFO CTF School для новичков. Сейчас руководит\
             \ кросс-функциональной командой разработки одного из продуктов Solar.</p>"}
+    twitter: mkobilev
+    gitHub: mkobilev
+    habr: mkobilev
   - id: 3480
     photoFileName: 3480.jpg
     photoUpdatedAt: "2024-07-30T11:39:47Z"
@@ -50594,6 +50619,8 @@ speakers:
       - {language: ru, text: "Около четырех лет разрабатывает на Python, делает фронтенды, занимается DevOps. Любит писать\
             \ на Go и Rust.</p><p>Выступает на конференциях, пишет статьи, занимается опенсорсом.</p><p>Увлекается шахмата\
             ми и горными лыжами."}
+    gitHub: reqww
+    habr: insani7y
   - id: 3482
     photoFileName: 3482.jpg
     photoUpdatedAt: "2024-08-15T12:03:57Z"
