@@ -387,14 +387,10 @@ speakers:
     companyIds: [634]
     bio:
       - {language: en, text: "<p>Project Manager, IT Architect. Periodically writes articles and gives talks on topics related\
-            \ to documentation preparation. Author of the Open Document backend (converter) for Asciidoctor.&nbsp;</p>"}
+            \ to documentation preparation. Author of the Open Document backend (converter) for Asciidoctor.</p>"}
       - language: ru
         text: "<p>Руководитель проектов, IT-архитектор. Периодически пишет статьи и выступает с докладами на темы, связанн\
-            ые с подготовкой документации. Автор Open Document-бэкенда (конвертера) для Asciidoctor.</p>\n<p>&nbsp;</p>\n\
-            <h3>Николай участвует в активности ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет консультировать н\
-            а следующие темы:</h4>\n<ul>\n<li>Работа системных и бизнес-аналитиков в ИТ-проектах с государственными структ\
-            урами.</li>\n<li>Стандартизация в ИТ-проектах. Подготовка документации.</li>\n<li>Эффективное взаимодействие с\
-            истемных аналитиков и разработчиков.</li>\n</ul>"
+            ые с подготовкой документации. Автор Open Document-бэкенда (конвертера) для Asciidoctor.</p>"
     gitHub: fiddlededee
     habr: fiddle-de-dee
   - id: 21
@@ -7213,17 +7209,7 @@ speakers:
             но выступал на DotNext, PyCon и других технологических конференциях. Преподает курсы функционального программи\
             рования в МАИ и НИУ ВШЭ, технический руководитель лаборатории AI Lab Школы дизайна НИУ ВШЭ, технологический ху\
             дожник.</p>\n<p>Автор первой <a href=\"https://books.google.com/books/about/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80.html?id=_6GfDQAAQBAJ&amp;redir_esc=y\"\
-            >книги по F# на русском языке</a>.</p>\n<p>&nbsp;</p>\n<h3>Дмитрий участвует в активности ASK EXPERT в офлайн\
-            -части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"\
-            1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Внутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\"\
-            \ data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Функциональное программирование и F#.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Вопрос-ответные системы на базе LLM.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Евангелизм и DevRel.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Машинное обучение и ИИ.</span></li>\n</ul>"
+            >книги по F# на русском языке</a>.</p>"
     twitter: shwars
     gitHub: shwars
     habr: shwars
@@ -31877,11 +31863,7 @@ speakers:
       - language: ru
         text: "<p>Больше 12 лет занимается бизнес-процессами: от обучения BPMN до разработки систем для активации и выдачи\
             \ банковских продуктов. Работал с банками ПСБ, Ак Барс, МСП, Локо-, Зенит, Тинькофф.</p>\n<p>Сейчас возглавляе\
-            т собственный продукт&nbsp;Stormbpmn для моделирования бизнес-процессов.</p>\n<h3>Денис участвует в активности\
-            \ ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span\
-            \ data-sheets-root=\"1\">Процессный подход.</span></li>\n<li><span data-sheets-root=\"1\">BPMN.</span></li>\n\
-            <li><span data-sheets-root=\"1\">Архитектура информационных систем.</span></li>\n<li><span data-sheets-root=\"\
-            1\">Маркетинг и продуктоводство в SaaS.</span></li>\n</ul>"
+            т собственный продукт&nbsp;Stormbpmn для моделирования бизнес-процессов.</p>"
   - id: 2215
     photoFileName: 2215.jpg
     photoUpdatedAt: 2023-04-13T10:11:49Z[UTC]
@@ -35951,12 +35933,7 @@ speakers:
       - language: ru
         text: "<p>Работает в IT уже 12 лет, занимается системным и бизнес-анализом в различных доменах: ЖКХ, финтехе, инфо\
             рмационной безопасности. Руководит отделом системного анализа и создает спецификации так, что разработчики их\
-            \ читают. И помогает это делать другим.</p>\n<p>&nbsp;</p>\n<h3>Елена участвует в активности ASK EXPERT в офла\
-            йн-части конференции.</h3>\n<h4>Она будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"\
-            1\">Системный анализ.</span></li>\n<li><span data-sheets-root=\"1\">Документирование требований, работа с нефу\
-            нкциональными требованиями.</span></li>\n<li><span data-sheets-root=\"1\"> Развитие аналитиков middle+.</span></li>\n\
-            <li><span data-sheets-root=\"1\">Выстраивание процессов анализа, управление командой аналитиков.</span></li>\n\
-            </ul>"
+            \ читают. И помогает это делать другим.</p>"
   - id: 2503
     photoFileName: 2503.jpg
     photoUpdatedAt: "2022-11-14T18:04:51Z"
@@ -36103,11 +36080,7 @@ speakers:
         text: "<p>Более 25 лет в информационных технологиях. Побывал во всех основных проектных ролях.</p>\n<p>Соосновател\
             ь Школы Системного Анализа.</p>\n<p>Руководитель экспертной группы, разработчик профстандарта &laquo;Системный\
             \ аналитик&raquo; редакции 2023 года.</p>\n<p>Системный аналитик и системный архитектор в Poscredit.</p>\n<p>Agile-к\
-            оуч, тренер, консультант по проектированию и построению ИТ-систем, преподаватель в НИУ ВШЭ.</p>\n<p>&nbsp;</p>\n\
-            <h3>Сергей участвует в активности ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на\
-            \ следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\">Работы системного и бизнес-аналитика.</span></li>\n\
-            <li><span data-sheets-root=\"1\">Agile.</span></li>\n<li><span data-sheets-root=\"1\">Проектирование систем.</span></li>\n\
-            <li><span data-sheets-root=\"1\">Управление проектами.</span></li>\n</ul>"
+            оуч, тренер, консультант по проектированию и построению ИТ-систем, преподаватель в НИУ ВШЭ.</p>"
   - id: 2511
     photoFileName: 2511.jpg
     photoUpdatedAt: "2022-10-25T11:21:59Z"
@@ -36222,11 +36195,7 @@ speakers:
             роектами. Был директором по продуктам национальной платформы &laquo;Открытое образование&raquo;, проектов &laquo;О\
             ткрытая школа&raquo; и конструктора образовательных ресурсов CoreApp.ai. Работал архитектором платформы &laquo;У\
             ниверситета 2035&raquo;, управлял продуктовым развитием Московской электронной школы.&nbsp;</p>\n<p>Лучший док\
-            ладчик конференций ЛАФ 2022 и Analyst Days 2023.</p>\n<p>&nbsp;</p>\n<h3>Юрий участвует в активности ASK EXPERT\
-            \ в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"\
-            1\">Техники системного анализа.</span></li>\n<li><span data-sheets-root=\"1\">Развитие аналитиков middle+.</span></li>\n\
-            <li><span data-sheets-root=\"1\">Управление продуктами.</span></li>\n<li><span data-sheets-root=\"1\">UX.</span></li>\n\
-            </ul>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>"
+            ладчик конференций ЛАФ 2022 и Analyst Days 2023.</p>"
     twitter: ykkks
     habr: Ykkks
   - id: 2518
@@ -39181,15 +39150,7 @@ speakers:
         text: "<p>16 лет в ИТ, практически все время в системном и бизнес-анализе. Плавно переходит в продуктовый менеджме\
             нт. Регулярно выступает на конференциях для аналитиков и не только.</p>\n<p>Три года руководит курсом &laquo;С\
             истемный аналитик. Advanced&raquo; на площадке Otus.ru и ведет занятия. За это время обучил более 1 000 студен\
-            тов.</p>\n<p>Фаундер сервиса персонализированного развития аналитиков &laquo;Аналитическая мастерская&raquo;.</p>\n\
-            <p>&nbsp;</p>\n<h3>Иннокентий участвует в активности ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет\
-            \ консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\">Системный анализ, анализ биз\
-            нес-процессов.</span></li>\n<li><span data-sheets-root=\"1\">Выявление и документирование требований.</span></li>\n\
-            <li><span data-sheets-root=\"1\">Проектирование концептуальной, логической и физической модели данных.</span></li>\n\
-            <li><span data-sheets-root=\"1\">Systems design, проектирование API.</span></li>\n<li><span data-sheets-root=\"\
-            1\">Бережливое производство и управление разработкой</span></li>\n<li><span data-sheets-root=\"1\">Построение\
-            \ эффективной команды разработки, целеполагание и общение с бизнесом на языке бизнес-метрик результатов</span></li>\n\
-            </ul>"
+            тов.</p>\n<p>Фаундер сервиса персонализированного развития аналитиков &laquo;Аналитическая мастерская&raquo;.</p>"
   - id: 2723
     photoFileName: 2723.jpg
     photoUpdatedAt: "2024-04-26T10:59:56Z"
@@ -43696,10 +43657,7 @@ speakers:
       - {language: en, text: "<p>Tech Lead at Yandex Taxi. Got hooked on Python in 2016. In his spare time, he refines the\
             \ infrastructure around Python and learns Japanese.</p>"}
       - {language: ru, text: "Техлид в Техплатформе Екома и Райдтеха Яндекса. Подсел на Python в 2016-м. В свободное время\
-            \ дорабатывает напильником инфру вокруг Python и изучает японский язык.</p><p>&nbsp;</p><p><br></p><h3>Сергей\
-            \ участвует в активности ASK EXPERT в офлайн-части конференции.</h3><h4>Он будет консультировать на следующие\
-            \ темы:</h4><ul><li>Бэкенд.</li><li>Фреймворки.</li><li>API.</li><li>asyncio.</li><li>Энтерпрайз.</li><li>Рабо\
-            та с большой кодовой базой.</li><li>Инструменты анализа кода.</li></ul>"}
+            \ дорабатывает напильником инфру вокруг Python и изучает японский язык.</p>"}
     gitHub: serjflint
     habr: sergflint
   - id: 3016
@@ -43955,19 +43913,7 @@ speakers:
       - language: ru
         text: "<p>Тимлид в нескольких командах в Райффайзен Банке, пишет на Python и TypeScript, занимается DevOps. Создал\
             \ и развивает корпоративное сообщество питонистов, отвечает за найм и развитие, стандарты. Проводит митапы и в\
-            ыступает на конференциях.</p>\n<p>&nbsp;</p>\n<h3>Денис участвует в активности ASK EXPERT в офлайн-части конфе\
-            ренции.</h3>\n<h4>Он будет консультировать на следующие темы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"\
-            {&quot;1&quot;:2,&quot;2&quot;:&quot;Внутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"\
-            {&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\">Fullstack-р\
-            азработка.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Python/Typescript.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Управление командой.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Карьерный рост разработчика/тимлида.</span></li>\n<li><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;В\
-            нутренности JVM\\nКарьера JVM-инженера\\nJIT&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:705,&quot;3&quot;:{&quot;1&quot;:0},&quot;9&quot;:0,&quot;10&quot;:1,&quot;12&quot;:0}\"\
-            >Публичные выступления.</span></li>\n</ul>"
+            ыступает на конференциях.</p>"
     gitHub: xfenix
     habr: xfenix
   - id: 3034
@@ -49793,11 +49739,7 @@ speakers:
         text: "<p>Окончил факультет прикладной математики и процессов управления СПбГУ, кандидат физико-математических нау\
             к.</p>\n<p>IT-разработкой занимается 20 лет в разных областях &mdash; от разработки САПР до дата-инженерии и ML.\
             \ Сейчас в YooMoney отвечает за проекты Департамента аналитических решений. Любит рассказывать о полученном оп\
-            ыте на конференциях, занимается разработкой учебных курсов и преподаванием.</p>\n<p>&nbsp;</p>\n<h3>Евгений уч\
-            аствует в активности ASK EXPERT в офлайн-части конференции.</h3>\n<h4>Он будет консультировать на следующие те\
-            мы:</h4>\n<ul>\n<li><span data-sheets-root=\"1\">Проектирование API.</span></li>\n<li><span data-sheets-root=\"\
-            1\">Data Governance и ML-проекты.</span></li>\n<li><span data-sheets-root=\"1\">Дашбординг.</span></li>\n<li><span\
-            \ data-sheets-root=\"1\">MLOps.</span></li>\n</ul>"
+            ыте на конференциях, занимается разработкой учебных курсов и преподаванием.</p>"
   - id: 3428
     photoFileName: 3428.jpg
     photoUpdatedAt: "2024-09-04T08:48:27Z"
@@ -50273,16 +50215,7 @@ speakers:
     bio:
       - {language: en, text: "<p>CEO of Soft Skills Lab.</p>"}
       - language: ru
-        text: "<p>CEO Soft Skills Lab.</p>\n<p>&nbsp;</p>\n<h3>Александра участвует в активности ASK EXPERT в офлайн-части\
-            \ конференции.</h3>\n<h4>Она будет консультировать на следующие темы:</h4>\n<ul>\n<li><span style=\"font-weight:\
-            \ 400;\">Построение команды.</span></li>\n<li><span style=\"font-weight: 400;\">Конфликты и взаимодействие в к\
-            оманде.</span></li>\n<li><span style=\"font-weight: 400;\">Коммуникации.</span></li>\n<li><span style=\"font-weight:\
-            \ 400;\">Переговоры.</span></li>\n<li><span style=\"font-weight: 400;\">Работа в команде.</span></li>\n<li><span\
-            \ style=\"font-weight: 400;\">Soft Skills.</span></li>\n<li><span style=\"font-weight: 400;\">Переговоры со ст\
-            ейкхолдерами.</span></li>\n<li><span style=\"font-weight: 400;\">Переговоры с клиентами.</span></li>\n<li><span\
-            \ style=\"font-weight: 400;\">Переговоры под давлением.</span></li>\n<li><span style=\"font-weight: 400;\">Нав\
-            ыки коммуникаций для роста карьеры.</span></li>\n<li><span style=\"font-weight: 400;\">Эскалация конфликтов.</span></li>\n\
-            </ul>"
+        text: "<p>CEO Soft Skills Lab.</p>"
   - id: 3456
     photoFileName: 3456.jpg
     photoUpdatedAt: "2024-07-29T09:29:12Z"
@@ -50589,10 +50522,7 @@ speakers:
             \ and has presented at various Python conferences, including Pycascades, Europython, and Flaskcon.</p>\n<p>Explore\
             \ his professional journey and insights on his <a href=\"https://adarshd.dev\" target=\"_blank\" rel=\"noopener\
             \ noreferrer\">personal website</a> and <a href=\"https://blog.adarshd.dev\" target=\"_blank\" rel=\"noopener\
-            \ noreferrer\">blog</a>.</p>\n<p>&nbsp;</p>\n<h3>Adarsh participates in the ASK EXPERT activity in the offline\
-            \ part of the conference.</h3>\n<h4>He will be advising on the following topics:</h4>\n<ul>\n<li><span data-sheets-root=\"\
-            1\">Python.</span></li>\n<li><span data-sheets-root=\"1\">Backend.</span></li>\n<li><span data-sheets-root=\"\
-            1\">API development-related topics.</span></li>\n</ul>"
+            \ noreferrer\">blog</a>.</p>"
     twitter: adarshd905
   - id: 3477
     photoFileName: 3477.jpg
