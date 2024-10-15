@@ -34713,7 +34713,8 @@ speakers:
             ать в жизнь новые идеи. Кайфует от написания кода.</p>\n<p>За плечами кандидатская диссертация по индексам в б\
             азах данных.</p>\n<p>Более 15 лет опыта разработки. Начинал с автоматизированных банковских систем на C/C++, а\
             \ последние шесть лет разрабатывает на Java сервисы для экосистемы Сбера.</p>"
-    gitHub: serializers-benchmark
+    gitHub: chernov-af
+    habr: ChernovAF
   - id: 2421
     photoFileName: 2421.jpg
     photoUpdatedAt: 2022-10-13T20:36:29Z[UTC]
@@ -45621,6 +45622,9 @@ speakers:
             \ learning.</p>"}
       - {language: ru, text: "<p>Старший исследователь данных в Kaspersky. Занимается полным жизненным циклом проектов с п\
             рименением машинного обучения.</p>"}
+    twitter: demitesla
+    gitHub: UncleDijkstra
+    habr: uncle_dijkstra
   - id: 3159
     photoFileName: 3159.jpg
     photoUpdatedAt: "2024-03-15T07:29:12Z"
@@ -50647,6 +50651,8 @@ speakers:
             ях в AI и ML в <a href=\"https://t.me/complete_ai\">авторском Telegram-канале</a>.</p>\n<p>Автор более 100 нау\
             чных публикаций, в том числе в топ-журналах (Q1/Q2) и сборниках Core A/A* конференций ACL, EMNLP, EACL. Индекс\
             \ Хирша &mdash; 12.</p>"
+    gitHub: kuznetsoffandrey
+    habr: kuznetsoff87
   - id: 3483
     photoFileName: 3483.jpg
     photoUpdatedAt: "2024-08-23T09:28:13Z"
@@ -50688,6 +50694,7 @@ speakers:
       - language: ru
         text: "<p>Исследователь, руководит командой генерации видео с помощью ИИ в AIRI. Ранее работал в Samsung AI Center.</p>\n\
             <p>Опыт в ИИ &mdash; 6 лет, в генерации видео &mdash; 2 года. Окончил МФТИ и Сколтех.</p>"
+    gitHub: k-sobolev
   - id: 3485
     photoFileName: 3485.jpg
     photoUpdatedAt: "2024-07-22T14:53:59Z"
@@ -50712,11 +50719,14 @@ speakers:
             \ quickly and beautifully on slow TVs with very old browsers.</p>"}
       - {language: ru, text: "<p>Разработчик приложения Okko для Smart TV. Ищет способы, как заставить быстро и красиво ра\
             ботать web-приложение на медленных телевизорах с очень старыми браузерами.</p>"}
+    gitHub: 4erty
+    habr: 4erty
   - id: 3487
     photoFileName: 3487.jpg
     photoUpdatedAt: "2024-09-16T11:12:12Z"
     name:
-      - {language: en, text: "Дмитрий Ермаков"}
+      - {language: en, text: "Dmitry Ermakov"}
+      - {language: ru, text: "Дмитрий Ермаков"}
     companyIds: [620]
     bio:
       - {language: en, text: "Ответственно тестирую Android TV и Smart TV"}
@@ -50725,7 +50735,8 @@ speakers:
     photoFileName: 3488.jpg
     photoUpdatedAt: "2024-09-12T05:24:41Z"
     name:
-      - {language: en, text: "Александр Монетчиков"}
+      - {language: en, text: "Alexander Monetchikov"}
+      - {language: ru, text: "Александр Монетчиков"}
     companyIds: [280]
     bio:
       - {language: en, text: "Обеспечивает качество разработки видеоплееров в Иви"}
@@ -50745,7 +50756,8 @@ speakers:
     photoFileName: 3490.jpg
     photoUpdatedAt: "2024-09-17T09:27:32Z"
     name:
-      - {language: en, text: "Илья Истомин"}
+      - {language: en, text: "Ilya Istomin"}
+      - {language: ru, text: "Илья Истомин"}
     companyIds: [689]
     bio:
       - {language: en, text: "Пришёл в разработку приложений для смарт тв в 2019. Для смарт тв делал разные проекты: и гол\
@@ -50757,6 +50769,7 @@ speakers:
             оров, и для приставок, и для веба. Забочусь о качестве воспроизведения. Считаю, что без телеметрии и без иссле\
             дований плеер для смарт тв лучше не сделать. Люблю смотреть контент на смарт тв и автоматизировать задачи, свя\
             занные со смарт тв."}
+    gitHub: procot
   - id: 3491
     photoFileName: 3491.jpg
     photoUpdatedAt: "2024-08-20T13:40:34Z"
@@ -50771,6 +50784,7 @@ speakers:
       - {language: ru, text: "<p>Инженер-разработчик в команде звуковых технологий ВКонтакте (Единое Видео). Занимается ау\
             диоалгоритмами в VK Звонках. Любит быстрые, оптимизированные on-device алгоритмы, а также разработки, которые\
             \ работают для людей здесь и сейчас.</p>"}
+    gitHub: JBloodless
   - id: 3492
     photoFileName: 3492.jpg
     photoUpdatedAt: "2024-07-10T08:25:42Z"
@@ -50805,11 +50819,14 @@ speakers:
             ыли проекты, связанные с online-вещанием и видео (smotri.com, Иви). В 2012 году Netstream вместе со всей коман\
             дой был дружественно поглощен одним из своих заказчиков &mdash; Иви. C 2012 года по сей день Евгений &mdash; CTO\
             \ Иви.</p>"}
+    twitter: erossinsky
+    habr: eross
   - id: 3494
     photoFileName: 3494.jpg
     photoUpdatedAt: "2024-09-13T09:06:18Z"
     name:
-      - {language: en, text: "Александр Шашов"}
+      - {language: en, text: "Alexander Shashov"}
+      - {language: ru, text: "Александр Шашов"}
     companyIds: [1211]
     bio:
       - {language: en, text: "CTO онлайн-кинотеатра START. 16 лет в разработке, 7 лет из которых на руководящих должностях\
@@ -50851,6 +50868,8 @@ speakers:
       - language: ru
         text: "<p>DevOps со стажем более 10 лет. Последние 3 года поддерживает Streaming Platform.</p>\n<p>Программирует н\
             а Python и бьет молотком серверы.</p>"
+    twitter: zulgabis
+    gitHub: zulgabis
   - id: 3497
     photoFileName: 3497.jpg
     photoUpdatedAt: "2024-08-20T13:32:38Z"
@@ -50931,6 +50950,9 @@ speakers:
             \ the <a href=\"https://github.com/OpenIPC\">OpenIPC</a> project.</p>"}
       - {language: ru, text: "<p>Занимается медиа более 25 лет: от сенсоров до VR-плееров. Сооснователь проекта <a href=\"\
             https://github.com/OpenIPC\">OpenIPC</a>.</p>"}
+    twitter: widgetii
+    gitHub: widgetii
+    habr: widgetii
   - id: 3502
     photoFileName: 3502.jpg
     photoUpdatedAt: "2024-08-29T09:03:11Z"
@@ -50946,6 +50968,7 @@ speakers:
       - {language: ru, text: "Разрабатывает высоконагруженные отказоустойчивые системы с 2015 года. Строил решение Search\
             \ as a Service с полнотекстовым поиском с учетом релевантности. Последние 2 года, погрузившись в мир ВКС, веде\
             т команду Телемоста в Яндекс 360 в светлое будущее в роли руководителя. Любит заниматься DevRel-скими делами."}
+    habr: Cad1L
   - id: 3503
     photoFileName: 3503.jpg
     photoUpdatedAt: "2024-06-27T08:07:43Z"
@@ -51018,6 +51041,8 @@ speakers:
             \ of the backend of the recommendation system and ETL processes.</p>"}
       - {language: ru, text: "<p>Senior бэкенд-разработчик на Python в команде витрины онлайн-кинотеатра KION. Занимается\
             \ бэкендом системы рекомендаций и ETL-процессами.</p>"}
+    twitter: Lqueed
+    gitHub: Lqueed
   - id: 3508
     photoFileName: 3508.jpg
     photoUpdatedAt: "2024-08-29T09:25:35Z"
@@ -51066,6 +51091,7 @@ speakers:
             \ media flow and camera.</p>"}
       - {language: ru, text: "<p>Android-разработчик в команде VK Клипов последние 5 лет. Занимается проработкой медиафлоу\
             \ и камерой ВКонтакте.</p>"}
+    gitHub: Deymosl
   - id: 3512
     photoFileName: 3512.jpg
     photoUpdatedAt: "2024-09-17T12:04:48Z"
@@ -51101,6 +51127,8 @@ speakers:
             ончил бакалавриат и магистратуру МГТУ им. Н. Э. Баумана по специальности &laquo;программная инженерия&raquo;.</p>\n\
             <p>Спикер ODS Data Fest. Автор <a href=\"https://habr.com/ru/companies/ivi/articles/589209/\">статьи о синтети\
             ческих постерах для кино</a> на Хабре.&nbsp;</p>"
+    gitHub: RabbitRu
+    habr: ultrar
   - id: 3514
     photoFileName: 3514.jpg
     photoUpdatedAt: "2024-07-04T13:54:10Z"
