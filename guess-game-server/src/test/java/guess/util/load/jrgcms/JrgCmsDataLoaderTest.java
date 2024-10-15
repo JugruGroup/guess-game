@@ -21,7 +21,6 @@ import guess.domain.source.image.UrlDates;
 import guess.util.FileUtils;
 import guess.util.LocalizationUtils;
 import guess.util.load.CmsDataLoader;
-import guess.util.load.jrgcms.JrgCmsDataLoader;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
