@@ -34,7 +34,6 @@ import guess.domain.source.cms.contentful.talk.response.ContentfulTalkResponse;
 import guess.domain.source.cms.contentful.talk.response.ContentfulTalkResponseCommon;
 import guess.domain.source.image.UrlDates;
 import guess.util.load.CmsDataLoader;
-import guess.util.load.contentful.ContentfulDataLoader;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -107,11 +106,11 @@ class ContentfulDataLoaderTest {
                     .thenReturn(restTemplateMock);
 
             Map<String, List<String>> expected = Map.of(
-                    ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.HOLY_JS_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.DOT_NEXT_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.HEISENBUG_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
-                    ContentfulDataLoader.ConferenceSpaceInfo.MOBIUS_SPACE_INFO.toString(), List.of(code1, code2, code3, code4));
+                    ConferenceSpaceInfo.COMMON_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ConferenceSpaceInfo.HOLY_JS_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ConferenceSpaceInfo.DOT_NEXT_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ConferenceSpaceInfo.HEISENBUG_SPACE_INFO.toString(), List.of(code1, code2, code3, code4),
+                    ConferenceSpaceInfo.MOBIUS_SPACE_INFO.toString(), List.of(code1, code2, code3, code4));
 
             ContentfulDataLoader contentfulDataLoader = Mockito.mock(ContentfulDataLoader.class);
             Mockito.when(contentfulDataLoader.getTags(Mockito.nullable(String.class)))
@@ -734,7 +733,7 @@ class ContentfulDataLoaderTest {
     @SuppressWarnings("unchecked")
     void getSpeakersByConferenceSpaceInfo() {
         try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
-            mockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(ContentfulDataLoader.ConferenceSpaceInfo.class), Mockito.nullable(String.class)))
+            mockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(ConferenceSpaceInfo.class), Mockito.nullable(String.class)))
                     .thenCallRealMethod();
             mockedStatic.when(() -> ContentfulDataLoader.createSpeaker(
                             Mockito.any(ContentfulSpeaker.class), Mockito.anyMap(), Mockito.anySet(), Mockito.any(AtomicLong.class), Mockito.any(AtomicLong.class), Mockito.anyBoolean()))
@@ -754,10 +753,10 @@ class ContentfulDataLoaderTest {
             mockedStatic.when(ContentfulDataLoader::getRestTemplate)
                     .thenReturn(restTemplateMock);
 
-            assertEquals(2, ContentfulDataLoader.getSpeakers(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "code").size());
-            assertEquals(2, ContentfulDataLoader.getSpeakers(ContentfulDataLoader.ConferenceSpaceInfo.HOLY_JS_SPACE_INFO, "code").size());
-            assertEquals(2, ContentfulDataLoader.getSpeakers(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, null).size());
-            assertEquals(2, ContentfulDataLoader.getSpeakers(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "").size());
+            assertEquals(2, ContentfulDataLoader.getSpeakers(ConferenceSpaceInfo.COMMON_SPACE_INFO, "code").size());
+            assertEquals(2, ContentfulDataLoader.getSpeakers(ConferenceSpaceInfo.HOLY_JS_SPACE_INFO, "code").size());
+            assertEquals(2, ContentfulDataLoader.getSpeakers(ConferenceSpaceInfo.COMMON_SPACE_INFO, null).size());
+            assertEquals(2, ContentfulDataLoader.getSpeakers(ConferenceSpaceInfo.COMMON_SPACE_INFO, "").size());
         }
     }
 
@@ -866,7 +865,7 @@ class ContentfulDataLoaderTest {
         try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
             mockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(Conference.class), Mockito.anyString()))
                     .thenCallRealMethod();
-            mockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(ContentfulDataLoader.ConferenceSpaceInfo.class), Mockito.anyString()))
+            mockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString()))
                     .thenReturn(Collections.emptyList());
 
             assertDoesNotThrow(() -> ContentfulDataLoader.getSpeakers(Conference.JPOINT, "code"));
@@ -892,7 +891,7 @@ class ContentfulDataLoaderTest {
     @SuppressWarnings("unchecked")
     void getTalks() {
         try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
-            mockedStatic.when(() -> ContentfulDataLoader.getTalks(Mockito.any(ContentfulDataLoader.ConferenceSpaceInfo.class), Mockito.nullable(String.class), Mockito.anyBoolean()))
+            mockedStatic.when(() -> ContentfulDataLoader.getTalks(Mockito.any(ConferenceSpaceInfo.class), Mockito.nullable(String.class), Mockito.anyBoolean()))
                     .thenCallRealMethod();
             mockedStatic.when(() -> ContentfulDataLoader.createTalk(
                             Mockito.any(ContentfulTalk.class), Mockito.anyMap(), Mockito.anySet(), Mockito.anySet(), Mockito.anyMap(), Mockito.any(AtomicLong.class)))
@@ -930,13 +929,13 @@ class ContentfulDataLoaderTest {
             mockedStatic.when(ContentfulDataLoader::getRestTemplate)
                     .thenReturn(restTemplateMock);
 
-            assertEquals(4, ContentfulDataLoader.getTalks(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "code", true).size());
-            assertEquals(4, ContentfulDataLoader.getTalks(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, null, true).size());
-            assertEquals(4, ContentfulDataLoader.getTalks(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "", true).size());
+            assertEquals(4, ContentfulDataLoader.getTalks(ConferenceSpaceInfo.COMMON_SPACE_INFO, "code", true).size());
+            assertEquals(4, ContentfulDataLoader.getTalks(ConferenceSpaceInfo.COMMON_SPACE_INFO, null, true).size());
+            assertEquals(4, ContentfulDataLoader.getTalks(ConferenceSpaceInfo.COMMON_SPACE_INFO, "", true).size());
 
-            assertEquals(9, ContentfulDataLoader.getTalks(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "code", false).size());
-            assertEquals(9, ContentfulDataLoader.getTalks(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, null, false).size());
-            assertEquals(9, ContentfulDataLoader.getTalks(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "", false).size());
+            assertEquals(9, ContentfulDataLoader.getTalks(ConferenceSpaceInfo.COMMON_SPACE_INFO, "code", false).size());
+            assertEquals(9, ContentfulDataLoader.getTalks(ConferenceSpaceInfo.COMMON_SPACE_INFO, null, false).size());
+            assertEquals(9, ContentfulDataLoader.getTalks(ConferenceSpaceInfo.COMMON_SPACE_INFO, "", false).size());
         }
     }
 
@@ -1059,7 +1058,7 @@ class ContentfulDataLoaderTest {
     @Test
     void testGetTalks() {
         try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
-            mockedStatic.when(() -> ContentfulDataLoader.getTalks(Mockito.any(ContentfulDataLoader.ConferenceSpaceInfo.class), Mockito.anyString(), Mockito.anyBoolean()))
+            mockedStatic.when(() -> ContentfulDataLoader.getTalks(Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString(), Mockito.anyBoolean()))
                     .thenReturn(Collections.emptyList());
 
             ContentfulDataLoader contentfulDataLoader = new ContentfulDataLoader();
@@ -1667,7 +1666,7 @@ class ContentfulDataLoaderTest {
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("fixEntryNotResolvableError method tests")
     class FixEntryNotResolvableErrorTest {
-        private Stream<Arguments> createStream(ContentfulDataLoader.ConferenceSpaceInfo existingConferenceSpaceInfo, String existingEntryId) {
+        private Stream<Arguments> createStream(ConferenceSpaceInfo existingConferenceSpaceInfo, String existingEntryId) {
             Speaker speaker0 = new Speaker();
             speaker0.setId(0);
 
@@ -1733,24 +1732,24 @@ class ContentfulDataLoaderTest {
                                     Stream.concat(
                                             Stream.concat(
                                                     Stream.concat(
-                                                            createStream(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "6yIC7EpG1EhejCEJDEsuqA"),
-                                                            createStream(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "2i2OfmHelyMCiK2sCUoGsS")
+                                                            createStream(ConferenceSpaceInfo.COMMON_SPACE_INFO, "6yIC7EpG1EhejCEJDEsuqA"),
+                                                            createStream(ConferenceSpaceInfo.COMMON_SPACE_INFO, "2i2OfmHelyMCiK2sCUoGsS")
                                                     ),
-                                                    createStream(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "1FDbCMYfsEkiQG6s8CWQwS")
+                                                    createStream(ConferenceSpaceInfo.COMMON_SPACE_INFO, "1FDbCMYfsEkiQG6s8CWQwS")
                                             ),
-                                            createStream(ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO, "MPZSTxFNbbjBdf5M5uoOZ")
+                                            createStream(ConferenceSpaceInfo.COMMON_SPACE_INFO, "MPZSTxFNbbjBdf5M5uoOZ")
                                     ),
-                                    createStream(ContentfulDataLoader.ConferenceSpaceInfo.HOLY_JS_SPACE_INFO, "3YSoYRePW0OIeaAAkaweE6")
+                                    createStream(ConferenceSpaceInfo.HOLY_JS_SPACE_INFO, "3YSoYRePW0OIeaAAkaweE6")
                             ),
-                            createStream(ContentfulDataLoader.ConferenceSpaceInfo.HOLY_JS_SPACE_INFO, "2UddvLNyXmy4YaukAuE4Ao")
+                            createStream(ConferenceSpaceInfo.HOLY_JS_SPACE_INFO, "2UddvLNyXmy4YaukAuE4Ao")
                     ),
-                    createStream(ContentfulDataLoader.ConferenceSpaceInfo.MOBIUS_SPACE_INFO, "33qzWXnXYsgyCsSiwK0EOy")
+                    createStream(ConferenceSpaceInfo.MOBIUS_SPACE_INFO, "33qzWXnXYsgyCsSiwK0EOy")
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void fixEntryNotResolvableError(ContentfulDataLoader.ConferenceSpaceInfo conferenceSpaceInfo,
+        void fixEntryNotResolvableError(ConferenceSpaceInfo conferenceSpaceInfo,
                                         Set<String> entryErrorSet, Map<String, Speaker> speakerMap,
                                         Set<String> expectedEntryErrorSet, Map<String, Speaker> expectedSpeakerMap) {
             assertDoesNotThrow(() -> ContentfulDataLoader.fixEntryNotResolvableError(conferenceSpaceInfo, entryErrorSet, speakerMap));
@@ -1766,9 +1765,9 @@ class ContentfulDataLoaderTest {
                     .thenReturn(Collections.emptyList());
             contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getEvents(Mockito.anyString(), Mockito.any(LocalDate.class)))
                     .thenReturn(Collections.emptyList());
-            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(ContentfulDataLoader.ConferenceSpaceInfo.class), Mockito.anyString()))
+            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString()))
                     .thenReturn(Collections.emptyList());
-            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getTalks(Mockito.any(ContentfulDataLoader.ConferenceSpaceInfo.class), Mockito.anyString(), Mockito.anyBoolean()))
+            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getTalks(Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString(), Mockito.anyBoolean()))
                     .thenReturn(Collections.emptyList());
 
             ContentfulDataLoader contentfulDataLoader = Mockito.mock(ContentfulDataLoader.class);

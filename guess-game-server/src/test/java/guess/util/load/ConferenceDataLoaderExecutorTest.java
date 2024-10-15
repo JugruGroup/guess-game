@@ -9,7 +9,7 @@ import guess.domain.source.image.UrlFilename;
 import guess.domain.source.load.*;
 import guess.util.ImageUtils;
 import guess.util.LocalizationUtils;
-import guess.util.load.contentful.ContentfulDataLoader;
+import guess.util.load.contentful.ConferenceSpaceInfo;
 import guess.util.yaml.YamlUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -51,7 +51,7 @@ class ConferenceDataLoaderExecutorTest {
             CmsDataLoader cmsDataLoader = Mockito.mock(CmsDataLoader.class);
             Mockito.when(cmsDataLoader.getTags(Mockito.nullable(String.class)))
                     .thenReturn(Map.of(
-                            ContentfulDataLoader.ConferenceSpaceInfo.COMMON_SPACE_INFO.toString(),
+                            ConferenceSpaceInfo.COMMON_SPACE_INFO.toString(),
                             List.of(CODE1, CODE2, CODE3, CODE4)));
 
             mockedStatic.when(() -> CmsDataLoaderFactory.createDataLoader(Mockito.any(CmsType.class)))
