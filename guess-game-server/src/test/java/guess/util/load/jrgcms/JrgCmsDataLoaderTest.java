@@ -1,4 +1,4 @@
-package guess.util.load;
+package guess.util.load.jrgcms;
 
 import guess.domain.Conference;
 import guess.domain.Language;
@@ -20,6 +20,8 @@ import guess.domain.source.cms.jrgcms.talk.schedule.*;
 import guess.domain.source.image.UrlDates;
 import guess.util.FileUtils;
 import guess.util.LocalizationUtils;
+import guess.util.load.CmsDataLoader;
+import guess.util.load.jrgcms.JrgCmsDataLoader;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -45,7 +47,7 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
-import static guess.util.load.JrgCmsDataLoader.IMAGE_PARAMETERS_TEMPLATE;
+import static guess.util.load.jrgcms.JrgCmsDataLoader.IMAGE_PARAMETERS_TEMPLATE;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 

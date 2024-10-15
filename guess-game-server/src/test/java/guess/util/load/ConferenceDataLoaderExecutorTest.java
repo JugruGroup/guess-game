@@ -9,6 +9,7 @@ import guess.domain.source.image.UrlFilename;
 import guess.domain.source.load.*;
 import guess.util.ImageUtils;
 import guess.util.LocalizationUtils;
+import guess.util.load.contentful.ContentfulDataLoader;
 import guess.util.yaml.YamlUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

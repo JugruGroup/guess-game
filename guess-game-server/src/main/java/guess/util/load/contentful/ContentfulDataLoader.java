@@ -1,4 +1,4 @@
-package guess.util.load;
+package guess.util.load.contentful;
 
 import guess.domain.Conference;
 import guess.domain.Language;
@@ -26,6 +26,7 @@ import guess.domain.source.extract.ExtractPair;
 import guess.domain.source.extract.ExtractSet;
 import guess.domain.source.image.UrlDates;
 import guess.util.DateTimeUtils;
+import guess.util.load.CmsDataLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestTemplate;
@@ -692,7 +693,7 @@ public class ContentfulDataLoader extends CmsDataLoader {
     }
 
     @Override
-    String getImageParametersTemplate() {
+    public String getImageParametersTemplate() {
         return IMAGE_PARAMETERS_TEMPLATE;
     }
 

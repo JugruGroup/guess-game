@@ -1,4 +1,4 @@
-package guess.util.load;
+package guess.util.load.contentful;
 
 import guess.domain.Conference;
 import guess.domain.Language;
@@ -33,6 +33,8 @@ import guess.domain.source.cms.contentful.talk.fields.ContentfulTalkFieldsCommon
 import guess.domain.source.cms.contentful.talk.response.ContentfulTalkResponse;
 import guess.domain.source.cms.contentful.talk.response.ContentfulTalkResponseCommon;
 import guess.domain.source.image.UrlDates;
+import guess.util.load.CmsDataLoader;
+import guess.util.load.contentful.ContentfulDataLoader;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -54,7 +56,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Stream;
 
-import static guess.util.load.ContentfulDataLoader.IMAGE_PARAMETERS_TEMPLATE;
+import static guess.util.load.contentful.ContentfulDataLoader.IMAGE_PARAMETERS_TEMPLATE;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 

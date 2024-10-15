@@ -5,6 +5,7 @@ import guess.domain.source.Company;
 import guess.domain.source.LocaleItem;
 import guess.domain.source.extract.ExtractPair;
 import guess.domain.source.extract.ExtractSet;
+import guess.util.load.contentful.ContentfulDataLoader;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

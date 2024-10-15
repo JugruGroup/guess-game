@@ -1,4 +1,4 @@
-package guess.util.load;
+package guess.util.load.jrgcms;
 
 import guess.domain.Conference;
 import guess.domain.Language;
@@ -19,6 +19,7 @@ import guess.domain.source.cms.jrgcms.talk.JrgTalkPresentation;
 import guess.domain.source.cms.jrgcms.talk.schedule.*;
 import guess.domain.source.image.UrlDates;
 import guess.util.LocalizationUtils;
+import guess.util.load.CmsDataLoader;
 import guess.util.yaml.CustomYaml;
 import guess.util.yaml.YamlUtils;
 import org.slf4j.Logger;
@@ -625,7 +626,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     }
 
     @Override
-    String getImageParametersTemplate() {
+    public String getImageParametersTemplate() {
         return IMAGE_PARAMETERS_TEMPLATE;
     }
 

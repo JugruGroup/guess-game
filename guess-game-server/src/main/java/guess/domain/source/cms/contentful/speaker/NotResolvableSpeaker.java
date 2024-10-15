@@ -1,7 +1,7 @@
 package guess.domain.source.cms.contentful.speaker;
 
 import guess.domain.source.Speaker;
-import guess.util.load.ContentfulDataLoader;
+import guess.util.load.contentful.ContentfulDataLoader;
 
 public abstract class NotResolvableSpeaker {
     private final ContentfulDataLoader.ConferenceSpaceInfo conferenceSpaceInfo;

@@ -1,6 +1,8 @@
 package guess.util.load;
 
 import guess.domain.source.load.CmsType;
+import guess.util.load.contentful.ContentfulDataLoader;
+import guess.util.load.jrgcms.JrgCmsDataLoader;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.TestInstance;
