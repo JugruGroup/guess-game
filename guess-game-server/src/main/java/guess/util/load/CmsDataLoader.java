@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
 public abstract class CmsDataLoader {
     private static final Logger log = LoggerFactory.getLogger(CmsDataLoader.class);
 
-    static final long JUG_RU_GROUP_ORGANIZER_ID = 0L;
+    protected static final long JUG_RU_GROUP_ORGANIZER_ID = 0L;
 
     /**
      * Gets tags by conference code prefix.
@@ -41,14 +41,14 @@ public abstract class CmsDataLoader {
      * @param conferenceCodePrefix conference code prefix
      * @return tags
      */
-    abstract Map<String, List<String>> getTags(String conferenceCodePrefix) throws IOException, NoSuchFieldException;
+    protected abstract Map<String, List<String>> getTags(String conferenceCodePrefix) throws IOException, NoSuchFieldException;
 
     /**
      * Gets event types.
      *
      * @return event types
      */
-    abstract List<EventType> getEventTypes() throws IOException, NoSuchFieldException;
+    protected abstract List<EventType> getEventTypes() throws IOException, NoSuchFieldException;
 
     /**
      * Gets event.
@@ -59,7 +59,7 @@ public abstract class CmsDataLoader {
      * @param eventTemplate  event template
      * @return event
      */
-    abstract Event getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate) throws IOException, NoSuchFieldException;
+    protected abstract Event getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate) throws IOException, NoSuchFieldException;
 
     /**
      * Gets talks
@@ -70,16 +70,16 @@ public abstract class CmsDataLoader {
      * @param ignoreDemoStage ignore demo stage talks
      * @return talks
      */
-    abstract List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage) throws IOException, NoSuchFieldException;
+    protected abstract List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage) throws IOException, NoSuchFieldException;
 
     /**
      * Gets template of image parameters.
      *
      * @return template of image parameters
      */
-    abstract String getImageParametersTemplate();
+    protected abstract String getImageParametersTemplate();
 
-    static RestTemplate createRestTemplate() {
+    protected static RestTemplate createRestTemplate() {
         List<HttpMessageConverter<?>> converters = new ArrayList<>();
         converters.add(new StringHttpMessageConverter(StandardCharsets.UTF_8));
         converters.add(new MappingJackson2HttpMessageConverter());
@@ -95,7 +95,7 @@ public abstract class CmsDataLoader {
      * @param removeDuplicateWhiteSpaces {@code true} if need to remove duplicate white spaces, {@code false} otherwise
      * @return extracted string
      */
-    static String extractString(String value, boolean removeDuplicateWhiteSpaces) {
+    protected static String extractString(String value, boolean removeDuplicateWhiteSpaces) {
         if (value != null) {
             String trimmedValue = value.trim();
 
@@ -115,7 +115,7 @@ public abstract class CmsDataLoader {
      * @param value source value
      * @return extracted string
      */
-    static String extractString(String value) {
+    protected static String extractString(String value) {
         return extractString(value, false);
     }
 
@@ -128,7 +128,7 @@ public abstract class CmsDataLoader {
      * @param removeDuplicateWhiteSpaces {@code true} if need to remove duplicate white spaces, {@code false} otherwise
      * @return local items
      */
-    static List<LocaleItem> extractLocaleItems(String enText, String ruText, boolean checkEnTextExistence, boolean removeDuplicateWhiteSpaces) {
+    public static List<LocaleItem> extractLocaleItems(String enText, String ruText, boolean checkEnTextExistence, boolean removeDuplicateWhiteSpaces) {
         enText = extractString(enText, removeDuplicateWhiteSpaces);
         ruText = extractString(ruText, removeDuplicateWhiteSpaces);
 
@@ -167,7 +167,7 @@ public abstract class CmsDataLoader {
      * @param checkEnTextExistence {@code true} if need to check English text existence, {@code false} otherwise
      * @return local items
      */
-    static List<LocaleItem> extractLocaleItems(String enText, String ruText, boolean checkEnTextExistence) {
+    public static List<LocaleItem> extractLocaleItems(String enText, String ruText, boolean checkEnTextExistence) {
         return extractLocaleItems(enText, ruText, checkEnTextExistence, false);
     }
 
@@ -178,7 +178,7 @@ public abstract class CmsDataLoader {
      * @param ruText Russian text
      * @return local items
      */
-    static List<LocaleItem> extractLocaleItems(String enText, String ruText) {
+    public static List<LocaleItem> extractLocaleItems(String enText, String ruText) {
         return extractLocaleItems(enText, ruText, true);
     }
 
@@ -188,7 +188,7 @@ public abstract class CmsDataLoader {
      * @param name name
      * @return fixed name
      */
-    static String getSpeakerFixedName(String name) {
+    public static String getSpeakerFixedName(String name) {
         Map<String, String> fixedLastNames = Map.of("Аксенов", "Аксёнов", "Богачев", "Богачёв", "Горбачев", "Горбачёв",
                 "Королев", "Королёв", "Плетнев", "Плетнёв", "Пономарев", "Пономарёв",
                 "Толкачев", "Толкачёв", "Усачев", "Усачёв", "Федоров", "Фёдоров", "Шипилев", "Шипилёв");
@@ -261,7 +261,7 @@ public abstract class CmsDataLoader {
      * @param value source value
      * @return extracted Twitter username
      */
-    static String extractTwitter(String value) {
+    public static String extractTwitter(String value) {
         return extractProperty(value, new ExtractSet(
                 List.of(
                         new ExtractPair("^[\\s]*[@]?(\\w{1,15})[\\s]*$", 1),
@@ -297,7 +297,7 @@ public abstract class CmsDataLoader {
      * @param checkEnTextExistence {@code true} if need to check English text existence, {@code false} otherwise
      * @return company list
      */
-    static List<Company> createCompanies(String enName, String ruName, AtomicLong companyId, boolean checkEnTextExistence) {
+    public static List<Company> createCompanies(String enName, String ruName, AtomicLong companyId, boolean checkEnTextExistence) {
         if (((enName != null) && !enName.isEmpty()) ||
                 ((ruName != null) && !ruName.isEmpty())) {
             List<Company> companies = new ArrayList<>();
@@ -318,7 +318,7 @@ public abstract class CmsDataLoader {
      * @param zonedDateTimeString zoned date time string
      * @return event local date
      */
-    static LocalDate createEventLocalDate(String zonedDateTimeString) {
+    public static LocalDate createEventLocalDate(String zonedDateTimeString) {
         return ZonedDateTime.ofInstant(
                         ZonedDateTime.parse(zonedDateTimeString).toInstant(),
                         ZoneId.of(DateTimeUtils.MOSCOW_TIME_ZONE))
@@ -331,7 +331,7 @@ public abstract class CmsDataLoader {
      * @param zonedDateTimeString zoned date time string
      * @return event local time
      */
-    static LocalTime createEventLocalTime(String zonedDateTimeString) {
+    public static LocalTime createEventLocalTime(String zonedDateTimeString) {
         return ZonedDateTime.ofInstant(
                         ZonedDateTime.parse(zonedDateTimeString).toInstant(),
                         ZoneId.of(DateTimeUtils.MOSCOW_TIME_ZONE))
