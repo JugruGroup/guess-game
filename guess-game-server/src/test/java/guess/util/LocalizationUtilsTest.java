@@ -87,6 +87,53 @@ public class LocalizationUtilsTest {
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getSpeakerNamesWithLastNameFirst method tests")
+    class GetSpeakerNamesWithLastNameFirstTest {
+        private Stream<Arguments> data() {
+            final List<LocaleItem> localeItemsWithUnknownLanguageCode = List.of(
+                    new LocaleItem("", "FirstName LastName"));
+            final List<LocaleItem> fullNameLocaleItems = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), "FirstName LastName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Имя Фамилия"));
+            final List<LocaleItem> fullNameLocaleItemsWithLastNameFirst = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), "LastName FirstName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия Имя"));
+            final List<LocaleItem> nameLocaleItems = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), "LastName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия"));
+
+            Speaker speaker0 = new Speaker();
+
+            Speaker speaker1 = new Speaker();
+            speaker1.setName(Collections.emptyList());
+
+            Speaker speaker2 = new Speaker();
+            speaker2.setName(localeItemsWithUnknownLanguageCode);
+
+            Speaker speaker3 = new Speaker();
+            speaker3.setName(fullNameLocaleItems);
+
+            Speaker speaker4 = new Speaker();
+            speaker4.setName(nameLocaleItems);
+
+            return Stream.of(
+                    arguments(speaker0, null),
+                    arguments(speaker1, Collections.emptyList()),
+                    arguments(speaker2, localeItemsWithUnknownLanguageCode),
+                    arguments(speaker3, fullNameLocaleItemsWithLastNameFirst),
+                    arguments(speaker4, nameLocaleItems)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getSpeakerNamesWithLastNameFirst(Speaker speaker, List<LocaleItem> expected) {
+            assertEquals(expected, LocalizationUtils.getSpeakerNamesWithLastNameFirst(speaker));
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("getSpeakerCompanies method tests")
     class GetSpeakerCompaniesTest {
         private Stream<Arguments> data() {
