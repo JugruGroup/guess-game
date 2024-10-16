@@ -1,8 +1,5 @@
 package guess.domain.source;
 
-import guess.domain.Language;
-import guess.util.LocalizationUtils;
-
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -172,36 +169,6 @@ public class Speaker extends Nameable {
 
     public void setCompanies(List<Company> companies) {
         this.companies = companies;
-    }
-
-    public List<LocaleItem> getNameWithLastNameFirst() {
-        if (getName() == null) {
-            return null;
-        }
-
-        List<LocaleItem> result = new ArrayList<>();
-
-        for (LocaleItem localeItem : getName()) {
-            var language = Language.getLanguageByCode(localeItem.getLanguage());
-
-            if (language != null) {
-                String localeName = LocalizationUtils.getString(getName(), language).trim();
-                int lastIndex = localeName.lastIndexOf(' ');
-                String resultLocaleName;
-
-                if ((lastIndex >= 0) && ((lastIndex + 1) <= localeName.length())) {
-                    resultLocaleName = localeName.substring(lastIndex + 1) + ' ' + localeName.substring(0, lastIndex);
-                } else {
-                    resultLocaleName = localeName;
-                }
-
-                result.add(new LocaleItem(localeItem.getLanguage(), resultLocaleName));
-            } else {
-                result.add(localeItem);
-            }
-        }
-
-        return result;
     }
 
     @Override

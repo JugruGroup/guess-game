@@ -89,6 +89,42 @@ public class LocalizationUtils {
     }
 
     /**
+     * Gets speaker names with last name first.
+     *
+     * @param speaker speaker
+     * @return speaker names
+     */
+    public static List<LocaleItem> getSpeakerNamesWithLastNameFirst(Speaker speaker) {
+        if (speaker.getName() == null) {
+            return null;
+        }
+
+        List<LocaleItem> result = new ArrayList<>();
+
+        for (LocaleItem localeItem : speaker.getName()) {
+            var language = Language.getLanguageByCode(localeItem.getLanguage());
+
+            if (language != null) {
+                String localeName = getString(speaker.getName(), language).trim();
+                int lastIndex = localeName.lastIndexOf(' ');
+                String resultLocaleName;
+
+                if ((lastIndex >= 0) && ((lastIndex + 1) <= localeName.length())) {
+                    resultLocaleName = localeName.substring(lastIndex + 1) + ' ' + localeName.substring(0, lastIndex);
+                } else {
+                    resultLocaleName = localeName;
+                }
+
+                result.add(new LocaleItem(localeItem.getLanguage(), resultLocaleName));
+            } else {
+                result.add(localeItem);
+            }
+        }
+
+        return result;
+    }
+
+    /**
      * Gets speaker companies as string.
      *
      * @param speaker  speaker
@@ -97,7 +133,7 @@ public class LocalizationUtils {
      */
     public static String getSpeakerCompanies(Speaker speaker, Language language) {
         return speaker.getCompanies().stream()
-                .map(c -> LocalizationUtils.getString(c.getName(), language))
+                .map(c -> getString(c.getName(), language))
                 .sorted()
                 .collect(Collectors.joining(", "));
     }
@@ -110,7 +146,7 @@ public class LocalizationUtils {
      * @return speaker name with company name
      */
     public static String getSpeakerNameWithCompanies(Speaker speaker, Language language) {
-        var name = LocalizationUtils.getString(speaker.getName(), language);
+        var name = getString(speaker.getName(), language);
         String companies = getSpeakerCompanies(speaker, language);
 
         return (!companies.isEmpty()) ?
@@ -126,7 +162,7 @@ public class LocalizationUtils {
      * @return speaker name with company name
      */
     public static String getSpeakerNameWithLastNameFirstWithCompanies(Speaker speaker, Language language) {
-        var name = LocalizationUtils.getString(speaker.getNameWithLastNameFirst(), language);
+        var name = getString(getSpeakerNamesWithLastNameFirst(speaker), language);
         String company = getSpeakerCompanies(speaker, language);
 
         return (!company.isEmpty()) ?
@@ -163,8 +199,8 @@ public class LocalizationUtils {
      */
     public static String getSpeakerName(Speaker speaker, Language language, Set<Speaker> speakerDuplicates) {
         return speakerDuplicates.contains(speaker) ?
-                LocalizationUtils.getSpeakerNameWithCompanies(speaker, language) :
-                LocalizationUtils.getString(speaker.getName(), language);
+                getSpeakerNameWithCompanies(speaker, language) :
+                getString(speaker.getName(), language);
     }
 
     /**
@@ -177,7 +213,7 @@ public class LocalizationUtils {
      */
     public static String getSpeakerNameWithLastNameFirst(Speaker speaker, Language language, Set<Speaker> speakerDuplicates) {
         return speakerDuplicates.contains(speaker) ?
-                LocalizationUtils.getSpeakerNameWithLastNameFirstWithCompanies(speaker, language) :
-                LocalizationUtils.getString(speaker.getNameWithLastNameFirst(), language);
+                getSpeakerNameWithLastNameFirstWithCompanies(speaker, language) :
+                getString(getSpeakerNamesWithLastNameFirst(speaker), language);
     }
 }
