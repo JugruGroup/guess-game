@@ -37,7 +37,7 @@ public class SpeakerServiceImpl implements SpeakerService {
     public List<Speaker> getSpeakersByFirstLetter(String firstLetter, Language language) {
         return speakerDao.getSpeakers().stream()
                 .filter(s -> {
-                    var name = LocalizationUtils.getString(s.getNameWithLastNameFirst(), language);
+                    var name = LocalizationUtils.getString(LocalizationUtils.getSpeakerNamesWithLastNameFirst(s), language);
                     String nameFirstLetter;
 
                     if (name != null) {
@@ -58,7 +58,8 @@ public class SpeakerServiceImpl implements SpeakerService {
         String lowerCaseFirstLetters = (firstLetters != null) ? firstLetters.toLowerCase() : "";
 
         return speakerDao.getSpeakers().stream()
-                .filter(s -> LocalizationUtils.getString(s.getNameWithLastNameFirst(), language).toLowerCase().indexOf(lowerCaseFirstLetters) == 0)
+                .filter(s -> LocalizationUtils.getString(LocalizationUtils.getSpeakerNamesWithLastNameFirst(s), language)
+                        .toLowerCase().indexOf(lowerCaseFirstLetters) == 0)
                 .toList();
     }
 
@@ -77,7 +78,8 @@ public class SpeakerServiceImpl implements SpeakerService {
             return Collections.emptyList();
         } else {
             return speakerDao.getSpeakers().stream()
-                    .filter(s -> ((!isNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedName, s.getName()) || SearchUtils.isSubstringFound(trimmedLowerCasedName, s.getNameWithLastNameFirst())) &&
+                    .filter(s -> ((!isNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedName, s.getName()) ||
+                            SearchUtils.isSubstringFound(trimmedLowerCasedName, LocalizationUtils.getSpeakerNamesWithLastNameFirst(s))) &&
                             (!isCompanySet || isSpeakerCompanyFound(s, trimmedLowerCasedCompany)) &&
                             (!isTwitterSet || SearchUtils.isSubstringFound(trimmedLowerCasedTwitter, s.getTwitter())) &&
                             (!isGitHubSet || SearchUtils.isSubstringFound(trimmedLowerCasedGitHub, s.getGitHub())) &&

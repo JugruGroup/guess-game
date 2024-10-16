@@ -170,6 +170,15 @@ class SpeakerServiceImplTest {
         @SuppressWarnings("unchecked")
         void getSpeakersByFirstLetters(String firstLetters, Language language, List<Speaker> speakers, List<Speaker> expected) {
             try (MockedStatic<LocalizationUtils> mockedStatic = Mockito.mockStatic(LocalizationUtils.class)) {
+                mockedStatic.when(() -> LocalizationUtils.getSpeakerNamesWithLastNameFirst(Mockito.any(Speaker.class)))
+                        .thenAnswer(
+                                (Answer<List<LocaleItem>>) invocation -> {
+                                    Object[] args = invocation.getArguments();
+                                    Speaker speaker = (Speaker) args[0];
+
+                                    return speaker.getName();
+                                }
+                        );
                 mockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                         .thenAnswer(
                                 (Answer<String>) invocation -> {
