@@ -90,17 +90,47 @@ public class LocalizationUtilsTest {
     @DisplayName("getSpeakerNamesWithLastNameFirst method tests")
     class GetSpeakerNamesWithLastNameFirstTest {
         private Stream<Arguments> data() {
-            final List<LocaleItem> localeItemsWithUnknownLanguageCode = List.of(
+            final List<LocaleItem> nameLocaleItems0 = List.of(
                     new LocaleItem("", "FirstName LastName"));
-            final List<LocaleItem> fullNameLocaleItems = Arrays.asList(
+
+            final List<LocaleItem> sourceNameLocaleItems1 = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "FirstName LastName"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Имя Фамилия"));
-            final List<LocaleItem> fullNameLocaleItemsWithLastNameFirst = Arrays.asList(
+            final List<LocaleItem> resultNameLocaleItems1 = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "LastName FirstName"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия Имя"));
-            final List<LocaleItem> nameLocaleItems = Arrays.asList(
+
+            final List<LocaleItem> nameLocaleItems2 = Arrays.asList(
                     new LocaleItem(Language.ENGLISH.getCode(), "LastName"),
                     new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия"));
+
+            final List<LocaleItem> sourceNameLocaleItems3 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), " LastName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия "));
+            final List<LocaleItem> resultNameLocaleItems3 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), "LastName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия"));
+
+            final List<LocaleItem> sourceNameLocaleItems4 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), "FirstName MiddleName LastName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Имя Отчество Фамилия"));
+            final List<LocaleItem> resultNameLocaleItems4 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), "LastName FirstName MiddleName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия Имя Отчество"));
+
+            final List<LocaleItem> sourceNameLocaleItems5 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), " FirstName MiddleName LastName "),
+                    new LocaleItem(Language.RUSSIAN.getCode(), " Имя Отчество Фамилия "));
+            final List<LocaleItem> resultNameLocaleItems5 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), "LastName FirstName MiddleName"),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "Фамилия Имя Отчество"));
+
+            final List<LocaleItem> sourceNameLocaleItems6 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), " "),
+                    new LocaleItem(Language.RUSSIAN.getCode(), "  "));
+            final List<LocaleItem> resultNameLocaleItems6 = Arrays.asList(
+                    new LocaleItem(Language.ENGLISH.getCode(), ""),
+                    new LocaleItem(Language.RUSSIAN.getCode(), ""));
 
             Speaker speaker0 = new Speaker();
 
@@ -108,20 +138,36 @@ public class LocalizationUtilsTest {
             speaker1.setName(Collections.emptyList());
 
             Speaker speaker2 = new Speaker();
-            speaker2.setName(localeItemsWithUnknownLanguageCode);
+            speaker2.setName(nameLocaleItems0);
 
             Speaker speaker3 = new Speaker();
-            speaker3.setName(fullNameLocaleItems);
+            speaker3.setName(sourceNameLocaleItems1);
 
             Speaker speaker4 = new Speaker();
-            speaker4.setName(nameLocaleItems);
+            speaker4.setName(nameLocaleItems2);
+
+            Speaker speaker5 = new Speaker();
+            speaker5.setName(sourceNameLocaleItems3);
+
+            Speaker speaker6 = new Speaker();
+            speaker6.setName(sourceNameLocaleItems4);
+
+            Speaker speaker7 = new Speaker();
+            speaker7.setName(sourceNameLocaleItems5);
+
+            Speaker speaker8 = new Speaker();
+            speaker8.setName(sourceNameLocaleItems6);
 
             return Stream.of(
                     arguments(speaker0, null),
                     arguments(speaker1, Collections.emptyList()),
-                    arguments(speaker2, localeItemsWithUnknownLanguageCode),
-                    arguments(speaker3, fullNameLocaleItemsWithLastNameFirst),
-                    arguments(speaker4, nameLocaleItems)
+                    arguments(speaker2, nameLocaleItems0),
+                    arguments(speaker3, resultNameLocaleItems1),
+                    arguments(speaker4, nameLocaleItems2),
+                    arguments(speaker5, resultNameLocaleItems3),
+                    arguments(speaker6, resultNameLocaleItems4),
+                    arguments(speaker7, resultNameLocaleItems5),
+                    arguments(speaker8, resultNameLocaleItems6)
             );
         }
 

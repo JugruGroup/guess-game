@@ -109,7 +109,7 @@ public class LocalizationUtils {
                 int lastIndex = localeName.lastIndexOf(' ');
                 String resultLocaleName;
 
-                if ((lastIndex >= 0) && ((lastIndex + 1) <= localeName.length())) {
+                if (lastIndex >= 0) {
                     resultLocaleName = localeName.substring(lastIndex + 1) + ' ' + localeName.substring(0, lastIndex);
                 } else {
                     resultLocaleName = localeName;
