@@ -79,7 +79,7 @@ public class EventType extends Descriptionable {
     }
 
     public EventType(Descriptionable descriptionable, Conference conference, String logoFileName, EventTypeLinks links,
-                     List<Event> events, Organizer organizer, EventTypeAttributes attributes) {
+                     Organizer organizer, EventTypeAttributes attributes) {
         super(descriptionable.getId(), descriptionable.getName(), descriptionable.getShortDescription(),
                 descriptionable.getLongDescription());
 
@@ -93,7 +93,6 @@ public class EventType extends Descriptionable {
         this.speakerdeckLink = links.speakerdeckLink;
         this.habrLink = links.socialLinks.habrLink;
         this.logoFileName = logoFileName;
-        this.events = events;
         this.inactive = attributes.inactive;
 
         this.organizer = organizer;
