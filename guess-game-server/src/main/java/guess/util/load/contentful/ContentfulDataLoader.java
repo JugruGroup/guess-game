@@ -244,7 +244,6 @@ public class ContentfulDataLoader extends CmsDataLoader {
                                 null
                         )
                 ),
-                Collections.emptyList(),
                 new Organizer(JUG_RU_GROUP_ORGANIZER_ID, Collections.emptyList()),
                 new EventType.EventTypeAttributes(false, null, null)
         );
