@@ -488,9 +488,10 @@ companySynonyms:
     ]
   - name: OZON
     synonyms: [
-      "Ozon Fintech",
       "Ozon Bank",
-      "Ozon Банк"
+      "Ozon Fintech",
+      "Ozon Банк",
+      "Ozon Tech"
     ]
   - name: "Particular Software"
     synonyms: [

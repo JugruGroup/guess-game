@@ -2732,5 +2732,9 @@ public class ConferenceDataLoaderExecutor {
 //                                new NameCompany("Илья Смирнов", new Company(567, "Usetech")), 3483L),
 //                        Set.of("Открытие конференции", "Закрытие конференции", "Подведение итогов онлайн-части",
 //                                "Открытие офлайн-части конференции", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.GO_FUNC, LocalDate.of(2024, 10, 3), "2024 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("GoFunc 2024 Autumn", null, List.of(24L)),
+//                        Set.of("Открытие конференции GoFunc 2024 Autumn", "Закрытие конференции GoFunc 2024 Autumn")));
     }
 }

@@ -30808,8 +30808,8 @@ speakers:
     bio:
       - {language: en, text: "<p>In IT since 1990. Since 2000, consults a variety of Internet startups on building\
             \ efficient and secure server systems.</p>"}
-      - {language: ru, text: "<p>В IT c 1990 года. С 2000 года консультирует интернет-стартапы по вопросам построения эффе\
-            ктивных и безопасных серверных систем.</p>"}
+      - {language: ru, text: "<p>В IT c 1990 года. С 2000-го консультирует интернет-стартапы по вопросам построения эффект\
+            ивных и безопасных серверных систем.</p>"}
     twitter: onokonem
     gitHub: onokonem
     habr: onokonem
@@ -45303,7 +45303,7 @@ speakers:
     gitHub: antonzhukov
   - id: 3134
     photoFileName: 3134.jpg
-    photoUpdatedAt: "2024-01-25T13:15:34Z"
+    photoUpdatedAt: "2024-09-23T08:12:49Z"
     name:
       - {language: en, text: "Aleksandr Ivanov"}
       - {language: ru, text: "Александр Иванов"}
@@ -51169,3 +51169,126 @@ speakers:
             \ and Leningrad region, and curator of &ldquo;LizaAlert&rdquo; Pskov region.</p>"}
       - {language: ru, text: "Руководитель ИТ-направления поисково-спасательного отряда \"ЛизаАлерт\", старший&nbsp;направ\
             ления беспилотников и координатор поисков в Санкт-Петербурге и ЛенОбласти"}
+  - id: 3517
+    photoFileName: 3517.jpg
+    photoUpdatedAt: "2024-08-28T16:34:34Z"
+    name:
+      - {language: en, text: "Alexander Leonovich"}
+      - {language: ru, text: "Александр Леонович"}
+    companyIds: [410]
+    bio:
+      - language: ru
+        text: "<p>Программирует с 2005 года, защитил PhD в Тайваньском университете науки и технологий по теме оптимизации\
+            \ протоколов Wi-Fi для передачи видео- и аудиопотоков. Работал в различных российских и зарубежных ИТ-компания\
+            х, включая стартапы.</p>\n<p>Сейчас &mdash; тимлид команды по разработке нового продукта компании Positive Technologies\
+            \ в сфере защиты данных.</p>"
+  - id: 3518
+    photoFileName: 3518.jpg
+    photoUpdatedAt: "2024-08-30T07:36:52Z"
+    name:
+      - {language: en, text: "Dmitry Gonozov"}
+      - {language: ru, text: "Дмитрий Гонозов"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Программирует на Python больше 5 лет. Последние 2 года пишет также на Go. Senior Backend\
+            \ Developer в Яндексе. В работе ищет баланс между скоростью и качеством разработки. При этом старается выстраи\
+            вать и оптимизировать процессы, как внутри команды, так и во всей компании.</p>"}
+    gitHub: gonozov0
+    habr: gonozov0
+  - id: 3519
+    photoFileName: 3519.jpg
+    photoUpdatedAt: "2024-02-06T11:01:08Z"
+    name:
+      - {language: en, text: "Ilya Gorkun"}
+      - {language: ru, text: "Илья Горкун"}
+    companyIds: [257]
+    bio:
+      - {language: en, text: "Go developer at Tinkoff, writing a PhD on the complexity of algorithms in semigroups, and making\
+            \ conferences on GO."}
+      - {language: ru, text: "<span style=\"background-color: transparent;\">Go-разработчик. Пишет кандидатскую по сложнос\
+            ти алгоритмов в полугруппах, а также делает конференции по Go.</span>"}
+  - id: 3520
+    photoFileName: 3520.jpg
+    photoUpdatedAt: "2024-08-23T09:34:05Z"
+    name:
+      - {language: en, text: "Igor Panasyuk"}
+      - {language: ru, text: "Игорь Панасюк"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Работает в финтехе Яндекса. Любит computer science. Преподает в университете и на частных\
+            \ курсах.</p>"}
+    gitHub: IgorWalther
+  - id: 3521
+    photoFileName: 3521.jpg
+    photoUpdatedAt: "2024-08-07T10:12:48Z"
+    name:
+      - {language: en, text: "Alexander Sinichkin"}
+      - {language: ru, text: "Александр Синичкин"}
+    companyIds: [567]
+    bio:
+      - {language: ru, text: "<p>Разработчик уже более 10 лет. Руководитель практики Golang в Usetech. Любит строгость в к\
+            оде &mdash; чтобы был настроен линтер, оговорены и зафиксированы все спорные моменты. Обожает, когда вся рутин\
+            а вынесена в скрипты, кодогенерацию и т.д. А разработчику остается только бизнес-логика и R&amp;D в интересных\
+            \ задачах.</p>"}
+    gitHub: AlwxSin
+  - id: 3522
+    photoFileName: 3522.jpg
+    photoUpdatedAt: "2024-09-01T07:55:12Z"
+    name:
+      - {language: en, text: "Vasily Bliznetsov"}
+      - {language: ru, text: "Василий Близнецов"}
+    companyIds: []
+    bio:
+      - {language: ru, text: "<p>Занимается разработкой и проектированием платформы для безопасной разработки Positive Technologies.\
+            \ По мере сил и возможностей участвует в open source-проектах.&nbsp;</p>"}
+    gitHub: hound672
+  - id: 3523
+    photoFileName: 3523.jpg
+    photoUpdatedAt: "2024-09-26T11:43:17Z"
+    name:
+      - {language: en, text: "Vladimir Telbukhov"}
+      - {language: ru, text: "Владимир Тельбухов"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Senior developer at Yandex Change with over 7 years of experience, of which more than 2 years\
+            \ dedicated to Golang development. Contributed to OZON and Mail.ru projects. Loves product development, cooking\
+            \ lasagna and developing to music in headphones.</p>"}
+      - language: ru
+        text: "<p>Старший разработчик в Яндекс Смене с опытом более 7 лет, из которых больше 2 лет посвятил себя разработк\
+            е на Golang. Внес вклад в проекты OZON и Mail.ru.</p>\n<p>Любит продуктовую разработку, готовить лазанью и раз\
+            рабатывать под музыку в наушниках.</p>"
+    gitHub: vovatelbukhov
+    habr: vovatelbukhov
+  - id: 3524
+    photoFileName: 3524.jpg
+    photoUpdatedAt: "2024-09-18T08:17:06Z"
+    name:
+      - {language: en, text: "Ivan Zolotnikov"}
+      - {language: ru, text: "Иван Золотников"}
+    companyIds: [773]
+    bio:
+      - language: ru
+        text: "<p>Младший инженер в компании YADRO. Занимается разработкой и интеграцией решений по фаззинг-тестированию п\
+            роектов на Golang.</p>\n<p>Окончил ФБИТ ИТМО. Интересуется ИБ, фаззингом, ИИ и совместным применением их практ\
+            ик и технологий.&nbsp;</p>"
+  - id: 3525
+    photoFileName: 3525.jpg
+    photoUpdatedAt: "2024-09-11T12:00:25Z"
+    name:
+      - {language: en, text: "Yura Sargsyan"}
+      - {language: ru, text: "Юра Саргсян"}
+    companyIds: [1128]
+    bio:
+      - {language: ru, text: "<p>Бэкенд-разработчик на Go, автор и лид курсов по Go в Яндекс Лицее.</p>"}
+  - id: 3526
+    photoFileName: 3526.jpg
+    photoUpdatedAt: "2024-08-31T11:46:51Z"
+    name:
+      - {language: en, text: "Leonid Chensky"}
+      - {language: ru, text: "Леонид Ченский"}
+    companyIds: [390]
+    bio:
+      - {language: ru, text: "<p>Руководитель команды разработки в Ozon. На Go разрабатывает уже больше 5 лет. Ведет свой\
+            \ блог и курсы для разработчиков, активно выступает на конференциях.</p>"}
+    gitHub: moguchev
+    habr: moguchev
