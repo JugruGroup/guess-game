@@ -2777,7 +2777,7 @@ speakers:
     gitHub: alxmatorin
   - id: 164
     photoFileName: 0164.jpg
-    photoUpdatedAt: "2024-06-20T06:46:39Z"
+    photoUpdatedAt: "2024-07-12T14:48:16Z"
     name:
       - {language: en, text: "Maksim Dorofeev"}
       - {language: ru, text: "Максим Дорофеев"}
@@ -15734,22 +15734,16 @@ speakers:
     habr: willykolepniy
   - id: 1076
     photoFileName: 1076.jpg
-    photoUpdatedAt: 2017-05-10T15:32:48.117Z[UTC]
+    photoUpdatedAt: "2022-03-31T19:05:20Z"
     name:
       - {language: en, text: "Andrey Dmitriev"}
       - {language: ru, text: "Андрей Дмитриев"}
     companyIds: [291]
     bio:
-      - {language: en, text: "Graduated from the mathematics department of St. Petersburg State University. A programmer since\
-            \ school, a pragmatist in life and a co-owner of the business of organizing conferences for IT people. Developed\
-            \ JDK libraries at Sun Microsystems and Oracle for several years. Managed the mobile development team at QuickOffice.\
-            \ Led a distributed load testing team at NetCracker. Currently Director of Operations at JUG Ru Group. Tends to\
-            \ trust facts and figures."}
-      - {language: ru, text: "Окончил матмех СПбГУ. Программист со школы, прагматик в жизни и совладелец бизнеса по органи\
-            зации конференций для айтишников. Несколько лет разрабатывал библиотеки JDK в Sun Microsystems и Oracle. Руков\
-            одил группой мобильной разработки в компании QuickOffice. Был руководителем распределенной группы нагрузочного\
-            \ тестирования в NetCracker. В настоящее время директор по производству в JUG Ru Group. Склонен доверять факта\
-            м и цифрам."}
+      - {language: en, text: "<p>In IT since 2000. He built his career from a developer to the head of a department in an\
+            \ international company. Now he is a director at JUG Ru Group, where he develops promising areas of conferences.</p>"}
+      - {language: ru, text: "<p>В IT с 2000 года. Построил карьеру от разработчика до руководителя департамента в междуна\
+            родной компании. Сейчас &mdash; директор в JUG Ru Group, где развивает перспективные направления конференций.</p>"}
     twitter: it_improve
     habr: real_ales
   - id: 1077
@@ -28294,21 +28288,20 @@ speakers:
             ько."}
   - id: 1975
     photoFileName: 1975.jpg
-    photoUpdatedAt: 2021-11-08T11:06:22.462Z[UTC]
+    photoUpdatedAt: "2024-09-20T08:38:43Z"
     name:
       - {language: en, text: "Alexey Totmakov"}
       - {language: ru, text: "Алексей Тотмаков"}
-    companyIds: [635]
+    companyIds: [620]
     bio:
-      - {language: en, text: "Head of B2B development and Core Technologies at Kaspersky Lab. In programming since the age\
-            \ of 14, the first programming language is C++. I started my career as a software developer. Now I'm in charge\
-            \ of development, that is, I help developers do their work most efficiently. I study modern approaches to the\
-            \ organization of software development, the experience of successful companies and the engineering practices adopted\
-            \ in them."}
-      - {language: ru, text: "Руководитель разработки корпоративных продуктов и базовых технологий в Лаборатории Касперско\
-            го. В программировании с 14 лет, первый язык программирования — C++. Карьеру начинал разработчиком. Сейчас рук\
-            оводит разработкой, то есть помогает разработчикам делать их работу наиболее рационально. Изучает современные\
-            \ подходы к организации процессов разработки, опыт успешных компаний и принятые в них инженерные практики."}
+      - language: ru
+        text: "<p>Технический директор VK Tech. Более 20 лет занимается разработкой ПО и управлением технологиями. За свою\
+            \ карьеру успел поработать в крупных компаниях, таких как &laquo;Лаборатория Касперского&raquo; и Luxoft, где\
+            \ руководил командами и занимался созданием корпоративных B2B-продуктов и ключевых технологий.</p>\n<p>До VK Tech\
+            \ провел 14 лет в &laquo;Лаборатории Касперского&raquo;, где отвечал за развитие корпоративных решений, внедря\
+            л современные инженерные практики вроде &laquo;everything as code&raquo; и улучшал процессы, что помогло ускор\
+            ить разработку и повысить качество продуктов.</p>\n<p>Верит в важность открытости и командной работы, активно\
+            \ развивает внутренние практики open source и всегда рад делиться опытом с молодыми инженерами.</p>"
   - id: 1976
     photoFileName: 1976.jpg
     photoUpdatedAt: 2021-11-08T11:16:32.926Z[UTC]
@@ -39796,7 +39789,7 @@ speakers:
             а bare metal).</p>"}
   - id: 2765
     photoFileName: 2765.jpg
-    photoUpdatedAt: "2023-06-27T15:45:55Z"
+    photoUpdatedAt: "2024-08-05T12:59:34Z"
     name:
       - {language: en, text: "Andrey Sukhorukov"}
       - {language: ru, text: "Андрей Сухоруков"}
@@ -39807,12 +39800,12 @@ speakers:
             Rushing to where the project... feels bad\" is one of the mottos of continuing to be one of the few who come after\
             \ the \"successful\" ones. Has come a long way from testing and consulting to a buzzword called DevOps. Doesn't\
             \ promote approaches because most of them are sometimes pointless and ruthless...</p>"}
-      - {language: ru, text: "<p>Team Lead Devops. Антикризисный. Пират в мире девопса. Собирал команды в разных местах, р\
-            ешал кризисы, провел очень очень очень очень много собесов девопсов, чтобы понять, как все плохо. &laquo;Спеши\
-            м туда, где проекту... плохо&raquo; &mdash; один из девизов, которые позволяют продолжать быть одним из немног\
-            их, кто приходит после &laquo;успешных&raquo;. Прошел долгой дорогой из тестирования и консалтинга в модное сл\
-            ово под названием DevOps. Не продвигает подходы, так как большая часть из них порой бессмысленна и беспощадна\
-            ...</p>"}
+      - language: ru
+        text: "<p>Team Lead DevOps. Антикризисный. Пират в мире девопса. Собирал команды в разных местах, решал кризисы, п\
+            ровел очень-очень много собеседований девопсов, чтобы понять, как все плохо.</p>\n<p>Спикер конференций, митап\
+            ов, подкастов, автор на <a href=\"https://habr.com/ru/users/devops_sergeant/\">Хабре</a>. Экспериментатор и ис\
+            следователь процессов управления командами.</p>"
+    habr: devops_sergeant
   - id: 2766
     photoFileName: 2766.jpg
     photoUpdatedAt: "2023-06-01T11:59:11Z"
@@ -43021,7 +43014,7 @@ speakers:
             ференции и участвует в хакатонах."}
   - id: 2976
     photoFileName: 2976.jpg
-    photoUpdatedAt: "2023-10-19T08:50:58Z"
+    photoUpdatedAt: "2024-07-16T12:51:37Z"
     name:
       - {language: en, text: "Kira Kuzmenko"}
       - {language: ru, text: "Кира Кузьменко"}
@@ -43032,12 +43025,11 @@ speakers:
             \ of NEWHR &mdash; an international recruitment agency.</li>\n<li>Geekjob.ru &mdash; anonymous IT job search service.</li>\n\
             <li>TechMarketResearch &mdash; global IT market research.</li>\n<li>Hello, New Job! &mdash; author's course about\
             \ job search in modern realities.</li>\n</ul>"
-      - {language: ru, text: "IT-рекрутер с опытом более 15 лет. Фаундер нескольких HR tech-проектов. </p><p><br></p><ul><li>NEWHR\
-            \ Recruiting — международное рекрутинговое агентство.</li><li>Geekjob.ru — сервис анонимного поиска работы в IT.</li><li>NEWHR\
-            \ Data— исследования глобального IT-рынка.</li><li>Hello, New Job! — авторский курс про поиск работы в совреме\
-            нных реалиях.</li></ul><p><br></p><p><span style=\"background-color: rgb(32, 38, 46);\">Автор подкаста \"Собес\
-            \" — лучший подкаст про поиск работы за рубежом.</span></p><p><span style=\"background-color: rgb(32, 38, 46);\"\
-            >Пишу про работу и личное в ТГ-канале \"Рекрутинг, котики и апокалипсис\"</span>"}
+      - {language: ru, text: "<p>18 лет в IT-рекрутинге (VK, Связном, Banki.ru). Основатель международного рекрутингового\
+            \ агентства NEWHR и центра исследований IT-рынка NEWHR Data. CEO Geekjob.ru &mdash; сервиса анонимного поиска\
+            \ работы в IT. Автор подкаста <a href=\"https://podcast.ru/1638899174/e\">&laquo;Собес&raquo;</a> про поиск ра\
+            боты за рубежом. Автор курса-интенсива &laquo;Hello New Job!&raquo; про поиск работы в современных реалиях. Ве\
+            дет <a href=\"https://t.me/kirafound\">ТГ-канал</a> про жизнь внутри рекрутинга.</p>"}
     twitter: kuzmenko_kira
     habr: newhr
   - id: 2977
@@ -51292,3 +51284,523 @@ speakers:
             \ блог и курсы для разработчиков, активно выступает на конференциях.</p>"}
     gitHub: moguchev
     habr: moguchev
+  - id: 3527
+    photoFileName: 3527.jpg
+    photoUpdatedAt: "2024-05-08T15:02:20Z"
+    name:
+      - {language: en, text: "Anna Vasilyeva"}
+      - {language: ru, text: "Анна Васильева"}
+    companyIds: [1226]
+    bio:
+      - language: ru
+        text: "<p>Окончила ВШМ СПбГУ по специальности &laquo;управление персоналом&raquo;, уже 20 лет верна полученной про\
+            фессии. Прошла разнообразный путь как в западных производственных компаниях (Lindstrom), так и в IT (i-Free, EPAM).\
+            \ Сейчас &mdash; Head of HR BP в Reksoft.</p>\n<p>Испытывает особую профессиональную любовь к теме корпоративн\
+            ой культуры и ценностей, ведет консалтинговые проекты в этой области.</p>"
+  - id: 3528
+    photoFileName: 3528.jpg
+    photoUpdatedAt: "2024-07-23T11:48:25Z"
+    name:
+      - {language: en, text: "Alla Guzova"}
+      - {language: ru, text: "Алла Гузова"}
+    companyIds: [1329]
+    bio:
+      - language: ru
+        text: "<p>Эксперт по корпоративному бренду и коммуникациям, бренд-стратег, руководитель проектов, предприниматель\
+            .</p>\n<p>С 2006 года в коммуникациях, с 2013-го ー в IT, с 2016-го ー в менеджменте. В 2022-м получила степень\
+            \ MBA бизнес-школы Университета Ноттингема. Занималась и руководила коммуникациями и брендом работодателя в IT-к\
+            омпаниях (телеком, FinTech, AdTech). Работала директором проектов в старейшем брендинговом агентстве страны.</p>\n\
+            <p>Основательница и заведующая лаборатории импакт-проектов. Партнер консалтинговых, маркетинговых и HR-агентст\
+            в. Резидент и ментор Технопарка Санкт-Петербурга; эксперт питч-сессий. Автор ТГ-каналов и подкаста про брендин\
+            г, смыслы и управление.</p>"
+  - id: 3529
+    photoFileName: 3529.jpg
+    photoUpdatedAt: "2024-08-20T16:58:48Z"
+    name:
+      - {language: en, text: "Elizaveta Vasilenko"}
+      - {language: ru, text: "Елизавета Василенко"}
+    companyIds: [674]
+    bio:
+      - {language: ru, text: "Руководитель продукта, продуктовая команда найма."}
+  - id: 3530
+    photoFileName: 3530.jpg
+    photoUpdatedAt: "2024-07-31T12:06:08Z"
+    name:
+      - {language: en, text: "Goar Ananyan"}
+      - {language: ru, text: "Гоар Ананян"}
+    companyIds: [1330]
+    bio:
+      - {language: ru, text: "<p>Международный эксперт в сфере HR, развития и обучения бизнеса. Предприниматель.</p>"}
+  - id: 3531
+    photoFileName: 3531.jpg
+    photoUpdatedAt: "2024-08-07T11:18:12Z"
+    name:
+      - {language: en, text: "Lyubov Soboleva"}
+      - {language: ru, text: "Любовь Соболева"}
+    companyIds: [1331]
+    bio:
+      - {language: ru, text: "Основатель и руководитель креативной студии in-house в крупнейшем IT-медиа. Креативный страт\
+            ег: создала десятки стратегий коммуникаций IT-брендов. Соорганизатор исследования IT-брендов."}
+    habr: Soboleva
+  - id: 3532
+    photoFileName: 3532.jpg
+    photoUpdatedAt: "2024-08-20T17:07:03Z"
+    name:
+      - {language: en, text: "Katya Verkina"}
+      - {language: ru, text: "Катя Веркина"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Отвечает за HR Brand и EJM в Яндексе (HQ). Строит отношения центральной функции с основны\
+            ми стейкхолдерами: СЕО и HRD бизнесов. Отвечает на вопрос, зачем нам все еще делать единый DevRel и почему нуж\
+            ен общий флоу найма и адаптации.</p>"}
+  - id: 3533
+    photoFileName: 3533.jpg
+    photoUpdatedAt: "2024-08-13T14:57:14Z"
+    name:
+      - {language: en, text: "Ekaterina Elyazyan"}
+      - {language: ru, text: "Екатерина Элязян"}
+    companyIds: [1172]
+    bio:
+      - language: ru
+        text: "<p>В сфере HR более 8 лет, последние 4 года фокусируется на T&amp;D. Работала в ВТБ, Changellenge&gt;&gt;,\
+            \ Литрес. Сейчас отвечает за оценку и развитие сотрудников в Звуке.</p>\n<p>Окончила ВШЭ по направлению &laquo;П\
+            сихоаналитический коучинг и бизнес-консультирование&raquo;. Коуч ICF. Помогает людям стать счастливее и осущес\
+            твить свои мечты.</p>\n<p>Ведет подкаст <a href=\"https://recipeforsuccess.mave.digital/\">&laquo;Рецепт успех\
+            а&raquo;</a>.</p>"
+  - id: 3534
+    photoFileName: 3534.jpg
+    photoUpdatedAt: "2024-08-11T20:40:27Z"
+    name:
+      - {language: en, text: "Yana Ivanova"}
+      - {language: ru, text: "Яна Иванова"}
+    companyIds: [635]
+    bio:
+      - {language: ru, text: "<p>10 лет опыта работы в HR таких компаний, как Kaspersky, PwC, ДИТ Москвы, инвестиционной к\
+            омпании &laquo;АТОН&raquo;. Работала с рынками Азиатско-Тихоокеанского региона, Ближнего Востока, Африки, Турц\
+            ии, Латинской Америки, Европы, Северной Америки и России.</p>"}
+  - id: 3535
+    photoFileName: 3535.jpg
+    photoUpdatedAt: "2024-08-05T13:06:17Z"
+    name:
+      - {language: en, text: "Aleksandr Sertakov"}
+      - {language: ru, text: "Александр Сертаков"}
+    companyIds: []
+    bio:
+      - language: en
+        text: "<pre class=\"ql-syntax\" spellcheck=\"false\">Chief Financial Architect/Officer, Lean management evangelist,\
+            \ \"True Finance\" channel author\n\n\n\n\n</pre>"
+      - {language: ru, text: "<p>Финансовый архитектор / директор, евангелист бережливого управления. Автор Telegram-канал\
+            а <a href=\"https://t.me/truefinance\">&laquo;Тру финансы&raquo;</a>.</p>"}
+    habr: Sertakov83
+  - id: 3536
+    photoFileName: 3536.jpg
+    photoUpdatedAt: "2024-07-22T11:39:22Z"
+    name:
+      - {language: en, text: "Tatyana Belyaeva"}
+      - {language: ru, text: "Татьяна Беляева"}
+    companyIds: [1332]
+    bio:
+      - {language: ru, text: "<p>Бизнес-психолог, executive-коуч, преподаватель. Автор и ведущая подкаста <a href=\"https://psyhoanaliz.mave.digital/\"\
+            >&laquo;Психологический анализ бизнеса&raquo;</a>. Более 14 лет с удовольствием развивает людей, команды, орга\
+            низации.</p>"}
+  - id: 3537
+    photoFileName: 3537.jpg
+    photoUpdatedAt: "2024-07-19T12:43:28Z"
+    name:
+      - {language: en, text: "Ksenia Romanova"}
+      - {language: ru, text: "Ксения Романова"}
+    companyIds: [410]
+    bio:
+      - language: ru
+        text: "<p>13 лет в IT. Отвечала за B2B-маркетинг и PR, а затем &mdash; за developer relations в продуктовых компан\
+            иях.</p>\n<p>Питает слабость к open source (и особенно к Apache Ignite).</p>\n<p>Энтузиаст развития культуры developer\
+            \ relations в России, организатор DevRel-завтраков и митапов в Петербурге, участник ПК DevRelConf.</p>\n<p>Вед\
+            ет <a href=\"https://t.me/devrel_sklad\">Telegram-канал</a> с краткими конспектами статей и заметками по developer\
+            \ relations, community management и open source.</p>"
+    habr: kseniya_ro
+  - id: 3538
+    photoFileName: 3538.jpg
+    photoUpdatedAt: "2024-07-12T11:17:15Z"
+    name:
+      - {language: en, text: "Alexander Prokhorov"}
+      - {language: ru, text: "Александр Прохоров"}
+    companyIds: []
+    bio:
+      - language: ru
+        text: "<p>Автор книги <a href=\"https://www.artlebedev.ru/izdal/russkaya-model-upravlenia/\">&laquo;Русская модель\
+            \ управления&raquo;</a>. Опубликовал две книги и более тридцати журнальных статей о проблемах русского управле\
+            ния.&nbsp;</p>\n<p>Преподает в Ярославском государственном университете имени П. Г. Демидова.</p>\n<p>Ранее ра\
+            ботал финансовым менеджером, заместителем гендиректора торговой компании, директором по персоналу и социальным\
+            \ вопросам, директором по развитию, советником губернатора по экономическим вопросам; консультировал по вопрос\
+            ам управления.</p>"
+  - id: 3539
+    photoFileName: 3539.jpg
+    photoUpdatedAt: "2024-08-12T13:50:07Z"
+    name:
+      - {language: en, text: "Veronica Ilyina"}
+      - {language: ru, text: "Вероника Ильина"}
+    companyIds: [1333]
+    bio:
+      - language: ru
+        text: "<p>Больше 9 лет работает в HR и коммуникациях с айтишниками. Почти 3 года была Head of DevRel в Додо, приве\
+            ла компанию в топ-9 ИТ-брендов наряду с Яндексом, Авито и Т-Банком.</p>\n<p>Последний год консультирует компан\
+            ии по построению внешних и внутренних коммуникаций с сотрудниками. И первое, что у всех запрашивает, &mdash; д\
+            анные по опросам вовлеченности, так что повидала всякое.</p>"
+    twitter: catwomenko
+    habr: catwomenko
+  - id: 3540
+    photoFileName: 3540.jpg
+    photoUpdatedAt: "2024-09-20T14:14:15Z"
+    name:
+      - {language: en, text: "Victoria Lashina"}
+      - {language: ru, text: "Виктория Лашина"}
+    companyIds: [648]
+    bio:
+      - language: ru
+        text: "<p>Более 5 лет опыта в HR в разных направлениях: от ИТ-рекрутинга до адаптации. Начинала с развития образов\
+            ательного стартапа для школьников. С тех пор &mdash; амбассадор работы с молодыми талантами.</p>\n<p>Сейчас в\
+            \ МТС занимается стажерскими программами, спецпроектами и карьерным консультированием.</p>\n<p>6 лет психологи\
+            ческого образования. Профили: психологическое консультирование, организационная психология.</p>"
+  - id: 3541
+    photoFileName: 3541.jpg
+    photoUpdatedAt: "2024-09-24T11:57:28Z"
+    name:
+      - {language: en, text: "Ekaterina Sereda"}
+      - {language: ru, text: "Екатерина Середа"}
+    companyIds: [689]
+    bio:
+      - language: ru
+        text: "<p>Руководит командой подбора и привлечения на стажировку в Яндексе (HQ). Отвечает за найм и DevRel-активно\
+            сти для молодых специалистов.</p>\n<p>Более 8 лет в HR, включая рекрутмент, управление талантами, бренд работо\
+            дателя, центры оценки и развития, работу с молодежью и бизнес-партнерство. До прихода в Яндекс работала в Kaspersky,\
+            \ Coca-Cola HBC и MSD Pharmaceuticals.</p>"
+  - id: 3542
+    photoFileName: 3542.jpg
+    photoUpdatedAt: "2024-10-03T11:24:45Z"
+    name:
+      - {language: en, text: "Evgeniya Rasskazova"}
+      - {language: ru, text: "Евгения Рассказова"}
+    companyIds: [620]
+    bio:
+      - {language: ru, text: "<p>HR по призванию, профессии и образованию уже 17 лет. Последние 8 лет развивает направлени\
+            е по работе с молодежью в VK: создает стратегические проекты по развитию Employer-бренда, развивает культуру р\
+            аботы со стажерами и junior-специалистами и отвечает за их найм.</p>"}
+  - id: 3543
+    photoFileName: 3543.jpg
+    photoUpdatedAt: "2024-07-23T13:01:49Z"
+    name:
+      - {language: en, text: "Andrey Onuchin"}
+      - {language: ru, text: "Андрей Онучин"}
+    companyIds: [1334]
+    bio:
+      - language: ru
+        text: "<p>Партнер компании &laquo;ЭКОПСИ Консалтинг&raquo;, руководитель практики &laquo;Социология бизнеса&raquo;,\
+            \ старший научный сотрудник кафедры социальной психологии факультета психологии МГУ им. М. В. Ломоносова. Боле\
+            е 20 лет изучает вопросы вовлеченности персонала и удовлетворенности сотрудников своей работой.</p>\n<p>Автор\
+            \ <a href=\"https://istina.msu.ru/workers/852357/publications/\">публикаций</a> в области социальной и организ\
+            ационной психологии, а также эффективного управления персоналом.</p>"
+  - id: 3544
+    photoFileName: 3544.jpg
+    photoUpdatedAt: "2024-07-23T13:11:28Z"
+    name:
+      - {language: en, text: "Alina Mikhel"}
+      - {language: ru, text: "Алина Михель"}
+    companyIds: [1335]
+    bio:
+      - language: ru
+        text: "<p>Основатель проекта MarHR: HR-маркетинг для HR.</p>\n<p>Основатель LifeHack: лаборатории продуктивности д\
+            ля тех, кто работает мозгом.</p>\n<p>Тренер NIT, ICF.</p>\n<p>Опыт управления проектами и командами &mdash; бо\
+            лее 16 лет.</p>"
+  - id: 3545
+    photoFileName: 3545.jpg
+    photoUpdatedAt: "2024-08-02T11:37:02Z"
+    name:
+      - {language: en, text: "Konstantin Shcheglov"}
+      - {language: ru, text: "Константин Щеглов"}
+    companyIds: [1336]
+    bio:
+      - language: ru
+        text: "<p>Работает на позициях CIO / CTO более 16 лет, активно занимается наймом и обучением команд с 2006 года. О\
+            бладает опытом выстраивания обучения как &laquo;с нуля&raquo;, так и с тонким тюнингом обучения больших команд\
+            \ разработки (более 150 человек).</p>\n<p>Имеет опыт работы CIO в двух компаниях, в разное время входивших в т\
+            оп-20 самых дорогих компаний Рунета &mdash; Mamba и SuperJob.</p>"
+    habr: gnuman
+  - id: 3546
+    photoFileName: 3546.jpg
+    photoUpdatedAt: "2024-08-15T15:06:29Z"
+    name:
+      - {language: en, text: "Nataliya Makarova"}
+      - {language: ru, text: "Наталия Макарова"}
+    companyIds: [1337]
+    bio:
+      - {language: en, text: "<p>Having over 12 years of experience in developer relations, Natalya has been instrumental\
+            \ in leading a range of projects at Yandex since 2013. Notably, she held the role of program manager for ML conferences\
+            \ in Moscow and Berlin, and contributed to the development of technological communities and ecosystems surrounding\
+            \ new regional offices. Furthermore, she played a key role in engaging with the C++ developer community, co-founding\
+            \ and managing the national working group for standardizing the C++ language. For the past 3.5 years at SberDevices,\
+            \ she has been responsible for directing the developer relations domain, promoting technology, GIgaChat DevRel\
+            \ Partner. Presently, she provides consultancy services specializing in DevRel strategy.</p>"}
+      - language: ru
+        text: "<p>Опыт работы в сфере коммуникации с разработчиками &mdash; более 12 лет. С 2013 года вела проекты в Яндек\
+            се &mdash; была программным менеджером ML-конференций ШАД в Москве и Берлине, развивала технологические сообще\
+            ства и экосистемы вокруг новых региональных офисов. Много работала с сообществом С++ разработчиков. Соосновате\
+            ль и менеджер национальной рабочей группы по стандартизации C++.</p>\n<p>В SberDevices последние 3,5 года руко\
+            водила направлением Developer Relations и продвижения технологий, была DevRel-партнером GigaChat. Сейчас &mdash;\
+            \ консультант в области стратегии DevRel. Ведет <a href=\"https://t.me/My_DevRel\">Telegram-канал</a>, в котор\
+            ом пишет про свой опыт, делится практиками и полезными материалами.&nbsp;</p>"
+    habr: mangeld
+  - id: 3547
+    photoFileName: 3547.jpg
+    photoUpdatedAt: "2024-08-05T13:49:28Z"
+    name:
+      - {language: en, text: "Oksana Zueva"}
+      - {language: ru, text: "Оксана Зуева"}
+    companyIds: [3]
+    bio:
+      - language: ru
+        text: "<p>В 2ГИС отвечает за обучение сотрудников ИТ-направления. &laquo;Лучший тренер-фасилитатор России 2017&raquo;,\
+            \ эксперт по управленческим навыкам и коммуникациям, карьерный консультант.</p>\n<p>Автор и ведущая программ д\
+            ля руководителей и команд: курса для развития управленческих навыков &laquo;Быстрый старт&raquo;, курса &laquo;П\
+            роведение командных встреч для руководителей&raquo;, курса по постановке и достижению целей &laquo;Школа лично\
+            й эффективности&raquo;.</p>"
+  - id: 3548
+    photoFileName: 3548.jpg
+    photoUpdatedAt: "2023-12-06T09:09:26Z"
+    name:
+      - {language: en, text: "Yana Selezneva"}
+      - {language: ru, text: "Яна Селезнева"}
+    companyIds: [3]
+    bio:
+      - {language: en, text: "Head of the 2GIS Training Centre and Business School. \"Best Facilitator Trainer of Russia 2016\"\
+            . Professional coach.&nbsp;Yana developed corporate training for large international companies in HoReCa, fintech,\
+            \ telecom. Author of systemic projects to develop managerial skills: \"2GIS Corporate University\", \"School of\
+            \ Management\", \"School of Leadership\", \"School of Team Leaders\", \"School of Facilitation\" and others."}
+      - language: ru
+        text: "<p>Руководитель Учебного центра и Бизнес-школы 2ГИС. &laquo;Лучший тренер-фасилитатор России 2016&raquo;. П\
+            рофессиональный коуч.&nbsp;</p>\n<p>Развивала корпоративное обучение крупных международных компаний в сферах HoReCa,\
+            \ финтех, телеком. Автор системных проектов развития управленческих навыков: &laquo;Корпоративный Университет\
+            \ 2ГИС&raquo;, &laquo;Школа управления&raquo;, &laquo;Школа лидерства&raquo;, &laquo;Школа Тимлидов&raquo;, &laquo;Ш\
+            кола фасилитации&raquo; и других.</p>"
+    habr: Yana_Sel
+  - id: 3549
+    photoFileName: 3549.jpg
+    photoUpdatedAt: "2024-09-26T11:50:20Z"
+    name:
+      - {language: en, text: "Vladimir Demchenkov"}
+      - {language: ru, text: "Владимир Демченков"}
+    companyIds: [613]
+    bio:
+      - {language: ru, text: "<p>Руководитель дирекции по подбору ИТ-персонала в Альфа-Банке. Выстраивает команды ИТ-подбо\
+            ра, занимается аутстаф-менеджментом и массовым подбором ИТ-специалистов. В Альфа-Банке вместе с командой нанял\
+            \ более 12 000 специалистов.</p>"}
+  - id: 3550
+    photoFileName: 3550.jpg
+    photoUpdatedAt: 2024-08-06T07:47Z
+    name:
+      - {language: en, text: "Andrey Chakchurin"}
+      - {language: ru, text: "Андрей Чакчурин"}
+    companyIds: [440]
+    bio:
+      - {language: ru, text: "<p>HR-директор подразделения hitch в red_mad_robot. Более 10 лет выводим IT-специалистов на\
+            \ проекты отечественных корпораций. Только за последний год моя команда провела около 800 собеседований, чтобы\
+            \ отобрать лучших разработчиков (и не только). Поэтому я в числе первых узнаю про боли и потребности IT-компан\
+            ий, особенно в вопросах кадров и карьеры.</p>"}
+  - id: 3551
+    photoFileName: 3551.jpg
+    photoUpdatedAt: "2024-09-03T09:03:11Z"
+    name:
+      - {language: en, text: "Natalia Liubimova"}
+      - {language: ru, text: "Наталья Любимова"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Head of cross-functional analytics and reporting at T-Bank. Expert in BI analytics with more\
+            \ than 10 years of experience in large companies: Yota Networks, Luxoft Professional, T-Bank. Over the last 7\
+            \ years, the main focus of his work has been on building a service to provide analytics and reporting on the employee\
+            \ life cycle for all levels of management in the company: HR, recruiting, HRBP, CEO, CFO, business leaders and\
+            \ team leaders. In particular, Luxoft launched from scratch a centralized center of expertise for HR analytics\
+            \ and reporting, which was recognized as one of the company's best operational services by user evaluation. At\
+            \ T-Bank, one of the priorities is the development of HR analytics to improve the company's operational efficiency.</p>"}
+      - {language: ru, text: "Руководитель отдела кросс-функциональной аналитики и отчетности в Т-Банке. Эксперт в области\
+            \ BI аналитики со стажем более 10 лет в крупных компаниях: Yota Networks, Luxoft Professional, T-Банк. На прот\
+            яжении последних 7 лет основной фокус в работе связан с выстраиванием сервиса предоставления аналитики и отчет\
+            ности про жизненный цикл сотрудников для всех уровней менеджмента в компании: руководителей HR, рекрутмента, HRBP,\
+            \ CEO, CFO, бизнес-лидеров и руководителей команд. В частности, в Luxoft был с нуля запущен централизованный ц\
+            ентр экспертизы по HR аналитике и отчетности, который получил признание как один из лучших операционных сервис\
+            ов компании по оценке пользователей. В Т-Банке один из приоритетов – развитие HR аналитики для повышения опера\
+            ционной эффективности деятельности компании."}
+  - id: 3552
+    photoFileName: 3552.jpg
+    photoUpdatedAt: "2024-09-03T11:49:34Z"
+    name:
+      - {language: en, text: "Tatiana Elistratova"}
+      - {language: ru, text: "Татьяна Елистратова"}
+    companyIds: [1338]
+    bio:
+      - language: ru
+        text: "<p><strong>Лидершип коуч, конфликтолог, корпоративный медиатор и карьерный стратег</strong>. Работаю в IT к\
+            орпорации. Pet projects &ndash; курсы по управлению конфликтами и карьерой, консалтинг.</p>\n<p>Экс-HR BP (хот\
+            я, разве можно быть в HR с приставкой &laquo;экс&raquo;?). Рулила DevRel и своим небольшим кадровым агентством\
+            .</p>\n<p><strong>Помогаю экспертам в управлении карьерой и конфликтами</strong> &ndash; с опорой на ценности\
+            , фокусом на результат и отношения. В своем телеграм-канале <a href=\"https://t.me/Conflict_Mgmt\" target=\"_blank\"\
+            \ rel=\"noopener noreferrer\">https://t.me/Conflict_Mgmt</a> пишу про самореализацию, конфликты, работу с людь\
+            ми и всё, что между.</p>\n<p><strong>22 года играю в игру &laquo;Назови себя сам&raquo;</strong>. Почти 10 лет\
+            \ &mdash; в науке, преподавании и социальной работе, 2 &mdash; в продажах, 2 &mdash; в HR предпринимательстве\
+            , 8 &ndash; в HR и коучинге для IT.</p>\n<p>Люблю время от времени отвечать себе на вопрос <strong>\"кто я?\"\
+            </strong> и менять ответ.</p>\n<p>Играю в оркестре разные скрипки, дирижерство тоже люблю.</p>\n<p>Верю, что ч\
+            еловек &mdash; многогранная шкатулка талантов, и способен на все, что захочет.</p>"
+    habr: Zingara_tat
+  - id: 3553
+    photoFileName: 3553.jpg
+    photoUpdatedAt: "2024-09-25T08:55:07Z"
+    name:
+      - {language: en, text: "Egor Yatsenko"}
+      - {language: ru, text: "Егор Яценко"}
+    companyIds: [1339]
+    bio:
+      - language: ru
+        text: "<p>10 лет в рекрутменте. Автор книги &laquo;IT-рекрутмент: Как найти лучших, когда всё вокруг горит&raquo;.&nbsp;</p>\n\
+            <p>6 лет в обучении. Основатель школы Sourcing School, где обучают сорсингу, рекрутменту, копирайтингу, перего\
+            ворам для HR и нанимающих менеджеров.&nbsp;</p>\n<p>Автор конференций Index Tech и Index Source. Ведет Telegram-к\
+            анал по сорсингу <a href=\"https://t.me/booleansearch\">Boolean Search Hacks</a>, а также канал о текстах<span\
+            \ style=\"color: #1f6bc0;\"> </span><a href=\"https://t.me/pishisvishi\">ПишиСвищи</a>.</p>\n<p>Кроме того, Ег\
+            ор &mdash; режиссер, сценарист и автор фильма <a href=\"https://www.youtube.com/watch?v=R4OHWyjXHBA&amp;ab_channel=%D0%95%D0%B3%D0%BE%D1%80%D0%AF%D1%86%D0%B5%D0%BD%D0%BA%D0%BE%7C%7CEgorYatsenko\"\
+            >&laquo;Собеседование&raquo;</a> и различных корпоративных сериалов.</p>"
+  - id: 3554
+    photoFileName: 3554.jpg
+    photoUpdatedAt: "2024-08-27T07:29:43Z"
+    name:
+      - {language: en, text: "Vera Manevich"}
+      - {language: ru, text: "Вера Маневич"}
+    companyIds: [390]
+    bio:
+      - {language: ru, text: "Более 18 лет в HR в различных проявлениях пипл-менеджмента и всего с ним связанного. По обра\
+            зованию айтишник, а по призванию — HR. Много лет занимается HR-«директорством»: сейчас — IT HRD в Ozon.</p><p>В\
+            ере намного ближе «human potential», а не «human resources». Амбассадор культуры оффбординга в мире. Преподает\
+            , пишет статьи, выступает на крупных IT-конференциях и развивает HR-индустрию. К HR относится как к продукту."}
+    habr: VeraManevich
+  - id: 3555
+    photoFileName: 3555.jpg
+    photoUpdatedAt: "2024-08-27T07:39:16Z"
+    name:
+      - {language: en, text: "Alexey Isaev"}
+      - {language: ru, text: "Алексей Исаев"}
+    companyIds: [1340]
+    bio:
+      - {language: ru, text: "<p>Более 12 лет занимается tech-рекрутментом для крупных компаний (Яндекс, Т-Банк) и стартап\
+            ов (Revolut, Miro). Настоящий фанат профессии и продуктового подхода. Cейчас &mdash; партнер в <a href=\"https://getmatch.ru/\"\
+            >getmatch:</a>&nbsp;группе HR tech-продуктов и сервисов, которые используют компании по всему миру.</p>"}
+    habr: AlexIsaev
+  - id: 3556
+    photoFileName: 3556.jpg
+    photoUpdatedAt: "2024-08-15T12:25:52Z"
+    name:
+      - {language: en, text: "Asya Isakova"}
+      - {language: ru, text: "Ася Исакова"}
+    companyIds: []
+    bio:
+      - language: en
+        text: "<p>Hi, my name is Asya Isakova, and I&rsquo;m an organizational psychologist, trainer, certified Management\
+            \ 3.0 practitioner and a lecturer in Barcelona School of Management. In my last position as a Head of People and\
+            \ Culture in an American fintech company, I was building an organizational culture using GitHub as a main tool.\
+            \ And it was quite something! Now I&rsquo;m wandering around telling the folks how it worked.&nbsp;</p>\n<p>I\
+            \ follow evidence-based practices in work psychology, and can easily prove that the main thing in almost any job\
+            \ is building human connections. Also, I know a lot of scary but interesting terms about organizational culture\
+            \ and structure and can talk about it for hours (please do stop me if you may!). Last but not the least, I really\
+            \ love drinking black tea with some home-grown thyme.</p>"
+      - language: ru
+        text: "<p>Организационный психолог, тренер, сертифицированный практик Management 3.0, приглашенный лектор Школы ме\
+            неджмента при университете Pompeu Fabra в Барселоне. Автор Telegram-канала <a href=\"https://t.me/integritycompass\"\
+            >&laquo;Компас Конгруэнтности&raquo;</a>, в котором пишет про управление командами в IT и digital.</p>\n<p>Пос\
+            ледняя должность Аси в найме &mdash; Head of People &amp; Culture в полностью распределенной команде американс\
+            кого финтеха Inca Digital. Там за 2,5 года она выстроила классную культуру, используя GitHub как основной инст\
+            румент.</p>\n<p>Практикует доказательный подход в работе и запросто расскажет вам о том, почему главное в любо\
+            й работе &mdash; строить человеческие отношения с людьми. А еще знает много страшных и интересных терминов на\
+            \ тему организационной культуры и структуры и любит пить чай с чабрецом, который выращивает на подоконнике.</p>"
+    habr: asya_isakova
+  - id: 3557
+    photoFileName: 3557.jpg
+    photoUpdatedAt: "2024-02-06T11:48:42Z"
+    name:
+      - {language: en, text: "Kristina Karpinskaya"}
+      - {language: ru, text: "Кристина Карпинская"}
+    companyIds: [1341]
+    bio:
+      - {language: en, text: "Global HR Business Partner в американском IT-юникорне долины. «У каждого есть талант, задача\
+            \ — его проявить!» — профессиональное кредо Кристины и принцип по жизни.HR по призванию, профессии и образован\
+            ию. Более 14 лет в HR, 8 из них — в IT-индустрии. Выстраивает систему HR бизнес-партнерства почти на всех мате\
+            риках планеты. Мастер кросс-культурной коммуникации, амбассадор HR-партнерства и зрелого менеджмента. Професси\
+            ональный коуч."}
+      - {language: ru, text: "HRD в Welltory. Ex-Global HR Business Partner в американском IT-юникорне Долины. «У каждого\
+            \ есть талант, задача — его проявить!» — профессиональное кредо Кристины и принцип по жизни.HR по призванию, п\
+            рофессии и образованию. Более 14 лет в HR, 8 из них — в IT-индустрии. Выстраивает систему HR бизнес-партнерств\
+            а почти на всех материках планеты. Мастер кросс-культурной коммуникации, амбассадор HR-партнерства и зрелого м\
+            енеджмента. Профессиональный коуч."}
+  - id: 3558
+    photoFileName: 3558.jpg
+    photoUpdatedAt: "2024-08-20T16:46:23Z"
+    name:
+      - {language: en, text: "Daniil Pilipenko"}
+      - {language: ru, text: "Даниил Пилипенко"}
+    companyIds: [1342]
+    bio:
+      - language: ru
+        text: "<p>Выпускник МГУ имени М. В. Ломоносова, кандидат наук.</p>\n<p>Разработчик с 2004 года (основные технологи\
+            и &mdash; Java, PHP и frontend), руководитель разработки с 2008-го.</p>\n<p>Программный директор факультета backend-р\
+            азработки, автор курсов и старший преподаватель в Skillbox.</p>\n<p>Автор курсов и программ обучения, ведущий\
+            \ вебинаров, лектор и преподаватель в Российском обществе &laquo;Знание&raquo;, МФТИ, РАНХиГС, АИС, Иннотех, GeekBrains,\
+            \ Skillfactory и Яндекс Практикуме.</p>\n<p>Сертифицированный карьерный коуч (CareerWay Inc., ICF).</p>\n<p>Ди\
+            ректор центра подбора IT-специалистов SymbioWay.</p>"
+    gitHub: sortedmap
+    habr: SortedMap
+  - id: 3559
+    photoFileName: 3559.jpg
+    photoUpdatedAt: "2024-08-23T11:22:28Z"
+    name:
+      - {language: en, text: "Tatiana Dyakonova"}
+      - {language: ru, text: "Татьяна Дьяконова"}
+    companyIds: [611]
+    bio:
+      - language: ru
+        text: "<p>Более 15 лет в HR. Начала свою карьеру в Microsoft, сейчас &mdash; директор департамента по управлению п\
+            ерсоналом Tech в Авито.</p>\n<p>Любит свою профессию за множество функций внутри: менеджмент, психологию, анал\
+            итику, продукт, проекты, процессы, маркетинг. Убеждена, что в HR можно учиться всю жизнь: это целый мир!</p>"
+  - id: 3560
+    photoFileName: 3560.jpg
+    photoUpdatedAt: "2024-07-19T14:16:40Z"
+    name:
+      - {language: en, text: "Sergey Khudovekov"}
+      - {language: ru, text: "Сергей Худовеков"}
+    companyIds: [1343]
+    bio:
+      - language: ru
+        text: "<p class=\"p1\">Старший партнер Paper Planes &mdash; первого в России агентства, использующего методы марке\
+            тинга, основанные на данных. В числе клиентов агентства &mdash; Газпромнефть-Цифровые решения, Альфа-Банк, Гри\
+            натом, Одноклассники, Дзен, &laquo;Мое дело&raquo;, Workle, Иви, Grid Dynamics и другие компании.</p>\n<p class=\"\
+            p1\">Эксперт в области HR-маркетинга, HR-стратегии, повышения кадровой эффективности, внешних и внутренних ком\
+            муникаций, управления путешествием потребителя, сотрудника и кандидата.</p>\n<p class=\"p1\">Соавтор книги &laquo;В\
+            \ погоне за кадрами&raquo; про маркетинг в HR.</p>"
+  - id: 3561
+    photoFileName: 3561.jpg
+    photoUpdatedAt: "2024-09-20T14:10:05Z"
+    name:
+      - {language: en, text: "Alexey Voropaev"}
+      - {language: ru, text: "Алексей Воропаев"}
+    companyIds: []
+    bio:
+      - {language: ru, text: "<p>Более 15 лет в роли CIO / CTO развивает ИТ-системы, команды, процессы, взаимодействие ИТ\
+            \ с бизнесом в таких отраслях, как розничная торговля, страхование, производство.</p>"}
+  - id: 3562
+    photoFileName: 3562.jpg
+    photoUpdatedAt: "2024-09-24T15:42:59Z"
+    name:
+      - {language: en, text: "Elena Sadykova"}
+      - {language: ru, text: "Елена Садыкова"}
+    companyIds: []
+    bio:
+      - language: ru
+        text: "<p>Более 13 лет в управлении персоналом в инхаус и консалтинге, весь опыт &mdash; в IT-индустрии. Занимала\
+            \ позиции от руководителя направления до директора по операционной эффективности и управлению персоналом.</p>\n\
+            <p>По первому образованию &mdash; математик, сейчас &mdash; магистрант в Институте философии СПбГУ. Исследует\
+            \ этичные HR-процессы в компании, работающие на достижение целей компании и развитие потенциала сотрудников.</p>\n\
+            <p>Имеет профессиональный интерес к построению performance management system. Создает HR-сообщество для реализ\
+            ации профессионального кодекса HR в России.</p>"

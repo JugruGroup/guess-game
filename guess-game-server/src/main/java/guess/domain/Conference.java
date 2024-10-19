@@ -23,5 +23,6 @@ public enum Conference {
     SAFE_CODE,
     GO_FUNC,
     IML,
+    CARGO_CULT,
     SNOW_ONE
 }

@@ -2736,5 +2736,10 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("GoFunc 2024 Autumn", null, List.of(24L)),
 //                        Set.of("Открытие конференции GoFunc 2024 Autumn", "Закрытие конференции GoFunc 2024 Autumn")));
+//        loadTalksSpeakersEvent(Conference.CARGO_CULT, LocalDate.of(2024, 10, 7), "2024",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("CargoCult 2024", "КаргоКульт 2024", List.of(24L)),
+//                        Map.of(new NameCompany("Анна Васильева", new Company(1226, "Reksoft")), 3527L),
+//                        Set.of("Открытие второго дня")));
     }
 }
