@@ -175,10 +175,6 @@ companySynonyms:
     synonyms: [
       Samokat.tech
     ]
-  - name: Eyeota
-    synonyms: [
-      eyeota.com
-    ]
   - name: "Freight One"
     synonyms: [
       "PGK Digital",
@@ -351,7 +347,8 @@ companySynonyms:
   - name: "Lemana PRO"
     synonyms: [
       "Lemana PRO (Leroy Merlin)",
-      "Лемана ПРО (Леруа Мерлен)"
+      "Лемана ПРО (Леруа Мерлен)",
+      "Leroy Merlin"
     ]
   - name: "Lesta Group"
     synonyms: [
@@ -500,6 +497,11 @@ companySynonyms:
   - name: "Performance Lab"
     synonyms: [
       performance-lab.ru
+    ]
+  - name: red_mad_robot
+    synonyms: [
+      Redmadrobot,
+      "hitch (red_mad_robot)"
     ]
   - name: "RT Labs"
     synonyms: [
@@ -877,15 +879,18 @@ companySynonyms:
     ]
   - name: ""
     synonyms: [
-      "Author of \"The C++ Standard Library\" and \"C++ Templates\"",
-      "Автор книг «The C++ Standard Library» и «C++ Templates»",
       "Acme Corp",
-      Startup,
-      Стартап,
-      "JMeter Committer",
-      "PostgreSQL JDBC maintainer",
-      TatarinFrontend,
+      "Author of \"The C++ Standard Library\" and \"C++ Templates\"",
       ex-Yandex,
       ex-Яндекс,
-      Ex-Ozon
+      Ex-Ozon,
+      Ex-T-Bank,
+      "JMeter Committer",
+      "PostgreSQL JDBC maintainer",
+      Startup,
+      TatarinFrontend,
+      "Автор книг «The C++ Standard Library» и «C++ Templates»",
+      "Доцент, автор книги «Русская модель управления»",
+      "Корпоративный прокрастинолог",
+      Стартап
     ]

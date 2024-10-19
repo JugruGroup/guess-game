@@ -1010,10 +1010,6 @@ companies:
     name:
       - { language: en, text: "Kitab Sawti" }
     siteLink: https://kitabsawti.com
-  - id: 298
-    name:
-      - { language: en, text: Klarna }
-    siteLink: https://www.klarna.com
   - id: 299
     name:
       - { language: en, text: "Kodewerk Ltd." }
@@ -1138,10 +1134,6 @@ companies:
     name:
       - { language: en, text: MIT }
     siteLink: https://www.mit.edu
-  - id: 333
-    name:
-      - { language: en, text: mnogosdelal.ru }
-    siteLink: https://mnogosdelal.ru
   - id: 335
     name:
       - { language: en, text: "Modelus LLC" }
@@ -1294,10 +1286,6 @@ companies:
     name:
       - { language: en, text: "Ocado Technology" }
     siteLink: https://www.ocadogroup.com
-  - id: 376
-    name:
-      - { language: en, text: OCS.LAB }
-    siteLink: https://ocs.ru
   - id: 377
     name:
       - { language: en, text: Okko }
@@ -1515,7 +1503,7 @@ companies:
     siteLink: https://kiwitcms.org
   - id: 440
     name:
-      - { language: en, text: Redmadrobot }
+      - { language: en, text: red_mad_robot }
     siteLink: https://www.redmadrobot.com
   - id: 441
     name:
@@ -1989,10 +1977,6 @@ companies:
     name:
       - { language: en, text: VMware }
     siteLink: https://www.vmware.com
-  - id: 578
-    name:
-      - { language: en, text: "Volosoft Computer and Technology" }
-    siteLink: https://volosoft.com
   - id: 579
     name:
       - { language: en, text: vvvv }
@@ -2569,10 +2553,6 @@ companies:
     name:
       - { language: en, text: "Hibernating Rhinos" }
     siteLink: https://hibernatingrhinos.com
-  - id: 743
-    name:
-      - { language: en, text: SoftPro }
-    siteLink: https://softpro.com
   - id: 744
     name:
       - { language: en, text: "Vevy Europe" }
@@ -2710,14 +2690,6 @@ companies:
     name:
       - { language: en, text: Vertica }
     siteLink: https://www.vertica.com
-  - id: 786
-    name:
-      - { language: en, text: Eyeota }
-    siteLink: https://www.eyeota.com
-  - id: 787
-    name:
-      - { language: en, text: "Leroy Merlin" }
-    siteLink: https://www.leroymerlin.com
   - id: 788
     name:
       - { language: en, text: Dremio }
@@ -3182,10 +3154,6 @@ companies:
     name:
       - { language: en, text: Syntacore }
     siteLink: https://syntacore.com
-  - id: 920
-    name:
-      - { language: en, text: "Speech Technology Center" }
-    siteLink: https://speechpro.com
   - id: 921
     name:
       - { language: en, text: Workato }
@@ -3296,11 +3264,6 @@ companies:
     name:
       - { language: en, text: IBS }
     siteLink: https://ibs.ru
-  - id: 951
-    name:
-      - { language: en, text: "Center for Research in Perspective Technologies" }
-      - { language: ru, text: "Центр развития перспективных технологий" }
-    siteLink: https://crpt.ru
   - id: 952
     name:
       - { language: en, text: Toloka }
@@ -3889,10 +3852,6 @@ companies:
     name:
       - { language: en, text: TravelX }
     siteLink: https://travelx.io
-  - id: 1112
-    name:
-      - { language: en, text: Rubytech }
-    siteLink: https://rubytech.ru
   - id: 1113
     name:
       - { language: en, text: Poscredit }
@@ -4054,11 +4013,6 @@ companies:
       - { language: en, text: ASE }
       - { language: ru, text: АСЭ }
     siteLink: https://ase-ec.ru
-  - id: 1156
-    name:
-      - { language: en, text: ProgMsk }
-      - { language: ru, text: "Московский клуб программистов" }
-    siteLink: https://prog.msk.ru
   - id: 1157
     name:
       - { language: en, text: "C Teleport" }
@@ -4779,3 +4733,65 @@ companies:
       - {language: en, text: "Liza Alert"}
       - {language: ru, text: ЛизаАлерт}
     siteLink: https://lizaalert.org
+  - id: 1329
+    name:
+      - {language: en, text: MUNLA}
+    siteLink: https://munla.ru
+  - id: 1330
+    name:
+      - {language: en, text: "WOW GROUP"}
+    siteLink: https://wowgroup.org
+  - id: 1331
+    name:
+      - {language: en, text: Habr}
+      - {language: ru, text: Хабр}
+    siteLink: https://habr.com
+  - id: 1332
+    name:
+      - {language: en, text: Businesology}
+    siteLink: https://businesology.ru
+  - id: 1333
+    name:
+      - {language: en, text: LYAV.me}
+    siteLink: https://lyav.me
+  - id: 1334
+    name:
+      - {language: en, text: ECOPSY}
+      - {language: ru, text: ЭКОПСИ}
+    siteLink: https://www.ecopsy.ru
+  - id: 1335
+    name:
+      - {language: en, text: LifeHack}
+    siteLink: https://www.alinamikhel.com
+  - id: 1336
+    name:
+      - {language: en, text: SuperJob}
+    siteLink: https://www.superjob.ru
+  - id: 1337
+    name:
+      - {language: en, text: MyDevRel}
+    siteLink: https://t.me/My_DevRel
+  - id: 1338
+    name:
+      - {language: en, text: WebPros}
+    siteLink: https://webpros.com
+  - id: 1339
+    name:
+      - {language: en, text: "Sourcing School"}
+    siteLink: http://sourcing-school.ru
+  - id: 1340
+    name:
+      - {language: en, text: getmatch}
+    siteLink: https://getmatch.ru
+  - id: 1341
+    name:
+      - {language: en, text: Welltory}
+    siteLink: https://welltory.com
+  - id: 1342
+    name:
+      - {language: en, text: SymbioWay}
+    siteLink: https://www.symbioway.ru
+  - id: 1343
+    name:
+      - {language: en, text: "Paper Planes"}
+    siteLink: https://paper-planes.ru

@@ -204,8 +204,8 @@ eventTypes:
     name:
       - {language: en, text: JPoint}
     shortDescription:
-      - {language: en, text: "Conference for experienced Java developers"}
-      - {language: ru, text: "Конференция для опытных Java‑разработчиков"}
+      - {language: en, text: "Java сonference for experienced developers"}
+      - {language: ru, text: "Java-конференция для опытных разработчиков"}
     longDescription:
       - language: en
         text: "JPoint is\_a\_conference for Java programmers. One of\_the two largest and oldest Java conferences in\_\
@@ -236,8 +236,8 @@ eventTypes:
     name:
       - {language: en, text: Joker}
     shortDescription:
-      - {language: en, text: "Conference for experienced Java developers"}
-      - {language: ru, text: "Конференция для опытных Java‑разработчиков"}
+      - {language: en, text: "Java сonference for experienced developers"}
+      - {language: ru, text: "Java-конференция для опытных разработчиков"}
     longDescription:
       - {language: en, text: "Joker is\_a\_conference for Java developers that’s held since 2013. It’s one of\_two largest\
             \ and oldest Java conferences in\_Russia (the other is\_its «twin», the JPoint conference). It\_is\_the right\
@@ -452,8 +452,8 @@ eventTypes:
     name:
       - {language: en, text: VideoTech}
     shortDescription:
-      - {language: en, text: "Video technologies conference"}
-      - {language: ru, text: "Конференция по технологиям видео"}
+      - {language: en, text: "Conference on video technologies"}
+      - {language: ru, text: "Конференция по видеотехнологиям"}
     longDescription:
       - {language: en, text: "Videotech is a conference about video technologies. Its mission is to develop a professional\
             \ community of people who work on video calls, streaming platforms, video players, content delivery and other\
@@ -555,7 +555,7 @@ eventTypes:
             нологий. От\_Secure SDL и\_DevSecOps до\_SAST/DAST, OSA/SCA и\_управления секретами. А\_также мы\_разбираем во\
             просы образования и\_карьеры в\_AppSec.\n\nОрганизатор\_— [JUG Ru\_Group](https://jugru.org/)."
     siteLink:
-      - {language: en, text: "https://safecodeconf.ru/"}
+      - {language: en, text: "https://safecodeconf.ru"}
     vkLink: https://vk.com/safecodeconf
     twitterLink: https://twitter.com/safecodeconf
     youtubeLink: https://www.youtube.com/@SafeCodeConf
@@ -584,7 +584,7 @@ eventTypes:
             ходы и\_фреймворки при разработке приложений, обработке данных и\_разворачивании нагруженных систем. Кроме тог\
             о, постараемся заглянуть за\_пределы стандартных возможностей\_Go runtime.\n\nОрганизатор – [JUG Ru&nbsp;Group](https://jugru.org/)."
     siteLink:
-      - {language: en, text: "https://gofunc.ru/"}
+      - {language: en, text: "https://gofunc.ru"}
     vkLink: https://vk.com/gofuncconf
     twitterLink: https://twitter.com/GoFuncConf
     youtubeLink: https://www.youtube.com/@GoFuncConf
@@ -599,8 +599,8 @@ eventTypes:
     name:
       - {language: en, text: I'ML}
     shortDescription:
-      - {language: en, text: "Training, application and maintenance of models in production"}
-      - {language: ru, text: "Обучение, применение и сопровождение моделей в продакшене"}
+      - {language: en, text: "Conference on MLOps: from training to operating models"}
+      - {language: ru, text: "MLOps-конференция: от обучения до эксплуатации моделей"}
     longDescription:
       - language: en
         text: "I’ML is a technical conference for everyone who uses ML in projects.\n\nThe program includes diverse\
@@ -619,10 +619,35 @@ eventTypes:
             нженеры, дата-сайентисты, исследователи, аналитики и\_разработчики, чтобы поделиться как успешным опытом реали\
             зации ML-проектов, так и\_фейлами при внедрении ML. Присоединяйтесь!\n\nОрганизатор\_— [JUG Ru\_Group](https://jugru.org/)."
     siteLink:
-      - {language: en, text: "https://imlconf.com/"}
+      - {language: en, text: "https://imlconf.com"}
     vkLink: https://vk.com/imlconf
     youtubeLink: http://www.youtube.com/@iml_conf
     telegramLink: https://t.me/iml_conf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
     topicId: 15
+  - id: 23
+    conference: CARGO_CULT
+    logoFileName: cargocult.png
+    organizerId: 0
+    name:
+      - {language: en, text: CargoCult}
+      - {language: ru, text: КаргоКульт}
+    shortDescription:
+      - {language: en, text: "Highlights of HR practices from the IT industry"}
+      - {language: ru, text: "Избранные HR-практики из IT-сферы"}
+    longDescription:
+      - language: ru
+        text: "КаргоКульт\_от [JUG\_Ru\_Group](https://jugru.org/) — конференция по\_HR, People Management и\_выстраив\
+            анию эффективных команд. Лучшие HR-практики из\_сферы IT\_— для всех, кто связан с\_управлением людьми.\n\nМы\_\
+            организовали более 130 специализированных\_IT конференций и\_за\_11\_лет работы познакомились с\_лучшими специ\
+            алистами-практиками. Лидеры индустрии расскажут про инструменты, подходы и\_методологии работы с\_людьми, прош\
+            едшие проверку в\_крупнейших IT-компаниях и\_не\_только."
+    siteLink:
+      - {language: en, text: "https://cargo-cult.club"}
+    vkLink: https://vk.com/cargocultjrg
+    youtubeLink: https://www.youtube.com/@CargoCultConf
+    telegramLink: https://t.me/CargoCult_channel
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow
+    topicId: 16
