@@ -2786,9 +2786,7 @@ speakers:
       - language: en
         text: "<p>Author of books and developer of the unique personal effectiveness training course of the same name, \"\
             Jedi Techniques\". Until 2013, he was Head of Development at Kaspersky Lab, after which he continued in the role\
-            \ of corporate procrastinator, founding the company. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
-            \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
-            \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n<p>Since 2012,\
+            \ of corporate procrastinator, founding the company.</p>\n<p>Since 2012,\
             \ he has been conducting trainings, educational events and advising companies on how to improve productivity and\
             \ reliability within his own project mnogosdelal.ru. He develops <a href=\"https://www.youtube.com/user/Cartmendum\"\
             >a YouTube channel about productivity</a>.</p>\n<p>He has been interested in psychology and mathematical statistics\
@@ -2796,7 +2794,7 @@ speakers:
       - language: ru
         text: "<p>Автор книг и разработчик одноименного уникального тренинга по личной эффективности &laquo;Джедайские тех\
             ники&raquo;. До 2013 года был руководителем отдела разработки в &laquo;Лаборатории Касперского&raquo;, после ч\
-            его продолжил работу в роли корпоративного прокрастинатолога, основав компанию.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n\
+            его продолжил работу в роли корпоративного прокрастинатолога, основав компанию.</p>\n\
             <p>С 2012 года ведет тренинги, обучающие мероприятия и консультирует компании по вопросам повышения продуктивн\
             ости и надежности работы в рамках собственного проекта mnogosdelal.ru. Развивает <a href=\"https://www.youtube.com/user/Cartmendum\"\
             >YouTube-канал о продуктивности</a>.</p>\n<p>Всю свою сознательную жизнь увлекается психологией и математическ\
@@ -9475,7 +9473,7 @@ speakers:
             \ данных в Positive Technologies. Активный open source-энтузиаст, контрибьютор в экосистему Kotlin. Создатель\
             \ библиотеки <code>ktoml</code> и статического анализатора <code>diktat</code>.</p>"}
     twitter: akuleshov7
-    gitHub: orchestr7
+    gitHub: akuleshov7
     habr: akuleshov7
   - id: 628
     photoFileName: 0628.jpg
