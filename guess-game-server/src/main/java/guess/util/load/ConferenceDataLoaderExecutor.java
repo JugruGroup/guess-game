@@ -2741,5 +2741,9 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("CargoCult 2024", "КаргоКульт 2024", List.of(24L)),
 //                        Map.of(new NameCompany("Анна Васильева", new Company(1226, "Reksoft")), 3527L),
 //                        Set.of("Открытие второго дня")));
+//        loadTalksSpeakersEvent(Conference.JOKER, LocalDate.of(2024, 10, 9), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Joker 2024", null, List.of(24L, 31L)),
+//                        Set.of("Подведение итогов онлайн-части", "Открытие офлайн-части", "Lightning Talks")));
     }
 }

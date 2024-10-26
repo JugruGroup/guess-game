@@ -243,3 +243,11 @@ places:
       - {language: en, text: "Airportcity Plaza Congress Hotel: Ulitsa Startovaya, 6, litera A"}
       - {language: ru, text: "Конгресс-отель Airportcity Plaza: ул. Стартовая, 6, литера А"}
     mapCoordinates: "59.806140, 30.316422"
+  - id: 31
+    city:
+      - {language: en, text: "Saint Petersburg"}
+      - {language: ru, text: Санкт-Петербург}
+    venueAddress:
+      - {language: en, text: "DAA Expo: Ploshchad Krasnogvardeyskaya, 3, litera E"}
+      - {language: ru, text: "DAA Expo: пл. Красногвардейская, 3, литера Е"}
+    mapCoordinates: "59.941601, 30.409661"

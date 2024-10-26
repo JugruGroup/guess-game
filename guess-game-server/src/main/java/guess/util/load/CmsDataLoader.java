@@ -265,7 +265,7 @@ public abstract class CmsDataLoader {
         return extractProperty(value, new ExtractSet(
                 List.of(
                         new ExtractPair("^[\\s]*[@]?(\\w{1,15})[\\s]*$", 1),
-                        new ExtractPair("^[\\s]*((http(s)?://)?twitter.com/)?(\\w{1,15})[\\s]*$", 4)),
+                        new ExtractPair("^[\\s]*((http(s)?://)?(twitter|x).com/)?(\\w{1,15})[\\s]*$", 5)),
                 "Invalid Twitter username: %s (change regular expression and rerun)"));
     }
 
