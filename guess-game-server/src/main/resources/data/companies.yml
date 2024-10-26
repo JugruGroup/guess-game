@@ -4795,3 +4795,24 @@ companies:
     name:
       - {language: en, text: "Paper Planes"}
     siteLink: https://paper-planes.ru
+  - id: 1344
+    name:
+      - {language: en, text: "Atlantic Money"}
+    siteLink: https://atlantic.money
+  - id: 1345
+    name:
+      - {language: en, text: OSChina}
+    siteLink: https://www.oschina.net
+  - id: 1346
+    name:
+      - {language: en, text: Explyt}
+    siteLink: https://explyt.ru
+  - id: 1347
+    name:
+      - {language: en, text: "Tomsk State University"}
+      - {language: ru, text: "Томский государственный университет"}
+    siteLink: https://tsu.ru
+  - id: 1348
+    name:
+      - {language: en, text: Amplicode}
+    siteLink: https://amplicode.ru
