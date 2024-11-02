@@ -460,7 +460,8 @@ companySynonyms:
       VK/Одноклассники,
       "VK / Odnoklassniki",
       "VK / Одноклассники",
-      "VK / OK"
+      "VK / OK",
+      "VK / OK.TECH"
     ]
   - name: Okko
     synonyms: [
@@ -840,7 +841,6 @@ companySynonyms:
       Yandex.Toloka,
       "Yandex Travel",
       "Yandex (Auto.ru)",
-      "Yandex 360",
       Дзен
       "Кинопоиск (Яндекс)",
       Кинопоиск,
@@ -866,7 +866,6 @@ companySynonyms:
       "Яндекс.Такси Технологии",
       Яндекс.Толока,
       "Яндекс (Авто.ру)",
-      "Яндекс 360",
       "Kinopoisk (Yandex)",
       Kinopoisk,
       Zen,

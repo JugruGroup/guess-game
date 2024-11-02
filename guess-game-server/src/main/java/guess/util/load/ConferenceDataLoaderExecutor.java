@@ -2745,5 +2745,15 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Joker 2024", null, List.of(24L, 31L)),
 //                        Set.of("Подведение итогов онлайн-части", "Открытие офлайн-части", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2024, 10, 10), "2024 Autumn",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("Heisenbug 2024 Autumn", null, List.of(24L, 31L)),
+//                        Map.of(new NameCompany("Николай Марков", new Company(689, "Яндекс")), 3585L,
+//                                new NameCompany("Александр Волков", new Company(1034, "Cloud.ru")), 3586L),
+//                        Set.of("Открытие онлайн-части конференции Heisenbug 2024 Autumn",
+//                                "Подведение итогов онлайн-части конференции Heisenbug 2024 Autumn",
+//                                "Открытие офлайн-части конференции Heisenbug 2024 Autumn", "Открытый микрофон", "Квиз",
+//                                "Закрытие конференции Heisenbug 2024 Autumn",
+//                                "Ask Expert: обсудите свой вопрос с экспертом")));
     }
 }
