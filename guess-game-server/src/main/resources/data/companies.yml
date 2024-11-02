@@ -4816,3 +4816,29 @@ companies:
     name:
       - {language: en, text: Amplicode}
     siteLink: https://amplicode.ru
+  - id: 1349
+    name:
+      - {language: en, text: NoBugs}
+    siteLink: https://nobugs.me
+  - id: 1350
+    name:
+      - {language: en, text: HFLabs}
+    siteLink: https://hflabs.ru
+  - id: 1351
+    name:
+      - {language: en, text: Webpractik}
+      - {language: ru, text: Вебпрактик}
+    siteLink: https://webpractik.ru
+  - id: 1352
+    name:
+      - {language: en, text: "Effective Technologies"}
+    siteLink: https://www.effective-group.ru
+  - id: 1353
+    name:
+      - {language: en, text: "QA Playground"}
+    siteLink: https://qa-playground.com
+  - id: 1354
+    name:
+      - {language: en, text: "Yandex 360"}
+      - {language: ru, text: "Яндекс 360"}
+    siteLink: https://360.yandex.ru
