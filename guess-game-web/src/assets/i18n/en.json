@@ -183,6 +183,8 @@
       "nameLabel": "Name:",
       "twitterLabel": "Twitter:",
       "gitHubLabel": "GitHub:",
+      "habrLabel": "Habr:",
+      "descriptionLabel": "Description:",
       "javaChampionLabel": "Java Champion",
       "mvpLabel": "Most Valuable Professional"
     }

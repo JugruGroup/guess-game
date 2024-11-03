@@ -21,6 +21,8 @@ export class SpeakersSearchComponent {
   public company: string;
   public twitter: string;
   public gitHub: string;
+  public habr: string;
+  public description: string;
   public isJavaChampion = false;
   public isMvp = false;
 
@@ -36,8 +38,9 @@ export class SpeakersSearchComponent {
     this.multiSortMeta.push({field: 'companiesString', order: 1});
   }
 
-  loadSpeakers(name: string, company: string, twitter: string, gitHub: string, isJavaChampion: boolean, isMvp: boolean) {
-    this.speakerService.getSpeakers(name, company, twitter, gitHub, isJavaChampion, isMvp)
+  loadSpeakers(name: string, company: string, twitter: string, gitHub: string, habr: string, description: string,
+               isJavaChampion: boolean, isMvp: boolean) {
+    this.speakerService.getSpeakers(name, company, twitter, gitHub, habr, description, isJavaChampion, isMvp)
       .subscribe(data => {
         this.speakers = getSpeakersWithCompaniesString(data);
         this.searched = true;
@@ -54,7 +57,7 @@ export class SpeakersSearchComponent {
 
   search() {
     if (!this.isSearchDisabled()) {
-      this.loadSpeakers(this.name, this.company, this.twitter, this.gitHub, this.isJavaChampion, this.isMvp);
+      this.loadSpeakers(this.name, this.company, this.twitter, this.gitHub, this.habr, this.description, this.isJavaChampion, this.isMvp);
     }
   }
 
@@ -63,6 +66,8 @@ export class SpeakersSearchComponent {
     this.company = undefined;
     this.twitter = undefined;
     this.gitHub = undefined;
+    this.habr = undefined;
+    this.description = undefined;
     this.isJavaChampion = false;
     this.isMvp = false;
     this.speakers = [];
@@ -75,6 +80,8 @@ export class SpeakersSearchComponent {
       isStringEmpty(this.company) &&
       isStringEmpty(this.twitter) &&
       isStringEmpty(this.gitHub) &&
+      isStringEmpty(this.habr) &&
+      isStringEmpty(this.description) &&
       (!this.isJavaChampion) &&
       (!this.isMvp));
   }
