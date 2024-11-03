@@ -45,6 +45,8 @@ class SpeakerServiceImplTest {
         speaker0.setCompanyIds(List.of(0L));
         speaker0.setTwitter("twitter0");
         speaker0.setGitHub("github0");
+        speaker0.setHabr("habr0");
+        speaker0.setBio(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Bio0")));
 
         speaker1 = new Speaker();
         speaker1.setId(1);
@@ -53,6 +55,8 @@ class SpeakerServiceImplTest {
         speaker1.setCompanyIds(List.of(1L));
         speaker1.setTwitter("twitter1");
         speaker1.setGitHub("github1");
+        speaker1.setHabr("habr1");
+        speaker1.setBio(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Bio1")));
         speaker1.setJavaChampion(true);
 
         speaker2 = new Speaker();
@@ -62,6 +66,8 @@ class SpeakerServiceImplTest {
         speaker2.setCompanyIds(List.of(2L));
         speaker2.setTwitter("twitter2");
         speaker2.setGitHub("github2");
+        speaker2.setHabr("habr2");
+        speaker2.setBio(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Bio2")));
         speaker2.setMvp(true);
 
         speaker3 = new Speaker();
@@ -71,6 +77,8 @@ class SpeakerServiceImplTest {
         speaker3.setCompanyIds(List.of(2L));
         speaker3.setTwitter("twitter3");
         speaker3.setGitHub("github3");
+        speaker3.setHabr("habr3");
+        speaker3.setBio(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Bio3")));
     }
 
     @Test
@@ -207,37 +215,41 @@ class SpeakerServiceImplTest {
             List<Speaker> speakers = List.of(speaker0, speaker1, speaker2, speaker3);
 
             return Stream.of(
-                    arguments(null, null, null, null, false, false, Collections.emptyList(), Collections.emptyList()),
-                    arguments(null, null, null, null, false, false, speakers, Collections.emptyList()),
-                    arguments("0", null, null, null, false, false, speakers, List.of(speaker0)),
-                    arguments("7", null, null, null, false, false, speakers, Collections.emptyList()),
-                    arguments(null, "0", null, null, false, false, speakers, List.of(speaker0)),
-                    arguments(null, "7", null, null, false, false, speakers, Collections.emptyList()),
-                    arguments(null, null, "0", null, false, false, speakers, List.of(speaker0)),
-                    arguments(null, null, "7", null, false, false, speakers, Collections.emptyList()),
-                    arguments(null, null, null, "0", false, false, speakers, List.of(speaker0)),
-                    arguments(null, null, null, "7", false, false, speakers, Collections.emptyList()),
-                    arguments(null, null, null, null, true, false, speakers, List.of(speaker1)),
-                    arguments(null, null, null, null, false, true, speakers, List.of(speaker2)),
-                    arguments(null, null, null, null, true, true, speakers, Collections.emptyList()),
-                    arguments("0", "0", "0", "0", false, false, speakers, List.of(speaker0)),
-                    arguments(null, null, "1", null, true, false, speakers, List.of(speaker1)),
-                    arguments(null, null, null, "2", false, true, speakers, List.of(speaker2)),
-                    arguments("name", null, null, null, false, false, speakers, List.of(speaker0, speaker1, speaker2)),
-                    arguments("Last3 First3", null, null, null, false, false, speakers, List.of(speaker3))
+                    arguments(null, null, null, null, null, null, false, false, Collections.emptyList(), Collections.emptyList()),
+                    arguments(null, null, null, null, null, null, false, false, speakers, Collections.emptyList()),
+                    arguments("0", null, null, null, null, null, false, false, speakers, List.of(speaker0)),
+                    arguments("7", null, null, null, null, null, false, false, speakers, Collections.emptyList()),
+                    arguments(null, "0", null, null, null, null, false, false, speakers, List.of(speaker0)),
+                    arguments(null, "7", null, null, null, null, false, false, speakers, Collections.emptyList()),
+                    arguments(null, null, "0", null, null, null, false, false, speakers, List.of(speaker0)),
+                    arguments(null, null, "7", null, null, null, false, false, speakers, Collections.emptyList()),
+                    arguments(null, null, null, "0", null, null, false, false, speakers, List.of(speaker0)),
+                    arguments(null, null, null, "7", null, null, false, false, speakers, Collections.emptyList()),
+                    arguments(null, null, null, null, "0", null, false, false, speakers, List.of(speaker0)),
+                    arguments(null, null, null, null, "7", null, false, false, speakers, Collections.emptyList()),
+                    arguments(null, null, null, null, null, "0", false, false, speakers, List.of(speaker0)),
+                    arguments(null, null, null, null, null, "7", false, false, speakers, Collections.emptyList()),
+                    arguments(null, null, null, null, null, null, true, false, speakers, List.of(speaker1)),
+                    arguments(null, null, null, null, null, null, false, true, speakers, List.of(speaker2)),
+                    arguments(null, null, null, null, null, null, true, true, speakers, Collections.emptyList()),
+                    arguments("0", "0", "0", "0", "0", "0", false, false, speakers, List.of(speaker0)),
+                    arguments(null, null, "1", null, null, null, true, false, speakers, List.of(speaker1)),
+                    arguments(null, null, null, "2", null, null, false, true, speakers, List.of(speaker2)),
+                    arguments("name", null, null, null, null, null, false, false, speakers, List.of(speaker0, speaker1, speaker2)),
+                    arguments("Last3 First3", null, null, null, null, null, false, false, speakers, List.of(speaker3))
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getSpeakers(String name, String company, String twitter, String gitHub, boolean isJavaChampion, boolean isMvp,
-                         List<Speaker> speakers, List<Speaker> expected) {
+        void getSpeakers(String name, String company, String twitter, String gitHub, String habr, String description,
+                         boolean isJavaChampion, boolean isMvp, List<Speaker> speakers, List<Speaker> expected) {
             SpeakerDao speakerDao = Mockito.mock(SpeakerDao.class);
             SpeakerService speakerService = new SpeakerServiceImpl(speakerDao);
 
             Mockito.when(speakerDao.getSpeakers()).thenReturn(speakers);
 
-            assertEquals(expected, speakerService.getSpeakers(name, company, twitter, gitHub, isJavaChampion, isMvp));
+            assertEquals(expected, speakerService.getSpeakers(name, company, twitter, gitHub, habr, description, isJavaChampion, isMvp));
         }
     }
 

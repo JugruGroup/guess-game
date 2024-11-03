@@ -70,10 +70,11 @@ public class SpeakerController {
     @GetMapping("/speakers")
     public List<SpeakerBriefDto> getSpeakers(@RequestParam(required = false) String name, @RequestParam(required = false) String company,
                                              @RequestParam(required = false) String twitter, @RequestParam(required = false) String gitHub,
+                                             @RequestParam(required = false) String habr, @RequestParam(required = false) String description,
                                              @RequestParam boolean javaChampion, @RequestParam boolean mvp,
                                              HttpSession httpSession) {
         var language = localeService.getLanguage(httpSession);
-        List<Speaker> speakers = speakerService.getSpeakers(name, company, twitter, gitHub, javaChampion, mvp);
+        List<Speaker> speakers = speakerService.getSpeakers(name, company, twitter, gitHub, habr, description, javaChampion, mvp);
 
         return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, language));
     }

@@ -17,7 +17,8 @@ public interface SpeakerService {
 
     List<Speaker> getSpeakersByFirstLetters(String firstLetters, Language language);
 
-    List<Speaker> getSpeakers(String name, String company, String twitter, String gitHub, boolean isJavaChampion, boolean isMvp);
+    List<Speaker> getSpeakers(String name, String company, String twitter, String gitHub, String habr, String description,
+                              boolean isJavaChampion, boolean isMvp);
 
     List<Speaker> getSpeakersByCompanyId(long companyId);
 }

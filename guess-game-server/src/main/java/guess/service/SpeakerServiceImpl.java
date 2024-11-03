@@ -64,17 +64,22 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     @Override
-    public List<Speaker> getSpeakers(String name, String company, String twitter, String gitHub, boolean isJavaChampion, boolean isMvp) {
+    public List<Speaker> getSpeakers(String name, String company, String twitter, String gitHub, String habr,
+                                     String description, boolean isJavaChampion, boolean isMvp) {
         String trimmedLowerCasedName = SearchUtils.trimAndLowerCase(name);
         String trimmedLowerCasedCompany = SearchUtils.trimAndLowerCase(company);
         String trimmedLowerCasedTwitter = SearchUtils.trimAndLowerCase(twitter);
         String trimmedLowerCasedGitHub = SearchUtils.trimAndLowerCase(gitHub);
+        String trimmedLowerCasedHabr = SearchUtils.trimAndLowerCase(habr);
+        String trimmedLowerCasedDescription = SearchUtils.trimAndLowerCase(description);
         boolean isNameSet = SearchUtils.isStringSet(trimmedLowerCasedName);
         boolean isCompanySet = SearchUtils.isStringSet(trimmedLowerCasedCompany);
         boolean isTwitterSet = SearchUtils.isStringSet(trimmedLowerCasedTwitter);
         boolean isGitHubSet = SearchUtils.isStringSet(trimmedLowerCasedGitHub);
+        boolean isHabrSet = SearchUtils.isStringSet(trimmedLowerCasedHabr);
+        boolean isDescriptionSet = SearchUtils.isStringSet(trimmedLowerCasedDescription);
 
-        if (!isNameSet && !isCompanySet && !isTwitterSet && !isGitHubSet && !isJavaChampion && !isMvp) {
+        if (!isNameSet && !isCompanySet && !isTwitterSet && !isGitHubSet && !isHabrSet && !isDescriptionSet && !isJavaChampion && !isMvp) {
             return Collections.emptyList();
         } else {
             return speakerDao.getSpeakers().stream()
@@ -83,6 +88,8 @@ public class SpeakerServiceImpl implements SpeakerService {
                             (!isCompanySet || isSpeakerCompanyFound(s, trimmedLowerCasedCompany)) &&
                             (!isTwitterSet || SearchUtils.isSubstringFound(trimmedLowerCasedTwitter, s.getTwitter())) &&
                             (!isGitHubSet || SearchUtils.isSubstringFound(trimmedLowerCasedGitHub, s.getGitHub())) &&
+                            (!isHabrSet || SearchUtils.isSubstringFound(trimmedLowerCasedHabr, s.getHabr())) &&
+                            (!isDescriptionSet || SearchUtils.isSubstringFound(trimmedLowerCasedDescription, s.getBio())) &&
                             (!isJavaChampion || s.isJavaChampion()) &&
                             (!isMvp || s.isAnyMvp())))
                     .toList();
