@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * Speaker service implementation.
@@ -64,8 +65,11 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     @Override
-    public List<Speaker> getSpeakers(String name, String company, String twitter, String gitHub, String habr,
+    public List<Speaker> getSpeakers(String name, String company, Speaker.SpeakerSocials speakerSocials,
                                      String description, boolean isJavaChampion, boolean isMvp) {
+        String twitter = speakerSocials.getTwitter();
+        String gitHub = speakerSocials.getGitHub();
+        String habr = speakerSocials.getHabr();
         String trimmedLowerCasedName = SearchUtils.trimAndLowerCase(name);
         String trimmedLowerCasedCompany = SearchUtils.trimAndLowerCase(company);
         String trimmedLowerCasedTwitter = SearchUtils.trimAndLowerCase(twitter);
@@ -83,12 +87,11 @@ public class SpeakerServiceImpl implements SpeakerService {
             return Collections.emptyList();
         } else {
             return speakerDao.getSpeakers().stream()
-                    .filter(s -> ((!isNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedName, s.getName()) ||
-                            SearchUtils.isSubstringFound(trimmedLowerCasedName, LocalizationUtils.getSpeakerNamesWithLastNameFirst(s))) &&
+                    .filter(s -> (isValidByName(s, isNameSet, trimmedLowerCasedName) &&
                             (!isCompanySet || isSpeakerCompanyFound(s, trimmedLowerCasedCompany)) &&
-                            (!isTwitterSet || SearchUtils.isSubstringFound(trimmedLowerCasedTwitter, s.getTwitter())) &&
-                            (!isGitHubSet || SearchUtils.isSubstringFound(trimmedLowerCasedGitHub, s.getGitHub())) &&
-                            (!isHabrSet || SearchUtils.isSubstringFound(trimmedLowerCasedHabr, s.getHabr())) &&
+                            isValidByField(s, isTwitterSet, trimmedLowerCasedTwitter, Speaker::getTwitter) &&
+                            isValidByField(s, isGitHubSet, trimmedLowerCasedGitHub, Speaker::getGitHub) &&
+                            isValidByField(s, isHabrSet, trimmedLowerCasedHabr, Speaker::getHabr) &&
                             (!isDescriptionSet || SearchUtils.isSubstringFound(trimmedLowerCasedDescription, s.getBio())) &&
                             (!isJavaChampion || s.isJavaChampion()) &&
                             (!isMvp || s.isAnyMvp())))
@@ -101,6 +104,15 @@ public class SpeakerServiceImpl implements SpeakerService {
         return speakerDao.getSpeakers().stream()
                 .filter(s -> s.getCompanyIds().contains(companyId))
                 .toList();
+    }
+
+    static boolean isValidByName(Speaker s, boolean isNameSet, String trimmedLowerCasedName) {
+        return (!isNameSet || SearchUtils.isSubstringFound(trimmedLowerCasedName, s.getName()) ||
+                SearchUtils.isSubstringFound(trimmedLowerCasedName, LocalizationUtils.getSpeakerNamesWithLastNameFirst(s)));
+    }
+
+    static boolean isValidByField(Speaker s, boolean isStringSet, String trimmedLowerCasedString, Function<Speaker, String> fieldFunction) {
+        return (!isStringSet || SearchUtils.isSubstringFound(trimmedLowerCasedString, fieldFunction.apply(s)));
     }
 
     static boolean isSpeakerCompanyFound(Speaker speaker, String trimmedLowerCasedCompany) {

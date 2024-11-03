@@ -19,6 +19,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -249,7 +250,8 @@ class SpeakerServiceImplTest {
 
             Mockito.when(speakerDao.getSpeakers()).thenReturn(speakers);
 
-            assertEquals(expected, speakerService.getSpeakers(name, company, twitter, gitHub, habr, description, isJavaChampion, isMvp));
+            assertEquals(expected, speakerService.getSpeakers(name, company, new Speaker.SpeakerSocials(twitter, gitHub,
+                    habr), description, isJavaChampion, isMvp));
         }
     }
 
@@ -276,6 +278,49 @@ class SpeakerServiceImplTest {
             Mockito.when(speakerDao.getSpeakers()).thenReturn(speakers);
 
             assertEquals(expected, speakerService.getSpeakersByCompanyId(companyId));
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("isValidByName method tests")
+    class IsValidByNameTest {
+        private Stream<Arguments> data() {
+            return Stream.of(
+                    arguments(speaker3, false, null, true),
+                    arguments(speaker3, true, "name", false),
+                    arguments(speaker3, true, "first3 last3", true),
+                    arguments(speaker3, true, "last3 first3", true)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void isValidByName(Speaker speaker, boolean isNameSet, String trimmedLowerCasedName, boolean expected) {
+            assertEquals(expected, SpeakerServiceImpl.isValidByName(speaker, isNameSet, trimmedLowerCasedName));
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("isValidByField method tests")
+    class IsValidByFieldTest {
+        private Stream<Arguments> data() {
+            Function<Speaker, String> fieldFunction = Speaker::getTwitter;
+
+            return Stream.of(
+                    arguments(speaker0, false, null, null, true),
+                    arguments(speaker0, true, "name", fieldFunction, false),
+                    arguments(speaker0, true, "twitter0", fieldFunction, true)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void isValidByField(Speaker speaker, boolean isStringSet, String trimmedLowerCasedString,
+                            Function<Speaker, String> fieldFunction, boolean expected) {
+            assertEquals(expected, SpeakerServiceImpl.isValidByField(speaker, isStringSet, trimmedLowerCasedString,
+                    fieldFunction));
         }
     }
 
