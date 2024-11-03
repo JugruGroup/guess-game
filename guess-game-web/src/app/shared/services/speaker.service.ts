@@ -52,8 +52,8 @@ export class SpeakerService {
       );
   }
 
-  getSpeakers(name: string, company: string, twitter: string, gitHub: string, javaChampion: boolean,
-              mvp: boolean): Observable<Speaker[]> {
+  getSpeakers(name: string, company: string, twitter: string, gitHub: string, habr: string, description: string,
+              javaChampion: boolean, mvp: boolean): Observable<Speaker[]> {
     let params = new HttpParams()
       .set('javaChampion', javaChampion.toString())
       .set('mvp', mvp.toString());
@@ -68,6 +68,12 @@ export class SpeakerService {
     }
     if (gitHub) {
       params = params.set('gitHub', gitHub.toString());
+    }
+    if (habr) {
+      params = params.set('habr', habr.toString());
+    }
+    if (description) {
+      params = params.set('description', description.toString());
     }
 
     return this.http.get<Speaker[]>(`${this.baseUrl}/speakers`, {params: params})

@@ -3,6 +3,7 @@ package guess.domain.source;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -28,6 +29,30 @@ public class Speaker extends Nameable {
             this.twitter = twitter;
             this.gitHub = gitHub;
             this.habr = habr;
+        }
+
+        public String getTwitter() {
+            return twitter;
+        }
+
+        public String getGitHub() {
+            return gitHub;
+        }
+
+        public String getHabr() {
+            return habr;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof SpeakerSocials that)) return false;
+            return Objects.equals(getTwitter(), that.getTwitter()) && Objects.equals(getGitHub(), that.getGitHub()) && Objects.equals(getHabr(), that.getHabr());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(getTwitter(), getGitHub(), getHabr());
         }
     }
 

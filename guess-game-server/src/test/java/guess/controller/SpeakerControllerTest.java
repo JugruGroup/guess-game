@@ -149,6 +149,8 @@ class SpeakerControllerTest {
         final String company = "company";
         final String twitter = "twitter";
         final String gitHub = "gitHub";
+        final String habr = "habr";
+        final String description = "description";
         final boolean javaChampion = true;
         final boolean mvp = false;
 
@@ -160,8 +162,11 @@ class SpeakerControllerTest {
         Speaker speaker1 = new Speaker();
         speaker1.setId(1);
 
+        Speaker.SpeakerSocials speakerSocials = new Speaker.SpeakerSocials(twitter, gitHub, habr);
+
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
-        given(speakerService.getSpeakers(name, company, twitter, gitHub, javaChampion, mvp)).willReturn(List.of(speaker0, speaker1));
+        given(speakerService.getSpeakers(name, company, speakerSocials, description, javaChampion, mvp))
+                .willReturn(List.of(speaker0, speaker1));
 
         mvc.perform(get("/api/speaker/speakers")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -169,13 +174,16 @@ class SpeakerControllerTest {
                         .param("company", company)
                         .param("twitter", twitter)
                         .param("gitHub", gitHub)
+                        .param("habr", habr)
+                        .param("description", description)
                         .param("javaChampion", Boolean.toString(javaChampion))
                         .param("mvp", Boolean.toString(mvp))
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
-        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakers(name, company, twitter, gitHub, javaChampion, mvp);
+        Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakers(name, company,
+                speakerSocials, description, javaChampion, mvp);
     }
 
     @Test
