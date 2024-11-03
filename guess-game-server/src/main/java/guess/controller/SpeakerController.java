@@ -74,7 +74,8 @@ public class SpeakerController {
                                              @RequestParam boolean javaChampion, @RequestParam boolean mvp,
                                              HttpSession httpSession) {
         var language = localeService.getLanguage(httpSession);
-        List<Speaker> speakers = speakerService.getSpeakers(name, company, twitter, gitHub, habr, description, javaChampion, mvp);
+        List<Speaker> speakers = speakerService.getSpeakers(name, company, new Speaker.SpeakerSocials(twitter, gitHub, habr),
+                description, javaChampion, mvp);
 
         return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, language));
     }

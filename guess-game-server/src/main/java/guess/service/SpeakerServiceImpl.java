@@ -64,8 +64,11 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     @Override
-    public List<Speaker> getSpeakers(String name, String company, String twitter, String gitHub, String habr,
+    public List<Speaker> getSpeakers(String name, String company, Speaker.SpeakerSocials speakerSocials,
                                      String description, boolean isJavaChampion, boolean isMvp) {
+        String twitter = speakerSocials.getTwitter();
+        String gitHub = speakerSocials.getGitHub();
+        String habr = speakerSocials.getHabr();
         String trimmedLowerCasedName = SearchUtils.trimAndLowerCase(name);
         String trimmedLowerCasedCompany = SearchUtils.trimAndLowerCase(company);
         String trimmedLowerCasedTwitter = SearchUtils.trimAndLowerCase(twitter);

@@ -249,7 +249,8 @@ class SpeakerServiceImplTest {
 
             Mockito.when(speakerDao.getSpeakers()).thenReturn(speakers);
 
-            assertEquals(expected, speakerService.getSpeakers(name, company, twitter, gitHub, habr, description, isJavaChampion, isMvp));
+            assertEquals(expected, speakerService.getSpeakers(name, company, new Speaker.SpeakerSocials(twitter, gitHub,
+                    habr), description, isJavaChampion, isMvp));
         }
     }
 

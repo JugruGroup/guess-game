@@ -162,8 +162,10 @@ class SpeakerControllerTest {
         Speaker speaker1 = new Speaker();
         speaker1.setId(1);
 
+        Speaker.SpeakerSocials speakerSocials = new Speaker.SpeakerSocials(twitter, gitHub, habr);
+
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
-        given(speakerService.getSpeakers(name, company, twitter, gitHub, habr, description, javaChampion, mvp))
+        given(speakerService.getSpeakers(name, company, speakerSocials, description, javaChampion, mvp))
                 .willReturn(List.of(speaker0, speaker1));
 
         mvc.perform(get("/api/speaker/speakers")
@@ -181,7 +183,7 @@ class SpeakerControllerTest {
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
         Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakers(name, company,
-                twitter, gitHub, habr, description, javaChampion, mvp);
+                speakerSocials, description, javaChampion, mvp);
     }
 
     @Test
