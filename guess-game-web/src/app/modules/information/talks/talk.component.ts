@@ -16,7 +16,11 @@ import { TranslateService } from '@ngx-translate/core';
 import { TalkDetails } from '../../../shared/models/talk/talk-details.model';
 import { TalkService } from '../../../shared/services/talk.service';
 import { VideoSize } from "../../../shared/models/talk/video-size.model";
-import { getSpeakersWithCompaniesString, getTalkTimes } from '../../general/utility-functions';
+import {
+  getSpeakersWithCompaniesString,
+  getTalkClassnameByFilename,
+  getTalkTimes
+} from '../../general/utility-functions';
 import getVideoId from 'get-video-id';
 
 @Component({
@@ -196,5 +200,9 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
     const videoSize = this.resizedVideoSizes.get(videoId);
 
     return (videoSize) ? videoSize.height : null;
+  }
+
+  getClassnameByFilename(filename: string): string {
+    return getTalkClassnameByFilename(filename);
   }
 }

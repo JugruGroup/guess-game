@@ -28,14 +28,14 @@
             <i class="fas fa-globe"></i><span class="d-none d-sm-inline"> {{'common.siteLinkText' | translate}}</span>
           </a>
         </div>
+        <div *ngIf="eventDetails.event?.youtubeLink" class="col-auto">
+          <a href="{{eventDetails.event.youtubeLink}}" class="text-dark">
+            <i class="fab fa-youtube"></i><span class="d-none d-sm-inline"> YouTube</span>
+          </a>
+        </div>
         <div *ngIf="eventDetails.event?.facebookLink" class="col-auto">
           <a href="{{eventDetails.event.facebookLink}}" class="text-dark">
             <i class="fab fa-facebook-f"></i><span class="d-none d-sm-inline"> Facebook</span>
-          </a>
-        </div>
-        <div *ngIf="eventDetails.event?.vkLink" class="col-auto">
-          <a href="{{eventDetails.event.vkLink}}" class="text-dark">
-            <i class="fab fa-vk"></i><span class="d-none d-sm-inline"> {{'common.vkLinkText' | translate}}</span>
           </a>
         </div>
         <div *ngIf="eventDetails.event?.twitterLink" class="col-auto">
@@ -43,24 +43,24 @@
             <i class="fab fa-square-x-twitter"></i><span class="d-none d-sm-inline"> Twitter</span>
           </a>
         </div>
-        <div *ngIf="eventDetails.event?.youtubeLink" class="col-auto">
-          <a href="{{eventDetails.event.youtubeLink}}" class="text-dark">
-            <i class="fab fa-youtube"></i><span class="d-none d-sm-inline"> YouTube</span>
-          </a>
-        </div>
         <div *ngIf="eventDetails.event?.telegramLink" class="col-auto">
           <a href="{{eventDetails.event.telegramLink}}" class="text-dark">
             <i class="fab fa-telegram-plane"></i><span class="d-none d-sm-inline"> Telegram</span>
           </a>
         </div>
-        <div *ngIf="eventDetails.event?.speakerdeckLink" class="col-auto">
-          <a href="{{eventDetails.event.speakerdeckLink}}" class="text-dark">
-            <i class="fab fa-speaker-deck"></i><span class="d-none d-sm-inline"> SpeakerDeck</span>
+        <div *ngIf="eventDetails.event?.vkLink" class="col-auto">
+          <a href="{{eventDetails.event.vkLink}}" class="text-dark">
+            <i class="fab fa-vk"></i><span class="d-none d-sm-inline"> {{'common.vkLinkText' | translate}}</span>
           </a>
         </div>
         <div *ngIf="eventDetails.event?.habrLink" class="col-auto">
           <a href="{{eventDetails.event.habrLink}}" class="text-dark">
             <i class="fas fa-h-square"></i><span class="d-none d-sm-inline"> {{'common.habrLinkText' | translate}}</span>
+          </a>
+        </div>
+        <div *ngIf="eventDetails.event?.speakerdeckLink" class="col-auto">
+          <a href="{{eventDetails.event.speakerdeckLink}}" class="text-dark">
+            <i class="fab fa-speaker-deck"></i><span class="d-none d-sm-inline"> SpeakerDeck</span>
           </a>
         </div>
       </div>
@@ -223,7 +223,7 @@
                 <a href="{{videoLink}}" class="text-dark"><i class="fab fa-youtube"></i></a>
               </span>
               <span *ngFor="let presentationLink of talk.presentationLinks" class="ms-1 me-1">
-                <a href="{{presentationLink}}" class="text-dark"><i class="far fa-file-pdf"></i></a>
+                <a href="{{presentationLink}}" class="text-dark"><i class={{getClassnameByFilename(presentationLink)}}></i></a>
               </span>
               <span *ngFor="let materialLink of talk.materialLinks" class="ms-1 me-1">
                 <a href="{{materialLink}}" class="text-dark"><i class="fas fa-external-link-alt"></i></a>

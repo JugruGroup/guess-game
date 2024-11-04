@@ -277,6 +277,10 @@ export function getTalksWithMaterialsOrderNumber(talks: Talk[]): Talk[] {
   return talks;
 }
 
+export function getTalkClassnameByFilename(filename: string): string {
+  return /.pdf$/i.test(filename) ? 'far fa-file-pdf' : 'far fa-file';
+}
+
 export function getFixedMeasureValues(measureValues: number[], quantity: number): number[] {
   if (measureValues) {
     if (measureValues.length < quantity) {
