@@ -3,7 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { SpeakerDetails } from '../../../shared/models/speaker/speaker-details.model';
 import { SpeakerService } from '../../../shared/services/speaker.service';
-import { getTalksWithMaterialsOrderNumber, getTalksWithSpeakersString } from '../../general/utility-functions';
+import {
+  getTalkClassnameByFilename,
+  getTalksWithMaterialsOrderNumber,
+  getTalksWithSpeakersString
+} from '../../general/utility-functions';
 
 @Component({
   selector: 'app-speaker',
@@ -66,5 +70,9 @@ export class SpeakerComponent implements OnInit {
 
   isTalksListVisible(): boolean {
     return ((this.speakerDetails.talks) && (this.speakerDetails.talks.length > 0));
+  }
+
+  getClassnameByFilename(filename: string): string {
+    return getTalkClassnameByFilename(filename);
   }
 }

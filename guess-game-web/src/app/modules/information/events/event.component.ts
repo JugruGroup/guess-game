@@ -7,6 +7,7 @@ import { EventService } from '../../../shared/services/event.service';
 import {
   getEventDates,
   getSpeakersWithCompaniesString,
+  getTalkClassnameByFilename,
   getTalksWithMaterialsOrderNumber,
   getTalksWithSpeakersString
 } from '../../general/utility-functions';
@@ -118,5 +119,9 @@ export class EventComponent implements OnInit {
 
   getEventDays(eventDays: EventDays): string {
     return getEventDates(eventDays.startDate, eventDays.endDate, this.translateService);
+  }
+
+  getClassnameByFilename(filename: string): string {
+    return getTalkClassnameByFilename(filename);
   }
 }

@@ -223,7 +223,7 @@
                 <a href="{{videoLink}}" class="text-dark"><i class="fab fa-youtube"></i></a>
               </span>
               <span *ngFor="let presentationLink of talk.presentationLinks" class="ms-1 me-1">
-                <a href="{{presentationLink}}" class="text-dark"><i class="far fa-file-pdf"></i></a>
+                <a href="{{presentationLink}}" class="text-dark"><i class={{getClassnameByFilename(presentationLink)}}></i></a>
               </span>
               <span *ngFor="let materialLink of talk.materialLinks" class="ms-1 me-1">
                 <a href="{{materialLink}}" class="text-dark"><i class="fas fa-external-link-alt"></i></a>
