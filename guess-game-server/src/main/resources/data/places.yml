@@ -36,8 +36,8 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Pobedy Square 1, Hotel «Park Inn by Radisson Pulkovskaya»"}
-      - {language: ru, text: "пл. Победы, 1, Гостиница «Park Inn by Radisson Пулковская»"}
+      - {language: en, text: "Cosmos Saint-Petersburg Pulkovskaya Hotel: Ploshchad Pobedy, 1"}
+      - {language: ru, text: "Cosmos Saint-Petersburg Pulkovskaya Hotel: пл. Победы, 1"}
     mapCoordinates: "59.842400, 30.318815"
   - id: 5
     city:

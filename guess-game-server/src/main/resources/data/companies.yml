@@ -4842,3 +4842,15 @@ companies:
       - {language: en, text: "Yandex 360"}
       - {language: ru, text: "Яндекс 360"}
     siteLink: https://360.yandex.ru
+  - id: 1355
+    name:
+      - {language: en, text: KODE}
+    siteLink: https://kode.ru
+  - id: 1356
+    name:
+      - {language: en, text: "Android Broadcast"}
+    siteLink: https://androidbroadcast.dev
+  - id: 1357
+    name:
+      - {language: en, text: AliExpress}
+    siteLink: https://aliexpress.com
