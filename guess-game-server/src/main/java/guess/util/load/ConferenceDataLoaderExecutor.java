@@ -2755,5 +2755,13 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-части конференции Heisenbug 2024 Autumn", "Открытый микрофон", "Квиз",
 //                                "Закрытие конференции Heisenbug 2024 Autumn",
 //                                "Ask Expert: обсудите свой вопрос с экспертом")));
+//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2024, 10, 11), "2024 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Mobius 2024 Autumn", null, List.of(24L, 31L)),
+//                        Set.of("Открытие конференции Mobius 2024 Autumn",
+//                                "Подведение итогов онлайн-части конференции Mobius 2024 Autumn",
+//                                "Открытие офлайн-части конференции Mobius 2024 Autumn",
+//                                "Открытый микрофон Mobius 2024 Autumn", "Открытая запись подкаста «Лента Мобиуса»",
+//                                "Mobius Quiz", "Закрытие конференции Mobius 2024 Autumn")));
     }
 }
