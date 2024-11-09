@@ -417,7 +417,7 @@ eventTypes:
       - {language: en, text: "https://jugnsk.timepad.ru"}
     vkLink: https://vk.com/jugnsk
     twitterLink: https://twitter.com/jugnsk
-    youtubeLink: https://www.youtube.com/c/JUGNsk
+    youtubeLink: https://www.youtube.com/@JUGNsk
     telegramLink: https://t.me/jugnsk
     speakerdeckLink: https://speakerdeck.com/jugnsk
     timeZone: Asia/Novosibirsk
@@ -441,7 +441,8 @@ eventTypes:
     siteLink:
       - {language: en, text: "https://snowone.ru"}
     twitterLink: https://twitter.com/snowone_conf
-    youtubeLink: https://www.youtube.com/c/JUGNsk
+    youtubeLink: https://www.youtube.com/@JUGNsk
+    telegramLink: https://t.me/snowone_news
     speakerdeckLink: https://speakerdeck.com/jugnsk
     timeZone: Asia/Novosibirsk
     topicId: 1
