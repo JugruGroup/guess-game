@@ -5238,7 +5238,7 @@ speakers:
     habr: alexeymalov
   - id: 344
     photoFileName: 0344.jpg
-    photoUpdatedAt: "2024-01-12T12:19:02Z"
+    photoUpdatedAt: "2024-05-20T13:48:18Z"
     name:
       - {language: en, text: "Andrey Karpov"}
       - {language: ru, text: "Андрей Карпов"}
@@ -8791,21 +8791,17 @@ speakers:
     gitHub: dougsillars
   - id: 582
     photoFileName: 0582.jpg
-    photoUpdatedAt: "2022-10-10T13:12:34Z"
+    photoUpdatedAt: "2024-09-25T13:43:42Z"
     name:
       - {language: en, text: "Nikita Sobolev"}
       - {language: ru, text: "Никита Соболев"}
     companyIds: [586]
     bio:
-      - language: en
-        text: "<p>Full-time open source developer. He makes CPython. More about its design &mdash; on the <a href=\"https://www.youtube.com/@sobolevn\"\
-            >author's YouTube-channel</a>.</p>\n<p>He maintains a Telegram channel <a href=\"https://t.me/opensource_findings\"\
-            >\"Finds in open source\"</a>, where he shares his interesting projects, commits, talks and so on.</p>"
       - language: ru
-        text: "<p>Full-time open source-разработчик. Делает CPython. Подробнее о его устройстве &mdash; на <a href=\"https://www.youtube.com/@sobolevn\"\
-            >авторском YouTube-канале</a>.</p>\n<p><span style=\"color: #000000;\">Ведет Telegram-канал <a href=\"https://t.me/opensource_findings\"\
-            >&laquo;Находки в опенсорсе&raquo;</a>, в котором рассказывает </span>про свои интересные проекты, коммиты, до\
-            клады и прочее.</p>"
+        text: "<p>Full-time open source-разработчик. Делает <a href=\"https://github.com/python/cpython\">CPython</a>. Под\
+            робнее о его устройстве &mdash; на&nbsp;<a href=\"https://www.youtube.com/@sobolevn\">авторском YouTube-канале\
+            </a>.</p>\n<p>Ведет <a href=\"https://t.me/opensource_findings\">Telegram-канал&nbsp;&laquo;Находки в опенсорс\
+            е&raquo;</a>, в котором рассказывает&nbsp;про свои интересные проекты, коммиты, доклады и прочее.</p>"
     twitter: sobolevn
     gitHub: sobolevn
     habr: sobolevn
@@ -32951,15 +32947,13 @@ speakers:
       - {language: ru, text: "Алексей Морозов"}
     companyIds: [1279]
     bio:
-      - {language: en, text: "He has been in AppSec for more than 9 years. Head of AppSec Samokat.tech. Pentester.Speaker\
-            \ at more than 100 conferences, including profile ones like ZeroNights, OFFZONE, PHDays.Four-time winner of the\
-            \ PHDays Standoff competition as a member of the Codeby team.Author of scientific publications and CVEs. He is\
-            \ certified by OSCP, OSWE, CEH, eWAPTX."}
+      - {language: en, text: "Head of AppSec BP. Certified by OSCP, OSWE, CEH, eWAPTx. Pentester.Speaker at profile conferences\
+            \ ZeroNights, OFFZONE, PHDays and many others. Three-time winner of the PHDays StandOFF competition as a member\
+            \ of the Codeby team."}
       - language: ru
-        text: "<p>В AppSec более 9 лет. Руководитель отдела AppSec Samokat.tech. Пентестер.</p>\n<p>Спикер более 100 конфе\
-            ренций, включая профильные ZeroNights, OFFZONE, PHDays.</p>\n<p>Четырехкратный победитель соревнования PHDays\
-            \ Standoff в составе команды Codeby.</p>\n<p>Автор научных публикаций и CVE. Имеет сертификаты OSCP, OSWE, CEH,\
-            \ eWAPTX.</p>"
+        text: "<p>Руководитель отдела AppSec BP. Сертифицирован OSCP, OSWE, CEH, eWAPTx. Пентестер.</p>\n<p>Спикер на проф\
+            ильных конференциях ZeroNights, OFFZONE, PHDays и многих других. Четырехкратный победитель соревнования PHDays\
+            \ StandOFF в составе команды Codeby.</p>"
   - id: 2288
     photoFileName: 2288.jpg
     photoUpdatedAt: "2023-07-14T09:12:33Z"
@@ -33320,18 +33314,16 @@ speakers:
       - {language: ru, text: "<p>Администрирует уже 15 лет. В основном занимается крупными инфраструктурными проектами.</p>"}
   - id: 2322
     photoFileName: 2322.jpg
-    photoUpdatedAt: "2023-07-31T14:28:12Z"
+    photoUpdatedAt: "2024-08-29T16:54:11Z"
     name:
-      - {language: en, text: "Aleksey Fedulaev"}
+      - {language: en, text: "Aleksei Fedulaev"}
       - {language: ru, text: "Алексей Федулаев"}
-    companyIds: [1128]
+    companyIds: [648]
     bio:
-      - {language: en, text: "In InfoSec since 2011. DevSecOps evangelist. DevSecOps Tech Lead at Wildberries. Helps make\
-            \ the company's products more secure."}
-      - {language: ru, text: "<p><span style=\"font-weight: 400;\">В ИБ с 2011 года. DevSecOps-евангелист. Руководитель на\
-            правления автоматизации безопасной разработки в Wildberries. Помогает делать продукты компании безопаснее, а м\
-            ир &ndash; лучше.</span></p>"}
-    habr: "0xffd"
+      - {language: ru, text: "В ИБ с 2011 года. Руководитель направления Cloud Native Security в MWS. Помогает делать прод\
+            укты компании безопаснее, а мир — лучше."}
+    gitHub: aleksey0xffd
+    habr: 0xffd
   - id: 2323
     photoFileName: 2323.jpg
     photoUpdatedAt: 2022-10-19T15:15:16Z[UTC]
@@ -40106,11 +40098,12 @@ speakers:
       - {language: ru, text: "Сергей Канибор"}
     companyIds: [1129]
     bio:
-      - {language: en, text: "<p>R&amp;D / Container Security at Luntry. Specializes in container security and Kubernetes.\
-            \ Speaker at PHDays, VolgaCTF, HackConf, CyberCamp, BeCon. Editor of the k8s (in)security Telegram channel.</p>"}
-      - {language: ru, text: "R&amp;D / Container Security в Luntry. Специализируется на безопасности контейнеров и Kubernetes.&nbsp;С\
-            пикер PHDays, OFFZONE, VolgaCTF, HackConf, CyberCamp, БеКон.&nbsp;Редактор Telegram-канала <a href=\"https://t.me/k8security\"\
-            \ rel=\"noopener noreferrer\" target=\"_blank\">k8s (in)security.</a>"}
+      - { language: en, text: "<p>R&amp;D / Container Security at Luntry. Specializes in container security and Kubernetes.\
+                  \ Speaker at PHDays, VolgaCTF, HackConf, CyberCamp, BeCon. Editor of the k8s (in)security Telegram channel.</p>" }
+      - {language: ru, text: "R&amp;D / Container Security в Luntry. Спикер PHDays, OFFZONE, VolgaCTF, HackConf, CyberCamp,\
+            \ БеКон и других профильных конференций. Bughunter. Редактор Telegram-канала <a href=\"https://t.me/k8security\"\
+            \ rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--primary-color);\">k8s (in)security</a> —\
+            \ о (не)безопасности Kubernetes, микросервисных и контейнеризированных приложений."}
   - id: 2786
     photoFileName: 2786.jpg
     photoUpdatedAt: 2023-08-16T07:51Z
@@ -44915,20 +44908,21 @@ speakers:
             \ Team- специалиста.</p>"}
   - id: 3101
     photoFileName: 3101.jpg
-    photoUpdatedAt: "2024-01-22T09:47:01Z"
+    photoUpdatedAt: "2024-10-03T11:57:09Z"
     name:
       - {language: en, text: "Evgeny Kokuykin"}
       - {language: ru, text: "Евгений Кокуйкин"}
     companyIds: [1227]
     bio:
-      - {language: en, text: "Has experience working on projects with Microsoft, Google, and MyTutor.co.uk, where he was involved\
-            \ in implementing complex technological solutions across various industries from fintech to healthcare. He has\
-            \ brought specialized products to market for marketplaces like AWS, PowerBI, Slack, and Atlassian. Currently,\
-            \ he is developing innovative solutions based on LLM."}
-      - {language: ru, text: "<p>Работал в проектах Microsoft, Google и Сбера, где занимался внедрением сложных технологич\
-            еских решений в различные отрасли: от финтеха до медицины. Выводил на рынок специализированные продукты для ма\
-            ркетплейсов AWS, PowerBI, Slack, и Atlassian. Сейчас разрабатывает инновационные решения на базе LLM и рассказ\
-            ывает об этом в <a href=\"https://t.me/kokuykin\">Telegram-канале</a>.</p>"}
+      - {language: en, text: "Worked on projects for Microsoft, Google, and Sber, focusing on the implementation of complex\
+            \ technological solutions across various industries, from fintech to healthcare. Launched specialized products\
+            \ for AWS, PowerBI, Slack, and Atlassian marketplaces. Currently developing monitoring and red teaming solutions\
+            \ based on LLMs"}
+      - {language: ru, text: "<p>Работал в проектах Microsoft, Google и Сбера, где внедрял сложные технологические решения\
+            \ в различные отрасли: от финтеха до медицины. Выводил на рынок специализированные продукты для маркетплейсов\
+            \ AWS, PowerBI, Slack, и Atlassian. Сейчас разрабатывает решения мониторинга и red teaming на базе LLM и расск\
+            азывает об этом в <a href=\"https://t.me/kokuykin\" target=\"_blank\" rel=\"noopener noreferrer\">Telegram-кан\
+            але</a>.</p>"}
     twitter: artmaro
     gitHub: artmaro
     habr: artmaro
@@ -45207,7 +45201,7 @@ speakers:
     photoFileName: 3123.jpg
     photoUpdatedAt: "2024-03-05T07:46:24Z"
     name:
-      - {language: en, text: "iTorry Team"}
+      - {language: en, text: "iTorri Team"}
       - {language: ru, text: "iТорри Team"}
     companyIds: [1234]
     bio:
@@ -53273,3 +53267,196 @@ speakers:
             Эксперсс. Сейчас занимает сеньорскую позицию в платформенной команде Fusion &mdash; одноименная команда BDUI-ф\
             реймворка. Более подробно его профессиональный путь можно отследить на канале &laquo;<a href=\"https://www.youtube.com/c/%D0%9D%D0%B5%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9%D0%B1%D0%BB%D0%BE%D0%B3%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D1%8F\"\
             >Небольшой блог Алексея</a>&raquo;</p>"}
+  - id: 3652
+    photoFileName: 3652.jpg
+    photoUpdatedAt: "2024-09-09T11:56:50Z"
+    name:
+      - {language: en, text: "Artemy Yurev"}
+      - {language: ru, text: "Артемий Юрьев"}
+    companyIds: [844]
+    bio:
+      - {language: en, text: "<p>Head of Security Analysis at Gazprombank. Pentest, AppSec, MobileAppSec, Security Business\
+            \ Partner.</p>"}
+      - {language: ru, text: "<p>Руководитель направления анализа защищенности Газпромбанк. Pentest, AppSec, MobileAppSec,\
+            \ Security Business Partner.</p>"}
+  - id: 3653
+    photoFileName: 3653.jpg
+    photoUpdatedAt: "2024-09-25T09:45:40Z"
+    name:
+      - {language: en, text: "Evgenii Novikov"}
+      - {language: ru, text: "Евгений Новиков"}
+    companyIds: [635]
+    bio:
+      - {language: ru, text: "<p>Более 15 лет занимался разработкой и внедрением системы статической верификации для больш\
+            их программ с высокими требованиями по надежности и безопасности, в том числе ядра и драйверов операционных си\
+            стем, а также встраиваемого ПО. Последние полтора года применяет накопленный опыт в фаззинг-тестировании.</p>"}
+    gitHub: eunovm
+  - id: 3654
+    photoFileName: 3654.jpg
+    photoUpdatedAt: "2024-08-30T12:16:24Z"
+    name:
+      - {language: en, text: "Viacheslav Davydov"}
+      - {language: ru, text: "Вячеслав Давыдов"}
+    companyIds: [975]
+    bio:
+      - {language: en, text: "DevOps and DevSecOps engineer. Python and Go developer. DevOpsConf and CyberCamp 2024 speaker.\
+            \ GIS enthusiast. HSE student."}
+  - id: 3655
+    photoFileName: 3655.jpg
+    photoUpdatedAt: "2024-08-30T11:45:55Z"
+    name:
+      - {language: en, text: "Alyona Zhilina"}
+      - {language: ru, text: "Алёна Жилина"}
+    companyIds: [975]
+    bio:
+      - language: en
+        text: "<p>DevSecOps engineer of Sber's AppSec team. Master's degree student of the Information Security program at\
+            \ the Higher School of Economics. 4 years of work in infobez.</p>\n<p>Now engaged in tool integration, design\
+            \ and development of software automation solutions in the field of Application Security, bringing them to CloudSecurity\
+            \ compliance and deploying them in Kubernetes. He is exploring how Policy engines work and how to apply them to\
+            \ realize platform requirements and data engineering in terms of storing operational data and scan results on\
+            \ AppSec practices. Active participant in CTF and other IS activities. Speaker at DevOpsConf 2024, CyberCamp 2024.</p>"
+      - language: ru
+        text: "<p>DevSecOps-инженер команды AppSec Сбера. Студентка магистратуры МИЭМ ВШЭ по направлению &laquo;Информацио\
+            нная безопасность&raquo;. 4 года работы в инфобезе.</p>\n<p>Сейчас <span style=\"font-family: -apple-system, BlinkMacSystemFont,\
+            \ 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">занимается интег\
+            рацией инструментов, проектированием и разработкой программных решений по автоматизации в сфере Application Security,\
+            \ приведением их к соответствию CloudSecurity и развертыванием в Kubernetes. Изучает принципы функционирования\
+            \ и способы применения Policy engines для реализации платформенных требований и data-инжиниринг в части хранен\
+            ия операционных данных и результатов сканирований по AppSec-практикам. Активный участник CTF и других ИБ-актив\
+            ностей. Спикер DevOpsConf 2024, CyberCamp 2024.</span></p>"
+  - id: 3656
+    photoFileName: 3656.jpg
+    photoUpdatedAt: "2024-10-07T12:34:15Z"
+    name:
+      - {language: en, text: "Denis Makrushin"}
+      - {language: ru, text: "Денис Макрушин"}
+    companyIds: []
+    bio:
+      - language: ru
+        text: "<p>Независимый эксперт по информационной безопасности. Ранее в роли технического директора в компании &laquo;М\
+            ТС&raquo; отвечал за развитие продуктов и технологическую стратегию в направлении кибербезопасности. До этого\
+            \ на позиции директора технологического центра в Huawei реализовывал программы перспективных исследований и ра\
+            зработок для ключевых продуктов в сфере телекоммуникации, хранения данных и облачных вычислений.&nbsp;</p>\n<p>В\
+            \ качестве исследователя безопасности в глобальном исследовательском центре Kaspersky GReAT занимался анализом\
+            \ угроз и поиском уязвимостей. Основатель и руководитель продукта Threat Deception в департаменте инвестиций и\
+            \ инноваций.&nbsp;</p>\n<p>Представлял свои исследования на крупнейших международных конференциях, включая DEFCON,\
+            \ RSA Conference, HITB, OWASP, а также на закрытых отраслевых мероприятиях.</p>\n<p>Выпускник факультета инфор\
+            мационной безопасности НИЯУ МИФИ.</p>\n<p>Регулярно делится исследованиями в авторском <a href=\"https://t.me/makrushin\"\
+            >Telegram-канале</a>.</p>"
+    twitter: makrushind
+    habr: makrushin
+  - id: 3657
+    photoFileName: 3657.jpg
+    photoUpdatedAt: "2024-09-27T08:43:44Z"
+    name:
+      - {language: en, text: "Ivan Vasiliev"}
+      - {language: ru, text: "Иван Васильев"}
+    companyIds: [627]
+    bio:
+      - {language: en, text: "Initially, my areas of interest were information security and systems programming. In this field,\
+            \ I spent several years developing extensions for the QEMU emulator, which allowed for in-depth analysis of the\
+            \ target system. Part of this work formed the foundation for the Natch software. As Natch expanded and became\
+            \ more complex, there arose a need to provide users with a convenient interface for interacting with the analysis\
+            \ results, and I decided to try my hand in a new field — as a full-stack developer for the SNatch product."}
+      - {language: ru, text: "<p>Изначально сферой интересов Ивана были информационная безопасность и системное программир\
+            ование. По этому профилю он несколько лет разрабатывал расширения для эмулятора QEMU, позволяющие проводить гл\
+            убокий анализ исследуемой системы. Часть этой работы легла в основу ПО Natch. По мере расширения и усложнения\
+            \ Natch возникла необходимость предоставить пользователям удобный интерфейс для взаимодействия с результатами\
+            \ анализа, и Иван решил попробовать себя в новой области &mdash; в качестве фуллстек-разработчика продукта SNatch.</p>"}
+  - id: 3658
+    photoFileName: 3658.jpg
+    photoUpdatedAt: "2024-09-24T12:11:19Z"
+    name:
+      - {language: en, text: "Ankel Likhtenberg"}
+      - {language: ru, text: "Анкель Лихтенберг"}
+    companyIds: [264]
+    bio:
+      - {language: ru, text: "Системный аналитик отделов криптографии и квантовых технологий."}
+  - id: 3659
+    photoFileName: 3659.jpg
+    photoUpdatedAt: "2024-08-29T16:51:42Z"
+    name:
+      - {language: en, text: "Anatolii Karpenko"}
+      - {language: ru, text: "Анатолий Карпенко"}
+    companyIds: [1129]
+    bio:
+      - {language: ru, text: "<p>Автоматизатор автоматизации в Luntry. Ведет канал <a href=\"https://t.me/tech_b0lt_Genona\"\
+            >&laquo;Технологический Болт Генона&raquo;</a>.</p>"}
+    gitHub: rusdacent
+  - id: 3660
+    photoFileName: 3660.jpg
+    photoUpdatedAt: "2024-09-18T14:00:45Z"
+    name:
+      - {language: en, text: "Sergei Ignatov"}
+      - {language: ru, text: "Сергей Игнатов"}
+    companyIds: [627]
+    bio:
+      - {language: ru, text: "<p>Имеет опыт работы в ведущих компаниях из списка S&amp;P 500 и стартапах с успешным exit'о\
+            м. Сейчас &mdash; аспирант Института системного программирования РАН и ведет исследовательскую работу в рамках\
+            \ кандидатской диссертации.</p>"}
+  - id: 3661
+    photoFileName: 3661.jpg
+    photoUpdatedAt: "2024-10-10T11:32:47Z"
+    name:
+      - {language: en, text: "Evgeniia Eltukova"}
+      - {language: ru, text: "Евгения Елтукова"}
+    companyIds: [424]
+    bio:
+      - {language: ru, text: "<p>Руководитель дизайн-направления в PVS-Studio. За три года работы в компании прошла путь о\
+            т переводчика до тимлида. Вместе с командой отвечает за визуальную составляющую бренда и UI/UX продуктов.</p>"}
+  - id: 3662
+    photoFileName: 3662.jpg
+    photoUpdatedAt: "2024-10-03T11:30:06Z"
+    name:
+      - {language: en, text: "Anna Kurenova"}
+      - {language: ru, text: "Анна Куренова"}
+    companyIds: [1004]
+    bio:
+      - {language: ru, text: "<p>DevSecOps. Настраивает SAST, DAST, пишет правила детекта уязвимостей. В свободное время з\
+            анимается Bug Bounty под ником SavAnna. Ведет <a href=\"https://t.me/bugbeer\">Telegram-канал про безопасность\
+            </a>.</p>"}
+  - id: 3663
+    photoFileName: 3663.jpg
+    photoUpdatedAt: "2024-09-25T09:10:52Z"
+    name:
+      - {language: en, text: "Sergei Golovanov"}
+      - {language: ru, text: "Сергей Голованов"}
+    companyIds: [635]
+    bio:
+      - language: ru
+        text: "<p>Пришел в Kaspersky в 2005 году на должность антивирусного аналитика. Сейчас Сергей &mdash; главный экспе\
+            рт, изучающий угрозы для финансовых систем и кампании кибершпионажа. В область его специализации также входят\
+            \ вопросы безопасности встраиваемых систем, угрозы для не-Windows платформ (macOS, UNIX), анализ деятельности\
+            \ преступных группировок, ботнеты.</p>\n<p>Окончил Московский инженерно-физический институт по специальности &laquo;к\
+            омплексное обеспечение информационной безопасности автоматизированных систем&raquo;.&nbsp;</p>"
+    twitter: k1k_
+    gitHub: k1k
+    habr: k1k
+  - id: 3664
+    photoFileName: 3664.jpg
+    photoUpdatedAt: "2024-10-22T10:52:27Z"
+    name:
+      - {language: en, text: "Lev Palei"}
+      - {language: ru, text: "Лев Палей"}
+    companyIds: [1235]
+    bio:
+      - language: ru
+        text: "<p>Член Ассоциации руководителей служб информационной безопасности (АРСИБ), более 15 лет опыта в ИТ и ИБ. И\
+            меет успешный практический опыт внедрения и совершенствования основных процессов ИБ в крупных распределенных к\
+            омпаниях.</p>\n<p>Эпизодически участвует в профильных мероприятиях как модератор и спикер.</p>\n<p>Имеет степе\
+            нь MBA, преподает в РАНХиГС на программах MBA по профилю CSO/CDTO/CISO, архитектор профессии &laquo;Специалист\
+            \ по кибербезопасности&raquo; Skillbox.</p>"
+    habr: isstoryteller
+  - id: 3665
+    photoFileName: 3665.jpg
+    photoUpdatedAt: "2024-10-01T13:22:56Z"
+    name:
+      - {language: en, text: "Mikhail Parfenov"}
+      - {language: ru, text: "Михаил Парфенов"}
+    companyIds: [1358]
+    bio:
+      - {language: ru, text: "<p>10 лет в ИБ, последние 5 &mdash; в роли Application Security Architect. Управляет процесс\
+            ом безопасной разработки, развивает и внедряет практики DevSecOps, исследует безопасность frontend-приложений\
+            \ и современные подходы в анализе защищенности. Автор Telegram-канала <a href=\"https://t.me/FrontSecOps\">FrontSecOps</a>.</p>"}
+    habr: MikhailParfenov

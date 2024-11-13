@@ -3035,9 +3035,19 @@ events:
       - {language: en, text: "SafeCode 2024"}
     days:
       - {startDate: "2024-03-13", endDate: "2024-03-14", placeId: 24}
+    siteLink:
+      - {language: en, text: "https://safecodeconf.ru/archive/2024/"}
     talkIds: [5257, 5258, 5259, 5260, 5261, 5262, 5263, 5264, 5265, 5266, 5267, 5268, 5269, 5270, 5271, 5272, 5273, 5274,
               5275, 5276, 5277, 5278, 5279, 5280, 5281, 5282, 5283, 5284, 5285, 5286, 5287, 5288, 5289, 5290, 5291, 5292, 5293,
               5294, 5295, 5296, 5297]
+  - eventTypeId: 20
+    name:
+      - {language: en, text: "SafeCode 2024 Autumn"}
+    days:
+      - {startDate: "2024-10-30", endDate: "2024-10-30", placeId: 24}
+    siteLink: []
+    talkIds: [6024, 6025, 6026, 6027, 6028, 6029, 6030, 6031, 6032, 6033, 6034, 6035, 6036, 6037, 6038, 6039, 6040, 6041,
+              6042]
   # GoFunc
   - eventTypeId: 21
     name:

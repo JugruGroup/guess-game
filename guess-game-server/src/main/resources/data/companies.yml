@@ -4854,3 +4854,7 @@ companies:
     name:
       - {language: en, text: AliExpress}
     siteLink: https://aliexpress.com
+  - id: 1358
+    name:
+      - {language: en, text: "DPA Analytics"}
+    siteLink: https://dpa-analytics.ru
