@@ -2763,5 +2763,9 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-части конференции Mobius 2024 Autumn",
 //                                "Открытый микрофон Mobius 2024 Autumn", "Открытая запись подкаста «Лента Мобиуса»",
 //                                "Mobius Quiz", "Закрытие конференции Mobius 2024 Autumn")));
+//        loadTalksSpeakersEvent(Conference.SAFE_CODE, LocalDate.of(2024, 10, 30), "2024 Autumn",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("SafeCode 2024 Autumn", null, List.of(24L)),
+//                        Set.of("Открытие конференции SafeCode", "Закрытие конференции SafeCode")));
     }
 }
