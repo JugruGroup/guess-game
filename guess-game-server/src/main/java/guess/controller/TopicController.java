@@ -30,7 +30,7 @@ public class TopicController {
     }
 
     @GetMapping("/topics")
-    List<TopicDto> getTopics(HttpSession httpSession) {
+    public List<TopicDto> getTopics(HttpSession httpSession) {
         var language = localeService.getLanguage(httpSession);
         List<Topic> topics = topicService.getTopics();
         List<Topic> sortedTopics = topics.stream()
@@ -41,8 +41,8 @@ public class TopicController {
     }
 
     @GetMapping("/filter-topics")
-    List<TopicDto> getFilterTopics(@RequestParam boolean conferences, @RequestParam boolean meetups,
-                                   @RequestParam(required = false) Long organizerId, HttpSession httpSession) {
+    public List<TopicDto> getFilterTopics(@RequestParam boolean conferences, @RequestParam boolean meetups,
+                                          @RequestParam(required = false) Long organizerId, HttpSession httpSession) {
         var language = localeService.getLanguage(httpSession);
         List<Topic> topics = topicService.getTopics(conferences, meetups, organizerId, false);
         List<Topic> sortedTopics = topics.stream()
