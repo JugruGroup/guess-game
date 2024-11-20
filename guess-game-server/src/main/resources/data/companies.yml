@@ -4858,3 +4858,7 @@ companies:
     name:
       - {language: en, text: "DPA Analytics"}
     siteLink: https://dpa-analytics.ru
+  - id: 1359
+    name:
+      - {language: en, text: dstack}
+    siteLink: https://dstack.ai

@@ -3071,8 +3071,17 @@ events:
       - {language: en, text: "I'ML 2024"}
     days:
       - {startDate: "2024-05-21", endDate: "2024-05-22", placeId: 24}
+    siteLink:
+      - {language: en, text: "https://imlconf.com/archive/2024/"}
     talkIds: [5487, 5488, 5489, 5490, 5491, 5492, 5493, 5494, 5495, 5496, 5497, 5498, 5499, 5500, 5501, 5502, 5503, 5504,
               5505, 5506, 5507, 5508, 5509, 5510, 5511, 5512, 5513]
+  - eventTypeId: 22
+    name:
+      - {language: en, text: "I'ML 2024 Autumn"}
+    days:
+      - {startDate: "2024-11-08", endDate: "2024-11-08", placeId: 24}
+    siteLink: []
+    talkIds: [6043, 6044, 6045, 6046, 6047, 6048, 6049, 6050, 6051, 6052, 6053, 6054]
   # CargoCult
   - eventTypeId: 23
     name:

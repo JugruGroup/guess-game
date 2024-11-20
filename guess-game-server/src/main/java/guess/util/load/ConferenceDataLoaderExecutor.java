@@ -2767,5 +2767,10 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("SafeCode 2024 Autumn", null, List.of(24L)),
 //                        Set.of("Открытие конференции SafeCode", "Закрытие конференции SafeCode")));
+//        loadTalksSpeakersEvent(Conference.IML, LocalDate.of(2024, 11, 8), "2024 Autumn",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("I'ML 2024 Autumn", null, List.of(24L)),
+//                        Map.of(new NameCompany("Алексей Карпов", new Company(377, "Okko")), 3666L),
+//                        Set.of("Открытие конференции I'ML 2024 Autumn", "Подведение итогов конференции I'ML 2024 Autumn")));
     }
 }

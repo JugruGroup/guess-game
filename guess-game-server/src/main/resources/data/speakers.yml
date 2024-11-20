@@ -4593,17 +4593,16 @@ speakers:
     photoFileName: 0301.jpg
     photoUpdatedAt: "2024-03-05T08:15:03Z"
     name:
-      - {language: en, text: "Dmitry Bugaychenko"}
+      - {language: en, text: "Dmitrii Bugaichenko"}
       - {language: ru, text: "Дмитрий Бугайченко"}
     companyIds: [665]
     bio:
-      - language: ru
-        text: "<p>Окончил Санкт-Петербургский государственный университет в 2004 году, там же защитил кандидатскую по форм\
-            ально-логическим методам в 2007-м. Почти 9 лет проработал в аутсорсинге, не теряя контакта с университетом и н\
-            аучной средой.</p>\n<p>Дмитрий занимался анализом больших данных в Одноклассниках, что позволило ему совместит\
-            ь теоретическую подготовку и научный фундамент с разработкой реальных востребованных продуктов. В 2019 году пр\
-            исоединился к команде Сбера, где разрабатывал и внедрял рекомендательные онлайн-системы. Сейчас Дмитрий отвеча\
-            ет за развитие искусственного интеллекта в розничном бизнесе.</p>"
+      - {language: ru, text: "Окончил Санкт-Петербургский государственный университет в 2004 году, там же защитил кандидат\
+            скую по формально-логическим методам в 2007-м. Почти 9 лет проработал в аутсорсинге, не теряя контакта с униве\
+            рситетом и научной средой.</p><p>Дмитрий занимался анализом больших данных в Одноклассниках, что позволило ему\
+            \ совместить теоретическую подготовку и научный фундамент с разработкой реальных востребованных продуктов. В 2019\
+            \ году присоединился к команде Сбера, где разрабатывал и внедрял рекомендательные онлайн-системы. Сейчас Дмитр\
+            ий отвечает за развитие искусственного интеллекта в розничном бизнесе."}
     gitHub: DmitryBugaychenko
     habr: dmitrybugaychenko
   - id: 302
@@ -16484,14 +16483,14 @@ speakers:
     gitHub: vitaut
   - id: 1146
     photoFileName: 1146.jpg
+    photoUpdatedAt: "2024-10-17T13:51:30Z"
     name:
       - {language: en, text: "Andrey Cheptsov"}
       - {language: ru, text: "Андрей Чепцов"}
-    companyIds: [286]
+    companyIds: [1359]
     bio:
-      - {language: ru, text: "Руководитель маркетинга продуктов IntelliJ IDEA и 0xDBE в компании JetBrains. В 2006 году ок\
-            ончил Саратовский государственный технический университет по специальности «Программирование вычислительной те\
-            хники». Более восьми лет занимался разработкой ПО, в том числе для брокерской и биржевой деятельности."}
+      - {language: ru, text: "<p>Основатель и директор <a href=\"https://dstack.ai\">dstack</a>. До dstack работал руковод\
+            ителем продукта в JetBrains вместе с командами IntelliJ IDEA, DataGrip, GoLand и PyCharm.</p>"}
     twitter: andrey_cheptsov
     gitHub: cheptsov
     habr: andreycheptsov
@@ -32626,16 +32625,14 @@ speakers:
             ой данных для Яндекс.Директ.</p>"}
   - id: 2266
     photoFileName: 2266.jpg
-    photoUpdatedAt: "2023-09-08T13:11:31Z"
+    photoUpdatedAt: "2024-11-01T10:20:04Z"
     name:
       - {language: en, text: "Oleg Kochergin"}
       - {language: ru, text: "Олег Кочергин"}
     companyIds: [410]
     bio:
-      - {language: en, text: "<p>Oleg has over twenty years in IT: first 15 &mdash; in development, last 7 in data. He led\
-            \ projects in multiple domains: geodata, product analytics platforms, feature store, data platforms.</p>"}
-      - {language: ru, text: "<p>Более 20 лет в IT: первые 15 в разработке, последние 7 &mdash; в data. Вел проекты во мно\
-            жестве доменов: геоданные, платформы продуктовой аналитики, feature store, платформы данных.</p>"}
+      - {language: ru, text: "Более 20 лет в IT: первые 15 в разработке, последние 7 — в data. Вел проекты во множестве до\
+            менов: геоданные, платформы продуктовой аналитики, feature store, платформы данных."}
   - id: 2267
     photoFileName: 2267.jpg
     photoUpdatedAt: "2023-07-04T11:03:34Z"
@@ -36357,16 +36354,14 @@ speakers:
     habr: krainov
   - id: 2528
     photoFileName: 2528.jpg
-    photoUpdatedAt: 2023-03-20T08:30:11Z[UTC]
+    photoUpdatedAt: "2024-10-02T06:36:51Z"
     name:
       - {language: en, text: "Nikolay Lyfenko"}
       - {language: ru, text: "Николай Лыфенко"}
     companyIds: [410]
     bio:
-      - {language: en, text: "<p>Interested in ML + Security. I'm sure there are a lot of non-trivial information security\
-            \ problems that can be solved with machine learning.</p>"}
-      - {language: ru, text: "<p>Интересуется ML + Security. Уверен, что с помощью машинного обучения можно решить много н\
-            етривиальных задач информационной безопасности.</p>"}
+      - {language: ru, text: "<p>Делает ML в Positive Technologies. Решает практические проблемы информационной безопаснос\
+            ти. Уверен, что с помощью машинного обучения можно решить много нетривиальных задач.</p>"}
     gitHub: nlyf
     habr: nlyf
   - id: 2529
@@ -53460,3 +53455,212 @@ speakers:
             ом безопасной разработки, развивает и внедряет практики DevSecOps, исследует безопасность frontend-приложений\
             \ и современные подходы в анализе защищенности. Автор Telegram-канала <a href=\"https://t.me/FrontSecOps\">FrontSecOps</a>.</p>"}
     habr: MikhailParfenov
+  - id: 3666
+    photoFileName: 3666.jpg
+    photoUpdatedAt: "2024-10-02T12:52:18Z"
+    name:
+      - {language: en, text: "Alexey Karpov"}
+      - {language: ru, text: "Алексей Карпов"}
+    companyIds: [377]
+    bio:
+      - language: ru
+        text: "<p>MLOps в Okko. Отвечает за надежность, обновление и качество работы сервисов и внедряет новые.</p>\n<p>Ра\
+            ботал в таких компаниях, как Wildberries, Альфа-Банк, Ренессанс Кредит Банк, а также в крупных интеграторах дл\
+            я банковского и государственного сектора.</p>\n<p>Имеет более 3 лет опыта работы с Apache Airflow в проде под\
+            \ высокой нагрузкой, работал со всеми видами инсталляций.</p>"
+    gitHub: alekseyolg
+    habr: alekseyolg
+  - id: 3667
+    photoFileName: 3667.jpg
+    photoUpdatedAt: "2024-10-07T11:13:46Z"
+    name:
+      - {language: en, text: "Carina Sadova"}
+      - {language: ru, text: "Карина Садова"}
+    companyIds: [911]
+    bio:
+      - language: ru
+        text: "<p>Окончила мехмат и аспирантуру МГУ.</p>\n<p>8 лет занимается нейронками, из них 4 года руководит проектам\
+            и и людьми. За последние 3 года построила ML-модерацию в Ozon Tech и запустила генерацию видеообложек. В X5 Digital\
+            \ выстраивает AI-процессы с нуля, выводит внутренние и &laquo;готовит&raquo; внешние продукты, выстраивает DS-к\
+            омьюнити.</p>\n<p>Делала стартапы, связанные с дипфейками и оптимизацией производства рекламного контента, а т\
+            акже связанные с AR и NFT. Пока эти проекты остановлены из-за отсутствия вдохновения.</p>\n<p>Последний год уч\
+            ится выступать и вести DS- и личные блоги: <a href=\"https://t.me/mnctty_at_it\">об AI, нейронках, стартапах и\
+            \ науке</a> и <a href=\"https://t.me/explored_by_mnctty\">о путешествиях, науке, искусстве и философии</a>.</p>\n\
+            <p>Digital nomad, посетила 50 стран мира и почти 40 регионов России.</p>\n<p>Занимается яхтингом и летает на п\
+            ланере.&nbsp;</p>"
+    gitHub: MNCTTY
+  - id: 3668
+    photoFileName: 3668.jpg
+    photoUpdatedAt: "2024-10-18T11:46:48Z"
+    name:
+      - {language: en, text: "Roman Bolozovsky"}
+      - {language: ru, text: "Роман Болозовский"}
+    companyIds: [620]
+    bio:
+      - {language: ru, text: "<p>ML-инженер AI VK, занимается рекомендациями в ленте ОК.</p>"}
+    habr: boloz
+  - id: 3669
+    photoFileName: 3669.jpg
+    photoUpdatedAt: "2024-11-06T13:08:43Z"
+    name:
+      - {language: en, text: "Nikita Zelinskii"}
+      - {language: ru, text: "Никита Зелинский"}
+    companyIds: [648]
+    bio:
+      - language: ru
+        text: "<p>В 2011 году окончил МГУ им М. В. Ломоносова, а в 2014-м стал кандидатом физико-математических наук.</p>\n\
+            <p>В 2014&ndash;2015-х гг. работал в Яндекс.Терра &mdash; разрабатывал алгоритмы обработки временных рядов для\
+            \ задач сейсморазведки. После устроился в ДИТ Москвы и руководил группой аналитиков для решения задач прогнози\
+            рования спроса и предложения на медицинские услуги в г. Москве.</p>\n<p>С 2016 по 2022 год работал в Сбербанке\
+            . Сначала проектировал Лабораторный кластер Сбербанка, разрабатывал модели оценки рисков на основе графовых и\
+            \ транзакционных данных для проекта &laquo;Кредит за 7 минут&raquo;. Позже руководил созданием и внедрением AI-р\
+            ешений в управлении Комплаенс Сбербанка, RnD-проектом по разработке графовых эмбеддингов юридических лиц. Кром\
+            е того, руководил кластером &laquo;Модели и данные&raquo; Департамента развития корпоративного бизнеса Сбербан\
+            ка.</p>\n<p>Сейчас &mdash; Chief Data Scientist в МТС, руководитель центра компетенций Data Science МТС Big Data\
+            \ и ML-платформ.</p>\n<p>Получил награду Stevie Gold Award 2022 в составе коллектива Департамента развития кор\
+            поративного бизнеса Сбербанка за решение &laquo;AI-based application for Sberbank client managers&raquo;.</p>"
+    habr: oksmoron
+  - id: 3670
+    photoFileName: 3670.jpg
+    photoUpdatedAt: "2024-10-02T12:20:44Z"
+    name:
+      - {language: en, text: "Efim Golovin"}
+      - {language: ru, text: "Ефим Головин"}
+    companyIds: [752]
+    bio:
+      - language: ru
+        text: "<p>Инженер, в IT запрыгнул в 2015-м, варится в Data Science с 2017-го. С 2022-го копается в инфраструктуре\
+            \ для ML. Весело.</p>\n<p>Катается на Стриде, поет, читает книжки, пьет ромашковый чай.&nbsp;</p>"
+    habr: feanoref
+  - id: 3671
+    photoFileName: 3671.jpg
+    photoUpdatedAt: "2024-10-17T09:43:06Z"
+    name:
+      - {language: en, text: "Danila Vaganov"}
+      - {language: ru, text: "Данила Ваганов"}
+    companyIds: [410]
+    bio:
+      - language: ru
+        text: "<p>Начинал свой путь в Data Science с исследования сложных систем (финансовых и социальных) в Университете\
+            \ ИТМО, где разрабатывал методы и модели машинного обучения на больших динамических графах. Затем продолжил св\
+            ой путь в сфере Crypto Compliance, где создавал алгоритмы и модели для кластеризации и идентификации владельце\
+            в криптокошельков.</p>\n<p>Сейчас в Positive Technologies автоматизирует аналитику трендовых уязвимостей и улу\
+            чшает экспертизу выявления вредоносных файлов с помощью крутых ML- и других технологий.</p>"
+    gitHub: danwhale
+  - id: 3672
+    photoFileName: 3672.jpg
+    photoUpdatedAt: "2024-10-03T09:47:18Z"
+    name:
+      - {language: en, text: "Elizaveta Gavrilova"}
+      - {language: ru, text: "Елизавета Гаврилова"}
+    companyIds: [1281]
+    bio:
+      - {language: ru, text: "<p>Senior ML Engineer в Лемана ПРО. Автор курса &laquo;MLOps. Начало&raquo; на Stepik. Препо\
+            даватель факультета компьютерных наук ВШЭ. Председатель экзаменационной комиссии магистерской программы &laquo;И\
+            скусственный интеллект&raquo;. Научный руководитель.</p>"}
+  - id: 3673
+    photoFileName: 3673.jpg
+    photoUpdatedAt: "2024-10-08T08:25:23Z"
+    name:
+      - {language: en, text: "Ksenija Blažević"}
+      - {language: ru, text: "Ксения Блажевич"}
+    companyIds: [1281]
+    bio:
+      - {language: en, text: "<ul><li>Graduated with honors from Moscow State University, focusing on neural networks and\
+            \ training algorithms</li><li>12 years of hands-on experience in applied machine learning</li><li>Worked with\
+            \ top companies like Sberbank and RU-Center Group</li><li>Won the Runet 2018 Technology &amp; Innovations for\
+            \ creating a domain name recommendation system</li><li>Enjoy exploring neurobiology and AI philosophy in free\
+            \ time</li></ul>"}
+      - language: ru
+        text: "<p>С отличием окончила ВМК МГУ, cпециализация: алгоритмы обучения и генерации архитектур нейросетей.</p>\n\
+            <p>12 лет в прикладном машинном обучении. Работала в Сбере, RU-CENTER (группа компаний &laquo;РБК&raquo;).</p>\n\
+            <p>Рекомендательная система доменных имен, которую Ксения разработала с командой в RU-CENTER, получила Премию\
+            \ Рунета 2018 в номинации &laquo;Технологии и Инновации&raquo;.</p>\n<p>Увлекается нейробиологией и философией\
+            \ ИИ.</p>"
+    habr: KseniaBlazhevich
+  - id: 3674
+    photoFileName: 3674.jpg
+    photoUpdatedAt: "2024-11-05T06:19:57Z"
+    name:
+      - {language: en, text: "Iurii Klassen"}
+      - {language: ru, text: "Юрий Классен"}
+    companyIds: [1282]
+    bio:
+      - {language: ru, text: "<p>Тимлид MLOps-команды Купера. До этого работал в T-Systems над аналитической системой для\
+            \ банка, а также в Альфа-Банке над ML-платформой. До работы в ML-и MLOps-среде успел поработать в геймдеве и и\
+            нформационной безопасности.</p>"}
+    habr: yklassen
+  - id: 3675
+    photoFileName: 3675.jpg
+    photoUpdatedAt: "2024-10-30T11:37:02Z"
+    name:
+      - {language: en, text: "Nikolai Riabykh"}
+      - {language: ru, text: "Николай Рябых"}
+    companyIds: [620]
+    bio:
+      - language: ru
+        text: "<p>Тимлид команды, которая разрабатывает рекомендации неподписного контента в OK. В рекомендательных систем\
+            ах два года, до этого занимался математической оптимизацией движения грузовых поездов для РЖД, прогнозирование\
+            м отказов оборудования для Газпром нефти и разработкой ML-приложений на базе Splunk.</p>\n<p>Играет в спортивн\
+            ую версию &laquo;Что? Где? Когда?&raquo;.</p>"
+    twitter: SoNicKKK
+    gitHub: nryabykh
+    habr: nryabykh
+  - id: 3676
+    photoFileName: 3676.jpg
+    photoUpdatedAt: "2023-12-22T07:50:05Z"
+    name:
+      - {language: en, text: "Elizaveta Afanasyeva"}
+      - {language: ru, text: "Елизавета Афанасьева"}
+    companyIds: [969]
+    bio:
+      - {language: ru, text: "<p>Победитель хакатонов, Data Scientist в Точке и стартапер в одном флаконе. Играет на гитар\
+            е и любит настолки.</p>"}
+    gitHub: Digitaljay
+    habr: digitaljay
+  - id: 3677
+    photoFileName: 3677.jpg
+    photoUpdatedAt: "2024-10-08T09:45:46Z"
+    name:
+      - {language: en, text: "Maxim Afanasyev"}
+      - {language: ru, text: "Максим Афанасьев"}
+    companyIds: [969]
+    bio:
+      - {language: ru, text: "<p>Лидер команды, которая занимается Foundation NLP моделями в Точке. Делает с ребятами внут\
+            рибанковскую LLM, Information Retrieval и другие модели, которые затем используют различные бизнес-команды для\
+            \ решения своих задач.</p>"}
+    gitHub: mrapplexz
+    habr: mrAppleXZ
+  - id: 3678
+    photoFileName: 3678.jpg
+    photoUpdatedAt: "2024-10-21T15:40:15Z"
+    name:
+      - {language: en, text: "Mikhail Panin"}
+      - {language: ru, text: "Михаил Панин"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>Sr Software Developer at Meta (Reality Labs). Speaker at SIGGRAPH Asia. Ex Computer Graphics\
+            \ lecturer at HSE and ITMO University. Ex Game Dev tech lead leading 6+ developers, shipping critically acclaimed\
+            \ (e.g. Lost Socks: Naughty Brothers) and popular (e.g. Fog: Battle Royale, 2+mln users) games.</p>"}
+      - language: ru
+        text: "<p>Senior-разработчик ПО. Спикер SIGGRAPH Asia. Преподавал компьютерную графику во ВШЭ и Университете ИТМО\
+            .</p>\n<p>Был техлидом в геймдеве &mdash; руководил командой из более 6 разработчиков. Под его руководством бы\
+            ли выпущены игры, получившие признание критиков, такие как Lost Socks: Naughty Brothers, и популярные проекты\
+            \ &mdash; например, FOG: Battle Royale, где более 2 млн пользователей.</p>"
+    twitter: marsermd
+    gitHub: marsermd
+    habr: marsermd
+  - id: 3679
+    photoFileName: 3679.jpg
+    photoUpdatedAt: "2024-10-03T07:27:46Z"
+    name:
+      - {language: en, text: "Nikolay Smirnov"}
+      - {language: ru, text: "Николай Смирнов"}
+    companyIds: [689]
+    bio:
+      - language: ru
+        text: "<p>Окончил ФТК в Петербургском Политехе. Преподаватель курса по Java в том же вузе, лектор в Школе Бэкенд-Р\
+            азработки Академии Яндекса.</p>\n<p>Работает в ML-команде товарного поиска в Яндекс Лавке и отвечает за рантай\
+            м сервиса, поставку данных, повышение качества поисковой выдачи за счет внедрения новых моделей машинного обуч\
+            ения.</p>"
+    habr: svetograde
