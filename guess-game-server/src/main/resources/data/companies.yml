@@ -2724,6 +2724,7 @@ companies:
   - id: 796
     name:
       - { language: en, text: DevBrothers }
+    siteLink: https://devbrother.com
   - id: 798
     name:
       - { language: en, text: "The Secret Circle Solutions" }
@@ -3359,10 +3360,6 @@ companies:
     name:
       - { language: en, text: MY.GAMES }
     siteLink: https://my.games
-  - id: 978
-    name:
-      - { language: en, text: "Independent researcher" }
-      - { language: ru, text: "Независимый исследователь" }
   - id: 979
     name:
       - { language: en, text: "Jet Infosystems" }
@@ -3563,6 +3560,7 @@ companies:
   - id: 1034
     name:
       - { language: en, text: Cloud.ru }
+    siteLink: https://cloud.ru
   - id: 1035
     name:
       - { language: en, text: IIBA }
@@ -3672,10 +3670,6 @@ companies:
     name:
       - { language: en, text: "Marco Schulz Consulting" }
     siteLink: https://www.service-schulz.eu
-  - id: 1067
-    name:
-      - { language: en, text: "Zodia Markets" }
-    siteLink: https://zodia-markets.com
   - id: 1068
     name:
       - { language: en, text: Aiven }
@@ -4070,10 +4064,6 @@ companies:
     name:
       - { language: en, text: Yclients }
     siteLink: https://www.yclients.com
-  - id: 1171
-    name:
-      - { language: en, text: Amediateka }
-    siteLink: https://www.amediateka.ru
   - id: 1172
     name:
       - { language: en, text: Zvuk }
@@ -4176,10 +4166,6 @@ companies:
   - id: 1199
     name:
       - { language: en, text: "Bettor IO" }
-  - id: 1200
-    name:
-      - { language: en, text: AIT }
-    siteLink: https://altinntech.com
   - id: 1201
     name:
       - { language: en, text: Altel }
@@ -4197,10 +4183,6 @@ companies:
     name:
       - { language: en, text: "Qatar Insurance Company" }
     siteLink: https://qic-group.com
-  - id: 1205
-    name:
-      - { language: en, text: Rentu }
-    siteLink: https://rentu.ru
   - id: 1206
     name:
       - { language: en, text: Skoltech }
@@ -4457,10 +4439,6 @@ companies:
     name:
       - {language: en, text: Xymatic}
     siteLink: https://xymatic.com
-  - id: 1266
-    name:
-      - {language: en, text: "Go Invest"}
-    siteLink: https://goinvest.ru
   - id: 1267
     name:
       - {language: en, text: SPbSUE}
