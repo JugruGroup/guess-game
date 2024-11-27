@@ -4862,3 +4862,87 @@ companies:
     name:
       - {language: en, text: dstack}
     siteLink: https://dstack.ai
+  - id: 1360
+    name:
+      - {language: en, text: Ænix}
+    siteLink: https://aenix.io
+  - id: 1361
+    name:
+      - {language: en, text: "Clearway Integration"}
+    siteLink: https://www.clearwayintegration.com
+  - id: 1362
+    name:
+      - {language: en, text: TalkHub}
+    siteLink: https://www.talkhub.io
+  - id: 1363
+    name:
+      - {language: en, text: "Hilbert Team"}
+    siteLink: https://hilbertteam.com
+  - id: 1364
+    name:
+      - {language: en, text: TAGES}
+    siteLink: https://tages.ru
+  - id: 1365
+    name:
+      - {language: en, text: Smartly.io}
+    siteLink: https://www.smartly.io
+  - id: 1366
+    name:
+      - {language: en, text: Zelkom}
+    siteLink: https://www.zelkom.net
+  - id: 1367
+    name:
+      - {language: en, text: "AESD Lab"}
+    siteLink: https://aesdlab.com
+  - id: 1368
+    name:
+      - {language: en, text: "Age of Memes Interactive"}
+    siteLink: https://ageofmemes.gg
+  - id: 1369
+    name:
+      - {language: en, text: LisGames}
+      - {language: ru, text: ЛисГеймс}
+    siteLink: https://www.lisgames.ru
+  - id: 1370
+    name:
+      - {language: en, text: PREMIER.ONE}
+    siteLink: https://premier.one
+  - id: 1371
+    name:
+      - {language: en, text: Profi}
+      - {language: ru, text: Профи}
+  - id: 1372
+    name:
+      - {language: en, text: KODIX}
+    siteLink: https://kodix.ru
+  - id: 1373
+    name:
+      - {language: en, text: Recraft}
+    siteLink: https://www.recraft.ai
+  - id: 1374
+    name:
+      - {language: en, text: Algoritmika}
+      - {language: ru, text: Алгоритмика}
+    siteLink: https://algoritmika.org
+  - id: 1375
+    name:
+      - {language: en, text: Doka}
+      - {language: ru, text: Дока}
+    siteLink: https://doka.guide
+  - id: 1376
+    name:
+      - {language: en, text: "Publishing house \"Piter\""}
+      - {language: ru, text: "Издательство «Питер»"}
+    siteLink: https://www.piter.com
+  - id: 1377
+    name:
+      - {language: en, text: MOSAIC}
+  - id: 1378
+    name:
+      - {language: en, text: LaranaTech}
+    siteLink: https://larana.tech
+  - id: 1379
+    name:
+      - {language: en, text: RANEPA}
+      - {language: ru, text: РАНХиГС}
+    siteLink: https://www.ranepa.ru
