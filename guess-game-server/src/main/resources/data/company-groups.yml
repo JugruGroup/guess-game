@@ -137,6 +137,11 @@ companyGroups:
       Tele2,
       Altel
     ]
+  - name: "Т-Bank, DevBrothers"
+    items: [
+      T-Bank,
+      DevBrothers
+    ]
   - name: "VK / Skillbox"
     items: [
       VK,

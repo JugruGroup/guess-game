@@ -416,7 +416,9 @@ companySynonyms:
       "MTC Digital",
       "MTS IT",
       "МТС ИТ",
-      "MTC Web Services"
+      "MTC Web Services",
+      "MTS Web Services",
+      "MTС Web Services"
     ]
   - name: Naviteq
     synonyms: [
@@ -835,6 +837,7 @@ companySynonyms:
       Yandex.Market,
       Yandex.Money,
       "Yandex Practicum",
+      "Yandex Plus Funtech",
       "Yandex Self-driving Technologies",
       "Yandex Taxi",
       "Yandex Taxi Technologies",
@@ -864,6 +867,7 @@ companySynonyms:
       Яндекс.Маркет,
       Яндекс.Облако,
       "Яндекс Практикум",
+      "Яндекс Плюс Фантех",
       "Яндекс Путешествия",
       "Яндекс Такси Технологии",
       Яндекс.Такси,

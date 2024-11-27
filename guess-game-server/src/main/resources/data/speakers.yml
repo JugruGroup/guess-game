@@ -3443,21 +3443,23 @@ speakers:
     gitHub: abashev
   - id: 218
     photoFileName: 0218.jpg
-    photoUpdatedAt: "2023-08-18T12:33:10Z"
+    photoUpdatedAt: "2024-07-23T20:07:08Z"
     name:
       - {language: en, text: "Anton Chernousov"}
       - {language: ru, text: "Антон Черноусов"}
     companyIds: [689]
     bio:
-      - {language: en, text: "<span style=\"color: rgb(15, 23, 42);\">Developer Advocate at Yandex Cloud. He has extensive\
-            \ experience in engineering management. Prior to that he was a Java developer and campus ambassador of Sun/Oracle\
-            \ in Irkutsk. He hosts his own development podcast The Art of Programming (200+ episodes). He is a regular participant\
-            \ of other Russian podcasts and conferences.</span>"}
-      - {language: ru, text: "<p><span style=\"color: #0f172a;\">Developer Advocate в Yandex Cloud. Имеет большой опыт в engineering\
-            \ managment. До этого был Java-разработчиком и кампус-амбассадором Sun/Oracle в Иркутске. Ведет свой&nbsp;</span><a\
-            \ style=\"color: inherit;\" href=\"https://www.youtube.com/@AntonChernousov\" target=\"_blank\" rel=\"noopener\
-            \ noreferrer\">подкаст про разработку The Art of Programming</a><span style=\"color: #0f172a;\">&nbsp;(200+ вы\
-            пусков). Постоянный участник других российских подкастов (Разбор полетов, Безопасно говоря) и конференций.</span></p>"}
+      - language: en
+        text: "<p>Developer Advocate at Yandex Cloud. He has extensive experience in engineering management. Prior to that\
+            \ he was a Java developer and campus ambassador of Sun/Oracle in Irkutsk.</p>\n<p>He hosts his own development\
+            \ podcast <a href=\"https://t.me/taoplive\">The Art of Programming</a> (300+ episodes). He is a regular participant\
+            \ of other Russian podcasts and conferences.</p>"
+      - language: ru
+        text: "<p>Developer Advocate в Yandex Cloud. Имеет большой опыт в engineering managment. До этого был Java-разрабо\
+            тчиком и кампус-амбассадором Sun/Oracle в Иркутске.</p>\n<p>Ведет свой <a href=\"https://t.me/taoplive\" target=\"\
+            _blank\" rel=\"noopener noreferrer\">подкаст про разработку The Art of Programming</a> (более 300 выпусков). П\
+            остоянный участник других российских подкастов (&laquo;Разбор Полетов&raquo;, &laquo;Безопасно говоря&raquo;)\
+            \ и конференций.</p>"
     twitter: golodnyj
     gitHub: golodnyj
     habr: golodnyj
@@ -3472,22 +3474,25 @@ speakers:
     habr: orionll
   - id: 220
     photoFileName: 0220.jpg
-    photoUpdatedAt: "2024-07-04T10:58:43Z"
+    photoUpdatedAt: "2024-09-05T20:25:02Z"
     name:
       - {language: en, text: "Gregory Koshelev"}
       - {language: ru, text: "Григорий Кошелев"}
     companyIds: [630]
     bio:
       - language: en
-        text: "<p>He started his way in IT in the mid-2000s with pet projects in Perl, C++, C# and Java. Since 2010 he has\
-            \ been developing information systems of various complexity and scale.</p>\n<p>He has made more than 30 talks\
-            \ at conferences and developer meetups. Among the topics of his talks are Apache Kafka, Elasticsearch, Sentry,\
-            \ SRE, distributed and event-driven systems and other topics.</p>"
+        text: "<p>He started his career in IT in the mid-2000s with pet projects in Perl, C++, C# and Java. Since 2014, he\
+            \ has been working at Kontur, where he has been working on Observability and development of Java and Go stacks\
+            \ for the last few years.</p>\n<p>He has given more than 30 talks at conferences and developer meetups, which\
+            \ he shares in his Telegram channel. Topics include Apache Kafka, Elasticsearch, Sentry, SRE, distributed and\
+            \ event-driven systems, and other topics. He participates in the program committee of JPoint, Joker and SnowOne\
+            \ conferences.</p>"
       - language: ru
-        text: "<p>Начал путь в IT с середины 2000-х с pet-проектов на Perl, C++, C# и Java. С 2010 года разрабатывает инфо\
-            рмационные системы различной сложности и масштаба.</p>\n<p>Выступил с более чем 30 докладами на конференциях и\
-            \ митапах для разработчиков. Среди тем докладов &mdash; Apache Kafka, Elasticsearch, Sentry, SRE, распределенн\
-            ые и event-driven системы и другие темы.</p>"
+        text: "<p>Начал путь в IT с середины 2000-х с pet-проектов на Perl, C++, C# и Java. С 2014-го года работает в &laquo;К\
+            онтуре&raquo;, где последние годы занимается темой Observability и развитием стеков Java и Go.</p>\n<p>Выступи\
+            л с более чем 30 докладами на конференциях и митапах для разработчиков, которыми делится у себя в Telegram-кан\
+            але. Среди тем &mdash; Apache Kafka, Elasticsearch, Sentry, SRE, распределённые и event-driven системы и други\
+            е темы. Участвует в программном комитете в подготовке конференций JPoint, Joker и SnowOne.</p>"
     twitter: GregoryKoshelev
     gitHub: gnkoshelev
     habr: gnkoshelev
@@ -7136,17 +7141,19 @@ speakers:
     habr: epeshk
   - id: 467
     photoFileName: 0467.jpg
+    photoUpdatedAt: "2024-08-28T14:53:21Z"
     name:
-      - {language: en, text: "Dmitry Moiseev"}
+      - {language: en, text: "Dmitrii Moiseev"}
       - {language: ru, text: "Дмитрий Моисеев"}
     companyIds: [630]
     bio:
-      - {language: en, text: "Dmitry is professionally engaged in programming since 2009. Works as a developer of mobile applications\
-            \ in SKB Kontur since 2013. Is sure that the future of applications' software development lies within the cross-platform\
-            \ solutions."}
-      - {language: ru, text: "Дмитрий профессионально занимается программированием с 2009 года, разработкой мобильных прил\
-            ожений в СКБ Контуре — с 2013 года. Уверен, что будущее разработки прикладного ПО — в кроссплатформенных решен\
-            иях."}
+      - {language: en, text: "<p>Mobile developer at Kontur. Since 2011 he has been running Old-Hard blog about old computer\
+            \ hardware, software and no less old games. Since 2013, the blog has been available in video format <a href=\"\
+            https://www.youtube.com/@Newbilius\">on YouTube</a>, and Dmitry continues to produce videos about these things\
+            \ to this day.</p>"}
+      - {language: ru, text: "<p>Мобильный разработчик в Контуре. С 2011 года ведет блог &laquo;Old-Hard&raquo; на тему ст\
+            арого компьютерного железа, софта и не менее старых игр. C 2013-го блог выходит в видеоформате <a href=\"https://www.youtube.com/@Newbilius\"\
+            >на YouTube</a>, и Дмитрий продолжает выпускать видео об этих вещах по сей день.</p>"}
     twitter: newbilius
     gitHub: Newbilius
     habr: Newbilius
@@ -12701,20 +12708,20 @@ speakers:
     gitHub: victorlapin
   - id: 845
     photoFileName: 0845.jpg
-    photoUpdatedAt: "2023-06-26T20:40:19Z"
+    photoUpdatedAt: "2024-08-29T17:18:43Z"
     name:
       - {language: en, text: "Kirill Borisov"}
       - {language: ru, text: "Кирилл Борисов"}
     companyIds: [620]
     bio:
-      - {language: en, text: "<p>Senior software engineer in VK. More than 11 years in IT. Implemented DevOps processes in\
-            \ several large projects. Extensive experience building CI/CD pipeline based on Jenkins, planning and deploying\
-            \ infrastructure from scratch. Automates everything possible. Experience as SRE Lead in large project. Current\
-            \ Slurm speaker.</p>"}
-      - {language: ru, text: "<p>Старший инженер-программист в VK. В IT более 11 лет. Внедрял DevOps-процессы в нескольких\
-            \ крупных проектах. Большой опыт построения CI/CD pipeline на базе Jenkins, планирование и развертывание инфра\
-            стуктуры с нуля. Автоматизирует все, что возможно. Опыт работы SRE Lead в крупном проекте. Действующий спикер\
-            \ Slurm.</p>"}
+      - language: en
+        text: "<p>More than 13 years in IT. SRE. Night troubleshooter, fixes problems by photo. Incident manager and best\
+            \ friend of SLO/SLA/SLI. Planned and deployed infrastructure for large projects from scratch.</p>\n<p>Excessive\
+            \ DevOps in the blood. Best friend is monitoring. Conference speaker and course author at Slurm.</p>"
+      - language: ru
+        text: "<p>В IТ более 13 лет. SRE. Ночной траблшутер, чинит проблемы по фотографии. Инцидент-менеджер и лучший друг\
+            \ SLO/SLA/SLI. Планировал и развертывал инфраструктуру для крупных проектов с нуля.</p>\n<p>Превышенное наличи\
+            е DevOps в крови. Лучший друг &mdash; мониторинг. Спикер конференций и автор курсов в Слёрм.</p>"
     twitter: lensvol
     gitHub: lensvol
   - id: 846
@@ -14374,16 +14381,16 @@ speakers:
     habr: sfedov
   - id: 977
     photoFileName: 0977.jpg
-    photoUpdatedAt: "2022-09-11T19:30:19Z"
+    photoUpdatedAt: "2024-10-22T11:51:22Z"
     name:
       - {language: en, text: "Alexander Lukyanchenko"}
       - {language: ru, text: "Александр Лукьянченко"}
     companyIds: [611]
     bio:
-      - {language: en, text: "Alexander is a part of PaaS team in Avito. He's working on developing internal PaaS/IDP and\
-            \ cloud solutions based on Kubernetes, Docker, envoy and many others cloud native tools."}
-      - {language: ru, text: "<p>В Авито занимается созданием и развитием облака и Platform as a Service на базе инструмен\
-            тов: Kubernetes, Docker, Envoy и множества других. Продвигает подходы построения платформы как продукта.</p>"}
+      - {language: en, text: "<p>At Avito he creates and develops the cloud and Platform as a Service based on tools: Kubernetes,\
+            \ Docker, Envoy and many others. Promotes approaches to building Platform as a Product.</p>"}
+      - {language: ru, text: "<p>В Авито создает и развивает облако и Platform as a Service на базе инструментов: Kubernetes,\
+            \ Docker, Envoy и множества других. Продвигает подходы построения платформы как продукта.</p>"}
     gitHub: Lookyan
     habr: digwnews
   - id: 978
@@ -14394,10 +14401,17 @@ speakers:
       - {language: ru, text: "Игорь Курочкин"}
     companyIds: [874]
     bio:
-      - {language: en, text: "<p>DevOps expert. Helps develop engineering culture, processes, practices, platform and product\
-            \ teams at technology and enterprise companies.</p>"}
-      - {language: ru, text: "<p>Эксперт по DevOps. Помогает развивать инженерную культуру, процессы, практики, платформен\
-            ные и продуктовые команды в технологических и enterprise компаниях.</p>"}
+      - {language: en, text: "<p>Helps develop engineering culture, processes and practices in technology and enterprise companies.\
+            \ He has worked with Avito, Uchi.ru, T-Bank, Rosbank, Raiffeisen Bank, inDrive, X5 Tech, WildApricot, Pushwoosh,\
+            \ Exness, RetailCRM, Skyeng, Delimobil and Lamoda. He led the analytics and consulting business at Express 42.\
+            \ Worked as a platform and SRE engineer at Microsoft Corporation, Skype, Qik and Scalaxy startups. He has spoken\
+            \ at HighLoad, AgileDays, South HUB, TeamLead Conf, DevOpsConf, Rootconf, DevOops conferences.</p>"}
+      - {language: ru, text: "<p>Помогает развивать инженерную культуру, процессы и практики в технологических и enterprise-к\
+            омпаниях. Работал с Авито, Учи.ру, Т-Банком, Росбанком, Райффайзен Банком, inDrive, X5 Tech, WildApricot, Pushwoosh,\
+            \ Exness, RetailCRM, Skyeng, Делимобилем и Lamoda. Руководил направлением анализа и консалтинга в компании Express\
+            \ 42. Работал платформенным и SRE-инженером в корпорации Microsoft, технологической компании Skype, стартапах\
+            \ Qik и Scalaxy. Выступал на конференциях HighLoad, AgileDays, South HUB, TeamLead Conf, DevOpsConf, Rootсonf,\
+            \ DevOops.</p>"}
     twitter: IgorKurochkin
     gitHub: ikurochkin
     habr: IgorITL
@@ -21142,20 +21156,18 @@ speakers:
     gitHub: badamczewski
   - id: 1490
     photoFileName: 1490.jpg
-    photoUpdatedAt: "2022-05-25T12:06:48Z"
+    photoUpdatedAt: "2024-07-26T12:18:21Z"
     name:
-      - {language: en, text: "Andrey Tsvettsikh"}
+      - {language: en, text: "Andrei Tsvettsikh"}
       - {language: ru, text: "Андрей Цветцих"}
-    companyIds: [796, 674]
+    companyIds: [674, 796]
     bio:
-      - language: en
-        text: "<p>Andrey has been developing corporate applications for over 10 years. He was involved in both the creation\
-            \ of new applications and the support and refactoring of existing ones.</p>\n<p>The main area of interest is the\
-            \ application of architectures and design patterns in practice.</p>"
-      - language: ru
-        text: "<p>Более 10 лет разрабатывает корпоративные приложения. Занимался как созданием новых приложений, так и под\
-            держкой и рефакторингом существующих.</p>\n<p>Основная область интересов &mdash; применение архитектур и патте\
-            рнов проектирования на практике.</p>"
+      - {language: en, text: "<p>He has been developing enterprise applications for more than 15 years. He has been involved\
+            \ in both creating new applications and supporting and refactoring existing ones. His main area of interest is\
+            \ application of architectures and design patterns in practice.</p>"}
+      - {language: ru, text: "Более 15 лет разрабатывает корпоративные приложения. Занимался как созданием новых приложени\
+            й, так и поддержкой и рефакторингом существующих. Основная область интересов — применение архитектур и паттерн\
+            ов проектирования на практике."}
     gitHub: andrewtsw
     habr: andrew_tsw
   - id: 1491
@@ -26071,22 +26083,23 @@ speakers:
     gitHub: rajbos
   - id: 1819
     photoFileName: 1819.jpg
-    photoUpdatedAt: "2022-09-01T09:37:26Z"
+    photoUpdatedAt: "2024-11-06T03:32:32Z"
     name:
       - {language: en, text: "Evgeny Kharchenko"}
       - {language: ru, text: "Евгений Харченко"}
     companyIds: [429]
     bio:
-      - {language: en, text: "<p>Evgeny has worked his way up from technical support to a managerial position. Worked as a\
-            \ Support Engineer in the Service Desk of the bank. Then he became Software Engineer in the automation team. In\
-            \ the process of working there he took over the role of Lead Engineer and then part of the managerial activities.\
-            \ He joined Raiffeisen Bank as Senior Community Lead Devops. Develops the DevOps community at Raiffeisen Bank,\
-            \ a community leader. Promoter of DevOps and Agile culture in CIS :)</p>"}
-      - {language: ru, text: "<p>Прошел путь от техподдержки до менеджерской позиции. Работал в роли Support Engineer в service\
-            \ desk банка. После развивался и стал Software Engineer в команде автоматизации. В процессе работы стал ведущи\
-            м инженером и перенял часть менеджерских активностей. Работает в Райффайзен Банке в роли Senior Community Lead\
-            \ Devops. Развивает DevOps-сообщество в Райффайзен Банке, является лидером сообщества. Промоутер DevOps и Agile-к\
-            ультуры в СНГ :)</p>"}
+      - language: en
+        text: "<p>Evgeny has worked his way up from technical support to a managerial position. Worked as a Support Engineer\
+            \ in the Service Desk of the bank. Then he became Software Engineer in the automation team. In the process of\
+            \ working there he took over the role of Lead Engineer and then part of the managerial activities.</p>\n<p>He\
+            \ joined Raiffeisen Bank as Senior Community Lead DevOps where he develops the DevOps community. Promoter of DevOps\
+            \ and Agile culture in CIS.</p>"
+      - language: ru
+        text: "<p>Прошел путь от техподдержки до менеджерской позиции. Работал в роли Support Engineer в service desk банк\
+            а. После развивался и стал Software Engineer в команде автоматизации. В процессе работы стал ведущим инженером\
+            \ и перенял часть менеджерских активностей.</p>\n<p>Сейчас &mdash; Senior Community Lead DevOps в Райффайзен Б\
+            анке, развивает DevOps-сообщество компании. Промоутер DevOps- и Agile-культуры в СНГ.</p>"
     twitter: EvgenyKharchen1
     gitHub: evgeniy-kharchenko
   - id: 1820
@@ -32148,23 +32161,22 @@ speakers:
             чпоп, бегает и иногда играет в сквош.</p>"}
   - id: 2230
     photoFileName: 2230.jpg
-    photoUpdatedAt: "2023-05-14T19:37:13Z"
+    photoUpdatedAt: "2024-10-09T07:34:43Z"
     name:
       - {language: en, text: "Vadim Martynov"}
       - {language: ru, text: "Вадим Мартынов"}
     companyIds: [689]
     bio:
-      - {language: en, text: "Vadim has been in IT for 12 years. The last seven years have been connected with managing teams\
-            \ and processes as a team leader, technical leader or process manager.&nbsp;During this time, he has managed to\
-            \ manage teams of more than 10 people inside projects with billion-dollar turnovers. Started development at startups\
-            \ where nothing is yet clear. Loves Kanban, communications, and Kafka. In his spare time, he organizes meetups\
-            \ and conferences for the Rostov IT community RndTech and fosters the culture of knowledge-sharing in the city."}
+      - language: en
+        text: "<p>Vadim has spent the last 14 years in IT. He designed and developed distributed systems, scaled services\
+            \ under load, and managed teams, projects, and processes. Now he deals with reliability and stability of systems.</p>\n\
+            <p>Loves Kanban, communications, and Kafka. In his spare time, he organizes meetups and conferences for the Rostov\
+            \ IT community RndTech, teaches to students and acts as a speaker.</p>"
       - language: ru
-        text: "<p>Вадим в ИТ уже 12 лет. Последние семь лет связаны с управлением командами и процессами в качестве тимлид\
-            а, техлида или process-менеджера.&nbsp;</p>\n<p>За это время успел порулить командами на 10 с лишним человек в\
-            нутри проектов с миллиардными оборотами. Запускал разработку в стартапах, где ещё пока ничего не понятно. Люби\
-            т Канбан, коммуникации и Kafka. В свободное время организует митапы и конференции для ростовского ИТ-сообществ\
-            а RndTech и взращивает культуру шеринга знаний в городе.</p>"
+        text: "<p>Последние 14 лет Вадим провел в ИТ. Проектировал и разрабатывал распределенные системы, масштабировал се\
+            рвисы под нагрузку, управлял командами, проектами и процессами. Сейчас занимается надежностью и устойчивостью\
+            \ систем.</p>\n<p>Любит Канбан, коммуникации и Kafka. В свободное время организует митапы и конференции для Ро\
+            стовского ИТ-сообщества RndTech, преподает студентам и выступает как спикер.</p>"
     twitter: martynovva
     gitHub: Vadimyan
     habr: Vadimyan
@@ -32306,7 +32318,7 @@ speakers:
     gitHub: RobotAvi
   - id: 2240
     photoFileName: 2240.jpg
-    photoUpdatedAt: "2024-05-27T08:44:42Z"
+    photoUpdatedAt: "2024-09-18T12:39:13Z"
     name:
       - {language: en, text: "Iuliia Volkova"}
       - {language: ru, text: "Юлия Волкова"}
@@ -32315,14 +32327,15 @@ speakers:
       - language: en
         text: "<p>Ex-EPAM, Ex-Grid Dynamics, currently (and in the foreseeable future) is Data Lead at CodeScoring.</p>\n\
             <p>Her entire engineering career she has been floundering between the Data Engineering stack with Apache Airflow,\
-            \ databases and other ETL tooling and working with classic REST API services and boring ORMs.&nbsp;</p>\n<p>In\
-            \ her spare time, she is into open source and maintains her <a href=\"https://github.com/xnuinside\" target=\"\
-            _blank\" rel=\"noopener noreferrer\">own libraries</a>.</p>"
-      - language: ru
-        text: "<p>Ex-EPAM, ex-GridDynamic, сейчас и в планах на обозримое будущее &mdash; Data Lead в CodeScoring.</p>\n<p>В\
+            \ databases and other ETL tooling and working with classic REST API services and boring ORMs. Right now, her main\
+            \ domain of work is vulnerabilities and open source packages.</p>\n<p>In her spare time, she is into open source\
+            \ and maintains her&nbsp;<a href=\"https://github.com/xnuinside\" target=\"_blank\" rel=\"noopener noreferrer\"\
+            >own libraries</a>.</p>"
+      - {language: ru, text: "Ex-EPAM, ex-GridDynamic, сейчас и в планах на обозримое будущее — Data Lead в CodeScoring.</p><p>В\
             сю инженерную карьеру мечется между стеком Data Engineering с Apache Airflow, базами данных и прочим ETL-тулин\
-            гом и работой с классическими REST API-сервисами и скучными ORM.&nbsp;</p>\n<p>В свободное время &laquo;балует\
-            ся&raquo; опенсорсом и поддерживает <a href=\"https://github.com/xnuinside\">свои библиотеки</a>.</p>"
+            гом и работой с классическими REST API-сервисами и скучными ORM. Сейчас основной домен работы — уязвимости и о\
+            пенсорс-пакеты.</p><p>В свободное время «балуется» опенсорсом и поддерживает&nbsp;<a href=\"https://github.com/xnuinside\"\
+            \ rel=\"noopener noreferrer\" target=\"_blank\">свои библиотеки</a>."}
     twitter: xnuinside
     gitHub: xnuinside
     habr: xnuinside
@@ -33095,11 +33108,11 @@ speakers:
     gitHub: Aitem
   - id: 2300
     photoFileName: 2300.jpg
-    photoUpdatedAt: "2022-09-20T16:04:26Z"
+    photoUpdatedAt: "2024-09-13T12:30:09Z"
     name:
       - {language: en, text: "Oleg Voznesensky"}
       - {language: ru, text: "Олег Вознесенский"}
-    companyIds: [844]
+    companyIds: [620]
     bio:
       - {language: en, text: "<p>Oleg has been in the IT industry for more than 20 years. Started out as a system administrator.\
             \ Worked in a bank, implemented SAP, was a developer of an automated banking system, the last seven years working\
@@ -33190,16 +33203,15 @@ speakers:
             \ мониторинга.</p>"}
   - id: 2308
     photoFileName: 2308.jpg
-    photoUpdatedAt: 2022-10-12T16:15:37Z[UTC]
+    photoUpdatedAt: "2024-09-27T08:16:49Z"
     name:
-      - {language: en, text: "Sergey Bukharov"}
+      - {language: en, text: "Sergei Bukharov"}
       - {language: ru, text: "Сергей Бухаров"}
     companyIds: [161]
     bio:
-      - {language: en, text: "<p>Started his career as a .NET developer. For the last two years has been implementing the\
-            \ SRE culture at Dodo Engineering.</p>"}
-      - {language: ru, text: "<p>Начинал карьеру в качестве .NET разработчика. В течение последних двух лет занимается вне\
-            дрением культуры SRE в Dodo Engineering.</p>"}
+      - {language: en, text: "<p>Technical leader of the Infrastructure Platform team at Dodo Engineering and a practising\
+            \ SRE.</p>"}
+      - {language: ru, text: "<p>Технический лидеры команды Infrastructure Platform в Dodo Engineering и практикующий SRE.</p>"}
   - id: 2309
     photoFileName: 2309.jpg
     photoUpdatedAt: 2022-09-29T14:51:01Z[UTC]
@@ -33313,12 +33325,14 @@ speakers:
     photoFileName: 2322.jpg
     photoUpdatedAt: "2024-08-29T16:54:11Z"
     name:
-      - {language: en, text: "Aleksei Fedulaev"}
+      - {language: en, text: "Aleksey Fedulaev"}
       - {language: ru, text: "Алексей Федулаев"}
     companyIds: [648]
     bio:
-      - {language: ru, text: "В ИБ с 2011 года. Руководитель направления Cloud Native Security в MWS. Помогает делать прод\
-            укты компании безопаснее, а мир — лучше."}
+      - {language: en, text: "<p>In InfoSec since 2011. Head of Cloud Native Security at MTS Web Services. Helps make the\
+            \ company's products safer and the world a better place.</p>"}
+      - {language: ru, text: "<p>В ИБ с 2011 года. Руководитель направления Cloud Native Security в MTС Web Services. Помо\
+            гает делать продукты компании безопаснее, а мир &mdash; лучше.</p>"}
     gitHub: aleksey0xffd
     habr: 0xffd
   - id: 2323
@@ -33350,16 +33364,20 @@ speakers:
             \ году присоединился к команде эксплуатации геймдев-студии IT Territory (входит в MY.GAMES).</p>"}
   - id: 2325
     photoFileName: 2325.jpg
-    photoUpdatedAt: "2023-06-19T12:20:22Z"
+    photoUpdatedAt: "2024-10-10T08:31:43Z"
     name:
-      - {language: en, text: "Vaclav Dovnar"}
+      - {language: en, text: "Vatslav Dovnar"}
       - {language: ru, text: "Вацлав Довнар"}
-    companyIds: [978]
+    companyIds: [975]
     bio:
-      - {language: en, text: "<p>Expert with 10 years of experience. Main areas of interest: building security teams, comprehensive\
-            \ security of software products for IT companies.&nbsp;</p>"}
-      - {language: ru, text: "<p>Эксперт с 10 летнем опытом работы. Основные сферы интересов: построение команд безопаснос\
-            ти и комплексное обеспечение безопасности программных продуктов для IT-компаний.&nbsp;</p>"}
+      - language: en
+        text: "<p>Has been in the security and IT industry for 11 years. He has experience in creating security from scratch\
+            \ in companies with more than 600 developers.</p>\n<p>His main area of interest is integrated security for IT\
+            \ product companies.</p>\n<p>Regular speaker and participant of conferences. Independent consultant.</p>"
+      - language: ru
+        text: "<p>11 лет в сфере безопасности и ИТ. Имеет опыт создания безопасности с нуля в компаниях, где более 600 раз\
+            работчиков.</p>\n<p>Основная сфера интересов &mdash; комплексное обеспечение безопасности продуктовых ИТ-компа\
+            ний.</p>\n<p>Постоянный спикер и участник конференций. Независимый консультант.</p>"
   - id: 2326
     photoFileName: 2326.jpg
     photoUpdatedAt: "2022-09-28T08:14:51Z"
@@ -34892,21 +34910,22 @@ speakers:
       - {language: ru, text: "Александр Козлов"}
     companyIds: [665]
     bio:
-      - {language: en, text: "<p>He is a long-time software developer. Alexander started out as a layout designer back when\
-            \ CSS was just starting to tickle everyone's nerves. It took almost seven years to learn the depths of software\
-            \ development on the front end, and then began a period of immersion in the back end. For six years he was involved\
-            \ in backend development. During all this time Alexander was lucky enough to face different tasks and different\
-            \ companies. As a web developer he created web-sites, CRM and ERP-systems. After web he worked on gamedev (Mail.ru)\
-            \ and high-load system tasks, deeply immersed in optimization of network interactions. After gamedev he joined\
-            \ Sberbank, where he has been developing the integration platform for several years now. He has been in the roles\
-            \ of developer (Java, Go, C#, C++), system architect, team leader and product owner.</p>"}
+      - language: en
+        text: "<p>He is a long-time software developer. Started out as a layout designer back when CSS was just starting to\
+            \ tickle everyone's nerves. It took almost seven years to learn the depths of software development on the front\
+            \ end, and then began a period of immersion in the back end. For six years he was involved in backend development.\
+            \ During all this time Alexander was lucky enough to face different tasks and different companies.</p>\n<p>As\
+            \ a web developer he created web sites, CRM and ERP systems. After web he worked on GameDev (Mail.ru) and high-load\
+            \ system tasks, deeply immersed in optimization of network interactions. After GameDev he joined Sber, where he\
+            \ has been developing the integration platform for several years now. Has been in the roles of a developer (Java,\
+            \ Go, C#, C++), system architect, team leader and product owner.</p>"
       - language: ru
         text: "<p>Разработчик ПО со стажем. Начинал верстальщиком в те времена, когда CSS только начинал щекотать всем нер\
             вные клетки. Почти семь лет ушло на познания глубин разработки ПО со стороны фронта, а после начался период по\
             гружения в бэк. Уже шесть лет занимается разработкой бэкенда. За все это время Александру посчастливилось стол\
-            кнуться с разными задачами и разными компаниями.</p>\n<p>Будучи веб-разработчиком, создавал сайты, CRM и ERP-с\
-            истемы. После веба занимался геймдевом в Mail.ru и задачами на высоконагруженные системы с глубоким погружение\
-            м в оптимизацию сетевых взаимодействий. После геймдева пришел в Сбер, где уже несколько лет занимается разрабо\
+            кнуться с разными задачами и разными компаниями.</p>\n<p>В роли веб-разработчика создавал сайты, CRM и ERP-сис\
+            темы. После веба занимался геймдевом в Mail.ru и задачами на высоконагруженные системы с глубоким погружением\
+            \ в оптимизацию сетевых взаимодействий. После геймдева пришел в Сбер, где уже несколько лет занимается разрабо\
             ткой интеграционной платформы. Был в ролях разработчика (Java, Go, C#, C++), системного архитектора, тимлида и\
             \ владельца продукта.</p>"
   - id: 2432
@@ -34917,16 +34936,14 @@ speakers:
       - {language: ru, text: "Максим Чудновский"}
     companyIds: [665]
     bio:
-      - language: en
-        text: "<p>Maxim has more than 10 years of experience in software development in various roles: developer, product\
-            \ manager, solution architect, system architect. Key areas of projects are:</p>\n<ul>\n<li>high-load integration\
-            \ solutions;</li>\n<li>distributed platform solutions based on cloud technologies;</li>\n<li>CI/CD solutions for\
-            \ cloud environments;</li>\n<li>AI &amp; ML solutions.</li>\n</ul>"
-      - language: ru
-        text: "<p>Более 10 лет опыта разработки ПО в различных ролях: developer, product manager, solution architect, system\
-            \ architect. Ключевые области проектов:</p>\n<ul>\n<li>высоконагруженные интеграционные решения;</li>\n<li>рас\
-            пределенные платформенные решения на базе облачных технологий;</li>\n<li>CI/CD-решения для облачных сред;</li>\n\
-            <li>AI &amp; ML-решения.</li>\n</ul>"
+      - {language: en, text: "<p>Maxim has more than 10 years of experience in software development in various roles: developer,\
+            \ product manager, solution architect, system architect. Key areas of projects: high-load integration solutions,\
+            \ distributed platform solutions based on cloud technologies, CI/CD solutions for cloud environments, AI&amp;ML\
+            \ solutions.</p>"}
+      - {language: ru, text: "<p>Более 10 лет опыта разработки ПО в различных ролях: developer, product manager, solution\
+            \ architect, system architect. Ключевые области проектов: высоконагруженные интеграционные решения,&nbsp;распр\
+            еделенные платформенные решения на базе облачных технологий, CI/CD-решения для облачных сред, AI&amp;ML-решени\
+            я.</p>"}
     twitter: mchudnovskiy
     habr: chudnovskiy
   - id: 2433
@@ -37182,13 +37199,13 @@ speakers:
             \ management system).</p>"}
   - id: 2594
     photoFileName: 2594.jpg
-    photoUpdatedAt: 2023-04-05T13:50:05Z[UTC]
+    photoUpdatedAt: "2024-09-23T15:50:12Z"
     name:
       - {language: en, text: "Georg Gaal"}
       - {language: ru, text: "Георг Гаал"}
-    companyIds: [1067]
+    companyIds: [1360]
     bio:
-      - {language: en, text: "<p>Georg is a serial devops. Active preacher of best practices and technologies. Protects exploitation\
+      - {language: en, text: "<p>Georg is a serial DevOps. Active proponent of best practices and technologies. Protects exploitation\
             \ from developers and vice versa.</p>"}
       - {language: ru, text: "<p>Серийный девопс. Активный проповедник лучших практик и технологий. Защищает эксплуатацию\
             \ от разработчиков и наоборот.</p>"}
@@ -39645,37 +39662,36 @@ speakers:
     habr: dmitrysatin
   - id: 2755
     photoFileName: 2755.jpg
-    photoUpdatedAt: "2023-08-31T11:01:36Z"
+    photoUpdatedAt: "2024-11-05T12:12:22Z"
     name:
       - {language: en, text: "Alexander Krylov"}
       - {language: ru, text: "Александр Крылов"}
     companyIds: [976]
     bio:
       - language: en
-        text: "<p>Team Lead DevOps. Over 10 years in IT, he has worked his way up from the first line of support to the head\
-            \ of DevOps. <br /><br />Co-author and host of the \"<a href=\"https://www.youtube.com/playlist?list=PLOUnAwlRtk1AyPdkOG-rh_AYpLkwLuqob\"\
-            >ProITStand\" podcast</a>.<br /><br />Founder of <a href=\"t.me/devopsforlove\">Telegram channel on technical\
-            \ manuals.</a> <br /><br />Regular speaker of conferences DevOps conf, TeamLead conf, Highload conf.<br /><br\
-            \ />Methodologist of the MlOps module of the data-engineer profession in Netology and a regular speaker of DevOps.\
-            \ <br /><br />Author of a course on haproxy and a regular speaker of DevOps direction in Rebrain.<br /><br />Author\
-            \ of a course on DevOps-engineering profession on the basis of digital departments at universities (MSTU, MIREA,\
-            \ MSMU).<br /><br />Member of the PC of the Slurm Monitoring School.<br /><br />YouTube:</p>\n<ul>\n<li><a href=\"\
-            https://www.youtube.com/devopsforlove\">DevOps For Love</a></li>\n<li><a href=\"https://youtu.be/nn_8oJHbEug\"\
-            >ProITStand</a></li>\n<li><a href=\"https://youtu.be/5836KL9jRkMInterview%20-%20https://www.youtube.com/watch?v=NVSONy5_PTc&amp;t\"\
-            >Brainshtorm</a> <br /><br /></li>\n</ul>"
+        text: "<p>Team Lead DevOps / Process manager, CTO. Over 11 years in IT, he has worked his way up from the first line\
+            \ of support to the head of DevOps.</p>\n<p>Co-author and host of the <a href=\"https://www.youtube.com/playlist?list=PLOUnAwlRtk1AyPdkOG-rh_AYpLkwLuqob\"\
+            >ProITStand podcast</a>. Founder of <a href=\"t.me/devopsforlove\">Telegram channel on technical manuals.</a></p>\n\
+            <p>Regular speaker of conferences DevOpsConf, TeamLead Conf, Highload.</p>\n<p>Methodologist of the MLOps module\
+            \ of the Data Engineer profession in Netology and a regular speaker of DevOps direction.</p>\n<p>Author of a course\
+            \ on HAProxy and a regular speaker of DevOps direction in Rebrain.</p>\n<p>Author of a course on DevOps-engineering\
+            \ profession on the basis of digital departments at universities MSTU, MIREA, MSMU.</p>\n<p>YouTube episodes featuring\
+            \ Alexander:</p>\n<ul>\n<li><a href=\"https://www.youtube.com/devopsforlove\">DevOps For Love</a></li>\n<li><a\
+            \ href=\"https://youtu.be/nn_8oJHbEug\">ProITStand</a></li>\n<li><a href=\"https://youtu.be/5836KL9jRkMInterview%20-%20https://www.youtube.com/watch?v=NVSONy5_PTc&amp;t\"\
+            >Brainstorm</a></li>\n</ul>"
       - language: ru
-        text: "<p>Team Lead DevOps. За 10 лет работы в ИТ прошёл полный путь от первой линии поддержки до начальника служб\
-            ы DevOps.&nbsp;</p>\n<p>Соавтор и ведущий подкаста <a href=\"https://www.youtube.com/playlist?list=PLOUnAwlRtk1AyPdkOG-rh_AYpLkwLuqob\"\
-            \ target=\"_blank\" rel=\"noopener noreferrer\">\"ProITStand\".</a></p>\n<p>Основатель <a style=\"color: #0066cc;\"\
-            \ href=\"https://t.me/devopsforlove\" target=\"_blank\" rel=\"noopener noreferrer\">Telegram-канала по техниче\
-            ским мануалам.</a><span style=\"color: #495057;\">&nbsp;</span></p>\n<p>Постоянный спикер конференций DevOps conf,\
-            \ TeamLead conf, Highload conf.</p>\n<p>Методист модуля MlOps профессии data-engineer в Нетологии и постоянный\
-            \ спикер направления DevOps.&nbsp;</p>\n<p>Автор курса по haproxy и постоянный спикер направления DevOps в Rebrain.</p>\n\
-            <p>Автор курса профессии DevOps-инженер на базе цифровых кафедр на базе вузов МГТУ, МИРЭА, МГМУ.</p>\n<p>Член\
-            \ ПК Школы Мониторинга &laquo;Слёрм&raquo;.YouTube-выпуски:</p>\n<ul>\n<li><a href=\"https://www.youtube.com/devopsforlove\"\
-            \ target=\"_blank\" rel=\"noopener noreferrer\">DevOps For Love&nbsp;</a></li>\n<li><a href=\"https://youtu.be/nn_8oJHbEug\"\
-            \ target=\"_blank\" rel=\"noopener noreferrer\">ProITStand</a></li>\n<li><a href=\"https://youtu.be/5836KL9jRkMInterview%20-%20https://www.youtube.com/watch?v=NVSONy5_PTc&amp;t\"\
-            \ target=\"_blank\" rel=\"noopener noreferrer\">Brainshtorm</a>&nbsp;</li>\n</ul>"
+        text: "<p>Team Lead DevOps / Process manager, CTO. За 11 лет работы в ИТ прошел полный путь от первой линии поддер\
+            жки до начальника службы DevOps.&nbsp;</p>\n<p>Соавтор и ведущий подкаста <a href=\"https://www.youtube.com/playlist?list=PLOUnAwlRtk1AyPdkOG-rh_AYpLkwLuqob\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">ProITStand</a>.&nbsp;Основатель <a href=\"https://t.me/devopsforlove\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">Telegram-канала по техническим мануалам.</a>&nbsp;</p>\n<p>Пос\
+            тоянный спикер конференций DevOpsConf, TeamLead Conf, Highload. Участник ПК ProIT Fest, Стачка.</p>\n<p>Методи\
+            ст модуля MLOps профессии &laquo;Data Engineer&raquo; в Нетологии и постоянный спикер направления DevOps.&nbsp;</p>\n\
+            <p>Автор курса по HAProxy и постоянный спикер направления DevOps в Rebrain.</p>\n<p>Автор курса профессии &laquo;DevOps-и\
+            нженер&raquo; на базе цифровых кафедр в вузах МГТУ, МИРЭА, МГМУ.</p>\n<p>YouTube-выпуски с участием Александра\
+            :</p>\n<ul>\n<li><a href=\"https://www.youtube.com/devopsforlove\" target=\"_blank\" rel=\"noopener noreferrer\"\
+            >DevOps For Love</a></li>\n<li><a href=\"https://youtu.be/nn_8oJHbEug\" target=\"_blank\" rel=\"noopener noreferrer\"\
+            >ProITStand</a></li>\n<li><a href=\"https://youtu.be/5836KL9jRkMInterview%20-%20https://www.youtube.com/watch?v=NVSONy5_PTc&amp;t\"\
+            \ target=\"_blank\" rel=\"noopener noreferrer\">Brainstorm</a>&nbsp;</li>\n</ul>"
     twitter: devopsforlove
     gitHub: darkbenladan
     habr: darkbenladan
@@ -39794,11 +39810,11 @@ speakers:
       - {language: ru, text: "Артём Мещеряков"}
     companyIds: [1131]
     bio:
-      - {language: en, text: "<p>DevOps engineer with 5 years of experience, formerly tech support engineer level 2. Experience\
+      - {language: en, text: "<p>DevOps engineer with 5 years of experience, formerly tech support engineer level 2. Has experience\
             \ in all major clouds (AWS/GCP/Azure) with deep dive into containers and K8s (including self-managed on bare metal).</p>"}
-      - {language: ru, text: "<p>DevOps инженер с 5-летним стажем, в прошлом инженер тех. поддержки 2 уровня. Опыт работы\
-            \ во всех крупных облаках (AWS/GCP/Azure) с глубоким погружение в контейнеры и K8s (в том числе self-managed н\
-            а bare metal).</p>"}
+      - {language: ru, text: "<p>DevOps-инженер с 5-летним стажем, в прошлом &mdash; инженер техподдержки 2-го уровня. Раб\
+            отал во всех крупных облаках (AWS/GCP/Azure) с глубоким погружением в контейнеры и K8s (в том числе self-managed\
+            \ на bare metal).</p>"}
   - id: 2765
     photoFileName: 2765.jpg
     photoUpdatedAt: "2024-08-05T12:59:34Z"
@@ -39807,30 +39823,33 @@ speakers:
       - {language: ru, text: "Андрей Сухоруков"}
     companyIds: [635]
     bio:
-      - {language: en, text: "<p>Team Lead Devops. Anti-Crisis. A pirate in the devops world. Gathered teams in different\
-            \ places, solved crises, conducted very, very, very many devops meetings to understand how bad things are. \"\
-            Rushing to where the project... feels bad\" is one of the mottos of continuing to be one of the few who come after\
-            \ the \"successful\" ones. Has come a long way from testing and consulting to a buzzword called DevOps. Doesn't\
-            \ promote approaches because most of them are sometimes pointless and ruthless...</p>"}
+      - language: en
+        text: "<p>Team Lead DevOps. Anti-Crisis. A pirate in the DevOps world. Gathered teams in different places, solved\
+            \ crises, conducted very, very many DevOps interviews to understand how bad things are.</p>\n<p>\"Rushing to where\
+            \ the project... feels bad\" is one of Andrey's mottos of continuing to be one of the few who come after the \"\
+            successful\" ones. Has come a long way from testing and consulting to a buzzword called DevOps. Doesn't promote\
+            \ approaches because most of them are sometimes pointless and ruthless...</p>"
       - language: ru
         text: "<p>Team Lead DevOps. Антикризисный. Пират в мире девопса. Собирал команды в разных местах, решал кризисы, п\
-            ровел очень-очень много собеседований девопсов, чтобы понять, как все плохо.</p>\n<p>Спикер конференций, митап\
-            ов, подкастов, автор на <a href=\"https://habr.com/ru/users/devops_sergeant/\">Хабре</a>. Экспериментатор и ис\
-            следователь процессов управления командами.</p>"
+            ровел очень-очень много собеседований девопсов, чтобы понять, как все плохо.</p>\n<p>&laquo;Спешим туда, где п\
+            роекту... плохо&raquo; &mdash; один из девизов, который позволяет Андрею продолжать быть одним из немногих, кт\
+            о приходит после &laquo;успешных&raquo;. Прошел долгой дорогой из тестирования и консалтинга в модное слово DevOps.\
+            \ Не продвигает подходы, так как большая часть из них порой бессмысленна и беспощадна...</p>"
     habr: devops_sergeant
   - id: 2766
     photoFileName: 2766.jpg
-    photoUpdatedAt: "2023-06-01T11:59:11Z"
+    photoUpdatedAt: "2024-08-27T08:50:49Z"
     name:
       - {language: en, text: "Dmitrii Rybalka"}
       - {language: ru, text: "Дмитрий Рыбалка"}
-    companyIds: [665]
+    companyIds: [1282]
     bio:
-      - {language: en, text: "<p>20 years in IT. His huge baggage of knowledge and practical experience allows him to carry\
-            \ out large-scale modern projects in the direction of IT infrastructure - to create, develop and maintain processes.</p>"}
-      - {language: ru, text: "<p>20 лет в IT. Огромный багаж знаний и практического опыта дает ему возможность выполнять м\
-            асштабные современные проекты в направлении IT-инфраструктуры &mdash; создавать, развивать и поддерживать проц\
-            ессы.&nbsp;</p>"}
+      - {language: en, text: "<p>20 years in IT. Dmitrii's wealth of knowledge and practical experience allows him to carry\
+            \ out large-scale modern projects in the direction of IT infrastructure &mdash; to create, develop and maintain\
+            \ processes.</p>"}
+      - {language: ru, text: "<p>20 лет в IT. Огромный багаж знаний и практического опыта дает Дмитрию возможность выполня\
+            ть масштабные современные проекты в направлении IT-инфраструктуры &mdash; создавать, развивать и поддерживать\
+            \ процессы.&nbsp;</p>"}
   - id: 2767
     photoFileName: 2767.jpg
     photoUpdatedAt: "2023-06-20T09:45:46Z"
@@ -40005,22 +40024,26 @@ speakers:
             х решений и инструментов, позволяющих решать такие задачи. Вдохновлен идеей подключить что угодно к интернету."}
   - id: 2779
     photoFileName: 2779.jpg
-    photoUpdatedAt: "2023-08-01T12:18:45Z"
+    photoUpdatedAt: "2024-08-28T14:43:20Z"
     name:
       - {language: en, text: "Daniel Khaliulin"}
       - {language: ru, text: "Даниэль Халиулин"}
     companyIds: [674]
     bio:
-      - {language: en, text: "Technical Product Manager at Tinkoff. He's responsible for the performance and reliability of\
-            \ the main mobile application — the mobile bank. Complex crashes, monitoring, performance optimization, technical\
-            \ metrics and all that — that's his job.Before that he worked as a system analyst and backend developer on a project\
-            \ for a Kuwaiti telecom operator (he even traveled to Kuwait a couple of times), and as an operations engineer\
-            \ and system administrator at MegaFon.The author of the Telegram channel \"Tales of a Technical Manager\" - https://t.me/tech_managers_tales."}
-      - {language: ru, text: "Technical Product Manager в Тинькофф. Отвечает за производительность и надежность основного\
-            \ мобильного приложения — мобильного банка. Сложные крэши, мониторинги, оптимизации производительности, технич\
-            еские метрики и все такое — это к нему.До этого поработал системным аналитиком и бэкенд-разработчиком на проек\
-            те кувейтского оператора связи (гонял пару раз в Кувейт даже), инженером по эксплуатации и системным администр\
-            атором в Мегафоне. Ведёт телеграм-канал \"Сказки технического менеджера\" - https://t.me/tech_managers_tales."}
+      - language: en
+        text: "<p>Technical Product Manager at T-Bank. He's responsible for the product development of the main bank-wide\
+            \ observability system &mdash; Sage. Previously was responsible for the performance and reliability of the main\
+            \ mobile application &mdash; mobile banking. Before T-Bank he worked as a system analyst and backend developer\
+            \ on a project for a Kuwaiti telecom operator (he even traveled to Kuwait a couple of times), and as an operations\
+            \ engineer and system administrator at a Russian telecom company.</p>\n<p>Author of the Telegram channel <a href=\"\
+            https://t.me/tech_managers_tales\">\"Tales of a Technical Manager\"</a>.</p>"
+      - language: ru
+        text: "<p>Technical Product Manager в Т-Банке. Отвечает за продуктовое развитие главной системы наблюдаемости всег\
+            о банка &mdash; Sage. Ранее отвечал за производительность и надежность основного мобильного приложения &mdash;\
+            \ мобильного банка. До Т-Банка работал системным аналитиком и бэкенд-разработчиком на проекте кувейтского опер\
+            атора связи (даже был пару раз в Кувейте), инженером по эксплуатации и системным администратором в российском\
+            \ телекоме.</p>\n<p>Ведет Telegram-канал <a href=\"https://t.me/tech_managers_tales\">&laquo;Сказки техническо\
+            го менеджера&raquo;</a>.</p>"
   - id: 2780
     photoFileName: 2780.jpg
     photoUpdatedAt: "2023-07-03T10:13:15Z"
@@ -40195,17 +40218,18 @@ speakers:
     habr: GRomR1
   - id: 2792
     photoFileName: 2792.jpg
-    photoUpdatedAt: "2023-06-26T16:54:43Z"
+    photoUpdatedAt: "2024-09-23T11:30:33Z"
     name:
       - {language: en, text: "Ivan Gulakov"}
       - {language: ru, text: "Иван Гулаков"}
     companyIds: [648]
     bio:
-      - {language: en, text: "<p>Techlead DevOps team at #CloudMTS. Develops and maintains infrastructure for cloud platform\
-            \ services. In his activities, he relies on GitOps practices in conjunction with his own Kubernetes operators.</p>"}
-      - {language: ru, text: "<p>Техлид DevOps команды в #CloudMTS.&nbsp;Занимается развитием и поддержкой инфраструктуры\
-            \ для сервисов облачной платформы.&nbsp;В своей деятельности опирается на практику GitOps в связке с собственн\
-            ыми Kubernetes-операторами.</p>"}
+      - {language: en, text: "<p>Tech lead of the DevOps team at MTS Web Services. Develops and maintains infrastructure for\
+            \ cloud platform services. In his activities, he relies on GitOps practices in conjunction with his own Kubernetes\
+            \ operators.</p>"}
+      - {language: ru, text: "<p>Техлид DevOps-команды в MTС Web Services. Развивает и поддерживает инфраструктуру для сер\
+            висов облачной платформы. В своей деятельности опирается на практику GitOps в связке с собственными Kubernetes-о\
+            ператорами.</p>"}
   - id: 2793
     photoFileName: 2793.jpg
     photoUpdatedAt: "2023-07-18T08:04:32Z"
@@ -40214,7 +40238,7 @@ speakers:
       - {language: ru, text: "Александр Кожемякин"}
     companyIds: [620]
     bio:
-      - {language: en, text: "<p>Builds platform solutions on Kubernetes. Accidentally got acquainted with Linux 17 years\
+      - {language: en, text: "<p>He builds platform solutions on Kubernetes. Accidentally got acquainted with Linux 17 years\
             \ ago, and then it was a blur.</p>"}
       - {language: ru, text: "<p>Строит платформенные решения на Kubernetes. Случайно познакомился с Linux 17 лет назад, а\
             \ дальше &mdash; как в тумане.</p>"}
@@ -40235,22 +40259,25 @@ speakers:
     twitter: MainDevOps
   - id: 2795
     photoFileName: 2795.jpg
-    photoUpdatedAt: "2023-09-06T08:05:25Z"
+    photoUpdatedAt: "2024-09-19T06:54:41Z"
     name:
       - {language: en, text: "Lev Khakimov"}
       - {language: ru, text: "Лев Хакимов"}
-    companyIds: [1128]
+    companyIds: [648]
     bio:
-      - {language: en, text: "<p>DevOps engineer, worked on the Gosuslugi project, developed Sber's brokerage platform. Now\
-            \ he is Tech Lead IS at Wildberries. Lev has 2 years of playing CTF as a member of ONO team from the top 10 in\
-            \ the country. Co-organizer of VrnCTF &mdash; information security competition on the basis of Voronezh State\
-            \ University. Developer of optional DevOps courses for the Faculty of Computer Science of the Voronezh State University,\
-            \ author of a DevOps master's course for MCS and software engineering.</p>"}
-      - {language: ru, text: "<p>DevOps-инженер, работал над проектом Госуслуги, вел разработку брокерской платформы Сбера\
-            . Сейчас техлид команды разработки блока ИБ в Wildberries. За плечами 2 года игры в CTF в составе команды ONO\
-            \ из топ-10 по стране. Соорганизатор VrnCTF &mdash; соревнований по информационной безопасности на базе Вороне\
-            жского государственного университета. Разработчик факультативных DevOps-курсов для факультета компьютерных нау\
-            к ВГУ, автор магистерского курса DevOps для направлений МКН и программной инженерии.</p>"}
+      - language: en
+        text: "<p>DevOps engineer, worked on the 'Gosuslugi' project, developed Sber's brokerage platform. Was the Lead of\
+            \ the IS infrastructure team at Wildberries. Now he is doing security for container solutions based on K8s at\
+            \ MTS Web Services.</p>\n<p>Lev has 2 years of playing CTF as a member of ONO team from the top 10 in the country.\
+            \ Organizer of VrnCTF and CenterCTF &mdash; large information security competitions in the Central Federal District.\
+            \ Developer of optional courses for the Faculty of Computer Science of the Voronezh State University, author of\
+            \ the master's course on computer networks for ITMO.</p>"
+      - language: ru
+        text: "<p>DevOps-инженер, работал над проектом &laquo;Госуслуги&raquo;, вел разработку брокерской платформы Сбера\
+            , был лидом команды инфрастурктуры ИБ в Wildberries. Сейчас занимается безопасностью контейнерных решений на б\
+            азе K8s в МТС Web Services.</p>\n<p>За плечами 2 года игры в CTF в составе команды ONO из топ-10 по стране. Ор\
+            ганизатор VrnCTF и CenterCTF &mdash; крупных соревнований по ИБ в ЦФО. Разработчик факультативных DevOps-курсо\
+            в для факультета компьютерных наук ВГУ, автор магистерского курса по компьютерным сетям для ИТМО.</p>"
     twitter: devijoe
     gitHub: DeviJoe
     habr: DeviJoe
@@ -41485,24 +41512,20 @@ speakers:
             ь JSON-ы и стремится понимать, как технологии работают под капотом.</p>"
   - id: 2878
     photoFileName: 2878.jpg
-    photoUpdatedAt: "2023-09-13T13:00:39Z"
+    photoUpdatedAt: "2024-07-22T10:20:44Z"
     name:
-      - {language: en, text: "Andrey Zarubin"}
+      - {language: en, text: "Andrei Zarubin"}
       - {language: ru, text: "Андрей Зарубин"}
-    companyIds: []
+    companyIds: [429]
     bio:
-      - language: en
-        text: "<p>Head of IT non-credit products of retail business at Rosbank. 19 years in IT. His entire career has been\
-            \ around Java: Desktop, Java EE, microservices.</p>\n<p>In various years Andrey created banking software, high-load\
-            \ trading platforms and geoinformation systems. He wrote code, managed teams, projects and departments, as well\
-            \ as implemented Agile, DevOps and other practices. Certified in Java, Cloud, Agile and PRINCE2. Adores hackathons\
-            \ and engineering culture.</p>"
-      - language: ru
-        text: "<p>Руководитель IT-некредитных продуктов розничного бизнеса в Росбанке. 19 лет в IT. Вся карьера &ndash; ок\
-            оло Java: Desktop, Java EE, микросервисы.</p>\n<p>В разные годы создавал банковское ПО, высоконагруженные трей\
-            динговые платформы и геоинформационные системы. Писал код, руководил командами, проектами и департаментами. Вн\
-            едрял Agile-, DevOps- и другие практики. Сертифицирован по Java, Cloud, Agile и PRINCE2. Обожает хакатоны и ин\
-            женерную культуру.</p>"
+      - {language: en, text: "<p>20 years in IT. His entire career has been around Java: desktop, enterprise, microservices.\
+            \ In different years, he created banking software, high-loaded trading platforms, and geographic information systems.\
+            \ Wrote code, managed teams, projects and departments. Implemented Agile, DevOps and other practices. Certified\
+            \ in Java, Cloud, Agile, and PRINCE2.</p>"}
+      - {language: ru, text: "<p>20 лет в IT. Вся карьера &mdash; около Java: desktop, enterprise, микросервисы. В разные\
+            \ годы создавал банковское ПО, высоконагруженные трейдинговые платформы и геоинформационные системы. Писал код\
+            , руководил командами, проектами и департаментами. Внедрял Agile-, DevOps- и другие практики. Сертифицирован п\
+            о Java, Cloud, Agile и PRINCE2.</p>"}
     twitter: zarandr
   - id: 2879
     photoFileName: 2879.jpg
@@ -42167,15 +42190,21 @@ speakers:
     habr: penolegrus
   - id: 2921
     photoFileName: 2921.jpg
-    photoUpdatedAt: "2023-07-31T15:52:39Z"
+    photoUpdatedAt: "2024-09-20T09:13:50Z"
     name:
       - {language: en, text: "Andrey Moiseev"}
       - {language: ru, text: "Андрей Моисеев"}
-    companyIds: [976]
+    companyIds: [648]
     bio:
-      - {language: en, text: "<p>Implements secure development across the company, builds processes including testing.</p>"}
-      - {language: ru, text: "<p><span style=\"font-weight: 400;\">Внедряет безопасную разработку в компании, а также выст\
-            раивает процессы, включая тестирование.</span></p>"}
+      - {language: en, text: "<p>In InfoSec he started with software analysis in C++. Then he was a DevSecOps methodologist\
+            \ for a state-owned company, took part in the development of 56939 standard, and then went into DevSecOps practice.\
+            \ He successfully implemented SAST, SCA, secret management and other practices of secure software development\
+            \ in companies. Now he provides cloud security in MTS Web Services.</p>"}
+      - {language: ru, text: "<p>В InfoSec начинал с анализа ПО на С++. Потом выполнял роль DevSecOps methodologist для го\
+            скомпании, принимал участие в разработке стандарта 56939, после чего ушел в DevSecOps practice. Успешно внедря\
+            л SAST, SCA, secret managment, другие практики безопасной разработки ПО в компаниях. Сейчас обеспечивает безоп\
+            асность облаков в MTС Web Services.</p>"}
+    habr: not_S0_s3c
   - id: 2922
     photoFileName: 2922.jpg
     photoUpdatedAt: "2023-07-26T14:51:10Z"
@@ -45598,15 +45627,19 @@ speakers:
     habr: Dionid
   - id: 3156
     photoFileName: 3156.jpg
-    photoUpdatedAt: "2024-03-14T15:02:50Z"
+    photoUpdatedAt: "2024-09-05T12:23:11Z"
     name:
-      - {language: en, text: "Alexander Shinkarev"}
+      - {language: en, text: "Aleksandr Shinkarev"}
       - {language: ru, text: "Александр Шинкарев"}
     companyIds: [1078]
     bio:
-      - {language: ru, text: "<p>Профессионально занимается разработкой 12 лет.&nbsp;В начале карьеры разрабатывал ПО в Byndyusoft,\
+      - {language: en, text: "<p>He has been developing professionally for 12 years. At the beginning of his career, he developed\
+            \ software at Byndyusoft, and later became a team lead in projects for Deloitte and Nielsen. Now he runs the IT\
+            \ company Tourmaline Core and teaches at South Ural State University. He is passionate about creating a culture\
+            \ of developing people in IT.</p>"}
+      - {language: ru, text: "Профессионально занимается разработкой 12 лет. В начале карьеры разрабатывал ПО в Byndyusoft,\
             \ позднее стал тимлидом в проектах для Deloitte и Nielsen. Сейчас руководит IT-компанией Tourmaline Core и пре\
-            подает в Южно-Уральском государственном университете. Увлечен созданием культуры развития людей в IT.</p>"}
+            подает в Южно-Уральском государственном университете. Увлечен созданием культуры развития людей в IT."}
   - id: 3157
     photoFileName: 3157.jpg
     photoUpdatedAt: "2024-03-26T08:11:44Z"
@@ -53370,14 +53403,17 @@ speakers:
       - {language: ru, text: "Системный аналитик отделов криптографии и квантовых технологий."}
   - id: 3659
     photoFileName: 3659.jpg
-    photoUpdatedAt: "2024-08-29T16:51:42Z"
+    photoUpdatedAt: "2024-09-11T10:22:48Z"
     name:
       - {language: en, text: "Anatolii Karpenko"}
       - {language: ru, text: "Анатолий Карпенко"}
     companyIds: [1129]
     bio:
-      - {language: ru, text: "<p>Автоматизатор автоматизации в Luntry. Ведет канал <a href=\"https://t.me/tech_b0lt_Genona\"\
-            >&laquo;Технологический Болт Генона&raquo;</a>.</p>"}
+      - {language: en, text: "<p>Luntry automation automator. Maintains the Telegram channel <a href=\"https://t.me/tech_b0lt_Genona\"\
+            >\"Genon's Technological Bolt\"</a>.</p>"}
+      - {language: ru, text: "<p>Автоматизатор автоматизации в Luntry. Ведет Telegram-канал <a style=\"color: var(--primary-color);\"\
+            \ href=\"https://t.me/tech_b0lt_Genona\" target=\"_blank\" rel=\"noopener noreferrer\">&laquo;Технологический\
+            \ Болт Генона&raquo;</a>.</p>"}
     gitHub: rusdacent
   - id: 3660
     photoFileName: 3660.jpg
@@ -53664,3 +53700,312 @@ speakers:
             м сервиса, поставку данных, повышение качества поисковой выдачи за счет внедрения новых моделей машинного обуч\
             ения.</p>"
     habr: svetograde
+  - id: 3680
+    photoFileName: 3680.jpg
+    photoUpdatedAt: "2024-09-06T06:58:24Z"
+    name:
+      - {language: en, text: "Anton Tretiakov"}
+      - {language: ru, text: "Антон Третьяков"}
+    companyIds: [424]
+    bio:
+      - {language: en, text: "<p>Anton helps to make a static analyzer, maintains the pipelines and writes articles.</p>"}
+      - {language: ru, text: "<p>Антон помогает делать статический анализатор, поддерживает пайплайн и пишет статьи.</p>"}
+  - id: 3681
+    photoFileName: 3681.jpg
+    photoUpdatedAt: "2024-10-03T12:12:30Z"
+    name:
+      - {language: en, text: "Konstantin Lebedev"}
+      - {language: ru, text: "Константин Лебедев"}
+    companyIds: [1322]
+    bio:
+      - {language: en, text: "<span style=\"color: rgb(15, 23, 42);\">DevOps in Mayflower. Will share his experience of moving\
+            \ from GlusterFS to SeaweedFS.</span>"}
+      - {language: ru, text: "DevOps в Mayflower. Поделится опытом переезда c GlusterFS на SeaweedFS."}
+  - id: 3682
+    photoFileName: 3682.jpg
+    photoUpdatedAt: "2024-09-10T15:55:18Z"
+    name:
+      - {language: en, text: "Anna Luchnik"}
+      - {language: ru, text: "Анна Лучник"}
+    companyIds: [1361]
+    bio:
+      - {language: en, text: "<p>Research architect, Director of IS development at Clearway. More than 15 years of experience\
+            \ as a consultant and architect in consulting divisions of international companies. 7 years in management positions,\
+            \ including CIO and CISO positions.</p>"}
+      - {language: ru, text: "Архитектор-исследователь, директор по развитию ИБ-направления в компании Clearway. Более 15\
+            \ лет работала консультантом и архитектором в консалтинговых подразделениях международных компаний. 7 лет на р\
+            уководящих должностях, включая позиции CIO и CISO."}
+  - id: 3683
+    photoFileName: 3683.jpg
+    photoUpdatedAt: "2024-10-04T07:59:36Z"
+    name:
+      - {language: en, text: "Aleksei Krugliak"}
+      - {language: ru, text: "Алексей Кругляк"}
+    companyIds: [806]
+    bio:
+      - {language: en, text: "<p>DevOps engineer with over 3 years of experience. Leads a small team. For the last year and\
+            \ a half he has been working on core tasks, doing different things for more than 40 clusters.</p>"}
+      - {language: ru, text: "<p class=\"p1\">DevOps-инженер с опытом более 3 лет. Руководит мини-командой. Последние полт\
+            ора года занимается core-задачами, делает разные штуки для более 40 кластеров.</p>"}
+    twitter: a_krugliak
+  - id: 3684
+    photoFileName: 3684.jpg
+    photoUpdatedAt: "2024-10-07T12:11:24Z"
+    name:
+      - {language: en, text: "Maksim Kupriianov"}
+      - {language: ru, text: "Максим Куприянов"}
+    companyIds: []
+    bio:
+      - {language: en, text: "<p>Admin / SRE and programmer with extensive experience. Specialisation: distributed systems,\
+            \ high loads, traffic delivery, network diagnostics.</p>"}
+      - {language: ru, text: "<p>Админ / SRE и программист с большим стажем. Специализация: распределенные системы, высоки\
+            е нагрузки, доставка трафика, диагностика сетей.</p>"}
+  - id: 3685
+    photoFileName: 3685.jpg
+    photoUpdatedAt: "2024-09-19T06:19:55Z"
+    name:
+      - {language: en, text: "Sergey Kiselev"}
+      - {language: ru, text: "Сергей Киселев"}
+    companyIds: [648]
+    bio:
+      - {language: en, text: "<p>More than 20 years in IT. For 10 years he created search and infrastructure services at Yandex.\
+            \ Currently he is building a Development Platform in MTS Web Services. Has extensive experience in server-side\
+            \ development of projects in such areas as distance learning, medicine, Internet search, cloud infrastructure.</p>"}
+      - {language: ru, text: "<p>В IT более 20 лет. 10 лет делал поисковые и инфраструктурные сервисы в Яндексе. Сейчас ст\
+            роит Development Platform в МТС Web Services. Имеет богатый опыт серверной разработки проектов в области диста\
+            нционного обучения, медицины, интернет-поиска, облачной инфраструктуры.</p>"}
+  - id: 3686
+    photoFileName: 3686.jpg
+    photoUpdatedAt: "2023-08-28T08:40:50Z"
+    name:
+      - {language: en, text: "Sergei Zadorozhnyi"}
+      - {language: ru, text: "Сергей Задорожный"}
+    companyIds: [1039]
+    bio:
+      - language: en
+        text: "<p>Head of Platform Engineering and Enabling Team at Center-Invest Bank.</p>\n<p>Over 15 years in IT. Introduces\
+            \ DevOps practices, Tech Lead, DevRel, speaker. Author of a DevOps course from Yandex Practicum.</p>\n<p>Maintains\
+            \ the Telegram channel <a href=\"https://t.me/IT_Friday\">IT Friday</a> &mdash; about the IT industry: trends,\
+            \ practices, tools and other useful materials. Writes <a href=\"https://habr.com/ru/users/SergeySabbath/publications/articles/\"\
+            >articles for habr.com</a>.</p>\n<p>Keeps snakes, spiders and other exotic creatures. Loves kittens and black\
+            \ metal.</p>"
+      - language: ru
+        text: "<p class=\"p1\">Руководитель Platform Engineering и Enabling Team в банке &laquo;Центр-инвест&raquo;.</p>\n\
+            <p class=\"p1\">Более 15 лет в ИТ. Внедряет DevOps-практики, техлидит, деврелит, выступает. Автор курса по DevOps\
+            \ от Яндекс Практикума.</p>\n<p class=\"p1\">Ведет Telegram-канал <a href=\"https://t.me/IT_Friday\">IT Friday</a>\
+            \ &mdash;&nbsp;об ИТ-индустрии: тренды, практики, инструменты и другие полезные материалы. Пишет <a href=\"https://habr.com/ru/users/SergeySabbath/publications/articles/\"\
+            >статьи на Хабр</a>.</p>\n<p class=\"p1\">Держит змей, пауков и прочих экзотических тварей. Любит котиков и бл\
+            эк-метал.</p>"
+    twitter: SergeySabbath
+  - id: 3687
+    photoFileName: 3687.jpg
+    photoUpdatedAt: "2024-09-30T06:48:58Z"
+    name:
+      - {language: en, text: "Tung Nan Kwong"}
+    companyIds: [1362]
+    bio:
+      - {language: en, text: "<p>A passionate individual that is constantly exploring and being amazed by new technologies.\
+            \ Always open to learn them to create a better world, Tung Nan won't mind if credit is not given to him, as long\
+            \ as the end goal is achieved. The speaker devotes his free time to understanding and joining talks, forums, meetups\
+            \ and exhibitions on improving his skill sets and broadening his horizons. Also a paranoid for good UI/UX, future-proof\
+            \ implementations and massively scalable systems.</p>"}
+      - {language: ru, text: "<p>A passionate individual that is constantly exploring and being amazed by new technologies.\
+            \ Always open to learn them to create a better world, Tung Nan won't mind if credit is not given to him, as long\
+            \ as the end goal is achieved. The speaker devotes his free time to understanding and joining talks, forums, meetups\
+            \ and exhibitions on improving his skill sets and broadening his horizons. Also a paranoid for good UI/UX, future-proof\
+            \ implementations and massively scalable systems.&nbsp;</p>"}
+  - id: 3688
+    photoFileName: 3688.jpg
+    photoUpdatedAt: "2024-07-12T08:51:34Z"
+    name:
+      - {language: en, text: "Anton Ermak"}
+      - {language: ru, text: "Антон Ермак"}
+    companyIds: [975]
+    bio:
+      - {language: en, text: "<p>He has over 10 years of experience building teams, designing highly loaded applications in\
+            \ major companies in Russia and abroad. In his current position of the development director, he creates high-load\
+            \ projects, system solutions in cloud providers for ML / backend / DevOps. In addition, he teaches Computer Science\
+            \ / Java backend.</p>"}
+      - {language: ru, text: "<p>Более 10 лет создает команды, проектирует высоконагруженные приложения в крупнейших компа\
+            ниях в России и за рубежом. На текущей позиции директора по разработке создает высоконагруженные проекты, сист\
+            емные решения в облачных провайдерах для ML / backend / DevOps. Кроме этого, преподает Computer Science / Java\
+            \ backend.</p>"}
+  - id: 3689
+    photoFileName: 3689.jpg
+    photoUpdatedAt: "2024-10-08T14:15:06Z"
+    name:
+      - {language: en, text: "Vladimir Medin"}
+      - {language: ru, text: "Владимир Медин"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>Builds systems, organises production, likes and does everything from Dev to Ops.</p>"}
+      - {language: ru, text: "<p>Строит системы, организовывает производство, любит и делает все &mdash; от Dev до Ops.</p>"}
+  - id: 3690
+    photoFileName: 3690.jpg
+    photoUpdatedAt: "2024-10-02T07:32:18Z"
+    name:
+      - {language: en, text: "Vlada Zubareva"}
+      - {language: ru, text: "Влада Зубарева"}
+    companyIds: [1322]
+    bio:
+      - {language: en, text: "<p>Senior DevOps Engineer at Mayflower.</p>"}
+      - {language: ru, text: "<p>Senior DevOps Engineer в Mayflower.</p>"}
+  - id: 3691
+    photoFileName: 3691.jpg
+    photoUpdatedAt: "2024-08-09T10:23:28Z"
+    name:
+      - {language: en, text: "Aleksei Tsykunov"}
+      - {language: ru, text: "Алексей Цыкунов"}
+    companyIds: [1363]
+    bio:
+      - {language: en, text: "<p>Co-founder and CTO of Hilbert Team. DevOps and DevSecOps expert with 20 years of experience\
+            \ in designing and implementing fault-tolerant and highload information systems in industries such as telecom\
+            \ and FinTech. Author of Linux courses at OTUS.</p>"}
+      - {language: ru, text: "<p>Сооснователь и технический директор Hilbert Team. Эксперт в DevOps и DevSecOps c 20-летни\
+            м опытом в проектировании и реализации отказоустойчивых и высоконагруженных информационных систем в таких отра\
+            слях, как телеком и FinTech. Автор курсов по Linux в OTUS.</p>"}
+  - id: 3692
+    photoFileName: 3692.jpg
+    photoUpdatedAt: "2024-07-10T14:20:44Z"
+    name:
+      - {language: en, text: "Ilia Oleksiv"}
+      - {language: ru, text: "Илья Олексив"}
+    companyIds: [845]
+    bio:
+      - {language: en, text: "<p>DevOps competence leader at Sibur Digital. In IT for more than 10 years. Previously, he was\
+            \ an Android developer and then a backend developer and DevOps engineer.</p>"}
+      - {language: ru, text: "<p>Лидер компетенции по направлению DevOps в Сибур Цифровой. В ИТ уже более 10 лет. Ранее бы\
+            л разработчиком под Android, а затем бэкенд-разработчиком и DevOps-инженером.</p>"}
+  - id: 3693
+    photoFileName: 3693.jpg
+    photoUpdatedAt: "2024-07-10T14:25:02Z"
+    name:
+      - {language: en, text: "Mikhail Fufaev"}
+      - {language: ru, text: "Михаил Фуфаев"}
+    companyIds: [845]
+    bio:
+      - language: en
+        text: "<p>Techlead at Sibur Digital. A representative of the innovation sphere, whose passion for various activities,\
+            \ including participation in hackathons and conferences, knows no bounds.</p>\n<p>Mikhail, with his experience\
+            \ and professionalism, has been making a significant contribution to the development of the industry for over\
+            \ 6 years and inspires others with his enthusiasm and commitment to continuous improvement.</p>\n<p>The speaker\
+            \ combines technical mastery and leadership qualities, which makes him an integral part of the innovation community.</p>"
+      - language: ru
+        text: "<p>Техлид в компании Сибур Цифровой. Представитель инновационной сферы, чья страсть к разнообразным активно\
+            стям, включая участие в хакатонах и конференциях, не знает границ.</p>\n<p>Михаил, обладая опытом и профессион\
+            ализмом, уже более 6 лет вносит значительный вклад в развитие отрасли и вдохновляет окружающих своим энтузиазм\
+            ом и стремлением к постоянному совершенствованию.</p>\n<p>Спикер сочетает в себе техническое мастерство и лиде\
+            рские качества, что делает его неотъемлемой частью инновационного сообщества.</p>"
+  - id: 3694
+    photoFileName: 3694.jpg
+    photoUpdatedAt: "2024-10-02T08:33:52Z"
+    name:
+      - {language: en, text: "Aleksandr Kositsyn"}
+      - {language: ru, text: "Александр Косицин"}
+    companyIds: [429]
+    bio:
+      - {language: en, text: "<p>Within 20 years in IT he has written front end in JS, PHP, Perl. Back end in C++, Python,\
+            \ even worked a little with Assembler. Administered servers and infrastructure in large organisations, including\
+            \ beyond the Arctic Circle. Worked his way up from a lab assistant in the computer science room at school, where\
+            \ he studied, to Senior Software Engineer in the Enabling team, which he later headed.</p>"}
+      - {language: ru, text: "<p>За 20 лет в IT писал фронт на JS, PHP, Perl. Бэк на C++, Python, даже немножко работал с\
+            \ Assembler. Администрировал серверы и инфраструктуру в крупных организациях, в том числе и за полярным кругом\
+            . В общей сложности прошел путь от лаборанта кабинета информатики в школе, где учился, до Senior Software Engineer\
+            \ в Enabling команде, которую в последствии и возглавил.</p>"}
+  - id: 3695
+    photoFileName: 3695.jpg
+    photoUpdatedAt: "2024-10-14T13:46:22Z"
+    name:
+      - {language: en, text: "Daria Dzhudis"}
+      - {language: ru, text: "Дарья Джудис"}
+    companyIds: [1279]
+    bio:
+      - {language: en, text: "<p>Enable Team Lead at ecom.tech. Lecturer at MIPT. Makes sure that engineering teams realise\
+            \ why they are doing all this.</p>"}
+      - {language: ru, text: "<p>Enable Team Lead в ecom.tech. Преподаватель в МФТИ. Заботится о том, чтобы инженерные ком\
+            анды осознавали, зачем всё это делают.</p>"}
+  - id: 3696
+    photoFileName: 3696.jpg
+    photoUpdatedAt: "2024-09-19T05:42:20Z"
+    name:
+      - {language: en, text: "Denis Zolotarev"}
+      - {language: ru, text: "Денис Золотарев"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Experience in IT is more than 15 years. Developed in Java in different projects. For the\
+            \ last 5 years he has been working on the infrastructure of Kinopoisk and other services Plus Funtech in Yandex.\
+            \ Solves various tasks related to observability, CI/CD, base libraries, platform for building microservices, IaC.\
+            \ For the last year he has been a team leader of the Service Mesh development team based on Envoy.</p>"}
+      - {language: ru, text: "<p>Опыт в IT &mdash; более 15 лет. Разрабатывал на Java в разных проектах. Последние 5 лет з\
+            анимается инфраструктурой Кинопоиска и других сервисов Плюс Фантеха в Яндексе. Решает самые разные задачи, свя\
+            занные с observability, CI/CD, базовыми библиотеками, платформой для построения микросервисов, IaC. Последний\
+            \ год &mdash; тимлид команды разработки собственного решения Service Mesh на базе Envoy.</p>"}
+  - id: 3697
+    photoFileName: 3697.jpg
+    photoUpdatedAt: "2024-09-20T09:21:21Z"
+    name:
+      - {language: en, text: "Aleksei Ignatov"}
+      - {language: ru, text: "Алексей Игнатов"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>He has been working in IT at Sber and SberTech for 28 years. He was involved in the development\
+            \ of highly loaded backends and integration. Now he is working in Synapse, dealing with an integration platform\
+            \ based on Istio Service Mesh.</p>"}
+      - {language: ru, text: "<p>28 лет работает в ИТ Сбера и СберТеха. Занимался разработкой высоконагруженных бэкендов и\
+            \ интеграцией. Сейчас работает в трайбе Synapse, занимается интеграционной платформой на базе Istio Service Mesh.</p>"}
+  - id: 3698
+    photoFileName: 3698.jpg
+    photoUpdatedAt: "2024-10-18T08:43:40Z"
+    name:
+      - {language: en, text: "Evgenii Chetverikov"}
+      - {language: ru, text: "Евгений Четвериков"}
+    companyIds: [844]
+    bio:
+      - language: en
+        text: "<p>Tech Lead of the common DevOps tools team at Gazprombank.</p>\n<p>20 years in product IT.</p>"
+      - {language: ru, text: "Техлид команды общих инструментов DevOps в Газпромбанке.</p><p>20 лет в продуктовом IT."}
+  - id: 3699
+    photoFileName: 3699.jpg
+    photoUpdatedAt: "2024-10-17T11:23:01Z"
+    name:
+      - {language: en, text: "Konstantin Samutichev"}
+      - {language: ru, text: "Константин Самутичев"}
+    companyIds: [1258]
+    bio:
+      - {language: en, text: "<p>DevOps engineer at the Digital HR Technology Centre of AO Greenatom.</p>"}
+      - {language: ru, text: "<p>DevOps-инженер в Центре цифровых HR-технологий (ЦЦ-HR) АО &laquo;Гринатом&raquo;.</p>"}
+  - id: 3700
+    photoFileName: 3700.jpg
+    photoUpdatedAt: "2024-09-23T15:19:34Z"
+    name:
+      - {language: en, text: "Viktor Kuzennyi"}
+      - {language: ru, text: "Виктор Кузенный"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Head of development of Cloud Functions, Serverless Containers, API Gateway and other services\
+            \ of the Serverless ecosystem in Yandex Cloud. He moved to Yandex in 2016 from a scientific institute. Prior to\
+            \ joining Yandex Cloud, he spent 5 years developing high-loaded backends in Kinopoisk. In Yandex Cloud, he first\
+            \ developed API Gateway, and then became the head of Serverless stack development.</p>"}
+      - {language: ru, text: "<p>Руководитель разработки Cloud Functions, Serverless Containers, API Gateway и других серв\
+            исов экосистемы Serverless в Yandex Cloud. Пришел в Яндекс в 2016 году из научного института. До перехода в Yandex\
+            \ Cloud 5 лет делал высоконагруженные бэкенды в Кинопоиске. В Yandex Cloud сначала разрабатывал API Gateway, а\
+            \ потом стал руководить разработкой стека Serverless.</p>"}
+  - id: 3701
+    photoFileName: 3701.jpg
+    photoUpdatedAt: "2024-09-26T15:23:21Z"
+    name:
+      - {language: en, text: "Tatiana Serdinova"}
+      - {language: ru, text: "Татьяна Сердинова"}
+    companyIds: [1364]
+    bio:
+      - language: en
+        text: "<p>DevOps Manager at TAGES.</p>\n<p>Has over 5 years of IT experience, including QA and PM roles in HRTech,\
+            \ EdTech and XR (VR). Led the development of HR platform and VR simulators.</p>\n<p>Ambassador of digital projects\
+            \ of the Russia &mdash; Land of Opportunities platform (Digital Breakthrough, Start the Game).</p>\n<p>Volunteer\
+            \ at World Festival of Youth and Students 2017 (Navigation Team Lead) and FIFA World Cup 2018 (Accreditation Problem\
+            \ Resolution).</p>"
+      - language: ru
+        text: "<p>DevOps Manager в TAGES.</p>\n<p>Опыт работы в IT &mdash; более 5 лет, включая роли QA и PM в сферах HRTech,\
+            \ EdTech и XR (VR). Руководила разработкой HR-платформы и созданием VR-тренажеров.</p>\n<p>Амбассадор цифровых\
+            \ проектов платформы &laquo;Россия &mdash; страна возможностей&raquo; (Цифровой прорыв, Начни Игру).</p>\n<p>В\
+            олонтер ВФМС-2017 (Navigation Team Lead) и FIFA World Cup 2018 (Accreditation Problem Resolution).</p>"

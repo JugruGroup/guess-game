@@ -2767,6 +2767,13 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("SafeCode 2024 Autumn", null, List.of(24L)),
 //                        Set.of("Открытие конференции SafeCode", "Закрытие конференции SafeCode")));
+//        loadTalksSpeakersEvent(Conference.DEV_OOPS, LocalDate.of(2024, 11, 6), "2024",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("DevOops 2024", null, List.of(24L, 4L)),
+//                        Set.of("Открытие конференции DevOops 2024", "Квиз State of DevOps",
+//                                "Подведение итогов онлайн-части конференции DevOops 2024",
+//                                "Открытие офлайн-части конференции DevOops 2024", "Lightning Talks",
+//                                "Закрытие конференции DevOops 2024")));
 //        loadTalksSpeakersEvent(Conference.IML, LocalDate.of(2024, 11, 8), "2024 Autumn",
 //                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("I'ML 2024 Autumn", null, List.of(24L)),

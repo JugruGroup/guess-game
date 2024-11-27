@@ -4862,3 +4862,23 @@ companies:
     name:
       - {language: en, text: dstack}
     siteLink: https://dstack.ai
+  - id: 1360
+    name:
+      - {language: en, text: Ænix}
+    siteLink: https://aenix.io
+  - id: 1361
+    name:
+      - {language: en, text: "Clearway Integration"}
+    siteLink: https://www.clearwayintegration.com
+  - id: 1362
+    name:
+      - {language: en, text: TalkHub}
+    siteLink: https://www.talkhub.io
+  - id: 1363
+    name:
+      - {language: en, text: "Hilbert Team"}
+    siteLink: https://hilbertteam.com
+  - id: 1364
+    name:
+      - {language: en, text: TAGES}
+    siteLink: https://tages.ru
