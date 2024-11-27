@@ -623,7 +623,9 @@ companySynonyms:
       "Sber Life Insurance",
       "Сбер Страхование Жизни",
       "СберСтрахование жизни",
-      SberAutoTech
+      SberAutoTech,
+      SberMarketing,
+      СберМаркетинг
     ]
   - name: Sibur
     synonyms: [

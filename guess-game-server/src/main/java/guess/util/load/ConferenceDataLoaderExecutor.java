@@ -2774,6 +2774,14 @@ public class ConferenceDataLoaderExecutor {
 //                                "Подведение итогов онлайн-части конференции DevOops 2024",
 //                                "Открытие офлайн-части конференции DevOops 2024", "Lightning Talks",
 //                                "Закрытие конференции DevOops 2024")));
+//        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2024, 11, 7), "2024 Autumn",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("HolyJS 2024 Autumn", null, List.of(24L, 4L)),
+//                        Map.of(new NameCompany("Иван Клименко", null), 3702L),
+//                        Set.of("Открытие конференции HolyJS 2024 Autumn",
+//                                "Подведение итогов онлайн-части конференции HolyJS 2024 Autumn",
+//                                "Открытие офлайн-части HolyJS 2024 Autumn", "Открытый микрофон", "Code in the Dark",
+//                                "Закрытие конференции HolyJS 2024 Autumn")));
 //        loadTalksSpeakersEvent(Conference.IML, LocalDate.of(2024, 11, 8), "2024 Autumn",
 //                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
 //                        createEventTemplate("I'ML 2024 Autumn", null, List.of(24L)),
