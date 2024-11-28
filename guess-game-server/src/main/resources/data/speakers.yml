@@ -53718,6 +53718,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Anton helps to make a static analyzer, maintains the pipelines and writes articles.</p>"}
       - {language: ru, text: "<p>Антон помогает делать статический анализатор, поддерживает пайплайн и пишет статьи.</p>"}
+    gitHub: tntnkn
+    habr: tntnkn
   - id: 3681
     photoFileName: 3681.jpg
     photoUpdatedAt: "2024-10-03T12:12:30Z"
@@ -53729,6 +53731,9 @@ speakers:
       - {language: en, text: "<span style=\"color: rgb(15, 23, 42);\">DevOps in Mayflower. Will share his experience of moving\
             \ from GlusterFS to SeaweedFS.</span>"}
       - {language: ru, text: "DevOps в Mayflower. Поделится опытом переезда c GlusterFS на SeaweedFS."}
+    twitter: kmlebedev
+    gitHub: kmlebedev
+    habr: kmlebedev
   - id: 3682
     photoFileName: 3682.jpg
     photoUpdatedAt: "2024-09-10T15:55:18Z"
@@ -53756,6 +53761,8 @@ speakers:
       - {language: ru, text: "<p class=\"p1\">DevOps-инженер с опытом более 3 лет. Руководит мини-командой. Последние полт\
             ора года занимается core-задачами, делает разные штуки для более 40 кластеров.</p>"}
     twitter: a_krugliak
+    gitHub: ksemele
+    habr: greengrunt
   - id: 3684
     photoFileName: 3684.jpg
     photoUpdatedAt: "2024-10-07T12:11:24Z"
@@ -53782,6 +53789,9 @@ speakers:
       - {language: ru, text: "<p>В IT более 20 лет. 10 лет делал поисковые и инфраструктурные сервисы в Яндексе. Сейчас ст\
             роит Development Platform в МТС Web Services. Имеет богатый опыт серверной разработки проектов в области диста\
             нционного обучения, медицины, интернет-поиска, облачной инфраструктуры.</p>"}
+    twitter: intr13
+    gitHub: intr13
+    habr: intr13
   - id: 3686
     photoFileName: 3686.jpg
     photoUpdatedAt: "2023-08-28T08:40:50Z"
@@ -53805,6 +53815,7 @@ speakers:
             >статьи на Хабр</a>.</p>\n<p class=\"p1\">Держит змей, пауков и прочих экзотических тварей. Любит котиков и бл\
             эк-метал.</p>"
     twitter: SergeySabbath
+    habr: SergeySabbath
   - id: 3687
     photoFileName: 3687.jpg
     photoUpdatedAt: "2024-09-30T06:48:58Z"
@@ -53822,6 +53833,7 @@ speakers:
             \ as the end goal is achieved. The speaker devotes his free time to understanding and joining talks, forums, meetups\
             \ and exhibitions on improving his skill sets and broadening his horizons. Also a paranoid for good UI/UX, future-proof\
             \ implementations and massively scalable systems.&nbsp;</p>"}
+    gitHub: kwongtn
   - id: 3688
     photoFileName: 3688.jpg
     photoUpdatedAt: "2024-07-12T08:51:34Z"
@@ -53838,6 +53850,7 @@ speakers:
             ниях в России и за рубежом. На текущей позиции директора по разработке создает высоконагруженные проекты, сист\
             емные решения в облачных провайдерах для ML / backend / DevOps. Кроме этого, преподает Computer Science / Java\
             \ backend.</p>"}
+    gitHub: raymank26
   - id: 3689
     photoFileName: 3689.jpg
     photoUpdatedAt: "2024-10-08T14:15:06Z"
