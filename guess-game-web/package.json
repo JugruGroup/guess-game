@@ -48,7 +48,7 @@
     "@angular/compiler-cli": "^17.3.9",
     "@angular/language-service": "^18.0.0",
     "@types/dagre": "^0.7.52",
-    "@types/jasmine": "^5.1.4",
+    "@types/jasmine": "^5.1.5",
     "@types/jasminewd2": "^2.0.13",
     "@types/marked": "^6.0.0",
     "@types/node": "^22.10.1",
