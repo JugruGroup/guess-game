@@ -53885,6 +53885,7 @@ speakers:
       - {language: ru, text: "<p>Сооснователь и технический директор Hilbert Team. Эксперт в DevOps и DevSecOps c 20-летни\
             м опытом в проектировании и реализации отказоустойчивых и высоконагруженных информационных систем в таких отра\
             слях, как телеком и FinTech. Автор курсов по Linux в OTUS.</p>"}
+    gitHub: erlong15
   - id: 3692
     photoFileName: 3692.jpg
     photoUpdatedAt: "2024-07-10T14:20:44Z"
@@ -53985,6 +53986,8 @@ speakers:
       - language: en
         text: "<p>Tech Lead of the common DevOps tools team at Gazprombank.</p>\n<p>20 years in product IT.</p>"
       - {language: ru, text: "Техлид команды общих инструментов DevOps в Газпромбанке.</p><p>20 лет в продуктовом IT."}
+    gitHub: leidruid
+    habr: LeiDruid
   - id: 3699
     photoFileName: 3699.jpg
     photoUpdatedAt: "2024-10-17T11:23:01Z"
