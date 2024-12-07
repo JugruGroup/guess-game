@@ -54076,6 +54076,8 @@ speakers:
             \ Now he writes mainly in TypeScript.</p>"}
       - {language: ru, text: "<p>Fullstack-разработчик. В прошлом &mdash; тимлид и админ. Интересуется криптой и Wasm. Сей\
             час пишет в основном на TypeScript.</p>"}
+    gitHub: roginvs
+    habr: roginvs
   - id: 3705
     photoFileName: 3705.jpg
     photoUpdatedAt: "2024-10-18T15:08:02Z"
@@ -54123,6 +54125,7 @@ speakers:
             \ время создал и поддерживает проект Node3D &mdash; компактную среду для запуска GL/WebGL-приложений на Node.js\
             \ без браузера. Этот хобби-проект появился благодаря интересу к разработке игр и программированию мультимедийн\
             ых приложений. Параллельно изучает игровой движок Godot и 3D-моделирование в Blender.</p>"
+    gitHub: raub
   - id: 3707
     photoFileName: 3707.jpg
     photoUpdatedAt: "2024-07-29T18:26:18Z"
@@ -54137,6 +54140,8 @@ speakers:
       - {language: ru, text: "<p>15 лет в разработке, 6 лет запускает стартапы как CEO / CTO. Прошел через финтех / пропте\
             х и AI / ML, дважды запускал криптопроекты. Сейчас осел в геймдеве. Последние 10 лет основной язык &mdash; JS.</p>"}
     twitter: ElKornacio
+    gitHub: ElKornacio
+    habr: ElKornacio
   - id: 3708
     photoFileName: 3708.jpg
     photoUpdatedAt: "2024-09-10T07:18:10Z"
@@ -54155,6 +54160,7 @@ speakers:
             \ клиент рендерил графику в 144 FPS. Успел пощупать все движки и библиотеки, которые относятся к WebGL или WebGPU,\
             \ покодить на Haxe около года.</p>\n<p>Сейчас делает браузерные игры в ЛисГеймс. Параллельно, совместно с Янде\
             кс Играми, делает <a href=\"https://github.com/yandex-games-plugins/\">плагины для их платформы</a>.</p>"
+    gitHub: koteelok
   - id: 3709
     photoFileName: 3709.jpg
     photoUpdatedAt: "2024-07-17T09:08:16Z"
@@ -54170,6 +54176,8 @@ speakers:
         text: "<p>Ведущий fullstack-разработчик (от аналитики до DevOps) / тимлид / техлид / девлид.</p>\n<p>Опыт работы:\
             \ Microsoft, Xsolla, Roadmunk, Adjust, EPAM, Akvelon, Kontur, Avito и прочие. Убежден, что всё вокруг &mdash;\
             \ функция.</p>"
+    gitHub: the-homeless-god
+    habr: the_homeless_god
   - id: 3710
     photoFileName: 3710.jpg
     photoUpdatedAt: "2024-09-13T10:09:27Z"
