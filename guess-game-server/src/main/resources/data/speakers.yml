@@ -54235,6 +54235,8 @@ speakers:
       - {language: ru, text: "<p>Техлид в Samokat.tech, работает над веб-приложением Самоката. В свободное время популяриз\
             ирует методологию FSD: контрибьютит примеры использования, поддерживает опенсорс-проект на основе методологии\
             \ и, конечно, спорит с core-командой о дальнейшем развитии.</p>"}
+    twitter: _amorgunov
+    gitHub: noveogroup-amorgunov
   - id: 3714
     photoFileName: 3714.jpg
     photoUpdatedAt: "2024-08-16T08:10:34Z"
@@ -54247,6 +54249,7 @@ speakers:
             \ in the web.</p>"}
       - {language: ru, text: "<p>Фронтенд-разработчик в Яндекс Крауд. Интересуется статическим анализом кода и 2D-графикой\
             \ в вебе.</p>"}
+    gitHub: asmalcev
   - id: 3715
     photoFileName: 3715.jpg
     photoUpdatedAt: "2024-09-20T13:40:13Z"
@@ -54263,6 +54266,7 @@ speakers:
         text: "<p>Разработчик в команде SaluteJazz. Последние 3 года работает над WebRTC-проектами: от простых софтфонов д\
             о SDK и ВКС с тысячами пользователей.</p>\n<p>Считает, что SDP &mdash;&nbsp;это валирийский для WebRTC-разрабо\
             тчиков.</p>"
+    gitHub: jspoetry
   - id: 3716
     photoFileName: 3716.jpg
     photoUpdatedAt: "2024-08-02T11:19:09Z"
@@ -54281,6 +54285,7 @@ speakers:
             <p>Сейчас активно развивает свой <a href=\"https://www.youtube.com/@paromovevg\">YouTube-канал</a> и Telegram-к\
             анал, автор курсов по FSD, Redux. В своем контенте концентрируется на темах архитектуры, качества кода и углуб\
             ленном понимании React, Redux, TypeScript, React Query.</p>"
+    gitHub: ParomovEvg
   - id: 3717
     photoFileName: 3717.jpg
     photoUpdatedAt: "2024-08-02T11:02:11Z"
@@ -54299,6 +54304,9 @@ speakers:
             \ 17 годам. Стал сеньором в 19 лет.</p>\n<p class=\"ql-align-justify\">Обожает сноуборды, скейтборды &mdash; в\
             се доски, на которых можно катиться. В прошлом &mdash; боец ММА. Сломал спину на соревнованиях и решил начать\
             \ красить кнопки.</p>\n<p class=\"ql-align-justify\">Уверенный пользователь JavaScript. Влюблен в CSS.</p>"
+    twitter: vsezol
+    gitHub: vsezol
+    habr: vsezol
   - id: 3718
     photoFileName: 3718.jpg
     photoUpdatedAt: "2024-07-17T09:53:47Z"
@@ -54311,6 +54319,7 @@ speakers:
             \ In his spare time, he likes to solve interesting tasks.</p>"}
       - {language: ru, text: "<p>Senior Node.js backend-разработчик. Несколько лет разрабатывает разные бэкенды. В свободн\
             ое от работы время любит решать интересные задачки.</p>"}
+    gitHub: andrewkuzmenko
   - id: 3719
     photoFileName: 3719.jpg
     photoUpdatedAt: "2024-08-27T08:57:19Z"
@@ -54327,6 +54336,7 @@ speakers:
         text: "<p>Старший разработчик в Kaspersky. 8 лет опыта работы с крупными enterprise-проектами, запускал несколько\
             \ больших приложений с нуля. Технический интервьюер, провел более 150 собеседований.</p>\n<p>В свободное время\
             \ танцует танго и катается на моноколесе.</p>"
+    gitHub: spiderpoul
   - id: 3720
     photoFileName: 3720.jpg
     photoUpdatedAt: "2024-09-20T11:40:06Z"
@@ -54342,6 +54352,7 @@ speakers:
       - {language: ru, text: "<p>3 года в проектной веб-разработке. В основном на React + Next.js. Работал над продакшен-п\
             роектами на Astro, Svelte, SvelteKit. Прошел путь от стажера до техлида. Занимается развитием технологий, оцен\
             кой рисков и развитием команды. Сейчас &mdash; техлид фронтенд-отдела из 15 человек.</p>"}
+    gitHub: WelcomeDev
   - id: 3721
     photoFileName: 3721.jpg
     photoUpdatedAt: "2024-03-19T12:30:57Z"
