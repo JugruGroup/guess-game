@@ -54371,6 +54371,7 @@ speakers:
             \ и вместе с командой работает над ключевыми для стратегии продуктовыми запусками.</p>\n<p>Преподает студентам\
             \ продуктовую фронтенд-разработку в VK Education в МГТУ им. Н. Э. Баумана. Любит все систематизировать и упоря\
             дочивать, потому что это делает мир чуточку лучше.</p>"
+    gitHub: StealthTech
   - id: 3722
     photoFileName: 3722.jpg
     photoUpdatedAt: "2023-10-26T10:46:41Z"
@@ -54389,6 +54390,7 @@ speakers:
             <p>Любит изучать, как что-то работает. Особенно, когда это красиво &mdash; поэтому Анна фронтендер. Теперь еще\
             \ и разбирается в том, как фронтендеры взаимодействуют и делятся опытом &mdash; поэтому организовывает ивенты\
             .</p>"
+    gitHub: numbingmist
   - id: 3723
     photoFileName: 3723.jpg
     photoUpdatedAt: "2024-09-20T12:51:20Z"
@@ -54408,6 +54410,8 @@ speakers:
             ть лидом, преподавателем, немного аналитиком, дизайнером и даже предпринимателем.</p>\n<p>Помимо чистого IT Се\
             ргею всегда нравились дисциплины на стыке технического и гуманитарного: компьютерная лингвистика, анализ социа\
             льных сетей, нет-арт. Сейчас пишет кандидатскую по философии науки и техники в Бауманке.</p>"
+    gitHub: solovevserg
+    habr: SolovevSerg
   - id: 3724
     photoFileName: 3724.jpg
     photoUpdatedAt: "2024-08-28T21:00:02Z"
@@ -54426,6 +54430,7 @@ speakers:
             \ использует различные языки программирования, включая JavaScript/TypeScript, Swift, Kotlin. Любит разбираться\
             \ в том, как всё устроено, читать стандарты и исходники. Есть опыт выступления на таких конференциях, как Dump,\
             \ BeerJS и FrontendNight и других. Влюблён во фронтенд."}
+    gitHub: Yuriy-Karpov
   - id: 3725
     photoFileName: 3725.jpg
     photoUpdatedAt: "2024-09-20T13:23:10Z"
@@ -54444,6 +54449,8 @@ speakers:
             \ в блокчейне Solana и более трех лет опыта работы в криптостартапе.</p>\n<p>Увлекается решением задач на LeetCode.\
             \ В свободное время пишет на TypeScript <a href=\"https://github.com/alexandr-kazakov/solana-crendel-bot/\">то\
             ргового бота</a> для децентрализованной биржи Raydium Solana.</p>"
+    gitHub: alexandr-kazakov
+    habr: AlexandrKazakov
   - id: 3726
     photoFileName: 3726.jpg
     photoUpdatedAt: "2024-09-20T13:09:09Z"
@@ -54460,6 +54467,9 @@ speakers:
         text: "<p>Занимается фронтенд-разработкой с 2008 года. Писал статьи на Хабр, работал в ЖЖ, РБК и Островке. Последн\
             ие годы разрабатывает курсы программирования для детей в EdTech-компании &laquo;Алгоритмика&raquo;.</p>\n<p>В\
             \ свободное время играет на гитаре и в ретроигры на ПК. Живет в сельской местности.</p>"
+    twitter: aralot
+    gitHub: aralot
+    habr: Aralot
   - id: 3727
     photoFileName: 3727.jpg
     photoUpdatedAt: "2024-11-12T10:18:41Z"
@@ -54472,6 +54482,8 @@ speakers:
             \ SIBERIA CAN CODE. Reviews and creates new solutions in our frontend world.</p>"}
       - {language: ru, text: "<p>Ведущий разработчик инфраструктурной команды. Стример и контент-мейкер под псевдонимом SIBERIA\
             \ CAN CODE. Обозревает и создает новые решения в нашем фронтенд-мире.</p>"}
+    twitter: de_babin
+    gitHub: debabin
   - id: 3728
     photoFileName: 3728.jpg
     photoUpdatedAt: "2024-10-04T11:50:11Z"
@@ -54492,6 +54504,8 @@ speakers:
             ключая хакатоны от VK, ЛЦТ, Цифровой прорыв и другие. Недавно стал контрибьютором опенсорс-библиотеки для опис\
             ания бизнес-процессов <a href=\"https://effector.dev/\">Effector</a>.</p>\n<p>Соорганизатор митапа MoscowJS и\
             \ активно участвует в жизни комьюнити.</p>"
+    gitHub: Olovyannikov
+    habr: cannibal_corpse
   - id: 3729
     photoFileName: 3729.jpg
     photoUpdatedAt: "2024-11-12T08:17:07Z"
@@ -54507,6 +54521,8 @@ speakers:
         text: "<p>Разрабатывает интерфейсы, помогал Доке (doka.guide &mdash; документация для разработчиков на понятном яз\
             ыке про веб-разработку) с запуском, а сейчас помогает с сообществом.</p>\n<p>В опенсорсе с 2010-го.</p>"
     twitter: furtivite
+    gitHub: furtivite
+    habr: antytoto
   - id: 3730
     photoFileName: 3730.jpg
     photoUpdatedAt: "2024-10-30T10:44:56Z"
@@ -54531,6 +54547,7 @@ speakers:
             \ technology, management, design, etc. A humanitarian in IT / an IT specialist in book publishing.</p>"}
       - {language: ru, text: "<p>Менеджер проектов в издательстве &laquo;Питер&raquo;. Издает книги в IT &mdash; о разрабо\
             тке, технологиях, менеджменте, дизайне и т. д. Гуманитарий в айти / айтишник в книгоиздании.</p>"}
+    habr: ntusyaa
   - id: 3732
     photoFileName: 3732.jpg
     photoUpdatedAt: "2024-09-20T12:26:10Z"
@@ -54553,6 +54570,8 @@ speakers:
             \ the Interface Development School. Is always ready to drink coffee and initiate a small talk on any topic.</p>"}
       - {language: ru, text: "<p>Разработчик интерфейсов в платформе интернационализации Плюса и Фантеха в Яндексе. Курато\
             р и лектор школы разработки интерфейсов. Всегда готов выпить кофе и разогнать small talk на любую тему.</p>"}
+    gitHub: alexey-ershkov
+    habr: alexey-ershkov
   - id: 3734
     photoFileName: 3734.jpg
     photoUpdatedAt: "2024-10-02T08:09:49Z"
