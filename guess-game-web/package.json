@@ -23,7 +23,7 @@
     "@angular/youtube-player": "^17.3.9",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@ngx-translate/core": "^16.0.4",
-    "@ngx-translate/http-loader": "^16.0.0",
+    "@ngx-translate/http-loader": "^16.0.1",
     "atft": "^1.6.5",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
