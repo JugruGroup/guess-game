@@ -883,6 +883,7 @@ speakers:
     twitter: _godin_
     gitHub: Godin
     habr: godin
+    javaChampion: true
   - id: 48
     photoFileName: 0048.jpg
     name:
@@ -17376,6 +17377,7 @@ speakers:
             \ open source projects. He currently works at Xhub, a DevOps software company, as Head Of Engineering."}
     twitter: laytoun
     gitHub: aboullaite
+    javaChampion: true
   - id: 1212
     photoFileName: 1212.jpg
     photoUpdatedAt: 2019-12-26T14:00:54.659Z[UTC]
@@ -22864,6 +22866,7 @@ speakers:
             \ software architecture, computer security, and soft-skills."}
     twitter: piotrprz
     gitHub: pioorg
+    javaChampion: true
   - id: 1603
     photoFileName: 1603.jpg
     photoUpdatedAt: 2021-04-06T08:56:17.039Z[UTC]
