@@ -34709,6 +34709,7 @@ speakers:
       - {language: en, text: "<p>Leading developer of the Faster Payments System. He has been working in SBP since the start\
             \ of the project, creating the service both on the testing and development side.</p>"}
       - {language: ru, text: "<p>Ведущий разработчик Мир Plat.Form.&nbsp;</p>"}
+    habr: m2n_misha
   - id: 2418
     photoFileName: 2418.jpg
     photoUpdatedAt: 2022-10-20T11:58:40Z[UTC]
