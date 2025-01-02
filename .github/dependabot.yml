@@ -12,6 +12,8 @@ updates:
       angular:
         patterns:
           - "@angular*"
+    ignore:
+      - dependency-name: "primeng"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
