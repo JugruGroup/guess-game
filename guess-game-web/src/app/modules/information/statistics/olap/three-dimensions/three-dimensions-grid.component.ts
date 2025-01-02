@@ -1,5 +1,9 @@
 import { Component, Input, OnChanges, Optional, SimpleChanges, SkipSelf } from '@angular/core';
-import { AbstractObject3D, RendererService } from 'atft';
+
+// import { AbstractObject3D, RendererService } from 'atft';
+import { AbstractObject3D } from '../../../../atft/object';
+import { RendererService } from '../../../../atft/renderer';
+
 import * as THREE from 'three';
 import { BufferGeometry } from 'three';
 

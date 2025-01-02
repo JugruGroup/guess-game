@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { AtftModule } from 'atft';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
@@ -15,6 +14,10 @@ import { RouterModule } from '@angular/router';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
+
+// import { AtftModule } from 'atft';
+import { AtftModule } from '../../atft/atft.module';
+
 import { ChartZoomInComponent } from './olap/chart/chart-zoom-in.component';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
@@ -33,6 +36,7 @@ import {
 import {
   ThreeDimensionsBatchedTextMeshComponent
 } from './olap/three-dimensions/three-dimensions-batched-text-mesh.component';
+import { ThreeDimensionsTextMeshComponent } from './olap/three-dimensions/three-dimensions-text-mesh.component';
 import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-dimensions-zoom-in.component';
 
 @NgModule({
@@ -48,6 +52,7 @@ import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-di
     ThreeDimensionsGridComponent,
     ThreeDimensionsBatchedSphereMeshComponent,
     ThreeDimensionsBatchedTextMeshComponent,
+    ThreeDimensionsTextMeshComponent,
     ThreeDimensionsZoomInComponent
   ],
   imports: [

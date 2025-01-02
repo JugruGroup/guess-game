@@ -1,8 +1,13 @@
 import { Component, Input, Optional, SkipSelf } from '@angular/core';
 import * as THREE from 'three';
-import { AbstractLazyObject3D, AbstractObject3D, appliedMaterial, FontService, RendererService } from 'atft';
 import { Font } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+
+// import { AbstractLazyObject3D, AbstractObject3D, appliedMaterial, FontService, RendererService } from 'atft';
+import { AbstractLazyObject3D, AbstractObject3D, FontService } from '../../../../atft/object';
+import { RendererService } from '../../../../atft/renderer';
+import { appliedMaterial } from '../../../../atft/util';
+
 import {
   ThreeDimensionsTextGroup
 } from '../../../../../shared/models/statistics/olap/three-dimensions/text/three-dimensions-text-group.model';
