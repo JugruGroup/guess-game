@@ -24,7 +24,6 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@ngx-translate/core": "^16.0.4",
     "@ngx-translate/http-loader": "^16.0.1",
-    "atft": "^1.6.5",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "chart.js": "^4.4.7",
@@ -39,6 +38,7 @@
     "rxjs": "^7.8.1",
     "three": "^0.160.0",
     "tslib": "^2.8.1",
+    "uuid": "^11.0.3",
     "yaml": "^2.7.0",
     "zone.js": "^0.14.10"
   },

@@ -1,5 +1,9 @@
 import { AfterViewChecked, Component, Input, OnChanges, SimpleChange, SimpleChanges, ViewChild } from '@angular/core';
-import { OrbitControlsComponent, RendererCanvasComponent } from 'atft';
+
+// import { OrbitControlsComponent, RendererCanvasComponent } from 'atft';
+import { RendererCanvasComponent } from '../../../../atft/renderer';
+import { OrbitControlsComponent } from '../../../../atft/control';
+
 import {
   ThreeDimensionsCubeDataset
 } from '../../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-dataset.model';

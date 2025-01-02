@@ -1,6 +1,10 @@
 import { Component, Input, Optional, SkipSelf } from '@angular/core';
-import { AbstractMesh, AbstractObject3D, RendererService } from 'atft';
 import * as THREE from 'three';
+
+// import { AbstractMesh, AbstractObject3D, RendererService } from 'atft';
+import { AbstractMesh, AbstractObject3D } from '../../../../atft/object';
+import { RendererService } from '../../../../atft/renderer';
+
 import {
   ThreeDimensionsSphereGroupItem
 } from '../../../../../shared/models/statistics/olap/three-dimensions/sphere/three-dimensions-sphere-group-item.model';
