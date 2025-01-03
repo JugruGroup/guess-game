@@ -45,7 +45,7 @@ export class GuessNameByPhotoComponent implements OnInit {
 
   answer(id: number) {
     this.answerService.setAnswer(this.photoNames.currentIndex, id)
-      .subscribe(data => {
+      .subscribe(() => {
           this.loadQuestion();
         }
       );
@@ -53,7 +53,7 @@ export class GuessNameByPhotoComponent implements OnInit {
 
   result() {
     this.stateService.setState(GameState.ResultState)
-      .subscribe(data => {
+      .subscribe(() => {
           this.router.navigateByUrl('/game/result');
         }
       );

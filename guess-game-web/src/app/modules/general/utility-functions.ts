@@ -55,7 +55,7 @@ export function findEventTypeById(id: number, eventTypes: EventType[]): EventTyp
 export function findEventTypesByIds(ids: number[], eventTypes: EventType[]): EventType[] {
   const result: EventType[] = [];
 
-  for (let id of ids) {
+  for (const id of ids) {
     const eventType = findEventTypeById(id, eventTypes);
 
     if (eventType) {
@@ -297,7 +297,7 @@ export function getFixedMeasureValues(measureValues: number[], quantity: number)
 
 export function fixOlapEntityStatistics<T, S extends OlapEntityMetrics>(entityStatistics: OlapEntityStatistics<T, S>,
                                                                         measureValueFieldNamePrefix: string,
-                                                                        fixCumulative: boolean = true) {
+                                                                        fixCumulative = true) {
   const quantity = entityStatistics.dimensionValues.length;
 
   entityStatistics.metricsList.forEach(metrics => {

@@ -1,11 +1,11 @@
 import {Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {RendererService} from '../renderer/renderer.service';
 import {AnimationService} from '../animation/animation.service';
 import {RaycasterService} from '../raycaster/raycaster.service';
 import {AbstractOrbitControls} from './abstract-orbit-controls';
 import {Subscription} from 'rxjs';
-import {MapControls} from "three/examples/jsm/controls/MapControls";
+import {MapControls} from "three/examples/jsm/controls/MapControls.js";
 
 @Component({
   selector: 'atft-map-controls',

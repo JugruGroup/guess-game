@@ -30,7 +30,7 @@ export class CompanyComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       const idString: string = params['id'];
-      const idNumber: number = Number(idString);
+      const idNumber = Number(idString);
 
       if (!isNaN(idNumber)) {
         this.id = idNumber;

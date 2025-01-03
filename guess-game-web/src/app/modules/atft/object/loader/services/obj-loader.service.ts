@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {AbstractCacheService} from './abstract-cache.service';
-import {OBJLoader} from 'three/examples/jsm/loaders/OBJLoader';
+import {OBJLoader} from 'three/examples/jsm/loaders/OBJLoader.js';
 import * as THREE from 'three';
-import {MTLLoader} from 'three/examples/jsm/loaders/MTLLoader';
+import {MTLLoader} from 'three/examples/jsm/loaders/MTLLoader.js';
 
 
 @Injectable()

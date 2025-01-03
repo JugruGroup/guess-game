@@ -76,7 +76,7 @@ export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked
 
   private heightUpdated = false;
 
-  public perspectiveCameraPositionZ: number = 0;
+  public perspectiveCameraPositionZ = 0;
   public internalData: ThreeDimensionsCubeInternalData = new ThreeDimensionsCubeInternalData(
     [], 100, 10, 100, 10, 100, 10, [], []);
 

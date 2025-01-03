@@ -5,7 +5,7 @@ import {RendererService} from '../../renderer/renderer.service';
 import {appliedMaterial, provideParent} from '../../util';
 import {AbstractObject3D} from '../abstract-object-3d';
 import {AbstractModelLoader} from './abstract-model-loader';
-import {STLLoader} from 'three/examples/jsm/loaders/STLLoader';
+import {STLLoader} from 'three/examples/jsm/loaders/STLLoader.js';
 
 @Component({
   selector: 'atft-stl-loader',

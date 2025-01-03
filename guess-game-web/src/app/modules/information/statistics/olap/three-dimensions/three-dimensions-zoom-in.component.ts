@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 import {
   ThreeDimensionsCubeOptions
@@ -8,7 +8,7 @@ import {
   selector: 'app-three-dimensions-zoom-in',
   templateUrl: './three-dimensions-zoom-in.component.html'
 })
-export class ThreeDimensionsZoomInComponent {
+export class ThreeDimensionsZoomInComponent implements AfterViewInit {
   public options!: ThreeDimensionsCubeOptions;
 
   @ViewChild('cubeDiv') cubeDiv!: ElementRef<HTMLDivElement>;

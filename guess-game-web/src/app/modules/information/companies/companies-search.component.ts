@@ -32,7 +32,7 @@ export class CompaniesSearchComponent {
     this.search();
   }
 
-  onFilterChange(value: any) {
+  onFilterChange() {
     this.searched = false;
   }
 

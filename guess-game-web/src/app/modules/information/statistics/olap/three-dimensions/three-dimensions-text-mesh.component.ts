@@ -6,8 +6,8 @@ import { AbstractLazyObject3D, AbstractObject3D, FontService } from '../../../..
 import { RendererService } from '../../../../atft/renderer';
 import { appliedMaterial } from '../../../../atft/util';
 
-import { Font } from 'three/examples/jsm/loaders/FontLoader';
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+import { Font } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 import {
   ThreeDimensionsTextAlignment
 } from '../../../../../shared/models/statistics/olap/three-dimensions/text/three-dimensions-text-alignment.model';
