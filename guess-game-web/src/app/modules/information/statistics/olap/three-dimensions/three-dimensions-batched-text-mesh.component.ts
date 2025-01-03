@@ -1,7 +1,7 @@
 import { Component, Input, Optional, SkipSelf } from '@angular/core';
 import * as THREE from 'three';
-import { Font } from 'three/examples/jsm/loaders/FontLoader';
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+import { Font } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 
 // import { AbstractLazyObject3D, AbstractObject3D, appliedMaterial, FontService, RendererService } from 'atft';
 import { AbstractLazyObject3D, AbstractObject3D, FontService } from '../../../../atft/object';

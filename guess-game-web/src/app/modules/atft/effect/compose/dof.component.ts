@@ -1,6 +1,6 @@
 import {Component, Input, Optional, SimpleChanges, SkipSelf} from '@angular/core';
 import {RendererService} from '../../renderer/renderer.service';
-import {BokehPass} from 'three/examples/jsm/postprocessing/BokehPass';
+import {BokehPass} from 'three/examples/jsm/postprocessing/BokehPass.js';
 import {EffectComposerComponent} from './effect-composer.component';
 import {AbstractComposeEffect} from './abstract-compose-effect';
 

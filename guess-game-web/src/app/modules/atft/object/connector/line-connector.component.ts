@@ -6,9 +6,9 @@ import {RendererService} from '../../renderer/renderer.service';
 import {provideParent} from '../../util';
 import {AbstractObject3D} from '../abstract-object-3d';
 import {AbstractConnector} from './abstract-connector';
-import {Line2} from 'three/examples/jsm/lines/Line2';
-import {LineGeometry} from 'three/examples/jsm/lines/LineGeometry';
-import {LineMaterial} from 'three/examples/jsm/lines/LineMaterial';
+import {Line2} from 'three/examples/jsm/lines/Line2.js';
+import {LineGeometry} from 'three/examples/jsm/lines/LineGeometry.js';
+import {LineMaterial} from 'three/examples/jsm/lines/LineMaterial.js';
 
 export enum LineType {
   dashed = 'dash',

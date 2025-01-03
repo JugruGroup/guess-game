@@ -1,8 +1,8 @@
 import {Component, Input, Optional, SimpleChanges, SkipSelf} from '@angular/core';
 import {RendererService} from '../../renderer/renderer.service';
 import {EffectComposerComponent} from './effect-composer.component';
-import {ShaderPass} from 'three/examples/jsm/postprocessing/ShaderPass';
-import {DotScreenShader} from 'three/examples/jsm/shaders/DotScreenShader';
+import {ShaderPass} from 'three/examples/jsm/postprocessing/ShaderPass.js';
+import {DotScreenShader} from 'three/examples/jsm/shaders/DotScreenShader.js';
 import {AbstractComposeEffect} from './abstract-compose-effect';
 
 @Component({

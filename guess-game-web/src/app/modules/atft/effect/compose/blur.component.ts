@@ -1,8 +1,8 @@
 import {Component, Optional, SimpleChanges, SkipSelf} from '@angular/core';
 import {RendererService} from '../../renderer/renderer.service';
-import {ShaderPass} from 'three/examples/jsm/postprocessing/ShaderPass';
-import {VerticalBlurShader} from 'three/examples/jsm/shaders/VerticalBlurShader';
-import {HorizontalBlurShader} from 'three/examples/jsm/shaders/HorizontalBlurShader';
+import {ShaderPass} from 'three/examples/jsm/postprocessing/ShaderPass.js';
+import {VerticalBlurShader} from 'three/examples/jsm/shaders/VerticalBlurShader.js';
+import {HorizontalBlurShader} from 'three/examples/jsm/shaders/HorizontalBlurShader.js';
 import {EffectComposerComponent} from './effect-composer.component';
 import {AbstractComposeEffect} from './abstract-compose-effect';
 

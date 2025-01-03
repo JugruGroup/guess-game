@@ -7,7 +7,7 @@ import {AbstractLazyObject3D} from '../abstract-lazy-object-3d';
 import {AbstractObject3D} from '../abstract-object-3d';
 import {FontService} from '../loader/services/font.service';
 import {Font} from "three/examples/jsm/loaders/FontLoader.js";
-import {TextGeometry} from "three/examples/jsm/geometries/TextGeometry";
+import {TextGeometry} from "three/examples/jsm/geometries/TextGeometry.js";
 
 @Component({
   selector: 'atft-text-mesh',

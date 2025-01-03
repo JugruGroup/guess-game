@@ -1,5 +1,5 @@
 import {Component, Input, Optional, SkipSelf} from '@angular/core';
-import {MTLLoader} from 'three/examples/jsm/loaders/MTLLoader';
+import {MTLLoader} from 'three/examples/jsm/loaders/MTLLoader.js';
 import {RendererService} from '../../renderer/renderer.service';
 import {provideParent} from '../../util';
 import {AbstractObject3D} from '../abstract-object-3d';
