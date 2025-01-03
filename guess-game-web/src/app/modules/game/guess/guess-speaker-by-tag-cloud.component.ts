@@ -55,7 +55,7 @@ export class GuessSpeakerByTagCloudComponent implements OnInit {
 
   answer(id: number) {
     this.answerService.setAnswer(this.tagCloudSpeakers.currentIndex, id)
-      .subscribe(data => {
+      .subscribe(() => {
           this.loadQuestion();
         }
       );
@@ -63,7 +63,7 @@ export class GuessSpeakerByTagCloudComponent implements OnInit {
 
   result() {
     this.stateService.setState(GameState.ResultState)
-      .subscribe(data => {
+      .subscribe(() => {
           this.router.navigateByUrl('/game/result');
         }
       );

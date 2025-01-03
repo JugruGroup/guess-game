@@ -30,8 +30,9 @@ module.exports = tseslint.config(
       //     style: "kebab-case",
       //   },
       // ],
+      "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-empty-function": "off"
+      "@typescript-eslint/prefer-for-of": "off"
     },
     ignores: ["**/src/app/modules/atft/**"]
   },
@@ -42,10 +43,13 @@ module.exports = tseslint.config(
       ...angular.configs.templateAccessibility,
     ],
     rules: {
+      "@angular-eslint/template/alt-text": "off",
       "@angular-eslint/template/click-events-have-key-events": "off",
       "@angular-eslint/template/elements-content": "off",
       "@angular-eslint/template/interactive-supports-focus": "off",
-      "@angular-eslint/template/no-autofocus": "off"
+      "@angular-eslint/template/label-has-associated-control": "off",
+      "@angular-eslint/template/no-autofocus": "off",
+      "@angular-eslint/template/table-scope": "off"
     },
   }
 );

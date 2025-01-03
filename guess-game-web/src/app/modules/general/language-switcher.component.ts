@@ -7,7 +7,7 @@ import { LocaleService } from '../../shared/services/locale.service';
   templateUrl: './language-switcher.component.html'
 })
 export class LanguageSwitcherComponent implements OnInit {
-  @Output() reload: EventEmitter<any> = new EventEmitter();
+  @Output() reload: EventEmitter<any> = new EventEmitter<any>();
 
   public selectedLanguage: Language;
   public language = Language;
@@ -24,7 +24,7 @@ export class LanguageSwitcherComponent implements OnInit {
 
   onLanguageChange(language: Language) {
     this.localeService.setLanguage(language)
-      .subscribe(data => {
+      .subscribe(() => {
           this.reload.emit();
         }
       );

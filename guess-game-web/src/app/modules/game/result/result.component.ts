@@ -38,7 +38,7 @@ export class ResultComponent implements OnInit {
 
   home() {
     this.stateService.deleteStartParameters()
-      .subscribe(data => {
+      .subscribe(() => {
           this.router.navigateByUrl('/home');
         }
       );
@@ -46,7 +46,7 @@ export class ResultComponent implements OnInit {
 
   restart() {
     this.stateService.deleteStartParameters()
-      .subscribe(data => {
+      .subscribe(() => {
           this.router.navigateByUrl('/game/start');
         }
       );

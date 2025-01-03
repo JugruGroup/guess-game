@@ -12,14 +12,14 @@ import { BufferGeometry } from 'three';
   template: '<ng-content></ng-content>'
 })
 export class ThreeDimensionsGridComponent extends AbstractObject3D<THREE.LineSegments> implements OnChanges {
-  @Input() sizeX: number = 100;
-  @Input() divisionsX: number = 10;
+  @Input() sizeX = 100;
+  @Input() divisionsX = 10;
 
-  @Input() sizeY: number = 100;
-  @Input() divisionsY: number = 10;
+  @Input() sizeY = 100;
+  @Input() divisionsY = 10;
 
-  @Input() sizeZ: number = 100;
-  @Input() divisionsZ: number = 10;
+  @Input() sizeZ = 100;
+  @Input() divisionsZ = 10;
 
   @Input() color: number | string = '#888888';
 

@@ -157,7 +157,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
         this.selectedEvents.map(e => e.id),
         this.selectedGuessMode,
         this.getSelectedQuantityValue()))
-      .subscribe(data => {
+      .subscribe(() => {
         this.router.navigateByUrl('/game/guess/name-by-photo');
       });
   }

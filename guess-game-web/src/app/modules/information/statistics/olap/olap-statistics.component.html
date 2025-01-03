@@ -82,7 +82,7 @@
         <label for="speaker" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'statistics.olap.speakersLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-10 col-xxl-11">
           <p-autoComplete id="speaker" [(ngModel)]="selectedSpeakers" [suggestions]="speakerSuggestions" (completeMethod)="speakerSearch($event)"
-                          (onSelect)="selectSpeaker($event)" (onUnselect)="unselectSpeaker($event)"
+                          (onSelect)="selectSpeaker()" (onUnselect)="unselectSpeaker()"
                           placeholder="{{'common.list.speakersPlaceholder' | translate}}"
                           field="displayName" name="speaker" [multiple]="true" styleClass="olap-autocomplete"></p-autoComplete>
         </div>
@@ -91,7 +91,7 @@
         <label for="company" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'statistics.olap.companiesLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-10 col-xxl-11">
           <p-autoComplete id="company" [(ngModel)]="selectedCompanies" [suggestions]="companySuggestions" (completeMethod)="companySearch($event)"
-                          (onSelect)="selectCompany($event)" (onUnselect)="unselectCompany($event)"
+                          (onSelect)="selectCompany()" (onUnselect)="unselectCompany()"
                           placeholder="{{'common.list.companiesPlaceholder' | translate}}"
                           field="name" name="company" [multiple]="true" styleClass="olap-autocomplete"></p-autoComplete>
         </div>

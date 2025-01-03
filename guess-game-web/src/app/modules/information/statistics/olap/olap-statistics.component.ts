@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { formatPercent } from '@angular/common';
 import { SelectItem } from 'primeng/api';
 import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
@@ -58,7 +58,7 @@ import {
   templateUrl: './olap-statistics.component.html',
   providers: [DialogService]
 })
-export class OlapStatisticsComponent implements OnInit {
+export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit {
   private readonly EVENT_TYPES_CUBE_TYPE_KEY = 'cubeType.eventTypes';
   private readonly SPEAKERS_CUBE_TYPE_KEY = 'cubeType.speakers';
   private readonly COMPANIES_CUBE_TYPE_KEY = 'cubeType.companies';
@@ -135,9 +135,9 @@ export class OlapStatisticsComponent implements OnInit {
   public speakerMultiSortMeta: any[] = [];
   public companyMultiSortMeta: any[] = [];
 
-  public eventTypeExpandedRows: {} = {};
-  public speakerExpandedRows: {} = {};
-  public companyExpandedRows: {} = {};
+  public eventTypeExpandedRows = {};
+  public speakerExpandedRows = {};
+  public companyExpandedRows = {};
 
   public lineOptions: any = {};
   public pieOptions: any = {};
@@ -180,7 +180,7 @@ export class OlapStatisticsComponent implements OnInit {
   private cubeMetricsMap = new Map<number, Olap3dCubeMetrics>();
 
   private zoomInDialogRef: DynamicDialogRef;
-  public zoomInDialogClosed: boolean = true;
+  public zoomInDialogClosed = true;
 
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, private organizerService: OrganizerService,
@@ -552,12 +552,12 @@ export class OlapStatisticsComponent implements OnInit {
       );
   }
 
-  selectSpeaker(event) {
+  selectSpeaker() {
     this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
       this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
   }
 
-  unselectSpeaker(event) {
+  unselectSpeaker() {
     this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
       this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
   }
@@ -570,12 +570,12 @@ export class OlapStatisticsComponent implements OnInit {
       );
   }
 
-  selectCompany(event) {
+  selectCompany() {
     this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
       this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
   }
 
-  unselectCompany(event) {
+  unselectCompany() {
     this.loadOlapStatistics(this.selectedCubeType, this.selectedMeasureType, this.isConferences, this.isMeetups,
       this.selectedOrganizer, this.selectedEventTypes, this.selectedSpeakers, this.selectedCompanies);
   }
@@ -902,7 +902,7 @@ export class OlapStatisticsComponent implements OnInit {
     }
 
     // Mark non-value dimensions
-    for (let metrics of metricsList) {
+    for (const metrics of metricsList) {
       for (let i = 0; i < metrics.measureValues.length; i++) {
         if (metrics.measureValues[i] > 0) {
           result[i] = true;
@@ -981,8 +981,8 @@ export class OlapStatisticsComponent implements OnInit {
   getUsedDimensionIds(metricsList: Olap3dCubeMetrics[]): Set<number> {
     const result = new Set<number>();
 
-    for (let metrics of metricsList) {
-      for (let measureValue of metrics.measureValueList) {
+    for (const metrics of metricsList) {
+      for (const measureValue of metrics.measureValueList) {
         result.add(measureValue.dimensionId);
       }
     }

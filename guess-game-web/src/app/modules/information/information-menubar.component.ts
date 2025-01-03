@@ -17,7 +17,7 @@ export class InformationMenubarComponent implements OnInit {
   private readonly KEYS = [this.EVENT_TYPES_TITLE_KEY, this.EVENTS_TITLE_KEY, this.TALKS_TITLE_KEY,
     this.SPEAKERS_TITLE_KEY, this.COMPANIES_TITLE_KEY, this.STATISTICS_TITLE_KEY];
 
-  @Output() reload: EventEmitter<any> = new EventEmitter();
+  @Output() reload: EventEmitter<any> = new EventEmitter<any>();
 
   public items: MenuItem[] = [];
 

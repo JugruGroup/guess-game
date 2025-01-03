@@ -43,7 +43,7 @@ export class GuessCompanyBySpeakerComponent implements OnInit {
 
   answer(id: number) {
     this.answerService.setAnswer(this.speakerCompanies.currentIndex, id)
-      .subscribe(data => {
+      .subscribe(() => {
           this.loadQuestion();
         }
       );
@@ -51,7 +51,7 @@ export class GuessCompanyBySpeakerComponent implements OnInit {
 
   result() {
     this.stateService.setState(GameState.ResultState)
-      .subscribe(data => {
+      .subscribe(() => {
           this.router.navigateByUrl('/game/result');
         }
       );
