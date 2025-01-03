@@ -16,6 +16,7 @@ updates:
       - dependency-name: "primeng"
       - dependency-name: "three"
       - dependency-name: "@types/three"
+      - dependency-name: "chart.js"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
