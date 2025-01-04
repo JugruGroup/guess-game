@@ -211,7 +211,7 @@
             <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
-        <ng-template #rowexpansion let-eventTypeMetrics>
+        <ng-template #expandedrow let-eventTypeMetrics>
           <tr>
             <td [attr.colspan]="olapStatistics.eventTypeStatistics.dimensionValues.length + 6">
               <div *ngIf="eventTypeMetrics?.cityStatistics">
@@ -327,7 +327,7 @@
             <td class="text-center total-column">{{speakerMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
-        <ng-template #rowexpansion let-speakerMetrics>
+        <ng-template #expandedrow let-speakerMetrics>
           <tr>
             <td [attr.colspan]="olapStatistics.speakerStatistics.dimensionValues.length + 6">
               <div *ngIf="speakerMetrics?.eventTypeStatistics">
@@ -430,7 +430,7 @@
             <td class="text-center total-column">{{companyMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
-        <ng-template #rowexpansion let-companyMetrics>
+        <ng-template #expandedrow let-companyMetrics>
           <tr>
             <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
               <div *ngIf="companyMetrics?.eventTypeStatistics">
@@ -476,7 +476,7 @@
                       <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
                     </tr>
                   </ng-template>
-                  <ng-template #rowexpansion let-eventTypeMetrics>
+                  <ng-template #expandedrow let-eventTypeMetrics>
                     <tr>
                       <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
                         <div *ngIf="eventTypeMetrics?.speakerStatistics">
