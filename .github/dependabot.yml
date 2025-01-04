@@ -12,10 +12,15 @@ updates:
       angular:
         patterns:
           - "@angular*"
+      primeng:
+        patterns:
+          - "primeng"
+          - "@primeng/themes"
     ignore:
-      - dependency-name: "primeng"
       - dependency-name: "three"
       - dependency-name: "@types/three"
+      - dependency-name: "primeng"
+      - dependency-name: "@primeng/themes"
       - dependency-name: "chart.js"
   - package-ecosystem: "github-actions"
     directory: "/"
