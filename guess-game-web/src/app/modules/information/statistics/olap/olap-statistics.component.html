@@ -154,7 +154,7 @@
 
     <div *ngIf="isEventTypesListVisible()" class="m-2">
       <p-table #eventTypeStatisticsTable [value]="olapStatistics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
-               sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
+               sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="eventTypeRowExpand($event)" [expandedRowKeys]="eventTypeExpandedRows"
                (onSort)="sortEventTypeStatistics(eventTypeStatisticsTable.value)">
         <ng-template pTemplate="header">
@@ -216,8 +216,8 @@
             <td [attr.colspan]="olapStatistics.eventTypeStatistics.dimensionValues.length + 6">
               <div *ngIf="eventTypeMetrics?.cityStatistics">
                 <p-table [value]="eventTypeMetrics.cityStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
-                         sortMode="multiple" [multiSortMeta]="cityMultiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
-                         responsiveLayout="scroll" dataKey="id">
+                         sortMode="multiple" [multiSortMeta]="cityMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
+                         [size]="'small'" responsiveLayout="scroll" dataKey="id">
                   <ng-template pTemplate="header">
                     <tr>
                       <th class="text-center" pResizableColumn>
@@ -270,7 +270,7 @@
                [rows]="15" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
-               sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
+               sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="speakerRowExpand($event)" [expandedRowKeys]="speakerExpandedRows"
                (onSort)="sortSpeakerStatistics(speakerStatisticsTable.value)">
         <ng-template pTemplate="header">
@@ -332,8 +332,8 @@
             <td [attr.colspan]="olapStatistics.speakerStatistics.dimensionValues.length + 6">
               <div *ngIf="speakerMetrics?.eventTypeStatistics">
                 <p-table [value]="speakerMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
-                         sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
-                         responsiveLayout="scroll" dataKey="id">
+                         sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
+                         [size]="'small'" responsiveLayout="scroll" dataKey="id">
                   <ng-template pTemplate="header">
                     <tr>
                       <th class="text-center" pResizableColumn>
@@ -391,7 +391,7 @@
                [rows]="15" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
-               sortMode="multiple" [multiSortMeta]="companyMultiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
+               sortMode="multiple" [multiSortMeta]="companyMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="companyRowExpand($event)" [expandedRowKeys]="companyExpandedRows"
                (onSort)="sortCompanyStatistics(companyStatisticsTable.value)">
         <ng-template pTemplate="header">
@@ -435,7 +435,7 @@
             <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
               <div *ngIf="companyMetrics?.eventTypeStatistics">
                 <p-table [value]="companyMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
-                         sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
+                         sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                          responsiveLayout="scroll" dataKey="id" (onRowExpand)="companyEventTypeRowExpand($event)">
                   <ng-template pTemplate="header">
                     <tr>
@@ -481,8 +481,8 @@
                       <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
                         <div *ngIf="eventTypeMetrics?.speakerStatistics">
                           <p-table [value]="eventTypeMetrics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
-                                   sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
-                                   responsiveLayout="scroll" dataKey="id">
+                                   sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
+                                   [size]="'small'" responsiveLayout="scroll" dataKey="id">
                             <ng-template pTemplate="header">
                               <tr>
                                 <th class="text-center" pResizableColumn>
