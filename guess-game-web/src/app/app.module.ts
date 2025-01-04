@@ -10,7 +10,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { MarkdownModule } from 'ngx-markdown';
 import { definePreset } from '@primeng/themes';
 import { providePrimeNG } from 'primeng/config';
-import Lara from '@primeng/themes/lara';
+import Aura from '@primeng/themes/aura';
 
 import { AppComponent } from './app.component';
 import { CompaniesModule } from './modules/information/companies/companies.module';
@@ -170,7 +170,7 @@ registerLocaleData(localeRu, 'ru');
     TopicService,
     providePrimeNG({
       theme: {
-        preset: definePreset(Lara, {
+        preset: definePreset(Aura, {
           semantic: {
             primary: {
               50: "{blue.50}",
