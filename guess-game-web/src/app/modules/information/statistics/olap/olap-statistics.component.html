@@ -15,12 +15,12 @@
                     placeholder="{{'statistics.olap.cubePlaceholder' | translate}}"
                     (onChange)="onCubeTypeChange()" name="cubeType" styleClass="w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-cubeType pTemplate="selectedItem">
+            <ng-template let-cubeType #selectedItem>
               <div *ngIf="cubeType">
                 {{ cubeType.label | translate }}
               </div>
             </ng-template>
-            <ng-template let-cubeType pTemplate="item">
+            <ng-template let-cubeType #item>
               {{ cubeType.label | translate }}
             </ng-template>
           </p-select>
@@ -30,12 +30,12 @@
           <p-select [options]="measureTypeSelectItems" [(ngModel)]="selectedMeasureType" id="measureType"
                     (onChange)="onMeasureTypeChange()" name="measureType" styleClass="w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-measureType pTemplate="selectedItem">
+            <ng-template let-measureType #selectedItem>
               <div *ngIf="measureType">
                 {{ measureType.label | translate }}
               </div>
             </ng-template>
-            <ng-template let-measureType pTemplate="item">
+            <ng-template let-measureType #item>
               {{ measureType.label | translate }}
             </ng-template>
           </p-select>
@@ -66,7 +66,7 @@
                     placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
                     (onChange)="onOrganizerChange()" name="organizer" styleClass="w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-organizer pTemplate="item">
+            <ng-template let-organizer #item>
               {{organizer.value.name}}
             </ng-template>
           </p-select>
@@ -77,7 +77,7 @@
                          placeholder="{{'common.list.eventTypePlaceholder' | translate}}"
                          (onChange)="onEventTypeChange()" name="eventType" styleClass="w-100"
                          optionLabel="label" optionValue="value">
-            <ng-template let-eventType pTemplate="item">
+            <ng-template let-eventType #item>
               <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-list" alt="logo"/>
               <span class="ms-2">{{eventType.value.name}}</span>
             </ng-template>
@@ -157,7 +157,7 @@
                sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="eventTypeRowExpand($event)" [expandedRowKeys]="eventTypeExpandedRows"
                (onSort)="sortEventTypeStatistics(eventTypeStatisticsTable.value)">
-        <ng-template pTemplate="header">
+        <ng-template #header>
           <tr>
             <th style="width: 3rem"></th>
             <th class="text-center" pResizableColumn>
@@ -184,7 +184,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-eventTypeMetrics let-i = "rowIndex" let-expanded="expanded">
+        <ng-template #body let-eventTypeMetrics let-i = "rowIndex" let-expanded="expanded">
           <tr>
             <td>
               <button type="button" pButton pRipple [pRowToggler]="eventTypeMetrics" class="p-button-text p-button-rounded p-button-plain remove-focus" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
@@ -211,14 +211,14 @@
             <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="rowexpansion" let-eventTypeMetrics>
+        <ng-template #rowexpansion let-eventTypeMetrics>
           <tr>
             <td [attr.colspan]="olapStatistics.eventTypeStatistics.dimensionValues.length + 6">
               <div *ngIf="eventTypeMetrics?.cityStatistics">
                 <p-table [value]="eventTypeMetrics.cityStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
                          sortMode="multiple" [multiSortMeta]="cityMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
                          [size]="'small'" responsiveLayout="scroll" dataKey="id">
-                  <ng-template pTemplate="header">
+                  <ng-template #header>
                     <tr>
                       <th class="text-center" pResizableColumn>
                         {{'common.table.numberColumn' | translate}}
@@ -238,7 +238,7 @@
                       </th>
                     </tr>
                   </ng-template>
-                  <ng-template pTemplate="body" let-cityMetrics let-i = "rowIndex">
+                  <ng-template #body let-cityMetrics let-i = "rowIndex">
                     <tr>
                       <td class="text-center">{{i + 1}}</td>
                       <td>{{cityMetrics.name}}</td>
@@ -253,7 +253,7 @@
             </td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="footer">
+        <ng-template #footer>
           <tr>
             <td colspan="5">{{'common.table.totalsText' | translate}}</td>
             <td *ngFor="let measureValue of olapStatistics.eventTypeStatistics.totals.measureValues" class="text-center">
@@ -273,7 +273,7 @@
                sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="speakerRowExpand($event)" [expandedRowKeys]="speakerExpandedRows"
                (onSort)="sortSpeakerStatistics(speakerStatisticsTable.value)">
-        <ng-template pTemplate="header">
+        <ng-template #header>
           <tr>
             <th style="width: 3rem"></th>
             <th class="text-center" pResizableColumn>
@@ -302,7 +302,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-speakerMetrics let-i = "rowIndex" let-expanded="expanded">
+        <ng-template #body let-speakerMetrics let-i = "rowIndex" let-expanded="expanded">
           <tr>
             <td>
               <button type="button" pButton pRipple [pRowToggler]="speakerMetrics" class="p-button-text p-button-rounded p-button-plain remove-focus" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
@@ -327,14 +327,14 @@
             <td class="text-center total-column">{{speakerMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="rowexpansion" let-speakerMetrics>
+        <ng-template #rowexpansion let-speakerMetrics>
           <tr>
             <td [attr.colspan]="olapStatistics.speakerStatistics.dimensionValues.length + 6">
               <div *ngIf="speakerMetrics?.eventTypeStatistics">
                 <p-table [value]="speakerMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
                          sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
                          [size]="'small'" responsiveLayout="scroll" dataKey="id">
-                  <ng-template pTemplate="header">
+                  <ng-template #header>
                     <tr>
                       <th class="text-center" pResizableColumn>
                         {{'common.table.numberColumn' | translate}}
@@ -354,7 +354,7 @@
                       </th>
                     </tr>
                   </ng-template>
-                  <ng-template pTemplate="body" let-eventTypeMetrics let-i = "rowIndex">
+                  <ng-template #body let-eventTypeMetrics let-i = "rowIndex">
                     <tr>
                       <td class="text-center">{{i + 1}}</td>
                       <td>
@@ -374,7 +374,7 @@
             </td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="footer">
+        <ng-template #footer>
           <tr>
             <td colspan="5">{{'common.table.totalsText' | translate}}</td>
             <td *ngFor="let measureValue of olapStatistics.speakerStatistics.totals.measureValues" class="text-center">
@@ -394,7 +394,7 @@
                sortMode="multiple" [multiSortMeta]="companyMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="companyRowExpand($event)" [expandedRowKeys]="companyExpandedRows"
                (onSort)="sortCompanyStatistics(companyStatisticsTable.value)">
-        <ng-template pTemplate="header">
+        <ng-template #header>
           <tr>
             <th style="width: 3rem"></th>
             <th class="text-center" pResizableColumn>
@@ -415,7 +415,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-companyMetrics let-i = "rowIndex" let-expanded="expanded">
+        <ng-template #body let-companyMetrics let-i = "rowIndex" let-expanded="expanded">
           <tr>
             <td>
               <button type="button" pButton pRipple [pRowToggler]="companyMetrics" class="p-button-text p-button-rounded p-button-plain remove-focus" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
@@ -430,14 +430,14 @@
             <td class="text-center total-column">{{companyMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="rowexpansion" let-companyMetrics>
+        <ng-template #rowexpansion let-companyMetrics>
           <tr>
             <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
               <div *ngIf="companyMetrics?.eventTypeStatistics">
                 <p-table [value]="companyMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
                          sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                          responsiveLayout="scroll" dataKey="id" (onRowExpand)="companyEventTypeRowExpand($event)">
-                  <ng-template pTemplate="header">
+                  <ng-template #header>
                     <tr>
                       <th style="width: 3rem"></th>
                       <th class="text-center" pResizableColumn>
@@ -458,7 +458,7 @@
                       </th>
                     </tr>
                   </ng-template>
-                  <ng-template pTemplate="body" let-eventTypeMetrics let-i = "rowIndex" let-expanded="expanded">
+                  <ng-template #body let-eventTypeMetrics let-i = "rowIndex" let-expanded="expanded">
                     <tr>
                       <td>
                         <button type="button" pButton pRipple [pRowToggler]="eventTypeMetrics" class="p-button-text p-button-rounded p-button-plain remove-focus" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
@@ -476,14 +476,14 @@
                       <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
                     </tr>
                   </ng-template>
-                  <ng-template pTemplate="rowexpansion" let-eventTypeMetrics>
+                  <ng-template #rowexpansion let-eventTypeMetrics>
                     <tr>
                       <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
                         <div *ngIf="eventTypeMetrics?.speakerStatistics">
                           <p-table [value]="eventTypeMetrics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
                                    sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
                                    [size]="'small'" responsiveLayout="scroll" dataKey="id">
-                            <ng-template pTemplate="header">
+                            <ng-template #header>
                               <tr>
                                 <th class="text-center" pResizableColumn>
                                   {{'common.table.numberColumn' | translate}}
@@ -503,7 +503,7 @@
                                 </th>
                               </tr>
                             </ng-template>
-                            <ng-template pTemplate="body" let-speakerMetrics let-i = "rowIndex">
+                            <ng-template #body let-speakerMetrics let-i = "rowIndex">
                               <tr>
                                 <td class="text-center">{{i + 1}}</td>
                                 <td>
@@ -528,7 +528,7 @@
             </td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="footer">
+        <ng-template #footer>
           <tr>
             <td colspan="3">{{'common.table.totalsText' | translate}}</td>
             <td *ngFor="let measureValue of olapStatistics.companyStatistics.totals.measureValues" class="text-center">

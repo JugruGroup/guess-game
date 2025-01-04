@@ -40,7 +40,7 @@
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false" [(first)]="paginatorFirst"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm" responsiveLayout="scroll">
-        <ng-template pTemplate="header">
+        <ng-template #header>
           <tr>
             <th class="text-center" pResizableColumn>
               {{'common.table.numberColumn' | translate}}
@@ -59,7 +59,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-company let-i = "rowIndex">
+        <ng-template #body let-company let-i = "rowIndex">
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>

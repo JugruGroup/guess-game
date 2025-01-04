@@ -32,7 +32,7 @@
                     placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
                     (onChange)="onOrganizerChange()" name="organizer" styleClass="organizer-dropdown w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-organizer pTemplate="item">
+            <ng-template let-organizer #item>
               {{organizer.value.name}}
             </ng-template>
           </p-select>
@@ -43,7 +43,7 @@
                     placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
                     (onChange)="onTopicChange()" name="topic" styleClass="topic-dropdown w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-topic pTemplate="item">
+            <ng-template let-topic #item>
               {{topic.value.name}}
             </ng-template>
           </p-select>
@@ -58,7 +58,7 @@
     <div *ngIf="isEventTypesListVisible()" class="m-2">
       <p-table [value]="eventTypes" [resizableColumns]="true" [autoLayout]="true" sortField="sortName"
                [showGridlines]="true" [stripedRows]="true" [size]="'small'" responsiveLayout="scroll">
-        <ng-template pTemplate="header" let-columns>
+        <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>
               {{'common.table.numberColumn' | translate}}
@@ -83,7 +83,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-eventType let-i = "rowIndex">
+        <ng-template #body let-eventType let-i = "rowIndex">
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>

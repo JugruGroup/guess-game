@@ -14,7 +14,7 @@
                     placeholder="{{'common.list.eventTypePlaceholder' | translate}}" [showClear]="true"
                     (onChange)="onEventTypeChange($event.value)" name="eventType" styleClass="w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-eventType pTemplate="item">
+            <ng-template let-eventType #item>
               <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-list" alt="logo"/>
               <span class="ms-2">{{eventType.value.name}}</span>
             </ng-template>
@@ -27,12 +27,12 @@
                     (onChange)="onFilterChange()" name="event" styleClass="w-100"
                     emptyMessage="{{'common.list.emptyMessage' | translate}}"
                     optionLabel="label" optionValue="value">
-            <ng-template let-event pTemplate="selectedItem">
+            <ng-template let-event #selectedItem>
               <div *ngIf="event">
                 {{event.value.name}}
               </div>
             </ng-template>
-            <ng-template let-event pTemplate="item">
+            <ng-template let-event #item>
               {{event.value.displayName}}
             </ng-template>
           </p-select>
@@ -55,7 +55,7 @@
                     placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
                     (onChange)="onFilterChange()" name="topic" styleClass="w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-topic pTemplate="item">
+            <ng-template let-topic #item>
               {{topic.value.name}}
             </ng-template>
           </p-select>
@@ -66,7 +66,7 @@
                     placeholder="{{'common.list.languagePlaceholder' | translate}}" [showClear]="true"
                     (onChange)="onFilterChange()" name="language" styleClass="w-100"
                     optionLabel="label" optionValue="value">
-            <ng-template let-language pTemplate="item">
+            <ng-template let-language #item>
               {{language.label}}
             </ng-template>
           </p-select>
@@ -93,7 +93,7 @@
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="multiSortMeta" [showGridlines]="true" [stripedRows]="true"
                [size]="'small'" responsiveLayout="scroll">
-        <ng-template pTemplate="header" let-columns>
+        <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>
               {{'common.table.numberColumn' | translate}}
@@ -116,7 +116,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-talk let-i = "rowIndex">
+        <ng-template #body let-talk let-i = "rowIndex">
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
