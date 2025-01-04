@@ -11,7 +11,7 @@ import { DynamicDialog } from 'primeng/dynamicdialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { RippleModule } from 'primeng/ripple';
 import { RouterModule } from '@angular/router';
-import { SelectButtonModule } from 'primeng/selectbutton';
+import { SelectButton } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 
@@ -74,7 +74,7 @@ import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-di
     InformationModule,
     MessageModule,
     TranslateModule,
-    SelectButtonModule
+    SelectButton
   ]
 })
 export class StatisticsModule {
