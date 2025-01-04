@@ -11,10 +11,10 @@
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="cubeType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'statistics.olap.cubeLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-3 col-xxl-4">
-          <p-dropdown [options]="cubeTypeSelectItems" [(ngModel)]="selectedCubeType" id="cubeType"
-                      placeholder="{{'statistics.olap.cubePlaceholder' | translate}}"
-                      (onChange)="onCubeTypeChange()" name="cubeType" styleClass="w-100"
-                      optionLabel="label" optionValue="value">
+          <p-select [options]="cubeTypeSelectItems" [(ngModel)]="selectedCubeType" id="cubeType"
+                    placeholder="{{'statistics.olap.cubePlaceholder' | translate}}"
+                    (onChange)="onCubeTypeChange()" name="cubeType" styleClass="w-100"
+                    optionLabel="label" optionValue="value">
             <ng-template let-cubeType pTemplate="selectedItem">
               <div *ngIf="cubeType">
                 {{ cubeType.label | translate }}
@@ -23,13 +23,13 @@
             <ng-template let-cubeType pTemplate="item">
               {{ cubeType.label | translate }}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
         <label for="measureType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'statistics.olap.measureLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-5 col-xxl-6 mt-sm-3 mt-md-0">
-          <p-dropdown [options]="measureTypeSelectItems" [(ngModel)]="selectedMeasureType" id="measureType"
-                      (onChange)="onMeasureTypeChange()" name="measureType" styleClass="w-100"
-                      optionLabel="label" optionValue="value">
+          <p-select [options]="measureTypeSelectItems" [(ngModel)]="selectedMeasureType" id="measureType"
+                    (onChange)="onMeasureTypeChange()" name="measureType" styleClass="w-100"
+                    optionLabel="label" optionValue="value">
             <ng-template let-measureType pTemplate="selectedItem">
               <div *ngIf="measureType">
                 {{ measureType.label | translate }}
@@ -38,7 +38,7 @@
             <ng-template let-measureType pTemplate="item">
               {{ measureType.label | translate }}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
       </div>
       <div class="mb-3 row justify-content-center">
@@ -62,14 +62,14 @@
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="organizer" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'common.list.organizerLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-3 col-xxl-4">
-          <p-dropdown [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
-                      placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onOrganizerChange()" name="organizer" styleClass="w-100"
-                      optionLabel="label" optionValue="value">
+          <p-select [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
+                    placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
+                    (onChange)="onOrganizerChange()" name="organizer" styleClass="w-100"
+                    optionLabel="label" optionValue="value">
             <ng-template let-organizer pTemplate="item">
               {{organizer.value.name}}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
         <label for="eventType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'common.list.eventTypesLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-5 col-xxl-6 mt-sm-3 mt-md-0">

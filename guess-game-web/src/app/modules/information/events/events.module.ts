@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { TranslateModule } from '@ngx-translate/core';
 import { CheckboxModule } from 'primeng/checkbox';
-import { DropdownModule } from 'primeng/dropdown';
+import { Select } from 'primeng/select';
 import { TableModule } from 'primeng/table';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
@@ -24,13 +24,13 @@ import { EventsTabMenuComponent } from './events-tabmenu.component';
     CommonModule,
     FormsModule,
     CheckboxModule,
-    DropdownModule,
     MarkdownModule,
     RouterModule,
     TableModule,
     GeneralModule,
     InformationModule,
     MessageModule,
+    Select,
     TranslateModule
   ]
 })

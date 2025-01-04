@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { TranslateModule } from '@ngx-translate/core';
 import { MarkdownModule } from 'ngx-markdown';
-import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
+import { Select } from 'primeng/select';
 import { TableModule } from 'primeng/table';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
@@ -23,7 +23,6 @@ import { TalksTabMenuComponent } from './talks-tabmenu.component';
   ],
   imports: [
     CommonModule,
-    DropdownModule,
     FormsModule,
     InputTextModule,
     MarkdownModule,
@@ -33,6 +32,7 @@ import { TalksTabMenuComponent } from './talks-tabmenu.component';
     GeneralModule,
     InformationModule,
     MessageModule,
+    Select,
     TranslateModule
   ]
 })

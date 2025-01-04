@@ -133,10 +133,10 @@
     <div class="mb-3 row align-items-center">
       <label for="quantity" class="form-label col-12 col-sm-2">{{'start.quantityLabel' | translate}}</label>
       <div class="col-12 col-sm-10">
-        <p-dropdown id="quantity" [options]="quantitySelectItems" [(ngModel)]="selectedQuantity" name="quantity"
-                    styleClass="w-100" emptyMessage="{{'common.list.emptyMessage' | translate}}"
-                    optionLabel="label" optionValue="value">
-        </p-dropdown>
+        <p-select id="quantity" [options]="quantitySelectItems" [(ngModel)]="selectedQuantity" name="quantity"
+                  styleClass="w-100" emptyMessage="{{'common.list.emptyMessage' | translate}}"
+                  optionLabel="label" optionValue="value">
+        </p-select>
       </div>
     </div>
     <div class="text-center">
