@@ -2,8 +2,6 @@
 
 @import 'src/assets/styles/defaults.scss' layer(defaults);
 @import 'bootstrap/dist/css/bootstrap.min.css' layer(primeng);
-@import 'primeng/resources/themes/lara-light-blue/theme.css';
-@import 'primeng/resources/primeng.min.css';
 @import 'primeicons/primeicons.css' layer(primeicons);
 @import '@fortawesome/fontawesome-free/css/all.css' layer(fontawesome);
 @import 'bootstrap-icons/font/bootstrap-icons.css' layer(bootstrap-icons);

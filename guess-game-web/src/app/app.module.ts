@@ -8,6 +8,9 @@ import localeRu from '@angular/common/locales/ru';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { MarkdownModule } from 'ngx-markdown';
+import { definePreset } from '@primeng/themes';
+import { providePrimeNG } from 'primeng/config';
+import Lara from '@primeng/themes/lara';
 
 import { AppComponent } from './app.component';
 import { CompaniesModule } from './modules/information/companies/companies.module';
@@ -164,7 +167,34 @@ registerLocaleData(localeRu, 'ru');
     SpeakerService,
     StatisticsService,
     TalkService,
-    TopicService
+    TopicService,
+    providePrimeNG({
+      theme: {
+        preset: definePreset(Lara, {
+          semantic: {
+            primary: {
+              50: "{blue.50}",
+              100: "{blue.100}",
+              200: "{blue.200}",
+              300: "{blue.300}",
+              400: "{blue.400}",
+              500: "{blue.500}",
+              600: "{blue.600}",
+              700: "{blue.700}",
+              800: "{blue.800}",
+              900: "{blue.900}",
+              950: "{blue.950}"
+            }
+          }
+        }),
+        options: {
+          cssLayer: {
+            name: 'primeng',
+            order: 'defaults, primeng, primeicons, primeflex, utilities'
+          }
+        }
+      },
+    })
   ],
   bootstrap: [AppComponent]
 })
