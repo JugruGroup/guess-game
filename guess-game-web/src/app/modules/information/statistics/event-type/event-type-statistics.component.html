@@ -10,14 +10,20 @@
     <form role="form" class="m-2">
       <div class="mb-3 row justify-content-center">
         <div class="col-auto">
-          <p-checkbox name="group1" value="conferences" label="{{'common.checkbox.conferencesLabel' | translate}}"
-                      [(ngModel)]="isConferences" binary="true"
-                      (onChange)="onEventTypeKindChange()"></p-checkbox>
+          <p-checkbox name="group1" value="conferences"
+                      [(ngModel)]="isConferences" binary="true" (onChange)="onEventTypeKindChange()"
+                      inputId="conferences" id="conferences"></p-checkbox>
+          <label for="conferences" class="ml-2">
+            {{'common.checkbox.conferencesLabel' | translate}}
+          </label>
         </div>
         <div class="col-auto">
-          <p-checkbox name="group1" value="meetups" label="{{'common.checkbox.meetupsLabel' | translate}}"
-                      [(ngModel)]="isMeetups" binary="true"
-                      (onChange)="onEventTypeKindChange()"></p-checkbox>
+          <p-checkbox name="group1" value="meetups"
+                      [(ngModel)]="isMeetups" binary="true" (onChange)="onEventTypeKindChange()"
+                      inputId="meetups" id="meetups"></p-checkbox>
+          <label for="meetups" class="ml-2">
+            {{'common.checkbox.meetupsLabel' | translate}}
+          </label>
         </div>
       </div>
       <div class="mb-3 row justify-content-center align-items-center">

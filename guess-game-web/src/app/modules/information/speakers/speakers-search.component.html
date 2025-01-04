@@ -41,14 +41,20 @@
       </div>
       <div class="mb-3 row justify-content-center">
         <div class="col-12 col-sm-auto">
-          <p-checkbox name="group1" value="conferences" label="{{'speakers.search.javaChampionLabel' | translate}}"
-                      [(ngModel)]="isJavaChampion" binary="true"
-                      (onChange)="onFilterChange()"></p-checkbox>
+          <p-checkbox name="group1" value="conferences"
+                      [(ngModel)]="isJavaChampion" binary="true" (onChange)="onFilterChange()"
+                      inputId="javaChampion" id="javaChampion"></p-checkbox>
+          <label for="javaChampion" class="ml-2">
+            {{'speakers.search.javaChampionLabel' | translate}}
+          </label>
         </div>
         <div class="col-12 col-sm-auto mt-3 mt-sm-0">
-          <p-checkbox name="group1" value="meetups" label="{{'speakers.search.mvpLabel' | translate}}"
-                      [(ngModel)]="isMvp" binary="true"
-                      (onChange)="onFilterChange()"></p-checkbox>
+          <p-checkbox name="group1" value="meetups"
+                      [(ngModel)]="isMvp" binary="true" (onChange)="onFilterChange()"
+                      inputId="mvp" id="mvp"></p-checkbox>
+          <label for="mvp" class="ml-2">
+            {{'speakers.search.mvpLabel' | translate}}
+          </label>
         </div>
       </div>
       <div class="text-center">
