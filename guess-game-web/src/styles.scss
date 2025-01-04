@@ -271,8 +271,8 @@
     width: 100%;
   }
 
-  // Style for dropdowns
-  .organizer-dropdown.p-dropdown, .event-type-dropdown.p-dropdown, .topic-dropdown.p-dropdown {
+  // Style for selects
+  .organizer-select.p-select, .event-type-select.p-select, .topic-select.p-select {
     min-width: 175px;
   }
 
@@ -280,7 +280,7 @@
   .p-paginator {
     padding: 0;
 
-    .p-dropdown {
+    .p-select {
       order: 0 !important;
       margin-right: auto !important;
     }
@@ -365,7 +365,7 @@
   }
 
   // Fix active and checked colors
-  .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.dropdown-toggle {
+  .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.select-toggle {
     color: #000;
     background-color: #dae0e5;
     border-color: #dae0e5;
@@ -394,8 +394,8 @@
     height: 2.75rem;
   }
 
-  // Decrease height of paginator dropdown
-  .p-paginator .p-dropdown {
+  // Decrease height of paginator select
+  .p-paginator .p-select {
     //height: 3rem;
     height: 2.75rem;
   }
