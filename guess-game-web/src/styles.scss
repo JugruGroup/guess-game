@@ -439,11 +439,6 @@
     border: 1px solid var(--bs-border-color);
   }
 
-  // Remove box shadow for select button
-  .p-selectbutton .p-button.p-highlight:focus {
-    box-shadow: none;
-  }
-
   // Increase height of chart zoom-in dialog
   .p-dialog.chart-zoom-in-dialog {
     max-height: 100%;
