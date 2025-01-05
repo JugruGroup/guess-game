@@ -27,7 +27,7 @@
     "@primeng/themes": "^19.0.2",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "chart.js": "^3.3.2",
+    "chart.js": "^4.4.7",
     "chartjs-plugin-datalabels": "^2.2.0",
     "core-js": "^3.39.0",
     "dagre": "^0.8.5",
@@ -39,7 +39,7 @@
     "rxjs": "^7.8.1",
     "three": "^0.160.1",
     "tslib": "^2.8.1",
-    "uuid": "^11.0.3",
+    "uuid": "^11.0.4",
     "yaml": "^2.7.0",
     "zone.js": "^0.15.0"
   },
@@ -51,7 +51,6 @@
     "@types/dagre": "^0.7.52",
     "@types/jasmine": "^5.1.5",
     "@types/jasminewd2": "^2.0.13",
-    "@types/marked": "^6.0.0",
     "@types/node": "^22.10.5",
     "@types/three": "^0.161.2",
     "ajv": "^8.17.1",
@@ -68,7 +67,7 @@
     "mockttp": "^3.15.5",
     "protractor": "~7.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "5.5",
+    "typescript": "~5.6.3",
     "typescript-eslint": "^8.19.0"
   }
 }
