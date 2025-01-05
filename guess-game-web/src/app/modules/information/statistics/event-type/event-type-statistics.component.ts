@@ -10,8 +10,9 @@ import { TopicService } from '../../../../shared/services/topic.service';
 import { findOrganizerById, findTopicById, getEventTypeStatisticsWithSortName } from '../../../general/utility-functions';
 
 @Component({
-  selector: 'app-event-type-statistics',
-  templateUrl: './event-type-statistics.component.html'
+    selector: 'app-event-type-statistics',
+    templateUrl: './event-type-statistics.component.html',
+    standalone: false
 })
 export class EventTypeStatisticsComponent implements OnInit {
   private imageDirectory = 'assets/images';

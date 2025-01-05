@@ -12,9 +12,10 @@ import {ObjLoaderService} from './services/obj-loader.service';
  * [1]: https://en.wikipedia.org/wiki/Wavefront_.obj_file
  */
 @Component({
-  selector: 'atft-obj-loader',
-  providers: [provideParent(ObjLoaderComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-obj-loader',
+    providers: [provideParent(ObjLoaderComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class ObjLoaderComponent extends AbstractModelLoader {
 

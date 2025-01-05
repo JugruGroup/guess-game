@@ -5,8 +5,9 @@ import { EntitiesListComponent } from '../entity-list.component';
 import { CompanyService } from '../../../shared/services/company.service';
 
 @Component({
-  selector: 'app-companies-list',
-  templateUrl: './companies-list.component.html'
+    selector: 'app-companies-list',
+    templateUrl: './companies-list.component.html',
+    standalone: false
 })
 export class CompaniesListComponent extends EntitiesListComponent implements OnInit {
   private readonly DEFAULT_IS_DIGIT = false;

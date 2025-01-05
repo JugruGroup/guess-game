@@ -24,8 +24,9 @@ import {
 import getVideoId from 'get-video-id';
 
 @Component({
-  selector: 'app-talk',
-  templateUrl: './talk.component.html'
+    selector: 'app-talk',
+    templateUrl: './talk.component.html',
+    standalone: false
 })
 export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, OnDestroy {
   private imageDirectory = 'assets/images';

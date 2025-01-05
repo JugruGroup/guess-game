@@ -2,7 +2,10 @@ import {AfterViewInit, Directive} from '@angular/core';
 import {AbstractCamera} from '../camera/abstract-camera';
 import {RaycasterService} from './raycaster.service';
 
-@Directive({selector: '[atft-raycaster-camera]'})
+@Directive({
+    selector: '[atft-raycaster-camera]',
+    standalone: false
+})
 export class RaycasterCameraDirective implements AfterViewInit {
 
   constructor(

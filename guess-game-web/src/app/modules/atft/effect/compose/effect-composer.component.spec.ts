@@ -8,10 +8,11 @@ import {BlurComponent} from './blur.component';
 
 
 @Component({
-  template: `
+    template: `
   <atft-effect-composer>
   </atft-effect-composer>
-  `
+  `,
+    standalone: false
 })
 export class MockComponent { }
 

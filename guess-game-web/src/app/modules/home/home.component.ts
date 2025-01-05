@@ -7,8 +7,9 @@ import { LocaleService } from '../../shared/services/locale.service';
 import { getEventDates } from '../general/utility-functions';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    standalone: false
 })
 export class HomeComponent implements OnInit {
   public imageDirectory = 'assets/images';

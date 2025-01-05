@@ -5,9 +5,10 @@ import { provideParent } from '../util';
 import { AbstractObject3D } from './abstract-object-3d';
 
 @Component({
-  selector: 'atft-scene',
-  providers: [provideParent(SceneComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-scene',
+    providers: [provideParent(SceneComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class SceneComponent extends AbstractObject3D<THREE.Scene> implements OnChanges {
 

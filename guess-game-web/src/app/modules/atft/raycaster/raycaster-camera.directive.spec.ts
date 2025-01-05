@@ -8,10 +8,11 @@ import {RaycasterService} from './raycaster.service';
 import {PerspectiveCameraComponent} from '../camera';
 
 @Component({
-  selector: 'atft-mock',
-  template: `
+    selector: 'atft-mock',
+    template: `
     <atft-perspective-camera atft-raycaster-camera></atft-perspective-camera>
-  `
+  `,
+    standalone: false
 })
 class MockComponent {
 

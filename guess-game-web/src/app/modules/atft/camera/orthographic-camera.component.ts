@@ -5,9 +5,10 @@ import {provideParent} from '../util';
 import {AbstractCamera} from './abstract-camera';
 
 @Component({
-  selector: 'atft-orthographic-camera',
-  providers: [provideParent(OrthographicCameraComponent, AbstractCamera)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-orthographic-camera',
+    providers: [provideParent(OrthographicCameraComponent, AbstractCamera)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class OrthographicCameraComponent extends AbstractCamera<THREE.OrthographicCamera> implements OnChanges {
 

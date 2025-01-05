@@ -10,8 +10,9 @@ import { OrganizerService } from '../../../shared/services/organizer.service';
 import { findEventTypeById, findOrganizerById } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-events-search',
-  templateUrl: './events-search.component.html'
+    selector: 'app-events-search',
+    templateUrl: './events-search.component.html',
+    standalone: false
 })
 export class EventsSearchComponent implements OnInit {
   private imageDirectory = 'assets/images';

@@ -6,12 +6,12 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 import { CheckboxModule } from 'primeng/checkbox';
-import { DropdownModule } from 'primeng/dropdown';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { RippleModule } from 'primeng/ripple';
 import { RouterModule } from '@angular/router';
-import { SelectButtonModule } from 'primeng/selectbutton';
+import { Select } from 'primeng/select';
+import { SelectButton } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 
@@ -63,18 +63,18 @@ import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-di
     CommonModule,
     FormsModule,
     CheckboxModule,
-    DropdownModule,
     DynamicDialogModule,
     MultiSelectModule,
     RippleModule,
     RouterModule,
+    Select,
     TableModule,
     TooltipModule,
     GeneralModule,
     InformationModule,
     MessageModule,
     TranslateModule,
-    SelectButtonModule
+    SelectButton
   ]
 })
 export class StatisticsModule {

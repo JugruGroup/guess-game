@@ -11,8 +11,9 @@ import { OrganizerService } from '../../../../shared/services/organizer.service'
 import { findEventTypeById, findOrganizerById } from '../../../general/utility-functions';
 
 @Component({
-  selector: 'app-company-statistics',
-  templateUrl: './company-statistics.component.html'
+    selector: 'app-company-statistics',
+    templateUrl: './company-statistics.component.html',
+    standalone: false
 })
 export class CompanyStatisticsComponent implements OnInit {
   private imageDirectory = 'assets/images';

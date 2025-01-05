@@ -6,9 +6,10 @@ import { AbstractObject3D } from '../abstract-object-3d';
 import { AbstractMesh } from './abstract-mesh-3d';
 
 @Component({
-  selector: 'atft-box-mesh',
-  providers: [provideParent(BoxMeshComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-box-mesh',
+    providers: [provideParent(BoxMeshComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class BoxMeshComponent extends AbstractMesh {
 

@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { MenubarModule } from 'primeng/menubar';
 import { TabMenuModule } from 'primeng/tabmenu';
-import { TabViewModule } from 'primeng/tabview';
+import { TabsModule } from 'primeng/tabs';
 import { GeneralModule } from '../general/general.module';
 import { InformationMenubarComponent } from './information-menubar.component';
 import { InformationTabMenuComponent } from './information-tabmenu.component';
@@ -19,7 +19,7 @@ import { InformationTabMenuComponent } from './information-tabmenu.component';
     MenubarModule,
     RouterModule,
     TabMenuModule,
-    TabViewModule,
+    TabsModule,
     TranslateModule,
     GeneralModule
   ],

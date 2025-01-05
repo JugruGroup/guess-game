@@ -8,9 +8,10 @@ import {AnimationService} from '../../animation';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'atft-video-mesh',
-  providers: [provideParent(VideoMeshComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-video-mesh',
+    providers: [provideParent(VideoMeshComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class VideoMeshComponent extends AbstractMesh implements AfterViewInit, OnDestroy {
 

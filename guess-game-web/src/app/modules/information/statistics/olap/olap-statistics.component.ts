@@ -54,9 +54,10 @@ import {
 } from "../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-dataset.model";
 
 @Component({
-  selector: 'app-olap-statistics',
-  templateUrl: './olap-statistics.component.html',
-  providers: [DialogService]
+    selector: 'app-olap-statistics',
+    templateUrl: './olap-statistics.component.html',
+    providers: [DialogService],
+    standalone: false
 })
 export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit {
   private readonly EVENT_TYPES_CUBE_TYPE_KEY = 'cubeType.eventTypes';

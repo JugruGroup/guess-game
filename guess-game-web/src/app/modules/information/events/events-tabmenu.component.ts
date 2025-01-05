@@ -2,12 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from "primeng/api";
 
 @Component({
-  selector: 'app-events-tabmenu',
-  templateUrl: './events-tabmenu.component.html'
+    selector: 'app-events-tabmenu',
+    templateUrl: './events-tabmenu.component.html',
+    standalone: false
 })
 export class EventsTabMenuComponent implements OnInit {
-  public readonly SCROLLABLE_WIDTH = 150;
-
+  @Input() public activeIndex: number;
   @Input() private id: number;
 
   public items: MenuItem[] = [];

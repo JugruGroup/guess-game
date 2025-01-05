@@ -22,8 +22,9 @@ import {
 } from '../../../../../shared/models/statistics/olap/three-dimensions/text/three-dimensions-text-geometry-key.model';
 
 @Component({
-  selector: 'app-three-dimensions-batched-text-mesh',
-  template: '<ng-content></ng-content>'
+    selector: 'app-three-dimensions-batched-text-mesh',
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3D {
   public readonly VERTEX_COUNT_FACTOR = 2048;

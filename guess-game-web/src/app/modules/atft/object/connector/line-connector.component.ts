@@ -16,9 +16,10 @@ export enum LineType {
 }
 
 @Component({
-  selector: 'atft-line-connector',
-  providers: [provideParent(LineConnectorComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-line-connector',
+    providers: [provideParent(LineConnectorComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class LineConnectorComponent extends AbstractConnector<Line2> implements OnDestroy, OnChanges {
 

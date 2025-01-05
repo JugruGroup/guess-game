@@ -7,9 +7,10 @@ import {AbstractObject3D} from '../abstract-object-3d';
 import {AbstractModelLoader} from './abstract-model-loader';
 
 @Component({
-  selector: 'atft-audio-loader',
-  providers: [provideParent(AudioLoaderComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-audio-loader',
+    providers: [provideParent(AudioLoaderComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class AudioLoaderComponent extends AbstractModelLoader implements OnDestroy {
   private loader = new THREE.AudioLoader();

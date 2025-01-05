@@ -10,8 +10,9 @@ import {
 } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-speaker',
-  templateUrl: './speaker.component.html'
+    selector: 'app-speaker',
+    templateUrl: './speaker.component.html',
+    standalone: false
 })
 export class SpeakerComponent implements OnInit {
   private imageDirectory = 'assets/images';

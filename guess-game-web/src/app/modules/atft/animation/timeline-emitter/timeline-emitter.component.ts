@@ -12,8 +12,9 @@ import {
 import {EmitStepComponent} from "./emit-step.component";
 
 @Component({
-  selector: 'atft-timeline-emitter',
-  template: '<ng-content></ng-content>'
+    selector: 'atft-timeline-emitter',
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class TimelineEmitterComponent implements AfterViewInit, OnDestroy, OnChanges, OnInit {
 

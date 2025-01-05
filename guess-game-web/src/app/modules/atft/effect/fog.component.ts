@@ -4,8 +4,9 @@ import {SceneComponent} from '../object';
 import * as THREE from 'three';
 
 @Component({
-  selector: 'atft-fog',
-  template: ''
+    selector: 'atft-fog',
+    template: '',
+    standalone: false
 })
 export class FogComponent implements AfterViewInit, OnDestroy, OnChanges {
 

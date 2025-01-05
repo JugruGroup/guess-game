@@ -36,8 +36,9 @@ import {
 } from '../../../../../shared/models/statistics/olap/three-dimensions/text/three-dimensions-text-alignment.model';
 
 @Component({
-  selector: 'app-three-dimensions-cube',
-  templateUrl: './three-dimensions-cube.component.html'
+    selector: 'app-three-dimensions-cube',
+    templateUrl: './three-dimensions-cube.component.html',
+    standalone: false
 })
 export class ThreeDimensionsCubeComponent implements OnChanges, AfterViewChecked {
   public readonly ORBIT_CONTROLS_ROTATE_SPEED = 1;

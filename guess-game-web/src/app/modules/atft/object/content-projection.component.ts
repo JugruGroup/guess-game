@@ -5,9 +5,10 @@ import {RendererService} from '../renderer/renderer.service';
 import {provideParent} from '../util';
 
 @Component({
-  selector: 'atft-content-projection',
-  providers: [provideParent(ContentProjectionComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-content-projection',
+    providers: [provideParent(ContentProjectionComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class ContentProjectionComponent extends EmptyComponent {
 

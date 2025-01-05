@@ -4,44 +4,50 @@
   <app-message></app-message>
 
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
-  <app-statistics-tabmenu></app-statistics-tabmenu>
+  <app-statistics-tabmenu [activeIndex]="0"></app-statistics-tabmenu>
 
   <div class="mt-3 mb-1 ms-1 me-1">
     <form role="form" class="m-2">
       <div class="mb-3 row justify-content-center">
         <div class="col-auto">
-          <p-checkbox name="group1" value="conferences" label="{{'common.checkbox.conferencesLabel' | translate}}"
-                      [(ngModel)]="isConferences" binary="true"
-                      (onChange)="onEventTypeKindChange()"></p-checkbox>
+          <p-checkbox name="group1" value="conferences"
+                      [(ngModel)]="isConferences" binary="true" (onChange)="onEventTypeKindChange()"
+                      inputId="conferences" id="conferences"></p-checkbox>
+          <label for="conferences" class="ms-2">
+            {{'common.checkbox.conferencesLabel' | translate}}
+          </label>
         </div>
         <div class="col-auto">
-          <p-checkbox name="group1" value="meetups" label="{{'common.checkbox.meetupsLabel' | translate}}"
-                      [(ngModel)]="isMeetups" binary="true"
-                      (onChange)="onEventTypeKindChange()"></p-checkbox>
+          <p-checkbox name="group1" value="meetups"
+                      [(ngModel)]="isMeetups" binary="true" (onChange)="onEventTypeKindChange()"
+                      inputId="meetups" id="meetups"></p-checkbox>
+          <label for="meetups" class="ms-2">
+            {{'common.checkbox.meetupsLabel' | translate}}
+          </label>
         </div>
       </div>
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="organizer" class="form-label col-12 col-sm-3 col-md-auto text-md-end">{{'common.list.organizerLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-auto">
-          <p-dropdown [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
-                      placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onOrganizerChange()" name="organizer" styleClass="organizer-dropdown w-100"
-                      optionLabel="label" optionValue="value">
-            <ng-template let-organizer pTemplate="item">
+          <p-select [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
+                    placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
+                    (onChange)="onOrganizerChange()" name="organizer" styleClass="organizer-select w-100"
+                    optionLabel="label" optionValue="value">
+            <ng-template let-organizer #item>
               {{organizer.value.name}}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
         <label for="topic" class="form-label col-12 col-sm-3 col-md-auto text-md-end mt-3 mt-md-0">{{'common.list.topicLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-auto mt-sm-3 mt-md-0">
-          <p-dropdown [options]="topicSelectItems" [(ngModel)]="selectedTopic" id="topic"
-                      placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onTopicChange()" name="topic" styleClass="topic-dropdown w-100"
-                      optionLabel="label" optionValue="value">
-            <ng-template let-topic pTemplate="item">
+          <p-select [options]="topicSelectItems" [(ngModel)]="selectedTopic" id="topic"
+                    placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
+                    (onChange)="onTopicChange()" name="topic" styleClass="topic-select w-100"
+                    optionLabel="label" optionValue="value">
+            <ng-template let-topic #item>
               {{topic.value.name}}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
       </div>
     </form>
@@ -52,9 +58,9 @@
 
     <div *ngIf="isEventTypesListVisible()" class="m-2">
       <p-table [value]="eventTypeStatistics.eventTypeMetricsList" [resizableColumns]="true" [autoLayout]="true"
-               sortMode="multiple" [multiSortMeta]="multiSortMeta" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines"
-               responsiveLayout="scroll">
-        <ng-template pTemplate="header" let-columns>
+               sortMode="multiple" [multiSortMeta]="multiSortMeta" [showGridlines]="true" [stripedRows]="true"
+               [size]="'small'" responsiveLayout="scroll">
+        <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>
               {{'common.table.numberColumn' | translate}}
@@ -114,7 +120,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-eventTypeMetrics let-i = "rowIndex">
+        <ng-template #body let-eventTypeMetrics let-i = "rowIndex">
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
@@ -145,7 +151,7 @@
             <td class="text-center">{{eventTypeMetrics.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
-        <ng-template pTemplate="footer">
+        <ng-template #footer>
           <tr>
             <td colspan="5">{{'common.table.totalsText' | translate}}</td>
             <td class="text-center">{{eventTypeStatistics.totals?.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>

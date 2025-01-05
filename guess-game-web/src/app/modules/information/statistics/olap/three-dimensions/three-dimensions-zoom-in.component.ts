@@ -5,8 +5,9 @@ import {
 } from '../../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-options.model';
 
 @Component({
-  selector: 'app-three-dimensions-zoom-in',
-  templateUrl: './three-dimensions-zoom-in.component.html'
+    selector: 'app-three-dimensions-zoom-in',
+    templateUrl: './three-dimensions-zoom-in.component.html',
+    standalone: false
 })
 export class ThreeDimensionsZoomInComponent implements AfterViewInit {
   public options!: ThreeDimensionsCubeOptions;

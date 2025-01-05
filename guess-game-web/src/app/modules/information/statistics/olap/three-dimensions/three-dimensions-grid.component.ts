@@ -8,8 +8,9 @@ import * as THREE from 'three';
 import { BufferGeometry } from 'three';
 
 @Component({
-  selector: 'app-three-dimensions-grid',
-  template: '<ng-content></ng-content>'
+    selector: 'app-three-dimensions-grid',
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class ThreeDimensionsGridComponent extends AbstractObject3D<THREE.LineSegments> implements OnChanges {
   @Input() sizeX = 100;

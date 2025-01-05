@@ -10,32 +10,32 @@
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="eventType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'common.list.eventTypeLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5">
-          <p-dropdown [options]="eventTypeSelectItems" [(ngModel)]="selectedEventType" id="eventType"
-                      placeholder="{{'common.list.eventTypePlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onEventTypeChange($event.value)" name="eventType" styleClass="w-100"
-                      optionLabel="label" optionValue="value">
-            <ng-template let-eventType pTemplate="item">
+          <p-select [options]="eventTypeSelectItems" [(ngModel)]="selectedEventType" id="eventType"
+                    placeholder="{{'common.list.eventTypePlaceholder' | translate}}" [showClear]="true"
+                    (onChange)="onEventTypeChange($event.value)" name="eventType" styleClass="w-100"
+                    optionLabel="label" optionValue="value">
+            <ng-template let-eventType #item>
               <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-list" alt="logo"/>
               <span class="ms-2">{{eventType.value.name}}</span>
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
         <label for="event" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'common.list.eventLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5 mt-sm-3 mt-md-0">
-          <p-dropdown [options]="eventSelectItems" [(ngModel)]="selectedEvent" id="event"
-                      placeholder="{{'common.list.eventPlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onFilterChange()" name="event" styleClass="w-100"
-                      emptyMessage="{{'common.list.emptyMessage' | translate}}"
-                      optionLabel="label" optionValue="value">
-            <ng-template let-event pTemplate="selectedItem">
+          <p-select [options]="eventSelectItems" [(ngModel)]="selectedEvent" id="event"
+                    placeholder="{{'common.list.eventPlaceholder' | translate}}" [showClear]="true"
+                    (onChange)="onFilterChange()" name="event" styleClass="w-100"
+                    emptyMessage="{{'common.list.emptyMessage' | translate}}"
+                    optionLabel="label" optionValue="value">
+            <ng-template let-event #selectedItem>
               <div *ngIf="event">
                 {{event.value.name}}
               </div>
             </ng-template>
-            <ng-template let-event pTemplate="item">
+            <ng-template let-event #item>
               {{event.value.displayName}}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
       </div>
       <div class="mb-3 row justify-content-center align-items-center">
@@ -51,25 +51,25 @@
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="topic" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'common.list.topicLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5">
-          <p-dropdown [options]="topicSelectItems" [(ngModel)]="selectedTopic" id="topic"
-                      placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onFilterChange()" name="topic" styleClass="w-100"
-                      optionLabel="label" optionValue="value">
-            <ng-template let-topic pTemplate="item">
+          <p-select [options]="topicSelectItems" [(ngModel)]="selectedTopic" id="topic"
+                    placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
+                    (onChange)="onFilterChange()" name="topic" styleClass="w-100"
+                    optionLabel="label" optionValue="value">
+            <ng-template let-topic #item>
               {{topic.value.name}}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
         <label for="language" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'common.list.languageLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5 mt-sm-3 mt-md-0">
-          <p-dropdown [options]="languageSelectItems" [(ngModel)]="selectedLanguage" id="language"
-                      placeholder="{{'common.list.languagePlaceholder' | translate}}" [showClear]="true"
-                      (onChange)="onFilterChange()" name="language" styleClass="w-100"
-                      optionLabel="label" optionValue="value">
-            <ng-template let-language pTemplate="item">
+          <p-select [options]="languageSelectItems" [(ngModel)]="selectedLanguage" id="language"
+                    placeholder="{{'common.list.languagePlaceholder' | translate}}" [showClear]="true"
+                    (onChange)="onFilterChange()" name="language" styleClass="w-100"
+                    optionLabel="label" optionValue="value">
+            <ng-template let-language #item>
               {{language.label}}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
       </div>
       <div class="text-center">
@@ -91,9 +91,9 @@
                [rows]="10" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
-               sortMode="multiple" [multiSortMeta]="multiSortMeta" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines"
-               responsiveLayout="scroll">
-        <ng-template pTemplate="header" let-columns>
+               sortMode="multiple" [multiSortMeta]="multiSortMeta" [showGridlines]="true" [stripedRows]="true"
+               [size]="'small'" responsiveLayout="scroll">
+        <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>
               {{'common.table.numberColumn' | translate}}
@@ -116,7 +116,7 @@
             </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-talk let-i = "rowIndex">
+        <ng-template #body let-talk let-i = "rowIndex">
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>

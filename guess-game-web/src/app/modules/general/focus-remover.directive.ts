@@ -4,7 +4,8 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
  * This directive removes focus from the selectors after clicking on them.
  */
 @Directive({
-  selector: 'button.remove-focus, input.remove-focus'
+    selector: 'button.remove-focus, input.remove-focus',
+    standalone: false
 })
 export class FocusRemoverDirective {
   constructor(private elRef: ElementRef) {

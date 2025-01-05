@@ -5,8 +5,9 @@ import {EffectComposerComponent} from './effect-composer.component';
 import {AbstractComposeEffect} from './abstract-compose-effect';
 
 @Component({
-  selector: 'atft-dof',
-  template: ''
+    selector: 'atft-dof',
+    template: '',
+    standalone: false
 })
 export class DofComponent extends AbstractComposeEffect<BokehPass> {
 

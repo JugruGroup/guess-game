@@ -2,8 +2,6 @@
 
 @import 'src/assets/styles/defaults.scss' layer(defaults);
 @import 'bootstrap/dist/css/bootstrap.min.css' layer(primeng);
-@import 'primeng/resources/themes/lara-light-blue/theme.css';
-@import 'primeng/resources/primeng.min.css';
 @import 'primeicons/primeicons.css' layer(primeicons);
 @import '@fortawesome/fontawesome-free/css/all.css' layer(fontawesome);
 @import 'bootstrap-icons/font/bootstrap-icons.css' layer(bootstrap-icons);
@@ -13,6 +11,9 @@
 @layer defaults {
   html {
     font-size: 13px;
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    line-height: normal;
   }
 
   body {
@@ -270,8 +271,8 @@
     width: 100%;
   }
 
-  // Style for dropdowns
-  .organizer-dropdown.p-dropdown, .event-type-dropdown.p-dropdown, .topic-dropdown.p-dropdown {
+  // Style for selects
+  .organizer-select.p-select, .event-type-select.p-select, .topic-select.p-select {
     min-width: 175px;
   }
 
@@ -279,7 +280,7 @@
   .p-paginator {
     padding: 0;
 
-    .p-dropdown {
+    .p-select {
       order: 0 !important;
       margin-right: auto !important;
     }
@@ -325,6 +326,11 @@
     text-overflow: ellipsis !important;
   }
 
+  // Styles for table total
+  .p-datatable .p-datatable-tfoot > tr > td {
+    font-weight: 700;
+  }
+
   // Checkbox style
   .p-checkbox-label, .p-radiobutton-label {
     margin-bottom: 0;
@@ -364,7 +370,7 @@
   }
 
   // Fix active and checked colors
-  .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.dropdown-toggle {
+  .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.select-toggle {
     color: #000;
     background-color: #dae0e5;
     border-color: #dae0e5;
@@ -393,8 +399,8 @@
     height: 2.75rem;
   }
 
-  // Decrease height of paginator dropdown
-  .p-paginator .p-dropdown {
+  // Decrease height of paginator select
+  .p-paginator .p-select {
     //height: 3rem;
     height: 2.75rem;
   }
@@ -431,11 +437,6 @@
   .img-thumbnail.img-guess-photo-by-name, .img-thumbnail.img-guess-speaker-by-talk, .img-thumbnail.img-guess-speaker-by-company,
   .img-thumbnail.img-guess-speaker-by-account, .img-thumbnail.img-guess-tag-cloud-by-speaker, .img-thumbnail.img-guess-speaker-by-tag-cloud {
     border: 1px solid var(--bs-border-color);
-  }
-
-  // Remove box shadow for select button
-  .p-selectbutton .p-button.p-highlight:focus {
-    box-shadow: none;
   }
 
   // Increase height of chart zoom-in dialog

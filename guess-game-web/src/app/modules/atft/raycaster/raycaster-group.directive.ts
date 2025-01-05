@@ -13,7 +13,10 @@ export interface RaycasterEmitEvent {
  * Only components marked as atft-raycaster-group emit raycaster events.
  * NOTE: All childs are also considered by raycaster (very usefull, for composite components).
  */
-@Directive({selector: '[atft-raycaster-group]'})
+@Directive({
+    selector: '[atft-raycaster-group]',
+    standalone: false
+})
 export class RaycasterGroupDirective implements AfterViewInit, OnDestroy {
 
   @Output() mouseEnter = new EventEmitter<RaycasterEmitEvent>();

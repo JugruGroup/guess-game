@@ -7,9 +7,10 @@ import { AbstractObject3D } from '../abstract-object-3d';
 import { AbstractModelLoader } from './abstract-model-loader';
 
 @Component({
-  selector: 'atft-object-loader',
-  providers: [provideParent(ObjectLoaderComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-object-loader',
+    providers: [provideParent(ObjectLoaderComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class ObjectLoaderComponent extends AbstractModelLoader {
   private loader = new THREE.ObjectLoader();

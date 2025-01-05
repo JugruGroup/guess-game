@@ -6,8 +6,9 @@ import { AnswerService } from '../../../shared/services/answer.service';
 import { GameState } from '../../../shared/models/game-state.model';
 
 @Component({
-  selector: 'app-guess-picture',
-  templateUrl: './guess-photo-by-name.component.html'
+    selector: 'app-guess-picture',
+    templateUrl: './guess-photo-by-name.component.html',
+    standalone: false
 })
 export class GuessPhotoByNameComponent implements OnInit {
   private imageDirectory = 'assets/images';

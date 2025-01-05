@@ -6,8 +6,9 @@ import {DotScreenShader} from 'three/examples/jsm/shaders/DotScreenShader.js';
 import {AbstractComposeEffect} from './abstract-compose-effect';
 
 @Component({
-  selector: 'atft-dot-screen',
-  template: ''
+    selector: 'atft-dot-screen',
+    template: '',
+    standalone: false
 })
 export class DotScreenComponent extends AbstractComposeEffect<ShaderPass> {
 

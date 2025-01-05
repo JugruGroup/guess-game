@@ -6,8 +6,9 @@ import { StateService } from '../../../shared/services/state.service';
 import { AnswerService } from '../../../shared/services/answer.service';
 
 @Component({
-  selector: 'app-guess-company-by-speaker',
-  templateUrl: './guess-company-by-speaker.component.html'
+    selector: 'app-guess-company-by-speaker',
+    templateUrl: './guess-company-by-speaker.component.html',
+    standalone: false
 })
 export class GuessCompanyBySpeakerComponent implements OnInit {
   private imageDirectory = 'assets/images';

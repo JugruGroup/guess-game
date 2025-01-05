@@ -5,9 +5,10 @@ import { provideParent } from '../../util';
 import { AbstractObject3D } from '../abstract-object-3d';
 
 @Component({
-  selector: 'atft-point-light',
-  providers: [provideParent(PointLightComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-point-light',
+    providers: [provideParent(PointLightComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class PointLightComponent extends AbstractObject3D<THREE.PointLight> implements OnInit, AfterViewInit {
 

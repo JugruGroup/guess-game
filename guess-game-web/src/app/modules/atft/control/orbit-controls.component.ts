@@ -5,10 +5,11 @@ import {RaycasterService} from '../raycaster/raycaster.service';
 import {AbstractOrbitControls} from './abstract-orbit-controls';
 
 @Component({
-  selector: 'atft-orbit-controls',
-  template: `
+    selector: 'atft-orbit-controls',
+    template: `
       <ng-content></ng-content>`,
-  styleUrls: ['controls.component.scss']
+    styleUrls: ['controls.component.scss'],
+    standalone: false
 })
 export class OrbitControlsComponent extends AbstractOrbitControls<OrbitControls> implements OnChanges {
 

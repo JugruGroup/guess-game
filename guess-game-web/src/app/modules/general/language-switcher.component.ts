@@ -3,8 +3,9 @@ import { Language } from '../../shared/models/language.model';
 import { LocaleService } from '../../shared/services/locale.service';
 
 @Component({
-  selector: 'app-language-switcher',
-  templateUrl: './language-switcher.component.html'
+    selector: 'app-language-switcher',
+    templateUrl: './language-switcher.component.html',
+    standalone: false
 })
 export class LanguageSwitcherComponent implements OnInit {
   @Output() reload: EventEmitter<any> = new EventEmitter<any>();

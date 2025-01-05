@@ -8,9 +8,10 @@ import * as THREE from 'three';
 
 
 @Component({
-  selector: 'atft-svg-loader',
-  providers: [provideParent(SVGLoaderComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-svg-loader',
+    providers: [provideParent(SVGLoaderComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class SVGLoaderComponent extends AbstractModelLoader {
 

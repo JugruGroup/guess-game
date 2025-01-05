@@ -4,7 +4,10 @@ import * as THREE from 'three';
 import {AnimationService} from '../animation/animation.service';
 import {Subscription} from 'rxjs';
 
-@Directive({selector: '[atft-dashed-draw]'})
+@Directive({
+    selector: '[atft-dashed-draw]',
+    standalone: false
+})
 export class DashedDrawDirective implements AfterViewInit, OnDestroy {
 
   @Input() dashColor: string | number = '#FF0000';

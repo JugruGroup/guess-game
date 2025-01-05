@@ -8,9 +8,10 @@ import {AbstractModelLoader} from './abstract-model-loader';
 import {STLLoader} from 'three/examples/jsm/loaders/STLLoader.js';
 
 @Component({
-  selector: 'atft-stl-loader',
-  providers: [provideParent(StlLoaderComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-stl-loader',
+    providers: [provideParent(StlLoaderComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class StlLoaderComponent extends AbstractModelLoader {
   private loader = new STLLoader();

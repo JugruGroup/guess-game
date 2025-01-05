@@ -1,7 +1,8 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-  name: 'rad2deg'
+    name: 'rad2deg',
+    standalone: false
 })
 export class Rad2DegPipe implements PipeTransform {
 

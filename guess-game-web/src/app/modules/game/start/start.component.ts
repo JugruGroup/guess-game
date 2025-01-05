@@ -12,8 +12,9 @@ import { StateService } from '../../../shared/services/state.service';
 import { findEventById, findEventTypeById, getEventsWithFullDisplayName } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-start',
-  templateUrl: './start.component.html'
+    selector: 'app-start',
+    templateUrl: './start.component.html',
+    standalone: false
 })
 export class StartComponent implements OnInit, AfterViewChecked {
   private readonly MIN_QUANTITY_VALUE = 4;

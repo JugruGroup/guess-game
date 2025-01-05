@@ -2,9 +2,10 @@ import {Component, ElementRef, HostListener, Input, OnInit, ViewChild} from '@an
 import {RendererService} from './renderer.service';
 
 @Component({
-  selector: 'atft-renderer-canvas',
-  templateUrl: './renderer-canvas.component.html',
-  styleUrls: ['./renderer-canvas.component.scss']
+    selector: 'atft-renderer-canvas',
+    templateUrl: './renderer-canvas.component.html',
+    styleUrls: ['./renderer-canvas.component.scss'],
+    standalone: false
 })
 export class RendererCanvasComponent implements OnInit {
 

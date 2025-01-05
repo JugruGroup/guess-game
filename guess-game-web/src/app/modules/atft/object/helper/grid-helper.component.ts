@@ -5,9 +5,10 @@ import { provideParent } from '../../util';
 import { AbstractObject3D } from '../abstract-object-3d';
 
 @Component({
-  selector: 'atft-grid-helper',
-  providers: [provideParent(GridHelperComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-grid-helper',
+    providers: [provideParent(GridHelperComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class GridHelperComponent extends AbstractObject3D<THREE.GridHelper> {
 

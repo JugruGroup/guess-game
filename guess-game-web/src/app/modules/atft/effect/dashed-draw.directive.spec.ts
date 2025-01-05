@@ -8,9 +8,10 @@ import {BoxMeshComponent} from '../object';
 
 
 @Component({
-  template: `
+    template: `
   <atft-box-mesh atft-dashed-draw></atft-box-mesh>
-  `
+  `,
+    standalone: false
 })
 export class MockComponent { }
 

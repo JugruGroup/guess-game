@@ -4,8 +4,9 @@ import { StateService } from '../../../shared/services/state.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-cancel-game',
-  templateUrl: './cancel-game.component.html'
+    selector: 'app-cancel-game',
+    templateUrl: './cancel-game.component.html',
+    standalone: false
 })
 export class CancelGameComponent {
   constructor(private stateService: StateService, private router: Router) {

@@ -5,7 +5,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { TranslateModule } from '@ngx-translate/core';
-import { DropdownModule } from 'primeng/dropdown';
+import { Select } from 'primeng/select';
 import { TableModule } from 'primeng/table';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
@@ -24,8 +24,8 @@ import { EventTypesTabMenuComponent } from './event-types-tabmenu.component';
     CommonModule,
     FormsModule,
     CheckboxModule,
-    DropdownModule,
     MarkdownModule,
+    Select,
     TableModule,
     RouterModule,
     GeneralModule,
