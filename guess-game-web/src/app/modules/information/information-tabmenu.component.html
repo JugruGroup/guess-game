@@ -1,10 +1,7 @@
-<div #tabMenuDiv>
-  <p-tabs [scrollable]="true">
-    <p-tablist>
-      <p-tab *ngFor="let localItem of localItems" [value]="localItem.label" [routerLink]="localItem.routerLink">
-        {{localItem.label}}
-      </p-tab>
-    </p-tablist>
-  </p-tabs>
-<!--  <p-tabMenu [model]="localItems" [scrollable]="scrollable"></p-tabMenu>-->
-</div>
+<p-tabs [scrollable]="true">
+  <p-tablist>
+    <p-tab *ngFor="let localItem of localItems" [value]="localItem.label" [routerLink]="localItem.routerLink">
+      {{localItem.label}}
+    </p-tab>
+  </p-tablist>
+</p-tabs>

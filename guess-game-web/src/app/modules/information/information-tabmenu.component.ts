@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -6,14 +6,11 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'app-information-tabmenu',
   templateUrl: './information-tabmenu.component.html'
 })
-export class InformationTabMenuComponent implements OnInit, AfterViewInit, OnDestroy {
+export class InformationTabMenuComponent implements OnInit {
   @Input() public items: MenuItem[] = [];
   @Input() public scrollableWidth: number;
 
-  public scrollable = false;
   public localItems: MenuItem[] = [];
-
-  @ViewChild('tabMenuDiv') tabMenuDiv: ElementRef<HTMLDivElement>;
 
   constructor(public translateService: TranslateService) {
   }
@@ -39,20 +36,5 @@ export class InformationTabMenuComponent implements OnInit, AfterViewInit, OnDes
 
         this.localItems = newItems;
       });
-  }
-
-  ngAfterViewInit(): void {
-    this.onResize();
-    window.addEventListener('resize', this.onResize);
-  }
-
-  ngOnDestroy(): void {
-    window.removeEventListener('resize', this.onResize);
-  }
-
-  onResize = (): void => {
-    if (!isNaN(this.scrollableWidth) && this.tabMenuDiv) {
-      this.scrollable = (this.tabMenuDiv.nativeElement.clientWidth < this.scrollableWidth);
-    }
   }
 }
