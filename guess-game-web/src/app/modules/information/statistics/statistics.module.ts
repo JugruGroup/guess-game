@@ -6,7 +6,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 import { CheckboxModule } from 'primeng/checkbox';
-import { DynamicDialog } from 'primeng/dynamicdialog';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { RippleModule } from 'primeng/ripple';
 import { RouterModule } from '@angular/router';
@@ -63,7 +63,7 @@ import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-di
     CommonModule,
     FormsModule,
     CheckboxModule,
-    DynamicDialog,
+    DynamicDialogModule,
     MultiSelectModule,
     RippleModule,
     RouterModule,
