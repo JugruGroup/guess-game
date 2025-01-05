@@ -19,9 +19,6 @@ updates:
     ignore:
       - dependency-name: "three"
       - dependency-name: "@types/three"
-      - dependency-name: "primeng"
-      - dependency-name: "@primeng/themes"
-      - dependency-name: "chart.js"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
