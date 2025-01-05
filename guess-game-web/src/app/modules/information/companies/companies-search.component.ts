@@ -5,8 +5,9 @@ import { CompanyService } from '../../../shared/services/company.service';
 import { isStringEmpty } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-companies-search',
-  templateUrl: './companies-search.component.html'
+    selector: 'app-companies-search',
+    templateUrl: './companies-search.component.html',
+    standalone: false
 })
 export class CompaniesSearchComponent {
   public name: string;

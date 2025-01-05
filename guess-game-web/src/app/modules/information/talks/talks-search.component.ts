@@ -20,8 +20,9 @@ import {
 } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-talks-search',
-  templateUrl: './talks-search.component.html'
+    selector: 'app-talks-search',
+    templateUrl: './talks-search.component.html',
+    standalone: false
 })
 export class TalksSearchComponent implements OnInit {
   private imageDirectory = 'assets/images';

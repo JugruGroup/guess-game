@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from "primeng/api";
 
 @Component({
-  selector: 'app-companies-tabmenu',
-  templateUrl: './companies-tabmenu.component.html'
+    selector: 'app-companies-tabmenu',
+    templateUrl: './companies-tabmenu.component.html',
+    standalone: false
 })
 export class CompaniesTabMenuComponent implements OnInit {
   @Input() public activeIndex: number;

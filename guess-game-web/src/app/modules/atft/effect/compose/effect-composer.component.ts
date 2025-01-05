@@ -6,8 +6,9 @@ import {RenderPass} from 'three/examples/jsm/postprocessing/RenderPass.js';
 import {Pass} from 'three/examples/jsm/postprocessing/Pass';
 
 @Component({
-  selector: 'atft-effect-composer',
-  template: ''
+    selector: 'atft-effect-composer',
+    template: '',
+    standalone: false
 })
 export class EffectComposerComponent implements AfterViewInit, OnDestroy {
 

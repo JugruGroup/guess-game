@@ -8,10 +8,11 @@ import {Subscription} from 'rxjs';
 import {MapControls} from "three/examples/jsm/controls/MapControls.js";
 
 @Component({
-  selector: 'atft-map-controls',
-  template: `
+    selector: 'atft-map-controls',
+    template: `
     <ng-content></ng-content>`,
-  styleUrls: ['controls.component.scss']
+    styleUrls: ['controls.component.scss'],
+    standalone: false
 })
 export class MapControlsComponent extends AbstractOrbitControls<OrbitControls> implements OnChanges, OnDestroy {
 

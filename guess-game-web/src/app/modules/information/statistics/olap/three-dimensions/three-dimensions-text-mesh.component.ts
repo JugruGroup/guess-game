@@ -13,8 +13,9 @@ import {
 } from '../../../../../shared/models/statistics/olap/three-dimensions/text/three-dimensions-text-alignment.model';
 
 @Component({
-  selector: 'app-three-dimensions-text-mesh',
-  template: '<ng-content></ng-content>'
+    selector: 'app-three-dimensions-text-mesh',
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class ThreeDimensionsTextMeshComponent extends AbstractLazyObject3D {
   @Input()

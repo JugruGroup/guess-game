@@ -6,8 +6,9 @@ import { CompanyService } from '../../../shared/services/company.service';
 import { getSpeakersWithCompaniesString } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-company',
-  templateUrl: './company.component.html'
+    selector: 'app-company',
+    templateUrl: './company.component.html',
+    standalone: false
 })
 export class CompanyComponent implements OnInit {
   private imageDirectory = 'assets/images';

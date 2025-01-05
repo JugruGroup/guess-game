@@ -6,9 +6,10 @@ import {AbstractObject3D} from '../abstract-object-3d';
 import {RendererService} from '../../renderer/renderer.service';
 
 @Component({
-  selector: 'atft-cylinder-mesh',
-  providers: [provideParent(CylinderMeshComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-cylinder-mesh',
+    providers: [provideParent(CylinderMeshComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class CylinderMeshComponent extends AbstractMesh {
 

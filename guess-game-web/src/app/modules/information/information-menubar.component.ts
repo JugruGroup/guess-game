@@ -3,8 +3,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-information-menubar',
-  templateUrl: './information-menubar.component.html'
+    selector: 'app-information-menubar',
+    templateUrl: './information-menubar.component.html',
+    standalone: false
 })
 export class InformationMenubarComponent implements OnInit {
   private readonly EVENT_TYPES_TITLE_KEY = 'eventTypes.title';

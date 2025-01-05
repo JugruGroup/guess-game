@@ -13,8 +13,9 @@ import {
 } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html'
+    selector: 'app-event',
+    templateUrl: './event.component.html',
+    standalone: false
 })
 export class EventComponent implements OnInit {
   private imageDirectory = 'assets/images';

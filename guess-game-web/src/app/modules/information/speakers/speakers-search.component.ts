@@ -6,8 +6,9 @@ import { CompanyService } from '../../../shared/services/company.service';
 import { getSpeakersWithCompaniesString, isStringEmpty } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-speakers-search',
-  templateUrl: './speakers-search.component.html'
+    selector: 'app-speakers-search',
+    templateUrl: './speakers-search.component.html',
+    standalone: false
 })
 export class SpeakersSearchComponent {
   private imageDirectory = 'assets/images';

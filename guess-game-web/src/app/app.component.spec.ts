@@ -5,7 +5,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 @Component({
-  template: '<h1>Welcome to {{title}}!</h1>'
+    template: '<h1>Welcome to {{title}}!</h1>',
+    standalone: false
 })
 class MockHomeComponent {
   public title = 'guess-game';

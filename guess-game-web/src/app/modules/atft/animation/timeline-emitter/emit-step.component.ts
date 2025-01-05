@@ -11,9 +11,10 @@ import {
 import {provideParent} from "../../util";
 
 @Component({
-  selector: 'atft-emit-step',
-  providers: [provideParent(EmitStepComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-emit-step',
+    providers: [provideParent(EmitStepComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class EmitStepComponent implements AfterViewInit, OnDestroy, OnChanges {
 

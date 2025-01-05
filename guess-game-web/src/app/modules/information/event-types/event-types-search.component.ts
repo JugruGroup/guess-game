@@ -10,8 +10,9 @@ import { Topic } from '../../../shared/models/topic/topic.model';
 import { findOrganizerById, findTopicById, getEventTypesWithSortName } from '../../general/utility-functions';
 
 @Component({
-  selector: 'app-event-types-search',
-  templateUrl: './event-types-search.component.html'
+    selector: 'app-event-types-search',
+    templateUrl: './event-types-search.component.html',
+    standalone: false
 })
 export class EventTypesSearchComponent implements OnInit {
   private imageDirectory = 'assets/images';

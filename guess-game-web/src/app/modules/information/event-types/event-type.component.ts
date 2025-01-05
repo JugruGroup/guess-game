@@ -5,8 +5,9 @@ import { EventTypeDetails } from '../../../shared/models/event-type/event-type-d
 import { EventTypeService } from '../../../shared/services/event-type.service';
 
 @Component({
-  selector: 'app-event-type',
-  templateUrl: './event-type.component.html'
+    selector: 'app-event-type',
+    templateUrl: './event-type.component.html',
+    standalone: false
 })
 export class EventTypeComponent implements OnInit {
   private imageDirectory = 'assets/images';

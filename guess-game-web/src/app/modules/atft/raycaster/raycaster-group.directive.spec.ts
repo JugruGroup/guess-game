@@ -8,10 +8,11 @@ import {EmptyComponent} from '../object/helper';
 import {RaycasterGroupDirective} from './raycaster-group.directive';
 
 @Component({
-  selector: 'atft-mock',
-  template: `
+    selector: 'atft-mock',
+    template: `
     <atft-empty atft-raycaster-group></atft-empty>
-  `
+  `,
+    standalone: false
 })
 class MockComponent {
 

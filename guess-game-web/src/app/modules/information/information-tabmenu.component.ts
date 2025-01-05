@@ -3,8 +3,9 @@ import { MenuItem } from 'primeng/api';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-information-tabmenu',
-  templateUrl: './information-tabmenu.component.html'
+    selector: 'app-information-tabmenu',
+    templateUrl: './information-tabmenu.component.html',
+    standalone: false
 })
 export class InformationTabMenuComponent implements OnInit {
   @Input() public items: MenuItem[] = [];

@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from "primeng/api";
 
 @Component({
-  selector: 'app-speakers-tabmenu',
-  templateUrl: './speakers-tabmenu.component.html'
+    selector: 'app-speakers-tabmenu',
+    templateUrl: './speakers-tabmenu.component.html',
+    standalone: false
 })
 export class SpeakersTabMenuComponent implements OnInit {
   @Input() public activeIndex: number;

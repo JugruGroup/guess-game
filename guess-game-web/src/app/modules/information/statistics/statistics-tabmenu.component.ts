@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import { MenuItem } from "primeng/api";
 
 @Component({
-  selector: 'app-statistics-tabmenu',
-  templateUrl: './statistics-tabmenu.component.html'
+    selector: 'app-statistics-tabmenu',
+    templateUrl: './statistics-tabmenu.component.html',
+    standalone: false
 })
 export class StatisticsTabMenuComponent {
   @Input() public activeIndex: number;

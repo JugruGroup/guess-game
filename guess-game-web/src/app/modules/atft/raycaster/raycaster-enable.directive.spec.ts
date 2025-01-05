@@ -8,10 +8,11 @@ import {PerspectiveCameraComponent} from '../camera';
 import {RaycasterEnableDirective} from './raycaster-enable.directive';
 
 @Component({
-  selector: 'atft-mock',
-  template: `
+    selector: 'atft-mock',
+    template: `
     <atft-perspective-camera atft-raycaster-enable></atft-perspective-camera>
-  `
+  `,
+    standalone: false
 })
 class MockComponent {
 

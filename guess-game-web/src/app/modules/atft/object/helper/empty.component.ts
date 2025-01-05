@@ -5,9 +5,10 @@ import { provideParent } from '../../util';
 import { AbstractObject3D } from '../abstract-object-3d';
 
 @Component({
-  selector: 'atft-empty',
-  providers: [provideParent(EmptyComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-empty',
+    providers: [provideParent(EmptyComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class EmptyComponent extends AbstractObject3D<THREE.Object3D> implements AfterViewInit {
 

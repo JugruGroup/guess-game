@@ -10,8 +10,9 @@ import {
 } from '../../../../../shared/models/statistics/olap/three-dimensions/sphere/three-dimensions-sphere-group-item.model';
 
 @Component({
-  selector: 'app-three-dimensions-batched-sphere-mesh',
-  template: '<ng-content></ng-content>'
+    selector: 'app-three-dimensions-batched-sphere-mesh',
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class ThreeDimensionsBatchedSphereMeshComponent extends AbstractMesh {
   public readonly VERTEX_COUNT_FACTOR = 2048;

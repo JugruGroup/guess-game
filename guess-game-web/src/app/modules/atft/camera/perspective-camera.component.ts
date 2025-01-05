@@ -5,9 +5,10 @@ import { provideParent } from '../util';
 import { AbstractCamera } from './abstract-camera';
 
 @Component({
-  selector: 'atft-perspective-camera',
-  providers: [provideParent(PerspectiveCameraComponent, AbstractCamera)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-perspective-camera',
+    providers: [provideParent(PerspectiveCameraComponent, AbstractCamera)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class PerspectiveCameraComponent extends AbstractCamera<THREE.PerspectiveCamera> {
 

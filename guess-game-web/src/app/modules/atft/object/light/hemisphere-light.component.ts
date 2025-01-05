@@ -5,9 +5,10 @@ import { provideParent } from '../../util';
 import { AbstractObject3D } from '../abstract-object-3d';
 
 @Component({
-  selector: 'atft-hemisphere-light',
-  providers: [provideParent(HemisphereLightComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-hemisphere-light',
+    providers: [provideParent(HemisphereLightComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class HemisphereLightComponent extends AbstractObject3D<THREE.HemisphereLight> {
 

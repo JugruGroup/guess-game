@@ -10,9 +10,10 @@ import {Font} from "three/examples/jsm/loaders/FontLoader.js";
 import {TextGeometry} from "three/examples/jsm/geometries/TextGeometry.js";
 
 @Component({
-  selector: 'atft-text-mesh',
-  providers: [provideParent(TextMeshComponent)],
-  template: '<ng-content></ng-content>'
+    selector: 'atft-text-mesh',
+    providers: [provideParent(TextMeshComponent)],
+    template: '<ng-content></ng-content>',
+    standalone: false
 })
 export class TextMeshComponent extends AbstractLazyObject3D {
 

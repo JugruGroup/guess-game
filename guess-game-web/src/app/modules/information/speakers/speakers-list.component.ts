@@ -5,8 +5,9 @@ import { EntitiesListComponent } from '../entity-list.component';
 import { SpeakerService } from '../../../shared/services/speaker.service';
 
 @Component({
-  selector: 'app-speakers-list',
-  templateUrl: './speakers-list.component.html'
+    selector: 'app-speakers-list',
+    templateUrl: './speakers-list.component.html',
+    standalone: false
 })
 export class SpeakersListComponent extends EntitiesListComponent implements OnInit {
   private imageDirectory = 'assets/images';

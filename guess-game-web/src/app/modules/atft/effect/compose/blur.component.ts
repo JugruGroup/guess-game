@@ -7,8 +7,9 @@ import {EffectComposerComponent} from './effect-composer.component';
 import {AbstractComposeEffect} from './abstract-compose-effect';
 
 @Component({
-  selector: 'atft-blur',
-  template: ''
+    selector: 'atft-blur',
+    template: '',
+    standalone: false
 })
 export class BlurComponent extends AbstractComposeEffect<ShaderPass> {
 

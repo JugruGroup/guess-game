@@ -7,8 +7,9 @@ import { AnswerService } from '../../../shared/services/answer.service';
 import { StateService } from '../../../shared/services/state.service';
 
 @Component({
-  selector: 'app-result',
-  templateUrl: './result.component.html'
+    selector: 'app-result',
+    templateUrl: './result.component.html',
+    standalone: false
 })
 export class ResultComponent implements OnInit {
   public speakersImageDirectory = 'assets/images/speakers';
