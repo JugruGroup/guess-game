@@ -18,6 +18,7 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "skipLibCheck": true
   }
 }
