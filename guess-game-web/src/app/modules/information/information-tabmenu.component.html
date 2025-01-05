@@ -1,6 +1,6 @@
-<p-tabs [scrollable]="true">
+<p-tabs [value]="activeIndex" [scrollable]="true">
   <p-tablist>
-    <p-tab *ngFor="let localItem of localItems" [value]="localItem.label" [routerLink]="localItem.routerLink">
+    <p-tab *ngFor="let localItem of localItems; index as i" [value]="i" [routerLink]="localItem.routerLink">
       {{localItem.label}}
     </p-tab>
   </p-tablist>

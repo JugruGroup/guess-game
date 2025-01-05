@@ -6,8 +6,7 @@ import { MenuItem } from "primeng/api";
   templateUrl: './talks-tabmenu.component.html'
 })
 export class TalksTabMenuComponent implements OnInit {
-  public readonly SCROLLABLE_WIDTH = 150;
-
+  @Input() public activeIndex: number;
   @Input() private id: number;
 
   public items: MenuItem[] = [];

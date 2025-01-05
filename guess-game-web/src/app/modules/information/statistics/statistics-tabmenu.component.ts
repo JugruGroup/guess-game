@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuItem } from "primeng/api";
 
 @Component({
@@ -6,7 +6,7 @@ import { MenuItem } from "primeng/api";
   templateUrl: './statistics-tabmenu.component.html'
 })
 export class StatisticsTabMenuComponent {
-  public readonly SCROLLABLE_WIDTH = 360;
+  @Input() public activeIndex: number;
 
   public items: MenuItem[] = [
     {labelKey: 'statistics.eventTypes.title', routerLink: '/information/statistics/event-types'},

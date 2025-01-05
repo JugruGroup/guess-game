@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class InformationTabMenuComponent implements OnInit {
   @Input() public items: MenuItem[] = [];
-  @Input() public scrollableWidth: number;
+  @Input() public activeIndex: number;
 
   public localItems: MenuItem[] = [];
 
