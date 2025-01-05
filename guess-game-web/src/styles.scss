@@ -326,6 +326,11 @@
     text-overflow: ellipsis !important;
   }
 
+  // Styles for table total
+  .p-datatable .p-datatable-tfoot > tr > td {
+    font-weight: 700;
+  }
+
   // Checkbox style
   .p-checkbox-label, .p-radiobutton-label {
     margin-bottom: 0;
