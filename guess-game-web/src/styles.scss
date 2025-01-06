@@ -278,7 +278,7 @@
 
   // Styles for table paginator
   .p-paginator {
-    padding: 0;
+    padding: 0 !important;
 
     .p-select {
       order: 0 !important;
@@ -308,6 +308,7 @@
 
     .p-paginator-current {
       margin-left: auto !important;
+      margin-right: 0.5rem !important;
       order: 6 !important;
     }
   }
