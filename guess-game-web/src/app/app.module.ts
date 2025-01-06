@@ -190,7 +190,7 @@ registerLocaleData(localeRu, 'ru');
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'defaults, primeng, primeicons, primeflex, utilities'
+            order: 'defaults, primeng, primeicons, fontawesome, bootstrap-icons'
           }
         }
       },

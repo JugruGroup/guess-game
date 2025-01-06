@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { formatPercent } from '@angular/common';
 import { SelectItem } from 'primeng/api';
-import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Company } from '../../../../shared/models/company/company.model';
@@ -1163,22 +1163,22 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
     const keys = [cubeTypeMessageKey, measureTypeMessageKey];
     const dynamicDialogChartData = new DynamicDialogChartData(type, plugins, data, options);
     const componentType = (this.selectedChartKind === OlapChartKind.Cube) ? ThreeDimensionsZoomInComponent : ChartZoomInComponent;
-    const dynamicDialogConfig = new DynamicDialogConfig<DynamicDialogChartData>();
-
-    dynamicDialogConfig.data = dynamicDialogChartData;
-    dynamicDialogConfig.width = '100%';
-    dynamicDialogConfig.height = '100%';
-    dynamicDialogConfig.styleClass = 'chart-zoom-in-dialog';
 
     this.translateService.get(keys)
       .subscribe(labels => {
         const cubeTypeMessage = labels[cubeTypeMessageKey];
         const measureTypeMessage = labels[measureTypeMessageKey];
 
-        dynamicDialogConfig.header = `${cubeTypeMessage} – ${measureTypeMessage}`;
-
         this.zoomInDialogClosed = false;
-        this.zoomInDialogRef = this.dialogService.open(componentType, dynamicDialogConfig);
+        this.zoomInDialogRef = this.dialogService.open(componentType, {
+          data: dynamicDialogChartData,
+          width: '100%',
+          height: '100%',
+          styleClass: 'chart-zoom-in-dialog',
+          header: `${cubeTypeMessage} – ${measureTypeMessage}`,
+          closable: true,
+          closeOnEscape: true
+        });
 
         this.zoomInDialogRef.onClose.subscribe(() => {
           this.zoomInDialogClosed = true;

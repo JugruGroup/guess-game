@@ -107,14 +107,14 @@
 
   // Style for event type listbox on start page
   .event-type-listbox-start {
-    height: 222px;
-    max-height: 222px !important;
+    height: 235px;
+    max-height: 235px !important;
   }
 
   // Style for event listbox on start page
   .event-listbox-start {
-    height: 98px;
-    max-height: 98px !important;
+    height: 105px;
+    max-height: 105px !important;
   }
 
   // Styles for OLAP chart button
@@ -166,8 +166,8 @@
     }
 
     .event-type-listbox-start {
-      height: 276px;
-      max-height: 276px !important;
+      height: 285px;
+      max-height: 285px !important;
     }
 
     .event-listbox-start {
@@ -278,7 +278,7 @@
 
   // Styles for table paginator
   .p-paginator {
-    padding: 0;
+    padding: 0 !important;
 
     .p-select {
       order: 0 !important;
@@ -304,10 +304,12 @@
 
     .p-paginator-last {
       order: 5 !important;
+      margin-right: auto !important;
     }
 
     .p-paginator-current {
       margin-left: auto !important;
+      margin-right: 0.5rem !important;
       order: 6 !important;
     }
   }
@@ -331,11 +333,6 @@
     font-weight: 700;
   }
 
-  // Checkbox style
-  .p-checkbox-label, .p-radiobutton-label {
-    margin-bottom: 0;
-  }
-
   // Habr color
   .text-habr {
     color: #548eaa;
@@ -344,7 +341,7 @@
   // Total column styles on OLAP page
   .p-datatable .p-datatable-tbody > tr > td.total-column {
     font-weight: 700;
-    background: #f8f9fa;
+    background: #f8fafc;
   }
 
   // Fix text decoration
@@ -364,11 +361,6 @@
     pointer-events: none;
   }
 
-  // Fix menubar button decoration
-  .p-menubar-button:hover {
-    text-decoration: none;
-  }
-
   // Fix active and checked colors
   .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.select-toggle {
     color: #000;
@@ -378,57 +370,20 @@
 
   // Decrease top, bottom padding for inputtext and multiselect
   .p-inputtext, .p-multiselect .p-multiselect-label {
-    //padding: 0.75rem 0.75rem;
+    //padding: 0.375rem 0.75rem;
     padding: 0.5rem 0.75rem;
-  }
-
-  // Decrease height of paginator arrow buttons
-  .p-paginator .p-paginator-first,
-  .p-paginator .p-paginator-prev,
-  .p-paginator .p-paginator-next,
-  .p-paginator .p-paginator-last {
-    //height: 3rem;
-    height: 2.75rem;
-  }
-
-  // Decrease width and height of paginator page buttons
-  .p-paginator .p-paginator-pages .p-paginator-page, .p-paginator .p-paginator-current {
-    //min-width: 3rem;
-    //height: 3rem;
-    min-width: 2.75rem;
-    height: 2.75rem;
-  }
-
-  // Decrease height of paginator select
-  .p-paginator .p-select {
-    //height: 3rem;
-    height: 2.75rem;
-  }
-
-  // Decrease top, bottom padding for listbox item
-  .p-listbox .p-listbox-list .p-listbox-item {
-    //padding: 0.75rem 1.25rem;
-    padding: 0.5rem 1rem;
   }
 
   // Decrease top, bottom padding for listbox
   .p-listbox .p-listbox-list {
-    //padding: 0.75rem 0;
+    //padding: 0.25rem 0.25rem;
     padding: 0;
   }
 
-  // Decrease width and height of table row expansion buttons
-  .p-datatable-tbody .p-button.p-button-icon-only.p-button-rounded {
-    //height: 3rem;
-    //width: 3rem;
-    height: 2.75rem;
-    width: 2.75rem;
-  }
-
-  // Decrease Decrease width and height of zoom-in buttons
+  // Decrease width and height of zoom-in buttons
   .p-button.p-button-icon-only.p-button-rounded.chart-zoom-in-button {
-    //height: 3rem;
-    //width: 3rem;
+    //height: 2.5rem;
+    //width: 2.5rem;
     height: 2.25rem;
     width: 2.25rem;
   }
