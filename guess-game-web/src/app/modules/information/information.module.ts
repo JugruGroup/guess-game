@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { MenubarModule } from 'primeng/menubar';
-import { TabMenuModule } from 'primeng/tabmenu';
 import { TabsModule } from 'primeng/tabs';
 import { GeneralModule } from '../general/general.module';
 import { InformationMenubarComponent } from './information-menubar.component';
@@ -18,7 +17,6 @@ import { InformationTabMenuComponent } from './information-tabmenu.component';
     CommonModule,
     MenubarModule,
     RouterModule,
-    TabMenuModule,
     TabsModule,
     TranslateModule,
     GeneralModule
