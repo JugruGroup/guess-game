@@ -361,13 +361,6 @@
     pointer-events: none;
   }
 
-  // Fix active and checked colors
-  .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.select-toggle {
-    color: #000;
-    background-color: #dae0e5;
-    border-color: #dae0e5;
-  }
-
   // Decrease top, bottom padding for inputtext and multiselect
   .p-inputtext, .p-multiselect .p-multiselect-label {
     //padding: 0.375rem 0.75rem;
