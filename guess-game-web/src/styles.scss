@@ -26,7 +26,7 @@
     text-decoration: none;
   }
 
-  a:hover {
+  a:hover:not(.p-menubar-button, .p-menubar-item-link) {
     text-decoration: underline;
   }
 
@@ -359,13 +359,6 @@
 
   .btn-link.disabled, .btn-link:disabled {
     pointer-events: none;
-  }
-
-  // Fix active and checked colors
-  .btn-check:active + .btn-light, .btn-check:checked + .btn-light, .btn-light.active, .btn-light:active, .show > .btn-light.select-toggle {
-    color: #000;
-    background-color: #dae0e5;
-    border-color: #dae0e5;
   }
 
   // Decrease top, bottom padding for inputtext and multiselect
