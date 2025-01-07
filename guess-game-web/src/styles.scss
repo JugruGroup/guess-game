@@ -26,7 +26,7 @@
     text-decoration: none;
   }
 
-  a:hover {
+  a:hover:not(.p-menubar-button, .p-menubar-item-link) {
     text-decoration: underline;
   }
 
