@@ -124,8 +124,7 @@
           {{getCubeTypeMessageKeyByCube(selectedCubeType) | translate}} – {{getMeasureTypeMessageKeyByCube(selectedMeasureType) | translate}}
         </span>
         <p-button icon="pi pi-search-plus" title="{{'statistics.olap.chart.zoomInToolTipText' | translate}}"
-                  [rounded]="true" [text]="true" variant="text" severity="secondary" (onClick)="zoomInChart()"
-                  styleClass="chart-zoom-in-button"></p-button>
+                  [rounded]="true" [text]="true" variant="text" severity="secondary" (onClick)="zoomInChart()"></p-button>
       </div>
 
       <div *ngIf="zoomInDialogClosed" class="mt-1 ms-2 me-2 mb-2">

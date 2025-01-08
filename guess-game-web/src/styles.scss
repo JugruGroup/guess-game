@@ -376,14 +376,6 @@
     padding: 0;
   }
 
-  // Decrease width and height of zoom-in buttons
-  .p-button.p-button-icon-only.p-button-rounded.chart-zoom-in-button {
-    //height: 2.5rem;
-    //width: 2.5rem;
-    height: 2.25rem;
-    width: 2.25rem;
-  }
-
   // Show borders around image thumbnails
   .img-thumbnail.img-guess-photo-by-name, .img-thumbnail.img-guess-speaker-by-talk, .img-thumbnail.img-guess-speaker-by-company,
   .img-thumbnail.img-guess-speaker-by-account, .img-thumbnail.img-guess-tag-cloud-by-speaker, .img-thumbnail.img-guess-speaker-by-tag-cloud {
