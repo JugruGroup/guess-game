@@ -88,7 +88,7 @@
 
     <div *ngIf="isTalksListVisible()" class="ms-2 me-2 mb-2 mt-3">
       <p-table [value]="talks" [resizableColumns]="true" [autoLayout]="true"
-               [rows]="10" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
+               [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="multiSortMeta" [showGridlines]="true" [stripedRows]="true"

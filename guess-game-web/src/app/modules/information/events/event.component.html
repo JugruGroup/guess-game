@@ -73,7 +73,7 @@
     <div *ngIf="isSpeakersListVisible()" class="m-2">
       <h5>{{'speakers.table.title' | translate}}</h5>
       <p-table [value]="eventDetails.speakers" [resizableColumns]="true" [autoLayout]="true"
-               [rows]="10" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
+               [rows]="10" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="speakersMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
@@ -158,7 +158,7 @@
     <div *ngIf="isTalksListVisible()" class="m-2">
       <h5>{{'talks.table.title' | translate}}</h5>
       <p-table [value]="eventDetails.talks" [resizableColumns]="true" [autoLayout]="true"
-               [rows]="10" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
+               [rows]="10" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="talksMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
