@@ -266,7 +266,7 @@
 
     <div *ngIf="isSpeakersListVisible()" class="m-2">
       <p-table #speakerStatisticsTable [value]="olapStatistics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
-               [rows]="15" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
+               [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
@@ -387,7 +387,7 @@
 
     <div *ngIf="isCompaniesListVisible()" class="m-2">
       <p-table #companyStatisticsTable [value]="olapStatistics.companyStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
-               [rows]="15" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
+               [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="companyMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
