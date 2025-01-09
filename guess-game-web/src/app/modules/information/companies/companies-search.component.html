@@ -33,8 +33,8 @@
                [rows]="15" [rowsPerPageOptions]="[5,10,15,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
-               sortMode="multiple" [multiSortMeta]="multiSortMeta" [showGridlines]="true" [stripedRows]="true" styleClass="p-datatable-sm"
-              responsiveLayout="scroll">
+               sortMode="multiple" [multiSortMeta]="multiSortMeta" [showGridlines]="true" [stripedRows]="true"
+               [size]="'small'" responsiveLayout="scroll">
         <ng-template #header>
           <tr>
             <th class="text-center" pResizableColumn>
