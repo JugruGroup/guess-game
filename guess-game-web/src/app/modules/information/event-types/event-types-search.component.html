@@ -8,18 +8,18 @@
   <div class="ms-1 me-1 mb-1 mt-2">
     <form role="form" class="m-2">
       <div class="mb-3 row justify-content-center">
-        <div class="col-auto">
+        <div class="col-auto d-flex align-items-center">
           <p-checkbox name="group1" value="conferences"
                       [(ngModel)]="isConferences" binary="true" (onChange)="onEventTypeKindChange()"
-                      inputId="conferences" id="conferences"></p-checkbox>
+                      inputId="conferences"></p-checkbox>
           <label for="conferences" class="ms-2">
             {{'common.checkbox.conferencesLabel' | translate}}
           </label>
         </div>
-        <div class="col-auto">
+        <div class="col-auto d-flex align-items-center">
           <p-checkbox name="group1" value="meetups"
                       [(ngModel)]="isMeetups" binary="true" (onChange)="onEventTypeKindChange()"
-                      inputId="meetups" id="meetups"></p-checkbox>
+                      inputId="meetups"></p-checkbox>
           <label for="meetups" class="ms-2">
             {{'common.checkbox.meetupsLabel' | translate}}
           </label>

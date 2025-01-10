@@ -40,18 +40,18 @@
         </div>
       </div>
       <div class="mb-3 row justify-content-center">
-        <div class="col-12 col-sm-auto">
+        <div class="col-12 col-sm-auto d-flex align-items-center">
           <p-checkbox name="group1" value="conferences"
                       [(ngModel)]="isJavaChampion" binary="true" (onChange)="onFilterChange()"
-                      inputId="javaChampion" id="javaChampion"></p-checkbox>
+                      inputId="javaChampion"></p-checkbox>
           <label for="javaChampion" class="ms-2">
             {{'speakers.search.javaChampionLabel' | translate}}
           </label>
         </div>
-        <div class="col-12 col-sm-auto mt-3 mt-sm-0">
+        <div class="col-12 col-sm-auto mt-3 mt-sm-0 d-flex align-items-center">
           <p-checkbox name="group1" value="meetups"
                       [(ngModel)]="isMvp" binary="true" (onChange)="onFilterChange()"
-                      inputId="mvp" id="mvp"></p-checkbox>
+                      inputId="mvp"></p-checkbox>
           <label for="mvp" class="ms-2">
             {{'speakers.search.mvpLabel' | translate}}
           </label>
