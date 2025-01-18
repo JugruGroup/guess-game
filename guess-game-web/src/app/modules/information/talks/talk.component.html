@@ -6,8 +6,8 @@
   <app-information-menubar></app-information-menubar>
   <app-talks-tabmenu [activeIndex]="1" [id]="id"></app-talks-tabmenu>
 
-  <div class="mt-3 mb-1 ms-1 me-1">
-    <div class="m-2">
+  <div class="mt-3">
+    <div class="mt-2 mb-2">
       <h4>{{talkDetails.talk?.name}}</h4>
 
       <div class="mt-1">
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div *ngIf="isSpeakersListVisible()" class="m-2">
+    <div *ngIf="isSpeakersListVisible()" class="mt-2 mb-2">
       <h5>{{'speakers.table.title' | translate}}</h5>
       <p-table [value]="talkDetails.speakers" [resizableColumns]="true" [autoLayout]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
@@ -112,7 +112,7 @@
       </p-table>
     </div>
 
-    <div *ngIf="isMaterialsVisible()" class="m-2">
+    <div *ngIf="isMaterialsVisible()" class="mt-2">
       <div *ngIf="isLinksListsVisible()" class="row mt-3">
       <span *ngFor="let presentationLink of talkDetails.talk.presentationLinks; let i = index" class="col-auto">
           <a href="{{presentationLink}}" class="text-dark">

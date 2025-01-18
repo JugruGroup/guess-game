@@ -6,7 +6,7 @@
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
   <app-companies-tabmenu [activeIndex]="0"></app-companies-tabmenu>
 
-  <div class="mt-3 mb-1 ms-1 me-1">
+  <div class="mt-3">
     <div>
       <button class="btn btn-link btn-sm-condensed remove-focus" *ngFor="let enLetter of enLetters"
               (click)="changeLetter(enLetter)"
@@ -30,11 +30,11 @@
       </button>
     </div>
 
-    <div *ngIf="!isCompaniesListVisible()" class="alert text-center m-2">
+    <div *ngIf="!isCompaniesListVisible()" class="alert text-center mt-2">
       {{'companies.noCompaniesFoundText' | translate}}
     </div>
 
-    <div *ngIf="isCompaniesListVisible()" class="ms-2 me-2 mb-2 mt-3">
+    <div *ngIf="isCompaniesListVisible()" class="mt-2">
       <p-table [value]="companies" [resizableColumns]="true" [autoLayout]="true"
                [rows]="20" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false" [(first)]="paginatorFirst"

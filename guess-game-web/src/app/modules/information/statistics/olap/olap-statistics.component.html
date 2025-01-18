@@ -6,8 +6,8 @@
   <app-information-menubar></app-information-menubar>
   <app-statistics-tabmenu [activeIndex]="4"></app-statistics-tabmenu>
 
-  <div class="mt-4 mb-1 ms-1 me-1">
-    <form role="form" class="m-2">
+  <div class="mt-4">
+    <form role="form" class="mt-2 mb-2">
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="cubeType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'statistics.olap.cubeLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-3 col-xxl-4">
@@ -104,7 +104,7 @@
       </div>
     </form>
 
-    <div class="d-flex align-items-center mt-2 ms-2 me-2 mb-1" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
+    <div class="d-flex align-items-center mt-2 mb-1" [class.justify-content-between]="isChartTypeSwitcherVisible()" [class.justify-content-end]="!isChartTypeSwitcherVisible()">
       <p-selectButton *ngIf="isChartTypeSwitcherVisible()" [options]="chartTypes" [(ngModel)]="selectedChartType" optionLabel="label" optionValue="value">
         <ng-template #item let-item>
           <span class="olap-chart-button">{{item.label | translate}}</span>
@@ -119,7 +119,7 @@
     </div>
 
     <div *ngIf="isChartsVisible()" #chartDiv>
-      <div *ngIf="selectedCubeType && selectedMeasureType" class="mt-2 ms-2 me-2 mb-1 d-flex align-items-center">
+      <div *ngIf="selectedCubeType && selectedMeasureType" class="mt-2 mb-1 d-flex align-items-center">
         <span class="text-center h5 flex-grow-1">
           {{getCubeTypeMessageKeyByCube(selectedCubeType) | translate}} – {{getMeasureTypeMessageKeyByCube(selectedMeasureType) | translate}}
         </span>
@@ -127,7 +127,7 @@
                   [rounded]="true" [text]="true" variant="text" severity="secondary" (onClick)="zoomInChart()"></p-button>
       </div>
 
-      <div *ngIf="zoomInDialogClosed" class="mt-1 ms-2 me-2 mb-2">
+      <div *ngIf="zoomInDialogClosed" class="mt-1 mb-2">
         <p-chart *ngIf="isDetailsLineChartVisible()" type="line" [data]="allLineData" [options]="lineOptions"></p-chart>
         <p-chart *ngIf="isTotalLineChartVisible()" type="line" [data]="totalLineData" [options]="lineOptions"></p-chart>
         <p-chart *ngIf="isDetailsLineWithCumulativeChartVisible()" type="line" [data]="allLineWithCumulativeData" [options]="lineOptions"></p-chart>
@@ -139,19 +139,19 @@
       </div>
     </div>
 
-    <div *ngIf="isNoEventTypesDataFoundVisible()" class="alert text-center m-2">
+    <div *ngIf="isNoEventTypesDataFoundVisible()" class="alert text-center mt-2">
       {{'statistics.olap.noEventTypesDataFoundText' | translate}}
     </div>
 
-    <div *ngIf="isNoSpeakersDataFoundVisible()" class="alert text-center m-2">
+    <div *ngIf="isNoSpeakersDataFoundVisible()" class="alert text-center mt-2">
       {{'statistics.olap.noSpeakersDataFoundText' | translate}}
     </div>
 
-    <div *ngIf="isNoCompaniesDataFoundVisible()" class="alert text-center m-2">
+    <div *ngIf="isNoCompaniesDataFoundVisible()" class="alert text-center mt-2">
       {{'statistics.olap.noCompaniesDataFoundText' | translate}}
     </div>
 
-    <div *ngIf="isEventTypesListVisible()" class="m-2">
+    <div *ngIf="isEventTypesListVisible()" class="mt-2">
       <p-table #eventTypeStatisticsTable [value]="olapStatistics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
                sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="eventTypeRowExpand($event)" [expandedRowKeys]="eventTypeExpandedRows"
@@ -264,7 +264,7 @@
       </p-table>
     </div>
 
-    <div *ngIf="isSpeakersListVisible()" class="m-2">
+    <div *ngIf="isSpeakersListVisible()" class="mt-2">
       <p-table #speakerStatisticsTable [value]="olapStatistics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
@@ -385,7 +385,7 @@
       </p-table>
     </div>
 
-    <div *ngIf="isCompaniesListVisible()" class="m-2">
+    <div *ngIf="isCompaniesListVisible()" class="mt-2">
       <p-table #companyStatisticsTable [value]="olapStatistics.companyStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"

@@ -6,8 +6,8 @@
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
   <app-companies-tabmenu [activeIndex]="2" [id]="id"></app-companies-tabmenu>
 
-  <div class="mt-3 mb-1 ms-1 me-1">
-    <div class="m-2">
+  <div class="mt-3">
+    <div class="mt-2 mb-2">
       <div class="row">
         <span class="col-auto h4">{{companyDetails.company?.name}}</span>
       </div>
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div *ngIf="isSpeakersListVisible()" class="m-2">
+    <div *ngIf="isSpeakersListVisible()" class="mt-2">
       <h5>{{'speakers.table.title' | translate}}</h5>
       <p-table [value]="companyDetails.speakers" [resizableColumns]="true" [autoLayout]="true"
                [rows]="20" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
