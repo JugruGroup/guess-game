@@ -5,8 +5,8 @@
 
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
 
-  <div class="ms-1 me-1 mb-1 mt-3">
-    <form role="form" class="m-2">
+  <div class="mt-2">
+    <form role="form" class="mt-2 mb-2">
       <div class="mb-3 row justify-content-center align-items-center">
         <label for="eventType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1">{{'common.list.eventTypeLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5">
@@ -82,11 +82,11 @@
       </div>
     </form>
 
-    <div *ngIf="isNoTalksFoundVisible()" class="alert text-center m-2">
+    <div *ngIf="isNoTalksFoundVisible()" class="alert text-center mt-2">
       {{'talks.noTalksFoundText' | translate}}
     </div>
 
-    <div *ngIf="isTalksListVisible()" class="ms-2 me-2 mb-2 mt-3">
+    <div *ngIf="isTalksListVisible()" class="mt-3">
       <p-table [value]="talks" [resizableColumns]="true" [autoLayout]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"

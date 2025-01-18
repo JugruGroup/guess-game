@@ -6,7 +6,7 @@
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
   <app-speakers-tabmenu [activeIndex]="0"></app-speakers-tabmenu>
 
-  <div class="mt-3 mb-1 ms-1 me-1">
+  <div class="mt-3">
     <div>
       <button class="btn btn-link btn-sm-condensed remove-focus" *ngFor="let enLetter of enLetters"
               (click)="changeLetter(enLetter)"
@@ -24,11 +24,11 @@
       </button>
     </div>
 
-    <div *ngIf="!isSpeakersListVisible()" class="alert text-center m-2">
+    <div *ngIf="!isSpeakersListVisible()" class="alert text-center mt-2">
       {{'speakers.noSpeakersFoundText' | translate}}
     </div>
 
-    <div *ngIf="isSpeakersListVisible()" class="m-2">
+    <div *ngIf="isSpeakersListVisible()" class="mt-2">
       <p-table [value]="speakers" [resizableColumns]="true" [autoLayout]="true"
                [rows]="20" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false" [(first)]="paginatorFirst"

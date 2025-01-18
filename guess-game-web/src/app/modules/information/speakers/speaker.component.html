@@ -6,8 +6,8 @@
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
   <app-speakers-tabmenu [activeIndex]="2" [id]="id"></app-speakers-tabmenu>
 
-  <div class="mt-3 mb-1 ms-1 me-1">
-    <div class="m-2">
+  <div class="mt-3">
+    <div class="mt-2 mb-2">
       <div class="row align-items-center">
         <span class="col-auto h4">{{speakerDetails.speaker?.name}}</span>
         <span class="col-auto font-italic" *ngIf="speakerDetails.speaker?.companies">
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <div *ngIf="isTalksListVisible()" class="m-2">
+    <div *ngIf="isTalksListVisible()" class="mt-2">
       <h5>{{'talks.table.title' | translate}}</h5>
       <p-table [value]="speakerDetails.talks" [resizableColumns]="true" [autoLayout]="true"
                [rows]="10" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"

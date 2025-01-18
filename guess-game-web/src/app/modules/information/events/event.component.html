@@ -6,8 +6,8 @@
   <app-information-menubar></app-information-menubar>
   <app-events-tabmenu [activeIndex]="1" [id]="id"></app-events-tabmenu>
 
-  <div class="mt-3 mb-1 ms-1 me-1">
-    <div class="m-2">
+  <div class="mt-3">
+    <div class="mt-2 mb-2">
       <a [routerLink]="['/information', 'event-types', 'event-type', eventDetails.event?.eventTypeId]" class="text-dark">
         <img *ngIf="eventDetails.event?.eventTypeLogoFileName" class="align-middle img-event-type-logo"
              src="{{eventsImageDirectory}}/{{eventDetails.event.eventTypeLogoFileName}}" alt="logo"/>
@@ -70,7 +70,7 @@
       </div>
     </div>
 
-    <div *ngIf="isSpeakersListVisible()" class="m-2">
+    <div *ngIf="isSpeakersListVisible()" class="mt-2 mb-2">
       <h5>{{'speakers.table.title' | translate}}</h5>
       <p-table [value]="eventDetails.speakers" [resizableColumns]="true" [autoLayout]="true"
                [rows]="10" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
@@ -155,7 +155,7 @@
       </p-table>
     </div>
 
-    <div *ngIf="isTalksListVisible()" class="m-2">
+    <div *ngIf="isTalksListVisible()" class="mt-2">
       <h5>{{'talks.table.title' | translate}}</h5>
       <p-table [value]="eventDetails.talks" [resizableColumns]="true" [autoLayout]="true"
                [rows]="10" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"

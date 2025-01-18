@@ -6,8 +6,8 @@
   <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
   <app-statistics-tabmenu [activeIndex]="2"></app-statistics-tabmenu>
 
-  <div class="mt-3 mb-1 ms-1 me-1">
-    <form role="form" class="m-2">
+  <div class="mt-3">
+    <form role="form" class="mt-2 mb-2">
       <div class="mb-3 row justify-content-center">
         <div class="col-auto d-flex align-items-center">
           <p-checkbox name="group1" value="conferences"
@@ -53,11 +53,11 @@
       </div>
     </form>
 
-    <div *ngIf="isNoSpeakersFoundVisible()" class="alert text-center m-2">
+    <div *ngIf="isNoSpeakersFoundVisible()" class="alert text-center mt-2">
       {{'statistics.speakers.noSpeakersDataFoundText' | translate}}
     </div>
 
-    <div *ngIf="isSpeakersListVisible()" class="m-2">
+    <div *ngIf="isSpeakersListVisible()" class="mt-2">
       <p-table [value]="speakerStatistics.speakerMetricsList" [resizableColumns]="true" [autoLayout]="true"
                [rows]="20" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
