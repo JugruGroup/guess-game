@@ -16,9 +16,10 @@ updates:
         patterns:
           - "primeng"
           - "@primeng/themes"
-    ignore:
-      - dependency-name: "three"
-      - dependency-name: "@types/three"
+      three:
+        patterns:
+          - "three"
+          - "@types/three"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
