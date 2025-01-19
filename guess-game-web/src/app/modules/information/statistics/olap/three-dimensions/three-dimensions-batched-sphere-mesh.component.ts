@@ -10,9 +10,9 @@ import {
 } from '../../../../../shared/models/statistics/olap/three-dimensions/sphere/three-dimensions-sphere-group-item.model';
 
 @Component({
-    selector: 'app-three-dimensions-batched-sphere-mesh',
-    template: '<ng-content></ng-content>',
-    standalone: false
+  selector: 'app-three-dimensions-batched-sphere-mesh',
+  template: '<ng-content></ng-content>',
+  standalone: false
 })
 export class ThreeDimensionsBatchedSphereMeshComponent extends AbstractMesh {
   public readonly VERTEX_COUNT_FACTOR = 2048;
@@ -58,9 +58,14 @@ export class ThreeDimensionsBatchedSphereMeshComponent extends AbstractMesh {
           geometryMap.set(sphereGroupItem.radius, geometry);
         }
 
-        const id = batchedMesh.addGeometry(geometry);
+        // Add geometry into the batched mesh
+        const geometryId = batchedMesh.addGeometry(geometry);
 
-        batchedMesh.setMatrixAt(id, this.fillMatrix(matrix, sphereGroupItem));
+        // Create instance of this geometry
+        const instanceId = batchedMesh.addInstance(geometryId);
+
+        // Position the geometry
+        batchedMesh.setMatrixAt(instanceId, this.fillMatrix(matrix, sphereGroupItem));
       }
 
       this.applyShadowProps(batchedMesh);

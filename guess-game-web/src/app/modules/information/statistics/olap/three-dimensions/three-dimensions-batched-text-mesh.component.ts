@@ -22,9 +22,9 @@ import {
 } from '../../../../../shared/models/statistics/olap/three-dimensions/text/three-dimensions-text-geometry-key.model';
 
 @Component({
-    selector: 'app-three-dimensions-batched-text-mesh',
-    template: '<ng-content></ng-content>',
-    standalone: false
+  selector: 'app-three-dimensions-batched-text-mesh',
+  template: '<ng-content></ng-content>',
+  standalone: false
 })
 export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3D {
   public readonly VERTEX_COUNT_FACTOR = 2048;
@@ -48,7 +48,7 @@ export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3
   }
 
   @Input()
-  height = 0.3;
+  depth = 0.3;
 
   @Input()
   curveSegments = 2;
@@ -171,7 +171,7 @@ export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3
           geometry = new TextGeometry(textGroup.text, {
             font: font,
             size: textGroup.size,
-            height: this.height,
+            depth: this.depth,
             curveSegments: this.curveSegments,
             bevelEnabled: this.bevelEnabled,
             bevelThickness: this.bevelThickness,
@@ -187,9 +187,14 @@ export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3
         const box = new THREE.Box3().setFromObject(mesh);
 
         for (const textGroupItem of textGroup.items) {
-          const id = batchedMesh.addGeometry(geometry);
+          // Add geometry into the batched mesh
+          const geometryId = batchedMesh.addGeometry(geometry);
 
-          batchedMesh.setMatrixAt(id, this.getMatrix(box, textGroupItem));
+          // Create instance of this geometry
+          const instanceId = batchedMesh.addInstance(geometryId);
+
+          // Position the geometry
+          batchedMesh.setMatrixAt(instanceId, this.getMatrix(box, textGroupItem));
         }
       }
 

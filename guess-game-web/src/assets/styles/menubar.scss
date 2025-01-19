@@ -15,10 +15,25 @@
   padding: 0.5rem 0.5rem;
 }
 
+/* Talk form left padding */
+form.talk-form {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  form.talk-form {
+    margin-left: 0.5rem;
+  }
+}
+
 @media (min-width: 820px) {
   .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content > .p-menubar-item-link {
     /* padding: 0.5rem 0.75rem; */
     padding: 0.5rem 0.6rem;
+  }
+
+  form.talk-form {
+    margin-left: 0.6rem;
   }
 }
 
@@ -27,10 +42,18 @@
     /* padding: 0.5rem 0.75rem; */
     padding: 0.5rem 0.625rem;
   }
+
+  form.talk-form {
+    margin-left: 0.625rem;
+  }
 }
 
 @media (min-width: 1200px) {
   .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content > .p-menubar-item-link {
     padding: 0.5rem 0.75rem;
+  }
+
+  form.talk-form {
+    margin-left: 0.75rem;
   }
 }
