@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpBackend, HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HttpBackend,
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi
+} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
@@ -133,7 +138,6 @@ registerLocaleData(localeRu, 'ru');
     RouterModule.forRoot(routes, {}),
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
     MarkdownModule.forRoot({
       loader: HttpClient
     }),
@@ -168,6 +172,7 @@ registerLocaleData(localeRu, 'ru');
     StatisticsService,
     TalkService,
     TopicService,
+    provideHttpClient(withInterceptorsFromDi()),
     providePrimeNG({
       theme: {
         preset: definePreset(Aura, {
