@@ -1,21 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MessageService } from '../../modules/message/message.service';
 import { lastValueFrom, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { Language } from '../models/language.model';
 import { TranslateService } from '@ngx-translate/core';
+import { PrimeNG } from 'primeng/config';
+import { MessageService } from '../../modules/message/message.service';
+import { Language } from '../models/language.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocaleService {
+  private readonly EN_LANGUAGE_CODE = 'en';
+  private readonly RU_LANGUAGE_CODE = 'ru';
+
   private baseUrl = 'api/locale';
 
-  constructor(private http: HttpClient, private messageService: MessageService,
-              public translateService: TranslateService) {
-    this.translateService.addLangs(['en', 'ru']);
-    this.translateService.setDefaultLang('en');
+  constructor(private http: HttpClient, private messageService: MessageService, public translateService: TranslateService,
+              private primeNG: PrimeNG) {
+    this.translateService.addLangs([this.EN_LANGUAGE_CODE, this.RU_LANGUAGE_CODE]);
+    this.translateService.setDefaultLang(this.EN_LANGUAGE_CODE);
 
     this.getLanguageAndChangeInterfaceLanguage().then();
   }
@@ -53,8 +57,11 @@ export class LocaleService {
   }
 
   async changeInterfaceLanguage(language: Language) {
-    const language$ = this.translateService.use(language === Language.Russian ? 'ru' : 'en');
+    const languageCode = (language === Language.Russian) ? this.RU_LANGUAGE_CODE : this.EN_LANGUAGE_CODE;
+    const language$ = this.translateService.use(languageCode);
+    const primeng$ = this.translateService.get(languageCode);
 
     await lastValueFrom(language$);
+    await lastValueFrom(primeng$).then(res => this.primeNG.setTranslation(res));
   }
 }

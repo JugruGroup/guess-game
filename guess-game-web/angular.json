@@ -24,7 +24,12 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*.json",
+                "input": "node_modules/primelocale",
+                "output": "/assets/i18n/primelocale/"
+              }
             ],
             "styles": [
               "src/styles.scss",
@@ -118,7 +123,12 @@
             ],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*.json",
+                "input": "node_modules/primelocale",
+                "output": "/assets/i18n/primelocale/"
+              }
             ]
           }
         },
