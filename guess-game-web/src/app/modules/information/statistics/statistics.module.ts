@@ -36,7 +36,6 @@ import {
 import {
   ThreeDimensionsBatchedTextMeshComponent
 } from './olap/three-dimensions/three-dimensions-batched-text-mesh.component';
-import { ThreeDimensionsTextMeshComponent } from './olap/three-dimensions/three-dimensions-text-mesh.component';
 import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-dimensions-zoom-in.component';
 
 @NgModule({
@@ -52,7 +51,6 @@ import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-di
     ThreeDimensionsGridComponent,
     ThreeDimensionsBatchedSphereMeshComponent,
     ThreeDimensionsBatchedTextMeshComponent,
-    ThreeDimensionsTextMeshComponent,
     ThreeDimensionsZoomInComponent
   ],
   imports: [

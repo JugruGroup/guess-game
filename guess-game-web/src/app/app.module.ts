@@ -1,13 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HttpBackend,
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi
+} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { MarkdownModule } from 'ngx-markdown';
+import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { definePreset } from '@primeng/themes';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
@@ -119,8 +124,8 @@ const routes: Routes = [
 ];
 
 // AoT requires an exported function for factories
-export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient);
+export function HttpLoaderFactory(httpBackend: HttpBackend) {
+  return new MultiTranslateHttpLoader(httpBackend, ['/assets/i18n/primelocale/', '/assets/i18n/']);
 }
 
 registerLocaleData(localeRu, 'ru');
@@ -133,7 +138,6 @@ registerLocaleData(localeRu, 'ru');
     RouterModule.forRoot(routes, {}),
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
     MarkdownModule.forRoot({
       loader: HttpClient
     }),
@@ -141,7 +145,7 @@ registerLocaleData(localeRu, 'ru');
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        deps: [HttpBackend]
       }
     }),
     CompaniesModule,
@@ -168,6 +172,7 @@ registerLocaleData(localeRu, 'ru');
     StatisticsService,
     TalkService,
     TopicService,
+    provideHttpClient(withInterceptorsFromDi()),
     providePrimeNG({
       theme: {
         preset: definePreset(Aura, {

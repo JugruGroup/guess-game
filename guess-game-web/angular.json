@@ -24,7 +24,12 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*.json",
+                "input": "node_modules/primelocale",
+                "output": "/assets/i18n/primelocale/"
+              }
             ],
             "styles": [
               "src/styles.scss",
@@ -112,13 +117,18 @@
               "src/assets/styles/tabmenu.scss"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/chart.js",
+              "node_modules/chart.js/dist/chart.cjs",
               "node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js",
               "node_modules/marked/marked.min.js"
             ],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*.json",
+                "input": "node_modules/primelocale",
+                "output": "/assets/i18n/primelocale/"
+              }
             ]
           }
         },
