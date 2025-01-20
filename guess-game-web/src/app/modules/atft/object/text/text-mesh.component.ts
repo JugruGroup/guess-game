@@ -53,7 +53,7 @@ export class TextMeshComponent extends AbstractLazyObject3D {
   size = 10;
 
   @Input()
-  height = 0.3;
+  depth = 0.3;
 
   @Input()
   curveSegments = 2;
@@ -114,7 +114,7 @@ export class TextMeshComponent extends AbstractLazyObject3D {
       const geometry = new TextGeometry(this.text, {
         font: font,
         size: this.size,
-        height: this.height,
+        depth: this.depth,
         curveSegments: this.curveSegments,
         bevelEnabled: this.bevelEnabled,
         bevelThickness: this.bevelThickness,
