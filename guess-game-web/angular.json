@@ -38,9 +38,6 @@
               "src/assets/styles/tabmenu.scss"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/chart.cjs",
-              "node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js",
-              "node_modules/marked/marked.min.js"
             ],
             "extractLicenses": false,
             "sourceMap": true,
@@ -117,9 +114,6 @@
               "src/assets/styles/tabmenu.scss"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/chart.cjs",
-              "node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js",
-              "node_modules/marked/marked.min.js"
             ],
             "assets": [
               "src/favicon.ico",
