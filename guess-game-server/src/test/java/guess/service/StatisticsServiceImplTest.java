@@ -22,7 +22,6 @@ import org.mockito.Mockito;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -103,15 +102,19 @@ class StatisticsServiceImplTest {
 
     @TestConfiguration
     static class TestContextConfiguration {
-        @MockBean
-        EventTypeDao eventTypeDao;
+        @Bean
+        EventTypeDao eventTypeDao() {
+            return Mockito.mock(EventTypeDao.class);
+        }
 
-        @MockBean
-        EventDao eventDao;
+        @Bean
+        EventDao eventDao() {
+            return Mockito.mock(EventDao.class);
+        }
 
         @Bean
         StatisticsService statisticsService() {
-            return new StatisticsServiceImpl(eventTypeDao, eventDao);
+            return new StatisticsServiceImpl(eventTypeDao(), eventDao());
         }
     }
 
@@ -270,6 +273,11 @@ class StatisticsServiceImplTest {
         Mockito.when(eventDao.getEvents()).thenReturn(List.of(event0, event1, event2, event3, event4, event5));
     }
 
+    @AfterEach
+    void tearDown() {
+        Mockito.reset(eventTypeDao);
+    }
+
     private EventTypeStatistics createEventTypeStatistics(List<EventTypeMetrics> eventTypeMetricsList,
                                                           EventType eventType, LocalDate startDate, LocalDate endDate,
                                                           long age, long duration, long eventsQuantity, long speakersQuantity,
@@ -350,8 +358,6 @@ class StatisticsServiceImplTest {
             assertEquals(expected, statisticsService.getStatisticsEventTypes(isConferences, isMeetups, organizerId, topicId, eventTypeId));
             Mockito.verify(eventTypeDao, VerificationModeFactory.times(1)).getEventTypes();
             Mockito.verifyNoMoreInteractions(eventTypeDao);
-
-            Mockito.reset(eventTypeDao);
         }
     }
 

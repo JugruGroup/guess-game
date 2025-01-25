@@ -18,7 +18,6 @@ import org.mockito.Mockito;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -36,15 +35,19 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class TopicServiceImplTest {
     @TestConfiguration
     static class TopicServiceImplTestConfiguration {
-        @MockBean
-        TopicDao topicDao;
+        @Bean
+        TopicDao topicDao() {
+            return Mockito.mock(TopicDao.class);
+        }
 
-        @MockBean
-        EventTypeDao eventTypeDao;
+        @Bean
+        EventTypeDao eventTypeDao() {
+            return Mockito.mock(EventTypeDao.class);
+        }
 
         @Bean
         TopicService topicService() {
-            return new TopicServiceImpl(topicDao, eventTypeDao);
+            return new TopicServiceImpl(topicDao(), eventTypeDao());
         }
     }
 

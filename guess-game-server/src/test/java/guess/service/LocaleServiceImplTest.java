@@ -10,7 +10,6 @@ import org.mockito.Mockito;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -20,12 +19,14 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 class LocaleServiceImplTest {
     @TestConfiguration
     static class LocaleServiceImplTestConfiguration {
-        @MockBean
-        private LocaleDao localeDao;
+        @Bean
+        LocaleDao localeDao() {
+            return Mockito.mock(LocaleDao.class);
+        }
 
         @Bean
         LocaleService localeService() {
-            return new LocaleServiceImpl(localeDao);
+            return new LocaleServiceImpl(localeDao());
         }
     }
 
