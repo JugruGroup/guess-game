@@ -8,9 +8,9 @@ import org.mockito.Mockito;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpSession;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -26,7 +26,7 @@ class LocaleControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @MockBean
+    @MockitoBean
     private LocaleService localeService;
 
     @Test
@@ -36,8 +36,8 @@ class LocaleControllerTest {
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/locale/language")
-                .contentType(MediaType.APPLICATION_JSON)
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", is("ENGLISH")));
         Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
@@ -49,9 +49,9 @@ class LocaleControllerTest {
         MockHttpSession httpSession = new MockHttpSession();
 
         mvc.perform(put("/api/locale/language")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(language.toString())
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(language.toString())
+                        .session(httpSession))
                 .andExpect(status().isOk());
         Mockito.verify(localeService, VerificationModeFactory.times(1)).setLanguage(language, httpSession);
     }

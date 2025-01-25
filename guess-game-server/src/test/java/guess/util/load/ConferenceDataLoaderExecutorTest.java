@@ -235,7 +235,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType3.setId(3);
             eventType3.setConference(Conference.DOT_NEXT);
 
-            Map<Conference, EventType> eventTypeMap = new HashMap<>(Map.of(Conference.JPOINT, eventType2,
+            Map<Conference, EventType> eventTypeMap = new EnumMap<>(Map.of(Conference.JPOINT, eventType2,
                     Conference.DOT_NEXT, eventType3));
 
             LoadResult<List<EventType>> expected = new LoadResult<>(

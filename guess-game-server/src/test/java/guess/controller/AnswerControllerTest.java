@@ -12,9 +12,9 @@ import org.mockito.Mockito;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpSession;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Collections;
@@ -33,10 +33,10 @@ class AnswerControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @MockBean
+    @MockitoBean
     private AnswerService answerService;
 
-    @MockBean
+    @MockitoBean
     private LocaleService localeService;
 
     @Test
@@ -44,10 +44,10 @@ class AnswerControllerTest {
         MockHttpSession httpSession = new MockHttpSession();
 
         mvc.perform(post("/api/answer/answers")
-                .contentType(MediaType.APPLICATION_JSON)
-                .param("questionIndex", "0")
-                .param("answerId", "1")
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .param("questionIndex", "0")
+                        .param("answerId", "1")
+                        .session(httpSession))
                 .andExpect(status().isOk());
         Mockito.verify(answerService, VerificationModeFactory.times(1)).setAnswer(0, 1, httpSession);
     }
@@ -71,8 +71,8 @@ class AnswerControllerTest {
         given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/answer/result")
-                .contentType(MediaType.APPLICATION_JSON)
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.correctAnswers", is(42)));
 
