@@ -67,7 +67,7 @@ public class CompanyServiceImpl implements CompanyService {
                         String trimmedName = name.trim();
                         String nameWithFirstAlphaNumeric = SearchUtils.getSubStringWithFirstAlphaNumeric(trimmedName);
 
-                        nameFirstLetter = (nameWithFirstAlphaNumeric.length() > 0) ? nameWithFirstAlphaNumeric.substring(0, 1) : null;
+                        nameFirstLetter = !nameWithFirstAlphaNumeric.isEmpty() ? nameWithFirstAlphaNumeric.substring(0, 1) : null;
                     } else {
                         nameFirstLetter = null;
                     }

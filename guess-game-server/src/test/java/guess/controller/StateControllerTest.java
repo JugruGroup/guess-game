@@ -25,9 +25,9 @@ import org.mockito.Mockito;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpSession;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Collections;
@@ -47,13 +47,13 @@ class StateControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @MockBean
+    @MockitoBean
     private StateService stateService;
 
-    @MockBean
+    @MockitoBean
     private AnswerService answerService;
 
-    @MockBean
+    @MockitoBean
     private LocaleService localeService;
 
     @Autowired
@@ -70,9 +70,9 @@ class StateControllerTest {
                 42);
 
         mvc.perform(post("/api/state/parameters")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(JsonUtil.toJson(startParameters))
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(JsonUtil.toJson(startParameters))
+                        .session(httpSession))
                 .andExpect(status().isOk());
         Mockito.verify(stateService, VerificationModeFactory.times(1)).setStartParameters(startParameters, httpSession);
     }
@@ -82,8 +82,8 @@ class StateControllerTest {
         MockHttpSession httpSession = new MockHttpSession();
 
         mvc.perform(delete("/api/state/parameters")
-                .contentType(MediaType.APPLICATION_JSON)
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .session(httpSession))
                 .andExpect(status().isOk());
         Mockito.verify(stateService, VerificationModeFactory.times(1)).deleteStartParameters(httpSession);
     }
@@ -93,8 +93,8 @@ class StateControllerTest {
         MockHttpSession httpSession = new MockHttpSession();
 
         mvc.perform(get("/api/state/state")
-                .contentType(MediaType.APPLICATION_JSON)
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .session(httpSession))
                 .andExpect(status().isOk());
         Mockito.verify(stateService, VerificationModeFactory.times(1)).getState(httpSession);
     }
@@ -106,9 +106,9 @@ class StateControllerTest {
         GameState state = GameState.START_STATE;
 
         mvc.perform(put("/api/state/state")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(state.toString())
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(state.toString())
+                        .session(httpSession))
                 .andExpect(status().isOk());
         Mockito.verify(stateService, VerificationModeFactory.times(1)).setState(state, httpSession);
     }
@@ -213,8 +213,8 @@ class StateControllerTest {
         MockHttpSession httpSession = new MockHttpSession();
 
         mvc.perform(get(String.format("/api/state/%s", urlSuffix))
-                .contentType(MediaType.APPLICATION_JSON)
-                .session(httpSession))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .session(httpSession))
                 .andExpect(status().isOk());
     }
 }

@@ -44,7 +44,7 @@ public class SpeakerServiceImpl implements SpeakerService {
                     if (name != null) {
                         String trimmedName = name.trim();
 
-                        nameFirstLetter = (trimmedName.length() > 0) ? trimmedName.substring(0, 1) : null;
+                        nameFirstLetter = !trimmedName.isEmpty() ? trimmedName.substring(0, 1) : null;
                     } else {
                         nameFirstLetter = null;
                     }
