@@ -4,7 +4,7 @@
     <caption>Conferences, meetups, their tags in <i>Contentful</i> spaces (2016-2021) and event versions in <i>Squidex</i> (2022)</caption>
     <tr>
         <th rowspan="2"></th>
-        <th colspan="21">Conferences</th>
+        <th colspan="23">Conferences</th>
         <th colspan="3">Meetups</th>
     </tr>
     <tr>
@@ -28,6 +28,8 @@
         <th>GoFunc</th>
         <th>CargoCult</th>
         <th>I’ML</th>
+        <th>sysconf</th>
+        <th>BiasConf</th>
         <th>SnowOne</th>
         <th>JUG.ru</th>
         <th>JUG.MSK</th>
@@ -35,6 +37,8 @@
     </tr>
     <tr>
         <th>2012</th>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -83,6 +87,8 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
         <td>2013</td>
         <td>2013</td>
         <td></td>
@@ -99,6 +105,8 @@
         <td rowspan="2">2014</td>
         <td rowspan="2">2014</td>
         <td rowspan="2">2014&nbsp;Spb</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
@@ -140,6 +148,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2015</td>
         <td rowspan="2">2015</td>
         <td rowspan="2"></td>
@@ -159,6 +169,8 @@
         <td rowspan="3">2016</td>
         <td rowspan="3">2016<br>(2016Joker)</td>
         <td rowspan="3">2016&nbsp;Spb</td>
+        <td rowspan="3"></td>
+        <td rowspan="3"></td>
         <td rowspan="3"></td>
         <td rowspan="3"></td>
         <td rowspan="3"></td>
@@ -204,6 +216,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2017</td>
         <td rowspan="2">2017</td>
         <td rowspan="2"></td>
@@ -229,6 +243,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2">2018<br>(2018tt)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
@@ -270,6 +286,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2019</td>
         <td rowspan="2">2019</td>
         <td rowspan="2">2019</td>
@@ -296,6 +314,8 @@
         <td rowspan="2">2020<br>(2020-msk-sptdc)</td>
         <td rowspan="2">2020<br>(2020spbsmartdata)</td>
         <td>2020&nbsp;Summer<br>(2020-spb-tt)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
@@ -339,6 +359,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2021</td>
         <td rowspan="2">2021</td>
         <td rowspan="2"></td>
@@ -369,6 +391,8 @@
         <td rowspan="2">2022<br>(2022)</td>
         <td rowspan="2">2022<br>(2022)</td>
         <td rowspan="2">2022<br>(2022)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
@@ -407,6 +431,8 @@
         <td rowspan="2"></td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2023</td>
         <td rowspan="2"></td>
         <td rowspan="2"></td>
@@ -440,18 +466,54 @@
         <td>2024<br>(2024)</td>
         <td rowspan="2">2024<br>(2024)</td>
         <td>2024<br>(2024)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
         <td rowspan="2">2024</td>
         <td rowspan="2"></td>
         <td rowspan="2">2024</td>
         <td rowspan="2">2024</td>
     </tr>
-        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
-        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
-        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
-        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
-        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
-        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
-        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
     <tr>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+        <td>2024&nbsp;Autumn<br>(2024&nbsp;Autumn)</td>
+    </tr>
+    <tr>
+        <th rowspan="2">2025</th>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td>2025&nbsp;Spring<br>(2025&nbsp;Spring)</td>
+        <td>2025&nbsp;Spring<br>(2025&nbsp;Spring)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td>2025&nbsp;Spring<br>(2025&nbsp;Spring)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2">2025<br>(2025)</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+    </tr>
+    <tr>
+        <td>2025&nbsp;Autumn<br>(2025&nbsp;Autumn)</td>
+        <td>2025&nbsp;Autumn<br>(2025&nbsp;Autumn)</td>
+        <td>2025&nbsp;Autumn<br>(2025&nbsp;Autumn)</td>
     </tr>
 </table>
