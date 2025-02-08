@@ -2082,6 +2082,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadTags(CmsType.JUGRUGROUP_CMS, "2022");
 //        loadTags(CmsType.JUGRUGROUP_CMS, "2023");
 //        loadTags(CmsType.JUGRUGROUP_CMS, "2024");
+//        loadTags(CmsType.JUGRUGROUP_CMS, "2025");
 
         // Load event types
 //        loadEventTypes(CmsType.CONTENTFUL);
@@ -2787,5 +2788,9 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("I'ML 2024 Autumn", null, List.of(24L)),
 //                        Map.of(new NameCompany("Алексей Карпов", new Company(377, "Okko")), 3666L),
 //                        Set.of("Открытие конференции I'ML 2024 Autumn", "Подведение итогов конференции I'ML 2024 Autumn")));
+//        loadTalksSpeakersEvent(Conference.SNOW_ONE, LocalDate.of(2025, 2, 28), "2025",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("SnowOne 2025", null, List.of(13L)),
+//                        Set.of()));
     }
 }
