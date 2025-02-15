@@ -4,7 +4,7 @@
 
     <groupId>guess-game</groupId>
     <artifactId>guess-game-parent</artifactId>
-    <version>3.2.18-SNAPSHOT</version>
+    <version>3.2.27-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GuessGame Parent</name>
 
@@ -33,7 +33,7 @@
         <spring-boot.version>3.4.2</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
-        <node.version>v22.13.0</node.version>
+        <node.version>v22.14.0</node.version>
         <ng.build.arguments>-- --configuration=production</ng.build.arguments>
 
         <sonar.coverage.exclusions>
