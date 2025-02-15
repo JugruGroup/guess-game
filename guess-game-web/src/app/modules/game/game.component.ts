@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-game',
   imports: [RouterOutlet],
-  templateUrl: './game.component.html',
+  template: '<router-outlet></router-outlet>',
   standalone: true
 })
 export class GameComponent {
