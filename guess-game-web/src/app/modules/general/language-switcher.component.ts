@@ -17,18 +17,20 @@ export class LanguageSwitcherComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.localeService.getLanguage()
-      .subscribe(data => {
-        this.selectedLanguage = data;
-      });
+    // TODO: change
+    // this.localeService.getLanguage()
+    //   .subscribe(data => {
+    //     this.selectedLanguage = data;
+    //   });
   }
 
   onLanguageChange(language: Language) {
-    this.localeService.setLanguage(language)
-      .subscribe(() => {
-          this.reload.emit();
-        }
-      );
+    // TODO: change
+    // this.localeService.setLanguage(language)
+    //   .subscribe(() => {
+    //       this.reload.emit();
+    //     }
+    //   );
   }
 
   isEnChecked(): boolean {
