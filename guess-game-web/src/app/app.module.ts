@@ -56,6 +56,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { HomeModule } from './modules/home/home.module';
 import { InformationComponent } from './modules/information/information.component';
 import { InformationModule } from './modules/information/information.module';
+import { LanguageComponent } from './modules/general/language.component';
 import { MessageModule } from './modules/message/message.module';
 import { OlapStatisticsComponent } from './modules/information/statistics/olap/olap-statistics.component';
 import { QuestionService } from './shared/services/question.service';
@@ -81,108 +82,123 @@ import { TalkService } from './shared/services/talk.service';
 import { TalksSearchComponent } from './modules/information/talks/talks-search.component';
 import { TopicService } from './shared/services/topic.service';
 
+const DEFAULT_LOCATION = '/en/home';
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
   {
-    path: 'game',
-    component: GameComponent,
+    path: ':language',
+    component: LanguageComponent,
     children: [
-      {path: '', redirectTo: 'start', pathMatch: 'full'},
-      {path: 'start', component: StartComponent, canActivate: [gameStateCanActivate]},
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: 'home', component: HomeComponent},
       {
-        path: 'guess',
-        component: GuessComponent,
+        path: 'game',
+        component: GameComponent,
         children: [
-          {path: '', redirectTo: 'name-by-photo', pathMatch: 'full'},
-          {path: 'name-by-photo', component: GuessNameByPhotoComponent, canActivate: [gameStateCanActivate]},
-          {path: 'photo-by-name', component: GuessPhotoByNameComponent, canActivate: [gameStateCanActivate]},
-          {path: 'talk-by-speaker', component: GuessTalkBySpeakerComponent, canActivate: [gameStateCanActivate]},
-          {path: 'speaker-by-talk', component: GuessSpeakerByTalkComponent, canActivate: [gameStateCanActivate]},
-          {path: 'company-by-speaker', component: GuessCompanyBySpeakerComponent, canActivate: [gameStateCanActivate]},
-          {path: 'speaker-by-company', component: GuessSpeakerByCompanyComponent, canActivate: [gameStateCanActivate]},
-          {path: 'account-by-speaker', component: GuessAccountBySpeakerComponent, canActivate: [gameStateCanActivate]},
-          {path: 'speaker-by-account', component: GuessSpeakerByAccountComponent, canActivate: [gameStateCanActivate]},
-          {path: 'tag-cloud-by-speaker', component: GuessTagCloudBySpeakerComponent, canActivate: [gameStateCanActivate]},
-          {path: 'speaker-by-tag-cloud', component: GuessSpeakerByTagCloudComponent, canActivate: [gameStateCanActivate]},
+          {path: '', redirectTo: 'start', pathMatch: 'full'},
+          {path: 'start', component: StartComponent, canActivate: [gameStateCanActivate]},
+          {
+            path: 'guess',
+            component: GuessComponent,
+            children: [
+              {path: '', redirectTo: 'name-by-photo', pathMatch: 'full'},
+              {path: 'name-by-photo', component: GuessNameByPhotoComponent, canActivate: [gameStateCanActivate]},
+              {path: 'photo-by-name', component: GuessPhotoByNameComponent, canActivate: [gameStateCanActivate]},
+              {path: 'talk-by-speaker', component: GuessTalkBySpeakerComponent, canActivate: [gameStateCanActivate]},
+              {path: 'speaker-by-talk', component: GuessSpeakerByTalkComponent, canActivate: [gameStateCanActivate]},
+              {path: 'company-by-speaker', component: GuessCompanyBySpeakerComponent, canActivate: [gameStateCanActivate]},
+              {path: 'speaker-by-company', component: GuessSpeakerByCompanyComponent, canActivate: [gameStateCanActivate]},
+              {path: 'account-by-speaker', component: GuessAccountBySpeakerComponent, canActivate: [gameStateCanActivate]},
+              {path: 'speaker-by-account', component: GuessSpeakerByAccountComponent, canActivate: [gameStateCanActivate]},
+              {path: 'tag-cloud-by-speaker', component: GuessTagCloudBySpeakerComponent, canActivate: [gameStateCanActivate]},
+              {path: 'speaker-by-tag-cloud', component: GuessSpeakerByTagCloudComponent, canActivate: [gameStateCanActivate]},
+            ]
+          },
+          {path: 'result', component: ResultComponent, canActivate: [gameStateCanActivate]},
+          {path: 'cancel', component: CancelGameComponent},
         ]
       },
-      {path: 'result', component: ResultComponent, canActivate: [gameStateCanActivate]},
-      {path: 'cancel', component: CancelGameComponent},
+      {
+        path: 'information',
+        component: InformationComponent,
+        children: [
+          {path: '', redirectTo: 'event-types/search', pathMatch: 'full'},
+          {
+            path: 'event-types',
+            component: EventTypesComponent,
+            children: [
+              {path: '', redirectTo: 'search', pathMatch: 'full'},
+              {path: 'search', component: EventTypesSearchComponent},
+              {path: 'event-type/:id', component: EventTypeComponent},
+            ]
+          },
+          {
+            path: 'events',
+            component: EventsComponent,
+            children: [
+              {path: '', redirectTo: 'search', pathMatch: 'full'},
+              {path: 'search', component: EventsSearchComponent},
+              {path: 'event/:id', component: EventComponent},
+            ]
+          },
+          {
+            path: 'talks',
+            component: TalksComponent,
+            children: [
+              {path: '', redirectTo: 'search', pathMatch: 'full'},
+              {path: 'search', component: TalksSearchComponent},
+              {path: 'talk/:id', component: TalkComponent},
+            ]
+          },
+          {
+            path: 'speakers',
+            component: SpeakersComponent,
+            children: [
+              {path: '', redirectTo: 'list', pathMatch: 'full'},
+              {path: 'list', component: SpeakersListComponent},
+              {path: 'search', component: SpeakersSearchComponent},
+              {path: 'speaker/:id', component: SpeakerComponent},
+            ]
+          },
+          {
+            path: 'companies',
+            component: CompaniesComponent,
+            children: [
+              {path: '', redirectTo: 'list', pathMatch: 'full'},
+              {path: 'list', component: CompaniesListComponent},
+              {path: 'search', component: CompaniesSearchComponent},
+              {path: 'company/:id', component: CompanyComponent},
+            ]
+          },
+          {
+            path: 'statistics',
+            component: StatisticsComponent,
+            children: [
+              {path: '', redirectTo: 'event-types', pathMatch: 'full'},
+              {path: 'event-types', component: EventTypeStatisticsComponent},
+              {path: 'events', component: EventStatisticsComponent},
+              {path: 'speakers', component: SpeakerStatisticsComponent},
+              {path: 'companies', component: CompanyStatisticsComponent},
+              {path: 'olap', component: OlapStatisticsComponent},
+            ]
+          }
+        ]
+      }
     ]
   },
-  {
-    path: 'information',
-    component: InformationComponent,
-    children: [
-      {path: '', redirectTo: 'event-types/search', pathMatch: 'full'},
-      {
-        path: 'event-types',
-        component: EventTypesComponent,
-        children: [
-          {path: '', redirectTo: 'search', pathMatch: 'full'},
-          {path: 'search', component: EventTypesSearchComponent},
-          {path: 'event-type/:id', component: EventTypeComponent},
-        ]
-      },
-      {
-        path: 'events',
-        component: EventsComponent,
-        children: [
-          {path: '', redirectTo: 'search', pathMatch: 'full'},
-          {path: 'search', component: EventsSearchComponent},
-          {path: 'event/:id', component: EventComponent},
-        ]
-      },
-      {
-        path: 'talks',
-        component: TalksComponent,
-        children: [
-          {path: '', redirectTo: 'search', pathMatch: 'full'},
-          {path: 'search', component: TalksSearchComponent},
-          {path: 'talk/:id', component: TalkComponent},
-        ]
-      },
-      {
-        path: 'speakers',
-        component: SpeakersComponent,
-        children: [
-          {path: '', redirectTo: 'list', pathMatch: 'full'},
-          {path: 'list', component: SpeakersListComponent},
-          {path: 'search', component: SpeakersSearchComponent},
-          {path: 'speaker/:id', component: SpeakerComponent},
-        ]
-      },
-      {
-        path: 'companies',
-        component: CompaniesComponent,
-        children: [
-          {path: '', redirectTo: 'list', pathMatch: 'full'},
-          {path: 'list', component: CompaniesListComponent},
-          {path: 'search', component: CompaniesSearchComponent},
-          {path: 'company/:id', component: CompanyComponent},
-        ]
-      },
-      {
-        path: 'statistics',
-        component: StatisticsComponent,
-        children: [
-          {path: '', redirectTo: 'event-types', pathMatch: 'full'},
-          {path: 'event-types', component: EventTypeStatisticsComponent},
-          {path: 'events', component: EventStatisticsComponent},
-          {path: 'speakers', component: SpeakerStatisticsComponent},
-          {path: 'companies', component: CompanyStatisticsComponent},
-          {path: 'olap', component: OlapStatisticsComponent},
-        ]
-      },
 
-      {path: 'event-type/:id', redirectTo: '/information/event-types/event-type/:id'},
-      {path: 'event/:id', redirectTo: '/information/events/event/:id'},
-      {path: 'talk/:id', redirectTo: '/information/talks/talk/:id'},
-      {path: 'speaker/:id', redirectTo: '/information/speakers/speaker/:id'},
-      {path: 'company/:id', redirectTo: '/information/companies/company/:id'},
-    ]
-  },
-  {path: '**', redirectTo: '/home'}
+  {path: 'information/event-type/:id', redirectTo: '/ru/information/event-types/event-type/:id'},
+  {path: 'information/event/:id', redirectTo: '/ru/information/events/event/:id'},
+  {path: 'information/talk/:id', redirectTo: '/ru/information/talks/talk/:id'},
+  {path: 'information/speaker/:id', redirectTo: '/ru/information/speakers/speaker/:id'},
+  {path: 'information/company/:id', redirectTo: '/ru/information/companies/company/:id'},
+
+  {path: 'information/event-types/event-type/:id', redirectTo: '/ru/information/event-types/event-type/:id'},
+  {path: 'information/events/event/:id', redirectTo: '/ru/information/events/event/:id'},
+  {path: 'information/talks/talk/:id', redirectTo: '/ru/information/talks/talk/:id'},
+  {path: 'information/speakers/speaker/:id', redirectTo: '/ru/information/speakers/speaker/:id'},
+  {path: 'information/companies/company/:id', redirectTo: '/ru/information/companies/company/:id'},
+
+  {path: '**', redirectTo: DEFAULT_LOCATION}
 ];
 
 // AoT requires an exported function for factories
