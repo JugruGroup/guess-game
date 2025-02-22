@@ -4,7 +4,7 @@
 
     <groupId>guess-game</groupId>
     <artifactId>guess-game-parent</artifactId>
-    <version>3.2.27-SNAPSHOT</version>
+    <version>3.2.33-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GuessGame Parent</name>
 
@@ -16,7 +16,7 @@
 
         <allure.plugin.version>2.15.2</allure.plugin.version>
         <assembly.plugin.version>3.7.1</assembly.plugin.version>
-        <clean.plugin.version>3.4.0</clean.plugin.version>
+        <clean.plugin.version>3.4.1</clean.plugin.version>
         <compiler.plugin.version>3.13.0</compiler.plugin.version>
         <frontend.plugin.version>1.15.1</frontend.plugin.version>
         <jacoco.plugin.version>0.8.12</jacoco.plugin.version>
@@ -30,7 +30,7 @@
         <aspectj.version>1.9.22.1</aspectj.version>
         <kumo.version>1.28</kumo.version>
         <imageio.version>3.12.0</imageio.version>
-        <spring-boot.version>3.4.2</spring-boot.version>
+        <spring-boot.version>3.4.3</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
         <node.version>v22.14.0</node.version>
