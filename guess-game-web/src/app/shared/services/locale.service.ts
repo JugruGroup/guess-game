@@ -7,14 +7,14 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class LocaleService {
-  private readonly EN_LANGUAGE_CODE = 'en';
-  private readonly RU_LANGUAGE_CODE = 'ru';
+  public static readonly EN_LANGUAGE_CODE = 'en';
+  public static readonly RU_LANGUAGE_CODE = 'ru';
 
   constructor(public translateService: TranslateService, private primeNG: PrimeNG) {
-    this.translateService.addLangs([this.EN_LANGUAGE_CODE, this.RU_LANGUAGE_CODE]);
-    this.translateService.setDefaultLang(this.EN_LANGUAGE_CODE);
+    this.translateService.addLangs([LocaleService.EN_LANGUAGE_CODE, LocaleService.RU_LANGUAGE_CODE]);
+    this.translateService.setDefaultLang(LocaleService.EN_LANGUAGE_CODE);
 
-    this.changeLanguage(this.EN_LANGUAGE_CODE).then();
+    this.changeLanguage(LocaleService.EN_LANGUAGE_CODE).then();
   }
 
   getLanguage(): string {
@@ -34,7 +34,7 @@ export class LocaleService {
   }
 
   getDefaultLanguage(): string {
-    return this.EN_LANGUAGE_CODE;
+    return LocaleService.EN_LANGUAGE_CODE;
   }
 
   getInitialLanguage(pathLanguageCode: string | undefined): string {
