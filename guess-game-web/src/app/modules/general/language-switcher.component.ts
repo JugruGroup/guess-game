@@ -17,7 +17,7 @@ export class LanguageSwitcherComponent implements OnInit {
   constructor(private localeService: LocaleService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
-  collectRouteParams(snapshot: ActivatedRouteSnapshot): Params {
+  getRouteParams(snapshot: ActivatedRouteSnapshot): Params {
     let params = {};
     const stack: ActivatedRouteSnapshot[] = [snapshot.root];
 
@@ -30,10 +30,50 @@ export class LanguageSwitcherComponent implements OnInit {
     return params;
   }
 
+  getResolvedUrl(snapshot: ActivatedRouteSnapshot): string {
+    return snapshot.pathFromRoot
+      .map(v => v.url.map(segment => segment.toString()).join('/'))
+      .join('/');
+  }
+
+  getResolvedUrlWithLanguage(snapshot: ActivatedRouteSnapshot, languageCode: string): string {
+    return snapshot.pathFromRoot
+      .map(v => {
+        if (v.paramMap.has('language')) {
+          return languageCode;
+        } else {
+          return v.url.map(segment => segment.toString()).join('/');
+        }
+      })
+      .join('/');
+  }
+
+  getConfiguredUrl(snapshot: ActivatedRouteSnapshot): string {
+    return '/' + snapshot.pathFromRoot
+      .filter(v => v.routeConfig)
+      .map(v => v.routeConfig!.path)
+      .join('/');
+  }
+
+  // TODO: delete
+  print(snapshot: ActivatedRouteSnapshot) {
+    for (const currentSnapshot of snapshot.pathFromRoot) {
+      console.log('params: ' + JSON.stringify(currentSnapshot.params) +
+        ', url: ' + JSON.stringify(currentSnapshot.url) +
+        ', fragment: ' + currentSnapshot.fragment);
+    }
+  }
+
   ngOnInit(): void {
-    const params = this.collectRouteParams(this.activatedRoute.snapshot);
+    const params = this.getRouteParams(this.activatedRoute.snapshot);
     const pathLanguageCode = params.language;
     const languageCode = this.localeService.getInitialLanguage(pathLanguageCode);
+
+    // TODO: delete
+    this.print(this.activatedRoute.snapshot);
+    console.log('resolvedUrl: ' + this.getResolvedUrl(this.activatedRoute.snapshot));
+    console.log('resolvedUrlWithLanguage: ' + this.getResolvedUrlWithLanguage(this.activatedRoute.snapshot, 'aa'));
+    console.log('configuredUrl: ' + this.getConfiguredUrl(this.activatedRoute.snapshot));
 
     this.localeService.localeIfNeeded(languageCode)
       .then(() => {
