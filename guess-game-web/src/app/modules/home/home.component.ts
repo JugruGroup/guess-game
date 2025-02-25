@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
   public eventDates: string;
   public homeState = HomeState.LoadingState;
 
-  constructor(private eventService: EventService, public translateService: TranslateService, private localeService: LocaleService) {
+  constructor(private eventService: EventService, public translateService: TranslateService,
+              public localeService: LocaleService) {
   }
 
   ngOnInit(): void {
@@ -34,7 +35,8 @@ export class HomeComponent implements OnInit {
       this.eventService.getDefaultEventPartHomeInfo()
         .subscribe(data => {
           this.eventPart = data;
-          this.eventDates = (this.eventPart) ? getEventDates(this.eventPart.startDate, this.eventPart.endDate, this.translateService) : null;
+          this.eventDates = (this.eventPart) ?
+            getEventDates(this.eventPart.startDate, this.eventPart.endDate, this.translateService) : null;
           this.homeState = (this.eventPart) ? HomeState.DefaultStateFoundState : HomeState.DefaultStateNotFoundState;
         });
     }
