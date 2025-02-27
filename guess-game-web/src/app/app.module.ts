@@ -185,19 +185,6 @@ const routes: Routes = [
       }
     ]
   },
-
-  {path: 'information/event-type/:id', redirectTo: '/ru/information/event-types/event-type/:id'},
-  {path: 'information/event/:id', redirectTo: '/ru/information/events/event/:id'},
-  {path: 'information/talk/:id', redirectTo: '/ru/information/talks/talk/:id'},
-  {path: 'information/speaker/:id', redirectTo: '/ru/information/speakers/speaker/:id'},
-  {path: 'information/company/:id', redirectTo: '/ru/information/companies/company/:id'},
-
-  {path: 'information/event-types/event-type/:id', redirectTo: '/ru/information/event-types/event-type/:id'},
-  {path: 'information/events/event/:id', redirectTo: '/ru/information/events/event/:id'},
-  {path: 'information/talks/talk/:id', redirectTo: '/ru/information/talks/talk/:id'},
-  {path: 'information/speakers/speaker/:id', redirectTo: '/ru/information/speakers/speaker/:id'},
-  {path: 'information/companies/company/:id', redirectTo: '/ru/information/companies/company/:id'},
-
   {path: '**', redirectTo: DEFAULT_LOCATION}
 ];
 
