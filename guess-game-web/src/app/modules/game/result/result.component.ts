@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { Result } from '../../../shared/models/result/result.model';
-import { GuessMode } from '../../../shared/models/guess-mode.model';
 import { AnswerService } from '../../../shared/services/answer.service';
+import { GuessMode } from '../../../shared/models/guess-mode.model';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { Result } from '../../../shared/models/result/result.model';
 import { StateService } from '../../../shared/services/state.service';
 
 @Component({
@@ -16,17 +17,25 @@ export class ResultComponent implements OnInit {
   public imageSourcePrefix = 'data:image/jpeg;base64,';
   public result = new Result();
   public isQuestionImage = true;
+  public language: string;
 
   constructor(private answerService: AnswerService, private stateService: StateService, private router: Router,
-              public translateService: TranslateService) {
+              private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadResult();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadResult();
+      });
   }
 
   loadResult() {
-    this.answerService.getResult()
+    this.answerService.getResult(this.language)
       .subscribe(data => {
         this.result = data;
         this.isQuestionImage = (GuessMode.GuessNameByPhotoMode === this.result.guessMode) ||
@@ -40,7 +49,7 @@ export class ResultComponent implements OnInit {
   home() {
     this.stateService.deleteStartParameters()
       .subscribe(() => {
-          this.router.navigateByUrl('/home');
+          this.router.navigateByUrl(`/${this.language}/home`);
         }
       );
   }
@@ -48,7 +57,7 @@ export class ResultComponent implements OnInit {
   restart() {
     this.stateService.deleteStartParameters()
       .subscribe(() => {
-          this.router.navigateByUrl('/game/start');
+          this.router.navigateByUrl(`/${this.language}/game/start`);
         }
       );
   }

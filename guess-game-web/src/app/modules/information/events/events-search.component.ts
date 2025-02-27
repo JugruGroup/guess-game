@@ -6,6 +6,7 @@ import { EventPart } from '../../../shared/models/event/event-part.model';
 import { Organizer } from '../../../shared/models/organizer/organizer.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { EventService } from '../../../shared/services/event.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { OrganizerService } from '../../../shared/services/organizer.service';
 import { findEventTypeById, findOrganizerById } from '../../general/utility-functions';
 
@@ -32,14 +33,24 @@ export class EventsSearchComponent implements OnInit {
   public eventParts: EventPart[] = [];
   public multiSortMeta: any[] = [];
 
+  public language: string;
+
   constructor(private eventService: EventService, public organizerService: OrganizerService,
-              private eventTypeService: EventTypeService, public translateService: TranslateService) {
+              private eventTypeService: EventTypeService, public translateService: TranslateService,
+              private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'startDate', order: -1});
     this.multiSortMeta.push({field: 'name', order: 1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadOrganizers();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
   }
 
   fillOrganizers(organizers: Organizer[]) {
@@ -63,7 +74,7 @@ export class EventsSearchComponent implements OnInit {
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
-        this.eventService.getDefaultEvent()
+        this.eventService.getDefaultEvent(this.language)
           .subscribe(defaultEventData => {
             this.selectedOrganizer = (defaultEventData) ? findOrganizerById(defaultEventData.organizerId, this.organizers) : null;
 

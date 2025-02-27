@@ -7,6 +7,7 @@ import { Topic } from '../../../shared/models/topic/topic.model';
 import { Talk } from '../../../shared/models/talk/talk.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { EventService } from '../../../shared/services/event.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { TalkService } from '../../../shared/services/talk.service';
 import { TopicService } from '../../../shared/services/topic.service';
 import {
@@ -53,17 +54,26 @@ export class TalksSearchComponent implements OnInit {
   private searched = false;
   public multiSortMeta: any[] = [];
 
+  public language: string;
+
   constructor(private eventTypeService: EventTypeService, private eventService: EventService,
               private talkService: TalkService, private topicService: TopicService,
-              public translateService: TranslateService) {
+              public translateService: TranslateService, private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'event.name', order: 1});
     this.multiSortMeta.push({field: 'talkDate', order: 1});
     this.multiSortMeta.push({field: 'name', order: 1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadEventTypes();
     this.loadTopics();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
   }
 
   fillEventTypes(eventTypes: EventType[]) {
@@ -97,7 +107,7 @@ export class TalksSearchComponent implements OnInit {
         this.fillEventTypes(eventTypesData);
 
         if (this.eventTypes.length > 0) {
-          this.eventService.getDefaultEvent()
+          this.eventService.getDefaultEvent(this.language)
             .subscribe(defaultEventData => {
               this.defaultEvent = defaultEventData;
 

@@ -11,15 +11,23 @@ import { OlapChartType } from '../../../../shared/models/statistics/olap/olap-ch
 import { OlapCityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
 import { OlapCityParameters } from '../../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
 import { OlapCompanyMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-company-metrics.model';
-import { Olap3dCubeStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-3d-cube-statistics.model';
+import {
+  Olap3dCubeStatistics
+} from '../../../../shared/models/statistics/olap/statistics/olap-3d-cube-statistics.model';
 import { OlapCubeType } from '../../../../shared/models/statistics/olap/olap-cube-type.model';
 import { OlapEntityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
-import { OlapEntityStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
+import {
+  OlapEntityStatistics
+} from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
 import { OlapEventTypeMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-event-type-metrics.model';
-import { OlapEventTypeParameters } from '../../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
+import {
+  OlapEventTypeParameters
+} from '../../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
 import { OlapMeasureType } from '../../../../shared/models/statistics/olap/olap-measure-type.model';
 import { OlapSpeakerMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-speaker-metrics.model';
-import { OlapSpeakerParameters } from '../../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
+import {
+  OlapSpeakerParameters
+} from '../../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
 import { OlapParameters } from '../../../../shared/models/statistics/olap/parameters/olap-parameters.model';
 import { OlapStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-statistics.model';
 import { Organizer } from '../../../../shared/models/organizer/organizer.model';
@@ -27,6 +35,7 @@ import { SelectedEntities } from '../../../../shared/models/common/selected-enti
 import { Speaker } from '../../../../shared/models/speaker/speaker.model';
 import { EventTypeService } from '../../../../shared/services/event-type.service';
 import { EventService } from '../../../../shared/services/event.service';
+import { LocaleService } from '../../../../shared/services/locale.service';
 import { OrganizerService } from '../../../../shared/services/organizer.service';
 import { StatisticsService } from '../../../../shared/services/statistics.service';
 import { SpeakerService } from '../../../../shared/services/speaker.service';
@@ -54,10 +63,10 @@ import {
 } from "../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-dataset.model";
 
 @Component({
-    selector: 'app-olap-statistics',
-    templateUrl: './olap-statistics.component.html',
-    providers: [DialogService],
-    standalone: false
+  selector: 'app-olap-statistics',
+  templateUrl: './olap-statistics.component.html',
+  providers: [DialogService],
+  standalone: false
 })
 export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit {
   private readonly EVENT_TYPES_CUBE_TYPE_KEY = 'cubeType.eventTypes';
@@ -183,10 +192,13 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   private zoomInDialogRef: DynamicDialogRef;
   public zoomInDialogClosed = true;
 
+  public language: string;
+
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, private organizerService: OrganizerService,
               public translateService: TranslateService, private speakerService: SpeakerService,
-              private companyService: CompanyService, public dialogService: DialogService) {
+              private companyService: CompanyService, public dialogService: DialogService,
+              private localeService: LocaleService) {
     this.eventTypeMultiSortMeta.push({field: 'sortName', order: 1});
 
     this.cityMultiSortMeta.push({field: 'name', order: 1});
@@ -196,6 +208,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
 
     this.companyMultiSortMeta.push({field: 'total', order: -1});
     this.companyMultiSortMeta.push({field: 'name', order: 1});
+
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
@@ -204,6 +218,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
 
     this.translateService.onLangChange
       .subscribe(() => {
+          this.language = this.localeService.getLanguage();
           this.loadOrganizers();
           this.fillChartKinds();
           this.fillChartOptions();
@@ -356,7 +371,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
               .subscribe(organizerData => {
                 this.fillOrganizers(organizerData);
 
-                this.eventService.getDefaultEvent()
+                this.eventService.getDefaultEvent(this.language)
                   .subscribe(defaultEventData => {
                     this.selectedOrganizer = (defaultEventData) ? findOrganizerById(defaultEventData.organizerId, this.organizers) : null;
 

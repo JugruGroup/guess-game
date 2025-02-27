@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
 import { EventType } from '../../../../shared/models/event-type/event-type.model';
 import { SpeakerStatistics } from '../../../../shared/models/statistics/speaker/speaker-statistics.model';
+import { LocaleService } from '../../../../shared/services/locale.service';
 import { Organizer } from '../../../../shared/models/organizer/organizer.model';
 import { StatisticsService } from '../../../../shared/services/statistics.service';
 import { EventTypeService } from '../../../../shared/services/event-type.service';
@@ -35,16 +36,25 @@ export class SpeakerStatisticsComponent implements OnInit {
   public speakerStatistics = new SpeakerStatistics();
   public multiSortMeta: any[] = [];
 
+  public language: string;
+
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, public organizerService: OrganizerService,
-              public translateService: TranslateService) {
+              public translateService: TranslateService, private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'talksQuantity', order: -1});
     this.multiSortMeta.push({field: 'eventsQuantity', order: -1});
     this.multiSortMeta.push({field: 'eventTypesQuantity', order: -1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadOrganizers();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
   }
 
   fillOrganizers(organizers: Organizer[]) {
@@ -68,7 +78,7 @@ export class SpeakerStatisticsComponent implements OnInit {
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
-        this.eventService.getDefaultEvent()
+        this.eventService.getDefaultEvent(this.language)
           .subscribe(defaultEventData => {
             this.selectedOrganizer = (defaultEventData) ? findOrganizerById(defaultEventData.organizerId, this.organizers) : null;
 

@@ -247,17 +247,13 @@ class EventControllerTest {
             final boolean IS_CONFERENCES = Boolean.TRUE;
             final boolean IS_MEETUPS = Boolean.TRUE;
 
-            MockHttpSession httpSession = new MockHttpSession();
-
             given(eventService.getDefaultEvent(IS_CONFERENCES, IS_MEETUPS)).willReturn(defaultEvent);
-            given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
             mvc.perform(get("/api/event/default-event")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .session(httpSession))
+                            .param("language", "en"))
                     .andExpect(status().isOk());
             Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(IS_CONFERENCES, IS_MEETUPS);
-            Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
             Mockito.reset(eventService, localeService);
         }
     }
@@ -279,17 +275,13 @@ class EventControllerTest {
             final boolean IS_CONFERENCES = Boolean.TRUE;
             final boolean IS_MEETUPS = Boolean.TRUE;
 
-            MockHttpSession httpSession = new MockHttpSession();
-
             given(eventService.getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS)).willReturn(defaultEventPart);
-            given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
             mvc.perform(get("/api/event/default-event-part-home-info")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .session(httpSession))
+                            .param("language", "en"))
                     .andExpect(status().isOk());
             Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS);
-            Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
             Mockito.reset(eventService, localeService);
         }
     }
@@ -322,17 +314,13 @@ class EventControllerTest {
             final boolean IS_CONFERENCES = Boolean.TRUE;
             final boolean IS_MEETUPS = Boolean.TRUE;
 
-            MockHttpSession httpSession = new MockHttpSession();
-
             given(eventService.getDefaultEvent(IS_CONFERENCES, IS_MEETUPS)).willReturn(defaultEvent);
-            given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
             mvc.perform(get("/api/event/default-event-part-home-info")
                             .contentType(MediaType.APPLICATION_JSON)
-                            .session(httpSession))
+                            .param("language", "en"))
                     .andExpect(status().isOk());
             Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEventPart(IS_CONFERENCES, IS_MEETUPS);
-            Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
             Mockito.reset(eventService, localeService);
         }
     }

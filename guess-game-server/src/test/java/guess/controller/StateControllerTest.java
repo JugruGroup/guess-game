@@ -183,9 +183,9 @@ class StateControllerTest {
             given(stateService.getQuestionAnswersSet(httpSession)).willReturn(questionAnswersSet);
             given(answerService.getCorrectAnswerIds(currentQuestionIndex, httpSession)).willReturn(List.of(0L, 1L));
             given(answerService.getYourAnswerIds(currentQuestionIndex, httpSession)).willReturn(List.of(0L));
-            given(localeService.getLanguage(httpSession)).willReturn(language);
 
-            PhotoNamesDto actual = stateController.getDto(httpSession, dtoFunction);
+            PhotoNamesDto actual = stateController.getDto(
+                    (language != null) ? language.getCode() : null, httpSession, dtoFunction);
 
             Mockito.verify(answerService, VerificationModeFactory.times(1)).getCurrentQuestionIndex(httpSession);
             Mockito.verify(stateService, VerificationModeFactory.times(1)).getQuestionAnswersSet(httpSession);
@@ -193,16 +193,12 @@ class StateControllerTest {
             Mockito.verify(answerService, VerificationModeFactory.times(1)).getYourAnswerIds(currentQuestionIndex, httpSession);
 
             if (expected != null) {
-                Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
-
                 assertEquals(expected.getPhotoFileName(), actual.getPhotoFileName());
             } else {
-                Mockito.verify(localeService, VerificationModeFactory.times(0)).getLanguage(httpSession);
-
                 assertNull(actual);
             }
 
-            Mockito.reset(stateService, answerService, localeService);
+            Mockito.reset(stateService, answerService);
         }
     }
 
@@ -214,6 +210,7 @@ class StateControllerTest {
 
         mvc.perform(get(String.format("/api/state/%s", urlSuffix))
                         .contentType(MediaType.APPLICATION_JSON)
+                        .param("language", "en")
                         .session(httpSession))
                 .andExpect(status().isOk());
     }

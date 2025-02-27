@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { MessageService } from '../../modules/message/message.service';
@@ -65,8 +65,11 @@ export class StateService {
       );
   }
 
-  getPhotoNames(): Observable<PhotoNames> {
-    return this.http.get<PhotoNames>(`${this.baseUrl}/photo-names`)
+  getPhotoNames(language: string): Observable<PhotoNames> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<PhotoNames>(`${this.baseUrl}/photo-names`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

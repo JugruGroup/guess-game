@@ -1,11 +1,9 @@
 package guess.controller;
 
 import guess.domain.GuessMode;
-import guess.domain.Language;
 import guess.domain.answer.ErrorDetails;
 import guess.domain.answer.Result;
 import guess.service.AnswerService;
-import guess.service.LocaleService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -36,9 +34,6 @@ class AnswerControllerTest {
     @MockitoBean
     private AnswerService answerService;
 
-    @MockitoBean
-    private LocaleService localeService;
-
     @Test
     void addAnswer() throws Exception {
         MockHttpSession httpSession = new MockHttpSession();
@@ -68,16 +63,15 @@ class AnswerControllerTest {
 
         given(answerService.getResult(httpSession)).willReturn(result);
         given(answerService.getErrorDetailsList(httpSession)).willReturn(errorDetailsList);
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/answer/result")
                         .contentType(MediaType.APPLICATION_JSON)
+                        .param("language", "en")
                         .session(httpSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.correctAnswers", is(42)));
 
         Mockito.verify(answerService, VerificationModeFactory.times(1)).getResult(httpSession);
         Mockito.verify(answerService, VerificationModeFactory.times(1)).getErrorDetailsList(httpSession);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 }

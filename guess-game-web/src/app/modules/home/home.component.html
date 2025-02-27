@@ -10,23 +10,23 @@
     <img *ngIf="isDefaultEventNotFound()" src="{{imageDirectory}}/home.jpg" alt="logo" class="img-home-logo"/>
     <div *ngIf="isDefaultEventFound()">
       <div class="text-center">
-        <a [routerLink]="['/information', 'events', 'event', eventPart.id]" class="text-dark">
+        <a routerLink="/{{language}}/information/events/event/{{eventPart.id}}" class="text-dark">
           <img *ngIf="eventPart?.eventTypeLogoFileName" class="img-home-logo"
                src="{{eventsImageDirectory}}/{{eventPart.eventTypeLogoFileName}}" alt="logo"/>
         </a>
       </div>
       <div class="h4 text-center">
-        <a [routerLink]="['/information', 'events', 'event', eventPart.id]" class="text-dark">
+        <a routerLink="/{{language}}/information/events/event/{{eventPart.id}}" class="text-dark">
           {{eventPart.name}}
         </a>
       </div>
       <div class="text-center">
-        <a [routerLink]="['/information', 'events', 'event', eventPart.id]" class="text-dark">
+        <a routerLink="/{{language}}/information/events/event/{{eventPart.id}}" class="text-dark">
           {{eventDates}}
         </a>
       </div>
       <div class="text-center">
-        <a [routerLink]="['/information', 'events', 'event', eventPart.id]" class="text-dark">
+        <a routerLink="/{{language}}/information/events/event/{{eventPart.id}}" class="text-dark">
           {{eventPart.placeCity}}
         </a>
       </div>
@@ -37,8 +37,8 @@
     </div>
 
     <div class="d-grid gap-2 mt-2">
-      <button class="btn btn-primary btn-lg py-3" routerLink="/{{localeService.getLanguage()}}/information">{{'home.informationButtonText' | translate}}</button>
-      <button class="btn btn-primary btn-lg py-3" routerLink="/{{localeService.getLanguage()}}/game">{{'home.gameButtonText' | translate}}</button>
+      <button class="btn btn-primary btn-lg py-3" routerLink="/{{language}}/information">{{'home.informationButtonText' | translate}}</button>
+      <button class="btn btn-primary btn-lg py-3" routerLink="/{{language}}/game">{{'home.gameButtonText' | translate}}</button>
     </div>
   </div>
 </div>

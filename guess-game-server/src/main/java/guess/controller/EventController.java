@@ -1,5 +1,6 @@
 package guess.controller;
 
+import guess.domain.Language;
 import guess.domain.source.Event;
 import guess.domain.source.EventPart;
 import guess.domain.source.Speaker;
@@ -65,19 +66,18 @@ public class EventController {
     }
 
     @GetMapping("/default-event")
-    public EventSuperBriefDto getDefaultEvent(HttpSession httpSession) {
+    public EventSuperBriefDto getDefaultEvent(@RequestParam String language) {
         var defaultEvent = eventService.getDefaultEvent(true, true);
-        var language = localeService.getLanguage(httpSession);
 
-        return (defaultEvent != null) ? EventSuperBriefDto.convertToSuperBriefDto(defaultEvent, language) : null;
+        return (defaultEvent != null) ? EventSuperBriefDto.convertToSuperBriefDto(defaultEvent, Language.getLanguageByCode(language)) : null;
     }
 
     @GetMapping("/default-event-part-home-info")
-    public EventPartHomeInfoDto getDefaultEventPartHomeInfo(HttpSession httpSession) {
+    public EventPartHomeInfoDto getDefaultEventPartHomeInfo(@RequestParam String language) {
         var defaultEventPart = eventService.getDefaultEventPart(true, true);
-        var language = localeService.getLanguage(httpSession);
 
-        return (defaultEventPart != null) ? EventPartHomeInfoDto.convertToDto(defaultEventPart, language) : null;
+        return (defaultEventPart != null) ?
+                EventPartHomeInfoDto.convertToDto(defaultEventPart, Language.getLanguageByCode(language)) : null;
     }
 
     @GetMapping("/event/{id}")

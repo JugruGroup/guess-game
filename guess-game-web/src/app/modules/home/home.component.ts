@@ -18,21 +18,26 @@ export class HomeComponent implements OnInit {
   public eventPart: EventPart;
   public eventDates: string;
   public homeState = HomeState.LoadingState;
+  public language: string;
 
   constructor(private eventService: EventService, public translateService: TranslateService,
-              public localeService: LocaleService) {
+              private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadDefaultEvent();
 
     this.translateService.onLangChange
-      .subscribe(() => this.loadDefaultEvent());
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadDefaultEvent();
+      });
   }
 
   loadDefaultEvent() {
     if (this.translateService.currentLang) {
-      this.eventService.getDefaultEventPartHomeInfo()
+      this.eventService.getDefaultEventPartHomeInfo(this.language)
         .subscribe(data => {
           this.eventPart = data;
           this.eventDates = (this.eventPart) ?

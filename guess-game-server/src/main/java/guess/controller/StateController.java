@@ -1,6 +1,7 @@
 package guess.controller;
 
 import guess.domain.GameState;
+import guess.domain.Language;
 import guess.dto.guess.*;
 import guess.dto.start.StartParametersDto;
 import guess.service.AnswerService;
@@ -54,6 +55,7 @@ public class StateController {
         stateService.setState(GameState.valueOf(state), httpSession);
     }
 
+    //TODO: delete
     <T> T getDto(HttpSession httpSession, DtoFunction<T> dtoFunction) {
         int currentQuestionIndex = answerService.getCurrentQuestionIndex(httpSession);
         var questionAnswersSet = stateService.getQuestionAnswersSet(httpSession);
@@ -81,9 +83,36 @@ public class StateController {
         }
     }
 
+    <T> T getDto(String language, HttpSession httpSession, DtoFunction<T> dtoFunction) {
+        int currentQuestionIndex = answerService.getCurrentQuestionIndex(httpSession);
+        var questionAnswersSet = stateService.getQuestionAnswersSet(httpSession);
+        List<Long> correctAnswerIds = answerService.getCorrectAnswerIds(currentQuestionIndex, httpSession);
+        List<Long> yourAnswerIds = answerService.getYourAnswerIds(currentQuestionIndex, httpSession);
+
+        if ((questionAnswersSet != null) && (currentQuestionIndex < questionAnswersSet.questionAnswersList().size())) {
+            var questionAnswers = questionAnswersSet.questionAnswersList().get(currentQuestionIndex);
+            var languageEnum = Language.getLanguageByCode(language);
+            var sourceDto = new QuestionAnswersSourceDto(
+                    LocalizationUtils.getString(questionAnswersSet.name(), languageEnum),
+                    currentQuestionIndex,
+                    questionAnswersSet.questionAnswersList().size(),
+                    questionAnswersSet.logoFileName(),
+                    correctAnswerIds,
+                    yourAnswerIds
+            );
+
+            return dtoFunction.apply(
+                    sourceDto,
+                    questionAnswers,
+                    languageEnum);
+        } else {
+            return null;
+        }
+    }
+
     @GetMapping("/photo-names")
-    public PhotoNamesDto getPhotoNames(HttpSession httpSession) {
-        return getDto(httpSession, PhotoNamesDto::convertToDto);
+    public PhotoNamesDto getPhotoNames(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, PhotoNamesDto::convertToDto);
     }
 
     @GetMapping("/name-photos")

@@ -56,8 +56,11 @@ export class EventService {
       );
   }
 
-  getDefaultEvent(): Observable<Event> {
-    return this.http.get<Event>(`${this.baseUrl}/default-event`)
+  getDefaultEvent(language: string): Observable<Event> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<Event>(`${this.baseUrl}/default-event`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -66,8 +69,11 @@ export class EventService {
       );
   }
 
-  getDefaultEventPartHomeInfo(): Observable<EventPart> {
-    return this.http.get<EventPart>(`${this.baseUrl}/default-event-part-home-info`)
+  getDefaultEventPartHomeInfo(language: string): Observable<EventPart> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<EventPart>(`${this.baseUrl}/default-event-part-home-info`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

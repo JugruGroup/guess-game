@@ -7,7 +7,7 @@
     <div class="col-auto">
       <button class="btn text-secondary" (click)="home()" title="{{'common.homeToolTipText' | translate}}"><i class="pi pi-home"></i></button>
     </div>
-    <app-language-switcher (reload)="loadResult()" class="col-auto"></app-language-switcher>
+    <app-language-switcher class="col-auto"></app-language-switcher>
   </div>
 
   <div class="mt-2 mb-4">
@@ -16,10 +16,10 @@
         <label class="col-form-label">{{'result.correctAnswersLabel' | translate}}</label>
       </div>
       <div class="col-4 text-center">
-        <label class="col-form-label">{{result.correctAnswers | number:'1.0-0':translateService.currentLang}}</label>
+        <label class="col-form-label">{{result.correctAnswers | number:'1.0-0':language}}</label>
       </div>
       <div class="col-2 text-end">
-        <label class="col-form-label">{{result.correctPercents | percent:'1.2-2':translateService.currentLang}}</label>
+        <label class="col-form-label">{{result.correctPercents | percent:'1.2-2':language}}</label>
       </div>
     </div>
     <div class="row h6">
@@ -27,10 +27,10 @@
         <label class="col-form-label">{{'result.wrongAnswersLabel' | translate}}</label>
       </div>
       <div class="col-4 text-center">
-        <label class="col-form-label">{{result.wrongAnswers | number:'1.0-0':translateService.currentLang}}</label>
+        <label class="col-form-label">{{result.wrongAnswers | number:'1.0-0':language}}</label>
       </div>
       <div class="col-2 text-end">
-        <label class="col-form-label">{{result.wrongPercents| percent:'1.2-2':translateService.currentLang}}</label>
+        <label class="col-form-label">{{result.wrongPercents| percent:'1.2-2':language}}</label>
       </div>
     </div>
     <div *ngIf="isSkippedVisible()" class="row h6">
@@ -38,10 +38,10 @@
         <label class="col-form-label">{{'result.skippedAnswersLabel' | translate}}</label>
       </div>
       <div class="col-4 text-center">
-        <label class="col-form-label">{{result.skippedAnswers | number:'1.0-0':translateService.currentLang}}</label>
+        <label class="col-form-label">{{result.skippedAnswers | number:'1.0-0':language}}</label>
       </div>
       <div class="col-2 text-end">
-        <label class="col-form-label">{{result.skippedPercents| percent:'1.2-2':translateService.currentLang}}</label>
+        <label class="col-form-label">{{result.skippedPercents| percent:'1.2-2':language}}</label>
       </div>
     </div>
   </div>

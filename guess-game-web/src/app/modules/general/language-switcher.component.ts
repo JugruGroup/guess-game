@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Params, Router } from '@angular/router';
+import { getRouteParams } from './utility-functions';
 import { LocaleService } from '../../shared/services/locale.service';
 
 @Component({
@@ -17,19 +18,6 @@ export class LanguageSwitcherComponent implements OnInit {
   constructor(private localeService: LocaleService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
-  getRouteParams(snapshot: ActivatedRouteSnapshot): Params {
-    let params = {};
-    const stack: ActivatedRouteSnapshot[] = [snapshot.root];
-
-    while (stack.length > 0) {
-      const route = stack.pop()!;
-      params = {...params, ...route.params};
-      stack.push(...route.children);
-    }
-
-    return params;
-  }
-
   getUrlWithLanguage(snapshot: ActivatedRouteSnapshot, languageCode: string): string {
     return snapshot.pathFromRoot
       .map(v => {
@@ -43,7 +31,7 @@ export class LanguageSwitcherComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const params = this.getRouteParams(this.activatedRoute.snapshot);
+    const params = getRouteParams(this.activatedRoute.snapshot);
     const pathLanguageCode = params.language;
     const languageCode = this.localeService.getInitialLanguage(pathLanguageCode);
 

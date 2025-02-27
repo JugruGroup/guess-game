@@ -28,8 +28,11 @@ export class AnswerService {
       );
   }
 
-  getResult(): Observable<Result> {
-    return this.http.get<Result>(`${this.baseUrl}/result`)
+  getResult(language: string): Observable<Result> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<Result>(`${this.baseUrl}/result`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

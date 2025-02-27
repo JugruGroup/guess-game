@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PhotoNames } from '../../../shared/models/guess/photo-names.model';
-import { StateService } from '../../../shared/services/state.service';
+import { TranslateService } from '@ngx-translate/core';
 import { AnswerService } from '../../../shared/services/answer.service';
 import { GameState } from '../../../shared/models/game-state.model';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { PhotoNames } from '../../../shared/models/guess/photo-names.model';
+import { StateService } from '../../../shared/services/state.service';
 
 @Component({
     selector: 'app-guess-name',
@@ -19,15 +21,25 @@ export class GuessNameByPhotoComponent implements OnInit {
   public logoImageSource: string;
   public imageSource: string;
 
-  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router) {
+  public language: string;
+
+  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router,
+              private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadQuestion();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadQuestion();
+      });
   }
 
   loadQuestion() {
-    this.stateService.getPhotoNames()
+    this.stateService.getPhotoNames(this.language)
       .subscribe(data => {
           if (data) {
             this.photoNames = data;
@@ -55,12 +67,12 @@ export class GuessNameByPhotoComponent implements OnInit {
   result() {
     this.stateService.setState(GameState.ResultState)
       .subscribe(() => {
-          this.router.navigateByUrl('/game/result');
+          this.router.navigateByUrl(`/${this.language}/game/result`);
         }
       );
   }
 
   cancel() {
-    this.router.navigateByUrl('/game/cancel');
+    this.router.navigateByUrl(`/${this.language}/game/cancel`);
   }
 }
