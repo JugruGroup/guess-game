@@ -2791,6 +2791,7 @@ public class ConferenceDataLoaderExecutor {
 //        loadTalksSpeakersEvent(Conference.SNOW_ONE, LocalDate.of(2025, 2, 28), "2025",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("SnowOne 2025", null, List.of(13L)),
-//                        Set.of()));
+//                        Set.of("Открытие SnowOne", "Закрытие первого дня", "Открытие второго дня конференции",
+//                                "Закрытие конференции", "Lightning Talks")));
     }
 }
