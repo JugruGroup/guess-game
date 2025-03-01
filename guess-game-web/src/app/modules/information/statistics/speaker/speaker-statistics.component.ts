@@ -74,7 +74,7 @@ export class SpeakerStatisticsComponent implements OnInit {
   }
 
   loadOrganizers() {
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
@@ -133,7 +133,7 @@ export class SpeakerStatisticsComponent implements OnInit {
     const currentSelectedOrganizer = this.selectedOrganizer;
     const currentSelectedEventType = this.selectedEventType;
 
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 

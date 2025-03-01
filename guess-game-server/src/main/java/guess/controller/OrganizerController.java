@@ -1,14 +1,14 @@
 package guess.controller;
 
+import guess.domain.Language;
 import guess.domain.source.Organizer;
 import guess.dto.organizer.OrganizerDto;
 import guess.service.EventService;
-import guess.service.LocaleService;
 import guess.service.OrganizerService;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Comparator;
@@ -22,20 +22,17 @@ import java.util.List;
 public class OrganizerController {
     private final OrganizerService organizerService;
     private final EventService eventService;
-    private final LocaleService localeService;
 
     @Autowired
-    public OrganizerController(OrganizerService organizerService, EventService eventService, LocaleService localeService) {
+    public OrganizerController(OrganizerService organizerService, EventService eventService) {
         this.organizerService = organizerService;
         this.eventService = eventService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/organizers")
-    public List<OrganizerDto> getOrganizers(HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<OrganizerDto> getOrganizers(@RequestParam String language) {
         List<Organizer> organizers = organizerService.getOrganizers();
-        List<OrganizerDto> organizerDtoList = OrganizerDto.convertToDto(organizers, language);
+        List<OrganizerDto> organizerDtoList = OrganizerDto.convertToDto(organizers, Language.getLanguageByCode(language));
 
         return organizerDtoList.stream()
                 .sorted(Comparator.comparing(OrganizerDto::name))
@@ -43,13 +40,11 @@ public class OrganizerController {
     }
 
     @GetMapping("/default-event-organizer")
-    public OrganizerDto getDefaultEventOrganizer(HttpSession httpSession) {
+    public OrganizerDto getDefaultEventOrganizer(@RequestParam String language) {
         var defaultEvent = eventService.getDefaultEvent(true, true);
 
         if (defaultEvent != null) {
-            var language = localeService.getLanguage(httpSession);
-
-            return OrganizerDto.convertToDto(defaultEvent.getEventType().getOrganizer(), language);
+            return OrganizerDto.convertToDto(defaultEvent.getEventType().getOrganizer(), Language.getLanguageByCode(language));
         } else {
             return null;
         }

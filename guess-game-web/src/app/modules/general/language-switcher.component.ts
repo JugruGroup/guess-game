@@ -1,5 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot, Params, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
 import { getRouteParams } from './utility-functions';
 import { LocaleService } from '../../shared/services/locale.service';
 
@@ -10,8 +10,6 @@ import { LocaleService } from '../../shared/services/locale.service';
 })
 export class LanguageSwitcherComponent implements OnInit {
   protected readonly LocaleService = LocaleService;
-
-  @Output() reload: EventEmitter<any> = new EventEmitter<any>();
 
   public selectedLanguageCode: string;
 
@@ -55,7 +53,6 @@ export class LanguageSwitcherComponent implements OnInit {
     this.localeService.changeLanguage(languageCode)
       .then(() => {
         this.navigateByLanguageCode(languageCode);
-        this.reload.emit();
       });
   }
 

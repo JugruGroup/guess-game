@@ -15,8 +15,11 @@ export class TopicService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getTopics() {
-    return this.http.get<Topic[]>(`${this.baseUrl}/topics`)
+  getTopics(language: string) {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<Topic[]>(`${this.baseUrl}/topics`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -25,10 +28,11 @@ export class TopicService {
       );
   }
 
-  getFilterTopics(isConferences: boolean, isMeetups: boolean, organizer: Organizer): Observable<Topic[]> {
+  getFilterTopics(isConferences: boolean, isMeetups: boolean, organizer: Organizer, language: string): Observable<Topic[]> {
     let params = new HttpParams()
       .set('conferences', isConferences.toString())
-      .set('meetups', isMeetups.toString());
+      .set('meetups', isMeetups.toString())
+      .set('language', language);
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }

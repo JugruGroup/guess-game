@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SpeakerTagClouds } from '../../../shared/models/guess/speaker-tag-clouds.model';
-import { GameState } from '../../../shared/models/game-state.model';
-import { StateService } from '../../../shared/services/state.service';
+import { TranslateService } from '@ngx-translate/core';
 import { AnswerService } from '../../../shared/services/answer.service';
+import { GameState } from '../../../shared/models/game-state.model';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { SpeakerTagClouds } from '../../../shared/models/guess/speaker-tag-clouds.model';
+import { StateService } from '../../../shared/services/state.service';
 
 @Component({
     selector: 'app-guess-tag-cloud-by-speaker',
@@ -22,16 +24,25 @@ export class GuessTagCloudBySpeakerComponent implements OnInit {
   public imageSource1: string;
   public imageSource2: string;
   public imageSource3: string;
+  public language: string;
 
-  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router) {
+  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router,
+              private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadQuestion();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadQuestion();
+      });
   }
 
   loadQuestion() {
-    this.stateService.getSpeakerTagClouds()
+    this.stateService.getSpeakerTagClouds(this.language)
       .subscribe(data => {
           if (data) {
             this.speakerTagClouds = data;
@@ -63,12 +74,12 @@ export class GuessTagCloudBySpeakerComponent implements OnInit {
   result() {
     this.stateService.setState(GameState.ResultState)
       .subscribe(() => {
-          this.router.navigateByUrl('/game/result');
+          this.router.navigateByUrl(`/${this.language}/game/result`);
         }
       );
   }
 
   cancel() {
-    this.router.navigateByUrl('/game/cancel');
+    this.router.navigateByUrl(`/${this.language}/game/cancel`);
   }
 }

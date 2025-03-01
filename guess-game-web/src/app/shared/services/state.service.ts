@@ -78,8 +78,11 @@ export class StateService {
       );
   }
 
-  getNamePhotos(): Observable<NamePhotos> {
-    return this.http.get<NamePhotos>(`${this.baseUrl}/name-photos`)
+  getNamePhotos(language: string): Observable<NamePhotos> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<NamePhotos>(`${this.baseUrl}/name-photos`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -88,8 +91,11 @@ export class StateService {
       );
   }
 
-  getSpeakerTalks(): Observable<SpeakersTalks> {
-    return this.http.get<SpeakersTalks>(`${this.baseUrl}/speaker-talks`)
+  getSpeakerTalks(language: string): Observable<SpeakersTalks> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<SpeakersTalks>(`${this.baseUrl}/speaker-talks`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -98,8 +104,11 @@ export class StateService {
       );
   }
 
-  getTalkSpeakers(): Observable<TalkSpeakers> {
-    return this.http.get<TalkSpeakers>(`${this.baseUrl}/talk-speakers`)
+  getTalkSpeakers(language: string): Observable<TalkSpeakers> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<TalkSpeakers>(`${this.baseUrl}/talk-speakers`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -108,8 +117,11 @@ export class StateService {
       );
   }
 
-  getSpeakerCompanies(): Observable<SpeakerCompanies> {
-    return this.http.get<SpeakerCompanies>(`${this.baseUrl}/speaker-companies`)
+  getSpeakerCompanies(language: string): Observable<SpeakerCompanies> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<SpeakerCompanies>(`${this.baseUrl}/speaker-companies`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -118,8 +130,11 @@ export class StateService {
       );
   }
 
-  getCompanySpeakers(): Observable<CompanySpeakers> {
-    return this.http.get<CompanySpeakers>(`${this.baseUrl}/company-speakers`)
+  getCompanySpeakers(language: string): Observable<CompanySpeakers> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<CompanySpeakers>(`${this.baseUrl}/company-speakers`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -128,8 +143,11 @@ export class StateService {
       );
   }
 
-  getSpeakerAccounts(): Observable<SpeakerAccounts> {
-    return this.http.get<SpeakerAccounts>(`${this.baseUrl}/speaker-accounts`)
+  getSpeakerAccounts(language: string): Observable<SpeakerAccounts> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<SpeakerAccounts>(`${this.baseUrl}/speaker-accounts`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -138,8 +156,11 @@ export class StateService {
       );
   }
 
-  getAccountSpeakers(): Observable<AccountSpeakers> {
-    return this.http.get<AccountSpeakers>(`${this.baseUrl}/account-speakers`)
+  getAccountSpeakers(language: string): Observable<AccountSpeakers> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<AccountSpeakers>(`${this.baseUrl}/account-speakers`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -148,8 +169,11 @@ export class StateService {
       );
   }
 
-  getSpeakerTagClouds(): Observable<SpeakerTagClouds> {
-    return this.http.get<SpeakerTagClouds>(`${this.baseUrl}/speaker-tag-clouds`)
+  getSpeakerTagClouds(language: string): Observable<SpeakerTagClouds> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<SpeakerTagClouds>(`${this.baseUrl}/speaker-tag-clouds`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -158,8 +182,11 @@ export class StateService {
       );
   }
 
-  getTagCloudSpeakers(): Observable<TagCloudSpeakers> {
-    return this.http.get<TagCloudSpeakers>(`${this.baseUrl}/tag-cloud-speakers`)
+  getTagCloudSpeakers(language: string): Observable<TagCloudSpeakers> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<TagCloudSpeakers>(`${this.baseUrl}/tag-cloud-speakers`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
-import { Organizer } from '../../../shared/models/organizer/organizer.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { Organizer } from '../../../shared/models/organizer/organizer.model';
 import { OrganizerService } from '../../../shared/services/organizer.service';
-import { TopicService } from '../../../shared/services/topic.service';
 import { Topic } from '../../../shared/models/topic/topic.model';
+import { TopicService } from '../../../shared/services/topic.service';
 import { findOrganizerById, findTopicById, getEventTypesWithSortName } from '../../general/utility-functions';
 
 @Component({
@@ -31,12 +32,22 @@ export class EventTypesSearchComponent implements OnInit {
 
   public eventTypes: EventType[] = [];
 
+  public language: string;
+
   constructor(private eventTypeService: EventTypeService, public organizerService: OrganizerService,
-              private topicService: TopicService, public translateService: TranslateService) {
+              private topicService: TopicService, public translateService: TranslateService,
+              private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadOrganizers();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
   }
 
   fillOrganizers(organizers: Organizer[]) {
@@ -58,17 +69,17 @@ export class EventTypesSearchComponent implements OnInit {
   loadOrganizers() {
     const currentSelectedTopic = this.selectedTopic;
 
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
         if (this.organizers.length > 0) {
-          this.organizerService.getDefaultEventOrganizer()
+          this.organizerService.getDefaultEventOrganizer(this.language)
             .subscribe(defaultOrganizerData => {
               const selectedOrganizer = (defaultOrganizerData) ? findOrganizerById(defaultOrganizerData.id, this.organizers) : null;
               this.selectedOrganizer = (selectedOrganizer) ? selectedOrganizer : null;
 
-              this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+              this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
                 .subscribe(topicsData => {
                   this.fillTopics(topicsData);
 
@@ -90,7 +101,7 @@ export class EventTypesSearchComponent implements OnInit {
   }
 
   loadTopics() {
-    this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+    this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 
@@ -101,7 +112,7 @@ export class EventTypesSearchComponent implements OnInit {
   }
 
   loadEventTypes(organizer: Organizer, topic: Topic) {
-    this.eventTypeService.getEventTypes(this.isConferences, this.isMeetups, organizer, topic)
+    this.eventTypeService.getEventTypes(this.isConferences, this.isMeetups, organizer, topic, this.language)
       .subscribe(data => {
         this.eventTypes = getEventTypesWithSortName(data);
       });
@@ -123,13 +134,13 @@ export class EventTypesSearchComponent implements OnInit {
     const currentSelectedOrganizer = this.selectedOrganizer;
     const currentSelectedTopic = this.selectedTopic;
 
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
         this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+        this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
           .subscribe(topicsData => {
             this.fillTopics(topicsData);
 

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { AccountSpeakers } from '../../../shared/models/guess/account-speakers.model';
-import { GameState } from '../../../shared/models/game-state.model';
-import { StateService } from '../../../shared/services/state.service';
 import { AnswerService } from '../../../shared/services/answer.service';
+import { GameState } from '../../../shared/models/game-state.model';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { StateService } from '../../../shared/services/state.service';
 
 @Component({
     selector: 'app-guess-speaker-by-account',
@@ -21,16 +23,25 @@ export class GuessSpeakerByAccountComponent implements OnInit {
   public imageSource1: string;
   public imageSource2: string;
   public imageSource3: string;
+  public language: string;
 
-  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router) {
+  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router,
+              private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadQuestion();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadQuestion();
+      });
   }
 
   loadQuestion() {
-    this.stateService.getAccountSpeakers()
+    this.stateService.getAccountSpeakers(this.language)
       .subscribe(data => {
           if (data) {
             this.accountSpeakers = data;
@@ -62,12 +73,12 @@ export class GuessSpeakerByAccountComponent implements OnInit {
   result() {
     this.stateService.setState(GameState.ResultState)
       .subscribe(() => {
-          this.router.navigateByUrl('/game/result');
+          this.router.navigateByUrl(`/${this.language}/game/result`);
         }
       );
   }
 
   cancel() {
-    this.router.navigateByUrl('/game/cancel');
+    this.router.navigateByUrl(`/${this.language}/game/cancel`);
   }
 }

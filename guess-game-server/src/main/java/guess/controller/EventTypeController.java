@@ -38,11 +38,11 @@ public class EventTypeController {
     public List<EventTypeBriefDto> getEventTypes(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                                  @RequestParam(required = false) Long organizerId,
                                                  @RequestParam(required = false) Long topicId,
-                                                 HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, topicId, language);
+                                                 @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, topicId, languageEnum);
 
-        return EventTypeBriefDto.convertToBriefDto(eventTypes, language);
+        return EventTypeBriefDto.convertToBriefDto(eventTypes, languageEnum);
     }
 
     @GetMapping("/filter-event-types")

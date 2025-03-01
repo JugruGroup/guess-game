@@ -17,10 +17,12 @@ export class EventTypeService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getEventTypes(isConferences: boolean, isMeetups: boolean, organizer: Organizer, topic: Topic): Observable<EventType[]> {
+  getEventTypes(isConferences: boolean, isMeetups: boolean, organizer: Organizer, topic: Topic,
+                language: string): Observable<EventType[]> {
     let params = new HttpParams()
       .set('conferences', isConferences.toString())
-      .set('meetups', isMeetups.toString());
+      .set('meetups', isMeetups.toString())
+      .set('language', language);
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }

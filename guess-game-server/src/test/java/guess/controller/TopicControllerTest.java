@@ -1,8 +1,6 @@
 package guess.controller;
 
-import guess.domain.Language;
 import guess.domain.source.Topic;
-import guess.service.LocaleService;
 import guess.service.TopicService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,7 +9,6 @@ import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -32,13 +29,8 @@ class TopicControllerTest {
     @MockitoBean
     private TopicService topicService;
 
-    @MockitoBean
-    private LocaleService localeService;
-
     @Test
     void getTopics() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Topic topic0 = new Topic();
         topic0.setId(0);
 
@@ -46,21 +38,17 @@ class TopicControllerTest {
         topic1.setId(1);
 
         given(topicService.getTopics()).willReturn(List.of(topic0, topic1));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/topic/topics")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(topicService, VerificationModeFactory.times(1)).getTopics();
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
     void getFilterTopics() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Topic topic0 = new Topic();
         topic0.setId(0);
 
@@ -68,16 +56,14 @@ class TopicControllerTest {
         topic1.setId(1);
 
         given(topicService.getTopics(true, true, null, false)).willReturn(List.of(topic0, topic1));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/topic/filter-topics")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("conferences", "true")
                         .param("meetups", "true")
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(topicService, VerificationModeFactory.times(1)).getTopics(true, true, null, false);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 }

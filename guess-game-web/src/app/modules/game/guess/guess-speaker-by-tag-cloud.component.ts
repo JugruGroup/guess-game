@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TagCloudSpeakers } from '../../../shared/models/guess/tag-cloud-speakers.model';
-import { GameState } from '../../../shared/models/game-state.model';
-import { StateService } from '../../../shared/services/state.service';
+import { TranslateService } from '@ngx-translate/core';
 import { AnswerService } from '../../../shared/services/answer.service';
+import { GameState } from '../../../shared/models/game-state.model';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { StateService } from '../../../shared/services/state.service';
+import { TagCloudSpeakers } from '../../../shared/models/guess/tag-cloud-speakers.model';
 
 @Component({
     selector: 'app-guess-speaker-by-tag-cloud',
@@ -23,16 +25,25 @@ export class GuessSpeakerByTagCloudComponent implements OnInit {
   public speakerImageSource1: string;
   public speakerImageSource2: string;
   public speakerImageSource3: string;
+  public language: string;
 
-  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router) {
+  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router,
+              private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadQuestion();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadQuestion();
+      });
   }
 
   loadQuestion() {
-    this.stateService.getTagCloudSpeakers()
+    this.stateService.getTagCloudSpeakers(this.language)
       .subscribe(data => {
           if (data) {
             this.tagCloudSpeakers = data;
@@ -65,12 +76,12 @@ export class GuessSpeakerByTagCloudComponent implements OnInit {
   result() {
     this.stateService.setState(GameState.ResultState)
       .subscribe(() => {
-          this.router.navigateByUrl('/game/result');
+          this.router.navigateByUrl(`/${this.language}/game/result`);
         }
       );
   }
 
   cancel() {
-    this.router.navigateByUrl('/game/cancel');
+    this.router.navigateByUrl(`/${this.language}/game/cancel`);
   }
 }

@@ -49,8 +49,6 @@ class EventTypeControllerTest {
 
     @Test
     void getEventTypes() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Organizer organizer0 = new Organizer();
         organizer0.setId(0);
 
@@ -63,17 +61,15 @@ class EventTypeControllerTest {
         eventType1.setOrganizer(organizer0);
 
         given(eventTypeService.getEventTypes(true, true, null, null)).willReturn(List.of(eventType0, eventType1));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/event-type/event-types")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("conferences", "true")
                         .param("meetups", "true")
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes(true, true, null, null);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test

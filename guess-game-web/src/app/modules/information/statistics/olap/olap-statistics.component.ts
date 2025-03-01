@@ -367,7 +367,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
             this.selectedMeasureType = (measureTypeData && (measureTypeData.length > 0)) ? measureTypeData[0] : null;
             this.fillMeasureTypes(measureTypeData);
 
-            this.organizerService.getOrganizers()
+            this.organizerService.getOrganizers(this.language)
               .subscribe(organizerData => {
                 this.fillOrganizers(organizerData);
 
@@ -398,7 +398,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
     const currentSelectedOrganizer = this.selectedOrganizer;
     const currentSelectedEventTypes = this.selectedEventTypes;
 
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 

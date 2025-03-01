@@ -153,7 +153,7 @@ export class TalksSearchComponent implements OnInit {
   }
 
   loadTopics() {
-    this.topicService.getTopics()
+    this.topicService.getTopics(this.language)
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 
@@ -211,7 +211,7 @@ export class TalksSearchComponent implements OnInit {
   loadTopicsAndSearch() {
     const currentSelectedTopic = this.selectedTopic;
 
-    this.topicService.getTopics()
+    this.topicService.getTopics(this.language)
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 

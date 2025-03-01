@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Organizer } from '../models/organizer/organizer.model';
@@ -14,8 +14,11 @@ export class OrganizerService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getOrganizers(): Observable<Organizer[]> {
-    return this.http.get<Organizer[]>(`${this.baseUrl}/organizers`)
+  getOrganizers(language: string): Observable<Organizer[]> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<Organizer[]>(`${this.baseUrl}/organizers`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -24,8 +27,11 @@ export class OrganizerService {
       );
   }
 
-  getDefaultEventOrganizer(): Observable<Organizer> {
-    return this.http.get<Organizer>(`${this.baseUrl}/default-event-organizer`)
+  getDefaultEventOrganizer(language: string): Observable<Organizer> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<Organizer>(`${this.baseUrl}/default-event-organizer`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

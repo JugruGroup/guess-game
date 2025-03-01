@@ -20,7 +20,6 @@ export class GuessNameByPhotoComponent implements OnInit {
   public title: string;
   public logoImageSource: string;
   public imageSource: string;
-
   public language: string;
 
   constructor(private stateService: StateService, private answerService: AnswerService, private router: Router,
