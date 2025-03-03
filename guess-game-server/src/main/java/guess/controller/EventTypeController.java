@@ -66,11 +66,10 @@ public class EventTypeController {
     }
 
     @GetMapping("/event-type/{id}")
-    public EventTypeDetailsDto getEventType(@PathVariable long id, HttpSession httpSession) {
+    public EventTypeDetailsDto getEventType(@PathVariable long id, @RequestParam String language) {
         var eventType = eventTypeService.getEventTypeById(id);
         var eventParts = eventService.convertEventsToEventParts(eventType.getEvents());
-        var language = localeService.getLanguage(httpSession);
-        var eventTypeDetailsDto = EventTypeDetailsDto.convertToDto(eventType, eventParts, language);
+        var eventTypeDetailsDto = EventTypeDetailsDto.convertToDto(eventType, eventParts, Language.getLanguageByCode(language));
 
         List<EventPartBriefDto> sortedEvents = eventTypeDetailsDto.eventParts().stream()
                 .sorted(Comparator.comparing(EventPartBriefDto::getStartDate).reversed())

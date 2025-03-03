@@ -56,8 +56,11 @@ export class EventTypeService {
       );
   }
 
-  getEventType(id: number): Observable<EventTypeDetails> {
-    return this.http.get<EventTypeDetails>(`${this.baseUrl}/event-type/${id}`)
+  getEventType(id: number, language: string): Observable<EventTypeDetails> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<EventTypeDetails>(`${this.baseUrl}/event-type/${id}`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

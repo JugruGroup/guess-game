@@ -3,7 +3,7 @@
 
   <app-message></app-message>
 
-  <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
+  <app-information-menubar></app-information-menubar>
   <app-event-types-tabmenu [activeIndex]="1" [id]="id"></app-event-types-tabmenu>
 
   <div class="mt-3">
@@ -103,7 +103,7 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'events', 'event', eventPart.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/events/event/{{eventPart.id}}" class="text-dark">
                 <img src="{{eventsImageDirectory}}/{{eventPart.eventTypeLogoFileName}}" class="img-event-type-logo-table" alt="logo"/>
                 <span class="ms-2">{{eventPart.name}}</span>
               </a>

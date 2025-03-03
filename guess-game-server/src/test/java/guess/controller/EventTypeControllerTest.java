@@ -127,8 +127,6 @@ class EventTypeControllerTest {
 
     @Test
     void getEventType() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Event event0 = new Event();
         event0.setId(0);
 
@@ -188,11 +186,10 @@ class EventTypeControllerTest {
 
         given(eventTypeService.getEventTypeById(0)).willReturn(eventType);
         given(eventService.convertEventsToEventParts(Mockito.anyList())).willReturn(List.of(eventPart0, eventPart1));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/event-type/event-type/0")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.eventType.id", is(0)))
                 .andExpect(jsonPath("$.eventType.name", is("Name")))
@@ -200,6 +197,5 @@ class EventTypeControllerTest {
                 .andExpect(jsonPath("$.eventParts[0].id", is(1)))
                 .andExpect(jsonPath("$.eventParts[1].id", is(0)));
         Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypeById(0);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 }

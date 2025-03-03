@@ -30,12 +30,14 @@ export class EventTypesTabMenuComponent implements OnInit {
   }
 
   initItems() {
-    this.items = [
+    const items = [
       {labelKey: 'eventTypes.search.title', routerLink: `/${this.language}/information/event-types/search`}
     ];
 
     if (!isNaN(this.id)) {
-      this.items.push({labelKey: 'eventType.title', routerLink: `/${this.language}/information/event-types/event-type/${this.id}`});
+      items.push({labelKey: 'eventType.title', routerLink: `/${this.language}/information/event-types/event-type/${this.id}`});
     }
+
+    this.items = items;
   }
 }
