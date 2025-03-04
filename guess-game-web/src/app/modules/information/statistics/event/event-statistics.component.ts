@@ -78,7 +78,7 @@ export class EventStatisticsComponent implements OnInit {
           .subscribe(defaultEventData => {
             this.selectedOrganizer = (defaultEventData) ? findOrganizerById(defaultEventData.organizerId, this.organizers) : null;
 
-            this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+            this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
               .subscribe(eventTypesData => {
                 this.fillEventTypes(eventTypesData);
 
@@ -95,7 +95,7 @@ export class EventStatisticsComponent implements OnInit {
   }
 
   loadEventTypes() {
-    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
       .subscribe(eventTypesData => {
         this.fillEventTypes(eventTypesData);
 
@@ -135,7 +135,7 @@ export class EventStatisticsComponent implements OnInit {
 
         this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
           .subscribe(eventTypesData => {
             this.fillEventTypes(eventTypesData);
 

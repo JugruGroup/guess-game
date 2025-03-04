@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { EventDays } from '../../../shared/models/event/event-days.model';
 import { EventDetails } from '../../../shared/models/event/event-details.model';
 import { EventService } from '../../../shared/services/event.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 import {
   getEventDates,
   getSpeakersWithCompaniesString,
@@ -32,7 +33,10 @@ export class EventComponent implements OnInit {
   public speakersMultiSortMeta: any[] = [];
   public talksMultiSortMeta: any[] = [];
 
-  constructor(private eventService: EventService, public translateService: TranslateService, private activatedRoute: ActivatedRoute) {
+  public language: string;
+
+  constructor(private eventService: EventService, public translateService: TranslateService,
+              private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
     this.speakersMultiSortMeta.push({field: 'displayName', order: 1});
     this.speakersMultiSortMeta.push({field: 'companiesString', order: 1});
 
@@ -40,6 +44,8 @@ export class EventComponent implements OnInit {
     this.talksMultiSortMeta.push({field: 'talkStartTime', order: 1});
     this.talksMultiSortMeta.push({field: 'track', order: 1});
     this.talksMultiSortMeta.push({field: 'talkEndTime', order: 1});
+
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
@@ -52,14 +58,17 @@ export class EventComponent implements OnInit {
         this.loadEvent(this.id);
 
         this.translateService.onLangChange
-          .subscribe(() => this.loadEvent(this.id));
+          .subscribe(() => {
+            this.language = this.localeService.getLanguage();
+            this.loadEvent(this.id);
+          });
       }
     });
   }
 
   loadEvent(id: number) {
     if (this.translateService.currentLang) {
-      this.eventService.getEvent(id)
+      this.eventService.getEvent(id, this.language)
         .subscribe(data => {
           this.eventDetails = this.getEventDetailsWithFilledAttributes(data);
         });

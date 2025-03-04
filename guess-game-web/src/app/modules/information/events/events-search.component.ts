@@ -78,7 +78,7 @@ export class EventsSearchComponent implements OnInit {
           .subscribe(defaultEventData => {
             this.selectedOrganizer = (defaultEventData) ? findOrganizerById(defaultEventData.organizerId, this.organizers) : null;
 
-            this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+            this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
               .subscribe(eventTypesData => {
                 this.fillEventTypes(eventTypesData);
 
@@ -95,7 +95,7 @@ export class EventsSearchComponent implements OnInit {
   }
 
   loadEventTypes() {
-    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
       .subscribe(eventTypesData => {
         this.fillEventTypes(eventTypesData);
 
@@ -106,7 +106,7 @@ export class EventsSearchComponent implements OnInit {
   }
 
   loadEvents(organizer: Organizer, eventType: EventType) {
-    this.eventService.getEventParts(this.isConferences, this.isMeetups, organizer, eventType)
+    this.eventService.getEventParts(this.isConferences, this.isMeetups, organizer, eventType, this.language)
       .subscribe(data => {
           this.eventParts = data;
         }
@@ -135,7 +135,7 @@ export class EventsSearchComponent implements OnInit {
 
         this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
           .subscribe(eventTypesData => {
             this.fillEventTypes(eventTypesData);
 

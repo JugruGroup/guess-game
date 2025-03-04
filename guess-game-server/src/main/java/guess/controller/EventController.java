@@ -12,8 +12,6 @@ import guess.dto.talk.TalkBriefDto;
 import guess.dto.talk.TalkSuperBriefDto;
 import guess.service.EventService;
 import guess.service.EventTypeService;
-import guess.service.LocaleService;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,38 +27,36 @@ import java.util.stream.Collectors;
 public class EventController {
     private final EventService eventService;
     private final EventTypeService eventTypeService;
-    private final LocaleService localeService;
 
     @Autowired
-    public EventController(EventService eventService, EventTypeService eventTypeService, LocaleService localeService) {
+    public EventController(EventService eventService, EventTypeService eventTypeService) {
         this.eventService = eventService;
         this.eventTypeService = eventTypeService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/events")
     public List<EventBriefDto> getEvents(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                          @RequestParam(required = false) Long organizerId,
-                                         @RequestParam(required = false) Long eventTypeId, HttpSession httpSession) {
+                                         @RequestParam(required = false) Long eventTypeId,
+                                         @RequestParam String language) {
         List<Event> events = eventService.getEvents(conferences, meetups, organizerId, eventTypeId);
-        var language = localeService.getLanguage(httpSession);
 
         List<Event> sortedEvents = events.stream()
                 .sorted(Comparator.comparing(Event::getFirstStartDate).reversed())
                 .toList();
 
-        return EventBriefDto.convertToBriefDto(sortedEvents, language);
+        return EventBriefDto.convertToBriefDto(sortedEvents, Language.getLanguageByCode(language));
     }
 
     @GetMapping("/event-parts")
     public List<EventPartBriefDto> getEventParts(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                                  @RequestParam(required = false) Long organizerId,
-                                                 @RequestParam(required = false) Long eventTypeId, HttpSession httpSession) {
+                                                 @RequestParam(required = false) Long eventTypeId,
+                                                 @RequestParam String language) {
         List<Event> events = eventService.getEvents(conferences, meetups, organizerId, eventTypeId);
         List<EventPart> eventParts = eventService.convertEventsToEventParts(events);
-        var language = localeService.getLanguage(httpSession);
 
-        return EventPartBriefDto.convertToBriefDto(eventParts, language).stream()
+        return EventPartBriefDto.convertToBriefDto(eventParts, Language.getLanguageByCode(language)).stream()
                 .sorted(Comparator.comparing(EventPartBriefDto::getStartDate).reversed())
                 .toList();
     }
@@ -81,16 +77,15 @@ public class EventController {
     }
 
     @GetMapping("/event/{id}")
-    public EventDetailsDto getEvent(@PathVariable long id, HttpSession httpSession) {
+    public EventDetailsDto getEvent(@PathVariable long id, @RequestParam String language) {
         var event = eventService.getEventById(id);
-        var language = localeService.getLanguage(httpSession);
         List<Talk> talks = event.getTalks();
         List<Speaker> speakers = talks.stream()
                 .flatMap(t -> t.getSpeakers().stream())
                 .distinct()
                 .toList();
         var eventDetailsDto = EventDetailsDto.convertToDto(event, speakers, talks, eventService::getEventByTalk,
-                eventTypeService::getEventTypeByEvent, language);
+                eventTypeService::getEventTypeByEvent, Language.getLanguageByCode(language));
 
         Comparator<SpeakerBriefDto> comparatorByName = Comparator.comparing(SpeakerBriefDto::getDisplayName, String.CASE_INSENSITIVE_ORDER);
         Comparator<SpeakerBriefDto> comparatorByCompany = Comparator.comparing(
