@@ -11,7 +11,7 @@
       <h4>{{talkDetails.talk?.name}}</h4>
 
       <div class="mt-1">
-        <a [routerLink]="['/information', 'events', 'event', talkDetails.talk?.event?.id]" class="text-dark">
+        <a routerLink="/{{language}}/information/events/event/{{talkDetails.talk?.event?.id}}" class="text-dark">
           <img *ngIf="talkDetails.talk?.eventTypeLogoFileName" class="img-event-type-logo-talk"
                src="{{eventsImageDirectory}}/{{talkDetails.talk.eventTypeLogoFileName}}" alt="logo"/>
           <span class="ms-2">{{talkDetails.talk?.event?.name}}</span>
@@ -74,14 +74,14 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'speakers', 'speaker', speaker.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/speakers/speaker/{{speaker.id}}" class="text-dark">
                 <img src="{{speakersImageDirectory}}/{{speaker.photoFileName}}" class="img-speaker-photo-table" alt="photo"/>
                 <span class="ms-2">{{speaker.displayName}}</span>
               </a>
             </td>
             <td>
               <span *ngFor="let company of speaker.companies; last as isLast">
-                <a [routerLink]="['/information', 'companies', 'company', company.id]" class="text-dark">{{company.name}}</a>
+                <a routerLink="/{{language}}/information/companies/company/{{company.id}}" class="text-dark">{{company.name}}</a>
                 <span *ngIf="!isLast">, </span>
               </span>
             </td>

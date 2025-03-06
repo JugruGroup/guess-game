@@ -161,8 +161,9 @@ export class TalksSearchComponent implements OnInit {
       });
   }
 
-  loadTalks(eventType: EventType, event: Event, talkName: string, speakerName: string, topic: Topic, language: string) {
-    this.talkService.getTalks(eventType, event, talkName, speakerName, topic, language)
+  loadTalks(eventType: EventType, event: Event, talkName: string, speakerName: string, topic: Topic,
+            talkLanguage: string, language: string) {
+    this.talkService.getTalks(eventType, event, talkName, speakerName, topic, talkLanguage, language)
       .subscribe(data => {
         this.talks = getTalksWithSpeakersString(data);
         this.searched = true;
@@ -227,7 +228,8 @@ export class TalksSearchComponent implements OnInit {
 
   search() {
     if (!this.isSearchDisabled()) {
-      this.loadTalks(this.selectedEventType, this.selectedEvent, this.talkName, this.speakerName, this.selectedTopic, this.selectedLanguage);
+      this.loadTalks(this.selectedEventType, this.selectedEvent, this.talkName, this.speakerName, this.selectedTopic,
+        this.selectedLanguage, this.language);
     }
   }
 
