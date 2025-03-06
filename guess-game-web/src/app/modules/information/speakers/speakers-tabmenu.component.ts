@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuItem } from "primeng/api";
+import { MenuItem } from 'primeng/api';
+import { TranslateService } from '@ngx-translate/core';
+import { LocaleService } from '../../../shared/services/locale.service';
 
 @Component({
     selector: 'app-speakers-tabmenu',
@@ -11,15 +13,32 @@ export class SpeakersTabMenuComponent implements OnInit {
   @Input() private id: number;
 
   public items: MenuItem[] = [];
+  public language: string;
+
+  constructor(private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
+  }
 
   ngOnInit(): void {
-    this.items = [
-      {labelKey: 'speakers.list.title', routerLink: '/information/speakers/list'},
-      {labelKey: 'speakers.search.title', routerLink: '/information/speakers/search'}
+    this.initItems();
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.initItems();
+      });
+  }
+
+  initItems() {
+    const items = [
+      {labelKey: 'speakers.list.title', routerLink: `/${this.language}/information/speakers/list`},
+      {labelKey: 'speakers.search.title', routerLink: `/${this.language}/information/speakers/search`}
     ];
 
     if (!isNaN(this.id)) {
-      this.items.push({labelKey: 'speaker.title', routerLink: `/information/speakers/speaker/${this.id}`});
+      items.push({labelKey: 'speaker.title', routerLink: `/${this.language}/information/speakers/speaker/${this.id}`});
     }
+
+    this.items = items;
   }
 }
