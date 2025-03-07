@@ -67,24 +67,20 @@ class SpeakerControllerTest {
         final Language language = Language.ENGLISH;
         final String firstLetter = "a";
 
-        MockHttpSession httpSession = new MockHttpSession();
-
         Speaker speaker0 = new Speaker();
         speaker0.setId(0);
 
         Speaker speaker1 = new Speaker();
         speaker1.setId(1);
 
-        given(localeService.getLanguage(httpSession)).willReturn(language);
         given(speakerService.getSpeakersByFirstLetter(firstLetter, language)).willReturn(List.of(speaker0, speaker1));
 
         mvc.perform(get("/api/speaker/first-letter-speakers")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("firstLetter", firstLetter)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
         Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakersByFirstLetter(firstLetter, language);
     }
 

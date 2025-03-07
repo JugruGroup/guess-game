@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Speaker } from '../../../shared/models/speaker/speaker.model';
 import { EntitiesListComponent } from '../entity-list.component';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { Speaker } from '../../../shared/models/speaker/speaker.model';
 import { SpeakerService } from '../../../shared/services/speaker.service';
 
 @Component({
@@ -19,16 +20,22 @@ export class SpeakersListComponent extends EntitiesListComponent implements OnIn
 
   public speakers: Speaker[] = [];
 
-  constructor(public speakerService: SpeakerService, translateService: TranslateService) {
-    super(translateService);
+  constructor(public speakerService: SpeakerService, translateService: TranslateService, localeService: LocaleService) {
+    super(translateService, localeService);
   }
 
   ngOnInit(): void {
     this.loadSpeakers(this.selectedLetter);
+
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
   }
 
   loadSpeakers(letter: string) {
-    this.speakerService.getSpeakersByFirstLetter(letter)
+    this.speakerService.getSpeakersByFirstLetter(letter, this.language)
       .subscribe(data => {
         this.speakers = data;
       });

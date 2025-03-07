@@ -92,13 +92,13 @@ public class CompanyController {
     @GetMapping("/first-letter-companies")
     public List<CompanySearchResultDto> getCompaniesByFirstLetter(@RequestParam boolean digit,
                                                                   @RequestParam(required = false) String firstLetter,
-                                                                  HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Company> companies = companyService.getCompaniesByFirstLetter(digit, firstLetter, language);
+                                                                  @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Company> companies = companyService.getCompaniesByFirstLetter(digit, firstLetter, languageEnum);
         Comparator<CompanySearchResultDto> comparatorByNameWithFirstAlphaNumeric = Comparator.comparing(
                 c -> SearchUtils.getSubStringWithFirstAlphaNumeric(c.name()), String.CASE_INSENSITIVE_ORDER);
 
-        return calculateAndConvertToDtoAndSort(companies, language, comparatorByNameWithFirstAlphaNumeric);
+        return calculateAndConvertToDtoAndSort(companies, languageEnum, comparatorByNameWithFirstAlphaNumeric);
     }
 
     @GetMapping("/companies")

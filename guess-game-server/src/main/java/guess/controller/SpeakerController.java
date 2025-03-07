@@ -44,11 +44,11 @@ public class SpeakerController {
     }
 
     @GetMapping("/first-letter-speakers")
-    public List<SpeakerBriefDto> getSpeakersByFirstLetter(@RequestParam String firstLetter, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Speaker> speakers = speakerService.getSpeakersByFirstLetter(firstLetter, language);
+    public List<SpeakerBriefDto> getSpeakersByFirstLetter(@RequestParam String firstLetter, @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Speaker> speakers = speakerService.getSpeakersByFirstLetter(firstLetter, languageEnum);
 
-        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, language));
+        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, languageEnum));
     }
 
     @GetMapping("/first-letters-speakers")

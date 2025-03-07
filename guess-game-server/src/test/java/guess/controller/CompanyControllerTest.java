@@ -192,8 +192,6 @@ class CompanyControllerTest {
         final String firstLetter = "a";
         final Language language = Language.ENGLISH;
 
-        MockHttpSession httpSession = new MockHttpSession();
-
         Company company0 = new Company();
         company0.setId(0);
         company0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
@@ -205,7 +203,6 @@ class CompanyControllerTest {
         CompanySearchResult companySearchResult0 = new CompanySearchResult(company0, 1, 0, 0);
         CompanySearchResult companySearchResult1 = new CompanySearchResult(company1, 1, 0, 0);
 
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
         given(companyService.getCompaniesByFirstLetter(isDigit, firstLetter, language)).willReturn(List.of(company1, company0));
         given(companyService.getCompanySearchResults(Mockito.anyList())).willReturn(List.of(companySearchResult1, companySearchResult0));
 
@@ -213,12 +210,11 @@ class CompanyControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("digit", Boolean.toString(isDigit))
                         .param("firstLetter", firstLetter)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(0)))
                 .andExpect(jsonPath("$[1].id", is(1)));
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
         Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetter(isDigit, firstLetter, language);
         Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompanySearchResults(Mockito.anyList());
     }
