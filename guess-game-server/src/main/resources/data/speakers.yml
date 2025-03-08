@@ -2530,15 +2530,14 @@ speakers:
     gitHub: martinfmi
   - id: 149
     photoFileName: 0149.jpg
+    photoUpdatedAt: "2025-01-17T07:09:10Z"
     name:
       - {language: en, text: "Roman Artemev"}
       - {language: ru, text: "Роман Артемьев"}
-    companyIds: [679]
+    companyIds: [919]
     bio:
-      - {language: en, text: "Roman has been making porting of OpenJDK on Elbrus architecture for almost 4 years. He develops\
-            \ compilers, interpreters. Roman performs as a speaker at conferences, where he tells about his work."}
-      - {language: ru, text: "Занимается портированием OpenJDK на архитектуру Эльбрус почти 4 года. Разрабатывает компилят\
-            оры, интерпретаторы. Выступает на конференциях, где рассказывает про свою работу"}
+      - {language: ru, text: "<p>VM/Compiler engineer. Люблю системное программирование, ОС, компиляторы и всякую черную м\
+            агию вокруг. Занимаюсь Android Runtime.</p>"}
     twitter: Rom_Art
     gitHub: rartemev
   - id: 150
@@ -22698,11 +22697,11 @@ speakers:
     gitHub: borkdude
   - id: 1592
     photoFileName: 1592.jpg
-    photoUpdatedAt: 2022-09-12T07:36:20Z[UTC]
+    photoUpdatedAt: "2025-02-19T13:41:44Z"
     name:
       - {language: en, text: "Ilya Sazonov"}
       - {language: ru, text: "Илья Сазонов"}
-    companyIds: [722]
+    companyIds: [1381]
     bio:
       - language: en
         text: "<p>Developer. Ilya has spent most of his career working on the backend, but has also managed to snag some patent\
@@ -22720,11 +22719,11 @@ speakers:
     habr: poxvuibr
   - id: 1593
     photoFileName: 1593.jpg
-    photoUpdatedAt: 2022-09-12T07:35:40Z[UTC]
+    photoUpdatedAt: "2025-02-19T13:43:56Z"
     name:
       - {language: en, text: "Fedor Sazonov"}
       - {language: ru, text: "Фёдор Сазонов"}
-    companyIds: [665]
+    companyIds: [1381]
     bio:
       - language: en
         text: "Java Developer. During his career he has worked on both simple backend for web pages and high load servers\
@@ -30726,7 +30725,7 @@ speakers:
     gitHub: KokorinIlya
   - id: 2136
     photoFileName: 2136.jpg
-    photoUpdatedAt: "2024-02-12T10:57:32Z"
+    photoUpdatedAt: "2024-12-25T09:10:39Z"
     name:
       - {language: en, text: "Konstantin Vladimirov"}
       - {language: ru, text: "Константин Владимиров"}
@@ -34780,18 +34779,14 @@ speakers:
       - {language: ru, text: "<p>Старший Java/Kotlin-разработчик продуктовой команды. Адепт Agile и servant leadership.</p>"}
   - id: 2423
     photoFileName: 2423.jpg
-    photoUpdatedAt: "2023-07-25T10:52:42Z"
+    photoUpdatedAt: "2025-01-10T07:26:26Z"
     name:
       - {language: en, text: "Pavel Kislov"}
       - {language: ru, text: "Павел Кислов"}
-    companyIds: [715]
+    companyIds: [1381]
     bio:
-      - {language: en, text: "<p>He works at Domclick. Leads several development teams, educates and enlightens the younger\
-            \ generation of developers and tries to bring the language to the masses. In his free time he teaches Java, snowboards,\
-            \ surfs and plays tennis.</p>"}
-      - {language: ru, text: "<p>Работает в компании &laquo;Домклик&raquo;. Руководит несколькими командами разработки, во\
-            спитывает и просвещает молодое поколение разработчиков и старается нести язык в массы. В свободное время препо\
-            дает Java, катается на сноуборде, серфе и играет в большой теннис.</p>"}
+      - {language: ru, text: "<p>Я уже около 8 лет в Java. В свободное время преподаю ее, стараюсь нести язык в массы. Экс\
+            перт русскоязычного сегмента сообщества Spring Framework.</p>"}
     gitHub: pavel-skittles-kislov
     habr: i_am_chasing_the_clouds
   - id: 2424
@@ -37260,16 +37255,23 @@ speakers:
     habr: Petrelevich
   - id: 2598
     photoFileName: 2598.jpg
-    photoUpdatedAt: "2023-02-18T16:33:25Z"
+    photoUpdatedAt: "2025-01-17T09:14:11Z"
     name:
-      - {language: en, text: "Alexander Lantsov"}
+      - {language: en, text: "Aleksander Lantsov"}
       - {language: ru, text: "Александр Ланцов"}
     companyIds: [643]
     bio:
-      - {language: en, text: "<p>He is engaged in the development of algotrading systems. Is interested in low-latency programming\
-            \ and concurrency, economic models.</p>"}
-      - {language: ru, text: "<p>Разрабатывает алготрейдинговые системы. Интересуется low-latency и конкурентным программи\
-            рованием, экономическими моделями.</p>"}
+      - {language: en, text: "In 2014, he graduated from the Moscow Institute of Physics and Technology and began his career\
+            \ as a financial software developer for traders at a major investment bank, where he gained his first experience\
+            \ with high-load systems. For over five years, he specialized in designing and improving algorithmic trading systems,\
+            \ deepening his expertise in low-latency technologies and multithreading. Currently, he works at Mir Plat.Form,\
+            \ where he is responsible for developing and optimizing the performance of one of the core components of the Mir\
+            \ payment system - financial transaction clearing."}
+      - {language: ru, text: "<p>В 2014 году окончил МФТИ и начал карьеру в качестве разработчика финансового ПО для трейд\
+            еров в крупном инвестиционном банке, где получил первый опыт работы с высоконагруженными системами. Более 5 ле\
+            т посвятил созданию и развитию алготрейдинговых систем, повышая экспертность в low-latency технологиях и много\
+            поточности. Сейчас работаю в Мир Plat.Form, где отвечаю за разработку и оптимизацию производительности одного\
+            \ из ключевых компонентов платежной системы &laquo;Мир&raquo; &mdash; клиринга финансовых операций.</p>"}
     gitHub: lantalex
   - id: 2599
     photoFileName: 2599.jpg
@@ -41384,7 +41386,7 @@ speakers:
             чем.</p>"}
   - id: 2869
     photoFileName: 2869.jpg
-    photoUpdatedAt: "2023-09-25T07:23:44Z"
+    photoUpdatedAt: "2024-11-25T09:21:06Z"
     name:
       - {language: en, text: "Nikolay Shipiakov"}
       - {language: ru, text: "Николай Шипяков"}
@@ -44788,27 +44790,29 @@ speakers:
     habr: grossws
   - id: 3089
     photoFileName: 3089.jpg
-    photoUpdatedAt: "2024-02-13T20:53:35Z"
+    photoUpdatedAt: "2025-01-17T09:25:40Z"
     name:
       - {language: en, text: "Ilia Gavrilin"}
       - {language: ru, text: "Илья Гаврилин"}
     companyIds: [919]
     bio:
-      - {language: en, text: "<p>Ilia optimises OpenJDK for the RISC-V architecture at Syntacore and adds missing intrinsics.</p>"}
+      - {language: en, text: "<p>Ilia optimises OpenJDK for the RISC-V architecture at Syntacore and adds missing intrinsics.\
+            \ Co-author of the Maglev compiler port to RISC-V.</p>"}
       - {language: ru, text: "<p>В Syntacore оптимизирует OpenJDK под архитектуру RISC-V, а также занимается добавлением н\
-            едостающих интринсиков.</p>"}
+            едостающих интринсиков. Соавтор порта компилятора Maglev на RISC-V.</p>"}
     gitHub: Ilyagavrilin
   - id: 3090
     photoFileName: 3090.jpg
+    photoUpdatedAt: "2025-01-27T09:57:53Z"
     name:
       - {language: en, text: "Ekaterina Shevchuk"}
       - {language: ru, text: "Екатерина Шевчук"}
     companyIds: [686]
     bio:
-      - {language: ru, text: "Я старший инженер-программист в компании ЦФТ. Опыт работы 2,5+ года. Являюсь тимлидом\
-            \ инфраструктурной команды.\n\nВ компанию пришла с ШИФТ-интенсива. Изначально была в бизнесовой команде,\
-            \ потом позвали в инфраструктурную. Делаем интересные технические задачи, помогаем с улучшением процессов\
-            \ выпуска бизнесовых задач, немного участвуем в самих бизнесовых задачах."}
+      - {language: ru, text: "<p>Старший инженер-разработчик. Тимлид инфраструктурной команды. Куратор курсов ШИФТ Интенси\
+            в в Koronatech, направление &laquo;Java-разработка&raquo;. Участник Программного комитета направления Backend\
+            \ в Koronatech (для внутренних и внешних конференций). Выступала на внешних митапах от своей компании и на SnowOne\
+            \ в 2024 году.</p>"}
   - id: 3091
     photoFileName: 3091.jpg
     photoUpdatedAt: "2023-12-22T14:55:10Z"
@@ -47092,16 +47096,9 @@ speakers:
       - {language: ru, text: "Михаил Поливаха"}
     companyIds: [665]
     bio:
-      - language: en
-        text: "<p>Senior Software Engineer. Certified Terraform Associate, AWS Solution Architect.</p>\n<p>Professional technical\
-            \ writer at <a href=\"https://www.baeldung.com/author/polivakhamikhail\">Baeldung</a>. An active open source contributor,\
-            \ including projects such as <code>spring-data-jdbc</code>, <code>spring-data-cassandra</code> and others. Conference\
-            \ speaker for JPoint, Kuber Conf, Joker.</p>"
-      - language: ru
-        text: "<p>Профессиональный разработчик. Обладает рядом сертификаций, таких как архитектор решений AWS, Terraform и\
-            \ т. д.</p>\n<p>Профессиональный технический писатель на <a href=\"https://www.baeldung.com/author/polivakhamikhail\"\
-            >Baeldung</a>. Контрибьютор в open source-решения, такие как <code>spring-data-jdbc</code>, <code>spring-data-cassandra</code>\
-            \ и другие. Спикер на конференциях JPoint, Kuber Conf, Joker.</p>"
+      - {language: ru, text: "<p>Эксперт сообщества <a href=\"https://t.me/spring_aio\">Spring АйО</a>, спикер конференций\
+            \ JPoint, Joker, Kuber Conf. Коммитер Spring Data, активный участник open source-проектов. Профессиональный пи\
+            сатель на <a href=\"https://www.baeldung.com/author/polivakhamikhail\">Baeldung</a>.</p>"}
     gitHub: mipo256
   - id: 3252
     photoFileName: 3252.jpg
@@ -47267,26 +47264,11 @@ speakers:
       - {language: ru, text: "Пётр Портнов"}
     companyIds: [390]
     bio:
-      - {language: en, text: "Senior search platform developer at Ozon. Creates new technical features in the engine such\
-            \ as fast search attribute storage and search query optimizer. Enhances the performance of the search and the\
-            \ related subsystems. Develops internal team tooling, e.g. search index analyzer, advanced request parser and\
-            \ cross-platform cluster ctl.</p><p>Main languages: Java, Rust. Open source fan, contributed to many projects,\
-            \ including OpenJDK, Rust, Lucene, one-nio, jrsonnet.</p><p>Fanboying for strict typing and maximal static code\
-            \ verifiability.</p><p>In his spare time, Petr is engaged in multiple projects, including development of Flipper\
-            \ Zero bindings, game server implementation, creation of a quantum programming language and a bit of nixpkgs contributing.</p><p>Previously\
-            \ worked in gamedev creating game servers and related infrastructure.</p><p>6th year student majoring in Computer\
-            \ Security.</p><p>Speaker of JPoint 2024 and Saint Highload++ 2024 conferences. Expert of Joker 2023 conference."}
       - language: ru
-        text: "<p>Старший разработчик поисковой платформы в Ozon. Создает новые технические фичи в движке, такие как быстр\
-            ое хранилище поисковых атрибутов и оптимизатор поисковых запросов. Улучшает производительность поиска и связан\
-            ных подсистем. Разрабатывает внутренний тулинг команды, включая анализатор поискового индекса, продвинутый пар\
-            сер запросов и кроссплатформенный клиент для управления кластером.</p>\n<p>Основные языки разработки: Java, Rust.\
-            \ Фанат опенсорса, контрибьютил в OpenJDK, Rust, Lucene, one-nio, jrsonnet.</p>\n<p>Топит за строгую типизацию\
-            \ и максимальную статическую верифицируемость кода.</p>\n<p>В свободное время занимается проектами биндинга дл\
-            я Flipper Zero и реализации модульного игрового сервера. Пишет квантовый ЯП, понемногу контрибьютит в nixpkgs.</p>\n\
-            <p>Ранее работал в геймдеве, создавал игровые серверы и инфраструктуры вокруг них.</p>\n<p>Студент 6-го курса\
-            \ специальности &laquo;компьютерная безопасность&raquo;.</p>\n<p>Спикер конференций JPoint 2024 и Saint Highload++\
-            \ 2024. Эксперт конференции Joker 2023.</p>"
+        text: "<p>Оканчиваю специалитет по &laquo;Компьютерной безопасности&raquo;. Старший разработчик поисковой платформ\
+            ы Ozon, много пишу на Java. В свободное (и не только) время много опенсорсю на Rust, а также занимаюсь его ева\
+            нгелизмом.</p>\n<p>Люблю рассказывать людям интересное и упоротое в не менее интересной и упоротой манере. Спи\
+            кер JPoint, Joker и Saint Highload++ 2024.</p>"
     twitter: PROgrm_JARvis
     gitHub: JarvisCraft
   - id: 3263
@@ -52136,7 +52118,7 @@ speakers:
     habr: KirillKurdyukov
   - id: 3578
     photoFileName: 3578.jpg
-    photoUpdatedAt: "2024-08-02T08:27:40Z"
+    photoUpdatedAt: "2024-12-25T09:11:19Z"
     name:
       - {language: en, text: "Nastya Lisitskaia"}
       - {language: ru, text: "Настя Лисицкая"}
@@ -54603,3 +54585,65 @@ speakers:
             \ сфере решения задач и проблем, механизмы воплощенного познания в мышлении и поведении, физические и семантич\
             еские аффордансы, особенности психологических теорий, различные типы объяснительных моделей в психологии мышле\
             ния.</p>"
+  - id: 3735
+    photoFileName: 3735.jpg
+    photoUpdatedAt: "2025-01-20T08:44:18Z"
+    name:
+      - {language: en, text: "Alexander Nikitin"}
+      - {language: ru, text: "Александр Никитин"}
+    companyIds: [1382]
+    bio:
+      - language: ru
+        text: "<p>Работаю с базами данных. Когда-то специализировался на Oracle, но уже довольно давно перешел на работу с\
+            \ PostgreSQL. Состою в Программном комитете конференции PG BootCamp.</p>\n<p>Занимаюсь гиревым спортом.</p>\n\
+            <p>&nbsp;</p>"
+  - id: 3736
+    photoFileName: 3736.jpg
+    photoUpdatedAt: "2024-12-25T09:15:27Z"
+    name:
+      - {language: en, text: "Alexander Chesnokov"}
+      - {language: ru, text: "Александр Чесноков"}
+    companyIds: [826, 665]
+    bio:
+      - {language: ru, text: "<p>Учусь в МФТИ, на кафедре СберТеха. Работаю в СберТехе в команде Platform V DataGrid, зани\
+            маюсь разработкой высоконагруженных систем и оптимизацией платформенных решений. Ассистент на курсе по Java на\
+            \ кафедре Алгоритмов и Технологий Программирования МФТИ.</p>"}
+    gitHub: chesnokoff
+  - id: 3737
+    photoFileName: 3737.jpg
+    photoUpdatedAt: "2025-01-27T11:51:24Z"
+    name:
+      - {language: en, text: "Alexey Ovsyannikov"}
+      - {language: ru, text: "Алексей Овсянников"}
+    companyIds: [1380]
+    bio:
+      - {language: ru, text: "<p>Работаю в IT 10 лет, веду несколько библиотек. Программирую в основном на Kotlin Multiplatform.</p>"}
+    twitter: InsanusMokrassa
+    gitHub: InsanusMokrassar
+    habr: InsanusMokrassar
+  - id: 3738
+    photoFileName: 3738.jpg
+    photoUpdatedAt: "2024-12-25T09:17:04Z"
+    name:
+      - {language: en, text: "Dmitry Cherkasov"}
+      - {language: ru, text: "Дмитрий Черкасов"}
+    companyIds: [232]
+    bio:
+      - {language: ru, text: "<p>DevRel Jmix, один из старших разработчиков Jmix. Выступаю на разных конференциях, нравитс\
+            я изучать что-то новое в Java и JVM, рассказывать про что-то новое. Играю на электрогитарах, писал плагин под\
+            \ ASIO на Rust для электрогитар.</p>"}
+    gitHub: KartnDev
+    habr: KartonDev
+  - id: 3739
+    photoFileName: 3739.jpg
+    photoUpdatedAt: "2024-11-25T09:05:38Z"
+    name:
+      - {language: en, text: "Artem Boyarshinov"}
+      - {language: ru, text: "Артём Бояршинов"}
+    companyIds: [643]
+    bio:
+      - {language: ru, text: "<p>Разрабатываю систему быстрых платежей. Был в Программном комитете конференции Podlodka Java\
+            \ Crew первые 4 сезона.</p>"}
+    twitter: a_boiarshinov
+    gitHub: Boiarshinov
+    habr: boiarshinov

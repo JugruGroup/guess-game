@@ -4924,3 +4924,17 @@ companies:
       - {language: en, text: RANEPA}
       - {language: ru, text: РАНХиГС}
     siteLink: https://www.ranepa.ru
+  - id: 1380
+    name:
+      - {language: en, text: "Smart DN"}
+      - {language: ru, text: "Разумные Электрические Сети"}
+    siteLink: https://www.smart-dn.ru
+  - id: 1381
+    name:
+      - {language: en, text: "Spring AiO"}
+      - {language: ru, text: "Spring АйО"}
+    siteLink: https://t.me/spring_aio
+  - id: 1382
+    name:
+      - {language: en, text: "DBA Team"}
+    siteLink: https://dba.team
