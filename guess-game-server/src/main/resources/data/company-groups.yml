@@ -162,14 +162,19 @@ companyGroups:
       "Yandex Infrastructure",
       YDB
     ]
-  - name: "Тинькофф, DevBrothers"
+  - name: "МФТИ / СберТех"
     items: [
-      Тинькофф,
-      DevBrothers
+      MIPT,
+      СберТех
     ]
   - name: "МТС, МФТИ, ВШЭ"
     items: [
       MTS,
       MIPT,
       "NRU HSE"
+    ]
+  - name: "Тинькофф, DevBrothers"
+    items: [
+      Тинькофф,
+      DevBrothers
     ]

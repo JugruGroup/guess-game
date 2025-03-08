@@ -4,7 +4,7 @@
 
     <groupId>guess-game</groupId>
     <artifactId>guess-game-parent</artifactId>
-    <version>3.2.40-SNAPSHOT</version>
+    <version>3.2.45-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GuessGame Parent</name>
 
