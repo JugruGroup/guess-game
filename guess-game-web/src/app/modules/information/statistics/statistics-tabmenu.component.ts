@@ -29,7 +29,7 @@ export class StatisticsTabMenuComponent implements OnInit {
   }
 
   initItems() {
-    const items = [
+    this.items = [
       {labelKey: 'statistics.eventTypes.title', routerLink: `/${this.language}/information/statistics/event-types`},
       {labelKey: 'statistics.events.title', routerLink: `/${this.language}/information/statistics/events`},
       {labelKey: 'statistics.speakers.title', routerLink: `/${this.language}/information/statistics/speakers`},

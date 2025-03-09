@@ -1,5 +1,6 @@
 package guess.controller;
 
+import guess.domain.Language;
 import guess.domain.statistics.olap.CubeType;
 import guess.domain.statistics.olap.MeasureType;
 import guess.dto.statistics.company.CompanyMetricsDto;
@@ -51,10 +52,9 @@ public class StatisticsController {
     public EventTypeStatisticsDto getEventTypeStatistics(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                                          @RequestParam(required = false) Long organizerId,
                                                          @RequestParam(required = false) Long topicId,
-                                                         HttpSession httpSession) {
+                                                         @RequestParam String language) {
         var eventTypeStatistics = statisticsService.getEventTypeStatistics(conferences, meetups, organizerId, topicId);
-        var language = localeService.getLanguage(httpSession);
-        var eventTypeStatisticsDto = EventTypeStatisticsDto.convertToDto(eventTypeStatistics, language);
+        var eventTypeStatisticsDto = EventTypeStatisticsDto.convertToDto(eventTypeStatistics, Language.getLanguageByCode(language));
         Comparator<EventTypeMetricsDto> comparatorByIsConference = Comparator.comparing(EventTypeMetricsDto::isConference).reversed();
         Comparator<EventTypeMetricsDto> comparatorByOrganizerName = Comparator.comparing(EventTypeMetricsDto::getOrganizerName, String.CASE_INSENSITIVE_ORDER);
         Comparator<EventTypeMetricsDto> comparatorByName = Comparator.comparing(EventTypeMetricsDto::getDisplayName, String.CASE_INSENSITIVE_ORDER);

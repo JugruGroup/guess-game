@@ -114,7 +114,7 @@ export class EventTypeStatisticsComponent implements OnInit {
   }
 
   loadEventTypeStatistics(organizer: Organizer, topic: Topic) {
-    this.statisticsService.getEventTypeStatistics(this.isConferences, this.isMeetups, organizer, topic)
+    this.statisticsService.getEventTypeStatistics(this.isConferences, this.isMeetups, organizer, topic, this.language)
       .subscribe(data => {
           this.eventTypeStatistics = getEventTypeStatisticsWithSortName(data);
         });

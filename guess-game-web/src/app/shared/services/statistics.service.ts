@@ -31,13 +31,17 @@ export class StatisticsService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getEventTypeStatistics(conferences: boolean, meetups: boolean, organizer: Organizer, topic: Topic): Observable<EventTypeStatistics> {
+  getEventTypeStatistics(conferences: boolean, meetups: boolean, organizer: Organizer, topic: Topic,
+                         language: string): Observable<EventTypeStatistics> {
     let params = new HttpParams()
       .set('conferences', conferences.toString())
-      .set('meetups', meetups.toString());
+      .set('meetups', meetups.toString())
+      .set('language', language);
+
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }
+
     if (topic) {
       params = params.set('topicId', topic.id.toString());
     }
