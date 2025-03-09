@@ -72,8 +72,10 @@ export class CompanyService {
       );
   }
 
-  getCompanies(name: string): Observable<CompanySearchResult[]> {
-    let params = new HttpParams();
+  getCompanies(name: string, language: string): Observable<CompanySearchResult[]> {
+    let params = new HttpParams()
+      .set('language', language);
+
     if (name) {
       params = params.set('name', name.toString());
     }
@@ -87,8 +89,11 @@ export class CompanyService {
       );
   }
 
-  getCompany(id: number): Observable<CompanyDetails> {
-    return this.http.get<CompanyDetails>(`${this.baseUrl}/company/${id}`)
+  getCompany(id: number, language: string): Observable<CompanyDetails> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<CompanyDetails>(`${this.baseUrl}/company/${id}`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CompanyDetails } from '../../../shared/models/company/company-details.model';
 import { CompanyService } from '../../../shared/services/company.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { getSpeakersWithCompaniesString } from '../../general/utility-functions';
 
 @Component({
@@ -22,10 +23,13 @@ export class CompanyComponent implements OnInit {
   public companyDetails: CompanyDetails = new CompanyDetails();
   public multiSortMeta: any[] = [];
 
+  public language: string;
+
   constructor(public companyService: CompanyService, public translateService: TranslateService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'displayName', order: 1});
     this.multiSortMeta.push({field: 'companiesString', order: 1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
@@ -36,12 +40,18 @@ export class CompanyComponent implements OnInit {
       if (!isNaN(idNumber)) {
         this.id = idNumber;
         this.loadCompany(this.id);
+
+        this.translateService.onLangChange
+          .subscribe(() => {
+            this.language = this.localeService.getLanguage();
+            this.onLanguageChange();
+          });
       }
     });
   }
 
   loadCompany(id: number) {
-    this.companyService.getCompany(id)
+    this.companyService.getCompany(id, this.language)
       .subscribe(data => {
         this.companyDetails = this.getCompanyDetailsWithFilledAttributes(data);
       });

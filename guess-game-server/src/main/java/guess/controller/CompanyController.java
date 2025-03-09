@@ -71,11 +71,10 @@ public class CompanyController {
     }
 
     @GetMapping("/company/{id}")
-    public CompanyDetailsDto getCompany(@PathVariable long id, HttpSession httpSession) {
+    public CompanyDetailsDto getCompany(@PathVariable long id, @RequestParam String language) {
         var company = companyService.getCompanyById(id);
-        var language = localeService.getLanguage(httpSession);
         List<Speaker> speakers = speakerService.getSpeakersByCompanyId(id);
-        var companyDetailsDto = CompanyDetailsDto.convertToDto(company, speakers, language);
+        var companyDetailsDto = CompanyDetailsDto.convertToDto(company, speakers, Language.getLanguageByCode(language));
 
         Comparator<SpeakerBriefDto> comparatorByName = Comparator.comparing(SpeakerBriefDto::getDisplayName, String.CASE_INSENSITIVE_ORDER);
         Comparator<SpeakerBriefDto> comparatorByCompany = Comparator.comparing(
@@ -102,12 +101,11 @@ public class CompanyController {
     }
 
     @GetMapping("/companies")
-    public List<CompanySearchResultDto> getCompanies(@RequestParam(required = false) String name, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<CompanySearchResultDto> getCompanies(@RequestParam(required = false) String name, @RequestParam String language) {
         List<Company> companies = companyService.getCompanies(name);
         Comparator<CompanySearchResultDto> comparatorByName = Comparator.comparing(CompanySearchResultDto::name, String.CASE_INSENSITIVE_ORDER);
 
-        return calculateAndConvertToDtoAndSort(companies, language, comparatorByName);
+        return calculateAndConvertToDtoAndSort(companies, Language.getLanguageByCode(language), comparatorByName);
     }
 
     List<CompanySearchResultDto> calculateAndConvertToDtoAndSort(List<Company> companies, Language language,

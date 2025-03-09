@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { CompanySearchResult } from '../../../shared/models/company/company-search-result.model';
 import { CompanyService } from '../../../shared/services/company.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { isStringEmpty } from '../../general/utility-functions';
 
 @Component({
@@ -9,7 +10,7 @@ import { isStringEmpty } from '../../general/utility-functions';
     templateUrl: './companies-search.component.html',
     standalone: false
 })
-export class CompaniesSearchComponent {
+export class CompaniesSearchComponent implements OnInit {
   public name: string;
 
   public companies: CompanySearchResult[] = [];
@@ -17,12 +18,24 @@ export class CompaniesSearchComponent {
   private searched = false;
   public multiSortMeta: any[] = [];
 
-  constructor(private companyService: CompanyService, public translateService: TranslateService) {
+  public language: string;
+
+  constructor(private companyService: CompanyService, public translateService: TranslateService,
+              private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'name', order: 1});
+    this.language = localeService.getLanguage();
+  }
+
+  ngOnInit(): void {
+    this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
   }
 
   loadCompanies(name: string) {
-    this.companyService.getCompanies(name)
+    this.companyService.getCompanies(name, this.language)
       .subscribe(data => {
         this.companies = data;
         this.searched = true;
