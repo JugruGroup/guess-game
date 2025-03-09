@@ -1,12 +1,12 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
 import { LocaleService } from '../../shared/services/locale.service';
 
 @Component({
-    selector: 'app-information-menubar',
-    templateUrl: './information-menubar.component.html',
-    standalone: false
+  selector: 'app-information-menubar',
+  templateUrl: './information-menubar.component.html',
+  standalone: false
 })
 export class InformationMenubarComponent implements OnInit {
   private readonly EVENT_TYPES_TITLE_KEY = 'eventTypes.title';
@@ -18,8 +18,6 @@ export class InformationMenubarComponent implements OnInit {
 
   private readonly KEYS = [this.EVENT_TYPES_TITLE_KEY, this.EVENTS_TITLE_KEY, this.TALKS_TITLE_KEY,
     this.SPEAKERS_TITLE_KEY, this.COMPANIES_TITLE_KEY, this.STATISTICS_TITLE_KEY];
-
-  @Output() reload: EventEmitter<any> = new EventEmitter<any>();
 
   public items: MenuItem[] = [];
   public language: string;
@@ -35,7 +33,6 @@ export class InformationMenubarComponent implements OnInit {
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.initMenuItems();
-        this.reload.emit(); // TODO: delete
       });
   }
 
