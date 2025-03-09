@@ -35,14 +35,14 @@ export class EventTypeComponent implements OnInit {
       if (!isNaN(idNumber)) {
         this.id = idNumber;
         this.loadEventType(this.id);
+
+        this.translateService.onLangChange
+          .subscribe(() => {
+            this.language = this.localeService.getLanguage();
+            this.onLanguageChange();
+          });
       }
     });
-
-    this.translateService.onLangChange
-      .subscribe(() => {
-        this.language = this.localeService.getLanguage();
-        this.onLanguageChange();
-      });
   }
 
   loadEventType(id: number) {

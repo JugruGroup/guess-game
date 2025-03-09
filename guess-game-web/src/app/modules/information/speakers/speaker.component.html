@@ -3,7 +3,7 @@
 
   <app-message></app-message>
 
-  <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
+  <app-information-menubar></app-information-menubar>
   <app-speakers-tabmenu [activeIndex]="2" [id]="id"></app-speakers-tabmenu>
 
   <div class="mt-3">
@@ -12,7 +12,7 @@
         <span class="col-auto h4">{{speakerDetails.speaker?.name}}</span>
         <span class="col-auto font-italic" *ngIf="speakerDetails.speaker?.companies">
           <span *ngFor="let company of speakerDetails.speaker.companies; last as isLast">
-            <a [routerLink]="['/information', 'companies', 'company', company.id]" class="text-dark">{{company.name}}</a>
+            <a routerLink="/{{language}}/information/companies/company/{{company.id}}" class="text-dark">{{company.name}}</a>
             <span *ngIf="!isLast">, </span>
           </span>
         </span>
@@ -93,18 +93,18 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'events', 'event', talk.event?.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/events/event/{{talk.event?.id}}" class="text-dark">
                 <img src="{{eventsImageDirectory}}/{{talk.eventTypeLogoFileName}}" class="img-event-type-logo-table" alt="logo"/>
                 <span class="ms-2">{{talk.event?.name}}</span>
               </a>
             </td>
             <td class="text-center">{{talk.talkDate | date:"shortDate":undefined:translateService.currentLang}}</td>
             <td>
-              <a [routerLink]="['/information', 'talks', 'talk', talk.id]" class="text-dark">{{talk.name}}</a>
+              <a routerLink="/{{language}}/information/talks/talk/{{talk.id}}" class="text-dark">{{talk.name}}</a>
             </td>
             <td>
               <span *ngFor="let speaker of talk.speakers; let i = index">
-                <span *ngIf="i > 0">, </span><a [routerLink]="['/information', 'speakers', 'speaker', speaker.id]" class="text-dark">{{speaker.displayName}}</a>
+                <span *ngIf="i > 0">, </span><a routerLink="/{{language}}/information/speakers/speaker/{{speaker.id}}" class="text-dark">{{speaker.displayName}}</a>
               </span>
             </td>
             <td>

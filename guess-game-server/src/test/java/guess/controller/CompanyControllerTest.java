@@ -124,26 +124,22 @@ class CompanyControllerTest {
         final Language language = Language.ENGLISH;
         final String firstLetters = "c";
 
-        MockHttpSession httpSession = new MockHttpSession();
-
         Company company0 = new Company(0, List.of(new LocaleItem(language.getCode(), "Company0")));
         Company company1 = new Company(1, List.of(new LocaleItem(language.getCode(), "Company1")));
         Company company2 = new Company(2, List.of(new LocaleItem(language.getCode(), "Company2")));
 
         given(companyService.getCompaniesByFirstLetters(firstLetters, language)).willReturn(List.of(company2, company1, company0));
-        given(localeService.getLanguage(httpSession)).willReturn(language);
 
         mvc.perform(get("/api/company/first-letters-company-names")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("firstLetters", firstLetters)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0]", is("Company0")))
                 .andExpect(jsonPath("$[1]", is("Company1")))
                 .andExpect(jsonPath("$[2]", is("Company2")));
         Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetters(firstLetters, language);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test

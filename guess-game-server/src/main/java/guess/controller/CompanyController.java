@@ -60,12 +60,12 @@ public class CompanyController {
     }
 
     @GetMapping("/first-letters-company-names")
-    public List<String> getCompanyNamesByFirstLetters(@RequestParam String firstLetters, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, language);
+    public List<String> getCompanyNamesByFirstLetters(@RequestParam String firstLetters, @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, languageEnum);
 
         return companies.stream()
-                .map(c -> LocalizationUtils.getString(c.getName(), language))
+                .map(c -> LocalizationUtils.getString(c.getName(), languageEnum))
                 .sorted(String.CASE_INSENSITIVE_ORDER)
                 .toList();
     }

@@ -68,25 +68,27 @@ public class SpeakerController {
     }
 
     @GetMapping("/speakers")
-    public List<SpeakerBriefDto> getSpeakers(@RequestParam(required = false) String name, @RequestParam(required = false) String company,
-                                             @RequestParam(required = false) String twitter, @RequestParam(required = false) String gitHub,
-                                             @RequestParam(required = false) String habr, @RequestParam(required = false) String description,
-                                             @RequestParam boolean javaChampion, @RequestParam boolean mvp,
-                                             HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<SpeakerBriefDto> getSpeakers(@RequestParam(required = false) String name,
+                                             @RequestParam(required = false) String company,
+                                             @RequestParam(required = false) String twitter,
+                                             @RequestParam(required = false) String gitHub,
+                                             @RequestParam(required = false) String habr,
+                                             @RequestParam(required = false) String description,
+                                             @RequestParam boolean javaChampion,
+                                             @RequestParam boolean mvp,
+                                             @RequestParam String language) {
         List<Speaker> speakers = speakerService.getSpeakers(name, company, new Speaker.SpeakerSocials(twitter, gitHub, habr),
                 description, javaChampion, mvp);
 
-        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, language));
+        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, Language.getLanguageByCode(language)));
     }
 
     @GetMapping("/speaker/{id}")
-    public SpeakerDetailsDto getSpeaker(@PathVariable long id, HttpSession httpSession) {
+    public SpeakerDetailsDto getSpeaker(@PathVariable long id, @RequestParam String language) {
         var speaker = speakerService.getSpeakerById(id);
         List<Talk> talks = talkService.getTalksBySpeaker(speaker);
-        var language = localeService.getLanguage(httpSession);
         var speakerDetailsDto = SpeakerDetailsDto.convertToDto(speaker, talks, eventService::getEventByTalk,
-                eventTypeService::getEventTypeByEvent, language);
+                eventTypeService::getEventTypeByEvent, Language.getLanguageByCode(language));
 
         List<TalkBriefDto> sortedTalks = speakerDetailsDto.talks().stream()
                 .sorted(Comparator.comparing(TalkBriefDto::getTalkDate).reversed())

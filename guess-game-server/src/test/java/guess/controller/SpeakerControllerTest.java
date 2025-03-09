@@ -150,8 +150,6 @@ class SpeakerControllerTest {
         final boolean javaChampion = true;
         final boolean mvp = false;
 
-        MockHttpSession httpSession = new MockHttpSession();
-
         Speaker speaker0 = new Speaker();
         speaker0.setId(0);
 
@@ -160,7 +158,6 @@ class SpeakerControllerTest {
 
         Speaker.SpeakerSocials speakerSocials = new Speaker.SpeakerSocials(twitter, gitHub, habr);
 
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
         given(speakerService.getSpeakers(name, company, speakerSocials, description, javaChampion, mvp))
                 .willReturn(List.of(speaker0, speaker1));
 
@@ -174,18 +171,15 @@ class SpeakerControllerTest {
                         .param("description", description)
                         .param("javaChampion", Boolean.toString(javaChampion))
                         .param("mvp", Boolean.toString(mvp))
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
         Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakers(name, company,
                 speakerSocials, description, javaChampion, mvp);
     }
 
     @Test
     void getSpeaker() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Organizer organizer = new Organizer();
         organizer.setId(0);
 
@@ -222,14 +216,13 @@ class SpeakerControllerTest {
 
         given(speakerService.getSpeakerById(0)).willReturn(speaker);
         given(talkService.getTalksBySpeaker(speaker)).willReturn(List.of(talk0, talk1));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
         given(eventService.getEventByTalk(talk0)).willReturn(event);
         given(eventService.getEventByTalk(talk1)).willReturn(event);
         given(eventTypeService.getEventTypeByEvent(event)).willReturn(eventType);
 
         mvc.perform(get("/api/speaker/speaker/0")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.speaker.id", is(0)))
                 .andExpect(jsonPath("$.talks", hasSize(2)))
@@ -237,7 +230,6 @@ class SpeakerControllerTest {
                 .andExpect(jsonPath("$.talks[1].id", is(0)));
         Mockito.verify(speakerService, VerificationModeFactory.times(1)).getSpeakerById(0);
         Mockito.verify(talkService, VerificationModeFactory.times(1)).getTalksBySpeaker(speaker);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
         Mockito.verify(eventService, VerificationModeFactory.times(1)).getEventByTalk(talk0);
         Mockito.verify(eventService, VerificationModeFactory.times(1)).getEventByTalk(talk1);
     }

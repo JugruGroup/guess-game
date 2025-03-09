@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { SpeakerDetails } from '../../../shared/models/speaker/speaker-details.model';
 import { SpeakerService } from '../../../shared/services/speaker.service';
 import {
@@ -27,10 +28,13 @@ export class SpeakerComponent implements OnInit {
   public speakerDetails: SpeakerDetails = new SpeakerDetails();
   public multiSortMeta: any[] = [];
 
+  public language: string;
+
   constructor(public speakerService: SpeakerService, public translateService: TranslateService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'talkDate', order: -1});
     this.multiSortMeta.push({field: 'name', order: 1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
@@ -41,12 +45,18 @@ export class SpeakerComponent implements OnInit {
       if (!isNaN(idNumber)) {
         this.id = idNumber;
         this.loadSpeaker(this.id);
+
+        this.translateService.onLangChange
+          .subscribe(() => {
+            this.language = this.localeService.getLanguage();
+            this.onLanguageChange();
+          });
       }
     });
   }
 
   loadSpeaker(id: number) {
-    this.speakerService.getSpeaker(id)
+    this.speakerService.getSpeaker(id, this.language)
       .subscribe(data => {
         this.speakerDetails = this.getSpeakerDetailsWithFilledAttributes(data);
       });

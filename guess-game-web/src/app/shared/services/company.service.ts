@@ -58,9 +58,10 @@ export class CompanyService {
       );
   }
 
-  getCompanyNamesByFirstLetters(firstLetters: string): Observable<string[]> {
+  getCompanyNamesByFirstLetters(firstLetters: string, language: string): Observable<string[]> {
     const params = new HttpParams()
-      .set('firstLetters', firstLetters);
+      .set('firstLetters', firstLetters)
+      .set('language', language);
 
     return this.http.get<string[]>(`${this.baseUrl}/first-letters-company-names`, {params: params})
       .pipe(
