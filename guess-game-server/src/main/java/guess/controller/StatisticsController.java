@@ -69,10 +69,10 @@ public class StatisticsController {
     @GetMapping("/event-statistics")
     public EventStatisticsDto getEventStatistics(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                                  @RequestParam(required = false) Long organizerId,
-                                                 @RequestParam(required = false) Long eventTypeId, HttpSession httpSession) {
+                                                 @RequestParam(required = false) Long eventTypeId,
+                                                 @RequestParam String language) {
         var eventStatistics = statisticsService.getEventStatistics(conferences, meetups, organizerId, eventTypeId);
-        var language = localeService.getLanguage(httpSession);
-        var eventStatisticsDto = EventStatisticsDto.convertToDto(eventStatistics, language);
+        var eventStatisticsDto = EventStatisticsDto.convertToDto(eventStatistics, Language.getLanguageByCode(language));
 
         List<EventMetricsDto> sortedEventMetricsList = eventStatisticsDto.eventMetricsList().stream()
                 .sorted(Comparator.comparing(EventMetricsDto::getName, String.CASE_INSENSITIVE_ORDER))
