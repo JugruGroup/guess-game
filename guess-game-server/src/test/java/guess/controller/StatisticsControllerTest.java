@@ -215,8 +215,6 @@ class StatisticsControllerTest {
 
     @Test
     void getCompanyStatistics() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         boolean conferences = true;
         boolean meetups = false;
         Long organizerId = null;
@@ -243,21 +241,19 @@ class StatisticsControllerTest {
                 companyMetricsTotals);
 
         given(statisticsService.getCompanyStatistics(conferences, meetups, organizerId, eventTypeId)).willReturn(companyStatistics);
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/statistics/company-statistics")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("conferences", Boolean.toString(conferences))
                         .param("meetups", Boolean.toString(meetups))
                         .param("eventTypeId", Long.toString(eventTypeId))
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.companyMetricsList", hasSize(2)))
                 .andExpect(jsonPath("$.companyMetricsList[0].id", is(1)))
                 .andExpect(jsonPath("$.companyMetricsList[1].id", is(0)))
                 .andExpect(jsonPath("$.totals.speakersQuantity", is(60)));
         Mockito.verify(statisticsService, VerificationModeFactory.times(1)).getCompanyStatistics(conferences, meetups, organizerId, eventTypeId);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test

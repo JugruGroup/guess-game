@@ -103,10 +103,12 @@ export class StatisticsService {
       );
   }
 
-  getCompanyStatistics(conferences: boolean, meetups: boolean, organizer: Organizer, eventType: EventType): Observable<CompanyStatistics> {
+  getCompanyStatistics(conferences: boolean, meetups: boolean, organizer: Organizer, eventType: EventType,
+                       language: string): Observable<CompanyStatistics> {
     let params = new HttpParams()
       .set('conferences', conferences.toString())
-      .set('meetups', meetups.toString());
+      .set('meetups', meetups.toString())
+      .set('language', language);
 
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
