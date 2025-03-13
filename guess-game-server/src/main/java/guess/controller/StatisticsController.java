@@ -20,10 +20,8 @@ import guess.dto.statistics.olap.parameters.OlapSpeakerParametersDto;
 import guess.dto.statistics.olap.statistics.*;
 import guess.dto.statistics.speaker.SpeakerMetricsDto;
 import guess.dto.statistics.speaker.SpeakerStatisticsDto;
-import guess.service.LocaleService;
 import guess.service.OlapService;
 import guess.service.StatisticsService;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,13 +37,11 @@ import java.util.List;
 public class StatisticsController {
     private final StatisticsService statisticsService;
     private final OlapService olapService;
-    private final LocaleService localeService;
 
     @Autowired
-    public StatisticsController(StatisticsService statisticsService, OlapService olapService, LocaleService localeService) {
+    public StatisticsController(StatisticsService statisticsService, OlapService olapService) {
         this.statisticsService = statisticsService;
         this.olapService = olapService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/event-type-statistics")
@@ -132,10 +128,9 @@ public class StatisticsController {
     }
 
     @PostMapping("/olap-statistics")
-    public OlapStatisticsDto getOlapStatistics(@RequestBody OlapParametersDto olapParameters, HttpSession httpSession) {
+    public OlapStatisticsDto getOlapStatistics(@RequestBody OlapParametersDto olapParameters, @RequestParam String language) {
         var olapStatistics = olapService.getOlapStatistics(olapParameters);
-        var language = localeService.getLanguage(httpSession);
-        var olapStatisticsDto = OlapStatisticsDto.convertToDto(olapStatistics, language);
+        var olapStatisticsDto = OlapStatisticsDto.convertToDto(olapStatistics, Language.getLanguageByCode(language));
 
         if (olapStatisticsDto.eventTypeStatistics() != null) {
             Comparator<OlapEventTypeMetricsDto> comparatorByIsConference = Comparator.comparing(OlapEventTypeMetricsDto::isConference).reversed();
@@ -176,10 +171,9 @@ public class StatisticsController {
 
     @PostMapping("/olap-event-type-statistics")
     public OlapEntityStatisticsDto<Integer, OlapEventTypeMetricsDto> getOlapEventTypeStatistics(
-            @RequestBody OlapEventTypeParametersDto olapParameters, HttpSession httpSession) {
+            @RequestBody OlapEventTypeParametersDto olapParameters, @RequestParam String language) {
         var eventTypeStatistics = olapService.getOlapEventTypeStatistics(olapParameters);
-        var language = localeService.getLanguage(httpSession);
-        var olapEventTypeStatisticsDto = OlapEventTypeStatisticsDto.convertToDto(eventTypeStatistics, language);
+        var olapEventTypeStatisticsDto = OlapEventTypeStatisticsDto.convertToDto(eventTypeStatistics, Language.getLanguageByCode(language));
 
         Comparator<OlapEventTypeMetricsDto> comparatorByIsConference = Comparator.comparing(OlapEventTypeMetricsDto::isConference).reversed();
         Comparator<OlapEventTypeMetricsDto> comparatorByOrganizerName = Comparator.comparing(OlapEventTypeMetricsDto::getOrganizerName, String.CASE_INSENSITIVE_ORDER);
@@ -195,10 +189,9 @@ public class StatisticsController {
 
     @PostMapping("/olap-speaker-statistics")
     public OlapEntityStatisticsDto<Integer, OlapSpeakerMetricsDto> getOlapSpeakerStatistics(
-            @RequestBody OlapSpeakerParametersDto olapParameters, HttpSession httpSession) {
+            @RequestBody OlapSpeakerParametersDto olapParameters, @RequestParam String language) {
         var speakerStatistics = olapService.getOlapSpeakerStatistics(olapParameters);
-        var language = localeService.getLanguage(httpSession);
-        var olapSpeakerStatisticsDto = OlapSpeakerStatisticsDto.convertToDto(speakerStatistics, language);
+        var olapSpeakerStatisticsDto = OlapSpeakerStatisticsDto.convertToDto(speakerStatistics, Language.getLanguageByCode(language));
 
         Comparator<OlapSpeakerMetricsDto> comparatorByTotal = Comparator.comparing(OlapSpeakerMetricsDto::getTotal).reversed();
         Comparator<OlapSpeakerMetricsDto> comparatorByName = Comparator.comparing(OlapSpeakerMetricsDto::getName, String.CASE_INSENSITIVE_ORDER);
@@ -213,10 +206,9 @@ public class StatisticsController {
 
     @PostMapping("/olap-city-statistics")
     public OlapEntityStatisticsDto<Integer, OlapCityMetricsDto> getOlapCityStatistics(
-            @RequestBody OlapCityParametersDto olapParameters, HttpSession httpSession) {
+            @RequestBody OlapCityParametersDto olapParameters, @RequestParam String language) {
         var cityStatistics = olapService.getOlapCityStatistics(olapParameters);
-        var language = localeService.getLanguage(httpSession);
-        var olapCityStatisticsDto = OlapCityStatisticsDto.convertToDto(cityStatistics, language);
+        var olapCityStatisticsDto = OlapCityStatisticsDto.convertToDto(cityStatistics, Language.getLanguageByCode(language));
 
         List<OlapCityMetricsDto> sortedMetricsList = olapCityStatisticsDto.getMetricsList().stream()
                 .sorted(Comparator.comparing(OlapCityMetricsDto::getName, String.CASE_INSENSITIVE_ORDER))

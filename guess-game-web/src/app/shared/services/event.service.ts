@@ -24,6 +24,7 @@ export class EventService {
       .set('conferences', isConferences.toString())
       .set('meetups', isMeetups.toString())
       .set('language', language);
+
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }

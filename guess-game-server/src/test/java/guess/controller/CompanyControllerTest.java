@@ -8,7 +8,6 @@ import guess.domain.statistics.company.CompanySearchResult;
 import guess.dto.common.SelectedEntitiesDto;
 import guess.dto.company.CompanySearchResultDto;
 import guess.service.CompanyService;
-import guess.service.LocaleService;
 import guess.service.SpeakerService;
 import guess.util.SearchUtils;
 import org.junit.jupiter.api.DisplayName;
@@ -23,7 +22,6 @@ import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -53,27 +51,21 @@ class CompanyControllerTest {
     @MockitoBean
     private SpeakerService speakerService;
 
-    @MockitoBean
-    private LocaleService localeService;
-
     @Test
     void getCompaniesByFirstLetters() throws Exception {
         final Language language = Language.ENGLISH;
         final String firstLetters = "c";
-
-        MockHttpSession httpSession = new MockHttpSession();
 
         Company company0 = new Company(0, List.of(new LocaleItem(language.getCode(), "Company0")));
         Company company1 = new Company(1, List.of(new LocaleItem(language.getCode(), "Company1")));
         Company company2 = new Company(2, List.of(new LocaleItem(language.getCode(), "Company2")));
 
         given(companyService.getCompaniesByFirstLetters(firstLetters, language)).willReturn(List.of(company2, company1, company0));
-        given(localeService.getLanguage(httpSession)).willReturn(language);
 
         mvc.perform(get("/api/company/first-letters-companies")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("firstLetters", firstLetters)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].id", is(0)))
@@ -83,15 +75,12 @@ class CompanyControllerTest {
                 .andExpect(jsonPath("$[2].id", is(2)))
                 .andExpect(jsonPath("$[2].name", is("Company2")));
         Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByFirstLetters(firstLetters, language);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
     void getSelectedCompanies() throws Exception {
         final Language language = Language.ENGLISH;
         final List<Long> ids = List.of(0L, 1L, 2L);
-
-        MockHttpSession httpSession = new MockHttpSession();
 
         SelectedEntitiesDto selectedEntities = new SelectedEntitiesDto();
         selectedEntities.setIds(ids);
@@ -101,12 +90,11 @@ class CompanyControllerTest {
         Company company2 = new Company(2, List.of(new LocaleItem(language.getCode(), "Company2")));
 
         given(companyService.getCompaniesByIds(ids)).willReturn(List.of(company2, company1, company0));
-        given(localeService.getLanguage(httpSession)).willReturn(language);
 
         mvc.perform(post("/api/company/selected-companies")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JsonUtil.toJson(selectedEntities))
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].id", is(0)))
@@ -116,7 +104,6 @@ class CompanyControllerTest {
                 .andExpect(jsonPath("$[2].id", is(2)))
                 .andExpect(jsonPath("$[2].name", is("Company2")));
         Mockito.verify(companyService, VerificationModeFactory.times(1)).getCompaniesByIds(ids);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
@@ -280,7 +267,7 @@ class CompanyControllerTest {
                                              List<CompanySearchResult> companySearchResults, List<CompanySearchResultDto> expected) {
             given(companyService.getCompanySearchResults(Mockito.anyList())).willReturn(companySearchResults);
 
-            CompanyController companyController = new CompanyController(companyService, speakerService, localeService);
+            CompanyController companyController = new CompanyController(companyService, speakerService);
 
             assertEquals(expected, companyController.calculateAndConvertToDtoAndSort(companies, language, comparator));
         }

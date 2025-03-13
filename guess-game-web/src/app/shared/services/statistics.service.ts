@@ -150,8 +150,11 @@ export class StatisticsService {
       );
   }
 
-  getOlapStatistics(olapParameters: OlapParameters): Observable<OlapStatistics> {
-    return this.http.post<OlapStatistics>(`${this.baseUrl}/olap-statistics`, olapParameters)
+  getOlapStatistics(olapParameters: OlapParameters, language: string): Observable<OlapStatistics> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.post<OlapStatistics>(`${this.baseUrl}/olap-statistics`, olapParameters, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -160,8 +163,13 @@ export class StatisticsService {
       );
   }
 
-  getOlapEventTypeStatistics(olapParameters: OlapEventTypeParameters): Observable<OlapEntityStatistics<number, OlapEventTypeMetrics>> {
-    return this.http.post<OlapEntityStatistics<number, OlapEventTypeMetrics>>(`${this.baseUrl}/olap-event-type-statistics`, olapParameters)
+  getOlapEventTypeStatistics(olapParameters: OlapEventTypeParameters, language: string):
+    Observable<OlapEntityStatistics<number, OlapEventTypeMetrics>> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.post<OlapEntityStatistics<number, OlapEventTypeMetrics>>(`${this.baseUrl}/olap-event-type-statistics`,
+      olapParameters, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -170,8 +178,13 @@ export class StatisticsService {
       );
   }
 
-  getOlapSpeakerStatistics(olapParameters: OlapSpeakerParameters): Observable<OlapEntityStatistics<number, OlapSpeakerMetrics>> {
-    return this.http.post<OlapEntityStatistics<number, OlapSpeakerMetrics>>(`${this.baseUrl}/olap-speaker-statistics`, olapParameters)
+  getOlapSpeakerStatistics(olapParameters: OlapSpeakerParameters, language: string):
+    Observable<OlapEntityStatistics<number, OlapSpeakerMetrics>> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.post<OlapEntityStatistics<number, OlapSpeakerMetrics>>(`${this.baseUrl}/olap-speaker-statistics`,
+      olapParameters, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -180,8 +193,13 @@ export class StatisticsService {
       );
   }
 
-  getOlapCityStatistics(olapParameters: OlapCityParameters): Observable<OlapEntityStatistics<number, OlapCityMetrics>> {
-    return this.http.post<OlapEntityStatistics<number, OlapCityMetrics>>(`${this.baseUrl}/olap-city-statistics`, olapParameters)
+  getOlapCityStatistics(olapParameters: OlapCityParameters, language: string):
+    Observable<OlapEntityStatistics<number, OlapCityMetrics>> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.post<OlapEntityStatistics<number, OlapCityMetrics>>(`${this.baseUrl}/olap-city-statistics`,
+      olapParameters, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

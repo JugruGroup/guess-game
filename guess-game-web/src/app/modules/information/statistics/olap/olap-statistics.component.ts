@@ -440,14 +440,16 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
         complete();
         break;
       case OlapCubeType.Speakers:
-        this.speakerService.getSelectedSpeakers(new SelectedEntities(this.selectedSpeakers.map(s => s.id)))
+        this.speakerService.getSelectedSpeakers(new SelectedEntities(this.selectedSpeakers.map(s => s.id)),
+          this.language)
           .subscribe(speakersData => {
             this.selectedSpeakers = speakersData;
             complete();
           });
         break;
       case OlapCubeType.Companies:
-        this.companyService.getSelectedCompanies(new SelectedEntities(this.selectedCompanies.map(c => c.id)))
+        this.companyService.getSelectedCompanies(new SelectedEntities(this.selectedCompanies.map(c => c.id)),
+          this.language)
           .subscribe(companiesData => {
             this.selectedCompanies = companiesData;
             complete();
@@ -466,7 +468,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
         (organizer) ? organizer.id : null,
         (eventTypes) ? eventTypes.map(et => et.id) : null,
         (speakers) ? speakers.map(s => s.id) : null,
-        (companies) ? companies.map(c => c.id) : null))
+        (companies) ? companies.map(c => c.id) : null),
+      this.language)
       .subscribe(data => {
           const olapStatistics = data;
 
@@ -561,7 +564,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   }
 
   speakerSearch(event) {
-    this.speakerService.getSpeakersByFirstLetters(event.query)
+    this.speakerService.getSpeakersByFirstLetters(event.query, this.language)
       .subscribe(data => {
           this.speakerSuggestions = data;
         }
@@ -579,7 +582,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   }
 
   companySearch(event) {
-    this.companyService.getCompaniesByFirstLetters(event.query)
+    this.companyService.getCompaniesByFirstLetters(event.query, this.language)
       .subscribe(data => {
           this.companySuggestions = data;
         }
@@ -645,7 +648,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           this.selectedCubeType,
           this.selectedMeasureType,
           eventTypeMetrics.id
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapCityStatistics: OlapEntityStatistics<number, OlapCityMetrics> = data;
 
@@ -670,7 +674,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           (this.selectedEventTypes) ? this.selectedEventTypes.map(et => et.id) : null,
           speakerMetrics.id,
           null
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapEventTypeStatistics: OlapEntityStatistics<number, OlapEventTypeMetrics> = data;
 
@@ -695,7 +700,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           (this.selectedEventTypes) ? this.selectedEventTypes.map(et => et.id) : null,
           null,
           companyMetrics.id
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapEventTypeStatistics: OlapEntityStatistics<number, OlapEventTypeMetrics> = data;
 
@@ -717,7 +723,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           this.selectedMeasureType,
           eventTypeMetrics.companyId,
           eventTypeMetrics.id
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapSpeakerStatistics: OlapEntityStatistics<number, OlapSpeakerMetrics> = data;
 

@@ -199,7 +199,7 @@
             </td>
             <td>{{eventTypeMetrics.organizerName}}</td>
             <td>
-              <a [routerLink]="['/information', 'event-types', 'event-type', eventTypeMetrics.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/event-types/event-type/{{eventTypeMetrics.id}}" class="text-dark">
                 <img src="{{eventsImageDirectory}}/{{eventTypeMetrics.logoFileName}}" class="img-event-type-logo-table" alt="logo"/>
                 <span class="ms-2">{{eventTypeMetrics.name}}</span>
               </a>
@@ -308,7 +308,7 @@
             </td>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'speakers', 'speaker', speakerMetrics.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/speakers/speaker/{{speakerMetrics.id}}" class="text-dark">
                 <img src="{{speakersImageDirectory}}/{{speakerMetrics.photoFileName}}" class="img-speaker-photo-table" alt="photo"/>
                 <span class="ms-2">{{speakerMetrics.name}}</span>
               </a>
@@ -357,7 +357,7 @@
                     <tr>
                       <td class="text-center">{{i + 1}}</td>
                       <td>
-                        <a [routerLink]="['/information', 'event-types', 'event-type', eventTypeMetrics.id]" class="text-dark">
+                        <a routerLink="/{{language}}/information/event-types/event-type/{{eventTypeMetrics.id}}" class="text-dark">
                           <img src="{{eventsImageDirectory}}/{{eventTypeMetrics.logoFileName}}" class="img-event-type-logo-table" alt="logo"/>
                           <span class="ms-2">{{eventTypeMetrics.name}}</span>
                         </a>
@@ -421,7 +421,7 @@
             </td>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'companies', 'company', companyMetrics.id]" class="text-dark">{{companyMetrics.name}}</a>
+              <a routerLink="/{{language}}/information/companies/company/{{companyMetrics.id}}" class="text-dark">{{companyMetrics.name}}</a>
             </td>
             <td *ngFor="let measureValue of companyMetrics.measureValues" class="text-center">
               {{measureValue | number:'1.0-0':translateService.currentLang}}
@@ -464,7 +464,7 @@
                       </td>
                       <td class="text-center">{{i + 1}}</td>
                       <td>
-                        <a [routerLink]="['/information', 'event-types', 'event-type', eventTypeMetrics.id]" class="text-dark">
+                        <a routerLink="/{{language}}/information/event-types/event-type/{{eventTypeMetrics.id}}" class="text-dark">
                           <img src="{{eventsImageDirectory}}/{{eventTypeMetrics.logoFileName}}" class="img-event-type-logo-table" alt="logo"/>
                           <span class="ms-2">{{eventTypeMetrics.name}}</span>
                         </a>
@@ -506,7 +506,7 @@
                               <tr>
                                 <td class="text-center">{{i + 1}}</td>
                                 <td>
-                                  <a [routerLink]="['/information', 'speakers', 'speaker', speakerMetrics.id]" class="text-dark">
+                                  <a routerLink="/{{language}}/information/speakers/speaker/{{speakerMetrics.id}}" class="text-dark">
                                     <img src="{{speakersImageDirectory}}/{{speakerMetrics.photoFileName}}" class="img-speaker-photo-table" alt="photo"/>
                                     <span class="ms-2">{{speakerMetrics.name}}</span>
                                   </a>

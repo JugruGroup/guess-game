@@ -20,7 +20,6 @@ import guess.dto.statistics.olap.parameters.OlapCityParametersDto;
 import guess.dto.statistics.olap.parameters.OlapEventTypeParametersDto;
 import guess.dto.statistics.olap.parameters.OlapParametersDto;
 import guess.dto.statistics.olap.parameters.OlapSpeakerParametersDto;
-import guess.service.LocaleService;
 import guess.service.OlapService;
 import guess.service.StatisticsService;
 import org.junit.jupiter.api.DisplayName;
@@ -35,7 +34,6 @@ import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -64,9 +62,6 @@ class StatisticsControllerTest {
 
     @MockitoBean
     private OlapService olapService;
-
-    @MockitoBean
-    private LocaleService localeService;
 
     @Test
     void getEventTypeStatistics() throws Exception {
@@ -417,16 +412,13 @@ class StatisticsControllerTest {
         @ParameterizedTest
         @MethodSource("data")
         void getOlapStatistics(CubeType cubeType, OlapStatistics olapStatistics) throws Exception {
-            MockHttpSession httpSession = new MockHttpSession();
-
             given(olapService.getOlapStatistics(Mockito.any())).willReturn(olapStatistics);
-            given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
             switch (cubeType) {
                 case EVENT_TYPES -> mvc.perform(post("/api/statistics/olap-statistics")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(JsonUtil.toJson(new OlapParametersDto()))
-                                .session(httpSession))
+                                .param("language", "en"))
                         .andExpect(status().isOk())
                         .andExpect(jsonPath("$.eventTypeStatistics.metricsList", hasSize(2)))
                         .andExpect(jsonPath("$.eventTypeStatistics.metricsList[0].id", is(1)))
@@ -434,7 +426,7 @@ class StatisticsControllerTest {
                 case SPEAKERS -> mvc.perform(post("/api/statistics/olap-statistics")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(JsonUtil.toJson(new OlapParametersDto()))
-                                .session(httpSession))
+                                .param("language", "en"))
                         .andExpect(status().isOk())
                         .andExpect(jsonPath("$.speakerStatistics.metricsList", hasSize(2)))
                         .andExpect(jsonPath("$.speakerStatistics.metricsList[0].id", is(1)))
@@ -442,7 +434,7 @@ class StatisticsControllerTest {
                 case COMPANIES -> mvc.perform(post("/api/statistics/olap-statistics")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(JsonUtil.toJson(new OlapParametersDto()))
-                                .session(httpSession))
+                                .param("language", "en"))
                         .andExpect(status().isOk())
                         .andExpect(jsonPath("$.companyStatistics.metricsList", hasSize(2)))
                         .andExpect(jsonPath("$.companyStatistics.metricsList[0].id", is(1)))
@@ -450,7 +442,6 @@ class StatisticsControllerTest {
             }
 
             Mockito.verify(olapService, VerificationModeFactory.times(1)).getOlapStatistics(Mockito.any());
-            Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
         }
     }
 
@@ -480,22 +471,18 @@ class StatisticsControllerTest {
         OlapEntityStatistics<Integer, Void, EventType> eventTypeStatistics0 =
                 new OlapEntityStatistics<>(yearDimensionValues0, voidDimensionValues0, yearVoidEventTypeSubMetricsList0, metricsList0, totals0);
 
-        MockHttpSession httpSession = new MockHttpSession();
-
         given(olapService.getOlapEventTypeStatistics(Mockito.any())).willReturn(eventTypeStatistics0);
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(post("/api/statistics/olap-event-type-statistics")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JsonUtil.toJson(new OlapEventTypeParametersDto()))
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.metricsList", hasSize(2)))
                 .andExpect(jsonPath("$.metricsList[0].id", is(1)))
                 .andExpect(jsonPath("$.metricsList[1].id", is(0)));
 
         Mockito.verify(olapService, VerificationModeFactory.times(1)).getOlapEventTypeStatistics(Mockito.any());
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
@@ -521,22 +508,18 @@ class StatisticsControllerTest {
         OlapEntityStatistics<Integer, Void, Speaker> speakerStatistics0 =
                 new OlapEntityStatistics<>(yearDimensionValues0, voidDimensionValues0, yearVoidSpeakerSubMetricsList0, metricsList0, totals0);
 
-        MockHttpSession httpSession = new MockHttpSession();
-
         given(olapService.getOlapSpeakerStatistics(Mockito.any())).willReturn(speakerStatistics0);
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(post("/api/statistics/olap-speaker-statistics")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JsonUtil.toJson(new OlapSpeakerParametersDto()))
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.metricsList", hasSize(2)))
                 .andExpect(jsonPath("$.metricsList[0].id", is(1)))
                 .andExpect(jsonPath("$.metricsList[1].id", is(0)));
 
         Mockito.verify(olapService, VerificationModeFactory.times(1)).getOlapSpeakerStatistics(Mockito.any());
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
@@ -557,21 +540,17 @@ class StatisticsControllerTest {
         OlapEntityStatistics<Integer, Void, City> cityStatistics0 =
                 new OlapEntityStatistics<>(yearDimensionValues0, voidDimensionValues0, yearVoidCitySubMetricsList0, metricsList0, totals0);
 
-        MockHttpSession httpSession = new MockHttpSession();
-
         given(olapService.getOlapCityStatistics(Mockito.any())).willReturn(cityStatistics0);
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(post("/api/statistics/olap-city-statistics")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JsonUtil.toJson(new OlapCityParametersDto()))
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.metricsList", hasSize(2)))
                 .andExpect(jsonPath("$.metricsList[0].id", is(0)))
                 .andExpect(jsonPath("$.metricsList[1].id", is(1)));
 
         Mockito.verify(olapService, VerificationModeFactory.times(1)).getOlapCityStatistics(Mockito.any());
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 }

@@ -35,9 +35,10 @@ export class CompanyService {
       );
   }
 
-  getCompaniesByFirstLetters(firstLetters: string): Observable<Company[]> {
+  getCompaniesByFirstLetters(firstLetters: string, language: string): Observable<Company[]> {
     const params = new HttpParams()
-      .set('firstLetters', firstLetters);
+      .set('firstLetters', firstLetters)
+      .set('language', language);
 
     return this.http.get<Company[]>(`${this.baseUrl}/first-letters-companies`, {params: params})
       .pipe(
@@ -48,8 +49,11 @@ export class CompanyService {
       );
   }
 
-  getSelectedCompanies(selectedEntities: SelectedEntities): Observable<Company[]> {
-    return this.http.post<Company[]>(`${this.baseUrl}/selected-companies`, selectedEntities)
+  getSelectedCompanies(selectedEntities: SelectedEntities, language: string): Observable<Company[]> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.post<Company[]>(`${this.baseUrl}/selected-companies`, selectedEntities, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

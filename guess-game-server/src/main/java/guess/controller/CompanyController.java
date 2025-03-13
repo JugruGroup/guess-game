@@ -10,11 +10,9 @@ import guess.dto.company.CompanyDetailsDto;
 import guess.dto.company.CompanySearchResultDto;
 import guess.dto.speaker.SpeakerBriefDto;
 import guess.service.CompanyService;
-import guess.service.LocaleService;
 import guess.service.SpeakerService;
 import guess.util.LocalizationUtils;
 import guess.util.SearchUtils;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,31 +28,29 @@ import java.util.stream.Collectors;
 public class CompanyController {
     private final CompanyService companyService;
     private final SpeakerService speakerService;
-    private final LocaleService localeService;
 
     @Autowired
-    public CompanyController(CompanyService companyService, SpeakerService speakerService, LocaleService localeService) {
+    public CompanyController(CompanyService companyService, SpeakerService speakerService) {
         this.companyService = companyService;
         this.speakerService = speakerService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/first-letters-companies")
-    public List<CompanyBriefDto> getCompaniesByFirstLetters(@RequestParam String firstLetters, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, language);
+    public List<CompanyBriefDto> getCompaniesByFirstLetters(@RequestParam String firstLetters, @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, languageEnum);
 
-        return CompanyBriefDto.convertToBriefDto(companies, language).stream()
+        return CompanyBriefDto.convertToBriefDto(companies, languageEnum).stream()
                 .sorted(Comparator.comparing(CompanyBriefDto::getName, String.CASE_INSENSITIVE_ORDER))
                 .toList();
     }
 
     @PostMapping("/selected-companies")
-    public List<CompanyBriefDto> getSelectedCompanies(@RequestBody SelectedEntitiesDto selectedEntities, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<CompanyBriefDto> getSelectedCompanies(@RequestBody SelectedEntitiesDto selectedEntities,
+                                                      @RequestParam String language) {
         List<Company> companies = companyService.getCompaniesByIds(selectedEntities.getIds());
 
-        return CompanyBriefDto.convertToBriefDto(companies, language).stream()
+        return CompanyBriefDto.convertToBriefDto(companies, Language.getLanguageByCode(language)).stream()
                 .sorted(Comparator.comparing(CompanyBriefDto::getName, String.CASE_INSENSITIVE_ORDER))
                 .toList();
     }
