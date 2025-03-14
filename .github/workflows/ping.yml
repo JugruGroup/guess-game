@@ -11,10 +11,10 @@ jobs:
       - name: Curl language
         id: ping
         run: |
-          echo "::set-output name=status::$(curl https://${{ secrets.DEPLOY_HOST }}/api/locale/language)"
+          echo "::set-output name=status::$(curl https://${{ secrets.DEPLOY_HOST }}/api/state/state)"
       - name: Health check
         run: |
-          if [[ ${{ steps.ping.outputs.status }} != *"ENGLISH"* ]]; then
+          if [[ ${{ steps.ping.outputs.status }} != *"START_STATE"* ]]; then
             echo "Health check is failed"
             exit 1
           fi
@@ -27,6 +27,6 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             Health check of the
-            https://${{ secrets.DEPLOY_HOST }}/api/locale/language
+            https://${{ secrets.DEPLOY_HOST }}/api/state/state
             failed with the result:
             ${{ steps.ping.outputs.status }}
