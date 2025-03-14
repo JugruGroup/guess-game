@@ -5,7 +5,6 @@ import guess.domain.GuessMode;
 import guess.domain.Language;
 import guess.domain.source.*;
 import guess.service.EventTypeService;
-import guess.service.LocaleService;
 import guess.service.QuestionService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -40,9 +39,6 @@ class QuestionControllerTest {
 
     @MockitoBean
     private EventTypeService eventTypeService;
-
-    @MockitoBean
-    private LocaleService localeService;
 
     @Test
     void getEventTypes() throws Exception {

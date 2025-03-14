@@ -5,7 +5,6 @@ import guess.domain.Language;
 import guess.dto.guess.*;
 import guess.dto.start.StartParametersDto;
 import guess.service.AnswerService;
-import guess.service.LocaleService;
 import guess.service.StateService;
 import guess.util.LocalizationUtils;
 import jakarta.servlet.http.HttpSession;
@@ -23,13 +22,11 @@ import java.util.List;
 public class StateController {
     private final StateService stateService;
     private final AnswerService answerService;
-    private final LocaleService localeService;
 
     @Autowired
-    public StateController(StateService stateService, AnswerService answerService, LocaleService localeService) {
+    public StateController(StateService stateService, AnswerService answerService) {
         this.stateService = stateService;
         this.answerService = answerService;
-        this.localeService = localeService;
     }
 
     @PostMapping("/parameters")

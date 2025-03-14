@@ -1,7 +1,6 @@
 package guess.util;
 
 import guess.domain.GameState;
-import guess.domain.Language;
 import guess.domain.StartParameters;
 import guess.domain.answer.AnswerSet;
 import guess.domain.question.QuestionAnswersSet;
@@ -105,19 +104,5 @@ public class HttpSessionUtils {
             answerSets.add(answerSet);
             httpSession.setAttribute(ANSWER_SETS_ATTRIBUTE_NAME, answerSets);
         }
-    }
-
-    public static Language getLanguage(HttpSession httpSession) {
-        var languageObject = httpSession.getAttribute(LANGUAGE_ATTRIBUTE_NAME);
-
-        if (languageObject instanceof Language language) {
-            return language;
-        } else {
-            return Language.ENGLISH;
-        }
-    }
-
-    public static void setLanguage(Language language, HttpSession httpSession) {
-        httpSession.setAttribute(LANGUAGE_ATTRIBUTE_NAME, language);
     }
 }

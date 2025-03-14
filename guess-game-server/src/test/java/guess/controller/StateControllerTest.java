@@ -11,7 +11,6 @@ import guess.dto.guess.DtoFunction;
 import guess.dto.guess.PhotoNamesDto;
 import guess.dto.guess.QuestionAnswersSourceDto;
 import guess.service.AnswerService;
-import guess.service.LocaleService;
 import guess.service.StateService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -52,9 +51,6 @@ class StateControllerTest {
 
     @MockitoBean
     private AnswerService answerService;
-
-    @MockitoBean
-    private LocaleService localeService;
 
     @Autowired
     private StateController stateController;

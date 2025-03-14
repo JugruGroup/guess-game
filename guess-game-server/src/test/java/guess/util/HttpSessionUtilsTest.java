@@ -1,6 +1,9 @@
 package guess.util;
 
-import guess.domain.*;
+import guess.domain.GameState;
+import guess.domain.GuessMode;
+import guess.domain.Quadruple;
+import guess.domain.StartParameters;
 import guess.domain.answer.AnswerSet;
 import guess.domain.answer.SpeakerAnswer;
 import guess.domain.question.QuestionAnswers;
@@ -247,31 +250,5 @@ class HttpSessionUtilsTest {
 
         HttpSessionUtils.addAnswerSet(answerSet1, httpSession);
         assertEquals(List.of(answerSet0, answerSet1), httpSession.getAttribute(HttpSessionUtils.ANSWER_SETS_ATTRIBUTE_NAME));
-    }
-
-    @Test
-    void getLanguage() {
-        HttpSession httpSession = new MockHttpSession();
-
-        assertEquals(Language.ENGLISH, HttpSessionUtils.getLanguage(httpSession));
-
-        httpSession.setAttribute(HttpSessionUtils.LANGUAGE_ATTRIBUTE_NAME, Language.RUSSIAN);
-        assertEquals(Language.RUSSIAN, HttpSessionUtils.getLanguage(httpSession));
-
-        httpSession.setAttribute(HttpSessionUtils.LANGUAGE_ATTRIBUTE_NAME, Language.ENGLISH);
-        assertEquals(Language.ENGLISH, HttpSessionUtils.getLanguage(httpSession));
-    }
-
-    @Test
-    void setLanguage() {
-        HttpSession httpSession = new MockHttpSession();
-
-        assertNull(httpSession.getAttribute(HttpSessionUtils.LANGUAGE_ATTRIBUTE_NAME));
-
-        HttpSessionUtils.setLanguage(Language.ENGLISH, httpSession);
-        assertEquals(Language.ENGLISH, httpSession.getAttribute(HttpSessionUtils.LANGUAGE_ATTRIBUTE_NAME));
-
-        HttpSessionUtils.setLanguage(Language.RUSSIAN, httpSession);
-        assertEquals(Language.RUSSIAN, httpSession.getAttribute(HttpSessionUtils.LANGUAGE_ATTRIBUTE_NAME));
     }
 }
