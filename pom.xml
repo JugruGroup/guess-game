@@ -27,7 +27,7 @@
         <war.plugin.version>3.4.0</war.plugin.version>
 
         <allure-junit5.version>2.29.1</allure-junit5.version>
-        <aspectj.version>1.9.22.1</aspectj.version>
+        <aspectj.version>1.9.23</aspectj.version>
         <kumo.version>1.28</kumo.version>
         <imageio.version>3.12.0</imageio.version>
         <spring-boot.version>3.4.3</spring-boot.version>
