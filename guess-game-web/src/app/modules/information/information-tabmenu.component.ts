@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { TranslateService } from '@ngx-translate/core';
+import { LocaleService } from '../../shared/services/locale.service';
 
 @Component({
     selector: 'app-information-tabmenu',
@@ -13,7 +14,7 @@ export class InformationTabMenuComponent implements OnInit {
 
   public localItems: MenuItem[] = [];
 
-  constructor(public translateService: TranslateService) {
+  constructor(private translateService: TranslateService, private localeService: LocaleService) {
   }
 
   ngOnInit(): void {
@@ -24,6 +25,7 @@ export class InformationTabMenuComponent implements OnInit {
   }
 
   initMenuItems() {
+    const language = this.localeService.getLanguage();
     const keys = this.items.map(i => i.labelKey);
 
     this.translateService.get(keys)
@@ -32,6 +34,7 @@ export class InformationTabMenuComponent implements OnInit {
 
         this.items.forEach(i => {
           i.label = labels[i.labelKey];
+          i.routerLink = `/${language}/${i.routerLinkSuffix}`;
           newItems.push(i);
         });
 
