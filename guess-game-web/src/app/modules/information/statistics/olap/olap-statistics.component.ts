@@ -4,6 +4,7 @@ import { SelectItem } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { Subscription } from 'rxjs';
 import { Company } from '../../../../shared/models/company/company.model';
 import { EventType } from '../../../../shared/models/event-type/event-type.model';
 import { OlapChartKind } from '../../../../shared/models/statistics/olap/olap-chart-kind.model';
@@ -68,7 +69,7 @@ import {
   providers: [DialogService],
   standalone: false
 })
-export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit {
+export class OlapStatisticsComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly EVENT_TYPES_CUBE_TYPE_KEY = 'cubeType.eventTypes';
   private readonly SPEAKERS_CUBE_TYPE_KEY = 'cubeType.speakers';
   private readonly COMPANIES_CUBE_TYPE_KEY = 'cubeType.companies';
@@ -193,6 +194,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   public zoomInDialogClosed = true;
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, private organizerService: OrganizerService,
@@ -216,7 +218,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
     this.loadCubeTypes();
     this.fillChartKinds();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
           this.language = this.localeService.getLanguage();
           this.loadOrganizers();
@@ -237,6 +239,10 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.onResize);
+
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   getCubeTypeMessageKeyByCube(cubeType: OlapCubeType): string {

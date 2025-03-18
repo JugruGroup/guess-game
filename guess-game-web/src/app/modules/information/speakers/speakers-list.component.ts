@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { EntitiesListComponent } from '../entity-list.component';
 import { LocaleService } from '../../../shared/services/locale.service';
@@ -10,7 +10,7 @@ import { SpeakerService } from '../../../shared/services/speaker.service';
     templateUrl: './speakers-list.component.html',
     standalone: false
 })
-export class SpeakersListComponent extends EntitiesListComponent implements OnInit {
+export class SpeakersListComponent extends EntitiesListComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
@@ -27,11 +27,17 @@ export class SpeakersListComponent extends EntitiesListComponent implements OnIn
   ngOnInit(): void {
     this.loadSpeakers(this.selectedLetter);
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.onLanguageChange();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadSpeakers(letter: string) {

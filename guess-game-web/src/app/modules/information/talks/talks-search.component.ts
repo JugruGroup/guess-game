@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { Event } from '../../../shared/models/event/event.model';
 import { Topic } from '../../../shared/models/topic/topic.model';
@@ -25,7 +26,7 @@ import {
     templateUrl: './talks-search.component.html',
     standalone: false
 })
-export class TalksSearchComponent implements OnInit {
+export class TalksSearchComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -55,6 +56,7 @@ export class TalksSearchComponent implements OnInit {
   public multiSortMeta: any[] = [];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private eventTypeService: EventTypeService, private eventService: EventService,
               private talkService: TalkService, private topicService: TopicService,
@@ -69,11 +71,17 @@ export class TalksSearchComponent implements OnInit {
     this.loadEventTypes();
     this.loadTopics();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.onLanguageChange();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   fillEventTypes(eventTypes: EventType[]) {

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { EventPart } from '../../shared/models/event/event-part.model';
 import { HomeState } from '../../shared/models/home-state.model';
 import { EventService } from '../../shared/services/event.service';
@@ -7,18 +8,20 @@ import { LocaleService } from '../../shared/services/locale.service';
 import { getEventDates } from '../general/utility-functions';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    standalone: false
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  standalone: false
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   public imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
   public eventPart: EventPart;
   public eventDates: string;
   public homeState = HomeState.LoadingState;
+
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private eventService: EventService, public translateService: TranslateService,
               private localeService: LocaleService) {
@@ -28,11 +31,17 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.loadDefaultEvent();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.loadDefaultEvent();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadDefaultEvent() {

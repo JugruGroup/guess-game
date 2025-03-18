@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { LocaleService } from '../../shared/services/locale.service';
 
@@ -14,6 +15,7 @@ export abstract class EntitiesListComponent {
   public paginatorFirst = 0;
 
   public language: string;
+  protected languageSubscription: Subscription;
 
   protected constructor(public translateService: TranslateService, protected localeService: LocaleService) {
     this.language = localeService.getLanguage();

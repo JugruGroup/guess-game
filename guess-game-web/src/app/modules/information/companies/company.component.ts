@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { CompanyDetails } from '../../../shared/models/company/company-details.model';
 import { CompanyService } from '../../../shared/services/company.service';
@@ -11,7 +12,7 @@ import { getSpeakersWithCompaniesString } from '../../general/utility-functions'
     templateUrl: './company.component.html',
     standalone: false
 })
-export class CompanyComponent implements OnInit {
+export class CompanyComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
@@ -24,6 +25,7 @@ export class CompanyComponent implements OnInit {
   public multiSortMeta: any[] = [];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(public companyService: CompanyService, public translateService: TranslateService,
               private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
@@ -41,13 +43,19 @@ export class CompanyComponent implements OnInit {
         this.id = idNumber;
         this.loadCompany(this.id);
 
-        this.translateService.onLangChange
+        this.languageSubscription = this.translateService.onLangChange
           .subscribe(() => {
             this.language = this.localeService.getLanguage();
             this.onLanguageChange();
           });
       }
     });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadCompany(id: number) {

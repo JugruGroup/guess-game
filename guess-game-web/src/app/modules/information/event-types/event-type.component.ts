@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { EventTypeDetails } from '../../../shared/models/event-type/event-type-details.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
@@ -10,7 +11,7 @@ import { LocaleService } from '../../../shared/services/locale.service';
   templateUrl: './event-type.component.html',
   standalone: false
 })
-export class EventTypeComponent implements OnInit {
+export class EventTypeComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -19,6 +20,7 @@ export class EventTypeComponent implements OnInit {
   public multiSortMeta: any[] = [];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private eventTypeService: EventTypeService, public translateService: TranslateService,
               private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
@@ -36,13 +38,19 @@ export class EventTypeComponent implements OnInit {
         this.id = idNumber;
         this.loadEventType(this.id);
 
-        this.translateService.onLangChange
+        this.languageSubscription = this.translateService.onLangChange
           .subscribe(() => {
             this.language = this.localeService.getLanguage();
             this.onLanguageChange();
           });
       }
     });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadEventType(id: number) {

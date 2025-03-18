@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { AnswerService } from '../../../shared/services/answer.service';
 import { GameState } from '../../../shared/models/game-state.model';
@@ -12,7 +13,7 @@ import { StateService } from '../../../shared/services/state.service';
     templateUrl: './guess-tag-cloud-by-speaker.component.html',
     standalone: false
 })
-export class GuessTagCloudBySpeakerComponent implements OnInit {
+export class GuessTagCloudBySpeakerComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   private eventsImageDirectory = `${this.imageDirectory}/events`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
@@ -24,7 +25,9 @@ export class GuessTagCloudBySpeakerComponent implements OnInit {
   public imageSource1: string;
   public imageSource2: string;
   public imageSource3: string;
+
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private stateService: StateService, private answerService: AnswerService, private router: Router,
               private translateService: TranslateService, private localeService: LocaleService) {
@@ -34,11 +37,17 @@ export class GuessTagCloudBySpeakerComponent implements OnInit {
   ngOnInit(): void {
     this.loadQuestion();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.loadQuestion();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadQuestion() {

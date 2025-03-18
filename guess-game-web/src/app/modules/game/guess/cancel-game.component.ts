@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { GameState } from '../../../shared/models/game-state.model';
 import { LocaleService } from '../../../shared/services/locale.service';
@@ -10,8 +11,9 @@ import { StateService } from '../../../shared/services/state.service';
   templateUrl: './cancel-game.component.html',
   standalone: false
 })
-export class CancelGameComponent implements OnInit {
+export class CancelGameComponent implements OnInit, OnDestroy {
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private stateService: StateService, private router: Router, private translateService: TranslateService,
               private localeService: LocaleService) {
@@ -19,10 +21,16 @@ export class CancelGameComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   cancel() {

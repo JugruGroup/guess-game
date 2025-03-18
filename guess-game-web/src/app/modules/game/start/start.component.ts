@@ -1,5 +1,6 @@
-import { AfterViewChecked, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
 import { StartParameters } from '../../../shared/models/start/start-parameters.model';
@@ -17,7 +18,7 @@ import { findEventById, findEventTypeById, getEventsWithFullDisplayName } from '
     templateUrl: './start.component.html',
     standalone: false
 })
-export class StartComponent implements OnInit, AfterViewChecked {
+export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
   private readonly MIN_QUANTITY_VALUE = 4;
 
   private imageDirectory = 'assets/images';
@@ -41,6 +42,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
   private selectedOptionsUpdated = false;
 
   public language: string;
+  private languageSubscription: Subscription;
 
   @ViewChildren('eventTypeRow', {read: ElementRef}) rowElement: QueryList<ElementRef>;
 
@@ -52,11 +54,17 @@ export class StartComponent implements OnInit, AfterViewChecked {
   ngOnInit(): void {
     this.loadEventTypes();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.loadEventTypes();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadEventTypes() {

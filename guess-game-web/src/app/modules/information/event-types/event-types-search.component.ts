@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { LocaleService } from '../../../shared/services/locale.service';
@@ -15,7 +16,7 @@ import { findOrganizerById, findTopicById, getEventTypesWithSortName } from '../
     templateUrl: './event-types-search.component.html',
     standalone: false
 })
-export class EventTypesSearchComponent implements OnInit {
+export class EventTypesSearchComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -33,6 +34,7 @@ export class EventTypesSearchComponent implements OnInit {
   public eventTypes: EventType[] = [];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private eventTypeService: EventTypeService, public organizerService: OrganizerService,
               private topicService: TopicService, public translateService: TranslateService,
@@ -43,11 +45,17 @@ export class EventTypesSearchComponent implements OnInit {
   ngOnInit(): void {
     this.loadOrganizers();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.onLanguageChange();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   fillOrganizers(organizers: Organizer[]) {

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
 import { EventTypeStatistics } from '../../../../shared/models/statistics/event-type/event-type-statistics.model';
 import { LocaleService } from '../../../../shared/services/locale.service';
 import { Organizer } from '../../../../shared/models/organizer/organizer.model';
@@ -15,7 +16,7 @@ import { findOrganizerById, findTopicById, getEventTypeStatisticsWithSortName } 
     templateUrl: './event-type-statistics.component.html',
     standalone: false
 })
-export class EventTypeStatisticsComponent implements OnInit {
+export class EventTypeStatisticsComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -34,6 +35,7 @@ export class EventTypeStatisticsComponent implements OnInit {
   public multiSortMeta: any[] = [];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private statisticsService: StatisticsService, public organizerService: OrganizerService,
               private topicService: TopicService, public translateService: TranslateService,
@@ -45,11 +47,17 @@ export class EventTypeStatisticsComponent implements OnInit {
   ngOnInit(): void {
     this.loadOrganizers();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.onLanguageChange();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   fillOrganizers(organizers: Organizer[]) {

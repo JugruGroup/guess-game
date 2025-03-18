@@ -12,6 +12,7 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { YouTubePlayer } from '@angular/youtube-player';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { LocaleService } from '../../../shared/services/locale.service';
 import { TalkDetails } from '../../../shared/models/talk/talk-details.model';
@@ -29,7 +30,7 @@ import getVideoId from 'get-video-id';
     templateUrl: './talk.component.html',
     standalone: false
 })
-export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, OnDestroy {
+export class TalkComponent implements OnInit, AfterViewInit, AfterViewChecked, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public eventsImageDirectory = `${this.imageDirectory}/events`;
@@ -42,6 +43,7 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
   public talkDetails: TalkDetails = new TalkDetails();
 
   public language: string;
+  private languageSubscription: Subscription;
 
   @ViewChild('youtubePlayerDiv') youtubePlayerDiv: ElementRef<HTMLDivElement>;
   @ViewChildren('youtubePlayer') youtubePlayers: QueryList<YouTubePlayer>;
@@ -64,7 +66,7 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
         this.id = idNumber;
         this.loadTalk(this.id);
 
-        this.translateService.onLangChange
+        this.languageSubscription = this.translateService.onLangChange
           .subscribe(() => {
             this.language = this.localeService.getLanguage();
             this.loadTalk(this.id);
@@ -79,6 +81,10 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.onResize);
+
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   ngAfterViewChecked() {

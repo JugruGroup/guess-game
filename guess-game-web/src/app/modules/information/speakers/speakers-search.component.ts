@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { CompanyService } from '../../../shared/services/company.service';
 import { LocaleService } from '../../../shared/services/locale.service';
@@ -11,7 +12,7 @@ import { getSpeakersWithCompaniesString, isStringEmpty } from '../../general/uti
     templateUrl: './speakers-search.component.html',
     standalone: false
 })
-export class SpeakersSearchComponent implements OnInit {
+export class SpeakersSearchComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public speakersImageDirectory = `${this.imageDirectory}/speakers`;
@@ -36,6 +37,7 @@ export class SpeakersSearchComponent implements OnInit {
   public companySuggestions: string[];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private speakerService: SpeakerService, public translateService: TranslateService,
               private companyService: CompanyService, private localeService: LocaleService) {
@@ -45,11 +47,17 @@ export class SpeakersSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.onLanguageChange();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadSpeakers(name: string, company: string, twitter: string, gitHub: string, habr: string, description: string,

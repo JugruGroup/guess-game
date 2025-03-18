@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { CompanySearchResult } from '../../../shared/models/company/company-search-result.model';
 import { CompanyService } from '../../../shared/services/company.service';
@@ -10,7 +10,7 @@ import { LocaleService } from '../../../shared/services/locale.service';
     templateUrl: './companies-list.component.html',
     standalone: false
 })
-export class CompaniesListComponent extends EntitiesListComponent implements OnInit {
+export class CompaniesListComponent extends EntitiesListComponent implements OnInit, OnDestroy {
   private readonly DEFAULT_IS_DIGIT = false;
   public readonly DIGIT_BUTTON_TEXT = '0-9';
 
@@ -24,11 +24,17 @@ export class CompaniesListComponent extends EntitiesListComponent implements OnI
   ngOnInit(): void {
     this.loadCompanies(this.isDigit, this.selectedLetter);
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.onLanguageChange();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadCompanies(isDigit: boolean, letter: string) {

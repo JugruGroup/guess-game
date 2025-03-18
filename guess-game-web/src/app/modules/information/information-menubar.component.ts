@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 import { LocaleService } from '../../shared/services/locale.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { LocaleService } from '../../shared/services/locale.service';
   templateUrl: './information-menubar.component.html',
   standalone: false
 })
-export class InformationMenubarComponent implements OnInit {
+export class InformationMenubarComponent implements OnInit, OnDestroy {
   private readonly EVENT_TYPES_TITLE_KEY = 'eventTypes.title';
   private readonly EVENTS_TITLE_KEY = 'events.title';
   private readonly TALKS_TITLE_KEY = 'talks.title';
@@ -20,7 +21,9 @@ export class InformationMenubarComponent implements OnInit {
     this.SPEAKERS_TITLE_KEY, this.COMPANIES_TITLE_KEY, this.STATISTICS_TITLE_KEY];
 
   public items: MenuItem[] = [];
+
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(public translateService: TranslateService, private localeService: LocaleService) {
     this.language = localeService.getLanguage();
@@ -29,11 +32,17 @@ export class InformationMenubarComponent implements OnInit {
   ngOnInit(): void {
     this.initMenuItems();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.initMenuItems();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   initMenuItems() {

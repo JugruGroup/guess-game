@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { CompanySearchResult } from '../../../shared/models/company/company-search-result.model';
 import { CompanyService } from '../../../shared/services/company.service';
@@ -10,7 +11,7 @@ import { isStringEmpty } from '../../general/utility-functions';
     templateUrl: './companies-search.component.html',
     standalone: false
 })
-export class CompaniesSearchComponent implements OnInit {
+export class CompaniesSearchComponent implements OnInit, OnDestroy {
   public name: string;
 
   public companies: CompanySearchResult[] = [];
@@ -19,6 +20,7 @@ export class CompaniesSearchComponent implements OnInit {
   public multiSortMeta: any[] = [];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private companyService: CompanyService, public translateService: TranslateService,
               private localeService: LocaleService) {
@@ -27,11 +29,17 @@ export class CompaniesSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.onLanguageChange();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadCompanies(name: string) {

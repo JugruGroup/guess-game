@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { EventDays } from '../../../shared/models/event/event-days.model';
 import { EventDetails } from '../../../shared/models/event/event-details.model';
@@ -18,7 +19,7 @@ import {
     templateUrl: './event.component.html',
     standalone: false
 })
-export class EventComponent implements OnInit {
+export class EventComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public eventsImageDirectory = `${this.imageDirectory}/events`;
@@ -34,6 +35,7 @@ export class EventComponent implements OnInit {
   public talksMultiSortMeta: any[] = [];
 
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private eventService: EventService, public translateService: TranslateService,
               private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
@@ -57,13 +59,19 @@ export class EventComponent implements OnInit {
         this.id = idNumber;
         this.loadEvent(this.id);
 
-        this.translateService.onLangChange
+        this.languageSubscription = this.translateService.onLangChange
           .subscribe(() => {
             this.language = this.localeService.getLanguage();
             this.loadEvent(this.id);
           });
       }
     });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadEvent(id: number) {

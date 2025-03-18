@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { AnswerService } from '../../../shared/services/answer.service';
 import { GuessMode } from '../../../shared/models/guess-mode.model';
@@ -12,12 +13,14 @@ import { StateService } from '../../../shared/services/state.service';
     templateUrl: './result.component.html',
     standalone: false
 })
-export class ResultComponent implements OnInit {
+export class ResultComponent implements OnInit, OnDestroy {
   public speakersImageDirectory = 'assets/images/speakers';
   public imageSourcePrefix = 'data:image/jpeg;base64,';
   public result = new Result();
   public isQuestionImage = true;
+
   public language: string;
+  private languageSubscription: Subscription;
 
   constructor(private answerService: AnswerService, private stateService: StateService, private router: Router,
               private translateService: TranslateService, private localeService: LocaleService) {
@@ -27,11 +30,17 @@ export class ResultComponent implements OnInit {
   ngOnInit(): void {
     this.loadResult();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
         this.loadResult();
       });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadResult() {
