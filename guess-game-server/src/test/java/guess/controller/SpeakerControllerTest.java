@@ -107,7 +107,6 @@ class SpeakerControllerTest {
 
     @Test
     void getSelectedSpeakers() throws Exception {
-        final Language language = Language.ENGLISH;
         final List<Long> ids = List.of(0L, 1L);
 
         SelectedEntitiesDto selectedEntities = new SelectedEntitiesDto();
