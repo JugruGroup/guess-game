@@ -4,7 +4,6 @@ import guess.domain.Language;
 import guess.domain.source.*;
 import guess.service.EventService;
 import guess.service.EventTypeService;
-import guess.service.LocaleService;
 import guess.service.TalkService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,7 +12,6 @@ import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -45,13 +43,8 @@ class TalkControllerTest {
     @MockitoBean
     private EventTypeService eventTypeService;
 
-    @MockitoBean
-    private LocaleService localeService;
-
     @Test
     void getTalks() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Organizer organizer0 = new Organizer();
         organizer0.setId(0);
 
@@ -104,7 +97,6 @@ class TalkControllerTest {
         given(eventService.getEventByTalk(talk1)).willReturn(event1);
         given(eventTypeService.getEventTypeByEvent(event0)).willReturn(eventType0);
         given(eventTypeService.getEventTypeByEvent(event1)).willReturn(eventType1);
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/talk/talks")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -114,20 +106,17 @@ class TalkControllerTest {
                         .param("speakerName", "Speaker")
                         .param("topicId", "2")
                         .param("talkLanguage", "EN")
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(0)))
                 .andExpect(jsonPath("$[1].id", is(1)));
         Mockito.verify(talkService, VerificationModeFactory.times(1)).getTalks(0L,
                 1L, "Talk", "Speaker", 2L, "EN");
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
     void getTalk() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Organizer organizer = new Organizer();
         organizer.setId(0);
 
@@ -161,16 +150,14 @@ class TalkControllerTest {
         talk.setEndTime(LocalTime.of(10, 45));
 
         given(talkService.getTalkById(0)).willReturn(talk);
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
         given(eventService.getEventByTalk(talk)).willReturn(event);
 
         mvc.perform(get("/api/talk/talk/0")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.talk.id", is(0)))
                 .andExpect(jsonPath("$.talk.name", is("Name")));
         Mockito.verify(talkService, VerificationModeFactory.times(1)).getTalkById(0);
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 }

@@ -5,7 +5,6 @@ import guess.domain.GuessMode;
 import guess.domain.Language;
 import guess.domain.source.*;
 import guess.service.EventTypeService;
-import guess.service.LocaleService;
 import guess.service.QuestionService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -41,13 +40,8 @@ class QuestionControllerTest {
     @MockitoBean
     private EventTypeService eventTypeService;
 
-    @MockitoBean
-    private LocaleService localeService;
-
     @Test
     void getEventTypes() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         EventType eventType0 = new EventType();
         eventType0.setId(0);
         eventType0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name0")));
@@ -63,24 +57,20 @@ class QuestionControllerTest {
         eventType0.setName(List.of(new LocaleItem(Language.ENGLISH.getCode(), "Name2")));
 
         given(eventTypeService.getEventTypes()).willReturn(List.of(eventType0, eventType1, eventType2));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/question/event-types")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].id", is(1)))
                 .andExpect(jsonPath("$[1].id", is(2)))
                 .andExpect(jsonPath("$[2].id", is(0)));
         Mockito.verify(eventTypeService, VerificationModeFactory.times(1)).getEventTypes();
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test
     void getEvents() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Organizer organizer0 = new Organizer();
         organizer0.setId(0);
 
@@ -121,18 +111,16 @@ class QuestionControllerTest {
         event1.setDays(List.of(eventDays1));
 
         given(questionService.getEvents(List.of(0L, 1L))).willReturn(List.of(event0, event1));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/question/events")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("eventTypeIds", "0", "1")
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].id", is(1)))
                 .andExpect(jsonPath("$[1].id", is(0)));
         Mockito.verify(questionService, VerificationModeFactory.times(1)).getEvents(List.of(0L, 1L));
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Test

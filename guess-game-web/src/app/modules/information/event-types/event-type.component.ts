@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { EventTypeDetails } from '../../../shared/models/event-type/event-type-details.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 
 @Component({
-    selector: 'app-event-type',
-    templateUrl: './event-type.component.html',
-    standalone: false
+  selector: 'app-event-type',
+  templateUrl: './event-type.component.html',
+  standalone: false
 })
-export class EventTypeComponent implements OnInit {
+export class EventTypeComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -17,10 +19,14 @@ export class EventTypeComponent implements OnInit {
   public eventTypeDetails: EventTypeDetails = new EventTypeDetails();
   public multiSortMeta: any[] = [];
 
+  public language: string;
+  private languageSubscription: Subscription;
+
   constructor(private eventTypeService: EventTypeService, public translateService: TranslateService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'startDate', order: -1});
     this.multiSortMeta.push({field: 'endDate', order: -1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
@@ -31,12 +37,24 @@ export class EventTypeComponent implements OnInit {
       if (!isNaN(idNumber)) {
         this.id = idNumber;
         this.loadEventType(this.id);
+
+        this.languageSubscription = this.translateService.onLangChange
+          .subscribe(() => {
+            this.language = this.localeService.getLanguage();
+            this.onLanguageChange();
+          });
       }
     });
   }
 
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
+  }
+
   loadEventType(id: number) {
-    this.eventTypeService.getEventType(id)
+    this.eventTypeService.getEventType(id, this.language)
       .subscribe(data => {
         this.eventTypeDetails = data;
       });

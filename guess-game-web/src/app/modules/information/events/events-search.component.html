@@ -3,7 +3,7 @@
 
   <app-message></app-message>
 
-  <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
+  <app-information-menubar></app-information-menubar>
 
   <div class="mt-2">
     <form role="form" class="mt-2 mb-2">
@@ -98,7 +98,7 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'events', 'event', eventPart.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/events/event/{{eventPart.id}}" class="text-dark">
                 <img src="{{eventsImageDirectory}}/{{eventPart.eventTypeLogoFileName}}" class="img-event-type-logo-table" alt="logo"/>
                 <span class="ms-2">{{eventPart.name}}</span>
               </a>

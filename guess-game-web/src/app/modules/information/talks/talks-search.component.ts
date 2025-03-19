@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { Event } from '../../../shared/models/event/event.model';
 import { Topic } from '../../../shared/models/topic/topic.model';
 import { Talk } from '../../../shared/models/talk/talk.model';
 import { EventTypeService } from '../../../shared/services/event-type.service';
 import { EventService } from '../../../shared/services/event.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { TalkService } from '../../../shared/services/talk.service';
 import { TopicService } from '../../../shared/services/topic.service';
 import {
@@ -24,7 +26,7 @@ import {
     templateUrl: './talks-search.component.html',
     standalone: false
 })
-export class TalksSearchComponent implements OnInit {
+export class TalksSearchComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -53,17 +55,33 @@ export class TalksSearchComponent implements OnInit {
   private searched = false;
   public multiSortMeta: any[] = [];
 
+  public language: string;
+  private languageSubscription: Subscription;
+
   constructor(private eventTypeService: EventTypeService, private eventService: EventService,
               private talkService: TalkService, private topicService: TopicService,
-              public translateService: TranslateService) {
+              public translateService: TranslateService, private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'event.name', order: 1});
     this.multiSortMeta.push({field: 'talkDate', order: 1});
     this.multiSortMeta.push({field: 'name', order: 1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadEventTypes();
     this.loadTopics();
+
+    this.languageSubscription = this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   fillEventTypes(eventTypes: EventType[]) {
@@ -92,12 +110,12 @@ export class TalksSearchComponent implements OnInit {
   }
 
   loadEventTypes() {
-    this.eventTypeService.getFilterEventTypes(true, true, null)
+    this.eventTypeService.getFilterEventTypes(true, true, null, this.language)
       .subscribe(eventTypesData => {
         this.fillEventTypes(eventTypesData);
 
         if (this.eventTypes.length > 0) {
-          this.eventService.getDefaultEvent()
+          this.eventService.getDefaultEvent(this.language)
             .subscribe(defaultEventData => {
               this.defaultEvent = defaultEventData;
 
@@ -120,7 +138,7 @@ export class TalksSearchComponent implements OnInit {
 
   loadEvents(eventType: EventType) {
     if (eventType) {
-      this.eventService.getEvents(true, true, null, eventType)
+      this.eventService.getEvents(true, true, null, eventType, this.language)
         .subscribe(data => {
           this.fillEvents(data);
 
@@ -143,7 +161,7 @@ export class TalksSearchComponent implements OnInit {
   }
 
   loadTopics() {
-    this.topicService.getTopics()
+    this.topicService.getTopics(this.language)
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 
@@ -151,8 +169,9 @@ export class TalksSearchComponent implements OnInit {
       });
   }
 
-  loadTalks(eventType: EventType, event: Event, talkName: string, speakerName: string, topic: Topic, language: string) {
-    this.talkService.getTalks(eventType, event, talkName, speakerName, topic, language)
+  loadTalks(eventType: EventType, event: Event, talkName: string, speakerName: string, topic: Topic,
+            talkLanguage: string, language: string) {
+    this.talkService.getTalks(eventType, event, talkName, speakerName, topic, talkLanguage, language)
       .subscribe(data => {
         this.talks = getTalksWithSpeakersString(data);
         this.searched = true;
@@ -164,7 +183,7 @@ export class TalksSearchComponent implements OnInit {
     const currentSelectedEvent = this.selectedEvent;
 
     // Load event types
-    this.eventTypeService.getFilterEventTypes(true, true, null)
+    this.eventTypeService.getFilterEventTypes(true, true, null, this.language)
       .subscribe(eventTypesData => {
         this.fillEventTypes(eventTypesData);
 
@@ -176,7 +195,7 @@ export class TalksSearchComponent implements OnInit {
 
         // Load events and search
         if (this.selectedEventType) {
-          this.eventService.getEvents(true, true, null, this.selectedEventType)
+          this.eventService.getEvents(true, true, null, this.selectedEventType, this.language)
             .subscribe(data => {
               this.fillEvents(data);
 
@@ -201,7 +220,7 @@ export class TalksSearchComponent implements OnInit {
   loadTopicsAndSearch() {
     const currentSelectedTopic = this.selectedTopic;
 
-    this.topicService.getTopics()
+    this.topicService.getTopics(this.language)
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 
@@ -217,7 +236,8 @@ export class TalksSearchComponent implements OnInit {
 
   search() {
     if (!this.isSearchDisabled()) {
-      this.loadTalks(this.selectedEventType, this.selectedEvent, this.talkName, this.speakerName, this.selectedTopic, this.selectedLanguage);
+      this.loadTalks(this.selectedEventType, this.selectedEvent, this.talkName, this.speakerName, this.selectedTopic,
+        this.selectedLanguage, this.language);
     }
   }
 

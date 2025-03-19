@@ -1,10 +1,9 @@
 package guess.controller;
 
+import guess.domain.Language;
 import guess.domain.source.Topic;
 import guess.dto.topic.TopicDto;
-import guess.service.LocaleService;
 import guess.service.TopicService;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,34 +20,30 @@ import java.util.List;
 @RequestMapping("/api/topic")
 public class TopicController {
     private final TopicService topicService;
-    private final LocaleService localeService;
 
     @Autowired
-    public TopicController(TopicService topicService, LocaleService localeService) {
+    public TopicController(TopicService topicService) {
         this.topicService = topicService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/topics")
-    public List<TopicDto> getTopics(HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<TopicDto> getTopics(@RequestParam String language) {
         List<Topic> topics = topicService.getTopics();
         List<Topic> sortedTopics = topics.stream()
                 .sorted(Comparator.comparing(Topic::getOrderNumber))
                 .toList();
 
-        return TopicDto.convertToDto(sortedTopics, language);
+        return TopicDto.convertToDto(sortedTopics, Language.getLanguageByCode(language));
     }
 
     @GetMapping("/filter-topics")
     public List<TopicDto> getFilterTopics(@RequestParam boolean conferences, @RequestParam boolean meetups,
-                                          @RequestParam(required = false) Long organizerId, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+                                          @RequestParam(required = false) Long organizerId, @RequestParam String language) {
         List<Topic> topics = topicService.getTopics(conferences, meetups, organizerId, false);
         List<Topic> sortedTopics = topics.stream()
                 .sorted(Comparator.comparing(Topic::getOrderNumber))
                 .toList();
 
-        return TopicDto.convertToDto(sortedTopics, language);
+        return TopicDto.convertToDto(sortedTopics, Language.getLanguageByCode(language));
     }
 }

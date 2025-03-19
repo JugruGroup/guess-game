@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { EventPart } from '../../shared/models/event/event-part.model';
 import { HomeState } from '../../shared/models/home-state.model';
 import { EventService } from '../../shared/services/event.service';
@@ -7,11 +8,11 @@ import { LocaleService } from '../../shared/services/locale.service';
 import { getEventDates } from '../general/utility-functions';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    standalone: false
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  standalone: false
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   public imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -19,22 +20,37 @@ export class HomeComponent implements OnInit {
   public eventDates: string;
   public homeState = HomeState.LoadingState;
 
-  constructor(private eventService: EventService, public translateService: TranslateService, private localeService: LocaleService) {
+  public language: string;
+  private languageSubscription: Subscription;
+
+  constructor(private eventService: EventService, public translateService: TranslateService,
+              private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadDefaultEvent();
 
-    this.translateService.onLangChange
-      .subscribe(() => this.loadDefaultEvent());
+    this.languageSubscription = this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadDefaultEvent();
+      });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadDefaultEvent() {
     if (this.translateService.currentLang) {
-      this.eventService.getDefaultEventPartHomeInfo()
+      this.eventService.getDefaultEventPartHomeInfo(this.language)
         .subscribe(data => {
           this.eventPart = data;
-          this.eventDates = (this.eventPart) ? getEventDates(this.eventPart.startDate, this.eventPart.endDate, this.translateService) : null;
+          this.eventDates = (this.eventPart) ?
+            getEventDates(this.eventPart.startDate, this.eventPart.endDate, this.translateService) : null;
           this.homeState = (this.eventPart) ? HomeState.DefaultStateFoundState : HomeState.DefaultStateNotFoundState;
         });
     }

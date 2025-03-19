@@ -1,16 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NamePhotos } from '../../../shared/models/guess/name-photos.model';
-import { StateService } from '../../../shared/services/state.service';
+import { Subscription } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 import { AnswerService } from '../../../shared/services/answer.service';
 import { GameState } from '../../../shared/models/game-state.model';
+import { LocaleService } from '../../../shared/services/locale.service';
+import { NamePhotos } from '../../../shared/models/guess/name-photos.model';
+import { StateService } from '../../../shared/services/state.service';
 
 @Component({
     selector: 'app-guess-picture',
     templateUrl: './guess-photo-by-name.component.html',
     standalone: false
 })
-export class GuessPhotoByNameComponent implements OnInit {
+export class GuessPhotoByNameComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   private eventsImageDirectory = `${this.imageDirectory}/events`;
   private speakersImageDirectory = `${this.imageDirectory}/speakers`;
@@ -22,15 +25,32 @@ export class GuessPhotoByNameComponent implements OnInit {
   public imageSource2: string;
   public imageSource3: string;
 
-  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router) {
+  public language: string;
+  private languageSubscription: Subscription;
+
+  constructor(private stateService: StateService, private answerService: AnswerService, private router: Router,
+              private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadQuestion();
+
+    this.languageSubscription = this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadQuestion();
+      });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadQuestion() {
-    this.stateService.getNamePhotos()
+    this.stateService.getNamePhotos(this.language)
       .subscribe(data => {
           if (data) {
             this.namePhotos = data;
@@ -61,12 +81,12 @@ export class GuessPhotoByNameComponent implements OnInit {
   result() {
     this.stateService.setState(GameState.ResultState)
       .subscribe(() => {
-          this.router.navigateByUrl('/game/result');
+          this.router.navigateByUrl(`/${this.language}/game/result`);
         }
       );
   }
 
   cancel() {
-    this.router.navigateByUrl('/game/cancel');
+    this.router.navigateByUrl(`/${this.language}/game/cancel`);
   }
 }

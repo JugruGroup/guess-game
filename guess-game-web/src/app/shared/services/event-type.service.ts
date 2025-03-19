@@ -17,10 +17,13 @@ export class EventTypeService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getEventTypes(isConferences: boolean, isMeetups: boolean, organizer: Organizer, topic: Topic): Observable<EventType[]> {
+  getEventTypes(isConferences: boolean, isMeetups: boolean, organizer: Organizer, topic: Topic,
+                language: string): Observable<EventType[]> {
     let params = new HttpParams()
       .set('conferences', isConferences.toString())
-      .set('meetups', isMeetups.toString());
+      .set('meetups', isMeetups.toString())
+      .set('language', language);
+
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }
@@ -37,10 +40,13 @@ export class EventTypeService {
       );
   }
 
-  getFilterEventTypes(isConferences: boolean, isMeetups: boolean, organizer: Organizer): Observable<EventType[]> {
+  getFilterEventTypes(isConferences: boolean, isMeetups: boolean, organizer: Organizer,
+                      language: string): Observable<EventType[]> {
     let params = new HttpParams()
       .set('conferences', isConferences.toString())
-      .set('meetups', isMeetups.toString());
+      .set('meetups', isMeetups.toString())
+      .set('language', language);
+
     if (organizer) {
       params = params.set('organizerId', organizer.id.toString());
     }
@@ -54,8 +60,11 @@ export class EventTypeService {
       );
   }
 
-  getEventType(id: number): Observable<EventTypeDetails> {
-    return this.http.get<EventTypeDetails>(`${this.baseUrl}/event-type/${id}`)
+  getEventType(id: number, language: string): Observable<EventTypeDetails> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<EventTypeDetails>(`${this.baseUrl}/event-type/${id}`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

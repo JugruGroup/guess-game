@@ -3,7 +3,7 @@
 
   <app-message></app-message>
 
-  <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
+  <app-information-menubar></app-information-menubar>
 
   <div class="mt-2">
     <form role="form" class="mt-2 mb-2 talk-form">
@@ -120,18 +120,18 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'events', 'event', talk.event?.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/events/event/{{talk.event?.id}}" class="text-dark">
                 <img src="{{eventsImageDirectory}}/{{talk.eventTypeLogoFileName}}" class="img-event-type-logo-table" alt="logo"/>
                 <span class="ms-2">{{talk.event?.name}}</span>
               </a>
             </td>
             <td class="text-center">{{talk.talkDate | date:"shortDate":undefined:translateService.currentLang}}</td>
             <td>
-              <a [routerLink]="['/information', 'talks', 'talk', talk.id]" class="text-dark">{{talk.name}}</a>
+              <a routerLink="/{{language}}/information/talks/talk/{{talk.id}}" class="text-dark">{{talk.name}}</a>
             </td>
             <td>
               <span *ngFor="let speaker of talk.speakers; let i = index">
-                <span *ngIf="i > 0">, </span><a [routerLink]="['/information', 'speakers', 'speaker', speaker.id]" class="text-dark">{{speaker.displayName}}</a>
+                <span *ngIf="i > 0">, </span><a routerLink="/{{language}}/information/speakers/speaker/{{speaker.id}}" class="text-dark">{{speaker.displayName}}</a>
               </span>
             </td>
           </tr>

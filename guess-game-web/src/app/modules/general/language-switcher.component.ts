@@ -1,41 +1,66 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Language } from '../../shared/models/language.model';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+import { getRouteParams } from './utility-functions';
 import { LocaleService } from '../../shared/services/locale.service';
 
 @Component({
-    selector: 'app-language-switcher',
-    templateUrl: './language-switcher.component.html',
-    standalone: false
+  selector: 'app-language-switcher',
+  templateUrl: './language-switcher.component.html',
+  standalone: false
 })
 export class LanguageSwitcherComponent implements OnInit {
-  @Output() reload: EventEmitter<any> = new EventEmitter<any>();
+  protected readonly LocaleService = LocaleService;
 
-  public selectedLanguage: Language;
-  public language = Language;
+  public selectedLanguageCode: string;
 
-  constructor(private localeService: LocaleService) {
+  constructor(private localeService: LocaleService, private router: Router, private activatedRoute: ActivatedRoute) {
+  }
+
+  getUrlWithLanguage(snapshot: ActivatedRouteSnapshot, languageCode: string): string {
+    return snapshot.pathFromRoot
+      .map(v => {
+        if (v.paramMap.has('language')) {
+          return languageCode;
+        } else {
+          return v.url.map(segment => segment.toString()).join('/');
+        }
+      })
+      .join('/');
   }
 
   ngOnInit(): void {
-    this.localeService.getLanguage()
-      .subscribe(data => {
-        this.selectedLanguage = data;
+    const params = getRouteParams(this.activatedRoute.snapshot);
+    const pathLanguageCode = params.language;
+    const languageCode = this.localeService.getInitialLanguage(pathLanguageCode);
+
+    this.localeService.localeIfNeeded(languageCode)
+      .then(() => {
+        this.selectedLanguageCode = this.localeService.getLanguage();
+
+        if (!this.localeService.isLanguageValid(pathLanguageCode)) {
+          this.navigateByLanguageCode(this.localeService.getDefaultLanguage());
+        }
       });
   }
 
-  onLanguageChange(language: Language) {
-    this.localeService.setLanguage(language)
-      .subscribe(() => {
-          this.reload.emit();
-        }
-      );
+  navigateByLanguageCode(languageCode: string) {
+    const url = this.getUrlWithLanguage(this.activatedRoute.snapshot, languageCode);
+
+    this.router.navigateByUrl(url).then();
+  }
+
+  onLanguageChange(languageCode: string) {
+    this.localeService.changeLanguage(languageCode)
+      .then(() => {
+        this.navigateByLanguageCode(languageCode);
+      });
   }
 
   isEnChecked(): boolean {
-    return this.selectedLanguage === Language.English;
+    return this.selectedLanguageCode === LocaleService.EN_LANGUAGE_CODE;
   }
 
   isRuChecked(): boolean {
-    return this.selectedLanguage === Language.Russian;
+    return this.selectedLanguageCode === LocaleService.RU_LANGUAGE_CODE;
   }
 }

@@ -1,10 +1,10 @@
 package guess.controller;
 
 import guess.domain.GameState;
+import guess.domain.Language;
 import guess.dto.guess.*;
 import guess.dto.start.StartParametersDto;
 import guess.service.AnswerService;
-import guess.service.LocaleService;
 import guess.service.StateService;
 import guess.util.LocalizationUtils;
 import jakarta.servlet.http.HttpSession;
@@ -22,13 +22,11 @@ import java.util.List;
 public class StateController {
     private final StateService stateService;
     private final AnswerService answerService;
-    private final LocaleService localeService;
 
     @Autowired
-    public StateController(StateService stateService, AnswerService answerService, LocaleService localeService) {
+    public StateController(StateService stateService, AnswerService answerService) {
         this.stateService = stateService;
         this.answerService = answerService;
-        this.localeService = localeService;
     }
 
     @PostMapping("/parameters")
@@ -54,7 +52,7 @@ public class StateController {
         stateService.setState(GameState.valueOf(state), httpSession);
     }
 
-    <T> T getDto(HttpSession httpSession, DtoFunction<T> dtoFunction) {
+    <T> T getDto(String language, HttpSession httpSession, DtoFunction<T> dtoFunction) {
         int currentQuestionIndex = answerService.getCurrentQuestionIndex(httpSession);
         var questionAnswersSet = stateService.getQuestionAnswersSet(httpSession);
         List<Long> correctAnswerIds = answerService.getCorrectAnswerIds(currentQuestionIndex, httpSession);
@@ -62,9 +60,9 @@ public class StateController {
 
         if ((questionAnswersSet != null) && (currentQuestionIndex < questionAnswersSet.questionAnswersList().size())) {
             var questionAnswers = questionAnswersSet.questionAnswersList().get(currentQuestionIndex);
-            var language = localeService.getLanguage(httpSession);
+            var languageEnum = Language.getLanguageByCode(language);
             var sourceDto = new QuestionAnswersSourceDto(
-                    LocalizationUtils.getString(questionAnswersSet.name(), language),
+                    LocalizationUtils.getString(questionAnswersSet.name(), languageEnum),
                     currentQuestionIndex,
                     questionAnswersSet.questionAnswersList().size(),
                     questionAnswersSet.logoFileName(),
@@ -75,59 +73,59 @@ public class StateController {
             return dtoFunction.apply(
                     sourceDto,
                     questionAnswers,
-                    language);
+                    languageEnum);
         } else {
             return null;
         }
     }
 
     @GetMapping("/photo-names")
-    public PhotoNamesDto getPhotoNames(HttpSession httpSession) {
-        return getDto(httpSession, PhotoNamesDto::convertToDto);
+    public PhotoNamesDto getPhotoNames(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, PhotoNamesDto::convertToDto);
     }
 
     @GetMapping("/name-photos")
-    public NamePhotosDto getNamePhotos(HttpSession httpSession) {
-        return getDto(httpSession, NamePhotosDto::convertToDto);
+    public NamePhotosDto getNamePhotos(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, NamePhotosDto::convertToDto);
     }
 
     @GetMapping("/speaker-talks")
-    public SpeakersTalksDto getSpeakerTalks(HttpSession httpSession) {
-        return getDto(httpSession, SpeakersTalksDto::convertToDto);
+    public SpeakersTalksDto getSpeakerTalks(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, SpeakersTalksDto::convertToDto);
     }
 
     @GetMapping("/talk-speakers")
-    public TalkSpeakersDto getTalkSpeakers(HttpSession httpSession) {
-        return getDto(httpSession, TalkSpeakersDto::convertToDto);
+    public TalkSpeakersDto getTalkSpeakers(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, TalkSpeakersDto::convertToDto);
     }
 
     @GetMapping("/speaker-companies")
-    public SpeakerCompaniesDto getSpeakerCompanies(HttpSession httpSession) {
-        return getDto(httpSession, SpeakerCompaniesDto::convertToDto);
+    public SpeakerCompaniesDto getSpeakerCompanies(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, SpeakerCompaniesDto::convertToDto);
     }
 
     @GetMapping("/company-speakers")
-    public CompanySpeakersDto getCompanySpeakers(HttpSession httpSession) {
-        return getDto(httpSession, CompanySpeakersDto::convertToDto);
+    public CompanySpeakersDto getCompanySpeakers(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, CompanySpeakersDto::convertToDto);
     }
 
     @GetMapping("/speaker-accounts")
-    public SpeakerAccountsDto getSpeakerAccounts(HttpSession httpSession) {
-        return getDto(httpSession, SpeakerAccountsDto::convertToDto);
+    public SpeakerAccountsDto getSpeakerAccounts(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, SpeakerAccountsDto::convertToDto);
     }
 
     @GetMapping("/account-speakers")
-    public AccountSpeakersDto getAccountSpeakers(HttpSession httpSession) {
-        return getDto(httpSession, AccountSpeakersDto::convertToDto);
+    public AccountSpeakersDto getAccountSpeakers(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, AccountSpeakersDto::convertToDto);
     }
 
     @GetMapping("/speaker-tag-clouds")
-    public SpeakerTagCloudsDto getSpeakerTagClouds(HttpSession httpSession) {
-        return getDto(httpSession, SpeakerTagCloudsDto::convertToDto);
+    public SpeakerTagCloudsDto getSpeakerTagClouds(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, SpeakerTagCloudsDto::convertToDto);
     }
 
     @GetMapping("/tag-cloud-speakers")
-    public TagCloudSpeakersDto getTagCloudSpeakers(HttpSession httpSession) {
-        return getDto(httpSession, TagCloudSpeakersDto::convertToDto);
+    public TagCloudSpeakersDto getTagCloudSpeakers(@RequestParam String language, HttpSession httpSession) {
+        return getDto(language, httpSession, TagCloudSpeakersDto::convertToDto);
     }
 }

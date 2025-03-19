@@ -3,7 +3,7 @@
 
   <app-message></app-message>
 
-  <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
+  <app-information-menubar></app-information-menubar>
   <app-companies-tabmenu [activeIndex]="2" [id]="id"></app-companies-tabmenu>
 
   <div class="mt-3">
@@ -68,14 +68,14 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'speakers', 'speaker', speaker.id]" class="text-dark">
+              <a routerLink="/{{language}}/information/speakers/speaker/{{speaker.id}}" class="text-dark">
                 <img src="{{speakersImageDirectory}}/{{speaker.photoFileName}}" class="img-speaker-photo-table" alt="photo"/>
                 <span class="ms-2">{{speaker.displayName}}</span>
               </a>
             </td>
             <td>
               <span *ngFor="let company of speaker.companies; last as isLast">
-                <a [routerLink]="['/information', 'companies', 'company', company.id]" class="text-dark">{{company.name}}</a>
+                <a routerLink="/{{language}}/information/companies/company/{{company.id}}" class="text-dark">{{company.name}}</a>
                 <span *ngIf="!isLast">, </span>
               </span>
             </td>

@@ -5,9 +5,9 @@
   <ng-template #end>
     <div class="row justify-content-end align-items-center">
       <div class="col-auto">
-        <button class="btn text-secondary" routerLink="/home" title="{{'common.homeToolTipText' | translate}}"><i class="pi pi-home"></i></button>
+        <button class="btn text-secondary" routerLink="/{{language}}/home" title="{{'common.homeToolTipText' | translate}}"><i class="pi pi-home"></i></button>
       </div>
-      <app-language-switcher (reload)="onReload()" class="col-auto"></app-language-switcher>
+      <app-language-switcher class="col-auto"></app-language-switcher>
     </div>
   </ng-template>
 </p-menubar>

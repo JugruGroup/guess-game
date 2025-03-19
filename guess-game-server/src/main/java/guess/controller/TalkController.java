@@ -1,13 +1,12 @@
 package guess.controller;
 
+import guess.domain.Language;
 import guess.domain.source.Talk;
-import guess.dto.talk.TalkSuperBriefDto;
 import guess.dto.talk.TalkDetailsDto;
+import guess.dto.talk.TalkSuperBriefDto;
 import guess.service.EventService;
 import guess.service.EventTypeService;
-import guess.service.LocaleService;
 import guess.service.TalkService;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,14 +22,12 @@ public class TalkController {
     private final TalkService talkService;
     private final EventService eventService;
     private final EventTypeService eventTypeService;
-    private final LocaleService localeService;
 
     @Autowired
-    public TalkController(TalkService talkService, EventService eventService, EventTypeService eventTypeService, LocaleService localeService) {
+    public TalkController(TalkService talkService, EventService eventService, EventTypeService eventTypeService) {
         this.talkService = talkService;
         this.eventService = eventService;
         this.eventTypeService = eventTypeService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/talks")
@@ -40,11 +37,10 @@ public class TalkController {
                                             @RequestParam(required = false) String speakerName,
                                             @RequestParam(required = false) Long topicId,
                                             @RequestParam(required = false) String talkLanguage,
-                                            HttpSession httpSession) {
+                                            @RequestParam String language) {
         List<Talk> talks = talkService.getTalks(eventTypeId, eventId, talkName, speakerName, topicId, talkLanguage);
-        var language = localeService.getLanguage(httpSession);
         List<TalkSuperBriefDto> talkSuperBriefDtoList = TalkSuperBriefDto.convertToSuperBriefDto(talks, eventService::getEventByTalk,
-                eventTypeService::getEventTypeByEvent, language);
+                eventTypeService::getEventTypeByEvent, Language.getLanguageByCode(language));
 
         Comparator<TalkSuperBriefDto> comparatorByEventName = Comparator.comparing(t -> t.getEvent().getName());
         Comparator<TalkSuperBriefDto> comparatorByName = Comparator.comparing(TalkSuperBriefDto::getName);
@@ -55,11 +51,10 @@ public class TalkController {
     }
 
     @GetMapping("/talk/{id}")
-    public TalkDetailsDto getTalk(@PathVariable long id, HttpSession httpSession) {
+    public TalkDetailsDto getTalk(@PathVariable long id, @RequestParam String language) {
         var talk = talkService.getTalkById(id);
-        var language = localeService.getLanguage(httpSession);
 
         return TalkDetailsDto.convertToDto(talk, eventService::getEventByTalk,
-                eventTypeService::getEventTypeByEvent, language);
+                eventTypeService::getEventTypeByEvent, Language.getLanguageByCode(language));
     }
 }

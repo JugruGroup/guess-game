@@ -1,67 +1,61 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { lastValueFrom, Observable } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-import { TranslateService } from '@ngx-translate/core';
 import { PrimeNG } from 'primeng/config';
-import { MessageService } from '../../modules/message/message.service';
-import { Language } from '../models/language.model';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocaleService {
-  private readonly EN_LANGUAGE_CODE = 'en';
-  private readonly RU_LANGUAGE_CODE = 'ru';
+  public static readonly EN_LANGUAGE_CODE = 'en';
+  public static readonly RU_LANGUAGE_CODE = 'ru';
 
-  private baseUrl = 'api/locale';
+  constructor(public translateService: TranslateService, private primeNG: PrimeNG) {
+    this.translateService.addLangs([LocaleService.EN_LANGUAGE_CODE, LocaleService.RU_LANGUAGE_CODE]);
+    this.translateService.setDefaultLang(LocaleService.EN_LANGUAGE_CODE);
 
-  constructor(private http: HttpClient, private messageService: MessageService, public translateService: TranslateService,
-              private primeNG: PrimeNG) {
-    this.translateService.addLangs([this.EN_LANGUAGE_CODE, this.RU_LANGUAGE_CODE]);
-    this.translateService.setDefaultLang(this.EN_LANGUAGE_CODE);
-
-    this.getLanguageAndChangeInterfaceLanguage().then();
+    this.changeLanguage(LocaleService.EN_LANGUAGE_CODE).then();
   }
 
-  getLanguage(): Observable<Language> {
-    return this.http.get<Language>(`${this.baseUrl}/language`)
-      .pipe(
-        catchError((response: Response) => {
-          this.messageService.reportMessage(response);
-          throw response;
-        })
-      );
+  getLanguage(): string {
+    return this.translateService.currentLang;
   }
 
-  setLanguage(language: Language): Observable<string> {
-    return this.http.put<string>(`${this.baseUrl}/language`, language)
-      .pipe(
-        map(data => {
-            this.changeInterfaceLanguage(language).then();
-            return data;
-          }
-        ),
-        catchError((response: Response) => {
-          this.messageService.reportMessage(response);
-          throw response;
-        })
-      );
-  }
-
-  async getLanguageAndChangeInterfaceLanguage() {
-    const language$ = this.getLanguage();
-    const language = await lastValueFrom(language$);
-
-    await this.changeInterfaceLanguage(language);
-  }
-
-  async changeInterfaceLanguage(language: Language) {
-    const languageCode = (language === Language.Russian) ? this.RU_LANGUAGE_CODE : this.EN_LANGUAGE_CODE;
+  async changeLanguage(languageCode: string) {
     const language$ = this.translateService.use(languageCode);
     const primeng$ = this.translateService.get(languageCode);
 
     await lastValueFrom(language$);
     await lastValueFrom(primeng$).then(res => this.primeNG.setTranslation(res));
+  }
+
+  isLanguageValid(languageCode: string): boolean {
+    return this.translateService.langs.includes(languageCode);
+  }
+
+  getDefaultLanguage(): string {
+    return LocaleService.EN_LANGUAGE_CODE;
+  }
+
+  getInitialLanguage(pathLanguageCode: string | undefined): string {
+    if (pathLanguageCode) {
+      return this.isLanguageValid(pathLanguageCode) ? pathLanguageCode : this.getDefaultLanguage();
+    } else {
+      return this.getDefaultLanguage();
+    }
+  }
+
+  async localeIfNeeded(newLanguageCode: string) {
+    if (this.getLanguage() !== newLanguageCode) {
+      await this.changeLanguage(newLanguageCode);
+    }
+  }
+
+  getResourceString(key: string | string[], interpolateParams?: object): Observable<string> {
+    return this.translateService.get(key, interpolateParams);
+  }
+
+  interpolate(expr: string, params?: any): string {
+    return this.translateService.parser.interpolate(expr, params);
   }
 }

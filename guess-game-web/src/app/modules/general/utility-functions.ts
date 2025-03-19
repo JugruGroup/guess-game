@@ -1,4 +1,5 @@
 import { formatDate } from '@angular/common';
+import { ActivatedRouteSnapshot, Params } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Event } from '../../shared/models/event/event.model';
 import { EventType } from '../../shared/models/event-type/event-type.model';
@@ -347,4 +348,17 @@ export function hexToRgbA(hex: string, alpha: string) {
   }
 
   throw new Error('Bad Hex');
+}
+
+export function getRouteParams(snapshot: ActivatedRouteSnapshot): Params {
+  let params = {};
+  const stack: ActivatedRouteSnapshot[] = [snapshot.root];
+
+  while (stack.length > 0) {
+    const route = stack.pop()!;
+    params = {...params, ...route.params};
+    stack.push(...route.children);
+  }
+
+  return params;
 }

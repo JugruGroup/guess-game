@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { SpeakerDetails } from '../../../shared/models/speaker/speaker-details.model';
 import { SpeakerService } from '../../../shared/services/speaker.service';
 import {
@@ -14,7 +16,7 @@ import {
     templateUrl: './speaker.component.html',
     standalone: false
 })
-export class SpeakerComponent implements OnInit {
+export class SpeakerComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public eventsImageDirectory = `${this.imageDirectory}/events`;
@@ -27,10 +29,14 @@ export class SpeakerComponent implements OnInit {
   public speakerDetails: SpeakerDetails = new SpeakerDetails();
   public multiSortMeta: any[] = [];
 
+  public language: string;
+  private languageSubscription: Subscription;
+
   constructor(public speakerService: SpeakerService, public translateService: TranslateService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute, private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'talkDate', order: -1});
     this.multiSortMeta.push({field: 'name', order: 1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
@@ -41,12 +47,24 @@ export class SpeakerComponent implements OnInit {
       if (!isNaN(idNumber)) {
         this.id = idNumber;
         this.loadSpeaker(this.id);
+
+        this.languageSubscription = this.translateService.onLangChange
+          .subscribe(() => {
+            this.language = this.localeService.getLanguage();
+            this.onLanguageChange();
+          });
       }
     });
   }
 
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
+  }
+
   loadSpeaker(id: number) {
-    this.speakerService.getSpeaker(id)
+    this.speakerService.getSpeaker(id, this.language)
       .subscribe(data => {
         this.speakerDetails = this.getSpeakerDetailsWithFilledAttributes(data);
       });

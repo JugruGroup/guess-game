@@ -9,9 +9,11 @@ import guess.dto.speaker.SpeakerBriefDto;
 import guess.dto.speaker.SpeakerDetailsDto;
 import guess.dto.speaker.SpeakerSuperBriefDto;
 import guess.dto.talk.TalkBriefDto;
-import guess.service.*;
+import guess.service.EventService;
+import guess.service.EventTypeService;
+import guess.service.SpeakerService;
+import guess.service.TalkService;
 import guess.util.LocalizationUtils;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,62 +33,63 @@ public class SpeakerController {
     private final TalkService talkService;
     private final EventService eventService;
     private final EventTypeService eventTypeService;
-    private final LocaleService localeService;
 
     @Autowired
     public SpeakerController(SpeakerService speakerService, TalkService talkService, EventService eventService,
-                             EventTypeService eventTypeService, LocaleService localeService) {
+                             EventTypeService eventTypeService) {
         this.speakerService = speakerService;
         this.talkService = talkService;
         this.eventService = eventService;
         this.eventTypeService = eventTypeService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/first-letter-speakers")
-    public List<SpeakerBriefDto> getSpeakersByFirstLetter(@RequestParam String firstLetter, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Speaker> speakers = speakerService.getSpeakersByFirstLetter(firstLetter, language);
+    public List<SpeakerBriefDto> getSpeakersByFirstLetter(@RequestParam String firstLetter, @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Speaker> speakers = speakerService.getSpeakersByFirstLetter(firstLetter, languageEnum);
 
-        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, language));
+        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, languageEnum));
     }
 
     @GetMapping("/first-letters-speakers")
-    public List<SpeakerSuperBriefDto> getSpeakersByFirstLetters(@RequestParam String firstLetters, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Speaker> speakers = speakerService.getSpeakersByFirstLetters(firstLetters, language);
+    public List<SpeakerSuperBriefDto> getSpeakersByFirstLetters(@RequestParam String firstLetters,
+                                                                @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Speaker> speakers = speakerService.getSpeakersByFirstLetters(firstLetters, languageEnum);
 
-        return createDuplicatesAndConvertToDtoAndSort(speakers, language);
+        return createDuplicatesAndConvertToDtoAndSort(speakers, languageEnum);
     }
 
     @PostMapping("/selected-speakers")
-    public List<SpeakerSuperBriefDto> getSelectedSpeakers(@RequestBody SelectedEntitiesDto selectedEntities, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<SpeakerSuperBriefDto> getSelectedSpeakers(@RequestBody SelectedEntitiesDto selectedEntities,
+                                                          @RequestParam String language) {
         List<Speaker> speakers = speakerService.getSpeakerByIds(selectedEntities.getIds());
 
-        return createDuplicatesAndConvertToDtoAndSort(speakers, language);
+        return createDuplicatesAndConvertToDtoAndSort(speakers, Language.getLanguageByCode(language));
     }
 
     @GetMapping("/speakers")
-    public List<SpeakerBriefDto> getSpeakers(@RequestParam(required = false) String name, @RequestParam(required = false) String company,
-                                             @RequestParam(required = false) String twitter, @RequestParam(required = false) String gitHub,
-                                             @RequestParam(required = false) String habr, @RequestParam(required = false) String description,
-                                             @RequestParam boolean javaChampion, @RequestParam boolean mvp,
-                                             HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<SpeakerBriefDto> getSpeakers(@RequestParam(required = false) String name,
+                                             @RequestParam(required = false) String company,
+                                             @RequestParam(required = false) String twitter,
+                                             @RequestParam(required = false) String gitHub,
+                                             @RequestParam(required = false) String habr,
+                                             @RequestParam(required = false) String description,
+                                             @RequestParam boolean javaChampion,
+                                             @RequestParam boolean mvp,
+                                             @RequestParam String language) {
         List<Speaker> speakers = speakerService.getSpeakers(name, company, new Speaker.SpeakerSocials(twitter, gitHub, habr),
                 description, javaChampion, mvp);
 
-        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, language));
+        return convertToBriefDtoAndSort(speakers, s -> SpeakerBriefDto.convertToBriefDto(s, Language.getLanguageByCode(language)));
     }
 
     @GetMapping("/speaker/{id}")
-    public SpeakerDetailsDto getSpeaker(@PathVariable long id, HttpSession httpSession) {
+    public SpeakerDetailsDto getSpeaker(@PathVariable long id, @RequestParam String language) {
         var speaker = speakerService.getSpeakerById(id);
         List<Talk> talks = talkService.getTalksBySpeaker(speaker);
-        var language = localeService.getLanguage(httpSession);
         var speakerDetailsDto = SpeakerDetailsDto.convertToDto(speaker, talks, eventService::getEventByTalk,
-                eventTypeService::getEventTypeByEvent, language);
+                eventTypeService::getEventTypeByEvent, Language.getLanguageByCode(language));
 
         List<TalkBriefDto> sortedTalks = speakerDetailsDto.talks().stream()
                 .sorted(Comparator.comparing(TalkBriefDto::getTalkDate).reversed())

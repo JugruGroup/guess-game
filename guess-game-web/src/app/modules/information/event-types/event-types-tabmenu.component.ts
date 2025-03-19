@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuItem } from "primeng/api";
+import { MenuItem } from 'primeng/api';
 
 @Component({
-    selector: 'app-event-types-tabmenu',
-    templateUrl: './event-types-tabmenu.component.html',
-    standalone: false
+  selector: 'app-event-types-tabmenu',
+  templateUrl: './event-types-tabmenu.component.html',
+  standalone: false
 })
 export class EventTypesTabMenuComponent implements OnInit {
   @Input() public activeIndex: number;
@@ -13,12 +13,17 @@ export class EventTypesTabMenuComponent implements OnInit {
   public items: MenuItem[] = [];
 
   ngOnInit(): void {
-    this.items = [
-      {labelKey: 'eventTypes.search.title', routerLink: '/information/event-types/search'}
+    const items = [
+      {labelKey: 'eventTypes.search.title', routerLinkSuffix: 'information/event-types/search'}
     ];
 
     if (!isNaN(this.id)) {
-      this.items.push({labelKey: 'eventType.title', routerLink: `/information/event-types/event-type/${this.id}`});
+      items.push({
+        labelKey: 'eventType.title',
+        routerLinkSuffix: `information/event-types/event-type/${this.id}`
+      });
     }
+
+    this.items = items;
   }
 }

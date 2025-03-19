@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
 import { EventTypeStatistics } from '../../../../shared/models/statistics/event-type/event-type-statistics.model';
+import { LocaleService } from '../../../../shared/services/locale.service';
 import { Organizer } from '../../../../shared/models/organizer/organizer.model';
-import { Topic } from '../../../../shared/models/topic/topic.model';
-import { StatisticsService } from '../../../../shared/services/statistics.service';
 import { OrganizerService } from '../../../../shared/services/organizer.service';
+import { StatisticsService } from '../../../../shared/services/statistics.service';
+import { Topic } from '../../../../shared/models/topic/topic.model';
 import { TopicService } from '../../../../shared/services/topic.service';
 import { findOrganizerById, findTopicById, getEventTypeStatisticsWithSortName } from '../../../general/utility-functions';
 
@@ -14,7 +16,7 @@ import { findOrganizerById, findTopicById, getEventTypeStatisticsWithSortName } 
     templateUrl: './event-type-statistics.component.html',
     standalone: false
 })
-export class EventTypeStatisticsComponent implements OnInit {
+export class EventTypeStatisticsComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
 
@@ -32,13 +34,30 @@ export class EventTypeStatisticsComponent implements OnInit {
   public eventTypeStatistics = new EventTypeStatistics();
   public multiSortMeta: any[] = [];
 
+  public language: string;
+  private languageSubscription: Subscription;
+
   constructor(private statisticsService: StatisticsService, public organizerService: OrganizerService,
-              private topicService: TopicService, public translateService: TranslateService) {
+              private topicService: TopicService, public translateService: TranslateService,
+              private localeService: LocaleService) {
     this.multiSortMeta.push({field: 'sortName', order: 1});
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadOrganizers();
+
+    this.languageSubscription = this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.onLanguageChange();
+      });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   fillOrganizers(organizers: Organizer[]) {
@@ -60,17 +79,17 @@ export class EventTypeStatisticsComponent implements OnInit {
   loadOrganizers() {
     const currentSelectedTopic = this.selectedTopic;
 
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
         if (this.organizers.length > 0) {
-          this.organizerService.getDefaultEventOrganizer()
+          this.organizerService.getDefaultEventOrganizer(this.language)
             .subscribe(defaultOrganizerData => {
               const selectedOrganizer = (defaultOrganizerData) ? findOrganizerById(defaultOrganizerData.id, this.organizers) : null;
               this.selectedOrganizer = (selectedOrganizer) ? selectedOrganizer : null;
 
-              this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+              this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
                 .subscribe(topicsData => {
                   this.fillTopics(topicsData);
 
@@ -92,7 +111,7 @@ export class EventTypeStatisticsComponent implements OnInit {
   }
 
   loadTopics() {
-    this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+    this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
       .subscribe(topicsData => {
         this.fillTopics(topicsData);
 
@@ -103,7 +122,7 @@ export class EventTypeStatisticsComponent implements OnInit {
   }
 
   loadEventTypeStatistics(organizer: Organizer, topic: Topic) {
-    this.statisticsService.getEventTypeStatistics(this.isConferences, this.isMeetups, organizer, topic)
+    this.statisticsService.getEventTypeStatistics(this.isConferences, this.isMeetups, organizer, topic, this.language)
       .subscribe(data => {
           this.eventTypeStatistics = getEventTypeStatisticsWithSortName(data);
         });
@@ -125,13 +144,13 @@ export class EventTypeStatisticsComponent implements OnInit {
     const currentSelectedOrganizer = this.selectedOrganizer;
     const currentSelectedTopic = this.selectedTopic;
 
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
         this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer)
+        this.topicService.getFilterTopics(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
           .subscribe(topicsData => {
             this.fillTopics(topicsData);
 

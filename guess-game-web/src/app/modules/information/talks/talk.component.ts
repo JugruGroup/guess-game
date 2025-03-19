@@ -12,10 +12,12 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { YouTubePlayer } from '@angular/youtube-player';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { TalkDetails } from '../../../shared/models/talk/talk-details.model';
 import { TalkService } from '../../../shared/services/talk.service';
-import { VideoSize } from "../../../shared/models/talk/video-size.model";
+import { VideoSize } from '../../../shared/models/talk/video-size.model';
 import {
   getSpeakersWithCompaniesString,
   getTalkClassnameByFilename,
@@ -28,7 +30,7 @@ import getVideoId from 'get-video-id';
     templateUrl: './talk.component.html',
     standalone: false
 })
-export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, OnDestroy {
+export class TalkComponent implements OnInit, AfterViewInit, AfterViewChecked, OnDestroy {
   private imageDirectory = 'assets/images';
   public degreesImageDirectory = `${this.imageDirectory}/degrees`;
   public eventsImageDirectory = `${this.imageDirectory}/events`;
@@ -40,6 +42,9 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
   public id: number;
   public talkDetails: TalkDetails = new TalkDetails();
 
+  public language: string;
+  private languageSubscription: Subscription;
+
   @ViewChild('youtubePlayerDiv') youtubePlayerDiv: ElementRef<HTMLDivElement>;
   @ViewChildren('youtubePlayer') youtubePlayers: QueryList<YouTubePlayer>;
   private initialVideoSizes: Map<string, VideoSize> = new Map<string, VideoSize>();
@@ -47,7 +52,9 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
   private isVideoSizesInitialized = false;
 
   constructor(private talkService: TalkService, public translateService: TranslateService,
-              private activatedRoute: ActivatedRoute, private changeDetector: ChangeDetectorRef) {
+              private activatedRoute: ActivatedRoute, private changeDetector: ChangeDetectorRef,
+              private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
@@ -59,8 +66,11 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
         this.id = idNumber;
         this.loadTalk(this.id);
 
-        this.translateService.onLangChange
-          .subscribe(() => this.loadTalk(this.id));
+        this.languageSubscription = this.translateService.onLangChange
+          .subscribe(() => {
+            this.language = this.localeService.getLanguage();
+            this.loadTalk(this.id);
+          });
       }
     });
   }
@@ -71,6 +81,10 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.onResize);
+
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   ngAfterViewChecked() {
@@ -100,7 +114,7 @@ export class TalkComponent implements AfterViewInit, AfterViewChecked, OnInit, O
 
   loadTalk(id: number) {
     if (this.translateService.currentLang) {
-      this.talkService.getTalk(id)
+      this.talkService.getTalk(id, this.language)
         .subscribe(data => {
           this.talkDetails = this.getTalkDetailsWithFilledAttributes(data);
 

@@ -18,8 +18,11 @@ export class TalkService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getTalks(eventType: EventType, event: Event, talkName: string, speakerName: string, topic: Topic, language: string): Observable<Talk[]> {
-    let params = new HttpParams();
+  getTalks(eventType: EventType, event: Event, talkName: string, speakerName: string, topic: Topic,
+           talkLanguage: string, language: string): Observable<Talk[]> {
+    let params = new HttpParams()
+      .set('language', language);
+
     if (eventType) {
       params = params.set('eventTypeId', eventType.id.toString());
     }
@@ -35,8 +38,8 @@ export class TalkService {
     if (topic) {
       params = params.set('topicId', topic.id.toString());
     }
-    if (language) {
-      params = params.set('talkLanguage', language);
+    if (talkLanguage) {
+      params = params.set('talkLanguage', talkLanguage);
     }
 
     return this.http.get<Talk[]>(`${this.baseUrl}/talks`, {params: params})
@@ -48,8 +51,11 @@ export class TalkService {
       );
   }
 
-  getTalk(id: number): Observable<TalkDetails> {
-    return this.http.get<TalkDetails>(`${this.baseUrl}/talk/${id}`)
+  getTalk(id: number, language: string): Observable<TalkDetails> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<TalkDetails>(`${this.baseUrl}/talk/${id}`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

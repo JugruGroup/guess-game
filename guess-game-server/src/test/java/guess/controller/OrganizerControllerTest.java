@@ -1,12 +1,10 @@
 package guess.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import guess.domain.Language;
 import guess.domain.source.Event;
 import guess.domain.source.EventType;
 import guess.domain.source.Organizer;
 import guess.service.EventService;
-import guess.service.LocaleService;
 import guess.service.OrganizerService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -20,7 +18,6 @@ import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -52,16 +49,11 @@ class OrganizerControllerTest {
     @MockitoBean
     private EventService eventService;
 
-    @MockitoBean
-    private LocaleService localeService;
-
     @Autowired
     private OrganizerController organizerController;
 
     @Test
     void getOrganizers() throws Exception {
-        MockHttpSession httpSession = new MockHttpSession();
-
         Organizer organizer0 = new Organizer();
         organizer0.setId(0);
 
@@ -69,15 +61,13 @@ class OrganizerControllerTest {
         organizer1.setId(1);
 
         given(organizerService.getOrganizers()).willReturn(List.of(organizer0, organizer1));
-        given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
 
         mvc.perform(get("/api/organizer/organizers")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .session(httpSession))
+                        .param("language", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
         Mockito.verify(organizerService, VerificationModeFactory.times(1)).getOrganizers();
-        Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
     }
 
     @Nested
@@ -108,16 +98,12 @@ class OrganizerControllerTest {
             final boolean IS_CONFERENCES = Boolean.TRUE;
             final boolean IS_MEETUPS = Boolean.TRUE;
 
-            MockHttpSession httpSession = new MockHttpSession();
-
             given(eventService.getDefaultEvent(IS_CONFERENCES, IS_MEETUPS)).willReturn(defaultEvent);
 
             if (defaultEvent != null) {
-                given(localeService.getLanguage(httpSession)).willReturn(Language.ENGLISH);
-
                 MvcResult mvcResult = mvc.perform(get("/api/organizer/default-event-organizer")
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .session(httpSession))
+                                .param("language", "en"))
                         .andExpect(status().isOk())
                         .andReturn();
                 String body = mvcResult.getResponse().getContentAsString();
@@ -125,11 +111,10 @@ class OrganizerControllerTest {
                 assertFalse(body.isBlank());
 
                 Mockito.verify(eventService, VerificationModeFactory.times(1)).getDefaultEvent(IS_CONFERENCES, IS_MEETUPS);
-                Mockito.verify(localeService, VerificationModeFactory.times(1)).getLanguage(httpSession);
             } else {
                 MvcResult mvcResult = mvc.perform(get("/api/organizer/default-event-organizer")
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .session(httpSession))
+                                .param("language", "en"))
                         .andExpect(status().isOk())
                         .andReturn();
                 String body = mvcResult.getResponse().getContentAsString();

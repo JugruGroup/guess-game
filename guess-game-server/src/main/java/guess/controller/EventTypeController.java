@@ -8,9 +8,7 @@ import guess.dto.eventtype.EventTypeDetailsDto;
 import guess.dto.eventtype.EventTypeSuperBriefDto;
 import guess.service.EventService;
 import guess.service.EventTypeService;
-import guess.service.LocaleService;
 import guess.util.LocalizationUtils;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,33 +23,32 @@ import java.util.List;
 public class EventTypeController {
     private final EventTypeService eventTypeService;
     private final EventService eventService;
-    private final LocaleService localeService;
 
     @Autowired
-    public EventTypeController(EventTypeService eventTypeService, EventService eventService, LocaleService localeService) {
+    public EventTypeController(EventTypeService eventTypeService, EventService eventService) {
         this.eventTypeService = eventTypeService;
         this.eventService = eventService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/event-types")
     public List<EventTypeBriefDto> getEventTypes(@RequestParam boolean conferences, @RequestParam boolean meetups,
                                                  @RequestParam(required = false) Long organizerId,
                                                  @RequestParam(required = false) Long topicId,
-                                                 HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, topicId, language);
+                                                 @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, topicId, languageEnum);
 
-        return EventTypeBriefDto.convertToBriefDto(eventTypes, language);
+        return EventTypeBriefDto.convertToBriefDto(eventTypes, languageEnum);
     }
 
     @GetMapping("/filter-event-types")
     public List<EventTypeSuperBriefDto> getFilterEventTypes(@RequestParam boolean conferences, @RequestParam boolean meetups,
-                                                            @RequestParam(required = false) Long organizerId, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, null, language);
+                                                            @RequestParam(required = false) Long organizerId,
+                                                            @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<EventType> eventTypes = getEventTypesAndSort(conferences, meetups, organizerId, null, languageEnum);
 
-        return EventTypeSuperBriefDto.convertToSuperBriefDto(eventTypes, language);
+        return EventTypeSuperBriefDto.convertToSuperBriefDto(eventTypes, languageEnum);
     }
 
     List<EventType> getEventTypesAndSort(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId, Language language) {
@@ -66,11 +63,10 @@ public class EventTypeController {
     }
 
     @GetMapping("/event-type/{id}")
-    public EventTypeDetailsDto getEventType(@PathVariable long id, HttpSession httpSession) {
+    public EventTypeDetailsDto getEventType(@PathVariable long id, @RequestParam String language) {
         var eventType = eventTypeService.getEventTypeById(id);
         var eventParts = eventService.convertEventsToEventParts(eventType.getEvents());
-        var language = localeService.getLanguage(httpSession);
-        var eventTypeDetailsDto = EventTypeDetailsDto.convertToDto(eventType, eventParts, language);
+        var eventTypeDetailsDto = EventTypeDetailsDto.convertToDto(eventType, eventParts, Language.getLanguageByCode(language));
 
         List<EventPartBriefDto> sortedEvents = eventTypeDetailsDto.eventParts().stream()
                 .sorted(Comparator.comparing(EventPartBriefDto::getStartDate).reversed())

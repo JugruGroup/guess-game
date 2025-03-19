@@ -303,10 +303,5 @@
         "mvpColumn": "MVP"
       }
     }
-  },
-  "notFound": {
-    "title": "Page not found",
-    "text": "Go to",
-    "existingPageLinkText": "existing page"
   }
 }

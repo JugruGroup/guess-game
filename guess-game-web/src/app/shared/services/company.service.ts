@@ -17,9 +17,11 @@ export class CompanyService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getCompaniesByFirstLetter(digit: boolean, firstLetter: string): Observable<CompanySearchResult[]> {
+  getCompaniesByFirstLetter(digit: boolean, firstLetter: string, language: string): Observable<CompanySearchResult[]> {
     let params = new HttpParams()
-      .set('digit', digit.toString());
+      .set('digit', digit.toString())
+      .set('language', language);
+
     if (firstLetter) {
       params = params.set('firstLetter', firstLetter);
     }
@@ -33,9 +35,10 @@ export class CompanyService {
       );
   }
 
-  getCompaniesByFirstLetters(firstLetters: string): Observable<Company[]> {
+  getCompaniesByFirstLetters(firstLetters: string, language: string): Observable<Company[]> {
     const params = new HttpParams()
-      .set('firstLetters', firstLetters);
+      .set('firstLetters', firstLetters)
+      .set('language', language);
 
     return this.http.get<Company[]>(`${this.baseUrl}/first-letters-companies`, {params: params})
       .pipe(
@@ -46,8 +49,11 @@ export class CompanyService {
       );
   }
 
-  getSelectedCompanies(selectedEntities: SelectedEntities): Observable<Company[]> {
-    return this.http.post<Company[]>(`${this.baseUrl}/selected-companies`, selectedEntities)
+  getSelectedCompanies(selectedEntities: SelectedEntities, language: string): Observable<Company[]> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.post<Company[]>(`${this.baseUrl}/selected-companies`, selectedEntities, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -56,9 +62,10 @@ export class CompanyService {
       );
   }
 
-  getCompanyNamesByFirstLetters(firstLetters: string): Observable<string[]> {
+  getCompanyNamesByFirstLetters(firstLetters: string, language: string): Observable<string[]> {
     const params = new HttpParams()
-      .set('firstLetters', firstLetters);
+      .set('firstLetters', firstLetters)
+      .set('language', language);
 
     return this.http.get<string[]>(`${this.baseUrl}/first-letters-company-names`, {params: params})
       .pipe(
@@ -69,8 +76,10 @@ export class CompanyService {
       );
   }
 
-  getCompanies(name: string): Observable<CompanySearchResult[]> {
-    let params = new HttpParams();
+  getCompanies(name: string, language: string): Observable<CompanySearchResult[]> {
+    let params = new HttpParams()
+      .set('language', language);
+
     if (name) {
       params = params.set('name', name.toString());
     }
@@ -84,8 +93,11 @@ export class CompanyService {
       );
   }
 
-  getCompany(id: number): Observable<CompanyDetails> {
-    return this.http.get<CompanyDetails>(`${this.baseUrl}/company/${id}`)
+  getCompany(id: number, language: string): Observable<CompanyDetails> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<CompanyDetails>(`${this.baseUrl}/company/${id}`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

@@ -3,7 +3,7 @@
 
   <app-message></app-message>
 
-  <app-information-menubar (reload)="onLanguageChange()"></app-information-menubar>
+  <app-information-menubar></app-information-menubar>
   <app-companies-tabmenu [activeIndex]="1"></app-companies-tabmenu>
 
   <div class="mt-4">
@@ -62,7 +62,7 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td>
-              <a [routerLink]="['/information', 'companies', 'company', company.id]" class="text-dark">{{company.name}}</a>
+              <a routerLink="/{{language}}/information/companies/company/{{company.id}}" class="text-dark">{{company.name}}</a>
             </td>
             <td class="text-center">{{company.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
             <td class="text-center">{{company.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>

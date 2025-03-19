@@ -303,10 +303,5 @@
         "mvpColumn": "MVP"
       }
     }
-  },
-  "notFound": {
-    "title": "Страница не найдена",
-    "text": "Перейти на",
-    "existingPageLinkText": "существующую страницу"
   }
 }

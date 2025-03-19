@@ -15,8 +15,11 @@ export class QuestionService {
   constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
-  getEventTypes(): Observable<EventType[]> {
-    return this.http.get<EventType[]>(`${this.baseUrl}/event-types`)
+  getEventTypes(language: string): Observable<EventType[]> {
+    const params = new HttpParams()
+      .set('language', language);
+
+    return this.http.get<EventType[]>(`${this.baseUrl}/event-types`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);
@@ -25,9 +28,10 @@ export class QuestionService {
       );
   }
 
-  getEvents(eventTypeIds: number[]): Observable<Event[]> {
+  getEvents(eventTypeIds: number[], language: string): Observable<Event[]> {
     const params = new HttpParams()
-      .set('eventTypeIds', eventTypeIds.toString());
+      .set('eventTypeIds', eventTypeIds.toString())
+      .set('language', language);
 
     return this.http.get<Event[]>(`${this.baseUrl}/events`, {params: params})
       .pipe(

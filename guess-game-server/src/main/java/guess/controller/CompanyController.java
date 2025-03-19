@@ -10,11 +10,9 @@ import guess.dto.company.CompanyDetailsDto;
 import guess.dto.company.CompanySearchResultDto;
 import guess.dto.speaker.SpeakerBriefDto;
 import guess.service.CompanyService;
-import guess.service.LocaleService;
 import guess.service.SpeakerService;
 import guess.util.LocalizationUtils;
 import guess.util.SearchUtils;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,52 +28,49 @@ import java.util.stream.Collectors;
 public class CompanyController {
     private final CompanyService companyService;
     private final SpeakerService speakerService;
-    private final LocaleService localeService;
 
     @Autowired
-    public CompanyController(CompanyService companyService, SpeakerService speakerService, LocaleService localeService) {
+    public CompanyController(CompanyService companyService, SpeakerService speakerService) {
         this.companyService = companyService;
         this.speakerService = speakerService;
-        this.localeService = localeService;
     }
 
     @GetMapping("/first-letters-companies")
-    public List<CompanyBriefDto> getCompaniesByFirstLetters(@RequestParam String firstLetters, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, language);
+    public List<CompanyBriefDto> getCompaniesByFirstLetters(@RequestParam String firstLetters, @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, languageEnum);
 
-        return CompanyBriefDto.convertToBriefDto(companies, language).stream()
+        return CompanyBriefDto.convertToBriefDto(companies, languageEnum).stream()
                 .sorted(Comparator.comparing(CompanyBriefDto::getName, String.CASE_INSENSITIVE_ORDER))
                 .toList();
     }
 
     @PostMapping("/selected-companies")
-    public List<CompanyBriefDto> getSelectedCompanies(@RequestBody SelectedEntitiesDto selectedEntities, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<CompanyBriefDto> getSelectedCompanies(@RequestBody SelectedEntitiesDto selectedEntities,
+                                                      @RequestParam String language) {
         List<Company> companies = companyService.getCompaniesByIds(selectedEntities.getIds());
 
-        return CompanyBriefDto.convertToBriefDto(companies, language).stream()
+        return CompanyBriefDto.convertToBriefDto(companies, Language.getLanguageByCode(language)).stream()
                 .sorted(Comparator.comparing(CompanyBriefDto::getName, String.CASE_INSENSITIVE_ORDER))
                 .toList();
     }
 
     @GetMapping("/first-letters-company-names")
-    public List<String> getCompanyNamesByFirstLetters(@RequestParam String firstLetters, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, language);
+    public List<String> getCompanyNamesByFirstLetters(@RequestParam String firstLetters, @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Company> companies = companyService.getCompaniesByFirstLetters(firstLetters, languageEnum);
 
         return companies.stream()
-                .map(c -> LocalizationUtils.getString(c.getName(), language))
+                .map(c -> LocalizationUtils.getString(c.getName(), languageEnum))
                 .sorted(String.CASE_INSENSITIVE_ORDER)
                 .toList();
     }
 
     @GetMapping("/company/{id}")
-    public CompanyDetailsDto getCompany(@PathVariable long id, HttpSession httpSession) {
+    public CompanyDetailsDto getCompany(@PathVariable long id, @RequestParam String language) {
         var company = companyService.getCompanyById(id);
-        var language = localeService.getLanguage(httpSession);
         List<Speaker> speakers = speakerService.getSpeakersByCompanyId(id);
-        var companyDetailsDto = CompanyDetailsDto.convertToDto(company, speakers, language);
+        var companyDetailsDto = CompanyDetailsDto.convertToDto(company, speakers, Language.getLanguageByCode(language));
 
         Comparator<SpeakerBriefDto> comparatorByName = Comparator.comparing(SpeakerBriefDto::getDisplayName, String.CASE_INSENSITIVE_ORDER);
         Comparator<SpeakerBriefDto> comparatorByCompany = Comparator.comparing(
@@ -92,22 +87,21 @@ public class CompanyController {
     @GetMapping("/first-letter-companies")
     public List<CompanySearchResultDto> getCompaniesByFirstLetter(@RequestParam boolean digit,
                                                                   @RequestParam(required = false) String firstLetter,
-                                                                  HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
-        List<Company> companies = companyService.getCompaniesByFirstLetter(digit, firstLetter, language);
+                                                                  @RequestParam String language) {
+        var languageEnum = Language.getLanguageByCode(language);
+        List<Company> companies = companyService.getCompaniesByFirstLetter(digit, firstLetter, languageEnum);
         Comparator<CompanySearchResultDto> comparatorByNameWithFirstAlphaNumeric = Comparator.comparing(
                 c -> SearchUtils.getSubStringWithFirstAlphaNumeric(c.name()), String.CASE_INSENSITIVE_ORDER);
 
-        return calculateAndConvertToDtoAndSort(companies, language, comparatorByNameWithFirstAlphaNumeric);
+        return calculateAndConvertToDtoAndSort(companies, languageEnum, comparatorByNameWithFirstAlphaNumeric);
     }
 
     @GetMapping("/companies")
-    public List<CompanySearchResultDto> getCompanies(@RequestParam(required = false) String name, HttpSession httpSession) {
-        var language = localeService.getLanguage(httpSession);
+    public List<CompanySearchResultDto> getCompanies(@RequestParam(required = false) String name, @RequestParam String language) {
         List<Company> companies = companyService.getCompanies(name);
         Comparator<CompanySearchResultDto> comparatorByName = Comparator.comparing(CompanySearchResultDto::name, String.CASE_INSENSITIVE_ORDER);
 
-        return calculateAndConvertToDtoAndSort(companies, language, comparatorByName);
+        return calculateAndConvertToDtoAndSort(companies, Language.getLanguageByCode(language), comparatorByName);
     }
 
     List<CompanySearchResultDto> calculateAndConvertToDtoAndSort(List<Company> companies, Language language,

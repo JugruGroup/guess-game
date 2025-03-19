@@ -4,6 +4,7 @@ import { SelectItem } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TranslateService } from '@ngx-translate/core';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { Subscription } from 'rxjs';
 import { Company } from '../../../../shared/models/company/company.model';
 import { EventType } from '../../../../shared/models/event-type/event-type.model';
 import { OlapChartKind } from '../../../../shared/models/statistics/olap/olap-chart-kind.model';
@@ -11,15 +12,23 @@ import { OlapChartType } from '../../../../shared/models/statistics/olap/olap-ch
 import { OlapCityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-city-metrics.model';
 import { OlapCityParameters } from '../../../../shared/models/statistics/olap/parameters/olap-city-parameters.model';
 import { OlapCompanyMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-company-metrics.model';
-import { Olap3dCubeStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-3d-cube-statistics.model';
+import {
+  Olap3dCubeStatistics
+} from '../../../../shared/models/statistics/olap/statistics/olap-3d-cube-statistics.model';
 import { OlapCubeType } from '../../../../shared/models/statistics/olap/olap-cube-type.model';
 import { OlapEntityMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-entity-metrics.model';
-import { OlapEntityStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
+import {
+  OlapEntityStatistics
+} from '../../../../shared/models/statistics/olap/statistics/olap-entity-statistics.model';
 import { OlapEventTypeMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-event-type-metrics.model';
-import { OlapEventTypeParameters } from '../../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
+import {
+  OlapEventTypeParameters
+} from '../../../../shared/models/statistics/olap/parameters/olap-event-type-parameters.model';
 import { OlapMeasureType } from '../../../../shared/models/statistics/olap/olap-measure-type.model';
 import { OlapSpeakerMetrics } from '../../../../shared/models/statistics/olap/metrics/olap-speaker-metrics.model';
-import { OlapSpeakerParameters } from '../../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
+import {
+  OlapSpeakerParameters
+} from '../../../../shared/models/statistics/olap/parameters/olap-speaker-parameters.model';
 import { OlapParameters } from '../../../../shared/models/statistics/olap/parameters/olap-parameters.model';
 import { OlapStatistics } from '../../../../shared/models/statistics/olap/statistics/olap-statistics.model';
 import { Organizer } from '../../../../shared/models/organizer/organizer.model';
@@ -27,6 +36,7 @@ import { SelectedEntities } from '../../../../shared/models/common/selected-enti
 import { Speaker } from '../../../../shared/models/speaker/speaker.model';
 import { EventTypeService } from '../../../../shared/services/event-type.service';
 import { EventService } from '../../../../shared/services/event.service';
+import { LocaleService } from '../../../../shared/services/locale.service';
 import { OrganizerService } from '../../../../shared/services/organizer.service';
 import { StatisticsService } from '../../../../shared/services/statistics.service';
 import { SpeakerService } from '../../../../shared/services/speaker.service';
@@ -54,12 +64,12 @@ import {
 } from "../../../../shared/models/statistics/olap/three-dimensions/cube/three-dimensions-cube-dataset.model";
 
 @Component({
-    selector: 'app-olap-statistics',
-    templateUrl: './olap-statistics.component.html',
-    providers: [DialogService],
-    standalone: false
+  selector: 'app-olap-statistics',
+  templateUrl: './olap-statistics.component.html',
+  providers: [DialogService],
+  standalone: false
 })
-export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit {
+export class OlapStatisticsComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly EVENT_TYPES_CUBE_TYPE_KEY = 'cubeType.eventTypes';
   private readonly SPEAKERS_CUBE_TYPE_KEY = 'cubeType.speakers';
   private readonly COMPANIES_CUBE_TYPE_KEY = 'cubeType.companies';
@@ -183,10 +193,14 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   private zoomInDialogRef: DynamicDialogRef;
   public zoomInDialogClosed = true;
 
+  public language: string;
+  private languageSubscription: Subscription;
+
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, private organizerService: OrganizerService,
               public translateService: TranslateService, private speakerService: SpeakerService,
-              private companyService: CompanyService, public dialogService: DialogService) {
+              private companyService: CompanyService, public dialogService: DialogService,
+              private localeService: LocaleService) {
     this.eventTypeMultiSortMeta.push({field: 'sortName', order: 1});
 
     this.cityMultiSortMeta.push({field: 'name', order: 1});
@@ -196,14 +210,17 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
 
     this.companyMultiSortMeta.push({field: 'total', order: -1});
     this.companyMultiSortMeta.push({field: 'name', order: 1});
+
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadCubeTypes();
     this.fillChartKinds();
 
-    this.translateService.onLangChange
+    this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
+          this.language = this.localeService.getLanguage();
           this.loadOrganizers();
           this.fillChartKinds();
           this.fillChartOptions();
@@ -222,6 +239,10 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.onResize);
+
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   getCubeTypeMessageKeyByCube(cubeType: OlapCubeType): string {
@@ -352,15 +373,15 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
             this.selectedMeasureType = (measureTypeData && (measureTypeData.length > 0)) ? measureTypeData[0] : null;
             this.fillMeasureTypes(measureTypeData);
 
-            this.organizerService.getOrganizers()
+            this.organizerService.getOrganizers(this.language)
               .subscribe(organizerData => {
                 this.fillOrganizers(organizerData);
 
-                this.eventService.getDefaultEvent()
+                this.eventService.getDefaultEvent(this.language)
                   .subscribe(defaultEventData => {
                     this.selectedOrganizer = (defaultEventData) ? findOrganizerById(defaultEventData.organizerId, this.organizers) : null;
 
-                    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+                    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
                       .subscribe(eventTypesData => {
                         this.fillEventTypes(eventTypesData);
 
@@ -383,13 +404,13 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
     const currentSelectedOrganizer = this.selectedOrganizer;
     const currentSelectedEventTypes = this.selectedEventTypes;
 
-    this.organizerService.getOrganizers()
+    this.organizerService.getOrganizers(this.language)
       .subscribe(organizerData => {
         this.fillOrganizers(organizerData);
 
         this.selectedOrganizer = (currentSelectedOrganizer) ? findOrganizerById(currentSelectedOrganizer.id, this.organizers) : null;
 
-        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+        this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
           .subscribe(eventTypesData => {
             this.fillEventTypes(eventTypesData);
 
@@ -408,7 +429,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   }
 
   loadEventTypes() {
-    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer)
+    this.eventTypeService.getFilterEventTypes(this.isConferences, this.isMeetups, this.selectedOrganizer, this.language)
       .subscribe(eventTypesData => {
         this.fillEventTypes(eventTypesData);
 
@@ -425,14 +446,16 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
         complete();
         break;
       case OlapCubeType.Speakers:
-        this.speakerService.getSelectedSpeakers(new SelectedEntities(this.selectedSpeakers.map(s => s.id)))
+        this.speakerService.getSelectedSpeakers(new SelectedEntities(this.selectedSpeakers.map(s => s.id)),
+          this.language)
           .subscribe(speakersData => {
             this.selectedSpeakers = speakersData;
             complete();
           });
         break;
       case OlapCubeType.Companies:
-        this.companyService.getSelectedCompanies(new SelectedEntities(this.selectedCompanies.map(c => c.id)))
+        this.companyService.getSelectedCompanies(new SelectedEntities(this.selectedCompanies.map(c => c.id)),
+          this.language)
           .subscribe(companiesData => {
             this.selectedCompanies = companiesData;
             complete();
@@ -451,7 +474,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
         (organizer) ? organizer.id : null,
         (eventTypes) ? eventTypes.map(et => et.id) : null,
         (speakers) ? speakers.map(s => s.id) : null,
-        (companies) ? companies.map(c => c.id) : null))
+        (companies) ? companies.map(c => c.id) : null),
+      this.language)
       .subscribe(data => {
           const olapStatistics = data;
 
@@ -546,7 +570,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   }
 
   speakerSearch(event) {
-    this.speakerService.getSpeakersByFirstLetters(event.query)
+    this.speakerService.getSpeakersByFirstLetters(event.query, this.language)
       .subscribe(data => {
           this.speakerSuggestions = data;
         }
@@ -564,7 +588,7 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
   }
 
   companySearch(event) {
-    this.companyService.getCompaniesByFirstLetters(event.query)
+    this.companyService.getCompaniesByFirstLetters(event.query, this.language)
       .subscribe(data => {
           this.companySuggestions = data;
         }
@@ -630,7 +654,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           this.selectedCubeType,
           this.selectedMeasureType,
           eventTypeMetrics.id
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapCityStatistics: OlapEntityStatistics<number, OlapCityMetrics> = data;
 
@@ -655,7 +680,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           (this.selectedEventTypes) ? this.selectedEventTypes.map(et => et.id) : null,
           speakerMetrics.id,
           null
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapEventTypeStatistics: OlapEntityStatistics<number, OlapEventTypeMetrics> = data;
 
@@ -680,7 +706,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           (this.selectedEventTypes) ? this.selectedEventTypes.map(et => et.id) : null,
           null,
           companyMetrics.id
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapEventTypeStatistics: OlapEntityStatistics<number, OlapEventTypeMetrics> = data;
 
@@ -702,7 +729,8 @@ export class OlapStatisticsComponent implements AfterViewInit, OnDestroy, OnInit
           this.selectedMeasureType,
           eventTypeMetrics.companyId,
           eventTypeMetrics.id
-        ))
+        ),
+        this.language)
         .subscribe(data => {
             const olapSpeakerStatistics: OlapEntityStatistics<number, OlapSpeakerMetrics> = data;
 

@@ -1,5 +1,6 @@
-import { AfterViewChecked, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { SelectItem } from 'primeng/api';
 import { StartParameters } from '../../../shared/models/start/start-parameters.model';
@@ -7,6 +8,7 @@ import { GuessMode } from '../../../shared/models/guess-mode.model';
 import { EventType } from '../../../shared/models/event-type/event-type.model';
 import { Event } from '../../../shared/models/event/event.model';
 import { EventService } from '../../../shared/services/event.service';
+import { LocaleService } from '../../../shared/services/locale.service';
 import { QuestionService } from '../../../shared/services/question.service';
 import { StateService } from '../../../shared/services/state.service';
 import { findEventById, findEventTypeById, getEventsWithFullDisplayName } from '../../general/utility-functions';
@@ -16,7 +18,7 @@ import { findEventById, findEventTypeById, getEventsWithFullDisplayName } from '
     templateUrl: './start.component.html',
     standalone: false
 })
-export class StartComponent implements OnInit, AfterViewChecked {
+export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
   private readonly MIN_QUANTITY_VALUE = 4;
 
   private imageDirectory = 'assets/images';
@@ -37,24 +39,36 @@ export class StartComponent implements OnInit, AfterViewChecked {
   public quantitySelectItems: SelectItem[] = [];
 
   private defaultEvent: Event;
-
   private selectedOptionsUpdated = false;
+
+  public language: string;
+  private languageSubscription: Subscription;
 
   @ViewChildren('eventTypeRow', {read: ElementRef}) rowElement: QueryList<ElementRef>;
 
   constructor(private questionService: QuestionService, private stateService: StateService, private eventService: EventService,
-              private router: Router, public translateService: TranslateService) {
+              private router: Router, private translateService: TranslateService, private localeService: LocaleService) {
+    this.language = localeService.getLanguage();
   }
 
   ngOnInit(): void {
     this.loadEventTypes();
 
-    this.translateService.onLangChange
-      .subscribe(() => this.loadEventTypes());
+    this.languageSubscription = this.translateService.onLangChange
+      .subscribe(() => {
+        this.language = this.localeService.getLanguage();
+        this.loadEventTypes();
+      });
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   loadEventTypes() {
-    this.questionService.getEventTypes()
+    this.questionService.getEventTypes(this.language)
       .subscribe(eventTypesData => {
         this.eventTypes = eventTypesData;
         this.eventTypeSelectItems = this.eventTypes.map(et => {
@@ -63,7 +77,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
         );
 
         if (this.eventTypes.length > 0) {
-          this.eventService.getDefaultEvent()
+          this.eventService.getDefaultEvent(this.language)
             .subscribe(defaultEventData => {
               this.defaultEvent = defaultEventData;
 
@@ -106,7 +120,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
 
   loadEvents(eventTypes: EventType[]) {
     if (this.translateService.currentLang) {
-      this.questionService.getEvents(eventTypes.map(et => et.id))
+      this.questionService.getEvents(eventTypes.map(et => et.id), this.language)
         .subscribe(data => {
           this.events = getEventsWithFullDisplayName(data, this.translateService);
 
@@ -159,7 +173,7 @@ export class StartComponent implements OnInit, AfterViewChecked {
         this.selectedGuessMode,
         this.getSelectedQuantityValue()))
       .subscribe(() => {
-        this.router.navigateByUrl('/game/guess/name-by-photo');
+        this.router.navigateByUrl(`/${this.language}/game/guess/name-by-photo`);
       });
   }
 

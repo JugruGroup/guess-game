@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuItem } from "primeng/api";
+import { MenuItem } from 'primeng/api';
 
 @Component({
-    selector: 'app-companies-tabmenu',
-    templateUrl: './companies-tabmenu.component.html',
-    standalone: false
+  selector: 'app-companies-tabmenu',
+  templateUrl: './companies-tabmenu.component.html',
+  standalone: false
 })
 export class CompaniesTabMenuComponent implements OnInit {
   @Input() public activeIndex: number;
@@ -13,13 +13,15 @@ export class CompaniesTabMenuComponent implements OnInit {
   public items: MenuItem[] = [];
 
   ngOnInit(): void {
-    this.items = [
-      {labelKey: 'companies.list.title', routerLink: '/information/companies/list'},
-      {labelKey: 'companies.search.title', routerLink: '/information/companies/search'}
+    const items = [
+      {labelKey: 'companies.list.title', routerLinkSuffix: 'information/companies/list'},
+      {labelKey: 'companies.search.title', routerLinkSuffix: 'information/companies/search'}
     ];
 
     if (!isNaN(this.id)) {
-      this.items.push({labelKey: 'company.title', routerLink: `/information/companies/company/${this.id}`});
+      items.push({labelKey: 'company.title', routerLinkSuffix: `information/companies/company/${this.id}`});
     }
+
+    this.items = items;
   }
 }
