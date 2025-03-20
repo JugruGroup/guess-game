@@ -406,9 +406,10 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     }
 
     @Override
-    public Event getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate) throws IOException, NoSuchFieldException {
+    public Event getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate,
+                          String timeZone) throws IOException, NoSuchFieldException {
         eventId = getEventId(conference, conferenceCode);
-        List<EventDates> eventDatesList = getEventDatesList(eventId);
+        List<EventDates> eventDatesList = getEventDatesList(eventId, timeZone);
         List<EventDays> eventDaysList = new ArrayList<>();
 
         for (int i = 0; i < eventDatesList.size(); i++) {
@@ -439,12 +440,13 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     }
 
     @Override
-    public List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage) throws IOException, NoSuchFieldException {
+    public List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage,
+                               String timeZone) throws IOException, NoSuchFieldException {
         if (getEventId() == null) {
             setEventId(getEventId(conference, conferenceCode));
         }
 
-        Map<String, DayTrackTime> dayTrackTimeMap = getDayTrackTimeMap(getEventId());
+        Map<String, DayTrackTime> dayTrackTimeMap = getDayTrackTimeMap(getEventId(), timeZone);
 
         return getTalks(getEventId(), ignoreDemoStage, dayTrackTimeMap);
     }
@@ -496,10 +498,11 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     /**
      * Gets schedule information.
      *
-     * @param eventId event identifier
+     * @param eventId  event identifier
+     * @param timeZone time zone
      * @return schedule information
      */
-    ScheduleInfo getScheduleInfo(long eventId) {
+    ScheduleInfo getScheduleInfo(long eventId, String timeZone) {
         // https://core.jugru.team/api/v1/public/events/{eventId}/schedule
         var builder = UriComponentsBuilder
                 .fromUriString(SCHEDULE_BASE_URL);
@@ -509,7 +512,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                 .toUri();
         JrgCmsScheduleResponse response = getRestTemplate().getForObject(uri, JrgCmsScheduleResponse.class);
         List<JrgCmsDay> sortedDays = Objects.requireNonNull(response).getData().getDays().stream()
-                .sorted(Comparator.comparing(d -> CmsDataLoader.createEventLocalDate(d.getDayStartsAt())))
+                .sorted(Comparator.comparing(d -> CmsDataLoader.createEventLocalDate(d.getDayStartsAt(), timeZone)))
                 .toList();
         LocalDate currentDate = null;
         LocalDate currentStartDate = null;
@@ -517,7 +520,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
 
         // Fill event days list
         for (JrgCmsDay day : sortedDays) {
-            LocalDate dayDate = CmsDataLoader.createEventLocalDate(day.getDayStartsAt());
+            LocalDate dayDate = CmsDataLoader.createEventLocalDate(day.getDayStartsAt(), timeZone);
 
             if ((currentDate == null) || !currentDate.plusDays(1).equals(dayDate)) {
                 currentStartDate = dayDate;
@@ -537,11 +540,12 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     /**
      * Gets event dates list.
      *
-     * @param eventId event identifier
+     * @param eventId  event identifier
+     * @param timeZone time zone
      * @return event dates list
      */
-    List<EventDates> getEventDatesList(long eventId) {
-        ScheduleInfo scheduleInfo = getScheduleInfo(eventId);
+    List<EventDates> getEventDatesList(long eventId, String timeZone) {
+        ScheduleInfo scheduleInfo = getScheduleInfo(eventId, timeZone);
 
         return scheduleInfo.eventDatesList;
     }
@@ -549,11 +553,12 @@ public class JrgCmsDataLoader extends CmsDataLoader {
     /**
      * Gets activity identifier/day number, track number, start time map.
      *
-     * @param eventId event identifier
+     * @param eventId  event identifier
+     * @param timeZone time zone
      * @return day, track, start time map
      */
-    Map<String, DayTrackTime> getDayTrackTimeMap(long eventId) {
-        ScheduleInfo scheduleInfo = getScheduleInfo(eventId);
+    Map<String, DayTrackTime> getDayTrackTimeMap(long eventId, String timeZone) {
+        ScheduleInfo scheduleInfo = getScheduleInfo(eventId, timeZone);
 
         // Fill DayTrackTime maps
         Map<String, DayTrackTime> currentDayTrackTimeMap = new HashMap<>();
@@ -565,8 +570,8 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                         currentDayTrackTimeMap.put(slot.getActivity().getId(), new DayTrackTime(
                                 day.getDayNumber(),
                                 track.getTrackNumber(),
-                                CmsDataLoader.createEventLocalTime(slot.getSlotStartTime()),
-                                CmsDataLoader.createEventLocalTime(slot.getSlotEndTime())));
+                                CmsDataLoader.createEventLocalTime(slot.getSlotStartTime(), timeZone),
+                                CmsDataLoader.createEventLocalTime(slot.getSlotEndTime(), timeZone)));
                     }
                 }
             }

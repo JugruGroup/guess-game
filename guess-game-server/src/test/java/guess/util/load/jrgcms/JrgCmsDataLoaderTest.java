@@ -606,34 +606,36 @@ class JrgCmsDataLoaderTest {
             );
 
             return Stream.of(
-                    arguments(null, null, null, eventTemplate0, getEventDatesListResult0, IllegalArgumentException.class, null),
-                    arguments(null, null, null, eventTemplate1, getEventDatesListResult0, null, event0),
-                    arguments(null, null, null, eventTemplate2, getEventDatesListResult1, null, event1)
+                    arguments(null, null, null, eventTemplate0, null, getEventDatesListResult0, IllegalArgumentException.class, null),
+                    arguments(null, null, null, eventTemplate1, null, getEventDatesListResult0, null, event0),
+                    arguments(null, null, null, eventTemplate2, null, getEventDatesListResult1, null, event1)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate,
+        void getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate, String timeZone,
                       List<JrgCmsDataLoader.EventDates> getEventDatesListResult, Class<? extends Exception> expectedException,
                       Event expectedValue) throws IOException, NoSuchFieldException {
             JrgCmsDataLoader jrgCmsDataLoader = Mockito.mock(JrgCmsDataLoader.class);
 
-            Mockito.when(jrgCmsDataLoader.getEvent(Mockito.nullable(Conference.class), Mockito.nullable(LocalDate.class), Mockito.nullable(String.class), Mockito.any(Event.class)))
+            Mockito.when(jrgCmsDataLoader.getEvent(Mockito.nullable(Conference.class), Mockito.nullable(LocalDate.class),
+                            Mockito.nullable(String.class), Mockito.any(Event.class), Mockito.nullable(String.class)))
                     .thenCallRealMethod();
             Mockito.when(jrgCmsDataLoader.getEventId(Mockito.any(Conference.class), Mockito.any(String.class)))
                     .thenReturn(42L);
-            Mockito.when(jrgCmsDataLoader.getEventDatesList(Mockito.anyLong()))
+            Mockito.when(jrgCmsDataLoader.getEventDatesList(Mockito.anyLong(), Mockito.nullable(String.class)))
                     .thenReturn(getEventDatesListResult);
 
             if (expectedException == null) {
-                Event actual = jrgCmsDataLoader.getEvent(conference, startDate, conferenceCode, eventTemplate);
+                Event actual = jrgCmsDataLoader.getEvent(conference, startDate, conferenceCode, eventTemplate, timeZone);
 
                 assertEquals(expectedValue, actual);
                 assertEquals(expectedValue.getName(), actual.getName());
                 assertEquals(expectedValue.getDays(), actual.getDays());
             } else {
-                assertThrows(expectedException, () -> jrgCmsDataLoader.getEvent(conference, startDate, conferenceCode, eventTemplate));
+                assertThrows(expectedException, () -> jrgCmsDataLoader.getEvent(conference, startDate, conferenceCode,
+                        eventTemplate, timeZone));
             }
         }
     }
@@ -644,21 +646,21 @@ class JrgCmsDataLoaderTest {
     class GetTalksTest {
         private Stream<Arguments> data() {
             return Stream.of(
-                    arguments(null, null, null, false, null),
-                    arguments(null, null, null, false, 42L)
+                    arguments(null, null, null, false, null, null),
+                    arguments(null, null, null, false, null, 42L)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
         void getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage,
-                      Long eventId) throws IOException, NoSuchFieldException {
+                      String timeZone, Long eventId) throws IOException, NoSuchFieldException {
             AtomicReference<Long> internalEventId = new AtomicReference<>();
 
             JrgCmsDataLoader jrgCmsDataLoader = Mockito.mock(JrgCmsDataLoader.class);
 
             Mockito.when(jrgCmsDataLoader.getTalks(Mockito.nullable(Conference.class), Mockito.nullable(LocalDate.class),
-                            Mockito.nullable(String.class), Mockito.anyBoolean()))
+                            Mockito.nullable(String.class), Mockito.anyBoolean(), Mockito.nullable(String.class)))
                     .thenCallRealMethod();
             Mockito.when(jrgCmsDataLoader.getEventId())
                     .thenAnswer(
@@ -674,7 +676,7 @@ class JrgCmsDataLoaderTest {
                     }
             ).when(jrgCmsDataLoader).setEventId(Mockito.nullable(Long.class));
 
-            assertDoesNotThrow(() -> jrgCmsDataLoader.getTalks(conference, startDate, conferenceCode, ignoreDemoStage));
+            assertDoesNotThrow(() -> jrgCmsDataLoader.getTalks(conference, startDate, conferenceCode, ignoreDemoStage, timeZone));
         }
     }
 
@@ -792,7 +794,7 @@ class JrgCmsDataLoaderTest {
             // Mock methods
             jrgCmsDataLoaderMockedStatic.when(JrgCmsDataLoader::getRestTemplate)
                     .thenReturn(restTemplateMock);
-            cmsDataLoaderMockedStatic.when(() -> CmsDataLoader.createEventLocalDate(Mockito.anyString()))
+            cmsDataLoaderMockedStatic.when(() -> CmsDataLoader.createEventLocalDate(Mockito.anyString(), Mockito.anyString()))
                     .thenAnswer(
                             (Answer<LocalDate>) invocation -> {
                                 Object[] args = invocation.getArguments();
@@ -807,17 +809,19 @@ class JrgCmsDataLoaderTest {
 
             // Mock method under test
             JrgCmsDataLoader jrgCmsDataLoader = Mockito.mock(JrgCmsDataLoader.class);
-            Mockito.when(jrgCmsDataLoader.getScheduleInfo(Mockito.anyLong()))
+            Mockito.when(jrgCmsDataLoader.getScheduleInfo(Mockito.anyLong(), Mockito.anyString()))
                     .thenCallRealMethod();
 
             // Expected result
             List<JrgCmsDataLoader.EventDates> expectedEventDatesList = List.of(
-                    new JrgCmsDataLoader.EventDates(LocalDate.of(2022, 5, 14), LocalDate.of(2022, 5, 15)),
-                    new JrgCmsDataLoader.EventDates(LocalDate.of(2022, 5, 17), LocalDate.of(2022, 5, 17))
+                    new JrgCmsDataLoader.EventDates(LocalDate.of(2022, 5, 14),
+                            LocalDate.of(2022, 5, 15)),
+                    new JrgCmsDataLoader.EventDates(LocalDate.of(2022, 5, 17),
+                            LocalDate.of(2022, 5, 17))
             );
 
             // Actual result
-            JrgCmsDataLoader.ScheduleInfo actual = jrgCmsDataLoader.getScheduleInfo(42);
+            JrgCmsDataLoader.ScheduleInfo actual = jrgCmsDataLoader.getScheduleInfo(42, "Europe/Moscow");
 
             assertEquals(expectedEventDatesList, actual.eventDatesList());
         }
@@ -826,16 +830,17 @@ class JrgCmsDataLoaderTest {
     @Test
     void getEventDatesList() {
         final long eventId = 42;
+        final String timeZone = "Europe/Moscow";
 
         JrgCmsDataLoader jrgCmsDataLoader = Mockito.mock(JrgCmsDataLoader.class);
-        Mockito.when(jrgCmsDataLoader.getEventDatesList(Mockito.anyLong()))
+        Mockito.when(jrgCmsDataLoader.getEventDatesList(Mockito.anyLong(), Mockito.anyString()))
                 .thenCallRealMethod();
-        Mockito.when(jrgCmsDataLoader.getScheduleInfo(Mockito.anyLong()))
+        Mockito.when(jrgCmsDataLoader.getScheduleInfo(Mockito.anyLong(), Mockito.anyString()))
                 .thenReturn(new JrgCmsDataLoader.ScheduleInfo(Collections.emptyList(), Collections.emptyList()));
 
-        assertDoesNotThrow(() -> jrgCmsDataLoader.getEventDatesList(eventId));
-        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getEventDatesList(eventId);
-        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getScheduleInfo(eventId);
+        assertDoesNotThrow(() -> jrgCmsDataLoader.getEventDatesList(eventId, timeZone));
+        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getEventDatesList(eventId, timeZone);
+        Mockito.verify(jrgCmsDataLoader, VerificationModeFactory.times(1)).getScheduleInfo(eventId, timeZone);
         Mockito.verifyNoMoreInteractions(jrgCmsDataLoader);
     }
 
@@ -919,12 +924,12 @@ class JrgCmsDataLoaderTest {
 
             // Mock methods
             JrgCmsDataLoader jrgCmsDataLoader = Mockito.mock(JrgCmsDataLoader.class);
-            Mockito.when(jrgCmsDataLoader.getDayTrackTimeMap(Mockito.anyLong()))
+            Mockito.when(jrgCmsDataLoader.getDayTrackTimeMap(Mockito.anyLong(), Mockito.nullable(String.class)))
                     .thenCallRealMethod();
-            Mockito.when(jrgCmsDataLoader.getScheduleInfo(Mockito.anyLong()))
+            Mockito.when(jrgCmsDataLoader.getScheduleInfo(Mockito.anyLong(), Mockito.nullable(String.class)))
                     .thenReturn(new JrgCmsDataLoader.ScheduleInfo(List.of(jrgCmsDay0, jrgCmsDay1, jrgCmsDay2), Collections.emptyList()));
 
-            cmsDataLoaderMockedStatic.when(() -> CmsDataLoader.createEventLocalTime(Mockito.anyString()))
+            cmsDataLoaderMockedStatic.when(() -> CmsDataLoader.createEventLocalTime(Mockito.anyString(), Mockito.nullable(String.class)))
                     .thenAnswer(
                             (Answer<LocalTime>) invocation -> {
                                 Object[] args = invocation.getArguments();
@@ -944,7 +949,7 @@ class JrgCmsDataLoaderTest {
             expected.put(activityId3, new DayTrackTime(2L, 4L, LocalTime.of(11, 15), LocalTime.of(11, 30)));
             expected.put(activityId4, new DayTrackTime(3L, 5L, LocalTime.of(13, 0), LocalTime.of(13, 15)));
 
-            assertEquals(expected, jrgCmsDataLoader.getDayTrackTimeMap(42));
+            assertEquals(expected, jrgCmsDataLoader.getDayTrackTimeMap(42, null));
         }
     }
 

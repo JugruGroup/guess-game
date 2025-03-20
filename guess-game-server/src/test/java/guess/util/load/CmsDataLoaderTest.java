@@ -379,15 +379,17 @@ class CmsDataLoaderTest {
     class CreateEventLocalDateTest {
         private Stream<Arguments> data() {
             return Stream.of(
-                    arguments("2020-01-01T00:00+03:00", LocalDate.of(2020, 1, 1)),
-                    arguments("2020-12-31T00:00+03:00", LocalDate.of(2020, 12, 31))
+                    arguments("2020-01-01T00:00+03:00", "Europe/Moscow", LocalDate.of(2020, 1, 1)),
+                    arguments("2020-12-31T00:00+03:00", "Europe/Moscow", LocalDate.of(2020, 12, 31)),
+                    arguments("2020-01-01T00:00+07:00", "Asia/Novosibirsk", LocalDate.of(2020, 1, 1)),
+                    arguments("2020-12-31T00:00+07:00", "Asia/Novosibirsk", LocalDate.of(2020, 12, 31))
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void createEventLocalDate(String zonedDateTimeString, LocalDate expected) {
-            assertEquals(expected, ContentfulDataLoader.createEventLocalDate(zonedDateTimeString));
+        void createEventLocalDate(String zonedDateTimeString, String timeZone, LocalDate expected) {
+            assertEquals(expected, ContentfulDataLoader.createEventLocalDate(zonedDateTimeString, timeZone));
         }
     }
 
@@ -397,15 +399,17 @@ class CmsDataLoaderTest {
     class CreateEventLocalTimeTest {
         private Stream<Arguments> data() {
             return Stream.of(
-                    arguments("2020-01-01T08:45+03:00", LocalTime.of(8, 45)),
-                    arguments("2020-12-31T10:00Z", LocalTime.of(13, 0))
+                    arguments("2020-01-01T08:45+03:00", "Europe/Moscow", LocalTime.of(8, 45)),
+                    arguments("2020-12-31T10:00Z", "Europe/Moscow", LocalTime.of(13, 0)),
+                    arguments("2020-01-01T08:45+03:00", "UTC", LocalTime.of(5, 45)),
+                    arguments("2020-12-31T10:00Z", "UTC", LocalTime.of(10, 0))
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void createEventLocalTime(String zonedDateTimeString, LocalTime expected) {
-            assertEquals(expected, ContentfulDataLoader.createEventLocalTime(zonedDateTimeString));
+        void createEventLocalTime(String zonedDateTimeString, String timeZone, LocalTime expected) {
+            assertEquals(expected, ContentfulDataLoader.createEventLocalTime(zonedDateTimeString, timeZone));
         }
     }
 }

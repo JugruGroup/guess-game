@@ -316,6 +316,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType0.setConference(jpointConference);
             eventType0.setOrganizer(organizer0);
             eventType0.setEvents(List.of(event0));
+            eventType0.setTimeZone("Europe/Moscow");
 
             Talk talk0 = new Talk();
             talk0.setId(0);
@@ -403,12 +404,15 @@ class ConferenceDataLoaderExecutorTest {
             try (MockedStatic<CmsDataLoaderFactory> cmsDataLoaderFactoryMockedStatic = Mockito.mockStatic(CmsDataLoaderFactory.class);
                  MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class);
                  MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-                 MockedStatic<ConferenceDataLoaderExecutor> conferenceDataLoaderExecutorMockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class)) {
+                 MockedStatic<ConferenceDataLoaderExecutor> conferenceDataLoaderExecutorMockedStatic =
+                         Mockito.mockStatic(ConferenceDataLoaderExecutor.class)) {
 
                 CmsDataLoader cmsDataLoader = Mockito.mock(CmsDataLoader.class);
-                Mockito.when(cmsDataLoader.getEvent(Mockito.any(Conference.class), Mockito.any(LocalDate.class), Mockito.nullable(String.class), Mockito.nullable(Event.class)))
+                Mockito.when(cmsDataLoader.getEvent(Mockito.any(Conference.class), Mockito.any(LocalDate.class),
+                                Mockito.nullable(String.class), Mockito.nullable(Event.class), Mockito.nullable(String.class)))
                         .thenReturn(contentfulEvent);
-                Mockito.when(cmsDataLoader.getTalks(Mockito.any(Conference.class), Mockito.any(LocalDate.class), Mockito.anyString(), Mockito.anyBoolean()))
+                Mockito.when(cmsDataLoader.getTalks(Mockito.any(Conference.class), Mockito.any(LocalDate.class),
+                                Mockito.anyString(), Mockito.anyBoolean(), Mockito.anyString()))
                         .thenReturn(contentfulTalks);
                 cmsDataLoaderFactoryMockedStatic.when(() -> CmsDataLoaderFactory.createDataLoader(Mockito.any(LocalDate.class)))
                         .thenReturn(cmsDataLoader);

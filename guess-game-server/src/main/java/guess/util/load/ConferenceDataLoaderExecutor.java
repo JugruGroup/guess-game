@@ -266,7 +266,8 @@ public class ConferenceDataLoaderExecutor {
 
         // Read event from CMS
         var cmsDataLoader = CmsDataLoaderFactory.createDataLoader(startDate);
-        var cmsEvent = cmsDataLoader.getEvent(conference, startDate, conferenceCode, loadSettings.eventTemplate());
+        var cmsEvent = cmsDataLoader.getEvent(conference, startDate, conferenceCode, loadSettings.eventTemplate(),
+                resourceEventType.getTimeZone());
 
         if (log.isInfoEnabled()) {
             log.info("Event (in CMS): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
@@ -276,7 +277,8 @@ public class ConferenceDataLoaderExecutor {
         }
 
         // Read talks from CMS
-        List<Talk> cmsTalks = cmsDataLoader.getTalks(conference, startDate, conferenceCode, loadSettings.ignoreDemoStage());
+        List<Talk> cmsTalks = cmsDataLoader.getTalks(conference, startDate, conferenceCode, loadSettings.ignoreDemoStage(),
+                resourceEventType.getTimeZone());
         log.info("Talks (in CMS): {}", cmsTalks.size());
         cmsTalks.forEach(
                 t -> log.trace("Talk: nameEn: '{}', name: '{}'",
