@@ -5,7 +5,6 @@ import guess.domain.Language;
 import guess.domain.source.*;
 import guess.domain.source.extract.ExtractPair;
 import guess.domain.source.extract.ExtractSet;
-import guess.util.DateTimeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.converter.FormHttpMessageConverter;
@@ -57,9 +56,11 @@ public abstract class CmsDataLoader {
      * @param startDate      start date
      * @param conferenceCode conference code
      * @param eventTemplate  event template
+     * @param timeZone       time zone
      * @return event
      */
-    protected abstract Event getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate) throws IOException, NoSuchFieldException;
+    protected abstract Event getEvent(Conference conference, LocalDate startDate, String conferenceCode,
+                                      Event eventTemplate, String timeZone) throws IOException, NoSuchFieldException;
 
     /**
      * Gets talks
@@ -68,9 +69,11 @@ public abstract class CmsDataLoader {
      * @param startDate       start date
      * @param conferenceCode  conference code
      * @param ignoreDemoStage ignore demo stage talks
+     * @param timeZone        time zone
      * @return talks
      */
-    protected abstract List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage) throws IOException, NoSuchFieldException;
+    protected abstract List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode,
+                                           boolean ignoreDemoStage, String timeZone) throws IOException, NoSuchFieldException;
 
     /**
      * Gets template of image parameters.
@@ -316,12 +319,13 @@ public abstract class CmsDataLoader {
      * Creates event local date from zoned date time string.
      *
      * @param zonedDateTimeString zoned date time string
+     * @param timeZone            time zone
      * @return event local date
      */
-    public static LocalDate createEventLocalDate(String zonedDateTimeString) {
+    public static LocalDate createEventLocalDate(String zonedDateTimeString, String timeZone) {
         return ZonedDateTime.ofInstant(
                         ZonedDateTime.parse(zonedDateTimeString).toInstant(),
-                        ZoneId.of(DateTimeUtils.MOSCOW_TIME_ZONE))
+                        ZoneId.of(timeZone))
                 .toLocalDate();
     }
 
@@ -329,12 +333,13 @@ public abstract class CmsDataLoader {
      * Creates event local time from zoned date time string.
      *
      * @param zonedDateTimeString zoned date time string
+     * @param timeZone            time zone
      * @return event local time
      */
-    public static LocalTime createEventLocalTime(String zonedDateTimeString) {
+    public static LocalTime createEventLocalTime(String zonedDateTimeString, String timeZone) {
         return ZonedDateTime.ofInstant(
                         ZonedDateTime.parse(zonedDateTimeString).toInstant(),
-                        ZoneId.of(DateTimeUtils.MOSCOW_TIME_ZONE))
+                        ZoneId.of(timeZone))
                 .toLocalTime();
     }
 }

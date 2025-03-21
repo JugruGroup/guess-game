@@ -266,7 +266,8 @@ public class ConferenceDataLoaderExecutor {
 
         // Read event from CMS
         var cmsDataLoader = CmsDataLoaderFactory.createDataLoader(startDate);
-        var cmsEvent = cmsDataLoader.getEvent(conference, startDate, conferenceCode, loadSettings.eventTemplate());
+        var cmsEvent = cmsDataLoader.getEvent(conference, startDate, conferenceCode, loadSettings.eventTemplate(),
+                resourceEventType.getTimeZone());
 
         if (log.isInfoEnabled()) {
             log.info("Event (in CMS): nameEn: {}, nameRu: {}, startDate: {}, endDate: {}",
@@ -276,7 +277,8 @@ public class ConferenceDataLoaderExecutor {
         }
 
         // Read talks from CMS
-        List<Talk> cmsTalks = cmsDataLoader.getTalks(conference, startDate, conferenceCode, loadSettings.ignoreDemoStage());
+        List<Talk> cmsTalks = cmsDataLoader.getTalks(conference, startDate, conferenceCode, loadSettings.ignoreDemoStage(),
+                resourceEventType.getTimeZone());
         log.info("Talks (in CMS): {}", cmsTalks.size());
         cmsTalks.forEach(
                 t -> log.trace("Talk: nameEn: '{}', name: '{}'",
@@ -2793,5 +2795,13 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("SnowOne 2025", null, List.of(13L)),
 //                        Set.of("Открытие SnowOne", "Закрытие первого дня", "Открытие второго дня конференции",
 //                                "Закрытие конференции", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2025, 3, 13), "2025",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("C++ Russia 2025", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции С++ Russia 2025",
+//                                "Подведение итогов online-части конференции С++ Russia 2025",
+//                                "Открытие офлайн-части конференции С++ Russia 2025",
+//                                "Yandex Multitrack на афтерпати C++ Russia",
+//                                "Lightning Talks", "Закрытие конференции С++ Russia 2025")));
     }
 }

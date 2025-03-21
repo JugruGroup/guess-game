@@ -342,35 +342,50 @@ class ContentfulDataLoaderTest {
         }
     }
 
-    @Test
-    @SuppressWarnings("unchecked")
-    void getEvents() {
-        try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
-            mockedStatic.when(() -> ContentfulDataLoader.getEvents(Mockito.nullable(String.class), Mockito.nullable(LocalDate.class)))
-                    .thenCallRealMethod();
-            mockedStatic.when(() -> ContentfulDataLoader.createEvent(Mockito.any(ContentfulEvent.class), Mockito.anyMap(), Mockito.anySet()))
-                    .thenReturn(new Event());
-            mockedStatic.when(() -> ContentfulDataLoader.createUtcZonedDateTime(Mockito.any(LocalDate.class)))
-                    .thenReturn(ZonedDateTime.now());
-            mockedStatic.when(() -> ContentfulDataLoader.getCityMap(Mockito.any(ContentfulEventResponse.class)))
-                    .thenReturn(Collections.emptyMap());
-            mockedStatic.when(() -> ContentfulDataLoader.getErrorSet(Mockito.any(ContentfulResponse.class), Mockito.anyString()))
-                    .thenReturn(Collections.emptySet());
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getEvents method tests")
+    class GetEventsTest {
+        private Stream<Arguments> data() {
+            return Stream.of(
+                    arguments("JPoint", LocalDate.of(2020, 6, 29), null),
+                    arguments(null, LocalDate.of(2020, 6, 29), null),
+                    arguments("", LocalDate.of(2020, 6, 29), null),
+                    arguments("JPoint", null, null)
+            );
+        }
 
-            ContentfulEventResponse response = new ContentfulEventResponse();
-            response.setItems(List.of(new ContentfulEvent(), new ContentfulEvent()));
+        @ParameterizedTest
+        @MethodSource("data")
+        @SuppressWarnings("unchecked")
+        void getEvents(String eventName, LocalDate startDate, String timeZone) {
+            try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
+                mockedStatic.when(() -> ContentfulDataLoader.getEvents(Mockito.nullable(String.class),
+                                Mockito.nullable(LocalDate.class), Mockito.nullable(String.class)))
+                        .thenCallRealMethod();
+                mockedStatic.when(() -> ContentfulDataLoader.createEvent(Mockito.any(ContentfulEvent.class), Mockito.anyMap(),
+                                Mockito.anySet(), Mockito.nullable(String.class)))
+                        .thenReturn(new Event());
+                mockedStatic.when(() -> ContentfulDataLoader.createUtcZonedDateTime(Mockito.any(LocalDate.class),
+                                Mockito.nullable(String.class)))
+                        .thenReturn(ZonedDateTime.now());
+                mockedStatic.when(() -> ContentfulDataLoader.getCityMap(Mockito.any(ContentfulEventResponse.class)))
+                        .thenReturn(Collections.emptyMap());
+                mockedStatic.when(() -> ContentfulDataLoader.getErrorSet(Mockito.any(ContentfulResponse.class), Mockito.anyString()))
+                        .thenReturn(Collections.emptySet());
 
-            RestTemplate restTemplateMock = Mockito.mock(RestTemplate.class);
-            Mockito.when(restTemplateMock.getForObject(Mockito.any(URI.class), Mockito.any()))
-                    .thenReturn(response);
+                ContentfulEventResponse response = new ContentfulEventResponse();
+                response.setItems(List.of(new ContentfulEvent(), new ContentfulEvent()));
 
-            mockedStatic.when(ContentfulDataLoader::getRestTemplate)
-                    .thenReturn(restTemplateMock);
+                RestTemplate restTemplateMock = Mockito.mock(RestTemplate.class);
+                Mockito.when(restTemplateMock.getForObject(Mockito.any(URI.class), Mockito.any()))
+                        .thenReturn(response);
 
-            assertEquals(2, ContentfulDataLoader.getEvents("JPoint", LocalDate.of(2020, 6, 29)).size());
-            assertEquals(2, ContentfulDataLoader.getEvents(null, LocalDate.of(2020, 6, 29)).size());
-            assertEquals(2, ContentfulDataLoader.getEvents("", LocalDate.of(2020, 6, 29)).size());
-            assertEquals(2, ContentfulDataLoader.getEvents("JPoint", null).size());
+                mockedStatic.when(ContentfulDataLoader::getRestTemplate)
+                        .thenReturn(restTemplateMock);
+
+                assertEquals(2, ContentfulDataLoader.getEvents(eventName, startDate, timeZone).size());
+            }
         }
     }
 
@@ -380,15 +395,25 @@ class ContentfulDataLoaderTest {
     class CreateUtcZonedDateTimeTest {
         private Stream<Arguments> data() {
             return Stream.of(
-                    arguments(LocalDate.of(2020, 1, 1), ZonedDateTime.of(2019, 12, 31, 21, 0, 0, 0, ZoneId.of("UTC"))),
-                    arguments(LocalDate.of(2020, 12, 31), ZonedDateTime.of(2020, 12, 30, 21, 0, 0, 0, ZoneId.of("UTC")))
+                    arguments(LocalDate.of(2020, 1, 1), "Europe/Moscow",
+                            ZonedDateTime.of(2019, 12, 31, 21, 0, 0, 0,
+                                    ZoneId.of("UTC"))),
+                    arguments(LocalDate.of(2020, 12, 31), "Europe/Moscow",
+                            ZonedDateTime.of(2020, 12, 30, 21, 0, 0, 0,
+                                    ZoneId.of("UTC"))),
+                    arguments(LocalDate.of(2020, 1, 1), "UTC",
+                            ZonedDateTime.of(2020, 1, 1, 0, 0, 0, 0,
+                                    ZoneId.of("UTC"))),
+                    arguments(LocalDate.of(2020, 12, 31), "UTC",
+                            ZonedDateTime.of(2020, 12, 31, 0, 0, 0, 0,
+                                    ZoneId.of("UTC")))
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void createUtcZonedDateTime(LocalDate localDate, ZonedDateTime expected) {
-            assertEquals(expected, ContentfulDataLoader.createUtcZonedDateTime(localDate));
+        void createUtcZonedDateTime(LocalDate localDate, String timeZone, ZonedDateTime expected) {
+            assertEquals(expected, ContentfulDataLoader.createUtcZonedDateTime(localDate, timeZone));
         }
     }
 
@@ -599,28 +624,35 @@ class ContentfulDataLoaderTest {
             Map<String, ContentfulCity> cityMap = Map.of("sys0", contentfulCity0, "sys1", contentfulCity1,
                     "sys2", contentfulCity2, "sys3", contentfulCity3, "sys4", contentfulCity4);
             Set<String> entryErrorSet = Collections.emptySet();
+            String timeZone = "Europe/Moscow";
 
             return Stream.of(
-                    arguments(contentfulEvent0, cityMap, entryErrorSet, event0),
-                    arguments(contentfulEvent1, cityMap, entryErrorSet, event1),
-                    arguments(contentfulEvent2, cityMap, entryErrorSet, event2),
-                    arguments(contentfulEvent3, cityMap, entryErrorSet, event3),
-                    arguments(contentfulEvent4, cityMap, entryErrorSet, event4)
+                    arguments(contentfulEvent0, cityMap, entryErrorSet, timeZone, event0),
+                    arguments(contentfulEvent1, cityMap, entryErrorSet, timeZone, event1),
+                    arguments(contentfulEvent2, cityMap, entryErrorSet, timeZone, event2),
+                    arguments(contentfulEvent3, cityMap, entryErrorSet, timeZone, event3),
+                    arguments(contentfulEvent4, cityMap, entryErrorSet, timeZone, event4)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void createEvent(ContentfulEvent contentfulEvent, Map<String, ContentfulCity> cityMap, Set<String> entryErrorSet, Event expected) {
-            Event actual = ContentfulDataLoader.createEvent(contentfulEvent, cityMap, entryErrorSet);
+        void createEvent(ContentfulEvent contentfulEvent, Map<String, ContentfulCity> cityMap, Set<String> entryErrorSet,
+                         String timeZone, Event expected) {
+            Event actual = ContentfulDataLoader.createEvent(contentfulEvent, cityMap, entryErrorSet, timeZone);
 
             assertEquals(expected, actual);
             assertEquals(expected.getName(), actual.getName());
             assertEquals(expected.getDays(), actual.getDays());
             assertEquals(expected.getYoutubeLink(), actual.getYoutubeLink());
 
-            String expectedMapCoordinates = (!expected.getDays().isEmpty() && (expected.getDays().get(0).getPlace()) != null) ? expected.getDays().get(0).getPlace().getMapCoordinates() : null;
-            String actualMapCoordinates = (!actual.getDays().isEmpty() && (actual.getDays().get(0).getPlace() != null)) ? actual.getDays().get(0).getPlace().getMapCoordinates() : null;
+            String expectedMapCoordinates =
+                    (!expected.getDays().isEmpty() && (expected.getDays().get(0).getPlace()) != null) ?
+                            expected.getDays().get(0).getPlace().getMapCoordinates() :
+                            null;
+            String actualMapCoordinates = (!actual.getDays().isEmpty() && (actual.getDays().get(0).getPlace() != null)) ?
+                    actual.getDays().get(0).getPlace().getMapCoordinates() :
+                    null;
             assertEquals(expectedMapCoordinates, actualMapCoordinates);
         }
     }
@@ -669,27 +701,35 @@ class ContentfulDataLoaderTest {
                     Collections.emptyList());
 
             return Stream.of(
-                    arguments(Conference.DOT_NEXT, LocalDate.of(2016, 12, 7), null, null, Collections.emptyList(), null, event0),
-                    arguments(Conference.DOT_NEXT, LocalDate.of(2017, 12, 7), null, null, Collections.emptyList(), IllegalStateException.class, null),
-                    arguments(Conference.DOT_NEXT, LocalDate.of(2017, 12, 7), null, null, List.of(event0, event1), IllegalStateException.class, null),
-                    arguments(Conference.DOT_NEXT, LocalDate.of(2017, 12, 7), null, null, List.of(event0), null, event0)
+                    arguments(Conference.DOT_NEXT, LocalDate.of(2016, 12, 7), null, null, null,
+                            Collections.emptyList(), null, event0),
+                    arguments(Conference.DOT_NEXT, LocalDate.of(2017, 12, 7), null, null, null,
+                            Collections.emptyList(), IllegalStateException.class, null),
+                    arguments(Conference.DOT_NEXT, LocalDate.of(2017, 12, 7), null, null, null,
+                            List.of(event0, event1), IllegalStateException.class, null),
+                    arguments(Conference.DOT_NEXT, LocalDate.of(2017, 12, 7), null, null, null,
+                            List.of(event0), null, event0)
             );
         }
 
         @ParameterizedTest
         @MethodSource("data")
-        void getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate, List<Event> events, Class<? extends Throwable> expectedException, Event expectedEvent) {
+        void getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate,
+                      String timeZone, List<Event> events, Class<? extends Throwable> expectedException, Event expectedEvent) {
             try (MockedStatic<ContentfulDataLoader> mockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
-                mockedStatic.when(() -> ContentfulDataLoader.getEvents(Mockito.anyString(), Mockito.any(LocalDate.class)))
+                mockedStatic.when(() -> ContentfulDataLoader.getEvents(Mockito.anyString(), Mockito.any(LocalDate.class),
+                                Mockito.nullable(String.class)))
                         .thenReturn(events);
-                mockedStatic.when(() -> ContentfulDataLoader.fixNonexistentEventError(Mockito.any(Conference.class), Mockito.any(LocalDate.class)))
+                mockedStatic.when(() -> ContentfulDataLoader.fixNonexistentEventError(Mockito.any(Conference.class),
+                                Mockito.any(LocalDate.class)))
                         .thenAnswer(
                                 (Answer<Event>) invocation -> {
                                     Object[] args = invocation.getArguments();
                                     Conference localConference = (Conference) args[0];
                                     LocalDate localStartDate = (LocalDate) args[1];
 
-                                    if (Conference.DOT_NEXT.equals(localConference) && LocalDate.of(2016, 12, 7).equals(localStartDate)) {
+                                    if (Conference.DOT_NEXT.equals(localConference) &&
+                                            LocalDate.of(2016, 12, 7).equals(localStartDate)) {
                                         return new Event(
                                                 new Nameable(
                                                         -1L,
@@ -717,13 +757,14 @@ class ContentfulDataLoaderTest {
                 ContentfulDataLoader contentfulDataLoader = new ContentfulDataLoader();
 
                 if (expectedException == null) {
-                    Event event = contentfulDataLoader.getEvent(conference, startDate, conferenceCode, eventTemplate);
+                    Event event = contentfulDataLoader.getEvent(conference, startDate, conferenceCode, eventTemplate, timeZone);
 
                     assertEquals(expectedEvent, event);
                     assertEquals(expectedEvent.getName(), event.getName());
                     assertEquals(expectedEvent.getDays(), event.getDays());
                 } else {
-                    assertThrows(expectedException, () -> contentfulDataLoader.getEvent(conference, startDate, conferenceCode, eventTemplate));
+                    assertThrows(expectedException, () -> contentfulDataLoader.getEvent(conference, startDate,
+                            conferenceCode, eventTemplate, timeZone));
                 }
             }
         }
@@ -1063,8 +1104,10 @@ class ContentfulDataLoaderTest {
 
             ContentfulDataLoader contentfulDataLoader = new ContentfulDataLoader();
 
-            assertDoesNotThrow(() -> contentfulDataLoader.getTalks(Conference.JPOINT, LocalDate.of(2022, 6, 14), "code", true));
-            assertDoesNotThrow(() -> contentfulDataLoader.getTalks(Conference.JPOINT, LocalDate.of(2022, 6, 14), "code", false));
+            assertDoesNotThrow(() -> contentfulDataLoader.getTalks(Conference.JPOINT,
+                    LocalDate.of(2022, 6, 14), "code", true, null));
+            assertDoesNotThrow(() -> contentfulDataLoader.getTalks(Conference.JPOINT,
+                    LocalDate.of(2022, 6, 14), "code", false, null));
         }
     }
 
@@ -1763,11 +1806,14 @@ class ContentfulDataLoaderTest {
         try (MockedStatic<ContentfulDataLoader> contentfulDataLoaderMockedStatic = Mockito.mockStatic(ContentfulDataLoader.class)) {
             contentfulDataLoaderMockedStatic.when(ContentfulDataLoader::getLocales)
                     .thenReturn(Collections.emptyList());
-            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getEvents(Mockito.anyString(), Mockito.any(LocalDate.class)))
+            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getEvents(Mockito.anyString(),
+                            Mockito.any(LocalDate.class), Mockito.anyString()))
                     .thenReturn(Collections.emptyList());
-            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getSpeakers(Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString()))
+            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getSpeakers(
+                            Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString()))
                     .thenReturn(Collections.emptyList());
-            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getTalks(Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString(), Mockito.anyBoolean()))
+            contentfulDataLoaderMockedStatic.when(() -> ContentfulDataLoader.getTalks(
+                            Mockito.any(ConferenceSpaceInfo.class), Mockito.anyString(), Mockito.anyBoolean()))
                     .thenReturn(Collections.emptyList());
 
             ContentfulDataLoader contentfulDataLoader = Mockito.mock(ContentfulDataLoader.class);

@@ -25,7 +25,6 @@ import guess.domain.source.cms.contentful.talk.response.ContentfulTalkResponse;
 import guess.domain.source.extract.ExtractPair;
 import guess.domain.source.extract.ExtractSet;
 import guess.domain.source.image.UrlDates;
-import guess.util.DateTimeUtils;
 import guess.util.load.CmsDataLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -268,9 +267,10 @@ public class ContentfulDataLoader extends CmsDataLoader {
      *
      * @param eventName event name
      * @param startDate start date
+     * @param timeZone  time zone
      * @return events
      */
-    static List<Event> getEvents(String eventName, LocalDate startDate) {
+    static List<Event> getEvents(String eventName, LocalDate startDate, String timeZone) {
         // https://cdn.contentful.com/spaces/{spaceId}/entries?access_token={accessToken}&locale={locale}&content_type=eventsCalendar&select={fields}
         UriComponentsBuilder builder = UriComponentsBuilder
                 .fromUriString(BASE_URL)
@@ -286,8 +286,10 @@ public class ContentfulDataLoader extends CmsDataLoader {
         }
 
         if (startDate != null) {
-            builder.queryParam("fields.eventStart[gte]", DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(createUtcZonedDateTime(startDate)));
-            builder.queryParam("fields.eventStart[lt]", DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(createUtcZonedDateTime(startDate.plusDays(1))));
+            builder.queryParam("fields.eventStart[gte]",
+                    DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(createUtcZonedDateTime(startDate, timeZone)));
+            builder.queryParam("fields.eventStart[lt]",
+                    DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(createUtcZonedDateTime(startDate.plusDays(1), timeZone)));
         }
 
         var uri = builder
@@ -299,7 +301,7 @@ public class ContentfulDataLoader extends CmsDataLoader {
         Set<String> entryErrorSet = getErrorSet(response, ENTRY_LINK_TYPE);
 
         return response.getItems().stream()
-                .map(e -> createEvent(e, cityMap, entryErrorSet))
+                .map(e -> createEvent(e, cityMap, entryErrorSet, timeZone))
                 .toList();
     }
 
@@ -307,27 +309,29 @@ public class ContentfulDataLoader extends CmsDataLoader {
      * Creates event zoned date time without offset (UTC).
      *
      * @param localDate date
+     * @param timeZone  time zone
      * @return zoned date time
      */
-    static ZonedDateTime createUtcZonedDateTime(LocalDate localDate) {
+    static ZonedDateTime createUtcZonedDateTime(LocalDate localDate, String timeZone) {
         return ZonedDateTime.ofInstant(
                 ZonedDateTime.of(
                         localDate,
                         LocalTime.of(0, 0, 0),
-                        ZoneId.of(DateTimeUtils.MOSCOW_TIME_ZONE)).toInstant(),
+                        ZoneId.of(timeZone)).toInstant(),
                 ZoneId.of("UTC"));
     }
 
-    static Event createEvent(ContentfulEvent e, Map<String, ContentfulCity> cityMap, Set<String> entryErrorSet) {
+    static Event createEvent(ContentfulEvent e, Map<String, ContentfulCity> cityMap, Set<String> entryErrorSet,
+                             String timeZone) {
         String nameEn = e.getFields().getConferenceName().get(ENGLISH_LOCALE);
         String nameRu = e.getFields().getConferenceName().get(RUSSIAN_LOCALE);
         if (nameEn == null) {
             nameEn = nameRu;
         }
 
-        var eventStartDate = createEventLocalDate(getFirstMapValue(e.getFields().getEventStart()));
+        var eventStartDate = createEventLocalDate(getFirstMapValue(e.getFields().getEventStart()), timeZone);
         LocalDate eventEndDate = (e.getFields().getEventEnd() != null) ?
-                createEventLocalDate(getFirstMapValue(e.getFields().getEventEnd())) :
+                createEventLocalDate(getFirstMapValue(e.getFields().getEventEnd()), timeZone) :
                 eventStartDate;
 
         ContentfulLink eventCityLink = getFirstMapValue(e.getFields().getEventCity());
@@ -370,14 +374,15 @@ public class ContentfulDataLoader extends CmsDataLoader {
     }
 
     @Override
-    public Event getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate) {
+    public Event getEvent(Conference conference, LocalDate startDate, String conferenceCode, Event eventTemplate,
+                          String timeZone) {
         var fixedEvent = fixNonexistentEventError(conference, startDate);
         if (fixedEvent != null) {
             return fixedEvent;
         }
 
         String eventName = CONFERENCE_EVENT_TYPE_NAME_MAP.get(conference);
-        List<Event> events = getEvents(eventName, startDate);
+        List<Event> events = getEvents(eventName, startDate, timeZone);
 
         if (events.isEmpty()) {
             throw new IllegalStateException(String.format("No events found for conference %s and start date %s (change conference and/or start date and rerun)",
@@ -639,7 +644,8 @@ public class ContentfulDataLoader extends CmsDataLoader {
     }
 
     @Override
-    public List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage) {
+    public List<Talk> getTalks(Conference conference, LocalDate startDate, String conferenceCode, boolean ignoreDemoStage,
+                               String timeZone) {
         var conferenceSpaceInfo = CONFERENCE_SPACE_INFO_MAP.get(conference);
 
         return getTalks(conferenceSpaceInfo, conferenceCode, ignoreDemoStage);
@@ -1215,7 +1221,7 @@ public class ContentfulDataLoader extends CmsDataLoader {
         List<EventType> eventTypes = getEventTypes();
         log.info("Event types: {}, {}", eventTypes.size(), eventTypes);
 
-        List<Event> events = getEvents(null, null);
+        List<Event> events = getEvents(null, null, "UTC");
         log.info("Events: {}, {}", events.size(), events);
 
         for (ConferenceSpaceInfo conferenceSpaceInfo : ConferenceSpaceInfo.values()) {
