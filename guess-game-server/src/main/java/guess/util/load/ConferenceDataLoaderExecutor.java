@@ -2795,5 +2795,13 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("SnowOne 2025", null, List.of(13L)),
 //                        Set.of("Открытие SnowOne", "Закрытие первого дня", "Открытие второго дня конференции",
 //                                "Закрытие конференции", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.CPP_RUSSIA, LocalDate.of(2025, 3, 13), "2025",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("C++ Russia 2025", null, List.of(24L, 9L)),
+//                        Set.of("Открытие конференции С++ Russia 2025",
+//                                "Подведение итогов online-части конференции С++ Russia 2025",
+//                                "Открытие офлайн-части конференции С++ Russia 2025",
+//                                "Yandex Multitrack на афтерпати C++ Russia",
+//                                "Lightning Talks", "Закрытие конференции С++ Russia 2025")));
     }
 }
