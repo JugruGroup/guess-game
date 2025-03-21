@@ -4,7 +4,7 @@
 
     <groupId>guess-game</groupId>
     <artifactId>guess-game-parent</artifactId>
-    <version>3.2.57-SNAPSHOT</version>
+    <version>3.2.59-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GuessGame Parent</name>
 
@@ -30,7 +30,7 @@
         <aspectj.version>1.9.23</aspectj.version>
         <kumo.version>1.28</kumo.version>
         <imageio.version>3.12.0</imageio.version>
-        <spring-boot.version>3.4.3</spring-boot.version>
+        <spring-boot.version>3.4.4</spring-boot.version>
         <webp-imageio.version>0.1.6</webp-imageio.version>
 
         <node.version>v22.14.0</node.version>
