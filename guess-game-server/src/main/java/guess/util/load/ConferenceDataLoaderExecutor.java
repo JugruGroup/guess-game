@@ -777,7 +777,7 @@ public class ConferenceDataLoaderExecutor {
                 // Speaker not exists
                 long id = lastSpeakerId.incrementAndGet();
                 String sourceUrl = speaker.getPhotoFileName();
-                var destinationFileName = String.format("%04d.jpg", id);
+                var destinationFileName = String.format("%05d.jpg", id);
 
                 speaker.setId(id);
 
@@ -1766,7 +1766,7 @@ public class ConferenceDataLoaderExecutor {
                 .collect(Collectors.toSet());
         resourceSourceInformation.getSpeakers().stream()
                 .filter(s -> !talkSpeakers.contains(s))
-                .map(s -> String.format("(%04d) %s", s.getId(), LocalizationUtils.getString(s.getName(), Language.ENGLISH)))
+                .map(s -> String.format("(%05d) %s", s.getId(), LocalizationUtils.getString(s.getName(), Language.ENGLISH)))
                 .sorted()
                 .forEach(e -> log.info(LOG_FORMAT, number.incrementAndGet(), e));
     }
