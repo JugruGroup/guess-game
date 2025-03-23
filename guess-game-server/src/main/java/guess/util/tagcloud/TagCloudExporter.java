@@ -85,7 +85,7 @@ public class TagCloudExporter {
             conferenceSb.append(talkText);
 
             if (isSaveTalkFiles) {
-                save(talkText, String.format("talk%04d.txt", talk.getId()));
+                save(talkText, String.format("talk%05d.txt", talk.getId()));
             }
 
             // Talk stop words
