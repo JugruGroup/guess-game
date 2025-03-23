@@ -1304,8 +1304,8 @@ class ConferenceDataLoaderExecutorTest {
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     @DisplayName("getSpeakerLoadResult method tests")
     class GetSpeakerLoadResultTest {
-        final String photoFileName0 = "0000.jpg";
-        final String photoFileName1 = "0001.jpg";
+        final String photoFileName0 = "00000.jpg";
+        final String photoFileName1 = "00001.jpg";
         final String photoFileName2 = "http://valid.com/2.jpg";
         final String imageParametersTemplate = "w=%d&h=%d";
 
@@ -1345,7 +1345,7 @@ class ConferenceDataLoaderExecutorTest {
                             Collections.emptyList()),
                     new LoadResult<>(
                             Collections.emptyList(),
-                            List.of(new UrlFilename(photoFileName2, "0000.jpg")),
+                            List.of(new UrlFilename(photoFileName2, photoFileName0)),
                             Collections.emptyList()));
 
             SpeakerLoadResult speakerLoadResult2 = new SpeakerLoadResult(
@@ -4557,7 +4557,7 @@ class ConferenceDataLoaderExecutorTest {
             final ZonedDateTime now = ZonedDateTime.now();
             final ZonedDateTime yesterday = now.minus(1, ChronoUnit.DAYS);
             final String validUrl = "https://valid.com";
-            final String photoFileName = "0000.jpg";
+            final String photoFileName = "00000.jpg";
             final String imageParametersTemplate = "w=%d&h=%d";
 
             return Stream.of(

@@ -246,7 +246,7 @@ public class LocalizationUtilsTest {
                     arguments(new Speaker(
                                     0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     null,
@@ -266,7 +266,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, ""),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     null,
@@ -286,7 +286,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, ""),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -306,7 +306,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "Name"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -326,7 +326,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Имя"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -346,7 +346,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "Name"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -366,7 +366,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Имя"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -386,7 +386,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "Name (Company0)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -406,7 +406,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Имя (Компания0)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -426,7 +426,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Имя (Company1)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -446,7 +446,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Name (Компания0)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -466,7 +466,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Name (Company1)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -486,7 +486,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "Name (Company0, Company1)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -540,7 +540,7 @@ public class LocalizationUtilsTest {
             return Stream.of(
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     null,
@@ -560,7 +560,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, ""),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     null,
@@ -580,7 +580,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, ""),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -600,7 +600,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "LastName FirstName"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -620,7 +620,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Фамилия Имя"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -640,7 +640,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "LastName FirstName"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -660,7 +660,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Фамилия Имя"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -680,7 +680,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "LastName FirstName (Company0)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -700,7 +700,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Фамилия Имя (Компания0)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     fullNameLocaleItems,
@@ -720,7 +720,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "Фамилия Имя (Company1)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -740,7 +740,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "LastName FirstName (Компания0)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -760,7 +760,7 @@ public class LocalizationUtilsTest {
                             Language.RUSSIAN, "LastName FirstName (Company1)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -780,7 +780,7 @@ public class LocalizationUtilsTest {
                             Language.ENGLISH, "LastName FirstName (Company0, Company1)"),
                     arguments(new Speaker(0L,
                                     new Speaker.SpeakerPhoto(
-                                            "0000.jpg",
+                                            "00000.jpg",
                                             null
                                     ),
                                     englishNameLocaleItems,
@@ -824,7 +824,7 @@ public class LocalizationUtilsTest {
             Speaker speaker0 = new Speaker(
                     0L,
                     new Speaker.SpeakerPhoto(
-                            "0000.jpg",
+                            "00000.jpg",
                             null
                     ),
                     fullNameLocaleItems,
@@ -873,7 +873,7 @@ public class LocalizationUtilsTest {
 
             Speaker speaker0 = new Speaker(0L,
                     new Speaker.SpeakerPhoto(
-                            "0000.jpg",
+                            "00000.jpg",
                             null
                     ),
                     fullNameLocaleItems,
