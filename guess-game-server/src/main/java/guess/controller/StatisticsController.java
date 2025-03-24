@@ -7,6 +7,7 @@ import guess.dto.statistics.company.CompanyMetricsDto;
 import guess.dto.statistics.company.CompanyStatisticsDto;
 import guess.dto.statistics.event.EventMetricsDto;
 import guess.dto.statistics.event.EventStatisticsDto;
+import guess.dto.statistics.eventplace.EventPlaceStatisticsDto;
 import guess.dto.statistics.eventtype.EventTypeMetricsDto;
 import guess.dto.statistics.eventtype.EventTypeStatisticsDto;
 import guess.dto.statistics.olap.metrics.OlapCityMetricsDto;
@@ -75,6 +76,15 @@ public class StatisticsController {
                 .toList();
 
         return new EventStatisticsDto(sortedEventMetricsList, eventStatisticsDto.totals());
+    }
+
+    @GetMapping("/event-place-statistics")
+    public EventPlaceStatisticsDto getgetEventPlaceStatistics(@RequestParam boolean conferences, @RequestParam boolean meetups,
+                                                              @RequestParam(required = false) Long organizerId,
+                                                              @RequestParam(required = false) Long eventTypeId,
+                                                              @RequestParam String language) {
+        //TODO: implement
+        return null;
     }
 
     @GetMapping("/speaker-statistics")
