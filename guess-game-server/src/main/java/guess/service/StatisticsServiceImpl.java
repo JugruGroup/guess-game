@@ -4,6 +4,7 @@ import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
 import guess.domain.source.*;
 import guess.domain.statistics.EventTypeEventMetrics;
+import guess.domain.statistics.Metrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyMetricsInternal;
 import guess.domain.statistics.company.CompanyStatistics;
@@ -118,17 +119,20 @@ public class StatisticsServiceImpl implements StatisticsService {
 
             eventTypeMetricsList.add(new EventTypeMetrics(
                     eventType,
-                    eventTypeStartDate,
-                    eventTypeEndDate,
                     eventTypeAge,
-                    eventTypeDuration,
                     eventType.getEvents().size(),
                     new EventTypeEventMetrics(
-                            eventTypeTalksQuantity,
+                            eventTypeStartDate,
+                            eventTypeEndDate,
+                            eventTypeDuration,
                             eventTypeSpeakers.size(),
                             eventTypeCompanies.size(),
-                            eventTypeJavaChampionsQuantity,
-                            eventTypeMvpsQuantity)
+                            new Metrics(
+                                    eventTypeTalksQuantity,
+                                    eventTypeJavaChampionsQuantity,
+                                    eventTypeMvpsQuantity
+                            )
+                    )
             ));
 
             // Totals metrics
@@ -162,17 +166,20 @@ public class StatisticsServiceImpl implements StatisticsService {
                 eventTypeMetricsList,
                 new EventTypeMetrics(
                         new EventType(),
-                        totalsStartDate,
-                        totalsEndDate,
                         totalsAge,
-                        totalsDuration,
                         totalsEventsQuantity,
                         new EventTypeEventMetrics(
-                                totalsTalksQuantity,
+                                totalsStartDate,
+                                totalsEndDate,
+                                totalsDuration,
                                 totalsSpeakers.size(),
                                 totalsCompanies.size(),
-                                totalsJavaChampionsQuantity,
-                                totalsMvpsQuantity)
+                                new Metrics(
+                                        totalsTalksQuantity,
+                                        totalsJavaChampionsQuantity,
+                                        totalsMvpsQuantity
+                                )
+                        )
                 ));
     }
 
@@ -243,14 +250,18 @@ public class StatisticsServiceImpl implements StatisticsService {
 
             eventMetricsList.add(new EventMetrics(
                     event,
-                    eventStartDate,
-                    eventEndDate,
-                    eventDuration,
-                    new EventTypeEventMetrics(eventTalksQuantity,
+                    new EventTypeEventMetrics(
+                            eventStartDate,
+                            eventEndDate,
+                            eventDuration,
                             eventSpeakers.size(),
                             eventCompanies.size(),
-                            eventJavaChampionsQuantity,
-                            eventMvpsQuantity)
+                            new Metrics(
+                                    eventTalksQuantity,
+                                    eventJavaChampionsQuantity,
+                                    eventMvpsQuantity
+                            )
+                    )
             ));
 
             // Totals metrics
@@ -279,14 +290,18 @@ public class StatisticsServiceImpl implements StatisticsService {
                 eventMetricsList,
                 new EventMetrics(
                         new Event(),
-                        totalsStartDate,
-                        totalsEndDate,
-                        totalsDuration,
-                        new EventTypeEventMetrics(totalsTalksQuantity,
+                        new EventTypeEventMetrics(
+                                totalsStartDate,
+                                totalsEndDate,
+                                totalsDuration,
                                 totalsSpeakers.size(),
                                 totalsCompanies.size(),
-                                totalsJavaChampionsQuantity,
-                                totalsMvpsQuantity)
+                                new Metrics(
+                                        totalsTalksQuantity,
+                                        totalsJavaChampionsQuantity,
+                                        totalsMvpsQuantity
+                                )
+                        )
                 ));
     }
 

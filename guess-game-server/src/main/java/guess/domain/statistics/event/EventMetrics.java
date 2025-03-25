@@ -3,17 +3,17 @@ package guess.domain.statistics.event;
 import guess.domain.source.Event;
 import guess.domain.statistics.EventTypeEventMetrics;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 /**
  * Event metrics.
  */
-public class EventMetrics extends AbstractEventMetrics {
+public class EventMetrics extends EventTypeEventMetrics {
     private final Event event;
 
-    public EventMetrics(Event event, LocalDate startDate, LocalDate endDate, long duration, EventTypeEventMetrics metrics) {
-        super(startDate, endDate, duration, metrics);
+    public EventMetrics(Event event, EventTypeEventMetrics metrics) {
+        super(metrics.getStartDate(), metrics.getEndDate(), metrics.getDuration(), metrics.getSpeakersQuantity(),
+                metrics.getCompaniesQuantity(), metrics);
 
         this.event = event;
     }
@@ -25,9 +25,8 @@ public class EventMetrics extends AbstractEventMetrics {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EventMetrics)) return false;
+        if (!(o instanceof EventMetrics that)) return false;
         if (!super.equals(o)) return false;
-        EventMetrics that = (EventMetrics) o;
         return Objects.equals(event, that.event);
     }
 

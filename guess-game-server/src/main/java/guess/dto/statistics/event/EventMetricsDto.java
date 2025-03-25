@@ -2,7 +2,6 @@ package guess.dto.statistics.event;
 
 import guess.domain.Language;
 import guess.domain.statistics.EventTypeEventMetrics;
-import guess.domain.statistics.event.AbstractEventMetrics;
 import guess.domain.statistics.event.EventMetrics;
 import guess.util.LocalizationUtils;
 
@@ -12,16 +11,14 @@ import java.util.Objects;
 /**
  * Event metrics DTO.
  */
-public class EventMetricsDto extends AbstractEventMetrics {
+public class EventMetricsDto extends EventTypeEventMetrics {
     private final long id;
     private final String name;
     private final String eventTypeLogoFileName;
 
-    public EventMetricsDto(long id, String name, String eventTypeLogoFileName, AbstractEventMetrics eventMetrics) {
-        super(eventMetrics.getStartDate(), eventMetrics.getEndDate(), eventMetrics.getDuration(),
-                new EventTypeEventMetrics(eventMetrics.getTalksQuantity(), eventMetrics.getSpeakersQuantity(),
-                        eventMetrics.getCompaniesQuantity(), eventMetrics.getJavaChampionsQuantity(),
-                        eventMetrics.getMvpsQuantity()));
+    public EventMetricsDto(long id, String name, String eventTypeLogoFileName, EventTypeEventMetrics metrics) {
+        super(metrics.getStartDate(), metrics.getEndDate(), metrics.getDuration(), metrics.getSpeakersQuantity(),
+                metrics.getCompaniesQuantity(), metrics);
 
         this.id = id;
         this.name = name;
@@ -59,9 +56,8 @@ public class EventMetricsDto extends AbstractEventMetrics {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EventMetricsDto)) return false;
+        if (!(o instanceof EventMetricsDto that)) return false;
         if (!super.equals(o)) return false;
-        EventMetricsDto that = (EventMetricsDto) o;
         return id == that.id &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(eventTypeLogoFileName, that.eventTypeLogoFileName);

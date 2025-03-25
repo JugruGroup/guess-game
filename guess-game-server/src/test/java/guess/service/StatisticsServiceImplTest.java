@@ -5,6 +5,7 @@ import guess.dao.EventTypeDao;
 import guess.domain.Conference;
 import guess.domain.source.*;
 import guess.domain.statistics.EventTypeEventMetrics;
+import guess.domain.statistics.Metrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyStatistics;
 import guess.domain.statistics.event.EventMetrics;
@@ -287,12 +288,20 @@ class StatisticsServiceImplTest {
                 eventTypeMetricsList,
                 new EventTypeMetrics(
                         eventType,
-                        startDate,
-                        endDate,
                         age,
-                        duration,
                         eventsQuantity,
-                        new EventTypeEventMetrics(talksQuantity, speakersQuantity, companiesQuantity, javaChampionsQuantity, mvpsQuantity)
+                        new EventTypeEventMetrics(
+                                startDate,
+                                endDate,
+                                duration,
+                                speakersQuantity,
+                                companiesQuantity,
+                                new Metrics(
+                                        talksQuantity,
+                                        javaChampionsQuantity,
+                                        mvpsQuantity
+                                )
+                        )
                 )
         );
     }
@@ -365,48 +374,88 @@ class StatisticsServiceImplTest {
     void getEventTypeStatistics() {
         EventTypeMetrics eventTypeMetrics0 = new EventTypeMetrics(
                 eventType0,
-                EVENT_START_DATE0,
-                EVENT_END_DATE0,
                 ChronoUnit.YEARS.between(EVENT_START_DATE0, NOW_DATE),
-                2,
                 1,
-                new EventTypeEventMetrics(1, 1, 1, 1, 0)
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE0,
+                        EVENT_END_DATE0,
+                        2,
+                        1,
+                        1,
+                        new Metrics(
+                                1,
+                                1,
+                                0
+                        )
+                )
         );
         EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
                 eventType1,
-                EVENT_START_DATE1,
-                EVENT_END_DATE1,
                 ChronoUnit.YEARS.between(EVENT_START_DATE1, NOW_DATE),
                 1,
-                1,
-                new EventTypeEventMetrics(1, 1, 1, 0, 1)
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE1,
+                        EVENT_END_DATE1,
+                        1,
+                        1,
+                        1,
+                        new Metrics(
+                                1,
+                                0,
+                                1
+                        )
+                )
         );
         EventTypeMetrics eventTypeMetrics2 = new EventTypeMetrics(
                 eventType2,
-                EVENT_START_DATE3,
-                EVENT_END_DATE4,
                 ChronoUnit.YEARS.between(EVENT_START_DATE3, NOW_DATE),
                 3,
-                3,
-                new EventTypeEventMetrics(1, 1, 1, 0, 0)
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE3,
+                        EVENT_END_DATE4,
+                        3,
+                        1,
+                        1,
+                        new Metrics(
+                                1,
+                                0,
+                                0
+                        )
+                )
         );
         EventTypeMetrics eventTypeMetrics3 = new EventTypeMetrics(
                 eventType3,
-                EVENT_START_DATE5,
-                EVENT_END_DATE5,
                 ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
                 1,
-                1,
-                new EventTypeEventMetrics(0, 0, 0, 0, 0)
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE5,
+                        EVENT_END_DATE5,
+                        1,
+                        0,
+                        0,
+                        new Metrics(
+                                0,
+                                0,
+                                0
+                        )
+                )
         );
         EventTypeMetrics eventTypeMetrics4 = new EventTypeMetrics(
                 eventType4,
-                null,
-                null,
                 0,
                 0,
-                0,
-                new EventTypeEventMetrics(0, 0, 0, 0, 0)
+                new EventTypeEventMetrics(
+                        null,
+                        null,
+                        0,
+                        0,
+                        0,
+                        new Metrics(
+                                0,
+                                0,
+                                0
+                        )
+                )
         );
 
         EventTypeStatistics expected0 = createEventTypeStatistics(
@@ -477,14 +526,18 @@ class StatisticsServiceImplTest {
                 eventMetricsList,
                 new EventMetrics(
                         event,
-                        startDate,
-                        endDate,
-                        duration,
-                        new EventTypeEventMetrics(talksQuantity,
+                        new EventTypeEventMetrics(
+                                startDate,
+                                endDate,
+                                duration,
                                 speakersQuantity,
                                 companiesQuantity,
-                                javaChampionsQuantity,
-                                mvpsQuantity)
+                                new Metrics(
+                                        talksQuantity,
+                                        javaChampionsQuantity,
+                                        mvpsQuantity
+                                )
+                        )
                 )
         );
     }
@@ -542,69 +595,93 @@ class StatisticsServiceImplTest {
     void getEventStatistics() {
         EventMetrics eventMetrics0 = new EventMetrics(
                 event0,
-                EVENT_START_DATE0,
-                EVENT_END_DATE0,
-                2,
-                new EventTypeEventMetrics(1,
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE0,
+                        EVENT_END_DATE0,
+                        2,
                         1,
                         1,
-                        1,
-                        0)
+                        new Metrics(
+                                1,
+                                1,
+                                0
+                        )
+                )
         );
         EventMetrics eventMetrics2 = new EventMetrics(
                 event2,
-                EVENT_START_DATE2,
-                EVENT_END_DATE2,
-                1,
-                new EventTypeEventMetrics(1,
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE2,
+                        EVENT_END_DATE2,
                         1,
                         1,
-                        0,
-                        0)
+                        1,
+                        new Metrics(
+                                1,
+                                0,
+                                0
+                        )
+                )
         );
         EventMetrics eventMetrics3 = new EventMetrics(
                 event3,
-                EVENT_START_DATE3,
-                EVENT_END_DATE3,
-                1,
-                new EventTypeEventMetrics(0,
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE3,
+                        EVENT_END_DATE3,
+                        1,
                         0,
                         0,
-                        0,
-                        0)
+                        new Metrics(
+                                0,
+                                0,
+                                0
+                        )
+                )
         );
         EventMetrics eventMetrics4 = new EventMetrics(
                 event4,
-                EVENT_START_DATE4,
-                EVENT_END_DATE4,
-                1,
-                new EventTypeEventMetrics(0,
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE4,
+                        EVENT_END_DATE4,
+                        1,
                         0,
                         0,
-                        0,
-                        0)
+                        new Metrics(
+                                0,
+                                0,
+                                0
+                        )
+                )
         );
         EventMetrics eventMetrics5 = new EventMetrics(
                 event1,
-                EVENT_START_DATE1,
-                EVENT_END_DATE1,
-                1,
-                new EventTypeEventMetrics(1,
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE1,
+                        EVENT_END_DATE1,
                         1,
                         1,
-                        0,
-                        1)
+                        1,
+                        new Metrics(
+                                1,
+                                0,
+                                1
+                        )
+                )
         );
         EventMetrics eventMetrics6 = new EventMetrics(
                 event5,
-                EVENT_START_DATE5,
-                EVENT_END_DATE5,
-                1,
-                new EventTypeEventMetrics(0,
+                new EventTypeEventMetrics(
+                        EVENT_START_DATE5,
+                        EVENT_END_DATE5,
+                        1,
                         0,
                         0,
-                        0,
-                        0)
+                        new Metrics(
+                                0,
+                                0,
+                                0
+                        )
+                )
         );
 
         EventStatistics expected0 = createEventStatistics(
