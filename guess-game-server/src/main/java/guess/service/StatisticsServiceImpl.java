@@ -2,6 +2,7 @@ package guess.service;
 
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
+import guess.dao.PlaceDao;
 import guess.domain.source.*;
 import guess.domain.statistics.EventTypeEventMetrics;
 import guess.domain.statistics.Metrics;
@@ -10,6 +11,8 @@ import guess.domain.statistics.company.CompanyMetricsInternal;
 import guess.domain.statistics.company.CompanyStatistics;
 import guess.domain.statistics.event.EventMetrics;
 import guess.domain.statistics.event.EventStatistics;
+import guess.domain.statistics.eventplace.EventPlaceMetrics;
+import guess.domain.statistics.eventplace.EventPlaceStatistics;
 import guess.domain.statistics.eventtype.EventTypeMetrics;
 import guess.domain.statistics.eventtype.EventTypeStatistics;
 import guess.domain.statistics.speaker.SpeakerMetrics;
@@ -31,11 +34,13 @@ import java.util.stream.Collectors;
 public class StatisticsServiceImpl implements StatisticsService {
     private final EventTypeDao eventTypeDao;
     private final EventDao eventDao;
+    private final PlaceDao placeDao;
 
     @Autowired
-    public StatisticsServiceImpl(EventTypeDao eventTypeDao, EventDao eventDao) {
+    public StatisticsServiceImpl(EventTypeDao eventTypeDao, EventDao eventDao, PlaceDao placeDao) {
         this.eventTypeDao = eventTypeDao;
         this.eventDao = eventDao;
+        this.placeDao = placeDao;
     }
 
     @Override
@@ -303,6 +308,84 @@ public class StatisticsServiceImpl implements StatisticsService {
                                 )
                         )
                 ));
+    }
+
+    static Map<Long, Place> getTalkDayPlaces(List<EventDays> eventDaysList) {
+        Map<Long, Place> talkDayDates = new HashMap<>();
+        long previousDays = 0;
+
+        for (EventDays eventDays : eventDaysList) {
+            long days = ChronoUnit.DAYS.between(eventDays.getStartDate(), eventDays.getEndDate()) + 1;
+
+            for (long i = 1; i <= days; i++) {
+                talkDayDates.put(previousDays + i, eventDays.getPlace());
+            }
+
+            previousDays += days;
+        }
+
+        return talkDayDates;
+    }
+
+    @Override
+    public EventPlaceStatistics getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
+        List<Event> events = eventDao.getEvents().stream()
+                .filter(e ->
+                        ((isConferences && e.getEventType().isEventTypeConference()) || (isMeetups && !e.getEventType().isEventTypeConference())) &&
+                                ((organizerId == null) || (e.getEventType().getOrganizer().getId() == organizerId)) &&
+                                ((eventTypeId == null) || (e.getEventType().getId() == eventTypeId)))
+                .toList();
+        List<EventPlaceMetrics> eventPlaceMetricsList = new ArrayList<>();
+        LocalDate totalsStartDate = null;
+        LocalDate totalsEndDate = null;
+        long totalsDuration = 0;
+        long totalsTalksQuantity = 0;
+        Set<Speaker> totalsSpeakers = new HashSet<>();
+        Set<Company> totalsCompanies = new HashSet<>();
+        Map<Place, Event> placeEvents = new HashMap<>();
+        Map<Place, EventType> placeEventTypes = new HashMap<>();
+
+        for (Event event : events) {
+            // Event place metrics
+            Map<Long, Place> talkDayPlaces = getTalkDayPlaces(event.getDays());
+
+            for (EventDays eventDays : event.getDays()) {
+                placeEvents.put(eventDays.getPlace(), event);
+                placeEventTypes.put(eventDays.getPlace(), event.getEventType());
+            }
+
+            long eventDuration = event.getDuration();
+        }
+
+        //TODO: implement
+
+        long totalsJavaChampionsQuantity = totalsSpeakers.stream()
+                .filter(Speaker::isJavaChampion)
+                .count();
+        long totalsMvpsQuantity = totalsSpeakers.stream()
+                .filter(Speaker::isAnyMvp)
+                .count();
+
+        return new EventPlaceStatistics(
+                eventPlaceMetricsList,
+                new EventPlaceMetrics(
+                        new Place(),
+                        0,
+                        0,
+                        new EventTypeEventMetrics(
+                                totalsStartDate,
+                                totalsEndDate,
+                                totalsDuration,
+                                totalsSpeakers.size(),
+                                totalsCompanies.size(),
+                                new Metrics(
+                                        totalsTalksQuantity,
+                                        totalsJavaChampionsQuantity,
+                                        totalsMvpsQuantity
+                                )
+                        )
+                )
+        );
     }
 
     @Override

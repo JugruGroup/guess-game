@@ -3,6 +3,7 @@ package guess.service;
 import guess.domain.source.EventType;
 import guess.domain.statistics.company.CompanyStatistics;
 import guess.domain.statistics.event.EventStatistics;
+import guess.domain.statistics.eventplace.EventPlaceStatistics;
 import guess.domain.statistics.eventtype.EventTypeStatistics;
 import guess.domain.statistics.speaker.SpeakerStatistics;
 
@@ -17,6 +18,8 @@ public interface StatisticsService {
     EventTypeStatistics getEventTypeStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId);
 
     EventStatistics getEventStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId);
+
+    EventPlaceStatistics getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId);
 
     SpeakerStatistics getSpeakerStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId);
 

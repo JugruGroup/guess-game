@@ -69,9 +69,8 @@ public class EventPart extends AbstractEvent {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EventPart)) return false;
+        if (!(o instanceof EventPart eventPart)) return false;
         if (!super.equals(o)) return false;
-        EventPart eventPart = (EventPart) o;
         return Objects.equals(getStartDate(), eventPart.getStartDate());
     }
 

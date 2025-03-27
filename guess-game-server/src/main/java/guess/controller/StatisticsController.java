@@ -7,6 +7,7 @@ import guess.dto.statistics.company.CompanyMetricsDto;
 import guess.dto.statistics.company.CompanyStatisticsDto;
 import guess.dto.statistics.event.EventMetricsDto;
 import guess.dto.statistics.event.EventStatisticsDto;
+import guess.dto.statistics.eventplace.EventPlaceMetricsDto;
 import guess.dto.statistics.eventplace.EventPlaceStatisticsDto;
 import guess.dto.statistics.eventtype.EventTypeMetricsDto;
 import guess.dto.statistics.eventtype.EventTypeStatisticsDto;
@@ -83,8 +84,16 @@ public class StatisticsController {
                                                               @RequestParam(required = false) Long organizerId,
                                                               @RequestParam(required = false) Long eventTypeId,
                                                               @RequestParam String language) {
-        //TODO: implement
-        return null;
+        var eventPlaceStatistics = statisticsService.getEventPlaceStatistics(conferences, meetups, organizerId, eventTypeId);
+        var eventPlaceStatisticsDto = EventPlaceStatisticsDto.convertToDto(eventPlaceStatistics, Language.getLanguageByCode(language));
+        Comparator<EventPlaceMetricsDto> comparatorByEventsQuantity = Comparator.comparing(EventPlaceMetricsDto::getEventsQuantity).reversed();
+        Comparator<EventPlaceMetricsDto> comparatorByEventTypesQuantity = Comparator.comparing(EventPlaceMetricsDto::getEventTypesQuantity).reversed();
+
+        List<EventPlaceMetricsDto> sortedEventPlaceMetricsList = eventPlaceStatisticsDto.eventPlaceMetricsList().stream()
+                .sorted(comparatorByEventsQuantity.thenComparing(comparatorByEventTypesQuantity))
+                .toList();
+
+        return new EventPlaceStatisticsDto(sortedEventPlaceMetricsList, eventPlaceStatisticsDto.totals());
     }
 
     @GetMapping("/speaker-statistics")
