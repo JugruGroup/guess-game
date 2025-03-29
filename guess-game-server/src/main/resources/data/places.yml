@@ -79,14 +79,6 @@ places:
       - {language: en, text: "Leningrad Avenue, 31А, building 1, MonArch Moscow Hotel"}
       - {language: ru, text: "Ленинградский проспект, 31А, строение 1, МонАрх Москва Отель"}
     mapCoordinates: "55.783321, 37.560867"
-  - id: 10
-    city:
-      - {language: en, text: Moscow}
-      - {language: ru, text: Москва}
-    venueAddress:
-      - {language: en, text: "Mezhdunarodnaya str. 16, Krasnogorsk, Krasnogorsk area, Moscow region, Crocus Expo"}
-      - {language: ru, text: "Международная ул., 16, Красногорск, Московская обл., МВЦ «Крокус Экспо»"}
-    mapCoordinates: "55.824414, 37.390359"
   - id: 11
     city:
       - {language: en, text: Moscow}

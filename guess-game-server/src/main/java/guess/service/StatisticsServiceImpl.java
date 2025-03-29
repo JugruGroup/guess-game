@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.BiPredicate;
 import java.util.stream.Collectors;
 
@@ -335,29 +336,137 @@ public class StatisticsServiceImpl implements StatisticsService {
                                 ((organizerId == null) || (e.getEventType().getOrganizer().getId() == organizerId)) &&
                                 ((eventTypeId == null) || (e.getEventType().getId() == eventTypeId)))
                 .toList();
-        List<EventPlaceMetrics> eventPlaceMetricsList = new ArrayList<>();
-        LocalDate totalsStartDate = null;
-        LocalDate totalsEndDate = null;
-        long totalsDuration = 0;
-        long totalsTalksQuantity = 0;
-        Set<Speaker> totalsSpeakers = new HashSet<>();
-        Set<Company> totalsCompanies = new HashSet<>();
-        Map<Place, Event> placeEvents = new HashMap<>();
-        Map<Place, EventType> placeEventTypes = new HashMap<>();
+        Map<Place, Set<Event>> placeEvents = new HashMap<>();
+        Map<Place, Set<EventType>> placeEventTypes = new HashMap<>();
+        Map<Place, LocalDate> placeStartDates = new HashMap<>();
+        Map<Place, LocalDate> placeEndDates = new HashMap<>();
+        Map<Place, AtomicLong> placeDurations = new HashMap<>();
+        Map<Place, AtomicLong> placeTalksQuantities = new HashMap<>();
+        Map<Place, Set<Speaker>> placeSpeakers = new HashMap<>();
+        Map<Place, Set<Company>> placeCompanies = new HashMap<>();
+        BiPredicate<LocalDate, LocalDate> targetNullPredicate = (targetLocalDate, sourceLocalDate) -> (targetLocalDate == null);
+        BiPredicate<LocalDate, LocalDate> targetNullOrBeforePredicate = targetNullPredicate
+                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isBefore(targetLocalDate));
+        BiPredicate<LocalDate, LocalDate> targetNullOrAfterPredicate = targetNullPredicate
+                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isAfter(targetLocalDate));
+
+        placeDao.getPlaces().forEach(place -> {
+            placeEvents.put(place, new HashSet<>());
+            placeEventTypes.put(place, new HashSet<>());
+            placeStartDates.put(place, null);
+            placeEndDates.put(place, null);
+            placeDurations.put(place, new AtomicLong(0));
+            placeTalksQuantities.put(place, new AtomicLong(0));
+            placeSpeakers.put(place, new HashSet<>());
+            placeCompanies.put(place, new HashSet<>());
+        });
 
         for (Event event : events) {
-            // Event place metrics
             Map<Long, Place> talkDayPlaces = getTalkDayPlaces(event.getDays());
 
             for (EventDays eventDays : event.getDays()) {
-                placeEvents.put(eventDays.getPlace(), event);
-                placeEventTypes.put(eventDays.getPlace(), event.getEventType());
+                // Event place metrics
+                Place place = eventDays.getPlace();
+                placeEvents.get(place).add(event);
+                placeEventTypes.get(place).add(event.getEventType());
+
+                LocalDate placeStartDate = placeStartDates.get(place);
+                LocalDate placeEndDate = placeEndDates.get(place);
+                LocalDate eventPartStartDate = eventDays.getStartDate();
+                LocalDate eventPartEndDate = eventDays.getEndDate();
+
+                if (targetNullOrBeforePredicate.test(placeStartDate, eventPartStartDate)) {
+                    placeStartDates.put(place, eventPartStartDate);
+                }
+
+                if (targetNullOrAfterPredicate.test(placeEndDate, eventPartEndDate)) {
+                    placeEndDates.put(place, eventPartEndDate);
+                }
+
+                placeDurations.get(place).addAndGet(ChronoUnit.DAYS.between(eventPartStartDate, eventPartEndDate) + 1);
             }
 
-            long eventDuration = event.getDuration();
+            event.getTalks().forEach(t -> {
+                Place place = talkDayPlaces.get(t.getTalkDay());
+
+                placeTalksQuantities.get(place).incrementAndGet();
+                placeSpeakers.get(place).addAll(t.getSpeakers());
+
+                Set<Company> companies = t.getSpeakers().stream()
+                        .flatMap(s -> s.getCompanies().stream())
+                        .collect(Collectors.toSet());
+
+                placeCompanies.get(place).addAll(companies);
+            });
         }
 
-        //TODO: implement
+        // Event place metrics
+        List<EventPlaceMetrics> eventPlaceMetricsList = placeDao.getPlaces().stream()
+                .map(place -> {
+                    Set<Speaker> speakers = placeSpeakers.get(place);
+                    long placeJavaChampionsQuantity = speakers.stream()
+                            .filter(Speaker::isJavaChampion)
+                            .count();
+                    long placeMvpsQuantity = speakers.stream()
+                            .filter(Speaker::isAnyMvp)
+                            .count();
+
+                    return new EventPlaceMetrics(
+                            place,
+                            placeEvents.get(place).size(),
+                            placeEventTypes.get(place).size(),
+                            new EventTypeEventMetrics(
+                                    placeStartDates.get(place),
+                                    placeEndDates.get(place),
+                                    placeDurations.get(place).get(),
+                                    speakers.size(),
+                                    placeCompanies.get(place).size(),
+                                    new Metrics(
+                                            placeTalksQuantities.get(place).get(),
+                                            placeJavaChampionsQuantity,
+                                            placeMvpsQuantity
+                                    )
+                            )
+                    );
+                })
+                .toList();
+
+        // Totals metrics
+        long totalsEventsQuantity = placeEvents.values().stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.toSet())
+                .size();
+
+        long totalsEventTypesQuantity = placeEventTypes.values().stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.toSet())
+                .size();
+
+        List<LocalDate> startDates = placeStartDates.values().stream()
+                .filter(Objects::nonNull)
+                .toList();
+        LocalDate totalsStartDate = !startDates.isEmpty() ? Collections.min(startDates) : null;
+
+        List<LocalDate> endDates = placeEndDates.values().stream()
+                .filter(Objects::nonNull)
+                .toList();
+        LocalDate totalsEndDate = !endDates.isEmpty() ? Collections.max(endDates) : null;
+
+        long totalsDuration = placeDurations.values().stream()
+                .mapToLong(AtomicLong::get)
+                .sum();
+
+        long totalsTalksQuantity = placeTalksQuantities.values().stream()
+                .mapToLong(AtomicLong::get)
+                .sum();
+
+        Set<Speaker> totalsSpeakers = placeSpeakers.values().stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.toSet());
+
+        Set<Company> totalsCompanies = placeCompanies.values().stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.toSet());
 
         long totalsJavaChampionsQuantity = totalsSpeakers.stream()
                 .filter(Speaker::isJavaChampion)
@@ -370,8 +479,8 @@ public class StatisticsServiceImpl implements StatisticsService {
                 eventPlaceMetricsList,
                 new EventPlaceMetrics(
                         new Place(),
-                        0,
-                        0,
+                        totalsEventsQuantity,
+                        totalsEventTypesQuantity,
                         new EventTypeEventMetrics(
                                 totalsStartDate,
                                 totalsEndDate,
