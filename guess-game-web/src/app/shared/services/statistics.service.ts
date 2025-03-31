@@ -2,25 +2,26 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { CompanyStatistics } from '../models/statistics/company/company-statistics.model';
+import { EventPlaceStatistics } from '../models/statistics/event-place/event-place-statistics.model';
 import { EventType } from '../models/event-type/event-type.model';
 import { EventTypeStatistics } from '../models/statistics/event-type/event-type-statistics.model';
 import { EventStatistics } from '../models/statistics/event/event-statistics.model';
-import { SpeakerStatistics } from '../models/statistics/speaker/speaker-statistics.model';
-import { CompanyStatistics } from '../models/statistics/company/company-statistics.model';
-import { Organizer } from '../models/organizer/organizer.model';
-import { OlapCubeType } from '../models/statistics/olap/olap-cube-type.model';
-import { OlapMeasureType } from '../models/statistics/olap/olap-measure-type.model';
+import { MessageService } from '../../modules/message/message.service';
 import { OlapCityMetrics } from '../models/statistics/olap/metrics/olap-city-metrics.model';
 import { OlapCityParameters } from '../models/statistics/olap/parameters/olap-city-parameters.model';
+import { OlapCubeType } from '../models/statistics/olap/olap-cube-type.model';
 import { OlapEntityStatistics } from '../models/statistics/olap/statistics/olap-entity-statistics.model';
 import { OlapEventTypeMetrics } from '../models/statistics/olap/metrics/olap-event-type-metrics.model';
 import { OlapEventTypeParameters } from '../models/statistics/olap/parameters/olap-event-type-parameters.model';
+import { OlapMeasureType } from '../models/statistics/olap/olap-measure-type.model';
 import { OlapParameters } from '../models/statistics/olap/parameters/olap-parameters.model';
 import { OlapSpeakerMetrics } from '../models/statistics/olap/metrics/olap-speaker-metrics.model';
 import { OlapSpeakerParameters } from '../models/statistics/olap/parameters/olap-speaker-parameters.model';
 import { OlapStatistics } from '../models/statistics/olap/statistics/olap-statistics.model';
+import { Organizer } from '../models/organizer/organizer.model';
+import { SpeakerStatistics } from '../models/statistics/speaker/speaker-statistics.model';
 import { Topic } from '../models/topic/topic.model';
-import { MessageService } from '../../modules/message/message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -71,6 +72,30 @@ export class StatisticsService {
     }
 
     return this.http.get<EventStatistics>(`${this.baseUrl}/event-statistics`, {params: params})
+      .pipe(
+        catchError((response: Response) => {
+          this.messageService.reportMessage(response);
+          throw response;
+        })
+      );
+  }
+
+  getEventPlaceStatistics(conferences: boolean, meetups: boolean, organizer: Organizer, eventType: EventType,
+                     language: string): Observable<EventPlaceStatistics> {
+    let params = new HttpParams()
+      .set('conferences', conferences.toString())
+      .set('meetups', meetups.toString())
+      .set('language', language);
+
+    if (organizer) {
+      params = params.set('organizerId', organizer.id.toString());
+    }
+
+    if (eventType) {
+      params = params.set('eventTypeId', eventType.id.toString());
+    }
+
+    return this.http.get<EventPlaceStatistics>(`${this.baseUrl}/event-place-statistics`, {params: params})
       .pipe(
         catchError((response: Response) => {
           this.messageService.reportMessage(response);

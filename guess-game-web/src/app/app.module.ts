@@ -27,6 +27,7 @@ import { CompaniesModule } from './modules/information/companies/companies.modul
 import { CompaniesSearchComponent } from './modules/information/companies/companies-search.component';
 import { CompanyStatisticsComponent } from './modules/information/statistics/company/company-statistics.component';
 import { EventComponent } from './modules/information/events/event.component';
+import { EventPlaceStatisticsComponent } from './modules/information/statistics/event-place/event-place-statistics.component';
 import { EventsComponent } from './modules/information/events/events.component';
 import { EventsModule } from './modules/information/events/events.module';
 import { EventsSearchComponent } from './modules/information/events/events-search.component';
@@ -176,6 +177,7 @@ const routes: Routes = [
               {path: '', redirectTo: 'event-types', pathMatch: 'full'},
               {path: 'event-types', component: EventTypeStatisticsComponent},
               {path: 'events', component: EventStatisticsComponent},
+              {path: 'event-places', component: EventPlaceStatisticsComponent},
               {path: 'speakers', component: SpeakerStatisticsComponent},
               {path: 'companies', component: CompanyStatisticsComponent},
               {path: 'olap', component: OlapStatisticsComponent},

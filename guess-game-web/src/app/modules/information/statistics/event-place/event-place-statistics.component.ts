@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { EventPlaceStatistics } from '../../../../shared/models/statistics/event-place/event-place-statistics.model';
 import { EventService } from '../../../../shared/services/event.service';
-import { EventStatistics } from '../../../../shared/models/statistics/event/event-statistics.model';
 import { EventType } from '../../../../shared/models/event-type/event-type.model';
 import { EventTypeService } from '../../../../shared/services/event-type.service';
 import { LocaleService } from '../../../../shared/services/locale.service';
@@ -13,13 +13,14 @@ import { StatisticsService } from '../../../../shared/services/statistics.servic
 import { findEventTypeById, findOrganizerById } from '../../../general/utility-functions';
 
 @Component({
-    selector: 'app-event-statistics',
-    templateUrl: './event-statistics.component.html',
-    standalone: false
+  selector: 'app-event-place-statistics-component',
+  templateUrl: './event-place-statistics.component.html',
+  standalone: false
 })
-export class EventStatisticsComponent implements OnInit, OnDestroy {
+export class EventPlaceStatisticsComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
   public eventsImageDirectory = `${this.imageDirectory}/events`;
+  public googleMapsUrlPrefix = 'https://www.google.com/maps/place';
 
   public isConferences = true;
   public isMeetups = true;
@@ -32,7 +33,7 @@ export class EventStatisticsComponent implements OnInit, OnDestroy {
   public selectedEventType: EventType;
   public eventTypeSelectItems: SelectItem[] = [];
 
-  public eventStatistics = new EventStatistics();
+  public eventPlaceStatistics = new EventPlaceStatistics();
   public multiSortMeta: any[] = [];
 
   public language: string;
@@ -41,7 +42,9 @@ export class EventStatisticsComponent implements OnInit, OnDestroy {
   constructor(private statisticsService: StatisticsService, private eventTypeService: EventTypeService,
               private eventService: EventService, public organizerService: OrganizerService,
               public translateService: TranslateService, private localeService: LocaleService) {
-    this.multiSortMeta.push({field: 'name', order: 1});
+    this.multiSortMeta.push({field: 'eventsQuantity', order: -1});
+    this.multiSortMeta.push({field: 'eventTypesQuantity', order: -1});
+    this.multiSortMeta.push({field: 'talksQuantity', order: -1});
     this.language = localeService.getLanguage();
   }
 
@@ -96,7 +99,7 @@ export class EventStatisticsComponent implements OnInit, OnDestroy {
                   this.selectedEventType = null;
                 }
 
-                this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
+                this.loadEventPlaceStatistics(this.selectedOrganizer, this.selectedEventType);
               });
           });
       });
@@ -109,14 +112,14 @@ export class EventStatisticsComponent implements OnInit, OnDestroy {
 
         this.selectedEventType = null;
 
-        this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
+        this.loadEventPlaceStatistics(this.selectedOrganizer, this.selectedEventType);
       });
   }
 
-  loadEventStatistics(organizer: Organizer, eventType: EventType) {
-    this.statisticsService.getEventStatistics(this.isConferences, this.isMeetups, organizer, eventType, this.language)
+  loadEventPlaceStatistics(organizer: Organizer, eventType: EventType) {
+    this.statisticsService.getEventPlaceStatistics(this.isConferences, this.isMeetups, organizer, eventType, this.language)
       .subscribe(data => {
-          this.eventStatistics = data;
+          this.eventPlaceStatistics = data;
         }
       );
   }
@@ -130,7 +133,7 @@ export class EventStatisticsComponent implements OnInit, OnDestroy {
   }
 
   onEventTypeChange() {
-    this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
+    this.loadEventPlaceStatistics(this.selectedOrganizer, this.selectedEventType);
   }
 
   onLanguageChange() {
@@ -153,16 +156,16 @@ export class EventStatisticsComponent implements OnInit, OnDestroy {
               this.selectedEventType = null;
             }
 
-            this.loadEventStatistics(this.selectedOrganizer, this.selectedEventType);
+            this.loadEventPlaceStatistics(this.selectedOrganizer, this.selectedEventType);
           });
       });
   }
 
-  isNoEventsFoundVisible() {
-    return (this.eventStatistics?.eventMetricsList && (this.eventStatistics.eventMetricsList.length === 0));
+  isNoEventPlacesFoundVisible() {
+    return (this.eventPlaceStatistics?.eventPlaceMetricsList && (this.eventPlaceStatistics.eventPlaceMetricsList.length === 0));
   }
 
-  isEventsListVisible() {
-    return (this.eventStatistics?.eventMetricsList && (this.eventStatistics.eventMetricsList.length > 0));
+  isEventPlacesListVisible() {
+    return (this.eventPlaceStatistics?.eventPlaceMetricsList && (this.eventPlaceStatistics.eventPlaceMetricsList.length > 0));
   }
 }

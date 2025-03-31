@@ -4,7 +4,7 @@
   <app-message></app-message>
 
   <app-information-menubar></app-information-menubar>
-  <app-statistics-tabmenu [activeIndex]="1"></app-statistics-tabmenu>
+  <app-statistics-tabmenu [activeIndex]="2"></app-statistics-tabmenu>
 
   <div class="mt-3">
     <form role="form" class="mt-2 mb-2">
@@ -54,12 +54,12 @@
       </div>
     </form>
 
-    <div *ngIf="isNoEventsFoundVisible()" class="alert text-center mt-2">
-      {{'statistics.events.noEventsDataFoundText' | translate}}
+    <div *ngIf="isNoEventPlacesFoundVisible()" class="alert text-center mt-2">
+      {{'statistics.eventPlaces.noEventPlacesDataFoundText' | translate}}
     </div>
 
-    <div *ngIf="isEventsListVisible()" class="mt-2">
-      <p-table [value]="eventStatistics.eventMetricsList" [resizableColumns]="true" [autoLayout]="true"
+    <div *ngIf="isEventPlacesListVisible()" class="mt-2">
+      <p-table [value]="eventPlaceStatistics.eventPlaceMetricsList" [resizableColumns]="true" [autoLayout]="true"
                [rows]="20" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
@@ -70,74 +70,89 @@
             <th class="text-center" pResizableColumn>
               {{'common.table.numberColumn' | translate}}
             </th>
-            <th class="text-center" [pSortableColumn]="'name'" pResizableColumn>
-              {{'statistics.events.table.nameColumn' | translate}}
-              <p-sortIcon [field]="'name'"></p-sortIcon>
+            <th class="text-center" [pSortableColumn]="'placeCity'" pResizableColumn>
+              {{'statistics.eventPlaces.table.cityColumn' | translate}}
+              <p-sortIcon [field]="'placeCity'"></p-sortIcon>
+            </th>
+            <th class="text-center" [pSortableColumn]="'placeVenueAddress'" pResizableColumn>
+              {{'statistics.eventPlaces.table.addressColumn' | translate}}
+              <p-sortIcon [field]="'placeVenueAddress'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'startDate'" pResizableColumn>
-              {{'statistics.events.table.startDateColumn' | translate}}
+              {{'statistics.eventPlaces.table.startDateColumn' | translate}}
               <p-sortIcon [field]="'startDate'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'endDate'" pResizableColumn>
-              {{'statistics.events.table.endDateColumn' | translate}}
+              {{'statistics.eventPlaces.table.endDateColumn' | translate}}
               <p-sortIcon [field]="'endDate'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'duration'" pResizableColumn>
-              {{'statistics.events.table.durationColumn' | translate}}
+              {{'statistics.eventPlaces.table.durationColumn' | translate}}
               <p-sortIcon [field]="'duration'"></p-sortIcon>
             </th>
+            <th class="text-center" [pSortableColumn]="'eventsQuantity'" pResizableColumn>
+              {{'statistics.eventPlaces.table.eventsColumn' | translate}}
+              <p-sortIcon [field]="'eventsQuantity'"></p-sortIcon>
+            </th>
+            <th class="text-center" [pSortableColumn]="'eventTypesQuantity'" pResizableColumn>
+              {{'statistics.eventPlaces.table.eventTypesColumn' | translate}}
+              <p-sortIcon [field]="'eventTypesQuantity'"></p-sortIcon>
+            </th>
             <th class="text-center" [pSortableColumn]="'talksQuantity'" pResizableColumn>
-              {{'statistics.events.table.talksColumn' | translate}}
+              {{'statistics.eventPlaces.table.talksColumn' | translate}}
               <p-sortIcon [field]="'talksQuantity'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'speakersQuantity'" pResizableColumn>
-              {{'statistics.events.table.speakersColumn' | translate}}
+              {{'statistics.eventPlaces.table.speakersColumn' | translate}}
               <p-sortIcon [field]="'speakersQuantity'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'companiesQuantity'" pResizableColumn>
-              {{'statistics.events.table.companiesColumn' | translate}}
+              {{'statistics.eventPlaces.table.companiesColumn' | translate}}
               <p-sortIcon [field]="'companiesQuantity'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'javaChampionsQuantity'" pResizableColumn>
-              {{'statistics.events.table.javaChampionsColumn' | translate}}
+              {{'statistics.eventPlaces.table.javaChampionsColumn' | translate}}
               <p-sortIcon [field]="'javaChampionsQuantity'"></p-sortIcon>
             </th>
             <th class="text-center" [pSortableColumn]="'mvpsQuantity'" pResizableColumn>
-              {{'statistics.events.table.mvpsColumn' | translate}}
+              {{'statistics.eventPlaces.table.mvpsColumn' | translate}}
               <p-sortIcon [field]="'mvpsQuantity'"></p-sortIcon>
             </th>
           </tr>
         </ng-template>
-        <ng-template #body let-eventMetrics let-i = "rowIndex">
+        <ng-template #body let-eventPlaceMetrics let-i = "rowIndex">
           <tr>
             <td class="text-center">{{i + 1}}</td>
+            <td>{{eventPlaceMetrics.placeCity}}</td>
             <td>
-              <a routerLink="/{{language}}/information/events/event/{{eventMetrics.id}}" class="text-dark">
-                <img src="{{eventsImageDirectory}}/{{eventMetrics.eventTypeLogoFileName}}" class="img-event-type-logo-table" alt="logo"/>
-                <span class="ms-2">{{eventMetrics.name}}</span>
-              </a>
+              <a *ngIf="eventPlaceMetrics.mapCoordinates" href="{{googleMapsUrlPrefix}}/{{eventPlaceMetrics.mapCoordinates}}" class="text-dark">{{eventPlaceMetrics.placeVenueAddress}}</a>
+              <span *ngIf="!eventPlaceMetrics.mapCoordinates">{{eventPlaceMetrics.placeVenueAddress}}</span>
             </td>
-            <td class="text-center">{{eventMetrics.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventMetrics.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventMetrics.duration | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventMetrics.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventMetrics.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventMetrics.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventMetrics.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventMetrics.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.duration | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
         <ng-template #footer>
           <tr>
-            <td colspan="2">{{'common.table.totalsText' | translate}}</td>
-            <td class="text-center">{{eventStatistics.totals?.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventStatistics.totals?.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventStatistics.totals?.duration | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventStatistics.totals?.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventStatistics.totals?.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td colspan="3">{{'common.table.totalsText' | translate}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.duration | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
           </tr>
         </ng-template>
       </p-table>

@@ -402,6 +402,7 @@ public class StatisticsServiceImpl implements StatisticsService {
 
         // Event place metrics
         List<EventPlaceMetrics> eventPlaceMetricsList = placeDao.getPlaces().stream()
+                .filter(place -> !placeEvents.get(place).isEmpty())
                 .map(place -> {
                     Set<Speaker> speakers = placeSpeakers.get(place);
                     long placeJavaChampionsQuantity = speakers.stream()
