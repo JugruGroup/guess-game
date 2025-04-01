@@ -9,7 +9,6 @@ import guess.dto.company.CompanyBriefDto;
 import guess.dto.event.*;
 import guess.dto.speaker.SpeakerBriefDto;
 import guess.dto.talk.TalkBriefDto;
-import guess.dto.talk.TalkSuperBriefDto;
 import guess.service.EventService;
 import guess.service.EventTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -96,21 +95,21 @@ public class EventController {
                 .sorted(comparatorByName.thenComparing(comparatorByCompany))
                 .toList();
 
-        Comparator<TalkSuperBriefDto> comparatorByTalkDate = Comparator.nullsLast(
+        Comparator<TalkBriefDto> comparatorByTalkDate = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkSuperBriefDto::getTalkDay,
+                        TalkBriefDto::getTalkDay,
                         Comparator.nullsLast(Comparator.naturalOrder())));
-        Comparator<TalkSuperBriefDto> comparatorByTalkStartTime = Comparator.nullsLast(
+        Comparator<TalkBriefDto> comparatorByTalkStartTime = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkSuperBriefDto::getTalkStartTime,
+                        TalkBriefDto::getTalkStartTime,
                         Comparator.nullsLast(Comparator.naturalOrder())));
-        Comparator<TalkSuperBriefDto> comparatorByTalkEndTime = Comparator.nullsLast(
+        Comparator<TalkBriefDto> comparatorByTalkEndTime = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkSuperBriefDto::getTalkEndTime,
+                        TalkBriefDto::getTalkEndTime,
                         Comparator.nullsLast(Comparator.naturalOrder())));
-        Comparator<TalkSuperBriefDto> comparatorByTrack = Comparator.nullsLast(
+        Comparator<TalkBriefDto> comparatorByTrack = Comparator.nullsLast(
                 Comparator.comparing(
-                        TalkSuperBriefDto::getTrack,
+                        TalkBriefDto::getTrack,
                         Comparator.nullsLast(Comparator.naturalOrder())));
         List<TalkBriefDto> sortedTalks = eventDetailsDto.talks().stream()
                 .sorted(comparatorByTalkDate.thenComparing(comparatorByTalkStartTime).thenComparing(comparatorByTrack).thenComparing(comparatorByTalkEndTime))
