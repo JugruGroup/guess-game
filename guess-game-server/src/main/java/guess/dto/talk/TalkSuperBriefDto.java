@@ -27,13 +27,20 @@ public class TalkSuperBriefDto {
         private final EventSuperBriefDto event;
         private final String eventTypeLogoFileName;
         private final List<SpeakerSuperBriefDto> speakers;
+        private final List<String> presentationLinks;
+        private final List<String> materialLinks;
+        private final List<String> videoLinks;
 
         public TalkSuperBriefDtoDetails(Long track, EventSuperBriefDto event, String eventTypeLogoFileName,
-                                        List<SpeakerSuperBriefDto> speakers) {
+                                        List<SpeakerSuperBriefDto> speakers, List<String> presentationLinks,
+                                        List<String> materialLinks, List<String> videoLinks) {
             this.track = track;
             this.event = event;
             this.eventTypeLogoFileName = eventTypeLogoFileName;
             this.speakers = speakers;
+            this.presentationLinks = presentationLinks;
+            this.materialLinks = materialLinks;
+            this.videoLinks = videoLinks;
         }
     }
 
@@ -96,6 +103,18 @@ public class TalkSuperBriefDto {
         return details.speakers;
     }
 
+    public List<String> getPresentationLinks() {
+        return details.presentationLinks;
+    }
+
+    public List<String> getMaterialLinks() {
+        return details.materialLinks;
+    }
+
+    public List<String> getVideoLinks() {
+        return details.videoLinks;
+    }
+
     public static TalkSuperBriefDto convertToSuperBriefDto(Talk talk, Function<Talk, Event> talkEventFunction,
                                                            Function<Event, EventType> eventEventTypeFunction, Language language) {
         var event = talkEventFunction.apply(talk);
@@ -138,7 +157,10 @@ public class TalkSuperBriefDto {
                         talk.getTrack(),
                         eventSuperBriefDto,
                         eventTypeLogoFileName,
-                        speakers
+                        speakers,
+                        talk.getPresentationLinks(),
+                        talk.getMaterialLinks(),
+                        talk.getVideoLinks()
                 )
         );
     }
