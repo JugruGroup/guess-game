@@ -19,12 +19,12 @@ public class AbstractEventPlaceMetrics extends EventTypeEventMetrics {
         this.eventTypesQuantity = eventTypesQuantity;
     }
 
-    public long getEventsQuantity() {
-        return eventsQuantity;
-    }
-
     public long getEventTypesQuantity() {
         return eventTypesQuantity;
+    }
+
+    public long getEventsQuantity() {
+        return eventsQuantity;
     }
 
     @Override
