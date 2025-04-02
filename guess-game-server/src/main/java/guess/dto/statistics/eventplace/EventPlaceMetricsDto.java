@@ -45,12 +45,13 @@ public class EventPlaceMetricsDto extends AbstractEventPlaceMetrics {
 
     public static EventPlaceMetricsDto convertToDto(EventPlaceMetrics eventPlaceMetrics, Language language) {
         var place = eventPlaceMetrics.getPlace();
+        long id = (place != null) ? place.getId() : 0;
         String placeCity = (place != null) ? LocalizationUtils.getString(place.getCity(), language) : null;
         String placeVenueAddress = (place != null) ? LocalizationUtils.getString(place.getVenueAddress(), language) : null;
         String mapCoordinates = (place != null) ? place.getMapCoordinates() : null;
 
         return new EventPlaceMetricsDto(
-                place.getId(),
+                id,
                 placeCity,
                 placeVenueAddress,
                 mapCoordinates,
