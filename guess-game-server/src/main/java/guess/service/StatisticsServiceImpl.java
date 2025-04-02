@@ -213,6 +213,15 @@ public class StatisticsServiceImpl implements StatisticsService {
         }
     }
 
+    /**
+     * Gets filtered events.
+     *
+     * @param isConferences {@code true} if need to use conferences, otherwise {@code false}
+     * @param isMeetups     {@code true} if need to use meetups, otherwise {@code false}
+     * @param organizerId   organizer identifier
+     * @param eventTypeId   event type identifier
+     * @return filtered events
+     */
     List<Event> getFilteredEvents(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
         return eventDao.getEvents().stream()
                 .filter(e ->
