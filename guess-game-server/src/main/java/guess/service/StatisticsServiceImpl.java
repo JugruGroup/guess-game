@@ -37,6 +37,17 @@ public class StatisticsServiceImpl implements StatisticsService {
     private final EventDao eventDao;
     private final PlaceDao placeDao;
 
+    private final BiPredicate<LocalDate, LocalDate> TARGET_NULL_PREDICATE = (targetLocalDate, sourceLocalDate) -> (targetLocalDate == null);
+    private final BiPredicate<LocalDate, LocalDate> TARGET_NULL_OR_BEFORE_PREDICATE = TARGET_NULL_PREDICATE
+            .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isBefore(targetLocalDate));
+    private final BiPredicate<LocalDate, LocalDate> TARGET_NULL_OR_AFTER_PREDICATE = TARGET_NULL_PREDICATE
+            .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isAfter(targetLocalDate));
+    private final BiPredicate<LocalDate, LocalDate> SOURCE_NOT_NULL_PREDICATE = (targetLocalDate, sourceLocalDate) -> (sourceLocalDate != null);
+    private final BiPredicate<LocalDate, LocalDate> SOURCE_NOT_NULL_AND_BEFORE_PREDICATE = SOURCE_NOT_NULL_PREDICATE
+            .and(TARGET_NULL_OR_BEFORE_PREDICATE);
+    private final BiPredicate<LocalDate, LocalDate> SOURCE_NOT_NULL_AND_AFTER_PREDICATE = SOURCE_NOT_NULL_PREDICATE
+            .and(TARGET_NULL_OR_AFTER_PREDICATE);
+
     @Autowired
     public StatisticsServiceImpl(EventTypeDao eventTypeDao, EventDao eventDao, PlaceDao placeDao) {
         this.eventTypeDao = eventTypeDao;
@@ -67,16 +78,6 @@ public class StatisticsServiceImpl implements StatisticsService {
         long totalsTalksQuantity = 0;
         Set<Speaker> totalsSpeakers = new HashSet<>();
         Set<Company> totalsCompanies = new HashSet<>();
-        BiPredicate<LocalDate, LocalDate> targetNullPredicate = (targetLocalDate, sourceLocalDate) -> (targetLocalDate == null);
-        BiPredicate<LocalDate, LocalDate> targetNullOrBeforePredicate = targetNullPredicate
-                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isBefore(targetLocalDate));
-        BiPredicate<LocalDate, LocalDate> targetNullOrAfterPredicate = targetNullPredicate
-                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isAfter(targetLocalDate));
-        BiPredicate<LocalDate, LocalDate> sourceNotNullPredicate = (targetLocalDate, sourceLocalDate) -> (sourceLocalDate != null);
-        BiPredicate<LocalDate, LocalDate> sourceNotNullAndBeforePredicate = sourceNotNullPredicate
-                .and(targetNullOrBeforePredicate);
-        BiPredicate<LocalDate, LocalDate> sourceNotNullAndAfterPredicate = sourceNotNullPredicate
-                .and(targetNullOrAfterPredicate);
 
         for (EventType eventType : eventTypes) {
             // Event type metrics
@@ -92,12 +93,12 @@ public class StatisticsServiceImpl implements StatisticsService {
                 LocalDate eventStartDate = event.getFirstStartDate();
                 LocalDate eventEndDate = event.getLastEndDate();
 
-                if (targetNullOrBeforePredicate.test(eventTypeStartDate, eventStartDate)) {
+                if (TARGET_NULL_OR_BEFORE_PREDICATE.test(eventTypeStartDate, eventStartDate)) {
                     eventTypeStartDate = eventStartDate;
                     eventTypeZoneId = event.getFinalTimeZoneId();
                 }
 
-                if (targetNullOrAfterPredicate.test(eventTypeEndDate, eventEndDate)) {
+                if (TARGET_NULL_OR_AFTER_PREDICATE.test(eventTypeEndDate, eventEndDate)) {
                     eventTypeEndDate = eventEndDate;
                 }
 
@@ -142,11 +143,11 @@ public class StatisticsServiceImpl implements StatisticsService {
             ));
 
             // Totals metrics
-            if (sourceNotNullAndBeforePredicate.test(totalsStartDate, eventTypeStartDate)) {
+            if (SOURCE_NOT_NULL_AND_BEFORE_PREDICATE.test(totalsStartDate, eventTypeStartDate)) {
                 totalsStartDate = eventTypeStartDate;
             }
 
-            if (sourceNotNullAndAfterPredicate.test(totalsEndDate, eventTypeEndDate)) {
+            if (SOURCE_NOT_NULL_AND_AFTER_PREDICATE.test(totalsEndDate, eventTypeEndDate)) {
                 totalsEndDate = eventTypeEndDate;
             }
 
@@ -212,14 +213,18 @@ public class StatisticsServiceImpl implements StatisticsService {
         }
     }
 
-    @Override
-    public EventStatistics getEventStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
-        List<Event> events = eventDao.getEvents().stream()
+    List<Event> getFilteredEvents(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
+        return eventDao.getEvents().stream()
                 .filter(e ->
                         ((isConferences && e.getEventType().isEventTypeConference()) || (isMeetups && !e.getEventType().isEventTypeConference())) &&
                                 ((organizerId == null) || (e.getEventType().getOrganizer().getId() == organizerId)) &&
                                 ((eventTypeId == null) || (e.getEventType().getId() == eventTypeId)))
                 .toList();
+    }
+
+    @Override
+    public EventStatistics getEventStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
+        List<Event> events = getFilteredEvents(isConferences, isMeetups, organizerId, eventTypeId);
         List<EventMetrics> eventMetricsList = new ArrayList<>();
         LocalDate totalsStartDate = null;
         LocalDate totalsEndDate = null;
@@ -330,12 +335,7 @@ public class StatisticsServiceImpl implements StatisticsService {
 
     @Override
     public EventPlaceStatistics getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
-        List<Event> events = eventDao.getEvents().stream()
-                .filter(e ->
-                        ((isConferences && e.getEventType().isEventTypeConference()) || (isMeetups && !e.getEventType().isEventTypeConference())) &&
-                                ((organizerId == null) || (e.getEventType().getOrganizer().getId() == organizerId)) &&
-                                ((eventTypeId == null) || (e.getEventType().getId() == eventTypeId)))
-                .toList();
+        List<Event> events = getFilteredEvents(isConferences, isMeetups, organizerId, eventTypeId);
         Map<Place, Set<Event>> placeEvents = new HashMap<>();
         Map<Place, Set<EventType>> placeEventTypes = new HashMap<>();
         Map<Place, LocalDate> placeStartDates = new HashMap<>();
@@ -344,11 +344,6 @@ public class StatisticsServiceImpl implements StatisticsService {
         Map<Place, AtomicLong> placeTalksQuantities = new HashMap<>();
         Map<Place, Set<Speaker>> placeSpeakers = new HashMap<>();
         Map<Place, Set<Company>> placeCompanies = new HashMap<>();
-        BiPredicate<LocalDate, LocalDate> targetNullPredicate = (targetLocalDate, sourceLocalDate) -> (targetLocalDate == null);
-        BiPredicate<LocalDate, LocalDate> targetNullOrBeforePredicate = targetNullPredicate
-                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isBefore(targetLocalDate));
-        BiPredicate<LocalDate, LocalDate> targetNullOrAfterPredicate = targetNullPredicate
-                .or((targetLocalDate, sourceLocalDate) -> sourceLocalDate.isAfter(targetLocalDate));
 
         placeDao.getPlaces().forEach(place -> {
             placeEvents.put(place, new HashSet<>());
@@ -375,11 +370,11 @@ public class StatisticsServiceImpl implements StatisticsService {
                 LocalDate eventPartStartDate = eventDays.getStartDate();
                 LocalDate eventPartEndDate = eventDays.getEndDate();
 
-                if (targetNullOrBeforePredicate.test(placeStartDate, eventPartStartDate)) {
+                if (TARGET_NULL_OR_BEFORE_PREDICATE.test(placeStartDate, eventPartStartDate)) {
                     placeStartDates.put(place, eventPartStartDate);
                 }
 
-                if (targetNullOrAfterPredicate.test(placeEndDate, eventPartEndDate)) {
+                if (TARGET_NULL_OR_AFTER_PREDICATE.test(placeEndDate, eventPartEndDate)) {
                     placeEndDates.put(place, eventPartEndDate);
                 }
 

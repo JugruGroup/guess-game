@@ -2,6 +2,7 @@ package guess.service;
 
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
+import guess.dao.PlaceDao;
 import guess.domain.Conference;
 import guess.domain.source.*;
 import guess.domain.statistics.EventTypeEventMetrics;
@@ -114,8 +115,13 @@ class StatisticsServiceImplTest {
         }
 
         @Bean
+        PlaceDao placeDao() {
+            return Mockito.mock(PlaceDao.class);
+        }
+
+        @Bean
         StatisticsService statisticsService() {
-            return new StatisticsServiceImpl(eventTypeDao(), eventDao());
+            return new StatisticsServiceImpl(eventTypeDao(), eventDao(), placeDao());
         }
     }
 
