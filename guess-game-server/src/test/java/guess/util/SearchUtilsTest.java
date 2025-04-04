@@ -1,6 +1,8 @@
 package guess.util;
 
+import guess.domain.source.EventDays;
 import guess.domain.source.LocaleItem;
+import guess.domain.source.Place;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.TestInstance;
@@ -8,8 +10,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -173,6 +177,42 @@ public class SearchUtilsTest {
         @MethodSource("data")
         void getSubStringWithFirstAlphaNumeric(String value, String expected) {
             assertEquals(expected, SearchUtils.getSubStringWithFirstAlphaNumeric(value));
+        }
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getTalkDayPlaces method tests")
+    class GetTalkDayPlacesTest {
+        private Stream<Arguments> data() {
+            Place place0 = new Place();
+            place0.setId(0);
+
+            Place place1 = new Place();
+            place1.setId(1);
+
+            EventDays eventDays0 = new EventDays();
+            eventDays0.setStartDate(LocalDate.of(2025, 3, 22));
+            eventDays0.setEndDate(LocalDate.of(2025, 3, 22));
+            eventDays0.setPlace(place0);
+
+            EventDays eventDays1 = new EventDays();
+            eventDays1.setStartDate(LocalDate.of(2025, 4, 3));
+            eventDays1.setEndDate(LocalDate.of(2025, 4, 4));
+            eventDays1.setPlace(place1);
+
+            return Stream.of(
+                    arguments(Collections.emptyList(), Map.of()),
+                    arguments(List.of(eventDays0), Map.of(1L, place0)),
+                    arguments(List.of(eventDays1), Map.of(1L, place1, 2L, place1)),
+                    arguments(List.of(eventDays0, eventDays1), Map.of(1L, place0, 2L, place1, 3L, place1))
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getTalkDayPlaces(List<EventDays> eventDaysList, Map<Long, Place> expected) {
+            assertEquals(expected, SearchUtils.getTalkDayPlaces(eventDaysList));
         }
     }
 }
