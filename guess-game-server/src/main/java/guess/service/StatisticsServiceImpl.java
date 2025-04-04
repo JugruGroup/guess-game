@@ -18,6 +18,7 @@ import guess.domain.statistics.eventtype.EventTypeStatistics;
 import guess.domain.statistics.speaker.SpeakerMetrics;
 import guess.domain.statistics.speaker.SpeakerMetricsInternal;
 import guess.domain.statistics.speaker.SpeakerStatistics;
+import guess.util.SearchUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -325,23 +326,6 @@ public class StatisticsServiceImpl implements StatisticsService {
                 ));
     }
 
-    static Map<Long, Place> getTalkDayPlaces(List<EventDays> eventDaysList) {
-        Map<Long, Place> talkDayDates = new HashMap<>();
-        long previousDays = 0;
-
-        for (EventDays eventDays : eventDaysList) {
-            long days = ChronoUnit.DAYS.between(eventDays.getStartDate(), eventDays.getEndDate()) + 1;
-
-            for (long i = 1; i <= days; i++) {
-                talkDayDates.put(previousDays + i, eventDays.getPlace());
-            }
-
-            previousDays += days;
-        }
-
-        return talkDayDates;
-    }
-
     @Override
     public EventPlaceStatistics getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
         List<Event> events = getFilteredEvents(isConferences, isMeetups, organizerId, eventTypeId);
@@ -366,7 +350,7 @@ public class StatisticsServiceImpl implements StatisticsService {
         });
 
         for (Event event : events) {
-            Map<Long, Place> talkDayPlaces = getTalkDayPlaces(event.getDays());
+            Map<Long, Place> talkDayPlaces = SearchUtils.getTalkDayPlaces(event.getDays());
 
             for (EventDays eventDays : event.getDays()) {
                 // Event place metrics
