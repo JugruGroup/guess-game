@@ -843,174 +843,146 @@ class StatisticsServiceImplTest {
         );
     }
 
-    @Test
-    void getSpeakerStatistics() {
-        SpeakerMetrics speakerMetrics0 = new SpeakerMetrics(
-                speaker0,
-                1,
-                1,
-                1,
-                1,
-                0);
-        SpeakerMetrics speakerMetrics1 = new SpeakerMetrics(
-                speaker1,
-                1,
-                1,
-                1,
-                0,
-                1);
-        SpeakerMetrics speakerMetrics2 = new SpeakerMetrics(
-                speaker2,
-                1,
-                1,
-                1,
-                0,
-                0);
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getSpeakerStatistics method with parameters tests")
+    class GetSpeakerStatisticsTest {
+        private Stream<Arguments> data() {
+            SpeakerMetrics speakerMetrics0 = new SpeakerMetrics(
+                    speaker0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0);
+            SpeakerMetrics speakerMetrics1 = new SpeakerMetrics(
+                    speaker1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1);
+            SpeakerMetrics speakerMetrics2 = new SpeakerMetrics(
+                    speaker2,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0);
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, null));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics1),
-                        new Speaker(),
-                        1, 2, 3, 0, 1
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, null));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0, speakerMetrics2),
-                        new Speaker(),
-                        2, 4, 2, 1, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, null));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0, speakerMetrics1, speakerMetrics2),
-                        new Speaker(),
-                        3, 6, 5, 1, 1
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, null));
+            return Stream.of(
+                    arguments(false, false, null, null, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, null, createSpeakerStatistics(
+                            List.of(speakerMetrics1),
+                            new Speaker(),
+                            1, 2, 3, 0, 1
+                    )),
+                    arguments(true, false, null, null, createSpeakerStatistics(
+                            List.of(speakerMetrics0, speakerMetrics2),
+                            new Speaker(),
+                            2, 4, 2, 1, 0
+                    )),
+                    arguments(true, true, null, null, createSpeakerStatistics(
+                            List.of(speakerMetrics0, speakerMetrics1, speakerMetrics2),
+                            new Speaker(),
+                            3, 6, 5, 1, 1
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 0L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 0L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0),
-                        new Speaker(),
-                        1, 1, 1, 1, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 0L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0),
-                        new Speaker(),
-                        1, 1, 1, 1, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 0L));
+                    arguments(false, false, null, 0L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 0L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 0L, createSpeakerStatistics(
+                            List.of(speakerMetrics0),
+                            new Speaker(),
+                            1, 1, 1, 1, 0
+                    )),
+                    arguments(true, true, null, 0L, createSpeakerStatistics(
+                            List.of(speakerMetrics0),
+                            new Speaker(),
+                            1, 1, 1, 1, 0
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 1L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics1),
-                        new Speaker(),
-                        1, 1, 1, 0, 1
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 1L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 1L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics1),
-                        new Speaker(),
-                        1, 1, 1, 0, 1
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 1L));
+                    arguments(false, false, null, 1L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 1L, createSpeakerStatistics(
+                            List.of(speakerMetrics1),
+                            new Speaker(),
+                            1, 1, 1, 0, 1
+                    )),
+                    arguments(true, false, null, 1L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 1L, createSpeakerStatistics(
+                            List.of(speakerMetrics1),
+                            new Speaker(),
+                            1, 1, 1, 0, 1
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 2L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 2L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics2),
-                        new Speaker(),
-                        1, 3, 1, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 2L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics2),
-                        new Speaker(),
-                        1, 3, 1, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 2L));
+                    arguments(false, false, null, 2L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 2L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 2L, createSpeakerStatistics(
+                            List.of(speakerMetrics2),
+                            new Speaker(),
+                            1, 3, 1, 0, 0
+                    )),
+                    arguments(true, true, null, 2L, createSpeakerStatistics(
+                            List.of(speakerMetrics2),
+                            new Speaker(),
+                            1, 3, 1, 0, 0
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 42L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 42L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 42L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 42L));
+                    arguments(false, false, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    ))
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getSpeakerStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId, SpeakerStatistics expected) {
+            assertEquals(expected, statisticsService.getSpeakerStatistics(isConferences, isMeetups, organizerId, eventTypeId));
+        }
     }
 
     private CompanyStatistics createCompanyStatistics(List<CompanyMetrics> companyMetricsList, Company company,
@@ -1029,176 +1001,148 @@ class StatisticsServiceImplTest {
         );
     }
 
-    @Test
-    void getCompanyStatistics() {
-        CompanyMetrics companyMetrics0 = new CompanyMetrics(
-                company0,
-                1,
-                1,
-                1,
-                1,
-                1,
-                0);
-        CompanyMetrics companyMetrics1 = new CompanyMetrics(
-                company1,
-                1,
-                1,
-                1,
-                1,
-                0,
-                1);
-        CompanyMetrics companyMetrics2 = new CompanyMetrics(
-                company2,
-                1,
-                1,
-                1,
-                1,
-                0,
-                0);
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getCompanyStatistics method with parameters tests")
+    class GetCompanyStatisticsTest {
+        private Stream<Arguments> data() {
+            CompanyMetrics companyMetrics0 = new CompanyMetrics(
+                    company0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0);
+            CompanyMetrics companyMetrics1 = new CompanyMetrics(
+                    company1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1);
+            CompanyMetrics companyMetrics2 = new CompanyMetrics(
+                    company2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0);
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, null));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics1),
-                        new Company(),
-                        1, 1, 1, 1, 0, 1
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, null));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0, companyMetrics2),
-                        new Company(),
-                        2, 2, 2, 2, 1, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, null));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0, companyMetrics1, companyMetrics2),
-                        new Company(),
-                        3, 3, 3, 3, 1, 1
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, null));
+            return Stream.of(
+                    arguments(false, false, null, null, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, null, createCompanyStatistics(
+                            List.of(companyMetrics1),
+                            new Company(),
+                            1, 1, 1, 1, 0, 1
+                    )),
+                    arguments(true, false, null, null, createCompanyStatistics(
+                            List.of(companyMetrics0, companyMetrics2),
+                            new Company(),
+                            2, 2, 2, 2, 1, 0
+                    )),
+                    arguments(true, true, null, null, createCompanyStatistics(
+                            List.of(companyMetrics0, companyMetrics1, companyMetrics2),
+                            new Company(),
+                            3, 3, 3, 3, 1, 1
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 0L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 0L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0),
-                        new Company(),
-                        1, 1, 1, 1, 1, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 0L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0),
-                        new Company(),
-                        1, 1, 1, 1, 1, 0
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 0L));
+                    arguments(false, false, null, 0L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 0L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 0L, createCompanyStatistics(
+                            List.of(companyMetrics0),
+                            new Company(),
+                            1, 1, 1, 1, 1, 0
+                    )),
+                    arguments(true, true, null, 0L, createCompanyStatistics(
+                            List.of(companyMetrics0),
+                            new Company(),
+                            1, 1, 1, 1, 1, 0
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 1L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics1),
-                        new Company(),
-                        1, 1, 1, 1, 0, 1
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 1L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 1L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics1),
-                        new Company(),
-                        1, 1, 1, 1, 0, 1
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 1L));
+                    arguments(false, false, null, 1L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 1L, createCompanyStatistics(
+                            List.of(companyMetrics1),
+                            new Company(),
+                            1, 1, 1, 1, 0, 1
+                    )),
+                    arguments(true, false, null, 1L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 1L, createCompanyStatistics(
+                            List.of(companyMetrics1),
+                            new Company(),
+                            1, 1, 1, 1, 0, 1
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 2L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 2L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics2),
-                        new Company(),
-                        1, 1, 1, 1, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 2L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics2),
-                        new Company(),
-                        1, 1, 1, 1, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 2L));
+                    arguments(false, false, null, 2L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 2L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 2L, createCompanyStatistics(
+                            List.of(companyMetrics2),
+                            new Company(),
+                            1, 1, 1, 1, 0, 0
+                    )),
+                    arguments(true, true, null, 2L, createCompanyStatistics(
+                            List.of(companyMetrics2),
+                            new Company(),
+                            1, 1, 1, 1, 0, 0
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 3L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 3L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 3L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 3L));
+                    arguments(false, false, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    ))
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getCompanyStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId, CompanyStatistics expected) {
+            assertEquals(expected, statisticsService.getCompanyStatistics(isConferences, isMeetups, organizerId, eventTypeId));
+        }
     }
 }
