@@ -25,9 +25,8 @@ public class SpeakerMetrics extends AbstractSpeakerCompanyMetrics {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof SpeakerMetrics)) return false;
+        if (!(o instanceof SpeakerMetrics that)) return false;
         if (!super.equals(o)) return false;
-        SpeakerMetrics that = (SpeakerMetrics) o;
         return Objects.equals(speaker, that.speaker);
     }
 

@@ -247,6 +247,24 @@
         "mvpsColumn": "MVPs"
       }
     },
+    "eventPlaces": {
+      "title": "Места событий",
+      "noEventPlacesDataFoundText": "Данные о местах событий не найдены",
+      "table": {
+        "cityColumn": "Город",
+        "addressColumn": "Адрес",
+        "startDateColumn": "Начальная дата",
+        "endDateColumn": "Конечная дата",
+        "durationColumn": "Длительность, дней",
+        "eventsColumn": "Событий",
+        "eventTypesColumn": "Типов событий",
+        "talksColumn": "Докладов",
+        "speakersColumn": "Спикеров",
+        "companiesColumn": "Компаний",
+        "javaChampionsColumn": "Java Champions",
+        "mvpsColumn": "MVPs"
+      }
+    },
     "speakers": {
       "title": "Спикеры",
       "noSpeakersDataFoundText": "Данные о спикерах не найдены",

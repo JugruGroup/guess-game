@@ -91,9 +91,8 @@ public class SpeakerMetricsDto extends AbstractSpeakerCompanyMetrics {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof SpeakerMetricsDto)) return false;
+        if (!(o instanceof SpeakerMetricsDto that)) return false;
         if (!super.equals(o)) return false;
-        SpeakerMetricsDto that = (SpeakerMetricsDto) o;
         return id == that.id &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(photoFileName, that.photoFileName) &&

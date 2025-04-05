@@ -15,6 +15,7 @@ export class StatisticsTabMenuComponent implements OnInit {
     this.items = [
       {labelKey: 'statistics.eventTypes.title', routerLinkSuffix: 'information/statistics/event-types'},
       {labelKey: 'statistics.events.title', routerLinkSuffix: 'information/statistics/events'},
+      {labelKey: 'statistics.eventPlaces.title', routerLinkSuffix: 'information/statistics/event-places'},
       {labelKey: 'statistics.speakers.title', routerLinkSuffix: 'information/statistics/speakers'},
       {labelKey: 'statistics.companies.title', routerLinkSuffix: 'information/statistics/companies'},
       {labelKey: 'statistics.olap.title', routerLinkSuffix: 'information/statistics/olap'}

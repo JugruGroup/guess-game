@@ -1,7 +1,7 @@
 package guess.dto.statistics.company;
 
 import guess.domain.Language;
-import guess.domain.statistics.AbstractSpeakerCompanyMetrics;
+import guess.domain.statistics.company.AbstractCompanyMetrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.util.LocalizationUtils;
 
@@ -11,18 +11,16 @@ import java.util.Objects;
 /**
  * Company metrics DTO.
  */
-public class CompanyMetricsDto extends AbstractSpeakerCompanyMetrics {
+public class CompanyMetricsDto extends AbstractCompanyMetrics {
     private final long id;
     private final String name;
-    private final long speakersQuantity;
 
-    public CompanyMetricsDto(long id, String name, CompanyMetrics companyMetrics) {
-        super(companyMetrics.getTalksQuantity(), companyMetrics.getEventsQuantity(), companyMetrics.getEventTypesQuantity(),
-                companyMetrics.getJavaChampionsQuantity(), companyMetrics.getMvpsQuantity());
+    public CompanyMetricsDto(long id, String name, CompanyMetrics metrics) {
+        super(metrics.getTalksQuantity(), metrics.getEventsQuantity(), metrics.getEventTypesQuantity(),
+                metrics.getJavaChampionsQuantity(), metrics.getMvpsQuantity(), metrics.getSpeakersQuantity());
 
         this.id = id;
         this.name = name;
-        this.speakersQuantity = companyMetrics.getSpeakersQuantity();
     }
 
     public long getId() {
@@ -31,10 +29,6 @@ public class CompanyMetricsDto extends AbstractSpeakerCompanyMetrics {
 
     public String getName() {
         return name;
-    }
-
-    public long getSpeakersQuantity() {
-        return speakersQuantity;
     }
 
     public static CompanyMetricsDto convertToDto(CompanyMetrics companyMetrics, Language language) {
@@ -56,16 +50,14 @@ public class CompanyMetricsDto extends AbstractSpeakerCompanyMetrics {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CompanyMetricsDto)) return false;
+        if (!(o instanceof CompanyMetricsDto that)) return false;
         if (!super.equals(o)) return false;
-        CompanyMetricsDto that = (CompanyMetricsDto) o;
         return id == that.id &&
-                speakersQuantity == that.speakersQuantity &&
                 Objects.equals(name, that.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), id, name, speakersQuantity);
+        return Objects.hash(super.hashCode(), id, name);
     }
 }

@@ -17,14 +17,16 @@ import {
   findTopicById,
   getEventsWithBriefDisplayName,
   getEventsWithFullDisplayName,
+  getTalkClassnameByFilename,
+  getTalksWithMaterialsOrderNumber,
   getTalksWithSpeakersString,
   isStringEmpty
 } from '../../general/utility-functions';
 
 @Component({
-    selector: 'app-talks-search',
-    templateUrl: './talks-search.component.html',
-    standalone: false
+  selector: 'app-talks-search',
+  templateUrl: './talks-search.component.html',
+  standalone: false
 })
 export class TalksSearchComponent implements OnInit, OnDestroy {
   private imageDirectory = 'assets/images';
@@ -173,7 +175,7 @@ export class TalksSearchComponent implements OnInit, OnDestroy {
             talkLanguage: string, language: string) {
     this.talkService.getTalks(eventType, event, talkName, speakerName, topic, talkLanguage, language)
       .subscribe(data => {
-        this.talks = getTalksWithSpeakersString(data);
+        this.talks = getTalksWithMaterialsOrderNumber(getTalksWithSpeakersString(data));
         this.searched = true;
       });
   }
@@ -271,5 +273,9 @@ export class TalksSearchComponent implements OnInit, OnDestroy {
 
   isTalksListVisible() {
     return (this.searched && (this.talks.length > 0));
+  }
+
+  getClassnameByFilename(filename: string): string {
+    return getTalkClassnameByFilename(filename);
   }
 }

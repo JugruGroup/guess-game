@@ -1,8 +1,13 @@
 package guess.util;
 
+import guess.domain.source.EventDays;
 import guess.domain.source.LocaleItem;
+import guess.domain.source.Place;
 
+import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
@@ -63,5 +68,22 @@ public class SearchUtils {
         } else {
             return value;
         }
+    }
+
+    public static Map<Long, Place> getTalkDayPlaces(List<EventDays> eventDaysList) {
+        Map<Long, Place> talkDayDates = new HashMap<>();
+        long previousDays = 0;
+
+        for (EventDays eventDays : eventDaysList) {
+            long days = ChronoUnit.DAYS.between(eventDays.getStartDate(), eventDays.getEndDate()) + 1;
+
+            for (long i = 1; i <= days; i++) {
+                talkDayDates.put(previousDays + i, eventDays.getPlace());
+            }
+
+            previousDays += days;
+        }
+
+        return talkDayDates;
     }
 }

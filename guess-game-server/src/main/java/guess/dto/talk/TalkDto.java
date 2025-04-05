@@ -22,8 +22,7 @@ public class TalkDto extends TalkBriefDto {
 
     public TalkDto(TalkSuperBriefDto talkSuperBriefDto, TalkBriefDto talkBriefDto, String description, String language,
                    String utcTimeZone) {
-        super(talkSuperBriefDto, talkBriefDto.getTopicName(), talkBriefDto.getPresentationLinks(), talkBriefDto.getMaterialLinks(),
-                talkBriefDto.getVideoLinks());
+        super(talkSuperBriefDto, talkBriefDto.getTopicName());
 
         this.description = description;
         this.language = language;

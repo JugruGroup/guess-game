@@ -22,6 +22,7 @@ import { ChartZoomInComponent } from './olap/chart/chart-zoom-in.component';
 import { GeneralModule } from '../../general/general.module';
 import { InformationModule } from '../information.module';
 import { MessageModule } from '../../message/message.module';
+import { EventPlaceStatisticsComponent } from './event-place/event-place-statistics.component';
 import { EventTypeStatisticsComponent } from './event-type/event-type-statistics.component';
 import { EventStatisticsComponent } from './event/event-statistics.component';
 import { SpeakerStatisticsComponent } from './speaker/speaker-statistics.component';
@@ -41,6 +42,7 @@ import { ThreeDimensionsZoomInComponent } from './olap/three-dimensions/three-di
 @NgModule({
   declarations: [
     ChartZoomInComponent,
+    EventPlaceStatisticsComponent,
     EventTypeStatisticsComponent,
     EventStatisticsComponent,
     SpeakerStatisticsComponent,

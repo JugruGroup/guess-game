@@ -1,48 +1,48 @@
-package guess.domain.statistics.eventtype;
+package guess.domain.statistics.eventplace;
 
-import guess.domain.source.EventType;
+import guess.domain.source.Place;
 import guess.domain.statistics.EventTypeEventMetrics;
 
 import java.util.Objects;
 
 /**
- * Event type metrics.
+ * Event place metrics.
  */
-public class EventTypeMetrics extends AbstractEventTypeMetrics {
-    private final EventType eventType;
+public class EventPlaceMetrics extends AbstractEventPlaceMetrics {
+    private final Place place;
 
-    public EventTypeMetrics(EventType eventType, long age, long eventsQuantity, EventTypeEventMetrics metrics) {
-        super(age, eventsQuantity, metrics);
+    public EventPlaceMetrics(Place place, long eventsQuantity, long eventTypesQuantity, EventTypeEventMetrics metrics) {
+        super(eventsQuantity, eventTypesQuantity, metrics);
 
-        this.eventType = eventType;
+        this.place = place;
     }
 
-    public EventType getEventType() {
-        return eventType;
+    public Place getPlace() {
+        return place;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EventTypeMetrics that)) return false;
+        if (!(o instanceof EventPlaceMetrics that)) return false;
         if (!super.equals(o)) return false;
-        return Objects.equals(eventType, that.eventType);
+        return Objects.equals(getPlace(), that.getPlace());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), eventType);
+        return Objects.hash(super.hashCode(), getPlace());
     }
 
     @Override
     public String toString() {
-        return "EventTypeMetrics{" +
-                "eventType=" + eventType +
+        return "EventPlaceMetrics{" +
+                "place=" + place +
                 ", startDate=" + getStartDate() +
                 ", endDate=" + getEndDate() +
-                ", age=" + getAge() +
                 ", duration=" + getDuration() +
                 ", eventsQuantity=" + getEventsQuantity() +
+                ", eventTypesQuantity=" + getEventTypesQuantity() +
                 ", speakersQuantity=" + getSpeakersQuantity() +
                 ", companiesQuantity=" + getCompaniesQuantity() +
                 ", talksQuantity=" + getTalksQuantity() +

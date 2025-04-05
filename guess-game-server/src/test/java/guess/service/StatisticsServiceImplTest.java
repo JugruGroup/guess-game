@@ -2,13 +2,17 @@ package guess.service;
 
 import guess.dao.EventDao;
 import guess.dao.EventTypeDao;
+import guess.dao.PlaceDao;
 import guess.domain.Conference;
 import guess.domain.source.*;
 import guess.domain.statistics.EventTypeEventMetrics;
+import guess.domain.statistics.Metrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyStatistics;
 import guess.domain.statistics.event.EventMetrics;
 import guess.domain.statistics.event.EventStatistics;
+import guess.domain.statistics.eventplace.EventPlaceMetrics;
+import guess.domain.statistics.eventplace.EventPlaceStatistics;
 import guess.domain.statistics.eventtype.EventTypeMetrics;
 import guess.domain.statistics.eventtype.EventTypeStatistics;
 import guess.domain.statistics.speaker.SpeakerMetrics;
@@ -60,6 +64,9 @@ class StatisticsServiceImplTest {
     private static final LocalDate EVENT_START_DATE5;
     private static final LocalDate EVENT_END_DATE5;
 
+    private static Place place0;
+    private static Place place1;
+    private static Place place2;
     private static EventType eventType0;
     private static EventType eventType1;
     private static EventType eventType2;
@@ -113,8 +120,13 @@ class StatisticsServiceImplTest {
         }
 
         @Bean
+        PlaceDao placeDao() {
+            return Mockito.mock(PlaceDao.class);
+        }
+
+        @Bean
         StatisticsService statisticsService() {
-            return new StatisticsServiceImpl(eventTypeDao(), eventDao());
+            return new StatisticsServiceImpl(eventTypeDao(), eventDao(), placeDao());
         }
     }
 
@@ -123,6 +135,9 @@ class StatisticsServiceImplTest {
 
     @Autowired
     private EventDao eventDao;
+
+    @Autowired
+    private PlaceDao placeDao;
 
     @Autowired
     private StatisticsService statisticsService;
@@ -195,14 +210,26 @@ class StatisticsServiceImplTest {
         Talk talk0 = new Talk();
         talk0.setId(0);
         talk0.setSpeakers(List.of(speaker0));
+        talk0.setTalkDay(1L);
 
         Talk talk1 = new Talk();
         talk1.setId(1);
         talk1.setSpeakers(List.of(speaker1));
+        talk1.setTalkDay(1L);
 
         Talk talk2 = new Talk();
         talk2.setId(2);
         talk2.setSpeakers(List.of(speaker2));
+        talk2.setTalkDay(1L);
+
+        place0 = new Place();
+        place0.setId(0);
+
+        place1 = new Place();
+        place1.setId(1);
+
+        place2 = new Place();
+        place2.setId(2);
 
         event0 = new Event();
         event0.setId(0);
@@ -210,7 +237,7 @@ class StatisticsServiceImplTest {
         event0.setDays(List.of(new EventDays(
                 EVENT_START_DATE0,
                 EVENT_END_DATE0,
-                new Place()
+                place0
         )));
         event0.setTalks(List.of(talk0));
 
@@ -220,7 +247,7 @@ class StatisticsServiceImplTest {
         event1.setDays(List.of(new EventDays(
                 EVENT_START_DATE1,
                 EVENT_END_DATE1,
-                new Place()
+                place1
         )));
         event1.setTalks(List.of(talk1));
 
@@ -230,7 +257,7 @@ class StatisticsServiceImplTest {
         event2.setDays(List.of(new EventDays(
                 EVENT_START_DATE2,
                 EVENT_END_DATE2,
-                new Place()
+                place2
         )));
         event2.setTalks(List.of(talk2));
 
@@ -240,7 +267,7 @@ class StatisticsServiceImplTest {
         event3.setDays(List.of(new EventDays(
                 EVENT_START_DATE3,
                 EVENT_END_DATE3,
-                new Place()
+                place0
         )));
 
         event4 = new Event();
@@ -249,7 +276,7 @@ class StatisticsServiceImplTest {
         event4.setDays(List.of(new EventDays(
                 EVENT_START_DATE4,
                 EVENT_END_DATE4,
-                new Place()
+                place1
         )));
 
         event5 = new Event();
@@ -258,7 +285,7 @@ class StatisticsServiceImplTest {
         event5.setDays(List.of(new EventDays(
                 EVENT_START_DATE5,
                 EVENT_END_DATE5,
-                new Place()
+                place2
         )));
 
         eventType0.setEvents(List.of(event0));
@@ -271,30 +298,12 @@ class StatisticsServiceImplTest {
     void setUp() {
         Mockito.when(eventTypeDao.getEventTypes()).thenReturn(List.of(eventType0, eventType1, eventType2, eventType3, eventType4));
         Mockito.when(eventDao.getEvents()).thenReturn(List.of(event0, event1, event2, event3, event4, event5));
+        Mockito.when(placeDao.getPlaces()).thenReturn(List.of(place0, place1, place2));
     }
 
     @AfterEach
     void tearDown() {
         Mockito.reset(eventTypeDao);
-    }
-
-    private EventTypeStatistics createEventTypeStatistics(List<EventTypeMetrics> eventTypeMetricsList,
-                                                          EventType eventType, LocalDate startDate, LocalDate endDate,
-                                                          long age, long duration, long eventsQuantity, long speakersQuantity,
-                                                          long companiesQuantity, long talksQuantity, long javaChampionsQuantity,
-                                                          long mvpsQuantity) {
-        return new EventTypeStatistics(
-                eventTypeMetricsList,
-                new EventTypeMetrics(
-                        eventType,
-                        startDate,
-                        endDate,
-                        age,
-                        duration,
-                        eventsQuantity,
-                        new EventTypeEventMetrics(talksQuantity, speakersQuantity, companiesQuantity, javaChampionsQuantity, mvpsQuantity)
-                )
-        );
     }
 
     @Nested
@@ -361,134 +370,191 @@ class StatisticsServiceImplTest {
         }
     }
 
-    @Test
-    void getEventTypeStatistics() {
-        EventTypeMetrics eventTypeMetrics0 = new EventTypeMetrics(
-                eventType0,
-                EVENT_START_DATE0,
-                EVENT_END_DATE0,
-                ChronoUnit.YEARS.between(EVENT_START_DATE0, NOW_DATE),
-                2,
-                1,
-                new EventTypeEventMetrics(1, 1, 1, 1, 0)
-        );
-        EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
-                eventType1,
-                EVENT_START_DATE1,
-                EVENT_END_DATE1,
-                ChronoUnit.YEARS.between(EVENT_START_DATE1, NOW_DATE),
-                1,
-                1,
-                new EventTypeEventMetrics(1, 1, 1, 0, 1)
-        );
-        EventTypeMetrics eventTypeMetrics2 = new EventTypeMetrics(
-                eventType2,
-                EVENT_START_DATE3,
-                EVENT_END_DATE4,
-                ChronoUnit.YEARS.between(EVENT_START_DATE3, NOW_DATE),
-                3,
-                3,
-                new EventTypeEventMetrics(1, 1, 1, 0, 0)
-        );
-        EventTypeMetrics eventTypeMetrics3 = new EventTypeMetrics(
-                eventType3,
-                EVENT_START_DATE5,
-                EVENT_END_DATE5,
-                ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
-                1,
-                1,
-                new EventTypeEventMetrics(0, 0, 0, 0, 0)
-        );
-        EventTypeMetrics eventTypeMetrics4 = new EventTypeMetrics(
-                eventType4,
-                null,
-                null,
-                0,
-                0,
-                0,
-                new EventTypeEventMetrics(0, 0, 0, 0, 0)
-        );
-
-        EventTypeStatistics expected0 = createEventTypeStatistics(
-                Collections.emptyList(),
-                new EventType(),
-                null,
-                null,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0, 0, 0
-        );
-        EventTypeStatistics actual0 = statisticsService.getEventTypeStatistics(false, false, null, null);
-        assertEquals(expected0, actual0);
-
-        EventTypeStatistics expected1 = createEventTypeStatistics(
-                List.of(eventTypeMetrics1, eventTypeMetrics3, eventTypeMetrics4),
-                new EventType(),
-                EVENT_START_DATE5,
-                EVENT_END_DATE1,
-                ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
-                2,
-                2,
-                1,
-                1,
-                1, 0, 1
-        );
-        EventTypeStatistics actual1 = statisticsService.getEventTypeStatistics(false, true, null, null);
-        assertEquals(expected1, actual1);
-
-        EventTypeStatistics expected2 = createEventTypeStatistics(
-                List.of(eventTypeMetrics0, eventTypeMetrics2),
-                new EventType(),
-                EVENT_START_DATE0,
-                EVENT_END_DATE4,
-                ChronoUnit.YEARS.between(EVENT_START_DATE0, NOW_DATE),
-                5,
-                4,
-                2,
-                2,
-                2, 1, 0
-        );
-        EventTypeStatistics actual2 = statisticsService.getEventTypeStatistics(true, false, null, null);
-        assertEquals(expected2, actual2);
-
-        EventTypeStatistics expected3 = createEventTypeStatistics(
-                List.of(eventTypeMetrics0, eventTypeMetrics1, eventTypeMetrics2, eventTypeMetrics3, eventTypeMetrics4),
-                new EventType(),
-                EVENT_START_DATE5,
-                EVENT_END_DATE4,
-                ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
-                7,
-                6,
-                3,
-                3,
-                3, 1, 1
-        );
-        EventTypeStatistics actual3 = statisticsService.getEventTypeStatistics(true, true, null, null);
-        assertEquals(expected3, actual3);
-    }
-
-    private EventStatistics createEventStatistics(List<EventMetrics> eventMetricsList, Event event, LocalDate startDate,
-                                                  LocalDate endDate, long duration, long talksQuantity, long speakersQuantity,
-                                                  long companiesQuantity, long javaChampionsQuantity, long mvpsQuantity) {
-        return new EventStatistics(
-                eventMetricsList,
-                new EventMetrics(
-                        event,
-                        startDate,
-                        endDate,
-                        duration,
-                        new EventTypeEventMetrics(talksQuantity,
+    private EventTypeStatistics createEventTypeStatistics(List<EventTypeMetrics> eventTypeMetricsList,
+                                                          EventType eventType, LocalDate startDate, LocalDate endDate,
+                                                          long age, long duration, long eventsQuantity, long speakersQuantity,
+                                                          long companiesQuantity, long talksQuantity, long javaChampionsQuantity,
+                                                          long mvpsQuantity) {
+        return new EventTypeStatistics(
+                eventTypeMetricsList,
+                new EventTypeMetrics(
+                        eventType,
+                        age,
+                        eventsQuantity,
+                        new EventTypeEventMetrics(
+                                startDate,
+                                endDate,
+                                duration,
                                 speakersQuantity,
                                 companiesQuantity,
-                                javaChampionsQuantity,
-                                mvpsQuantity)
+                                new Metrics(
+                                        talksQuantity,
+                                        javaChampionsQuantity,
+                                        mvpsQuantity
+                                )
+                        )
                 )
         );
     }
 
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getEventTypeStatistics method with parameters tests")
+    class GetEventTypeStatisticsTest {
+        private Stream<Arguments> data() {
+            EventTypeMetrics eventTypeMetrics0 = new EventTypeMetrics(
+                    eventType0,
+                    ChronoUnit.YEARS.between(EVENT_START_DATE0, NOW_DATE),
+                    1,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE0,
+                            EVENT_END_DATE0,
+                            2,
+                            1,
+                            1,
+                            new Metrics(
+                                    1,
+                                    1,
+                                    0
+                            )
+                    )
+            );
+            EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
+                    eventType1,
+                    ChronoUnit.YEARS.between(EVENT_START_DATE1, NOW_DATE),
+                    1,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE1,
+                            EVENT_END_DATE1,
+                            1,
+                            1,
+                            1,
+                            new Metrics(
+                                    1,
+                                    0,
+                                    1
+                            )
+                    )
+            );
+            EventTypeMetrics eventTypeMetrics2 = new EventTypeMetrics(
+                    eventType2,
+                    ChronoUnit.YEARS.between(EVENT_START_DATE3, NOW_DATE),
+                    3,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE3,
+                            EVENT_END_DATE4,
+                            3,
+                            1,
+                            1,
+                            new Metrics(
+                                    1,
+                                    0,
+                                    0
+                            )
+                    )
+            );
+            EventTypeMetrics eventTypeMetrics3 = new EventTypeMetrics(
+                    eventType3,
+                    ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
+                    1,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE5,
+                            EVENT_END_DATE5,
+                            1,
+                            0,
+                            0,
+                            new Metrics(
+                                    0,
+                                    0,
+                                    0
+                            )
+                    )
+            );
+            EventTypeMetrics eventTypeMetrics4 = new EventTypeMetrics(
+                    eventType4,
+                    0,
+                    0,
+                    new EventTypeEventMetrics(
+                            null,
+                            null,
+                            0,
+                            0,
+                            0,
+                            new Metrics(
+                                    0,
+                                    0,
+                                    0
+                            )
+                    )
+            );
+
+            EventTypeStatistics expected0 = createEventTypeStatistics(
+                    Collections.emptyList(),
+                    new EventType(),
+                    null,
+                    null,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0, 0, 0
+            );
+
+            EventTypeStatistics expected1 = createEventTypeStatistics(
+                    List.of(eventTypeMetrics1, eventTypeMetrics3, eventTypeMetrics4),
+                    new EventType(),
+                    EVENT_START_DATE5,
+                    EVENT_END_DATE1,
+                    ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
+                    2,
+                    2,
+                    1,
+                    1,
+                    1, 0, 1
+            );
+
+            EventTypeStatistics expected2 = createEventTypeStatistics(
+                    List.of(eventTypeMetrics0, eventTypeMetrics2),
+                    new EventType(),
+                    EVENT_START_DATE0,
+                    EVENT_END_DATE4,
+                    ChronoUnit.YEARS.between(EVENT_START_DATE0, NOW_DATE),
+                    5,
+                    4,
+                    2,
+                    2,
+                    2, 1, 0
+            );
+
+            EventTypeStatistics expected3 = createEventTypeStatistics(
+                    List.of(eventTypeMetrics0, eventTypeMetrics1, eventTypeMetrics2, eventTypeMetrics3, eventTypeMetrics4),
+                    new EventType(),
+                    EVENT_START_DATE5,
+                    EVENT_END_DATE4,
+                    ChronoUnit.YEARS.between(EVENT_START_DATE5, NOW_DATE),
+                    7,
+                    6,
+                    3,
+                    3,
+                    3, 1, 1
+            );
+
+            return Stream.of(
+                    arguments(false, false, null, null, expected0),
+                    arguments(false, true, null, null, expected1),
+                    arguments(true, false, null, null, expected2),
+                    arguments(true, true, null, null, expected3)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getEventTypeStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long topicId,
+                                    EventTypeStatistics expected) {
+            assertEquals(expected, statisticsService.getEventTypeStatistics(isConferences, isMeetups, organizerId, topicId));
+        }
+    }
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -538,192 +604,648 @@ class StatisticsServiceImplTest {
         }
     }
 
-    @Test
-    void getEventStatistics() {
-        EventMetrics eventMetrics0 = new EventMetrics(
-                event0,
-                EVENT_START_DATE0,
-                EVENT_END_DATE0,
-                2,
-                new EventTypeEventMetrics(1,
-                        1,
-                        1,
-                        1,
-                        0)
-        );
-        EventMetrics eventMetrics2 = new EventMetrics(
-                event2,
-                EVENT_START_DATE2,
-                EVENT_END_DATE2,
-                1,
-                new EventTypeEventMetrics(1,
-                        1,
-                        1,
-                        0,
-                        0)
-        );
-        EventMetrics eventMetrics3 = new EventMetrics(
-                event3,
-                EVENT_START_DATE3,
-                EVENT_END_DATE3,
-                1,
-                new EventTypeEventMetrics(0,
-                        0,
-                        0,
-                        0,
-                        0)
-        );
-        EventMetrics eventMetrics4 = new EventMetrics(
-                event4,
-                EVENT_START_DATE4,
-                EVENT_END_DATE4,
-                1,
-                new EventTypeEventMetrics(0,
-                        0,
-                        0,
-                        0,
-                        0)
-        );
-        EventMetrics eventMetrics5 = new EventMetrics(
-                event1,
-                EVENT_START_DATE1,
-                EVENT_END_DATE1,
-                1,
-                new EventTypeEventMetrics(1,
-                        1,
-                        1,
-                        0,
-                        1)
-        );
-        EventMetrics eventMetrics6 = new EventMetrics(
-                event5,
-                EVENT_START_DATE5,
-                EVENT_END_DATE5,
-                1,
-                new EventTypeEventMetrics(0,
-                        0,
-                        0,
-                        0,
-                        0)
-        );
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getFilteredEvents method with parameters tests")
+    class GetFilteredEventsTest {
+        private Stream<Arguments> data() {
+            List<Event> expected0 = List.of(event0, event2, event3, event4);
+            List<Event> expected1 = List.of(event0);
+            List<Event> expected2 = Collections.emptyList();
+            List<Event> expected3 = List.of(event2, event3, event4);
+            List<Event> expected4 = List.of(event1, event5);
+            List<Event> expected5 = List.of(event0, event1, event2, event3, event4, event5);
 
-        EventStatistics expected0 = createEventStatistics(
-                List.of(eventMetrics0, eventMetrics2, eventMetrics3, eventMetrics4),
-                new Event(),
-                EVENT_START_DATE0,
-                EVENT_END_DATE4,
-                5,
-                2,
-                2,
-                2,
-                1,
-                0
+            return Stream.of(
+                    arguments(true, false, null, null, expected0),
+                    arguments(true, false, null, 0L, expected1),
+                    arguments(true, false, null, 1L, expected2),
+                    arguments(true, false, null, 2L, expected3),
+                    arguments(true, false, null, 3L, expected2),
+
+                    arguments(true, false, 0L, null, expected1),
+                    arguments(true, false, 1L, null, expected3),
+
+                    arguments(true, false, 0L, 0L, expected1),
+                    arguments(true, false, 1L, 0L, expected2),
+
+                    arguments(true, false, 0L, 1L, expected2),
+                    arguments(true, false, 1L, 1L, expected2),
+
+                    arguments(true, false, 0L, 2L, expected2),
+                    arguments(true, false, 1L, 2L, expected3),
+
+                    arguments(true, false, 0L, 3L, expected2),
+                    arguments(true, false, 1L, 3L, expected2),
+
+                    arguments(false, false, null, null, expected2),
+                    arguments(false, true, null, null, expected4),
+                    arguments(true, true, null, null, expected5)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getFilteredEvents(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId,
+                               List<Event> expected) {
+            assertEquals(expected, statisticsService.getFilteredEvents(isConferences, isMeetups, organizerId, eventTypeId));
+        }
+    }
+
+    private EventStatistics createEventStatistics(List<EventMetrics> eventMetricsList, Event event, LocalDate startDate,
+                                                  LocalDate endDate, long duration, long talksQuantity, long speakersQuantity,
+                                                  long companiesQuantity, long javaChampionsQuantity, long mvpsQuantity) {
+        return new EventStatistics(
+                eventMetricsList,
+                new EventMetrics(
+                        event,
+                        new EventTypeEventMetrics(
+                                startDate,
+                                endDate,
+                                duration,
+                                speakersQuantity,
+                                companiesQuantity,
+                                new Metrics(
+                                        talksQuantity,
+                                        javaChampionsQuantity,
+                                        mvpsQuantity
+                                )
+                        )
+                )
         );
-        assertEquals(expected0, statisticsService.getEventStatistics(true, false, null, null));
+    }
 
-        EventStatistics expected1 = createEventStatistics(
-                List.of(eventMetrics0),
-                new Event(),
-                EVENT_START_DATE0,
-                EVENT_END_DATE0,
-                2,
-                1,
-                1,
-                1,
-                1,
-                0
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getEventStatistics method with parameters tests")
+    class GetEventStatisticsTest {
+        private Stream<Arguments> data() {
+            EventMetrics eventMetrics0 = new EventMetrics(
+                    event0,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE0,
+                            EVENT_END_DATE0,
+                            2,
+                            1,
+                            1,
+                            new Metrics(
+                                    1,
+                                    1,
+                                    0
+                            )
+                    )
+            );
+            EventMetrics eventMetrics2 = new EventMetrics(
+                    event2,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE2,
+                            EVENT_END_DATE2,
+                            1,
+                            1,
+                            1,
+                            new Metrics(
+                                    1,
+                                    0,
+                                    0
+                            )
+                    )
+            );
+            EventMetrics eventMetrics3 = new EventMetrics(
+                    event3,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE3,
+                            EVENT_END_DATE3,
+                            1,
+                            0,
+                            0,
+                            new Metrics(
+                                    0,
+                                    0,
+                                    0
+                            )
+                    )
+            );
+            EventMetrics eventMetrics4 = new EventMetrics(
+                    event4,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE4,
+                            EVENT_END_DATE4,
+                            1,
+                            0,
+                            0,
+                            new Metrics(
+                                    0,
+                                    0,
+                                    0
+                            )
+                    )
+            );
+            EventMetrics eventMetrics5 = new EventMetrics(
+                    event1,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE1,
+                            EVENT_END_DATE1,
+                            1,
+                            1,
+                            1,
+                            new Metrics(
+                                    1,
+                                    0,
+                                    1
+                            )
+                    )
+            );
+            EventMetrics eventMetrics6 = new EventMetrics(
+                    event5,
+                    new EventTypeEventMetrics(
+                            EVENT_START_DATE5,
+                            EVENT_END_DATE5,
+                            1,
+                            0,
+                            0,
+                            new Metrics(
+                                    0,
+                                    0,
+                                    0
+                            )
+                    )
+            );
+
+            EventStatistics expected0 = createEventStatistics(
+                    List.of(eventMetrics0, eventMetrics2, eventMetrics3, eventMetrics4),
+                    new Event(),
+                    EVENT_START_DATE0,
+                    EVENT_END_DATE4,
+                    5,
+                    2,
+                    2,
+                    2,
+                    1,
+                    0
+            );
+
+            EventStatistics expected1 = createEventStatistics(
+                    List.of(eventMetrics0),
+                    new Event(),
+                    EVENT_START_DATE0,
+                    EVENT_END_DATE0,
+                    2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+            );
+
+            EventStatistics expected2 = createEventStatistics(
+                    Collections.emptyList(),
+                    new Event(),
+                    null,
+                    null,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+            );
+
+            EventStatistics expected3 = createEventStatistics(
+                    List.of(eventMetrics2, eventMetrics3, eventMetrics4),
+                    new Event(),
+                    EVENT_START_DATE3,
+                    EVENT_END_DATE4,
+                    3,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0
+            );
+
+            EventStatistics expected4 = createEventStatistics(
+                    List.of(eventMetrics5, eventMetrics6),
+                    new Event(),
+                    EVENT_START_DATE5,
+                    EVENT_END_DATE1,
+                    2,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1
+            );
+
+            EventStatistics expected5 = createEventStatistics(
+                    List.of(eventMetrics0, eventMetrics5, eventMetrics2, eventMetrics3, eventMetrics4, eventMetrics6),
+                    new Event(),
+                    EVENT_START_DATE5,
+                    EVENT_END_DATE4,
+                    7,
+                    3,
+                    3,
+                    3,
+                    1,
+                    1
+            );
+
+            return Stream.of(
+                    arguments(true, false, null, null, expected0),
+                    arguments(true, false, null, 0L, expected1),
+                    arguments(true, false, null, 1L, expected2),
+                    arguments(true, false, null, 2L, expected3),
+                    arguments(true, false, null, 3L, expected2),
+
+                    arguments(true, false, 0L, null, expected1),
+                    arguments(true, false, 1L, null, expected3),
+
+                    arguments(true, false, 0L, 0L, expected1),
+                    arguments(true, false, 1L, 0L, expected2),
+
+                    arguments(true, false, 0L, 1L, expected2),
+                    arguments(true, false, 1L, 1L, expected2),
+
+                    arguments(true, false, 0L, 2L, expected2),
+                    arguments(true, false, 1L, 2L, expected3),
+
+                    arguments(true, false, 0L, 3L, expected2),
+                    arguments(true, false, 1L, 3L, expected2),
+
+                    arguments(false, false, null, null, expected2),
+                    arguments(false, true, null, null, expected4),
+                    arguments(true, true, null, null, expected5)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getEventStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId, EventStatistics expected) {
+            assertEquals(expected, statisticsService.getEventStatistics(isConferences, isMeetups, organizerId, eventTypeId));
+        }
+    }
+
+    private EventPlaceStatistics createEventPlaceStatistics(List<EventPlaceMetrics> eventPlaceMetricsList, Place place,
+                                                            long eventsQuantity, long eventTypesQuantity,
+                                                            LocalDate startDate, LocalDate endDate,
+                                                            long duration, long speakersQuantity,
+                                                            long companiesQuantity,
+                                                            long talksQuantity, long javaChampionsQuantity,
+                                                            long mvpsQuantity) {
+        return new EventPlaceStatistics(
+                eventPlaceMetricsList,
+                new EventPlaceMetrics(
+                        place,
+                        eventsQuantity,
+                        eventTypesQuantity,
+                        new EventTypeEventMetrics(
+                                startDate,
+                                endDate,
+                                duration,
+                                speakersQuantity,
+                                companiesQuantity,
+                                new Metrics(
+                                        talksQuantity,
+                                        javaChampionsQuantity,
+                                        mvpsQuantity
+                                )
+                        )
+                )
         );
-        assertEquals(expected1, statisticsService.getEventStatistics(true, false, null, 0L));
+    }
 
-        EventStatistics actual2 = statisticsService.getEventStatistics(true, false, null, 1L);
-        EventStatistics expected2 = createEventStatistics(
-                Collections.emptyList(),
-                new Event(),
-                null,
-                null,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-        );
-        assertEquals(expected2, actual2);
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getEventPlaceStatistics method with parameters tests")
+    class GetEventPlaceStatisticsTest {
+        private Stream<Arguments> data() {
+            EventPlaceStatistics expected0 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE3)),
+                                            Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE3)),
+                                            3,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    1,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place1,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE4,
+                                            EVENT_END_DATE4,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE2,
+                                            EVENT_END_DATE2,
+                                            1,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    4,
+                    2,
+                    Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE2, EVENT_START_DATE3, EVENT_START_DATE4)),
+                    Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE2, EVENT_END_DATE3, EVENT_END_DATE4)),
+                    5,
+                    2,
+                    2,
+                    2,
+                    1,
+                    0
+            );
+            EventPlaceStatistics expected1 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE0,
+                                            EVENT_END_DATE0,
+                                            2,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    1,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    1,
+                    1,
+                    EVENT_START_DATE0,
+                    EVENT_END_DATE0,
+                    2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+            );
+            EventPlaceStatistics expected2 = createEventPlaceStatistics(
+                    List.of(),
+                    new Place(),
+                    0,
+                    0,
+                    null,
+                    null,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+            );
+            EventPlaceStatistics expected3 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE3,
+                                            EVENT_END_DATE3,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place1,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE4,
+                                            EVENT_END_DATE4,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE2,
+                                            EVENT_END_DATE2,
+                                            1,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    3,
+                    1,
+                    Collections.min(List.of(EVENT_START_DATE2, EVENT_START_DATE3, EVENT_START_DATE4)),
+                    Collections.max(List.of(EVENT_END_DATE2, EVENT_END_DATE3, EVENT_END_DATE4)),
+                    3,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0
+            );
+            EventPlaceStatistics expected4 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place1,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE1,
+                                            EVENT_END_DATE1,
+                                            1,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    1
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE5,
+                                            EVENT_END_DATE5,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    2,
+                    2,
+                    Collections.min(List.of(EVENT_START_DATE1, EVENT_START_DATE5)),
+                    Collections.max(List.of(EVENT_END_DATE1, EVENT_END_DATE5)),
+                    2,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1
+            );
+            EventPlaceStatistics expected5 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE3)),
+                                            Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE3)),
+                                            3,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    1,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place1,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE1, EVENT_START_DATE4)),
+                                            Collections.max(List.of(EVENT_END_DATE1, EVENT_END_DATE4)),
+                                            2,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    1
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE2, EVENT_START_DATE5)),
+                                            Collections.max(List.of(EVENT_END_DATE2, EVENT_END_DATE5)),
+                                            2,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    6,
+                    4,
+                    Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE1, EVENT_START_DATE2, EVENT_START_DATE3, EVENT_START_DATE4, EVENT_START_DATE5)),
+                    Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE1, EVENT_END_DATE2, EVENT_END_DATE3, EVENT_END_DATE4, EVENT_END_DATE5)),
+                    7,
+                    3,
+                    3,
+                    3,
+                    1,
+                    1
+            );
 
-        EventStatistics actual3 = statisticsService.getEventStatistics(true, false, null, 2L);
-        EventStatistics expected3 = createEventStatistics(
-                List.of(eventMetrics2, eventMetrics3, eventMetrics4),
-                new Event(),
-                EVENT_START_DATE3,
-                EVENT_END_DATE4,
-                3,
-                1,
-                1,
-                1,
-                0,
-                0
-        );
-        assertEquals(expected3, actual3);
+            return Stream.of(
+                    arguments(true, false, null, null, expected0),
+                    arguments(true, false, null, 0L, expected1),
+                    arguments(true, false, null, 1L, expected2),
+                    arguments(true, false, null, 2L, expected3),
+                    arguments(true, false, null, 3L, expected2),
 
-        EventStatistics actual4 = statisticsService.getEventStatistics(true, false, null, 3L);
-        EventStatistics expected4 = createEventStatistics(
-                Collections.emptyList(),
-                new Event(),
-                null,
-                null,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-        );
-        assertEquals(expected4, actual4);
+                    arguments(true, false, 0L, null, expected1),
+                    arguments(true, false, 1L, null, expected3),
 
-        EventStatistics expected5 = createEventStatistics(
-                List.of(eventMetrics5, eventMetrics6),
-                new Event(),
-                EVENT_START_DATE5,
-                EVENT_END_DATE1,
-                2,
-                1,
-                1,
-                1,
-                0,
-                1
-        );
+                    arguments(true, false, 0L, 0L, expected1),
+                    arguments(true, false, 1L, 0L, expected2),
 
-        EventStatistics expected6 = createEventStatistics(
-                List.of(eventMetrics0, eventMetrics5, eventMetrics2, eventMetrics3, eventMetrics4, eventMetrics6),
-                new Event(),
-                EVENT_START_DATE5,
-                EVENT_END_DATE4,
-                7,
-                3,
-                3,
-                3,
-                1,
-                1
-        );
+                    arguments(true, false, 0L, 1L, expected2),
+                    arguments(true, false, 1L, 1L, expected2),
 
-        assertEquals(expected1, statisticsService.getEventStatistics(true, false, 0L, null));
-        assertEquals(expected3, statisticsService.getEventStatistics(true, false, 1L, null));
+                    arguments(true, false, 0L, 2L, expected2),
+                    arguments(true, false, 1L, 2L, expected3),
 
-        assertEquals(expected1, statisticsService.getEventStatistics(true, false, 0L, 0L));
-        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 1L, 0L));
+                    arguments(true, false, 0L, 3L, expected2),
+                    arguments(true, false, 1L, 3L, expected2),
 
-        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 0L, 1L));
-        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 1L, 1L));
+                    arguments(false, false, null, null, expected2),
+                    arguments(false, true, null, null, expected4),
+                    arguments(true, true, null, null, expected5)
+            );
+        }
 
-        assertEquals(expected2, statisticsService.getEventStatistics(true, false, 0L, 2L));
-        assertEquals(expected3, statisticsService.getEventStatistics(true, false, 1L, 2L));
-
-        assertEquals(expected4, statisticsService.getEventStatistics(true, false, 0L, 3L));
-        assertEquals(expected4, statisticsService.getEventStatistics(true, false, 1L, 3L));
-
-        assertEquals(expected4, statisticsService.getEventStatistics(false, false, null, null));
-        assertEquals(expected5, statisticsService.getEventStatistics(false, true, null, null));
-        assertEquals(expected6, statisticsService.getEventStatistics(true, true, null, null));
+        @ParameterizedTest
+        @MethodSource("data")
+        void getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId,
+                                     EventPlaceStatistics expected) {
+            assertEquals(expected, statisticsService.getEventPlaceStatistics(isConferences, isMeetups, organizerId, eventTypeId));
+        }
     }
 
     private SpeakerStatistics createSpeakerStatistics(List<SpeakerMetrics> speakerMetricsList, Speaker speaker,
@@ -741,174 +1263,146 @@ class StatisticsServiceImplTest {
         );
     }
 
-    @Test
-    void getSpeakerStatistics() {
-        SpeakerMetrics speakerMetrics0 = new SpeakerMetrics(
-                speaker0,
-                1,
-                1,
-                1,
-                1,
-                0);
-        SpeakerMetrics speakerMetrics1 = new SpeakerMetrics(
-                speaker1,
-                1,
-                1,
-                1,
-                0,
-                1);
-        SpeakerMetrics speakerMetrics2 = new SpeakerMetrics(
-                speaker2,
-                1,
-                1,
-                1,
-                0,
-                0);
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getSpeakerStatistics method with parameters tests")
+    class GetSpeakerStatisticsTest {
+        private Stream<Arguments> data() {
+            SpeakerMetrics speakerMetrics0 = new SpeakerMetrics(
+                    speaker0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0);
+            SpeakerMetrics speakerMetrics1 = new SpeakerMetrics(
+                    speaker1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1);
+            SpeakerMetrics speakerMetrics2 = new SpeakerMetrics(
+                    speaker2,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0);
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, null));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics1),
-                        new Speaker(),
-                        1, 2, 3, 0, 1
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, null));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0, speakerMetrics2),
-                        new Speaker(),
-                        2, 4, 2, 1, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, null));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0, speakerMetrics1, speakerMetrics2),
-                        new Speaker(),
-                        3, 6, 5, 1, 1
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, null));
+            return Stream.of(
+                    arguments(false, false, null, null, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, null, createSpeakerStatistics(
+                            List.of(speakerMetrics1),
+                            new Speaker(),
+                            1, 2, 3, 0, 1
+                    )),
+                    arguments(true, false, null, null, createSpeakerStatistics(
+                            List.of(speakerMetrics0, speakerMetrics2),
+                            new Speaker(),
+                            2, 4, 2, 1, 0
+                    )),
+                    arguments(true, true, null, null, createSpeakerStatistics(
+                            List.of(speakerMetrics0, speakerMetrics1, speakerMetrics2),
+                            new Speaker(),
+                            3, 6, 5, 1, 1
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 0L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 0L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0),
-                        new Speaker(),
-                        1, 1, 1, 1, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 0L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics0),
-                        new Speaker(),
-                        1, 1, 1, 1, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 0L));
+                    arguments(false, false, null, 0L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 0L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 0L, createSpeakerStatistics(
+                            List.of(speakerMetrics0),
+                            new Speaker(),
+                            1, 1, 1, 1, 0
+                    )),
+                    arguments(true, true, null, 0L, createSpeakerStatistics(
+                            List.of(speakerMetrics0),
+                            new Speaker(),
+                            1, 1, 1, 1, 0
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 1L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics1),
-                        new Speaker(),
-                        1, 1, 1, 0, 1
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 1L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 1L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics1),
-                        new Speaker(),
-                        1, 1, 1, 0, 1
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 1L));
+                    arguments(false, false, null, 1L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 1L, createSpeakerStatistics(
+                            List.of(speakerMetrics1),
+                            new Speaker(),
+                            1, 1, 1, 0, 1
+                    )),
+                    arguments(true, false, null, 1L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 1L, createSpeakerStatistics(
+                            List.of(speakerMetrics1),
+                            new Speaker(),
+                            1, 1, 1, 0, 1
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 2L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 2L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics2),
-                        new Speaker(),
-                        1, 3, 1, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 2L));
-        assertEquals(
-                createSpeakerStatistics(
-                        List.of(speakerMetrics2),
-                        new Speaker(),
-                        1, 3, 1, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 2L));
+                    arguments(false, false, null, 2L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 2L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 2L, createSpeakerStatistics(
+                            List.of(speakerMetrics2),
+                            new Speaker(),
+                            1, 3, 1, 0, 0
+                    )),
+                    arguments(true, true, null, 2L, createSpeakerStatistics(
+                            List.of(speakerMetrics2),
+                            new Speaker(),
+                            1, 3, 1, 0, 0
+                    )),
 
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, false, null, 42L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(false, true, null, 42L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, false, null, 42L));
-        assertEquals(
-                createSpeakerStatistics(
-                        Collections.emptyList(),
-                        new Speaker(),
-                        0, 0, 0, 0, 0
-                ),
-                statisticsService.getSpeakerStatistics(true, true, null, 42L));
+                    arguments(false, false, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 42L, createSpeakerStatistics(
+                            Collections.emptyList(),
+                            new Speaker(),
+                            0, 0, 0, 0, 0
+                    ))
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getSpeakerStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId, SpeakerStatistics expected) {
+            assertEquals(expected, statisticsService.getSpeakerStatistics(isConferences, isMeetups, organizerId, eventTypeId));
+        }
     }
 
     private CompanyStatistics createCompanyStatistics(List<CompanyMetrics> companyMetricsList, Company company,
@@ -927,176 +1421,148 @@ class StatisticsServiceImplTest {
         );
     }
 
-    @Test
-    void getCompanyStatistics() {
-        CompanyMetrics companyMetrics0 = new CompanyMetrics(
-                company0,
-                1,
-                1,
-                1,
-                1,
-                1,
-                0);
-        CompanyMetrics companyMetrics1 = new CompanyMetrics(
-                company1,
-                1,
-                1,
-                1,
-                1,
-                0,
-                1);
-        CompanyMetrics companyMetrics2 = new CompanyMetrics(
-                company2,
-                1,
-                1,
-                1,
-                1,
-                0,
-                0);
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getCompanyStatistics method with parameters tests")
+    class GetCompanyStatisticsTest {
+        private Stream<Arguments> data() {
+            CompanyMetrics companyMetrics0 = new CompanyMetrics(
+                    company0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0);
+            CompanyMetrics companyMetrics1 = new CompanyMetrics(
+                    company1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1);
+            CompanyMetrics companyMetrics2 = new CompanyMetrics(
+                    company2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0);
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, null));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics1),
-                        new Company(),
-                        1, 1, 1, 1, 0, 1
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, null));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0, companyMetrics2),
-                        new Company(),
-                        2, 2, 2, 2, 1, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, null));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0, companyMetrics1, companyMetrics2),
-                        new Company(),
-                        3, 3, 3, 3, 1, 1
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, null));
+            return Stream.of(
+                    arguments(false, false, null, null, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, null, createCompanyStatistics(
+                            List.of(companyMetrics1),
+                            new Company(),
+                            1, 1, 1, 1, 0, 1
+                    )),
+                    arguments(true, false, null, null, createCompanyStatistics(
+                            List.of(companyMetrics0, companyMetrics2),
+                            new Company(),
+                            2, 2, 2, 2, 1, 0
+                    )),
+                    arguments(true, true, null, null, createCompanyStatistics(
+                            List.of(companyMetrics0, companyMetrics1, companyMetrics2),
+                            new Company(),
+                            3, 3, 3, 3, 1, 1
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 0L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 0L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0),
-                        new Company(),
-                        1, 1, 1, 1, 1, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 0L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics0),
-                        new Company(),
-                        1, 1, 1, 1, 1, 0
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 0L));
+                    arguments(false, false, null, 0L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 0L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 0L, createCompanyStatistics(
+                            List.of(companyMetrics0),
+                            new Company(),
+                            1, 1, 1, 1, 1, 0
+                    )),
+                    arguments(true, true, null, 0L, createCompanyStatistics(
+                            List.of(companyMetrics0),
+                            new Company(),
+                            1, 1, 1, 1, 1, 0
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 1L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics1),
-                        new Company(),
-                        1, 1, 1, 1, 0, 1
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 1L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 1L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics1),
-                        new Company(),
-                        1, 1, 1, 1, 0, 1
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 1L));
+                    arguments(false, false, null, 1L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 1L, createCompanyStatistics(
+                            List.of(companyMetrics1),
+                            new Company(),
+                            1, 1, 1, 1, 0, 1
+                    )),
+                    arguments(true, false, null, 1L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 1L, createCompanyStatistics(
+                            List.of(companyMetrics1),
+                            new Company(),
+                            1, 1, 1, 1, 0, 1
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 2L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 2L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics2),
-                        new Company(),
-                        1, 1, 1, 1, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 2L));
-        assertEquals(
-                createCompanyStatistics(
-                        List.of(companyMetrics2),
-                        new Company(),
-                        1, 1, 1, 1, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 2L));
+                    arguments(false, false, null, 2L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 2L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 2L, createCompanyStatistics(
+                            List.of(companyMetrics2),
+                            new Company(),
+                            1, 1, 1, 1, 0, 0
+                    )),
+                    arguments(true, true, null, 2L, createCompanyStatistics(
+                            List.of(companyMetrics2),
+                            new Company(),
+                            1, 1, 1, 1, 0, 0
+                    )),
 
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, false, null, 3L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(false, true, null, 3L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, false, null, 3L));
-        assertEquals(
-                createCompanyStatistics(
-                        Collections.emptyList(),
-                        new Company(),
-                        0, 0, 0, 0, 0, 0
-                ),
-                statisticsService.getCompanyStatistics(true, true, null, 3L));
+                    arguments(false, false, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(false, true, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, false, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    )),
+                    arguments(true, true, null, 3L, createCompanyStatistics(
+                            Collections.emptyList(),
+                            new Company(),
+                            0, 0, 0, 0, 0, 0
+                    ))
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getCompanyStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId, CompanyStatistics expected) {
+            assertEquals(expected, statisticsService.getCompanyStatistics(isConferences, isMeetups, organizerId, eventTypeId));
+        }
     }
 }

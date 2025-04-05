@@ -3,10 +3,13 @@ package guess.controller;
 import guess.domain.Language;
 import guess.domain.source.*;
 import guess.domain.statistics.EventTypeEventMetrics;
+import guess.domain.statistics.Metrics;
 import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyStatistics;
 import guess.domain.statistics.event.EventMetrics;
 import guess.domain.statistics.event.EventStatistics;
+import guess.domain.statistics.eventplace.EventPlaceMetrics;
+import guess.domain.statistics.eventplace.EventPlaceStatistics;
 import guess.domain.statistics.eventtype.EventTypeMetrics;
 import guess.domain.statistics.eventtype.EventTypeStatistics;
 import guess.domain.statistics.olap.CubeType;
@@ -81,20 +84,25 @@ class StatisticsControllerTest {
 
         EventTypeMetrics eventTypeMetrics0 = new EventTypeMetrics(
                 eventType0,
-                LocalDate.of(2016, 11, 1), LocalDate.of(2016, 11, 1), 4, 4, 1,
-                new EventTypeEventMetrics(21, 20, 10, 3, 0)
+                4, 1,
+                new EventTypeEventMetrics(
+                        LocalDate.of(2016, 11, 1), LocalDate.of(2016, 11, 1),
+                        4, 20, 10, new Metrics(21, 3, 0))
         );
 
         EventTypeMetrics eventTypeMetrics1 = new EventTypeMetrics(
                 eventType1,
-                LocalDate.of(2018, 1, 1), LocalDate.of(2018, 1, 2), 2, 10, 4,
-                new EventTypeEventMetrics(61, 40, 25, 5, 1)
+                2, 4,
+                new EventTypeEventMetrics(
+                        LocalDate.of(2018, 1, 1), LocalDate.of(2018, 1, 2),
+                        10, 40, 25, new Metrics(61, 5, 1))
         );
 
         EventTypeMetrics eventTypeMetricsTotals = new EventTypeMetrics(
                 new EventType(),
-                LocalDate.of(2016, 11, 1), LocalDate.of(2018, 1, 2), 4, 14, 5,
-                new EventTypeEventMetrics(82, 60, 30, 7, 1)
+                4, 5,
+                new EventTypeEventMetrics(LocalDate.of(2016, 11, 1), LocalDate.of(2018, 1, 2),
+                        14, 60, 30, new Metrics(82, 7, 1))
         );
 
         EventTypeStatistics eventTypeStatistics = new EventTypeStatistics(
@@ -131,17 +139,23 @@ class StatisticsControllerTest {
 
         EventMetrics eventMetrics0 = new EventMetrics(
                 event0,
-                LocalDate.of(2016, 11, 1), LocalDate.of(2016, 11, 1), 4, new EventTypeEventMetrics(21, 20, 10, 3, 0)
+                new EventTypeEventMetrics(
+                        LocalDate.of(2016, 11, 1), LocalDate.of(2016, 11, 1),
+                        4, 20, 10, new Metrics(21, 3, 0))
         );
 
         EventMetrics eventMetrics1 = new EventMetrics(
                 event1,
-                LocalDate.of(2018, 1, 1), LocalDate.of(2018, 1, 2), 10, new EventTypeEventMetrics(61, 40, 25, 5, 1)
+                new EventTypeEventMetrics(
+                        LocalDate.of(2018, 1, 1), LocalDate.of(2018, 1, 2),
+                        10, 40, 25, new Metrics(61, 5, 1))
         );
 
         EventMetrics eventMetricsTotals = new EventMetrics(
                 new Event(),
-                LocalDate.of(2016, 11, 1), LocalDate.of(2018, 1, 2), 14, new EventTypeEventMetrics(81, 60, 30, 5, 1)
+                new EventTypeEventMetrics(
+                        LocalDate.of(2016, 11, 1), LocalDate.of(2018, 1, 2),
+                        14, 60, 30, new Metrics(81, 5, 1))
         );
 
         EventStatistics eventStatistics = new EventStatistics(
@@ -163,6 +177,73 @@ class StatisticsControllerTest {
                 .andExpect(jsonPath("$.eventMetricsList[1].id", is(1)))
                 .andExpect(jsonPath("$.totals.duration", is(14)));
         Mockito.verify(statisticsService, VerificationModeFactory.times(1)).getEventStatistics(conferences, meetups, organizerId, eventTypeId);
+    }
+
+    @Test
+    void getEventPlaceStatistics() throws Exception {
+        boolean conferences = true;
+        boolean meetups = false;
+        long organizerId = 0L;
+        long eventTypeId = 0L;
+
+        Place place0 = new Place();
+        place0.setId(0);
+
+        Place place1 = new Place();
+        place1.setId(1);
+
+        EventPlaceMetrics eventPlaceMetrics0 = new EventPlaceMetrics(
+                place0,
+                5,
+                2,
+                new EventTypeEventMetrics(
+                        LocalDate.of(2016, 11, 1), LocalDate.of(2016, 11, 1),
+                        4, 20, 10,
+                        new Metrics(21, 3, 0)
+                )
+        );
+
+        EventPlaceMetrics eventPlaceMetrics1 = new EventPlaceMetrics(
+                place1,
+                6,
+                3,
+                new EventTypeEventMetrics(
+                        LocalDate.of(2018, 1, 1), LocalDate.of(2018, 1, 2),
+                        10, 40, 25,
+                        new Metrics(61, 5, 1)
+                )
+        );
+
+        EventPlaceMetrics eventPlaceMetricsTotals = new EventPlaceMetrics(
+                new Place(),
+                11,
+                3,
+                new EventTypeEventMetrics(
+                        LocalDate.of(2016, 11, 1), LocalDate.of(2018, 1, 2),
+                        14, 60, 30,
+                        new Metrics(81, 5, 1)
+                )
+        );
+
+        EventPlaceStatistics eventPlaceStatistics = new EventPlaceStatistics(
+                List.of(eventPlaceMetrics0, eventPlaceMetrics1),
+                eventPlaceMetricsTotals);
+
+        given(statisticsService.getEventPlaceStatistics(conferences, meetups, organizerId, eventTypeId)).willReturn(eventPlaceStatistics);
+
+        mvc.perform(get("/api/statistics/event-place-statistics")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .param("conferences", Boolean.toString(conferences))
+                        .param("meetups", Boolean.toString(meetups))
+                        .param("organizerId", Long.toString(organizerId))
+                        .param("eventTypeId", Long.toString(eventTypeId))
+                        .param("language", "en"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.eventPlaceMetricsList", hasSize(2)))
+                .andExpect(jsonPath("$.eventPlaceMetricsList[0].id", is(1)))
+                .andExpect(jsonPath("$.eventPlaceMetricsList[1].id", is(0)))
+                .andExpect(jsonPath("$.totals.duration", is(14)));
+        Mockito.verify(statisticsService, VerificationModeFactory.times(1)).getEventPlaceStatistics(conferences, meetups, organizerId, eventTypeId);
     }
 
     @Test

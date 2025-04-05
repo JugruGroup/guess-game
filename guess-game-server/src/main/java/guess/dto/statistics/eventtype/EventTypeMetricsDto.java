@@ -1,7 +1,6 @@
 package guess.dto.statistics.eventtype;
 
 import guess.domain.Language;
-import guess.domain.statistics.EventTypeEventMetrics;
 import guess.domain.statistics.eventtype.AbstractEventTypeMetrics;
 import guess.domain.statistics.eventtype.EventTypeMetrics;
 import guess.util.LocalizationUtils;
@@ -21,12 +20,8 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
     private final String topicName;
 
     public EventTypeMetricsDto(long id, String displayName, boolean conference, String logoFileName,
-                               AbstractEventTypeMetrics eventTypeMetrics, String organizerName, String topicName) {
-        super(eventTypeMetrics.getStartDate(), eventTypeMetrics.getEndDate(), eventTypeMetrics.getAge(), eventTypeMetrics.getDuration(),
-                eventTypeMetrics.getEventsQuantity(),
-                new EventTypeEventMetrics(eventTypeMetrics.getTalksQuantity(), eventTypeMetrics.getSpeakersQuantity(),
-                        eventTypeMetrics.getCompaniesQuantity(), eventTypeMetrics.getJavaChampionsQuantity(),
-                        eventTypeMetrics.getMvpsQuantity()));
+                               String organizerName, String topicName, AbstractEventTypeMetrics metrics) {
+        super(metrics.getAge(), metrics.getEventsQuantity(), metrics);
 
         this.id = id;
         this.displayName = displayName;
@@ -71,9 +66,9 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
                 displayName,
                 eventType.isEventTypeConference(),
                 eventType.getLogoFileName(),
-                eventTypeMetrics,
                 organizerName,
-                topicName);
+                topicName,
+                eventTypeMetrics);
     }
 
     public static List<EventTypeMetricsDto> convertToDto(List<EventTypeMetrics> eventTypeMetricsList, Language language) {
@@ -85,9 +80,8 @@ public class EventTypeMetricsDto extends AbstractEventTypeMetrics {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EventTypeMetricsDto)) return false;
+        if (!(o instanceof EventTypeMetricsDto that)) return false;
         if (!super.equals(o)) return false;
-        EventTypeMetricsDto that = (EventTypeMetricsDto) o;
         return id == that.id &&
                 conference == that.conference &&
                 Objects.equals(displayName, that.displayName) &&

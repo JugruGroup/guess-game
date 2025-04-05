@@ -9,8 +9,8 @@ public abstract class AbstractSpeakerCompanyMetrics extends Metrics {
     private final long eventsQuantity;
     private final long eventTypesQuantity;
 
-    protected AbstractSpeakerCompanyMetrics(long talksQuantity, long eventsQuantity, long eventTypesQuantity, long javaChampionsQuantity,
-                                            long mvpsQuantity) {
+    protected AbstractSpeakerCompanyMetrics(long talksQuantity, long eventsQuantity, long eventTypesQuantity,
+                                            long javaChampionsQuantity, long mvpsQuantity) {
         super(talksQuantity, javaChampionsQuantity, mvpsQuantity);
 
         this.eventsQuantity = eventsQuantity;
@@ -28,9 +28,8 @@ public abstract class AbstractSpeakerCompanyMetrics extends Metrics {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof AbstractSpeakerCompanyMetrics)) return false;
+        if (!(o instanceof AbstractSpeakerCompanyMetrics that)) return false;
         if (!super.equals(o)) return false;
-        AbstractSpeakerCompanyMetrics that = (AbstractSpeakerCompanyMetrics) o;
         return eventsQuantity == that.eventsQuantity &&
                 eventTypesQuantity == that.eventTypesQuantity;
     }

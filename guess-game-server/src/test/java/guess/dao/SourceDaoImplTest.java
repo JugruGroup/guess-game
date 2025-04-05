@@ -5,6 +5,7 @@ import guess.domain.Conference;
 import guess.domain.question.QuestionSet;
 import guess.domain.question.SpeakerQuestion;
 import guess.domain.source.*;
+import guess.util.SearchUtils;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,6 +19,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.NoSuchElementException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -377,6 +379,12 @@ class SourceDaoImplTest {
         assertEquals(Collections.emptyList(), sourceDao.getTalksBySpeaker(speaker5));
     }
 
+    private void assertFileExistence(String fileName) {
+        Path path = Paths.get(String.format("../guess-game-web/src/assets/images/%s", fileName));
+        assertTrue(Files.exists(path) && Files.isRegularFile(path),
+                String.format("Image file %s does not exist", path));
+    }
+
     @Test
     void questionSetsImagesExistence() throws IOException, SpeakerDuplicatedException {
         SourceDao dao = new SourceDaoImpl();
@@ -395,14 +403,25 @@ class SourceDaoImplTest {
         }
     }
 
-    private void assertFileExistence(String fileName) {
-        Path path = Paths.get(String.format("../guess-game-web/src/assets/images/%s", fileName));
-        assertTrue(Files.exists(path) && Files.isRegularFile(path),
-                String.format("Image file %s does not exist", path));
-    }
-
     @Test
     void getTopics() {
         assertEquals(List.of(topic0, topic1), sourceDao.getTopics());
+    }
+
+    @Test
+    void talkDayExistence() throws SpeakerDuplicatedException, IOException {
+        SourceDao dao = new SourceDaoImpl();
+        List<Event> events = dao.getEvents();
+
+        for (Event event : events) {
+            Map<Long, Place> talkDayPlaces = SearchUtils.getTalkDayPlaces(event.getDays());
+
+            for (Talk talk : event.getTalks()) {
+                Long talkDay = talk.getTalkDay();
+                Place place = talkDayPlaces.get(talkDay);
+
+                assertNotNull(place, String.format("Talk day %d does not exist for talk %s", talkDay, talk.getName()));
+            }
+        }
     }
 }

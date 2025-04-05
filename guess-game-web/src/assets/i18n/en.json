@@ -247,6 +247,24 @@
         "mvpsColumn": "MVPs"
       }
     },
+    "eventPlaces": {
+      "title": "Event places",
+      "noEventPlacesDataFoundText": "No event places data found",
+      "table": {
+        "cityColumn": "City",
+        "addressColumn": "Address",
+        "startDateColumn": "Start date",
+        "endDateColumn": "End date",
+        "durationColumn": "Duration, days",
+        "eventsColumn": "Events",
+        "eventTypesColumn": "Event types",
+        "talksColumn": "Talks",
+        "speakersColumn": "Speakers",
+        "companiesColumn": "Companies",
+        "javaChampionsColumn": "Java Champions",
+        "mvpsColumn": "MVPs"
+      }
+    },
     "speakers": {
       "title": "Speakers",
       "noSpeakersDataFoundText": "No speakers data found",
