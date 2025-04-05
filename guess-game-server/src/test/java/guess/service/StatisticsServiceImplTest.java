@@ -11,6 +11,8 @@ import guess.domain.statistics.company.CompanyMetrics;
 import guess.domain.statistics.company.CompanyStatistics;
 import guess.domain.statistics.event.EventMetrics;
 import guess.domain.statistics.event.EventStatistics;
+import guess.domain.statistics.eventplace.EventPlaceMetrics;
+import guess.domain.statistics.eventplace.EventPlaceStatistics;
 import guess.domain.statistics.eventtype.EventTypeMetrics;
 import guess.domain.statistics.eventtype.EventTypeStatistics;
 import guess.domain.statistics.speaker.SpeakerMetrics;
@@ -62,6 +64,9 @@ class StatisticsServiceImplTest {
     private static final LocalDate EVENT_START_DATE5;
     private static final LocalDate EVENT_END_DATE5;
 
+    private static Place place0;
+    private static Place place1;
+    private static Place place2;
     private static EventType eventType0;
     private static EventType eventType1;
     private static EventType eventType2;
@@ -130,6 +135,9 @@ class StatisticsServiceImplTest {
 
     @Autowired
     private EventDao eventDao;
+
+    @Autowired
+    private PlaceDao placeDao;
 
     @Autowired
     private StatisticsService statisticsService;
@@ -202,14 +210,26 @@ class StatisticsServiceImplTest {
         Talk talk0 = new Talk();
         talk0.setId(0);
         talk0.setSpeakers(List.of(speaker0));
+        talk0.setTalkDay(1L);
 
         Talk talk1 = new Talk();
         talk1.setId(1);
         talk1.setSpeakers(List.of(speaker1));
+        talk1.setTalkDay(1L);
 
         Talk talk2 = new Talk();
         talk2.setId(2);
         talk2.setSpeakers(List.of(speaker2));
+        talk2.setTalkDay(1L);
+
+        place0 = new Place();
+        place0.setId(0);
+
+        place1 = new Place();
+        place1.setId(1);
+
+        place2 = new Place();
+        place2.setId(2);
 
         event0 = new Event();
         event0.setId(0);
@@ -217,7 +237,7 @@ class StatisticsServiceImplTest {
         event0.setDays(List.of(new EventDays(
                 EVENT_START_DATE0,
                 EVENT_END_DATE0,
-                new Place()
+                place0
         )));
         event0.setTalks(List.of(talk0));
 
@@ -227,7 +247,7 @@ class StatisticsServiceImplTest {
         event1.setDays(List.of(new EventDays(
                 EVENT_START_DATE1,
                 EVENT_END_DATE1,
-                new Place()
+                place1
         )));
         event1.setTalks(List.of(talk1));
 
@@ -237,7 +257,7 @@ class StatisticsServiceImplTest {
         event2.setDays(List.of(new EventDays(
                 EVENT_START_DATE2,
                 EVENT_END_DATE2,
-                new Place()
+                place2
         )));
         event2.setTalks(List.of(talk2));
 
@@ -247,7 +267,7 @@ class StatisticsServiceImplTest {
         event3.setDays(List.of(new EventDays(
                 EVENT_START_DATE3,
                 EVENT_END_DATE3,
-                new Place()
+                place0
         )));
 
         event4 = new Event();
@@ -256,7 +276,7 @@ class StatisticsServiceImplTest {
         event4.setDays(List.of(new EventDays(
                 EVENT_START_DATE4,
                 EVENT_END_DATE4,
-                new Place()
+                place1
         )));
 
         event5 = new Event();
@@ -265,7 +285,7 @@ class StatisticsServiceImplTest {
         event5.setDays(List.of(new EventDays(
                 EVENT_START_DATE5,
                 EVENT_END_DATE5,
-                new Place()
+                place2
         )));
 
         eventType0.setEvents(List.of(event0));
@@ -278,6 +298,7 @@ class StatisticsServiceImplTest {
     void setUp() {
         Mockito.when(eventTypeDao.getEventTypes()).thenReturn(List.of(eventType0, eventType1, eventType2, eventType3, eventType4));
         Mockito.when(eventDao.getEvents()).thenReturn(List.of(event0, event1, event2, event3, event4, event5));
+        Mockito.when(placeDao.getPlaces()).thenReturn(List.of(place0, place1, place2));
     }
 
     @AfterEach
@@ -583,6 +604,54 @@ class StatisticsServiceImplTest {
         }
     }
 
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getFilteredEvents method with parameters tests")
+    class GetFilteredEventsTest {
+        private Stream<Arguments> data() {
+            List<Event> expected0 = List.of(event0, event2, event3, event4);
+            List<Event> expected1 = List.of(event0);
+            List<Event> expected2 = Collections.emptyList();
+            List<Event> expected3 = List.of(event2, event3, event4);
+            List<Event> expected4 = List.of(event1, event5);
+            List<Event> expected5 = List.of(event0, event1, event2, event3, event4, event5);
+
+            return Stream.of(
+                    arguments(true, false, null, null, expected0),
+                    arguments(true, false, null, 0L, expected1),
+                    arguments(true, false, null, 1L, expected2),
+                    arguments(true, false, null, 2L, expected3),
+                    arguments(true, false, null, 3L, expected2),
+
+                    arguments(true, false, 0L, null, expected1),
+                    arguments(true, false, 1L, null, expected3),
+
+                    arguments(true, false, 0L, 0L, expected1),
+                    arguments(true, false, 1L, 0L, expected2),
+
+                    arguments(true, false, 0L, 1L, expected2),
+                    arguments(true, false, 1L, 1L, expected2),
+
+                    arguments(true, false, 0L, 2L, expected2),
+                    arguments(true, false, 1L, 2L, expected3),
+
+                    arguments(true, false, 0L, 3L, expected2),
+                    arguments(true, false, 1L, 3L, expected2),
+
+                    arguments(false, false, null, null, expected2),
+                    arguments(false, true, null, null, expected4),
+                    arguments(true, true, null, null, expected5)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getFilteredEvents(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId,
+                               List<Event> expected) {
+            assertEquals(expected, statisticsService.getFilteredEvents(isConferences, isMeetups, organizerId, eventTypeId));
+        }
+    }
+
     private EventStatistics createEventStatistics(List<EventMetrics> eventMetricsList, Event event, LocalDate startDate,
                                                   LocalDate endDate, long duration, long talksQuantity, long speakersQuantity,
                                                   long companiesQuantity, long javaChampionsQuantity, long mvpsQuantity) {
@@ -755,19 +824,6 @@ class StatisticsServiceImplTest {
             );
 
             EventStatistics expected4 = createEventStatistics(
-                    Collections.emptyList(),
-                    new Event(),
-                    null,
-                    null,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-            );
-
-            EventStatistics expected5 = createEventStatistics(
                     List.of(eventMetrics5, eventMetrics6),
                     new Event(),
                     EVENT_START_DATE5,
@@ -780,7 +836,7 @@ class StatisticsServiceImplTest {
                     1
             );
 
-            EventStatistics expected6 = createEventStatistics(
+            EventStatistics expected5 = createEventStatistics(
                     List.of(eventMetrics0, eventMetrics5, eventMetrics2, eventMetrics3, eventMetrics4, eventMetrics6),
                     new Event(),
                     EVENT_START_DATE5,
@@ -798,7 +854,7 @@ class StatisticsServiceImplTest {
                     arguments(true, false, null, 0L, expected1),
                     arguments(true, false, null, 1L, expected2),
                     arguments(true, false, null, 2L, expected3),
-                    arguments(true, false, null, 3L, expected4),
+                    arguments(true, false, null, 3L, expected2),
 
                     arguments(true, false, 0L, null, expected1),
                     arguments(true, false, 1L, null, expected3),
@@ -812,12 +868,12 @@ class StatisticsServiceImplTest {
                     arguments(true, false, 0L, 2L, expected2),
                     arguments(true, false, 1L, 2L, expected3),
 
-                    arguments(true, false, 0L, 3L, expected4),
-                    arguments(true, false, 1L, 3L, expected4),
+                    arguments(true, false, 0L, 3L, expected2),
+                    arguments(true, false, 1L, 3L, expected2),
 
-                    arguments(false, false, null, null, expected4),
-                    arguments(false, true, null, null, expected5),
-                    arguments(true, true, null, null, expected6)
+                    arguments(false, false, null, null, expected2),
+                    arguments(false, true, null, null, expected4),
+                    arguments(true, true, null, null, expected5)
             );
         }
 
@@ -825,6 +881,370 @@ class StatisticsServiceImplTest {
         @MethodSource("data")
         void getEventStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId, EventStatistics expected) {
             assertEquals(expected, statisticsService.getEventStatistics(isConferences, isMeetups, organizerId, eventTypeId));
+        }
+    }
+
+    private EventPlaceStatistics createEventPlaceStatistics(List<EventPlaceMetrics> eventPlaceMetricsList, Place place,
+                                                            long eventsQuantity, long eventTypesQuantity,
+                                                            LocalDate startDate, LocalDate endDate,
+                                                            long duration, long speakersQuantity,
+                                                            long companiesQuantity,
+                                                            long talksQuantity, long javaChampionsQuantity,
+                                                            long mvpsQuantity) {
+        return new EventPlaceStatistics(
+                eventPlaceMetricsList,
+                new EventPlaceMetrics(
+                        place,
+                        eventsQuantity,
+                        eventTypesQuantity,
+                        new EventTypeEventMetrics(
+                                startDate,
+                                endDate,
+                                duration,
+                                speakersQuantity,
+                                companiesQuantity,
+                                new Metrics(
+                                        talksQuantity,
+                                        javaChampionsQuantity,
+                                        mvpsQuantity
+                                )
+                        )
+                )
+        );
+    }
+
+    @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @DisplayName("getEventPlaceStatistics method with parameters tests")
+    class GetEventPlaceStatisticsTest {
+        private Stream<Arguments> data() {
+            EventPlaceStatistics expected0 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE3)),
+                                            Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE3)),
+                                            3,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    1,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place1,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE4,
+                                            EVENT_END_DATE4,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE2,
+                                            EVENT_END_DATE2,
+                                            1,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    4,
+                    2,
+                    Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE2, EVENT_START_DATE3, EVENT_START_DATE4)),
+                    Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE2, EVENT_END_DATE3, EVENT_END_DATE4)),
+                    5,
+                    2,
+                    2,
+                    2,
+                    1,
+                    0
+            );
+            EventPlaceStatistics expected1 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE0,
+                                            EVENT_END_DATE0,
+                                            2,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    1,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    1,
+                    1,
+                    EVENT_START_DATE0,
+                    EVENT_END_DATE0,
+                    2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+            );
+            EventPlaceStatistics expected2 = createEventPlaceStatistics(
+                    List.of(),
+                    new Place(),
+                    0,
+                    0,
+                    null,
+                    null,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+            );
+            EventPlaceStatistics expected3 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE3,
+                                            EVENT_END_DATE3,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place1,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE4,
+                                            EVENT_END_DATE4,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE2,
+                                            EVENT_END_DATE2,
+                                            1,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    3,
+                    1,
+                    Collections.min(List.of(EVENT_START_DATE2, EVENT_START_DATE3, EVENT_START_DATE4)),
+                    Collections.max(List.of(EVENT_END_DATE2, EVENT_END_DATE3, EVENT_END_DATE4)),
+                    3,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0
+            );
+            EventPlaceStatistics expected4 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place1,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE1,
+                                            EVENT_END_DATE1,
+                                            1,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    1
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    1,
+                                    1,
+                                    new EventTypeEventMetrics(
+                                            EVENT_START_DATE5,
+                                            EVENT_END_DATE5,
+                                            1,
+                                            0,
+                                            0,
+                                            new Metrics(
+                                                    0,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    2,
+                    2,
+                    Collections.min(List.of(EVENT_START_DATE1, EVENT_START_DATE5)),
+                    Collections.max(List.of(EVENT_END_DATE1, EVENT_END_DATE5)),
+                    2,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1
+            );
+            EventPlaceStatistics expected5 = createEventPlaceStatistics(
+                    List.of(
+                            new EventPlaceMetrics(
+                                    place0,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE3)),
+                                            Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE3)),
+                                            3,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    1,
+                                                    0
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place1,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE1, EVENT_START_DATE4)),
+                                            Collections.max(List.of(EVENT_END_DATE1, EVENT_END_DATE4)),
+                                            2,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    1
+                                            )
+                                    )
+                            ),
+                            new EventPlaceMetrics(
+                                    place2,
+                                    2,
+                                    2,
+                                    new EventTypeEventMetrics(
+                                            Collections.min(List.of(EVENT_START_DATE2, EVENT_START_DATE5)),
+                                            Collections.max(List.of(EVENT_END_DATE2, EVENT_END_DATE5)),
+                                            2,
+                                            1,
+                                            1,
+                                            new Metrics(
+                                                    1,
+                                                    0,
+                                                    0
+                                            )
+                                    )
+                            )
+                    ),
+                    new Place(),
+                    6,
+                    4,
+                    Collections.min(List.of(EVENT_START_DATE0, EVENT_START_DATE1, EVENT_START_DATE2, EVENT_START_DATE3, EVENT_START_DATE4, EVENT_START_DATE5)),
+                    Collections.max(List.of(EVENT_END_DATE0, EVENT_END_DATE1, EVENT_END_DATE2, EVENT_END_DATE3, EVENT_END_DATE4, EVENT_END_DATE5)),
+                    7,
+                    3,
+                    3,
+                    3,
+                    1,
+                    1
+            );
+
+            return Stream.of(
+                    arguments(true, false, null, null, expected0),
+                    arguments(true, false, null, 0L, expected1),
+                    arguments(true, false, null, 1L, expected2),
+                    arguments(true, false, null, 2L, expected3),
+                    arguments(true, false, null, 3L, expected2),
+
+                    arguments(true, false, 0L, null, expected1),
+                    arguments(true, false, 1L, null, expected3),
+
+                    arguments(true, false, 0L, 0L, expected1),
+                    arguments(true, false, 1L, 0L, expected2),
+
+                    arguments(true, false, 0L, 1L, expected2),
+                    arguments(true, false, 1L, 1L, expected2),
+
+                    arguments(true, false, 0L, 2L, expected2),
+                    arguments(true, false, 1L, 2L, expected3),
+
+                    arguments(true, false, 0L, 3L, expected2),
+                    arguments(true, false, 1L, 3L, expected2),
+
+                    arguments(false, false, null, null, expected2),
+                    arguments(false, true, null, null, expected4),
+                    arguments(true, true, null, null, expected5)
+            );
+        }
+
+        @ParameterizedTest
+        @MethodSource("data")
+        void getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId,
+                                     EventPlaceStatistics expected) {
+            assertEquals(expected, statisticsService.getEventPlaceStatistics(isConferences, isMeetups, organizerId, eventTypeId));
         }
     }
 

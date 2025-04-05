@@ -33,4 +33,21 @@ public class EventPlaceMetrics extends AbstractEventPlaceMetrics {
     public int hashCode() {
         return Objects.hash(super.hashCode(), getPlace());
     }
+
+    @Override
+    public String toString() {
+        return "EventPlaceMetrics{" +
+                "place=" + place +
+                ", startDate=" + getStartDate() +
+                ", endDate=" + getEndDate() +
+                ", duration=" + getDuration() +
+                ", eventsQuantity=" + getEventsQuantity() +
+                ", eventTypesQuantity=" + getEventTypesQuantity() +
+                ", speakersQuantity=" + getSpeakersQuantity() +
+                ", companiesQuantity=" + getCompaniesQuantity() +
+                ", talksQuantity=" + getTalksQuantity() +
+                ", javaChampionsQuantity=" + getJavaChampionsQuantity() +
+                ", mvpsQuantity=" + getMvpsQuantity() +
+                '}';
+    }
 }

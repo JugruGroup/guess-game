@@ -223,7 +223,8 @@ public class StatisticsServiceImpl implements StatisticsService {
      * @param eventTypeId   event type identifier
      * @return filtered events
      */
-    List<Event> getFilteredEvents(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
+    @Override
+    public List<Event> getFilteredEvents(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
         return eventDao.getEvents().stream()
                 .filter(e ->
                         ((isConferences && e.getEventType().isEventTypeConference()) || (isMeetups && !e.getEventType().isEventTypeConference())) &&
@@ -327,7 +328,8 @@ public class StatisticsServiceImpl implements StatisticsService {
     }
 
     @Override
-    public EventPlaceStatistics getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId, Long eventTypeId) {
+    public EventPlaceStatistics getEventPlaceStatistics(boolean isConferences, boolean isMeetups, Long organizerId,
+                                                        Long eventTypeId) {
         List<Event> events = getFilteredEvents(isConferences, isMeetups, organizerId, eventTypeId);
         Map<Place, Set<Event>> placeEvents = new HashMap<>();
         Map<Place, Set<EventType>> placeEventTypes = new HashMap<>();
