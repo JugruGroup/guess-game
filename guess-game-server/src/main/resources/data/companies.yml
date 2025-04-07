@@ -4938,3 +4938,29 @@ companies:
     name:
       - {language: en, text: "DBA Team"}
     siteLink: https://dba.team
+  - id: 1383
+    name:
+      - {language: en, text: "Tools for Brokers"}
+      - {language: ru, text: "ТФБ Девелопмент"}
+    siteLink: https://t4b.com
+  - id: 1384
+    name:
+      - {language: en, text: Tinybird}
+    siteLink: https://www.tinybird.co
+  - id: 1385
+    name:
+      - {language: en, text: "BlackHub Games"}
+      - {language: ru, text: "Блэкхаб Геймс"}
+    siteLink: https://blackhub.games
+  - id: 1386
+    name:
+      - {language: en, text: "Virtual Minds"}
+    siteLink: https://virtualminds.com
+  - id: 1387
+    name:
+      - {language: en, text: "Spectral::Technologies"}
+    siteLink: https://spectral.tech
+  - id: 1388
+    name:
+      - {language: en, text: "C3D Labs"}
+    siteLink: https://c3dlabs.ru
