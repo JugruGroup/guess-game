@@ -25,7 +25,7 @@
     "@ngx-translate/core": "^16.0.4",
     "@ngx-translate/http-loader": "^16.0.1",
     "@primeng/themes": "^19.0.10",
-    "bootstrap": "^5.3.4",
+    "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3",
     "chart.js": "^4.4.8",
     "chartjs-plugin-datalabels": "^2.2.0",
