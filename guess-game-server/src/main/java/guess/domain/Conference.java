@@ -24,5 +24,6 @@ public enum Conference {
     GO_FUNC,
     IML,
     CARGO_CULT,
+    SYSCONF,
     SNOW_ONE
 }

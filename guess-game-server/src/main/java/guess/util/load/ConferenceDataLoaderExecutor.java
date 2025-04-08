@@ -2804,5 +2804,9 @@ public class ConferenceDataLoaderExecutor {
 //                                "Открытие офлайн-части конференции С++ Russia 2025",
 //                                "Yandex Multitrack на афтерпати C++ Russia",
 //                                "Lightning Talks", "Закрытие конференции С++ Russia 2025")));
+//        loadTalksSpeakersEvent(Conference.SYSCONF, LocalDate.of(2025, 3, 22), "2025",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("sysconf 2025", null, List.of(9L)),
+//                        Set.of("Открытие конференции", "Закрытие конференции", "Lightning Talks")));
     }
 }

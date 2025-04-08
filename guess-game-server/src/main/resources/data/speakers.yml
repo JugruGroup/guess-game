@@ -26492,7 +26492,7 @@ speakers:
     gitHub: anthonywilliams
   - id: 1845
     photoFileName: 01845.jpg
-    photoUpdatedAt: "2024-02-02T11:12:26Z"
+    photoUpdatedAt: "2025-01-10T07:34:27Z"
     name:
       - {language: en, text: "Anna Melekhova"}
       - {language: ru, text: "Анна Мелехова"}
@@ -30729,8 +30729,8 @@ speakers:
       - {language: ru, text: "Константин Владимиров"}
     companyIds: [919]
     bio:
-      - {language: en, text: "<p>Have been working on compilers since 2010. Currently, I work on a compiler for RISC-V at\
-            \ Syntacore.</p>"}
+      - {language: en, text: "<p>I have been working on compilers since 2010. Currently, I works on a compiler for RISC-V\
+            \ at Syntacore.</p>"}
       - {language: ru, text: "<p>Работаю над компиляторами с 2010 года. Сейчас &mdash; над компилятором для RISC-V в Syntacore.</p>"}
     twitter: Tilir
     gitHub: tilir
@@ -30860,7 +30860,7 @@ speakers:
             \ different projects and now helps Workato to make their platform even better."
   - id: 2148
     photoFileName: 02148.jpg
-    photoUpdatedAt: "2022-10-27T12:28:37Z"
+    photoUpdatedAt: "2024-12-13T09:06:16Z"
     name:
       - {language: en, text: "Peter Sovietov"}
       - {language: ru, text: "Пётр Советов"}
@@ -41205,11 +41205,11 @@ speakers:
             зработчиков, дата-инженеров и дата-сайентистов.</p>"
   - id: 2857
     photoFileName: 02857.jpg
-    photoUpdatedAt: "2023-08-10T11:11:26Z"
+    photoUpdatedAt: "2025-01-16T14:04:49Z"
     name:
       - {language: en, text: "Maksim Pelevin"}
       - {language: ru, text: "Максим Пелевин"}
-    companyIds: [242]
+    companyIds: [1389]
     bio:
       - {language: en, text: "<p>Maxim has been in Java development for over 10 years and is interested in developing tools\
             \ for static and dynamic program analysis. He is also passionate about teaching at university.</p>"}
@@ -44792,7 +44792,7 @@ speakers:
     habr: grossws
   - id: 3089
     photoFileName: 03089.jpg
-    photoUpdatedAt: "2025-01-17T09:25:40Z"
+    photoUpdatedAt: "2025-02-04T09:03:34Z"
     name:
       - {language: en, text: "Ilia Gavrilin"}
       - {language: ru, text: "Илья Гаврилин"}
@@ -54896,3 +54896,218 @@ speakers:
             анимался разработкой КОМПАС-3D, направление &mdash; 2D-моделирование, спецификация.</p>\n<p>&bull; Программист\
             \ модуля визуализации C3D Vision, C3D Labs.</p>\n<p>&bull; Team lead команды C3D Web Vision, C3D Labs.</p>\n<p>&bull;\
             \ 12 лет опыта программирования на C++, OpenGL, WebGL, webasm, Go.</p>"
+  - id: 3756
+    photoFileName: 03756.jpg
+    photoUpdatedAt: "2025-01-16T13:18:37Z"
+    name:
+      - {language: en, text: "Konstantin Karasev"}
+      - {language: ru, text: "Константин Карасев"}
+    companyIds: [1021]
+    bio:
+      - {language: ru, text: "<p>В 2000 году окончил Московский институт электроники и математики, специализация &laquo;се\
+            тевые операционные системы&raquo;. Занимался исследованиями и разработками в области системного ПО в МЦСТ, Intel,\
+            \ Samsung. С 2012 года разрабатываю TEE для ARM TrustZone. В Открытой мобильной платформе руковожу командой ра\
+            зработки доверенной среды и экосистемы Аврора ТЕЕ, средств доверенной загрузки.</p>"}
+  - id: 3757
+    photoFileName: 03757.jpg
+    photoUpdatedAt: "2025-01-29T08:46:02Z"
+    name:
+      - {language: en, text: "Evgenii Naidanov"}
+      - {language: ru, text: "Евгений Найданов"}
+    companyIds: [919]
+    bio:
+      - {language: ru, text: "<p>Мейнтейнер в RISC-V OpenOCD, последние 2 года активно участвую в разработке и поддержке в\
+            озможностей External Debug.</p>"}
+    gitHub: en-sc
+  - id: 3758
+    photoFileName: 03758.jpg
+    photoUpdatedAt: "2025-01-20T11:34:05Z"
+    name:
+      - {language: en, text: "Evgenii Proidakov"}
+      - {language: ru, text: "Евгений Пройдаков"}
+    companyIds: [410]
+    bio:
+      - language: ru
+        text: "<p>С++ разработчик и техлид. В коммерческой разработке более 12 лет. Окончил Бауманку.</p>\n<p>Много лет по\
+            святил разработке FX маркетмейкера в Deutsche Bank. Трудился над рекламным бэкендом Rambler. Создавал компанию\
+            \ в области мобильной робототехники, а также немного разрабатывал компьютерные игры для души.</p>\n<p>Сейчас р\
+            уковожу группой разработки среды исполнения языка eXtraction and Processing в Positive Technologies, в компиля\
+            торном направлении.</p>"
+    gitHub: proydakov
+    habr: proydakov
+  - id: 3759
+    photoFileName: 03759.jpg
+    photoUpdatedAt: "2024-12-13T14:44:22Z"
+    name:
+      - {language: en, text: "Matvei Bystrin"}
+      - {language: ru, text: "Матвей Быстрин"}
+    companyIds: [773]
+    bio:
+      - {language: ru, text: "<p>Свой путь начинал с разработки прошивок для микроконтроллеров и userland системного ПО по\
+            д Linux. Сейчас работаю в BSP-команде в YADRO. Пишу и ремонтирую драйверы, разбираюсь с загрузчиком и читаю ме\
+            йлинг-листы.</p>"}
+  - id: 3760
+    photoFileName: 03760.jpg
+    photoUpdatedAt: "2025-01-17T07:18:34Z"
+    name:
+      - {language: en, text: "Anastasia Chernikova"}
+      - {language: ru, text: "Анастасия Черникова"}
+    companyIds: [919]
+    bio:
+      - {language: ru, text: "<p>Разрабатываю компиляторы и инструменты разработки в Syntacore. Автор RISC-V backend в <code>llvm-exegesis</code>.</p>"}
+  - id: 3761
+    photoFileName: 03761.jpg
+    photoUpdatedAt: "2025-01-22T22:56:53Z"
+    name:
+      - {language: en, text: "Denis Darvish"}
+      - {language: ru, text: "Денис Дарвиш"}
+    companyIds: [975]
+    bio:
+      - language: ru
+        text: "<p>Тимлид и разработчик.</p>\n<p>Начинал свой технический путь с разработки встраиваемых систем на микрокон\
+            троллерах ARM.</p>\n<p>12 лет назад погрузился в мир разработки компонентов и подсистем в ядре ОС для ARM TrustZone,\
+            \ а также в Linux kernel.</p>\n<p>Сейчас занимаюсь NUMA-системами.</p>"
+  - id: 3762
+    photoFileName: 03762.jpg
+    photoUpdatedAt: "2025-01-29T08:03:47Z"
+    name:
+      - {language: en, text: "Nikita Panov"}
+      - {language: ru, text: "Никита Панов"}
+    companyIds: [975]
+    bio:
+      - language: ru
+        text: "<p>Окончил МФТИ в 2024 году по специальности &laquo;информатика и вычислительная техника&raquo;.</p>\n<p>3\
+            \ года опыта разработки в Linux kernel.</p>\n<p>Основная сфера интересов &mdash; управление памятью в операцио\
+            нных системах.</p>"
+  - id: 3763
+    photoFileName: 03763.jpg
+    photoUpdatedAt: "2025-01-22T10:56:23Z"
+    name:
+      - {language: en, text: "Vasilii Leonenko"}
+      - {language: ru, text: "Василий Леоненко"}
+    companyIds: [975]
+    bio:
+      - language: ru
+        text: "<p>Более 15 лет опыта в разработке системного ПО: операционные системы, инструменты разработчиков. Работал\
+            \ в Intel, Teleca (Harman), Samsung.</p>\n<p>Эксперт в системном ПО, включая ядро ОС, виртуализацию (KVM, Xen),\
+            \ анализ и оптимизацию производительности ПО.</p>\n<p>Области интересов: оптимизация производительности, компи\
+            ляторы, низкоуровневые библиотеки и рантаймы, ядро ОС.</p>\n<p>Внес клад в проекты LLVM, Go.</p>"
+    gitHub: vleonen
+    habr: vleonen
+  - id: 3764
+    photoFileName: 03764.jpg
+    photoUpdatedAt: "2024-12-12T20:07:16Z"
+    name:
+      - {language: en, text: "Dmitrii Rokosov"}
+      - {language: ru, text: "Дмитрий Рокосов"}
+    companyIds: [665]
+    bio:
+      - language: ru
+        text: "<p>Более 10 лет занимаюсь разработкой ядра, низкоуровневой разработкой, процессорами и безопасностью.</p>\n\
+            <p>В SberDevices руковожу Kernel-командой по разработке, оптимизации и улучшению низкоуровневых компонентов ОС\
+            \ и прошивок.</p>\n<p>Познакомился с разработкой операционных систем в рамках рабочих проектов по исследованию\
+            \ безопасности ядер ОС Windows, Linux, macOS.</p>\n<p>Последние 5 лет занимаюсь ядром Linux, загрузчиками и TrustZone\
+            \ в прошивках умных устройств SberDevices на базе ARM SoC. Активный контрибьютор в ядро Linux и U-Boot: linux-amlogic,\
+            \ linux-arm-kernel, linux-clk, linux-iio, linux-phy, linux-usb, linux-mm.</p>"
+    twitter: rockosov
+    gitHub: rockosov
+  - id: 3765
+    photoFileName: 03765.jpg
+    photoUpdatedAt: "2025-02-19T12:22:09Z"
+    name:
+      - {language: en, text: "Alexey Romanov"}
+      - {language: ru, text: "Алексей Романов"}
+    companyIds: [665]
+    bio:
+      - {language: ru, text: "Увлекаюсь низкоуровневым программированием и всё что с ним связано. В SberDevices занимаюсь\
+            \ разработкой прошивок для умных устройств. Со стороны прошивки занимаюсь поддержкой Linux kernel, U-boot, ARM\
+            \ TrustZone, а так же являюсь активным open-source контрибьютором. В 2024 закончил магистратуру МГТУ им. Н. Э\
+            . Баумана, где в итоге остался преподавать part-time"}
+  - id: 3766
+    photoFileName: 03766.jpg
+    photoUpdatedAt: 2025-01-10T06:39Z
+    name:
+      - {language: en, text: "Nikita Kostlivtsev"}
+      - {language: ru, text: "Никита Костливцев"}
+    companyIds: [620]
+    bio:
+      - {language: ru, text: "Старший программист-разработчик в команде баз данных ВКонтакте. Практически весь мой професс\
+            иональный путь связан с разработкой движков (кастомные базы данных ВКонтакте). Начинал с работы над рекламными\
+            \ движками, а сейчас занимаюсь common кодом и сетевой библиотекой, которые используются во всех базах данных."}
+  - id: 3767
+    photoFileName: 03767.jpg
+    photoUpdatedAt: "2025-01-16T15:12:30Z"
+    name:
+      - {language: en, text: "Yuly Tarasov"}
+      - {language: ru, text: "Юлий Тарасов"}
+    companyIds: [919]
+    bio:
+      - {language: en, text: "Senior Software Engineer in the compiler and development tools department at Syntacore. Author\
+            \ of a PoC hardware breakpoint and watchpoint support in GDB for RISC-V."}
+      - {language: ru, text: "<p>Работаю в отделе разработки компиляторов и средств разработки в Syntacore. Автор прототип\
+            а поддержки аппаратных точек останова и наблюдения для RISC-V архитектуры.</p>"}
+  - id: 3768
+    photoFileName: 03768.jpg
+    photoUpdatedAt: "2025-01-17T15:21:33Z"
+    name:
+      - {language: en, text: "Vadim Ivanov"}
+      - {language: ru, text: "Вадим Иванов"}
+    companyIds: [975]
+    bio:
+      - language: ru
+        text: "<p>Мой путь в системной разработке начался 8 лет назад. За это время работал над прошивками для микроконтро\
+            ллеров, виртуализацией, userspace для TrustZone ОС.</p>\n<p>Последние 2 года занимаюсь concurrency: структурам\
+            и данных, алгоритмами, примитивами синхронизации.</p>"
+  - id: 3769
+    photoFileName: 03769.jpg
+    photoUpdatedAt: "2024-10-31T06:31:33Z"
+    name:
+      - {language: en, text: "Artem Kuzin"}
+      - {language: ru, text: "Артём Кузин"}
+    companyIds: [975]
+    bio:
+      - language: ru
+        text: "<p>Окончил МГТУ им. Н. Э. Баумана в 2006 году по специальности &laquo;конструирование и технология РЭА&raquo;.</p>\n\
+            <p>Более 10 лет опыта в разработке операционных систем. Работал в компаниях Luxoft, Samsung.</p>\n<p>Эксперт в\
+            о встроенном ПО, операционных системах различной архитектуры (монолитные, гибридные ядра), ОС для ARM TrustZone.</p>\n\
+            <p>Области интересов: управление памятью в ОС, схемы управления памятью RCU/EBR, lock-free и RCU-safe структур\
+            ы данных, NUMA-системы, OS4AI.</p>"
+  - id: 3770
+    photoFileName: 03770.jpg
+    photoUpdatedAt: "2024-12-13T15:11:58Z"
+    name:
+      - {language: en, text: "Denis Davydov"}
+      - {language: ru, text: "Денис Давыдов"}
+    companyIds: [98]
+    bio:
+      - {language: ru, text: "<p>Инженер-программист с разнообразным опытом, включающим разработку модулей ядра и бэкендов\
+            \ для авторизации почты. Владею несколькими языками программирования, среди которых C, C++, Python, Go, Rust и\
+            \ Lua, с акцентом на системное программирование. Увлечен функциональным программированием и стремлюсь к освоен\
+            ию инновационных методов написания элегантного кода.</p>"}
+    gitHub: WowVeryLogin
+  - id: 3771
+    photoFileName: 03771.jpg
+    photoUpdatedAt: "2025-02-06T08:39:12Z"
+    name:
+      - {language: en, text: "Daniil Shchepetilnikov"}
+      - {language: ru, text: "Даниил Щепетильников"}
+    companyIds: [1390]
+    bio:
+      - language: ru
+        text: "<p>Старший разработчик в Getmobit. Вместе с коллегами разрабатываем операционную систему GM OS, включая гра\
+            фический стек системы, взаимодействие с серверной частью продукта и интеграцией со смежными продуктами.</p>\n\
+            <p>Люблю программировать на C++, копаться в Linux, погружаться во внутренности используемых технологий, искать\
+            \ оптимальные (и иногда неочевидные) решения возникающих проблем и делиться знаниями с другими.</p>"
+    gitHub: d4nnie
+  - id: 3772
+    photoFileName: 03772.jpg
+    photoUpdatedAt: "2025-01-29T09:29:06Z"
+    name:
+      - {language: en, text: "Aleksandr Loshkarev"}
+      - {language: ru, text: "Александр Лошкарев"}
+    companyIds: [1391]
+    bio:
+      - language: ru
+        text: "<p>Разрабатываю сервисы для Wi-Fi оборудования в Eltex. Разрабатывал системное ПО для мобильных сетей 5G.</p>\n\
+            <p>Люблю изучать смежные технологии для поиска новых идей и решений.</p>\n<p>Преподаватель курсов в СибГУТИ, о\
+            бучал работе мобильных и проводных сетей в Nokia и Huawei.</p>"

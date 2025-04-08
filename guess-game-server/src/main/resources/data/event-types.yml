@@ -652,3 +652,28 @@ eventTypes:
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
     topicId: 16
+  - id: 24
+    conference: SYSCONF
+    logoFileName: sysconf.png
+    organizerId: 0
+    name:
+      - {language: en, text: sysconf}
+    shortDescription:
+      - {language: en, text: "Conference on system programming by JUG Ru Group"}
+      - {language: ru, text: "Конференция по системному программированию от JUG Ru Group"}
+    longDescription:
+      - language: ru
+        text: "sysconf\_— техническая конференция по\_системному программированию для тех, кому интересно низкоуровнев\
+            ое программирование, взаимодействие с\_железом и\_то, что скрыто «под капотом». Для тех, кто предпочитает gdb\
+            \ вместо отладчика в\_IDE, кто с\_интересом изучает код на\_ассемблере и\_получает от\_этого удовольствие, ком\
+            у важно понять, что такого сгенерировал оптимизирующий компилятор, что производительность системы взлетела до\_\
+            небес. В\_общем, мы\_собираем единомышленников, живущих системным программированием.\n\nОрганизатор конференци\
+            и\_— [JUG\_Ru\_Group](https://jugru.org/#schedule)."
+    siteLink:
+      - {language: en, text: "https://sysconf.pro"}
+    vkLink: https://vk.com/sysconf
+    youtubeLink: https://www.youtube.com/@sysconf
+    telegramLink: https://t.me/+ArQh-JNVvJc4MWRi
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow
+    topicId: 17

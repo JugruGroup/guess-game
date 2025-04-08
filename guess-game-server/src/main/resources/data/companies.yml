@@ -4964,3 +4964,16 @@ companies:
     name:
       - {language: en, text: "C3D Labs"}
     siteLink: https://c3dlabs.ru
+  - id: 1389
+    name:
+      - {language: en, text: "Huawei Russian Research Institute"}
+      - {language: ru, text: "Российский исследовательский институт Huawei"}
+    siteLink: https://career.huawei.ru/rri/
+  - id: 1390
+    name:
+      - {language: en, text: Getmobit}
+    siteLink: https://getmobit.ru
+  - id: 1391
+    name:
+      - {language: en, text: Eltex}
+    siteLink: https://eltex-co.ru
