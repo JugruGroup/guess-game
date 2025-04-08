@@ -20,7 +20,7 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Peterburgskoye hwy., 62/1, Expoforum"}
+      - {language: en, text: "Peterburgskoye Hwy., 62/1, Expoforum"}
       - {language: ru, text: "Петербургское ш., 64/1, КВЦ «Экспофорум»"}
     mapCoordinates: "59.762236, 30.356121"
   - id: 3
@@ -36,7 +36,7 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Pobedy Square, 1, Cosmos Saint-Petersburg Pulkovskaya Hotel"}
+      - {language: en, text: "Pobedy Sq., 1, Cosmos Saint-Petersburg Pulkovskaya Hotel"}
       - {language: ru, text: "Победы пл., 1, Cosmos Saint-Petersburg Pulkovskaya Hotel"}
     mapCoordinates: "59.842400, 30.318815"
   - id: 5
@@ -68,7 +68,7 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Kutuzovsky Avenue, 2/1 Building 1, Congress Park at the Radisson Royal Hotel"}
+      - {language: en, text: "Kutuzovsky Ave., 2/1 Bld. 1, Congress Park at the Radisson Royal Hotel"}
       - {language: ru, text: "Кутузовский пр-кт, 2/1, стр. 1, Конгресс-парк гостиницы «Рэдиссон Ройал Москва»"}
     mapCoordinates: "55.751979, 37.566894"
   - id: 9
@@ -76,7 +76,7 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Leningradsky Avenue, 31А, building 1, MonArch Moscow Hotel"}
+      - {language: en, text: "Leningradsky Ave., 31А, Bld. 1, MonArch Moscow Hotel"}
       - {language: ru, text: "Ленинградский пр-кт, 31А, строение 1, МонАрх Москва Отель"}
     mapCoordinates: "55.783321, 37.560867"
   - id: 11
@@ -84,7 +84,7 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Europe Square, 2, Hotel «Radisson Slavyanskaya»"}
+      - {language: en, text: "Europe Sq., 2, Hotel «Radisson Slavyanskaya»"}
       - {language: ru, text: "Европы пл., 2, Гостиница «Рэдиссон Славянская»"}
     mapCoordinates: "55.741881, 37.568099"
   - id: 12
@@ -123,7 +123,7 @@ places:
       - {language: en, text: Novosibirsk}
       - {language: ru, text: Новосибирск}
     venueAddress:
-      - {language: en, text: "Karl Marx Square, 7, Sun City, 2GIS office"}
+      - {language: en, text: "Karl Marx Sq., 7, Sun City, 2GIS office"}
       - {language: ru, text: "Карла Маркса пл., 7, Сан Сити, Офис компании 2ГИС"}
     mapCoordinates: "54.980394, 82.897882"
   - id: 17
@@ -139,7 +139,7 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Piskarevsky Avenue, 2, litera Shch, building 2"}
+      - {language: en, text: "Piskarevsky Ave., 2, litera Shch, Bld. 2"}
       - {language: ru, text: "Пискаревский пр-кт, 2, литера Щ, корп.2"}
     mapCoordinates: "59.958606, 30.405313"
   - id: 19
@@ -171,7 +171,7 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Kronverksky Avenue, 49, ITMO University"}
+      - {language: en, text: "Kronverksky Ave., 49, ITMO University"}
       - {language: ru, text: "Кронверкский пр-кт, дом 49, Университет ИТМО"}
     mapCoordinates: "59.956160, 30.309373"
   - id: 23
@@ -200,7 +200,7 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Bataysky Alley, 3A"}
+      - {language: en, text: "Bataysky Ln., 3A"}
       - {language: ru, text: "Батайский пер., 3А"}
     mapCoordinates: "59.913541, 30.320638"
   - id: 27
@@ -216,7 +216,7 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Bersenevskaya Emb., 6, building 3, Red October, Start Hub"}
+      - {language: en, text: "Bersenevskaya Emb., 6, Bld. 3, Red October, Start Hub"}
       - {language: ru, text: "Берсеневская наб., 6, стр. 3, Красный Октябрь, Start Hub"}
     mapCoordinates: "55.74081, 37.60892"
   - id: 29
@@ -224,7 +224,7 @@ places:
       - {language: en, text: Moscow}
       - {language: ru, text: Москва}
     venueAddress:
-      - {language: en, text: "Ramensky Boulevard, 1, \"Lomonosov\" Cluster"}
+      - {language: en, text: "Ramensky Blv., 1, \"Lomonosov\" Cluster"}
       - {language: ru, text: "Раменский б-р, 1, Кластер «Ломоносов»"}
     mapCoordinates: "55.692120, 37.516557"
   - id: 30
@@ -240,6 +240,6 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Krasnogvardeyskaya Square, 3, litera E, DAA Expo"}
+      - {language: en, text: "Krasnogvardeyskaya Sq., 3, litera E, DAA Expo"}
       - {language: ru, text: "Красногвардейская пл., 3, литера Е, DAA Expo"}
     mapCoordinates: "59.941601, 30.409661"
