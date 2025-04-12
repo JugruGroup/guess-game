@@ -66,7 +66,7 @@ export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3
   bevelOffset = 0;
 
   @Input()
-  bevelSegments = 1;
+  bevelSegments = 0;
 
   @Input()
   fontUrl = './assets/fonts/inter_regular.typeface.json';
@@ -177,7 +177,7 @@ export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3
             bevelThickness: this.bevelThickness,
             bevelSize: this.bevelSize,
             bevelOffset: this.bevelOffset,
-            bevelSegments: this.bevelOffset
+            bevelSegments: this.bevelSegments
           });
 
           geometryMap.set(geometryKey, geometry);
