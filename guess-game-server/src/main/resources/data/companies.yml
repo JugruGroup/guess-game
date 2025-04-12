@@ -4931,7 +4931,7 @@ companies:
     siteLink: https://www.smart-dn.ru
   - id: 1381
     name:
-      - {language: en, text: "Spring AiO"}
+      - {language: en, text: "Spring IO"}
       - {language: ru, text: "Spring АйО"}
     siteLink: https://t.me/spring_aio
   - id: 1382
