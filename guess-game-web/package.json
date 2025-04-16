@@ -27,7 +27,7 @@
     "@primeng/themes": "^19.0.10",
     "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3",
-    "chart.js": "^4.4.8",
+    "chart.js": "^4.4.9",
     "chartjs-plugin-datalabels": "^2.2.0",
     "core-js": "^3.41.0",
     "dagre": "^0.8.5",
