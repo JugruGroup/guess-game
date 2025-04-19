@@ -2808,5 +2808,10 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("sysconf 2025", null, List.of(9L)),
 //                        Set.of("Открытие конференции", "Закрытие конференции", "Lightning Talks")));
+//        loadTalksSpeakersEvent(Conference.JPOINT, LocalDate.of(2024, 4, 3), "2025",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("JPoint 2025", null, List.of(7L)),
+//                        Map.of(new NameCompany("Владимир Озеров", new Company(782, "Querify Labs")), 136L),
+//                        Set.of("Lightning Talks", "Шоу «Интуиция» от Яндекс 360", "Закрытие конференции")));
     }
 }

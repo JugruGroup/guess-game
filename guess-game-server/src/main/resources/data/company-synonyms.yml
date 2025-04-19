@@ -555,6 +555,10 @@ companySynonyms:
     synonyms: [
       "PVS Studio"
     ]
+  - name: "Querify Labs"
+    synonyms: [
+      CedrusData
+    ]
   - name: QIWI
     synonyms: [
       qiwi.ru
@@ -579,6 +583,13 @@ companySynonyms:
       "Райффайзен Банк",
       "Raiffeisen Capital",
       "Райффайзен Капитал"
+    ]
+  - name: RSHB
+    synonyms: [
+      RSHB-Intech,
+      РСХБ-Интех,
+      "RSHB Digital",
+      РСХБ.Цифра
     ]
   - name: RTSoft
     synonyms: [

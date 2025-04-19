@@ -3622,9 +3622,9 @@ companies:
     siteLink: https://yoonion.ru
   - id: 1052
     name:
-      - { language: en, text: RSHB-Intech }
-      - { language: ru, text: РСХБ-Интех }
-    siteLink: https://rshb-intech.ru
+      - { language: en, text: RSHB }
+      - { language: ru, text: РСХБ }
+    siteLink: https://www.rshb.ru
   - id: 1053
     name:
       - { language: en, text: Supabase }
@@ -4437,543 +4437,564 @@ companies:
     siteLink: https://clear.ml
   - id: 1265
     name:
-      - {language: en, text: Xymatic}
+      - { language: en, text: Xymatic }
     siteLink: https://xymatic.com
   - id: 1267
     name:
-      - {language: en, text: SPbSUE}
-      - {language: ru, text: СПбГЭУ}
+      - { language: en, text: SPbSUE }
+      - { language: ru, text: СПбГЭУ }
     siteLink: https://unecon.ru
   - id: 1268
     name:
-      - {language: en, text: "Order Capital"}
+      - { language: en, text: "Order Capital" }
     siteLink: https://www.ordercapital.com
   - id: 1269
     name:
-      - {language: en, text: "Stream Theatre"}
-      - {language: ru, text: "Стрим Театр"}
+      - { language: en, text: "Stream Theatre" }
+      - { language: ru, text: "Стрим Театр" }
     siteLink: https://streamtheater.ru
   - id: 1270
     name:
-      - {language: en, text: "Budapest University of Technology and Economics"}
-      - {language: ru, text: "Будапештский университет технологии и экономики"}
+      - { language: en, text: "Budapest University of Technology and Economics" }
+      - { language: ru, text: "Будапештский университет технологии и экономики" }
     siteLink: https://www.bme.hu
   - id: 1271
     name:
-      - {language: en, text: "Chestnyj znak"}
-      - {language: ru, text: "Честный знак"}
+      - { language: en, text: "Chestnyj znak" }
+      - { language: ru, text: "Честный знак" }
     siteLink: https://chestnyznak.ru
   - id: 1272
     name:
-      - {language: en, text: BigDataDuck}
+      - { language: en, text: BigDataDuck }
     siteLink: https://www.bigdataduck.ru
   - id: 1273
     name:
-      - {language: en, text: "NTU Singapore"}
+      - { language: en, text: "NTU Singapore" }
     siteLink: https://www.ntu.edu.sg
   - id: 1274
     name:
-      - {language: en, text: CueZen}
+      - { language: en, text: CueZen }
     siteLink: https://cuezen.com
   - id: 1275
     name:
-      - {language: en, text: Cryptology}
+      - { language: en, text: Cryptology }
     siteLink: https://cryptology.com
   - id: 1276
     name:
-      - {language: en, text: TaskData}
+      - { language: en, text: TaskData }
     siteLink: http://taskdata.ru
   - id: 1277
     name:
-      - {language: en, text: BestDoctor}
+      - { language: en, text: BestDoctor }
     siteLink: https://bestdoctor.ru
-  - id: 1278
-    name:
-      - {language: en, text: CedrusData}
-    siteLink: https://www.cedrusdata.ru
   - id: 1279
     name:
-      - {language: en, text: Ecom.tech}
+      - { language: en, text: Ecom.tech }
     siteLink: https://ecom.tech
   - id: 1280
     name:
-      - {language: en, text: "Detsky Mir"}
-      - {language: ru, text: "Детский мир"}
+      - { language: en, text: "Detsky Mir" }
+      - { language: ru, text: "Детский мир" }
     siteLink: https://www.detmir.ru
   - id: 1281
     name:
-      - {language: en, text: "Lemana PRO"}
-      - {language: ru, text: "Лемана ПРО"}
+      - { language: en, text: "Lemana PRO" }
+      - { language: ru, text: "Лемана ПРО" }
     siteLink: https://lemanapro.ru
   - id: 1282
     name:
-      - {language: en, text: "Kuper"}
-      - {language: ru, text: "Купер"}
+      - { language: en, text: "Kuper" }
+      - { language: ru, text: "Купер" }
     siteLink: https://kuper.ru
   - id: 1283
     name:
-      - {language: en, text: AutoTech}
+      - { language: en, text: AutoTech }
     siteLink: https://autotech.team
   - id: 1284
     name:
-      - {language: en, text: "Innovation Centre \"Bezopasnyj transport\" GKU CODD"}
-      - {language: ru, text: "Инновационный центр «Безопасный транспорт» ГКУ ЦОДД"}
+      - { language: en, text: "Innovation Centre \"Bezopasnyj transport\" GKU CODD" }
+      - { language: ru, text: "Инновационный центр «Безопасный транспорт» ГКУ ЦОДД" }
     siteLink: https://ictransport.ru
   - id: 1285
     name:
-      - {language: en, text: "Bureau 1440"}
-      - {language: ru, text: "Бюро 1440"}
+      - { language: en, text: "Bureau 1440" }
+      - { language: ru, text: "Бюро 1440" }
     siteLink: https://1440.space
   - id: 1286
     name:
-      - {language: en, text: KiraSoft}
+      - { language: en, text: KiraSoft }
     siteLink: https://www.kirasoft.com
   - id: 1287
     name:
-      - {language: en, text: SKAI}
+      - { language: en, text: SKAI }
     siteLink: https://skai.online
   - id: 1288
     name:
-      - {language: en, text: Volosoft}
+      - { language: en, text: Volosoft }
     siteLink: https://volosoft.com
   - id: 1289
     name:
-      - {language: en, text: "DoiT International"}
+      - { language: en, text: "DoiT International" }
     siteLink: https://www.doit.com
   - id: 1290
     name:
-      - {language: en, text: Artsofte}
+      - { language: en, text: Artsofte }
     siteLink: https://artsofte.ru
   - id: 1291
     name:
-      - {language: en, text: Profit}
+      - { language: en, text: Profit }
     siteLink: https://www.profit.co
   - id: 1292
     name:
-      - {language: en, text: CallCTO}
+      - { language: en, text: CallCTO }
     siteLink: https://callcto.com
   - id: 1293
     name:
-      - {language: en, text: "PIX Robotics"}
+      - { language: en, text: "PIX Robotics" }
     siteLink: https://pix.ru
   - id: 1294
     name:
-      - {language: en, text: "NP4 GmbH"}
+      - { language: en, text: "NP4 GmbH" }
     siteLink: https://www.np4.net
   - id: 1295
     name:
-      - {language: en, text: CodeAlive}
+      - { language: en, text: CodeAlive }
     siteLink: https://codealive.ru
   - id: 1296
     name:
-      - {language: en, text: EREMEX}
-      - {language: ru, text: ЭРЕМЕКС}
+      - { language: en, text: EREMEX }
+      - { language: ru, text: ЭРЕМЕКС }
     siteLink: https://www.eremex.ru
   - id: 1297
     name:
-      - {language: en, text: "QIC digital hub"}
+      - { language: en, text: "QIC digital hub" }
     siteLink: https://qic.online
   - id: 1298
     name:
-      - {language: en, text: "MD Audit"}
+      - { language: en, text: "MD Audit" }
     siteLink: https://mdaudit.ru
   - id: 1299
     name:
-      - {language: en, text: "School 21"}
-      - {language: ru, text: "Школа 21"}
+      - { language: en, text: "School 21" }
+      - { language: ru, text: "Школа 21" }
     siteLink: https://21-school.ru
   - id: 1300
     name:
-      - {language: en, text: LAF}
-      - {language: ru, text: ЛАФ}
+      - { language: en, text: LAF }
+      - { language: ru, text: ЛАФ }
     siteLink: https://www.youtube.com/@LAFest
   - id: 1301
     name:
-      - {language: en, text: "Epsilon Metrics"}
-      - {language: ru, text: "Эпсилон Метрикс"}
+      - { language: en, text: "Epsilon Metrics" }
+      - { language: ru, text: "Эпсилон Метрикс" }
     siteLink: https://epsilonmetrics.ru
   - id: 1302
     name:
-      - {language: en, text: "1C Bit"}
-      - {language: ru, text: "Первый Бит"}
+      - { language: en, text: "1C Bit" }
+      - { language: ru, text: "Первый Бит" }
     siteLink: https://www.1cbit.ru
   - id: 1303
     name:
-      - {language: en, text: Nexign}
+      - { language: en, text: Nexign }
     siteLink: https://nexign.com
   - id: 1304
     name:
-      - {language: en, text: DocHub}
+      - { language: en, text: DocHub }
     siteLink: https://dochub.info
   - id: 1305
     name:
-      - {language: en, text: Stormbpmn}
+      - { language: en, text: Stormbpmn }
     siteLink: https://stormbpmn.com
   - id: 1306
     name:
-      - {language: en, text: Terralink}
+      - { language: en, text: Terralink }
     siteLink: https://terralink.ru
   - id: 1307
     name:
-      - {language: en, text: "Smart Effect"}
+      - { language: en, text: "Smart Effect" }
     siteLink: https://smart-effect.ru
   - id: 1308
     name:
-      - {language: en, text: "Moscow exchange"}
-      - {language: ru, text: "Московская биржа"}
+      - { language: en, text: "Moscow exchange" }
+      - { language: ru, text: "Московская биржа" }
     siteLink: https://www.moex.com
   - id: 1309
     name:
-      - {language: en, text: "TN Digital"}
+      - { language: en, text: "TN Digital" }
     siteLink: https://digital.tn.ru
   - id: 1310
     name:
-      - {language: en, text: "System Swing"}
-      - {language: ru, text: "Системный сдвиг"}
+      - { language: en, text: "System Swing" }
+      - { language: ru, text: "Системный сдвиг" }
     siteLink: https://t.me/systemswing
   - id: 1311
     name:
-      - {language: en, text: "Soft Skills Lab"}
+      - { language: en, text: "Soft Skills Lab" }
     siteLink: https://skillslab.center
   - id: 1312
     name:
-      - {language: en, text: DoubleCloud}
+      - { language: en, text: DoubleCloud }
     siteLink: https://double.cloud
   - id: 1313
     name:
-      - {language: en, text: "Rotten Grapes Private Limited"}
+      - { language: en, text: "Rotten Grapes Private Limited" }
     siteLink: https://rottengrapes.tech
   - id: 1314
     name:
-      - {language: en, text: Sigmadevs}
+      - { language: en, text: Sigmadevs }
     siteLink: https://sigmadevs.ru
   - id: 1315
     name:
-      - {language: en, text: "Institute of Astronomy of the Russian Academy of Sciences"}
-      - {language: ru, text: "Институт астрономии Российской академии наук"}
+      - { language: en, text: "Institute of Astronomy of the Russian Academy of Sciences" }
+      - { language: ru, text: "Институт астрономии Российской академии наук" }
     siteLink: http://www.inasan.ru
   - id: 1316
     name:
-      - {language: en, text: Cinimex}
-      - {language: ru, text: Синимекс}
+      - { language: en, text: Cinimex }
+      - { language: ru, text: Синимекс }
     siteLink: https://cinimex.ru
   - id: 1317
     name:
-      - {language: en, text: AirtAI}
+      - { language: en, text: AirtAI }
     siteLink: https://airt.ai
   - id: 1318
     name:
-      - {language: en, text: ContactPay}
+      - { language: en, text: ContactPay }
     siteLink: https://www.contactpay.com
   - id: 1319
     name:
-      - {language: en, text: "Digievo Labs"}
+      - { language: en, text: "Digievo Labs" }
     siteLink: https://digievolabs.com
   - id: 1320
     name:
-      - {language: en, text: "Festival of DIY electronics Undefined DIY fest"}
-      - {language: ru, text: "Фестиваль самодельной электроники Undefined DIY fest"}
+      - { language: en, text: "Festival of DIY electronics Undefined DIY fest" }
+      - { language: ru, text: "Фестиваль самодельной электроники Undefined DIY fest" }
     siteLink: https://undefined.chaosconstructions.ru
   - id: 1321
     name:
-      - {language: en, text: AIRI}
+      - { language: en, text: AIRI }
     siteLink: https://airi.net
   - id: 1322
     name:
-      - {language: en, text: Mayflower}
+      - { language: en, text: Mayflower }
     siteLink: https://mayflower.work
   - id: 1323
     name:
-      - {language: en, text: NtechLab}
+      - { language: en, text: NtechLab }
     siteLink: https://ntechlab.ru
   - id: 1324
     name:
-      - {language: en, text: "KIAM RAS"}
-      - {language: ru, text: "Институт прикладной математики им. М. В. Келдыша РАН"}
+      - { language: en, text: "KIAM RAS" }
+      - { language: ru, text: "Институт прикладной математики им. М. В. Келдыша РАН" }
     siteLink: https://www.keldysh.ru
   - id: 1325
     name:
-      - {language: en, text: "GPM Data"}
-      - {language: ru, text: "ГПМ Дата"}
+      - { language: en, text: "GPM Data" }
+      - { language: ru, text: "ГПМ Дата" }
     siteLink: https://gpmdata.ru
   - id: 1326
     name:
-      - {language: en, text: Midian}
-      - {language: ru, text: Мидиан}
+      - { language: en, text: Midian }
+      - { language: ru, text: Мидиан }
     siteLink: https://goodgame.ru
   - id: 1327
     name:
-      - {language: en, text: "Nord Clan"}
-      - {language: ru, text: "Норд Клан"}
+      - { language: en, text: "Nord Clan" }
+      - { language: ru, text: "Норд Клан" }
     siteLink: https://nordclan.com
   - id: 1328
     name:
-      - {language: en, text: "Liza Alert"}
-      - {language: ru, text: ЛизаАлерт}
+      - { language: en, text: "Liza Alert" }
+      - { language: ru, text: ЛизаАлерт }
     siteLink: https://lizaalert.org
   - id: 1329
     name:
-      - {language: en, text: MUNLA}
+      - { language: en, text: MUNLA }
     siteLink: https://munla.ru
   - id: 1330
     name:
-      - {language: en, text: "WOW GROUP"}
+      - { language: en, text: "WOW GROUP" }
     siteLink: https://wowgroup.org
   - id: 1331
     name:
-      - {language: en, text: Habr}
-      - {language: ru, text: Хабр}
+      - { language: en, text: Habr }
+      - { language: ru, text: Хабр }
     siteLink: https://habr.com
   - id: 1332
     name:
-      - {language: en, text: Businesology}
+      - { language: en, text: Businesology }
     siteLink: https://businesology.ru
   - id: 1333
     name:
-      - {language: en, text: LYAV.me}
+      - { language: en, text: LYAV.me }
     siteLink: https://lyav.me
   - id: 1334
     name:
-      - {language: en, text: ECOPSY}
-      - {language: ru, text: ЭКОПСИ}
+      - { language: en, text: ECOPSY }
+      - { language: ru, text: ЭКОПСИ }
     siteLink: https://www.ecopsy.ru
   - id: 1335
     name:
-      - {language: en, text: LifeHack}
+      - { language: en, text: LifeHack }
     siteLink: https://www.alinamikhel.com
   - id: 1336
     name:
-      - {language: en, text: SuperJob}
+      - { language: en, text: SuperJob }
     siteLink: https://www.superjob.ru
   - id: 1337
     name:
-      - {language: en, text: MyDevRel}
+      - { language: en, text: MyDevRel }
     siteLink: https://t.me/My_DevRel
   - id: 1338
     name:
-      - {language: en, text: WebPros}
+      - { language: en, text: WebPros }
     siteLink: https://webpros.com
   - id: 1339
     name:
-      - {language: en, text: "Sourcing School"}
+      - { language: en, text: "Sourcing School" }
     siteLink: http://sourcing-school.ru
   - id: 1340
     name:
-      - {language: en, text: getmatch}
+      - { language: en, text: getmatch }
     siteLink: https://getmatch.ru
   - id: 1341
     name:
-      - {language: en, text: Welltory}
+      - { language: en, text: Welltory }
     siteLink: https://welltory.com
   - id: 1342
     name:
-      - {language: en, text: SymbioWay}
+      - { language: en, text: SymbioWay }
     siteLink: https://www.symbioway.ru
   - id: 1343
     name:
-      - {language: en, text: "Paper Planes"}
+      - { language: en, text: "Paper Planes" }
     siteLink: https://paper-planes.ru
   - id: 1344
     name:
-      - {language: en, text: "Atlantic Money"}
+      - { language: en, text: "Atlantic Money" }
     siteLink: https://atlantic.money
   - id: 1345
     name:
-      - {language: en, text: OSChina}
+      - { language: en, text: OSChina }
     siteLink: https://www.oschina.net
   - id: 1346
     name:
-      - {language: en, text: Explyt}
+      - { language: en, text: Explyt }
     siteLink: https://explyt.ru
   - id: 1347
     name:
-      - {language: en, text: "Tomsk State University"}
-      - {language: ru, text: "Томский государственный университет"}
+      - { language: en, text: "Tomsk State University" }
+      - { language: ru, text: "Томский государственный университет" }
     siteLink: https://tsu.ru
   - id: 1348
     name:
-      - {language: en, text: Amplicode}
+      - { language: en, text: Amplicode }
     siteLink: https://amplicode.ru
   - id: 1349
     name:
-      - {language: en, text: NoBugs}
+      - { language: en, text: NoBugs }
     siteLink: https://nobugs.me
   - id: 1350
     name:
-      - {language: en, text: HFLabs}
+      - { language: en, text: HFLabs }
     siteLink: https://hflabs.ru
   - id: 1351
     name:
-      - {language: en, text: Webpractik}
-      - {language: ru, text: Вебпрактик}
+      - { language: en, text: Webpractik }
+      - { language: ru, text: Вебпрактик }
     siteLink: https://webpractik.ru
   - id: 1352
     name:
-      - {language: en, text: "Effective Technologies"}
+      - { language: en, text: "Effective Technologies" }
     siteLink: https://www.effective-group.ru
   - id: 1353
     name:
-      - {language: en, text: "QA Playground"}
+      - { language: en, text: "QA Playground" }
     siteLink: https://qa-playground.com
   - id: 1354
     name:
-      - {language: en, text: "Yandex 360"}
-      - {language: ru, text: "Яндекс 360"}
+      - { language: en, text: "Yandex 360" }
+      - { language: ru, text: "Яндекс 360" }
     siteLink: https://360.yandex.ru
   - id: 1355
     name:
-      - {language: en, text: KODE}
+      - { language: en, text: KODE }
     siteLink: https://kode.ru
   - id: 1356
     name:
-      - {language: en, text: "Android Broadcast"}
+      - { language: en, text: "Android Broadcast" }
     siteLink: https://androidbroadcast.dev
   - id: 1357
     name:
-      - {language: en, text: AliExpress}
+      - { language: en, text: AliExpress }
     siteLink: https://aliexpress.com
   - id: 1358
     name:
-      - {language: en, text: "DPA Analytics"}
+      - { language: en, text: "DPA Analytics" }
     siteLink: https://dpa-analytics.ru
   - id: 1359
     name:
-      - {language: en, text: dstack}
+      - { language: en, text: dstack }
     siteLink: https://dstack.ai
   - id: 1360
     name:
-      - {language: en, text: Ænix}
+      - { language: en, text: Ænix }
     siteLink: https://aenix.io
   - id: 1361
     name:
-      - {language: en, text: "Clearway Integration"}
+      - { language: en, text: "Clearway Integration" }
     siteLink: https://www.clearwayintegration.com
   - id: 1362
     name:
-      - {language: en, text: TalkHub}
+      - { language: en, text: TalkHub }
     siteLink: https://www.talkhub.io
   - id: 1363
     name:
-      - {language: en, text: "Hilbert Team"}
+      - { language: en, text: "Hilbert Team" }
     siteLink: https://hilbertteam.com
   - id: 1364
     name:
-      - {language: en, text: TAGES}
+      - { language: en, text: TAGES }
     siteLink: https://tages.ru
   - id: 1365
     name:
-      - {language: en, text: Smartly.io}
+      - { language: en, text: Smartly.io }
     siteLink: https://www.smartly.io
   - id: 1366
     name:
-      - {language: en, text: Zelkom}
+      - { language: en, text: Zelkom }
     siteLink: https://www.zelkom.net
   - id: 1367
     name:
-      - {language: en, text: "AESD Lab"}
+      - { language: en, text: "AESD Lab" }
     siteLink: https://aesdlab.com
   - id: 1368
     name:
-      - {language: en, text: "Age of Memes Interactive"}
+      - { language: en, text: "Age of Memes Interactive" }
     siteLink: https://ageofmemes.gg
   - id: 1369
     name:
-      - {language: en, text: LisGames}
-      - {language: ru, text: ЛисГеймс}
+      - { language: en, text: LisGames }
+      - { language: ru, text: ЛисГеймс }
     siteLink: https://www.lisgames.ru
   - id: 1370
     name:
-      - {language: en, text: PREMIER.ONE}
+      - { language: en, text: PREMIER.ONE }
     siteLink: https://premier.one
   - id: 1371
     name:
-      - {language: en, text: Profi}
-      - {language: ru, text: Профи}
+      - { language: en, text: Profi }
+      - { language: ru, text: Профи }
   - id: 1372
     name:
-      - {language: en, text: KODIX}
+      - { language: en, text: KODIX }
     siteLink: https://kodix.ru
   - id: 1373
     name:
-      - {language: en, text: Recraft}
+      - { language: en, text: Recraft }
     siteLink: https://www.recraft.ai
   - id: 1374
     name:
-      - {language: en, text: Algoritmika}
-      - {language: ru, text: Алгоритмика}
+      - { language: en, text: Algoritmika }
+      - { language: ru, text: Алгоритмика }
     siteLink: https://algoritmika.org
   - id: 1375
     name:
-      - {language: en, text: Doka}
-      - {language: ru, text: Дока}
+      - { language: en, text: Doka }
+      - { language: ru, text: Дока }
     siteLink: https://doka.guide
   - id: 1376
     name:
-      - {language: en, text: "Publishing house \"Piter\""}
-      - {language: ru, text: "Издательство «Питер»"}
+      - { language: en, text: "Publishing house \"Piter\"" }
+      - { language: ru, text: "Издательство «Питер»" }
     siteLink: https://www.piter.com
   - id: 1377
     name:
-      - {language: en, text: MOSAIC}
+      - { language: en, text: MOSAIC }
   - id: 1378
     name:
-      - {language: en, text: LaranaTech}
+      - { language: en, text: LaranaTech }
     siteLink: https://larana.tech
   - id: 1379
     name:
-      - {language: en, text: RANEPA}
-      - {language: ru, text: РАНХиГС}
+      - { language: en, text: RANEPA }
+      - { language: ru, text: РАНХиГС }
     siteLink: https://www.ranepa.ru
   - id: 1380
     name:
-      - {language: en, text: "Smart DN"}
-      - {language: ru, text: "Разумные Электрические Сети"}
+      - { language: en, text: "Smart DN" }
+      - { language: ru, text: "Разумные Электрические Сети" }
     siteLink: https://www.smart-dn.ru
   - id: 1381
     name:
-      - {language: en, text: "Spring IO"}
-      - {language: ru, text: "Spring АйО"}
+      - { language: en, text: "Spring IO" }
+      - { language: ru, text: "Spring АйО" }
     siteLink: https://t.me/spring_aio
   - id: 1382
     name:
-      - {language: en, text: "DBA Team"}
+      - { language: en, text: "DBA Team" }
     siteLink: https://dba.team
   - id: 1383
     name:
-      - {language: en, text: "Tools for Brokers"}
-      - {language: ru, text: "ТФБ Девелопмент"}
+      - { language: en, text: "Tools for Brokers" }
+      - { language: ru, text: "ТФБ Девелопмент" }
     siteLink: https://t4b.com
   - id: 1384
     name:
-      - {language: en, text: Tinybird}
+      - { language: en, text: Tinybird }
     siteLink: https://www.tinybird.co
   - id: 1385
     name:
-      - {language: en, text: "BlackHub Games"}
-      - {language: ru, text: "Блэкхаб Геймс"}
+      - { language: en, text: "BlackHub Games" }
+      - { language: ru, text: "Блэкхаб Геймс" }
     siteLink: https://blackhub.games
   - id: 1386
     name:
-      - {language: en, text: "Virtual Minds"}
+      - { language: en, text: "Virtual Minds" }
     siteLink: https://virtualminds.com
   - id: 1387
     name:
-      - {language: en, text: "Spectral::Technologies"}
+      - { language: en, text: "Spectral::Technologies" }
     siteLink: https://spectral.tech
   - id: 1388
     name:
-      - {language: en, text: "C3D Labs"}
+      - { language: en, text: "C3D Labs" }
     siteLink: https://c3dlabs.ru
   - id: 1389
     name:
-      - {language: en, text: "Huawei Russian Research Institute"}
-      - {language: ru, text: "Российский исследовательский институт Huawei"}
+      - { language: en, text: "Huawei Russian Research Institute" }
+      - { language: ru, text: "Российский исследовательский институт Huawei" }
     siteLink: https://career.huawei.ru/rri/
   - id: 1390
     name:
-      - {language: en, text: Getmobit}
+      - { language: en, text: Getmobit }
     siteLink: https://getmobit.ru
   - id: 1391
     name:
-      - {language: en, text: Eltex}
+      - { language: en, text: Eltex }
     siteLink: https://eltex-co.ru
+  - id: 1392
+    name:
+      - { language: en, text: "Buralo Technologies" }
+    siteLink: https://www.buralotech.com
+  - id: 1393
+    name:
+      - { language: en, text: Koronatech }
+    siteLink: https://koronatech.ru
+  - id: 1394
+    name:
+      - { language: en, text: OpenIDE }
+    siteLink: https://openide.ru
+  - id: 1395
+    name:
+      - { language: en, text: 01.tech }
+    siteLink: https://01.tech
+  - id: 1396
+    name:
+      - { language: en, text: "Scientific Programming Centre" }
+      - { language: ru, text: "Центр научного программирования" }
+    siteLink: https://sciprog.center
+  - id: 1397
+    name:
+      - { language: en, text: Paidora }
+    siteLink: https://paidora-soft.com
