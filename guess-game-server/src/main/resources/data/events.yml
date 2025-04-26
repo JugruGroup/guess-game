@@ -658,10 +658,23 @@ events:
     days:
       - {startDate: "2024-10-10", endDate: "2024-10-10", placeId: 24}
       - {startDate: "2024-10-17", endDate: "2024-10-18", placeId: 31}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://heisenbug.ru/en/archive/2024 Autumn/"}
+      - {language: ru, text: "https://heisenbug.ru/archive/2024 Autumn/"}
     talkIds: [5922, 5923, 5924, 5925, 5926, 5927, 5928, 5929, 5930, 5931, 5932, 5933, 5934, 5935, 5936, 5937, 5938, 5939,
               5940, 5941, 5942, 5943, 5944, 5945, 5946, 5947, 5948, 5949, 5950, 5951, 5952, 5953, 5954, 5955, 5956, 5957, 5958,
               5959, 5960, 5961, 5962, 5963, 5964, 5965, 5966, 5967, 5968, 5969, 5970, 5971]
+  - eventTypeId: 3
+    name:
+      - {language: en, text: "Heisenbug 2025 Spring"}
+    days:
+      - {startDate: "2025-04-05", endDate: "2025-04-06", placeId: 7}
+    siteLink:
+      - {language: en, text: "https://heisenbug.ru/en/archive/2025 Spring/"}
+      - {language: ru, text: "https://heisenbug.ru/archive/2025 Spring/"}
+    talkIds: [6272, 6273, 6274, 6275, 6276, 6277, 6278, 6279, 6280, 6281, 6282, 6283, 6284, 6285, 6286, 6287, 6288, 6289,
+              6290, 6291, 6292, 6293, 6294, 6295, 6296, 6297, 6298, 6299, 6300, 6301, 6302, 6303, 6304, 6305, 6306, 6307, 6308,
+              6309, 6310, 6311]
   # HolyJS
   - eventTypeId: 4
     name:

@@ -4998,3 +4998,12 @@ companies:
     name:
       - { language: en, text: Paidora }
     siteLink: https://paidora-soft.com
+  - id: 1398
+    name:
+      - {language: en, text: "Speech Technology Center"}
+      - {language: ru, text: ЦРТ}
+    siteLink: https://www.speechpro.ru
+  - id: 1399
+    name:
+      - {language: en, text: BugBuster}
+    siteLink: https://bug-buster.ai
