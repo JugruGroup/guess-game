@@ -20,7 +20,9 @@ companySynonyms:
     synonyms: [
       Alfa-Lab,
       "Alpha Laboratory",
-      "Альфа-Банк: Альфа-Лаборатория"
+      "Альфа-Банк: Альфа-Лаборатория",
+      "Alfa-Bank (Belarus)",
+      "Альфа-Банк (Беларусь)"
     ]
   - name: "Align Technology"
     synonyms: [
@@ -555,6 +557,10 @@ companySynonyms:
     synonyms: [
       "PVS Studio"
     ]
+  - name: "Qameta Software"
+    synonyms: [
+      "Allure Team"
+    ]
   - name: "Querify Labs"
     synonyms: [
       CedrusData
@@ -838,6 +844,7 @@ companySynonyms:
     ]
   - name: Yandex
     synonyms: [
+      "Alice and Yandex Smart Devices",
       "Yandex.Classifieds Technology",
       "Yandex Cloud",
       Yandex.Cloud,
@@ -845,6 +852,7 @@ companySynonyms:
       "Yandex Delivery",
       Yandex.Drive,
       "Yandex Eda",
+      "Yandex Fintech",
       "Yandex Games",
       "Yandex Go",
       "Yandex GO",
@@ -866,7 +874,8 @@ companySynonyms:
       "Yandex (Auto.ru)",
       "Yandex / Auto.ru",
       "Yandex 360",
-      Дзен
+      "Алиса и Умные устройства Яндекса",
+      Дзен,
       "Кинопоиск (Яндекс)",
       Кинопоиск,
       "Техплатформа Екома и Райдтеха Яндекса",
@@ -891,6 +900,7 @@ companySynonyms:
       Яндекс.Такси,
       "Яндекс.Такси Технологии",
       Яндекс.Толока,
+      "Яндекс Финтех",
       "Яндекс (Авто.ру)",
       "Яндекс / Авто.ру",
       "Яндекс 360",

@@ -2813,5 +2813,12 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("JPoint 2025", null, List.of(7L)),
 //                        Map.of(new NameCompany("Владимир Озеров", new Company(782, "Querify Labs")), 136L),
 //                        Set.of("Lightning Talks", "Шоу «Интуиция» от Яндекс 360", "Закрытие конференции")));
+//        loadTalksSpeakersEvent(Conference.HEISENBUG, LocalDate.of(2025, 4, 5), "2025 Spring",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("Heisenbug 2025 Spring", null, List.of(7L)),
+//                        Map.of(new NameCompany("Алексей Иванов", null), 2533L),
+//                        Set.of("Открытие конференции Heisenbug 2025 Spring", "Закрытие конференции Heisenbug 2025 Spring",
+//                                "ASK EXPERT: обсудите свой вопрос с экспертом", "Открытый микрофон",
+//                                "Ozon IT MuzLoto")));
     }
 }
