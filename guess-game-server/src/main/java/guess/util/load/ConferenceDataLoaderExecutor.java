@@ -2820,5 +2820,10 @@ public class ConferenceDataLoaderExecutor {
 //                        Set.of("Открытие конференции Heisenbug 2025 Spring", "Закрытие конференции Heisenbug 2025 Spring",
 //                                "ASK EXPERT: обсудите свой вопрос с экспертом", "Открытый микрофон",
 //                                "Ozon IT MuzLoto")));
+//        loadTalksSpeakersEvent(Conference.HOLY_JS, LocalDate.of(2025, 4, 7), "2025 Spring",
+//                LoadSettings.eventTemplateAndKnownSpeakerIdsMapAndInvalidTalksSet(
+//                        createEventTemplate("HolyJS 2025 Spring", null, List.of(7L)),
+//                        Map.of(new NameCompany("Иван Клименко", null), 3702L),
+//                        Set.of("Code in the Dark", "Открытый микрофон", "Закрытие конференции HolyJS 2025 Spring")));
     }
 }
