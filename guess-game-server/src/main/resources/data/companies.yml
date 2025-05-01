@@ -5007,3 +5007,49 @@ companies:
     name:
       - {language: en, text: BugBuster}
     siteLink: https://bug-buster.ai
+  - id: 1400
+    name:
+      - {language: en, text: Boravto}
+      - {language: ru, text: Боравто}
+    siteLink: https://borauto.ru
+  - id: 1401
+    name:
+      - {language: en, text: setka.design}
+    siteLink: https://setka.design
+  - id: 1402
+    name:
+      - {language: en, text: R7}
+      - {language: ru, text: Р7}
+    siteLink: https://r7-office.ru
+  - id: 1403
+    name:
+      - {language: en, text: Metabase}
+    siteLink: https://www.metabase.com
+  - id: 1404
+    name:
+      - {language: en, text: "YouTube channel “Faib\""}
+      - {language: ru, text: "YouTube-канал «Файб»"}
+    siteLink: https://www.youtube.com/@faib
+  - id: 1405
+    name:
+      - {language: en, text: GamePix}
+    siteLink: https://www.gamepix.com
+  - id: 1406
+    name:
+      - {language: en, text: "YouTube-channel \"CosyFrontend\""}
+      - {language: ru, text: "YouTube-канал \"CosyFrontend\""}
+    siteLink: https://www.youtube.com/@CosyFrontendNastia
+  - id: 1407
+    name:
+      - {language: en, text: Enicraft}
+      - {language: ru, text: Эникрафт}
+    siteLink: https://ethnicraft.com
+  - id: 1408
+    name:
+      - {language: en, text: Sheverev}
+    siteLink: https://www.sheverev.com
+  - id: 1409
+    name:
+      - {language: en, text: Next}
+      - {language: ru, text: Далее}
+    siteLink: https://dalee.ru
