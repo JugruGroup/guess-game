@@ -2825,5 +2825,10 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("HolyJS 2025 Spring", null, List.of(7L)),
 //                        Map.of(new NameCompany("Иван Клименко", null), 3702L),
 //                        Set.of("Code in the Dark", "Открытый микрофон", "Закрытие конференции HolyJS 2025 Spring")));
+//        loadTalksSpeakersEvent(Conference.MOBIUS, LocalDate.of(2025, 4, 9), "2025 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Mobius 2025 Spring", null, List.of(7L)),
+//                        Set.of("Открытие конференции Mobius 2025 Spring", "Ozon IT MuzLoto", "Плюс вайб-кодинг",
+//                                "Закрытие конференции Mobius 2025 Spring")));
     }
 }
