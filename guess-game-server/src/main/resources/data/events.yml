@@ -1489,11 +1489,22 @@ events:
     days:
       - {startDate: "2024-10-11", endDate: "2024-10-11", placeId: 24}
       - {startDate: "2024-10-19", endDate: "2024-10-20", placeId: 31}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://mobiusconf.com/en/archive/2024 Autumn/"}
+      - {language: ru, text: "https://mobiusconf.com/archive/2024 Autumn/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236ouaAn1De1gyEZMqVckvQWb
     talkIds: [5972, 5973, 5974, 5975, 5976, 5977, 5978, 5979, 5980, 5981, 5982, 5983, 5984, 5985, 5986, 5987, 5988, 5989,
               5990, 5991, 5992, 5993, 5994, 5995, 5996, 5997, 5998, 5999, 6000, 6001, 6002, 6003, 6004, 6005, 6006, 6007, 6008,
               6009, 6010, 6011, 6012, 6013, 6014, 6015, 6016, 6017, 6018, 6019, 6020, 6021, 6022, 6023]
+  - eventTypeId: 9
+    name:
+      - {language: en, text: "Mobius 2025 Spring"}
+    days:
+      - {startDate: "2025-04-09", endDate: "2025-04-10", placeId: 7}
+    siteLink: []
+    talkIds: [6354, 6355, 6356, 6357, 6358, 6359, 6360, 6361, 6362, 6363, 6364, 6365, 6366, 6367, 6368, 6369, 6370, 6371,
+              6372, 6373, 6374, 6375, 6376, 6377, 6378, 6379, 6380, 6381, 6382, 6383, 6384, 6385, 6386, 6387, 6388, 6389, 6390,
+              6391, 6392, 6393, 6394, 6395, 6396, 6397, 6398]
   # SPTDC
   - eventTypeId: 10
     name:

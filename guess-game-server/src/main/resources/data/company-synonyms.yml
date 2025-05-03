@@ -838,6 +838,11 @@ companySynonyms:
       "X5 Tech",
       "X5 Digital"
     ]
+  - name: X
+    synonyms: [
+      Twitter,
+      "X (ex. Twitter)"
+    ]
   - name: "Yahoo!"
     synonyms: [
       "Yahoo! Research"

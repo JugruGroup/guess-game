@@ -5053,3 +5053,11 @@ companies:
       - {language: en, text: Next}
       - {language: ru, text: Далее}
     siteLink: https://dalee.ru
+  - id: 1410
+    name:
+      - {language: en, text: X}
+    siteLink: https://x.com
+  - id: 1411
+    name:
+      - {language: en, text: Droider}
+    siteLink: https://www.youtube.com/@Droiderru
