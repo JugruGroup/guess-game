@@ -31825,26 +31825,27 @@ speakers:
       - {language: ru, text: "Максим Чернухин"}
     companyIds: [665]
     bio:
-      - {language: en, text: "<p>10 years in IT. Graduated from Bauman Moscow State Technical University. He has worked with\
-            \ different languages of back and front end development and participated in projects with machine learning and\
-            \ big data.<br /><br />He created a digital sales platform for Alfa-Bank, which is successfully used outside the\
-            \ company, and its implementation increased the number of sales by 2-4 times.<br /><br />At SberLife Insurance\
-            \ as Executive Director of the Technology Department, he is responsible for improving customer experience and\
-            \ digitalization of customer interaction channels, as well as managing the development of architecture and infrastructure\
-            \ of projects taking into account the full software lifecycle.<br /><br />Leads the Cloud #9 community on cloud\
-            \ adoption in the banking industry. Project Director of Skillbox. Speaker at industry and business events.<br\
-            \ /><br />Always loved the challenges he finds both in IT and related fields such as hiring employees, motivation\
-            \ management or climbing Elbrus.<br /><br /></p>"}
+      - language: en
+        text: "<p>10 years in IT. Graduated from Bauman Moscow State Technical University. I managed to work with different\
+            \ languages ​ ​ of backend and frontend development and participate in projects with machine learning and big\
+            \ data. Created a digital sales platform at Alfa-Bank, which is successfully used outside the company, and its\
+            \ implementation increased the number of sales by 2-4 times.</p>\n<p>In SberLife Insurance, as Executive Director\
+            \ of Technology Management, I am responsible for improving the customer experience and digitalizing customer interaction\
+            \ channels, AI strategy, and also manage the development of the architecture and infrastructure of projects, taking\
+            \ into account the full software life cycle.</p>\n<p>I participate in the development of the IT development strategy\
+            \ in the FinTech sector in the AFT. Skillbox Project Director. Speaker of industry and business events.</p>\n\
+            <p>I have always loved the complex and interesting tasks that I find both in IT and in related areas, such as\
+            \ hiring employees, managing motivation or climbing Elbrus.</p>"
       - language: ru
-        text: "<p>10 лет в IT. Окончил МГТУ им. Н. Э. Баумана. Успел поработать с разными языками back- и front-разработки\
-            \ и поучаствовать в проектах c машинным обучением и большими данными.</p>\n<p>Создал платформу цифровых продаж\
-            \ в Альфа-Банке, которая успешно используется за пределами компании, а ее внедрение увеличило число продаж в 2-4\
-            \ раза.</p>\n<p>В СберСтраховании жизни на позиции исполнительного директора управления технологий отвечает за\
-            \ улучшение клиентского опыта и цифровизацию каналов взаимодействия с клиентами, а также управляет разработкой\
-            \ архитектуры и инфраструктуры проектов с учетом полного жизненного цикла ПО.</p>\n<p>Ведет комьюнити &laquo;Cloud\
-            \ №9&raquo; по внедрению облачных технологий в банковскую индустрию. Проектный директор Skillbox. Спикер отрас\
-            левых и деловых мероприятий.</p>\n<p>Всегда любил сложные и интересные задачи, которые находит как в IT, так и\
-            \ в смежных областях, таких как найм сотрудников, управление мотивацией или восхождение на Эльбрус.</p>"
+        text: "<p>10 лет в IT. Окончил МГТУ им. Н. Э. Баумана. Успел поработать с разными языками backend- и frontend-разр\
+            аботки и поучаствовать в проектах с машинным обучением и большими данными. Создал платформу цифровых продаж в\
+            \ Альфа-Банке, которая успешно используется за пределами компании, а ее внедрение увеличило число продаж в 2-4\
+            \ раза.</p>\n<p>В СберСтраховании жизни на позиции исполнительного директора управления технологий отвечаю за\
+            \ улучшение клиентского опыта и цифровизацию каналов взаимодействия с клиентами, стратегию AI, а также управля\
+            ю разработкой архитектуры и инфраструктуры проектов с учетом полного жизненного цикла ПО.</p>\n<p>Участвую в ф\
+            ормировании стратегии развития IT в FinTech-секторе в АФТ. Проектный директор Skillbox. Спикер отраслевых и де\
+            ловых мероприятий.</p>\n<p>Всегда любил сложные и интересные задачи, которые нахожу как в IT, так и в смежных\
+            \ областях, таких как найм сотрудников, управление мотивацией или восхождение на Эльбрус.</p>"
   - id: 2212
     photoFileName: 02212.jpg
     photoUpdatedAt: "2024-03-27T11:37:58Z"
@@ -32278,10 +32279,10 @@ speakers:
     companyIds: [613]
     bio:
       - {language: en, text: "<p>MBA, Systems Analysis Development Lead in Alfa-Bank. Sovcombank Challenge 2021 Winner, co-author\
-            \ of the systems analysts training program from SkillFactory.</p>"}
+            \ of the systems analysts training program from Skillfactory.</p>"}
       - {language: ru, text: "<p>МВА, руководитель направления развития компетенции системного анализа АО &laquo;Альфа-Бан\
             к&raquo;. Победитель конкурса Sovcombank Challenge 2021 в номинации &laquo;Системный анализ&raquo;, соавтор пр\
-            ограммы подготовки системных аналитиков SkillFactory.</p>"}
+            ограммы подготовки системных аналитиков Skillfactory.</p>"}
     gitHub: alobzov
     habr: alobzov
   - id: 2238
@@ -35838,13 +35839,13 @@ speakers:
       - {language: en, text: "<p>Lead Business Analyst. Business consultant. Co-founder and until the end of 2021 president\
             \ of the Russian branch of the International Institute of Business Analysis (IIBA Russia), current regional director\
             \ of IIBA. Leader of the project and developer of the State Professional Standard Business Analyst in the Russian\
-            \ Federation, project manager, editor and translator of A Guide to the Business Analysis Body of Knowledge (BABOK\
-            \ Guide). Author of training courses in business analysis at the Luxoft Training Center Moscow, LABA Kiev.</p>"}
+            \ Federation. Project manager, editor and translator of A Guide to the Business Analysis Body of Knowledge (BABOK\
+            \ Guide). Author of training courses in business analysis at the Luxoft Training Center Moscow, Laba Kiev.</p>"}
       - {language: ru, text: "<p>Ведущий бизнес-аналитик. Бизнес-консультант. Сооснователь и до конца 2021 года президент\
-            \ Российского отделения Международного института бизнес-анализа (IIBA Russia), ныне &mdash; региональный дирек\
-            тор IIBA. Руководитель проекта и разработчик Государственного Профессионального стандарта &laquo;Бизнес-аналит\
-            ик&raquo; в РФ, руководитель проекта, редактор и переводчик проекта A Guide to the Business Analysis Body of Knowledge\
-            \ (BABOK Guide). Автор учебных курсов по бизнес-анализу УЦ Luxoft Москва, ЛАБА Киев.</p>"}
+            \ Российского Отделения Международного института бизнес-анализа (IIBA Russia), сейчас &mdash; региональный дир\
+            ектор IIBA. Руководитель проекта и разработчик государственного профессионального стандарта &laquo;Бизнес-анал\
+            итик&raquo; в РФ. Руководитель проекта, редактор и переводчик проекта A Guide to the Business Analysis Body of\
+            \ Knowledge (BABOK Guide). Автор учебных курсов по бизнес-анализу УЦ Luxoft Москва, Лаба Киев.</p>"}
   - id: 2495
     photoFileName: 02495.jpg
     photoUpdatedAt: 2022-11-21T13:17:47Z[UTC]
@@ -35924,11 +35925,12 @@ speakers:
       - {language: ru, text: "Михаил Максимов"}
     companyIds: [975]
     bio:
-      - {language: en, text: "<p>Producer, business analyst. Author and host of the YouTube channel for business and systems\
-            \ analysts \"Cifra Bukva\". TOGAF certified. One of the leaders of Thinking Club St. Petersburg.</p>"}
+      - {language: en, text: "<p>Producer, business analyst. Candidate of Economic Sciences. Author and host of the YouTube\
+            \ channel for business and systems analysts <a href=\"https://www.youtube.com/@digitletter\">\"Cifra Bukva\"</a>.\
+            \ TOGAF certified. One of the leaders of Thinking Club St. Petersburg.</p>"}
       - {language: ru, text: "<p>Продакт, бизнес-аналитик. Кандидат экономических наук. Автор и ведущий YouTube-канала для\
-            \ системных и бизнес-аналитиков &laquo;Цифра Буква&raquo;. TOGAF certified. Один из лидеров Клуба Мышления Сан\
-            кт-Петербург.</p>"}
+            \ системных и бизнес-аналитиков <a href=\"https://www.youtube.com/@digitletter\">&laquo;Цифра Буква&raquo;</a>.\
+            \ TOGAF certified. Один из лидеров Клуба мышления Санкт-Петербург.</p>"}
     twitter: mikhmax
   - id: 2501
     photoFileName: 02501.jpg
@@ -35968,15 +35970,16 @@ speakers:
     companyIds: [1038]
     bio:
       - language: en
-        text: "<p>Andrey has been involved in the development of IT systems and digital products for more than 10 years. He\
-            \ was a developer, analyst, team leader, product manager in classical banking, large retail and fintech startups.</p>\n\
-            <p>Founder and teacher of <a href=\"https://nextway.pro\" target=\"_blank\" rel=\"noopener noreferrer\">NextWay</a>\
-            \ school of analysis and design.</p>"
+        text: "<p>Have been involved in the development of IT systems and digital products for more than 10 years. Was a developer,\
+            \ analyst, team leader, product manager in classical banking, large retail and fintech startups.</p>\n<p>Founder\
+            \ and teacher of <a href=\"https://nextway.pro\" target=\"_blank\" rel=\"noopener noreferrer\">NextWay</a> school\
+            \ of analysis and design. Maintain a Telegram channel about analyzing and architecting <a href=\"https://t.me/another_sa\"\
+            >\"Yet Another SA\"</a>.</p>"
       - language: ru
         text: "<p>Более 10 лет в разработке IT-систем и цифровых продуктов. Был разработчиком, аналитиком, тимлидом, руков\
             одителем продукта в классическом банкинге, крупном ритейле, финтех-стартапах.</p>\n<p>Основатель и преподавате\
             ль школы анализа и проектирования <a href=\"https://nextway.pro\" target=\"_blank\" rel=\"noopener noreferrer\"\
-            >NextWay</a>. Ведет Telegram-канал об анализе и архитектуре <a href=\"https://t.me/another_sa\" target=\"_blank\"\
+            >NextWay</a>. Веду Telegram-канал об анализе и архитектуре <a href=\"https://t.me/another_sa\" target=\"_blank\"\
             \ rel=\"noopener\">Yet another SA</a>.</p>"
   - id: 2504
     photoFileName: 02504.jpg
@@ -39538,20 +39541,32 @@ speakers:
             р Метсервис, Брянсксельмаш.</p>"
   - id: 2746
     photoFileName: 02746.jpg
-    photoUpdatedAt: "2023-07-19T15:29:49Z"
+    photoUpdatedAt: "2025-04-10T09:23:08Z"
     name:
       - {language: en, text: "Denis Beskov"}
       - {language: ru, text: "Денис Бесков"}
     companyIds: [1042]
     bio:
       - language: en
-        text: "<ul>\n<li>Founder and head of the Systems.Education school.</li>\n<li>Main author of professional standards\
-            \ for system analyst and IT product manager.</li>\n<li>Founder of Product Camp Russia and Product.Vision consulting\
-            \ company.</li>\n</ul>"
+        text: "<p>Founder and CPO of Systems.Education. The main author of the first generation of professional standards\
+            \ for system analyst and IT product manager.</p>\n<p>Designer of business solutions: from studying the customer's\
+            \ problem to developing use cases and reporting structure.</p>\n<p>Main domains and clients: logistics, transportation\
+            \ &mdash; Trucker Path, Rosavtotrans; unmanned cars &mdash; Atom; fintech &mdash; Apibank; engineering systems,\
+            \ CAD &mdash; INGIPRO (BIM).</p>\n<p>Has been in business and systems analysis for more than 10 years. Managed\
+            \ a systems analysis department of more than 35 people. 5 years was a product manager, more than two years &mdash;\
+            \ system architect, 5 years &mdash; developer of ETL, DWH, reports.</p>\n<p>I have RK6 diploma of Bauman Moscow\
+            \ State Technical University and CPRE certificate.</p>\n<p>Organizer of conferences SystemsDesign, LAF-2013, ProductCampMoscow\
+            \ 2011, TrainingLabs.</p>"
       - language: ru
-        text: "<ul>\n<li>Основатель и руководитель школы Systems.Education.</li>\n<li>Основной автор первого поколения про\
-            фстандартов системного аналитика и менеджера ИТ-продуктов.</li>\n<li>Основатель баркэмпов Product Camp Russia\
-            \ и консалтинговой компании Product.Vision.</li>\n</ul>"
+        text: "<p>Основатель и CPO школы <a href=\"https://systems.education/\">Systems.Education</a>. Основной автор перв\
+            ого поколения профстандартов системного аналитика и менеджера ИТ-продуктов.</p>\n<p>Проектировщик бизнес-решен\
+            ий: от изучения проблемы заказчика до разработки сценариев использования и структуры отчетов.</p>\n<p>Основные\
+            \ домены и клиенты: логистика, перевозки &mdash;Trucker Path, Росавтотранс; беспилотные авто &mdash; Атом; фин\
+            тех&mdash; Apibank; инженерные системы, САПР &mdash; ИНГИПРО (BIM).</p>\n<p>В бизнес- и системном анализе боле\
+            е 10 лет. Руководил отделом системного анализа численностью более 35 человек. 5 лет был менеджером продуктов,\
+            \ более двух лет &mdash; системным архитектором, 5 лет &mdash; разработчиком ETL, DWH, отчетов.</p>\n<p>Имею д\
+            иплом РК6 МГТУ им. Н. Э. Баумана и сертификат CPRE.</p>\n<p>Организатор конференций SystemsDesign, ЛАФ-2013, ProductCampMoscow\
+            \ 2011, TrainingLabs.</p>"
     habr: beskov
   - id: 2747
     photoFileName: 02747.jpg
@@ -39657,14 +39672,14 @@ speakers:
             работке. Участвовала в проектах по созданию мобильных и web-приложений для ведущих мировых компаний.</p>"}
   - id: 2754
     photoFileName: 02754.jpg
-    photoUpdatedAt: "2022-11-27T19:18:01Z"
+    photoUpdatedAt: "2025-04-07T10:40:41Z"
     name:
-      - {language: en, text: "Dmitry Satin"}
+      - {language: en, text: "Dmitrii Satin"}
       - {language: ru, text: "Дмитрий Сатин"}
-    companyIds: []
+    companyIds: [1125]
     bio:
-      - {language: en, text: "<p>CEO of USABILITYLAB. Engineering psychologist, in UX consulting since 1997.</p>"}
-      - {language: ru, text: "<p>Генеральный директор USABILITYLAB. Инженерный психолог, в UX-консалтинге с 1997 года.</p>"}
+      - {language: en, text: "<p>CEO of UsabilityLab. Engineering psychologist, have been in UX consulting since 1997.</p>"}
+      - {language: ru, text: "<p>Генеральный директор UsabilityLab. Инженерный психолог, в UX-консалтинге с 1997 года.</p>"}
     habr: dmitrysatin
   - id: 2755
     photoFileName: 02755.jpg
@@ -50152,14 +50167,12 @@ speakers:
       - {language: ru, text: "Валерия Солодовникова"}
     companyIds: [1034]
     bio:
-      - language: en
-        text: "<p>Expert in building and optimising business processes.</p>\n<p>1. Started in aviation, continued in the public\
-            \ sector, and eventually gave it all up for the cloud.</p>\n<p>2. Helps companies understand their processes better\
-            \ and optimise them.</p>\n<p>3. Likes to make lists and follow them.</p>"
-      - language: ru
-        text: "<p>Эксперт в построении и оптимизации бизнес-процессов.</p>\n<p>1. Начала в авиации, продолжила в госсектор\
-            е, а по итогу бросила все ради облаков.</p>\n<p>2. Помогает компаниям понимать свои процессы лучше и оптимизир\
-            овать их.</p>\n<p>3. Любит составлять списки и следовать им.</p>"
+      - {language: en, text: "<p>A traveler in the world of business processes with a path that has taken me through government\
+            \ and cloud horizons. I skillfully bring order to chaos, helping companies unlock the secrets of their processes\
+            \ and reach new heights of efficiency.</p>"}
+      - {language: ru, text: "<p>Путешественник в мире бизнес-процессов, чей путь пролегал через государственные структуры\
+            \ и облачные горизонты. Искусно навожу порядок в хаосе, помогая компаниям раскрыть тайны своих процессов и дос\
+            тичь новых высот эффективности.</p>"}
   - id: 3450
     photoFileName: 03450.jpg
     photoUpdatedAt: "2024-09-25T08:10:17Z"
@@ -50259,8 +50272,7 @@ speakers:
     companyIds: [1311]
     bio:
       - {language: en, text: "<p>CEO of Soft Skills Lab.</p>"}
-      - language: ru
-        text: "<p>CEO Soft Skills Lab.</p>"
+      - {language: ru, text: "CEO Soft Skills Lab."}
   - id: 3456
     photoFileName: 03456.jpg
     photoUpdatedAt: "2024-07-29T09:29:12Z"
@@ -56924,3 +56936,71 @@ speakers:
             _blank\" rel=\"noopener noreferrer\">Droider</a>, где вместе с командой рассказывает о новых гаджетах, техноло\
             гиях и всем, что связано с миром IT. Митя давно &laquo;в теме&raquo; и объясняет даже самые сложные штуки дост\
             упно для всех.</p>"}
+  - id: 3883
+    photoFileName: 03883.jpg
+    photoUpdatedAt: "2025-04-07T14:25:01Z"
+    name:
+      - {language: en, text: "Irina Shishkina"}
+      - {language: ru, text: "Ирина Шишкина"}
+    companyIds: [1412]
+    bio:
+      - {language: en, text: "<p>Project manager since 2007. Since 2014 &mdash; the head of my own consulting studio. Author\
+            \ and developer of the periodic system of project elements. Writer, business journalist, project designer.</p>"}
+      - {language: ru, text: "<p>Руководитель проектов с 2007 года. С 2014-го &mdash; руководитель своей консалтинговой ст\
+            удии. Автор и разработчик периодической системы проектных элементов. Писатель, бизнес-журналист, дизайнер прое\
+            ктов.</p>"}
+  - id: 3884
+    photoFileName: 03884.jpg
+    photoUpdatedAt: "2025-04-03T13:25:37Z"
+    name:
+      - {language: en, text: "Galina Shirankova"}
+      - {language: ru, text: "Галина Ширанкова"}
+    companyIds: [611]
+    bio:
+      - {language: en, text: "<p>Product Unit lead in Avito, having more than 5 years of product experience. Before that I\
+            \ worked as a business and system analyst for 6 years on automation projects at Gazprom, LANIT and T1. I have\
+            \ in my pocket a cool story about how a business analyst can become a product analyst and what is the difference\
+            \ in approaches to work.</p>"}
+      - {language: ru, text: "Product Unit lead в Авито, более 7 лет продуктового опыта Авито, VK, MTS. До этого 5 лет биз\
+            нес- и системного анализа на проектах автоматизации Газпрома, в ЛАНИТ и T1. Автор канала \"Полтора продакта\"\
+            \ https://t.me/poltora_producta"}
+  - id: 3885
+    photoFileName: 03885.jpg
+    photoUpdatedAt: "2025-04-03T13:35:54Z"
+    name:
+      - {language: en, text: "Dmitrii Bezuglyi"}
+      - {language: ru, text: "Дмитрий Безуглый"}
+    companyIds: [1413]
+    bio:
+      - language: en
+        text: "<p>I am professionally involved in projects and methodology for product organization development (Change &amp;\
+            \ Transform).</p>\n<p>I am a fan of:</p>\n<ul>\n<li><strong>Foresights and Future back approach</strong>. Designing\
+            \ and expert facilitation of strategy sessions allows me to not just work with the best teams, but for years after\
+            \ the foresight to assess and deepen my understanding of what and how works in selecting and making strategic\
+            \ decisions.</li>\n<li><strong>Deep knowledge of product management</strong>. Creating customized programs since\
+            \ 2010 and mentoring product teams and founders helps me gather up-to-date information on what works and doesn't\
+            \ work in the market, rather than blindly believing the next misunderstood hype.</li>\n<li><strong>Systems thinking\
+            \ and architecture</strong>. Over 15 years in digital systems development. Full Stack: real-world experience from\
+            \ chip design and CIO position to building and managing a 50-person team in a Scrum of Scrums format. Became CIO\
+            \ at 24.</li>\n</ul>\n<p>Founder of <a href=\"http://master-strategy.ru/\">Master Strategy</a>. I know how to\
+            \ work with high-performance teams. Certified CCE ICF team coach, Pinpoint facilitator.</p>\n<p>Lecturer at Higher\
+            \ School of Economics, Russian Academy of National Economy and Public Administration, MBA Mail.Ru Group since\
+            \ 2007. Learned from the experience of: Avito, Cian, Kaspersky, Yandex, Raiffeisen Bank, Wargaming.&nbsp;</p>\n\
+            <p>My main hobby is popularization of strategic thinking in product management. I have authored more than 80 talks\
+            \ at specialized conferences. I like to share my knowledge.</p>"
+      - language: ru
+        text: "<p>Профессионально занимаюсь проектами и методологией развития продуктовых организаций (Change &amp; Transform).</p>\n\
+            <p>Я фанат:</p>\n<ul>\n<li><strong>Форсайтов и Future back-подхода</strong>. Проектирование и экспертная фасил\
+            итация стратегических сессий позволяет мне не просто работать с лучшими командами, но и долгие годы после форс\
+            айта оценивать и углублять понимание, что и как работает в выборе и принятии стратегических решений.</li>\n<li><strong>Г\
+            лубокого знания продуктового управления.</strong> Создание адаптированных программ с 2010 года и менторинг про\
+            дуктовых команд и основателей помогает мне собирать актуальную информацию о том, что работает и не работает на\
+            \ рынке, а не слепо верить в очередной неправильно понятый хайп.</li>\n<li><strong>Системного мышления и архит\
+            ектуры</strong>. Более 15 лет в разработке цифровых систем. Full Stack: реальный опыт от проектирования чипов\
+            \ и позиции CIO до создания и управления командой в формате Scrum of Scrums на 50 человек. Стал CIO в 24.</li>\n\
+            </ul>\n<p>Основатель <a href=\"http://master-strategy.ru/\">Master Strategy</a>. Умею работать с high-performance\
+            \ teams. Сертифицированный командный коуч CCE ICF, фасилитатор Pinpoint.</p>\n<p>Преподаватель ВШЭ, РАНХиГС, MBA\
+            \ Mail.Ru Group с 2007 года. Учился на опыте: Авито, Циан, Kaspersky, Яндекса, Райффайзен Банка, Wargaming.&nbsp;</p>\n\
+            <p>Мое основное хобби &mdash; популяризация стратегического мышления в управлении продуктами. Автор более 80 д\
+            окладов на профильных конференциях. Люблю делиться знаниями.</p>"
+    habr: cless75

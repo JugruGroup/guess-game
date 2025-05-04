@@ -2830,5 +2830,9 @@ public class ConferenceDataLoaderExecutor {
 //                        createEventTemplate("Mobius 2025 Spring", null, List.of(7L)),
 //                        Set.of("Открытие конференции Mobius 2025 Spring", "Ozon IT MuzLoto", "Плюс вайб-кодинг",
 //                                "Закрытие конференции Mobius 2025 Spring")));
+//        loadTalksSpeakersEvent(Conference.FLOW, LocalDate.of(2025, 4, 26), "2025 Spring",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("Flow 2025 Spring", null, List.of(24L)),
+//                        Set.of("Открытие конференции Flow 2025 Spring", "Закрытие конференции Flow 2025 Spring")));
     }
 }
