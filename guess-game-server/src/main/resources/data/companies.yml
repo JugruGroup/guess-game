@@ -5061,3 +5061,12 @@ companies:
     name:
       - {language: en, text: Droider}
     siteLink: https://www.youtube.com/@Droiderru
+  - id: 1412
+    name:
+      - {language: en, text: "Creative Consulting Studio “Neprostoidea”"}
+      - {language: ru, text: "Студия креативного консалтинга «Не просто идея»"}
+    siteLink: https://neprostoidea.com
+  - id: 1413
+    name:
+      - {language: en, text: "System Approach"}
+    siteLink: https://www.system-approach.ru

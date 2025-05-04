@@ -3115,10 +3115,19 @@ events:
     days:
       - {startDate: "2024-09-17", endDate: "2024-09-17", placeId: 24}
       - {startDate: "2024-09-24", endDate: "2024-09-25", placeId: 30}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://flowconf.ru/en/archive/2024 Autumn/"}
+      - {language: ru, text: "https://flowconf.ru/archive/2024 Autumn/"}
     talkIds: [5707, 5708, 5709, 5710, 5711, 5712, 5713, 5714, 5715, 5716, 5717, 5718, 5719, 5720, 5721, 5722, 5723, 5724,
               5725, 5726, 5727, 5728, 5729, 5730, 5731, 5732, 5733, 5734, 5735, 5736, 5737, 5738, 5739, 5740, 5741, 5742, 5743,
               5744, 5745, 5746, 5747, 5748, 5749]
+  - eventTypeId: 19
+    name:
+      - {language: en, text: "Flow 2025 Spring"}
+    days:
+      - {startDate: "2025-04-26", endDate: "2025-04-26", placeId: 24}
+    siteLink: []
+    talkIds: [6399, 6400, 6401, 6402, 6403, 6404, 6405, 6406, 6407, 6408, 6409, 6410]
   # SafeCode
   - eventTypeId: 20
     name:
