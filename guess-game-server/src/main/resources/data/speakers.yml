@@ -5405,6 +5405,7 @@ speakers:
     photoFileName: 00356.jpg
     name:
       - {language: en, text: "Alexander Titov"}
+      - {language: ru, text: "Александр Титов"}
     companyIds: [267]
     bio:
       - language: en
@@ -6018,6 +6019,7 @@ speakers:
     photoFileName: 00396.jpg
     name:
       - {language: en, text: "Dmitry Vyukov"}
+      - {language: ru, text: "Дмитрий Вьюков"}
     companyIds: [217]
     bio:
       - {language: en, text: "Dmitry Vyukov works as a programmer at Google. He works on dynamic testing tools for C/C++ and\
@@ -6028,6 +6030,7 @@ speakers:
             \ a dozen of novel lock-free algorithms, holds Intel BlackBelt title."}
     twitter: dvyukov
     gitHub: dvyukov
+    habr: dvyukov
   - id: 397
     photoFileName: 00397.jpg
     name:
@@ -6105,6 +6108,7 @@ speakers:
     photoUpdatedAt: 2022-04-25T13:28:26Z[UTC]
     name:
       - {language: en, text: "Petr Kuznetsov"}
+      - {language: ru, text: "Пётр Кузнецов"}
     companyIds: [417]
     bio:
       - {language: en, text: "<p>Petr Kuznetsov is a computer science professor at T&eacute;l&eacute;com Paris and the Institut\
@@ -6786,6 +6790,7 @@ speakers:
     photoUpdatedAt: 2020-11-05T14:24:44.769Z[UTC]
     name:
       - {language: en, text: "Sergey Bykov"}
+      - {language: ru, text: "Сергей Быков"}
     companyIds: [517]
     bio:
       - {language: en, text: "Sergey Bykov was one of the founders of the Orleans project at Microsoft Research and continued\
@@ -8574,6 +8579,7 @@ speakers:
     photoUpdatedAt: 2021-09-01T13:25:02.841Z[UTC]
     name:
       - {language: en, text: "Andrey Lushnikov"}
+      - {language: ru, text: "Андрей Лушников"}
     companyIds: [328]
     bio:
       - {language: en, text: "Andrey Lushnikov, Principal Engineer at Microsoft, is a former Chrome DevTools engineer and\
@@ -15056,6 +15062,7 @@ speakers:
     photoUpdatedAt: 2019-08-28T09:07:30.878Z[UTC]
     name:
       - {language: en, text: "Ivan Akulov"}
+      - {language: ru, text: "Иван Акулов"}
     companyIds: [397]
     bio:
       - {language: en, text: "Google Developer Expert in web technologies. Founder of PerfPerfPerf which helps other companies\
@@ -16490,6 +16497,7 @@ speakers:
     photoUpdatedAt: 2020-01-22T10:30:50.641Z[UTC]
     name:
       - {language: en, text: "Victor Zverovich"}
+      - {language: ru, text: "Виктор Зверович"}
     companyIds: [194]
     bio:
       - {language: en, text: "Victor Zverovich is a software engineer at Facebook working on the Thrift RPC framework. Before\
@@ -17556,6 +17564,7 @@ speakers:
     photoUpdatedAt: 2022-05-23T08:03:55Z[UTC]
     name:
       - {language: en, text: "Anton Podkopaev"}
+      - {language: ru, text: "Антон Подкопаев"}
     companyIds: [344, 286, 650]
     bio:
       - {language: en, text: "Anton Podkopaev is a postdoctoral researcher at MPI-SWS, a docent at NRU HSE, and a researcher\
@@ -17563,6 +17572,7 @@ speakers:
             \ concurrency."}
     twitter: inf_anlun
     gitHub: anlun
+    habr: antonpodkopaev
   - id: 1224
     photoFileName: 01224.jpg
     photoUpdatedAt: 2020-04-29T11:48:33.731Z[UTC]
@@ -22082,12 +22092,14 @@ speakers:
     photoUpdatedAt: 2021-02-24T08:03:01.401Z[UTC]
     name:
       - {language: en, text: "Ilya Yatsishin"}
+      - {language: ru, text: "Илья Яцишин"}
     companyIds: [689]
     bio:
       - {language: en, text: "Active ClickHouse contributor and project participant. Part of Yandex infrastructure for more\
             \ than 6 years."}
     twitter: qoega
     gitHub: qoega
+    habr: qoega
   - id: 1553
     photoFileName: 01553.jpg
     photoUpdatedAt: 2021-02-26T14:15:50.930Z[UTC]
@@ -22515,6 +22527,7 @@ speakers:
     photoUpdatedAt: 2021-03-16T11:55:53.762Z[UTC]
     name:
       - {language: en, text: "Timur Valiev"}
+      - {language: ru, text: "Тимур Валиев"}
     companyIds: [194]
     bio:
       - language: en
@@ -23755,6 +23768,7 @@ speakers:
     photoUpdatedAt: 2022-05-18T15:37:53Z[UTC]
     name:
       - {language: en, text: "Andrey Fomichev"}
+      - {language: ru, text: "Андрей Фомичев"}
     companyIds: [689]
     bio:
       - {language: en, text: "<p>Head of the YDB project from the beginning. He works at&nbsp;Yandex as an Engineering Director\
@@ -23883,6 +23897,7 @@ speakers:
     photoUpdatedAt: 2021-06-14T19:00:33.778Z[UTC]
     name:
       - {language: en, text: "Valentin Kulichenko"}
+      - {language: ru, text: "Валентин Куличенко"}
     companyIds: [224]
     bio:
       - language: en
@@ -30642,6 +30657,7 @@ speakers:
     photoUpdatedAt: 2022-05-13T10:11:35Z[UTC]
     name:
       - {language: en, text: "Boris Stepanenko"}
+      - {language: ru, text: "Борис Степаненко"}
     companyIds: [511]
     bio:
       - {language: en, text: "<p>Developing Tarantool. Mostly focused on horizontal scalability. Previously worked as a researcher\
@@ -30669,6 +30685,7 @@ speakers:
     photoUpdatedAt: 2022-05-11T08:12:58Z[UTC]
     name:
       - {language: en, text: "Pavel Emelyanov"}
+      - {language: ru, text: "Павел Емельянов"}
     companyIds: [829]
     bio:
       - {language: en, text: "<p>Pavel is an ex-Linux kernel hacker now applying his experience to the database area.</p>"}
@@ -30678,7 +30695,8 @@ speakers:
     photoUpdatedAt: 2022-06-15T18:57:38Z[UTC]
     name:
       - {language: en, text: "Alexander Kirsanov"}
-    companyIds: []
+      - {language: ru, text: "Александр Кирсанов"}
+    companyIds: [286]
     bio:
       - {language: en, text: "<p>He leads Remote Development and Collaboration Tools (Code With Me, Gateway).&nbsp; Before\
             \ that, he worked on Rider. The product that embraced IDE process separation<span class=\"red-underline\" data-startindex=\"\
@@ -30686,6 +30704,8 @@ speakers:
       - {language: ru, text: "<p>He leads Remote Development and Collaboration Tools (Code With Me, Gateway). Before that,\
             \ he worked on Rider. The product that embraced IDE process separation<span class=\"red-underline\" data-startindex=\"\
             215\" data-endindex=\"216\" data-paragraphid=\"4\">. </span>We still share a lot of code.</p>"}
+    twitter: kashmervil
+    gitHub: kashmervil
   - id: 2134
     photoFileName: 02134.jpg
     photoUpdatedAt: 2022-04-27T12:36:46Z[UTC]
@@ -30708,6 +30728,7 @@ speakers:
     photoUpdatedAt: 2022-05-11T08:01:35Z[UTC]
     name:
       - {language: en, text: "Ilya Kokorin"}
+      - {language: ru, text: "Илья Кокорин"}
     companyIds: [279]
     bio:
       - {language: en, text: "<p class=\"root-block-node\" data-changed=\"false\" data-paragraphid=\"7\">Ilya is a researcher\
@@ -30737,6 +30758,7 @@ speakers:
     photoUpdatedAt: 2022-05-18T15:51:36Z[UTC]
     name:
       - {language: en, text: "Ilnaz Nizametdinov"}
+      - {language: ru, text: "Ильназ Низаметдинов"}
     companyIds: [689]
     bio:
       - {language: en, text: "<p>A biography will be published later.</p>"}
@@ -30851,11 +30873,14 @@ speakers:
     photoUpdatedAt: 2022-03-31T19:06:20Z[UTC]
     name:
       - {language: en, text: "Ivan Prisyazhniy"}
+      - {language: ru, text: "Иван Присяжный"}
     companyIds: [921]
     bio:
       - language: en
         text: "Software Engineer at Workato.\n\nIvan's areas of interest are distributed systems and databases. He went through\
             \ different projects and now helps Workato to make their platform even better."
+    twitter: JohnKoepi
+    gitHub: sitano
   - id: 2148
     photoFileName: 02148.jpg
     photoUpdatedAt: "2024-12-13T09:06:16Z"

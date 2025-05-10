@@ -2992,7 +2992,7 @@ events:
       - {language: en, text: "SnowOne 2025"}
     days:
       - {startDate: "2025-02-28", endDate: "2025-03-01", placeId: 13}
-    siteLink: []
+    youtubeLink: https://www.youtube.com/playlist?list=PLecWId-JT7S5bmAmqi5WKXYMsbesRw3bN
     talkIds: [6152, 6153, 6154, 6155, 6156, 6157, 6158, 6159, 6160, 6161, 6162, 6163, 6164, 6165, 6166, 6167, 6168, 6169,
               6170]
   # VideoTech
@@ -3072,7 +3072,9 @@ events:
     days:
       - {startDate: "2024-09-18", endDate: "2024-09-18", placeId: 24}
       - {startDate: "2024-09-26", endDate: "2024-09-27", placeId: 30}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://piterpy.com/en/archive/2024/"}
+      - {language: ru, text: "https://piterpy.com/archive/2024/"}
     talkIds: [5750, 5751, 5752, 5753, 5754, 5755, 5756, 5757, 5758, 5759, 5760, 5761, 5762, 5763, 5764, 5765, 5766, 5767,
               5768, 5769, 5770, 5771, 5772, 5773, 5774, 5775, 5776, 5777, 5778, 5779, 5780, 5781, 5782, 5783, 5784]
   # Flow
@@ -3179,7 +3181,9 @@ events:
       - {language: en, text: "I'ML 2024 Autumn"}
     days:
       - {startDate: "2024-11-08", endDate: "2024-11-08", placeId: 24}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://imlconf.com/archive/2024 Autumn/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PL03tekVxQBQ3E4jBxdMN9ykca9dsa0CWY
     talkIds: [6043, 6044, 6045, 6046, 6047, 6048, 6049, 6050, 6051, 6052, 6053, 6054]
   # CargoCult
   - eventTypeId: 23
