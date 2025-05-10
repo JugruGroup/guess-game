@@ -30873,11 +30873,14 @@ speakers:
     photoUpdatedAt: 2022-03-31T19:06:20Z[UTC]
     name:
       - {language: en, text: "Ivan Prisyazhniy"}
+      - {language: ru, text: "Иван Присяжный"}
     companyIds: [921]
     bio:
       - language: en
         text: "Software Engineer at Workato.\n\nIvan's areas of interest are distributed systems and databases. He went through\
             \ different projects and now helps Workato to make their platform even better."
+    twitter: JohnKoepi
+    gitHub: sitano
   - id: 2148
     photoFileName: 02148.jpg
     photoUpdatedAt: "2024-12-13T09:06:16Z"
