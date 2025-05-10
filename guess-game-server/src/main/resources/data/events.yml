@@ -3179,7 +3179,9 @@ events:
       - {language: en, text: "I'ML 2024 Autumn"}
     days:
       - {startDate: "2024-11-08", endDate: "2024-11-08", placeId: 24}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://imlconf.com/archive/2024 Autumn/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PL03tekVxQBQ3E4jBxdMN9ykca9dsa0CWY
     talkIds: [6043, 6044, 6045, 6046, 6047, 6048, 6049, 6050, 6051, 6052, 6053, 6054]
   # CargoCult
   - eventTypeId: 23
