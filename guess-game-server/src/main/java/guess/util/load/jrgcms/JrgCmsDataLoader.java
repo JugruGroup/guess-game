@@ -113,7 +113,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.FLOW, "FLOW");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SAFE_CODE, "SAFECODE");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.GO_FUNC, "GOFUNC");
-        CONFERENCE_EVENT_PROJECT_MAP.put(Conference.IML, "I'ML");
+        CONFERENCE_EVENT_PROJECT_MAP.put(Conference.IML, "IML");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.CARGO_CULT, "CARGO");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SYSCONF, "SYSCONF");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SNOW_ONE, "SNOWONE");

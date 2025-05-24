@@ -3193,6 +3193,14 @@ events:
       - {language: en, text: "https://imlconf.com/archive/2024 Autumn/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL03tekVxQBQ3E4jBxdMN9ykca9dsa0CWY
     talkIds: [6043, 6044, 6045, 6046, 6047, 6048, 6049, 6050, 6051, 6052, 6053, 6054]
+  - eventTypeId: 22
+    name:
+      - {language: en, text: "I'ML 2025"}
+    days:
+      - {startDate: "2025-05-16", endDate: "2025-05-17", placeId: 3}
+    siteLink: []
+    talkIds: [6437, 6438, 6439, 6440, 6441, 6442, 6443, 6444, 6445, 6446, 6447, 6448, 6449, 6450, 6451, 6452, 6453, 6454,
+              6455, 6456, 6457, 6458, 6459]
   # CargoCult
   - eventTypeId: 23
     name:

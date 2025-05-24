@@ -2834,7 +2834,7 @@ public class ConferenceDataLoaderExecutor {
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("Flow 2025 Spring", null, List.of(24L)),
 //                        Set.of("Открытие конференции Flow 2025 Spring", "Закрытие конференции Flow 2025 Spring")));
-//        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2024, 5, 16), "2025",
+//        loadTalksSpeakersEvent(Conference.PITER_PY, LocalDate.of(2025, 5, 16), "2025",
 //                LoadSettings.eventTemplateAndInvalidTalksSet(
 //                        createEventTemplate("PiterPy 2025", null, List.of(3L)),
 //                        Set.of("Открытие конференций PiterPy и IML", "Закрытие конференции PiterPy 2025", "АфтеПайти",
@@ -2861,5 +2861,32 @@ public class ConferenceDataLoaderExecutor {
 //                                "LLM Gateway в Циан: наводим порядок в работе с языковыми моделями",
 //                                "Экстренный буст метрик DL-моделей: как улучшить качество за неделю?",
 //                                "GigaEmbeddings", "Data Science без Python и дипломов: возможно ли это?")));
+//        loadTalksSpeakersEvent(Conference.IML, LocalDate.of(2025, 5, 16), "2025",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("I'ML 2025", null, List.of(3L)),
+//                        Set.of("Открытие конференций PiterPy и IML", "Закрытие конференций PiterPy и IML",
+//                                "Когда закончится гарантия на ваш организм?", "АфтеПайти",
+//                                "Открытый микрофон", "Турнир по настольной игре Ship IT!",
+//                                "Open Source изнутри: FastStream",
+//                                "Все еще ходите за метриками в BI? Как мы экспериментировали с LLM и не пRAGадали",
+//                                "Оптимизация PostgreSQL-запросов: все, что нужно знать на практике",
+//                                "Автоматизация проектирования линейных протяженных объектов при помощи эволюционных алгоритмов",
+//                                "Опыт использования FastAPI совместно с Clean Architecture: преимущества и ограничения",
+//                                "Кодогенерация gRPC без боли", "Контекстно-осведомленные функции", "Ржавеет экосистема Python",
+//                                "Taskiq и микросервисы",
+//                                "Как сделать быстрое и масштабируемое расчетное ядро на Python и не умереть рядом?",
+//                                "Болотные сны. Как собрать квест в лесу на Python и ESP8266",
+//                                "Как мы ускорили эксперимент в 1000 раз и поэтому вообще смогли его провести",
+//                                "Программируем роботов на Python", "Рефакторинг больших сервисов",
+//                                "Как бэкендеру написать LLM-агента", "Как внедрить Observability без СМС и регистрации",
+//                                "Зачем нам PyPy, если в CPython есть JIT?",
+//                                "Airflow жив и здоров: разбор претензий и альтернатив",
+//                                "mypy в неестественной среде обитания: benches, perf и portable",
+//                                "В поисках ответа, почему Python [не] умеет работать с CPU-bound задачами",
+//                                "Технологии построения распределенной карты для автономного транспорта",
+//                                "Скрапинг на 360°: от простых HTTP-запросов до использования компьютерного зрения",
+//                                "Геоданные + Python: как мы создаем высокопроизводительный сервис для расчета геофакторов",
+//                                "Python: разгоняем медленную змейку",
+//                                "onETL: как и зачем мы прикручиваем батарейки к Apache Spark")));
     }
 }

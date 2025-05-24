@@ -5109,3 +5109,11 @@ companies:
       - {language: en, text: "Central University"}
       - {language: ru, text: "Центральный университет"}
     siteLink: https://centraluniversity.ru
+  - id: 1422
+    name:
+      - {language: en, text: Navio}
+    siteLink: https://navio.auto
+  - id: 1423
+    name:
+      - {language: en, text: OpenIPC}
+    siteLink: https://openipc.org
