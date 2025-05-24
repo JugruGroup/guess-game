@@ -28,8 +28,8 @@ places:
       - {language: en, text: "Saint Petersburg"}
       - {language: ru, text: Санкт-Петербург}
     venueAddress:
-      - {language: en, text: "Startovaya St., 6 A, Hotel «Crowne Plaza St.Petersburg Airport»"}
-      - {language: ru, text: "Стартовая ул., 6 литер А, Гостиница «Crowne Plaza St.Petersburg Airport»"}
+      - {language: en, text: "Startovaya St., 6 A, Airportcity Plaza Congress Hotel"}
+      - {language: ru, text: "Стартовая ул., 6 литер А, Конгресс-отель Airportcity Plaza"}
     mapCoordinates: "59.806223, 30.316258"
   - id: 4
     city:
