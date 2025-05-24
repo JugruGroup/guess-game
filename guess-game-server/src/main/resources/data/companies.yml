@@ -5072,8 +5072,8 @@ companies:
     siteLink: https://www.system-approach.ru
   - id: 1414
     name:
-      - {language: en, text: Ex-Ostrovok!}
-      - {language: ru, text: Ex-Островок!}
+      - {language: en, text: "Gold Apple"}
+      - {language: ru, text: "Золотое яблоко"}
     siteLink: https://goldapple.ru
   - id: 1415
     name:
