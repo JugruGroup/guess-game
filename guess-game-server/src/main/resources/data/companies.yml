@@ -5070,3 +5070,50 @@ companies:
     name:
       - {language: en, text: "System Approach"}
     siteLink: https://www.system-approach.ru
+  - id: 1414
+    name:
+      - {language: en, text: "Gold Apple"}
+      - {language: ru, text: "Золотое яблоко"}
+    siteLink: https://goldapple.ru
+  - id: 1415
+    name:
+      - {language: en, text: Ostrovok!}
+      - {language: ru, text: Островок!}
+    siteLink: https://ostrovok.ru
+  - id: 1416
+    name:
+      - {language: en, text: Intree}
+    siteLink: https://www.intree.com
+  - id: 1417
+    name:
+      - {language: en, text: "Irkutsk Oil Company"}
+      - {language: ru, text: "Иркутская нефтяная компания"}
+    siteLink: https://irkutskoil.ru
+  - id: 1418
+    name:
+      - {language: en, text: "Dr. Vialov's office"}
+      - {language: ru, text: "Кабинет доктора Вялова"}
+    siteLink: https://vyalov.ru
+  - id: 1419
+    name:
+      - {language: en, text: Litres}
+      - {language: ru, text: Литрес}
+    siteLink: https://www.litres.ru
+  - id: 1420
+    name:
+      - {language: en, text: Atom}
+      - {language: ru, text: Атом}
+    siteLink: https://atom.auto
+  - id: 1421
+    name:
+      - {language: en, text: "Central University"}
+      - {language: ru, text: "Центральный университет"}
+    siteLink: https://centraluniversity.ru
+  - id: 1422
+    name:
+      - {language: en, text: Navio}
+    siteLink: https://navio.auto
+  - id: 1423
+    name:
+      - {language: en, text: OpenIPC}
+    siteLink: https://openipc.org

@@ -4594,12 +4594,13 @@ speakers:
       - {language: ru, text: "Дмитрий Бугайченко"}
     companyIds: [665]
     bio:
-      - {language: ru, text: "Окончил Санкт-Петербургский государственный университет в 2004 году, там же защитил кандидат\
-            скую по формально-логическим методам в 2007-м. Почти 9 лет проработал в аутсорсинге, не теряя контакта с униве\
-            рситетом и научной средой.</p><p>Дмитрий занимался анализом больших данных в Одноклассниках, что позволило ему\
-            \ совместить теоретическую подготовку и научный фундамент с разработкой реальных востребованных продуктов. В 2019\
-            \ году присоединился к команде Сбера, где разрабатывал и внедрял рекомендательные онлайн-системы. Сейчас Дмитр\
-            ий отвечает за развитие искусственного интеллекта в розничном бизнесе."}
+      - language: ru
+        text: "<p>Окончил Санкт-Петербургский государственный университет в 2004 году, там же защитил кандидатскую по форм\
+            ально-логическим методам в 2007-м. Почти 9 лет проработал в аутсорсинге, не теряя контакта с университетом и н\
+            аучной средой.</p>\n<p>Занимался анализом больших данных в Одноклассниках, что позволило мне совместить теорет\
+            ическую подготовку и научный фундамент с разработкой реальных востребованных продуктов. В 2019 году присоедини\
+            лся к команде Сбера, где разрабатывал и внедрял рекомендательные онлайн-системы. Сейчас отвечаю за развитие ис\
+            кусственного интеллекта в розничном бизнесе.</p>"
     gitHub: DmitryBugaychenko
     habr: dmitrybugaychenko
   - id: 302
@@ -4824,20 +4825,21 @@ speakers:
     habr: ortemij
   - id: 320
     photoFileName: 00320.jpg
+    photoUpdatedAt: "2025-04-18T11:47:28Z"
     name:
       - {language: en, text: "Sergey Nikolenko"}
       - {language: ru, text: "Сергей Николенко"}
-    companyIds: [657]
+    companyIds: []
     bio:
-      - {language: en, text: "Researcher in the field of machine learning (deep learning, Bayesian methods, natural language\
-            \ processing and more) and analysis of algorithms (network algorithms, competitive analysis). Co-authored more\
-            \ than 100 research papers, several books, courses \"Machine learning\", \"Deep learning\", and others. Extensive\
-            \ experience with industrial projects (Neuromation, SolidOpinion, Surfingbird, Deloitte Analytics Institute)."}
-      - {language: ru, text: "Специалист по машинному обучению (глубокое обучение, байесовские методы, обработка текстов и\
-            \ многое другое) и анализу алгоритмов (сетевые алгоритмы, конкурентный анализ). Автор более 100 научных публик\
-            аций, нескольких книг, авторских курсов «Машинное обучение», «Обучение глубоких сетей» и др. Большой опыт сотр\
-            удничества с индустрией в области машинного обучения (Neuromation, SolidOpinion, Surfingbird, Deloitte Analytics\
-            \ Institute)."}
+      - language: ru
+        text: "<p>Ученый, преподаватель и практик в области машинного обучения и информатики в целом. Доктор физико-матема\
+            тических наук, сотрудник ПОМИ РАН, преподаватель в СПбГУ, Harbour Space University, ИТМО и НИУ ВШЭ, Head of AI\
+            \ в компании Synthesis AI, автор более 200 научных публикаций и нескольких книг, в том числе бестселлера &laquo;Г\
+            лубокое обучение&raquo;.</p>\n<p>Провожу исследования в разных областях &mdash; от улучшения больших языковых\
+            \ моделей до анализа алгоритмов и теоретической информатики. Применяю машинное обучение в реальных проектах.</p>\n\
+            <p>Двукратный чемпион мира в спортивной версии &laquo;Что? Где? Когда?&raquo;.</p>"
+    gitHub: snikolenko
+    habr: snikolenko
   - id: 321
     photoFileName: 00321.jpg
     photoUpdatedAt: "2023-07-03T07:01:18Z"
@@ -7227,10 +7229,10 @@ speakers:
         text: "<p>16 лет работал в Microsoft технологическим евангелистом и ведущим экспертом по ИИ и машинному обучению,\
             \ в том числе в команде Commercial Software Engineering, где с небольшой группой разрабатывал библиотеку mPyPl,\
             \ упрощающую программирование пайплайнов обработки данных на Python в функциональном стиле.</p>\n<p>Неоднократ\
-            но выступал на DotNext, PyCon и других технологических конференциях. Преподает курсы функционального программи\
-            рования в МАИ и НИУ ВШЭ, технический руководитель лаборатории AI Lab Школы дизайна НИУ ВШЭ, технологический ху\
-            дожник.</p>\n<p>Автор первой <a href=\"https://books.google.com/books/about/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80.html?id=_6GfDQAAQBAJ&amp;redir_esc=y\"\
-            >книги по F# на русском языке</a>.</p>"
+            но выступал на DotNext, PyCon и других технологических конференциях. Преподаю курсы функционального программир\
+            ования в МАИ и НИУ ВШЭ. Технический руководитель лаборатории AI LAB Школы дизайна НИУ ВШЭ, технологический худ\
+            ожник.</p>\n<p>Автор первой книги по F# на русском языке &laquo;Функциональное программирование на F#&raquo;.</p>\n\
+            <p>&nbsp;</p>"
     twitter: shwars
     gitHub: shwars
     habr: shwars
@@ -15772,16 +15774,18 @@ speakers:
     habr: willykolepniy
   - id: 1076
     photoFileName: 01076.jpg
-    photoUpdatedAt: "2022-03-31T19:05:20Z"
+    photoUpdatedAt: "2023-12-12T14:11:28Z"
     name:
-      - {language: en, text: "Andrey Dmitriev"}
+      - {language: en, text: "Andrei Dmitriev"}
       - {language: ru, text: "Андрей Дмитриев"}
     companyIds: [291]
     bio:
-      - {language: en, text: "<p>In IT since 2000. He built his career from a developer to the head of a department in an\
-            \ international company. Now he is a director at JUG Ru Group, where he develops promising areas of conferences.</p>"}
-      - {language: ru, text: "<p>В IT с 2000 года. Построил карьеру от разработчика до руководителя департамента в междуна\
-            родной компании. Сейчас &mdash; директор в JUG Ru Group, где развивает перспективные направления конференций.</p>"}
+      - language: ru
+        text: "<p>Окончил матмех СПбГУ. Программист со школы, прагматик в жизни и совладелец бизнеса по организации конфер\
+            енций для айтишников.</p>\n<p>Несколько лет разрабатывал библиотеки JDK в Sun Microsystems и Oracle. Руководил\
+            \ группой мобильной разработки в компании QuickOffice. Был руководителем распределенной группы нагрузочного те\
+            стирования в Netсracker. Сейчас &mdash; директор по производству в JUG Ru Group. Склонен доверять фактам и циф\
+            рам.</p>"
     twitter: it_improve
     habr: real_ales
   - id: 1077
@@ -26323,21 +26327,22 @@ speakers:
     gitHub: kotbegemot
   - id: 1833
     photoFileName: 01833.jpg
-    photoUpdatedAt: "2024-05-07T13:58:04Z"
+    photoUpdatedAt: "2025-02-24T13:13:41Z"
     name:
       - {language: en, text: "Mikhail Lukin"}
       - {language: ru, text: "Михаил Лукин"}
     companyIds: [925]
     bio:
-      - {language: en, text: "<p>Candidate of Technical Sciences. In commercial development since 2008, mainly in C++. I have\
-            \ participated in various projects: from enterprise to embedded systems. For the last six years I have been developing\
-            \ scientific and engineering systems, as well as software performance optimization using GPGPUs on OpenCL and\
-            \ CUDA.</p>"}
-      - {language: ru, text: "<p>Кандидат технических наук. В коммерческой разработке с 2008 года, преимущественно на С++.\
-            \ За это время прошел путь от младшего разработчика до CTO. Участвовал в разных проектах: от энтерпрайза до вс\
-            траиваемых систем. C 2018 года занимаюсь разработкой научных и инженерных систем, а также оптимизацией произво\
-            дительности ПО с использованием GPGPU на OpenCL и CUDA. В числе моих научных и инженерных интересов GPGPU, HPC\
-            \ и анализ кода.</p>"}
+      - {language: en, text: "<p>Candidate of Technical Sciences. I have been in commercial development since 2008. During\
+            \ this time I worked my way up from a junior developer to CTO. Participated in different projects: from enterprise\
+            \ to embedded systems. Since 2018 I have been involved in scientific and engineering systems development, as well\
+            \ as software performance optimization using GPGPUs on OpenCL and CUDA. My scientific and engineering interests\
+            \ include GPGPU, HPC, ML and code analysis.</p>"}
+      - {language: ru, text: "<p>Кандидат технических наук. В коммерческой разработке с 2008 года. За это время прошел пут\
+            ь от младшего разработчика до CTO. Участвовал в разных проектах: от энтерпрайза до встраиваемых систем. C 2018\
+            \ года занимаюсь разработкой научных и инженерных систем, а также оптимизацией производительности ПО с использ\
+            ованием GPGPU на OpenCL и CUDA. В числе моих научных и инженерных интересов &mdash; GPGPU, HPC, ML и анализ ко\
+            да.</p>"}
     gitHub: lukinma
   - id: 1834
     photoFileName: 01834.jpg
@@ -32443,20 +32448,16 @@ speakers:
             \ трансформируя и объединяя их.</p>"
   - id: 2246
     photoFileName: 02246.jpg
-    photoUpdatedAt: 2022-09-30T15:31:07Z[UTC]
+    photoUpdatedAt: "2025-03-26T14:45:34Z"
     name:
-      - {language: en, text: "Maxim Martynov"}
+      - {language: en, text: "Maksim Martynov"}
       - {language: ru, text: "Максим Мартынов"}
     companyIds: [648]
     bio:
-      - language: en
-        text: "<p>Python developer, a little DevOps, a little architect, legacy eradicator, open source fanatic.</p>\n<p>Develops\
-            \ and maintains tools for DE and DS, from deploying and writing plugins for JupyterHub, AirFlow and MLflow, an\
-            \ ETL pipelines dockerization tool, to developing an ETL framework.</p>"
-      - language: ru
-        text: "<p>Python-разработчик, немного DevOps, чуток архитектор, искоренитель легаси, фанат open source.</p>\n<p>За\
-            нимается разработкой и поддержкой инструментов для DE и DS &mdash; от развертывания и написания плагинов к JupyterHub,\
-            \ AirFlow и MLflow, инструмента для докеризации ETL-пайплайнов, до разработки ETL-фреймворка.</p>"
+      - {language: en, text: "<p>Python developer, a bit of DevOps, a bit of architect. For the last few years I've been developing\
+            \ and maintaining tools for DE, open source, PySpark and more.</p>"}
+      - {language: ru, text: "<p>Python-разработчик, немного DevOps, чуток архитектор. Последние несколько лет разрабатыва\
+            ю и поддерживаю инструменты для DE, в open source, на PySpark и не только.</p>"}
     gitHub: dolfinus
     habr: dolfinus
   - id: 2247
@@ -32624,13 +32625,14 @@ speakers:
     bio:
       - language: en
         text: "<p>Candidate of Physical and Mathematical Sciences, Ph.D. in theoretical physics and mathematics and just a\
-            \ tall guy. Igor identifies himself as a pragmatic engineer with a strong technical background, and is currently\
-            \ working as a data engineer at Klarna, a Swedish fintech company.</p>\n<p>Igor thinks that cephalopods are very\
-            \ cool, and if you also like octopuses, he would love to talk to you about it.</p>"
-      - {language: ru, text: "Кандидат физико-математических наук, PhD по направлению теоретической физики и просто высоки\
-            й парень. Игорь определяет себя как «прагматичного инженера с сильной технической подготовкой» и любит слушать\
-            \ математический рок.</p><p>Считает, что цефалоподы — это очень круто, и если вы тоже любите осьминогов, то Иг\
-            орь с удовольствием поговорит с вами об этом"}
+            \ tall guy. I identify myself as a pragmatic engineer with a strong technical background, and like listening to\
+            \ math rock.</p>\n<p>I think that cephalopods are very cool, and if you also like octopuses, I would love to talk\
+            \ to you about it.</p>"
+      - language: ru
+        text: "<p>Кандидат физико-математических наук, PhD по направлению теоретической физики и просто высокий парень. Оп\
+            ределяю себя как &laquo;прагматичного инженера с сильной технической подготовкой&raquo; и люблю слушать матема\
+            тический рок.</p>\n<p>Считаю, что цефалоподы &mdash; это очень круто, и если вы тоже любите осьминогов, то с у\
+            довольствием поговорю с вами об этом.</p>"
     twitter: shrimpsizemoose
     gitHub: cra
     habr: shrimpsizemoose
@@ -36382,15 +36384,22 @@ speakers:
             автор и соведущий LeanDS &mdash; курса по управлению Data Science-проектами и продуктами.</p>"}
   - id: 2527
     photoFileName: 02527.jpg
-    photoUpdatedAt: 2023-03-21T10:59:04Z[UTC]
+    photoUpdatedAt: "2023-12-12T12:53:10Z"
     name:
       - {language: en, text: "Alexander Krainov"}
       - {language: ru, text: "Александр Крайнов"}
     companyIds: [689]
     bio:
-      - {language: ru, text: "<p>Директор по развитию технологий искусственного интеллекта Яндекса. Отвечает за направлени\
-            е экспериментальных продуктов и технологий на базе ИИ. До этого на протяжении 9 лет возглавлял в Яндексе разра\
-            ботку продуктов и алгоритмов компьютерного зрения. Член экспертного совета премии Сегаловича.</p>"}
+      - language: ru
+        text: "<p>Руководитель лаборатории машинного интеллекта Яндекса. Отвечает за направление экспериментальных продукт\
+            ов и технологий на базе ИИ. До&nbsp;этого на&nbsp;протяжении 9&nbsp;лет возглавлял в&nbsp;Яндексе разработку п\
+            родуктов и&nbsp;алгоритмов компьютерного зрения.</p>\n<p>До Яндекса работал в компании SPIRIT DSP и в ее дочер\
+            нем подразделении, а также в SeeStorm в должности директора по продуктам. Занимался алгоритмами сжатия и перед\
+            ачи звука и видео, распознаванием речи, технологиями видеоконференций, компьютерным зрением и 3D-моделирование\
+            м.</p>\n<p>Работал в одном из пионеров российского интернета, компании &laquo;Порт.Ру&raquo;, где создавал сис\
+            тему каталогизаций для первого в России онлайн-маркетплейса.</p>\n<p>Первым местом работы был временный научны\
+            й коллектив &laquo;Сверхматрица&raquo;, где занимался машинным проектированием топологии сверхпроводниковых ма\
+            триц.</p>\n<p>Окончил МИРЭА.</p>"
     habr: krainov
   - id: 2528
     photoFileName: 02528.jpg
@@ -38992,14 +39001,14 @@ speakers:
             \ IT-консалтингом и активно участвует в мероприятиях платформы РСВ. Трекер и методолог хакатонов по ИИ.</p>"
   - id: 2710
     photoFileName: 02710.jpg
-    photoUpdatedAt: "2023-08-10T14:53:25Z"
+    photoUpdatedAt: "2025-03-12T07:15:34Z"
     name:
       - {language: en, text: "Evgeny Nikitin"}
       - {language: ru, text: "Евгений Никитин"}
     companyIds: [915]
     bio:
-      - {language: en, text: "<p>Много лет любит машинное обучение в разных формах. Сейчас Евгений &ndash; CTO Цельса, где\
-            \ разрабатывают ML-системы для анализа медицинских изображений. Ведет Telegram-канал &laquo;Варим ML&raquo;.</p>"}
+      - {language: ru, text: "<p>Технический директор Цельс, автор Тelegram-канала <a href=\"https://t.me/varim_ml\">Варим\
+            \ МЛ</a>.</p>"}
     twitter: crazyfrogspb
     gitHub: crazyfrogspb
     habr: crazyfrogspb1
@@ -43733,10 +43742,10 @@ speakers:
       - {language: ru, text: "Сергей Яхницкий"}
     companyIds: [689]
     bio:
-      - {language: en, text: "<p>Tech Lead at Yandex Taxi. Got hooked on Python in 2016. In his spare time, he refines the\
-            \ infrastructure around Python and learns Japanese.</p>"}
-      - {language: ru, text: "Техлид в Техплатформе Екома и Райдтеха Яндекса. Подсел на Python в 2016-м. В свободное время\
-            \ дорабатывает напильником инфру вокруг Python и изучает японский язык.</p>"}
+      - {language: en, text: "Tech Lead at Platform for Yandex City Services. Got hooked on Python in 2016. In my spare time,\
+            \ I refine the infrastructure around Python and learn Japanese."}
+      - {language: ru, text: "Техлид в Техплатформе Городских сервисов&nbsp;Яндекса. Подсел на Python в 2016-м. В свободно\
+            е время дорабатываю напильником инфру вокруг Python и изучаю японский язык."}
     gitHub: serjflint
     habr: sergflint
   - id: 3016
@@ -43892,12 +43901,12 @@ speakers:
       - {language: ru, text: "Олег Ануфриев"}
     companyIds: [3]
     bio:
-      - {language: en, text: "<p>He has been programming since the last century. From Fokal on a piece of paper in those times\
+      - {language: en, text: "<p>I have been programming since the last century. From Fokal on a piece of paper in those times\
             \ when harsh programmers wrote drivers and soldered hardware themselves, gradually came to Python in a cozy IDE.\
             \ Came to the world of Python from Java.</p>"}
-      - {language: ru, text: "<p>Программирует с прошлого века. От Фокала на бумажке в те времена, когда суровые программи\
-            сты сами писали драйвера и паяли железо, постепенно дошел до Python в уютной IDE. Непосредственно в мир Python\
-            \ пришёл из Java.</p>"}
+      - {language: ru, text: "<p><span style=\"font-weight: 400;\">Программирую с прошлого века. От Фокала на бумажке в те\
+            \ времена, когда суровые программисты сами писали драйверы и паяли железо, постепенно дошел до Python в уютной\
+            \ IDE. Непосредственно в мир Python пришел из Java.</span></p>"}
   - id: 3027
     photoFileName: 03027.jpg
     photoUpdatedAt: "2023-10-30T14:26:30Z"
@@ -43912,16 +43921,14 @@ speakers:
     habr: madrugado
   - id: 3028
     photoFileName: 03028.jpg
-    photoUpdatedAt: "2023-08-30T11:56:29Z"
+    photoUpdatedAt: "2025-04-14T13:05:59Z"
     name:
       - {language: en, text: "Vladimir Burmistrov"}
       - {language: ru, text: "Владимир Бурмистров"}
-    companyIds: [1056]
+    companyIds: [1420]
     bio:
-      - {language: en, text: "<p>Software engineer in the perception department of Evocargo, a company developing a logistics\
-            \ service based on autonomous vehicles.</p>"}
-      - {language: ru, text: "<p>Инженер-программист в отделе восприятия компании Evocargo, которая разрабатывает логистич\
-            еский сервис на базе автономного транспорта.</p>"}
+      - {language: en, text: "<p>Software engineer.</p>"}
+      - {language: ru, text: <p>Инженер-программист.</p>}
   - id: 3029
     photoFileName: 03029.jpg
     photoUpdatedAt: "2023-09-08T12:15:44Z"
@@ -43950,17 +43957,18 @@ speakers:
             \ технологии и не страдают.</p>"}
   - id: 3031
     photoFileName: 03031.jpg
-    photoUpdatedAt: "2023-07-14T13:57:11Z"
+    photoUpdatedAt: "2025-04-02T08:13:34Z"
     name:
       - {language: en, text: "Andrey Sharapov"}
       - {language: ru, text: "Андрей Шарапов"}
     companyIds: [630]
     bio:
-      - {language: en, text: "<p>Andrey has 15 years in IT and 10 years in Python: there were both product and infrastructure\
-            \ projects. He likes Linux, Python, bash and open source. His hobbies besides IT are extreme activities like mountain\
-            \ biking and snowboarding.</p>"}
-      - {language: ru, text: "<p>15 лет в IT, 10 лет с Python: продуктовые и инфраструктурные проекты. Любит Linux, Python,\
-            \ bash и open source. В свободное время помимо IT увлекается экстремальным спортом: МТБ, cноуборд.</p>"}
+      - {language: en, text: "<p>I have 10 years in Python in both product and infrastructure projects. Love Linux, Python,\
+            \ bash and open source. My hobbies besides IT are extreme activities like mountain biking and snowboarding. I\
+            \ also play in a musical group.</p>"}
+      - {language: ru, text: "<p>Более 10 лет с Python в продуктовых и инфраструктурных проектах. Люблю Linux, Python, bash\
+            \ и open source. В свободное время помимо IT увлекаюсь экстремальным спортом &mdash; МТB, cноубордом &mdash; и\
+            \ играю в музыкальном коллективе.</p>"}
   - id: 3032
     photoFileName: 03032.jpg
     photoUpdatedAt: "2022-09-23T09:18:04Z"
@@ -44084,14 +44092,14 @@ speakers:
             тся автоматизацией инфраструктуры.</p>"}
   - id: 3040
     photoFileName: 03040.jpg
-    photoUpdatedAt: "2023-08-21T07:26:24Z"
+    photoUpdatedAt: "2025-03-20T08:09:02Z"
     name:
       - {language: en, text: "Roman Peskov"}
       - {language: ru, text: "Роман Песков"}
     companyIds: [683]
     bio:
-      - {language: en, text: "<p>Over 7 years of Python development. 2 years of MLOps in Cian.</p>"}
-      - {language: ru, text: "<p>Более 7 лет разработки на Python. 2 года занимается MLOps в Циан.</p>"}
+      - {language: en, text: "Over 9 years of Python development. 2 years of MLOps in Cian."}
+      - {language: ru, text: "Более 9 лет разработки на Python. 4 года занимаюсь MLOps в Циан."}
   - id: 3041
     photoFileName: 03041.jpg
     photoUpdatedAt: "2023-08-31T11:20:23Z"
@@ -44645,16 +44653,17 @@ speakers:
       - {language: ru, text: "Евгений Ильюшин"}
     companyIds: [1216]
     bio:
-      - {language: en, text: "<p>CTO at Viasat Tech. Since 2000, he has been professionally engaged in software development\
-            \ for various purposes. For the last 10 years, his main focus has been on the development of systems with AI elements.\
-            \ In addition to solving practical problems in the industry, Evgeny is engaged in research and teaching at Lomonosov\
-            \ Moscow State University, Department of Computational Mathematics and Cybernetics. His research interests are\
-            \ primarily related to the development of methods and tools for creating robust AI systems.</p>"}
-      - {language: ru, text: "<p>CTO в Viasat Tech. С 2000 года профессионально занимается разработкой ПО различного назна\
-            чения. Последние 10 лет &mdash; основной фокус на разработке систем с элементами ИИ. Помимо решения практическ\
-            их задач в индустрии Евгений занимается исследованиями и ведет преподавательскую деятельность в МГУ имени М.В\
-            . Ломоносова на факультете вычислительной математики и кибернетики. Область научных интересов в первую очередь\
-            \ связана с разработкой методов и средств, позволяющих создавать робастные системы ИИ.</p>"}
+      - language: en
+        text: "<p>CTO at Viasat Tech. Since 2000, I have been professionally engaged in software development for various purposes.\
+            \ For the last 10 years, my main focus has been on the development of systems with AI elements.</p>\n<p>In addition\
+            \ to solving practical problems in the industry, I am engaged in research and teaching at Lomonosov Moscow State\
+            \ University, Department of Computational Mathematics and Cybernetics. My research interests are primarily related\
+            \ to the development of methods and tools for creating robust AI systems.</p>"
+      - {language: ru, text: "<p>С 2000 года профессионально разрабатываю ПО различного назначения. Последние 10 лет &mdash;\
+            \ основной фокус на разработке систем с элементами ИИ. Помимо решения практических задач в индустрии занимаюсь\
+            \ исследованиями и веду преподавательскую деятельность в МГУ имени М. В. Ломоносова на факультете вычислительн\
+            ой математики и кибернетики. Область научных интересов в первую очередь связана с разработкой методов и средст\
+            в, позволяющих создавать робастные системы ИИ.</p>"}
     gitHub: Ilyushin
   - id: 3077
     photoFileName: 03077.jpg
@@ -47425,14 +47434,14 @@ speakers:
             терным зрением в видеоаналитике с 2021 года.</p>"}
   - id: 3270
     photoFileName: 03270.jpg
-    photoUpdatedAt: "2024-04-01T15:00:14Z"
+    photoUpdatedAt: "2025-03-27T07:47:23Z"
     name:
       - {language: en, text: "Evgeniy Kosarev"}
       - {language: ru, text: "Евгений Косарев"}
     companyIds: [665]
     bio:
-      - {language: ru, text: "<p>Senior ML Engineer в SberDevices. Ранее работал над alignment YandexGPT, сейчас отвечает\
-            \ за разработку и обучение pretrain-моделей GigaChat. Читает курс по анализу данных в РЭШ.</p>"}
+      - {language: ru, text: "<p>Lead ML Engineer в SberDevices. Руковожу разработкой LLM-претрейнов в команде GigaChat, а\
+            \ также читаю лекции по анализу данных в Российской экономической школе.</p>"}
     gitHub: EvgenijGod
     habr: evgenijkkk
   - id: 3271
@@ -47453,10 +47462,9 @@ speakers:
       - {language: ru, text: "Пётр Ермаков"}
     companyIds: [689]
     bio:
-      - {language: ru, text: "<p><span style=\"color: #0f172a;\">За 10 лет практики в анализе данных (data science) успел\
-            \ поработать в hh.ru, Mail.ru, Lamoda. Сейчас развивает бренд машинного обучения Яндекса. Участвует в развитии\
-            \ сообщества ODS. Интересуется технологиями для умного дома и строит умную теплицу. В свободное время занимает\
-            ся трейлраннингом.</span></p>"}
+      - {language: ru, text: "<p>За 10 лет практики в анализе данных (data science) успел поработать в hh.ru, Mail.ru, Lamoda.\
+            \ Сейчас развиваю бренд машинного обучения Яндекса. Участвую в развитии сообщества ODS. Интересуюсь технология\
+            ми для умного дома и строю умную теплицу. В свободное время занимаюсь трейлраннингом.</p>"}
     twitter: ermakovpetr
     gitHub: ermakovpetr
     habr: couatl
@@ -47520,16 +47528,16 @@ speakers:
     gitHub: minemile
   - id: 3277
     photoFileName: 03277.jpg
-    photoUpdatedAt: "2024-07-22T12:01:30Z"
+    photoUpdatedAt: "2025-03-10T09:25:44Z"
     name:
       - {language: en, text: "Dmitrii Krylov"}
       - {language: ru, text: "Дмитрий Крылов"}
     companyIds: [1261]
     bio:
-      - {language: en, text: "<p>Developer with experience in ML. Leads development at Bestplace, a company creating an analytical\
-            \ ML platform for geodata. Previously worked in machine learning and development at Yandex and ConsultantPlus.</p>"}
-      - {language: ru, text: "Разработчик с опытом в ML. Руководит разработкой в компании Bestplace, создающей аналитическ\
-            ую ML-платформу для геоданных. Раньше занимался машинным обучением и разработкой в Яндексе и КонсультантПлюс."}
+      - {language: en, text: "<p>Developer with ML experience. I lead development at Bestplace: we are creating an analytical\
+            \ ML platform for geodata. Previously I was involved in machine learning and development in Yandex and ConsultantPlus.</p>"}
+      - {language: ru, text: "<p>Разработчик с опытом в ML. Руковожу разработкой в компании Bestplace: создаем аналитическ\
+            ую ML-платформу для геоданных. Раньше занимался машинным обучением и разработкой в Яндексе и КонсультантПлюс.</p>"}
     gitHub: mityakrylov
   - id: 3278
     photoFileName: 03278.jpg
@@ -50636,8 +50644,8 @@ speakers:
     bio:
       - {language: en, text: "50% Head of Python, 50% Senior Python Developer at Cian. Passionate about creating top-notch\
             \ products for users, doing it fast, and tackling DevEx problems from every angle."}
-      - {language: ru, text: "<p>Сейчас на 50% Head of Python, на 50% Senior Python Developer в Циан. Нравится разрабатыва\
-            ть качественный продукт для пользователей, делать это быстро и искать точки улучшения DevEx с разных сторон.</p>"}
+      - {language: ru, text: "Сейчас на 50% Head of Python, на 50% Staff Engineer в Циан. Нравится разрабатывать качествен\
+            ный продукт для пользователей, делать это быстро и искать точки улучшения DevEx с разных сторон."}
     gitHub: v2v21
     habr: v2v21
   - id: 3478
@@ -51022,11 +51030,11 @@ speakers:
     name:
       - {language: en, text: "Dmitrii Ilin"}
       - {language: ru, text: "Дмитрий Ильин"}
-    companyIds: []
+    companyIds: [1423]
     bio:
-      - {language: en, text: "<p>He has been involved in media for over 25 years: from sensors to VR players. Co-founder of\
+      - {language: en, text: "<p>I have been involved in media for over 25 years: from sensors to VR players. Co-founder of\
             \ the <a href=\"https://github.com/OpenIPC\">OpenIPC</a> project.</p>"}
-      - {language: ru, text: "<p>Занимается медиа более 25 лет: от сенсоров до VR-плееров. Сооснователь проекта <a href=\"\
+      - {language: ru, text: "<p>Занимаюсь медиа более 25 лет: от сенсоров до VR-плееров. Сооснователь проекта <a href=\"\
             https://github.com/OpenIPC\">OpenIPC</a>.</p>"}
     twitter: widgetii
     gitHub: widgetii
@@ -53670,8 +53678,9 @@ speakers:
       - {language: ru, text: "Елизавета Афанасьева"}
     companyIds: [969]
     bio:
-      - {language: ru, text: "<p>Победитель хакатонов, Data Scientist в Точке и стартапер в одном флаконе. Играет на гитар\
-            е и любит настолки.</p>"}
+      - language: ru
+        text: "<p>Построила систему речевой аналитики в компании, а сейчас работаю в команде, разрабатывающей свою LLM.</p>\n\
+            <p>Заядлый слушатель, спикер и участник ПК конференций.</p>\n<p>Играю на гитаре и люблю настолки.</p>"
     gitHub: Digitaljay
     habr: digitaljay
   - id: 3677
@@ -57029,3 +57038,484 @@ speakers:
             <p>Мое основное хобби &mdash; популяризация стратегического мышления в управлении продуктами. Автор более 80 д\
             окладов на профильных конференциях. Люблю делиться знаниями.</p>"
     habr: cless75
+  - id: 3886
+    photoFileName: 03886.jpg
+    photoUpdatedAt: "2025-04-15T07:11:57Z"
+    name:
+      - {language: en, text: "Sergey Volkow"}
+      - {language: ru, text: "Сергей Волков"}
+    companyIds: [665]
+    bio:
+      - {language: en, text: "<p>More recently head of the technical team of data engineers. In the past I was involved in\
+            \ the development of various backends from simple to the most complex, including for recommendation services for\
+            \ various devices with Sbera screen. I love what I do, it's always interesting to try something new.</p>"}
+      - {language: ru, text: "<p>С недавнего времени возглавил техническую команду дата-инженеров. В прошлом занимался раз\
+            работкой различных бэкендов от простых до самых сложных, в том числе для сервисов рекомендаций под различные у\
+            стройства с экраном Сбера. Люблю свое дело, всегда интересно пощупать что-то новое.</p>"}
+  - id: 3887
+    photoFileName: 03887.jpg
+    photoUpdatedAt: "2025-03-26T14:15:37Z"
+    name:
+      - {language: en, text: "Viktor Luferov"}
+      - {language: ru, text: "Виктор Луферов"}
+    companyIds: [969]
+    bio:
+      - {language: en, text: "<p>Candidate of Technical Sciences. Head of Python development. I am interested in architectural\
+            \ issues related to building high-performance and scalable systems.</p>"}
+      - {language: ru, text: "<p>Кандидат технических наук. Руководитель направления Python-разработки. Интересуюсь архите\
+            ктурными вопросами построения высокопроизводительных и масштабируемых систем.</p>"}
+  - id: 3888
+    photoFileName: 03888.jpg
+    photoUpdatedAt: "2025-03-04T08:44:15Z"
+    name:
+      - {language: en, text: "Vladislav Zubarev"}
+      - {language: ru, text: "Владислав Зубарев"}
+    companyIds: [390]
+    bio:
+      - {language: en, text: "<p>I lead the development of the Python platform at Ozon Tech.</p>"}
+      - {language: ru, text: "Руковожу развитием Python-платформы в Ozon Tech."}
+  - id: 3889
+    photoFileName: 03889.jpg
+    photoUpdatedAt: "2025-05-07T12:39:35Z"
+    name:
+      - {language: en, text: "Evgeniy Blinov"}
+      - {language: ru, text: "Евгений Блинов"}
+    companyIds: [611]
+    bio:
+      - {language: en, text: "<p>Programmer, open source enthusiast.</p>"}
+      - {language: ru, text: "<p>Программист, энтузиаст опенсорса.</p>"}
+  - id: 3890
+    photoFileName: 03890.jpg
+    photoUpdatedAt: "2025-04-16T13:12:54Z"
+    name:
+      - {language: en, text: "Ivan Elfimov"}
+      - {language: ru, text: "Иван Елфимов"}
+    companyIds: [1414]
+    bio:
+      - {language: en, text: "<p>Team Lead at Golden Apple. I lead a team that develops a personal user account. I do a lot\
+            \ of pet projects where I experiment and learn new technologies.</p>"}
+      - {language: ru, text: "<p>Тимлид в Золотом Яблоке. Руковожу командой, которая разрабывает личный кабинет пользовате\
+            ля. Делаю много пет-проектов, на которых экспериментирую и изучаю новые технологии.</p>"}
+  - id: 3891
+    photoFileName: 03891.jpg
+    photoUpdatedAt: "2025-04-17T07:38:29Z"
+    name:
+      - {language: en, text: "Ivan Chernov"}
+      - {language: ru, text: "Иван Чернов"}
+    companyIds: [1415]
+    bio:
+      - language: en
+        text: "<p>Moved to architects from CTO and don't regret a thing. I have worked in startups and what \"grows\" out\
+            \ of them.</p>\n<p>I maintain a Telegram channel about development processes from different levels \"Chernov sharit\"\
+            , as well as the podcasts &ldquo;Two Ivans&rdquo; and &ldquo;Evening Downtime&rdquo;.</p>"
+      - language: ru
+        text: "<p>Ушел в архитекторы из CTO и ни о чем не жалею. Поработал в стартапах и там, что из них вырастает.</p>\n\
+            <p>Веду Telegram-канал о процессах в разработке с разных уровней <a href=\"https://t.me/chernov_sharit\">Chernov\
+            \ sharit</a>, а также подкасты <a href=\"https://doubleivan.ru/\">&laquo;Два Ивана&raquo;</a> и <a href=\"https://vdauntaim.mave.digital/\"\
+            >&laquo;Вечерний даунтайм&raquo;</a>.</p>"
+  - id: 3892
+    photoFileName: 03892.jpg
+    photoUpdatedAt: "2025-03-01T23:28:53Z"
+    name:
+      - {language: en, text: "Pavel Kirilin"}
+      - {language: ru, text: "Павел Кирилин"}
+    companyIds: [1416]
+    bio:
+      - {language: en, text: "<p>CTO at the Danish startup Intree. Prior to this, I worked for several years at Gazprom-Media,\
+            \ where I was the head of the R&amp;D department and developed backend applications. I also participated in a\
+            \ number of high-load projects while working at the outsource company named Simbirsoft. I am actively involved\
+            \ in open-source development, managing projects both under my own name and on behalf of Intree. The main projects\
+            \ at the moment are <a href=\"https://github.com/taskiq-python/taskiq\">Taskiq</a> and <a href=\"https://github.com/s3rius/rustus\"\
+            >Rustus</a>.</p>"}
+      - language: ru
+        text: "<p>CTO в датском стартапе Intree. До этого несколько лет работал в Газпром-Медиа, где был руководителем отд\
+            ела R&amp;D и разрабатывал бэкенд приложений. Участвовал в высоконагруженных проектах в аутсорс-компании SimbirSoft.</p>\n\
+            <p>Активно участвую в open source-разработке, веду проекты как от своего имени, так и от имени Intree. Основны\
+            е проекты сейчас: <a href=\"https://github.com/taskiq-python/taskiq\">Taskiq</a> и <a href=\"https://github.com/s3rius/rustus\"\
+            >Rustus</a>.</p>"
+  - id: 3893
+    photoFileName: 03893.jpg
+    photoUpdatedAt: "2025-03-26T14:26:23Z"
+    name:
+      - {language: en, text: "Roman Iov"}
+      - {language: ru, text: "Роман Иов"}
+    companyIds: [1417]
+    bio:
+      - {language: en, text: "<p>Python Team Lead. I lead the development of complex projects in the oil industry.</p>"}
+      - {language: ru, text: "<p>Python Team Lead. Веду разработку сложных проектов в нефтяной отрасли.</p>"}
+  - id: 3894
+    photoFileName: 03894.jpg
+    photoUpdatedAt: "2025-03-03T11:19:06Z"
+    name:
+      - {language: en, text: "Ivan Kalinin"}
+      - {language: ru, text: "Иван Калинин"}
+    companyIds: [689]
+    bio:
+      - language: en
+        text: "<p>Graduated from MIPT. Have been working at Yandex for 12 years &mdash; from Advertising and Stations to Cloud.</p>\n\
+            <p>I am fond of D&amp;D and LARP games.</p>"
+      - language: ru
+        text: "<p>Окончил Физтех. 12 лет работаю в Яндексе &mdash; от Рекламы и Колонок до Облака.</p>\n<p>Увлекаюсь D&amp;D\
+            \ и полевыми ролевыми играми.</p>"
+  - id: 3895
+    photoFileName: 03895.jpg
+    photoUpdatedAt: "2025-04-14T09:35:28Z"
+    name:
+      - {language: en, text: "Sergei Vialov"}
+      - {language: ru, text: "Сергей Вялов"}
+    companyIds: [1418]
+    bio:
+      - {language: en, text: "<p>Overqualified gastroenterologist, hepatologist, Candidate of Medical Sciences, MD, PhD. Author\
+            \ of more than 160 scientific articles and more than 20 books for physicians.</p>"}
+      - {language: ru, text: "<p>Overqualified гастроэнтеролог, гепатолог, к. м. н., MD, PhD. Автор более 160 научных стат\
+            ей и более 20 книг для врачей.</p>"}
+  - id: 3896
+    photoFileName: 03896.jpg
+    photoUpdatedAt: "2025-02-27T14:37:05Z"
+    name:
+      - {language: en, text: "Anton Patrushev"}
+      - {language: ru, text: "Антон Патрушев"}
+    companyIds: [969]
+    bio:
+      - {language: en, text: "<p>I've been writing in Python since 2003, am the creator of PyCon Russia conference. I have\
+            \ been involved in amateur microelectronics since 2010. I have spoken at conferences, meetups, and held master\
+            \ classes many times.</p>"}
+      - {language: ru, text: "<p>Пишу на Python c 2003 года, создатель конференции PyCon Russia. Занимаюсь любительской ми\
+            кроэлектроникой с 2010-го. Много раз выступал на конференциях, митапах, проводил мастер-классы.</p>"}
+  - id: 3897
+    photoFileName: 03897.jpg
+    photoUpdatedAt: "2025-04-04T07:48:01Z"
+    name:
+      - {language: en, text: "Anatoly Kruglov"}
+      - {language: ru, text: "Анатолий Круглов"}
+    companyIds: [1419]
+    bio:
+      - {language: en, text: "<p>I've been writing code for about 8 years, the last 3 of them in Python. I would like to share\
+            \ my experience and knowledge about approaches to project development, methods of code complexity management,\
+            \ and practical application of SOLID, CQRS and DDD principles.</p>"}
+      - {language: ru, text: "Пишу код уже около 8 лет, из них последние 3 года на Python. Хочу поделиться своим опытом и\
+            \ знаниями о подходах к разработке проектов, методах управления сложностью кода, а также о практическом примен\
+            ении принципов SOLID, CQRS и DDD."}
+  - id: 3898
+    photoFileName: 03898.jpg
+    photoUpdatedAt: "2025-04-07T06:29:03Z"
+    name:
+      - {language: en, text: "Denis Kataev"}
+      - {language: ru, text: "Денис Катаев"}
+    companyIds: [674]
+    bio:
+      - {language: en, text: "<p>Executive, developer, conference speaker.</p>"}
+      - {language: ru, text: "<p>Руководитель, разработчик, спикер на конференциях.</p>"}
+  - id: 3899
+    photoFileName: 03899.jpg
+    photoUpdatedAt: 2024-09-05T20:48Z
+    name:
+      - {language: en, text: "Roman Pozharnov"}
+      - {language: ru, text: "Роман Пожарнов"}
+    companyIds: [410]
+    bio:
+      - {language: en, text: "<p>I write in Python and Go, I love looking at beautiful dashboards in Grafana and poking around\
+            \ in the monitoring infrastructure. In my free time, I contribute to cool libraries, and during my working hours,\
+            \ I develop products at Positive Technologies.</p>"}
+      - {language: ru, text: "<p>Пишу на Python и Go, обожаю смотреть на красивые дашборды в Grafana и ковыряться в инфрас\
+            труктуре мониторинга. В свободное время контрибьючу в классные библиотеки, а в рабочее &mdash; развиваю продук\
+            ты Positive Technologies.</p>"}
+  - id: 3900
+    photoFileName: 03900.jpg
+    photoUpdatedAt: "2025-03-04T08:57:52Z"
+    name:
+      - {language: en, text: "Ivan Zhernovkov"}
+      - {language: ru, text: "Иван Жерновков"}
+    companyIds: [630]
+    bio:
+      - {language: en, text: "<p>Head of the Python developer cluster at Kontur. Background: desktop, backend, system development\
+            \ and algorithms. Proud to have solved TSP and written Control Plane for an L4 balancer.</p>"}
+      - {language: ru, text: "<p>Руководитель кластера Python-разработчиков в Контуре. Бэкграунд: desktop, backend, систем\
+            ная разработка и алгоритмы. Горжусь тем, что решил TSP и написал Control Plane для L4-балансера.</p>"}
+  - id: 3901
+    photoFileName: 03901.jpg
+    photoUpdatedAt: "2025-02-18T07:11:51Z"
+    name:
+      - {language: en, text: "Giorgii Lutidze"}
+      - {language: ru, text: "Гиоргий Лутидзе"}
+    companyIds: [689]
+    bio:
+      - {language: en, text: "<p>Technical manager and developer with experience in academia (PhD in Petroleum Engineering),\
+            \ industry (Yandex Market, Yandex Unmanned Technologies) and startups (CTO MD.School).</p>"}
+      - {language: ru, text: "<p>Технический менеджер и разработчик с опытом в академии (PhD в Petroleum Engineering), инд\
+            устрии (Яндекс Маркет, Яндекс Беспилотные Технологии) и стартапах (CTO MD.School).</p>"}
+  - id: 3902
+    photoFileName: 03902.jpg
+    photoUpdatedAt: "2025-02-20T07:10:57Z"
+    name:
+      - {language: en, text: "Arseniy Savin"}
+      - {language: ru, text: "Арсений Савин"}
+    companyIds: [174]
+    bio:
+      - language: en
+        text: "<p>I'm a backend engineer and solution architect based in Omsk. I represent the Effective company. We help\
+            \ Russian and international companies strengthen their development teams with specialists. We solve interesting\
+            \ and complex tasks for clients such as Yandex, Walmart, FedEx, IMAX, as well as innovative startups like HeraMED.</p>\n\
+            <p>I love technology and everything related to it. I enjoy diving into various areas, from DevOps and AppSec to\
+            \ cross-platform client application development.</p>"
+      - language: ru
+        text: "<p>Backend-инженер и архитектор решений из Омска. Представляю компанию Effective &mdash; мы помогаем россий\
+            ским и зарубежным компаниям усилить их команды разработки специалистами. Решаем интересные, сложные задачи у т\
+            аких клиентов, как Яндекс, Walmart, FedEx, IMAX, а также инновационных стартапов вроде HeraMED.</p>\n<p>Обожаю\
+            \ технологии и все, что с ними связано. Люблю &laquo;копать&raquo; в разные сферы: от DevOps и AppSec до кросс\
+            платформенной разработки клиентских приложений.</p>"
+  - id: 3903
+    photoFileName: 03903.jpg
+    photoUpdatedAt: "2025-04-09T15:39:04Z"
+    name:
+      - {language: en, text: "Aleksandr Allakhverdian"}
+      - {language: ru, text: "Александр Аллахвердян"}
+    companyIds: [1261]
+    bio:
+      - language: en
+        text: "<p>Python developer who loves math, ML and IT. I wrote military simulators in Unity and C++, worked in RnD\
+            \ with Huawei and solved a number of optimization problems &mdash; until I finally reached Bestplace.</p>\n<p>I\
+            \ like to smile, swim and be inspired by the fact that my life is slow paced.</p>"
+      - language: ru
+        text: "<p><span style=\"font-weight: 400;\">Python-разработчик, любящий математику, ML и IT. Успел пописать военны\
+            е симуляторы на Unity и C++, поработать в RnD с Huawei и порешать ряд оптимизационных задач &mdash; пока, нако\
+            нец, не достиг Bestplace.</span></p>\n<p><span style=\"font-weight: 400;\">Люблю улыбаться, плавать и вдохновл\
+            яться от факта размеренности своей жизни.</span></p>"
+  - id: 3904
+    photoFileName: 03904.jpg
+    photoUpdatedAt: "2025-03-25T09:25:23Z"
+    name:
+      - {language: en, text: "Philip Ulyankin"}
+      - {language: ru, text: "Филипп Ульянкин"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "Руковожу командой технологий безопасности в Техплатформе Городских сервисов Яндекса. Мы обес\
+            печиваем безопасность поездок в Яндекс Go."}
+  - id: 3905
+    photoFileName: 03905.jpg
+    photoUpdatedAt: "2025-03-13T12:02:28Z"
+    name:
+      - {language: en, text: "Sergey Vorobyov"}
+      - {language: ru, text: "Сергей Воробьёв"}
+    companyIds: [689]
+    bio:
+      - {language: ru, text: "<p>Разрабатываю системы распределенного обучения в команде претрейна YandexGPT. Имею опыт ма\
+            сштабирования больших LLM.</p>"}
+  - id: 3906
+    photoFileName: 03906.jpg
+    photoUpdatedAt: "2025-04-09T12:43:30Z"
+    name:
+      - {language: en, text: "Peter Valing"}
+      - {language: ru, text: "Пётр Валинг"}
+    companyIds: [674]
+    bio:
+      - language: ru
+        text: "<p><span style=\"font-weight: 400;\">В ИТ еще с тех времен, когда тональность текста определяли регулярками\
+            .</span></p>\n<p><span style=\"font-weight: 400;\">Окончил МГТУ им. H. Э. Баумана в 2009-м и параллельно уже п\
+            лотно работал в одном из ИТ-интеграторов, где сделал много разных прикольных систем.</span></p>\n<p><span style=\"\
+            font-weight: 400;\">Познакомился с классическим ML на курсе Яндекса и МФТИ. Это позволило на собеседованиях ин\
+            огда &laquo;сойти за умного&raquo;, открылись новые горизонты. Меня закинуло в low-хайлоад AdTech, и я сделал\
+            \ с нуля рекламную &laquo;крутилку&raquo;. После этого работал AI/ML-архитектором в Сбере, где осознал глубину\
+            \ кроличьей норы в части Large Enterprise AI, когда у тебя тысячи ML-сотрудников со своими задачами и проблема\
+            ми. После архитектуры захотелось опять поработать руками, и я присоединился к команде AI-платформы Т-Банка, гд\
+            е занимался развитием MLE-тулов и немного инфраструктурой. Последние 5 лет занимаюсь MLOps-платформами и проце\
+            ссами в крупнейших финтехах.</span></p>"
+  - id: 3907
+    photoFileName: 03907.jpg
+    photoUpdatedAt: "2025-04-21T09:01:27Z"
+    name:
+      - {language: en, text: "Evgeniy Vylegzhanin"}
+      - {language: ru, text: "Евгений Вылегжанин"}
+    companyIds: [844]
+    bio:
+      - language: ru
+        text: "<p>Главный разработчик и Team Lead команды машинного обучения. Вместе с командой занимаемся внедрением LLM\
+            \ в компании, разрабатываем различные ассистенты на базе больших языковых моделей и других NLP-решений.</p>\n\
+            <p>Победитель и призер соревнований по машинному обучению и ИИ.</p>"
+  - id: 3908
+    photoFileName: 03908.jpg
+    photoUpdatedAt: "2025-04-16T09:09:53Z"
+    name:
+      - {language: en, text: "Aleksei Popov"}
+      - {language: ru, text: "Алексей Попов"}
+    companyIds: [1422]
+    bio:
+      - language: en
+        text: "<p>Since 2019, I have been involved in the development and research of computer vision algorithms for various\
+            \ applications.</p>\n<p>Graduated with honors from the Bachelor's and Master's degree programs of VMK MSU in Computer\
+            \ Vision. Winner and medalist of All-Russian Olympiads in robotics.</p>\n<p>I have been developing object recognition\
+            \ in the field of autonomous transportation since 2022, and since 2024 I have been leading the Computer Vision\
+            \ development team at Navio.</p>\n<p>I like to talk about complex things in simple words. I love cars, robots\
+            \ and everything related to them.</p>"
+      - language: ru
+        text: "<p>С 2019 года занимаюсь разработкой и исследованиями в области алгоритмов компьютерного зрения для различн\
+            ых приложений.</p>\n<p>С отличием окончил бакалавриат и магистратуру ВМК МГУ по направлению Computer Vision. П\
+            обедитель и призер всероссийских олимпиад по робототехнике.</p>\n<p>В области автономного транспорта с 2022 го\
+            да развиваю направление распознавания объектов, а с 2024 года руковожу командой разработки в области Computer\
+            \ Vision в компании Navio.</p>\n<p>Люблю рассказывать о сложном простыми словами. Обожаю машины, роботов и всё\
+            , что с ними связано.</p>"
+  - id: 3909
+    photoFileName: 03909.jpg
+    photoUpdatedAt: "2025-04-10T15:28:23Z"
+    name:
+      - {language: en, text: "Ruslan Talipov"}
+      - {language: ru, text: "Руслан Талипов"}
+    companyIds: [377]
+    bio:
+      - {language: en, text: "Head of ML Okko. Kaggle Competition Master."}
+      - {language: ru, text: "Head of ML Okko. Kaggle Competition Master. 14 лет индустриального опыта.</p><p><br>"}
+  - id: 3910
+    photoFileName: 03910.jpg
+    photoUpdatedAt: "2025-04-09T12:41:13Z"
+    name:
+      - {language: en, text: "Stanislav Yarkin"}
+      - {language: ru, text: "Станислав Яркин"}
+    companyIds: [234]
+    bio:
+      - {language: ru, text: "<p><span style=\"font-weight: 400;\">Работаю в hh.ru в качестве ML-инженера в команде поиска\
+            , до этого был бэкенд-разработчиком. Развиваю рекомендательную систему, участвую на всех этапах ее реализации\
+            . Окончил Академию больших данных MADE. Есть опыт публичных выступлений: выступал с докладом на &laquo;Матемар\
+            кетинге&raquo; в 2024 году, участвовал в интервью для проекта </span><a href=\"https://www.youtube.com/watch?v=8GhKRUtJPRE\"\
+            ><span style=\"font-weight: 400;\">&laquo;В гости к hh.ru&raquo;</span></a><span style=\"font-weight: 400;\">.</span></p>"}
+  - id: 3911
+    photoFileName: 03911.jpg
+    photoUpdatedAt: "2025-04-17T16:29:57Z"
+    name:
+      - {language: en, text: "Alexander Gasnikov"}
+      - {language: ru, text: "Александр Гасников"}
+    companyIds: [678]
+    bio:
+      - language: ru
+        text: "<p>В 2006 году окончил МФТИ. В 2007-м стал кандидатом, а в 2016-м &mdash; доцентом физико-математических на\
+            ук. С 2022 года заведую кафедрой и лабораторией в МФТИ, руковожу группой в ИИ-центре ИСП РАН. С 2023 года &mdash;\
+            \ ректор Университета Иннополис.</p>\n<p>Автор более 200 статей и 7 книг. Лауреат премии Yahoo, научной премии\
+            \ Яндекса им. Ильи Сегаловича, премии Правительства г. Москвы по направлению &laquo;Математика&raquo;.</p>\n<p>О\
+            бласть интересов: численные методы оптимизации и их приложения в ИИ.</p>"
+  - id: 3912
+    photoFileName: 03912.jpg
+    photoUpdatedAt: "2025-02-21T10:22:17Z"
+    name:
+      - {language: en, text: "Lina Veltman"}
+      - {language: ru, text: "Лина Вельтман"}
+    companyIds: [1128]
+    bio:
+      - {language: ru, text: "<p>Senior Engineer Researcher в Wildberries Tech, занимаюсь CoreLLM alignment для анализа по\
+            льзовательского поведения и улучшения рекомендаций. В Samsung работала с C++, тренируя модели для поиска багов\
+            \ и написания тестов. Начала карьеру в Computer Vision, а теперь фокусируюсь на LLM, используя опыт в разных м\
+            одальностях.</p>"}
+  - id: 3913
+    photoFileName: 03913.jpg
+    photoUpdatedAt: "2025-02-12T13:54:40Z"
+    name:
+      - {language: en, text: "Karina Romanova"}
+      - {language: ru, text: "Карина Романова"}
+    companyIds: [1128]
+    bio:
+      - {language: ru, text: "<p>Занимаюсь разработкой и внедрением больших языковых моделей (LLMs) и генеративного ИИ. В\
+            \ течение карьеры работала над различными задачами NLP, включая создание генеративных ассистентов в SberDevices,\
+            \ разработку мультимодальных рекомендательных систем и интеграцию моделей в высоконагруженные бизнес-продукты\
+            . Сейчас руковожу R&amp;D-направлением по LLM Alignment в Wildberries, где мы разрабатываем инфраструктуру для\
+            \ управления поведением пользователей с помощью LLM. Кроме того, преподаю мультимодальные архитектуры и соврем\
+            енные методы обучения языковых моделей в МФТИ.</p>"}
+  - id: 3914
+    photoFileName: 03914.jpg
+    photoUpdatedAt: "2025-03-12T06:57:19Z"
+    name:
+      - {language: en, text: "Ivan Maximov"}
+      - {language: ru, text: "Иван Максимов"}
+    companyIds: [689]
+    bio:
+      - language: ru
+        text: "<p>Лид продуктовой аналитики и ML в персонализации Яндекс Маркета. Ex-WB, ex-Delivery Club.</p>\n<p>9 лет в\
+            \ DS: построил с нуля систему рекомендаций Delivery Club, внедрил платформу А/В-тестирования, обеспечив более\
+            \ 200 экспериментов в квартал.</p>\n<p>Автор тематических Telegram-каналов <a href=\"https://t.me/ml4value\">ML\
+            \ for Value</a> и <a href=\"https://t.me/abpolice\">AB Police</a>.</p>"
+  - id: 3915
+    photoFileName: 03915.jpg
+    photoUpdatedAt: "2025-04-10T09:52:36Z"
+    name:
+      - {language: en, text: "Nikita Romanov"}
+      - {language: ru, text: "Никита Романов"}
+    companyIds: [1128]
+    bio:
+      - {language: ru, text: "<p>Lead команды Поиска по фото в Wildberries Tech. Разрабатываю архитектуру, инфраструктуру\
+            \ и технологии для высоконагруженных бизнес-продуктов &mdash; онлайн-сервиса &laquo;Поиск по фото&raquo; и рек\
+            омендательной ленты &laquo;Похожие по фото&raquo;.</p>"}
+  - id: 3916
+    photoFileName: 03916.jpg
+    photoUpdatedAt: "2025-03-04T08:29:37Z"
+    name:
+      - {language: en, text: "Illarion Iov"}
+      - {language: ru, text: "Илларион Иов"}
+    companyIds: [969]
+    bio:
+      - {language: en, text: "I specialize in LLM alignment and fine-tuning for banking tasks at Tochka. Currently, as a PhD\
+            \ Student at ITMO, I work on applying LLMs in AutoML. My past research focused on ML applications in physical\
+            \ sciences, and I continue to follow developments in the field."}
+      - {language: ru, text: "<p>Развиваю в Точке LLM alignment и дообучаю модели для банковских задач. Пишу диссертацию в\
+            \ ИТМО о применении LLM в AutoML. Ранее ресерчил применения ML в физических исследованиях и продолжаю следить\
+            \ за новостями в области.</p>"}
+  - id: 3917
+    photoFileName: 03917.jpg
+    photoUpdatedAt: "2025-04-09T12:35:16Z"
+    name:
+      - {language: en, text: "Alexander Ledovsky"}
+      - {language: ru, text: "Александр Ледовский"}
+    companyIds: [611]
+    bio:
+      - language: ru
+        text: "<p><span style=\"font-weight: 400;\">В Авито с 2022 года. Работаю над ранжированием платных объявлений и ав\
+            тобиддингом для установки ставок. Отвечал со стороны DS за разработку и запуск продвижения за бюджет и продвиж\
+            ения с оплатой за просмотр.&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\">В ML с 2016 года. В прошлом\
+            \ работал в Сбере, IBM, а также в управленческом консалтинге. Выпускник ШАД Яндекса. Автор Telegram-канала </span><a\
+            \ href=\"https://t.me/big_ledovsky\"><span style=\"font-weight: 400;\">Big Ledovsky | блог DS лида</span></a><span\
+            \ style=\"font-weight: 400;\">.</span></p>"
+  - id: 3918
+    photoFileName: 03918.jpg
+    photoUpdatedAt: 2025-04-01T14:21Z
+    name:
+      - {language: en, text: "Daria Khomich"}
+      - {language: ru, text: "Дарья Хомич"}
+    companyIds: [665]
+    bio:
+      - {language: ru, text: "<p>Занимаюсь данными для alignment обучения моделей линейки GigaChat. Также разрабатываю B2C-/B2B-\
+            \ продукты &mdash; LLM-based ассистентские системы, genAI поисковые решения, ключевые компоненты RAG-систем. О\
+            канчиваю магистратуру ВМК МГУ.</p>"}
+  - id: 3919
+    photoFileName: 03919.jpg
+    photoUpdatedAt: "2025-04-01T14:17:41Z"
+    name:
+      - {language: en, text: "Egor Kolodin"}
+      - {language: ru, text: "Егор Колодин"}
+    companyIds: [665]
+    bio:
+      - {language: ru, text: "<p>Выпускник МФТИ и ШАД. Senior NLP-разработчик в GigaChat prod team. Преподаватель.</p>"}
+  - id: 3920
+    photoFileName: 03920.jpg
+    photoUpdatedAt: "2025-04-22T15:37:38Z"
+    name:
+      - {language: en, text: "Alexander Gushchin"}
+      - {language: ru, text: "Александр Гущин"}
+    companyIds: [1421]
+    bio:
+      - language: ru
+        text: "<p>Kaggle Competitions Grandmaster и Fullstack ML Engineer. Сейчас &mdash; индустриальный руководитель ML-н\
+            аправления в Центральном университете и главный тренер школьной команды России на межнар по AI.</p>\n<p>Внедря\
+            ю ИИ в образование в Центральном университете. Автор курсов на Coursera, KARPOV.COURSES, HARBOUR.SPACE.</p>"
+  - id: 3921
+    photoFileName: 03921.jpg
+    photoUpdatedAt: "2025-02-19T09:27:06Z"
+    name:
+      - {language: en, text: "Mark Panenko"}
+      - {language: ru, text: "Марк Паненко"}
+    companyIds: [390]
+    bio:
+      - language: ru
+        text: "<p class=\"p1\">В Ozon Банке руковожу направлением Data Science. Мы создаем продакшен-решения в:</p>\n<ul>\n\
+            <li class=\"p1\">классическом ML (скоринг, ранжирование, рекомендации, временные ряды и др.);</li>\n<li class=\"\
+            p1\">антифроде ML (сверхбыстрые транзакционные системы и поведенческое моделирование);</li>\n<li class=\"p1\"\
+            >NLP (классификаторы, кластеризация, большие языковые модели и RAG);</li>\n<li class=\"p1\">компьютерном зрени\
+            и (распознавание лиц, документов и многое другое).</li>\n</ul>\n<p class=\"p1\">Автор и ведущий подкаста <a href=\"\
+            https://data-breakfast.mave.digital/\">Data breakfast</a>. Курирую треки ODS &mdash; ALLMs и Scoring. В ODS SPB\
+            \ организую офлайн-мероприятия в Питере.</p>\n<p class=\"p1\">Автор курсов и преподаватель в ИТМО, KARPOV.COURSES,\
+            \ Skillfactory.</p>\n<p class=\"p1\">Состою в Программных комитетах DUMP, &laquo;Стачки&raquo;.&nbsp;</p>"
