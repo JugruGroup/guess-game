@@ -490,9 +490,12 @@ companySynonyms:
     synonyms: [
       "Oracle Labs"
     ]
-  - name: Ostrovok
+  - name: Ostrovok!
     synonyms: [
-      Ostrovok.ru
+      Ostrovok.ru,
+      Островок!,
+      Ostrovok,
+      Островок
     ]
   - name: OZON
     synonyms: [

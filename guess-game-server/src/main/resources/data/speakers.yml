@@ -4829,7 +4829,7 @@ speakers:
     name:
       - {language: en, text: "Sergey Nikolenko"}
       - {language: ru, text: "Сергей Николенко"}
-    companyIds: []
+    companyIds: [657]
     bio:
       - language: ru
         text: "<p>Ученый, преподаватель и практик в области машинного обучения и информатики в целом. Доктор физико-матема\
@@ -57102,7 +57102,7 @@ speakers:
     name:
       - {language: en, text: "Ivan Chernov"}
       - {language: ru, text: "Иван Чернов"}
-    companyIds: [1415]
+    companyIds: [1092]
     bio:
       - language: en
         text: "<p>Moved to architects from CTO and don't regret a thing. I have worked in startups and what \"grows\" out\

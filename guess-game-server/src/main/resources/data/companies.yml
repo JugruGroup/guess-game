@@ -2471,11 +2471,6 @@ companies:
     name:
       - { language: en, text: "Doctor Evidence" }
     siteLink: https://www.drevidence.com
-  - id: 722
-    name:
-      - { language: en, text: Vsegda.Da }
-      - { language: ru, text: Всегда.Да }
-    siteLink: https://vsegda-da.com
   - id: 723
     name:
       - { language: en, text: "Eclipse Foundation" }
@@ -3681,9 +3676,6 @@ companies:
     name:
       - { language: en, text: "SolarWinds" }
     siteLink: https://www.solarwinds.com
-  - id: 1071
-    name:
-      - { language: en, text: "Mekhovyye Kulaki" }
   - id: 1072
     name:
       - { language: en, text: WANNA }
@@ -3761,8 +3753,8 @@ companies:
     siteLink: https://www.mapbox.com
   - id: 1092
     name:
-      - { language: en, text: Ostrovok }
-      - { language: ru, text: Островок }
+      - { language: en, text: Ostrovok! }
+      - { language: ru, text: Островок! }
     siteLink: https://ostrovok.ru
   - id: 1093
     name:
@@ -5075,11 +5067,6 @@ companies:
       - {language: en, text: "Gold Apple"}
       - {language: ru, text: "Золотое яблоко"}
     siteLink: https://goldapple.ru
-  - id: 1415
-    name:
-      - {language: en, text: Ostrovok!}
-      - {language: ru, text: Островок!}
-    siteLink: https://ostrovok.ru
   - id: 1416
     name:
       - {language: en, text: Intree}
