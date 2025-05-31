@@ -57064,6 +57064,8 @@ speakers:
             \ issues related to building high-performance and scalable systems.</p>"}
       - {language: ru, text: "<p>Кандидат технических наук. Руководитель направления Python-разработки. Интересуюсь архите\
             ктурными вопросами построения высокопроизводительных и масштабируемых систем.</p>"}
+    twitter: viktor_zloy
+    gitHub: Luferov
   - id: 3888
     photoFileName: 03888.jpg
     photoUpdatedAt: "2025-03-04T08:44:15Z"
@@ -57084,6 +57086,8 @@ speakers:
     bio:
       - {language: en, text: "<p>Programmer, open source enthusiast.</p>"}
       - {language: ru, text: "<p>Программист, энтузиаст опенсорса.</p>"}
+    gitHub: pomponchik
+    habr: pomponchik
   - id: 3890
     photoFileName: 03890.jpg
     photoUpdatedAt: "2025-04-16T13:12:54Z"
@@ -57096,6 +57100,8 @@ speakers:
             \ of pet projects where I experiment and learn new technologies.</p>"}
       - {language: ru, text: "<p>Тимлид в Золотом Яблоке. Руковожу командой, которая разрабывает личный кабинет пользовате\
             ля. Делаю много пет-проектов, на которых экспериментирую и изучаю новые технологии.</p>"}
+    gitHub: biozz
+    habr: cvaynex
   - id: 3891
     photoFileName: 03891.jpg
     photoUpdatedAt: "2025-04-17T07:38:29Z"
@@ -57113,6 +57119,8 @@ speakers:
             <p>Веду Telegram-канал о процессах в разработке с разных уровней <a href=\"https://t.me/chernov_sharit\">Chernov\
             \ sharit</a>, а также подкасты <a href=\"https://doubleivan.ru/\">&laquo;Два Ивана&raquo;</a> и <a href=\"https://vdauntaim.mave.digital/\"\
             >&laquo;Вечерний даунтайм&raquo;</a>.</p>"
+    gitHub: vanadium23
+    habr: vanadium23
   - id: 3892
     photoFileName: 03892.jpg
     photoUpdatedAt: "2025-03-01T23:28:53Z"
@@ -57133,6 +57141,8 @@ speakers:
             <p>Активно участвую в open source-разработке, веду проекты как от своего имени, так и от имени Intree. Основны\
             е проекты сейчас: <a href=\"https://github.com/taskiq-python/taskiq\">Taskiq</a> и <a href=\"https://github.com/s3rius/rustus\"\
             >Rustus</a>.</p>"
+    gitHub: s3rius
+    habr: s3rius
   - id: 3893
     photoFileName: 03893.jpg
     photoUpdatedAt: "2025-03-26T14:26:23Z"
