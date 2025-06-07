@@ -4838,6 +4838,7 @@ speakers:
             лубокое обучение&raquo;.</p>\n<p>Провожу исследования в разных областях &mdash; от улучшения больших языковых\
             \ моделей до анализа алгоритмов и теоретической информатики. Применяю машинное обучение в реальных проектах.</p>\n\
             <p>Двукратный чемпион мира в спортивной версии &laquo;Что? Где? Когда?&raquo;.</p>"
+    twitter: snikolenko
     gitHub: snikolenko
     habr: snikolenko
   - id: 321
@@ -47538,6 +47539,7 @@ speakers:
             \ ML platform for geodata. Previously I was involved in machine learning and development in Yandex and ConsultantPlus.</p>"}
       - {language: ru, text: "<p>Разработчик с опытом в ML. Руковожу разработкой в компании Bestplace: создаем аналитическ\
             ую ML-платформу для геоданных. Раньше занимался машинным обучением и разработкой в Яндексе и КонсультантПлюс.</p>"}
+    twitter: mityakrylov
     gitHub: mityakrylov
   - id: 3278
     photoFileName: 03278.jpg
@@ -57119,6 +57121,7 @@ speakers:
             <p>Веду Telegram-канал о процессах в разработке с разных уровней <a href=\"https://t.me/chernov_sharit\">Chernov\
             \ sharit</a>, а также подкасты <a href=\"https://doubleivan.ru/\">&laquo;Два Ивана&raquo;</a> и <a href=\"https://vdauntaim.mave.digital/\"\
             >&laquo;Вечерний даунтайм&raquo;</a>.</p>"
+    twitter: vanadium23
     gitHub: vanadium23
     habr: vanadium23
   - id: 3892
@@ -57153,6 +57156,7 @@ speakers:
     bio:
       - {language: en, text: "<p>Python Team Lead. I lead the development of complex projects in the oil industry.</p>"}
       - {language: ru, text: "<p>Python Team Lead. Веду разработку сложных проектов в нефтяной отрасли.</p>"}
+    twitter: mickeyeasy
   - id: 3894
     photoFileName: 03894.jpg
     photoUpdatedAt: "2025-03-03T11:19:06Z"
@@ -57167,6 +57171,8 @@ speakers:
       - language: ru
         text: "<p>Окончил Физтех. 12 лет работаю в Яндексе &mdash; от Рекламы и Колонок до Облака.</p>\n<p>Увлекаюсь D&amp;D\
             \ и полевыми ролевыми играми.</p>"
+    twitter: pupssman
+    gitHub: pupssman
   - id: 3895
     photoFileName: 03895.jpg
     photoUpdatedAt: "2025-04-14T09:35:28Z"
@@ -57192,6 +57198,9 @@ speakers:
             \ classes many times.</p>"}
       - {language: ru, text: "<p>Пишу на Python c 2003 года, создатель конференции PyCon Russia. Занимаюсь любительской ми\
             кроэлектроникой с 2010-го. Много раз выступал на конференциях, митапах, проводил мастер-классы.</p>"}
+    twitter: apatrushev
+    gitHub: apatrushev
+    habr: apatrushev
   - id: 3897
     photoFileName: 03897.jpg
     photoUpdatedAt: "2025-04-04T07:48:01Z"
@@ -57216,6 +57225,7 @@ speakers:
     bio:
       - {language: en, text: "<p>Executive, developer, conference speaker.</p>"}
       - {language: ru, text: "<p>Руководитель, разработчик, спикер на конференциях.</p>"}
+    gitHub: kataev
   - id: 3899
     photoFileName: 03899.jpg
     photoUpdatedAt: 2024-09-05T20:48Z
@@ -57230,6 +57240,8 @@ speakers:
       - {language: ru, text: "<p>Пишу на Python и Go, обожаю смотреть на красивые дашборды в Grafana и ковыряться в инфрас\
             труктуре мониторинга. В свободное время контрибьючу в классные библиотеки, а в рабочее &mdash; развиваю продук\
             ты Positive Technologies.</p>"}
+    twitter: draincoder
+    gitHub: draincoder
   - id: 3900
     photoFileName: 03900.jpg
     photoUpdatedAt: "2025-03-04T08:57:52Z"
@@ -57274,6 +57286,7 @@ speakers:
             аких клиентов, как Яндекс, Walmart, FedEx, IMAX, а также инновационных стартапов вроде HeraMED.</p>\n<p>Обожаю\
             \ технологии и все, что с ними связано. Люблю &laquo;копать&raquo; в разные сферы: от DevOps и AppSec до кросс\
             платформенной разработки клиентских приложений.</p>"
+    gitHub: ayusavin
   - id: 3903
     photoFileName: 03903.jpg
     photoUpdatedAt: "2025-04-09T15:39:04Z"
@@ -57301,6 +57314,7 @@ speakers:
     bio:
       - {language: ru, text: "Руковожу командой технологий безопасности в Техплатформе Городских сервисов Яндекса. Мы обес\
             печиваем безопасность поездок в Яндекс Go."}
+    gitHub: FUlyankin
   - id: 3905
     photoFileName: 03905.jpg
     photoUpdatedAt: "2025-03-13T12:02:28Z"
@@ -57330,6 +57344,8 @@ speakers:
             ми. После архитектуры захотелось опять поработать руками, и я присоединился к команде AI-платформы Т-Банка, гд\
             е занимался развитием MLE-тулов и немного инфраструктурой. Последние 5 лет занимаюсь MLOps-платформами и проце\
             ссами в крупнейших финтехах.</span></p>"
+    twitter: pvaling
+    gitHub: pvaling
   - id: 3907
     photoFileName: 03907.jpg
     photoUpdatedAt: "2025-04-21T09:01:27Z"
@@ -57342,6 +57358,7 @@ speakers:
         text: "<p>Главный разработчик и Team Lead команды машинного обучения. Вместе с командой занимаемся внедрением LLM\
             \ в компании, разрабатываем различные ассистенты на базе больших языковых моделей и других NLP-решений.</p>\n\
             <p>Победитель и призер соревнований по машинному обучению и ИИ.</p>"
+    gitHub: evylegzhanin
   - id: 3908
     photoFileName: 03908.jpg
     photoUpdatedAt: "2025-04-16T09:09:53Z"
@@ -57374,6 +57391,7 @@ speakers:
     bio:
       - {language: en, text: "Head of ML Okko. Kaggle Competition Master."}
       - {language: ru, text: "Head of ML Okko. Kaggle Competition Master. 14 лет индустриального опыта.</p><p><br>"}
+    gitHub: RooshRoosh
   - id: 3910
     photoFileName: 03910.jpg
     photoUpdatedAt: "2025-04-09T12:41:13Z"
@@ -57387,6 +57405,7 @@ speakers:
             . Окончил Академию больших данных MADE. Есть опыт публичных выступлений: выступал с докладом на &laquo;Матемар\
             кетинге&raquo; в 2024 году, участвовал в интервью для проекта </span><a href=\"https://www.youtube.com/watch?v=8GhKRUtJPRE\"\
             ><span style=\"font-weight: 400;\">&laquo;В гости к hh.ru&raquo;</span></a><span style=\"font-weight: 400;\">.</span></p>"}
+    habr: stasyarkin
   - id: 3911
     photoFileName: 03911.jpg
     photoUpdatedAt: "2025-04-17T16:29:57Z"
@@ -57427,6 +57446,7 @@ speakers:
             . Сейчас руковожу R&amp;D-направлением по LLM Alignment в Wildberries, где мы разрабатываем инфраструктуру для\
             \ управления поведением пользователей с помощью LLM. Кроме того, преподаю мультимодальные архитектуры и соврем\
             енные методы обучения языковых моделей в МФТИ.</p>"}
+    gitHub: zj-karina
   - id: 3914
     photoFileName: 03914.jpg
     photoUpdatedAt: "2025-03-12T06:57:19Z"
@@ -57440,6 +57460,8 @@ speakers:
             \ DS: построил с нуля систему рекомендаций Delivery Club, внедрил платформу А/В-тестирования, обеспечив более\
             \ 200 экспериментов в квартал.</p>\n<p>Автор тематических Telegram-каналов <a href=\"https://t.me/ml4value\">ML\
             \ for Value</a> и <a href=\"https://t.me/abpolice\">AB Police</a>.</p>"
+    gitHub: geangohn
+    habr: Ivan_ds
   - id: 3915
     photoFileName: 03915.jpg
     photoUpdatedAt: "2025-04-10T09:52:36Z"
@@ -57465,6 +57487,8 @@ speakers:
       - {language: ru, text: "<p>Развиваю в Точке LLM alignment и дообучаю модели для банковских задач. Пишу диссертацию в\
             \ ИТМО о применении LLM в AutoML. Ранее ресерчил применения ML в физических исследованиях и продолжаю следить\
             \ за новостями в области.</p>"}
+    twitter: Angrysigma
+    gitHub: AngrySigma
   - id: 3917
     photoFileName: 03917.jpg
     photoUpdatedAt: "2025-04-09T12:35:16Z"
@@ -57480,6 +57504,8 @@ speakers:
             \ работал в Сбере, IBM, а также в управленческом консалтинге. Выпускник ШАД Яндекса. Автор Telegram-канала </span><a\
             \ href=\"https://t.me/big_ledovsky\"><span style=\"font-weight: 400;\">Big Ledovsky | блог DS лида</span></a><span\
             \ style=\"font-weight: 400;\">.</span></p>"
+    gitHub: ledovsky
+    habr: aledovskiy
   - id: 3918
     photoFileName: 03918.jpg
     photoUpdatedAt: 2025-04-01T14:21Z
@@ -57491,6 +57517,8 @@ speakers:
       - {language: ru, text: "<p>Занимаюсь данными для alignment обучения моделей линейки GigaChat. Также разрабатываю B2C-/B2B-\
             \ продукты &mdash; LLM-based ассистентские системы, genAI поисковые решения, ключевые компоненты RAG-систем. О\
             канчиваю магистратуру ВМК МГУ.</p>"}
+    gitHub: DKhomi
+    habr: d_khomich
   - id: 3919
     photoFileName: 03919.jpg
     photoUpdatedAt: "2025-04-01T14:17:41Z"
@@ -57512,6 +57540,7 @@ speakers:
         text: "<p>Kaggle Competitions Grandmaster и Fullstack ML Engineer. Сейчас &mdash; индустриальный руководитель ML-н\
             аправления в Центральном университете и главный тренер школьной команды России на межнар по AI.</p>\n<p>Внедря\
             ю ИИ в образование в Центральном университете. Автор курсов на Coursera, KARPOV.COURSES, HARBOUR.SPACE.</p>"
+    gitHub: aguschin
   - id: 3921
     photoFileName: 03921.jpg
     photoUpdatedAt: "2025-02-19T09:27:06Z"
@@ -57529,3 +57558,5 @@ speakers:
             https://data-breakfast.mave.digital/\">Data breakfast</a>. Курирую треки ODS &mdash; ALLMs и Scoring. В ODS SPB\
             \ организую офлайн-мероприятия в Питере.</p>\n<p class=\"p1\">Автор курсов и преподаватель в ИТМО, KARPOV.COURSES,\
             \ Skillfactory.</p>\n<p class=\"p1\">Состою в Программных комитетах DUMP, &laquo;Стачки&raquo;.&nbsp;</p>"
+    gitHub: mark-rtb
+    habr: mark-rtb
