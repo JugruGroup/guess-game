@@ -1693,6 +1693,7 @@ events:
       - {language: en, text: "TechTrain 2024 Spring"}
     days:
       - {startDate: "2024-04-06", endDate: "2024-04-06", placeId: 24}
+    youtubeLink: https://www.youtube.com/playlist?list=PLmJD_ICvgPy3khapyyS3q9J16H-1gQIdz
     talkIds: [5321, 5322, 5323, 5324, 5325, 5326, 5327, 5328, 5329, 5330, 5331, 5332, 5333, 5334, 5335, 5336, 5337]
   # JUG.MSK
   - eventTypeId: 13
