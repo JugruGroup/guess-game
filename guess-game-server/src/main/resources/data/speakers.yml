@@ -403,6 +403,7 @@ speakers:
             \ stock trading and e-commerce.</p>"}
       - {language: ru, text: "<p>Энтузиаст Java, производительности и высоконагруженных систем. Работал над проектами в об\
             ласти телекоммуникаций, биржевой торговли и e-commerce.</p>"}
+    twitter: aragozin
     gitHub: aragozin
     habr: aragozin
   - id: 22
@@ -4327,6 +4328,8 @@ speakers:
             емами и системным ПО в медицине, измерительной технике и телекоммуникационном оборудовании. Увлечению системны\
             м программированием способствовала тесная связь компании и кафедры системного программирования СПбГУ. Как и лю\
             бой программист, мечтал написать свою операционную систему, что в итоге и было реализовано в проекте Embox."
+    gitHub: anton-bondarev
+    habr: abondarev
   - id: 284
     photoFileName: 00284.jpg
     name:
@@ -4364,6 +4367,7 @@ speakers:
             \ Days, Agile Days, IT Week, IT Subbotnik и EuroStar. Автор нескольких open source-фреймворков для автоматизир\
             ованного тестирования: VIQA, JDI UI, JDI Light, JDI Dark, FlashPages. Роман старается улучшить мир вокруг, пом\
             очь коллегам в проектах научиться тестировать в удовольствие: быстро, дешево, качественно."}
+    twitter: romanyister
     gitHub: epam-roman-iovlev
     habr: RomanYIovlev
   - id: 287
@@ -13774,6 +13778,7 @@ speakers:
       - {language: ru, text: "<p>Tech Lead developer, кандидат физико-математических наук, автор книг и научных публикаций\
             \ по теории программирования, переводчик книг по программированию, преподаватель программирования и сопутствую\
             щих разделов математики. Любимые языки: C++ и Haskell.</p>"}
+    gitHub: vadimvinnik
   - id: 924
     photoFileName: 00924.jpg
     photoUpdatedAt: 2019-08-02T13:00:35.517Z[UTC]
@@ -15802,6 +15807,9 @@ speakers:
             \ [Django Girls SPb](https://djangogirls.org/stpetersburg/) и [PyLadies SPb](http://spb.pyladies.com/). \n\nОн\
             \ выступал в Москве, Лиссабоне, Берлине, Минске, Литве; является талисманом конференции index-tech.ru и извест\
             ен своими [статьями по проблематике найма](https://huntflow.ru/insight/article/v-samye-klassnye-kontory-samye-lyogkie-sobesedovaniya)."
+    twitter: bruno_gelb
+    gitHub: bruno-gelb
+    habr: bruno_gelb
   - id: 1079
     photoFileName: 01079.jpg
     photoUpdatedAt: 2019-07-30T07:03:03.458Z[UTC]
@@ -18438,6 +18446,7 @@ speakers:
             тур данных. Работал в Университете ИТМО, а до него &mdash; в IST Austria под руководством профессора Дэна Алис\
             тарха и получил докторские степени в университетах Париж VII имени Дени Дидро и ИТМО под руководством профессо\
             ра Петра Кузнецова.</p>"}
+    twitter: Aksenov239
     gitHub: Aksenov239
   - id: 1289
     photoFileName: 01289.jpg
@@ -19220,6 +19229,7 @@ speakers:
       - {language: ru, text: "В прошлом разработчик C#, последние 6 лет занимается различными хранилищами. Сейчас является\
             \ техлидом Data Engineering в Dodo Engineering, а также соорганизатором DE or DIE meetup. Сфера интересов: дви\
             жки баз данных, оптимизация обработки данных, моделирование данных."}
+    gitHub: k-tomak
   - id: 1353
     photoFileName: 01353.jpg
     photoUpdatedAt: "2022-03-31T19:06:41Z"
@@ -23457,6 +23467,7 @@ speakers:
       - {language: ru, text: "<p>Руководитель центра мониторинга и наблюдаемости в МТС. Занимается развитием технологическ\
             ой платформы, обеспечивающей наблюдаемость экосистемы компании. Продвигает и популяризирует идеи наблюдаемости\
             \ среди продуктовых команд. Сертифицированный владелец продукта с опытом в разработке более 10 лет.</p>"}
+    twitter: bocharovf
     gitHub: bocharovf
     habr: bocharovf
   - id: 1642
@@ -29092,6 +29103,7 @@ speakers:
             ьше реализовывать свою страсть к realtime-видео. В свободное время помогает благотворительным фондам: делится\
             \ экспертным опытом и участвует в разработке сложных интернет-проектов. Некоторые из них были номинированы на\
             \ премии за Digital Storytelling (Visa pour l&rsquo;image, Great Eight, Press Photo Digital Storytelling Contest).</p>"
+    twitter: irbisadm
     gitHub: irbisadm
     habr: irbisadm
   - id: 2022
@@ -33104,7 +33116,9 @@ speakers:
             \ лет преподавал Python в СПбГУ. С 2019 года &mdash; организатор трека и конференции Code Mining в сообществе\
             \ ODS.ai. Основал платформу композиционного анализа CodeScoring для оценки безопасности open source и качества\
             \ исходного кода.</p>"}
+    twitter: alsmirn
     gitHub: alsmirn
+    habr: alsmirn
   - id: 2298
     photoFileName: 02298.jpg
     photoUpdatedAt: 2022-10-14T09:50:12Z[UTC]
@@ -37286,6 +37300,7 @@ speakers:
       - {language: ru, text: "<p>В профессиональной разработке с 2003 года. С 2010-го программирует на Java. Работал в мос\
             ковском техцентре Deutsche Bank, Райффайзен Банке, НСПК. Интересуется эффективными средствами решения техничес\
             ких задач. Cейчас разрабатывает систему информационной безопасности в Squad.</p>"}
+    twitter: petrelevich
     gitHub: petrelevich
     habr: Petrelevich
   - id: 2598
@@ -38686,6 +38701,7 @@ speakers:
             \ FileAPI, Pilot и многим другим. Сейчас занимаюсь архитектурой VK Доски, развитием внутреннего сервиса для ид\
             еального Code Review, чуть-чуть фронтенд-платформой и многими другими задачами связанными с Почтой, Календарем\
             , Облаком, Заметками и другими сервисами ВК.</p>"}
+    twitter: RubaXa
     gitHub: RubaXa
     habr: RubaXa
   - id: 2690
@@ -38967,6 +38983,7 @@ speakers:
             https://youtu.be/-Ur7zctCrdw\">Подкаст Яндекса про Голосовых помощников</a></p>\n<p>2. <a href=\"https://youtu.be/gB0mrl1KXfU\"\
             >Выступление про ускорение моделей на Highload&nbsp;</a></p>\n<p>3. <a href=\"https://youtu.be/g0bQF5MPTZY\">В\
             ыступление на митапе AGIMA</a>&nbsp;</p>"
+    twitter: ibragim_bad
     gitHub: ibragim-bad
     habr: Ibragim_bad
   - id: 2708
@@ -41586,6 +41603,7 @@ speakers:
             , руководил командами, проектами и департаментами. Внедрял Agile-, DevOps- и другие практики. Сертифицирован п\
             о Java, Cloud, Agile и PRINCE2.</p>"}
     twitter: zarandr
+    gitHub: zarandr
   - id: 2879
     photoFileName: 02879.jpg
     photoUpdatedAt: "2023-09-12T12:43:25Z"
@@ -42680,6 +42698,7 @@ speakers:
       - {language: ru, text: "<p>Главный техлид платформы iOS в Альфа-Банке. Люблю улучшать жизнь разработчиков и пользова\
             телей и создавать различные инфраструктурные штуки, а также заниматься перформансом всего, с чем они работают\
             .</p>"}
+    twitter: krasich74
     gitHub: krasich74
   - id: 2947
     photoFileName: 02947.jpg
@@ -48468,6 +48487,7 @@ speakers:
             \ at the Higher School of Economics. His mind is sharp, his tongue is long, his character is bad, he is married.</p>"}
       - {language: ru, text: "<p>Работал в Яндексе, потом в Microsoft и вот снова в Яндексе. Преподавал около 5 лет в НИУ\
             \ ВШЭ. Ум острый, язык длинный, характер скверный, женат.</p>"}
+    twitter: Cadovvl
     gitHub: Cadovvl
     habr: cadovvl
   - id: 3338
@@ -55382,6 +55402,7 @@ speakers:
         text: "<p class=\"ql-align-justify\">В разработке на Java с 2011-го.</p>\n<p class=\"ql-align-justify\">Соосновате\
             ль компании, разрабатывающей платформу для платежных систем, и отвечаю за архитектуру платформы.</p>\n<p class=\"\
             ql-align-justify\">Пишу код на Java + Angular, люблю заниматься pet-проектами и DIY.</p>"
+    twitter: icanit
     gitHub: icanit
     habr: icanit
   - id: 3787
@@ -55965,6 +55986,7 @@ speakers:
             кс и SberDevices. Последнее время посвятил себя разработке инструментов и подходов к автоматизации тестировани\
             я с применением нейронных сетей, в частности больших языковых моделей. Моя главная цель &mdash; сократить расх\
             оды IT-компаний на разработку и поддержку автоматизации тестирования.</p>"}
+    twitter: DAkhetov
     gitHub: dakhetov
     habr: dakhetov
   - id: 3820
@@ -56181,6 +56203,7 @@ speakers:
             ия запросов к базам данных и построением графиков. До этого работал 4 года в Wrike над интерактивными таблицам\
             и и отчетами.</p>\n<p>Интересуюсь решением сложных задач на фронтенде &mdash; оптимизацией производительности\
             , обновлением данных в реальном времени, кастомными решениями для визуализации и редактирования данных.</p>"
+    twitter: ranquild
     gitHub: ranquild
     habr: ranquild
   - id: 3832
@@ -56359,6 +56382,7 @@ speakers:
             ираться в сложных концепциях и доносить их простым языком. Важно, чтобы код оставался понятным: если в нем сло\
             жно разобраться, значит, что-то пошло не так. Люблю, когда решения масштабируются и превращаются в библиотеки\
             . Разрабатываю MarkdownEditor &mdash; непростой, но очень увлекательный проект.</p>"}
+    twitter: makhnatkin
     gitHub: makhnatkin
     habr: m_sergey
   - id: 3843
