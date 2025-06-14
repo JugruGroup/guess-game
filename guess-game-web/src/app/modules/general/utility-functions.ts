@@ -79,6 +79,20 @@ export function findEventById(id: number, events: Event[]): Event {
   return null;
 }
 
+export function findEventsByIds(ids: number[], events: Event[]): Event[] {
+  const result: Event[] = [];
+
+  for (const id of ids) {
+    const event = findEventById(id, events);
+
+    if (event) {
+      result.push(event);
+    }
+  }
+
+  return result;
+}
+
 export function isEventStartDateVisible(startDate: Date): boolean {
   return !!startDate;
 }

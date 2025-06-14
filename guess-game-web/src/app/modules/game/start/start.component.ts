@@ -11,7 +11,12 @@ import { EventService } from '../../../shared/services/event.service';
 import { LocaleService } from '../../../shared/services/locale.service';
 import { QuestionService } from '../../../shared/services/question.service';
 import { StateService } from '../../../shared/services/state.service';
-import { findEventById, findEventTypeById, getEventsWithFullDisplayName } from '../../general/utility-functions';
+import {
+  findEventById, findEventsByIds,
+  findEventTypeById,
+  findEventTypesByIds,
+  getEventsWithFullDisplayName
+} from '../../general/utility-functions';
 
 @Component({
     selector: 'app-start',
@@ -57,7 +62,7 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
     this.languageSubscription = this.translateService.onLangChange
       .subscribe(() => {
         this.language = this.localeService.getLanguage();
-        this.loadEventTypes();
+        this.onLanguageChange();
       });
   }
 
@@ -67,21 +72,26 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
     }
   }
 
+  fillEventTypes(eventTypes: EventType[]) {
+    this.eventTypes = eventTypes;
+    this.eventTypeSelectItems = this.eventTypes.map(et => {
+        return {label: et.displayName, value: et};
+      }
+    );
+  }
+
   loadEventTypes() {
     this.questionService.getEventTypes(this.language)
       .subscribe(eventTypesData => {
-        this.eventTypes = eventTypesData;
-        this.eventTypeSelectItems = this.eventTypes.map(et => {
-            return {label: et.displayName, value: et};
-          }
-        );
+        this.fillEventTypes(eventTypesData);
 
         if (this.eventTypes.length > 0) {
           this.eventService.getDefaultEvent(this.language)
             .subscribe(defaultEventData => {
               this.defaultEvent = defaultEventData;
 
-              const selectedEventType = (this.defaultEvent) ? findEventTypeById(this.defaultEvent.eventTypeId, this.eventTypes) : null;
+              const selectedEventType = (this.defaultEvent) ?
+                findEventTypeById(this.defaultEvent.eventTypeId, this.eventTypes) : null;
 
               if (selectedEventType) {
                 this.selectedEventTypes = [selectedEventType];
@@ -125,7 +135,8 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
           this.events = getEventsWithFullDisplayName(data, this.translateService);
 
           if (this.events.length > 0) {
-            const selectedEvent = (this.defaultEvent) ? findEventById(this.defaultEvent.id, this.events) : null;
+            const selectedEvent = (this.defaultEvent) ?
+              findEventById(this.defaultEvent.id, this.events) : null;
 
             if (selectedEvent) {
               this.selectedEvents = [selectedEvent];
@@ -149,15 +160,71 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
     this.loadQuantities(this.selectedEventTypes, this.selectedEvents, guessMode);
   }
 
+  fillQuantities(quantities: number[]) {
+    this.quantities = quantities;
+    this.quantitySelectItems = quantities.map(q => {
+        return {label: q.toString(), value: q};
+      }
+    );
+  }
+
   loadQuantities(eventTypes: EventType[], events: Event[], guessMode) {
     this.questionService.getQuantities(eventTypes.map(et => et.id), events.map(e => e.id), guessMode)
       .subscribe(data => {
-        this.quantities = data;
+        this.fillQuantities(data);
         this.selectedQuantity = (data && (data.length > 0)) ? data[0] : null;
-        this.quantitySelectItems = this.quantities.map(q => {
-            return {label: q.toString(), value: q};
+      });
+  }
+
+  onLanguageChange() {
+    const currentSelectedEventTypes = this.selectedEventTypes;
+    const currentSelectedEvents = this.selectedEvents;
+    const currentSelectedQuantity = this.selectedQuantity;
+
+    this.questionService.getEventTypes(this.language)
+      .subscribe(eventTypesData => {
+        this.fillEventTypes(eventTypesData);
+
+        if (this.eventTypes.length > 0) {
+          this.selectedEventTypes = (currentSelectedEventTypes) ?
+            findEventTypesByIds(currentSelectedEventTypes.map(et => et.id), this.eventTypes) : [];
+
+          if (!this.selectedEventTypes || (this.selectedEventTypes.length === 0)) {
+            this.selectedEventTypes = [this.eventTypes[0]];
           }
-        );
+
+          this.selectedOptionsUpdated = true;
+        } else {
+          this.selectedEventTypes = [];
+        }
+
+        this.questionService.getEvents(this.selectedEventTypes.map(et => et.id), this.language)
+          .subscribe(data => {
+            this.events = getEventsWithFullDisplayName(data, this.translateService);
+
+            if (this.events.length > 0) {
+              this.selectedEvents = (currentSelectedEvents) ?
+                findEventsByIds(currentSelectedEvents.map(e => e.id), this.events) : [];
+
+              if (!this.selectedEvents || (this.selectedEvents.length === 0)) {
+                this.selectedEvents = [this.events[0]];
+              }
+            } else {
+              this.selectedEvents = [];
+            }
+
+            this.questionService.getQuantities(this.selectedEventTypes.map(et => et.id),
+              this.selectedEvents.map(e => e.id), this.selectedGuessMode)
+              .subscribe(data => {
+                this.fillQuantities(data);
+
+                if (currentSelectedQuantity) {
+                  this.selectedQuantity = currentSelectedQuantity;
+                } else {
+                  this.selectedQuantity = (data && (data.length > 0)) ? data[0] : null;
+                }
+              });
+          });
       });
   }
 
