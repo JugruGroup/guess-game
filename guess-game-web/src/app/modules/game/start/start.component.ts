@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
@@ -23,7 +23,7 @@ import {
     templateUrl: './start.component.html',
     standalone: false
 })
-export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
+export class StartComponent implements OnInit, OnDestroy {
   private readonly MIN_QUANTITY_VALUE = 4;
 
   private imageDirectory = 'assets/images';
@@ -44,12 +44,9 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
   public quantitySelectItems: SelectItem[] = [];
 
   private defaultEvent: Event;
-  private selectedOptionsUpdated = false;
 
   public language: string;
   private languageSubscription: Subscription;
-
-  @ViewChildren('eventTypeRow', {read: ElementRef}) rowElement: QueryList<ElementRef>;
 
   constructor(private questionService: QuestionService, private stateService: StateService, private eventService: EventService,
               private router: Router, private translateService: TranslateService, private localeService: LocaleService) {
@@ -95,7 +92,6 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
 
               if (selectedEventType) {
                 this.selectedEventTypes = [selectedEventType];
-                this.selectedOptionsUpdated = true;
               } else {
                 this.selectedEventTypes = [this.eventTypes[0]];
               }
@@ -107,21 +103,6 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
           this.loadEvents(this.selectedEventTypes);
         }
       });
-  }
-
-  ngAfterViewChecked() {
-    if (this.selectedOptionsUpdated) {
-      if (this.selectedEventTypes && (this.selectedEventTypes.length > 0)) {
-        const eventType: EventType = this.selectedEventTypes[0];
-        const elementRef = this.rowElement.find(r => r.nativeElement.getAttribute('id') === eventType.id.toString());
-
-        if (elementRef) {
-          elementRef.nativeElement.scrollIntoView({behavior: 'auto', block: 'center', inline: 'nearest'});
-        }
-      }
-
-      this.selectedOptionsUpdated = false;
-    }
   }
 
   onEventTypeChange(eventTypes: EventType[]) {
@@ -186,14 +167,14 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
         this.fillEventTypes(eventTypesData);
 
         if (this.eventTypes.length > 0) {
-          this.selectedEventTypes = (currentSelectedEventTypes) ?
+          const selectedEventTypes = (currentSelectedEventTypes) ?
             findEventTypesByIds(currentSelectedEventTypes.map(et => et.id), this.eventTypes) : [];
 
-          if (!this.selectedEventTypes || (this.selectedEventTypes.length === 0)) {
+          if (selectedEventTypes && (selectedEventTypes.length > 0)) {
+            this.selectedEventTypes = selectedEventTypes;
+          } else {
             this.selectedEventTypes = [this.eventTypes[0]];
           }
-
-          this.selectedOptionsUpdated = true;
         } else {
           this.selectedEventTypes = [];
         }
@@ -203,10 +184,12 @@ export class StartComponent implements OnInit, AfterViewChecked, OnDestroy {
             this.events = getEventsWithFullDisplayName(data, this.translateService);
 
             if (this.events.length > 0) {
-              this.selectedEvents = (currentSelectedEvents) ?
+              const selectedEvents = (currentSelectedEvents) ?
                 findEventsByIds(currentSelectedEvents.map(e => e.id), this.events) : [];
 
-              if (!this.selectedEvents || (this.selectedEvents.length === 0)) {
+              if (selectedEvents && (selectedEvents.length > 0)) {
+                this.selectedEvents = selectedEvents;
+              } else {
                 this.selectedEvents = [this.events[0]];
               }
             } else {
