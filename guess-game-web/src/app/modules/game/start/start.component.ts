@@ -167,10 +167,12 @@ export class StartComponent implements OnInit, OnDestroy {
         this.fillEventTypes(eventTypesData);
 
         if (this.eventTypes.length > 0) {
-          this.selectedEventTypes = (currentSelectedEventTypes) ?
+          const selectedEventTypes = (currentSelectedEventTypes) ?
             findEventTypesByIds(currentSelectedEventTypes.map(et => et.id), this.eventTypes) : [];
 
-          if (!this.selectedEventTypes || (this.selectedEventTypes.length === 0)) {
+          if (selectedEventTypes && (selectedEventTypes.length > 0)) {
+            this.selectedEventTypes = selectedEventTypes;
+          } else {
             this.selectedEventTypes = [this.eventTypes[0]];
           }
         } else {
@@ -182,10 +184,12 @@ export class StartComponent implements OnInit, OnDestroy {
             this.events = getEventsWithFullDisplayName(data, this.translateService);
 
             if (this.events.length > 0) {
-              this.selectedEvents = (currentSelectedEvents) ?
+              const selectedEvents = (currentSelectedEvents) ?
                 findEventsByIds(currentSelectedEvents.map(e => e.id), this.events) : [];
 
-              if (!this.selectedEvents || (this.selectedEvents.length === 0)) {
+              if (selectedEvents && (selectedEvents.length > 0)) {
+                this.selectedEvents = selectedEvents;
+              } else {
                 this.selectedEvents = [this.events[0]];
               }
             } else {
