@@ -23,7 +23,13 @@
             ],
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              "src/apple-touch-icon.png",
               "src/favicon.ico",
+              "src/favicon.svg",
+              "src/favicon-96x96.png",
+              "src/site.webmanifest",
+              "src/web-app-manifest-192x192.png",
+              "src/web-app-manifest-512x512.png",
               "src/assets",
               {
                 "glob": "**/*.json",
@@ -116,7 +122,13 @@
             "scripts": [
             ],
             "assets": [
+              "src/apple-touch-icon.png",
               "src/favicon.ico",
+              "src/favicon.svg",
+              "src/favicon-96x96.png",
+              "src/site.webmanifest",
+              "src/web-app-manifest-192x192.png",
+              "src/web-app-manifest-512x512.png",
               "src/assets",
               {
                 "glob": "**/*.json",
