@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Find, See, Guess the Speakers",
+  "short_name": "JUG Speakers",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
