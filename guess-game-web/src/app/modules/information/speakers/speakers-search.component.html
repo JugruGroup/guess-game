@@ -16,7 +16,7 @@
         <label for="company" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'common.list.companyLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-4 col-xxl-5 mt-sm-3 mt-md-0">
           <p-autoComplete id="company" [(ngModel)]="company" [suggestions]="companySuggestions" (completeMethod)="companySearch($event)"
-                          name="company" styleClass="search-autocomplete"></p-autoComplete>
+                          name="company" class="search-autocomplete"></p-autoComplete>
         </div>
       </div>
       <div class="mb-3 row justify-content-center align-items-center">

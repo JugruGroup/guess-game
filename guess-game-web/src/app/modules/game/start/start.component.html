@@ -17,7 +17,7 @@
         <div class="col-12 col-sm-10">
           <p-listbox [multiple]="true" id="eventType" [options]="eventTypeSelectItems" [(ngModel)]="selectedEventTypes"
                      (onChange)="onEventTypeChange($event.value)" name="eventType"
-                     styleClass="w-100" listStyleClass="event-type-listbox-start">
+                     class="w-100" listStyleClass="event-type-listbox-start">
             <ng-template let-eventType #item>
               <div>
                 <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-start" alt="logo"/>
@@ -32,7 +32,7 @@
       <div class="col-12 col-sm-10">
         <p-listbox [multiple]="true" id="event" [options]="events" [(ngModel)]="selectedEvents"
                    optionLabel="displayName" (onChange)="onEventChange($event.value)" name="event"
-                   styleClass="w-100" listStyleClass="event-listbox-start"
+                   class="w-100" listStyleClass="event-listbox-start"
                    [disabled]="isEventsDisabled()" emptyMessage="{{'common.list.emptyMessage' | translate}}"></p-listbox>
       </div>
     </div>
@@ -135,7 +135,7 @@
       <label for="quantity" class="form-label col-12 col-sm-2">{{'start.quantityLabel' | translate}}</label>
       <div class="col-12 col-sm-10">
         <p-select id="quantity" [options]="quantitySelectItems" [(ngModel)]="selectedQuantity" name="quantity"
-                  styleClass="w-100" emptyMessage="{{'common.list.emptyMessage' | translate}}"
+                  class="w-100" emptyMessage="{{'common.list.emptyMessage' | translate}}"
                   optionLabel="label" optionValue="value">
         </p-select>
       </div>

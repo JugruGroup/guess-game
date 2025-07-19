@@ -31,7 +31,7 @@
         <div class="col-12 col-sm-9 col-md-auto">
           <p-select [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
                     placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
-                    (onChange)="onOrganizerChange()" name="organizer" styleClass="organizer-select w-100"
+                    (onChange)="onOrganizerChange()" name="organizer" class="organizer-select w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-organizer #item>
               {{organizer.value.name}}
@@ -42,7 +42,7 @@
         <div class="col-12 col-sm-9 col-md-auto mt-sm-3 mt-md-0">
           <p-select [options]="topicSelectItems" [(ngModel)]="selectedTopic" id="topic"
                     placeholder="{{'common.list.topicPlaceholder' | translate}}" [showClear]="true"
-                    (onChange)="onTopicChange()" name="topic" styleClass="topic-select w-100"
+                    (onChange)="onTopicChange()" name="topic" class="topic-select w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-topic #item>
               {{topic.value.name}}

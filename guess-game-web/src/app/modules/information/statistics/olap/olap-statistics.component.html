@@ -13,7 +13,7 @@
         <div class="col-12 col-sm-9 col-md-3 col-xxl-4">
           <p-select [options]="cubeTypeSelectItems" [(ngModel)]="selectedCubeType" id="cubeType"
                     placeholder="{{'statistics.olap.cubePlaceholder' | translate}}"
-                    (onChange)="onCubeTypeChange()" name="cubeType" styleClass="w-100"
+                    (onChange)="onCubeTypeChange()" name="cubeType" class="w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-cubeType #selectedItem>
               <div *ngIf="cubeType">
@@ -28,7 +28,7 @@
         <label for="measureType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'statistics.olap.measureLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-5 col-xxl-6 mt-sm-3 mt-md-0">
           <p-select [options]="measureTypeSelectItems" [(ngModel)]="selectedMeasureType" id="measureType"
-                    (onChange)="onMeasureTypeChange()" name="measureType" styleClass="w-100"
+                    (onChange)="onMeasureTypeChange()" name="measureType" class="w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-measureType #selectedItem>
               <div *ngIf="measureType">
@@ -64,7 +64,7 @@
         <div class="col-12 col-sm-9 col-md-3 col-xxl-4">
           <p-select [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
                     placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
-                    (onChange)="onOrganizerChange()" name="organizer" styleClass="w-100"
+                    (onChange)="onOrganizerChange()" name="organizer" class="w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-organizer #item>
               {{organizer.value.name}}
@@ -75,7 +75,7 @@
         <div class="col-12 col-sm-9 col-md-5 col-xxl-6 mt-sm-3 mt-md-0">
           <p-multiSelect [options]="eventTypeSelectItems" [(ngModel)]="selectedEventTypes" id="eventType"
                          placeholder="{{'common.list.eventTypePlaceholder' | translate}}"
-                         (onChange)="onEventTypeChange()" name="eventType" styleClass="w-100"
+                         (onChange)="onEventTypeChange()" name="eventType" class="w-100"
                          optionLabel="label" optionValue="value">
             <ng-template let-eventType #item>
               <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-list" alt="logo"/>
@@ -90,7 +90,7 @@
           <p-autoComplete id="speaker" [(ngModel)]="selectedSpeakers" [suggestions]="speakerSuggestions" (completeMethod)="speakerSearch($event)"
                           (onSelect)="selectSpeaker()" (onUnselect)="unselectSpeaker()"
                           placeholder="{{'common.list.speakersPlaceholder' | translate}}"
-                          field="displayName" name="speaker" [multiple]="true" styleClass="olap-autocomplete"></p-autoComplete>
+                          field="displayName" name="speaker" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
         </div>
       </div>
       <div *ngIf="isCompaniesVisible()" class="mb-3 row justify-content-center align-items-center">
@@ -99,7 +99,7 @@
           <p-autoComplete id="company" [(ngModel)]="selectedCompanies" [suggestions]="companySuggestions" (completeMethod)="companySearch($event)"
                           (onSelect)="selectCompany()" (onUnselect)="unselectCompany()"
                           placeholder="{{'common.list.companiesPlaceholder' | translate}}"
-                          field="name" name="company" [multiple]="true" styleClass="olap-autocomplete"></p-autoComplete>
+                          field="name" name="company" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
         </div>
       </div>
     </form>
