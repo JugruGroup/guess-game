@@ -152,7 +152,7 @@
     </div>
 
     <div *ngIf="isEventTypesListVisible()" class="mt-2">
-      <p-table #eventTypeStatisticsTable [value]="olapStatistics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table #eventTypeStatisticsTable [value]="olapStatistics.eventTypeStatistics.metricsList" [resizableColumns]="true"
                sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                responsiveLayout="scroll" dataKey="id" (onRowExpand)="eventTypeRowExpand($event)" [expandedRowKeys]="eventTypeExpandedRows"
                (onSort)="sortEventTypeStatistics(eventTypeStatisticsTable.value)">
@@ -214,7 +214,7 @@
           <tr>
             <td [attr.colspan]="olapStatistics.eventTypeStatistics.dimensionValues.length + 6">
               <div *ngIf="eventTypeMetrics?.cityStatistics">
-                <p-table [value]="eventTypeMetrics.cityStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                <p-table [value]="eventTypeMetrics.cityStatistics.metricsList" [resizableColumns]="true"
                          sortMode="multiple" [multiSortMeta]="cityMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
                          [size]="'small'" responsiveLayout="scroll" dataKey="id">
                   <ng-template #header>
@@ -265,7 +265,7 @@
     </div>
 
     <div *ngIf="isSpeakersListVisible()" class="mt-2">
-      <p-table #speakerStatisticsTable [value]="olapStatistics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table #speakerStatisticsTable [value]="olapStatistics.speakerStatistics.metricsList" [resizableColumns]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
@@ -330,7 +330,7 @@
           <tr>
             <td [attr.colspan]="olapStatistics.speakerStatistics.dimensionValues.length + 6">
               <div *ngIf="speakerMetrics?.eventTypeStatistics">
-                <p-table [value]="speakerMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                <p-table [value]="speakerMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true"
                          sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
                          [size]="'small'" responsiveLayout="scroll" dataKey="id">
                   <ng-template #header>
@@ -386,7 +386,7 @@
     </div>
 
     <div *ngIf="isCompaniesListVisible()" class="mt-2">
-      <p-table #companyStatisticsTable [value]="olapStatistics.companyStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table #companyStatisticsTable [value]="olapStatistics.companyStatistics.metricsList" [resizableColumns]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
@@ -433,7 +433,7 @@
           <tr>
             <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
               <div *ngIf="companyMetrics?.eventTypeStatistics">
-                <p-table [value]="companyMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                <p-table [value]="companyMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true"
                          sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
                          responsiveLayout="scroll" dataKey="id" (onRowExpand)="companyEventTypeRowExpand($event)">
                   <ng-template #header>
@@ -479,7 +479,7 @@
                     <tr>
                       <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
                         <div *ngIf="eventTypeMetrics?.speakerStatistics">
-                          <p-table [value]="eventTypeMetrics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                          <p-table [value]="eventTypeMetrics.speakerStatistics.metricsList" [resizableColumns]="true"
                                    sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
                                    [size]="'small'" responsiveLayout="scroll" dataKey="id">
                             <ng-template #header>

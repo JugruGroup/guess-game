@@ -56,7 +56,7 @@
     </div>
 
     <div *ngIf="isEventTypesListVisible()" class="mt-2">
-      <p-table [value]="eventTypes" [resizableColumns]="true" [autoLayout]="true" sortField="sortName"
+      <p-table [value]="eventTypes" [resizableColumns]="true" sortField="sortName"
                [showGridlines]="true" [stripedRows]="true" [size]="'small'" responsiveLayout="scroll">
         <ng-template #header let-columns>
           <tr>

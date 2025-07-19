@@ -59,7 +59,7 @@
     </div>
 
     <div *ngIf="isEventsListVisible()" class="mt-2">
-      <p-table [value]="eventStatistics.eventMetricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table [value]="eventStatistics.eventMetricsList" [resizableColumns]="true"
                [rows]="20" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"

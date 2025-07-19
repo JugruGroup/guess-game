@@ -62,7 +62,7 @@
 
     <div *ngIf="isEventPartsListVisible()" class="mt-2">
       <h5>{{'events.table.title' | translate}}</h5>
-      <p-table [value]="eventTypeDetails.eventParts" [resizableColumns]="true" [autoLayout]="true"
+      <p-table [value]="eventTypeDetails.eventParts" [resizableColumns]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
