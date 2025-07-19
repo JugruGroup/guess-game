@@ -31,7 +31,7 @@
         <div class="col-12 col-sm-9 col-md-auto">
           <p-select [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
                     placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
-                    (onChange)="onOrganizerChange()" name="organizer" styleClass="organizer-select w-100"
+                    (onChange)="onOrganizerChange()" name="organizer" class="organizer-select w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-organizer #item>
               {{organizer.value.name}}
@@ -42,7 +42,7 @@
         <div class="col-12 col-sm-9 col-md-auto mt-sm-3 mt-md-0">
           <p-select [options]="eventTypeSelectItems" [(ngModel)]="selectedEventType" id="eventType"
                     placeholder="{{'common.list.eventTypePlaceholder' | translate}}" [showClear]="true"
-                    (onChange)="onEventTypeChange()" name="eventType" styleClass="event-type-select w-100"
+                    (onChange)="onEventTypeChange()" name="eventType" class="event-type-select w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-eventType #item>
               <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-list" alt="logo"/>
@@ -58,12 +58,12 @@
     </div>
 
     <div *ngIf="isCompaniesListVisible()" class="mt-2">
-      <p-table [value]="companyStatistics.companyMetricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table [value]="companyStatistics.companyMetricsList" [resizableColumns]="true"
                [rows]="20" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="multiSortMeta" [showGridlines]="true" [stripedRows]="true"
-               [size]="'small'" responsiveLayout="scroll">
+               [size]="'small'">
         <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>

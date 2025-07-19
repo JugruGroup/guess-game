@@ -72,12 +72,12 @@
 
     <div *ngIf="isSpeakersListVisible()" class="mt-2 mb-2">
       <h5>{{'speakers.table.title' | translate}}</h5>
-      <p-table [value]="eventDetails.speakers" [resizableColumns]="true" [autoLayout]="true"
+      <p-table [value]="eventDetails.speakers" [resizableColumns]="true"
                [rows]="10" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="speakersMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
-               [size]="'small'" responsiveLayout="scroll">
+               [size]="'small'">
         <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>
@@ -157,12 +157,12 @@
 
     <div *ngIf="isTalksListVisible()" class="mt-2">
       <h5>{{'talks.table.title' | translate}}</h5>
-      <p-table [value]="eventDetails.talks" [resizableColumns]="true" [autoLayout]="true"
+      <p-table [value]="eventDetails.talks" [resizableColumns]="true"
                [rows]="10" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="talksMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
-               [size]="'small'" responsiveLayout="scroll">
+               [size]="'small'">
         <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>

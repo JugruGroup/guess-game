@@ -38,7 +38,7 @@ describe('MessagesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MessageComponent);
     component = fixture.componentInstance;
-    messageService = TestBed.get(MessageService);
+    messageService = TestBed.inject(MessageService);
     debugElement = fixture.debugElement;
     fixture.detectChanges();
   });

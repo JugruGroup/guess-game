@@ -30,11 +30,11 @@
 
     <div *ngIf="isSpeakersListVisible()" class="mt-2 mb-2">
       <h5>{{'speakers.table.title' | translate}}</h5>
-      <p-table [value]="talkDetails.speakers" [resizableColumns]="true" [autoLayout]="true"
+      <p-table [value]="talkDetails.speakers" [resizableColumns]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
-               sortMode="multiple" [showGridlines]="true" [stripedRows]="true" [size]="'small'" responsiveLayout="scroll">
+               sortMode="multiple" [showGridlines]="true" [stripedRows]="true" [size]="'small'">
         <ng-template #header let-columns>
           <tr>
             <th class="text-center" pResizableColumn>

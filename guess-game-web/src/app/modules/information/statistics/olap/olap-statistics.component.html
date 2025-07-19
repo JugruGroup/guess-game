@@ -13,7 +13,7 @@
         <div class="col-12 col-sm-9 col-md-3 col-xxl-4">
           <p-select [options]="cubeTypeSelectItems" [(ngModel)]="selectedCubeType" id="cubeType"
                     placeholder="{{'statistics.olap.cubePlaceholder' | translate}}"
-                    (onChange)="onCubeTypeChange()" name="cubeType" styleClass="w-100"
+                    (onChange)="onCubeTypeChange()" name="cubeType" class="w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-cubeType #selectedItem>
               <div *ngIf="cubeType">
@@ -28,7 +28,7 @@
         <label for="measureType" class="form-label col-12 col-sm-3 col-md-2 col-xxl-1 mt-3 mt-md-0">{{'statistics.olap.measureLabel' | translate}}</label>
         <div class="col-12 col-sm-9 col-md-5 col-xxl-6 mt-sm-3 mt-md-0">
           <p-select [options]="measureTypeSelectItems" [(ngModel)]="selectedMeasureType" id="measureType"
-                    (onChange)="onMeasureTypeChange()" name="measureType" styleClass="w-100"
+                    (onChange)="onMeasureTypeChange()" name="measureType" class="w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-measureType #selectedItem>
               <div *ngIf="measureType">
@@ -64,7 +64,7 @@
         <div class="col-12 col-sm-9 col-md-3 col-xxl-4">
           <p-select [options]="organizerSelectItems" [(ngModel)]="selectedOrganizer" id="organizer"
                     placeholder="{{'common.list.organizerPlaceholder' | translate}}" [showClear]="true"
-                    (onChange)="onOrganizerChange()" name="organizer" styleClass="w-100"
+                    (onChange)="onOrganizerChange()" name="organizer" class="w-100"
                     optionLabel="label" optionValue="value">
             <ng-template let-organizer #item>
               {{organizer.value.name}}
@@ -75,7 +75,7 @@
         <div class="col-12 col-sm-9 col-md-5 col-xxl-6 mt-sm-3 mt-md-0">
           <p-multiSelect [options]="eventTypeSelectItems" [(ngModel)]="selectedEventTypes" id="eventType"
                          placeholder="{{'common.list.eventTypePlaceholder' | translate}}"
-                         (onChange)="onEventTypeChange()" name="eventType" styleClass="w-100"
+                         (onChange)="onEventTypeChange()" name="eventType" class="w-100"
                          optionLabel="label" optionValue="value">
             <ng-template let-eventType #item>
               <img src="{{eventsImageDirectory}}/{{eventType.value.logoFileName}}" class="img-event-type-logo-list" alt="logo"/>
@@ -90,7 +90,7 @@
           <p-autoComplete id="speaker" [(ngModel)]="selectedSpeakers" [suggestions]="speakerSuggestions" (completeMethod)="speakerSearch($event)"
                           (onSelect)="selectSpeaker()" (onUnselect)="unselectSpeaker()"
                           placeholder="{{'common.list.speakersPlaceholder' | translate}}"
-                          field="displayName" name="speaker" [multiple]="true" styleClass="olap-autocomplete"></p-autoComplete>
+                          optionLabel="displayName" name="speaker" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
         </div>
       </div>
       <div *ngIf="isCompaniesVisible()" class="mb-3 row justify-content-center align-items-center">
@@ -99,7 +99,7 @@
           <p-autoComplete id="company" [(ngModel)]="selectedCompanies" [suggestions]="companySuggestions" (completeMethod)="companySearch($event)"
                           (onSelect)="selectCompany()" (onUnselect)="unselectCompany()"
                           placeholder="{{'common.list.companiesPlaceholder' | translate}}"
-                          field="name" name="company" [multiple]="true" styleClass="olap-autocomplete"></p-autoComplete>
+                          optionLabel="name" name="company" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
         </div>
       </div>
     </form>
@@ -152,9 +152,9 @@
     </div>
 
     <div *ngIf="isEventTypesListVisible()" class="mt-2">
-      <p-table #eventTypeStatisticsTable [value]="olapStatistics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table #eventTypeStatisticsTable [value]="olapStatistics.eventTypeStatistics.metricsList" [resizableColumns]="true"
                sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
-               responsiveLayout="scroll" dataKey="id" (onRowExpand)="eventTypeRowExpand($event)" [expandedRowKeys]="eventTypeExpandedRows"
+               dataKey="id" (onRowExpand)="eventTypeRowExpand($event)" [expandedRowKeys]="eventTypeExpandedRows"
                (onSort)="sortEventTypeStatistics(eventTypeStatisticsTable.value)">
         <ng-template #header>
           <tr>
@@ -214,9 +214,9 @@
           <tr>
             <td [attr.colspan]="olapStatistics.eventTypeStatistics.dimensionValues.length + 6">
               <div *ngIf="eventTypeMetrics?.cityStatistics">
-                <p-table [value]="eventTypeMetrics.cityStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                <p-table [value]="eventTypeMetrics.cityStatistics.metricsList" [resizableColumns]="true"
                          sortMode="multiple" [multiSortMeta]="cityMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
-                         [size]="'small'" responsiveLayout="scroll" dataKey="id">
+                         [size]="'small'" dataKey="id">
                   <ng-template #header>
                     <tr>
                       <th class="text-center" pResizableColumn>
@@ -265,12 +265,12 @@
     </div>
 
     <div *ngIf="isSpeakersListVisible()" class="mt-2">
-      <p-table #speakerStatisticsTable [value]="olapStatistics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table #speakerStatisticsTable [value]="olapStatistics.speakerStatistics.metricsList" [resizableColumns]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
-               responsiveLayout="scroll" dataKey="id" (onRowExpand)="speakerRowExpand($event)" [expandedRowKeys]="speakerExpandedRows"
+               dataKey="id" (onRowExpand)="speakerRowExpand($event)" [expandedRowKeys]="speakerExpandedRows"
                (onSort)="sortSpeakerStatistics(speakerStatisticsTable.value)">
         <ng-template #header>
           <tr>
@@ -330,9 +330,9 @@
           <tr>
             <td [attr.colspan]="olapStatistics.speakerStatistics.dimensionValues.length + 6">
               <div *ngIf="speakerMetrics?.eventTypeStatistics">
-                <p-table [value]="speakerMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                <p-table [value]="speakerMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true"
                          sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
-                         [size]="'small'" responsiveLayout="scroll" dataKey="id">
+                         [size]="'small'" dataKey="id">
                   <ng-template #header>
                     <tr>
                       <th class="text-center" pResizableColumn>
@@ -386,12 +386,12 @@
     </div>
 
     <div *ngIf="isCompaniesListVisible()" class="mt-2">
-      <p-table #companyStatisticsTable [value]="olapStatistics.companyStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+      <p-table #companyStatisticsTable [value]="olapStatistics.companyStatistics.metricsList" [resizableColumns]="true"
                [rows]="15" [rowsPerPageOptions]="[5,10,15,20,25,50]" [paginator]="true"
                [showCurrentPageReport]="true" [alwaysShowPaginator]="false"
                currentPageReportTemplate="{{'common.table.paginator.currentPageReportTemplate' | translate}}"
                sortMode="multiple" [multiSortMeta]="companyMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
-               responsiveLayout="scroll" dataKey="id" (onRowExpand)="companyRowExpand($event)" [expandedRowKeys]="companyExpandedRows"
+               dataKey="id" (onRowExpand)="companyRowExpand($event)" [expandedRowKeys]="companyExpandedRows"
                (onSort)="sortCompanyStatistics(companyStatisticsTable.value)">
         <ng-template #header>
           <tr>
@@ -433,9 +433,9 @@
           <tr>
             <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
               <div *ngIf="companyMetrics?.eventTypeStatistics">
-                <p-table [value]="companyMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                <p-table [value]="companyMetrics.eventTypeStatistics.metricsList" [resizableColumns]="true"
                          sortMode="multiple" [multiSortMeta]="eventTypeMultiSortMeta" [showGridlines]="true" [stripedRows]="true" [size]="'small'"
-                         responsiveLayout="scroll" dataKey="id" (onRowExpand)="companyEventTypeRowExpand($event)">
+                         dataKey="id" (onRowExpand)="companyEventTypeRowExpand($event)">
                   <ng-template #header>
                     <tr>
                       <th style="width: 3rem"></th>
@@ -479,9 +479,9 @@
                     <tr>
                       <td [attr.colspan]="olapStatistics.companyStatistics.dimensionValues.length + 4">
                         <div *ngIf="eventTypeMetrics?.speakerStatistics">
-                          <p-table [value]="eventTypeMetrics.speakerStatistics.metricsList" [resizableColumns]="true" [autoLayout]="true"
+                          <p-table [value]="eventTypeMetrics.speakerStatistics.metricsList" [resizableColumns]="true"
                                    sortMode="multiple" [multiSortMeta]="speakerMultiSortMeta" [showGridlines]="true" [stripedRows]="true"
-                                   [size]="'small'" responsiveLayout="scroll" dataKey="id">
+                                   [size]="'small'" dataKey="id">
                             <ng-template #header>
                               <tr>
                                 <th class="text-center" pResizableColumn>
