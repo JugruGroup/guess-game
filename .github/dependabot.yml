@@ -20,10 +20,6 @@ updates:
         patterns:
           - "three"
           - "@types/three"
-    ignore:
-      - dependency-name: "@angular*"
-        update-types: [ "version-update:semver-major" ]
-      - dependency-name: "ngx-markdown"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
