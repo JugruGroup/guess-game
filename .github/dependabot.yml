@@ -15,7 +15,7 @@ updates:
       primeng:
         patterns:
           - "primeng"
-          - "@primeng/themes"
+          - "@primeuix/themes"
       three:
         patterns:
           - "three"

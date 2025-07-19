@@ -13,9 +13,9 @@ import localeRu from '@angular/common/locales/ru';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { MarkdownModule } from 'ngx-markdown';
 import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
-import { definePreset } from '@primeng/themes';
+import { definePreset } from '@primeuix/themes';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura';
+import Aura from '@primeuix/themes/aura';
 
 import { AnswerService } from './shared/services/answer.service';
 import { AppComponent } from './app.component';
