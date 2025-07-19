@@ -90,7 +90,7 @@
           <p-autoComplete id="speaker" [(ngModel)]="selectedSpeakers" [suggestions]="speakerSuggestions" (completeMethod)="speakerSearch($event)"
                           (onSelect)="selectSpeaker()" (onUnselect)="unselectSpeaker()"
                           placeholder="{{'common.list.speakersPlaceholder' | translate}}"
-                          field="displayName" name="speaker" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
+                          optionLabel="displayName" name="speaker" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
         </div>
       </div>
       <div *ngIf="isCompaniesVisible()" class="mb-3 row justify-content-center align-items-center">
@@ -99,7 +99,7 @@
           <p-autoComplete id="company" [(ngModel)]="selectedCompanies" [suggestions]="companySuggestions" (completeMethod)="companySearch($event)"
                           (onSelect)="selectCompany()" (onUnselect)="unselectCompany()"
                           placeholder="{{'common.list.companiesPlaceholder' | translate}}"
-                          field="name" name="company" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
+                          optionLabel="name" name="company" [multiple]="true" class="olap-autocomplete"></p-autoComplete>
         </div>
       </div>
     </form>
