@@ -385,4 +385,9 @@
   .p-dialog.chart-zoom-in-dialog {
     max-height: 100%;
   }
+
+  // Fix height of zoom-in dialog content
+  .p-dialog.chart-zoom-in-dialog .p-dialog-content {
+    flex-grow: 1;
+  }
 }
