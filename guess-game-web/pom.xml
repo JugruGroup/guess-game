@@ -5,7 +5,7 @@
     <parent>
         <groupId>guess-game</groupId>
         <artifactId>guess-game-parent</artifactId>
-        <version>3.2.185</version>
+        <version>3.2.186-SNAPSHOT</version>
     </parent>
 
     <artifactId>guess-game-web</artifactId>
