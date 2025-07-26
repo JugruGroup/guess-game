@@ -27,8 +27,8 @@ import {
   standalone: false
 })
 export class ThreeDimensionsBatchedTextMeshComponent extends AbstractLazyObject3D {
-  public readonly VERTEX_COUNT_FACTOR = 2048;
-  public readonly INDEX_COUNT_FACTOR = 2048;
+  public readonly VERTEX_COUNT_FACTOR = 4096;
+  public readonly INDEX_COUNT_FACTOR = 4096;
 
   @Input()
   material = 'basic';
