@@ -113,7 +113,7 @@ export class TalkComponent implements OnInit, AfterViewInit, AfterViewChecked, O
   }
 
   loadTalk(id: number) {
-    if (this.translateService.currentLang) {
+    if (this.translateService.getCurrentLang()) {
       this.talkService.getTalk(id, this.language)
         .subscribe(data => {
           this.talkDetails = this.getTalkDetailsWithFilledAttributes(data);

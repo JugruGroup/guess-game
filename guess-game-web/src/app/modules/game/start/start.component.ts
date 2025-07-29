@@ -110,7 +110,7 @@ export class StartComponent implements OnInit, OnDestroy {
   }
 
   loadEvents(eventTypes: EventType[]) {
-    if (this.translateService.currentLang) {
+    if (this.translateService.getCurrentLang()) {
       this.questionService.getEvents(eventTypes.map(et => et.id), this.language)
         .subscribe(data => {
           this.events = getEventsWithFullDisplayName(data, this.translateService);

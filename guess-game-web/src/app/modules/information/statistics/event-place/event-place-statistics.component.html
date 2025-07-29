@@ -128,31 +128,31 @@
               <a *ngIf="eventPlaceMetrics.mapCoordinates" href="{{googleMapsUrlPrefix}}/{{eventPlaceMetrics.mapCoordinates}}" class="text-dark">{{eventPlaceMetrics.placeVenueAddress}}</a>
               <span *ngIf="!eventPlaceMetrics.mapCoordinates">{{eventPlaceMetrics.placeVenueAddress}}</span>
             </td>
-            <td class="text-center">{{eventPlaceMetrics.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.duration | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceMetrics.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceMetrics.startDate | date:"shortDate":undefined:translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.endDate | date:"shortDate":undefined:translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.duration | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.eventsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.eventTypesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.talksQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.speakersQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.companiesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.javaChampionsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceMetrics.mvpsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
         <ng-template #footer>
           <tr>
             <td colspan="3">{{'common.table.totalsText' | translate}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.duration | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.companiesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{eventPlaceStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.startDate | date:"shortDate":undefined:translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.endDate | date:"shortDate":undefined:translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.duration | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.eventTypesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.talksQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.companiesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPlaceStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
       </p-table>

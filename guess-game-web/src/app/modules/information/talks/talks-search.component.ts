@@ -95,7 +95,7 @@ export class TalksSearchComponent implements OnInit, OnDestroy {
   }
 
   fillEvents(events: Event[]) {
-    this.events = (this.translateService.currentLang) ?
+    this.events = (this.translateService.getCurrentLang()) ?
       getEventsWithFullDisplayName(events, this.translateService) :
       getEventsWithBriefDisplayName(events);
     this.eventSelectItems = this.events.map(e => {

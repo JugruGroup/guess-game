@@ -108,9 +108,9 @@
                 <span class="ms-2">{{eventPart.name}}</span>
               </a>
             </td>
-            <td class="text-center">{{eventPart.startDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventPart.endDate | date:"shortDate":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{eventPart.duration | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{eventPart.startDate | date:"shortDate":undefined:translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPart.endDate | date:"shortDate":undefined:translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{eventPart.duration | number:'1.0-0':translateService.getCurrentLang()}}</td>
             <td>{{eventPart.placeCity}}</td>
             <td>{{eventPart.placeVenueAddress}}</td>
           </tr>

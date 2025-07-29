@@ -113,7 +113,7 @@ export function getEventDates(startDate: Date, endDate: Date, translateService: 
   let result = '';
 
   if (isEventStartDateVisibleFlag) {
-    result += formatDate(startDate, 'shortDate', translateService.currentLang, undefined);
+    result += formatDate(startDate, 'shortDate', translateService.getCurrentLang(), undefined);
   }
 
   if (isEventHyphenVisibleFlag) {
@@ -121,7 +121,7 @@ export function getEventDates(startDate: Date, endDate: Date, translateService: 
   }
 
   if (isEventEndDateVisibleFlag) {
-    result += formatDate(endDate, 'shortDate', translateService.currentLang, undefined);
+    result += formatDate(endDate, 'shortDate', translateService.getCurrentLang(), undefined);
   }
 
   return result;
@@ -147,7 +147,7 @@ export function getTalkTimes(startTime: Date, endTime: Date, translateService: T
   let result = '';
 
   if (isTalkStartTimeVisibleFlag) {
-    result += formatDate(startTime, 'HH:mm', translateService.currentLang, undefined);
+    result += formatDate(startTime, 'HH:mm', translateService.getCurrentLang(), undefined);
   }
 
   if (isTalkHyphenVisibleFlag) {
@@ -155,7 +155,7 @@ export function getTalkTimes(startTime: Date, endTime: Date, translateService: T
   }
 
   if (isTalkEndTimeVisibleFlag) {
-    result += formatDate(endTime, 'HH:mm', translateService.currentLang, undefined);
+    result += formatDate(endTime, 'HH:mm', translateService.getCurrentLang(), undefined);
   }
 
   return result;

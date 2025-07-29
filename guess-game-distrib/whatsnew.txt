@@ -1,6 +1,6 @@
 Guess Game
 
-Version 3.3.0 - ??? ??, 2025
+Version 3.3.0 - July 30, 2025
 * Localization changes.
 * Statistics of event places.
 

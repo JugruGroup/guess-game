@@ -75,7 +75,7 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   loadEvent(id: number) {
-    if (this.translateService.currentLang) {
+    if (this.translateService.getCurrentLang()) {
       this.eventService.getEvent(id, this.language)
         .subscribe(data => {
           this.eventDetails = this.getEventDetailsWithFilledAttributes(data);
