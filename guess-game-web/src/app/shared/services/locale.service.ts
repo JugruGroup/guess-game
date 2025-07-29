@@ -12,7 +12,7 @@ export class LocaleService {
 
   constructor(public translateService: TranslateService, private primeNG: PrimeNG) {
     this.translateService.addLangs([LocaleService.EN_LANGUAGE_CODE, LocaleService.RU_LANGUAGE_CODE]);
-    this.translateService.setDefaultLang(LocaleService.EN_LANGUAGE_CODE);
+    this.translateService.setFallbackLang(LocaleService.EN_LANGUAGE_CODE);
 
     this.changeLanguage(LocaleService.EN_LANGUAGE_CODE).then();
   }
