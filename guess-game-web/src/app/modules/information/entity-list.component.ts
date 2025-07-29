@@ -28,6 +28,6 @@ export abstract class EntitiesListComponent {
   }
 
   isRuLettersVisible(): boolean {
-    return (this.translateService.currentLang === this.RUSSIAN_LANG);
+    return (this.translateService.getCurrentLang() === this.RUSSIAN_LANG);
   }
 }

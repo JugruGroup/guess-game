@@ -18,7 +18,7 @@ export class LocaleService {
   }
 
   getLanguage(): string {
-    return this.translateService.currentLang;
+    return this.translateService.getCurrentLang();
   }
 
   async changeLanguage(languageCode: string) {

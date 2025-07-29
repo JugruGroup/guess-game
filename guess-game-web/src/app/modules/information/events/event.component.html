@@ -206,8 +206,8 @@
           <tr>
             <td class="text-center">{{i + 1}}</td>
             <td class="text-center">{{talk.talkDay}}</td>
-            <td class="text-center">{{talk.talkStartTime | date:"HH:mm":undefined:translateService.currentLang}}</td>
-            <td class="text-center">{{talk.talkEndTime | date:"HH:mm":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{talk.talkStartTime | date:"HH:mm":undefined:translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{talk.talkEndTime | date:"HH:mm":undefined:translateService.getCurrentLang()}}</td>
             <td class="text-center">{{talk.track}}</td>
             <td *ngIf="isTopicColumnVisible()">{{talk.topicName}}</td>
             <td>

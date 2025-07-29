@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   loadDefaultEvent() {
-    if (this.translateService.currentLang) {
+    if (this.translateService.getCurrentLang()) {
       this.eventService.getDefaultEventPartHomeInfo(this.language)
         .subscribe(data => {
           this.eventPart = data;

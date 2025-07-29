@@ -104,9 +104,9 @@
                 <span class="ms-2">{{speakerMetrics.name}}</span>
               </a>
             </td>
-            <td class="text-center">{{speakerMetrics.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{speakerMetrics.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{speakerMetrics.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{speakerMetrics.talksQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{speakerMetrics.eventsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{speakerMetrics.eventTypesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
             <td class="text-center">
               <img *ngIf="speakerMetrics.javaChampion" src="{{degreesImageDirectory}}/java-champion.png" class="img-speaker-degree-table" alt="java-champion"/>
             </td>
@@ -119,11 +119,11 @@
         <ng-template #footer>
           <tr>
             <td colspan="2">{{'common.table.totalsText' | translate}}</td>
-            <td class="text-center">{{speakerStatistics.totals?.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{speakerStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{speakerStatistics.totals?.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{speakerStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{speakerStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{speakerStatistics.totals?.talksQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{speakerStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{speakerStatistics.totals?.eventTypesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{speakerStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{speakerStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
       </p-table>

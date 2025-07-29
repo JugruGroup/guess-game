@@ -98,7 +98,7 @@
                 <span class="ms-2">{{talk.event?.name}}</span>
               </a>
             </td>
-            <td class="text-center">{{talk.talkDate | date:"shortDate":undefined:translateService.currentLang}}</td>
+            <td class="text-center">{{talk.talkDate | date:"shortDate":undefined:translateService.getCurrentLang()}}</td>
             <td>
               <a routerLink="/{{language}}/information/talks/talk/{{talk.id}}" class="text-dark">{{talk.name}}</a>
             </td>

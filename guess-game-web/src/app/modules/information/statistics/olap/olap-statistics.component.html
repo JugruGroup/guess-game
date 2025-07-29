@@ -205,9 +205,9 @@
               </a>
             </td>
             <td *ngFor="let measureValue of eventTypeMetrics.measureValues" class="text-center">
-              {{measureValue | number:'1.0-0':translateService.currentLang}}
+              {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
             </td>
-            <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
         <ng-template #expandedrow let-eventTypeMetrics>
@@ -242,9 +242,9 @@
                       <td class="text-center">{{i + 1}}</td>
                       <td>{{cityMetrics.name}}</td>
                       <td *ngFor="let measureValue of cityMetrics.measureValues" class="text-center">
-                        {{measureValue | number:'1.0-0':translateService.currentLang}}
+                        {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
                       </td>
-                      <td class="text-center total-column">{{cityMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
+                      <td class="text-center total-column">{{cityMetrics.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
                     </tr>
                   </ng-template>
                 </p-table>
@@ -256,9 +256,9 @@
           <tr>
             <td colspan="5">{{'common.table.totalsText' | translate}}</td>
             <td *ngFor="let measureValue of olapStatistics.eventTypeStatistics.totals.measureValues" class="text-center">
-              {{measureValue | number:'1.0-0':translateService.currentLang}}
+              {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
             </td>
-            <td class="text-center">{{olapStatistics.eventTypeStatistics.totals.total | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{olapStatistics.eventTypeStatistics.totals.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
       </p-table>
@@ -321,9 +321,9 @@
               <img *ngIf="speakerMetrics.mvpReconnect" src="{{degreesImageDirectory}}/mvp-reconnect.png" class="img-speaker-degree-table" alt="mvp-reconnect"/>
             </td>
             <td *ngFor="let measureValue of speakerMetrics.measureValues" class="text-center">
-              {{measureValue | number:'1.0-0':translateService.currentLang}}
+              {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
             </td>
-            <td class="text-center total-column">{{speakerMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center total-column">{{speakerMetrics.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
         <ng-template #expandedrow let-speakerMetrics>
@@ -363,9 +363,9 @@
                         </a>
                       </td>
                       <td *ngFor="let measureValue of eventTypeMetrics.measureValues" class="text-center">
-                        {{measureValue | number:'1.0-0':translateService.currentLang}}
+                        {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
                       </td>
-                      <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
+                      <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
                     </tr>
                   </ng-template>
                 </p-table>
@@ -377,9 +377,9 @@
           <tr>
             <td colspan="5">{{'common.table.totalsText' | translate}}</td>
             <td *ngFor="let measureValue of olapStatistics.speakerStatistics.totals.measureValues" class="text-center">
-              {{measureValue | number:'1.0-0':translateService.currentLang}}
+              {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
             </td>
-            <td class="text-center">{{olapStatistics.speakerStatistics.totals.total | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{olapStatistics.speakerStatistics.totals.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
       </p-table>
@@ -424,9 +424,9 @@
               <a routerLink="/{{language}}/information/companies/company/{{companyMetrics.id}}" class="text-dark">{{companyMetrics.name}}</a>
             </td>
             <td *ngFor="let measureValue of companyMetrics.measureValues" class="text-center">
-              {{measureValue | number:'1.0-0':translateService.currentLang}}
+              {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
             </td>
-            <td class="text-center total-column">{{companyMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center total-column">{{companyMetrics.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
         <ng-template #expandedrow let-companyMetrics>
@@ -470,9 +470,9 @@
                         </a>
                       </td>
                       <td *ngFor="let measureValue of eventTypeMetrics.measureValues" class="text-center">
-                        {{measureValue | number:'1.0-0':translateService.currentLang}}
+                        {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
                       </td>
-                      <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
+                      <td class="text-center total-column">{{eventTypeMetrics.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
                     </tr>
                   </ng-template>
                   <ng-template #expandedrow let-eventTypeMetrics>
@@ -512,9 +512,9 @@
                                   </a>
                                 </td>
                                 <td *ngFor="let measureValue of speakerMetrics.measureValues" class="text-center">
-                                  {{measureValue | number:'1.0-0':translateService.currentLang}}
+                                  {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
                                 </td>
-                                <td class="text-center total-column">{{speakerMetrics.total | number:'1.0-0':translateService.currentLang}}</td>
+                                <td class="text-center total-column">{{speakerMetrics.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
                               </tr>
                             </ng-template>
                           </p-table>
@@ -531,9 +531,9 @@
           <tr>
             <td colspan="3">{{'common.table.totalsText' | translate}}</td>
             <td *ngFor="let measureValue of olapStatistics.companyStatistics.totals.measureValues" class="text-center">
-              {{measureValue | number:'1.0-0':translateService.currentLang}}
+              {{measureValue | number:'1.0-0':translateService.getCurrentLang()}}
             </td>
-            <td class="text-center">{{olapStatistics.companyStatistics.totals.total | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{olapStatistics.companyStatistics.totals.total | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
       </p-table>

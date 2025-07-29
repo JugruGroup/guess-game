@@ -331,7 +331,7 @@ export class OlapStatisticsComponent implements OnInit, AfterViewInit, OnDestroy
   }
 
   fillChartKinds() {
-    if (this.translateService.currentLang) {
+    if (this.translateService.getCurrentLang()) {
       const keys = this.chartKinds
         .map(e => e.label);
 
@@ -746,7 +746,7 @@ export class OlapStatisticsComponent implements OnInit, AfterViewInit, OnDestroy
       animation: false,
       maintainAspectRatio: maintainAspectRatio,
       aspectRatio: aspectRatio,
-      locale: this.translateService.currentLang,
+      locale: this.translateService.getCurrentLang(),
       plugins: {
         legend: {
           labels: {
@@ -767,7 +767,7 @@ export class OlapStatisticsComponent implements OnInit, AfterViewInit, OnDestroy
       animation: false,
       maintainAspectRatio: maintainAspectRatio,
       aspectRatio: aspectRatio,
-      locale: this.translateService.currentLang,
+      locale: this.translateService.getCurrentLang(),
       plugins: {
         datalabels: {
           formatter: (value, context) => {
@@ -803,7 +803,7 @@ export class OlapStatisticsComponent implements OnInit, AfterViewInit, OnDestroy
       animation: false,
       maintainAspectRatio: maintainAspectRatio,
       aspectRatio: aspectRatio,
-      locale: this.translateService.currentLang,
+      locale: this.translateService.getCurrentLang(),
       plugins: {
         legend: {
           labels: {

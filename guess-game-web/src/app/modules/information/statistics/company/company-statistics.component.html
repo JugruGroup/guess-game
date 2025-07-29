@@ -105,23 +105,23 @@
             <td>
               <a routerLink="/{{language}}/information/companies/company/{{companyMetrics.id}}" class="text-dark">{{companyMetrics.name}}</a>
             </td>
-            <td class="text-center">{{companyMetrics.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyMetrics.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyMetrics.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyMetrics.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyMetrics.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyMetrics.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{companyMetrics.speakersQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyMetrics.talksQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyMetrics.eventsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyMetrics.eventTypesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyMetrics.javaChampionsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyMetrics.mvpsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
         <ng-template #footer>
           <tr>
             <td colspan="2">{{'common.table.totalsText' | translate}}</td>
-            <td class="text-center">{{companyStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyStatistics.totals?.talksQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyStatistics.totals?.eventTypesQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.currentLang}}</td>
-            <td class="text-center">{{companyStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.currentLang}}</td>
+            <td class="text-center">{{companyStatistics.totals?.speakersQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyStatistics.totals?.talksQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyStatistics.totals?.eventsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyStatistics.totals?.eventTypesQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyStatistics.totals?.javaChampionsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
+            <td class="text-center">{{companyStatistics.totals?.mvpsQuantity | number:'1.0-0':translateService.getCurrentLang()}}</td>
           </tr>
         </ng-template>
       </p-table>
