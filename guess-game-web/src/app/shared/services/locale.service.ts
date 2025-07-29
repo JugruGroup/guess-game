@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { lastValueFrom, Observable } from 'rxjs';
 import { PrimeNG } from 'primeng/config';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateParser, TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ export class LocaleService {
   public static readonly EN_LANGUAGE_CODE = 'en';
   public static readonly RU_LANGUAGE_CODE = 'ru';
 
-  constructor(public translateService: TranslateService, private primeNG: PrimeNG) {
+  constructor(public translateService: TranslateService, private translateParser: TranslateParser,
+              private primeNG: PrimeNG) {
     this.translateService.addLangs([LocaleService.EN_LANGUAGE_CODE, LocaleService.RU_LANGUAGE_CODE]);
     this.translateService.setFallbackLang(LocaleService.EN_LANGUAGE_CODE);
 
@@ -56,6 +57,6 @@ export class LocaleService {
   }
 
   interpolate(expr: string, params?: any): string {
-    return this.translateService.parser.interpolate(expr, params);
+    return this.translateParser.interpolate(expr, params);
   }
 }
