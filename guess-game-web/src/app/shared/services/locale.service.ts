@@ -30,7 +30,7 @@ export class LocaleService {
   }
 
   isLanguageValid(languageCode: string): boolean {
-    return this.translateService.langs.includes(languageCode);
+    return this.translateService.getLangs().includes(languageCode);
   }
 
   getDefaultLanguage(): string {
