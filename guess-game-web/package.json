@@ -29,7 +29,7 @@
     "bootstrap-icons": "^1.13.1",
     "chart.js": "^4.5.0",
     "chartjs-plugin-datalabels": "^2.2.0",
-    "core-js": "^3.44.0",
+    "core-js": "^3.45.0",
     "dagre": "^0.8.5",
     "get-video-id": "^4.1.7",
     "marked": "^15.0.12",
