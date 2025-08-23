@@ -54651,6 +54651,7 @@ speakers:
         text: "<p>Работаю с базами данных. Когда-то специализировался на Oracle, но уже довольно давно перешел на работу с\
             \ PostgreSQL. Состою в Программном комитете конференции PG BootCamp.</p>\n<p>Занимаюсь гиревым спортом.</p>\n\
             <p>&nbsp;</p>"
+    gitHub: Nikitin-Alexandr
   - id: 3736
     photoFileName: 03736.jpg
     photoUpdatedAt: "2024-12-25T09:15:27Z"
