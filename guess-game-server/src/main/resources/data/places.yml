@@ -243,3 +243,11 @@ places:
       - {language: en, text: "Krasnogvardeyskaya Sq., 3, litera E, DAA Expo"}
       - {language: ru, text: "Красногвардейская пл., 3, литера Е, DAA Expo"}
     mapCoordinates: "59.941601, 30.409661"
+  - id: 32
+    city:
+      - {language: en, text: Moscow}
+      - {language: ru, text: Москва}
+    venueAddress:
+      - {language: en, text: "Spartakovsky Ln., 2, Bld. 1, Ent. 7, VESNASPACE"}
+      - {language: ru, text: "Спартаковский пер., 2, стр. 1, под. 7, Пространство ВЕСНА"}
+    mapCoordinates: "55.774982, 37.672834"

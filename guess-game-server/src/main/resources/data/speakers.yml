@@ -54651,6 +54651,7 @@ speakers:
         text: "<p>Работаю с базами данных. Когда-то специализировался на Oracle, но уже довольно давно перешел на работу с\
             \ PostgreSQL. Состою в Программном комитете конференции PG BootCamp.</p>\n<p>Занимаюсь гиревым спортом.</p>\n\
             <p>&nbsp;</p>"
+    gitHub: Nikitin-Alexandr
   - id: 3736
     photoFileName: 03736.jpg
     photoUpdatedAt: "2024-12-25T09:15:27Z"
@@ -57585,3 +57586,47 @@ speakers:
             \ Skillfactory.</p>\n<p class=\"p1\">Состою в Программных комитетах DUMP, &laquo;Стачки&raquo;.&nbsp;</p>"
     gitHub: mark-rtb
     habr: mark-rtb
+  - id: 3922
+    photoFileName: 03922.jpg
+    name:
+      - {language: en, text: "Andrei Morozov"}
+      - {language: ru, text: "Андрей Морозов"}
+    companyIds: [291]
+    bio:
+      - {language: ru, text: "Продюсер конференции BiasConf. Head of CX/UX в JUG Ru Group. Автор Telegram-канала «Токсичный манагер»."}
+  - id: 3923
+    photoFileName: 03923.jpg
+    name:
+      - {language: en, text: "Svyatoslav Biryulin"}
+      - {language: ru, text: "Святослав Бирюлин"}
+    companyIds: [257]
+    bio:
+      - {language: ru, text: "Практикующий управленец, бизнес-консультант. MBA в области стратегического менеджмента\
+            \ (Академия Народного Хозяйства при Правительстве РФ). Certified Director в области корпоративного\
+            \ управления (Institute of Directors, London, UK). Член ассоциации QID (Казахстан).\n\nГенеральный\
+            \ директор с опытом управления крупными предприятиями. Общий стаж руководства производственными и торговыми\
+            \ предприятиями — 26 лет. Среди компаний — бизнесы с оборотом до 12 млрд и численностью персонала до 3 600\
+            \ человек. Опыт работы в советах директоров — с 2012 года по настоящее время.\n\nОснователь консалтинговой\
+            \ компании Sapiens Consulting, специализирующейся на стратегическом консалтинге, повышении эффективности\
+            \ бизнеса, разработке стратегий и долгосрочных программ развития, обучении стратегическому менеджменту.\
+            \ Сооснователь консалтингового бутика <a href=\"https://www.rethnk.group\" target=\"_blank\">Rethnk Group</a>\
+            \ (Швеция).\n\nАвтор книг на тему стратегии и управления, среди которых «Красная и желтая стратегии. Все,\
+            \ что нужно знать о бизнес-стратегии», «Red and Yellow Strategies: Flip Your Strategic Thinking and Overcome\
+            \ Short-termism» и «Люди — как ими управлять». Автор курса «Красная и желтая стратегии» для собственников и\
+            \ CEO.\n\nПолезные авторские материалы:\n\n- <a href=\"https://t.me/sapcons\" target=\"_blank\">Telegram-канал</a>\
+            \ о ведении малого и среднего бизнеса.\n- Рассылки на английском языке\
+            \ <a href=\"https://svyatoslav.substack.com\" target=\"_blank\">Strategic Seeing</a> и\
+            \ <a href=\"https://strategyintwominutes.substack.com\" target=\"_blank\">Strategy in Three Minutes</a>."}
+    twitter: SBiryulin1973
+  - id: 3924
+    photoFileName: 03924.jpg
+    name:
+      - {language: en, text: "Ivan Selikhovkin"}
+      - {language: ru, text: "Иван Селиховкин"}
+    companyIds: [257]
+    bio:
+      - {language: ru, text: "PMP. Руководитель портфелей и проектных офисов в сфере медицинского ИТ и приборостроения\
+            \ с 2012 года. Ex-сооснователь и вице-президент PMI Chapter Санкт-Петербурга, ex-head of PMO ЕАПТЕКА. Head\
+            \ of PMO и консультант."}
+    twitter: selikhovkin
+    habr: selikhovkin

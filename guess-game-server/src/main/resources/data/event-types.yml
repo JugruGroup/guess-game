@@ -677,3 +677,30 @@ eventTypes:
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
     topicId: 17
+  - id: 25
+    conference: IN_BETWEEN
+    logoFileName: inbetween.png
+    organizerId: 0
+    name:
+      - {language: en, text: InBetween}
+    shortDescription:
+      - {language: en, text: "Conference on operational art in management"}
+      - {language: ru, text: "Конференция про оперативное искусство в менеджменте"}
+    longDescription:
+      - language: ru
+        text: "Мы\_считаем, что на\_оперативном уровне:\n* не\_бывает правильного «как надо»;\n* можно и\_нужно обсужд\
+            ать темы в\_ключе «как мы\_пробуем и\_где обжигаемся»;\n* полезно рассказывать людям «вот это у\_нас более-мен\
+            ее работает на\_данном этапе».\n\nInBetween\_— это конференция про проблемы руководителей, которые находят\
+            ся на самом сложном уровне — между стратегическими целями от руководства и повседневной тактической рутиной ко\
+            манд.\n\nКлючевые вопросы конференции:\n* Как принимать ключевые решения в\_условиях неопределенности?\n* Где\
+            \ полагаться на\_цифры, а\_где\_— на\_интуицию?\n* Как объяснить «прыжок веры» совету директоров?\n* Как не\_р\
+            азвалить команду, меняя подход к\_проектам?\n* Нужен\_ли проектный офис и\_какой?\n* Что делать, если никто не\
+            \_берет ответственность?\n* Как координировать команды с\_разными целями?\n* Как быстро адаптировать планы, ес\
+            ли ситуация поменялась?\n* Как каскадировать изменения на\_команду?"
+    siteLink:
+      - {language: en, text: "https://inbetween.ru"}
+    youtubeLink: https://www.youtube.com/@inbetweenconf
+    telegramLink: https://t.me/InBetweenConf
+    habrLink: https://habr.com/ru/company/jugru
+    timeZone: Europe/Moscow
+    topicId: 18

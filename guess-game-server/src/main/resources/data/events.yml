@@ -3221,3 +3221,11 @@ events:
     siteLink: []
     talkIds: [6212, 6213, 6214, 6215, 6216, 6217, 6218, 6219, 6220, 6221, 6222, 6223, 6224, 6225, 6226, 6227, 6228, 6229,
               6230]
+  # InBetween
+  - eventTypeId: 25
+    name:
+      - {language: en, text: "InBetween 2025"}
+    days:
+      - {startDate: "2025-08-18", endDate: "2025-08-20", placeId: 32}
+    siteLink: []
+    talkIds: [6460, 6461, 6462]
