@@ -2888,5 +2888,9 @@ public class ConferenceDataLoaderExecutor {
 //                                "Геоданные + Python: как мы создаем высокопроизводительный сервис для расчета геофакторов",
 //                                "Python: разгоняем медленную змейку",
 //                                "onETL: как и зачем мы прикручиваем батарейки к Apache Spark")));
+//        loadTalksSpeakersEvent(Conference.IN_BETWEEN, LocalDate.of(2025, 8, 18), "2025",
+//                LoadSettings.eventTemplateAndInvalidTalksSet(
+//                        createEventTemplate("InBetween 2025", null, List.of(24L, 32L)),
+//                        Set.of()));
     }
 }

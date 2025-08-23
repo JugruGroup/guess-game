@@ -4,7 +4,7 @@ topics:
       - {language: en, text: "Other"}
       - {language: ru, text: "Прочее"}
     defaultTopic: true
-    orderNumber: 18
+    orderNumber: 19
   - id: 1
     name:
       - {language: en, text: "Java"}
@@ -81,3 +81,8 @@ topics:
       - {language: en, text: "System programming"}
       - {language: ru, text: "Системное программирование"}
     orderNumber: 17
+  - id: 18
+    name:
+      - {language: en, text: "Management"}
+      - {language: ru, text: "Менеджмент"}
+    orderNumber: 18

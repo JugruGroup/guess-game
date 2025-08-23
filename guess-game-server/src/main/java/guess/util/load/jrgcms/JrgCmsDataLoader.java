@@ -116,6 +116,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.IML, "IML");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.CARGO_CULT, "CARGO");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SYSCONF, "SYSCONF");
+        CONFERENCE_EVENT_PROJECT_MAP.put(Conference.IN_BETWEEN, "INBETWEEN");
         CONFERENCE_EVENT_PROJECT_MAP.put(Conference.SNOW_ONE, "SNOWONE");
 
         EVENT_PROJECT_CONFERENCE_MAP = CONFERENCE_EVENT_PROJECT_MAP.entrySet().stream()

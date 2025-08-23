@@ -25,5 +25,6 @@ public enum Conference {
     IML,
     CARGO_CULT,
     SYSCONF,
+    IN_BETWEEN,
     SNOW_ONE
 }
