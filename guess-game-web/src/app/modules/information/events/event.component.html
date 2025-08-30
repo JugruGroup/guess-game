@@ -45,7 +45,8 @@
         </div>
         <div *ngIf="eventDetails.event?.telegramLink" class="col-auto">
           <a href="{{eventDetails.event.telegramLink}}" class="text-dark">
-            <i class="fab fa-telegram-plane"></i><span class="d-none d-sm-inline"> Telegram</span>
+            <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegram"></use></svg>
+            <span class="d-none d-sm-inline"> Telegram</span>
           </a>
         </div>
         <div *ngIf="eventDetails.event?.vkLink" class="col-auto">
