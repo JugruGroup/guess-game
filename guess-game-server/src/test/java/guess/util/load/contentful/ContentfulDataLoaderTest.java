@@ -275,7 +275,7 @@ class ContentfulDataLoaderTest {
 
             EventType eventType5 = new EventType();
             eventType5.setId(-1);
-            eventType5.setTelegramLink(telegramLink);
+            eventType5.setTelegramChannelLink(telegramLink);
 
             EventType eventType6 = new EventType();
             eventType6.setId(-1);
@@ -307,7 +307,7 @@ class ContentfulDataLoaderTest {
             assertEquals(expected.getTwitterLink(), actual.getTwitterLink());
             assertEquals(expected.getFacebookLink(), actual.getFacebookLink());
             assertEquals(expected.getYoutubeLink(), actual.getYoutubeLink());
-            assertEquals(expected.getTelegramLink(), actual.getTelegramLink());
+            assertEquals(expected.getTelegramChannelLink(), actual.getTelegramChannelLink());
             assertEquals(expected.getSpeakerdeckLink(), actual.getSpeakerdeckLink());
             assertEquals(expected.getHabrLink(), actual.getHabrLink());
         }

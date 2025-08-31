@@ -12,8 +12,8 @@ import java.util.function.Function;
  * Event DTO.
  */
 public class EventDto extends EventBriefDto {
-    public record EventDtoSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramLink,
-                                      String habrLink) {
+    public record EventDtoSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramChatLink,
+                                      String telegramChannelLink, String habrLink) {
     }
 
     public record EventDtoLinks(String siteLink, String youtubeLink, String speakerdeckLink,
@@ -53,8 +53,12 @@ public class EventDto extends EventBriefDto {
         return links.socialLinks.facebookLink;
     }
 
-    public String getTelegramLink() {
-        return links.socialLinks.telegramLink;
+    public String getTelegramChatLink() {
+        return links.socialLinks.telegramChatLink;
+    }
+
+    public String getTelegramChannelLink() {
+        return links.socialLinks.telegramChannelLink;
     }
 
     public String getSpeakerdeckLink() {
@@ -84,7 +88,8 @@ public class EventDto extends EventBriefDto {
         String eventTypeVkLink = (eventType != null) ? eventType.getVkLink() : null;
         String eventTypeTwitterLink = (eventType != null) ? eventType.getTwitterLink() : null;
         String eventTypeFacebookLink = (eventType != null) ? eventType.getFacebookLink() : null;
-        String eventTypeTelegramLink = (eventType != null) ? eventType.getTelegramLink() : null;
+        String eventTypeTelegramChatLink = (eventType != null) ? eventType.getTelegramChatLink() : null;
+        String eventTypeTelegramChannelLink = (eventType != null) ? eventType.getTelegramChannelLink() : null;
         String eventTypeSpeakerdeckLink = (eventType != null) ? eventType.getSpeakerdeckLink() : null;
         String eventTypeHabrLink = (eventType != null) ? eventType.getHabrLink() : null;
         String description = (eventType != null) ? LocalizationUtils.getString(eventType.getShortDescription(), language) : null;
@@ -101,7 +106,8 @@ public class EventDto extends EventBriefDto {
                                 eventTypeVkLink,
                                 eventTypeTwitterLink,
                                 eventTypeFacebookLink,
-                                eventTypeTelegramLink,
+                                eventTypeTelegramChatLink,
+                                eventTypeTelegramChannelLink,
                                 eventTypeHabrLink
                         )
                 ),

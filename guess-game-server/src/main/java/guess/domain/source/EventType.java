@@ -14,14 +14,17 @@ public class EventType extends Descriptionable {
         private final String vkLink;
         private final String twitterLink;
         private final String facebookLink;
-        private final String telegramLink;
+        private final String telegramChatLink;
+        private final String telegramChannelLink;
         private final String habrLink;
 
-        public EventTypeSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramLink, String habrLink) {
+        public EventTypeSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramChatLink,
+                                    String telegramChannelLink, String habrLink) {
             this.vkLink = vkLink;
             this.twitterLink = twitterLink;
             this.facebookLink = facebookLink;
-            this.telegramLink = telegramLink;
+            this.telegramChatLink = telegramChatLink;
+            this.telegramChannelLink = telegramChannelLink;
             this.habrLink = habrLink;
         }
     }
@@ -59,7 +62,8 @@ public class EventType extends Descriptionable {
     private String twitterLink;
     private String facebookLink;
     private String youtubeLink;
-    private String telegramLink;
+    private String telegramChatLink;
+    private String telegramChannelLink;
     private String speakerdeckLink;
     private String habrLink;
     private String logoFileName;
@@ -89,7 +93,8 @@ public class EventType extends Descriptionable {
         this.twitterLink = links.socialLinks.twitterLink;
         this.facebookLink = links.socialLinks.facebookLink;
         this.youtubeLink = links.youtubeLink;
-        this.telegramLink = links.socialLinks.telegramLink;
+        this.telegramChatLink = links.socialLinks.telegramChatLink;
+        this.telegramChannelLink = links.socialLinks.telegramChannelLink;
         this.speakerdeckLink = links.speakerdeckLink;
         this.habrLink = links.socialLinks.habrLink;
         this.logoFileName = logoFileName;
@@ -153,12 +158,20 @@ public class EventType extends Descriptionable {
         this.youtubeLink = youtubeLink;
     }
 
-    public String getTelegramLink() {
-        return telegramLink;
+    public String getTelegramChatLink() {
+        return telegramChatLink;
     }
 
-    public void setTelegramLink(String telegramLink) {
-        this.telegramLink = telegramLink;
+    public void setTelegramChatLink(String telegramChatLink) {
+        this.telegramChatLink = telegramChatLink;
+    }
+
+    public String getTelegramChannelLink() {
+        return telegramChannelLink;
+    }
+
+    public void setTelegramChannelLink(String telegramChannelLink) {
+        this.telegramChannelLink = telegramChannelLink;
     }
 
     public String getSpeakerdeckLink() {
