@@ -67,7 +67,7 @@ export class EventTypeComponent implements OnInit, OnDestroy {
   isEventTypeLinksVisible() {
     return this.eventTypeDetails.eventType?.siteLink || this.eventTypeDetails.eventType?.facebookLink ||
       this.eventTypeDetails.eventType?.vkLink || this.eventTypeDetails.eventType?.twitterLink ||
-      this.eventTypeDetails.eventType?.youtubeLink || this.eventTypeDetails.eventType?.telegramLink ||
+      this.eventTypeDetails.eventType?.youtubeLink || this.eventTypeDetails.eventType?.telegramChannelLink ||
       this.eventTypeDetails.eventType?.speakerdeckLink || this.eventTypeDetails.eventType?.habrLink;
   }
 

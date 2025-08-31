@@ -11,7 +11,7 @@ export abstract class AbstractEvent {
     public vkLink?: string,
     public twitterLink?: string,
     public facebookLink?: string,
-    public telegramLink?: string,
+    public telegramChannelLink?: string,
     public speakerdeckLink?: string,
     public habrLink?: string,
     public description?: string,

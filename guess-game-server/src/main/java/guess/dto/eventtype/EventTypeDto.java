@@ -10,7 +10,7 @@ import java.util.List;
  * Event type DTO.
  */
 public class EventTypeDto extends EventTypeBriefDto {
-    public record EventTypeDtoSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramLink,
+    public record EventTypeDtoSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramChannelLink,
                                           String habrLink) {
     }
 
@@ -53,8 +53,8 @@ public class EventTypeDto extends EventTypeBriefDto {
         return links.youtubeLink;
     }
 
-    public String getTelegramLink() {
-        return links.socialLinks.telegramLink;
+    public String getTelegramChannelLink() {
+        return links.socialLinks.telegramChannelLink;
     }
 
     public String getSpeakerdeckLink() {
@@ -85,7 +85,7 @@ public class EventTypeDto extends EventTypeBriefDto {
                                 eventType.getVkLink(),
                                 eventType.getTwitterLink(),
                                 eventType.getFacebookLink(),
-                                eventType.getTelegramLink(),
+                                eventType.getTelegramChannelLink(),
                                 eventType.getHabrLink()
                         )
                 ));

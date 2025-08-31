@@ -3833,7 +3833,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType0.setTwitterLink("twitterLink0");
             eventType0.setFacebookLink("facebookLink0");
             eventType0.setYoutubeLink("youtubeLink0");
-            eventType0.setTelegramLink("telegramLink0");
+            eventType0.setTelegramChannelLink("telegramChannelLink0");
             eventType0.setSpeakerdeckLink("speakerdeckLink0");
             eventType0.setHabrLink("habrLink0");
             eventType0.setOrganizer(organizer0);
@@ -3940,7 +3940,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType12.setTwitterLink("twitterLink0");
             eventType12.setFacebookLink("facebookLink0");
             eventType12.setYoutubeLink("youtubeLink0");
-            eventType12.setTelegramLink("telegramLink12");
+            eventType12.setTelegramChannelLink("telegramChannelLink12");
 
             EventType eventType13 = new EventType();
             eventType13.setId(0);
@@ -3954,7 +3954,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType13.setTwitterLink("twitterLink0");
             eventType13.setFacebookLink("facebookLink0");
             eventType13.setYoutubeLink("youtubeLink0");
-            eventType13.setTelegramLink("telegramLink0");
+            eventType13.setTelegramChannelLink("telegramChannelLink0");
             eventType13.setSpeakerdeckLink("speakerdeckLink13");
 
             EventType eventType14 = new EventType();
@@ -3969,7 +3969,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType14.setTwitterLink("twitterLink0");
             eventType14.setFacebookLink("facebookLink0");
             eventType14.setYoutubeLink("youtubeLink0");
-            eventType14.setTelegramLink("telegramLink0");
+            eventType14.setTelegramChannelLink("telegramChannelLink0");
             eventType14.setSpeakerdeckLink("speakerdeckLink0");
             eventType14.setHabrLink("habrLink14");
 
@@ -3985,7 +3985,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType15.setTwitterLink("twitterLink0");
             eventType15.setFacebookLink("facebookLink0");
             eventType15.setYoutubeLink("youtubeLink0");
-            eventType15.setTelegramLink("telegramLink0");
+            eventType15.setTelegramChannelLink("telegramChannelLink0");
             eventType15.setSpeakerdeckLink("speakerdeckLink0");
             eventType15.setHabrLink("habrLink0");
             eventType15.setOrganizer(organizer1);
@@ -4002,7 +4002,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType16.setTwitterLink("twitterLink0");
             eventType16.setFacebookLink("facebookLink0");
             eventType16.setYoutubeLink("youtubeLink0");
-            eventType16.setTelegramLink("telegramLink0");
+            eventType16.setTelegramChannelLink("telegramChannelLink0");
             eventType16.setSpeakerdeckLink("speakerdeckLink0");
             eventType16.setHabrLink("habrLink0");
             eventType16.setOrganizer(organizer0);
@@ -4019,7 +4019,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType17.setTwitterLink("twitterLink0");
             eventType17.setFacebookLink("facebookLink0");
             eventType17.setYoutubeLink("youtubeLink0");
-            eventType17.setTelegramLink("telegramLink0");
+            eventType17.setTelegramChannelLink("telegramChannelLink0");
             eventType17.setSpeakerdeckLink("speakerdeckLink0");
             eventType17.setHabrLink("habrLink0");
             eventType17.setOrganizer(organizer0);
@@ -4038,7 +4038,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType18.setTwitterLink("twitterLink0");
             eventType18.setFacebookLink("facebookLink0");
             eventType18.setYoutubeLink("youtubeLink0");
-            eventType18.setTelegramLink("telegramLink0");
+            eventType18.setTelegramChannelLink("telegramChannelLink0");
             eventType18.setSpeakerdeckLink("speakerdeckLink0");
             eventType18.setHabrLink("habrLink0");
             eventType18.setOrganizer(organizer0);
