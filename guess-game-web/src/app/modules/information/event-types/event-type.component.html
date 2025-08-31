@@ -35,14 +35,24 @@
         </div>
         <div *ngIf="eventTypeDetails.eventType?.telegramChatLink" class="col-auto">
           <a href="{{eventTypeDetails.eventType.telegramChatLink}}" class="text-dark">
-            <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegramChat"></use></svg>
-            <span class="d-none d-sm-inline"> {{'common.telegramChatLinkText' | translate}}</span>
+            @if (eventTypeDetails.eventType?.telegramChannelLink) {
+              <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegramChat"></use></svg>
+              <span class="d-none d-sm-inline"> {{'common.telegramChatLinkText' | translate}}</span>
+            } @else {
+              <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegram"></use></svg>
+              <span class="d-none d-sm-inline"> {{'common.telegramLinkText' | translate}}</span>
+            }
           </a>
         </div>
         <div *ngIf="eventTypeDetails.eventType?.telegramChannelLink" class="col-auto">
           <a href="{{eventTypeDetails.eventType.telegramChannelLink}}" class="text-dark">
-            <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegramChannel"></use></svg>
-            <span class="d-none d-sm-inline"> {{'common.telegramChannelLinkText' | translate}}</span>
+            @if (eventTypeDetails.eventType?.telegramChatLink) {
+              <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegramChannel"></use></svg>
+              <span class="d-none d-sm-inline"> {{'common.telegramChannelLinkText' | translate}}</span>
+            } @else {
+              <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegram"></use></svg>
+              <span class="d-none d-sm-inline"> {{'common.telegramLinkText' | translate}}</span>
+            }
           </a>
         </div>
         <div *ngIf="eventTypeDetails.eventType?.vkLink" class="col-auto">
