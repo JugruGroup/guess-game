@@ -10,6 +10,7 @@ export class EventType {
     public twitterLink?: string,
     public facebookLink?: string,
     public youtubeLink?: string,
+    public telegramChatLink?: string,
     public telegramChannelLink?: string,
     public speakerdeckLink?: string,
     public habrLink?: string,

@@ -18,6 +18,8 @@
     "homeToolTipText": "Home",
     "cancelLinkText": "Cancel",
     "siteLinkText": "Site",
+    "telegramChatLinkText": "Telegram Chat",
+    "telegramChannelLinkText": "Telegram Channel",
     "vkLinkText": "VK",
     "habrLinkText": "Habr",
     "searchButtonText": "Search",

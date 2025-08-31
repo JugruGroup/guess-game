@@ -12,8 +12,8 @@ import java.util.function.Function;
  * Event DTO.
  */
 public class EventDto extends EventBriefDto {
-    public record EventDtoSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramChannelLink,
-                                      String habrLink) {
+    public record EventDtoSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramChatLink,
+                                      String telegramChannelLink, String habrLink) {
     }
 
     public record EventDtoLinks(String siteLink, String youtubeLink, String speakerdeckLink,
@@ -53,6 +53,10 @@ public class EventDto extends EventBriefDto {
         return links.socialLinks.facebookLink;
     }
 
+    public String getTelegramChatLink() {
+        return links.socialLinks.telegramChatLink;
+    }
+
     public String getTelegramChannelLink() {
         return links.socialLinks.telegramChannelLink;
     }
@@ -84,6 +88,7 @@ public class EventDto extends EventBriefDto {
         String eventTypeVkLink = (eventType != null) ? eventType.getVkLink() : null;
         String eventTypeTwitterLink = (eventType != null) ? eventType.getTwitterLink() : null;
         String eventTypeFacebookLink = (eventType != null) ? eventType.getFacebookLink() : null;
+        String eventTypeTelegramChatLink = (eventType != null) ? eventType.getTelegramChatLink() : null;
         String eventTypeTelegramChannelLink = (eventType != null) ? eventType.getTelegramChannelLink() : null;
         String eventTypeSpeakerdeckLink = (eventType != null) ? eventType.getSpeakerdeckLink() : null;
         String eventTypeHabrLink = (eventType != null) ? eventType.getHabrLink() : null;
@@ -101,6 +106,7 @@ public class EventDto extends EventBriefDto {
                                 eventTypeVkLink,
                                 eventTypeTwitterLink,
                                 eventTypeFacebookLink,
+                                eventTypeTelegramChatLink,
                                 eventTypeTelegramChannelLink,
                                 eventTypeHabrLink
                         )

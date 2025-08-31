@@ -18,6 +18,8 @@
     "homeToolTipText": "Главная",
     "cancelLinkText": "Прервать",
     "siteLinkText": "Сайт",
+    "telegramChatLinkText": "Telegram-чат",
+    "telegramChannelLinkText": "Telegram-канал",
     "vkLinkText": "ВКонтакте",
     "habrLinkText": "Хабр",
     "searchButtonText": "Искать",

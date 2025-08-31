@@ -22,6 +22,7 @@ eventTypes:
     vkLink: https://vk.com/cpp_russia
     twitterLink: https://twitter.com/cpp_russia
     youtubeLink: https://www.youtube.com/channel/UCJ9v015sPgEi0jJXe_zanjA
+    telegramChatLink: https://t.me/cpprussia
     telegramChannelLink: https://t.me/cpprussia_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -48,6 +49,7 @@ eventTypes:
     vkLink: https://vk.com/devoops
     twitterLink: https://twitter.com/devoopsconf
     youtubeLink: https://www.youtube.com/channel/UCjnQreLMbpKsfJwDnHGZLxg
+    telegramChatLink: https://t.me/devOopsconf
     telegramChannelLink: https://t.me/devoops_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -76,6 +78,7 @@ eventTypes:
     vkLink: https://vk.com/dotnext
     twitterLink: https://twitter.com/DotNextConf
     youtubeLink: https://www.youtube.com/channel/UCNPwMPudMEw-gnAT4zh_UZg
+    telegramChatLink: https://t.me/dotnextconf
     telegramChannelLink: https://t.me/dotnext_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -108,6 +111,7 @@ eventTypes:
     vkLink: https://vk.com/heisenbugconf
     twitterLink: https://twitter.com/HeisenbugConf
     youtubeLink: https://www.youtube.com/channel/UCX6fjZa167tSy_4ryTLcOBw
+    telegramChatLink: https://t.me/heisenbugconf
     telegramChannelLink: https://t.me/heisenbug_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -137,6 +141,7 @@ eventTypes:
     vkLink: https://vk.com/holyjs
     twitterLink: https://twitter.com/HolyJSconf
     youtubeLink: https://www.youtube.com/channel/UC2Jwo4Q0s-ucjGseHP8XUSQ
+    telegramChatLink: https://t.me/holyjsconf
     telegramChannelLink: https://t.me/holyjs_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -160,6 +165,7 @@ eventTypes:
     vkLink: https://vk.com/hydraconf
     twitterLink: https://twitter.com/hydraconference
     youtubeLink: https://www.youtube.com/channel/UCcwI0q9tsGZYZDvz5mLsXZA
+    telegramChatLink: https://t.me/hydraconf
     telegramChannelLink: https://t.me/hydraconf_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -225,6 +231,7 @@ eventTypes:
     vkLink: https://vk.com/jpoint
     twitterLink: https://twitter.com/JUGru
     youtubeLink: https://www.youtube.com/c/JUGru
+    telegramChatLink: https://t.me/jpoint_joker_conf
     telegramChannelLink: https://t.me/jpoint_joker_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -253,6 +260,7 @@ eventTypes:
     vkLink: https://vk.com/jokerconf
     twitterLink: https://twitter.com/jugru
     youtubeLink: https://www.youtube.com/c/JUGru
+    telegramChatLink: https://t.me/jpoint_joker_conf
     telegramChannelLink: https://t.me/jpoint_joker_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -283,6 +291,7 @@ eventTypes:
     vkLink: https://vk.com/mobiusconf
     twitterLink: https://twitter.com/MobiusConf
     youtubeLink: https://www.youtube.com/c/MobiusConf
+    telegramChatLink: https://t.me/mobiusconf
     telegramChannelLink: https://t.me/mobiusconf_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -336,6 +345,7 @@ eventTypes:
     vkLink: https://vk.com/smartdata
     twitterLink: https://twitter.com/smartdatacon
     youtubeLink: https://www.youtube.com/channel/UCfCOJWNC_ipu34-LVvPUeCg
+    telegramChatLink: https://t.me/smartdataconf
     telegramChannelLink: https://t.me/smartdata_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -364,6 +374,7 @@ eventTypes:
     vkLink: https://vk.com/techtrain
     twitterLink: https://twitter.com/techtrainfest
     youtubeLink: https://www.youtube.com/c/TechTrainFest
+    telegramChatLink: https://t.me/techtrainfest
     telegramChannelLink: https://t.me/techtrainfest_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -469,6 +480,7 @@ eventTypes:
     vkLink: https://vk.com/vt_conference
     twitterLink: https://twitter.com/videotech_conf
     youtubeLink: https://www.youtube.com/channel/UC16ztwLQMXcS4aqCWvbkj3Q
+    telegramChatLink: https://t.me/videotech_chat
     telegramChannelLink: https://t.me/videotech_conf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -497,6 +509,7 @@ eventTypes:
     vkLink: https://vk.com/piterpy
     twitterLink: https://twitter.com/PiterPy
     youtubeLink: https://www.youtube.com/c/PiterPyConference
+    telegramChatLink: https://t.me/PiterPy
     telegramChannelLink: https://t.me/PiterPy_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -527,6 +540,7 @@ eventTypes:
     vkLink: https://vk.com/flowconf
     twitterLink: https://twitter.com/Flow_conf
     youtubeLink: https://www.youtube.com/channel/UC6kyNBysyJZIs8bKBf7YhVg
+    telegramChatLink: https://t.me/flowconf
     telegramChannelLink: https://t.me/flowconf_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -560,6 +574,7 @@ eventTypes:
     vkLink: https://vk.com/safecodeconf
     twitterLink: https://twitter.com/safecodeconf
     youtubeLink: https://www.youtube.com/@SafeCodeConf
+    telegramChatLink: https://t.me/SafeCode_chat
     telegramChannelLink: https://t.me/safecode_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -589,6 +604,7 @@ eventTypes:
     vkLink: https://vk.com/gofuncconf
     twitterLink: https://twitter.com/GoFuncConf
     youtubeLink: https://www.youtube.com/@GoFuncConf
+    telegramChatLink: https://t.me/GoFunc_chat
     telegramChannelLink: https://t.me/GoFuncConf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -623,6 +639,7 @@ eventTypes:
       - {language: en, text: "https://imlconf.com"}
     vkLink: https://vk.com/imlconf
     youtubeLink: http://www.youtube.com/@iml_conf
+    telegramChatLink: https://t.me/iml_chat
     telegramChannelLink: https://t.me/iml_conf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -648,6 +665,7 @@ eventTypes:
       - {language: en, text: "https://cargo-cult.club"}
     vkLink: https://vk.com/cargocultjrg
     youtubeLink: https://www.youtube.com/@CargoCultConf
+    telegramChatLink: https://t.me/CargoCult_chat
     telegramChannelLink: https://t.me/CargoCult_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -673,6 +691,7 @@ eventTypes:
       - {language: en, text: "https://sysconf.pro"}
     vkLink: https://vk.com/sysconf
     youtubeLink: https://www.youtube.com/@sysconf
+    telegramChatLink: https://t.me/chat_sysconf
     telegramChannelLink: https://t.me/sysconf_channel
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow
@@ -700,6 +719,7 @@ eventTypes:
     siteLink:
       - {language: en, text: "https://inbetween.ru"}
     youtubeLink: https://www.youtube.com/@inbetweenconf
+    telegramChatLink: https://t.me/inbetweenchat
     telegramChannelLink: https://t.me/InBetweenConf
     habrLink: https://habr.com/ru/company/jugru
     timeZone: Europe/Moscow

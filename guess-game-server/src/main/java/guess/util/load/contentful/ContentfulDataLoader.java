@@ -239,6 +239,7 @@ public class ContentfulDataLoader extends CmsDataLoader {
                                 (vkLink != null) ? getFirstMapValue(vkLink) : null,
                                 (twLink != null) ? getFirstMapValue(twLink) : null,
                                 (fbLink != null) ? getFirstMapValue(fbLink) : null,
+                                null,
                                 (telegramLink != null) ? getFirstMapValue(telegramLink) : null,
                                 null
                         )

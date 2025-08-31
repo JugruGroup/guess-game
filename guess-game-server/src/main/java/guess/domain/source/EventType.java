@@ -14,13 +14,16 @@ public class EventType extends Descriptionable {
         private final String vkLink;
         private final String twitterLink;
         private final String facebookLink;
+        private final String telegramChatLink;
         private final String telegramChannelLink;
         private final String habrLink;
 
-        public EventTypeSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramChannelLink, String habrLink) {
+        public EventTypeSocialLinks(String vkLink, String twitterLink, String facebookLink, String telegramChatLink,
+                                    String telegramChannelLink, String habrLink) {
             this.vkLink = vkLink;
             this.twitterLink = twitterLink;
             this.facebookLink = facebookLink;
+            this.telegramChatLink = telegramChatLink;
             this.telegramChannelLink = telegramChannelLink;
             this.habrLink = habrLink;
         }
@@ -59,6 +62,7 @@ public class EventType extends Descriptionable {
     private String twitterLink;
     private String facebookLink;
     private String youtubeLink;
+    private String telegramChatLink;
     private String telegramChannelLink;
     private String speakerdeckLink;
     private String habrLink;
@@ -89,6 +93,7 @@ public class EventType extends Descriptionable {
         this.twitterLink = links.socialLinks.twitterLink;
         this.facebookLink = links.socialLinks.facebookLink;
         this.youtubeLink = links.youtubeLink;
+        this.telegramChatLink = links.socialLinks.telegramChatLink;
         this.telegramChannelLink = links.socialLinks.telegramChannelLink;
         this.speakerdeckLink = links.speakerdeckLink;
         this.habrLink = links.socialLinks.habrLink;
@@ -151,6 +156,14 @@ public class EventType extends Descriptionable {
 
     public void setYoutubeLink(String youtubeLink) {
         this.youtubeLink = youtubeLink;
+    }
+
+    public String getTelegramChatLink() {
+        return telegramChatLink;
+    }
+
+    public void setTelegramChatLink(String telegramChatLink) {
+        this.telegramChatLink = telegramChatLink;
     }
 
     public String getTelegramChannelLink() {

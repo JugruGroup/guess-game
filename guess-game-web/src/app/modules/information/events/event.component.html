@@ -43,10 +43,16 @@
             <i class="fab fa-square-x-twitter"></i><span class="d-none d-sm-inline"> Twitter</span>
           </a>
         </div>
+        <div *ngIf="eventDetails.event?.telegramChatLink" class="col-auto">
+          <a href="{{eventDetails.event.telegramChatLink}}" class="text-dark">
+            <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegramChat"></use></svg>
+            <span class="d-none d-sm-inline"> {{'common.telegramChatLinkText' | translate}}</span>
+          </a>
+        </div>
         <div *ngIf="eventDetails.event?.telegramChannelLink" class="col-auto">
           <a href="{{eventDetails.event.telegramChannelLink}}" class="text-dark">
-            <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegram"></use></svg>
-            <span class="d-none d-sm-inline"> Telegram</span>
+            <svg class="icon" focusable="false" aria-hidden="true"><use href="assets/images/sprite.svg#telegramChannel"></use></svg>
+            <span class="d-none d-sm-inline"> {{'common.telegramChannelLinkText' | translate}}</span>
           </a>
         </div>
         <div *ngIf="eventDetails.event?.vkLink" class="col-auto">
