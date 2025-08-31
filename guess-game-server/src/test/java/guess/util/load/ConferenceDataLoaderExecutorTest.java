@@ -3833,6 +3833,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType0.setTwitterLink("twitterLink0");
             eventType0.setFacebookLink("facebookLink0");
             eventType0.setYoutubeLink("youtubeLink0");
+            eventType0.setTelegramChatLink("telegramChatLink0");
             eventType0.setTelegramChannelLink("telegramChannelLink0");
             eventType0.setSpeakerdeckLink("speakerdeckLink0");
             eventType0.setHabrLink("habrLink0");
@@ -3940,7 +3941,7 @@ class ConferenceDataLoaderExecutorTest {
             eventType12.setTwitterLink("twitterLink0");
             eventType12.setFacebookLink("facebookLink0");
             eventType12.setYoutubeLink("youtubeLink0");
-            eventType12.setTelegramChannelLink("telegramChannelLink12");
+            eventType12.setTelegramChatLink("telegramChatLink12");
 
             EventType eventType13 = new EventType();
             eventType13.setId(0);
@@ -3954,8 +3955,8 @@ class ConferenceDataLoaderExecutorTest {
             eventType13.setTwitterLink("twitterLink0");
             eventType13.setFacebookLink("facebookLink0");
             eventType13.setYoutubeLink("youtubeLink0");
-            eventType13.setTelegramChannelLink("telegramChannelLink0");
-            eventType13.setSpeakerdeckLink("speakerdeckLink13");
+            eventType13.setTelegramChatLink("telegramChatLink0");
+            eventType13.setTelegramChannelLink("telegramChannelLink13");
 
             EventType eventType14 = new EventType();
             eventType14.setId(0);
@@ -3969,9 +3970,9 @@ class ConferenceDataLoaderExecutorTest {
             eventType14.setTwitterLink("twitterLink0");
             eventType14.setFacebookLink("facebookLink0");
             eventType14.setYoutubeLink("youtubeLink0");
+            eventType14.setTelegramChatLink("telegramChatLink0");
             eventType14.setTelegramChannelLink("telegramChannelLink0");
-            eventType14.setSpeakerdeckLink("speakerdeckLink0");
-            eventType14.setHabrLink("habrLink14");
+            eventType14.setSpeakerdeckLink("speakerdeckLink14");
 
             EventType eventType15 = new EventType();
             eventType15.setId(0);
@@ -3985,10 +3986,10 @@ class ConferenceDataLoaderExecutorTest {
             eventType15.setTwitterLink("twitterLink0");
             eventType15.setFacebookLink("facebookLink0");
             eventType15.setYoutubeLink("youtubeLink0");
+            eventType15.setTelegramChatLink("telegramChatLink0");
             eventType15.setTelegramChannelLink("telegramChannelLink0");
             eventType15.setSpeakerdeckLink("speakerdeckLink0");
-            eventType15.setHabrLink("habrLink0");
-            eventType15.setOrganizer(organizer1);
+            eventType15.setHabrLink("habrLink15");
 
             EventType eventType16 = new EventType();
             eventType16.setId(0);
@@ -4002,10 +4003,11 @@ class ConferenceDataLoaderExecutorTest {
             eventType16.setTwitterLink("twitterLink0");
             eventType16.setFacebookLink("facebookLink0");
             eventType16.setYoutubeLink("youtubeLink0");
+            eventType16.setTelegramChatLink("telegramChatLink0");
             eventType16.setTelegramChannelLink("telegramChannelLink0");
             eventType16.setSpeakerdeckLink("speakerdeckLink0");
             eventType16.setHabrLink("habrLink0");
-            eventType16.setOrganizer(organizer0);
+            eventType16.setOrganizer(organizer1);
 
             EventType eventType17 = new EventType();
             eventType17.setId(0);
@@ -4019,12 +4021,11 @@ class ConferenceDataLoaderExecutorTest {
             eventType17.setTwitterLink("twitterLink0");
             eventType17.setFacebookLink("facebookLink0");
             eventType17.setYoutubeLink("youtubeLink0");
+            eventType17.setTelegramChatLink("telegramChatLink0");
             eventType17.setTelegramChannelLink("telegramChannelLink0");
             eventType17.setSpeakerdeckLink("speakerdeckLink0");
             eventType17.setHabrLink("habrLink0");
             eventType17.setOrganizer(organizer0);
-            eventType17.setTimeZone("Europe/Moscow");
-            eventType17.setTopic(topic1);
 
             EventType eventType18 = new EventType();
             eventType18.setId(0);
@@ -4038,13 +4039,34 @@ class ConferenceDataLoaderExecutorTest {
             eventType18.setTwitterLink("twitterLink0");
             eventType18.setFacebookLink("facebookLink0");
             eventType18.setYoutubeLink("youtubeLink0");
+            eventType18.setTelegramChatLink("telegramChatLink0");
             eventType18.setTelegramChannelLink("telegramChannelLink0");
             eventType18.setSpeakerdeckLink("speakerdeckLink0");
             eventType18.setHabrLink("habrLink0");
             eventType18.setOrganizer(organizer0);
             eventType18.setTimeZone("Europe/Moscow");
-            eventType18.setTopic(topic0);
-            eventType18.setInactive(true);
+            eventType18.setTopic(topic1);
+
+            EventType eventType19 = new EventType();
+            eventType19.setId(0);
+            eventType19.setConference(Conference.JPOINT);
+            eventType19.setLogoFileName("logoFileName0");
+            eventType19.setName(List.of(new LocaleItem("en", "name0")));
+            eventType19.setShortDescription(List.of(new LocaleItem("en", "shortDescription0")));
+            eventType19.setLongDescription(List.of(new LocaleItem("en", "longDescription0")));
+            eventType19.setSiteLink(List.of(new LocaleItem("en", "siteLink0")));
+            eventType19.setVkLink("vkLink0");
+            eventType19.setTwitterLink("twitterLink0");
+            eventType19.setFacebookLink("facebookLink0");
+            eventType19.setYoutubeLink("youtubeLink0");
+            eventType19.setTelegramChatLink("telegramChatLink0");
+            eventType19.setTelegramChannelLink("telegramChannelLink0");
+            eventType19.setSpeakerdeckLink("speakerdeckLink0");
+            eventType19.setHabrLink("habrLink0");
+            eventType19.setOrganizer(organizer0);
+            eventType19.setTimeZone("Europe/Moscow");
+            eventType19.setTopic(topic0);
+            eventType19.setInactive(true);
 
             return Stream.of(
                     arguments(eventType0, eventType0, false),
@@ -4065,7 +4087,8 @@ class ConferenceDataLoaderExecutorTest {
                     arguments(eventType0, eventType15, true),
                     arguments(eventType0, eventType16, true),
                     arguments(eventType0, eventType17, true),
-                    arguments(eventType0, eventType18, true)
+                    arguments(eventType0, eventType18, true),
+                    arguments(eventType0, eventType19, true)
             );
         }
 

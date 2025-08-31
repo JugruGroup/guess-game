@@ -168,6 +168,7 @@ public class ConferenceDataLoaderExecutor {
                         fillStringAttributeValue(resourceEventType::getTwitterLink, et::getTwitterLink, et::setTwitterLink);
                         fillStringAttributeValue(resourceEventType::getFacebookLink, et::getFacebookLink, et::setFacebookLink);
                         fillStringAttributeValue(resourceEventType::getYoutubeLink, et::getYoutubeLink, et::setYoutubeLink);
+                        fillStringAttributeValue(resourceEventType::getTelegramChatLink, et::getTelegramChatLink, et::setTelegramChatLink);
                         fillStringAttributeValue(resourceEventType::getTelegramChannelLink, et::getTelegramChannelLink, et::setTelegramChannelLink);
                         fillStringAttributeValue(resourceEventType::getSpeakerdeckLink, et::getSpeakerdeckLink, et::setSpeakerdeckLink);
                         fillStringAttributeValue(resourceEventType::getHabrLink, et::getHabrLink, et::setHabrLink);
@@ -1908,6 +1909,7 @@ public class ConferenceDataLoaderExecutor {
                 equals(a.getTwitterLink(), b.getTwitterLink()) &&
                 equals(a.getFacebookLink(), b.getFacebookLink()) &&
                 equals(a.getYoutubeLink(), b.getYoutubeLink()) &&
+                equals(a.getTelegramChatLink(), b.getTelegramChatLink()) &&
                 equals(a.getTelegramChannelLink(), b.getTelegramChannelLink()) &&
                 equals(a.getSpeakerdeckLink(), b.getSpeakerdeckLink()) &&
                 equals(a.getHabrLink(), b.getHabrLink()) &&
