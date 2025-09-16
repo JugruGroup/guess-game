@@ -26,7 +26,7 @@
         <surefire.plugin.version>3.5.4</surefire.plugin.version>
         <war.plugin.version>3.4.0</war.plugin.version>
 
-        <allure-junit5.version>2.29.1</allure-junit5.version>
+        <allure-junit5.version>2.30.0</allure-junit5.version>
         <aspectj.version>1.9.24</aspectj.version>
         <kumo.version>1.28</kumo.version>
         <imageio.version>3.12.0</imageio.version>
