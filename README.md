@@ -33,7 +33,7 @@ https://jugspeakers.info
 
 ### Offline
 
-1. Install [Java SE 21](https://www.oracle.com/java/technologies/downloads/) or higher (*JRE* or *JDK*)
+1. Install [Java SE 25](https://www.oracle.com/java/technologies/downloads/) or higher (*JRE* or *JDK*)
 
 1. Extract files from ZIP, for example:
 
@@ -62,7 +62,7 @@ https://jugspeakers.info
 
 ## Compilation
 
-1. Install [Java SE 21](https://www.oracle.com/java/technologies/downloads/) or higher (*JDK*)
+1. Install [Java SE 25](https://www.oracle.com/java/technologies/downloads/) or higher (*JDK*)
 
 1. Install [Apache Maven 3.9.0](https://maven.apache.org/download.cgi) or higher
 
