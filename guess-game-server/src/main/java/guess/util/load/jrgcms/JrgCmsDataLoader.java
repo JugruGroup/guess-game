@@ -165,7 +165,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
 
         try {
             return tokenResponseYaml.load(tokenResponseResource.getInputStream());
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException _) {
             log.warn("Token response file {} not found", TOKEN_FILENAME);
 
             return null;
@@ -245,7 +245,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
 
         try {
             return requestFunction.apply(tokenResponse.getAccessToken());
-        } catch (HttpClientErrorException.Unauthorized e) {
+        } catch (HttpClientErrorException.Unauthorized _) {
             // Request the token again
             tokenResponse = getToken();
 
@@ -747,7 +747,7 @@ public class JrgCmsDataLoader extends CmsDataLoader {
                 .collect(Collectors.toMap(
                         JrgContact::getType,
                         c -> c,
-                        (c1, c2) -> c1
+                        (c1, _) -> c1
                 ));
 
         return new Speaker(

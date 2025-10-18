@@ -109,13 +109,13 @@
 
   // Style for event type listbox on start page
   .event-type-listbox-start {
-    height: 250px;
+    height: 250px !important;
     max-height: 250px !important;
   }
 
   // Style for event listbox on start page
   .event-listbox-start {
-    height: 105px;
+    height: 105px !important;
     max-height: 105px !important;
   }
 
@@ -168,12 +168,12 @@
     }
 
     .event-type-listbox-start {
-      height: 290px;
+      height: 290px !important;
       max-height: 290px !important;
     }
 
     .event-listbox-start {
-      height: 114px;
+      height: 114px !important;
       max-height: 114px !important;
     }
 

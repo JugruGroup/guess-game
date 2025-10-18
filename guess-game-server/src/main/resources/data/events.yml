@@ -3209,7 +3209,9 @@ events:
       - {language: ru, text: "КаргоКульт 2024"}
     days:
       - {startDate: "2024-10-07", endDate: "2024-10-08", placeId: 24}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://cargo-cult.club/archive/2024/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLgDryet5jYN_RnGhPhc08nv1GGLL55amC
     talkIds: [5841, 5842, 5843, 5844, 5845, 5846, 5847, 5848, 5849, 5850, 5851, 5852, 5853, 5854, 5855, 5856, 5857, 5858,
               5859, 5860, 5861, 5862, 5863, 5864, 5865, 5866, 5867, 5868, 5869, 5870, 5871, 5872, 5873]
   # sysconf
