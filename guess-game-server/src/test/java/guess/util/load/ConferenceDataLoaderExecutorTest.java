@@ -279,7 +279,7 @@ class ConferenceDataLoaderExecutorTest {
         @MethodSource("data")
         void saveEventTypes(LoadResult<List<EventType>> loadResult) {
             try (MockedStatic<ConferenceDataLoaderExecutor> conferenceDataLoaderMockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class);
-                 MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class)) {
+                 MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)) {
                 conferenceDataLoaderMockedStatic.when(() -> ConferenceDataLoaderExecutor.saveEventTypes(Mockito.any()))
                         .thenCallRealMethod();
 
@@ -2740,7 +2740,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveEventTypes() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class)
+             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2752,7 +2752,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveCompanies() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class)
+             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2763,7 +2763,7 @@ class ConferenceDataLoaderExecutorTest {
 
     @Test
     void logAndCreateSpeakerImages() {
-        try (MockedStatic<ImageUtils> mockedStatic = Mockito.mockStatic(ImageUtils.class)) {
+        try (MockedStatic<ImageUtils> _ = Mockito.mockStatic(ImageUtils.class)) {
             assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.logAndCreateSpeakerImages(
                     List.of(new UrlFilename("url", "filename")), "{}", "w=%d&h=%d"));
         }
@@ -2772,7 +2772,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveSpeakers() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class)
+             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2784,7 +2784,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveTalks() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class)
+             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2796,7 +2796,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSavePlaces() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> yamlUtilsMockedStatic = Mockito.mockStatic(YamlUtils.class)
+             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2807,7 +2807,7 @@ class ConferenceDataLoaderExecutorTest {
 
     @Test
     void saveEvent() {
-        try (MockedStatic<YamlUtils> mockedStatic = Mockito.mockStatic(YamlUtils.class)) {
+        try (MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)) {
             assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.saveEvent(new Event(), "filename"));
         }
     }
