@@ -195,7 +195,7 @@ class TagCloudExporterTest {
         @MethodSource("data")
         void export(List<Talk> talks, boolean isSaveTalkFiles, String commonFileName) {
             try (MockedStatic<TagCloudExporter> tagCloudExporterMockedStatic = Mockito.mockStatic(TagCloudExporter.class);
-                 MockedStatic<FileUtils> _ = Mockito.mockStatic(FileUtils.class);
+                 var _ = Mockito.mockStatic(FileUtils.class);
                  MockedStatic<TagCloudUtils> tagCloudUtilsMockedStatic = Mockito.mockStatic(TagCloudUtils.class)) {
                 tagCloudExporterMockedStatic.when(() -> TagCloudExporter.export(Mockito.anyList(), Mockito.anyBoolean(), Mockito.anyString()))
                         .thenCallRealMethod();

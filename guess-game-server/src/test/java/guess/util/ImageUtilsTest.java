@@ -184,7 +184,7 @@ class ImageUtilsTest {
         final String imageParametersTemplate = "w=%d&h=%d";
 
         try (MockedStatic<ImageUtils> imageUtilsMockedStatic = Mockito.mockStatic(ImageUtils.class);
-             MockedStatic<FileUtils> _ = Mockito.mockStatic(FileUtils.class);
+             var _ = Mockito.mockStatic(FileUtils.class);
              MockedStatic<ImageIO> imageIOMockedStatic = Mockito.mockStatic(ImageIO.class)) {
             imageUtilsMockedStatic.when(() -> ImageUtils.create(Mockito.anyString(), Mockito.anyString(), Mockito.anyString()))
                     .thenCallRealMethod();
