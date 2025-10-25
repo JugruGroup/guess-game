@@ -27,7 +27,6 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.*;
@@ -279,7 +278,7 @@ class ConferenceDataLoaderExecutorTest {
         @MethodSource("data")
         void saveEventTypes(LoadResult<List<EventType>> loadResult) {
             try (MockedStatic<ConferenceDataLoaderExecutor> conferenceDataLoaderMockedStatic = Mockito.mockStatic(ConferenceDataLoaderExecutor.class);
-                 MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)) {
+                 var _ = Mockito.mockStatic(YamlUtils.class)) {
                 conferenceDataLoaderMockedStatic.when(() -> ConferenceDataLoaderExecutor.saveEventTypes(Mockito.any()))
                         .thenCallRealMethod();
 
@@ -566,12 +565,12 @@ class ConferenceDataLoaderExecutorTest {
 
                                     if ((localeItems != null) && !localeItems.isEmpty()) {
                                         if (Language.ENGLISH.equals(language)) {
-                                            return localeItems.get(0).getText();
+                                            return localeItems.getFirst().getText();
                                         } else if (Language.RUSSIAN.equals(language)) {
                                             if (localeItems.size() > 1) {
                                                 return localeItems.get(1).getText();
                                             } else {
-                                                return localeItems.get(0).getText();
+                                                return localeItems.getFirst().getText();
                                             }
                                         } else {
                                             return null;
@@ -1907,7 +1906,7 @@ class ConferenceDataLoaderExecutorTest {
 
         private Stream<Arguments> data() {
             final ZonedDateTime now = ZonedDateTime.now();
-            final ZonedDateTime yesterday = now.minus(1, ChronoUnit.DAYS);
+            final ZonedDateTime yesterday = now.minusDays(1);
 
             return Stream.of(
                     arguments(createSpeaker(null), createSpeaker(null), null),
@@ -2740,7 +2739,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveEventTypes() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
+             var _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2752,7 +2751,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveCompanies() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
+             var _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2763,7 +2762,7 @@ class ConferenceDataLoaderExecutorTest {
 
     @Test
     void logAndCreateSpeakerImages() {
-        try (MockedStatic<ImageUtils> _ = Mockito.mockStatic(ImageUtils.class)) {
+        try (var _ = Mockito.mockStatic(ImageUtils.class)) {
             assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.logAndCreateSpeakerImages(
                     List.of(new UrlFilename("url", "filename")), "{}", "w=%d&h=%d"));
         }
@@ -2772,7 +2771,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveSpeakers() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
+             var _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2784,7 +2783,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSaveTalks() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
+             var _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2796,7 +2795,7 @@ class ConferenceDataLoaderExecutorTest {
     @Test
     void logAndSavePlaces() {
         try (MockedStatic<LocalizationUtils> localizationUtilsMockedStatic = Mockito.mockStatic(LocalizationUtils.class);
-             MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)
+             var _ = Mockito.mockStatic(YamlUtils.class)
         ) {
             localizationUtilsMockedStatic.when(() -> LocalizationUtils.getString(Mockito.anyList(), Mockito.any(Language.class)))
                     .thenReturn("");
@@ -2807,7 +2806,7 @@ class ConferenceDataLoaderExecutorTest {
 
     @Test
     void saveEvent() {
-        try (MockedStatic<YamlUtils> _ = Mockito.mockStatic(YamlUtils.class)) {
+        try (var _ = Mockito.mockStatic(YamlUtils.class)) {
             assertDoesNotThrow(() -> ConferenceDataLoaderExecutor.saveEvent(new Event(), "filename"));
         }
     }
@@ -2970,7 +2969,7 @@ class ConferenceDataLoaderExecutorTest {
                                     Object[] args = invocation.getArguments();
                                     List<LocaleItem> localeItems = (List<LocaleItem>) args[0];
 
-                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.get(0).getText() : null;
+                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.getFirst().getText() : null;
                                 }
                         );
 
@@ -3113,7 +3112,7 @@ class ConferenceDataLoaderExecutorTest {
                                     Object[] args = invocation.getArguments();
                                     List<LocaleItem> localeItems = (List<LocaleItem>) args[0];
 
-                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.get(0).getText() : null;
+                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.getFirst().getText() : null;
                                 }
                         );
 
@@ -3177,7 +3176,7 @@ class ConferenceDataLoaderExecutorTest {
                                     Object[] args = invocation.getArguments();
                                     List<LocaleItem> localeItems = (List<LocaleItem>) args[0];
 
-                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.get(0).getText() : null;
+                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.getFirst().getText() : null;
                                 }
                         );
 
@@ -3231,7 +3230,7 @@ class ConferenceDataLoaderExecutorTest {
                                     Object[] args = invocation.getArguments();
                                     List<LocaleItem> localeItems = (List<LocaleItem>) args[0];
 
-                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.get(0).getText() : null;
+                                    return ((localeItems != null) && !localeItems.isEmpty()) ? localeItems.getFirst().getText() : null;
                                 }
                         );
 
@@ -4178,7 +4177,7 @@ class ConferenceDataLoaderExecutorTest {
             Speaker speaker3 = new Speaker();
             speaker3.setId(0);
             speaker3.setPhotoFileName("photoFileName0");
-            speaker3.setPhotoUpdatedAt(now.plus(1, ChronoUnit.DAYS));
+            speaker3.setPhotoUpdatedAt(now.plusDays(1));
 
             Speaker speaker4 = new Speaker();
             speaker4.setId(0);
@@ -4578,7 +4577,7 @@ class ConferenceDataLoaderExecutorTest {
     class NeedPhotoUpdateTest {
         private Stream<Arguments> data() {
             final ZonedDateTime now = ZonedDateTime.now();
-            final ZonedDateTime yesterday = now.minus(1, ChronoUnit.DAYS);
+            final ZonedDateTime yesterday = now.minusDays(1);
             final String validUrl = "https://valid.com";
             final String photoFileName = "00000.jpg";
             final String imageParametersTemplate = "w=%d&h=%d";
@@ -4651,7 +4650,7 @@ class ConferenceDataLoaderExecutorTest {
 
         assertEquals(EN_TEXT, LocalizationUtils.getString(actual.getName(), Language.ENGLISH));
         assertEquals(RU_TEXT, LocalizationUtils.getString(actual.getName(), Language.RUSSIAN));
-        assertEquals(PLACE_ID, actual.getDays().get(0).getPlace().getId());
+        assertEquals(PLACE_ID, actual.getDays().getFirst().getPlace().getId());
     }
 
     @Test
