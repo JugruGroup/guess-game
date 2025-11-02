@@ -26,7 +26,7 @@ jobs:
         run: |
           export MVN_ARGS="-DbuildNumberSuffix="
           mvn ${MVN_ARGS} package
-          echo "PROJECT_VERSION=$(mvn ${MVN_ARGS} org.apache.maven.plugins:maven-help-plugin:3.1.0:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+          echo "PROJECT_VERSION=$(mvn ${MVN_ARGS} org.apache.maven.plugins:maven-help-plugin:3.5.1:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
       - name: Upload ZIP
         uses: JasonEtco/upload-to-release@master
         with:
