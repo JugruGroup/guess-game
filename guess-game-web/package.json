@@ -51,7 +51,7 @@
     "@angular/compiler-cli": "^20.3.12",
     "@angular/language-service": "^20.3.12",
     "@types/dagre": "^0.7.53",
-    "@types/jasmine": "^5.1.12",
+    "@types/jasmine": "^5.1.13",
     "@types/jasminewd2": "^2.0.13",
     "@types/node": "^24.10.1",
     "@types/three": "^0.181.0",
