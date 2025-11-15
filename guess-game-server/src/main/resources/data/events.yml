@@ -858,6 +858,7 @@ events:
     siteLink:
       - {language: en, text: "https://holyjs.ru/en/archive/2023 Spring/"}
       - {language: ru, text: "https://holyjs.ru/archive/2023 Spring/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8KEVndDIw0QPGUGugVtV3NJ
     talkIds: [4644, 4645, 4646, 4647, 4648, 4649, 4650, 4651, 4652, 4653, 4654, 4655, 4656, 4657, 4658, 4659, 4660, 5023, 4661,
               4662, 4663, 4664, 4665, 4666, 4667, 4668, 4669, 4670, 4671, 4672, 4673, 4674, 4675, 4676, 4677, 4678, 4679, 4680,
               4681, 4682, 4683, 4684, 4685, 4686, 4687, 4688, 4689, 4690, 4691, 4692, 4693]
@@ -882,6 +883,7 @@ events:
     siteLink:
       - {language: en, text: "https://holyjs.ru/en/archive/2024 Spring/"}
       - {language: ru, text: "https://holyjs.ru/archive/2024 Spring/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8LxBi_-bEdNLszOFU2_gGid
     talkIds: [5338, 5339, 5340, 5341, 5342, 5343, 5344, 5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5353, 5354, 5355,
               5356, 5357, 5358, 5359, 5360, 5361, 5362, 5363, 5364, 5365, 5366, 5367, 5368, 5369, 5370, 5371, 5372, 5373, 5374,
               5375, 5376, 5377, 5378, 5379, 5380, 5381, 5382, 5383, 5384, 5385, 5386, 5387, 5388, 5389]
@@ -894,6 +896,7 @@ events:
     siteLink:
       - {language: en, text: "https://holyjs.ru/en/archive/2024 Autumn/"}
       - {language: ru, text: "https://holyjs.ru/archive/2024 Autumn/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8JNsuo_q7g_Z8Qkkg3-x_Sy
     talkIds: [6102, 6103, 6104, 6105, 6106, 6107, 6108, 6109, 6110, 6111, 6112, 6113, 6114, 6115, 6116, 6117, 6118, 6119,
               6120, 6121, 6122, 6123, 6124, 6125, 6126, 6127, 6128, 6129, 6130, 6131, 6132, 6133, 6134, 6135, 6136, 6137, 6138,
               6139, 6140, 6141, 6142, 6143, 6144, 6145, 6146, 6147, 6148, 6149, 6150, 6151]
@@ -903,6 +906,7 @@ events:
     days:
       - {startDate: "2025-04-07", endDate: "2025-04-08", placeId: 7}
     siteLink: []
+    youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8JEShF_vpw9XBG9m6nB1SVa
     talkIds: [6312, 6313, 6314, 6315, 6316, 6317, 6318, 6319, 6320, 6321, 6322, 6323, 6324, 6325, 6326, 6327, 6328, 6329,
               6330, 6331, 6332, 6333, 6334, 6335, 6336, 6337, 6338, 6339, 6340, 6341, 6342, 6343, 6344, 6345, 6346, 6347, 6348,
               6349, 6350, 6351, 6352, 6353]
