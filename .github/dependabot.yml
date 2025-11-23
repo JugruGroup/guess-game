@@ -20,6 +20,8 @@ updates:
         patterns:
           - "three"
           - "@types/three"
+    ignore:
+      - dependency-name: "@angular*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
