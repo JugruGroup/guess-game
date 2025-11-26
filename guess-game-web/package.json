@@ -24,7 +24,7 @@
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
-    "@primeuix/themes": "^1.2.5",
+    "@primeuix/themes": "^2.0.0",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "chart.js": "^4.5.1",
