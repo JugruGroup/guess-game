@@ -1506,7 +1506,10 @@ events:
       - {language: en, text: "Mobius 2025 Spring"}
     days:
       - {startDate: "2025-04-09", endDate: "2025-04-10", placeId: 7}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://mobiusconf.com/en/archive/2025 Spring/"}
+      - {language: ru, text: "https://mobiusconf.com/archive/2025 Spring/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236plxcpm5zcar9OH4pfkBdp-
     talkIds: [6354, 6355, 6356, 6357, 6358, 6359, 6360, 6361, 6362, 6363, 6364, 6365, 6366, 6367, 6368, 6369, 6370, 6371,
               6372, 6373, 6374, 6375, 6376, 6377, 6378, 6379, 6380, 6381, 6382, 6383, 6384, 6385, 6386, 6387, 6388, 6389, 6390,
               6391, 6392, 6393, 6394, 6395, 6396, 6397, 6398]
