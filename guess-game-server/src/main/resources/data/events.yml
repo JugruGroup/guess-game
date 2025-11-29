@@ -103,7 +103,9 @@ events:
     days:
       - {startDate: "2025-03-13", endDate: "2025-03-13", placeId: 24}
       - {startDate: "2025-03-20", endDate: "2025-03-21", placeId: 9}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://cppconf.ru/en/archive/2025/"}
+      - {language: ru, text: "https://cppconf.ru/archive/2025/"}
     talkIds: [6171, 6172, 6173, 6174, 6175, 6176, 6177, 6178, 6179, 6180, 6181, 6182, 6183, 6184, 6185, 6186, 6187, 6188,
               6189, 6190, 6191, 6192, 6193, 6194, 6195, 6196, 6197, 6198, 6199, 6200, 6201, 6202, 6203, 6204, 6205, 6206, 6207,
               6208, 6209, 6210, 6211]
@@ -207,7 +209,9 @@ events:
     days:
       - {startDate: "2024-11-06", endDate: "2024-11-06", placeId: 24}
       - {startDate: "2024-11-12", endDate: "2024-11-13", placeId: 4}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://devoops.ru/en/archive/2024/"}
+      - {language: ru, text: "https://devoops.ru/archive/2024/"}
     talkIds: [6055, 6056, 6057, 6058, 6059, 6060, 6061, 6062, 6063, 6064, 6065, 6066, 6067, 6068, 6069, 6070, 6071, 6072,
               6073, 6074, 6075, 6076, 6077, 6078, 6079, 6080, 6081, 6082, 6083, 6084, 6085, 6086, 6087, 6088, 6089, 6090, 6091,
               6092, 6093, 6094, 6095, 6096, 6097, 6098, 6099, 6100, 6101]
@@ -451,7 +455,9 @@ events:
       - {language: en, text: "DotNext 2024"}
     days:
       - {startDate: "2024-09-10", endDate: "2024-09-11", placeId: 9}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://dotnext.ru/en/archive/2024/"}
+      - {language: ru, text: "https://dotnext.ru/archive/2024/"}
     talkIds: [5670, 5671, 5672, 5673, 5674, 5675, 5676, 5677, 5678, 5679, 5680, 5681, 5682, 5683, 5684, 5685, 5686, 5687,
               5688, 5689, 5690, 5691, 5692, 5693, 5694, 5695, 5696, 5697, 5698, 5699, 5700, 5701, 5702, 5703, 5704]
   # Heisenbug
@@ -905,7 +911,9 @@ events:
       - {language: en, text: "HolyJS 2025 Spring"}
     days:
       - {startDate: "2025-04-07", endDate: "2025-04-08", placeId: 7}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://holyjs.ru/en/archive/2025 Spring/"}
+      - {language: ru, text: "https://holyjs.ru/archive/2025 Spring/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL8sJahqnzh8JEShF_vpw9XBG9m6nB1SVa
     talkIds: [6312, 6313, 6314, 6315, 6316, 6317, 6318, 6319, 6320, 6321, 6322, 6323, 6324, 6325, 6326, 6327, 6328, 6329,
               6330, 6331, 6332, 6333, 6334, 6335, 6336, 6337, 6338, 6339, 6340, 6341, 6342, 6343, 6344, 6345, 6346, 6347, 6348,
@@ -1122,7 +1130,9 @@ events:
       - {language: en, text: "JPoint 2025"}
     days:
       - {startDate: "2025-04-03", endDate: "2025-04-04", placeId: 7}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://jpoint.ru/en/archive/2025/"}
+      - {language: ru, text: "https://jpoint.ru/archive/2025/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLVe-2wcL84b8FbfntZIlyFYjCXHz-s1y1
     talkIds: [6231, 6232, 6233, 6234, 6235, 6236, 6237, 6238, 6239, 6240, 6241, 6242, 6243, 6244, 6245, 6246, 6247, 6248,
               6249, 6250, 6251, 6252, 6253, 6254, 6255, 6256, 6257, 6258, 6259, 6260, 6261, 6262, 6263, 6264, 6265, 6266, 6267,
@@ -1263,7 +1273,9 @@ events:
     days:
       - {startDate: "2024-10-09", endDate: "2024-10-09", placeId: 24}
       - {startDate: "2024-10-15", endDate: "2024-10-16", placeId: 31}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://jokerconf.com/en/archive/2024/"}
+      - {language: ru, text: "https://jokerconf.com/archive/2024/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLVe-2wcL84b8kdxhnO1W9D8NIfMVQFZjV
     talkIds: [5874, 5875, 5876, 5877, 5878, 5879, 5880, 5881, 5882, 5883, 5884, 5885, 5886, 5887, 5888, 5889, 5890, 5891,
               5892, 5893, 5894, 5895, 5896, 5897, 5898, 5899, 5900, 5901, 5902, 5903, 5904, 5905, 5906, 5907, 5908, 5909, 5910,
@@ -1506,7 +1518,10 @@ events:
       - {language: en, text: "Mobius 2025 Spring"}
     days:
       - {startDate: "2025-04-09", endDate: "2025-04-10", placeId: 7}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://mobiusconf.com/en/archive/2025 Spring/"}
+      - {language: ru, text: "https://mobiusconf.com/archive/2025 Spring/"}
+    youtubeLink: https://www.youtube.com/playlist?list=PLb1A91j1236plxcpm5zcar9OH4pfkBdp-
     talkIds: [6354, 6355, 6356, 6357, 6358, 6359, 6360, 6361, 6362, 6363, 6364, 6365, 6366, 6367, 6368, 6369, 6370, 6371,
               6372, 6373, 6374, 6375, 6376, 6377, 6378, 6379, 6380, 6381, 6382, 6383, 6384, 6385, 6386, 6387, 6388, 6389, 6390,
               6391, 6392, 6393, 6394, 6395, 6396, 6397, 6398]
@@ -1595,7 +1610,9 @@ events:
     days:
       - {startDate: "2024-09-04", endDate: "2024-09-04", placeId: 24}
       - {startDate: "2024-09-08", endDate: "2024-09-09", placeId: 9}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://smartdataconf.ru/en/archive/2024/"}
+      - {language: ru, text: "https://smartdataconf.ru/archive/2024/"}
     youtubeLink: https://www.youtube.com/playlist?list=PLeN_80lmoMY2b6A8676yZ9bR50OGXZ34W
     talkIds: [5614, 5615, 5616, 5617, 5618, 5619, 5620, 5621, 5622, 5623, 5624, 5625, 5626, 5627, 5628, 5629, 5630, 5631,
               5632, 5633, 5634, 5635, 5636, 5637, 5638, 5639, 5640, 5641, 5642, 5643, 5644, 5645, 5646, 5647, 5648, 5649, 5650,
@@ -3046,7 +3063,9 @@ events:
     days:
       - {startDate: "2024-09-19", endDate: "2024-09-19", placeId: 24}
       - {startDate: "2024-09-28", endDate: "2024-09-29", placeId: 30}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://vtconf.com/en/archive/2024/"}
+      - {language: ru, text: "https://vtconf.com/archive/2024/"}
     youtubeLink: https://www.youtube.com/playlist?list=PL0TQFzykgJj-IYk-2yJxF9qBoYdnapmwD
     talkIds: [5785, 5786, 5787, 5788, 5789, 5790, 5791, 5792, 5793, 5794, 5795, 5796, 5797, 5798, 5799, 5800, 5801, 5802,
               5803, 5804, 5805, 5806, 5807, 5808, 5809, 5810, 5811, 5812, 5813, 5814, 5815, 5816, 5817, 5818, 5819, 5820, 5821,
@@ -3145,7 +3164,9 @@ events:
       - {language: en, text: "Flow 2025 Spring"}
     days:
       - {startDate: "2025-04-26", endDate: "2025-04-26", placeId: 24}
-    siteLink: []
+    siteLink:
+      - {language: en, text: "https://flowconf.ru/en/archive/2025 Spring/"}
+      - {language: ru, text: "https://flowconf.ru/archive/2025 Spring/"}
     talkIds: [6399, 6400, 6401, 6402, 6403, 6404, 6405, 6406, 6407, 6408, 6409, 6410]
   # SafeCode
   - eventTypeId: 20
