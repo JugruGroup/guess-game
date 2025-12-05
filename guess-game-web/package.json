@@ -32,7 +32,7 @@
     "core-js": "^3.47.0",
     "dagre": "^0.8.5",
     "get-video-id": "^4.1.7",
-    "marked": "^16.4.2",
+    "marked": "^17.0.1",
     "ngx-markdown": "^20.1.0",
     "ngx-translate-multi-http-loader": "^20.0.0",
     "primeicons": "^7.0.0",
